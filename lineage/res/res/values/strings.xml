@@ -208,4 +208,8 @@
 
     <!-- Long-press back kill application -->
     <string name="app_killed_message">Application killed</string>
+
+    <!-- Status bar network traffic monitor strings -->
+    <string name="kilobitspersecond_short">kbps</string>
+    <string name="megabitspersecond_short">Mbps</string>
 </resources>
