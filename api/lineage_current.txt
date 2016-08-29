@@ -1622,7 +1622,7 @@ package lineageos.util {
     method public static int findPerceptuallyNearestColor(int, int[]);
     method public static int findPerceptuallyNearestSolidColor(int);
     method public static int generateAlertColorFromDrawable(android.graphics.drawable.Drawable);
-    method public static com.android.internal.util.cm.palette.Palette.Swatch getDominantSwatch(com.android.internal.util.cm.palette.Palette);
+    method public static lineageos.util.palette.Palette.Swatch getDominantSwatch(lineageos.util.palette.Palette);
     method public static float[] temperatureToRGB(int);
   }
 
