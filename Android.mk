@@ -237,6 +237,7 @@ LOCAL_DROIDDOC_CUSTOM_TEMPLATE_DIR:= external/doclava/res/assets/templates-sdk
 LOCAL_DROIDDOC_STUB_OUT_DIR := $(TARGET_OUT_COMMON_INTERMEDIATES)/JAVA_LIBRARIES/lineage-sdk_stubs_current_intermediates/src
 
 LOCAL_DROIDDOC_OPTIONS:= \
+        -referenceonly \
         -stubpackages $(lineage_stub_packages) \
         -exclude org.lineageos.platform.internal \
         -api $(INTERNAL_LINEAGE_PLATFORM_API_FILE) \
