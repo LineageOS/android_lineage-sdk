@@ -1,5 +1,6 @@
 /**
  * Copyright (c) 2015, The CyanogenMod Project
+ *               2017 The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -19,6 +20,7 @@ package cyanogenmod.hardware;
 import cyanogenmod.hardware.DisplayMode;
 import cyanogenmod.hardware.HSIC;
 import cyanogenmod.hardware.IThermalListenerCallback;
+import cyanogenmod.hardware.TouchscreenGesture;
 
 /** @hide */
 interface ICMHardwareService {
@@ -70,4 +72,6 @@ interface ICMHardwareService {
     boolean setPictureAdjustment(in HSIC hsic);
     float[] getPictureAdjustmentRanges();
 
+    TouchscreenGesture[] getTouchscreenGestures();
+    boolean setTouchscreenGestureEnabled(in TouchscreenGesture gesture, boolean state);
 }
