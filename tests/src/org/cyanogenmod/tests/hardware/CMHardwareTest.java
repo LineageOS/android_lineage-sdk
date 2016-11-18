@@ -44,7 +44,6 @@ public class CMHardwareTest extends TestActivity {
             CMHardwareManager.FEATURE_LONG_TERM_ORBITS,
             CMHardwareManager.FEATURE_SERIAL_NUMBER,
             CMHardwareManager.FEATURE_SUNLIGHT_ENHANCEMENT,
-            CMHardwareManager.FEATURE_TAP_TO_WAKE,
             CMHardwareManager.FEATURE_TOUCH_HOVERING,
             CMHardwareManager.FEATURE_AUTO_CONTRAST,
             CMHardwareManager.FEATURE_DISPLAY_MODES,
@@ -61,7 +60,6 @@ public class CMHardwareTest extends TestActivity {
             "FEATURE_LONG_TERM_ORBITS",
             "FEATURE_SERIAL_NUMBER",
             "FEATURE_SUNLIGHT_ENHANCEMENT",
-            "FEATURE_TAP_TO_WAKE",
             "FEATURE_TOUCH_HOVERING",
             "FEATURE_AUTO_CONTRAST",
             "FEATURE_DISPLAY_MODES",
@@ -74,7 +72,6 @@ public class CMHardwareTest extends TestActivity {
             CMHardwareManager.FEATURE_HIGH_TOUCH_SENSITIVITY,
             CMHardwareManager.FEATURE_KEY_DISABLE,
             CMHardwareManager.FEATURE_SUNLIGHT_ENHANCEMENT,
-            CMHardwareManager.FEATURE_TAP_TO_WAKE,
             CMHardwareManager.FEATURE_TOUCH_HOVERING,
             CMHardwareManager.FEATURE_AUTO_CONTRAST
     );
