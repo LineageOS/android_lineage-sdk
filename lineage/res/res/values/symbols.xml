@@ -130,4 +130,15 @@
 
     <!-- General purpose use "unknown" string -->
     <java-symbol type="string" name="unknown" />
+
+    <!-- Status bar network traffic monitor -->
+    <java-symbol type="drawable" name="stat_sys_network_traffic_down" />
+    <java-symbol type="drawable" name="stat_sys_network_traffic_up" />
+    <java-symbol type="drawable" name="stat_sys_network_traffic_updown" />
+    <java-symbol type="dimen" name="net_traffic_single_text_size" />
+    <java-symbol type="dimen" name="net_traffic_multi_text_size" />
+    <java-symbol type="string" name="kilobitspersecond_short" />
+    <java-symbol type="string" name="megabitspersecond_short" />
+    <java-symbol type="string" name="network_traffic_format" />
+    <java-symbol type="string" name="network_traffic_format_with_unit" />
 </resources>
