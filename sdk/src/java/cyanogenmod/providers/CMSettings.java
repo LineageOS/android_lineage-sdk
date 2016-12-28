@@ -2635,7 +2635,9 @@ public final class CMSettings {
         /**
          * Whether the global stats collection setting has been successfully reported to server
          * @hide
+         * @deprecated {@link org.cyanogenmod.cmparts.cmstats.AnonymousStats} no longer uses this
          */
+        @Deprecated
         public static final String STATS_COLLECTION_REPORTED = "stats_collection_reported";
 
         /**
