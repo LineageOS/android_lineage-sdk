@@ -23,6 +23,7 @@ import android.content.res.AssetManager;
 import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteDoneException;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.database.sqlite.SQLiteStatement;
 import android.os.Build;
@@ -249,6 +250,8 @@ public class CMDatabaseHelper extends SQLiteOpenHelper{
                         stmt.execute();
                     }
                     db.setTransactionSuccessful();
+                } catch (SQLiteDoneException ex) {
+                    // CMSettings.System.STATUS_BAR_CLOCK is not set
                 } finally {
                     if (stmt != null) stmt.close();
                     db.endTransaction();
