@@ -15,31 +15,43 @@
  */
 package org.lineageos.platform.internal.display;
 
+import android.animation.Animator;
+import android.animation.AnimatorListenerAdapter;
+import android.animation.TypeEvaluator;
 import android.animation.ValueAnimator;
 import android.animation.ValueAnimator.AnimatorUpdateListener;
 import android.content.Context;
 import android.net.Uri;
+import android.opengl.Matrix;
 import android.os.Handler;
+import android.os.SystemProperties;
 import android.text.format.DateUtils;
 import android.util.MathUtils;
 import android.util.Range;
 import android.util.Slog;
+import android.view.animation.AnimationUtils;
 import android.view.animation.LinearInterpolator;
 
 import org.lineageos.platform.internal.display.TwilightTracker.TwilightState;
 
 import java.io.PrintWriter;
+import java.util.Arrays;
 import java.util.BitSet;
 
 import lineageos.hardware.LineageHardwareManager;
 import lineageos.hardware.LiveDisplayManager;
 import lineageos.providers.LineageSettings;
 import lineageos.util.ColorUtils;
+import lineageos.util.DisplayUtils;
 
 import static lineageos.hardware.LiveDisplayManager.MODE_AUTO;
 import static lineageos.hardware.LiveDisplayManager.MODE_DAY;
 import static lineageos.hardware.LiveDisplayManager.MODE_NIGHT;
 import static lineageos.hardware.LiveDisplayManager.MODE_OFF;
+
+import com.android.server.LocalServices;
+import com.android.server.display.DisplayTransformManager;
+import static com.android.server.display.DisplayTransformManager.LEVEL_COLOR_MATRIX_NIGHT_DISPLAY;
 
 public class ColorTemperatureController extends LiveDisplayFeature {
 
@@ -274,11 +286,31 @@ public class ColorTemperatureController extends LiveDisplayFeature {
             return;
         }
 
+        applyColorTemperature(temperature);
+        if (DEBUG) {
+            Slog.d(TAG, "Adjust display temperature to " + temperature + "K");
+        }
+    }
+
+    private void applyColorTemperature(int temperature) {
+        /**
+         * Use the same config that Night Light is using. All HWC2 devices MUST set this
+         */
+        Boolean acceleratedColorTransform = getContext().getResources().getBoolean(
+                com.android.internal.R.bool.config_setColorTransformAccelerated);
+
         final float[] rgb = ColorUtils.temperatureToRGB(temperature);
-        if (mDisplayHardware.setAdditionalAdjustment(rgb)) {
-            if (DEBUG) {
-                Slog.d(TAG, "Adjust display temperature to " + temperature + "K");
+        if (!acceleratedColorTransform) { /* Use the legacy CMHW temperature adjustment implementation */
+            if (mDisplayHardware.setAdditionalAdjustment(rgb)) {
+                if (DEBUG) {
+                    Slog.d(TAG, "Adjust display temperature to " + temperature + "K");
+                }
             }
+        } else { /* Use DisplayTransformManager API to adjust temperature */
+            if (DEBUG) {
+                Slog.d(TAG, "temperatureToRGB: " + Arrays.toString(rgb));
+            }
+            writeMatrix(rgb, LEVEL_COLOR_MATRIX_NIGHT_DISPLAY)
         }
     }
 
