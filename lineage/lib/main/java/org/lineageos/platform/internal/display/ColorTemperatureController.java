@@ -15,20 +15,27 @@
  */
 package org.lineageos.platform.internal.display;
 
+import android.animation.Animator;
+import android.animation.AnimatorListenerAdapter;
+import android.animation.TypeEvaluator;
 import android.animation.ValueAnimator;
 import android.animation.ValueAnimator.AnimatorUpdateListener;
 import android.content.Context;
 import android.net.Uri;
+import android.opengl.Matrix;
 import android.os.Handler;
+import android.os.SystemProperties;
 import android.text.format.DateUtils;
 import android.util.MathUtils;
 import android.util.Range;
 import android.util.Slog;
+import android.view.animation.AnimationUtils;
 import android.view.animation.LinearInterpolator;
 
 import org.lineageos.platform.internal.display.TwilightTracker.TwilightState;
 
 import java.io.PrintWriter;
+import java.util.Arrays;
 import java.util.BitSet;
 
 import lineageos.hardware.LineageHardwareManager;
@@ -40,6 +47,10 @@ import static lineageos.hardware.LiveDisplayManager.MODE_AUTO;
 import static lineageos.hardware.LiveDisplayManager.MODE_DAY;
 import static lineageos.hardware.LiveDisplayManager.MODE_NIGHT;
 import static lineageos.hardware.LiveDisplayManager.MODE_OFF;
+
+import com.android.server.LocalServices;
+import com.android.server.display.DisplayTransformManager;
+import static com.android.server.display.DisplayTransformManager.LEVEL_COLOR_MATRIX_NIGHT_DISPLAY;
 
 public class ColorTemperatureController extends LiveDisplayFeature {
 
@@ -274,11 +285,117 @@ public class ColorTemperatureController extends LiveDisplayFeature {
             return;
         }
 
+        applyColorTemperature(temperature);
+        if (DEBUG) {
+            Slog.d(TAG, "Adjust display temperature to " + temperature + "K");
+        }
+    }
+
+    private void applyColorTemperature(int temperature) {
+        final DisplayTransformManager dtm = LocalServices.getService(DisplayTransformManager.class);;
+
+        /**
+         * Read the HWC version from SurfaceFlinger
+         * Defaults to HWC2 if property is not present
+         */
+        int hwcVersion = SystemProperties.getInt("display.sf.hwc_version", 2);
+
         final float[] rgb = ColorUtils.temperatureToRGB(temperature);
-        if (mDisplayHardware.setAdditionalAdjustment(rgb)) {
-            if (DEBUG) {
-                Slog.d(TAG, "Adjust display temperature to " + temperature + "K");
+        if (hwcVersion == 1) { /* Use the legacy CMHW temperature adjustment implementation */
+            if (mDisplayHardware.setAdditionalAdjustment(rgb)) {
+                if (DEBUG) {
+                    Slog.d(TAG, "Adjust display temperature to " + temperature + "K");
+                }
             }
+        } else { /* Use DisplayTransformManager API to adjust temperature */
+            if (DEBUG) {
+                Slog.d(TAG, "temperatureToRGB: " + Arrays.toString(rgb));
+            }
+
+            /**
+             * The transformation matrix, used to apply the transformation onto a frame.
+             */
+            final float[] newMatrix = new float[] {
+                rgb[0], 0,      0,      0,
+                0,      rgb[1], 0,      0,
+                0,      0,      rgb[2], 0,
+                0,      0,      0,      1
+            };
+
+            /**
+             * The identity matrix, used if one of the given matrices is {@code null}.
+             */
+            final float[] MATRIX_IDENTITY = new float[16];
+            {
+                Matrix.setIdentityM(MATRIX_IDENTITY, 0);
+            }
+
+            /**
+             * Evaluator used to animate color matrix transitions.
+             */
+            final ColorMatrixEvaluator COLOR_MATRIX_EVALUATOR = new ColorMatrixEvaluator();
+
+            final float[] from = dtm.getColorMatrix(LEVEL_COLOR_MATRIX_NIGHT_DISPLAY);
+            final float[] to = newMatrix;
+
+            // Cancel the old animator if still running.
+            if (mAnimator != null) {
+                mAnimator.cancel();
+            }
+
+            mAnimator = ValueAnimator.ofObject(COLOR_MATRIX_EVALUATOR,
+                    from == null ? MATRIX_IDENTITY : from, to == null ? MATRIX_IDENTITY : to);
+            mAnimator.setDuration(mContext.getResources()
+                    .getInteger(android.R.integer.config_longAnimTime));
+            mAnimator.setInterpolator(AnimationUtils.loadInterpolator(
+                    mContext, android.R.interpolator.fast_out_slow_in));
+            mAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
+                @Override
+                public void onAnimationUpdate(ValueAnimator animator) {
+                    final float[] value = (float[]) animator.getAnimatedValue();
+                    dtm.setColorMatrix(LEVEL_COLOR_MATRIX_NIGHT_DISPLAY, value);
+                }
+            });
+            mAnimator.addListener(new AnimatorListenerAdapter() {
+
+                private boolean mIsCancelled;
+
+                @Override
+                public void onAnimationCancel(Animator animator) {
+                    mIsCancelled = true;
+                }
+
+                @Override
+                public void onAnimationEnd(Animator animator) {
+                    if (!mIsCancelled) {
+                        // Ensure final color matrix is set at the end of the animation. If the
+                        // animation is cancelled then don't set the final color matrix so the new
+                        // animator can pick up from where this one left off.
+                        dtm.setColorMatrix(LEVEL_COLOR_MATRIX_NIGHT_DISPLAY, to);
+                    }
+                    mAnimator = null;
+                }
+            });
+            mAnimator.start();
+        }
+    }
+
+    /**
+     * Interpolates between two 4x4 color transform matrices (in column-major order).
+     */
+    private static class ColorMatrixEvaluator implements TypeEvaluator<float[]> {
+
+        /**
+         * Result matrix returned by {@link #evaluate(float, float[], float[])}.
+         */
+        private final float[] mResultMatrix = new float[16];
+
+        @Override
+        public float[] evaluate(float fraction, float[] startValue, float[] endValue) {
+            for (int i = 0; i < mResultMatrix.length; i++) {
+                mResultMatrix[i] = MathUtils.lerp(startValue[i], endValue[i], fraction);
+            }
+            return mResultMatrix;
         }
     }
 
