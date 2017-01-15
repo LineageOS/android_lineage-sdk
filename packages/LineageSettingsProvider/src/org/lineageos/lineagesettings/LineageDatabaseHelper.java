@@ -51,7 +51,7 @@ public class LineageDatabaseHelper extends SQLiteOpenHelper{
     private static final boolean LOCAL_LOGV = false;
 
     private static final String DATABASE_NAME = "lineagesettings.db";
-    private static final int DATABASE_VERSION = 8;
+    private static final int DATABASE_VERSION = 9;
 
     private static final String DATABASE_NAME_OLD = "cmsettings.db";
 
@@ -320,6 +320,40 @@ public class LineageDatabaseHelper extends SQLiteOpenHelper{
                 db.endTransaction();
             }
             upgradeVersion = 8;
+        }
+
+        if (upgradeVersion < 9) {
+            if (mUserHandle == UserHandle.USER_OWNER) {
+                db.beginTransaction();
+                SQLiteStatement stmt = null;
+                try {
+                    stmt = db.compileStatement("SELECT value FROM system WHERE name=?");
+                    stmt.bindString(1, LineageSettings.System.STATUS_BAR_BATTERY_STYLE);
+                    long value = stmt.simpleQueryForLong();
+
+                    long newValue = 0;
+                    switch ((int) value) {
+                        case 5:
+                            newValue = 1;
+                            break;
+                        case 6:
+                            newValue = 3;
+                            break;
+                    }
+
+                    stmt = db.compileStatement("UPDATE system SET value=? WHERE name=?");
+                    stmt.bindLong(1, newValue);
+                    stmt.bindString(2, LineageSettings.System.STATUS_BAR_BATTERY_STYLE);
+                    stmt.execute();
+                    db.setTransactionSuccessful();
+                } catch (SQLiteDoneException ex) {
+                    // LineageSettings.System.STATUS_BAR_BATTERY_STYLE is not set
+                } finally {
+                    if (stmt != null) stmt.close();
+                    db.endTransaction();
+                }
+            }
+            upgradeVersion = 9;
         }
         // *** Remember to update DATABASE_VERSION above!
 
