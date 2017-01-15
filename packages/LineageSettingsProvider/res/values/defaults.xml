@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
      Copyright (C) 2014-2015 The CyanogenMod Project
+                   2019 The LineageOS Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -36,13 +37,10 @@
 
     <!-- Default for LineageSettings.System.STATUS_BAR_BATTERY_STYLE
          * 0: Display the battery as icon in portrait mode
-         * 2: Display the battery as a circle
-         * 4: Hide the battery status information
-         * 5: Display the battery as icon in landscape mode
-         * 6: Display the battery as plain text
-         * default: 2
-         -->
-    <integer name="def_battery_style">2</integer>
+         * 1: Display the battery as a circle
+         * 2: Display the battery as plain text
+    -->
+    <integer name="def_battery_style">0</integer>
 
     <!-- Default for LineageSettings.Secure.LOCKSCREEN_VISUALIZER_ENABLED -->
     <bool name="def_lockscreen_visualizer">true</bool>
