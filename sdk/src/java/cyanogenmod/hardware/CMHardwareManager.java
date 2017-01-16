@@ -656,6 +656,8 @@ public final class CMHardwareManager {
 
     /**
      * @return the number of RGB controls the device supports
+     *
+     * @deprecated
      */
     @Deprecated
     public int getNumGammaControls() {
@@ -672,6 +674,8 @@ public final class CMHardwareManager {
      * @param idx the control to query
      *
      * @return the current RGB gamma calibration for the given control
+     *
+     * @deprecated
      */
     @Deprecated
     public int[] getDisplayGammaCalibration(int idx) {
@@ -684,6 +688,8 @@ public final class CMHardwareManager {
 
     /**
      * @return the minimum value for all colors
+     *
+     * @deprecated
      */
     @Deprecated
     public int getDisplayGammaCalibrationMin() {
@@ -692,6 +698,8 @@ public final class CMHardwareManager {
 
     /**
      * @return the maximum value for all colors
+     *
+     * @deprecated
      */
     @Deprecated
     public int getDisplayGammaCalibrationMax() {
@@ -707,6 +715,8 @@ public final class CMHardwareManager {
      * inclusive.
      *
      * @return true on success, false otherwise.
+     *
+     * @deprecated
      */
     @Deprecated
     public boolean setDisplayGammaCalibration(int idx, int[] rgb) {

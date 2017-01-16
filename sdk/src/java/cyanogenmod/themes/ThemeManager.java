@@ -164,6 +164,7 @@ public class ThemeManager {
     /**
      * @deprecated Use {@link ThemeManager#registerThemeChangeListener(ThemeChangeListener)} instead
      */
+    @Deprecated
     public void addClient(ThemeChangeListener listener) {
         registerThemeChangeListener(listener);
     }
@@ -172,6 +173,7 @@ public class ThemeManager {
      * @deprecated Use {@link ThemeManager#unregisterThemeChangeListener(ThemeChangeListener)}
      * instead
      */
+    @Deprecated
     public void removeClient(ThemeChangeListener listener) {
         unregisterThemeChangeListener(listener);
     }
@@ -180,6 +182,7 @@ public class ThemeManager {
      * @deprecated Use {@link ThemeManager#unregisterThemeChangeListener(ThemeChangeListener)}
      * instead
      */
+    @Deprecated
     public void onClientPaused(ThemeChangeListener listener) {
         unregisterThemeChangeListener(listener);
     }
@@ -187,6 +190,7 @@ public class ThemeManager {
     /**
      * @deprecated Use {@link ThemeManager#registerThemeChangeListener(ThemeChangeListener)} instead
      */
+    @Deprecated
     public void onClientResumed(ThemeChangeListener listener) {
         registerThemeChangeListener(listener);
     }
@@ -195,6 +199,7 @@ public class ThemeManager {
      * @deprecated Use {@link ThemeManager#unregisterThemeChangeListener(ThemeChangeListener)}
      * instead
      */
+    @Deprecated
     public void onClientDestroyed(ThemeChangeListener listener) {
         unregisterThemeChangeListener(listener);
     }

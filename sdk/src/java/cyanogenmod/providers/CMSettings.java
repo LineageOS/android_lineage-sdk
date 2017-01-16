@@ -1379,8 +1379,9 @@ public final class CMSettings {
         public static final String DISPLAY_CABC = "display_low_power";
 
         /**
-         * @deprecated
+         * @deprecated Use {@link cyanogenmod.providers.CMSettings.System#DISPLAY_CABC} instead
          */
+        @Deprecated
         public static final String DISPLAY_LOW_POWER = DISPLAY_CABC;
 
         /** @hide */

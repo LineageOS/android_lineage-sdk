@@ -275,6 +275,9 @@ public class ProfileManager {
         return sService;
     }
 
+    /**
+     * @deprecated
+     */
     @Deprecated
     public void setActiveProfile(String profileName) {
         try {
@@ -349,6 +352,8 @@ public class ProfileManager {
      * Get the {@link Profile} object by its literal name
      * @param profileName name associated with the profile
      * @return profile a {@link Profile} object
+     *
+     * @deprecated
      */
     @Deprecated
     public Profile getProfile(String profileName) {

@@ -87,6 +87,8 @@ public final class ConnectionSettings implements Parcelable {
     /**
      * The {@link #PROFILE_CONNECTION_WIMAX} allows for enabling and disabling the WIMAX radio (if exists)
      * on the device. Boolean connection settings {@link BooleanState}
+     *
+     * @deprecated
      */
     @Deprecated
     public static final int PROFILE_CONNECTION_WIMAX = 3;
