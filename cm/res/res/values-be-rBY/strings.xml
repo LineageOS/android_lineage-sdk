@@ -38,7 +38,7 @@
   <string name="permdesc_modifyProfiles">Дазваляць дадаткам змяняць сістэмныя профілі.</string>
   <!-- Labels for the HARDWARE_ABSTRACTION_ACCESS permission. -->
   <string name="permlab_useHardwareFramework">Узаемадзеянне з абсталяваннем</string>
-  <string name="permdesc_useHardwareFramework">Дадатак зможа атрымваць доступ да падсістэмы апаратных абстракцый LineageOS.</string>
+  <string name="permdesc_useHardwareFramework">Дадатак зможа атрымваць доступ да падсістэмы апаратных абстракцый CyanogenMod.</string>
   <!-- Labels for the WRITE_ALARMS permission. -->
   <string name="permlab_write_alarms">змена будзільнікаў</string>
   <string name="permdesc_write_alarms">Дадатак зможа дадаваць, змяняць ці выдаляць любыя будзільнікі.</string>

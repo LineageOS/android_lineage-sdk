@@ -155,11 +155,11 @@
   <string name="permdesc_accessLiveLockScreenServiceProvider">Ermöglicht einer App, auf den Verwaltungsdienst der animierten Bildschirmsperre zuzugreifen.</string>
   <!-- Weather Service strings -->
   <string name="permlab_weather_read">Wetter auslesen</string>
-  <string name="permdesc_weather_read">Ermöglicht einer App, Inhalte des Wetteranbieters auszulesen.</string>
-  <string name="permlab_weather_write">Wetteranbieter aktualisieren</string>
-  <string name="permdesc_weather_write">Ermöglicht einer App, Inhalte des Wetteranbieters zu aktualisieren.</string>
-  <string name="permlab_weather_bind">Anbindung an einen Service für Wetteranbieter</string>
-  <string name="permdesc_weather_bind">Ermöglicht der App, sich als Wetteranbieterdienst zu identifizieren.</string>
+  <string name="permdesc_weather_read">Ermöglicht einer App, Inhalte des Wetterdatenanbieters auszulesen.</string>
+  <string name="permlab_weather_write">Wetterdatenanbieter aktualisieren</string>
+  <string name="permdesc_weather_write">Ermöglicht einer App, Inhalte des Wetterdatenanbieters zu aktualisieren.</string>
+  <string name="permlab_weather_bind">Anbindung als Service für Wetterdatenanbieter</string>
+  <string name="permdesc_weather_bind">Ermöglicht der App, sich als Wetterdatenanbieter zu identifizieren.</string>
   <string name="permlab_weather_access_mgr">auf Wetterdienst zugreifen</string>
   <string name="permdesc_weather_access_mgr">Ermöglicht der App, auf den Wetterdienst des Systems zuzugreifen. Wird für normale Apps nicht benötigt.</string>
   <!-- DataUsageProvider write permission title -->

@@ -88,6 +88,11 @@
   <string name="perf_profile_bias_power">Αποδοτικό</string>
   <string name="perf_profile_bias_perf">Γρήγορο</string>
   <!-- Performance profiles -->
+  <string name="perf_profile_pwrsv_summary">Μέγιστη εξοικονόμηση ενέργειας. Μειώνει την απόδοση της συσκευής, απενεργοποιεί εργασίες στο παρασκήνιο και τα δεδομένα, απενεργοποιεί τα εφέ κίνησης και μειώνει την εμφάνιση ρυθμού πλαισίου</string>
+  <string name="perf_profile_bal_summary">Ισορροπία βέλτιστης απόδοσης και χαρακτηριστικά εξοικονόμησης</string>
+  <string name="perf_profile_perf_summary">Λειτουργία υψηλής απόδοσης. Χρήσιμο για εφαρμογές που απαιτούν χαμηλή καθυστέρηση και υψηλότερη απόδοση όταν η κατανάλωση ενέργειας δεν έχει καμία σημασία</string>
+  <string name="perf_profile_bias_power_summary">Υψηλή εξοικονόμηση. Περιορίζει την μέγιστη απόδοση του επεξεργαστή και βελτιστοποίηση για εξοικονόμηση με κόστος υψηλής καθυστέρησης</string>
+  <string name="perf_profile_bias_perf_summary">Υψηλή απόδοση. Μείωση καθυστέρησης με ελαφρώς αυξημένη κατανάλωση</string>
   <!-- LiveDisplay strings -->
   <string name="live_display_auto">Αυτόματο</string>
   <string name="live_display_auto_summary">Αυτόματη ρύθμιση της θερμοκρασίας χρώματος της οθόνης μετά το ηλιοβασίλεμα και την ανατολή του ηλίου</string>
@@ -178,5 +183,8 @@
   <string name="qs_themes_label">Θέματα</string>
   <string name="qs_themes_content_description">Προσαρμόστε το θέμα σας</string>
   <!-- Privacy Guard -->
+  <string name="privacy_guard_manager_title">Προστασία Απορρήτου</string>
   <!-- Permissions used by remote preferences -->
+  <string name="permlab_manageRemotePrefs">διαχείριση απομακρυσμένων ρυθμίσεων</string>
+  <string name="permdesc_manageRemotePrefs">Επιτρέπει σε μια εφαρμογή να διαχειριστεί απομακρυσμένες ρυθμίσεις</string>
 </resources>

@@ -38,7 +38,7 @@
   <string name="permdesc_modifyProfiles">Tillåter att en app ändrar systemprofiler.</string>
   <!-- Labels for the HARDWARE_ABSTRACTION_ACCESS permission. -->
   <string name="permlab_useHardwareFramework">använda hårdvaruramverk</string>
-  <string name="permdesc_useHardwareFramework">Ger en app åtkomst till LineageOSs hårdvaruramverk.</string>
+  <string name="permdesc_useHardwareFramework">Ger en app åtkomst till CyanogenMods hårdvaruramverk.</string>
   <!-- Labels for the WRITE_ALARMS permission. -->
   <string name="permlab_write_alarms">ändra alarm direkt</string>
   <string name="permdesc_write_alarms">Tillåter att en app lägger till, ändrar eller tar bort alla dina alarm.</string>

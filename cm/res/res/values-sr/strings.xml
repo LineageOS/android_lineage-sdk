@@ -88,6 +88,11 @@
   <string name="perf_profile_bias_power">Ефикасност</string>
   <string name="perf_profile_bias_perf">Брзина</string>
   <!-- Performance profiles -->
+  <string name="perf_profile_pwrsv_summary">Максимална уштеда батерије. Смањује перформансе уређаја, онемогућава позадинске задатке и податке, онемогућава анимације и брзину освежавања екрана</string>
+  <string name="perf_profile_bal_summary">Баланс оптималних перформанси и потрошње</string>
+  <string name="perf_profile_perf_summary">Режим високих перформанси. Корисно за апликације које траже брзи одзив и високи приоритет када потрошња није битна</string>
+  <string name="perf_profile_bias_power_summary">Уштеда енергије. Лимитиран CPU и оптимизована уштеда батерије на рачун повећаног кашњења</string>
+  <string name="perf_profile_bias_perf_summary">Услуга перформанси. Смањује кашњење са благо повећаном потрошњом</string>
   <!-- LiveDisplay strings -->
   <string name="live_display_auto">Аутоматски</string>
   <string name="live_display_auto_summary">Аутоматски прилагоди температуру боје екрана после сумрака и свитања</string>
@@ -178,5 +183,8 @@
   <string name="qs_themes_label">Теме</string>
   <string name="qs_themes_content_description">Прилагодите вашу тему</string>
   <!-- Privacy Guard -->
+  <string name="privacy_guard_manager_title">Заштита приватности</string>
   <!-- Permissions used by remote preferences -->
+  <string name="permlab_manageRemotePrefs">управљај удаљеним подешавањима</string>
+  <string name="permdesc_manageRemotePrefs">Дозволи апликацији управљање удаљеним подешавањима</string>
 </resources>

@@ -38,7 +38,7 @@
   <string name="permdesc_modifyProfiles">Приложение сможет изменять настройки системных профилей.</string>
   <!-- Labels for the HARDWARE_ABSTRACTION_ACCESS permission. -->
   <string name="permlab_useHardwareFramework">Взаимодействие с оборудованием</string>
-  <string name="permdesc_useHardwareFramework">Приложение сможет получать доступ к подсистеме аппаратных абстракций LineageOS.</string>
+  <string name="permdesc_useHardwareFramework">Приложение сможет получать доступ к подсистеме аппаратных абстракций CyanogenMod.</string>
   <!-- Labels for the WRITE_ALARMS permission. -->
   <string name="permlab_write_alarms">Изменение будильников</string>
   <string name="permdesc_write_alarms">Приложение сможет добавлять, изменять или удалять любые будильники.</string>

@@ -94,7 +94,7 @@
   <string name="perf_profile_bias_power_summary">Preferovanie úspory energie. Obmedzenie maximálneho výkonu procesora, optimalizácia úspory energie za cenu vyššiu latencia</string>
   <string name="perf_profile_bias_perf_summary">Preferovanie výkonu. Znižuje latenciu a zvyšuje spotrebu energie</string>
   <!-- LiveDisplay strings -->
-  <string name="live_display_auto">Automatické</string>
+  <string name="live_display_auto">Automaticky</string>
   <string name="live_display_auto_summary">Automaticky upraviť teplotu farieb obrazovky po západe a východe slnka</string>
   <string name="live_display_off">Vypnuté</string>
   <string name="live_display_off_summary">Zakázať všetky úpravy</string>
@@ -104,7 +104,7 @@
   <string name="live_display_night_summary">Použiť len nastavenia pre noc</string>
   <string name="live_display_outdoor">Vonku (slnečno)</string>
   <string name="live_display_outdoor_summary">Používať len nastavenia pre vonkajšie prostredie</string>
-  <string name="live_display_hint">LiveDisplay môže pomôcť znížiť únavu očí a pomôže vám v noci zaspať. Kliknite sem a vyskúšajte túto funkciu!</string>
+  <string name="live_display_hint">LiveDisplay môže pomôcť znížiť únavu očí a pomôže vám spať v noci. Kliknite sem a vyskúšajte túto funkciu!</string>
   <string name="accessibility_quick_settings_live_display_off">LiveDisplay vyp.</string>
   <string name="accessibility_quick_settings_live_display_auto">LiveDisplay: automatický režim.</string>
   <string name="accessibility_quick_settings_live_display_day">LiveDisplay: denný režim.</string>
@@ -130,7 +130,7 @@
   <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
   <string name="permdesc_accessThemeService">Umožňuje aplikácii prístup k službe na správu tém. Toto povolenie nie je bežné pre štandardné aplikácie.</string>
   <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permlab_readThemes">čítať informácie o vašej téme</string>
+  <string name="permlab_readThemes">čítať informácie vašej témy</string>
   <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
   <string name="permdesc_readThemesDesc">Umožňuje aplikácii čítať vaše témy a určiť, ktorú tému ste použili.</string>
   <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
@@ -140,22 +140,22 @@
   <!-- Performance manager permission title -->
   <string name="permlab_perfAccess">prístup k správe výkonu</string>
   <!-- Performance manager permission description -->
-  <string name="permdesc_perfAccessDesc">Umožňuje aplikácii prístup k správe výkonu. Toto povolenie by nemala požadovať žiadna štandardná aplikácia.</string>
+  <string name="permdesc_perfAccessDesc">Umožňuje aplikácii prístup k správe výkonu. Toto povolenie nie je bežné pre štandardné aplikácie.</string>
   <!-- Access live lock screen manager service permission label -->
-  <string name="permlab_accessLiveLockScreenService">prístup k službe správcu živého zámku obrazovky</string>
+  <string name="permlab_accessLiveLockScreenService">prístup k službe správcu živých uzamykacích obrazoviek</string>
   <!-- Access live lock screen manager service permission description -->
-  <string name="permdesc_accessLiveLockScreenService">Umožní aplikácii pristupovať k správcovi služby živého zámku obrazovky.</string>
+  <string name="permdesc_accessLiveLockScreenService">Umožní aplikácii prístup k správcovi služby živých uzamykacích obrazoviek.</string>
   <!-- Privileged access live lock screen manager service permission label -->
-  <string name="permlab_accessLiveLockScreenServicePrivate">prístup k službe správcu živého zámku obrazovky</string>
+  <string name="permlab_accessLiveLockScreenServicePrivate">prístup k službe správcu živých uzamykacích obrazoviek</string>
   <!-- Privileged access live lock screen manager service permission description -->
-  <string name="permdesc_accessLiveLockScreenServicePrivate">Umožní systémovým aplikáciám prístup k správcovi služby živého zámku obrazovky.</string>
+  <string name="permdesc_accessLiveLockScreenServicePrivate">Umožní systémovým aplikáciám prístup k správcovi služby živých uzamykacích obrazoviek.</string>
   <!-- Live lock screen manager service provider permission label -->
-  <string name="permlab_accessLiveLockScreenServiceProvider">poskytnúť správcu služby živého zámku obrazovky</string>
+  <string name="permlab_accessLiveLockScreenServiceProvider">poskytnúť správcu služby živých uzamykacích obrazoviek</string>
   <!-- Live lock screen manager service provider permission description -->
-  <string name="permdesc_accessLiveLockScreenServiceProvider">Umožní službe poskytnúť správcu služby živého zámku obrazovky.</string>
+  <string name="permdesc_accessLiveLockScreenServiceProvider">Umožní službe poskytnúť správcu služby živých uzamykacích obrazoviek.</string>
   <!-- Weather Service strings -->
   <string name="permlab_weather_read">čítať počasie</string>
-  <string name="permdesc_weather_read">Umožní aplikácii čítať obsah od poskytovateľa počasia.</string>
+  <string name="permdesc_weather_read">Umožní aplikácii čítať obsah z poskytovateľa počasia.</string>
   <string name="permlab_weather_write">aktualizovať poskytovateľa počasia</string>
   <string name="permdesc_weather_write">Umožní aplikácii aktualizovať obsah poskytovateľa počasia.</string>
   <string name="permlab_weather_bind">viazať sa ako služba poskytovateľa počasia</string>
