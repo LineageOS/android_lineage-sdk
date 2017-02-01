@@ -18,7 +18,7 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Label for the LineageOS system components when they are shown to the user. -->
-  <string name="cyanogenmod_system_label">LineageOS-systeem</string>
+  <string name="cyanogenmod_system_label">LineageOS Systeem</string>
   <string name="permlab_publishCustomTile">een aangepaste tegel aanmaken in het snelle instellingenpaneel</string>
   <string name="permdesc_publishCustomTile">Hiermee kan een app een tegel toevoegen aan Snelle instellingen.</string>
   <string name="permlab_modifyNetworkSettings">systeemnetwerkinstellingen wijzigen</string>
@@ -90,9 +90,9 @@
   <!-- Performance profiles -->
   <string name="perf_profile_pwrsv_summary">Maximale energiebesparing. Vermindert prestaties, achtergrondtaken, gegevensverbinding en animaties worden uitgeschakeld en beeldsnelheid wordt verlaagd</string>
   <string name="perf_profile_bal_summary">Balans tussen optimale prestaties en energieverbruik</string>
-  <string name="perf_profile_perf_summary">Hoge prestaties. Handig voor apps die low latency en de hoogste doorvoersnelheid vereisen en waarbij stroomverbruik niet van belang is</string>
-  <string name="perf_profile_bias_power_summary">Geeft de voorkeur aan energiebesparing. Maximaal CPU-vermogen wordt beperkt en geoptimaliseerd voor energiebesparing ten koste van een hogere latency</string>
-  <string name="perf_profile_bias_perf_summary">Geeft de voorkeur aan prestaties. Latency wordt beperkt ten koste van een iets hoger stroomverbruik</string>
+  <string name="perf_profile_perf_summary">Hoge prestaties. Te gebruiken in situaties die de hoogste prestaties vereisen en waarbij stroomverbruik niet van belang is</string>
+  <string name="perf_profile_bias_power_summary">Geeft de voorkeur aan energiebesparing. Maximaal CPU-vermogen wordt beperkt en geoptimaliseerd voor energiebesparing, ten koste van een mindere prestatie</string>
+  <string name="perf_profile_bias_perf_summary">Geeft de voorkeur aan prestaties. Goede prestaties ten koste van een iets hoger stroomverbruik</string>
   <!-- LiveDisplay strings -->
   <string name="live_display_auto">Automatisch</string>
   <string name="live_display_auto_summary">Automatisch kleurtemperatuur van scherm aanpassen na zonsopkomst en -ondergang</string>
@@ -185,4 +185,6 @@
   <!-- Privacy Guard -->
   <string name="privacy_guard_manager_title">Privacybescherming</string>
   <!-- Permissions used by remote preferences -->
+  <string name="permlab_manageRemotePrefs">instellingen voor externe verbindingen beheren</string>
+  <string name="permdesc_manageRemotePrefs">Een app toestaan wijzigingen te maken aan externe verbindingen</string>
 </resources>

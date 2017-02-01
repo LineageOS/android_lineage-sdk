@@ -104,17 +104,17 @@
   <string name="live_display_night_summary">Само настройки на нощен режим</string>
   <string name="live_display_outdoor">На открито (ярко слънце)</string>
   <string name="live_display_outdoor_summary">Само настройки на режим на открито</string>
-  <string name="live_display_hint">Използването на адаптивен екран може да помогне за намаляване умората в очите през нощта. Докоснете тук, за да го изпробвате!</string>
-  <string name="accessibility_quick_settings_live_display_off">Изключи адаптивен екран.</string>
-  <string name="accessibility_quick_settings_live_display_auto">Адаптивен екран: автоматичен режим.</string>
-  <string name="accessibility_quick_settings_live_display_day">Адаптивен екран: дневен режим.</string>
-  <string name="accessibility_quick_settings_live_display_night">Адаптивен екран: нощен режим.</string>
-  <string name="accessibility_quick_settings_live_display_outdoor">Адаптивен екран: външен режим.</string>
-  <string name="accessibility_quick_settings_live_display_changed_off">Адаптивен екран е изключен.</string>
-  <string name="accessibility_quick_settings_live_display_changed_auto">Адаптивен екран е променен на автоматичен режим.</string>
-  <string name="accessibility_quick_settings_live_display_changed_day">Адаптивен екран е променен на дневен режим.</string>
-  <string name="accessibility_quick_settings_live_display_changed_night">Адаптивен екран е променен на нощен режим.</string>
-  <string name="accessibility_quick_settings_live_display_changed_outdoor">Адаптивен екран е променен на външен режим.</string>
+  <string name="live_display_hint">Използването на адаптивен дисплей може да помогне за намаляване умората в очите през нощта. Докоснете тук, за да го изпробвате!</string>
+  <string name="accessibility_quick_settings_live_display_off">Изключи адаптивен дисплей.</string>
+  <string name="accessibility_quick_settings_live_display_auto">Адаптивен дисплей: автоматичен режим.</string>
+  <string name="accessibility_quick_settings_live_display_day">Адаптивен дисплей: дневен режим.</string>
+  <string name="accessibility_quick_settings_live_display_night">Адаптивен дисплей: нощен режим.</string>
+  <string name="accessibility_quick_settings_live_display_outdoor">Адаптивен дисплей: външен режим.</string>
+  <string name="accessibility_quick_settings_live_display_changed_off">Адаптивен дисплей е изключен.</string>
+  <string name="accessibility_quick_settings_live_display_changed_auto">Адаптивен дисплей е променен на автоматичен режим.</string>
+  <string name="accessibility_quick_settings_live_display_changed_day">Адаптивен дисплей е променен на дневен режим.</string>
+  <string name="accessibility_quick_settings_live_display_changed_night">Адаптивен дисплей е променен на нощен режим.</string>
+  <string name="accessibility_quick_settings_live_display_changed_outdoor">Адаптивен дисплей е променен на външен режим.</string>
   <!-- Third party keyguard permission label -->
   <string name="permlab_thirdPartyKeyguard">Защитен екран от друг автор</string>
   <!-- Third party keyguard permission description -->
@@ -171,8 +171,8 @@
   <!-- DataUsageProvider read permission description -->
   <string name="permdesc_dataUsageRead">Разрешава на приложението да чете съдържанието на базата данни.</string>
   <!-- LiveDisplay manager permission -->
-  <string name="permlab_manageLiveDisplay">управление на настройките за Адаптивен екран</string>
-  <string name="permdesc_manageLiveDisplay">Позволява на приложението да променя разширените настройки на екрана.</string>
+  <string name="permlab_manageLiveDisplay">управление на настройките за Адаптивен дисплей</string>
+  <string name="permdesc_manageLiveDisplay">Позволява на приложението да променя разширените настройки на дисплея.</string>
   <!-- CMAudioService - observe session changes permission -->
   <string name="permlab_observe_audio_sessions">преглед на промените в аудио сесии</string>
   <string name="permdesc_observe_audio_sessions">Позволява на приложение да наблюдава създаване и унищожаване на аудио потоци.</string>
