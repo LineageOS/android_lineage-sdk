@@ -83,8 +83,7 @@ public class PerformanceManagerService extends CMSystemService {
 
     // keep in sync with hardware/libhardware/include/hardware/power.h
     private final int POWER_HINT_CPU_BOOST    = 0x00000110;
-    private final int POWER_HINT_LAUNCH_BOOST = 0x00000111;
-    private final int POWER_HINT_SET_PROFILE  = 0x00000112;
+    private final int POWER_HINT_SET_PROFILE  = 0x00000111;
 
     private final int POWER_FEATURE_SUPPORTED_PROFILES = 0x00001000;
 
@@ -117,8 +116,7 @@ public class PerformanceManagerService extends CMSystemService {
 
     // Events on the handler
     private static final int MSG_CPU_BOOST    = 1;
-    private static final int MSG_LAUNCH_BOOST = 2;
-    private static final int MSG_SET_PROFILE  = 3;
+    private static final int MSG_SET_PROFILE  = 2;
 
     public PerformanceManagerService(Context context) {
         super(context);
@@ -493,18 +491,6 @@ public class PerformanceManagerService extends CMSystemService {
         }
 
         @Override
-        public void launchBoost(int pid, String packageName) {
-            if (!mSystemReady) {
-                Slog.e(TAG, "System is not ready, dropping launch boost request");
-                return;
-            }
-            if (!mBoostEnabled) {
-                return;
-            }
-            mHandler.obtainMessage(MSG_LAUNCH_BOOST, pid, 0, packageName).sendToTarget();
-        }
-
-        @Override
         public void activityResumed(Intent intent) {
             String activityName = null;
             if (intent != null) {
@@ -524,11 +510,10 @@ public class PerformanceManagerService extends CMSystemService {
     private static class BoostLog {
         static final int APP_PROFILE  = 0;
         static final int CPU_BOOST    = 1;
-        static final int LAUNCH_BOOST = 2;
-        static final int USER_PROFILE = 3;
+        static final int USER_PROFILE = 2;
 
         static final String[] EVENTS = new String[] {
-                "APP_PROFILE", "CPU_BOOST", "LAUNCH_BOOST", "USER_PROFILE" };
+                "APP_PROFILE", "CPU_BOOST", "USER_PROFILE" };
 
         private static final int LOG_BUF_SIZE = 25;
 
@@ -583,14 +568,6 @@ public class PerformanceManagerService extends CMSystemService {
                     mPm.powerHint(POWER_HINT_CPU_BOOST, msg.arg1);
                     mBoostLog.log(BoostLog.CPU_BOOST, "duration=" + msg.arg1);
                     break;
-                case MSG_LAUNCH_BOOST:
-                    int pid = msg.arg1;
-                    String packageName = (String) msg.obj;
-                    if (NativeHelper.isNativeLibraryAvailable() && packageName != null) {
-                        native_launchBoost(pid, packageName);
-                    }
-                    mBoostLog.log(BoostLog.LAUNCH_BOOST, "package=" + packageName);
-                    break;
                 case MSG_SET_PROFILE:
                     mPm.powerHint(POWER_HINT_SET_PROFILE, msg.arg1);
                     mBoostLog.log((msg.arg2 == 1 ? BoostLog.USER_PROFILE : BoostLog.APP_PROFILE),
@@ -626,6 +603,4 @@ public class PerformanceManagerService extends CMSystemService {
             }
         }
     };
-
-    private native final void native_launchBoost(int pid, String packageName);
 }
