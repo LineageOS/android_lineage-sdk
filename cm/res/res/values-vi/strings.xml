@@ -88,6 +88,11 @@
   <string name="perf_profile_bias_power">Hiệu quả</string>
   <string name="perf_profile_bias_perf">Nhanh</string>
   <!-- Performance profiles -->
+  <string name="perf_profile_pwrsv_summary">Tiết kiệm pin tối đa. Làm giảm hiệu suất thiết bị, vô hiệu hóa dữ liệu và tác vụ nền, tắt hoạt ảnh, và làm giảm tỷ lệ khung hình hiển thị</string>
+  <string name="perf_profile_bal_summary">Cân bằng của tối ưu hiệu suất và điện năng</string>
+  <string name="perf_profile_perf_summary">Chế độ hiệu suất cao. Hữu ích cho các ứng dụng đòi hỏi độ trễ thấp và băng thông cao nhất khi tiêu thụ điện năng không phải là một mối quan tâm</string>
+  <string name="perf_profile_bias_power_summary">Ưu tiên tiết kiệm pin. Hạn chế tối đa điện năng CPU và tối ưu hóa điện năng để tiết kiệm hao phí do độ trễ cao hơn</string>
+  <string name="perf_profile_bias_perf_summary">Ưu tiên hiệu suất. Làm giảm độ trễ với điện năng tiêu thụ gia tăng không đáng kể</string>
   <!-- LiveDisplay strings -->
   <string name="live_display_auto">Tự động</string>
   <string name="live_display_auto_summary">Tự động chỉnh nhiệt độ màu của màn hình theo ngày và đêm</string>
@@ -172,9 +177,14 @@
   <string name="permlab_observe_audio_sessions">quan sát các thay đổi về phiên âm thanh</string>
   <string name="permdesc_observe_audio_sessions">Cho phép ứng dụng quan sát dòng âm thanh được tạo và bị hủy.</string>
   <!-- CMAudioService - observe session changes permission -->
+  <string name="permlab_manage_audio_sessions">quản lý thay đổi âm thanh phiên</string>
+  <string name="permdesc_manage_audio_sessions">Cho phép một ứng dụng gửi thông tin các cập nhật stream âm thanh.</string>
   <!-- QuickSettings: Themes tile -->
   <string name="qs_themes_label">Chủ đề</string>
   <string name="qs_themes_content_description">Tùy chỉnh chủ đề của bạn</string>
   <!-- Privacy Guard -->
+  <string name="privacy_guard_manager_title">Bảo vệ quyền riêng tư</string>
   <!-- Permissions used by remote preferences -->
+  <string name="permlab_manageRemotePrefs">quản lý cài đặt từ xa</string>
+  <string name="permdesc_manageRemotePrefs">Cho phép một ứng dụng quản lý cài đặt từ xa</string>
 </resources>

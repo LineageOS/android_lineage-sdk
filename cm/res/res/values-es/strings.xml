@@ -88,6 +88,11 @@
   <string name="perf_profile_bias_power">Eficiencia</string>
   <string name="perf_profile_bias_perf">Rápido</string>
   <!-- Performance profiles -->
+  <string name="perf_profile_pwrsv_summary">Máximo ahorro de energía. Reduce el rendimiento del dispositivo, desactiva datos y tareas en segundo plano, desactiva las animaciones y reduce la velocidad de fotogramas de la pantalla</string>
+  <string name="perf_profile_bal_summary">Equilibrio de rendimiento optimo y características de energía</string>
+  <string name="perf_profile_perf_summary">Modo de alto rendimiento. Útil para aplicaciones que requieren baja latencia y mayor rendimiento, cuando el consumo de energía no es una preocupación</string>
+  <string name="perf_profile_bias_power_summary">Favorecer ahorro de energía. Limitar la potencia máxima del CPU y optimizar para poder ahorrar energía a costa de mayor latencia</string>
+  <string name="perf_profile_bias_perf_summary">Favorecer el rendimiento. Reduce la latencia con un consumo de energía ligeramente mayor</string>
   <!-- LiveDisplay strings -->
   <string name="live_display_auto">Automático</string>
   <string name="live_display_auto_summary">Ajustar automáticamente la temperatura del color de pantalla con el amanecer y el anochecer</string>
@@ -172,9 +177,14 @@
   <string name="permlab_observe_audio_sessions">observa los cambios en la sesión de sonido</string>
   <string name="permdesc_observe_audio_sessions">Permite que una aplicación observe los flujos de sonido que se crean y destruyen.</string>
   <!-- CMAudioService - observe session changes permission -->
+  <string name="permlab_manage_audio_sessions">gestionar los cambios de la sesión de audio</string>
+  <string name="permdesc_manage_audio_sessions">Permite a la aplicación enviar actualizaciones de la transmisión del audio.</string>
   <!-- QuickSettings: Themes tile -->
   <string name="qs_themes_label">Temas</string>
   <string name="qs_themes_content_description">Personalizar tu tema</string>
   <!-- Privacy Guard -->
+  <string name="privacy_guard_manager_title">Protección de la privacidad</string>
   <!-- Permissions used by remote preferences -->
+  <string name="permlab_manageRemotePrefs">administrar la configuración remota</string>
+  <string name="permdesc_manageRemotePrefs">Permite a una aplicación administrar la configuración remota</string>
 </resources>

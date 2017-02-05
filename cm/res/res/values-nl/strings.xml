@@ -185,6 +185,4 @@
   <!-- Privacy Guard -->
   <string name="privacy_guard_manager_title">Privacybescherming</string>
   <!-- Permissions used by remote preferences -->
-  <string name="permlab_manageRemotePrefs">instellingen voor externe verbindingen beheren</string>
-  <string name="permdesc_manageRemotePrefs">Een app toestaan wijzigingen te maken aan externe verbindingen</string>
 </resources>
