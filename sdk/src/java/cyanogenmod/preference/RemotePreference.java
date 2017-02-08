@@ -124,7 +124,7 @@ public class RemotePreference extends SelfRemovingPreference
     @Override
     public void onDetached() {
         super.onDetached();
-        RemotePreferenceManager.get(mContext).detach(getKey());
+        RemotePreferenceManager.get(mContext).detach(getKey(), this);
     }
 
     protected String getRemoteKey(Bundle metaData) {

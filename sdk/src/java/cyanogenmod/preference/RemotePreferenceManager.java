@@ -28,8 +28,10 @@ import android.os.UserHandle;
 import android.util.ArrayMap;
 import android.util.Log;
 
+import java.util.HashSet;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Set;
 
 import cyanogenmod.platform.Manifest;
 
@@ -54,7 +56,7 @@ public class RemotePreferenceManager {
 
     private final Context mContext;
     private final Map<String, Intent> mCache = new ArrayMap<>();
-    private final Map<String, OnRemoteUpdateListener> mCallbacks = new ArrayMap<>();
+    private final Map<String, Set<OnRemoteUpdateListener>> mCallbacks = new ArrayMap<>();
 
     private final Handler mMainHandler = new Handler(Looper.getMainLooper());
 
@@ -73,7 +75,7 @@ public class RemotePreferenceManager {
 
     public synchronized static RemotePreferenceManager get(Context context) {
         if (sInstance == null) {
-            sInstance = new RemotePreferenceManager(context);
+            sInstance = new RemotePreferenceManager(context.getApplicationContext());
         }
         return sInstance;
     }
@@ -89,27 +91,36 @@ public class RemotePreferenceManager {
         }
         synchronized (mCallbacks) {
             if (i != null) {
-                mCallbacks.put(key, pref);
-                if (mCallbacks.size() == 1) {
-                    mThread = new HandlerThread("RemotePreference");
-                    mThread.start();
-                    mHandler = new Handler(mThread.getLooper());
-                    mContext.registerReceiver(mListener,
-                            new IntentFilter(ACTION_REFRESH_PREFERENCE),
-                            Manifest.permission.MANAGE_REMOTE_PREFERENCES, mHandler);
+                Set<OnRemoteUpdateListener> cbs = mCallbacks.get(key);
+                if (cbs == null) {
+                    cbs = new HashSet<>();
+                    mCallbacks.put(key, cbs);
+                    if (mCallbacks.size() == 1) {
+                        mThread = new HandlerThread("RemotePreference");
+                        mThread.start();
+                        mHandler = new Handler(mThread.getLooper());
+                        mContext.registerReceiver(mListener,
+                                new IntentFilter(ACTION_REFRESH_PREFERENCE),
+                                Manifest.permission.MANAGE_REMOTE_PREFERENCES, mHandler);
+                    }
                 }
+                cbs.add(pref);
                 requestUpdate(key);
             }
         }
     }
 
-    public void detach(String key) {
+    public void detach(String key, OnRemoteUpdateListener pref) {
         synchronized (mCallbacks) {
-            if (mCallbacks.remove(key) != null && mCallbacks.size() == 0) {
+            Set<OnRemoteUpdateListener> cbs = mCallbacks.get(key);
+            if (cbs != null && cbs.remove(pref) && cbs.isEmpty()
+                    && mCallbacks.remove(key) != null && mCallbacks.isEmpty()) {
                 mContext.unregisterReceiver(mListener);
                 if (mThread != null) {
                     mThread.quit();
+                    mThread = null;
                 }
+                mHandler = null;
             }
         }
     }
@@ -152,7 +163,12 @@ public class RemotePreferenceManager {
                             public void run() {
                                 synchronized (mCallbacks) {
                                     if (mCallbacks.containsKey(key)) {
-                                        mCallbacks.get(key).onRemoteUpdated(bundle);
+                                        Set<OnRemoteUpdateListener> cbs = mCallbacks.get(key);
+                                        if (cbs != null) {
+                                            for (OnRemoteUpdateListener cb : cbs) {
+                                                cb.onRemoteUpdated(bundle);
+                                            }
+                                        }
                                     }
                                 }
                             }
