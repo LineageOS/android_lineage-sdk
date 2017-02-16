@@ -88,6 +88,11 @@
   <string name="perf_profile_bias_power">יעילות</string>
   <string name="perf_profile_bias_perf">מהיר</string>
   <!-- Performance profiles -->
+  <string name="perf_profile_pwrsv_summary">חסכון חשמל מרבי. מפחית את ביצועי התקן, מבטל משימות רקע ואינטרנט סלולרי, מבטל הנפשות ומפחית את קצב רענון התצוגה</string>
+  <string name="perf_profile_bal_summary">אזן בין ביצועים לצריכת חשמל</string>
+  <string name="perf_profile_perf_summary">מצב ביצועים גבוהים. שימושי ליישומים שדורשים הרבה כוח עיבוד ותגובה מהירה וכשצריכת החשמל אינה משנה</string>
+  <string name="perf_profile_bias_power_summary">חיסכון בצריכת חשמל. מגביל את עוצמת המעבד ומשפר את צריכת החשמל בתמורה למהירות תגובה נמוכה</string>
+  <string name="perf_profile_bias_perf_summary">ביצועים טובים. משפר את זמן התגובה עם עליה קלה בצריכת החשמל</string>
   <!-- LiveDisplay strings -->
   <string name="live_display_auto">אוטומטי</string>
   <string name="live_display_auto_summary">התאם אוטומטית את טמפרטורת הצבע של המסך לאחר הזריחה והשקיעה</string>
@@ -178,5 +183,8 @@
   <string name="qs_themes_label">ערכות עיצוב</string>
   <string name="qs_themes_content_description">התאם אישית את ערכת הנושא שלך</string>
   <!-- Privacy Guard -->
+  <string name="privacy_guard_manager_title">שומר הפרטיות</string>
   <!-- Permissions used by remote preferences -->
+  <string name="permlab_manageRemotePrefs">נהל הגדרות מרחוק</string>
+  <string name="permdesc_manageRemotePrefs">אפשר ליישום לנהל הגדרות מרחוק</string>
 </resources>

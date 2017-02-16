@@ -18,7 +18,7 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Label for the LineageOS system components when they are shown to the user. -->
-  <string name="cyanogenmod_system_label">LineageOSシステム</string>
+  <string name="cyanogenmod_system_label">LineageOS システム</string>
   <string name="permlab_publishCustomTile">クイック設定パネルでのカスタムタイルの作成</string>
   <string name="permdesc_publishCustomTile">クイック設定タイルの作成をアプリに許可します</string>
   <string name="permlab_modifyNetworkSettings">システムのネットワークの設定の変更</string>
