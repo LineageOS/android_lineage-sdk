@@ -126,7 +126,10 @@ import java.util.Map;
       * they may change at slightly different times.
       *
       * Test whether the setting was properly set and is not null.
+      *
+      * @deprecated
       */
+     @Deprecated
      @SmallTest
      public void testCMProvisionedFlagFallbackSet() {
          final String newCmFlag = CMSettings.Secure.getStringForUser(

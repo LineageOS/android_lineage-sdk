@@ -2864,8 +2864,10 @@ public final class CMSettings {
          * Set to 0 when we enter the CM Setup Wizard.
          * Set to 1 when we exit the CM Setup Wizard.
          *
+         * @deprecated
          * @hide
          */
+        @Deprecated
         public static final String CM_SETUP_WIZARD_COMPLETED = "cm_setup_wizard_completed";
 
         /**
