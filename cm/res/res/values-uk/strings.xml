@@ -22,7 +22,9 @@
   <string name="permlab_publishCustomTile">Створити власну плитку для панелі швидких налаштувань</string>
   <string name="permdesc_publishCustomTile">Дозволяє додатку створити плитку швидких налаштувань.</string>
   <string name="permlab_modifyNetworkSettings">змінювати налаштування мережі системи</string>
+  <string name="permdesc_modifyNetworkSettings">Дозволяє додатку вносити зміни в \"Режимі польоту\" і в налаштуваннях мобільної передачі даних.</string>
   <string name="permlab_modifySoundSettings">змінювати звукові налаштування системи</string>
+  <string name="permdesc_modifySoundSettings">Дозволяє додатку вносити зміни налаштувань звуку в режимі сповіщень.</string>
   <string name="permlab_bindCustomTileListenerService">прив’язати до власної служби</string>
   <string name="permdesc_bindCustomTileListenerService">Дозволяє власникові прив\'язувати плитки до інтерфесу високого рівня служб.</string>
   <!-- Labels for the READ_MSIM_PHONE_STATE permission. -->
@@ -33,6 +35,7 @@
   <string name="permdesc_modifyMSPhoneState">Дозволяє програмі змінювати стан телефону і з’єднання даних з підтримкою до декількох SIM.</string>
   <!-- Labels for the MODIFY_PROFILES permission. -->
   <string name="permlab_modifyProfiles">зміна системних профілів</string>
+  <string name="permdesc_modifyProfiles">Дозволяє додатку змінювати системні профілі.</string>
   <!-- Labels for the HARDWARE_ABSTRACTION_ACCESS permission. -->
   <string name="permlab_useHardwareFramework">Взаємодія із обладнанням</string>
   <string name="permdesc_useHardwareFramework">Додаток зможе отримувати доступ до підсистеми апаратних абстракцій CyanogenMod.</string>
@@ -52,6 +55,8 @@
   <string name="permlab_writeSecureSettings">змінювати налаштування безпеки</string>
   <string name="permdesc_writeSecureSettings">Дозволяє додатку змінювати системні налаштування безпеки. Непотрібно звичайним додаткам.</string>
   <!-- Labels for the MANAGE_PERSISTENT_STORAGE permission. -->
+  <string name="permlab_managePersistentStorage">керування постійною пам\'яттю даних</string>
+  <string name="permdesc_managePersistentStorage">Дозволяє додатку зчитувати і записувати властивості, які можуть зберігатися навіть після відновлення заводських налаштувань.</string>
   <!-- Labels for the ACCESS_APP_SUGGESTIONS permission -->
   <string name="permlab_accessAppSuggestions">Доступ до рекомендованих додатків</string>
   <string name="permdesc_accessAppSuggestions">Додаток зможе отримувати доступ до списку рекомендованих додатків.</string>
@@ -100,35 +105,84 @@
   <string name="live_display_outdoor">Надворі (яскраве сонце)</string>
   <string name="live_display_outdoor_summary">Використовувати параметри для яскравого освітлення надворі</string>
   <string name="live_display_hint">LiveDisplay допоможе зменшити навантаження на зір та покращить Ваш сон. Натисніть тут, щоб спробувати його!</string>
+  <string name="accessibility_quick_settings_live_display_off">LiveDisplay вимкнений.</string>
+  <string name="accessibility_quick_settings_live_display_auto">LiveDisplay: автоматичний режим.</string>
+  <string name="accessibility_quick_settings_live_display_day">LiveDisplay: денний режим.</string>
+  <string name="accessibility_quick_settings_live_display_night">LiveDisplay: нічний режим.</string>
+  <string name="accessibility_quick_settings_live_display_outdoor">LiveDisplay: режим на вулиці.</string>
+  <string name="accessibility_quick_settings_live_display_changed_off">LiveDisplay вимкнено.</string>
+  <string name="accessibility_quick_settings_live_display_changed_auto">LiveDisplay змінено до автоматичного режиму.</string>
+  <string name="accessibility_quick_settings_live_display_changed_day">LiveDisplay змінено до денного режиму.</string>
+  <string name="accessibility_quick_settings_live_display_changed_night">LiveDisplay змінено до нічного режиму.</string>
+  <string name="accessibility_quick_settings_live_display_changed_outdoor">LiveDisplay змінено до режиму на вулиці.</string>
   <!-- Third party keyguard permission label -->
   <string name="permlab_thirdPartyKeyguard">Нетиповий екран блокування</string>
   <!-- Third party keyguard permission description -->
   <string name="permdesc_thirdPartyKeyguard">Дозволяє використати програму як незахищене блокування екрану.</string>
   <!-- Theme installation error notification -->
+  <string name="theme_install_error_title">Не вдалося встановити тему</string>
+  <string name="theme_install_error_message"><xliff:g id="theme">%1$s </xliff:g> не вдалося встановити</string>
   <!-- Theme reset notification -->
+  <string name="theme_reset_notification_title">Скинути тему</string>
+  <string name="theme_reset_notification_message">Через збої в роботі додатків встановлено системну тему.</string>
   <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
+  <string name="permlab_accessThemeService">доступ до служби тем</string>
   <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
+  <string name="permdesc_accessThemeService">Дозволяє додатку отримувати доступ до служби тем. Цей дозвіл не використовується звичайними додатками.</string>
   <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
+  <string name="permlab_readThemes">читати дані вашої теми</string>
   <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
+  <string name="permdesc_readThemesDesc">Дозволяє додатку читати дані про теми і
+виявляти, яку тему зараз застосовано.</string>
   <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
+  <string name="permlab_writeThemes">змінювати теми</string>
   <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
+  <string name="permdesc_writeThemesDesc">Дозволяє додатку встановлювати нові теми і змінювати поточну.</string>
   <!-- Performance manager permission title -->
+  <string name="permlab_perfAccess">доступ до менеджера продуктивності</string>
   <!-- Performance manager permission description -->
+  <string name="permdesc_perfAccessDesc">Дозволяє додатку отримувати доступ до менеджера продуктивності. Цей дозвіл не потрібний звичайним додаткам.</string>
   <!-- Access live lock screen manager service permission label -->
+  <string name="permlab_accessLiveLockScreenService">доступ до сервісу живого екрану блокування</string>
   <!-- Access live lock screen manager service permission description -->
+  <string name="permdesc_accessLiveLockScreenService">Надає додатку доступ до сервісу керування живим екраном блокування.</string>
   <!-- Privileged access live lock screen manager service permission label -->
+  <string name="permlab_accessLiveLockScreenServicePrivate">доступ до сервісу живого екрану блокування</string>
   <!-- Privileged access live lock screen manager service permission description -->
+  <string name="permdesc_accessLiveLockScreenServicePrivate">Надає системним додаткам доступ до сервісу керування живим екраном блокування.</string>
   <!-- Live lock screen manager service provider permission label -->
+  <string name="permlab_accessLiveLockScreenServiceProvider">доступ до сервісу живого екрану блокування</string>
   <!-- Live lock screen manager service provider permission description -->
+  <string name="permdesc_accessLiveLockScreenServiceProvider">Дозволяє додатку доступ до сервісу живого екрану блокування.</string>
   <!-- Weather Service strings -->
+  <string name="permlab_weather_read">читати погоду</string>
+  <string name="permdesc_weather_read">Дозволити додатку читати дані від провайдера погоди.</string>
+  <string name="permlab_weather_write">оновлення провайдера погоди</string>
+  <string name="permdesc_weather_write">Дозволяє додатку оновлювати дані провайдера погоди.</string>
+  <string name="permlab_weather_bind">прив\'язати як провайдера погоди</string>
+  <string name="permdesc_weather_bind">Дозволяє додатку бути службою провайдера погоди.</string>
+  <string name="permlab_weather_access_mgr">доступ до служби погоди</string>
+  <string name="permdesc_weather_access_mgr">Дозволити додатку доступ до служби погоди в системі. Це ніколи не потрібно для звичайних додатків.</string>
   <!-- DataUsageProvider write permission title -->
+  <string name="permlab_dataUsageWrite">змінювати дані використання бази даних</string>
   <!-- DataUsageProvider write permission description -->
+  <string name="permdesc_dataUsageWrite">Дозволяє додатку оновлювати вміст БД використання даних.</string>
   <!-- DataUsageProvider read permission title -->
+  <string name="permlab_dataUsageRead">читати дані використання бази даних</string>
   <!-- DataUsageProvider read permission description -->
+  <string name="permdesc_dataUsageRead">Дозволяє додатку читати вміст БД використання даних.</string>
   <!-- LiveDisplay manager permission -->
+  <string name="permlab_manageLiveDisplay">керування налаштуваннями LiveDisplay</string>
+  <string name="permdesc_manageLiveDisplay">Дозволяє додатку керувати розширеними налаштуваннями дисплея.</string>
   <!-- CMAudioService - observe session changes permission -->
+  <string name="permlab_observe_audio_sessions">спостерігати за змінами аудіо сесії</string>
+  <string name="permdesc_observe_audio_sessions">Дозволяє додатку переглядати аудіопотоки, які створюються або знищуються.</string>
   <!-- CMAudioService - observe session changes permission -->
+  <string name="permlab_manage_audio_sessions">керувати змінами аудіо сесії</string>
+  <string name="permdesc_manage_audio_sessions">Дозволяє додатку змінювати параметри аудіопотоків.</string>
   <!-- QuickSettings: Themes tile -->
+  <string name="qs_themes_label">Теми</string>
+  <string name="qs_themes_content_description">Налаштувати вашу тему</string>
   <!-- Privacy Guard -->
   <string name="privacy_guard_manager_title">Вартовий Приватності</string>
   <!-- Permissions used by remote preferences -->
