@@ -127,7 +127,8 @@ import java.util.Map;
       *
       * Test whether the setting was properly set and is not null.
       *
-      * @deprecated
+      * @deprecated Replaced by {@link Settings.Global#DEVICE_PROVISIONED}
+      *             or {@link Settings.Secure#USER_SETUP_COMPLETE}
       */
      @Deprecated
      @SmallTest
