@@ -470,17 +470,6 @@ public class CMSettingsProvider extends ContentProvider {
                     null, sortOrder);
         }
 
-        // the default Cursor interface does not support per-user observation
-        try {
-            AbstractCursor abstractCursor = (AbstractCursor) returnCursor;
-            abstractCursor.setNotificationUri(getContext().getContentResolver(), uri, userId);
-        } catch (ClassCastException e) {
-            // details of the concrete Cursor implementation have changed and this code has
-            // not been updated to match -- complain and fail hard.
-            Log.wtf(TAG, "Incompatible cursor derivation");
-            throw e;
-        }
-
         return returnCursor;
     }
 
