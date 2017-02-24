@@ -18,6 +18,7 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Label for the LineageOS system components when they are shown to the user. -->
+  <string name="permdesc_modifyNetworkSettings">Allows an app to make changes to the aeroplane mode and mobile data network settings.</string>
   <!-- Labels for the READ_MSIM_PHONE_STATE permission. -->
   <!-- Labels for the MODIFY_MSIM_PHONE_STATE permission. -->
   <!-- Labels for the MODIFY_PROFILES permission. -->

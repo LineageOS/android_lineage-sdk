@@ -20,7 +20,7 @@
   <!-- Label for the LineageOS system components when they are shown to the user. -->
   <string name="cyanogenmod_system_label">LineageOS System</string>
   <string name="permlab_publishCustomTile">opprett en egendefinert flis i hurtiginnstillingspanelet</string>
-  <string name="permdesc_publishCustomTile">Tillater at en app kan publisere en hurtiginnstillingsflis.</string>
+  <string name="permdesc_publishCustomTile">Tillater en app å publisere en hurtiginnstillingsflis.</string>
   <string name="permlab_modifyNetworkSettings">endre innstillingene for nettverk</string>
   <string name="permdesc_modifyNetworkSettings">Tillat en app å gjøre endringer i flymodus og mobildatainnstillinger.</string>
   <string name="permlab_modifySoundSettings">endre systemets lydinnstillinger</string>

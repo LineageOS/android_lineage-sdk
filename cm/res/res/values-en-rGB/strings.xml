@@ -18,8 +18,18 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Label for the LineageOS system components when they are shown to the user. -->
+  <string name="cyanogenmod_system_label">LineageOS System</string>
+  <string name="permlab_publishCustomTile">create a custom tile within quick settings panel</string>
+  <string name="permdesc_publishCustomTile">Allows an app to publish a quick settings tile.</string>
+  <string name="permlab_modifyNetworkSettings">change system network settings</string>
+  <string name="permdesc_modifyNetworkSettings">Allows an app to make changes to the aeroplane mode and mobile data network settings.</string>
+  <string name="permlab_modifySoundSettings">change system sound settings</string>
+  <string name="permdesc_modifySoundSettings">Allows an app to make changes to the interruption mode sound settings.</string>
+  <string name="permlab_bindCustomTileListenerService">bind to a custom tile listener service</string>
+  <string name="permdesc_bindCustomTileListenerService">Allows the app to bind to the top-level interface of a custom tile listener service.</string>
   <!-- Labels for the READ_MSIM_PHONE_STATE permission. -->
   <!-- Labels for the MODIFY_MSIM_PHONE_STATE permission. -->
+  <string name="permdesc_modifyMSPhoneState">Allows an app to modify the phone state and data connection with support to multiple SIMs.</string>
   <!-- Labels for the MODIFY_PROFILES permission. -->
   <!-- Labels for the HARDWARE_ABSTRACTION_ACCESS permission. -->
   <!-- Labels for the WRITE_ALARMS permission. -->
@@ -37,7 +47,13 @@
   <!-- Name of wildcard profile. -->
   <!-- Performance profiles -->
   <!-- Performance profiles -->
+  <string name="perf_profile_pwrsv_summary">Maximum power savings. Reduces device performance, disables background tasks and data, disables animations, and reduces display frame rate</string>
+  <string name="perf_profile_bal_summary">Balance of optimal performance and power characteristics</string>
+  <string name="perf_profile_perf_summary">High performance mode. Useful for applications requiring low latency and highest throughput when power consumption is not a concern</string>
+  <string name="perf_profile_bias_power_summary">Favour power savings. Limit maximum CPU power and optimize for power saving at the cost of higher latency</string>
+  <string name="perf_profile_bias_perf_summary">Favour performance. Reduces latency with slightly increased power consumption</string>
   <!-- LiveDisplay strings -->
+  <string name="live_display_auto_summary">Automatically adjust colour temperature of screen after sunset and sunrise</string>
   <!-- Third party keyguard permission label -->
   <!-- Third party keyguard permission description -->
   <!-- Theme installation error notification -->
@@ -65,6 +81,10 @@
   <!-- CMAudioService - observe session changes permission -->
   <!-- CMAudioService - observe session changes permission -->
   <!-- QuickSettings: Themes tile -->
+  <string name="qs_themes_content_description">Customise your theme</string>
   <!-- Privacy Guard -->
+  <string name="privacy_guard_manager_title">Privacy Guard</string>
   <!-- Permissions used by remote preferences -->
+  <string name="permlab_manageRemotePrefs">manage remote settings</string>
+  <string name="permdesc_manageRemotePrefs">Allows an app to manage remote settings</string>
 </resources>

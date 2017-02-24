@@ -40,7 +40,7 @@
   <string name="permlab_useHardwareFramework">Взаємодія із обладнанням</string>
   <string name="permdesc_useHardwareFramework">Додаток зможе отримувати доступ до підсистеми апаратних абстракцій CyanogenMod.</string>
   <!-- Labels for the WRITE_ALARMS permission. -->
-  <string name="permlab_write_alarms">безпосередньо змінювати установки будильника</string>
+  <string name="permlab_write_alarms">безпосередньо змінювати будильники</string>
   <string name="permdesc_write_alarms">Дозволяє програмі додавати, змінювати або видаляти налаштування сигналів будильника.</string>
   <!-- Labels for the MANAGE_ALARMS permission. -->
   <string name="permlab_manage_alarms">перемикання запланованих будильників</string>
