@@ -51,7 +51,7 @@ public class CMPartsPreference extends RemotePreference {
     }
 
     public CMPartsPreference(Context context, AttributeSet attrs) {
-        this(context, attrs, com.android.internal.R.attr.preferenceScreenStyle);
+        this(context, attrs, android.support.v7.preference.R.attr.preferenceScreenStyle);
     }
 
     @Override
