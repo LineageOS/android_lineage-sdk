@@ -104,8 +104,8 @@ public class CMPartnerInterfaceTest extends AndroidTestCase {
     }
 
     private boolean getAirplaneModeEnabled() {
-        return Settings.System.getInt(getContext().getContentResolver(),
-                Settings.System.AIRPLANE_MODE_ON, 0) == 1;
+        return Settings.Global.getInt(getContext().getContentResolver(),
+                Settings.Global.AIRPLANE_MODE_ON, 0) == 1;
     }
 
     /////////////////////////////////////////////////////
