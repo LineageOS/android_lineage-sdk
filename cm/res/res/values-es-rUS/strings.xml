@@ -41,7 +41,7 @@
   <string name="permdesc_useHardwareFramework">Permite que la aplicación acceda al framework de hardware de CM.</string>
   <!-- Labels for the WRITE_ALARMS permission. -->
   <string name="permlab_write_alarms">cambiar las alarmas directamente</string>
-  <string name="permdesc_write_alarms">Permite a una aplicación añadir, modificar o eliminar todas tus alarmas.</string>
+  <string name="permdesc_write_alarms">Permite a una aplicación añadir, modificar o borrar todas las alarmas.</string>
   <!-- Labels for the MANAGE_ALARMS permission. -->
   <string name="permlab_manage_alarms">alternar alarmas programadas</string>
   <string name="permdesc_manage_alarms">Permite que una aplicación active o desactive tus alarmas programadas.</string>

@@ -28,17 +28,17 @@
   <string name="permlab_bindCustomTileListenerService">カスタムタイルリスナーサービスのバインド</string>
   <string name="permdesc_bindCustomTileListenerService">カスタムタイルリスナーサービスのトップレベルインターフェースへのバインドをアプリに許可します</string>
   <!-- Labels for the READ_MSIM_PHONE_STATE permission. -->
-  <string name="permlab_readMSPhoneState">マルチSIMをサポートする携帯電話の状態とデータ接続の表示</string>
-  <string name="permdesc_readMSPhoneState">マルチSIMをサポートする携帯電話の状態とデータ接続の表示をアプリに許可します。</string>
+  <string name="permlab_readMSPhoneState">マルチSIMをサポートする端末の状態とデータ接続の表示</string>
+  <string name="permdesc_readMSPhoneState">マルチSIMをサポートする端末の状態とデータ接続の表示をアプリに許可します。</string>
   <!-- Labels for the MODIFY_MSIM_PHONE_STATE permission. -->
-  <string name="permlab_modifyMSPhoneState">マルチSIMをサポートする携帯電話の状態とデータ接続の変更</string>
-  <string name="permdesc_modifyMSPhoneState">マルチSIMをサポートする携帯電話の状態とデータ接続の変更をアプリに許可します。</string>
+  <string name="permlab_modifyMSPhoneState">マルチSIMをサポートする端末の状態とデータ接続の変更</string>
+  <string name="permdesc_modifyMSPhoneState">マルチSIMをサポートする端末の状態とデータ接続の変更をアプリに許可します。</string>
   <!-- Labels for the MODIFY_PROFILES permission. -->
   <string name="permlab_modifyProfiles">システムプロファイルの変更</string>
   <string name="permdesc_modifyProfiles">システムプロファイルの変更をアプリに許可します。</string>
   <!-- Labels for the HARDWARE_ABSTRACTION_ACCESS permission. -->
   <string name="permlab_useHardwareFramework">ハードウェアフレームワークの使用</string>
-  <string name="permdesc_useHardwareFramework">CMハードウェアフレームワークへのアクセスをアプリに許可します。</string>
+  <string name="permdesc_useHardwareFramework">LineageOS ハードウェアフレームワークへのアクセスをアプリに許可します。</string>
   <!-- Labels for the WRITE_ALARMS permission. -->
   <string name="permlab_write_alarms">アラームの直接変更</string>
   <string name="permdesc_write_alarms">アラームの追加やすべてのアラームの変更および削除をアプリに許可します。</string>
@@ -49,11 +49,11 @@
   <string name="permlab_read_alarms">予定されているアラームへのアクセス</string>
   <string name="permdesc_read_alarms">予定されているアラームの読み取りをアプリに許可します。</string>
   <!-- Labels for the WRITE_SETTINGS permission -->
-  <string name="permlab_writeSettings">CMシステム設定の変更</string>
-  <string name="permdesc_writeSettings">CMシステム設定の変更をアプリに許可します。</string>
+  <string name="permlab_writeSettings">LineageOS システム設定の変更</string>
+  <string name="permdesc_writeSettings">LineageOS システム設定の変更をアプリに許可します。</string>
   <!-- Labels for the WRITE_SECURE_SETTINGS permission -->
-  <string name="permlab_writeSecureSettings">CMセキュアシステム設定の変更</string>
-  <string name="permdesc_writeSecureSettings">CMセキュアシステム設定の変更をアプリに許可します。通常のアプリ用ではありません。</string>
+  <string name="permlab_writeSecureSettings">LineageOS セキュアシステム設定の変更</string>
+  <string name="permdesc_writeSecureSettings">LineageOS セキュアシステム設定の変更をアプリに許可します。通常のアプリ用ではありません。</string>
   <!-- Labels for the MANAGE_PERSISTENT_STORAGE permission. -->
   <string name="permlab_managePersistentStorage">永続ストレージの管理</string>
   <string name="permdesc_managePersistentStorage">工場出荷時の状態に戻しても永続する可能性のあるプロパティの読み取りまたは書き込みをアプリに許可します。</string>
