@@ -35,7 +35,6 @@
   <string name="permdesc_modifyMSPhoneState">Mengizinkan aplikasi untuk mengubah status ponsel dan koneksi data dengan dukungan untuk beberapa SIM.</string>
   <!-- Labels for the MODIFY_PROFILES permission. -->
   <string name="permlab_modifyProfiles">memodifikasi profil sistem</string>
-  <string name="permdesc_modifyProfiles">Membolehkan aplikasi untuk mengubah profil sistem.</string>
   <!-- Labels for the HARDWARE_ABSTRACTION_ACCESS permission. -->
   <string name="permlab_useHardwareFramework">gunakan hardware framework</string>
   <string name="permdesc_useHardwareFramework">Izinkan aplikasi untuk mengakses hardware framework CM.</string>

@@ -185,4 +185,6 @@
   <!-- Privacy Guard -->
   <string name="privacy_guard_manager_title">Privacybescherming</string>
   <!-- Permissions used by remote preferences -->
+  <string name="permlab_manageRemotePrefs">instellingen voor beheer op afstand</string>
+  <string name="permdesc_manageRemotePrefs">Hiermee kan de app instellingen voor beheer op afstand beheren</string>
 </resources>

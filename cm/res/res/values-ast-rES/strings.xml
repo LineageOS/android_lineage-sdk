@@ -18,10 +18,17 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Label for the LineageOS system components when they are shown to the user. -->
+  <string name="cyanogenmod_system_label">Sistema LineageOS</string>
+  <string name="permdesc_publishCustomTile">Permite qu\'una aplicación espublize una caxella d\'axustes rápidos.</string>
+  <string name="permdesc_modifyNetworkSettings">Permite qu\'una aplicación faiga camudancies al mou avión y a los axustes de la rede de datos móviles.</string>
+  <string name="permdesc_modifySoundSettings">Permite qu\'una aplicación faiga camudancies a los axustes de soníu del mou d\'interrupción.</string>
   <!-- Labels for the READ_MSIM_PHONE_STATE permission. -->
+  <string name="permdesc_readMSPhoneState">Permite qu\'una aplicación vea l\'estáu\'l teléfonu y la conexón de datos con sofitu pa SIMs múltiples.</string>
   <!-- Labels for the MODIFY_MSIM_PHONE_STATE permission. -->
+  <string name="permdesc_modifyMSPhoneState">Permite qu\'una aplicación modifique l\'estáu\'l teléfonu y la conexón de datos con sofitu pa SIMs múltiples.</string>
   <!-- Labels for the MODIFY_PROFILES permission. -->
   <!-- Labels for the HARDWARE_ABSTRACTION_ACCESS permission. -->
+  <string name="permdesc_useHardwareFramework">Permite qu\'una aplicación acceda al framework de hardware de CM.</string>
   <!-- Labels for the WRITE_ALARMS permission. -->
   <!-- Labels for the MANAGE_ALARMS permission. -->
   <!-- Labels for the READ_ALARMS permission. -->
@@ -31,9 +38,11 @@
   <!-- Labels for the ACCESS_APP_SUGGESTIONS permission -->
   <!-- Label to show for a service that is running because it is observing the user's custom tiles. -->
   <!-- Labels for the PROTECTED_APP permission. -->
+  <string name="permdesc_protectedApp">Permite qu\'una aplicación conseñe a otres como protexíes y blóquiales.</string>
   <!-- Profiles -->
   <!-- Names of default profiles. -->
   <string name="profileNameNight">Nueche</string>
+  <string name="profileNameAutomobile">Automóvil</string>
   <!-- Names of application groups. -->
   <string name="profileGroupPhone">Teléfonu</string>
   <string name="profileGroupCalendar">Calendariu</string>
@@ -47,19 +56,30 @@
   <string name="perf_profile_perf">Rindimientu</string>
   <string name="perf_profile_bias_power">Eficiencia</string>
   <!-- Performance profiles -->
+  <string name="perf_profile_pwrsv_summary">Aforros máximos d\'enerxía. Amenorga\'l rindimientu\'l preséu, deshabilita xeres de fondu, datos y animaciones, amás d\'amenorgar la tasa de cuadros de la pantalla</string>
+  <string name="perf_profile_perf_summary">Mou de rindimientu altu. Útil p\'aplicaciones que rican llatencia baxa y el meyor rindimientu cuando\'l consumu d\'enerxía nun seya un esmolecimientu</string>
   <!-- LiveDisplay strings -->
+  <string name="live_display_day">Día</string>
+  <string name="live_display_night">Nueche</string>
   <!-- Third party keyguard permission label -->
   <!-- Third party keyguard permission description -->
   <!-- Theme installation error notification -->
+  <string name="theme_install_error_title">Fallu al instalase\'l tema</string>
   <!-- Theme reset notification -->
+  <string name="theme_reset_notification_message">Restauróse\'l tema\'l sistema pola mor de casques múltiples d\'aplicaciones.</string>
   <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
   <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
+  <string name="permdesc_accessThemeService">Permite qu\'una aplicación acceda al serviciu de temes. Enxamás debería precisase p\'aplicaciones normales.</string>
   <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
   <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
+  <string name="permdesc_readThemesDesc">Permite que l\'aplicación llea los tos temes y
+       determine\'l que tienes aplicáu.</string>
   <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
   <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
+  <string name="permdesc_writeThemesDesc">Permite que l\'aplicación inxerte temes nuevos y modifique\'l que tienes aplicáu.</string>
   <!-- Performance manager permission title -->
   <!-- Performance manager permission description -->
+  <string name="permdesc_perfAccessDesc">Permite qu\'una aplicación acceda al serviciu de rindimientu. Enxamás debería precisase p\'aplicaciones normales.</string>
   <!-- Access live lock screen manager service permission label -->
   <!-- Access live lock screen manager service permission description -->
   <!-- Privileged access live lock screen manager service permission label -->
@@ -69,12 +89,18 @@
   <!-- Weather Service strings -->
   <!-- DataUsageProvider write permission title -->
   <!-- DataUsageProvider write permission description -->
+  <string name="permdesc_dataUsageWrite">Permite qu\'una aplicación anueve\'l conteníu de la base de datos d\'usu de datos.</string>
   <!-- DataUsageProvider read permission title -->
   <!-- DataUsageProvider read permission description -->
+  <string name="permdesc_dataUsageRead">Permite qu\'una aplicación llea\'l conteníu de la base de datos d\'usu de datos.</string>
   <!-- LiveDisplay manager permission -->
   <!-- CMAudioService - observe session changes permission -->
   <!-- CMAudioService - observe session changes permission -->
   <!-- QuickSettings: Themes tile -->
+  <string name="qs_themes_label">Temes</string>
   <!-- Privacy Guard -->
+  <string name="privacy_guard_manager_title">Guardián de privacidá</string>
   <!-- Permissions used by remote preferences -->
+  <string name="permlab_manageRemotePrefs">xestionar axustes remotos</string>
+  <string name="permdesc_manageRemotePrefs">Permite qu\'una aplicación xestione axustes remotos</string>
 </resources>

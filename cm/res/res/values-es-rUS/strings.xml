@@ -44,10 +44,10 @@
   <string name="permdesc_write_alarms">Permite a una aplicación añadir, modificar o borrar todas las alarmas.</string>
   <!-- Labels for the MANAGE_ALARMS permission. -->
   <string name="permlab_manage_alarms">alternar alarmas programadas</string>
-  <string name="permdesc_manage_alarms">Permite que una aplicación active o desactive tus alarmas programadas.</string>
+  <string name="permdesc_manage_alarms">Permite que una aplicación active o desactive las alarmas programadas.</string>
   <!-- Labels for the READ_ALARMS permission. -->
   <string name="permlab_read_alarms">acceder a alarmas programadas</string>
-  <string name="permdesc_read_alarms">Permite que una aplicación lea tus alarmas programadas.</string>
+  <string name="permdesc_read_alarms">Permite que una aplicación lea las alarmas programadas.</string>
   <!-- Labels for the WRITE_SETTINGS permission -->
   <string name="permlab_writeSettings">modificar los ajustes del sistema de CM</string>
   <string name="permdesc_writeSettings">Permite que una aplicación modifique los ajustes del sistema de CM.</string>
@@ -55,7 +55,7 @@
   <string name="permlab_writeSecureSettings">modificar los ajustes del sistema seguro de CM</string>
   <string name="permdesc_writeSecureSettings">Permite que una aplicación modifique los ajustes del sistema seguro de CM. No es para el uso de aplicaciones normales.</string>
   <!-- Labels for the MANAGE_PERSISTENT_STORAGE permission. -->
-  <string name="permlab_managePersistentStorage">administrar el almacenamiento persistente</string>
+  <string name="permlab_managePersistentStorage">gestionar el almacenamiento persistente</string>
   <string name="permdesc_managePersistentStorage">Permite que una aplicación lea o escriba propiedades que pueden continuar incluso después de una restauración de fábrica.</string>
   <!-- Labels for the ACCESS_APP_SUGGESTIONS permission -->
   <string name="permlab_accessAppSuggestions">acceder a las sugerencias de aplicaciones</string>
@@ -67,7 +67,7 @@
   <string name="permdesc_protectedApp">Permite que una aplicación marque a otras aplicaciones como protegidas y las bloquee.</string>
   <!-- Profiles -->
   <!-- Names of default profiles. -->
-  <string name="profileNameDefault">Predeterminado</string>
+  <string name="profileNameDefault">Predefinido</string>
   <string name="profileNameWork">Trabajo</string>
   <string name="profileNameHome">Casa</string>
   <string name="profileNameSilent">Silencio</string>
@@ -104,7 +104,7 @@
   <string name="live_display_night_summary">Utilizar solo los ajustes de noche</string>
   <string name="live_display_outdoor">Al aire libre (luz del sol)</string>
   <string name="live_display_outdoor_summary">Utilizar solo los ajustes de aire libre</string>
-  <string name="live_display_hint">LiveDisplay puede ayudar a reducir la fatiga visual y a dormir por la noche. ¡Haz clic aquí para probarlo!</string>
+  <string name="live_display_hint">LiveDisplay puede ayudar a reducir la fatiga visual y a dormir por la noche. ¡Pulsa aquí para probarlo!</string>
   <string name="accessibility_quick_settings_live_display_off">LiveDisplay desactivado.</string>
   <string name="accessibility_quick_settings_live_display_auto">LiveDisplay: modo automático.</string>
   <string name="accessibility_quick_settings_live_display_day">LiveDisplay: modo diurno.</string>
@@ -138,21 +138,21 @@
   <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
   <string name="permdesc_writeThemesDesc">Permite que la aplicación añada temas nuevos y modifique el tema aplicado.</string>
   <!-- Performance manager permission title -->
-  <string name="permlab_perfAccess">acceso al administrador de rendimiento</string>
+  <string name="permlab_perfAccess">acceso al gestor de rendimiento</string>
   <!-- Performance manager permission description -->
   <string name="permdesc_perfAccessDesc">Permite que la aplicación acceda al servicio de rendimiento. Nunca debería ser necesario para aplicaciones normales.</string>
   <!-- Access live lock screen manager service permission label -->
-  <string name="permlab_accessLiveLockScreenService">acceder al administrador de servicio de pantalla de bloqueo animada</string>
+  <string name="permlab_accessLiveLockScreenService">acceder al gestor de servicio de pantalla de bloqueo animada</string>
   <!-- Access live lock screen manager service permission description -->
-  <string name="permdesc_accessLiveLockScreenService">Permite que una aplicación acceda al servicio de administración de la pantalla de bloqueo animada.</string>
+  <string name="permdesc_accessLiveLockScreenService">Permite que una aplicación acceda al servicio de gestión de la pantalla de bloqueo animada.</string>
   <!-- Privileged access live lock screen manager service permission label -->
-  <string name="permlab_accessLiveLockScreenServicePrivate">acceder al administrador de servicio de pantalla de bloqueo animada</string>
+  <string name="permlab_accessLiveLockScreenServicePrivate">acceder al gestor de servicio de la pantalla de bloqueo animada</string>
   <!-- Privileged access live lock screen manager service permission description -->
-  <string name="permdesc_accessLiveLockScreenServicePrivate">Permite que las aplicaciones de sistema accedan al servicio de administración de pantalla de bloqueo animada.</string>
+  <string name="permdesc_accessLiveLockScreenServicePrivate">Permite que las aplicaciones de sistema accedan al servicio de gestión de la pantalla de bloqueo animada.</string>
   <!-- Live lock screen manager service provider permission label -->
-  <string name="permlab_accessLiveLockScreenServiceProvider">proporcionar servicio de administración de pantalla de bloqueo animada</string>
+  <string name="permlab_accessLiveLockScreenServiceProvider">proporcionar servicio de gestión de la pantalla de bloqueo animada</string>
   <!-- Live lock screen manager service provider permission description -->
-  <string name="permdesc_accessLiveLockScreenServiceProvider">Permite que un servicio provea el servicio de administración de pantalla de bloqueo animada.</string>
+  <string name="permdesc_accessLiveLockScreenServiceProvider">Permite que un servicio provea el servicio de gestión de la pantalla de bloqueo animada.</string>
   <!-- Weather Service strings -->
   <string name="permlab_weather_read">ver el tiempo</string>
   <string name="permdesc_weather_read">Permite a una aplicación leer contenido desde el proveedor del clima.</string>
@@ -171,7 +171,7 @@
   <!-- DataUsageProvider read permission description -->
   <string name="permdesc_dataUsageRead">Permite que una aplicación lea el contenido desde la base de datos.</string>
   <!-- LiveDisplay manager permission -->
-  <string name="permlab_manageLiveDisplay">administrar los ajustes de LiveDisplay</string>
+  <string name="permlab_manageLiveDisplay">gestionar los ajustes de LiveDisplay</string>
   <string name="permdesc_manageLiveDisplay">Permite que una aplicación modifique los ajustes avanzados de la pantalla.</string>
   <!-- CMAudioService - observe session changes permission -->
   <string name="permlab_observe_audio_sessions">observa los cambios en la sesión de sonido</string>
