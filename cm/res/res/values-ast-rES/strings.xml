@@ -41,6 +41,8 @@
   <string name="permdesc_protectedApp">Permite qu\'una aplicación conseñe a otres como protexíes y blóquiales.</string>
   <!-- Profiles -->
   <!-- Names of default profiles. -->
+  <string name="profileNameWork">Trabayu</string>
+  <string name="profileNameHome">Home</string>
   <string name="profileNameNight">Nueche</string>
   <string name="profileNameAutomobile">Automóvil</string>
   <!-- Names of application groups. -->
@@ -57,30 +59,39 @@
   <string name="perf_profile_bias_power">Eficiencia</string>
   <!-- Performance profiles -->
   <string name="perf_profile_pwrsv_summary">Aforros máximos d\'enerxía. Amenorga\'l rindimientu\'l preséu, deshabilita xeres de fondu, datos y animaciones, amás d\'amenorgar la tasa de cuadros de la pantalla</string>
+  <string name="perf_profile_bal_summary">Equilibriu de rindimientu óptimu y carauterístiques d\'enerxía</string>
   <string name="perf_profile_perf_summary">Mou de rindimientu altu. Útil p\'aplicaciones que rican llatencia baxa y el meyor rindimientu cuando\'l consumu d\'enerxía nun seya un esmolecimientu</string>
+  <string name="perf_profile_bias_power_summary">Favorez los aforros d\'enerxía. Llenda la potencia máximo de la CPU y optimízala pa un aforru d\'enerxía empara d\'una llatencia mayor</string>
+  <string name="perf_profile_bias_perf_summary">Favorez el rindimientu. Amenorga la llatencia con un consumu d\'enerxía llixeramente aumentáu</string>
   <!-- LiveDisplay strings -->
   <string name="live_display_day">Día</string>
   <string name="live_display_night">Nueche</string>
   <!-- Third party keyguard permission label -->
+  <string name="permlab_thirdPartyKeyguard">pantalla de bloquéu de terceros</string>
   <!-- Third party keyguard permission description -->
   <!-- Theme installation error notification -->
   <string name="theme_install_error_title">Fallu al instalase\'l tema</string>
   <!-- Theme reset notification -->
   <string name="theme_reset_notification_message">Restauróse\'l tema\'l sistema pola mor de casques múltiples d\'aplicaciones.</string>
   <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
+  <string name="permlab_accessThemeService">acceder al serviciu de temes</string>
   <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
   <string name="permdesc_accessThemeService">Permite qu\'una aplicación acceda al serviciu de temes. Enxamás debería precisase p\'aplicaciones normales.</string>
   <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
+  <string name="permlab_readThemes">lleer la información del to tema</string>
   <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
   <string name="permdesc_readThemesDesc">Permite que l\'aplicación llea los tos temes y
        determine\'l que tienes aplicáu.</string>
   <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
+  <string name="permlab_writeThemes">modificar los tos temes</string>
   <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
   <string name="permdesc_writeThemesDesc">Permite que l\'aplicación inxerte temes nuevos y modifique\'l que tienes aplicáu.</string>
   <!-- Performance manager permission title -->
+  <string name="permlab_perfAccess">acceder al xestor de rindimientu</string>
   <!-- Performance manager permission description -->
   <string name="permdesc_perfAccessDesc">Permite qu\'una aplicación acceda al serviciu de rindimientu. Enxamás debería precisase p\'aplicaciones normales.</string>
   <!-- Access live lock screen manager service permission label -->
+  <string name="permlab_accessLiveLockScreenService">acceder al serviciu de pantalles de bloquéu animaes</string>
   <!-- Access live lock screen manager service permission description -->
   <!-- Privileged access live lock screen manager service permission label -->
   <!-- Privileged access live lock screen manager service permission description -->

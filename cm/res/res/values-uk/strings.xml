@@ -26,7 +26,7 @@
   <string name="permlab_modifySoundSettings">змінювати звукові налаштування системи</string>
   <string name="permdesc_modifySoundSettings">Дозволяє додатку вносити зміни налаштувань звуку в режимі сповіщень.</string>
   <string name="permlab_bindCustomTileListenerService">прив’язати до власної служби</string>
-  <string name="permdesc_bindCustomTileListenerService">Дозволяє власникові прив\'язувати плитки до інтерфесу високого рівня служб.</string>
+  <string name="permdesc_bindCustomTileListenerService">Дозволяє власникові прив\'язувати плитки до інтерфейсу високого рівня служб.</string>
   <!-- Labels for the READ_MSIM_PHONE_STATE permission. -->
   <string name="permlab_readMSPhoneState">переглядати стан телефону і з\'єднання даних з підтримкою до декількох SIM</string>
   <string name="permdesc_readMSPhoneState">Дозволяє програмі переглядати стану телефону і з\'єднання даних з підтримкою до декількох SIM.</string>

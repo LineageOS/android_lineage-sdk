@@ -19,14 +19,14 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Label for the LineageOS system components when they are shown to the user. -->
   <string name="cyanogenmod_system_label">Sistem LineageOS</string>
-  <string name="permlab_publishCustomTile">buat ubin khusus di panel pengaturan cepat</string>
-  <string name="permdesc_publishCustomTile">Mengizinkan aplikasi untuk membuat ubin pengaturan cepat.</string>
+  <string name="permlab_publishCustomTile">membuat ikon kustom dalam panel setelan cepat</string>
+  <string name="permdesc_publishCustomTile">Izinkan aplikasi untuk mempublikasikan ikon pengaturan cepat.</string>
   <string name="permlab_modifyNetworkSettings">ubah pengaturan jaringan sistem</string>
   <string name="permdesc_modifyNetworkSettings">Mengizinkan sebuah aplikasi untuk membuat perubahan ke modus pesawat dan pengaturan jaringan data seluler.</string>
   <string name="permlab_modifySoundSettings">ubah pengaturan suara sistem</string>
   <string name="permdesc_modifySoundSettings">Mengizinkan sebuah aplikasi untuk membuat perubahan pada pengaturan suara modus gangguan.</string>
-  <string name="permlab_bindCustomTileListenerService">menautkan ke layanan pendengar ubin khusus</string>
-  <string name="permdesc_bindCustomTileListenerService">Mengizinkan aplikasi untuk menautkan pada antarmuka level atas dari layanan pendengar ubin khusus.</string>
+  <string name="permlab_bindCustomTileListenerService">menautkan ke layanan pendengar ikon khusus</string>
+  <string name="permdesc_bindCustomTileListenerService">Mengizinkan aplikasi untuk menautkan pada antarmuka level atas dari layanan pendengar ikon khusus.</string>
   <!-- Labels for the READ_MSIM_PHONE_STATE permission. -->
   <string name="permlab_readMSPhoneState">lihat status ponsel dan koneksi data dengan dukungan untuk beberapa SIM</string>
   <string name="permdesc_readMSPhoneState">Mengizinkan aplikasi untuk melihat status ponsel dan koneksi data dengan dukungan untuk beberapa SIM.</string>
@@ -60,7 +60,7 @@
   <string name="permlab_accessAppSuggestions">akses saran aplikasi</string>
   <string name="permdesc_accessAppSuggestions">Mengizinkan aplikasi untuk mengakses saran aplikasi.</string>
   <!-- Label to show for a service that is running because it is observing the user's custom tiles. -->
-  <string name="custom_tile_listener_binding_label">Pendengar ubin khusus</string>
+  <string name="custom_tile_listener_binding_label">Daftar ikon kustom</string>
   <!-- Labels for the PROTECTED_APP permission. -->
   <string name="permlab_protectedApp">tambahkan dan hapus aplikasi untuk aplikasi yang dilindungi</string>
   <string name="permdesc_protectedApp">Mengizinkan aplikasi untuk menandai aplikasi lain sebagai aplikasi yang dilindungi dan menguncinya.</string>
@@ -87,7 +87,7 @@
   <string name="perf_profile_bias_power">Efisiensi</string>
   <string name="perf_profile_bias_perf">Cepat</string>
   <!-- Performance profiles -->
-  <string name="perf_profile_pwrsv_summary">Penghematan daya maksimal. Mengurangi kinerja perangkat, menonaktifkan tugas latar belakang dan data, menonaktifkan animasi, dan mengurangi laju bingkai tampilan</string>
+  <string name="perf_profile_pwrsv_summary">Maksimal penghematan daya. Mengurangi kinerja perangkat, mematikan latar belakang tugas dan data, mematikan animasi, dan mengurangi laju bingkai tampilan</string>
   <string name="perf_profile_bal_summary">Seimbang antara kinerja yang optimal dan karakteristik kekuatan</string>
   <string name="perf_profile_perf_summary">Mode kinerja tinggi. Berguna untuk aplikasi yang memerlukan latency rendah dan tertinggi throughput ketika konsumsi daya tidak perhatian</string>
   <string name="perf_profile_bias_power_summary">Mendukung penghematan daya. Batas maksimum power CPU dan mengoptimalkan untuk penghematan biaya latensi lebih tinggi daya</string>
@@ -100,7 +100,6 @@
   <string name="live_display_day">Siang</string>
   <string name="live_display_day_summary">Gunakan pengaturan hanya pada siang hari</string>
   <string name="live_display_night">Malam</string>
-  <string name="live_display_night_summary">Gunakan pengaturan hanya pada malam hari</string>
   <string name="live_display_outdoor">Luar ruangan (matahari cerah)</string>
   <string name="live_display_outdoor_summary">Hanya menggunakan pengaturan luar ruangan</string>
   <string name="live_display_hint">LiveDisplay dapat membantu mengurangi kelelahan mata dan membantu Anda tidur di malam hari. Klik di sini untuk mencobanya!</string>

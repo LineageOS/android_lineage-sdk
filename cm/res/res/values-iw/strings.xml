@@ -88,10 +88,10 @@
   <string name="perf_profile_bias_power">יעילות</string>
   <string name="perf_profile_bias_perf">מהיר</string>
   <!-- Performance profiles -->
-  <string name="perf_profile_pwrsv_summary">חסכון חשמל מרבי. מפחית את ביצועי התקן, מבטל משימות רקע ואינטרנט סלולרי, מבטל הנפשות ומפחית את קצב רענון התצוגה</string>
-  <string name="perf_profile_bal_summary">אזן בין ביצועים לצריכת חשמל</string>
-  <string name="perf_profile_perf_summary">מצב ביצועים גבוהים. שימושי ליישומים שדורשים הרבה כוח עיבוד ותגובה מהירה וכשצריכת החשמל אינה משנה</string>
-  <string name="perf_profile_bias_power_summary">חיסכון בצריכת חשמל. מגביל את עוצמת המעבד ומשפר את צריכת החשמל בתמורה למהירות תגובה נמוכה</string>
+  <string name="perf_profile_pwrsv_summary">חסכון חשמל מרבי. מפחית את ביצועי המכשיר, מבטל משימות רקע, אינטרנט סלולרי והנפשות, ומפחית את קצב רענון התצוגה</string>
+  <string name="perf_profile_bal_summary">אזן בין ביצועים מיטביים לצריכת חשמל</string>
+  <string name="perf_profile_perf_summary">מצב ביצועים גבוהים. שימושי ליישומים שדורשים הרבה כוח עיבוד ותגובה מהירה, כאשר צריכת החשמל לא מהווה מדד</string>
+  <string name="perf_profile_bias_power_summary">חיסכון בצריכת החשמל. מגביל את עוצמת המעבד ומשפר את צריכת החשמל בתמורה למהירות תגובה נמוכה יותר</string>
   <string name="perf_profile_bias_perf_summary">ביצועים טובים. משפר את זמן התגובה עם עליה קלה בצריכת החשמל</string>
   <!-- LiveDisplay strings -->
   <string name="live_display_auto">אוטומטי</string>
