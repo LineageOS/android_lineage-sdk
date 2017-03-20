@@ -186,5 +186,5 @@
   <string name="privacy_guard_manager_title">שומר הפרטיות</string>
   <!-- Permissions used by remote preferences -->
   <string name="permlab_manageRemotePrefs">נהל הגדרות מרחוק</string>
-  <string name="permdesc_manageRemotePrefs">אפשר ליישום לנהל הגדרות מרחוק</string>
+  <string name="permdesc_manageRemotePrefs">מאפשר ליישום לנהל הגדרות מרחוק</string>
 </resources>

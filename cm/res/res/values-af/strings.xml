@@ -88,6 +88,11 @@
   <string name="perf_profile_bias_power">Doeltreffendheid</string>
   <string name="perf_profile_bias_perf">Vinnige</string>
   <!-- Performance profiles -->
+  <string name="perf_profile_pwrsv_summary">Maksimum kragbesparings. Verminder toestelprestasie, deaktiveer agtergrond take en data, deaktiveer animasie, en verminder beeldraamkoers</string>
+  <string name="perf_profile_bal_summary">Balans van optimale prestasie en krageienskappe</string>
+  <string name="perf_profile_perf_summary">Hoë-prestasiemodus. Nuttig vir toepaasings wat lae netwerklatensie en hoogste deurvoer vereis wanneer kragverbruik is nie \'n bron van kommer nie</string>
+  <string name="perf_profile_bias_power_summary">Gee voorkeur aan kragbesparing. Beperk maksimum SVE-krag en optimeer vir kragbesparing ten koste van hoër netwerk latensie</string>
+  <string name="perf_profile_bias_perf_summary">Gee voorkeur aan prestasie. Goeie prestasie ten koste van hoër kragverbruik</string>
   <!-- LiveDisplay strings -->
   <string name="live_display_auto">Outomaties</string>
   <string name="live_display_auto_summary">Kleurtemperatuur van die skerm sal outomaties aanpas na sononder en sonop</string>
@@ -179,5 +184,8 @@
   <string name="qs_themes_label">Temas</string>
   <string name="qs_themes_content_description">Verpersoonlik jou tema</string>
   <!-- Privacy Guard -->
+  <string name="privacy_guard_manager_title">Privaatheidswag</string>
   <!-- Permissions used by remote preferences -->
+  <string name="permlab_manageRemotePrefs">bestuur afgeleë opsies</string>
+  <string name="permdesc_manageRemotePrefs">Laat \'n toepassing toe om afgeleë opsies te bestuur</string>
 </resources>
