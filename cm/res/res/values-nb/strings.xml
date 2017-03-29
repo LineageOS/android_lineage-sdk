@@ -156,8 +156,8 @@
   <string name="permdesc_accessLiveLockScreenServiceProvider">Tillater en tjeneste å forsyne levende skjermlås administrerings-tjenesten.</string>
   <!-- Weather Service strings -->
   <string name="permlab_weather_read">lese vær</string>
-  <string name="permdesc_weather_read">Tillater en app å lese av innholdet fra vær leverandøren.</string>
-  <string name="permlab_weather_write">oppdatere vær leverandør</string>
+  <string name="permdesc_weather_read">Tillater en app å lese av innholdet fra værleverandøren.</string>
+  <string name="permlab_weather_write">oppdatere værleverandør</string>
   <string name="permdesc_weather_write">Tillater en app å oppdatere innholdet til vær leverandøren.</string>
   <string name="permlab_weather_bind">bind som en værleverandør tjeneste</string>
   <string name="permdesc_weather_bind">Tillater en app å bli identifisert som en værleverandør tjeneste.</string>
@@ -175,7 +175,7 @@
   <string name="permlab_manageLiveDisplay">behandle LiveDisplay innstillinger</string>
   <string name="permdesc_manageLiveDisplay">Tillater en app å konfigurere avanserte skjerminnstillinger.</string>
   <!-- CMAudioService - observe session changes permission -->
-  <string name="permlab_observe_audio_sessions">observere lyd-økt endringer</string>
+  <string name="permlab_observe_audio_sessions">observer lydøkt-endringer</string>
   <string name="permdesc_observe_audio_sessions">Tillater en app å observere om lyd-strømmer blir lagd eller ødelagt.</string>
   <!-- CMAudioService - observe session changes permission -->
   <string name="permlab_manage_audio_sessions">administrer lyd økt endringer</string>

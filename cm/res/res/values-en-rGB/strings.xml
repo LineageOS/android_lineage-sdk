@@ -69,15 +69,24 @@
   <!-- Names of default profiles. -->
   <string name="profileNameDefault">Default</string>
   <string name="profileNameWork">Work</string>
+  <string name="profileNameHome">Home</string>
+  <string name="profileNameSilent">Silent</string>
   <string name="profileNameNight">Night</string>
   <string name="profileNameAutomobile">Vehicle</string>
   <!-- Names of application groups. -->
   <string name="profileGroupPhone">Phone</string>
+  <string name="profileGroupCalendar">Calendar</string>
   <string name="profileGroupGmail">Gmail</string>
   <string name="profileGroupEmail">Email</string>
   <string name="profileGroupSMS">SMS</string>
   <!-- Name of wildcard profile. -->
+  <string name="wildcardProfile">Other</string>
   <!-- Performance profiles -->
+  <string name="perf_profile_pwrsv">Power save</string>
+  <string name="perf_profile_bal">Balanced</string>
+  <string name="perf_profile_perf">Performance</string>
+  <string name="perf_profile_bias_power">Efficiency</string>
+  <string name="perf_profile_bias_perf">Quick</string>
   <!-- Performance profiles -->
   <string name="perf_profile_pwrsv_summary">Maximum power savings. Reduces device performance, disables background tasks and data, disables animations, and reduces display frame rate</string>
   <string name="perf_profile_bal_summary">Balance of optimal performance and power characteristics</string>
@@ -85,6 +94,7 @@
   <string name="perf_profile_bias_power_summary">Favour power savings. Limit maximum CPU power and optimize for power saving at the cost of higher latency</string>
   <string name="perf_profile_bias_perf_summary">Favour performance. Reduces latency with slightly increased power consumption</string>
   <!-- LiveDisplay strings -->
+  <string name="live_display_auto">Automatic</string>
   <string name="live_display_auto_summary">Automatically adjust colour temperature of screen after sunset and sunrise</string>
   <!-- Third party keyguard permission label -->
   <!-- Third party keyguard permission description -->
