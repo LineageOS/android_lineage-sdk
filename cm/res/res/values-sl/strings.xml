@@ -88,7 +88,7 @@
   <string name="perf_profile_bias_power">Učinkovitost</string>
   <string name="perf_profile_bias_perf">Hitro</string>
   <!-- Performance profiles -->
-  <string name="perf_profile_pwrsv_summary">Največji prihranek energije. Zmanjša zmogljivost naprave, onemogoči opravila in podatke v ozadju, onemogoči animacije in zmanjša hitrost sličic zaslona</string>
+  <string name="perf_profile_pwrsv_summary">Največje varčevanje z energijo, zmanjša zmogljivost naprave</string>
   <string name="perf_profile_bal_summary">Uravnotežena optimalna zmogljivost in poraba energije</string>
   <string name="perf_profile_perf_summary">Visokozmogljivostni način. Uporabno za aplikacije, ki zahtevajo majhne zakasnitve in visoko prepustnost, kadar poraba energije ni bistvena</string>
   <string name="perf_profile_bias_power_summary">Naklonjeno varčevanju z energijo. Omeji največjo porabo energije CPE-ja in optimizira za varčevanje z energijo na račun višjih zakasnitev</string>

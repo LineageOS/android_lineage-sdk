@@ -88,7 +88,7 @@
   <string name="perf_profile_bias_power">效率</string>
   <string name="perf_profile_bias_perf">快速</string>
   <!-- Performance profiles -->
-  <string name="perf_profile_pwrsv_summary">最大限度节约电池用量。降低设备性能，禁用后台任务和数据，禁用动画效果，降低显示的帧率</string>
+  <string name="perf_profile_pwrsv_summary">最大限度节约电池用量，降低设备性能。</string>
   <string name="perf_profile_bal_summary">平衡最佳性能与功耗特性</string>
   <string name="perf_profile_perf_summary">高性能模式。当能耗不是主要考量时，适用于需要低延迟和高吞吐量的应用</string>
   <string name="perf_profile_bias_power_summary">节能优先。以更高延迟为代价，限制最大 CPU 功率和为节能优化</string>

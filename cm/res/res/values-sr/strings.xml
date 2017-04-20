@@ -88,7 +88,6 @@
   <string name="perf_profile_bias_power">Ефикасност</string>
   <string name="perf_profile_bias_perf">Брзина</string>
   <!-- Performance profiles -->
-  <string name="perf_profile_pwrsv_summary">Максимална уштеда батерије. Смањује перформансе уређаја, онемогућава позадинске задатке и податке, онемогућава анимације и брзину освежавања екрана</string>
   <string name="perf_profile_bal_summary">Баланс оптималних перформанси и потрошње</string>
   <string name="perf_profile_perf_summary">Режим високих перформанси. Корисно за апликације које траже брзи одзив и високи приоритет када потрошња није битна</string>
   <string name="perf_profile_bias_power_summary">Уштеда енергије. Лимитиран CPU и оптимизована уштеда батерије на рачун повећаног кашњења</string>

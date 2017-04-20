@@ -88,11 +88,11 @@
   <string name="perf_profile_bias_power">효율</string>
   <string name="perf_profile_bias_perf">성능</string>
   <!-- Performance profiles -->
-  <string name="perf_profile_pwrsv_summary">최대 전원 절약 모드입니다. 기기 성능을 감소시키고 백그라운드 작업 및 데이터, 애니메이션 효과를 비활성화하며 화면 프레임을 감소시킵니다</string>
-  <string name="perf_profile_bal_summary">최적 성능 및 전력 특성 사이에서 균형을 맞춥니다</string>
-  <string name="perf_profile_perf_summary">고성능 모드입니다. 높은 전력 소모량을 고려하지 않아도 되는 상황에서 낮은 지연 시간 및 많은 처리량을 요구하는 애플리케이션에 유용합니다</string>
-  <string name="perf_profile_bias_power_summary">전원 절약 우위 모드입니다. 최대 CPU 성능을 제한하며 지연 시간이 늘어나는 대신 전원을 절약하는 쪽으로 최적화합니다</string>
-  <string name="perf_profile_bias_perf_summary">성능 우위 모드입니다. 지연 시간이 줄어들고 전력 소모량이 약간 늘어납니다</string>
+  <string name="perf_profile_pwrsv_summary">최대 전원 절약 모드입니다. 기기 성능이 제한됩니다.</string>
+  <string name="perf_profile_bal_summary">최적 성능 및 전력 특성 사이에서 균형을 맞춥니다.</string>
+  <string name="perf_profile_perf_summary">고성능 모드입니다. 높은 전력 소모량을 고려하지 않아도 되는 상황에서 낮은 지연 시간 및 많은 처리량을 요구하는 애플리케이션에 유용합니다.</string>
+  <string name="perf_profile_bias_power_summary">전원 절약 우위 모드입니다. 최대 CPU 성능을 제한하며 지연 시간이 늘어나는 대신 전원을 절약하는 쪽으로 최적화합니다.</string>
+  <string name="perf_profile_bias_perf_summary">성능 우위 모드입니다. 지연 시간이 줄어들고 전력 소모량이 약간 늘어납니다.</string>
   <!-- LiveDisplay strings -->
   <string name="live_display_auto">자동</string>
   <string name="live_display_auto_summary">일출 및 일몰 후 화면의 색 온도를 자동으로 조정</string>

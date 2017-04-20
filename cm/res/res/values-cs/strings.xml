@@ -88,7 +88,6 @@
   <string name="perf_profile_bias_power">Efektivita</string>
   <string name="perf_profile_bias_perf">Rychlý</string>
   <!-- Performance profiles -->
-  <string name="perf_profile_pwrsv_summary">Maximální úspora energie. Snižuje výkon zařízení, zakáže data, úlohy na pozadí, animaci a sníží snímkovací frekvenci</string>
   <string name="perf_profile_bal_summary">Optimální výkon a výkonové charakteristiky</string>
   <string name="perf_profile_perf_summary">Režim Vysoký výkon. Vhodné pro aplikace vyžadující nízkou latenci a vysoký výkon. Zvyšuje se spotřeba energie</string>
   <string name="perf_profile_bias_power_summary">Preferování úspory energie. Omezení maximálního výkonu procesoru, optimalizace úspory energie za cenu vyšší latence</string>

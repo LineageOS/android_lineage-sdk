@@ -88,7 +88,7 @@
   <string name="perf_profile_bias_power">Eficiència</string>
   <string name="perf_profile_bias_perf">Ràpid</string>
   <!-- Performance profiles -->
-  <string name="perf_profile_pwrsv_summary">Estalvi d\'energia màxim. Redueix el rendiment del dispositiu, deshabilitat tasques i dades en segon pla, inhabilita les animacions, i redueix la freqüència de la imatge de la pantalla</string>
+  <string name="perf_profile_pwrsv_summary">El màxim estalvi d\'energia, redueix el rendiment del dispositiu</string>
   <string name="perf_profile_bal_summary">Equilibri entre rendiment òptim i característiques d\'estalvi d\'energia</string>
   <string name="perf_profile_perf_summary">Mode d\'alt rendiment. Útil per a aplicacions que requereixen una latència baixa i el millor rendiment quan el consum d\'energia no és una preocupació</string>
   <string name="perf_profile_bias_power_summary">Afavoreix l\'estalvi d\'energia. Limita el rendiment màxim de la CPU i optimitza\'l per a l\'estalvi d\'energia a costa d\'una latència més alta</string>

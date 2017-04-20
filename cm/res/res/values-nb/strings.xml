@@ -88,7 +88,6 @@
   <string name="perf_profile_bias_power">Effektivitet</string>
   <string name="perf_profile_bias_perf">Rask</string>
   <!-- Performance profiles -->
-  <string name="perf_profile_pwrsv_summary">Maksimum strømsparing. Reduserer ytelsen, deaktiverer bakgrunsoppgaver og data, deaktiverer animasjoner og reduserer bildefrekvens</string>
   <string name="perf_profile_bal_summary">Balanse av best ytelse og strømegenskaper</string>
   <string name="perf_profile_perf_summary">Høy ytelse modus. Nyttig for programmer som krever lav latens og høyeste gjennomstrømningen når strømforbruket ikke er en bekymring</string>
   <string name="perf_profile_bias_power_summary">Favoriserer strømsparing. Begrenser prossesor-kraft og optimaliserer for strømsparing på bekostning av høyere latens</string>

@@ -88,7 +88,7 @@
   <string name="perf_profile_bias_power">Ефективність</string>
   <string name="perf_profile_bias_perf">Швидко</string>
   <!-- Performance profiles -->
-  <string name="perf_profile_pwrsv_summary">Максимальне збереження енергії. Знижує продуктивність пристрою, вимикає фонові процеси і дані, вимикає анімації, та зменшує відображення частоти кадрів</string>
+  <string name="perf_profile_pwrsv_summary">Максимальне збереження енергії, знижує продуктивність пристрою</string>
   <string name="perf_profile_bal_summary">Баланс між енергозбереженням та оптимальною продуктивністю</string>
   <string name="perf_profile_perf_summary">Режим високої продуктивності. Корисно для додатків, що вимагають низької затримки відгуку і найвищу пропускну здатність, коли енергоспоживання не має значення</string>
   <string name="perf_profile_bias_power_summary">Економія понад усе. Обмеження максимальної потужності процесора і оптимізація для енергозбереження за рахунок вищої затримки</string>

@@ -88,7 +88,7 @@
   <string name="perf_profile_bias_power">Efficiente</string>
   <string name="perf_profile_bias_perf">Rapido</string>
   <!-- Performance profiles -->
-  <string name="perf_profile_pwrsv_summary">Massimo risparmio energetico. Riduce le performance del dispositivo, disattiva dati e operazioni in background e riduce il frame rate del display</string>
+  <string name="perf_profile_pwrsv_summary">Massimo risparmio energetico, riduce le prestazioni del dispositivo</string>
   <string name="perf_profile_bal_summary">Performance e utilizzo batteria bilanciati</string>
   <string name="perf_profile_perf_summary">Modalità performance. Utile per applicazioni che richiedono bassa latenza e ottimo rendimento quando i consumi energetici non sono un problema</string>
   <string name="perf_profile_bias_power_summary">Efficienza. I risparmi energetici vengono favoriti limitando la potenza massima della CPU al costo di una latenza maggiore</string>

@@ -88,7 +88,7 @@
   <string name="perf_profile_bias_power">Eficiencia</string>
   <string name="perf_profile_bias_perf">Rápido</string>
   <!-- Performance profiles -->
-  <string name="perf_profile_pwrsv_summary">Máximo ahorro de energía. Reduce el rendimiento del dispositivo, desactiva datos y tareas en segundo plano, desactiva las animaciones y reduce la velocidad de fotogramas de la pantalla</string>
+  <string name="perf_profile_pwrsv_summary">Máximo ahorro de energía, reduce el rendimiento del dispositivo</string>
   <string name="perf_profile_bal_summary">Equilibrio de rendimiento optimo y características de energía</string>
   <string name="perf_profile_perf_summary">Modo de alto rendimiento. Útil para aplicaciones que requieren baja latencia y mayor rendimiento, cuando el consumo de energía no es una preocupación</string>
   <string name="perf_profile_bias_power_summary">Favorecer ahorro de energía. Limitar la potencia máxima del CPU y optimizar para poder ahorrar energía a costa de mayor latencia</string>

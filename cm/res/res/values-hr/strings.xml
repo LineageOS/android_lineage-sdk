@@ -88,7 +88,6 @@
   <string name="perf_profile_bias_power">Učinkovitost</string>
   <string name="perf_profile_bias_perf">Brzo</string>
   <!-- Performance profiles -->
-  <string name="perf_profile_pwrsv_summary">Maksimalna ušteda energije. Smanjuje performanse uređaja, onemogućava pozadinske zadatke i podatke, onemogućava animacije i smanjuje prikaz sličica.</string>
   <string name="perf_profile_bal_summary">Ravnoteža optimalnih performansi i karakteristika energije</string>
   <string name="perf_profile_perf_summary">Način rada visokih performansi. Korisno za aplikacije koje zahtijevaju niske latencije i najveću propusnost kada potrošnja energije nije bitna.</string>
   <string name="perf_profile_bias_power_summary">Naklonost uštedi energije. Ograničuje maksimalnu upotrebu CPU-a i optimizira za uštedu energije po cijeni više latencije.</string>

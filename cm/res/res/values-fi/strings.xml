@@ -88,7 +88,7 @@
   <string name="perf_profile_bias_power">Tehokkuus</string>
   <string name="perf_profile_bias_perf">Nopea</string>
   <!-- Performance profiles -->
-  <string name="perf_profile_pwrsv_summary">Suurin virransäästö. Heikentää laitteen suorituskykyä, poistaa taustatehtävät ja -datan käytöstä, poistaa animaatiot käytöstä ja heikentää näytön kuvataajuutta</string>
+  <string name="perf_profile_pwrsv_summary">Pidentää akun kestoa, vähentää laitteen suorituskykyä</string>
   <string name="perf_profile_bal_summary">Tasapainottaa suorituskyvyn ja virrankulutuksen</string>
   <string name="perf_profile_perf_summary">Korken suorituskyvyn tila. Hyödyllinen sovelluksiin, jotka vaativat alhaisen latenssin ja nopeimman ulostulon kun virrankulutuksella ei ole väliä</string>
   <string name="perf_profile_bias_power_summary">Suosii virransäästöä. Rajoittaa prosessorin tehoa ja optimoi virran säästämiseksi hieman pidemmällä latenssilla</string>

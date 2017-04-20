@@ -88,7 +88,7 @@
   <string name="perf_profile_bias_power">效率</string>
   <string name="perf_profile_bias_perf">快速</string>
   <!-- Performance profiles -->
-  <string name="perf_profile_pwrsv_summary">最大程度的減少電力消耗。降低裝置效能，停用背景程式執行與資料傳輸，停用動畫並降低螢幕顯示影格數</string>
+  <string name="perf_profile_pwrsv_summary">最大省電，降低裝置效能</string>
   <string name="perf_profile_bal_summary">在效能與電力損耗間取得平衡</string>
   <string name="perf_profile_perf_summary">高效能模式，電量消耗不屬於主要考量時適用於需要低延遲與高使用量的應用程式</string>
   <string name="perf_profile_bias_power_summary">省電優先模式，限制 CPU 功率與改善電量消耗，可能會帶來較高延遲</string>

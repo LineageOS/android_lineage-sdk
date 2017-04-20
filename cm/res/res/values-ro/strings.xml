@@ -88,7 +88,7 @@
   <string name="perf_profile_bias_power">Eficiență</string>
   <string name="perf_profile_bias_perf">Rapid</string>
   <!-- Performance profiles -->
-  <string name="perf_profile_pwrsv_summary">Economisire maximă a bateriei. Reduce performanța dispozitivului, dezactivează sarcinile din fundal și datele, dezactivează animațiile și reduce rata de cadre a ecranului</string>
+  <string name="perf_profile_pwrsv_summary">Economie maximă a energiei, reduce performanța dispozitivului</string>
   <string name="perf_profile_bal_summary">Echilibrul de performanţă optimă și caracteristicile energiei</string>
   <string name="perf_profile_perf_summary">Modul de performanţă înaltă. Util pentru aplicaţii care necesită latenţă scăzută şi un debit mai mare atunci când consumul de energie nu este un motiv de îngrijorare</string>
   <string name="perf_profile_bias_power_summary">Favorizează economisirea energiei. Limitează puterea maximă a procesorului şi optimizează pentru economisirea energiei la costul de latenţă mai mare</string>

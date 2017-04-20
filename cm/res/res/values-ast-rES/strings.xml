@@ -83,7 +83,7 @@
   <string name="perf_profile_perf">Rindimientu</string>
   <string name="perf_profile_bias_power">Eficiencia</string>
   <!-- Performance profiles -->
-  <string name="perf_profile_pwrsv_summary">Aforros máximos d\'enerxía. Amenorga\'l rindimientu\'l preséu, deshabilita xeres de fondu, datos y animaciones, amás d\'amenorgar la tasa de cuadros de la pantalla</string>
+  <string name="perf_profile_pwrsv_summary">Aforros máximos d\'enerxía, amenorga\'l rindimientu del preséu</string>
   <string name="perf_profile_bal_summary">Equilibriu de rindimientu óptimu y carauterístiques d\'enerxía</string>
   <string name="perf_profile_perf_summary">Mou de rindimientu altu. Útil p\'aplicaciones que rican llatencia baxa y el meyor rindimientu cuando\'l consumu d\'enerxía nun seya un esmolecimientu</string>
   <string name="perf_profile_bias_power_summary">Favorez los aforros d\'enerxía. Llenda la potencia máximo de la CPU y optimízala pa un aforru d\'enerxía empara d\'una llatencia mayor</string>

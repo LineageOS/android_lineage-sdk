@@ -88,7 +88,6 @@
   <string name="perf_profile_bias_power">効率</string>
   <string name="perf_profile_bias_perf">クイック</string>
   <!-- Performance profiles -->
-  <string name="perf_profile_pwrsv_summary">最大限に省電力化します。端末のパフォーマンスとディスプレイのフレームレートを制限し、バックグラウンドのタスク、通信、アニメーションを無効にします。</string>
   <string name="perf_profile_bal_summary">最適なパフォーマンスと電力特性のバランスを保ちます</string>
   <string name="perf_profile_perf_summary">高パフォーマンスモードです。電力消費を気にしなければ、低遅延と高処理を必要とするアプリケーションに最適です。</string>
   <string name="perf_profile_bias_power_summary">省電力化を優先します。遅延が起こりやすくなりますが、最大CPU電力を制限して、省電力に最適化します。</string>

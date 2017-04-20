@@ -88,7 +88,6 @@
   <string name="perf_profile_bias_power">Eraginkortasuna</string>
   <string name="perf_profile_bias_perf">Azkarra</string>
   <!-- Performance profiles -->
-  <string name="perf_profile_pwrsv_summary">Gehieneko energia aurreztea. Gailuaren errendimendua gutxitzen du, bigarren planoko eginkizunak eta datuak desgaitzen ditu, animazioak desgaitzen ditu eta fotogramen abiadura gutxitzen du</string>
   <string name="perf_profile_bal_summary">Errendimendu optimoa eta energia ezaugarrien arteko oreka</string>
   <string name="perf_profile_perf_summary">Errendimendu altuko modua. Latentzia baxua eta emari altuena behar duten aplikazioetarako erabilgarria energia kontsumoak ardura ez duenean</string>
   <string name="perf_profile_bias_power_summary">Hobetsi energia aurreztea. Mugatu gehieneko PUZ energia eta optimizatu energia aurrezteko latentzia altuago baten truke</string>

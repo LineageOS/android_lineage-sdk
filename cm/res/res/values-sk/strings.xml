@@ -61,7 +61,7 @@
   <string name="permlab_accessAppSuggestions">prístup k návrhom aplikácií</string>
   <string name="permdesc_accessAppSuggestions">Umožní aplikácii prístup k návrhom aplikácií.</string>
   <!-- Label to show for a service that is running because it is observing the user's custom tiles. -->
-  <string name="custom_tile_listener_binding_label">Služba vlastnej dlaždice</string>
+  <string name="custom_tile_listener_binding_label">Zoznam vlastných dlaždíc</string>
   <!-- Labels for the PROTECTED_APP permission. -->
   <string name="permlab_protectedApp">pridať a odobrať aplikácie z chránených aplikácií</string>
   <string name="permdesc_protectedApp">Umožní aplikácii označiť iné aplikácie ako chránené a zamknúť ich.</string>
@@ -88,7 +88,7 @@
   <string name="perf_profile_bias_power">Efektívny</string>
   <string name="perf_profile_bias_perf">Rýchly</string>
   <!-- Performance profiles -->
-  <string name="perf_profile_pwrsv_summary">Maximálna úspora energie. Znižuje výkon zariadenia, zakáže dáta, úlohy na pozadí, animáciu a zníži snímkovaciu frekvenciu</string>
+  <string name="perf_profile_pwrsv_summary">Maximálna úspora energie, znižuje výkon zariadenia</string>
   <string name="perf_profile_bal_summary">Optimálny výkon a výkonové charakteristiky</string>
   <string name="perf_profile_perf_summary">Režim Vysoký výkon. Vhodné pre aplikácie vyžadujúce nízku latenciu a vysoký výkon. Zvyšuje sa spotreba energie</string>
   <string name="perf_profile_bias_power_summary">Preferovanie úspory energie. Obmedzenie maximálneho výkonu procesora, optimalizácia úspory energie za cenu vyššiu latencia</string>

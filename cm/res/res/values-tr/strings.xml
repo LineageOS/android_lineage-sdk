@@ -88,7 +88,7 @@
   <string name="perf_profile_bias_power">Verimlilik</string>
   <string name="perf_profile_bias_perf">Hızlı</string>
   <!-- Performance profiles -->
-  <string name="perf_profile_pwrsv_summary">Maksimum güç tasarrufu. Cihaz performansını düşürür, arka plan görevlerini ve veriyi devre dışı bırakır, animasyonları devre dışı bırakır ve ekran karesi oranını azaltır</string>
+  <string name="perf_profile_pwrsv_summary">Maksimum güç tasarrufu, cihaz performansını düşürür</string>
   <string name="perf_profile_bal_summary">Optimum performans ve güç özelliklerinin dengelenmesi</string>
   <string name="perf_profile_perf_summary">Yüksek performans modu. Güç tüketiminin endişe kaynağı olmadığında düşük gecikme ve yüksek verim gerektiren uygulamalar için kullanışlıdır</string>
   <string name="perf_profile_bias_power_summary">Güç tasarrufunu tercih et. Maksimum işlemci gücünü sınırlayın ve daha yüksek gecikme maliyeti ile güç tasarrufu için optimize edin</string>

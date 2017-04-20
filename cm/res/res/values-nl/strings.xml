@@ -88,7 +88,7 @@
   <string name="perf_profile_bias_power">Efficiënt</string>
   <string name="perf_profile_bias_perf">Snel</string>
   <!-- Performance profiles -->
-  <string name="perf_profile_pwrsv_summary">Maximale energiebesparing. Vermindert prestaties, achtergrondtaken, gegevensverbinding en animaties worden uitgeschakeld en beeldsnelheid wordt verlaagd</string>
+  <string name="perf_profile_pwrsv_summary">Maximale energiebesparing, vermindert apparaatprestaties</string>
   <string name="perf_profile_bal_summary">Balans tussen optimale prestaties en energieverbruik</string>
   <string name="perf_profile_perf_summary">Hoge prestaties. Te gebruiken in situaties die de hoogste prestaties vereisen en waarbij stroomverbruik niet van belang is</string>
   <string name="perf_profile_bias_power_summary">Geeft de voorkeur aan energiebesparing. Maximaal CPU-vermogen wordt beperkt en geoptimaliseerd voor energiebesparing, ten koste van een mindere prestatie</string>
