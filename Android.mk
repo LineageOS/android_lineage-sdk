@@ -275,6 +275,7 @@ LOCAL_ADDITIONAL_DEPENDENCIES := \
 LOCAL_JAVA_LIBRARIES := $(lineage_platform_docs_java_libraries)
 
 LOCAL_DROIDDOC_OPTIONS := \
+        -android \
         -offlinemode \
         -exclude org.lineageos.platform.internal \
         -hidePackage org.lineageos.platform.internal \
