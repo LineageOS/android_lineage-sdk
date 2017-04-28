@@ -88,6 +88,7 @@
   <string name="perf_profile_bias_power">Effizient</string>
   <string name="perf_profile_bias_perf">Schnell</string>
   <!-- Performance profiles -->
+  <string name="perf_profile_pwrsv_summary">Maximale Energieeinsparung, reduziert die Geräteleistung</string>
   <string name="perf_profile_bal_summary">Balance zwischen optimaler Leistung und Energieverbrauch</string>
   <string name="perf_profile_perf_summary">Hochleistungsmodus. Nützlich für Anwendungen die niedrige Latenzen und den höchsten Durchsatz benötigen und der Energiebedarf nicht von Belang ist</string>
   <string name="perf_profile_bias_power_summary">Auf Energiesparen ausrichten. Verringert die maximale CPU-Leistung auf Kosten höherer Latenz</string>

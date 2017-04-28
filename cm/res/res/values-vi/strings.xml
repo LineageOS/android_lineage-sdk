@@ -88,6 +88,7 @@
   <string name="perf_profile_bias_power">Hiệu quả</string>
   <string name="perf_profile_bias_perf">Nhanh</string>
   <!-- Performance profiles -->
+  <string name="perf_profile_pwrsv_summary">Tiết kiệm năng lượng tối đa, giảm hiệu suất thiết bị</string>
   <string name="perf_profile_bal_summary">Cân bằng của tối ưu hiệu suất và điện năng</string>
   <string name="perf_profile_perf_summary">Chế độ hiệu suất cao. Hữu ích cho các ứng dụng đòi hỏi độ trễ thấp và băng thông cao nhất khi tiêu thụ điện năng không phải là một mối quan tâm</string>
   <string name="perf_profile_bias_power_summary">Ưu tiên tiết kiệm pin. Hạn chế tối đa điện năng CPU và tối ưu hóa điện năng để tiết kiệm hao phí do độ trễ cao hơn</string>

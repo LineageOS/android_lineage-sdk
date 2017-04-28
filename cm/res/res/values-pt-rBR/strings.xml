@@ -88,6 +88,7 @@
   <string name="perf_profile_bias_power">Eficiência</string>
   <string name="perf_profile_bias_perf">Rápido</string>
   <!-- Performance profiles -->
+  <string name="perf_profile_pwrsv_summary">Economia máxima de energia, reduz o desempenho do dispositivo</string>
   <string name="perf_profile_bal_summary">Equilíbrio entre desempenho e consumo de energia</string>
   <string name="perf_profile_perf_summary">Modo de alto desempenho. Útil para aplicações que requerem baixa latência e a taxa de transferência mais alta, quando o consumo de energia não é uma preocupação</string>
   <string name="perf_profile_bias_power_summary">Favorece a economia de energia. Limita a potência máxima da CPU e otimiza a economia de energia a custo de maior latência</string>

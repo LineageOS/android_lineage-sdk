@@ -88,6 +88,7 @@
   <string name="perf_profile_bias_power">Efficace</string>
   <string name="perf_profile_bias_perf">Rapide</string>
   <!-- Performance profiles -->
+  <string name="perf_profile_pwrsv_summary">Économies d’énergie maximales, réduit les performances de l’appareil</string>
   <string name="perf_profile_bal_summary">Équilibre entre performances optimales et économies d\'énergie</string>
   <string name="perf_profile_perf_summary">Mode haute performance. Utile pour les applications nécessitant un débit plus élevé et à faible latence lorsque la consommation d’énergie n’est pas un problème</string>
   <string name="perf_profile_bias_power_summary">Favorise les économies d’énergie. Limite la puissance du processeur et l\'optimise pour des économies d\'énergie maximales, entraînant une latence plus élevée</string>

@@ -88,6 +88,7 @@
   <string name="perf_profile_bias_power">Энергоэффективный</string>
   <string name="perf_profile_bias_perf">Оптимальная производитительность</string>
   <!-- Performance profiles -->
+  <string name="perf_profile_pwrsv_summary">Максимальное энергосбережение, снижает производительность устройства</string>
   <string name="perf_profile_bal_summary">Баланс оптимальной производительности и энергопотребления</string>
   <string name="perf_profile_perf_summary">Режим высокой производительности. Полезно при работе с приложениями, требующими минимального времени отклика и высокой скорости обмена данными, и когда энергопотребление устройства неважно</string>
   <string name="perf_profile_bias_power_summary">Стараться экономить энергию. Ограничивается максимальная мощность процессора ценой увеличения времени отклика системы</string>
