@@ -88,6 +88,7 @@
   <string name="perf_profile_bias_power">Effektivitet</string>
   <string name="perf_profile_bias_perf">Hurtig</string>
   <!-- Performance profiles -->
+  <string name="perf_profile_pwrsv_summary">Maksimal strømbesparelse, reducerer enhedens ydeevne</string>
   <string name="perf_profile_bal_summary">Balance mellem optimal ydelse og strømegenskaber</string>
   <string name="perf_profile_perf_summary">Højtydende tilstand. Nyttigt for programmer, der kræver lav latenstid og højeste dataoverførselshastighed, når der ikke skal tages hensyn til strømforbruget</string>
   <string name="perf_profile_bias_power_summary">Prioritér strømbesparelser. Begræns maksimal CPU-kraft og optimér til strømbesparelse på bekostning af højere latenstid</string>

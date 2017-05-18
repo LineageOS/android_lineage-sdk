@@ -88,6 +88,7 @@
   <string name="perf_profile_bias_power">Oszczędny</string>
   <string name="perf_profile_bias_perf">Szybki</string>
   <!-- Performance profiles -->
+  <string name="perf_profile_pwrsv_summary">Maksymalna oszczędność energii, zmniejsza wydajność urządzenia</string>
   <string name="perf_profile_bal_summary">Równowaga optymalnej wydajności i zużycia energii</string>
   <string name="perf_profile_perf_summary">Tryb wysokiej wydajności. Przydatne dla aplikacji wymagających minimalnych opóźnień i najwyższej wydajności bez względu na zużycie energii</string>
   <string name="perf_profile_bias_power_summary">Sprzyja oszczędzaniu energii. Ogranicza moc procesora i optymalizuje pod kątem zużycia energii, kosztem większych opóźnień</string>

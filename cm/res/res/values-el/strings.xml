@@ -88,6 +88,7 @@
   <string name="perf_profile_bias_power">Αποδοτικό</string>
   <string name="perf_profile_bias_perf">Γρήγορο</string>
   <!-- Performance profiles -->
+  <string name="perf_profile_pwrsv_summary">Μέγιστη εξοικονόμηση ενέργειας, μειώνει την απόδοση της συσκευής</string>
   <string name="perf_profile_bal_summary">Ισορροπία βέλτιστης απόδοσης και χαρακτηριστικά εξοικονόμησης</string>
   <string name="perf_profile_perf_summary">Λειτουργία υψηλής απόδοσης. Χρήσιμο για εφαρμογές που απαιτούν χαμηλή καθυστέρηση και υψηλότερη απόδοση όταν η κατανάλωση ενέργειας δεν έχει καμία σημασία</string>
   <string name="perf_profile_bias_power_summary">Υψηλή εξοικονόμηση. Περιορίζει την μέγιστη απόδοση του επεξεργαστή και βελτιστοποίηση για εξοικονόμηση με κόστος υψηλής καθυστέρησης</string>
