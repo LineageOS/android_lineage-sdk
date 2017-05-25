@@ -50,6 +50,8 @@ import libcore.util.Objects;
 public final class TwilightTracker {
     private static final String TAG = "TwilightTracker";
     private static final boolean DEBUG = false;
+    private static final String ACTION_UPDATE_TWILIGHT_STATE =
+            "cyanogenmod.platform.intent.action.UPDATE_TWILIGHT_STATE";
 
     private final Object mLock = new Object();
 
@@ -74,7 +76,7 @@ public final class TwilightTracker {
         IntentFilter filter = new IntentFilter(Intent.ACTION_AIRPLANE_MODE_CHANGED);
         filter.addAction(Intent.ACTION_TIME_CHANGED);
         filter.addAction(Intent.ACTION_TIMEZONE_CHANGED);
-        filter.addAction(TwilightTracker.class.getName());
+        filter.addAction(ACTION_UPDATE_TWILIGHT_STATE);
         mContext.registerReceiver(mUpdateLocationReceiver, filter);
     }
 
@@ -392,7 +394,7 @@ public final class TwilightTracker {
                 Slog.d(TAG, "Next update in " + (nextUpdate - now) + " ms");
             }
 
-            Intent updateIntent = new Intent(mContext, TwilightTracker.class);
+            Intent updateIntent = new Intent(ACTION_UPDATE_TWILIGHT_STATE);
             PendingIntent pendingIntent = PendingIntent.getBroadcast(
                     mContext, 0, updateIntent, 0);
             mAlarmManager.cancel(pendingIntent);

@@ -35,6 +35,8 @@
     <protected-broadcast android:name="cyanogenmod.platform.intent.action.PROFILE_UPDATED" />
     <protected-broadcast android:name="cyanogenmod.platform.intent.action.INTENT_ACTION_PROFILE_TRIGGER_STATE_CHANGED" />
 
+    <protected-broadcast android:name="cyanogenmod.platform.intent.action.UPDATE_TWILIGHT_STATE" />
+
     <!-- Must be required by an, to ensure that only the system can bind to it.
          @hide -->
     <permission android:name="cyanogenmod.permission.BIND_CUSTOM_TILE_LISTENER_SERVICE"
