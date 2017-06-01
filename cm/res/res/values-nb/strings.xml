@@ -38,7 +38,7 @@
   <string name="permdesc_modifyProfiles">Tillat en app å endre systemprofiler.</string>
   <!-- Labels for the HARDWARE_ABSTRACTION_ACCESS permission. -->
   <string name="permlab_useHardwareFramework">bruk maskinvare framework</string>
-  <string name="permdesc_useHardwareFramework">Gir en app tilgang til CMs maskinvare framework.</string>
+  <string name="permdesc_useHardwareFramework">Gir et program tilgang til LineageOS sitt maskinvare-rammeverk.</string>
   <!-- Labels for the WRITE_ALARMS permission. -->
   <string name="permlab_write_alarms">endre alarmer direkte</string>
   <string name="permdesc_write_alarms">Gir en app tilgang til å legge til, endre eller slette alle alarmene dine.</string>
