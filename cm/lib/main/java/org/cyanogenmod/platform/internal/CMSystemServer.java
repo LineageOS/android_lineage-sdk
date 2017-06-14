@@ -45,8 +45,10 @@ public class CMSystemServer {
     public static boolean coreAppsOnly() {
         // Only run "core" apps+services if we're encrypting the device.
         final String cryptState = SystemProperties.get("vold.decrypt");
+        final boolean isAlarmBoot = SystemProperties.getBoolean("ro.alarm_boot", false);
         return ENCRYPTING_STATE.equals(cryptState) ||
-               ENCRYPTED_STATE.equals(cryptState);
+               ENCRYPTED_STATE.equals(cryptState) ||
+               isAlarmBoot;
     }
 
     /**
