@@ -18,172 +18,173 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Label for the LineageOS system components when they are shown to the user. -->
-  <string name="cyanogenmod_system_label">LineageOS систем</string>
-  <string name="permlab_publishCustomTile">направи прилагођену плочицу у панелу брзог подешавања</string>
-  <string name="permdesc_publishCustomTile">Омогући апликацији да избаци плочицу брзог подешавања.</string>
-  <string name="permlab_modifyNetworkSettings">промена поставки мрежног система</string>
-  <string name="permdesc_modifyNetworkSettings">Дозволи апликацији да промени подешавања за авионски мод и мобилне податке.</string>
-  <string name="permlab_modifySoundSettings">промени подешавања системског звука</string>
-  <string name="permdesc_modifySoundSettings">Дозволи апликацији да промени подешавања за мод прекидања звука.</string>
-  <string name="permlab_bindCustomTileListenerService">везује за подразумевану плочицу сервиса надгледања</string>
-  <string name="permdesc_bindCustomTileListenerService">Омогућава апликацији да се веже за интерфејс највишег нивоа прилагођене плочице сервиса надгледања.</string>
+  <string name="cyanogenmod_system_label">Систем LineageOS</string>
+  <string name="permlab_publishCustomTile">стварање прилагођених плочица на панелу са брзим подешавањима</string>
+  <string name="permdesc_publishCustomTile">Апликација може да додаје плочице на панел са брзим подешавањима.</string>
+  <string name="permlab_modifyNetworkSettings">промена мрежних подешавања система</string>
+  <string name="permdesc_modifyNetworkSettings">Апликација може да мења подешавања режима рада у авиону и мобилне мреже за пренос података.</string>
+  <string name="permlab_modifySoundSettings">промена подешавања звука система</string>
+  <string name="permdesc_modifySoundSettings">Апликација може да мења подешавања звука за режим обавештења.</string>
+  <string name="permlab_bindCustomTileListenerService">повезивање са услугом за надзор прилагођених плочица</string>
+  <string name="permdesc_bindCustomTileListenerService">Апликација може да успостави везу са интерфејсом највишег нивоа за услугу надзора прилагођених плочица.</string>
   <!-- Labels for the READ_MSIM_PHONE_STATE permission. -->
-  <string name="permlab_readMSPhoneState">приказ стања телефона и конекције уз подршку за више SIM-ова</string>
-  <string name="permdesc_readMSPhoneState">Дозволи апликацији да види стање телефона и конекцију уз подршку за више SIM-ова.</string>
+  <string name="permlab_readMSPhoneState">преглед стања телефона и преноса података са подршком за неколико SIM картица</string>
+  <string name="permdesc_readMSPhoneState">Апликација може да приступа информацијама о стању телефона и преносу података са подршком за неколико SIM картица.</string>
   <!-- Labels for the MODIFY_MSIM_PHONE_STATE permission. -->
-  <string name="permlab_modifyMSPhoneState">промена стања телефона и конекције уз подршку за више SIM-ова</string>
-  <string name="permdesc_modifyMSPhoneState">Дозволи апликацији да мења стање телефона и конекције уз подршку за више SIM-ова.</string>
+  <string name="permlab_modifyMSPhoneState">измена стања телефона и преноса података са подршком за неколико SIM картица</string>
+  <string name="permdesc_modifyMSPhoneState">Апликација може да мења стање телефона и пренос података са подршком за неколико SIM картица.</string>
   <!-- Labels for the MODIFY_PROFILES permission. -->
-  <string name="permlab_modifyProfiles">Измени системске профиле</string>
-  <string name="permdesc_modifyProfiles">Дозволи апликацији да мења системске профиле.</string>
+  <string name="permlab_modifyProfiles">измена профила система</string>
+  <string name="permdesc_modifyProfiles">Апликација може да мења подешавања системских профила.</string>
   <!-- Labels for the HARDWARE_ABSTRACTION_ACCESS permission. -->
-  <string name="permlab_useHardwareFramework">користи хардверски оквир</string>
-  <string name="permdesc_useHardwareFramework">Дозвољава апликацији приступ CM хардверском оквиру.</string>
+  <string name="permlab_useHardwareFramework">коришћење хардверског оквира</string>
+  <string name="permdesc_useHardwareFramework">Апликација може да приступа хардверском оквиру LineageOS-а.</string>
   <!-- Labels for the WRITE_ALARMS permission. -->
-  <string name="permlab_write_alarms">директна промена аларма</string>
-  <string name="permdesc_write_alarms">Дозвола апликацији да дода, промени или обрише све твоје аларме.</string>
+  <string name="permlab_write_alarms">промена аларма</string>
+  <string name="permdesc_write_alarms">Апликација може да додаје, мења или брише аларме.</string>
   <!-- Labels for the MANAGE_ALARMS permission. -->
-  <string name="permlab_manage_alarms">Укључи/искључи заказане аларме</string>
-  <string name="permdesc_manage_alarms">Дозвола апликацији да укључи или искључи заказане аларме.</string>
+  <string name="permlab_manage_alarms">укључивање/искључивање заказаних аларма</string>
+  <string name="permdesc_manage_alarms">Апликација може да укључује или искључује заказане аларме.</string>
   <!-- Labels for the READ_ALARMS permission. -->
   <string name="permlab_read_alarms">приступ заказаним алармима</string>
-  <string name="permdesc_read_alarms">Дозвола апликацији да чита заказане аларме.</string>
+  <string name="permdesc_read_alarms">Апликација може да чита податке о заказаним алармима.</string>
   <!-- Labels for the WRITE_SETTINGS permission -->
-  <string name="permlab_writeSettings">промени CM системска подешавања</string>
-  <string name="permdesc_writeSettings">Омогућава апликацији да промени CM системска подешавања.</string>
+  <string name="permlab_writeSettings">измена подешавања система</string>
+  <string name="permdesc_writeSettings">Апликација може да мења подешавања система.</string>
   <!-- Labels for the WRITE_SECURE_SETTINGS permission -->
-  <string name="permlab_writeSecureSettings">промени CM системска подешавања сигурности</string>
-  <string name="permdesc_writeSecureSettings">Омогући апликацији да промени CM системска подешавања сигурности. Није за коришћење код нормалних апликација.</string>
+  <string name="permlab_writeSecureSettings">измена подешавања безбедности система</string>
+  <string name="permdesc_writeSecureSettings">Апликација може да мења подешавања безбедности система. Ова дозвола није потребна нормалним апликацијама.</string>
   <!-- Labels for the MANAGE_PERSISTENT_STORAGE permission. -->
-  <string name="permlab_managePersistentStorage">Управљај сталним складиштем</string>
-  <string name="permdesc_managePersistentStorage">омогући апликацији да чита и пише својства која остају после фабричког ресета.</string>
+  <string name="permlab_managePersistentStorage">управљање сталним складиштем</string>
+  <string name="permdesc_managePersistentStorage">Апликација може да чита и пише својства која могу остати након враћања фабричких подешавања.</string>
   <!-- Labels for the ACCESS_APP_SUGGESTIONS permission -->
-  <string name="permlab_accessAppSuggestions">приступ предлозима апликације</string>
-  <string name="permdesc_accessAppSuggestions">Дозволи апликацији да приступи предлозима апликације.</string>
+  <string name="permlab_accessAppSuggestions">приступ списку предложених апликација</string>
+  <string name="permdesc_accessAppSuggestions">Апликација може да приступа списку предложених апликација.</string>
   <!-- Label to show for a service that is running because it is observing the user's custom tiles. -->
-  <string name="custom_tile_listener_binding_label">Прилагођена плочица надгледања</string>
+  <string name="custom_tile_listener_binding_label">Надзор прилагођених плочица</string>
   <!-- Labels for the PROTECTED_APP permission. -->
-  <string name="permlab_protectedApp">додавање и уклањање апликација за заштићене апликације</string>
-  <string name="permdesc_protectedApp">Дозвољава апликацији да означи друге апликације као заштићене и закључа их.</string>
+  <string name="permlab_protectedApp">додавање и уклањање апликација са списка заштићених</string>
+  <string name="permdesc_protectedApp">Апликација може да означава друге апликације као заштићене и закључа их.</string>
   <!-- Profiles -->
   <!-- Names of default profiles. -->
-  <string name="profileNameDefault">Подразумевано</string>
+  <string name="profileNameDefault">Подразумевани</string>
   <string name="profileNameWork">Посао</string>
-  <string name="profileNameHome">Кући</string>
-  <string name="profileNameSilent">Тишина</string>
+  <string name="profileNameHome">Кућа</string>
+  <string name="profileNameSilent">Нечујни</string>
   <string name="profileNameNight">Ноћ</string>
   <string name="profileNameAutomobile">Аутомобил</string>
   <!-- Names of application groups. -->
   <string name="profileGroupPhone">Телефон</string>
   <string name="profileGroupCalendar">Календар</string>
   <string name="profileGroupGmail">Gmail</string>
-  <string name="profileGroupEmail">Е-пошта</string>
+  <string name="profileGroupEmail">Имејл</string>
   <string name="profileGroupSMS">SMS</string>
   <!-- Name of wildcard profile. -->
   <string name="wildcardProfile">Друго</string>
   <!-- Performance profiles -->
   <string name="perf_profile_pwrsv">Уштеда енергије</string>
-  <string name="perf_profile_bal">Уравнотежено</string>
+  <string name="perf_profile_bal">Уравнотежени</string>
   <string name="perf_profile_perf">Перформансе</string>
   <string name="perf_profile_bias_power">Ефикасност</string>
   <string name="perf_profile_bias_perf">Брзина</string>
   <!-- Performance profiles -->
-  <string name="perf_profile_bal_summary">Баланс оптималних перформанси и потрошње</string>
-  <string name="perf_profile_perf_summary">Режим високих перформанси. Корисно за апликације које траже брзи одзив и високи приоритет када потрошња није битна</string>
-  <string name="perf_profile_bias_power_summary">Уштеда енергије. Лимитиран CPU и оптимизована уштеда батерије на рачун повећаног кашњења</string>
-  <string name="perf_profile_bias_perf_summary">Услуга перформанси. Смањује кашњење са благо повећаном потрошњом</string>
+  <string name="perf_profile_pwrsv_summary">Максимална уштеда енергије на рачун перформанси уређаја.</string>
+  <string name="perf_profile_bal_summary">Равнотежа између оптималних перформанси и потрошње.</string>
+  <string name="perf_profile_perf_summary">Режим великих перформанси. Корисно за апликације које захтевају брз одзив и висок приоритет, када потрошња није битна.</string>
+  <string name="perf_profile_bias_power_summary">Повећана уштеда енергије. Ограничава максималну употребу процесора у циљу уштеде енергије на рачун споријег одзива.</string>
+  <string name="perf_profile_bias_perf_summary">Повећане перформансе. Смањује време одзива уз незнатно већу потрошњу.</string>
   <!-- LiveDisplay strings -->
   <string name="live_display_auto">Аутоматски</string>
-  <string name="live_display_auto_summary">Аутоматски прилагоди температуру боје екрана после сумрака и свитања</string>
+  <string name="live_display_auto_summary">Аутоматски прилагодите температуру боје екрана након сумрака и свитања.</string>
   <string name="live_display_off">Искључено</string>
-  <string name="live_display_off_summary">Онемогућити сва подешавања</string>
+  <string name="live_display_off_summary">Онемогућите сва прилагођавања.</string>
   <string name="live_display_day">Дан</string>
-  <string name="live_display_day_summary">Користи само дневна подешавања</string>
+  <string name="live_display_day_summary">Само дневна подешавања.</string>
   <string name="live_display_night">Ноћ</string>
-  <string name="live_display_night_summary">Користи само ноћна подешавања</string>
-  <string name="live_display_outdoor">Напољу (јако сунце)</string>
-  <string name="live_display_outdoor_summary">Користи само подешавања за напоље</string>
-  <string name="live_display_hint">LiveDisplay може смањити напрезање очију и помоћи да спавате ноћу. Додирните да пробате!</string>
-  <string name="accessibility_quick_settings_live_display_off">Активни екран искључен.</string>
-  <string name="accessibility_quick_settings_live_display_auto">Активни Екран: ауто режим.</string>
-  <string name="accessibility_quick_settings_live_display_day">Активни Екран: дневни режим.</string>
-  <string name="accessibility_quick_settings_live_display_night">Активни Екран: ноћни режим.</string>
-  <string name="accessibility_quick_settings_live_display_outdoor">Активни Екран: режим на отвореном.</string>
-  <string name="accessibility_quick_settings_live_display_changed_off">Активни Екран је искључен.</string>
-  <string name="accessibility_quick_settings_live_display_changed_auto">Активни Екран промењен у ауто режим.</string>
-  <string name="accessibility_quick_settings_live_display_changed_day">Активни Екран промењен у дневни режим.</string>
-  <string name="accessibility_quick_settings_live_display_changed_night">Активни Екран промењен у ноћни режим.</string>
-  <string name="accessibility_quick_settings_live_display_changed_outdoor">Активни Екран промењен у режим на отвореном.</string>
+  <string name="live_display_night_summary">Само ноћна подешавања.</string>
+  <string name="live_display_outdoor">На отвореном (јако сунце)</string>
+  <string name="live_display_outdoor_summary">Само подешавања на отвореном.</string>
+  <string name="live_display_hint">LiveDisplay може да смањи напрезање очију и побољша сан. Додирните овде да бисте га испробали!</string>
+  <string name="accessibility_quick_settings_live_display_off">LiveDisplay је искључен.</string>
+  <string name="accessibility_quick_settings_live_display_auto">LiveDisplay ради у аутоматском режиму.</string>
+  <string name="accessibility_quick_settings_live_display_day">LiveDisplay ради у дневном режиму.</string>
+  <string name="accessibility_quick_settings_live_display_night">LiveDisplay ради у ноћном режиму.</string>
+  <string name="accessibility_quick_settings_live_display_outdoor">LiveDisplay ради у режиму „на отвореном“.</string>
+  <string name="accessibility_quick_settings_live_display_changed_off">LiveDisplay је искључен.</string>
+  <string name="accessibility_quick_settings_live_display_changed_auto">LiveDisplay је пребачен у аутоматски режим.</string>
+  <string name="accessibility_quick_settings_live_display_changed_day">LiveDisplay је пребачен у дневни режим.</string>
+  <string name="accessibility_quick_settings_live_display_changed_night">LiveDisplay је пребачен у ноћни режим.</string>
+  <string name="accessibility_quick_settings_live_display_changed_outdoor">LiveDisplay је пребачен у режим „на отвореном“.</string>
   <!-- Third party keyguard permission label -->
   <string name="permlab_thirdPartyKeyguard">закључани екран треће стране</string>
   <!-- Third party keyguard permission description -->
-  <string name="permdesc_thirdPartyKeyguard">Дозволи апликацији да се користи као несигуран закључани екран.</string>
+  <string name="permdesc_thirdPartyKeyguard">Апликација може да функционише као небезбедан закључани екран.</string>
   <!-- Theme installation error notification -->
-  <string name="theme_install_error_title">Инсталирање теме није успело</string>
-  <string name="theme_install_error_message"><xliff:g id="theme">%1$s</xliff:g> неуспешно инсталирано</string>
+  <string name="theme_install_error_title">Грешка при инсталирању теме</string>
+  <string name="theme_install_error_message">Не могу да инсталирам „<xliff:g id="theme">%1$s</xliff:g>“.</string>
   <!-- Theme reset notification -->
-  <string name="theme_reset_notification_title">Ресетуј тему</string>
-  <string name="theme_reset_notification_message">Системска тема је обновљена због вишеструких падова апликација.</string>
+  <string name="theme_reset_notification_title">Враћање првобитне теме</string>
+  <string name="theme_reset_notification_message">Враћена је стандардна тема због отказивања апликација.</string>
   <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permlab_accessThemeService">приступај услузи тема</string>
+  <string name="permlab_accessThemeService">приступ услузи тема</string>
   <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permdesc_accessThemeService">Омогућава апликацији да приступи услузи тема. Никада не би требало за нормалне апликације.</string>
+  <string name="permdesc_accessThemeService">Апликација може да приступа услузи тема. Ова дозвола није потребна нормалним апликацијама.</string>
   <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permlab_readThemes">читај информације о теми</string>
+  <string name="permlab_readThemes">читање података о теми</string>
   <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permdesc_readThemesDesc">Омогућава апликацији да чита твоје теме и одређује коју си тему применио.</string>
+  <string name="permdesc_readThemesDesc">Апликација може да чита теме и одреди која је тренутно активна.</string>
   <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permlab_writeThemes">модификуј своје теме</string>
+  <string name="permlab_writeThemes">измена тема</string>
   <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permdesc_writeThemesDesc">Омогућава апликацији да убацује нове теме и модификује коју тему ћеш применити.</string>
+  <string name="permdesc_writeThemesDesc">Апликација може да инсталира нове теме и да промени тренутну.</string>
   <!-- Performance manager permission title -->
   <string name="permlab_perfAccess">приступ менаџеру перформанси</string>
   <!-- Performance manager permission description -->
-  <string name="permdesc_perfAccessDesc">Омогућава апликацији да приступи услугама перформанси. Није потребно нормалним апликацијама.</string>
+  <string name="permdesc_perfAccessDesc">Апликација може да приступа услузи перформанси. Ова дозвола није потребна нормалним апликацијама.</string>
   <!-- Access live lock screen manager service permission label -->
-  <string name="permlab_accessLiveLockScreenService">приступ услузи менаџера активног екрана</string>
+  <string name="permlab_accessLiveLockScreenService">приступ менаџеру анимираног закључаног екрана</string>
   <!-- Access live lock screen manager service permission description -->
-  <string name="permdesc_accessLiveLockScreenService">Дозвола апликацији за приступ услузи менаџера активног екрана.</string>
+  <string name="permdesc_accessLiveLockScreenService">Апликација може да приступа менаџеру анимираног закључаног екрана.</string>
   <!-- Privileged access live lock screen manager service permission label -->
-  <string name="permlab_accessLiveLockScreenServicePrivate">приступ услузи менаџера активног екрана</string>
+  <string name="permlab_accessLiveLockScreenServicePrivate">приступ менаџеру анимираног закључаног екрана</string>
   <!-- Privileged access live lock screen manager service permission description -->
-  <string name="permdesc_accessLiveLockScreenServicePrivate">Дозволи системској апликацији приступ услузи менаџера активног екрана.</string>
+  <string name="permdesc_accessLiveLockScreenServicePrivate">Системске апликације могу да приступају менаџеру анимираног закључаног екрана.</string>
   <!-- Live lock screen manager service provider permission label -->
-  <string name="permlab_accessLiveLockScreenServiceProvider">пружање услуге менаџера активног екрана</string>
+  <string name="permlab_accessLiveLockScreenServiceProvider">обезбеђивање приступа менаџеру анимираног закључаног екрана</string>
   <!-- Live lock screen manager service provider permission description -->
-  <string name="permdesc_accessLiveLockScreenServiceProvider">Дозвола услуге добављача за услугу менаџера активног закључаног екрана.</string>
+  <string name="permdesc_accessLiveLockScreenServiceProvider">Обезбеђује услугу која може да приступа менаџеру анимираног закључаног екрана.</string>
   <!-- Weather Service strings -->
   <string name="permlab_weather_read">читање временске прогнозе</string>
-  <string name="permdesc_weather_read">Дозвола апликацији да чита садржај временске прогнозе.</string>
+  <string name="permdesc_weather_read">Апликација може да чита садржај временске прогнозе.</string>
   <string name="permlab_weather_write">ажурирање временске прогнозе</string>
-  <string name="permdesc_weather_write">Дозвола апликацији да ажурира садржај временске прогнозе.</string>
+  <string name="permdesc_weather_write">Апликација може да ажурира садржај временске прогнозе.</string>
   <string name="permlab_weather_bind">повезан као добављач временске прогнозе</string>
-  <string name="permdesc_weather_bind">Дозволи апликацији да се идентификује као добављач временске прогнозе.</string>
-  <string name="permlab_weather_access_mgr">Приступ услузи временске прогнозе</string>
-  <string name="permdesc_weather_access_mgr">Омогућава апликацији да приступи услугама временске прогнозе у систему. Није потребно нормалним апликацијама.</string>
+  <string name="permdesc_weather_bind">Апликација може да буде добављач временске прогнозе.</string>
+  <string name="permlab_weather_access_mgr">приступ услузи временске прогнозе</string>
+  <string name="permdesc_weather_access_mgr">Апликација може да приступа системској услузи временске прогнозе. Ова дозвола није потребна нормалним апликацијама.</string>
   <!-- DataUsageProvider write permission title -->
-  <string name="permlab_dataUsageWrite">промени коришћење података базе података</string>
+  <string name="permlab_dataUsageWrite">измена базе о коришћењу података</string>
   <!-- DataUsageProvider write permission description -->
-  <string name="permdesc_dataUsageWrite">Дозвола апликацији да ажурира садржај података базе података.</string>
+  <string name="permdesc_dataUsageWrite">Апликација може да ажурира садржај базе о коришћењу података.</string>
   <!-- DataUsageProvider read permission title -->
-  <string name="permlab_dataUsageRead">прочитај податке коришћења базе података</string>
+  <string name="permlab_dataUsageRead">читање базе о коришћењу података</string>
   <!-- DataUsageProvider read permission description -->
-  <string name="permdesc_dataUsageRead">Дозвола апликацији да чита садржај података базе података.</string>
+  <string name="permdesc_dataUsageRead">Апликација може да чита садржај базе о коришћењу података.</string>
   <!-- LiveDisplay manager permission -->
-  <string name="permlab_manageLiveDisplay">Управљај подешавањем Активног екрана</string>
-  <string name="permdesc_manageLiveDisplay">Омогућује апликацији да подеси подешавања напредног приказа.</string>
+  <string name="permlab_manageLiveDisplay">управљање подешавањима LiveDisplay-а</string>
+  <string name="permdesc_manageLiveDisplay">Апликација може да мења подешавања напредног приказа.</string>
   <!-- CMAudioService - observe session changes permission -->
-  <string name="permlab_observe_audio_sessions">посматрај промене аудио сесије</string>
-  <string name="permdesc_observe_audio_sessions">Дозвољава апликацији да посматра ток аудиа док је креиран и прекинут.</string>
+  <string name="permlab_observe_audio_sessions">преглед измена звучних сесија</string>
+  <string name="permdesc_observe_audio_sessions">Апликација може да прегледа звучне токове који се стварају и нестају.</string>
   <!-- CMAudioService - observe session changes permission -->
-  <string name="permlab_manage_audio_sessions">управљај променама аудио сесије</string>
-  <string name="permdesc_manage_audio_sessions">Дозвола апликацији да шаље ажурирања тока аудио записа.</string>
+  <string name="permlab_manage_audio_sessions">управљање изменама звучних сесија</string>
+  <string name="permdesc_manage_audio_sessions">Апликација може да мења параметре звучних токова.</string>
   <!-- QuickSettings: Themes tile -->
   <string name="qs_themes_label">Теме</string>
-  <string name="qs_themes_content_description">Прилагодите вашу тему</string>
+  <string name="qs_themes_content_description">Прилагодите своју тему.</string>
   <!-- Privacy Guard -->
   <string name="privacy_guard_manager_title">Заштита приватности</string>
   <!-- Permissions used by remote preferences -->
-  <string name="permlab_manageRemotePrefs">управљај удаљеним подешавањима</string>
-  <string name="permdesc_manageRemotePrefs">Дозволи апликацији управљање удаљеним подешавањима</string>
+  <string name="permlab_manageRemotePrefs">управљање подешавањима даљинског приступа</string>
+  <string name="permdesc_manageRemotePrefs">Апликација може да управља подешавањима даљинског приступа.</string>
 </resources>
