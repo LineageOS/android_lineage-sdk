@@ -47,7 +47,7 @@ public class CMDatabaseHelper extends SQLiteOpenHelper{
     private static final boolean LOCAL_LOGV = false;
 
     private static final String DATABASE_NAME = "cmsettings.db";
-    private static final int DATABASE_VERSION = 7;
+    private static final int DATABASE_VERSION = 8;
 
     public static class CMTableNames {
         public static final String TABLE_SYSTEM = "system";
@@ -258,6 +258,23 @@ public class CMDatabaseHelper extends SQLiteOpenHelper{
                 }
             }
             upgradeVersion = 7;
+        }
+
+        if (upgradeVersion < 8) {
+            db.beginTransaction();
+            SQLiteStatement stmt = null;
+            try {
+                stmt = db.compileStatement("UPDATE secure SET value=? WHERE name=?");
+                stmt.bindString(1, mContext.getResources()
+                        .getString(R.string.def_protected_component_managers));
+                stmt.bindString(2, CMSettings.Secure.PROTECTED_COMPONENT_MANAGERS);
+                stmt.execute();
+                db.setTransactionSuccessful();
+            } finally {
+                if (stmt != null) stmt.close();
+                db.endTransaction();
+            }
+            upgradeVersion = 8;
         }
         // *** Remember to update DATABASE_VERSION above!
 
