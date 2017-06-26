@@ -111,7 +111,7 @@
     <bool name="def_swap_volume_keys_on_rotation">false</bool>
 
     <!-- Default values for protected component managers -->
-    <string name="def_protected_component_managers" translatable="false">com.android.settings|com.android.launcher3|com.cyanogenmod.trebuchet</string>
+    <string name="def_protected_component_managers" translatable="false">com.android.settings|com.android.launcher3|com.cyanogenmod.trebuchet|org.cyanogenmod.cmparts</string>
 
     <!-- Default temperature unit (CELSIUS) -->
     <integer name="def_temperature_unit">2</integer>
