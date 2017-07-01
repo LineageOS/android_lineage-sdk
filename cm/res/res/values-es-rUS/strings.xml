@@ -154,14 +154,14 @@
   <!-- Live lock screen manager service provider permission description -->
   <string name="permdesc_accessLiveLockScreenServiceProvider">Permite que un servicio provea el servicio de gestión de la pantalla de bloqueo animada.</string>
   <!-- Weather Service strings -->
-  <string name="permlab_weather_read">ver el tiempo</string>
-  <string name="permdesc_weather_read">Permite a una aplicación leer contenido desde el proveedor del clima.</string>
-  <string name="permlab_weather_write">actualizar proveedor del clima</string>
-  <string name="permdesc_weather_write">Permite a una aplicación actualizar el contenido del proveedor del clima.</string>
-  <string name="permlab_weather_bind">establecer como servicio de proveedor del clima</string>
-  <string name="permdesc_weather_bind">Permite que una aplicación sea identificada como un servicio de proveedor del clima.</string>
-  <string name="permlab_weather_access_mgr">acceder al servicio del clima</string>
-  <string name="permdesc_weather_access_mgr">Permite a una aplicación acceder al servicio del clima en el sistema. Nunca debería ser necesario para aplicaciones normales.</string>
+  <string name="permlab_weather_read">leer datos climáticos</string>
+  <string name="permdesc_weather_read">Permite a una aplicación leer contenido desde el proveedor climático.</string>
+  <string name="permlab_weather_write">actualizar proveedor climático</string>
+  <string name="permdesc_weather_write">Permite a una aplicación actualizar el contenido del proveedor climático.</string>
+  <string name="permlab_weather_bind">establecer como servicio del proveedor climático</string>
+  <string name="permdesc_weather_bind">Permite que una aplicación sea identificada como un servicio del proveedor climático.</string>
+  <string name="permlab_weather_access_mgr">acceder al servicio meteorológico</string>
+  <string name="permdesc_weather_access_mgr">Permite a una aplicación acceder al servicio meteorológico en el sistema. Nunca debería ser necesario para aplicaciones normales.</string>
   <!-- DataUsageProvider write permission title -->
   <string name="permlab_dataUsageWrite">modificar datos de uso de la base de datos</string>
   <!-- DataUsageProvider write permission description -->

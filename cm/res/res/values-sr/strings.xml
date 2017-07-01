@@ -19,49 +19,49 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Label for the LineageOS system components when they are shown to the user. -->
   <string name="cyanogenmod_system_label">Систем LineageOS</string>
-  <string name="permlab_publishCustomTile">стварање прилагођених плочица на панелу са брзим подешавањима</string>
+  <string name="permlab_publishCustomTile">прављење прилагођених плочица на панелу са брзим подешавањима</string>
   <string name="permdesc_publishCustomTile">Апликација може да додаје плочице на панел са брзим подешавањима.</string>
   <string name="permlab_modifyNetworkSettings">промена мрежних подешавања система</string>
   <string name="permdesc_modifyNetworkSettings">Апликација може да мења подешавања режима рада у авиону и мобилне мреже за пренос података.</string>
   <string name="permlab_modifySoundSettings">промена подешавања звука система</string>
   <string name="permdesc_modifySoundSettings">Апликација може да мења подешавања звука за режим обавештења.</string>
-  <string name="permlab_bindCustomTileListenerService">повезивање са услугом за надзор прилагођених плочица</string>
-  <string name="permdesc_bindCustomTileListenerService">Апликација може да успостави везу са интерфејсом највишег нивоа за услугу надзора прилагођених плочица.</string>
+  <string name="permlab_bindCustomTileListenerService">повезивање са услугом за надгледање прилагођених плочица</string>
+  <string name="permdesc_bindCustomTileListenerService">Апликација може да успостави везу са интерфејсом највишег нивоа за услугу надгледања прилагођених плочица.</string>
   <!-- Labels for the READ_MSIM_PHONE_STATE permission. -->
-  <string name="permlab_readMSPhoneState">преглед стања телефона и преноса података са подршком за неколико SIM картица</string>
-  <string name="permdesc_readMSPhoneState">Апликација може да приступа информацијама о стању телефона и преносу података са подршком за неколико SIM картица.</string>
+  <string name="permlab_readMSPhoneState">преглед стања телефона и преноса података са подршком за више SIM картица</string>
+  <string name="permdesc_readMSPhoneState">Апликација може да приступа информацијама о стању телефона и преносу података са подршком за више SIM картица.</string>
   <!-- Labels for the MODIFY_MSIM_PHONE_STATE permission. -->
-  <string name="permlab_modifyMSPhoneState">измена стања телефона и преноса података са подршком за неколико SIM картица</string>
-  <string name="permdesc_modifyMSPhoneState">Апликација може да мења стање телефона и пренос података са подршком за неколико SIM картица.</string>
+  <string name="permlab_modifyMSPhoneState">мењање стања телефона и преноса података са подршком за више SIM картица</string>
+  <string name="permdesc_modifyMSPhoneState">Апликација може да мења стање телефона и пренос података са подршком за више SIM картица.</string>
   <!-- Labels for the MODIFY_PROFILES permission. -->
-  <string name="permlab_modifyProfiles">измена профила система</string>
+  <string name="permlab_modifyProfiles">мењање профила система</string>
   <string name="permdesc_modifyProfiles">Апликација може да мења подешавања системских профила.</string>
   <!-- Labels for the HARDWARE_ABSTRACTION_ACCESS permission. -->
   <string name="permlab_useHardwareFramework">коришћење хардверског оквира</string>
   <string name="permdesc_useHardwareFramework">Апликација може да приступа хардверском оквиру LineageOS-а.</string>
   <!-- Labels for the WRITE_ALARMS permission. -->
-  <string name="permlab_write_alarms">промена аларма</string>
+  <string name="permlab_write_alarms">директна промена аларма</string>
   <string name="permdesc_write_alarms">Апликација може да додаје, мења или брише аларме.</string>
   <!-- Labels for the MANAGE_ALARMS permission. -->
   <string name="permlab_manage_alarms">укључивање/искључивање заказаних аларма</string>
   <string name="permdesc_manage_alarms">Апликација може да укључује или искључује заказане аларме.</string>
   <!-- Labels for the READ_ALARMS permission. -->
   <string name="permlab_read_alarms">приступ заказаним алармима</string>
-  <string name="permdesc_read_alarms">Апликација може да чита податке о заказаним алармима.</string>
+  <string name="permdesc_read_alarms">Апликација може да чита заказане аларме.</string>
   <!-- Labels for the WRITE_SETTINGS permission -->
-  <string name="permlab_writeSettings">измена подешавања система</string>
+  <string name="permlab_writeSettings">мењање подешавања система</string>
   <string name="permdesc_writeSettings">Апликација може да мења подешавања система.</string>
   <!-- Labels for the WRITE_SECURE_SETTINGS permission -->
-  <string name="permlab_writeSecureSettings">измена подешавања безбедности система</string>
+  <string name="permlab_writeSecureSettings">мењање подешавања безбедности система</string>
   <string name="permdesc_writeSecureSettings">Апликација може да мења подешавања безбедности система. Ова дозвола није потребна нормалним апликацијама.</string>
   <!-- Labels for the MANAGE_PERSISTENT_STORAGE permission. -->
-  <string name="permlab_managePersistentStorage">управљање сталним складиштем</string>
+  <string name="permlab_managePersistentStorage">управљање непрекидном меморијом</string>
   <string name="permdesc_managePersistentStorage">Апликација може да чита и пише својства која могу остати након враћања фабричких подешавања.</string>
   <!-- Labels for the ACCESS_APP_SUGGESTIONS permission -->
-  <string name="permlab_accessAppSuggestions">приступ списку предложених апликација</string>
-  <string name="permdesc_accessAppSuggestions">Апликација може да приступа списку предложених апликација.</string>
+  <string name="permlab_accessAppSuggestions">приступ предложеним апликацијама</string>
+  <string name="permdesc_accessAppSuggestions">Апликација може да приступа предложеним апликацијама.</string>
   <!-- Label to show for a service that is running because it is observing the user's custom tiles. -->
-  <string name="custom_tile_listener_binding_label">Надзор прилагођених плочица</string>
+  <string name="custom_tile_listener_binding_label">Надгледање прилагођених плочица</string>
   <!-- Labels for the PROTECTED_APP permission. -->
   <string name="permlab_protectedApp">додавање и уклањање апликација са списка заштићених</string>
   <string name="permdesc_protectedApp">Апликација може да означава друге апликације као заштићене и закључа их.</string>
@@ -104,7 +104,7 @@
   <string name="live_display_night_summary">Само ноћна подешавања.</string>
   <string name="live_display_outdoor">На отвореном (јако сунце)</string>
   <string name="live_display_outdoor_summary">Само подешавања на отвореном.</string>
-  <string name="live_display_hint">LiveDisplay може да смањи напрезање очију и побољша сан. Додирните овде да бисте га испробали!</string>
+  <string name="live_display_hint">LiveDisplay може да смањи напрезање очију и побољша сан. Додирните овде да бисте га испробали.</string>
   <string name="accessibility_quick_settings_live_display_off">LiveDisplay је искључен.</string>
   <string name="accessibility_quick_settings_live_display_auto">LiveDisplay ради у аутоматском режиму.</string>
   <string name="accessibility_quick_settings_live_display_day">LiveDisplay ради у дневном режиму.</string>
@@ -134,7 +134,7 @@
   <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
   <string name="permdesc_readThemesDesc">Апликација може да чита теме и одреди која је тренутно активна.</string>
   <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permlab_writeThemes">измена тема</string>
+  <string name="permlab_writeThemes">мењање тема</string>
   <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
   <string name="permdesc_writeThemesDesc">Апликација може да инсталира нове теме и да промени тренутну.</string>
   <!-- Performance manager permission title -->
