@@ -156,11 +156,11 @@
   <string name="permdesc_accessLiveLockScreenServiceProvider">允許服務提供活動鎖定畫面管理員服務。</string>
   <!-- Weather Service strings -->
   <string name="permlab_weather_read">讀取天氣資料</string>
-  <string name="permdesc_weather_read">允許應用程式從天氣資訊提供者讀取資料內容</string>
+  <string name="permdesc_weather_read">允許應用程式從天氣資訊供應商讀取資料內容</string>
   <string name="permlab_weather_write">更新天氣</string>
   <string name="permdesc_weather_write">允許應用程式更新天氣資訊提供者的內容。</string>
-  <string name="permlab_weather_bind">綁定為天氣資訊提供者服務</string>
-  <string name="permdesc_weather_bind">允許應用程式識別為天氣提供者服務。</string>
+  <string name="permlab_weather_bind">綁定為天氣資訊供應商服務</string>
+  <string name="permdesc_weather_bind">允許應用程式識別為天氣供應商服務。</string>
   <string name="permlab_weather_access_mgr">存取氣象服務</string>
   <string name="permdesc_weather_access_mgr">允許應用程式存取氣象服務 。一般應用程式不需使用。</string>
   <!-- DataUsageProvider write permission title -->
