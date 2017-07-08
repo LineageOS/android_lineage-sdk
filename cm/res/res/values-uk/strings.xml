@@ -90,7 +90,7 @@
   <!-- Performance profiles -->
   <string name="perf_profile_pwrsv_summary">Максимальне збереження енергії, знижує продуктивність пристрою</string>
   <string name="perf_profile_bal_summary">Баланс між енергозбереженням та оптимальною продуктивністю</string>
-  <string name="perf_profile_perf_summary">Режим високої продуктивності. Корисно для додатків, що вимагають низької затримки відгуку і найвищу пропускну здатність, коли енергоспоживання не має значення</string>
+  <string name="perf_profile_perf_summary">Режим високої продуктивності. Корисно для застосунків, що вимагають низької затримки відгуку і найвищу пропускну здатність, коли енергоспоживання не має значення</string>
   <string name="perf_profile_bias_power_summary">Економія понад усе. Обмеження максимальної потужності процесора і оптимізація для енергозбереження за рахунок вищої затримки</string>
   <string name="perf_profile_bias_perf_summary">Продуктивність понад усе. Зменшує час затримки з трохи збільшеним енергоспоживанням</string>
   <!-- LiveDisplay strings -->
@@ -187,5 +187,5 @@
   <string name="privacy_guard_manager_title">Вартовий Приватності</string>
   <!-- Permissions used by remote preferences -->
   <string name="permlab_manageRemotePrefs">керування віддаленими параметрами</string>
-  <string name="permdesc_manageRemotePrefs">Дозволяє додатку керувати налаштуваннями віддаленого підключення</string>
+  <string name="permdesc_manageRemotePrefs">Дозволяє застосункові керувати налаштуваннями віддаленого підключення</string>
 </resources>
