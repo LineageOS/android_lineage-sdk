@@ -124,7 +124,7 @@
   <!-- Live lock screen manager service provider permission description -->
   <!-- Weather Service strings -->
   <string name="permlab_weather_read">lexo motin</string>
-  <string name="permlab_weather_write">përditëso furnizuesin e të dhënave të motit</string>
+  <string name="permlab_weather_write">përditëso ofruesin e të dhënave të motit</string>
   <string name="permlab_weather_access_mgr">akseso shërbimin e motit</string>
   <!-- DataUsageProvider write permission title -->
   <!-- DataUsageProvider write permission description -->
