@@ -49,6 +49,9 @@
     <!-- Proximity check on screen on default -->
     <java-symbol type="bool" name="config_proximityCheckOnWakeEnabledByDefault" />
 
+    <!-- Should proximity check also affect fingerprint reader-->
+    <java-symbol type="bool" name="config_proximityCheckOnFingerprintWake" />
+
     <!-- LiveDisplay -->
     <java-symbol type="string" name="live_display_title" />
     <java-symbol type="string" name="live_display_hint" />

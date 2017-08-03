@@ -21,6 +21,9 @@
     <bool name="config_proximityCheckOnWake">false</bool>
     <integer name="config_proximityCheckTimeout">250</integer>
     <bool name="config_proximityCheckOnWakeEnabledByDefault">false</bool>
+    <!-- Stop listening fingerprint reader when NON-WAKEUP proximity sensor is covered & screen is off.
+         config_proximityCheckOnWake must be true. -->
+    <bool name="config_proximityCheckOnFingerprintWake">false</bool>
 
     <!-- Default values for LiveDisplay -->
     <integer name="config_dayColorTemperature">6500</integer>
