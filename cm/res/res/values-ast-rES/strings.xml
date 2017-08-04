@@ -89,6 +89,7 @@
   <string name="perf_profile_bias_power_summary">Favorez los aforros d\'enerxía. Llenda la potencia máximo de la CPU y optimízala pa un aforru d\'enerxía empara d\'una llatencia mayor</string>
   <string name="perf_profile_bias_perf_summary">Favorez el rindimientu. Amenorga la llatencia con un consumu d\'enerxía llixeramente aumentáu</string>
   <!-- LiveDisplay strings -->
+  <string name="live_display_auto_summary">Axusta automáticamente la temperatura de color de la pantalla dempués del tapecer y l\'aséu</string>
   <string name="live_display_off">Non</string>
   <string name="live_display_off_summary">Deshabilita tolos axustes</string>
   <string name="live_display_day">Día</string>

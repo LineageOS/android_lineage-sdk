@@ -99,22 +99,22 @@
   <string name="live_display_off">Desactivado</string>
   <string name="live_display_off_summary">Desactivar todos los ajustes</string>
   <string name="live_display_day">Día</string>
-  <string name="live_display_day_summary">Sólo utilizar los ajustes de día</string>
+  <string name="live_display_day_summary">Utilizar sólo los ajustes de «Día»</string>
   <string name="live_display_night">Noche</string>
-  <string name="live_display_night_summary">Sólo utilizar los ajustes de noche</string>
-  <string name="live_display_outdoor">Al aire libre (luz del sol)</string>
-  <string name="live_display_outdoor_summary">Sólo utilizar los ajustes de aire libre</string>
+  <string name="live_display_night_summary">Utilizar sólo los ajustes de «Noche»</string>
+  <string name="live_display_outdoor">Exterior (luz del sol)</string>
+  <string name="live_display_outdoor_summary">Utilizar sólo los ajustes de «Exterior»</string>
   <string name="live_display_hint">LiveDisplay puede ayudar a reducir la fatiga visual y a dormir por la noche. ¡Pulsa aquí para probarlo!</string>
   <string name="accessibility_quick_settings_live_display_off">LiveDisplay desactivado.</string>
   <string name="accessibility_quick_settings_live_display_auto">LiveDisplay: modo automático.</string>
   <string name="accessibility_quick_settings_live_display_day">LiveDisplay: modo diurno.</string>
   <string name="accessibility_quick_settings_live_display_night">LiveDisplay: modo nocturno.</string>
-  <string name="accessibility_quick_settings_live_display_outdoor">LiveDisplay: modo aire libre.</string>
+  <string name="accessibility_quick_settings_live_display_outdoor">LiveDisplay: modo exterior.</string>
   <string name="accessibility_quick_settings_live_display_changed_off">LiveDisplay desactivado.</string>
   <string name="accessibility_quick_settings_live_display_changed_auto">LiveDisplay cambió a modo automático.</string>
   <string name="accessibility_quick_settings_live_display_changed_day">LiveDisplay cambió a modo diurno.</string>
   <string name="accessibility_quick_settings_live_display_changed_night">LiveDisplay cambió a modo nocturno.</string>
-  <string name="accessibility_quick_settings_live_display_changed_outdoor">LiveDisplay cambió a modo aire libre.</string>
+  <string name="accessibility_quick_settings_live_display_changed_outdoor">LiveDisplay cambió a modo exterior.</string>
   <!-- Third party keyguard permission label -->
   <string name="permlab_thirdPartyKeyguard">pantalla bloqueada con aplicación de terceros</string>
   <!-- Third party keyguard permission description -->
@@ -183,7 +183,7 @@
   <string name="qs_themes_label">Temas</string>
   <string name="qs_themes_content_description">Personaliza tu tema</string>
   <!-- Privacy Guard -->
-  <string name="privacy_guard_manager_title">Guardián de Privacidad</string>
+  <string name="privacy_guard_manager_title">Guardián de privacidad</string>
   <!-- Permissions used by remote preferences -->
   <string name="permlab_manageRemotePrefs">gestionar los ajustes remotos</string>
   <string name="permdesc_manageRemotePrefs">Permite a una aplicación gestionar los ajustes remotos</string>

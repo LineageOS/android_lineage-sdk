@@ -37,7 +37,7 @@
   <string name="permlab_modifyProfiles">modificar os perfis de sistema</string>
   <string name="permdesc_modifyProfiles">Permite que um aplicativo modifique os perfis de sistema.</string>
   <!-- Labels for the HARDWARE_ABSTRACTION_ACCESS permission. -->
-  <string name="permlab_useHardwareFramework">utilizar o framework do hardware</string>
+  <string name="permlab_useHardwareFramework">usar o framework do hardware</string>
   <string name="permdesc_useHardwareFramework">Permite o acesso de um aplicativo ao framework de acesso ao hardware CM.</string>
   <!-- Labels for the WRITE_ALARMS permission. -->
   <string name="permlab_write_alarms">alterar os alarmes diretamente</string>
