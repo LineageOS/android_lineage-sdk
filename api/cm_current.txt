@@ -1229,6 +1229,7 @@ package cyanogenmod.providers {
     field public static final java.lang.String STATUS_BAR_AM_PM = "status_bar_am_pm";
     field public static final java.lang.String STATUS_BAR_BATTERY_STYLE = "status_bar_battery_style";
     field public static final java.lang.String STATUS_BAR_BRIGHTNESS_CONTROL = "status_bar_brightness_control";
+    field public static final java.lang.String SYSTEMUI_BURNIN_PROTECTION = "systemui_burnin_protection";
     field public static final java.lang.String STATUS_BAR_CLOCK = "status_bar_clock";
     field public static final java.lang.String STATUS_BAR_IME_SWITCHER = "status_bar_ime_switcher";
     field public static final java.lang.String STATUS_BAR_NOTIF_COUNT = "status_bar_notif_count";
