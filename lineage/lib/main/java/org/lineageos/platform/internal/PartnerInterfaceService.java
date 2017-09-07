@@ -269,11 +269,13 @@ public class PartnerInterfaceService extends LineageSystemService {
 
     public String getHotwordPackageNameInternal() {
         String packageName = null;
+        /* BRINGUP: requires https://review.lineageos.org/#/c/65792/
         try {
             packageName = mAudioService.getCurrentHotwordInputPackageName();
         } catch (RemoteException e) {
             Log.e(TAG, "getHotwordPackageName() failed.");
         }
+        */
         return packageName;
     }
 }
