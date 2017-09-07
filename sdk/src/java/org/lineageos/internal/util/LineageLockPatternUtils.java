@@ -65,8 +65,10 @@ public class LineageLockPatternUtils extends LockPatternUtils {
             }
         }
 
+        /* BRINGUP: requires https://review.lineageos.org/#/c/65796/
         setString(THIRD_PARTY_KEYGUARD_COMPONENT,
                 component != null ? component.flattenToString() : "", getCurrentUser());
+        */
 
         // notify systemui, or whatever other process needs to know, that the third party keyguard
         // component has changed.  What it changed to is up to the receiver to figure out using
@@ -80,16 +82,22 @@ public class LineageLockPatternUtils extends LockPatternUtils {
      * @return
      */
     public ComponentName getThirdPartyKeyguardComponent() {
+        /* BRINGUP: requires https://review.lineageos.org/#/c/65796/
         String component = getString(THIRD_PARTY_KEYGUARD_COMPONENT, getCurrentUser());
         return component != null ? ComponentName.unflattenFromString(component) : null;
+        */
+        return null;
     }
 
     /**
      * @return Whether a third party keyguard is set
      */
     public boolean isThirdPartyKeyguardEnabled() {
+        /* BRINGUP: requires https://review.lineageos.org/#/c/65796/
         String component = getString(THIRD_PARTY_KEYGUARD_COMPONENT, getCurrentUser());
         return !TextUtils.isEmpty(component);
+        */
+        return false;
     }
 
     private int getCurrentUser() {
@@ -97,10 +105,15 @@ public class LineageLockPatternUtils extends LockPatternUtils {
     }
 
     public boolean shouldPassToSecurityView(int userId) {
+        /* BRINGUP: requires https://review.lineageos.org/#/c/65796/
         return getBoolean(LineageSettings.Secure.LOCK_PASS_TO_SECURITY_VIEW, false, userId);
+        */
+        return false;
     }
 
     public void setPassToSecurityView(boolean enabled, int userId) {
+        /* BRINGUP: requires https://review.lineageos.org/#/c/65796/
         setBoolean(LineageSettings.Secure.LOCK_PASS_TO_SECURITY_VIEW, enabled, userId);
+        */
     }
 }
