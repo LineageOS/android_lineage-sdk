@@ -207,6 +207,9 @@ public class CMTelephonyManagerService extends CMSystemService {
     private boolean isSubActive(int subId) {
         boolean validSubscriptionId = SubscriptionManager.isValidSubscriptionId(subId);
 
+        /* BRINGUP.  problem is missing getSlotId() */
+        return false;
+        /*
         if (validSubscriptionId) {
             int simState = SubscriptionManager.getSimStateForSlotIdx(
                     SubscriptionManager.getSlotId(subId));
@@ -229,6 +232,7 @@ public class CMTelephonyManagerService extends CMSystemService {
             Log.w(TAG, "Invalid subscription identifier: " + subId);
             return false;
         }
+        */
     }
 
     private void setSubState(int subId, boolean state) {

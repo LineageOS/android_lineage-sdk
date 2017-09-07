@@ -31,6 +31,7 @@ import android.os.Binder;
 import android.os.Handler;
 import android.os.IBinder;
 import android.os.PowerManagerInternal;
+import android.os.PowerSaveState;
 import android.os.Process;
 import android.os.UserHandle;
 import android.view.Display;
@@ -38,6 +39,7 @@ import android.view.Display;
 import com.android.internal.util.ArrayUtils;
 import com.android.server.LocalServices;
 import com.android.server.ServiceThread;
+import com.android.server.power.BatterySaverPolicy.ServiceType;
 
 import org.lineageos.internal.util.QSConstants;
 import org.lineageos.internal.util.QSUtils;
@@ -213,7 +215,8 @@ public class LiveDisplayService extends CMSystemService {
 
             PowerManagerInternal pmi = LocalServices.getService(PowerManagerInternal.class);
             pmi.registerLowPowerModeObserver(mLowPowerModeListener);
-            mState.mLowPowerMode = pmi.getLowPowerModeEnabled();
+            /* BRINGUP */
+            mState.mLowPowerMode = false; /*pmi.getLowPowerModeEnabled(); */
 
             mTwilightTracker.registerListener(mTwilightListener, mHandler);
             mState.mTwilight = mTwilightTracker.getCurrentState();
@@ -530,11 +533,17 @@ public class LiveDisplayService extends CMSystemService {
     private PowerManagerInternal.LowPowerModeListener mLowPowerModeListener =
             new PowerManagerInternal.LowPowerModeListener() {
         @Override
-        public void onLowPowerModeChanged(boolean lowPowerMode) {
+        public void onLowPowerModeChanged(PowerSaveState result) {
+            /* BRINGUP */
+            /*
             if (lowPowerMode != mState.mLowPowerMode) {
                 mState.mLowPowerMode = lowPowerMode;
                 updateFeatures(MODE_CHANGED);
-            }
+            }*/
+         }
+         @Override
+         public int getServiceType() {
+             return ServiceType.ANIMATION; /*BRINGUP*/
          }
     };
 

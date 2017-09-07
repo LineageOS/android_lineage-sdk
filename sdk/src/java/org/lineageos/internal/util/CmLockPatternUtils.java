@@ -65,8 +65,9 @@ public class CmLockPatternUtils extends LockPatternUtils {
             }
         }
 
-        setString(THIRD_PARTY_KEYGUARD_COMPONENT,
-                component != null ? component.flattenToString() : "", getCurrentUser());
+        /* BRINGUP */
+        /*setString(THIRD_PARTY_KEYGUARD_COMPONENT,
+                component != null ? component.flattenToString() : "", getCurrentUser());*/
 
         // notify systemui, or whatever other process needs to know, that the third party keyguard
         // component has changed.  What it changed to is up to the receiver to figure out using
@@ -80,16 +81,24 @@ public class CmLockPatternUtils extends LockPatternUtils {
      * @return
      */
     public ComponentName getThirdPartyKeyguardComponent() {
+        /* BRINGUP */
+        /*
         String component = getString(THIRD_PARTY_KEYGUARD_COMPONENT, getCurrentUser());
         return component != null ? ComponentName.unflattenFromString(component) : null;
+        */
+        return null;
     }
 
     /**
      * @return Whether a third party keyguard is set
      */
     public boolean isThirdPartyKeyguardEnabled() {
+        /* BRINGUP */
+        /*
         String component = getString(THIRD_PARTY_KEYGUARD_COMPONENT, getCurrentUser());
         return !TextUtils.isEmpty(component);
+        */
+        return false;
     }
 
     private int getCurrentUser() {
@@ -97,10 +106,11 @@ public class CmLockPatternUtils extends LockPatternUtils {
     }
 
     public boolean shouldPassToSecurityView(int userId) {
-        return getBoolean(LineageSettings.Secure.LOCK_PASS_TO_SECURITY_VIEW, false, userId);
+        //return getBoolean(LineageSettings.Secure.LOCK_PASS_TO_SECURITY_VIEW, false, userId);
+        return false;
     }
 
     public void setPassToSecurityView(boolean enabled, int userId) {
-        setBoolean(LineageSettings.Secure.LOCK_PASS_TO_SECURITY_VIEW, enabled, userId);
+        //setBoolean(LineageSettings.Secure.LOCK_PASS_TO_SECURITY_VIEW, enabled, userId);
     }
 }
