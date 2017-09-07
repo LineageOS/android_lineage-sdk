@@ -31,12 +31,14 @@ import android.os.IBinder;
 import android.os.Looper;
 import android.os.Message;
 import android.os.PowerManagerInternal;
+import android.os.PowerSaveState;
 import android.os.Process;
 import android.os.RemoteException;
 import android.util.ArrayMap;
 import android.util.Slog;
 
 import com.android.server.ServiceThread;
+import com.android.server.power.BatterySaverPolicy.ServiceType;
 
 import java.io.FileDescriptor;
 import java.io.PrintWriter;
@@ -227,7 +229,18 @@ public class PerformanceManagerService extends LineageSystemService {
         if (phase == PHASE_SYSTEM_SERVICES_READY && !mSystemReady) {
             synchronized (mLock) {
                 mPm = getLocalService(PowerManagerInternal.class);
+                /* BRINGUP.  requires:
+                   Author: Steve Kondik <steve@cyngn.com>
+                   Date:   Mon Nov 2 17:38:41 2015 -0800
+                   perf: Add plumbing for PerformanceManager
+                   * Expose a couple of helpers on PowerManagerInternal to handle
+                     features and hints.
+                     Change-Id: Ic8df7d891dece4e678711a2a5ad1434b4971663a
+                 */
+                /*
                 mNumProfiles = mPm.getFeature(POWER_FEATURE_SUPPORTED_PROFILES);
+                 */
+                mNumProfiles = 0;
 
                 if (hasProfiles()) {
                     populateProfilesLocked();
@@ -285,7 +298,9 @@ public class PerformanceManagerService extends LineageSystemService {
         if (!isProfileSame && profile != PROFILE_POWER_SAVE &&
                 mActiveProfile == PROFILE_POWER_SAVE) {
             long token = Binder.clearCallingIdentity();
+            /* BRINGUP
             mPm.setPowerSaveMode(false);
+            */
             Binder.restoreCallingIdentity(token);
         }
 
@@ -562,7 +577,9 @@ public class PerformanceManagerService extends LineageSystemService {
             PowerManagerInternal.LowPowerModeListener() {
 
                 @Override
-                public void onLowPowerModeChanged(boolean enabled) {
+                public void onLowPowerModeChanged(PowerSaveState result) {
+                    /* BRINGUP */
+                    /*
                     synchronized (mLock) {
                         if (enabled == mLowPowerModeEnabled) {
                             return;
@@ -573,6 +590,11 @@ public class PerformanceManagerService extends LineageSystemService {
                         mLowPowerModeEnabled = enabled;
                         applyAppProfileLocked();
                     }
+                    */
+                }
+                @Override
+                public int getServiceType() {
+                    return ServiceType.ANIMATION; /*BRINGUP*/
                 }
             };
 

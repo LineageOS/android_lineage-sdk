@@ -207,6 +207,9 @@ public class LineageTelephonyManagerService extends LineageSystemService {
     private boolean isSubActive(int subId) {
         boolean validSubscriptionId = SubscriptionManager.isValidSubscriptionId(subId);
 
+        /* BRINGUP.  problem is missing getSlotId() */
+        return false;
+        /*
         if (validSubscriptionId) {
             int simState = SubscriptionManager.getSimStateForSlotIdx(
                     SubscriptionManager.getSlotId(subId));
@@ -229,6 +232,7 @@ public class LineageTelephonyManagerService extends LineageSystemService {
             Log.w(TAG, "Invalid subscription identifier: " + subId);
             return false;
         }
+        */
     }
 
     private void setSubState(int subId, boolean state) {
