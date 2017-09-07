@@ -270,7 +270,7 @@ LOCAL_SRC_FILES := $(lineageplat_docs_src_files)
 LOCAL_ADDITONAL_JAVA_DIR := $(intermediates.COMMON)/src
 
 LOCAL_IS_HOST_MODULE := false
-LOCAL_DROIDDOC_CUSTOM_TEMPLATE_DIR := vendor/cm/build/tools/droiddoc/templates-cmsdk
+LOCAL_DROIDDOC_CUSTOM_TEMPLATE_DIR := vendor/lineage/build/tools/droiddoc/templates-lineagesdk
 LOCAL_ADDITIONAL_DEPENDENCIES := \
     services \
     org.lineageos.hardware
