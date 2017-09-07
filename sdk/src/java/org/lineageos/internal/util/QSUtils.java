@@ -240,8 +240,11 @@ public class QSUtils {
     public static boolean deviceSupportsLte(Context ctx) {
         final TelephonyManager tm = (TelephonyManager)
                 ctx.getSystemService(Context.TELEPHONY_SERVICE);
+        /* BRINGUP: requires https://review.lineageos.org/#/c/65795/
         return (tm.getLteOnCdmaMode() == PhoneConstants.LTE_ON_CDMA_TRUE)
                 || tm.getLteOnGsmMode() != 0;
+        */
+        return true;
     }
 
     public static boolean deviceSupportsDdsSupported(Context context) {
