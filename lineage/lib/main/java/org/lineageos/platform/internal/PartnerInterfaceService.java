@@ -269,11 +269,14 @@ public class PartnerInterfaceService extends CMSystemService {
 
     public String getHotwordPackageNameInternal() {
         String packageName = null;
+        /* BRINGUP */
+        /*
         try {
             packageName = mAudioService.getCurrentHotwordInputPackageName();
         } catch (RemoteException e) {
             Log.e(TAG, "getHotwordPackageName() failed.");
         }
+        */
         return packageName;
     }
 }
