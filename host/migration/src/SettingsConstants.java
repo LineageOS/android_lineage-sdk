@@ -20,7 +20,7 @@ import java.util.ArrayList;
  * Created by adnan on 11/16/15.
  */
 public class SettingsConstants {
-    public static final String CMSETTINGS_AUTHORITY = "cmsettings";
+    public static final String LINEAGESETTINGS_AUTHORITY = "lineagesettings";
     public static final String SETTINGS_AUTHORITY = "settings";
     public static final String CONTENT_URI = "content://";
     public static final String SYSTEM = "/system";
@@ -31,7 +31,7 @@ public class SettingsConstants {
         public static ArrayList<String> SECURE_SETTINGS = new ArrayList<String>();
 
         static {
-            SECURE_SETTINGS.add(CMSettings.Secure.ADB_PORT);
+            SECURE_SETTINGS.add(LineageSettings.Secure.ADB_PORT);
         }
     }
 }

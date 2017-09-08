@@ -1,4 +1,5 @@
 # Copyright (C) 2015 The CyanogenMod Project
+# Copyright (C) 2017 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -21,35 +22,35 @@ LOCAL_PATH := $(call my-dir)
 # did, the PRIVATE_* vars for R.java wouldn't be guaranteed to be correct.
 # Instead, it depends on the R.stamp file, which lists the corresponding
 # R.java file as a prerequisite.
-cm_platform_res := APPS/org.cyanogenmod.platform-res_intermediates/src
+lineage_platform_res := APPS/org.lineageos.platform-res_intermediates/src
 
-# List of packages used in cm-api-stubs
-cm_stub_packages := cyanogenmod.alarmclock:cyanogenmod.app:cyanogenmod.content:cyanogenmod.externalviews:cyanogenmod.hardware:cyanogenmod.media:cyanogenmod.os:cyanogenmod.preference:cyanogenmod.profiles:cyanogenmod.providers:cyanogenmod.platform:cyanogenmod.power:cyanogenmod.themes:cyanogenmod.util:cyanogenmod.weather:cyanogenmod.weatherservice
+# List of packages used in lineage-api-stubs
+lineage_stub_packages := lineageos.alarmclock:lineageos.app:lineageos.content:lineageos.externalviews:lineageos.hardware:lineageos.media:lineageos.os:lineageos.preference:lineageos.profiles:lineageos.providers:lineageos.platform:lineageos.power:lineageos.themes:lineageos.util:lineageos.weather:lineageos.weatherservice
 
-# The CyanogenMod Platform Framework Library
+# The LineageOS Platform Framework Library
 # ============================================================
 include $(CLEAR_VARS)
 
-cyanogenmod_sdk_src := sdk/src/java/cyanogenmod
-cyanogenmod_sdk_internal_src := sdk/src/java/org/cyanogenmod/internal
-library_src := cm/lib/main/java
+lineageos_sdk_src := sdk/src/java/lineageos
+lineageos_sdk_internal_src := sdk/src/java/org/lineageos/internal
+library_src := lineage/lib/main/java
 
-LOCAL_MODULE := org.cyanogenmod.platform
+LOCAL_MODULE := org.lineageos.platform
 LOCAL_MODULE_TAGS := optional
 
-cmsdk_LOCAL_JAVA_LIBRARIES := \
+lineagesdk_LOCAL_JAVA_LIBRARIES := \
     android-support-v7-preference \
     android-support-v7-recyclerview \
     android-support-v14-preference
 
 LOCAL_JAVA_LIBRARIES := \
     services \
-    org.cyanogenmod.hardware \
-    $(cmsdk_LOCAL_JAVA_LIBRARIES)
+    org.lineageos.hardware \
+    $(lineagesdk_LOCAL_JAVA_LIBRARIES)
 
 LOCAL_SRC_FILES := \
-    $(call all-java-files-under, $(cyanogenmod_sdk_src)) \
-    $(call all-java-files-under, $(cyanogenmod_sdk_internal_src)) \
+    $(call all-java-files-under, $(lineageos_sdk_src)) \
+    $(call all-java-files-under, $(lineageos_sdk_internal_src)) \
     $(call all-java-files-under, $(library_src))
 
 ## READ ME: ########################################################
@@ -63,39 +64,39 @@ LOCAL_SRC_FILES := \
 ##
 ## READ ME: ########################################################
 LOCAL_SRC_FILES += \
-    $(call all-Iaidl-files-under, $(cyanogenmod_sdk_src)) \
-    $(call all-Iaidl-files-under, $(cyanogenmod_sdk_internal_src))
+    $(call all-Iaidl-files-under, $(lineageos_sdk_src)) \
+    $(call all-Iaidl-files-under, $(lineageos_sdk_internal_src))
 
-cmplat_LOCAL_INTERMEDIATE_SOURCES := \
-    $(cm_platform_res)/cyanogenmod/platform/R.java \
-    $(cm_platform_res)/cyanogenmod/platform/Manifest.java \
-    $(cm_platform_res)/org/cyanogenmod/platform/internal/R.java
+lineageplat_LOCAL_INTERMEDIATE_SOURCES := \
+    $(lineage_platform_res)/lineageos/platform/R.java \
+    $(lineage_platform_res)/lineageos/platform/Manifest.java \
+    $(lineage_platform_res)/org/lineageos/platform/internal/R.java
 
 LOCAL_INTERMEDIATE_SOURCES := \
-    $(cmplat_LOCAL_INTERMEDIATE_SOURCES)
+    $(lineageplat_LOCAL_INTERMEDIATE_SOURCES)
 
-# Include aidl files from cyanogenmod.app namespace as well as internal src aidl files
+# Include aidl files from lineageos.app namespace as well as internal src aidl files
 LOCAL_AIDL_INCLUDES := $(LOCAL_PATH)/sdk/src/java
 LOCAL_AIDL_FLAGS := -n
 
 include $(BUILD_JAVA_LIBRARY)
-cm_framework_module := $(LOCAL_INSTALLED_MODULE)
+lineage_framework_module := $(LOCAL_INSTALLED_MODULE)
 
 # Make sure that R.java and Manifest.java are built before we build
 # the source for this library.
-cm_framework_res_R_stamp := \
-    $(call intermediates-dir-for,APPS,org.cyanogenmod.platform-res,,COMMON)/src/R.stamp
-$(full_classes_compiled_jar): $(cm_framework_res_R_stamp)
-$(built_dex_intermediate): $(cm_framework_res_R_stamp)
+lineage_framework_res_R_stamp := \
+    $(call intermediates-dir-for,APPS,org.lineageos.platform-res,,COMMON)/src/R.stamp
+$(full_classes_compiled_jar): $(lineage_framework_res_R_stamp)
+$(built_dex_intermediate): $(lineage_framework_res_R_stamp)
 
-$(cm_framework_module): | $(dir $(cm_framework_module))org.cyanogenmod.platform-res.apk
+$(lineage_framework_module): | $(dir $(lineage_framework_module))org.lineageos.platform-res.apk
 
-cm_framework_built := $(call java-lib-deps, org.cyanogenmod.platform)
+lineage_framework_built := $(call java-lib-deps, org.lineageos.platform)
 
-# ====  org.cyanogenmod.platform.xml lib def  ========================
+# ====  org.lineageos.platform.xml lib def  ========================
 include $(CLEAR_VARS)
 
-LOCAL_MODULE := org.cyanogenmod.platform.xml
+LOCAL_MODULE := org.lineageos.platform.xml
 LOCAL_MODULE_TAGS := optional
 
 LOCAL_MODULE_CLASS := ETC
@@ -111,34 +112,34 @@ include $(BUILD_PREBUILT)
 # ============================================================
 include $(CLEAR_VARS)
 
-LOCAL_MODULE:= org.cyanogenmod.platform.sdk
+LOCAL_MODULE:= org.lineageos.platform.sdk
 LOCAL_MODULE_TAGS := optional
 LOCAL_REQUIRED_MODULES := services
 
 LOCAL_SRC_FILES := \
-    $(call all-java-files-under, $(cyanogenmod_sdk_src)) \
-    $(call all-Iaidl-files-under, $(cyanogenmod_sdk_src))
+    $(call all-java-files-under, $(lineageos_sdk_src)) \
+    $(call all-Iaidl-files-under, $(lineageos_sdk_src))
 
-# Included aidl files from cyanogenmod.app namespace
+# Included aidl files from lineageos.app namespace
 LOCAL_AIDL_INCLUDES := $(LOCAL_PATH)/sdk/src/java
 
-cmsdk_LOCAL_INTERMEDIATE_SOURCES := \
-    $(cm_platform_res)/cyanogenmod/platform/R.java \
-    $(cm_platform_res)/cyanogenmod/platform/Manifest.java
+lineagesdk_LOCAL_INTERMEDIATE_SOURCES := \
+    $(lineage_platform_res)/lineageos/platform/R.java \
+    $(lineage_platform_res)/lineageos/platform/Manifest.java
 
 LOCAL_INTERMEDIATE_SOURCES := \
-    $(cmsdk_LOCAL_INTERMEDIATE_SOURCES)
+    $(lineagesdk_LOCAL_INTERMEDIATE_SOURCES)
 
 LOCAL_JAVA_LIBRARIES := \
-    $(cmsdk_LOCAL_JAVA_LIBRARIES)
+    $(lineagesdk_LOCAL_JAVA_LIBRARIES)
 
 # Make sure that R.java and Manifest.java are built before we build
 # the source for this library.
-cm_framework_res_R_stamp := \
-    $(call intermediates-dir-for,APPS,org.cyanogenmod.platform-res,,COMMON)/src/R.stamp
-$(full_classes_compiled_jar): $(cm_framework_res_R_stamp)
-$(built_dex_intermediate): $(cm_framework_res_R_stamp)
-$(full_target): $(cm_framework_built) $(gen)
+lineage_framework_res_R_stamp := \
+    $(call intermediates-dir-for,APPS,org.lineageos.platform-res,,COMMON)/src/R.stamp
+$(full_classes_compiled_jar): $(lineage_framework_res_R_stamp)
+$(built_dex_intermediate): $(lineage_framework_res_R_stamp)
+$(full_target): $(lineage_framework_built) $(gen)
 include $(BUILD_STATIC_JAVA_LIBRARY)
 
 # the sdk as an aar for publish, not built as part of full target
@@ -146,7 +147,7 @@ include $(BUILD_STATIC_JAVA_LIBRARY)
 # ============================================================
 include $(CLEAR_VARS)
 
-LOCAL_MODULE := org.cyanogenmod.platform.sdk.aar
+LOCAL_MODULE := org.lineageos.platform.sdk.aar
 
 LOCAL_JACK_ENABLED := disabled
 
@@ -157,11 +158,11 @@ LOCAL_CONSUMER_PROGUARD_FILE := $(LOCAL_PATH)/sdk/proguard.txt
 LOCAL_RESOURCE_DIR := $(addprefix $(LOCAL_PATH)/, sdk/res/res)
 LOCAL_MANIFEST_FILE := sdk/AndroidManifest.xml
 
-cmsdk_exclude_files := 'cyanogenmod/library'
-LOCAL_JAR_EXCLUDE_PACKAGES := $(cmsdk_exclude_files)
+lineagesdk_exclude_files := 'lineageos/library'
+LOCAL_JAR_EXCLUDE_PACKAGES := $(lineagesdk_exclude_files)
 LOCAL_JAR_EXCLUDE_FILES := none
 
-LOCAL_STATIC_JAVA_LIBRARIES := org.cyanogenmod.platform.sdk
+LOCAL_STATIC_JAVA_LIBRARIES := org.lineageos.platform.sdk
 
 include $(BUILD_STATIC_JAVA_LIBRARY)
 $(LOCAL_MODULE) : $(built_aar)
@@ -170,80 +171,80 @@ $(LOCAL_MODULE) : $(built_aar)
 #
 include $(CLEAR_VARS)
 
-LOCAL_MODULE:= org.cyanogenmod.platform.internal
+LOCAL_MODULE:= org.lineageos.platform.internal
 LOCAL_MODULE_TAGS := optional
 LOCAL_REQUIRED_MODULES := services
 
 LOCAL_SRC_FILES := \
-    $(call all-java-files-under, $(cyanogenmod_sdk_src)) \
-    $(call all-java-files-under, $(cyanogenmod_sdk_internal_src)) \
-    $(call all-Iaidl-files-under, $(cyanogenmod_sdk_src)) \
-    $(call all-Iaidl-files-under, $(cyanogenmod_sdk_internal_src))
+    $(call all-java-files-under, $(lineageos_sdk_src)) \
+    $(call all-java-files-under, $(lineageos_sdk_internal_src)) \
+    $(call all-Iaidl-files-under, $(lineageos_sdk_src)) \
+    $(call all-Iaidl-files-under, $(lineageos_sdk_internal_src))
 
-# Included aidl files from cyanogenmod.app namespace
+# Included aidl files from lineageos.app namespace
 LOCAL_AIDL_INCLUDES := $(LOCAL_PATH)/sdk/src/java
 LOCAL_AIDL_FLAGS := -n
 
-cmsdk_LOCAL_INTERMEDIATE_SOURCES := \
-    $(cm_platform_res)/cyanogenmod/platform/R.java \
-    $(cm_platform_res)/cyanogenmod/platform/Manifest.java \
-    $(cm_platform_res)/org/cyanogenmod/platform/internal/R.java \
-    $(cm_platform_res)/org/cyanogenmod/platform/internal/Manifest.java
+lineagesdk_LOCAL_INTERMEDIATE_SOURCES := \
+    $(lineage_platform_res)/lineageos/platform/R.java \
+    $(lineage_platform_res)/lineageos/platform/Manifest.java \
+    $(lineage_platform_res)/org/lineageos/platform/internal/R.java \
+    $(lineage_platform_res)/org/lineageos/platform/internal/Manifest.java
 
 LOCAL_INTERMEDIATE_SOURCES := \
-    $(cmsdk_LOCAL_INTERMEDIATE_SOURCES)
+    $(lineagesdk_LOCAL_INTERMEDIATE_SOURCES)
 
 LOCAL_JAVA_LIBRARIES := \
-    $(cmsdk_LOCAL_JAVA_LIBRARIES)
+    $(lineagesdk_LOCAL_JAVA_LIBRARIES)
 
-$(full_target): $(cm_framework_built) $(gen)
+$(full_target): $(lineage_framework_built) $(gen)
 include $(BUILD_STATIC_JAVA_LIBRARY)
 
 
 # ===========================================================
 # Common Droiddoc vars
-cmplat_docs_src_files := \
-    $(call all-java-files-under, $(cyanogenmod_sdk_src)) \
-    $(call all-html-files-under, $(cyanogenmod_sdk_src))
+lineageplat_docs_src_files := \
+    $(call all-java-files-under, $(lineageos_sdk_src)) \
+    $(call all-html-files-under, $(lineageos_sdk_src))
 
-cmplat_docs_java_libraries := \
-    org.cyanogenmod.platform.sdk
+lineageplat_docs_java_libraries := \
+    org.lineageos.platform.sdk
 
 # SDK version as defined
-cmplat_docs_SDK_VERSION := 14.0
+lineageplat_docs_SDK_VERSION := 14.0
 
 # release version
-cmplat_docs_SDK_REL_ID := 7
+lineageplat_docs_SDK_REL_ID := 7
 
-cmplat_docs_LOCAL_MODULE_CLASS := JAVA_LIBRARIES
+lineageplat_docs_LOCAL_MODULE_CLASS := JAVA_LIBRARIES
 
-cmplat_docs_LOCAL_DROIDDOC_SOURCE_PATH := \
-    $(cmplat_docs_src_files)
+lineageplat_docs_LOCAL_DROIDDOC_SOURCE_PATH := \
+    $(lineageplat_docs_src_files)
 
-intermediates.COMMON := $(call intermediates-dir-for,$(LOCAL_MODULE_CLASS),org.cyanogenmod.platform.sdk,,COMMON)
+intermediates.COMMON := $(call intermediates-dir-for,$(LOCAL_MODULE_CLASS),org.lineageos.platform.sdk,,COMMON)
 
 # ====  the api stubs and current.xml ===========================
 include $(CLEAR_VARS)
 
 LOCAL_SRC_FILES:= \
-    $(cmplat_docs_src_files)
-LOCAL_INTERMEDIATE_SOURCES:= $(cmplat_LOCAL_INTERMEDIATE_SOURCES)
-LOCAL_JAVA_LIBRARIES:= $(cmplat_docs_java_libraries)
-LOCAL_MODULE_CLASS:= $(cmplat_docs_LOCAL_MODULE_CLASS)
-LOCAL_DROIDDOC_SOURCE_PATH:= $(cmplat_docs_LOCAL_DROIDDOC_SOURCE_PATH)
+    $(lineageplat_docs_src_files)
+LOCAL_INTERMEDIATE_SOURCES:= $(lineageplat_LOCAL_INTERMEDIATE_SOURCES)
+LOCAL_JAVA_LIBRARIES:= $(lineageplat_docs_java_libraries)
+LOCAL_MODULE_CLASS:= $(lineageplat_docs_LOCAL_MODULE_CLASS)
+LOCAL_DROIDDOC_SOURCE_PATH:= $(lineageplat_docs_LOCAL_DROIDDOC_SOURCE_PATH)
 LOCAL_ADDITIONAL_JAVA_DIR:= $(intermediates.COMMON)/src
-LOCAL_ADDITIONAL_DEPENDENCIES:= $(cmplat_docs_LOCAL_ADDITIONAL_DEPENDENCIES)
+LOCAL_ADDITIONAL_DEPENDENCIES:= $(lineageplat_docs_LOCAL_ADDITIONAL_DEPENDENCIES)
 
-LOCAL_MODULE := cm-api-stubs
+LOCAL_MODULE := lineage-api-stubs
 
 LOCAL_DROIDDOC_CUSTOM_TEMPLATE_DIR:= build/tools/droiddoc/templates-sdk
 
 LOCAL_DROIDDOC_OPTIONS:= \
-        -stubs $(TARGET_OUT_COMMON_INTERMEDIATES)/JAVA_LIBRARIES/cmsdk_stubs_current_intermediates/src \
-        -stubpackages $(cm_stub_packages) \
-        -exclude org.cyanogenmod.platform.internal \
-        -api $(INTERNAL_CM_PLATFORM_API_FILE) \
-        -removedApi $(INTERNAL_CM_PLATFORM_REMOVED_API_FILE) \
+        -stubs $(TARGET_OUT_COMMON_INTERMEDIATES)/JAVA_LIBRARIES/lineagesdk_stubs_current_intermediates/src \
+        -stubpackages $(lineage_stub_packages) \
+        -exclude org.lineageos.platform.internal \
+        -api $(INTERNAL_LINEAGE_PLATFORM_API_FILE) \
+        -removedApi $(INTERNAL_LINEAGE_PLATFORM_REMOVED_API_FILE) \
         -nodocs
 
 LOCAL_UNINSTALLABLE_MODULE := true
@@ -251,54 +252,54 @@ LOCAL_UNINSTALLABLE_MODULE := true
 include $(BUILD_DROIDDOC)
 
 # $(gen), i.e. framework.aidl, is also needed while building against the current stub.
-$(full_target): $(cm_framework_built) $(gen)
-$(INTERNAL_CM_PLATFORM_API_FILE): $(full_target)
-$(call dist-for-goals,sdk,$(INTERNAL_CM_PLATFORM_API_FILE))
+$(full_target): $(lineage_framework_built) $(gen)
+$(INTERNAL_LINEAGE_PLATFORM_API_FILE): $(full_target)
+$(call dist-for-goals,sdk,$(INTERNAL_LINEAGE_PLATFORM_API_FILE))
 
 
 # Documentation
 # ===========================================================
 include $(CLEAR_VARS)
 
-LOCAL_MODULE := org.cyanogenmod.platform.sdk
-LOCAL_INTERMEDIATE_SOURCES:= $(cmplat_LOCAL_INTERMEDIATE_SOURCES)
+LOCAL_MODULE := org.lineageos.platform.sdk
+LOCAL_INTERMEDIATE_SOURCES:= $(lineageplat_LOCAL_INTERMEDIATE_SOURCES)
 LOCAL_MODULE_CLASS := JAVA_LIBRARIES
 LOCAL_MODULE_TAGS := optional
 
-LOCAL_SRC_FILES := $(cmplat_docs_src_files)
+LOCAL_SRC_FILES := $(lineageplat_docs_src_files)
 LOCAL_ADDITONAL_JAVA_DIR := $(intermediates.COMMON)/src
 
 LOCAL_IS_HOST_MODULE := false
-LOCAL_DROIDDOC_CUSTOM_TEMPLATE_DIR := vendor/cm/build/tools/droiddoc/templates-cmsdk
+LOCAL_DROIDDOC_CUSTOM_TEMPLATE_DIR := vendor/lineage/build/tools/droiddoc/templates-lineagesdk
 LOCAL_ADDITIONAL_DEPENDENCIES := \
     services \
-    org.cyanogenmod.hardware
+    org.lineageos.hardware
 
-LOCAL_JAVA_LIBRARIES := $(cmplat_docs_java_libraries)
+LOCAL_JAVA_LIBRARIES := $(lineageplat_docs_java_libraries)
 
 LOCAL_DROIDDOC_OPTIONS := \
         -offlinemode \
-        -exclude org.cyanogenmod.platform.internal \
-        -hidePackage org.cyanogenmod.platform.internal \
+        -exclude org.lineageos.platform.internal \
+        -hidePackage org.lineageos.platform.internal \
         -hdf android.whichdoc offline \
-        -hdf sdk.version $(cmplat_docs_docs_SDK_VERSION) \
-        -hdf sdk.rel.id $(cmplat_docs_docs_SDK_REL_ID) \
+        -hdf sdk.version $(lineageplat_docs_docs_SDK_VERSION) \
+        -hdf sdk.rel.id $(lineageplat_docs_docs_SDK_REL_ID) \
         -hdf sdk.preview 0 \
-        -since $(CM_SRC_API_DIR)/1.txt 1 \
-        -since $(CM_SRC_API_DIR)/2.txt 2 \
-        -since $(CM_SRC_API_DIR)/3.txt 3 \
-        -since $(CM_SRC_API_DIR)/4.txt 4 \
-        -since $(CM_SRC_API_DIR)/5.txt 5 \
-        -since $(CM_SRC_API_DIR)/6.txt 6 \
-        -since $(CM_SRC_API_DIR)/7.txt 7
+        -since $(LINEAGE_SRC_API_DIR)/1.txt 1 \
+        -since $(LINEAGE_SRC_API_DIR)/2.txt 2 \
+        -since $(LINEAGE_SRC_API_DIR)/3.txt 3 \
+        -since $(LINEAGE_SRC_API_DIR)/4.txt 4 \
+        -since $(LINEAGE_SRC_API_DIR)/5.txt 5 \
+        -since $(LINEAGE_SRC_API_DIR)/6.txt 6 \
+        -since $(LINEAGE_SRC_API_DIR)/7.txt 7
 
-$(full_target): $(cm_framework_built) $(gen)
+$(full_target): $(lineage_framework_built) $(gen)
 include $(BUILD_DROIDDOC)
 
 include $(call first-makefiles-under,$(LOCAL_PATH))
 
 # Cleanup temp vars
 # ===========================================================
-cmplat.docs.src_files :=
-cmplat.docs.java_libraries :=
+lineageplat.docs.src_files :=
+lineageplat.docs.java_libraries :=
 intermediates.COMMON :=
