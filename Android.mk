@@ -37,7 +37,7 @@ library_src := cm/lib/main/java
 LOCAL_MODULE := org.cyanogenmod.platform
 LOCAL_MODULE_TAGS := optional
 
-cmsdk_LOCAL_JAVA_LIBRARIES := \
+lineagesdk_LOCAL_JAVA_LIBRARIES := \
     android-support-v7-preference \
     android-support-v7-recyclerview \
     android-support-v14-preference
@@ -45,7 +45,7 @@ cmsdk_LOCAL_JAVA_LIBRARIES := \
 LOCAL_JAVA_LIBRARIES := \
     services \
     org.cyanogenmod.hardware \
-    $(cmsdk_LOCAL_JAVA_LIBRARIES)
+    $(lineagesdk_LOCAL_JAVA_LIBRARIES)
 
 LOCAL_SRC_FILES := \
     $(call all-java-files-under, $(cyanogenmod_sdk_src)) \
@@ -122,15 +122,15 @@ LOCAL_SRC_FILES := \
 # Included aidl files from cyanogenmod.app namespace
 LOCAL_AIDL_INCLUDES := $(LOCAL_PATH)/sdk/src/java
 
-cmsdk_LOCAL_INTERMEDIATE_SOURCES := \
+lineagesdk_LOCAL_INTERMEDIATE_SOURCES := \
     $(cm_platform_res)/cyanogenmod/platform/R.java \
     $(cm_platform_res)/cyanogenmod/platform/Manifest.java
 
 LOCAL_INTERMEDIATE_SOURCES := \
-    $(cmsdk_LOCAL_INTERMEDIATE_SOURCES)
+    $(lineagesdk_LOCAL_INTERMEDIATE_SOURCES)
 
 LOCAL_JAVA_LIBRARIES := \
-    $(cmsdk_LOCAL_JAVA_LIBRARIES)
+    $(lineagesdk_LOCAL_JAVA_LIBRARIES)
 
 # Make sure that R.java and Manifest.java are built before we build
 # the source for this library.
@@ -157,8 +157,8 @@ LOCAL_CONSUMER_PROGUARD_FILE := $(LOCAL_PATH)/sdk/proguard.txt
 LOCAL_RESOURCE_DIR := $(addprefix $(LOCAL_PATH)/, sdk/res/res)
 LOCAL_MANIFEST_FILE := sdk/AndroidManifest.xml
 
-cmsdk_exclude_files := 'cyanogenmod/library'
-LOCAL_JAR_EXCLUDE_PACKAGES := $(cmsdk_exclude_files)
+lineagesdk_exclude_files := 'cyanogenmod/library'
+LOCAL_JAR_EXCLUDE_PACKAGES := $(lineagesdk_exclude_files)
 LOCAL_JAR_EXCLUDE_FILES := none
 
 LOCAL_STATIC_JAVA_LIBRARIES := org.cyanogenmod.platform.sdk
@@ -184,17 +184,17 @@ LOCAL_SRC_FILES := \
 LOCAL_AIDL_INCLUDES := $(LOCAL_PATH)/sdk/src/java
 LOCAL_AIDL_FLAGS := -n
 
-cmsdk_LOCAL_INTERMEDIATE_SOURCES := \
+lineagesdk_LOCAL_INTERMEDIATE_SOURCES := \
     $(cm_platform_res)/cyanogenmod/platform/R.java \
     $(cm_platform_res)/cyanogenmod/platform/Manifest.java \
     $(cm_platform_res)/org/cyanogenmod/platform/internal/R.java \
     $(cm_platform_res)/org/cyanogenmod/platform/internal/Manifest.java
 
 LOCAL_INTERMEDIATE_SOURCES := \
-    $(cmsdk_LOCAL_INTERMEDIATE_SOURCES)
+    $(lineagesdk_LOCAL_INTERMEDIATE_SOURCES)
 
 LOCAL_JAVA_LIBRARIES := \
-    $(cmsdk_LOCAL_JAVA_LIBRARIES)
+    $(lineagesdk_LOCAL_JAVA_LIBRARIES)
 
 $(full_target): $(cm_framework_built) $(gen)
 include $(BUILD_STATIC_JAVA_LIBRARY)
@@ -239,7 +239,7 @@ LOCAL_MODULE := cm-api-stubs
 LOCAL_DROIDDOC_CUSTOM_TEMPLATE_DIR:= build/tools/droiddoc/templates-sdk
 
 LOCAL_DROIDDOC_OPTIONS:= \
-        -stubs $(TARGET_OUT_COMMON_INTERMEDIATES)/JAVA_LIBRARIES/cmsdk_stubs_current_intermediates/src \
+        -stubs $(TARGET_OUT_COMMON_INTERMEDIATES)/JAVA_LIBRARIES/lineagesdk_stubs_current_intermediates/src \
         -stubpackages $(cm_stub_packages) \
         -exclude org.cyanogenmod.platform.internal \
         -api $(INTERNAL_CM_PLATFORM_API_FILE) \

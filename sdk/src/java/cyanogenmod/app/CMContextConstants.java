@@ -147,13 +147,13 @@ public final class CMContextConstants {
     public static final String CM_AUDIO_SERVICE = "cmaudio";
 
     /**
-     * Features supported by the CMSDK.
+     * Features supported by the LineageSDK.
      */
     public static class Features {
         /**
          * Feature for {@link PackageManager#getSystemAvailableFeatures} and
          * {@link PackageManager#hasSystemFeature}: The device includes the hardware abstraction
-         * framework service utilized by the cmsdk.
+         * framework service utilized by the lineagesdk.
          */
         @SdkConstant(SdkConstant.SdkConstantType.FEATURE)
         public static final String HARDWARE_ABSTRACTION = "org.cyanogenmod.hardware";
@@ -161,7 +161,7 @@ public final class CMContextConstants {
         /**
          * Feature for {@link PackageManager#getSystemAvailableFeatures} and
          * {@link PackageManager#hasSystemFeature}: The device includes the cm status bar service
-         * utilzed by the cmsdk.
+         * utilzed by the lineagesdk.
          */
         @SdkConstant(SdkConstant.SdkConstantType.FEATURE)
         public static final String STATUSBAR = "org.cyanogenmod.statusbar";
@@ -169,7 +169,7 @@ public final class CMContextConstants {
         /**
          * Feature for {@link PackageManager#getSystemAvailableFeatures} and
          * {@link PackageManager#hasSystemFeature}: The device includes the cm profiles service
-         * utilized by the cmsdk.
+         * utilized by the lineagesdk.
          */
         @SdkConstant(SdkConstant.SdkConstantType.FEATURE)
         public static final String PROFILES = "org.cyanogenmod.profiles";
@@ -177,7 +177,7 @@ public final class CMContextConstants {
         /**
          * Feature for {@link PackageManager#getSystemAvailableFeatures} and
          * {@link PackageManager#hasSystemFeature}: The device includes the cm app suggest service
-         * utilized by the cmsdk.
+         * utilized by the lineagesdk.
          */
         @SdkConstant(SdkConstant.SdkConstantType.FEATURE)
         public static final String APP_SUGGEST = "org.cyanogenmod.appsuggest";
@@ -185,7 +185,7 @@ public final class CMContextConstants {
         /**
          * Feature for {@link PackageManager#getSystemAvailableFeatures} and
          * {@link PackageManager#hasSystemFeature}: The device includes the cm telephony service
-         * utilized by the cmsdk.
+         * utilized by the lineagesdk.
          */
         @SdkConstant(SdkConstant.SdkConstantType.FEATURE)
         public static final String TELEPHONY = "org.cyanogenmod.telephony";
@@ -193,7 +193,7 @@ public final class CMContextConstants {
         /**
          * Feature for {@link PackageManager#getSystemAvailableFeatures} and
          * {@link PackageManager#hasSystemFeature}: The device includes the cm theme service
-         * utilized by the cmsdk.
+         * utilized by the lineagesdk.
          */
         @SdkConstant(SdkConstant.SdkConstantType.FEATURE)
         public static final String THEMES = "org.cyanogenmod.theme";
@@ -201,7 +201,7 @@ public final class CMContextConstants {
         /**
          * Feature for {@link PackageManager#getSystemAvailableFeatures} and
          * {@link PackageManager#hasSystemFeature}: The device includes the cm performance service
-         * utilized by the cmsdk.
+         * utilized by the lineagesdk.
          */
         @SdkConstant(SdkConstant.SdkConstantType.FEATURE)
         public static final String PERFORMANCE = "org.cyanogenmod.performance";
@@ -209,7 +209,7 @@ public final class CMContextConstants {
         /**
          * Feature for {@link PackageManager#getSystemAvailableFeatures} and
          * {@link PackageManager#hasSystemFeature}: The device includes the cm partner service
-         * utilized by the cmsdk.
+         * utilized by the lineagesdk.
          */
         @SdkConstant(SdkConstant.SdkConstantType.FEATURE)
         public static final String PARTNER = "org.cyanogenmod.partner";
@@ -225,7 +225,7 @@ public final class CMContextConstants {
         /**
          * Feature for {@link PackageManager#getSystemAvailableFeatures} and
          * {@link PackageManager#hasSystemFeature}: The device includes the cm weather weather
-         * service utilized by the cmsdk.
+         * service utilized by the lineagesdk.
          */
         @SdkConstant(SdkConstant.SdkConstantType.FEATURE)
         public static final String WEATHER_SERVICES = "org.cyanogenmod.weather";
@@ -233,7 +233,7 @@ public final class CMContextConstants {
         /**
          * Feature for {@link PackageManager#getSystemAvailableFeatures} and
          * {@link PackageManager#hasSystemFeature}: The device includes the LiveDisplay service
-         * utilized by the cmsdk.
+         * utilized by the lineagesdk.
          */
         @SdkConstant(SdkConstant.SdkConstantType.FEATURE)
         public static final String LIVEDISPLAY = "org.cyanogenmod.livedisplay";
@@ -241,7 +241,7 @@ public final class CMContextConstants {
         /**
          * Feature for {@link PackageManager#getSystemAvailableFeatures} and
          * {@link PackageManager#hasSystemFeature}: The device includes the CM audio extensions
-         * utilized by the cmsdk.
+         * utilized by the lineagesdk.
          */
         @SdkConstant(SdkConstant.SdkConstantType.FEATURE)
         public static final String AUDIO = "org.cyanogenmod.audio";

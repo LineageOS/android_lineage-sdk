@@ -4,7 +4,7 @@ The Platform SDK provides a set of APIs that give you easy access to a variety o
 
 ## Setup
 
-You can either [download](https://github.com/LineageOS/android_prebuilts_cmsdk/tree/master/current) from prebuilts hosted on github or pull directly via Gradle.
+You can either [download](https://github.com/LineageOS/android_prebuilts_lineagesdk/tree/master/current) from prebuilts hosted on github or pull directly via Gradle.
 
 
 ### Building against release artifacts

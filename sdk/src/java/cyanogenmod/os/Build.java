@@ -141,7 +141,7 @@ public class Build {
          * {@link cyanogenmod.weatherservice.WeatherProviderService}</li>
          * <li>Extended capabilities of the {@link cyanogenmod.externalviews.KeyguardExternalView}
          * interfaces to provide immersive and interactive experiences on the lockscreen.</li>
-         * <li>Themes interfaces have found a new home in the cmsdk, thus we allow access
+         * <li>Themes interfaces have found a new home in the lineagesdk, thus we allow access
          * to 3rd parties requesting theme changes on the platform via
          * {@link cyanogenmod.themes.ThemeManager} and
          * {@link cyanogenmod.themes.ThemeChangeRequest}</li>
