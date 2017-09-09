@@ -114,26 +114,12 @@
   <string name="permlab_thirdPartyKeyguard">شاشة تأمين جهة أخرى</string>
   <!-- Third party keyguard permission description -->
   <string name="permdesc_thirdPartyKeyguard">السماح باستخدام تطبيق كشاشة تأمين غير آمنة.</string>
-  <!-- Theme installation error notification -->
-  <string name="theme_install_error_title">فشل تثبيت السمة</string>
-  <string name="theme_install_error_message"><xliff:g id="theme">%1$s</xliff:g> فشل التثبيت</string>
-  <!-- Theme reset notification -->
-  <string name="theme_reset_notification_title">إعادة تعيين السمة</string>
-  <string name="theme_reset_notification_message">تم استرداد سمة النظام بسبب عمليات تعطيل متعددة للتطبيق.</string>
   <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permlab_accessThemeService">الوصول إلى خدمة السمة</string>
   <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permdesc_accessThemeService">يسمح للتطبيق بالوصول إلى خدمة السمة. ينبغي أن لا تكون ضرورية أبداً للتطبيقات العادية.</string>
   <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permlab_readThemes">قراءة معلومات السمة لديك</string>
   <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permdesc_readThemesDesc">يسمح للتطبيق بقراءة السمات الخاصة بك 
-وتحديد السمة التي قمت بتطبيقها.</string>
   <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permlab_writeThemes">تعديل السمات الخاصة بك</string>
   <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permdesc_writeThemesDesc">السماح للتطبيق بإدخال سمات جديدة
-وتعديل السمة التي قمت بتطبيقها.</string>
   <!-- Performance manager permission title -->
   <string name="permlab_perfAccess">الوصول إلى مدير الأداء</string>
   <!-- Performance manager permission description -->
@@ -174,9 +160,6 @@
   <string name="permlab_observe_audio_sessions">ملاحظة تغييرات جلسة عمل الصوت</string>
   <string name="permdesc_observe_audio_sessions">يسمح لتطبيق معين لملاحظة تدفقات الصوت الجاري إنشاؤها وتدميرها.</string>
   <!-- LineageAudioService - observe session changes permission -->
-  <!-- QuickSettings: Themes tile -->
-  <string name="qs_themes_label">السمات</string>
-  <string name="qs_themes_content_description">تخصيص  السمة</string>
   <!-- Privacy Guard -->
   <!-- Permissions used by remote preferences -->
 </resources>

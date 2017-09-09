@@ -119,25 +119,12 @@
   <string name="permlab_thirdPartyKeyguard">derde party slotskerm</string>
   <!-- Third party keyguard permission description -->
   <string name="permdesc_thirdPartyKeyguard">Laat \'n toep toe om gebruik te word as \'n onveilige skermslot.</string>
-  <!-- Theme installation error notification -->
-  <string name="theme_install_error_title">Kon nie tema installeer</string>
-  <string name="theme_install_error_message"><xliff:g id="theme">%1$s</xliff:g> kon nie installeer nie</string>
-  <!-- Theme reset notification -->
-  <string name="theme_reset_notification_title">Herstel tema</string>
-  <string name="theme_reset_notification_message">Stelsel tema is herstel a. g. v. baie program foute.</string>
   <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permlab_accessThemeService">toegang tot tema diens</string>
   <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permdesc_accessThemeService">Laat \'n toep toe om toegang na die tema diens te verkry. Moet nooit nodig wees vir normale programme nie.</string>
   <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permlab_readThemes">lees jou tema inligting</string>
   <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permdesc_readThemesDesc">Laat die toep toe om jou temas te lees en 
-       bepaal watter tema jy toegepas het.</string>
   <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permlab_writeThemes">verander jou temas</string>
   <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permdesc_writeThemesDesc">Laat die toep toe om nuwe temas by te voeg en verander die tema wat jy toegepas het.</string>
   <!-- Performance manager permission title -->
   <string name="permlab_perfAccess">toegang na prestasie bestuurder</string>
   <!-- Performance manager permission description -->
@@ -180,9 +167,6 @@
   <!-- LineageAudioService - observe session changes permission -->
   <string name="permlab_manage_audio_sessions">bestuur oudio-sessie veranderinge</string>
   <string name="permdesc_manage_audio_sessions">Laat \'n toep toe om oudio-stroom bywerkings te stuur.</string>
-  <!-- QuickSettings: Themes tile -->
-  <string name="qs_themes_label">Temas</string>
-  <string name="qs_themes_content_description">Verpersoonlik jou tema</string>
   <!-- Privacy Guard -->
   <string name="privacy_guard_manager_title">Privaatheidswag</string>
   <!-- Permissions used by remote preferences -->

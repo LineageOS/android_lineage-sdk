@@ -119,25 +119,12 @@
   <string name="permlab_thirdPartyKeyguard">ecran de blocare terț</string>
   <!-- Third party keyguard permission description -->
   <string name="permdesc_thirdPartyKeyguard">Permite unei aplicații să fie utilizată ca ecran de blocare nesigur.</string>
-  <!-- Theme installation error notification -->
-  <string name="theme_install_error_title">Instalarea temei a eșuat</string>
-  <string name="theme_install_error_message"><xliff:g id="theme">%1$s</xliff:g> nu s-a instalat</string>
-  <!-- Theme reset notification -->
-  <string name="theme_reset_notification_title">Resetare temă</string>
-  <string name="theme_reset_notification_message">Tema de sistem a fost restaurată datorită unor multiple crash-uri.</string>
   <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permlab_accessThemeService">accesare serviciul pentru teme</string>
   <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permdesc_accessThemeService">Permite unei aplicații să acceseze serviciul pentru teme. Aplicațiile normale nu ar trebui să aibă nevoie de aceasta.</string>
   <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permlab_readThemes">citiți informațiile temei dvs.</string>
   <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permdesc_readThemesDesc">Permite aplicației să citească temele dumneavoastră și
-       să determine pe care ați aplicat-o.</string>
   <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permlab_writeThemes">modifică teme</string>
   <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permdesc_writeThemesDesc">Permite aplicației să adauge teme noi și să le modifice pe cele aplicate.</string>
   <!-- Performance manager permission title -->
   <string name="permlab_perfAccess">acces la managerul de performanță</string>
   <!-- Performance manager permission description -->
@@ -180,9 +167,6 @@
   <!-- LineageAudioService - observe session changes permission -->
   <string name="permlab_manage_audio_sessions">gestionează schimbările de sesiune audio</string>
   <string name="permdesc_manage_audio_sessions">Permite unei aplicații să trimită actualizări de flux audio.</string>
-  <!-- QuickSettings: Themes tile -->
-  <string name="qs_themes_label">Teme</string>
-  <string name="qs_themes_content_description">Personalizați tema</string>
   <!-- Privacy Guard -->
   <string name="privacy_guard_manager_title">Gardian Intimitate</string>
   <!-- Permissions used by remote preferences -->

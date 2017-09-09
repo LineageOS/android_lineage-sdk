@@ -119,24 +119,12 @@
   <string name="permlab_thirdPartyKeyguard">מסך נעילה של צד שלישי</string>
   <!-- Third party keyguard permission description -->
   <string name="permdesc_thirdPartyKeyguard">מאפשר ליישום לשמש כמסך נעילה לא מאובטח.</string>
-  <!-- Theme installation error notification -->
-  <string name="theme_install_error_title">התקנת ערכת העיצוב נכשלה</string>
-  <string name="theme_install_error_message">התקנת <xliff:g id="theme">%1$s </xliff:g> נכשלה</string>
-  <!-- Theme reset notification -->
-  <string name="theme_reset_notification_title">איפוס ערכת עיצוב</string>
-  <string name="theme_reset_notification_message">ערכת העיצוב של המערכת שוחזרה עקב קריסות יישומים מרובות.</string>
   <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permlab_accessThemeService">גש לשירות ערכות העיצוב</string>
   <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permdesc_accessThemeService">מאפשר ליישום לגשת לשירות ערכות העיצוב. לא אמור להידרש ליישומים רגילים לעולם.</string>
   <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permlab_readThemes">קרא את פרטי ערכת העיצוב שלך</string>
   <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permdesc_readThemesDesc">מאפשר ליישום לקרוא את ערכות העיצוב הקיימות, ולקבוע איזו ערכה החלת.</string>
   <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permlab_writeThemes">שנה את ערכות העיצוב שלך</string>
   <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permdesc_writeThemesDesc">מאפשר ליישום להוסיף ערכות עיצוב חדשות ולשנות את הערכה המוחלת.</string>
   <!-- Performance manager permission title -->
   <string name="permlab_perfAccess">גש למנהל הביצועים</string>
   <!-- Performance manager permission description -->
@@ -179,9 +167,6 @@
   <!-- LineageAudioService - observe session changes permission -->
   <string name="permlab_manage_audio_sessions">נהל עדכוני פעולות במערכת השמע</string>
   <string name="permdesc_manage_audio_sessions">מאפשר ליישום לשלוח עדכוני זרימת שמע.</string>
-  <!-- QuickSettings: Themes tile -->
-  <string name="qs_themes_label">ערכות עיצוב</string>
-  <string name="qs_themes_content_description">התאם אישית את ערכת הנושא שלך</string>
   <!-- Privacy Guard -->
   <string name="privacy_guard_manager_title">שומר הפרטיות</string>
   <!-- Permissions used by remote preferences -->

@@ -119,24 +119,12 @@
   <string name="permlab_thirdPartyKeyguard">zámok obrazovky tretej strany</string>
   <!-- Third party keyguard permission description -->
   <string name="permdesc_thirdPartyKeyguard">Umožňuje použiť aplikáciu ako nezabezpečený zámok obrazovky.</string>
-  <!-- Theme installation error notification -->
-  <string name="theme_install_error_title">Inštalácia témy zlyhala</string>
-  <string name="theme_install_error_message"><xliff:g id="theme">%1$s </xliff:g> sa nepodarilo nainštalovať</string>
-  <!-- Theme reset notification -->
-  <string name="theme_reset_notification_title">Obnoviť tému</string>
-  <string name="theme_reset_notification_message">Systémová téma sa obnovila z dôvodu viacerých pádov aplikácií.</string>
   <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permlab_accessThemeService">prístup k službe tém</string>
   <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permdesc_accessThemeService">Umožňuje aplikácii prístup k službe na správu tém. Toto povolenie nie je bežné pre štandardné aplikácie.</string>
   <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permlab_readThemes">čítať informácie vašej témy</string>
   <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permdesc_readThemesDesc">Umožňuje aplikácii čítať vaše témy a určiť, ktorú tému ste použili.</string>
   <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permlab_writeThemes">upraviť vaše témy</string>
   <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permdesc_writeThemesDesc">Umožňuje aplikácii vkladať nové témy a upraviť tému, ktorú ste použili.</string>
   <!-- Performance manager permission title -->
   <string name="permlab_perfAccess">prístup k správe výkonu</string>
   <!-- Performance manager permission description -->
@@ -179,9 +167,6 @@
   <!-- LineageAudioService - observe session changes permission -->
   <string name="permlab_manage_audio_sessions">spravovať zmeny audio relácie</string>
   <string name="permdesc_manage_audio_sessions">Umožňuje aktualizovať zvukové relácie.</string>
-  <!-- QuickSettings: Themes tile -->
-  <string name="qs_themes_label">Témy</string>
-  <string name="qs_themes_content_description">Prispôsobiť vašu tému</string>
   <!-- Privacy Guard -->
   <string name="privacy_guard_manager_title">Ochrana súkromia</string>
   <!-- Permissions used by remote preferences -->

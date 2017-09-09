@@ -104,8 +104,6 @@
   <string name="permlab_thirdPartyKeyguard">മൂന്നാം കക്ഷി ലോക്ക് സ്ക്രീൻ</string>
   <!-- Third party keyguard permission description -->
   <string name="permdesc_thirdPartyKeyguard">സുരക്ഷിതമല്ലാത്ത ലോക്ക് സ്ക്രീന്‍ ആയി ഉപയോഗിക്കുവാന്‍ ഒരു ആപ്ലിക്കേഷനെ അനുവദിക്കുന്നു.</string>
-  <!-- Theme installation error notification -->
-  <!-- Theme reset notification -->
   <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
   <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
   <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
@@ -128,7 +126,6 @@
   <!-- LiveDisplay manager permission -->
   <!-- LineageAudioService - observe session changes permission -->
   <!-- LineageAudioService - observe session changes permission -->
-  <!-- QuickSettings: Themes tile -->
   <!-- Privacy Guard -->
   <!-- Permissions used by remote preferences -->
 </resources>

@@ -2602,24 +2602,6 @@ public final class LineageSettings {
         public static final String BUTTON_BRIGHTNESS = "button_brightness";
 
         /**
-         * A '|' delimited list of theme components to apply from the default theme on first boot.
-         * Components can be one or more of the "mods_XXXXXXX" found in
-         * {@link ThemesContract$ThemesColumns}.  Leaving this field blank assumes all components
-         * will be applied.
-         *
-         * ex: mods_icons|mods_overlays|mods_homescreen
-         *
-         * @hide
-         */
-        public static final String DEFAULT_THEME_COMPONENTS = "default_theme_components";
-
-        /**
-         * Default theme to use.  If empty, use holo.
-         * @hide
-         */
-        public static final String DEFAULT_THEME_PACKAGE = "default_theme_package";
-
-        /**
          * Developer options - Navigation Bar show switch
          * @deprecated
          * @hide
@@ -2808,17 +2790,6 @@ public final class LineageSettings {
         public static final String ADVANCED_REBOOT = "advanced_reboot";
 
         /**
-         * This will be set to the system's current theme API version when ThemeService starts.
-         * It is useful for when an upgrade from one version of Lineage to another occurs.
-         * For example, after a user upgrades from CM11 to CM12, the value of this field
-         * might be 19. ThemeService would then change the value to 21. This is useful
-         * when an API change breaks a theme. Themeservice can identify old themes and
-         * unapply them from the system.
-         * @hide
-         */
-        public static final String THEME_PREV_BOOT_API_LEVEL = "theme_prev_boot_api_level";
-
-        /**
          * Whether detail view for the location tile is enabled
          * @hide
          */
@@ -2950,8 +2921,6 @@ public final class LineageSettings {
                 LineageSettings.Secure.ADVANCED_MODE,
                 LineageSettings.Secure.BUTTON_BACKLIGHT_TIMEOUT,
                 LineageSettings.Secure.BUTTON_BRIGHTNESS,
-                LineageSettings.Secure.DEFAULT_THEME_COMPONENTS,
-                LineageSettings.Secure.DEFAULT_THEME_PACKAGE,
                 LineageSettings.Secure.DEV_FORCE_SHOW_NAVBAR,
                 LineageSettings.Secure.KEYBOARD_BRIGHTNESS,
                 LineageSettings.Secure.POWER_MENU_ACTIONS,
@@ -2970,7 +2939,6 @@ public final class LineageSettings {
                 LineageSettings.Secure.PROTECTED_COMPONENTS,
                 LineageSettings.Secure.LIVE_DISPLAY_COLOR_MATRIX,
                 LineageSettings.Secure.ADVANCED_REBOOT,
-                LineageSettings.Secure.THEME_PREV_BOOT_API_LEVEL,
                 LineageSettings.Secure.LOCKSCREEN_TARGETS,
                 LineageSettings.Secure.RING_HOME_BUTTON_BEHAVIOR,
                 LineageSettings.Secure.PRIVACY_GUARD_DEFAULT,

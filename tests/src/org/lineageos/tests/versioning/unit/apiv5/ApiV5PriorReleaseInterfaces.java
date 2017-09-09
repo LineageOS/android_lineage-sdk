@@ -105,43 +105,6 @@ public class ApiV5PriorReleaseInterfaces {
         lineageAudioService.put("listAudioSessions", 1);
     }
 
-    //ThemeChangeListener Aidl (IThemeChangeListener)
-    static {
-        Map<String, Integer> themeChangeListener =
-                getInternalInterfaceMap("IThemeChangeListener");
-        //ELDERBERRY BEGIN
-        themeChangeListener.put("onProgress", 1);
-        themeChangeListener.put("onFinish", 2);
-    }
-
-    //ThemeProcessingListener Aidl (IThemeProcessingListener)
-    static {
-        Map<String, Integer> themeChangeListener =
-                getInternalInterfaceMap("IThemeProcessingListener");
-        //ELDERBERRY BEGIN
-        themeChangeListener.put("onFinishedProcessing", 1);
-    }
-
-    //ThemeManager Aidl (IThemeService)
-    static {
-        Map<String, Integer> themes =
-                getInternalInterfaceMap("IThemeService");
-        //ELDERBERRY BEGIN
-        themes.put("requestThemeChangeUpdates", 1);
-        themes.put("removeUpdates ", 2);
-        themes.put("requestThemeChange", 3);
-        themes.put("applyDefaultTheme", 4);
-        themes.put("isThemeApplying", 5);
-        themes.put("getProgress", 6);
-        themes.put("processThemeResources", 7);
-        themes.put("isThemeBeingProcessed", 8);
-        themes.put("registerThemeProcessingListener", 9);
-        themes.put("unregisterThemeProcessingListener", 10);
-        themes.put("rebuildResourceCache", 11);
-        themes.put("getLastThemeChangeTime", 12);
-        themes.put("getLastThemeChangeRequestType", 13);
-    }
-
     //LineageWeatherManager Aidl (ILineageWeatherManager)
     static {
         Map<String, Integer> ilineageWeatherManager =

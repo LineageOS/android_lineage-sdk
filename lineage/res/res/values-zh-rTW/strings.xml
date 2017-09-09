@@ -119,25 +119,12 @@
   <string name="permlab_thirdPartyKeyguard">第三方鎖定畫面</string>
   <!-- Third party keyguard permission description -->
   <string name="permdesc_thirdPartyKeyguard">允許應用程式用作不安全的鎖定畫面。</string>
-  <!-- Theme installation error notification -->
-  <string name="theme_install_error_title">主題安裝失敗</string>
-  <string name="theme_install_error_message"><xliff:g id="theme">%1$s </xliff:g> 安裝失敗</string>
-  <!-- Theme reset notification -->
-  <string name="theme_reset_notification_title">重設主題</string>
-  <string name="theme_reset_notification_message">根據多個應用程式發生錯誤所以已還原至預設主題</string>
   <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permlab_accessThemeService">存取主題服務</string>
   <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permdesc_accessThemeService">允許應用程式存取主題服務 。一般應用程式不需使用。</string>
   <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permlab_readThemes">閱讀您的主題資訊</string>
   <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permdesc_readThemesDesc">允許應用程式讀取您的主題，
-       並確定您已套用哪個的主題。</string>
   <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permlab_writeThemes">修改您的主題</string>
   <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permdesc_writeThemesDesc">允許應用程式來插入新的主題和修改您已應用的主題。</string>
   <!-- Performance manager permission title -->
   <string name="permlab_perfAccess">存取效能管理員</string>
   <!-- Performance manager permission description -->
@@ -180,9 +167,6 @@
   <!-- LineageAudioService - observe session changes permission -->
   <string name="permlab_manage_audio_sessions">管理音訊會話變動</string>
   <string name="permdesc_manage_audio_sessions">允許應用程式傳送音訊串流更新。</string>
-  <!-- QuickSettings: Themes tile -->
-  <string name="qs_themes_label">主題</string>
-  <string name="qs_themes_content_description">自訂您的主題</string>
   <!-- Privacy Guard -->
   <string name="privacy_guard_manager_title">隱私守衛</string>
   <!-- Permissions used by remote preferences -->

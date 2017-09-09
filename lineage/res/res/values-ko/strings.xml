@@ -119,24 +119,12 @@
   <string name="permlab_thirdPartyKeyguard">서드 파티 잠금 화면</string>
   <!-- Third party keyguard permission description -->
   <string name="permdesc_thirdPartyKeyguard">앱을 안전하지 않은 잠금 화면으로 사용할 수 있도록 허용합니다.</string>
-  <!-- Theme installation error notification -->
-  <string name="theme_install_error_title">테마 설치 실패</string>
-  <string name="theme_install_error_message"><xliff:g id="theme">%1$s </xliff:g> 설치 실패</string>
-  <!-- Theme reset notification -->
-  <string name="theme_reset_notification_title">테마 초기화</string>
-  <string name="theme_reset_notification_message">잦은 앱 충돌로 인해 시스템 테마가 복원되었습니다.</string>
   <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permlab_accessThemeService">테마 서비스에 액세스</string>
   <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permdesc_accessThemeService">앱이 테마 서비스에 접근할 수 있도록 허용합니다. 일반 앱에서는 필요 없는 권한입니다.</string>
   <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permlab_readThemes">테마 정보 읽기</string>
   <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permdesc_readThemesDesc">앱이 설치된 테마들을 읽어들이고 현재 적용된 테마를 확인할 수 있도록 허용합니다.</string>
   <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permlab_writeThemes">테마 정보 수정</string>
   <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permdesc_writeThemesDesc">앱이 새로운 테마를 설치하거나 다른 테마를 적용할 수 있도록 허용합니다.</string>
   <!-- Performance manager permission title -->
   <string name="permlab_perfAccess">성능 관리자에 액세스</string>
   <!-- Performance manager permission description -->
@@ -179,9 +167,6 @@
   <!-- LineageAudioService - observe session changes permission -->
   <string name="permlab_manage_audio_sessions">오디오 세션 변경 관리</string>
   <string name="permdesc_manage_audio_sessions">앱을 통해 오디오 스트림 업데이트를 보내도록 합니다.</string>
-  <!-- QuickSettings: Themes tile -->
-  <string name="qs_themes_label">테마</string>
-  <string name="qs_themes_content_description">테마 사용자 정의</string>
   <!-- Privacy Guard -->
   <string name="privacy_guard_manager_title">프라이버시 가드</string>
   <!-- Permissions used by remote preferences -->

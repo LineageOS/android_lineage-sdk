@@ -104,24 +104,12 @@
   <string name="permlab_thirdPartyKeyguard">ئۈچىنچى تەرەپ ئېكران قۇلۇپى</string>
   <!-- Third party keyguard permission description -->
   <string name="permdesc_thirdPartyKeyguard">ئەپنىڭ تۇراقسىز ئىكران قۇلۇپى بۇلۇپ ئىشلىتىلىشىگە رۇخسەت قىلىش.</string>
-  <!-- Theme installation error notification -->
-  <string name="theme_install_error_title">ئۆرنەك ئورنىتالمىدى</string>
-  <string name="theme_install_error_message"><xliff:g id="theme">%1$s</xliff:g> ئورنىتىش مەغلۇب بولدى</string>
-  <!-- Theme reset notification -->
-  <string name="theme_reset_notification_title">باش تېمىنى قايتا بېكىتىش</string>
-  <string name="theme_reset_notification_message">كۆپلىگەن ئەپ ۋەيران بولغانلىقى ئۈچۈن باش تېما ئەسلىگە قايتتى.</string>
   <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permlab_accessThemeService">باش تېما مۇلازىمىتىگە كىرىش</string>
   <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permdesc_accessThemeService">بىر ئەپنىڭ باش تېما مۇلازىمىتىگە كىرىشىگە رۇخسەت قىلىش. نورمال ئەپ بۇنداق ھوقۇققا ھەرگىز ئېھتىياجلىق ئەمەس.</string>
   <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permlab_readThemes">باش تېما ئۇچۇرىڭىزنى ئوقۇڭ</string>
   <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permdesc_readThemesDesc">ئەپنىڭ سىزنىڭ باش تېمىڭىزنى ئوقۇشقا ۋە سىزنىڭ قايسى باش تېمىنى ئىشلەتكىڭىزنى جەزىملەشتۈرۈشكە رۇخسەت قىلىڭ.</string>
   <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permlab_writeThemes">باش تېمىڭىزنى ئۆزگەرتىڭ</string>
   <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permdesc_writeThemesDesc">ئەپنىڭ يېڭى باش تېما قوشۇشىغا ۋە سىزنىڭ قايسى باش تېمىنى ئىشلەتكىڭىزنى جەزىملەشتۈرۈشكە رۇخسەت قىلىڭ.</string>
   <!-- Performance manager permission title -->
   <string name="permlab_perfAccess">ئىقتىدار باشقۇرغۇچنى زىيارەت قىلىش</string>
   <!-- Performance manager permission description -->
@@ -140,7 +128,6 @@
   <!-- LiveDisplay manager permission -->
   <!-- LineageAudioService - observe session changes permission -->
   <!-- LineageAudioService - observe session changes permission -->
-  <!-- QuickSettings: Themes tile -->
   <!-- Privacy Guard -->
   <!-- Permissions used by remote preferences -->
 </resources>

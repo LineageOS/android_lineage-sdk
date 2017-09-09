@@ -31,12 +31,6 @@
     <!-- Default for LineageSettings.Secure.ADVANCED_MODE -->
     <bool name="def_advanced_mode">true</bool>
 
-    <!-- Default for LineageSettings.Secure.DEFAULT_THEME_COMPONENTS -->
-    <string name="def_theme_components"></string>
-
-    <!-- Default for LineageSettings.Secure.DEFAULT_THEME_PACKAGE -->
-    <string name="def_theme_package"></string>
-
     <!-- Defaults for LineageSettings.Secure.DEV_FORCE_SHOW_NAVBAR -->
     <integer name="def_force_show_navbar">0</integer>
 

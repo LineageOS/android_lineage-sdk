@@ -103,21 +103,8 @@
     <java-symbol type="string" name="config_wifiDirectName" />
     <java-symbol type="bool" name="config_wifiHotspotSecurityNone" />
 
-    <!-- Theme install failure notification -->
-    <java-symbol type="string" name="theme_install_error_title" />
-    <java-symbol type="string" name="theme_install_error_message" />
-
-    <!-- Theme reset notification -->
-    <java-symbol type="string" name="theme_reset_notification_title" />
-    <java-symbol type="string" name="theme_reset_notification_message" />
-
     <!-- External Lineage specific core services -->
     <java-symbol type="array" name="config_externalLineageServices" />
-
-    <!-- Themes tile -->
-    <java-symbol type="string" name="qs_themes_label" />
-    <java-symbol type="string" name="qs_themes_content_description" />
-    <java-symbol type="drawable" name="ic_qs_themes" />
 
     <!-- Lineage system server -->
     <java-symbol type="string" name="config_externalSystemServer" />

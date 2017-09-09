@@ -44,8 +44,6 @@
   <!-- LiveDisplay strings -->
   <!-- Third party keyguard permission label -->
   <!-- Third party keyguard permission description -->
-  <!-- Theme installation error notification -->
-  <!-- Theme reset notification -->
   <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
   <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
   <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
@@ -68,7 +66,6 @@
   <!-- LiveDisplay manager permission -->
   <!-- LineageAudioService - observe session changes permission -->
   <!-- LineageAudioService - observe session changes permission -->
-  <!-- QuickSettings: Themes tile -->
   <!-- Privacy Guard -->
   <!-- Permissions used by remote preferences -->
 </resources>

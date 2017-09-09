@@ -119,25 +119,12 @@
   <string name="permlab_thirdPartyKeyguard">tredjeparts låseskjerm</string>
   <!-- Third party keyguard permission description -->
   <string name="permdesc_thirdPartyKeyguard">Tillater en app å brukes som en usikret låseskjerm.</string>
-  <!-- Theme installation error notification -->
-  <string name="theme_install_error_title">Kunne ikke installere tema</string>
-  <string name="theme_install_error_message"><xliff:g id="theme">%1$s </xliff:g> kunne ikke installere</string>
-  <!-- Theme reset notification -->
-  <string name="theme_reset_notification_title">Reset tema</string>
-  <string name="theme_reset_notification_message">System tema er gjenopprettet pga. flere app krasj.</string>
   <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permlab_accessThemeService">få tilgang til tematjeneste</string>
   <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permdesc_accessThemeService">Tillater en app å få tilgang til tematjenesten. Skal aldri være nødvendig for normale apper.</string>
   <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permlab_readThemes">les temainformasjon</string>
   <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permdesc_readThemesDesc">Tillater apper å lese av dine temaer og
-       hvilket tema du har valgt.</string>
   <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permlab_writeThemes">endre temaer</string>
   <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permdesc_writeThemesDesc">Lar apper installere nye temaer og endre de temaene du har valgt.</string>
   <!-- Performance manager permission title -->
   <string name="permlab_perfAccess">tilgang til ytelsesadministrereren</string>
   <!-- Performance manager permission description -->
@@ -180,9 +167,6 @@
   <!-- LineageAudioService - observe session changes permission -->
   <string name="permlab_manage_audio_sessions">administrer lyd økt endringer</string>
   <string name="permdesc_manage_audio_sessions">Gir en app tillatelse til å sende lydstrømning oppdateringer.</string>
-  <!-- QuickSettings: Themes tile -->
-  <string name="qs_themes_label">Temaer</string>
-  <string name="qs_themes_content_description">Tilpass temaet ditt</string>
   <!-- Privacy Guard -->
   <string name="privacy_guard_manager_title">Personvernvakt</string>
   <!-- Permissions used by remote preferences -->

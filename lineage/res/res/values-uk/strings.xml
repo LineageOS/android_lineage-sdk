@@ -119,25 +119,12 @@
   <string name="permlab_thirdPartyKeyguard">Нетиповий екран блокування</string>
   <!-- Third party keyguard permission description -->
   <string name="permdesc_thirdPartyKeyguard">Дозволяє використати програму як незахищене блокування екрану.</string>
-  <!-- Theme installation error notification -->
-  <string name="theme_install_error_title">Не вдалося встановити тему</string>
-  <string name="theme_install_error_message"><xliff:g id="theme">%1$s </xliff:g> не вдалося встановити</string>
-  <!-- Theme reset notification -->
-  <string name="theme_reset_notification_title">Скинути тему</string>
-  <string name="theme_reset_notification_message">Через збої в роботі додатків встановлено системну тему.</string>
   <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permlab_accessThemeService">доступ до служби тем</string>
   <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permdesc_accessThemeService">Дозволяє додатку отримувати доступ до служби тем. Цей дозвіл не використовується звичайними додатками.</string>
   <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permlab_readThemes">читати дані вашої теми</string>
   <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permdesc_readThemesDesc">Дозволяє додатку читати дані про теми і
-виявляти, яку тему зараз застосовано.</string>
   <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permlab_writeThemes">змінювати теми</string>
   <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permdesc_writeThemesDesc">Дозволяє додатку встановлювати нові теми і змінювати поточну.</string>
   <!-- Performance manager permission title -->
   <string name="permlab_perfAccess">доступ до менеджера продуктивності</string>
   <!-- Performance manager permission description -->
@@ -180,9 +167,6 @@
   <!-- LineageAudioService - observe session changes permission -->
   <string name="permlab_manage_audio_sessions">керувати змінами аудіо сесії</string>
   <string name="permdesc_manage_audio_sessions">Дозволяє додатку змінювати параметри аудіопотоків.</string>
-  <!-- QuickSettings: Themes tile -->
-  <string name="qs_themes_label">Теми</string>
-  <string name="qs_themes_content_description">Налаштувати вашу тему</string>
   <!-- Privacy Guard -->
   <string name="privacy_guard_manager_title">Вартовий Приватності</string>
   <!-- Permissions used by remote preferences -->

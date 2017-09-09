@@ -119,26 +119,12 @@
   <string name="permlab_thirdPartyKeyguard">üçüncü taraf kilit ekranı</string>
   <!-- Third party keyguard permission description -->
   <string name="permdesc_thirdPartyKeyguard">Uygulamalara şifresiz kilit ekranı olarak kullanılabilme izni verir.</string>
-  <!-- Theme installation error notification -->
-  <string name="theme_install_error_title">Tema yüklenemedi</string>
-  <string name="theme_install_error_message"><xliff:g id="theme">%1$s </xliff:g> yüklenemedi</string>
-  <!-- Theme reset notification -->
-  <string name="theme_reset_notification_title">Tema sıfırlandı</string>
-  <string name="theme_reset_notification_message">Uygulama çökmelerinden dolayı sistem temasına geri dönüldü.</string>
   <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permlab_accessThemeService">tema hizmetine erişim</string>
   <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permdesc_accessThemeService">Bir uygulamanın tema hizmetine erişimine izin verir. Normal uygulamalar için gerekli değildir.</string>
   <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permlab_readThemes">tema bilginizi okuyun</string>
   <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permdesc_readThemesDesc">Uygulamanın temalarınızı okumasına ve hangi
-temayı uyguladığınızı belirlemesine izin verir.</string>
   <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permlab_writeThemes">temalarınızı değiştirin</string>
   <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permdesc_writeThemesDesc">Uygulamanın yeni temalar eklemesine ve
-uyguladığınız temayı değiştirmesine izin verir.</string>
   <!-- Performance manager permission title -->
   <string name="permlab_perfAccess">performans yöneticisine erişim</string>
   <!-- Performance manager permission description -->
@@ -181,9 +167,6 @@ uyguladığınız temayı değiştirmesine izin verir.</string>
   <!-- LineageAudioService - observe session changes permission -->
   <string name="permlab_manage_audio_sessions">sesli oturum değişikliklerini yönet</string>
   <string name="permdesc_manage_audio_sessions">Bir uygulamaya ses akış güncellemeleri gönderme izni verir.</string>
-  <!-- QuickSettings: Themes tile -->
-  <string name="qs_themes_label">Temalar</string>
-  <string name="qs_themes_content_description">Temanızı özelleştirin</string>
   <!-- Privacy Guard -->
   <string name="privacy_guard_manager_title">Gizlilik Koruması</string>
   <!-- Permissions used by remote preferences -->

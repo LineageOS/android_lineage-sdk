@@ -119,25 +119,12 @@
   <string name="permlab_thirdPartyKeyguard">ecrã de bloqueio de terceiros</string>
   <!-- Third party keyguard permission description -->
   <string name="permdesc_thirdPartyKeyguard">Permite que uma aplicação seja utilizada como ecrã de bloqueio inseguro.</string>
-  <!-- Theme installation error notification -->
-  <string name="theme_install_error_title">Falha ao instalar o tema</string>
-  <string name="theme_install_error_message">Falha ao instalar <xliff:g id="theme">%1$s</xliff:g></string>
-  <!-- Theme reset notification -->
-  <string name="theme_reset_notification_title">Repor tema</string>
-  <string name="theme_reset_notification_message">O tema do sistema foi restaurado devido a vários erros nas aplicações.</string>
   <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permlab_accessThemeService">aceder ao serviço de temas</string>
   <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permdesc_accessThemeService">Permite que uma aplicação aceda ao serviço de temas. Nunca deverá ser necessário para aplicações normais.</string>
   <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permlab_readThemes">ler a informação do seu tema</string>
   <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permdesc_readThemesDesc">Permite que a aplicação leia os seus temas e
-       determine qual o tema que tem aplicado.</string>
   <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permlab_writeThemes">modificar os seus temas</string>
   <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permdesc_writeThemesDesc">Permite que a aplicação insira novos temas e modifique o tema que tem aplicado.</string>
   <!-- Performance manager permission title -->
   <string name="permlab_perfAccess">aceder ao gestor de desempenho</string>
   <!-- Performance manager permission description -->
@@ -180,9 +167,6 @@
   <!-- LineageAudioService - observe session changes permission -->
   <string name="permlab_manage_audio_sessions">gerir sessões de alterações de som</string>
   <string name="permdesc_manage_audio_sessions">Permite que uma aplicação envie atualizações de fluxo de áudio.</string>
-  <!-- QuickSettings: Themes tile -->
-  <string name="qs_themes_label">Temas</string>
-  <string name="qs_themes_content_description">Personalize o seu tema</string>
   <!-- Privacy Guard -->
   <string name="privacy_guard_manager_title">Proteção da Privacidade</string>
   <!-- Permissions used by remote preferences -->

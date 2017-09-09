@@ -96,45 +96,6 @@ public class Intent {
     public static final String ACTION_APP_FAILURE = "lineageos.intent.action.APP_FAILURE";
 
     /**
-     * Used to indicate that a theme package has been installed or un-installed.
-     */
-    public static final String CATEGORY_THEME_PACKAGE_INSTALLED_STATE_CHANGE =
-            "lineageos.intent.category.THEME_PACKAGE_INSTALL_STATE_CHANGE";
-
-    /**
-     * Action sent from the provider when a theme has been fully installed.  Fully installed
-     * means that the apk was installed by PackageManager and the theme resources were
-     * processed and cached by {@link org.lineageos.platform.internal.ThemeManagerService}
-     * Requires the {@link  lineageos.platform.Manifest.permission#READ_THEMES} permission to
-     * receive this broadcast.
-     */
-    public static final String ACTION_THEME_INSTALLED =
-            "lineageos.intent.action.THEME_INSTALLED";
-
-    /**
-     * Action sent from the provider when a theme has been updated.
-     * Requires the {@link lineageos.platform.Manifest.permission#READ_THEMES} permission to
-     * receive this broadcast.
-     */
-    public static final String ACTION_THEME_UPDATED =
-            "lineageos.intent.action.THEME_UPDATED";
-
-    /**
-     * Action sent from the provider when a theme has been removed.
-     * Requires the {@link  lineageos.platform.Manifest.permission#READ_THEMES} permission to
-     * receive this broadcast.
-     */
-    public static final String ACTION_THEME_REMOVED =
-            "lineageos.intent.action.THEME_REMOVED";
-
-    /**
-     * Uri scheme used to broadcast the theme's package name when broadcasting
-     * {@link Intent#ACTION_THEME_INSTALLED} or
-     * {@link Intent#ACTION_THEME_REMOVED}
-     */
-    public static final String URI_SCHEME_PACKAGE = "package";
-
-    /**
      * Implicit action to open live lock screen settings.
      * @hide
      */

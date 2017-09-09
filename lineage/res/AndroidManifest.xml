@@ -155,27 +155,6 @@
                 android:description="@string/permdesc_thirdPartyKeyguard"
                 android:protectionLevel="normal" />
 
-    <!-- Allows an application to use ThemeManager -->
-    <permission android:name="lineageos.permission.ACCESS_THEME_MANAGER"
-                android:label="@string/permlab_accessThemeService"
-                android:description="@string/permdesc_accessThemeService"
-                android:protectionLevel="normal" />
-
-    <!-- Allows an application to read the current theme configuration and
-         get information about the various themes currently installed -->
-    <permission android:name="lineageos.permission.READ_THEMES"
-                android:label="@string/permlab_readThemes"
-                android:description="@string/permdesc_readThemesDesc"
-                android:protectionLevel="normal" />
-
-    <!-- Allows an application to write the current theme configuration and
-         write information about the various themes currently installed.
-         Changing themes should be done through the service ACCESS_THEME_MANAGER -->
-    <permission android:name="lineageos.permission.WRITE_THEMES"
-                android:label="@string/permlab_writeThemes"
-                android:description="@string/permdesc_writeThemesDesc"
-                android:protectionLevel="normal" />
-
     <!-- Allows low-level access to performance management.
          <p>Not for use by third-party applications. -->
     <permission android:name="lineageos.permission.PERFORMANCE_ACCESS"
@@ -254,11 +233,6 @@
     <!-- Not meant for third parties. Allows brokering core services to other
          processes @hide -->
     <permission android:name="lineageos.permission.BIND_CORE_SERVICE"
-                android:protectionLevel="signature|privileged" />
-
-    <!-- Not meant for third parties.
-         @hide -->
-    <permission android:name="lineageos.permission.SEND_PROTECTED_THEME_BROADCAST"
                 android:protectionLevel="signature|privileged" />
 
     <application android:process="system"

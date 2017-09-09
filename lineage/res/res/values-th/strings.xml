@@ -114,24 +114,12 @@
   <string name="permlab_thirdPartyKeyguard">หน้าจอล็อคบุคคลที่สาม</string>
   <!-- Third party keyguard permission description -->
   <string name="permdesc_thirdPartyKeyguard">อนุญาตให้ใช้แอปเป็นหน้าจอล็อคแบบไม่ปลอดภัย</string>
-  <!-- Theme installation error notification -->
-  <string name="theme_install_error_title">การติดตั้งรูปแบบธีมล้มเหลว</string>
-  <string name="theme_install_error_message"><xliff:g id="theme">%1$s</xliff:g> ล้มเหลวในการติดตั้ง</string>
-  <!-- Theme reset notification -->
-  <string name="theme_reset_notification_title">รีเซ็ตรูปแบบธีม</string>
-  <string name="theme_reset_notification_message">ระบบกลับมาใช้รูปแบบธีมเดิมเนื่องจากมีหลายปัญหาที่เกิดกับแอป</string>
   <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permlab_accessThemeService">เข้าถึงรูปแบบธีม</string>
   <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permdesc_accessThemeService">อนุญาตให้แอปเข้าถึงรูปแบบธีมได้ ซึ่งถือว่าไม่จำเป็นในแอปปกติ</string>
   <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permlab_readThemes">อ่านข้อมูลรูปแบบธีมของคุณ</string>
   <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permdesc_readThemesDesc">อนุญาตให้แอปอ่านข้อมูลรูปแบบธีมและ       กำหนดหาว่ารูปแบบธีมใดที่คุณใช้</string>
   <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permlab_writeThemes">แก้ไขรูปแบบธีมของคุณ</string>
   <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permdesc_writeThemesDesc">อณุญาตให้แอปเพิ่มรูปแบบธีมใหม่และแก้ไขรูปแบบธีมที่คุณใช้</string>
   <!-- Performance manager permission title -->
   <string name="permlab_perfAccess">ตัวจัดการประสิทธิภาพการเข้าถึง</string>
   <!-- Performance manager permission description -->
@@ -172,9 +160,6 @@
   <string name="permlab_observe_audio_sessions">สังเกตการเปลี่ยนแปลงเซสชันเสียง</string>
   <string name="permdesc_observe_audio_sessions">อนุญาตให้แอปสังเกตกระแสข้อมูลเสียงที่กำลังถูกสร้างและทำลาย</string>
   <!-- LineageAudioService - observe session changes permission -->
-  <!-- QuickSettings: Themes tile -->
-  <string name="qs_themes_label">รูปแบบธีม</string>
-  <string name="qs_themes_content_description">กำหนดรูปแบบธีมเอง</string>
   <!-- Privacy Guard -->
   <!-- Permissions used by remote preferences -->
 </resources>

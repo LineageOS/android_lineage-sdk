@@ -101,13 +101,6 @@ public final class LineageContextConstants {
     public static final String LINEAGE_PERFORMANCE_SERVICE = "lineageperformance";
 
     /**
-     * Controls changing and applying themes
-     *
-     * @hide
-     */
-    public static final String LINEAGE_THEME_SERVICE = "lineagethemes";
-
-    /**
      * Manages composed icons
      *
      * @hide
@@ -189,14 +182,6 @@ public final class LineageContextConstants {
          */
         @SdkConstant(SdkConstant.SdkConstantType.FEATURE)
         public static final String TELEPHONY = "org.lineageos.telephony";
-
-        /**
-         * Feature for {@link PackageManager#getSystemAvailableFeatures} and
-         * {@link PackageManager#hasSystemFeature}: The device includes the lineage theme service
-         * utilized by the lineage sdk.
-         */
-        @SdkConstant(SdkConstant.SdkConstantType.FEATURE)
-        public static final String THEMES = "org.lineageos.theme";
 
         /**
          * Feature for {@link PackageManager#getSystemAvailableFeatures} and

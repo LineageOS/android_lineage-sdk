@@ -119,24 +119,12 @@
   <string name="permlab_thirdPartyKeyguard">закључани екран треће стране</string>
   <!-- Third party keyguard permission description -->
   <string name="permdesc_thirdPartyKeyguard">Апликација може да функционише као небезбедан закључани екран.</string>
-  <!-- Theme installation error notification -->
-  <string name="theme_install_error_title">Грешка при инсталирању теме</string>
-  <string name="theme_install_error_message">Не могу да инсталирам „<xliff:g id="theme">%1$s</xliff:g>“.</string>
-  <!-- Theme reset notification -->
-  <string name="theme_reset_notification_title">Враћање првобитне теме</string>
-  <string name="theme_reset_notification_message">Враћена је стандардна тема због отказивања апликација.</string>
   <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permlab_accessThemeService">приступ услузи тема</string>
   <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permdesc_accessThemeService">Апликација може да приступа услузи тема. Ова дозвола није потребна нормалним апликацијама.</string>
   <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permlab_readThemes">читање података о теми</string>
   <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permdesc_readThemesDesc">Апликација може да чита теме и одреди која је тренутно активна.</string>
   <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permlab_writeThemes">мењање тема</string>
   <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permdesc_writeThemesDesc">Апликација може да инсталира нове теме и да промени тренутну.</string>
   <!-- Performance manager permission title -->
   <string name="permlab_perfAccess">приступ менаџеру перформанси</string>
   <!-- Performance manager permission description -->
@@ -179,9 +167,6 @@
   <!-- LineageAudioService - observe session changes permission -->
   <string name="permlab_manage_audio_sessions">управљање изменама звучних сесија</string>
   <string name="permdesc_manage_audio_sessions">Апликација може да мења параметре звучних токова.</string>
-  <!-- QuickSettings: Themes tile -->
-  <string name="qs_themes_label">Теме</string>
-  <string name="qs_themes_content_description">Прилагодите своју тему.</string>
   <!-- Privacy Guard -->
   <string name="privacy_guard_manager_title">Заштита приватности</string>
   <!-- Permissions used by remote preferences -->

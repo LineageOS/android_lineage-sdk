@@ -100,20 +100,12 @@
   <string name="permlab_thirdPartyKeyguard">ekran bllokues i mundësuar nga një palë e tretë</string>
   <!-- Third party keyguard permission description -->
   <string name="permdesc_thirdPartyKeyguard">Lejon një aplikacion që të përdoret si një ekran bllokues i pasigurtë.</string>
-  <!-- Theme installation error notification -->
-  <string name="theme_install_error_title">Instalimi i temës dështoi</string>
-  <string name="theme_install_error_message"><xliff:g id="theme">%1$s</xliff:g> nuk u instalua</string>
-  <!-- Theme reset notification -->
   <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permlab_accessThemeService">akseso shërbimin e temave</string>
   <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
   <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permlab_readThemes">lexo informacionet e temës</string>
   <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
   <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permlab_writeThemes">modifiko temat e tua</string>
   <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permdesc_writeThemesDesc">Lejon aplikacionin të instalojë tema të reja dhe të modifikojë temën që ke aplikuar.</string>
   <!-- Performance manager permission title -->
   <!-- Performance manager permission description -->
   <!-- Access live lock screen manager service permission label -->
@@ -135,9 +127,6 @@
   <string name="permdesc_manageLiveDisplay">Lejon një aplikacion të konfigurojë parametra të përparuar të ekranit.</string>
   <!-- LineageAudioService - observe session changes permission -->
   <!-- LineageAudioService - observe session changes permission -->
-  <!-- QuickSettings: Themes tile -->
-  <string name="qs_themes_label">Temat</string>
-  <string name="qs_themes_content_description">Personalizo temën</string>
   <!-- Privacy Guard -->
   <string name="privacy_guard_manager_title">Mbrojtësi i të Dhënave</string>
   <!-- Permissions used by remote preferences -->
