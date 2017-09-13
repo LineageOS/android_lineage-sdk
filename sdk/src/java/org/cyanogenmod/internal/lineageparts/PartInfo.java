@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.cyanogenmod.internal.cmparts;
+package org.cyanogenmod.internal.lineageparts;
 
 import android.content.Intent;
 import android.os.Parcel;
@@ -180,7 +180,7 @@ public class PartInfo implements Parcelable {
 
     public Intent getIntentForActivity() {
         Intent i = new Intent(getAction());
-        i.setComponent(PartsList.CMPARTS_ACTIVITY);
+        i.setComponent(PartsList.LINEAGEPARTS_ACTIVITY);
         return i;
     }
 

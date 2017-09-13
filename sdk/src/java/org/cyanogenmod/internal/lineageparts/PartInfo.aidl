@@ -14,6 +14,6 @@
  * limitations under the License.
  */
 
-package org.cyanogenmod.internal.cmparts;
+package org.cyanogenmod.internal.lineageparts;
 
 parcelable PartInfo;

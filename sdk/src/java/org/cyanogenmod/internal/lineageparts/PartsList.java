@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.cyanogenmod.internal.cmparts;
+package org.cyanogenmod.internal.lineageparts;
 
 import android.content.ComponentName;
 import android.content.Context;
@@ -53,12 +53,12 @@ public class PartsList {
 
     public static final String EXTRA_PART = ":cm:part";
 
-    public static final String CMPARTS_PACKAGE = "org.cyanogenmod.cmparts";
+    public static final String LINEAGEPARTS_PACKAGE = "org.cyanogenmod.lineageparts";
 
-    public static final ComponentName CMPARTS_ACTIVITY = new ComponentName(
-            CMPARTS_PACKAGE, CMPARTS_PACKAGE + ".PartsActivity");
+    public static final ComponentName LINEAGEPARTS_ACTIVITY = new ComponentName(
+            LINEAGEPARTS_PACKAGE, LINEAGEPARTS_PACKAGE + ".PartsActivity");
 
-    public static final String PARTS_ACTION_PREFIX = CMPARTS_PACKAGE + ".parts";
+    public static final String PARTS_ACTION_PREFIX = LINEAGEPARTS_PACKAGE + ".parts";
 
     private final Map<String, PartInfo> mParts = new ArrayMap<>();
 
@@ -85,16 +85,16 @@ public class PartsList {
         synchronized (mParts) {
             final PackageManager pm = mContext.getPackageManager();
             try {
-                final Resources r = pm.getResourcesForApplication(CMPARTS_PACKAGE);
+                final Resources r = pm.getResourcesForApplication(LINEAGEPARTS_PACKAGE);
                 if (r == null) {
                     return;
                 }
-                int resId = r.getIdentifier("parts_catalog", "xml", CMPARTS_PACKAGE);
+                int resId = r.getIdentifier("parts_catalog", "xml", LINEAGEPARTS_PACKAGE);
                 if (resId > 0) {
                     loadPartsFromResourceLocked(r, resId, mParts);
                 }
             } catch (PackageManager.NameNotFoundException e) {
-                // no cmparts installed
+                // no lineageparts installed
             }
         }
     }

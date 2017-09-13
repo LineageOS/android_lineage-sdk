@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.cyanogenmod.internal.cmparts;
+package org.cyanogenmod.internal.lineageparts;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -25,15 +25,15 @@ import cyanogenmod.preference.RemotePreference;
  * A link to a remote preference screen which can be used with a minimum amount
  * of information. Supports summary updates asynchronously.
  */
-public class CMPartsPreference extends RemotePreference {
+public class LineagePartsPreference extends RemotePreference {
 
-    private static final String TAG = "CMPartsPreference";
+    private static final String TAG = "LineagePartsPreference";
 
     private final PartInfo mPart;
 
     private final Context mContext;
 
-    public CMPartsPreference(Context context, AttributeSet attrs,
+    public LineagePartsPreference(Context context, AttributeSet attrs,
                             int defStyle, int defStyleRes) {
         super(context, attrs, defStyle, defStyleRes);
         mContext = context;
@@ -46,11 +46,11 @@ public class CMPartsPreference extends RemotePreference {
         setIntent(mPart.getIntentForActivity());
     }
 
-    public CMPartsPreference(Context context, AttributeSet attrs, int defStyle) {
+    public LineagePartsPreference(Context context, AttributeSet attrs, int defStyle) {
         this(context, attrs, defStyle, 0);
     }
 
-    public CMPartsPreference(Context context, AttributeSet attrs) {
+    public LineagePartsPreference(Context context, AttributeSet attrs) {
         this(context, attrs, android.support.v7.preference.R.attr.preferenceScreenStyle);
     }
 
