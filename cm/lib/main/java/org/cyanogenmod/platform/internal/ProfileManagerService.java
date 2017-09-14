@@ -28,7 +28,7 @@ import android.net.wifi.WifiSsid;
 import android.os.Message;
 import android.util.ArraySet;
 import com.android.internal.policy.IKeyguardService;
-import cyanogenmod.providers.CMSettings;
+import cyanogenmod.providers.LineageSettings;
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
 import org.xmlpull.v1.XmlPullParserFactory;
@@ -222,8 +222,8 @@ public class ProfileManagerService extends CMSystemService {
 
         @Override
         public void onChange(boolean selfChange, Uri uri) {
-            int state = CMSettings.System.getInt(mContext.getContentResolver(),
-                    CMSettings.System.SYSTEM_PROFILES_ENABLED,
+            int state = LineageSettings.System.getInt(mContext.getContentResolver(),
+                    LineageSettings.System.SYSTEM_PROFILES_ENABLED,
                     ProfileManager.PROFILES_STATE_ENABLED);
             mHandler.obtainMessage(MSG_SEND_PROFILE_STATE, state, 0 /* unused */).sendToTarget();
         }
@@ -281,7 +281,7 @@ public class ProfileManagerService extends CMSystemService {
             bindKeyguard();
         } else if (phase == PHASE_BOOT_COMPLETED) {
             mContext.getContentResolver().registerContentObserver(
-                    CMSettings.System.getUriFor(CMSettings.System.SYSTEM_PROFILES_ENABLED),
+                    LineageSettings.System.getUriFor(LineageSettings.System.SYSTEM_PROFILES_ENABLED),
                     false, new ProfilesObserver(mHandler), UserHandle.USER_ALL);
         }
     }
@@ -551,8 +551,8 @@ public class ProfileManagerService extends CMSystemService {
         public boolean isEnabled() {
             long token = clearCallingIdentity();
             try {
-                return CMSettings.System.getIntForUser(mContext.getContentResolver(),
-                        CMSettings.System.SYSTEM_PROFILES_ENABLED,
+                return LineageSettings.System.getIntForUser(mContext.getContentResolver(),
+                        LineageSettings.System.SYSTEM_PROFILES_ENABLED,
                         ProfileManager.PROFILES_STATE_ENABLED,
                         UserHandle.USER_CURRENT) == ProfileManager.PROFILES_STATE_ENABLED;
             } finally {

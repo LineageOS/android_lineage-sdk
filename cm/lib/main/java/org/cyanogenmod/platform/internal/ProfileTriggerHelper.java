@@ -36,7 +36,7 @@ import android.util.Log;
 import cyanogenmod.app.Profile;
 import cyanogenmod.app.Profile.ProfileTrigger;
 import cyanogenmod.app.ProfileManager;
-import cyanogenmod.providers.CMSettings;
+import cyanogenmod.providers.LineageSettings;
 
 import java.util.Set;
 import java.util.UUID;
@@ -85,13 +85,13 @@ public class ProfileTriggerHelper extends BroadcastReceiver {
         updateEnabled();
 
         mContext.getContentResolver().registerContentObserver(
-                CMSettings.System.getUriFor(CMSettings.System.SYSTEM_PROFILES_ENABLED), false,
+                LineageSettings.System.getUriFor(LineageSettings.System.SYSTEM_PROFILES_ENABLED), false,
                 mSettingsObserver);
     }
 
     public void updateEnabled() {
-        boolean enabled = CMSettings.System.getInt(mContext.getContentResolver(),
-                CMSettings.System.SYSTEM_PROFILES_ENABLED, 1) == 1;
+        boolean enabled = LineageSettings.System.getInt(mContext.getContentResolver(),
+                LineageSettings.System.SYSTEM_PROFILES_ENABLED, 1) == 1;
         if (enabled && !mFilterRegistered) {
             Log.v(TAG, "Enabling");
             mContext.registerReceiver(this, mIntentFilter);

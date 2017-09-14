@@ -61,7 +61,7 @@ import cyanogenmod.app.CustomTile;
 import cyanogenmod.hardware.HSIC;
 import cyanogenmod.hardware.ILiveDisplayService;
 import cyanogenmod.hardware.LiveDisplayConfig;
-import cyanogenmod.providers.CMSettings;
+import cyanogenmod.providers.LineageSettings;
 
 import static cyanogenmod.hardware.LiveDisplayManager.FEATURE_MANAGED_OUTDOOR_MODE;
 import static cyanogenmod.hardware.LiveDisplayManager.MODE_DAY;
@@ -346,7 +346,7 @@ public class LiveDisplayService extends CMSystemService {
     }
 
     private PendingIntent getCustomTileLongClickPendingIntent() {
-        Intent i = new Intent(CMSettings.ACTION_LIVEDISPLAY_SETTINGS);
+        Intent i = new Intent(LineageSettings.ACTION_LIVEDISPLAY_SETTINGS);
         i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         return PendingIntent.getActivityAsUser(mContext, 0, i,
                 PendingIntent.FLAG_UPDATE_CURRENT, null, UserHandle.CURRENT);
@@ -542,7 +542,7 @@ public class LiveDisplayService extends CMSystemService {
     private final class ModeObserver extends UserContentObserver {
 
         private final Uri MODE_SETTING =
-                CMSettings.System.getUriFor(CMSettings.System.DISPLAY_TEMPERATURE_MODE);
+                LineageSettings.System.getUriFor(LineageSettings.System.DISPLAY_TEMPERATURE_MODE);
 
         ModeObserver(Handler handler) {
             super(handler);
@@ -565,13 +565,13 @@ public class LiveDisplayService extends CMSystemService {
         }
 
         int getMode() {
-            return getInt(CMSettings.System.DISPLAY_TEMPERATURE_MODE,
+            return getInt(LineageSettings.System.DISPLAY_TEMPERATURE_MODE,
                     mConfig.getDefaultMode());
         }
 
         boolean setMode(int mode) {
             if (mConfig.hasFeature(mode) && mode >= MODE_FIRST && mode <= MODE_LAST) {
-                putInt(CMSettings.System.DISPLAY_TEMPERATURE_MODE, mode);
+                putInt(LineageSettings.System.DISPLAY_TEMPERATURE_MODE, mode);
                 if (mode != mConfig.getDefaultMode()) {
                     stopNudgingMe();
                 }
@@ -599,16 +599,16 @@ public class LiveDisplayService extends CMSystemService {
     private int getSunsetCounter() {
         // Counter used to determine when we should tell the user about this feature.
         // If it's not used after 3 sunsets, we'll show the hint once.
-        return CMSettings.System.getIntForUser(mContext.getContentResolver(),
-                CMSettings.System.LIVE_DISPLAY_HINTED,
+        return LineageSettings.System.getIntForUser(mContext.getContentResolver(),
+                LineageSettings.System.LIVE_DISPLAY_HINTED,
                 -3,
                 UserHandle.USER_CURRENT);
     }
 
 
     private void updateSunsetCounter(int count) {
-        CMSettings.System.putIntForUser(mContext.getContentResolver(),
-                CMSettings.System.LIVE_DISPLAY_HINTED,
+        LineageSettings.System.putIntForUser(mContext.getContentResolver(),
+                LineageSettings.System.LIVE_DISPLAY_HINTED,
                 count,
                 UserHandle.USER_CURRENT);
         mAwaitingNudge = count > 0;
@@ -650,7 +650,7 @@ public class LiveDisplayService extends CMSystemService {
         }
         if (counter == 0) {
             //show the notification and don't come back here
-            final Intent intent = new Intent(CMSettings.ACTION_LIVEDISPLAY_SETTINGS);
+            final Intent intent = new Intent(LineageSettings.ACTION_LIVEDISPLAY_SETTINGS);
             PendingIntent result = PendingIntent.getActivity(
                     mContext, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT);
             Notification.Builder builder = new Notification.Builder(mContext)
@@ -674,12 +674,12 @@ public class LiveDisplayService extends CMSystemService {
     }
 
     private int getInt(String setting, int defValue) {
-        return CMSettings.System.getIntForUser(mContext.getContentResolver(),
+        return LineageSettings.System.getIntForUser(mContext.getContentResolver(),
                 setting, defValue, UserHandle.USER_CURRENT);
     }
 
     private void putInt(String setting, int value) {
-        CMSettings.System.putIntForUser(mContext.getContentResolver(),
+        LineageSettings.System.putIntForUser(mContext.getContentResolver(),
                 setting, value, UserHandle.USER_CURRENT);
     }
 }

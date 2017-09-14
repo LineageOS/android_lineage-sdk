@@ -28,7 +28,7 @@ import java.util.BitSet;
 
 import cyanogenmod.hardware.CMHardwareManager;
 import cyanogenmod.hardware.LiveDisplayManager;
-import cyanogenmod.providers.CMSettings;
+import cyanogenmod.providers.LineageSettings;
 
 public class OutdoorModeController extends LiveDisplayFeature {
 
@@ -78,7 +78,7 @@ public class OutdoorModeController extends LiveDisplayFeature {
         }
 
         registerSettings(
-                CMSettings.System.getUriFor(CMSettings.System.DISPLAY_AUTO_OUTDOOR_MODE));
+                LineageSettings.System.getUriFor(LineageSettings.System.DISPLAY_AUTO_OUTDOOR_MODE));
     }
 
     @Override
@@ -242,13 +242,13 @@ public class OutdoorModeController extends LiveDisplayFeature {
         if (!mUseOutdoorMode) {
             return false;
         }
-        putBoolean(CMSettings.System.DISPLAY_AUTO_OUTDOOR_MODE, enabled);
+        putBoolean(LineageSettings.System.DISPLAY_AUTO_OUTDOOR_MODE, enabled);
         return true;
     }
 
     boolean isAutomaticOutdoorModeEnabled() {
         return mUseOutdoorMode &&
-                getBoolean(CMSettings.System.DISPLAY_AUTO_OUTDOOR_MODE,
+                getBoolean(LineageSettings.System.DISPLAY_AUTO_OUTDOOR_MODE,
                            getDefaultAutoOutdoorMode());
     }
 

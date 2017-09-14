@@ -29,7 +29,7 @@ import org.cyanogenmod.platform.internal.display.TwilightTracker.TwilightState;
 import java.io.PrintWriter;
 import java.util.BitSet;
 
-import cyanogenmod.providers.CMSettings;
+import cyanogenmod.providers.LineageSettings;
 
 import static org.cyanogenmod.platform.internal.display.LiveDisplayService.ALL_CHANGED;
 import static org.cyanogenmod.platform.internal.display.LiveDisplayService.DISPLAY_CHANGED;
@@ -98,32 +98,32 @@ public abstract class LiveDisplayFeature {
     }
 
     protected final boolean getBoolean(String setting, boolean defaultValue) {
-        return CMSettings.System.getIntForUser(mContext.getContentResolver(),
+        return LineageSettings.System.getIntForUser(mContext.getContentResolver(),
                 setting, (defaultValue ? 1 : 0), UserHandle.USER_CURRENT) == 1;
     }
 
     protected final void putBoolean(String setting, boolean value) {
-        CMSettings.System.putIntForUser(mContext.getContentResolver(),
+        LineageSettings.System.putIntForUser(mContext.getContentResolver(),
                 setting, (value ? 1 : 0), UserHandle.USER_CURRENT);
     }
 
     protected final int getInt(String setting, int defaultValue) {
-        return CMSettings.System.getIntForUser(mContext.getContentResolver(),
+        return LineageSettings.System.getIntForUser(mContext.getContentResolver(),
                 setting, defaultValue, UserHandle.USER_CURRENT);
     }
 
     protected final void putInt(String setting, int value) {
-        CMSettings.System.putIntForUser(mContext.getContentResolver(),
+        LineageSettings.System.putIntForUser(mContext.getContentResolver(),
                 setting, value, UserHandle.USER_CURRENT);
     }
 
     protected final String getString(String setting) {
-        return CMSettings.System.getStringForUser(mContext.getContentResolver(),
+        return LineageSettings.System.getStringForUser(mContext.getContentResolver(),
                 setting, UserHandle.USER_CURRENT);
     }
 
     protected final void putString(String setting, String value) {
-        CMSettings.System.putStringForUser(mContext.getContentResolver(),
+        LineageSettings.System.putStringForUser(mContext.getContentResolver(),
                 setting, value, UserHandle.USER_CURRENT);
     }
 

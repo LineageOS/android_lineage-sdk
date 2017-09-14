@@ -50,7 +50,7 @@ import java.security.interfaces.RSAPublicKey;
 
 public class PartnerInterfaceService extends CMSystemService {
 
-    private static final String TAG = "CMSettingsService";
+    private static final String TAG = "LineageSettingsService";
 
     private Context mContext;
     private TelephonyManager mTelephonyManager;

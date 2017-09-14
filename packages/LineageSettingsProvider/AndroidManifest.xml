@@ -14,11 +14,11 @@
      limitations under the License.
 -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="org.cyanogenmod.cmsettings"
+          package="org.cyanogenmod.lineagesettings"
           coreApp="true"
           android:sharedUserId="android.uid.system">
     <!-- It is necessary to be a system app in order to update table versions in SystemProperties for
-         CMSettings to know whether or not the client side cache is up to date. It is also necessary
+         LineageSettings to know whether or not the client side cache is up to date. It is also necessary
          to run in the system process in order to start the content provider prior to running migration
          for CM settings on user starting -->
 
@@ -33,8 +33,8 @@
                  android:defaultToDeviceProtectedStorage="true"
                  android:directBootAware="true">
 
-        <provider android:name="CMSettingsProvider"
-                  android:authorities="cmsettings"
+        <provider android:name="LineageSettingsProvider"
+                  android:authorities="lineagesettings"
                   android:multiprocess="false"
                   android:exported="true"
                   android:writePermission="cyanogenmod.permission.WRITE_SETTINGS"

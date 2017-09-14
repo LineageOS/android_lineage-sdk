@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.cyanogenmod.cmsettings.tests;
+package org.cyanogenmod.lineagesettings.tests;
 
 import android.content.ContentResolver;
 import android.content.ContentValues;
@@ -32,14 +32,14 @@ import android.test.AndroidTestCase;
 import android.test.suitebuilder.annotation.MediumTest;
 import android.test.suitebuilder.annotation.SmallTest;
 import android.text.TextUtils;
-import cyanogenmod.providers.CMSettings;
-import org.cyanogenmod.cmsettings.CMSettingsProvider;
+import cyanogenmod.providers.LineageSettings;
+import org.cyanogenmod.lineagesettings.LineageSettingsProvider;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
 
- public class CMSettingsProviderTest extends AndroidTestCase {
-     private static final String TAG = "CMSettingsProviderTest";
+ public class LineageSettingsProviderTest extends AndroidTestCase {
+     private static final String TAG = "LineageSettingsProviderTest";
 
      private static final LinkedHashMap<String, String> sMap = new LinkedHashMap<String, String>();
 
@@ -70,7 +70,7 @@ import java.util.Map;
      }
 
      @MediumTest
-     public void testMigrateCMSettingsForOtherUser() {
+     public void testMigrateLineageSettingsForOtherUser() {
          // Make sure there's an owner
          assertTrue(findUser(mUserManager, UserHandle.USER_OWNER));
 
@@ -81,19 +81,19 @@ import java.util.Map;
      }
 
      /**
-      * make sure that queries to SettingsProvider are forwarded to CMSettingsProvider as needed
-      * See {@link cyanogenmod.providers.CMSettings.System#shouldInterceptSystemProvider(String)}
+      * make sure that queries to SettingsProvider are forwarded to LineageSettingsProvider as needed
+      * See {@link cyanogenmod.providers.LineageSettings.System#shouldInterceptSystemProvider(String)}
       *
       * Currently this test only checks that
-      * {@link cyanogenmod.providers.CMSettings.System#SYSTEM_PROFILES_ENABLED} is expected to
+      * {@link cyanogenmod.providers.LineageSettings.System#SYSTEM_PROFILES_ENABLED} is expected to
       * be forwarded, and is forwarded.
       */
      @SmallTest
      public void testSettingsProviderKeyForwarding() {
-         String forwardedKey = CMSettings.System.SYSTEM_PROFILES_ENABLED;
+         String forwardedKey = LineageSettings.System.SYSTEM_PROFILES_ENABLED;
 
          // make sure the key should be forwarded
-         assertTrue(CMSettings.System.shouldInterceptSystemProvider(forwardedKey));
+         assertTrue(LineageSettings.System.shouldInterceptSystemProvider(forwardedKey));
 
          // put value 1 into Settings provider:
          // let's try to disable the profiles via the Settings provider
@@ -104,15 +104,15 @@ import java.util.Map;
          assertEquals("0", Settings.System.getStringForUser(getContext().getContentResolver(),
                  forwardedKey, UserHandle.USER_CURRENT));
 
-         // put value 2 into CMSettings provider
-         CMSettings.System.putStringForUser(mContentResolver,
+         // put value 2 into LineageSettings provider
+         LineageSettings.System.putStringForUser(mContentResolver,
                  forwardedKey, "1", UserHandle.USER_CURRENT);
 
-         assertEquals("1", CMSettings.System.getStringForUser(getContext().getContentResolver(),
+         assertEquals("1", LineageSettings.System.getStringForUser(getContext().getContentResolver(),
                  forwardedKey, UserHandle.USER_CURRENT));
 
          // assert reading from both returns value 2
-         final String cmProviderValue = CMSettings.System.getStringForUser(
+         final String cmProviderValue = LineageSettings.System.getStringForUser(
                  getContext().getContentResolver(), forwardedKey, UserHandle.USER_CURRENT);
          final String settingsProviderValue = Settings.System.getStringForUser(
                  getContext().getContentResolver(), forwardedKey, UserHandle.USER_CURRENT);
@@ -120,7 +120,7 @@ import java.util.Map;
      }
 
      /**
-      * The new {@link CMSettings.Secure#CM_SETUP_WIZARD_COMPLETED} cm specific provisioned flag
+      * The new {@link LineageSettings.Secure#CM_SETUP_WIZARD_COMPLETED} cm specific provisioned flag
       * should be equal to the old {@link Settings.Global#DEVICE_PROVISIONED} flag on boot, or on
       * upgrade. These flags will almost always be equal, except during the provisioning process,
       * they may change at slightly different times.
@@ -133,8 +133,8 @@ import java.util.Map;
      @Deprecated
      @SmallTest
      public void testCMProvisionedFlagFallbackSet() {
-         final String newCmFlag = CMSettings.Secure.getStringForUser(
-                 getContext().getContentResolver(), CMSettings.Secure.CM_SETUP_WIZARD_COMPLETED,
+         final String newCmFlag = LineageSettings.Secure.getStringForUser(
+                 getContext().getContentResolver(), LineageSettings.Secure.CM_SETUP_WIZARD_COMPLETED,
                  UserHandle.USER_OWNER);
          assertNotNull(newCmFlag);
 
@@ -148,34 +148,34 @@ import java.util.Map;
          // Setup values in Settings
          /*final String expectedPullDownValue = "testQuickPullDownValue";
          Settings.System.putStringForUser(mContentResolver,
-                 CMSettingsProvider.LegacyCMSettings.STATUS_BAR_QUICK_QS_PULLDOWN,
+                 LineageSettingsProvider.LegacyLineageSettings.STATUS_BAR_QUICK_QS_PULLDOWN,
                  expectedPullDownValue, userId);
 
          final int expectedKeyboardBrightness = 4;
          Settings.Secure.putIntForUser(mContentResolver,
-                 CMSettingsProvider.LegacyCMSettings.KEYBOARD_BRIGHTNESS,
+                 LineageSettingsProvider.LegacyLineageSettings.KEYBOARD_BRIGHTNESS,
                  expectedKeyboardBrightness, userId);
 
          Bundle arg = new Bundle();
-         arg.putInt(CMSettings.CALL_METHOD_USER_KEY, userId);
+         arg.putInt(LineageSettings.CALL_METHOD_USER_KEY, userId);
          IContentProvider contentProvider = mContentResolver.acquireProvider(
-                 CMSettings.AUTHORITY);
+                 LineageSettings.AUTHORITY);
 
          try{
              // Trigger migrate settings for guest
              contentProvider.call(mContentResolver.getPackageName(),
-                     CMSettings.CALL_METHOD_MIGRATE_SETTINGS_FOR_USER, null, arg);
+                     LineageSettings.CALL_METHOD_MIGRATE_SETTINGS_FOR_USER, null, arg);
          } catch (RemoteException ex) {
              fail("Failed to trigger settings migration due to RemoteException");
          }
 
          // Check values
-         final String actualPullDownValue = CMSettings.System.getStringForUser(mContentResolver,
-                 CMSettings.System.QS_QUICK_PULLDOWN, userId);
+         final String actualPullDownValue = LineageSettings.System.getStringForUser(mContentResolver,
+                 LineageSettings.System.QS_QUICK_PULLDOWN, userId);
          assertEquals(expectedPullDownValue, actualPullDownValue);
 
-         final int actualKeyboardBrightness = CMSettings.Secure.getIntForUser(mContentResolver,
-                 CMSettings.Secure.KEYBOARD_BRIGHTNESS, -1, userId);
+         final int actualKeyboardBrightness = LineageSettings.Secure.getIntForUser(mContentResolver,
+                 LineageSettings.Secure.KEYBOARD_BRIGHTNESS, -1, userId);
          assertEquals(expectedKeyboardBrightness, actualKeyboardBrightness);*/
      }
 
@@ -204,9 +204,9 @@ import java.util.Map;
              contentValues[count++] = contentValue;
          }
 
-         testBulkInsertForUri(CMSettings.System.CONTENT_URI, contentValues, keyValues);
-         testBulkInsertForUri(CMSettings.Secure.CONTENT_URI, contentValues, keyValues);
-         testBulkInsertForUri(CMSettings.Global.CONTENT_URI, contentValues, keyValues);
+         testBulkInsertForUri(LineageSettings.System.CONTENT_URI, contentValues, keyValues);
+         testBulkInsertForUri(LineageSettings.Secure.CONTENT_URI, contentValues, keyValues);
+         testBulkInsertForUri(LineageSettings.Global.CONTENT_URI, contentValues, keyValues);
      }
 
      private void testBulkInsertForUri(Uri uri, ContentValues[] contentValues, String[] keyValues) {
@@ -248,9 +248,9 @@ import java.util.Map;
 
      @MediumTest
      public void testInsertUpdateDeleteSuccess() {
-         //testInsertUpdateDeleteForUri(CMSettings.System.CONTENT_URI);
-         testInsertUpdateDeleteForUri(CMSettings.Secure.CONTENT_URI);
-         testInsertUpdateDeleteForUri(CMSettings.Global.CONTENT_URI);
+         //testInsertUpdateDeleteForUri(LineageSettings.System.CONTENT_URI);
+         testInsertUpdateDeleteForUri(LineageSettings.Secure.CONTENT_URI);
+         testInsertUpdateDeleteForUri(LineageSettings.Global.CONTENT_URI);
      }
 
      private void testInsertUpdateDeleteForUri(Uri uri) {

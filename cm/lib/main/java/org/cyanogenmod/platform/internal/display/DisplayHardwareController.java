@@ -36,7 +36,7 @@ import java.util.BitSet;
 
 import cyanogenmod.hardware.CMHardwareManager;
 import cyanogenmod.hardware.LiveDisplayManager;
-import cyanogenmod.providers.CMSettings;
+import cyanogenmod.providers.LineageSettings;
 
 public class DisplayHardwareController extends LiveDisplayFeature {
 
@@ -64,13 +64,13 @@ public class DisplayHardwareController extends LiveDisplayFeature {
 
     // settings uris
     private static final Uri DISPLAY_AUTO_CONTRAST =
-            CMSettings.System.getUriFor(CMSettings.System.DISPLAY_AUTO_CONTRAST);
+            LineageSettings.System.getUriFor(LineageSettings.System.DISPLAY_AUTO_CONTRAST);
     private static final Uri DISPLAY_COLOR_ADJUSTMENT =
-            CMSettings.System.getUriFor(CMSettings.System.DISPLAY_COLOR_ADJUSTMENT);
+            LineageSettings.System.getUriFor(LineageSettings.System.DISPLAY_COLOR_ADJUSTMENT);
     private static final Uri DISPLAY_COLOR_ENHANCE =
-            CMSettings.System.getUriFor(CMSettings.System.DISPLAY_COLOR_ENHANCE);
+            LineageSettings.System.getUriFor(LineageSettings.System.DISPLAY_COLOR_ENHANCE);
     private static final Uri DISPLAY_CABC =
-            CMSettings.System.getUriFor(CMSettings.System.DISPLAY_CABC);
+            LineageSettings.System.getUriFor(LineageSettings.System.DISPLAY_CABC);
 
     public DisplayHardwareController(Context context, Handler handler) {
         super(context, handler);
@@ -418,33 +418,33 @@ public class DisplayHardwareController extends LiveDisplayFeature {
 
     boolean isAutoContrastEnabled() {
         return mUseAutoContrast &&
-                getBoolean(CMSettings.System.DISPLAY_AUTO_CONTRAST, mDefaultAutoContrast);
+                getBoolean(LineageSettings.System.DISPLAY_AUTO_CONTRAST, mDefaultAutoContrast);
     }
 
     boolean setAutoContrastEnabled(boolean enabled) {
         if (!mUseAutoContrast) {
             return false;
         }
-        putBoolean(CMSettings.System.DISPLAY_AUTO_CONTRAST, enabled);
+        putBoolean(LineageSettings.System.DISPLAY_AUTO_CONTRAST, enabled);
         return true;
     }
 
     boolean isCABCEnabled() {
         return mUseCABC &&
-                getBoolean(CMSettings.System.DISPLAY_CABC, mDefaultCABC);
+                getBoolean(LineageSettings.System.DISPLAY_CABC, mDefaultCABC);
     }
 
     boolean setCABCEnabled(boolean enabled) {
         if (!mUseCABC) {
             return false;
         }
-        putBoolean(CMSettings.System.DISPLAY_CABC, enabled);
+        putBoolean(LineageSettings.System.DISPLAY_CABC, enabled);
         return true;
     }
 
     boolean isColorEnhancementEnabled() {
         return mUseColorEnhancement &&
-                getBoolean(CMSettings.System.DISPLAY_COLOR_ENHANCE,
+                getBoolean(LineageSettings.System.DISPLAY_COLOR_ENHANCE,
                 mDefaultColorEnhancement);
     }
 
@@ -452,7 +452,7 @@ public class DisplayHardwareController extends LiveDisplayFeature {
         if (!mUseColorEnhancement) {
             return false;
         }
-        putBoolean(CMSettings.System.DISPLAY_COLOR_ENHANCE, enabled);
+        putBoolean(LineageSettings.System.DISPLAY_COLOR_ENHANCE, enabled);
         return true;
     }
 
@@ -461,7 +461,7 @@ public class DisplayHardwareController extends LiveDisplayFeature {
             return getDefaultAdjustment();
         }
         float[] cur = new float[3];
-        if (!parseColorAdjustment(getString(CMSettings.System.DISPLAY_COLOR_ADJUSTMENT), cur)) {
+        if (!parseColorAdjustment(getString(LineageSettings.System.DISPLAY_COLOR_ADJUSTMENT), cur)) {
             // clear it out if invalid
             cur = getDefaultAdjustment();
             saveColorAdjustmentString(cur);
@@ -481,7 +481,7 @@ public class DisplayHardwareController extends LiveDisplayFeature {
     private void saveColorAdjustmentString(final float[] adj) {
         StringBuilder sb = new StringBuilder();
         sb.append(adj[0]).append(" ").append(adj[1]).append(" ").append(adj[2]);
-        putString(CMSettings.System.DISPLAY_COLOR_ADJUSTMENT, sb.toString());
+        putString(LineageSettings.System.DISPLAY_COLOR_ADJUSTMENT, sb.toString());
     }
 
     boolean hasColorAdjustment() {

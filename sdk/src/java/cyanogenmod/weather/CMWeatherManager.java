@@ -27,7 +27,7 @@ import android.os.ServiceManager;
 import android.util.ArraySet;
 import android.util.Log;
 import cyanogenmod.app.CMContextConstants;
-import cyanogenmod.providers.CMSettings;
+import cyanogenmod.providers.LineageSettings;
 import cyanogenmod.providers.WeatherContract;
 
 import java.util.ArrayList;
@@ -140,8 +140,8 @@ public class CMWeatherManager {
         }
 
         try {
-            int tempUnit = CMSettings.Global.getInt(mContext.getContentResolver(),
-                    CMSettings.Global.WEATHER_TEMPERATURE_UNIT,
+            int tempUnit = LineageSettings.Global.getInt(mContext.getContentResolver(),
+                    LineageSettings.Global.WEATHER_TEMPERATURE_UNIT,
                         WeatherContract.WeatherColumns.TempUnit.FAHRENHEIT);
 
             RequestInfo info = new RequestInfo
@@ -178,8 +178,8 @@ public class CMWeatherManager {
         }
 
         try {
-            int tempUnit = CMSettings.Global.getInt(mContext.getContentResolver(),
-                    CMSettings.Global.WEATHER_TEMPERATURE_UNIT,
+            int tempUnit = LineageSettings.Global.getInt(mContext.getContentResolver(),
+                    LineageSettings.Global.WEATHER_TEMPERATURE_UNIT,
                         WeatherContract.WeatherColumns.TempUnit.FAHRENHEIT);
 
             RequestInfo info = new RequestInfo

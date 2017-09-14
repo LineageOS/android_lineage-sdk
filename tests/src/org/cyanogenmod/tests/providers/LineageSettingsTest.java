@@ -24,11 +24,11 @@ import android.os.UserHandle;
 import android.provider.Settings;
 import android.test.AndroidTestCase;
 import android.test.suitebuilder.annotation.MediumTest;
-import cyanogenmod.providers.CMSettings;
+import cyanogenmod.providers.LineageSettings;
 
-public class CMSettingsTest extends AndroidTestCase{
+public class LineageSettingsTest extends AndroidTestCase{
     private ContentResolver mContentResolver;
-    private CMSettingsTestObserver mTestObserver;
+    private LineageSettingsTestObserver mTestObserver;
 
     private static boolean sIsOnChangedCalled = false;
     private static Uri sExpectedUriChange = null;
@@ -36,7 +36,7 @@ public class CMSettingsTest extends AndroidTestCase{
     @Override
     public void setUp() {
         mContentResolver = getContext().getContentResolver();
-        mTestObserver = new CMSettingsTestObserver(null);
+        mTestObserver = new LineageSettingsTestObserver(null);
     }
 
     @Override
@@ -46,34 +46,34 @@ public class CMSettingsTest extends AndroidTestCase{
 
     @MediumTest
     public void testPutAndGetSystemString() {
-        final String key = CMSettings.System.__MAGICAL_TEST_PASSING_ENABLER;
+        final String key = LineageSettings.System.__MAGICAL_TEST_PASSING_ENABLER;
 
         // put
         final String expectedValue = "1";
-        boolean isPutSuccessful = CMSettings.System.putString(mContentResolver, key, expectedValue);
+        boolean isPutSuccessful = LineageSettings.System.putString(mContentResolver, key, expectedValue);
         assertTrue(isPutSuccessful);
 
         // get
-        String actualValue = CMSettings.System.getString(mContentResolver, key);
+        String actualValue = LineageSettings.System.getString(mContentResolver, key);
         assertEquals(expectedValue, actualValue);
 
         // setup observer
         sIsOnChangedCalled = false;
-        sExpectedUriChange = CMSettings.System.getUriFor(key);
+        sExpectedUriChange = LineageSettings.System.getUriFor(key);
         mContentResolver.registerContentObserver(sExpectedUriChange, false, mTestObserver,
                 UserHandle.USER_ALL);
 
         // replace
         final String expectedReplaceValue = "0";
-        isPutSuccessful = CMSettings.System.putString(mContentResolver, key, expectedReplaceValue);
+        isPutSuccessful = LineageSettings.System.putString(mContentResolver, key, expectedReplaceValue);
         assertTrue(isPutSuccessful);
 
         // get
-        actualValue = CMSettings.System.getString(mContentResolver, key);
+        actualValue = LineageSettings.System.getString(mContentResolver, key);
         assertEquals(expectedReplaceValue, actualValue);
 
         // delete to clean up
-        int rowsAffected = mContentResolver.delete(CMSettings.System.CONTENT_URI,
+        int rowsAffected = mContentResolver.delete(LineageSettings.System.CONTENT_URI,
                 Settings.NameValueTable.NAME + " = ?", new String[]{ key });
         assertEquals(1, rowsAffected);
 
@@ -85,34 +85,34 @@ public class CMSettingsTest extends AndroidTestCase{
     @MediumTest
     public void testPutAndGetSecureString() {
         /* TODO: FIXME
-        final String key = CMSettings.Secure.__MAGICAL_TEST_PASSING_ENABLER;
+        final String key = LineageSettings.Secure.__MAGICAL_TEST_PASSING_ENABLER;
 
         // put
         final String expectedValue = "0";
-        boolean isPutSuccessful = CMSettings.Secure.putString(mContentResolver, key, expectedValue);
+        boolean isPutSuccessful = LineageSettings.Secure.putString(mContentResolver, key, expectedValue);
         assertTrue(isPutSuccessful);
 
         // get
-        String actualValue = CMSettings.Secure.getString(mContentResolver, key);
+        String actualValue = LineageSettings.Secure.getString(mContentResolver, key);
         assertEquals(expectedValue, actualValue);
 
         // setup observer
         sIsOnChangedCalled = false;
-        sExpectedUriChange = CMSettings.Secure.getUriFor(key);
+        sExpectedUriChange = LineageSettings.Secure.getUriFor(key);
         mContentResolver.registerContentObserver(sExpectedUriChange, false, mTestObserver,
                 UserHandle.USER_ALL);
 
         // replace
         final String expectedReplaceValue = "1";
-        isPutSuccessful = CMSettings.Secure.putString(mContentResolver, key, expectedReplaceValue);
+        isPutSuccessful = LineageSettings.Secure.putString(mContentResolver, key, expectedReplaceValue);
         assertTrue(isPutSuccessful);
 
         // get
-        actualValue = CMSettings.Secure.getString(mContentResolver, key);
+        actualValue = LineageSettings.Secure.getString(mContentResolver, key);
         assertEquals(expectedReplaceValue, actualValue);
 
         // delete to clean up
-        int rowsAffected = mContentResolver.delete(CMSettings.Secure.CONTENT_URI,
+        int rowsAffected = mContentResolver.delete(LineageSettings.Secure.CONTENT_URI,
                 Settings.NameValueTable.NAME + " = ?", new String[]{ key });
         assertEquals(1, rowsAffected);
 
@@ -127,30 +127,30 @@ public class CMSettingsTest extends AndroidTestCase{
 
         // put
         final String expectedValue = "globalTestValue1";
-        boolean isPutSuccessful = CMSettings.Global.putString(mContentResolver, key, expectedValue);
+        boolean isPutSuccessful = LineageSettings.Global.putString(mContentResolver, key, expectedValue);
         assertTrue(isPutSuccessful);
 
         // get
-        String actualValue = CMSettings.Global.getString(mContentResolver, key);
+        String actualValue = LineageSettings.Global.getString(mContentResolver, key);
         assertEquals(expectedValue, actualValue);
 
         // setup observer
         sIsOnChangedCalled = false;
-        sExpectedUriChange = CMSettings.Global.getUriFor(key);
+        sExpectedUriChange = LineageSettings.Global.getUriFor(key);
         mContentResolver.registerContentObserver(sExpectedUriChange, false, mTestObserver,
                 UserHandle.USER_OWNER);
 
         // replace
         final String expectedReplaceValue = "globalTestValue2";
-        isPutSuccessful = CMSettings.Global.putString(mContentResolver, key, expectedReplaceValue);
+        isPutSuccessful = LineageSettings.Global.putString(mContentResolver, key, expectedReplaceValue);
         assertTrue(isPutSuccessful);
 
         // get
-        actualValue = CMSettings.Global.getString(mContentResolver, key);
+        actualValue = LineageSettings.Global.getString(mContentResolver, key);
         assertEquals(expectedReplaceValue, actualValue);
 
         // delete to clean up
-        int rowsAffected = mContentResolver.delete(CMSettings.Global.CONTENT_URI,
+        int rowsAffected = mContentResolver.delete(LineageSettings.Global.CONTENT_URI,
                 Settings.NameValueTable.NAME + " = ?", new String[]{ key });
         assertEquals(1, rowsAffected);
 
@@ -159,9 +159,9 @@ public class CMSettingsTest extends AndroidTestCase{
         }
     }
 
-    private class CMSettingsTestObserver extends ContentObserver {
+    private class LineageSettingsTestObserver extends ContentObserver {
 
-        public CMSettingsTestObserver(Handler handler) {
+        public LineageSettingsTestObserver(Handler handler) {
             super(handler);
         }
 

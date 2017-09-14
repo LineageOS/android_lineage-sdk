@@ -14,7 +14,7 @@
      limitations under the License.
 -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="org.cyanogenmod.cmsettings.tests">
+          package="org.cyanogenmod.lineagesettings.tests">
 
     <uses-permission android:name="cyanogenmod.permission.WRITE_SETTINGS"/>
     <uses-permission android:name="cyanogenmod.permission.WRITE_SECURE_SETTINGS"/>
@@ -25,7 +25,7 @@
 
     <instrumentation
             android:name="android.test.InstrumentationTestRunner"
-            android:targetPackage="org.cyanogenmod.cmsettings.tests"
+            android:targetPackage="org.cyanogenmod.lineagesettings.tests"
             android:label="CM Settings Provider Tests" />
 
     <application>

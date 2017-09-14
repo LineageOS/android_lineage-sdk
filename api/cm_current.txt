@@ -1092,25 +1092,25 @@ package cyanogenmod.profiles {
 
 package cyanogenmod.providers {
 
-  public final class CMSettings {
-    ctor public CMSettings();
+  public final class LineageSettings {
+    ctor public LineageSettings();
     field public static final java.lang.String ACTION_DATA_USAGE = "cyanogenmod.settings.ACTION_DATA_USAGE";
     field public static final java.lang.String ACTION_LIVEDISPLAY_SETTINGS = "cyanogenmod.settings.LIVEDISPLAY_SETTINGS";
-    field public static final java.lang.String AUTHORITY = "cmsettings";
+    field public static final java.lang.String AUTHORITY = "lineagesettings";
   }
 
-  public static class CMSettings.CMSettingNotFoundException extends android.util.AndroidException {
-    ctor public CMSettings.CMSettingNotFoundException(java.lang.String);
+  public static class LineageSettings.LineageSettingNotFoundException extends android.util.AndroidException {
+    ctor public LineageSettings.LineageSettingNotFoundException(java.lang.String);
   }
 
-  public static final class CMSettings.Global extends android.provider.Settings.NameValueTable {
-    ctor public CMSettings.Global();
+  public static final class LineageSettings.Global extends android.provider.Settings.NameValueTable {
+    ctor public LineageSettings.Global();
     method public static float getFloat(android.content.ContentResolver, java.lang.String, float);
-    method public static float getFloat(android.content.ContentResolver, java.lang.String) throws cyanogenmod.providers.CMSettings.CMSettingNotFoundException;
+    method public static float getFloat(android.content.ContentResolver, java.lang.String) throws cyanogenmod.providers.LineageSettings.LineageSettingNotFoundException;
     method public static int getInt(android.content.ContentResolver, java.lang.String, int);
-    method public static int getInt(android.content.ContentResolver, java.lang.String) throws cyanogenmod.providers.CMSettings.CMSettingNotFoundException;
+    method public static int getInt(android.content.ContentResolver, java.lang.String) throws cyanogenmod.providers.LineageSettings.LineageSettingNotFoundException;
     method public static long getLong(android.content.ContentResolver, java.lang.String, long);
-    method public static long getLong(android.content.ContentResolver, java.lang.String) throws cyanogenmod.providers.CMSettings.CMSettingNotFoundException;
+    method public static long getLong(android.content.ContentResolver, java.lang.String) throws cyanogenmod.providers.LineageSettings.LineageSettingNotFoundException;
     method public static java.lang.String getString(android.content.ContentResolver, java.lang.String);
     method public static android.net.Uri getUriFor(java.lang.String);
     method public static boolean putFloat(android.content.ContentResolver, java.lang.String, float);
@@ -1122,14 +1122,14 @@ package cyanogenmod.providers {
     field public static final java.lang.String WEATHER_TEMPERATURE_UNIT = "weather_temperature_unit";
   }
 
-  public static final class CMSettings.Secure extends android.provider.Settings.NameValueTable {
-    ctor public CMSettings.Secure();
+  public static final class LineageSettings.Secure extends android.provider.Settings.NameValueTable {
+    ctor public LineageSettings.Secure();
     method public static float getFloat(android.content.ContentResolver, java.lang.String, float);
-    method public static float getFloat(android.content.ContentResolver, java.lang.String) throws cyanogenmod.providers.CMSettings.CMSettingNotFoundException;
+    method public static float getFloat(android.content.ContentResolver, java.lang.String) throws cyanogenmod.providers.LineageSettings.LineageSettingNotFoundException;
     method public static int getInt(android.content.ContentResolver, java.lang.String, int);
-    method public static int getInt(android.content.ContentResolver, java.lang.String) throws cyanogenmod.providers.CMSettings.CMSettingNotFoundException;
+    method public static int getInt(android.content.ContentResolver, java.lang.String) throws cyanogenmod.providers.LineageSettings.LineageSettingNotFoundException;
     method public static long getLong(android.content.ContentResolver, java.lang.String, long);
-    method public static long getLong(android.content.ContentResolver, java.lang.String) throws cyanogenmod.providers.CMSettings.CMSettingNotFoundException;
+    method public static long getLong(android.content.ContentResolver, java.lang.String) throws cyanogenmod.providers.LineageSettings.LineageSettingNotFoundException;
     method public static java.lang.String getString(android.content.ContentResolver, java.lang.String);
     method public static android.net.Uri getUriFor(java.lang.String);
     method public static boolean putFloat(android.content.ContentResolver, java.lang.String, float);
@@ -1140,14 +1140,14 @@ package cyanogenmod.providers {
     field public static final java.lang.String SYS_PROP_CM_SETTING_VERSION = "sys.cm_settings_secure_version";
   }
 
-  public static final class CMSettings.System extends android.provider.Settings.NameValueTable {
-    ctor public CMSettings.System();
+  public static final class LineageSettings.System extends android.provider.Settings.NameValueTable {
+    ctor public LineageSettings.System();
     method public static float getFloat(android.content.ContentResolver, java.lang.String, float);
-    method public static float getFloat(android.content.ContentResolver, java.lang.String) throws cyanogenmod.providers.CMSettings.CMSettingNotFoundException;
+    method public static float getFloat(android.content.ContentResolver, java.lang.String) throws cyanogenmod.providers.LineageSettings.LineageSettingNotFoundException;
     method public static int getInt(android.content.ContentResolver, java.lang.String, int);
-    method public static int getInt(android.content.ContentResolver, java.lang.String) throws cyanogenmod.providers.CMSettings.CMSettingNotFoundException;
+    method public static int getInt(android.content.ContentResolver, java.lang.String) throws cyanogenmod.providers.LineageSettings.LineageSettingNotFoundException;
     method public static long getLong(android.content.ContentResolver, java.lang.String, long);
-    method public static long getLong(android.content.ContentResolver, java.lang.String) throws cyanogenmod.providers.CMSettings.CMSettingNotFoundException;
+    method public static long getLong(android.content.ContentResolver, java.lang.String) throws cyanogenmod.providers.LineageSettings.LineageSettingNotFoundException;
     method public static java.lang.String getString(android.content.ContentResolver, java.lang.String);
     method public static android.net.Uri getUriFor(java.lang.String);
     method public static boolean putFloat(android.content.ContentResolver, java.lang.String, float);

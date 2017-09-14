@@ -33,7 +33,7 @@ import cyanogenmod.hardware.CMHardwareManager;
 import cyanogenmod.hardware.DisplayMode;
 import cyanogenmod.hardware.HSIC;
 import cyanogenmod.hardware.LiveDisplayManager;
-import cyanogenmod.providers.CMSettings;
+import cyanogenmod.providers.LineageSettings;
 
 public class PictureAdjustmentController extends LiveDisplayFeature {
 
@@ -77,7 +77,7 @@ public class PictureAdjustmentController extends LiveDisplayFeature {
         }
 
         registerSettings(
-                CMSettings.System.getUriFor(CMSettings.System.DISPLAY_PICTURE_ADJUSTMENT));
+                LineageSettings.System.getUriFor(LineageSettings.System.DISPLAY_PICTURE_ADJUSTMENT));
     }
 
     @Override
@@ -213,7 +213,7 @@ public class PictureAdjustmentController extends LiveDisplayFeature {
     private SparseArray<HSIC> unpackPreference() {
         final SparseArray<HSIC> ret = new SparseArray<HSIC>();
 
-        String pref = getString(CMSettings.System.DISPLAY_PICTURE_ADJUSTMENT);
+        String pref = getString(LineageSettings.System.DISPLAY_PICTURE_ADJUSTMENT);
         if (pref != null) {
             String[] byMode = TextUtils.split(pref, ",");
             for (String mode : byMode) {
@@ -236,7 +236,7 @@ public class PictureAdjustmentController extends LiveDisplayFeature {
             }
             sb.append(id).append(":").append(m.flatten());
         }
-        putString(CMSettings.System.DISPLAY_PICTURE_ADJUSTMENT, sb.toString());
+        putString(LineageSettings.System.DISPLAY_PICTURE_ADJUSTMENT, sb.toString());
     }
 
 }

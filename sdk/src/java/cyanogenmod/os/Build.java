@@ -100,7 +100,7 @@ public class Build {
          * {@link cyanogenmod.hardware.CMHardwareManager} (Not for use by 3rd parties)
          * <li>MSIM API via {@link cyanogenmod.app.CMTelephonyManager}
          * <li>Interface for partners via {@link cyanogenmod.app.PartnerInterface}
-         * <li>Introductory Settings Provider {@link cyanogenmod.providers.CMSettings}
+         * <li>Introductory Settings Provider {@link cyanogenmod.providers.LineageSettings}
          * <li>AlarmClock API via {@link cyanogenmod.alarmclock.CyanogenModAlarmClock}
          * </ul>
          */
@@ -124,7 +124,7 @@ public class Build {
          * the type of mode to have the device be placed in via
          * {@link cyanogenmod.power.PerformanceManager}</li>
          * <li>Numerous new "System" settings exposed via the
-         * {@link cyanogenmod.providers.CMSettings.System} interface</li>
+         * {@link cyanogenmod.providers.LineageSettings.System} interface</li>
          * </ul>
          */
         public static final int DRAGON_FRUIT = 4;
@@ -164,7 +164,7 @@ public class Build {
          * {@link cyanogenmod.hardware.LiveDisplayConfig} and a dedicated
          * {@link cyanogenmod.hardware.LiveDisplayManager}</li>
          * <li>Added new settings, such as LOCKSCREEN_ROTATION and DISPLAY_LOW_POWER
-         * to {@link cyanogenmod.providers.CMSettings}</li>
+         * to {@link cyanogenmod.providers.LineageSettings}</li>
          * </ul>
          *
          * Signing out, Adnan \u270C

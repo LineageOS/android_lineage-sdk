@@ -29,7 +29,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-import cyanogenmod.providers.CMSettings;
+import cyanogenmod.providers.LineageSettings;
 
 public class SettingsHelper {
 
@@ -37,9 +37,9 @@ public class SettingsHelper {
     private static final String SETTINGS_SECURE = Settings.Secure.CONTENT_URI.toString();
     private static final String SETTINGS_SYSTEM = Settings.System.CONTENT_URI.toString();
 
-    private static final String CMSETTINGS_GLOBAL = CMSettings.Global.CONTENT_URI.toString();
-    private static final String CMSETTINGS_SECURE = CMSettings.Secure.CONTENT_URI.toString();
-    private static final String CMSETTINGS_SYSTEM = CMSettings.System.CONTENT_URI.toString();
+    private static final String LINEAGESETTINGS_GLOBAL = LineageSettings.Global.CONTENT_URI.toString();
+    private static final String LINEAGESETTINGS_SECURE = LineageSettings.Secure.CONTENT_URI.toString();
+    private static final String LINEAGESETTINGS_SYSTEM = LineageSettings.System.CONTENT_URI.toString();
 
     private static SettingsHelper sInstance;
 
@@ -68,12 +68,12 @@ public class SettingsHelper {
             return Settings.System.getString(resolver, uri.substring(SETTINGS_SYSTEM.length()));
         } else if (uri.startsWith(SETTINGS_GLOBAL)) {
             return Settings.Global.getString(resolver, uri.substring(SETTINGS_GLOBAL.length()));
-        } else if (uri.startsWith(CMSETTINGS_SECURE)) {
-            return CMSettings.Secure.getString(resolver, uri.substring(CMSETTINGS_SECURE.length()));
-        } else if (uri.startsWith(CMSETTINGS_SYSTEM)) {
-            return CMSettings.System.getString(resolver, uri.substring(CMSETTINGS_SYSTEM.length()));
-        } else if (uri.startsWith(CMSETTINGS_GLOBAL)) {
-            return CMSettings.Global.getString(resolver, uri.substring(CMSETTINGS_GLOBAL.length()));
+        } else if (uri.startsWith(LINEAGESETTINGS_SECURE)) {
+            return LineageSettings.Secure.getString(resolver, uri.substring(LINEAGESETTINGS_SECURE.length()));
+        } else if (uri.startsWith(LINEAGESETTINGS_SYSTEM)) {
+            return LineageSettings.System.getString(resolver, uri.substring(LINEAGESETTINGS_SYSTEM.length()));
+        } else if (uri.startsWith(LINEAGESETTINGS_GLOBAL)) {
+            return LineageSettings.Global.getString(resolver, uri.substring(LINEAGESETTINGS_GLOBAL.length()));
         }
         return null;
     }
@@ -88,12 +88,12 @@ public class SettingsHelper {
             return Settings.System.getInt(resolver, uri.substring(SETTINGS_SYSTEM.length()), def);
         } else if (uri.startsWith(SETTINGS_GLOBAL)) {
             return Settings.Global.getInt(resolver, uri.substring(SETTINGS_GLOBAL.length()), def);
-        } else if (uri.startsWith(CMSETTINGS_SECURE)) {
-            return CMSettings.Secure.getInt(resolver, uri.substring(CMSETTINGS_SECURE.length()), def);
-        } else if (uri.startsWith(CMSETTINGS_SYSTEM)) {
-            return CMSettings.System.getInt(resolver, uri.substring(CMSETTINGS_SYSTEM.length()), def);
-        } else if (uri.startsWith(CMSETTINGS_GLOBAL)) {
-            return CMSettings.Global.getInt(resolver, uri.substring(CMSETTINGS_GLOBAL.length()), def);
+        } else if (uri.startsWith(LINEAGESETTINGS_SECURE)) {
+            return LineageSettings.Secure.getInt(resolver, uri.substring(LINEAGESETTINGS_SECURE.length()), def);
+        } else if (uri.startsWith(LINEAGESETTINGS_SYSTEM)) {
+            return LineageSettings.System.getInt(resolver, uri.substring(LINEAGESETTINGS_SYSTEM.length()), def);
+        } else if (uri.startsWith(LINEAGESETTINGS_GLOBAL)) {
+            return LineageSettings.Global.getInt(resolver, uri.substring(LINEAGESETTINGS_GLOBAL.length()), def);
         }
         return def;
     }
@@ -113,12 +113,12 @@ public class SettingsHelper {
             Settings.System.putString(resolver, uri.substring(SETTINGS_SYSTEM.length()), value);
         } else if (uri.startsWith(SETTINGS_GLOBAL)) {
             Settings.Global.putString(resolver, uri.substring(SETTINGS_GLOBAL.length()), value);
-        } else if (uri.startsWith(CMSETTINGS_SECURE)) {
-            CMSettings.Secure.putString(resolver, uri.substring(CMSETTINGS_SECURE.length()), value);
-        } else if (uri.startsWith(CMSETTINGS_SYSTEM)) {
-            CMSettings.System.putString(resolver, uri.substring(CMSETTINGS_SYSTEM.length()), value);
-        } else if (uri.startsWith(CMSETTINGS_GLOBAL)) {
-            CMSettings.Global.putString(resolver, uri.substring(CMSETTINGS_GLOBAL.length()), value);
+        } else if (uri.startsWith(LINEAGESETTINGS_SECURE)) {
+            LineageSettings.Secure.putString(resolver, uri.substring(LINEAGESETTINGS_SECURE.length()), value);
+        } else if (uri.startsWith(LINEAGESETTINGS_SYSTEM)) {
+            LineageSettings.System.putString(resolver, uri.substring(LINEAGESETTINGS_SYSTEM.length()), value);
+        } else if (uri.startsWith(LINEAGESETTINGS_GLOBAL)) {
+            LineageSettings.Global.putString(resolver, uri.substring(LINEAGESETTINGS_GLOBAL.length()), value);
         }
     }
 
@@ -132,12 +132,12 @@ public class SettingsHelper {
             Settings.System.putInt(resolver, uri.substring(SETTINGS_SYSTEM.length()), value);
         } else if (uri.startsWith(SETTINGS_GLOBAL)) {
             Settings.Global.putInt(resolver, uri.substring(SETTINGS_GLOBAL.length()), value);
-        } else if (uri.startsWith(CMSETTINGS_SECURE)) {
-            CMSettings.Secure.putInt(resolver, uri.substring(CMSETTINGS_SECURE.length()), value);
-        } else if (uri.startsWith(CMSETTINGS_SYSTEM)) {
-            CMSettings.System.putInt(resolver, uri.substring(CMSETTINGS_SYSTEM.length()), value);
-        } else if (uri.startsWith(CMSETTINGS_GLOBAL)) {
-            CMSettings.Global.putInt(resolver, uri.substring(CMSETTINGS_GLOBAL.length()), value);
+        } else if (uri.startsWith(LINEAGESETTINGS_SECURE)) {
+            LineageSettings.Secure.putInt(resolver, uri.substring(LINEAGESETTINGS_SECURE.length()), value);
+        } else if (uri.startsWith(LINEAGESETTINGS_SYSTEM)) {
+            LineageSettings.System.putInt(resolver, uri.substring(LINEAGESETTINGS_SYSTEM.length()), value);
+        } else if (uri.startsWith(LINEAGESETTINGS_GLOBAL)) {
+            LineageSettings.Global.putInt(resolver, uri.substring(LINEAGESETTINGS_GLOBAL.length()), value);
         }
     }
 

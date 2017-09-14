@@ -56,11 +56,11 @@ import cyanogenmod.power.PerformanceProfile;
 import static cyanogenmod.power.PerformanceManager.PROFILE_BALANCED;
 import static cyanogenmod.power.PerformanceManager.PROFILE_HIGH_PERFORMANCE;
 import static cyanogenmod.power.PerformanceManager.PROFILE_POWER_SAVE;
-import static cyanogenmod.providers.CMSettings.Secure.APP_PERFORMANCE_PROFILES_ENABLED;
-import static cyanogenmod.providers.CMSettings.Secure.PERFORMANCE_PROFILE;
-import static cyanogenmod.providers.CMSettings.Secure.getInt;
-import static cyanogenmod.providers.CMSettings.Secure.getUriFor;
-import static cyanogenmod.providers.CMSettings.Secure.putInt;
+import static cyanogenmod.providers.LineageSettings.Secure.APP_PERFORMANCE_PROFILES_ENABLED;
+import static cyanogenmod.providers.LineageSettings.Secure.PERFORMANCE_PROFILE;
+import static cyanogenmod.providers.LineageSettings.Secure.getInt;
+import static cyanogenmod.providers.LineageSettings.Secure.getUriFor;
+import static cyanogenmod.providers.LineageSettings.Secure.putInt;
 
 /**
  * @hide

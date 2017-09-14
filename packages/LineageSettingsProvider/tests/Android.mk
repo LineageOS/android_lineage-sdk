@@ -19,8 +19,8 @@ include $(CLEAR_VARS)
 
 LOCAL_MODULE_TAGS := tests
 
-LOCAL_PACKAGE_NAME := CMSettingsProviderTests
-LOCAL_INSTRUMENTATION_FOR := CMSettingsProvider
+LOCAL_PACKAGE_NAME := LineageSettingsProviderTests
+LOCAL_INSTRUMENTATION_FOR := LineageSettingsProvider
 
 LOCAL_SRC_FILES := $(call all-subdir-java-files)
 
@@ -39,8 +39,8 @@ include $(CLEAR_VARS)
 
 LOCAL_MODULE_TAGS := tests
 
-LOCAL_PACKAGE_NAME := CmtsCMSettingsProviderTests
-LOCAL_INSTRUMENTATION_FOR := CMSettingsProvider
+LOCAL_PACKAGE_NAME := CmtsLineageSettingsProviderTests
+LOCAL_INSTRUMENTATION_FOR := LineageSettingsProvider
 
 LOCAL_SRC_FILES := $(call all-subdir-java-files)
 

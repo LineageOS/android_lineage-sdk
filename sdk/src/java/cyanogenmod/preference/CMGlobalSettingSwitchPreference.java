@@ -19,7 +19,7 @@ package cyanogenmod.preference;
 import android.content.Context;
 import android.util.AttributeSet;
 
-import cyanogenmod.providers.CMSettings;
+import cyanogenmod.providers.LineageSettings;
 
 public class CMGlobalSettingSwitchPreference extends SelfRemovingSwitchPreference {
 
@@ -42,7 +42,7 @@ public class CMGlobalSettingSwitchPreference extends SelfRemovingSwitchPreferenc
                 // It's already there, so the same as persisting
                 return true;
             }
-            CMSettings.Global.putInt(getContext().getContentResolver(), getKey(), value ? 1 : 0);
+            LineageSettings.Global.putInt(getContext().getContentResolver(), getKey(), value ? 1 : 0);
             return true;
         }
         return false;
@@ -53,12 +53,12 @@ public class CMGlobalSettingSwitchPreference extends SelfRemovingSwitchPreferenc
         if (!shouldPersist()) {
             return defaultReturnValue;
         }
-        return CMSettings.Global.getInt(getContext().getContentResolver(),
+        return LineageSettings.Global.getInt(getContext().getContentResolver(),
                 getKey(), defaultReturnValue ? 1 : 0) != 0;
     }
 
     @Override
     protected boolean isPersisted() {
-        return CMSettings.Global.getString(getContext().getContentResolver(), getKey()) != null;
+        return LineageSettings.Global.getString(getContext().getContentResolver(), getKey()) != null;
     }
 }

@@ -74,20 +74,20 @@ class MigrationTest {
         //Read settings
         legacySettings.execute();
 
-        SettingImageCommands legacyToCMSettings =
+        SettingImageCommands legacyToLineageSettings =
                 new SettingImageCommands(SettingsConstants.SETTINGS_AUTHORITY);
         //For each example setting in the table, add inserts
         for (Setting setting : legacySystemSettings) {
-            legacyToCMSettings.addInsert(SettingsConstants.SYSTEM, setting);
+            legacyToLineageSettings.addInsert(SettingsConstants.SYSTEM, setting);
         }
         for (Setting setting : legacySecureSettings) {
-            legacyToCMSettings.addInsert(SettingsConstants.SECURE, setting);
+            legacyToLineageSettings.addInsert(SettingsConstants.SECURE, setting);
         }
         for (Setting setting : legacyGlobalSettings) {
-            legacyToCMSettings.addInsert(SettingsConstants.GLOBAL, setting);
+            legacyToLineageSettings.addInsert(SettingsConstants.GLOBAL, setting);
         }
         //Write them to the database for verification later
-        legacyToCMSettings.execute();
+        legacyToLineageSettings.execute();
 
         //Force update
         DebuggingCommands updateRom = new DebuggingCommands();
@@ -102,12 +102,12 @@ class MigrationTest {
         updateRom.execute();
 
         //Requery
-        SettingImageCommands cmSettingImage =
-                new SettingImageCommands(SettingsConstants.CMSETTINGS_AUTHORITY);
-        cmSettingImage.addQuery(SettingsConstants.SYSTEM, cmSystemSettingList);
-        cmSettingImage.addQuery(SettingsConstants.SECURE, cmSecureSettingList);
-        cmSettingImage.addQuery(SettingsConstants.GLOBAL, cmGlobalSettingList);
-        cmSettingImage.execute();
+        SettingImageCommands lineageSettingImage =
+                new SettingImageCommands(SettingsConstants.LINEAGESETTINGS_AUTHORITY);
+        lineageSettingImage.addQuery(SettingsConstants.SYSTEM, cmSystemSettingList);
+        lineageSettingImage.addQuery(SettingsConstants.SECURE, cmSecureSettingList);
+        lineageSettingImage.addQuery(SettingsConstants.GLOBAL, cmGlobalSettingList);
+        lineageSettingImage.execute();
 
         //Validate
         System.out.println("\n\nValidating " + SettingsConstants.SYSTEM + "...");
@@ -150,43 +150,43 @@ class MigrationTest {
         return value;
     }
 
-    private static void validate(ArrayList<Setting> legacySettings, ArrayList<Setting> cmSettings) {
+    private static void validate(ArrayList<Setting> legacySettings, ArrayList<Setting> lineageSettings) {
         Collections.sort(legacySettings);
-        Collections.sort(cmSettings);
+        Collections.sort(lineageSettings);
 
-        if (legacySettings.size() != cmSettings.size()) {
+        if (legacySettings.size() != lineageSettings.size()) {
             System.err.println("Warning: Size mismatch: " + " legacy "
-                    + legacySettings.size() + " cm " + cmSettings.size());
+                    + legacySettings.size() + " cm " + lineageSettings.size());
         }
 
         for (int i = 0; i < legacySettings.size(); i++) {
             Setting legacySetting = legacySettings.get(i);
-            Setting cmSetting = cmSettings.get(i);
+            Setting lineageSetting = lineageSettings.get(i);
             int error = 0;
 
-            System.out.println("Comparing: legacy " + legacySetting.getKey() + " and cmsetting "
-                    + cmSetting.getKey());
+            System.out.println("Comparing: legacy " + legacySetting.getKey() + " and lineagesetting "
+                    + lineageSetting.getKey());
 
-            if (!legacySetting.getKey().equals(cmSetting.getKey())) {
+            if (!legacySetting.getKey().equals(lineageSetting.getKey())) {
                 System.err.println("    Key mismatch: " + legacySetting.getKey() + " and "
-                        + cmSetting.getKey());
+                        + lineageSetting.getKey());
                 error = 1;
             }
-            if (!legacySetting.getKeyType().equals(cmSetting.getKeyType())) {
+            if (!legacySetting.getKeyType().equals(lineageSetting.getKeyType())) {
                 System.err.println("    Key type mismatch: " + legacySetting.getKeyType() + " and "
-                        + cmSetting.getKeyType());
+                        + lineageSetting.getKeyType());
                 error = 1;
             }
             if (legacySetting.getValue().length() > 0) {
-                if (!legacySetting.getValue().equals(cmSetting.getValue())) {
+                if (!legacySetting.getValue().equals(lineageSetting.getValue())) {
                     System.err.println("    Value mismatch: " + legacySetting.getValue() + " and "
-                            + cmSetting.getValue());
+                            + lineageSetting.getValue());
                     error = 1;
                 }
             }
-            if (!legacySetting.getValueType().equals(cmSetting.getValueType())) {
+            if (!legacySetting.getValueType().equals(lineageSetting.getValueType())) {
                 System.err.println("    Value type mismatch: " + legacySetting.getValueType()
-                        + " and " + cmSetting.getValueType());
+                        + " and " + lineageSetting.getValueType());
                 error = 1;
             }
 

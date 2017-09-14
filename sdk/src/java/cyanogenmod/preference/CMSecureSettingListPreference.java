@@ -18,7 +18,7 @@ package cyanogenmod.preference;
 import android.content.Context;
 import android.util.AttributeSet;
 
-import cyanogenmod.providers.CMSettings;
+import cyanogenmod.providers.LineageSettings;
 
 
 public class CMSecureSettingListPreference extends SelfRemovingListPreference {
@@ -38,7 +38,7 @@ public class CMSecureSettingListPreference extends SelfRemovingListPreference {
                 // It's already there, so the same as persisting
                 return true;
             }
-            CMSettings.Secure.putString(getContext().getContentResolver(), getKey(), value);
+            LineageSettings.Secure.putString(getContext().getContentResolver(), getKey(), value);
             return true;
         }
         return false;
@@ -49,13 +49,13 @@ public class CMSecureSettingListPreference extends SelfRemovingListPreference {
         if (!shouldPersist()) {
             return defaultReturnValue;
         }
-        String value = CMSettings.Secure.getString(getContext().getContentResolver(), getKey());
+        String value = LineageSettings.Secure.getString(getContext().getContentResolver(), getKey());
         return value == null ? defaultReturnValue : value;
     }
 
     @Override
     protected boolean isPersisted() {
-        return CMSettings.Secure.getString(getContext().getContentResolver(), getKey()) != null;
+        return LineageSettings.Secure.getString(getContext().getContentResolver(), getKey()) != null;
     }
 
     public int getIntValue(int defValue) {

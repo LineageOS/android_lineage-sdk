@@ -31,7 +31,7 @@ import android.util.Log;
 import cyanogenmod.app.IProfileManager;
 
 import com.android.internal.R;
-import cyanogenmod.providers.CMSettings;
+import cyanogenmod.providers.LineageSettings;
 
 
 /**

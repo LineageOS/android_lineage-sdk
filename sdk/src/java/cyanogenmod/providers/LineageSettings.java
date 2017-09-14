@@ -44,16 +44,16 @@ import java.util.Map;
 import java.util.regex.Pattern;
 
 /**
- * CMSettings contains CM specific preferences in System, Secure, and Global.
+ * LineageSettings contains CM specific preferences in System, Secure, and Global.
  */
-public final class CMSettings {
-    private static final String TAG = "CMSettings";
+public final class LineageSettings {
+    private static final String TAG = "LineageSettings";
     private static final boolean LOCAL_LOGV = false;
 
-    public static final String AUTHORITY = "cmsettings";
+    public static final String AUTHORITY = "lineagesettings";
 
-    public static class CMSettingNotFoundException extends AndroidException {
-        public CMSettingNotFoundException(String msg) {
+    public static class LineageSettingNotFoundException extends AndroidException {
+        public LineageSettingNotFoundException(String msg) {
             super(msg);
         }
     }
@@ -116,12 +116,12 @@ public final class CMSettings {
     public static final String CALL_METHOD_PUT_GLOBAL= "PUT_global";
 
     /**
-     * @hide - Private call() method on CMSettingsProvider to migrate CM settings
+     * @hide - Private call() method on LineageSettingsProvider to migrate CM settings
      */
     public static final String CALL_METHOD_MIGRATE_SETTINGS = "migrate_settings";
 
     /**
-     * @hide - Private call() method on CMSettingsProvider to migrate CM settings for a user
+     * @hide - Private call() method on LineageSettingsProvider to migrate CM settings for a user
      */
     public static final String CALL_METHOD_MIGRATE_SETTINGS_FOR_USER = "migrate_settings_for_user";
 
@@ -509,9 +509,9 @@ public final class CMSettings {
         public static String getStringForUser(ContentResolver resolver, String name,
                 int userId) {
             if (MOVED_TO_SECURE.contains(name)) {
-                Log.w(TAG, "Setting " + name + " has moved from CMSettings.System"
-                        + " to CMSettings.Secure, value is unchanged.");
-                return CMSettings.Secure.getStringForUser(resolver, name, userId);
+                Log.w(TAG, "Setting " + name + " has moved from LineageSettings.System"
+                        + " to LineageSettings.Secure, value is unchanged.");
+                return LineageSettings.Secure.getStringForUser(resolver, name, userId);
             }
             return sNameValueCache.getStringForUser(resolver, name, userId);
         }
@@ -531,8 +531,8 @@ public final class CMSettings {
         public static boolean putStringForUser(ContentResolver resolver, String name, String value,
                int userId) {
             if (MOVED_TO_SECURE.contains(name)) {
-                Log.w(TAG, "Setting " + name + " has moved from CMSettings.System"
-                        + " to CMSettings.Secure, value is unchanged.");
+                Log.w(TAG, "Setting " + name + " has moved from LineageSettings.System"
+                        + " to LineageSettings.Secure, value is unchanged.");
                 return false;
             }
             return sNameValueCache.putStringForUser(resolver, name, value, userId);
@@ -574,29 +574,29 @@ public final class CMSettings {
          * <p>
          * This version does not take a default value.  If the setting has not
          * been set, or the string value is not a number,
-         * it throws {@link CMSettingNotFoundException}.
+         * it throws {@link LineageSettingNotFoundException}.
          *
          * @param cr The ContentResolver to access.
          * @param name The name of the setting to retrieve.
          *
-         * @throws CMSettingNotFoundException Thrown if a setting by the given
+         * @throws LineageSettingNotFoundException Thrown if a setting by the given
          * name can't be found or the setting value is not an integer.
          *
          * @return The setting's current value.
          */
         public static int getInt(ContentResolver cr, String name)
-                throws CMSettingNotFoundException {
+                throws LineageSettingNotFoundException {
             return getIntForUser(cr, name, UserHandle.myUserId());
         }
 
         /** @hide */
         public static int getIntForUser(ContentResolver cr, String name, int userId)
-                throws CMSettingNotFoundException {
+                throws LineageSettingNotFoundException {
             String v = getStringForUser(cr, name, userId);
             try {
                 return Integer.parseInt(v);
             } catch (NumberFormatException e) {
-                throw new CMSettingNotFoundException(name);
+                throw new LineageSettingNotFoundException(name);
             }
         }
 
@@ -662,28 +662,28 @@ public final class CMSettings {
          * <p>
          * This version does not take a default value.  If the setting has not
          * been set, or the string value is not a number,
-         * it throws {@link CMSettingNotFoundException}.
+         * it throws {@link LineageSettingNotFoundException}.
          *
          * @param cr The ContentResolver to access.
          * @param name The name of the setting to retrieve.
          *
          * @return The setting's current value.
-         * @throws CMSettingNotFoundException Thrown if a setting by the given
+         * @throws LineageSettingNotFoundException Thrown if a setting by the given
          * name can't be found or the setting value is not an integer.
          */
         public static long getLong(ContentResolver cr, String name)
-                throws CMSettingNotFoundException {
+                throws LineageSettingNotFoundException {
             return getLongForUser(cr, name, UserHandle.myUserId());
         }
 
         /** @hide */
         public static long getLongForUser(ContentResolver cr, String name, int userId)
-                throws CMSettingNotFoundException {
+                throws LineageSettingNotFoundException {
             String valString = getStringForUser(cr, name, userId);
             try {
                 return Long.parseLong(valString);
             } catch (NumberFormatException e) {
-                throw new CMSettingNotFoundException(name);
+                throw new LineageSettingNotFoundException(name);
             }
         }
 
@@ -747,32 +747,32 @@ public final class CMSettings {
          * <p>
          * This version does not take a default value.  If the setting has not
          * been set, or the string value is not a number,
-         * it throws {@link CMSettingNotFoundException}.
+         * it throws {@link LineageSettingNotFoundException}.
          *
          * @param cr The ContentResolver to access.
          * @param name The name of the setting to retrieve.
          *
-         * @throws CMSettingNotFoundException Thrown if a setting by the given
+         * @throws LineageSettingNotFoundException Thrown if a setting by the given
          * name can't be found or the setting value is not a float.
          *
          * @return The setting's current value.
          */
         public static float getFloat(ContentResolver cr, String name)
-                throws CMSettingNotFoundException {
+                throws LineageSettingNotFoundException {
             return getFloatForUser(cr, name, UserHandle.myUserId());
         }
 
         /** @hide */
         public static float getFloatForUser(ContentResolver cr, String name, int userId)
-                throws CMSettingNotFoundException {
+                throws LineageSettingNotFoundException {
             String v = getStringForUser(cr, name, userId);
             if (v == null) {
-                throw new CMSettingNotFoundException(name);
+                throw new LineageSettingNotFoundException(name);
             }
             try {
                 return Float.parseFloat(v);
             } catch (NumberFormatException e) {
-                throw new CMSettingNotFoundException(name);
+                throw new LineageSettingNotFoundException(name);
             }
         }
 
@@ -1405,7 +1405,7 @@ public final class CMSettings {
         public static final String DISPLAY_CABC = "display_low_power";
 
         /**
-         * @deprecated Use {@link cyanogenmod.providers.CMSettings.System#DISPLAY_CABC} instead
+         * @deprecated Use {@link cyanogenmod.providers.LineageSettings.System#DISPLAY_CABC} instead
          */
         @Deprecated
         public static final String DISPLAY_LOW_POWER = DISPLAY_CABC;
@@ -1924,93 +1924,93 @@ public final class CMSettings {
          * @hide
          */
         public static final String[] LEGACY_SYSTEM_SETTINGS = new String[]{
-                CMSettings.System.NAV_BUTTONS,
-                CMSettings.System.KEY_HOME_LONG_PRESS_ACTION,
-                CMSettings.System.KEY_HOME_DOUBLE_TAP_ACTION,
-                CMSettings.System.BACK_WAKE_SCREEN,
-                CMSettings.System.MENU_WAKE_SCREEN,
-                CMSettings.System.VOLUME_WAKE_SCREEN,
-                CMSettings.System.KEY_MENU_ACTION,
-                CMSettings.System.KEY_MENU_LONG_PRESS_ACTION,
-                CMSettings.System.KEY_ASSIST_ACTION,
-                CMSettings.System.KEY_ASSIST_LONG_PRESS_ACTION,
-                CMSettings.System.KEY_APP_SWITCH_ACTION,
-                CMSettings.System.KEY_APP_SWITCH_LONG_PRESS_ACTION,
-                CMSettings.System.HOME_WAKE_SCREEN,
-                CMSettings.System.ASSIST_WAKE_SCREEN,
-                CMSettings.System.APP_SWITCH_WAKE_SCREEN,
-                CMSettings.System.CAMERA_WAKE_SCREEN,
-                CMSettings.System.CAMERA_SLEEP_ON_RELEASE,
-                CMSettings.System.CAMERA_LAUNCH,
-                CMSettings.System.STYLUS_ICON_ENABLED,
-                CMSettings.System.SWAP_VOLUME_KEYS_ON_ROTATION,
-                CMSettings.System.BATTERY_LIGHT_ENABLED,
-                CMSettings.System.BATTERY_LIGHT_PULSE,
-                CMSettings.System.BATTERY_LIGHT_LOW_COLOR,
-                CMSettings.System.BATTERY_LIGHT_MEDIUM_COLOR,
-                CMSettings.System.BATTERY_LIGHT_FULL_COLOR,
-                CMSettings.System.ENABLE_MWI_NOTIFICATION,
-                CMSettings.System.PROXIMITY_ON_WAKE,
-                CMSettings.System.ENABLE_FORWARD_LOOKUP,
-                CMSettings.System.ENABLE_PEOPLE_LOOKUP,
-                CMSettings.System.ENABLE_REVERSE_LOOKUP,
-                CMSettings.System.FORWARD_LOOKUP_PROVIDER,
-                CMSettings.System.PEOPLE_LOOKUP_PROVIDER,
-                CMSettings.System.REVERSE_LOOKUP_PROVIDER,
-                CMSettings.System.DIALER_OPENCNAM_ACCOUNT_SID,
-                CMSettings.System.DIALER_OPENCNAM_AUTH_TOKEN,
-                CMSettings.System.DISPLAY_TEMPERATURE_DAY,
-                CMSettings.System.DISPLAY_TEMPERATURE_NIGHT,
-                CMSettings.System.DISPLAY_TEMPERATURE_MODE,
-                CMSettings.System.DISPLAY_AUTO_OUTDOOR_MODE,
-                CMSettings.System.DISPLAY_CABC,
-                CMSettings.System.DISPLAY_COLOR_ENHANCE,
-                CMSettings.System.DISPLAY_COLOR_ADJUSTMENT,
-                CMSettings.System.LIVE_DISPLAY_HINTED,
-                CMSettings.System.DOUBLE_TAP_SLEEP_GESTURE,
-                CMSettings.System.STATUS_BAR_SHOW_WEATHER,
-                CMSettings.System.RECENTS_SHOW_SEARCH_BAR,
-                CMSettings.System.NAVBAR_LEFT_IN_LANDSCAPE,
-                CMSettings.System.T9_SEARCH_INPUT_LOCALE,
-                CMSettings.System.BLUETOOTH_ACCEPT_ALL_FILES,
-                CMSettings.System.LOCKSCREEN_PIN_SCRAMBLE_LAYOUT,
-                CMSettings.System.SHOW_ALARM_ICON,
-                CMSettings.System.STATUS_BAR_IME_SWITCHER,
-                CMSettings.System.QS_SHOW_BRIGHTNESS_SLIDER,
-                CMSettings.System.STATUS_BAR_BRIGHTNESS_CONTROL,
-                CMSettings.System.VOLBTN_MUSIC_CONTROLS,
-                CMSettings.System.USE_EDGE_SERVICE_FOR_GESTURES,
-                CMSettings.System.STATUS_BAR_NOTIF_COUNT,
-                CMSettings.System.CALL_RECORDING_FORMAT,
-                CMSettings.System.NOTIFICATION_LIGHT_BRIGHTNESS_LEVEL,
-                CMSettings.System.NOTIFICATION_LIGHT_MULTIPLE_LEDS_ENABLE,
-                CMSettings.System.NOTIFICATION_LIGHT_SCREEN_ON,
-                CMSettings.System.NOTIFICATION_LIGHT_PULSE_DEFAULT_COLOR,
-                CMSettings.System.NOTIFICATION_LIGHT_PULSE_DEFAULT_LED_ON,
-                CMSettings.System.NOTIFICATION_LIGHT_PULSE_DEFAULT_LED_OFF,
-                CMSettings.System.NOTIFICATION_LIGHT_PULSE_CALL_COLOR,
-                CMSettings.System.NOTIFICATION_LIGHT_PULSE_CALL_LED_ON,
-                CMSettings.System.NOTIFICATION_LIGHT_PULSE_CALL_LED_OFF,
-                CMSettings.System.NOTIFICATION_LIGHT_PULSE_VMAIL_COLOR,
-                CMSettings.System.NOTIFICATION_LIGHT_PULSE_VMAIL_LED_ON,
-                CMSettings.System.NOTIFICATION_LIGHT_PULSE_VMAIL_LED_OFF,
-                CMSettings.System.NOTIFICATION_LIGHT_PULSE_CUSTOM_ENABLE,
-                CMSettings.System.NOTIFICATION_LIGHT_PULSE_CUSTOM_VALUES,
-                CMSettings.System.STATUS_BAR_QUICK_QS_PULLDOWN,
-                CMSettings.System.VOLUME_ADJUST_SOUNDS_ENABLED,
-                CMSettings.System.SYSTEM_PROFILES_ENABLED,
-                CMSettings.System.INCREASING_RING,
-                CMSettings.System.INCREASING_RING_START_VOLUME,
-                CMSettings.System.INCREASING_RING_RAMP_UP_TIME,
-                CMSettings.System.STATUS_BAR_CLOCK,
-                CMSettings.System.STATUS_BAR_AM_PM,
-                CMSettings.System.STATUS_BAR_BATTERY_STYLE,
-                CMSettings.System.STATUS_BAR_SHOW_BATTERY_PERCENT,
-                CMSettings.System.VOLUME_KEYS_CONTROL_RING_STREAM,
-                CMSettings.System.NAVIGATION_BAR_MENU_ARROW_KEYS,
-                CMSettings.System.HEADSET_CONNECT_PLAYER,
-                CMSettings.System.ZEN_ALLOW_LIGHTS,
-                CMSettings.System.TOUCHSCREEN_GESTURE_HAPTIC_FEEDBACK,
+                LineageSettings.System.NAV_BUTTONS,
+                LineageSettings.System.KEY_HOME_LONG_PRESS_ACTION,
+                LineageSettings.System.KEY_HOME_DOUBLE_TAP_ACTION,
+                LineageSettings.System.BACK_WAKE_SCREEN,
+                LineageSettings.System.MENU_WAKE_SCREEN,
+                LineageSettings.System.VOLUME_WAKE_SCREEN,
+                LineageSettings.System.KEY_MENU_ACTION,
+                LineageSettings.System.KEY_MENU_LONG_PRESS_ACTION,
+                LineageSettings.System.KEY_ASSIST_ACTION,
+                LineageSettings.System.KEY_ASSIST_LONG_PRESS_ACTION,
+                LineageSettings.System.KEY_APP_SWITCH_ACTION,
+                LineageSettings.System.KEY_APP_SWITCH_LONG_PRESS_ACTION,
+                LineageSettings.System.HOME_WAKE_SCREEN,
+                LineageSettings.System.ASSIST_WAKE_SCREEN,
+                LineageSettings.System.APP_SWITCH_WAKE_SCREEN,
+                LineageSettings.System.CAMERA_WAKE_SCREEN,
+                LineageSettings.System.CAMERA_SLEEP_ON_RELEASE,
+                LineageSettings.System.CAMERA_LAUNCH,
+                LineageSettings.System.STYLUS_ICON_ENABLED,
+                LineageSettings.System.SWAP_VOLUME_KEYS_ON_ROTATION,
+                LineageSettings.System.BATTERY_LIGHT_ENABLED,
+                LineageSettings.System.BATTERY_LIGHT_PULSE,
+                LineageSettings.System.BATTERY_LIGHT_LOW_COLOR,
+                LineageSettings.System.BATTERY_LIGHT_MEDIUM_COLOR,
+                LineageSettings.System.BATTERY_LIGHT_FULL_COLOR,
+                LineageSettings.System.ENABLE_MWI_NOTIFICATION,
+                LineageSettings.System.PROXIMITY_ON_WAKE,
+                LineageSettings.System.ENABLE_FORWARD_LOOKUP,
+                LineageSettings.System.ENABLE_PEOPLE_LOOKUP,
+                LineageSettings.System.ENABLE_REVERSE_LOOKUP,
+                LineageSettings.System.FORWARD_LOOKUP_PROVIDER,
+                LineageSettings.System.PEOPLE_LOOKUP_PROVIDER,
+                LineageSettings.System.REVERSE_LOOKUP_PROVIDER,
+                LineageSettings.System.DIALER_OPENCNAM_ACCOUNT_SID,
+                LineageSettings.System.DIALER_OPENCNAM_AUTH_TOKEN,
+                LineageSettings.System.DISPLAY_TEMPERATURE_DAY,
+                LineageSettings.System.DISPLAY_TEMPERATURE_NIGHT,
+                LineageSettings.System.DISPLAY_TEMPERATURE_MODE,
+                LineageSettings.System.DISPLAY_AUTO_OUTDOOR_MODE,
+                LineageSettings.System.DISPLAY_CABC,
+                LineageSettings.System.DISPLAY_COLOR_ENHANCE,
+                LineageSettings.System.DISPLAY_COLOR_ADJUSTMENT,
+                LineageSettings.System.LIVE_DISPLAY_HINTED,
+                LineageSettings.System.DOUBLE_TAP_SLEEP_GESTURE,
+                LineageSettings.System.STATUS_BAR_SHOW_WEATHER,
+                LineageSettings.System.RECENTS_SHOW_SEARCH_BAR,
+                LineageSettings.System.NAVBAR_LEFT_IN_LANDSCAPE,
+                LineageSettings.System.T9_SEARCH_INPUT_LOCALE,
+                LineageSettings.System.BLUETOOTH_ACCEPT_ALL_FILES,
+                LineageSettings.System.LOCKSCREEN_PIN_SCRAMBLE_LAYOUT,
+                LineageSettings.System.SHOW_ALARM_ICON,
+                LineageSettings.System.STATUS_BAR_IME_SWITCHER,
+                LineageSettings.System.QS_SHOW_BRIGHTNESS_SLIDER,
+                LineageSettings.System.STATUS_BAR_BRIGHTNESS_CONTROL,
+                LineageSettings.System.VOLBTN_MUSIC_CONTROLS,
+                LineageSettings.System.USE_EDGE_SERVICE_FOR_GESTURES,
+                LineageSettings.System.STATUS_BAR_NOTIF_COUNT,
+                LineageSettings.System.CALL_RECORDING_FORMAT,
+                LineageSettings.System.NOTIFICATION_LIGHT_BRIGHTNESS_LEVEL,
+                LineageSettings.System.NOTIFICATION_LIGHT_MULTIPLE_LEDS_ENABLE,
+                LineageSettings.System.NOTIFICATION_LIGHT_SCREEN_ON,
+                LineageSettings.System.NOTIFICATION_LIGHT_PULSE_DEFAULT_COLOR,
+                LineageSettings.System.NOTIFICATION_LIGHT_PULSE_DEFAULT_LED_ON,
+                LineageSettings.System.NOTIFICATION_LIGHT_PULSE_DEFAULT_LED_OFF,
+                LineageSettings.System.NOTIFICATION_LIGHT_PULSE_CALL_COLOR,
+                LineageSettings.System.NOTIFICATION_LIGHT_PULSE_CALL_LED_ON,
+                LineageSettings.System.NOTIFICATION_LIGHT_PULSE_CALL_LED_OFF,
+                LineageSettings.System.NOTIFICATION_LIGHT_PULSE_VMAIL_COLOR,
+                LineageSettings.System.NOTIFICATION_LIGHT_PULSE_VMAIL_LED_ON,
+                LineageSettings.System.NOTIFICATION_LIGHT_PULSE_VMAIL_LED_OFF,
+                LineageSettings.System.NOTIFICATION_LIGHT_PULSE_CUSTOM_ENABLE,
+                LineageSettings.System.NOTIFICATION_LIGHT_PULSE_CUSTOM_VALUES,
+                LineageSettings.System.STATUS_BAR_QUICK_QS_PULLDOWN,
+                LineageSettings.System.VOLUME_ADJUST_SOUNDS_ENABLED,
+                LineageSettings.System.SYSTEM_PROFILES_ENABLED,
+                LineageSettings.System.INCREASING_RING,
+                LineageSettings.System.INCREASING_RING_START_VOLUME,
+                LineageSettings.System.INCREASING_RING_RAMP_UP_TIME,
+                LineageSettings.System.STATUS_BAR_CLOCK,
+                LineageSettings.System.STATUS_BAR_AM_PM,
+                LineageSettings.System.STATUS_BAR_BATTERY_STYLE,
+                LineageSettings.System.STATUS_BAR_SHOW_BATTERY_PERCENT,
+                LineageSettings.System.VOLUME_KEYS_CONTROL_RING_STREAM,
+                LineageSettings.System.NAVIGATION_BAR_MENU_ARROW_KEYS,
+                LineageSettings.System.HEADSET_CONNECT_PLAYER,
+                LineageSettings.System.ZEN_ALLOW_LIGHTS,
+                LineageSettings.System.TOUCHSCREEN_GESTURE_HAPTIC_FEEDBACK,
         };
 
         /**
@@ -2027,7 +2027,7 @@ public final class CMSettings {
             switch (key) {
                 case System.SYSTEM_PROFILES_ENABLED:
                 // some apps still query Settings.System.DEV_FORCE_SHOW_NAVBAR;
-                // we intercept the call, and return CMSettings.Secure.DEV_FORCE_SHOW_NAVBAR's value
+                // we intercept the call, and return LineageSettings.Secure.DEV_FORCE_SHOW_NAVBAR's value
                 case Secure.DEV_FORCE_SHOW_NAVBAR:
                     return true;
                 default:
@@ -2272,9 +2272,9 @@ public final class CMSettings {
         public static String getStringForUser(ContentResolver resolver, String name,
                 int userId) {
             if (MOVED_TO_GLOBAL.contains(name)) {
-                Log.w(TAG, "Setting " + name + " has moved from CMSettings.Secure"
-                        + " to CMSettings.Global, value is unchanged.");
-                return CMSettings.Global.getStringForUser(resolver, name, userId);
+                Log.w(TAG, "Setting " + name + " has moved from LineageSettings.Secure"
+                        + " to LineageSettings.Global, value is unchanged.");
+                return LineageSettings.Global.getStringForUser(resolver, name, userId);
             }
             return sNameValueCache.getStringForUser(resolver, name, userId);
         }
@@ -2294,8 +2294,8 @@ public final class CMSettings {
         public static boolean putStringForUser(ContentResolver resolver, String name, String value,
                int userId) {
             if (MOVED_TO_GLOBAL.contains(name)) {
-                Log.w(TAG, "Setting " + name + " has moved from CMSettings.Secure"
-                        + " to CMSettings.Global, value is unchanged.");
+                Log.w(TAG, "Setting " + name + " has moved from LineageSettings.Secure"
+                        + " to LineageSettings.Global, value is unchanged.");
                 return false;
             }
             return sNameValueCache.putStringForUser(resolver, name, value, userId);
@@ -2337,29 +2337,29 @@ public final class CMSettings {
          * <p>
          * This version does not take a default value.  If the setting has not
          * been set, or the string value is not a number,
-         * it throws {@link CMSettingNotFoundException}.
+         * it throws {@link LineageSettingNotFoundException}.
          *
          * @param cr The ContentResolver to access.
          * @param name The name of the setting to retrieve.
          *
-         * @throws CMSettingNotFoundException Thrown if a setting by the given
+         * @throws LineageSettingNotFoundException Thrown if a setting by the given
          * name can't be found or the setting value is not an integer.
          *
          * @return The setting's current value.
          */
         public static int getInt(ContentResolver cr, String name)
-                throws CMSettingNotFoundException {
+                throws LineageSettingNotFoundException {
             return getIntForUser(cr, name, UserHandle.myUserId());
         }
 
         /** @hide */
         public static int getIntForUser(ContentResolver cr, String name, int userId)
-                throws CMSettingNotFoundException {
+                throws LineageSettingNotFoundException {
             String v = getStringForUser(cr, name, userId);
             try {
                 return Integer.parseInt(v);
             } catch (NumberFormatException e) {
-                throw new CMSettingNotFoundException(name);
+                throw new LineageSettingNotFoundException(name);
             }
         }
 
@@ -2425,28 +2425,28 @@ public final class CMSettings {
          * <p>
          * This version does not take a default value.  If the setting has not
          * been set, or the string value is not a number,
-         * it throws {@link CMSettingNotFoundException}.
+         * it throws {@link LineageSettingNotFoundException}.
          *
          * @param cr The ContentResolver to access.
          * @param name The name of the setting to retrieve.
          *
          * @return The setting's current value.
-         * @throws CMSettingNotFoundException Thrown if a setting by the given
+         * @throws LineageSettingNotFoundException Thrown if a setting by the given
          * name can't be found or the setting value is not an integer.
          */
         public static long getLong(ContentResolver cr, String name)
-                throws CMSettingNotFoundException {
+                throws LineageSettingNotFoundException {
             return getLongForUser(cr, name, UserHandle.myUserId());
         }
 
         /** @hide */
         public static long getLongForUser(ContentResolver cr, String name, int userId)
-                throws CMSettingNotFoundException {
+                throws LineageSettingNotFoundException {
             String valString = getStringForUser(cr, name, userId);
             try {
                 return Long.parseLong(valString);
             } catch (NumberFormatException e) {
-                throw new CMSettingNotFoundException(name);
+                throw new LineageSettingNotFoundException(name);
             }
         }
 
@@ -2510,32 +2510,32 @@ public final class CMSettings {
          * <p>
          * This version does not take a default value.  If the setting has not
          * been set, or the string value is not a number,
-         * it throws {@link CMSettingNotFoundException}.
+         * it throws {@link LineageSettingNotFoundException}.
          *
          * @param cr The ContentResolver to access.
          * @param name The name of the setting to retrieve.
          *
-         * @throws CMSettingNotFoundException Thrown if a setting by the given
+         * @throws LineageSettingNotFoundException Thrown if a setting by the given
          * name can't be found or the setting value is not a float.
          *
          * @return The setting's current value.
          */
         public static float getFloat(ContentResolver cr, String name)
-                throws CMSettingNotFoundException {
+                throws LineageSettingNotFoundException {
             return getFloatForUser(cr, name, UserHandle.myUserId());
         }
 
         /** @hide */
         public static float getFloatForUser(ContentResolver cr, String name, int userId)
-                throws CMSettingNotFoundException {
+                throws LineageSettingNotFoundException {
             String v = getStringForUser(cr, name, userId);
             if (v == null) {
-                throw new CMSettingNotFoundException(name);
+                throw new LineageSettingNotFoundException(name);
             }
             try {
                 return Float.parseFloat(v);
             } catch (NumberFormatException e) {
-                throw new CMSettingNotFoundException(name);
+                throw new LineageSettingNotFoundException(name);
             }
         }
 
@@ -2934,40 +2934,40 @@ public final class CMSettings {
          * @hide
          */
         public static final String[] LEGACY_SECURE_SETTINGS = new String[]{
-                CMSettings.Secure.ADVANCED_MODE,
-                CMSettings.Secure.BUTTON_BACKLIGHT_TIMEOUT,
-                CMSettings.Secure.BUTTON_BRIGHTNESS,
-                CMSettings.Secure.DEFAULT_THEME_COMPONENTS,
-                CMSettings.Secure.DEFAULT_THEME_PACKAGE,
-                CMSettings.Secure.DEV_FORCE_SHOW_NAVBAR,
-                CMSettings.Secure.KEYBOARD_BRIGHTNESS,
-                CMSettings.Secure.POWER_MENU_ACTIONS,
-                CMSettings.Secure.STATS_COLLECTION,
-                CMSettings.Secure.QS_SHOW_BRIGHTNESS_SLIDER,
-                CMSettings.Secure.QS_TILES,
-                CMSettings.Secure.QS_USE_MAIN_TILES,
-                CMSettings.Secure.NAVIGATION_RING_TARGETS[0],
-                CMSettings.Secure.NAVIGATION_RING_TARGETS[1],
-                CMSettings.Secure.NAVIGATION_RING_TARGETS[2],
-                CMSettings.Secure.RECENTS_LONG_PRESS_ACTIVITY,
-                CMSettings.Secure.ADB_NOTIFY,
-                CMSettings.Secure.ADB_PORT,
-                CMSettings.Secure.DEVICE_HOSTNAME,
-                CMSettings.Secure.KILL_APP_LONGPRESS_BACK,
-                CMSettings.Secure.PROTECTED_COMPONENTS,
-                CMSettings.Secure.LIVE_DISPLAY_COLOR_MATRIX,
-                CMSettings.Secure.ADVANCED_REBOOT,
-                CMSettings.Secure.THEME_PREV_BOOT_API_LEVEL,
-                CMSettings.Secure.LOCKSCREEN_TARGETS,
-                CMSettings.Secure.RING_HOME_BUTTON_BEHAVIOR,
-                CMSettings.Secure.PRIVACY_GUARD_DEFAULT,
-                CMSettings.Secure.PRIVACY_GUARD_NOTIFICATION,
-                CMSettings.Secure.DEVELOPMENT_SHORTCUT,
-                CMSettings.Secure.PERFORMANCE_PROFILE,
-                CMSettings.Secure.APP_PERFORMANCE_PROFILES_ENABLED,
-                CMSettings.Secure.QS_LOCATION_ADVANCED,
-                CMSettings.Secure.LOCKSCREEN_VISUALIZER_ENABLED,
-                CMSettings.Secure.LOCK_PASS_TO_SECURITY_VIEW
+                LineageSettings.Secure.ADVANCED_MODE,
+                LineageSettings.Secure.BUTTON_BACKLIGHT_TIMEOUT,
+                LineageSettings.Secure.BUTTON_BRIGHTNESS,
+                LineageSettings.Secure.DEFAULT_THEME_COMPONENTS,
+                LineageSettings.Secure.DEFAULT_THEME_PACKAGE,
+                LineageSettings.Secure.DEV_FORCE_SHOW_NAVBAR,
+                LineageSettings.Secure.KEYBOARD_BRIGHTNESS,
+                LineageSettings.Secure.POWER_MENU_ACTIONS,
+                LineageSettings.Secure.STATS_COLLECTION,
+                LineageSettings.Secure.QS_SHOW_BRIGHTNESS_SLIDER,
+                LineageSettings.Secure.QS_TILES,
+                LineageSettings.Secure.QS_USE_MAIN_TILES,
+                LineageSettings.Secure.NAVIGATION_RING_TARGETS[0],
+                LineageSettings.Secure.NAVIGATION_RING_TARGETS[1],
+                LineageSettings.Secure.NAVIGATION_RING_TARGETS[2],
+                LineageSettings.Secure.RECENTS_LONG_PRESS_ACTIVITY,
+                LineageSettings.Secure.ADB_NOTIFY,
+                LineageSettings.Secure.ADB_PORT,
+                LineageSettings.Secure.DEVICE_HOSTNAME,
+                LineageSettings.Secure.KILL_APP_LONGPRESS_BACK,
+                LineageSettings.Secure.PROTECTED_COMPONENTS,
+                LineageSettings.Secure.LIVE_DISPLAY_COLOR_MATRIX,
+                LineageSettings.Secure.ADVANCED_REBOOT,
+                LineageSettings.Secure.THEME_PREV_BOOT_API_LEVEL,
+                LineageSettings.Secure.LOCKSCREEN_TARGETS,
+                LineageSettings.Secure.RING_HOME_BUTTON_BEHAVIOR,
+                LineageSettings.Secure.PRIVACY_GUARD_DEFAULT,
+                LineageSettings.Secure.PRIVACY_GUARD_NOTIFICATION,
+                LineageSettings.Secure.DEVELOPMENT_SHORTCUT,
+                LineageSettings.Secure.PERFORMANCE_PROFILE,
+                LineageSettings.Secure.APP_PERFORMANCE_PROFILES_ENABLED,
+                LineageSettings.Secure.QS_LOCATION_ADVANCED,
+                LineageSettings.Secure.LOCKSCREEN_VISUALIZER_ENABLED,
+                LineageSettings.Secure.LOCK_PASS_TO_SECURITY_VIEW
         };
 
         /**
@@ -3039,8 +3039,8 @@ public final class CMSettings {
         public static boolean shouldInterceptSystemProvider(String key) {
             switch (key) {
                 // some apps still query Settings.System.DEV_FORCE_SHOW_NAVBAR, and it was moved to
-                // Settings.Secure, then CMSettings.Secure. Forward queries from Settings.Secure
-                // to CMSettings.Secure here just in case an app stuck with the Settings.Secure call
+                // Settings.Secure, then LineageSettings.Secure. Forward queries from Settings.Secure
+                // to LineageSettings.Secure here just in case an app stuck with the Settings.Secure call
                 case DEV_FORCE_SHOW_NAVBAR:
                     return true;
                 default:
@@ -3185,29 +3185,29 @@ public final class CMSettings {
          * <p>
          * This version does not take a default value.  If the setting has not
          * been set, or the string value is not a number,
-         * it throws {@link CMSettingNotFoundException}.
+         * it throws {@link LineageSettingNotFoundException}.
          *
          * @param cr The ContentResolver to access.
          * @param name The name of the setting to retrieve.
          *
-         * @throws CMSettingNotFoundException Thrown if a setting by the given
+         * @throws LineageSettingNotFoundException Thrown if a setting by the given
          * name can't be found or the setting value is not an integer.
          *
          * @return The setting's current value.
          */
         public static int getInt(ContentResolver cr, String name)
-                throws CMSettingNotFoundException {
+                throws LineageSettingNotFoundException {
             return getIntForUser(cr, name, UserHandle.myUserId());
         }
 
         /** @hide */
         public static int getIntForUser(ContentResolver cr, String name, int userId)
-                throws CMSettingNotFoundException {
+                throws LineageSettingNotFoundException {
             String v = getStringForUser(cr, name, userId);
             try {
                 return Integer.parseInt(v);
             } catch (NumberFormatException e) {
-                throw new CMSettingNotFoundException(name);
+                throw new LineageSettingNotFoundException(name);
             }
         }
 
@@ -3273,28 +3273,28 @@ public final class CMSettings {
          * <p>
          * This version does not take a default value.  If the setting has not
          * been set, or the string value is not a number,
-         * it throws {@link CMSettingNotFoundException}.
+         * it throws {@link LineageSettingNotFoundException}.
          *
          * @param cr The ContentResolver to access.
          * @param name The name of the setting to retrieve.
          *
          * @return The setting's current value.
-         * @throws CMSettingNotFoundException Thrown if a setting by the given
+         * @throws LineageSettingNotFoundException Thrown if a setting by the given
          * name can't be found or the setting value is not an integer.
          */
         public static long getLong(ContentResolver cr, String name)
-                throws CMSettingNotFoundException {
+                throws LineageSettingNotFoundException {
             return getLongForUser(cr, name, UserHandle.myUserId());
         }
 
         /** @hide */
         public static long getLongForUser(ContentResolver cr, String name, int userId)
-                throws CMSettingNotFoundException {
+                throws LineageSettingNotFoundException {
             String valString = getStringForUser(cr, name, userId);
             try {
                 return Long.parseLong(valString);
             } catch (NumberFormatException e) {
-                throw new CMSettingNotFoundException(name);
+                throw new LineageSettingNotFoundException(name);
             }
         }
 
@@ -3358,32 +3358,32 @@ public final class CMSettings {
          * <p>
          * This version does not take a default value.  If the setting has not
          * been set, or the string value is not a number,
-         * it throws {@link CMSettingNotFoundException}.
+         * it throws {@link LineageSettingNotFoundException}.
          *
          * @param cr The ContentResolver to access.
          * @param name The name of the setting to retrieve.
          *
-         * @throws CMSettingNotFoundException Thrown if a setting by the given
+         * @throws LineageSettingNotFoundException Thrown if a setting by the given
          * name can't be found or the setting value is not a float.
          *
          * @return The setting's current value.
          */
         public static float getFloat(ContentResolver cr, String name)
-                throws CMSettingNotFoundException {
+                throws LineageSettingNotFoundException {
             return getFloatForUser(cr, name, UserHandle.myUserId());
         }
 
         /** @hide */
         public static float getFloatForUser(ContentResolver cr, String name, int userId)
-                throws CMSettingNotFoundException {
+                throws LineageSettingNotFoundException {
             String v = getStringForUser(cr, name, userId);
             if (v == null) {
-                throw new CMSettingNotFoundException(name);
+                throw new LineageSettingNotFoundException(name);
             }
             try {
                 return Float.parseFloat(v);
             } catch (NumberFormatException e) {
-                throw new CMSettingNotFoundException(name);
+                throw new LineageSettingNotFoundException(name);
             }
         }
 
@@ -3481,11 +3481,11 @@ public final class CMSettings {
          * @hide
          */
         public static final String[] LEGACY_GLOBAL_SETTINGS = new String[]{
-                CMSettings.Global.WAKE_WHEN_PLUGGED_OR_UNPLUGGED,
-                CMSettings.Global.POWER_NOTIFICATIONS_VIBRATE,
-                CMSettings.Global.POWER_NOTIFICATIONS_RINGTONE,
-                CMSettings.Global.ZEN_DISABLE_DUCKING_DURING_MEDIA_PLAYBACK,
-                CMSettings.Global.WIFI_AUTO_PRIORITIES_CONFIGURATION
+                LineageSettings.Global.WAKE_WHEN_PLUGGED_OR_UNPLUGGED,
+                LineageSettings.Global.POWER_NOTIFICATIONS_VIBRATE,
+                LineageSettings.Global.POWER_NOTIFICATIONS_RINGTONE,
+                LineageSettings.Global.ZEN_DISABLE_DUCKING_DURING_MEDIA_PLAYBACK,
+                LineageSettings.Global.WIFI_AUTO_PRIORITIES_CONFIGURATION
         };
 
         /**

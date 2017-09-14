@@ -27,7 +27,7 @@ import cyanogenmod.app.CMContextConstants;
 import cyanogenmod.app.Profile;
 import cyanogenmod.app.ProfileManager;
 import cyanogenmod.app.IProfileManager;
-import cyanogenmod.providers.CMSettings;
+import cyanogenmod.providers.LineageSettings;
 
 import java.util.Arrays;
 import java.util.UUID;
@@ -62,32 +62,32 @@ public class ProfileManagerTest extends AndroidTestCase {
     public void testManagerProfileIsEnabled() {
         // first enable profiles
         final String enabledValue = "1";
-        assertTrue(CMSettings.System.putString(getContext().getContentResolver(),
-                CMSettings.System.SYSTEM_PROFILES_ENABLED, enabledValue));
+        assertTrue(LineageSettings.System.putString(getContext().getContentResolver(),
+                LineageSettings.System.SYSTEM_PROFILES_ENABLED, enabledValue));
 
         // check that we successfully enabled them via system setting
-        assertEquals(enabledValue, CMSettings.System.getString(getContext().getContentResolver(),
-                CMSettings.System.SYSTEM_PROFILES_ENABLED));
+        assertEquals(enabledValue, LineageSettings.System.getString(getContext().getContentResolver(),
+                LineageSettings.System.SYSTEM_PROFILES_ENABLED));
 
         // check that profile manger returns true
         assertTrue(mProfileManager.isProfilesEnabled());
 
         // now disable the setting
         final String disabledValue = "0";
-        assertTrue(CMSettings.System.putString(getContext().getContentResolver(),
-                CMSettings.System.SYSTEM_PROFILES_ENABLED, disabledValue));
+        assertTrue(LineageSettings.System.putString(getContext().getContentResolver(),
+                LineageSettings.System.SYSTEM_PROFILES_ENABLED, disabledValue));
 
         // check that we successfully disable them via system setting
-        assertEquals(disabledValue, CMSettings.System.getString(getContext().getContentResolver(),
-                CMSettings.System.SYSTEM_PROFILES_ENABLED));
+        assertEquals(disabledValue, LineageSettings.System.getString(getContext().getContentResolver(),
+                LineageSettings.System.SYSTEM_PROFILES_ENABLED));
 
         assertFalse(mProfileManager.isProfilesEnabled());
     }
 
     private void ensureProfilesEnabled() {
         final String enabledValue = "1";
-        assertTrue(CMSettings.System.putString(getContext().getContentResolver(),
-                CMSettings.System.SYSTEM_PROFILES_ENABLED, enabledValue));
+        assertTrue(LineageSettings.System.putString(getContext().getContentResolver(),
+                LineageSettings.System.SYSTEM_PROFILES_ENABLED, enabledValue));
     }
 
     @SmallTest

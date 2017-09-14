@@ -40,7 +40,7 @@ import android.util.SparseArray;
 
 import com.android.internal.telephony.PhoneConstants;
 import cyanogenmod.power.PerformanceManager;
-import cyanogenmod.providers.CMSettings;
+import cyanogenmod.providers.LineageSettings;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -213,8 +213,8 @@ public class QSUtils {
     public static boolean isQSTileEnabledForUser(
             Context context, String tileSpec, int userId) {
         final ContentResolver resolver = context.getContentResolver();
-        String order = CMSettings.Secure.getStringForUser(resolver,
-                CMSettings.Secure.QS_TILES, userId);
+        String order = LineageSettings.Secure.getStringForUser(resolver,
+                LineageSettings.Secure.QS_TILES, userId);
         return !TextUtils.isEmpty(order) && Arrays.asList(order.split(",")).contains(tileSpec);
     }
 
@@ -227,7 +227,7 @@ public class QSUtils {
         };
 
         ctx.getContentResolver().registerContentObserver(
-                CMSettings.Secure.getUriFor(CMSettings.Secure.QS_TILES),
+                LineageSettings.Secure.getUriFor(LineageSettings.Secure.QS_TILES),
                 false, observer, UserHandle.USER_ALL);
         return observer;
     }

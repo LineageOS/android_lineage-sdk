@@ -23,7 +23,7 @@ res_dir := res
 LOCAL_SRC_FILES := $(call all-java-files-under, $(src_dir))
 LOCAL_RESOURCE_DIR := $(addprefix $(LOCAL_PATH)/, $(res_dir))
 
-LOCAL_PACKAGE_NAME := CMSettingsProvider
+LOCAL_PACKAGE_NAME := LineageSettingsProvider
 LOCAL_CERTIFICATE := platform
 LOCAL_PRIVILEGED_MODULE := true
 

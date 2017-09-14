@@ -43,7 +43,7 @@ import cyanogenmod.app.ILiveLockScreenManagerProvider;
 import cyanogenmod.app.LiveLockScreenInfo;
 import cyanogenmod.app.LiveLockScreenManager;
 import cyanogenmod.platform.Manifest;
-import cyanogenmod.providers.CMSettings;
+import cyanogenmod.providers.LineageSettings;
 
 import org.cyanogenmod.platform.internal.common.BrokeredServiceConnection;
 
@@ -262,8 +262,8 @@ public class LiveLockScreenServiceBroker extends
             if (DEBUG) Slog.d(TAG, "Third party apps ready");
 
             // Initialize the default LLS component
-            String defComponent = CMSettings.Secure.getString(mContext.getContentResolver(),
-                    CMSettings.Secure.DEFAULT_LIVE_LOCK_SCREEN_COMPONENT);
+            String defComponent = LineageSettings.Secure.getString(mContext.getContentResolver(),
+                    LineageSettings.Secure.DEFAULT_LIVE_LOCK_SCREEN_COMPONENT);
             if (!TextUtils.isEmpty(defComponent)) {
                 mDefaultLlsInfo = new LiveLockScreenInfo.Builder()
                         .setComponent(ComponentName.unflattenFromString(defComponent))
@@ -305,8 +305,8 @@ public class LiveLockScreenServiceBroker extends
 
         long token = Binder.clearCallingIdentity();
         try {
-            CMSettings.Secure.putString(mContext.getContentResolver(),
-                    CMSettings.Secure.DEFAULT_LIVE_LOCK_SCREEN_COMPONENT,
+            LineageSettings.Secure.putString(mContext.getContentResolver(),
+                    LineageSettings.Secure.DEFAULT_LIVE_LOCK_SCREEN_COMPONENT,
                     (llsInfo != null && llsInfo.component != null)
                             ? llsInfo.component.flattenToString()
                             : "");
@@ -324,8 +324,8 @@ public class LiveLockScreenServiceBroker extends
 
     private void setLiveLockScreenEnabledInternal(boolean enabled) {
         long token = Binder.clearCallingIdentity();
-        CMSettings.Secure.putInt(mContext.getContentResolver(),
-                CMSettings.Secure.LIVE_LOCK_SCREEN_ENABLED, enabled ? 1 : 0);
+        LineageSettings.Secure.putInt(mContext.getContentResolver(),
+                LineageSettings.Secure.LIVE_LOCK_SCREEN_ENABLED, enabled ? 1 : 0);
         Binder.restoreCallingIdentity(token);
     }
 }

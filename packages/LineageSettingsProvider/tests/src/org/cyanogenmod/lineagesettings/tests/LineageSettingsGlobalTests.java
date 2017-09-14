@@ -14,15 +14,15 @@
  * limitations under the License.
  */
 
-package org.cyanogenmod.cmsettings.tests;
+package org.cyanogenmod.lineagesettings.tests;
 
 import android.content.ContentResolver;
 import android.net.Uri;
 import android.test.AndroidTestCase;
 import android.test.suitebuilder.annotation.SmallTest;
-import cyanogenmod.providers.CMSettings;
+import cyanogenmod.providers.LineageSettings;
 
-public class CMSettingsGlobalTests extends AndroidTestCase {
+public class LineageSettingsGlobalTests extends AndroidTestCase {
     private ContentResolver mContentResolver;
 
     private static final String UNREALISTIC_SETTING = "_______UNREAL_______";
@@ -36,14 +36,14 @@ public class CMSettingsGlobalTests extends AndroidTestCase {
     @SmallTest
     public void testFloat() {
         final float expectedFloatValue = 1.0f;
-        CMSettings.Global.putFloat(mContentResolver,
-                CMSettings.Global.__MAGICAL_TEST_PASSING_ENABLER, expectedFloatValue);
+        LineageSettings.Global.putFloat(mContentResolver,
+                LineageSettings.Global.__MAGICAL_TEST_PASSING_ENABLER, expectedFloatValue);
 
         try {
-            float actualValue = CMSettings.Global.getFloat(mContentResolver,
-                    CMSettings.Global.__MAGICAL_TEST_PASSING_ENABLER);
+            float actualValue = LineageSettings.Global.getFloat(mContentResolver,
+                    LineageSettings.Global.__MAGICAL_TEST_PASSING_ENABLER);
             assertEquals(expectedFloatValue, actualValue);
-        } catch (CMSettings.CMSettingNotFoundException e) {
+        } catch (LineageSettings.LineageSettingNotFoundException e) {
             throw new AssertionError(e);
         }
     }
@@ -51,7 +51,7 @@ public class CMSettingsGlobalTests extends AndroidTestCase {
     @SmallTest
     public void testFloatWithDefault() {
         final float expectedDefaultFloatValue = 1.5f;
-        float actualValue = CMSettings.Global.getFloat(mContentResolver,
+        float actualValue = LineageSettings.Global.getFloat(mContentResolver,
                 UNREALISTIC_SETTING, expectedDefaultFloatValue);
         assertEquals(expectedDefaultFloatValue, actualValue);
     }
@@ -59,14 +59,14 @@ public class CMSettingsGlobalTests extends AndroidTestCase {
     @SmallTest
     public void testInt() {
         final int expectedIntValue = 2;
-        CMSettings.Global.putInt(mContentResolver,
-                CMSettings.Global.__MAGICAL_TEST_PASSING_ENABLER, expectedIntValue);
+        LineageSettings.Global.putInt(mContentResolver,
+                LineageSettings.Global.__MAGICAL_TEST_PASSING_ENABLER, expectedIntValue);
 
         try {
-            int actualValue = CMSettings.Global.getInt(mContentResolver,
-                    CMSettings.Global.__MAGICAL_TEST_PASSING_ENABLER);
+            int actualValue = LineageSettings.Global.getInt(mContentResolver,
+                    LineageSettings.Global.__MAGICAL_TEST_PASSING_ENABLER);
             assertEquals(expectedIntValue, actualValue);
-        } catch (CMSettings.CMSettingNotFoundException e) {
+        } catch (LineageSettings.LineageSettingNotFoundException e) {
             throw new AssertionError(e);
         }
     }
@@ -74,7 +74,7 @@ public class CMSettingsGlobalTests extends AndroidTestCase {
     @SmallTest
     public void testIntWithDefault() {
         final int    expectedDefaultIntValue = 11;
-        int actualValue = CMSettings.Global.getInt(mContentResolver,
+        int actualValue = LineageSettings.Global.getInt(mContentResolver,
                 UNREALISTIC_SETTING, expectedDefaultIntValue);
         assertEquals(expectedDefaultIntValue, actualValue);
     }
@@ -82,14 +82,14 @@ public class CMSettingsGlobalTests extends AndroidTestCase {
     @SmallTest
     public void testLong() {
         final long expectedLongValue = 3l;
-        CMSettings.Global.putLong(mContentResolver,
-                CMSettings.Global.__MAGICAL_TEST_PASSING_ENABLER, expectedLongValue);
+        LineageSettings.Global.putLong(mContentResolver,
+                LineageSettings.Global.__MAGICAL_TEST_PASSING_ENABLER, expectedLongValue);
 
         try {
-            long actualValue = CMSettings.Global.getLong(mContentResolver,
-                    CMSettings.Global.__MAGICAL_TEST_PASSING_ENABLER);
+            long actualValue = LineageSettings.Global.getLong(mContentResolver,
+                    LineageSettings.Global.__MAGICAL_TEST_PASSING_ENABLER);
             assertEquals(expectedLongValue, actualValue);
-        } catch (CMSettings.CMSettingNotFoundException e) {
+        } catch (LineageSettings.LineageSettingNotFoundException e) {
             throw new AssertionError(e);
         }
     }
@@ -97,7 +97,7 @@ public class CMSettingsGlobalTests extends AndroidTestCase {
     @SmallTest
     public void testLongWithDefault() {
         final long expectedDefaultLongValue = 17l;
-        long actualValue = CMSettings.Global.getLong(mContentResolver,
+        long actualValue = LineageSettings.Global.getLong(mContentResolver,
                 UNREALISTIC_SETTING, expectedDefaultLongValue);
         assertEquals(expectedDefaultLongValue, actualValue);
     }
@@ -105,21 +105,21 @@ public class CMSettingsGlobalTests extends AndroidTestCase {
     @SmallTest
     public void testString() {
         final String expectedStringValue = "4";
-        CMSettings.Global.putString(mContentResolver,
-                CMSettings.Global.__MAGICAL_TEST_PASSING_ENABLER, expectedStringValue);
+        LineageSettings.Global.putString(mContentResolver,
+                LineageSettings.Global.__MAGICAL_TEST_PASSING_ENABLER, expectedStringValue);
 
-        String actualValue = CMSettings.Global.getString(mContentResolver,
-                CMSettings.Global.__MAGICAL_TEST_PASSING_ENABLER);
+        String actualValue = LineageSettings.Global.getString(mContentResolver,
+                LineageSettings.Global.__MAGICAL_TEST_PASSING_ENABLER);
         assertEquals(expectedStringValue, actualValue);
     }
 
     @SmallTest
     public void testGetUri() {
-        final Uri expectedUri = Uri.withAppendedPath(CMSettings.Global.CONTENT_URI,
-                CMSettings.Global.__MAGICAL_TEST_PASSING_ENABLER);
+        final Uri expectedUri = Uri.withAppendedPath(LineageSettings.Global.CONTENT_URI,
+                LineageSettings.Global.__MAGICAL_TEST_PASSING_ENABLER);
 
-        final Uri actualUri = CMSettings.Global.getUriFor(
-                CMSettings.Global.__MAGICAL_TEST_PASSING_ENABLER);
+        final Uri actualUri = LineageSettings.Global.getUriFor(
+                LineageSettings.Global.__MAGICAL_TEST_PASSING_ENABLER);
 
         assertEquals(expectedUri, actualUri);
     }

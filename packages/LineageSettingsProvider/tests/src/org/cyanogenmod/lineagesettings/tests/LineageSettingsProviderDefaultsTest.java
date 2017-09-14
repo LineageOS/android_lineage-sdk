@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.cyanogenmod.cmsettings.tests;
+package org.cyanogenmod.lineagesettings.tests;
 
 import android.content.ContentResolver;
 import android.content.Context;
@@ -29,15 +29,15 @@ import java.util.ArrayList;
 import android.text.TextUtils;
 import android.util.Log;
 import android.util.TypedValue;
-import cyanogenmod.providers.CMSettings;
-import org.cyanogenmod.cmsettings.CMDatabaseHelper;
-import org.cyanogenmod.cmsettings.CMSettingsProvider;
-import org.cyanogenmod.cmsettings.R;
+import cyanogenmod.providers.LineageSettings;
+import org.cyanogenmod.lineagesettings.CMDatabaseHelper;
+import org.cyanogenmod.lineagesettings.LineageSettingsProvider;
+import org.cyanogenmod.lineagesettings.R;
 
 /**
  * Created by adnan on 1/25/16.
  */
-public class CMSettingsProviderDefaultsTest extends AndroidTestCase {
+public class LineageSettingsProviderDefaultsTest extends AndroidTestCase {
     private ContentResolver mContentResolver;
     private boolean mHasMigratedSettings;
     private Resources mRemoteResources;
@@ -50,81 +50,81 @@ public class CMSettingsProviderDefaultsTest extends AndroidTestCase {
     //SYSTEM
     static {
         SYSTEM_SETTINGS_DEFAULTS.add(new Setting(
-                CMSettings.System.STATUS_BAR_QUICK_QS_PULLDOWN,
+                LineageSettings.System.STATUS_BAR_QUICK_QS_PULLDOWN,
                 "R.integer.def_qs_quick_pulldown"));
         SYSTEM_SETTINGS_DEFAULTS.add(new Setting(
-                CMSettings.System.NOTIFICATION_LIGHT_BRIGHTNESS_LEVEL,
+                LineageSettings.System.NOTIFICATION_LIGHT_BRIGHTNESS_LEVEL,
                 "R.integer.def_notification_brightness_level"));
         SYSTEM_SETTINGS_DEFAULTS.add(new Setting(
-                CMSettings.System.ENABLE_FORWARD_LOOKUP,
+                LineageSettings.System.ENABLE_FORWARD_LOOKUP,
                 "R.integer.def_forward_lookup"));
         SYSTEM_SETTINGS_DEFAULTS.add(new Setting(
-                CMSettings.System.ENABLE_PEOPLE_LOOKUP,
+                LineageSettings.System.ENABLE_PEOPLE_LOOKUP,
                 "R.integer.def_people_lookup"));
         SYSTEM_SETTINGS_DEFAULTS.add(new Setting(
-                CMSettings.System.ENABLE_REVERSE_LOOKUP,
+                LineageSettings.System.ENABLE_REVERSE_LOOKUP,
                 "R.integer.def_reverse_lookup"));
         SYSTEM_SETTINGS_DEFAULTS.add(new Setting(
-                CMSettings.System.NOTIFICATION_LIGHT_MULTIPLE_LEDS_ENABLE,
+                LineageSettings.System.NOTIFICATION_LIGHT_MULTIPLE_LEDS_ENABLE,
                 "R.bool.def_notification_multiple_leds"));
         SYSTEM_SETTINGS_DEFAULTS.add(new Setting(
-                CMSettings.System.SYSTEM_PROFILES_ENABLED,
+                LineageSettings.System.SYSTEM_PROFILES_ENABLED,
                 "R.bool.def_profiles_enabled"));
         SYSTEM_SETTINGS_DEFAULTS.add(new Setting(
-                CMSettings.System.NOTIFICATION_LIGHT_PULSE_CUSTOM_ENABLE,
+                LineageSettings.System.NOTIFICATION_LIGHT_PULSE_CUSTOM_ENABLE,
                 "R.bool.def_notification_pulse_custom_enable"));
         SYSTEM_SETTINGS_DEFAULTS.add(new Setting(
-                CMSettings.System.SWAP_VOLUME_KEYS_ON_ROTATION,
+                LineageSettings.System.SWAP_VOLUME_KEYS_ON_ROTATION,
                 "R.bool.def_swap_volume_keys_on_rotation"));
         SYSTEM_SETTINGS_DEFAULTS.add(new Setting(
-                CMSettings.System.NOTIFICATION_LIGHT_PULSE_CUSTOM_VALUES,
+                LineageSettings.System.NOTIFICATION_LIGHT_PULSE_CUSTOM_VALUES,
                 "R.string.def_notification_pulse_custom_value"));
         SYSTEM_SETTINGS_DEFAULTS.add(new Setting(
-                CMSettings.System.STATUS_BAR_BATTERY_STYLE,
+                LineageSettings.System.STATUS_BAR_BATTERY_STYLE,
                 "R.integer.def_battery_style"));
     }
 
     //SECURE
     static {
         SECURE_SETTINGS_DEFAULTS.add(new Setting(
-                CMSettings.Secure.ADVANCED_MODE,
+                LineageSettings.Secure.ADVANCED_MODE,
                 "R.bool.def_advanced_mode"));
         SECURE_SETTINGS_DEFAULTS.add(new Setting(
-                CMSettings.Secure.QS_USE_MAIN_TILES,
+                LineageSettings.Secure.QS_USE_MAIN_TILES,
                 "R.bool.def_sysui_qs_main_tiles"));
         SECURE_SETTINGS_DEFAULTS.add(new Setting(
-                CMSettings.Secure.STATS_COLLECTION,
+                LineageSettings.Secure.STATS_COLLECTION,
                 "R.bool.def_stats_collection"));
         SECURE_SETTINGS_DEFAULTS.add(new Setting(
-                CMSettings.Secure.LOCKSCREEN_VISUALIZER_ENABLED,
+                LineageSettings.Secure.LOCKSCREEN_VISUALIZER_ENABLED,
                 "R.bool.def_lockscreen_visualizer"));
         SECURE_SETTINGS_DEFAULTS.add(new Setting(
-                CMSettings.Secure.DEFAULT_THEME_COMPONENTS,
+                LineageSettings.Secure.DEFAULT_THEME_COMPONENTS,
                 "R.string.def_theme_components"));
         SECURE_SETTINGS_DEFAULTS.add(new Setting(
-                CMSettings.Secure.DEFAULT_THEME_PACKAGE,
+                LineageSettings.Secure.DEFAULT_THEME_PACKAGE,
                 "R.string.def_theme_package"));
         SECURE_SETTINGS_DEFAULTS.add(new Setting(
-                CMSettings.Secure.PROTECTED_COMPONENT_MANAGERS,
+                LineageSettings.Secure.PROTECTED_COMPONENT_MANAGERS,
                 "R.string.def_protected_component_managers"));
     }
 
     //GLOBAL
     static {
         GLOBAL_SETTINGS_DEFAULTS.add(new Setting(
-                CMSettings.Global.POWER_NOTIFICATIONS_ENABLED,
+                LineageSettings.Global.POWER_NOTIFICATIONS_ENABLED,
                 "R.bool.def_power_notifications_enabled"));
         GLOBAL_SETTINGS_DEFAULTS.add(new Setting(
-                CMSettings.Global.POWER_NOTIFICATIONS_VIBRATE,
+                LineageSettings.Global.POWER_NOTIFICATIONS_VIBRATE,
                 "R.bool.def_power_notifications_vibrate"));
         GLOBAL_SETTINGS_DEFAULTS.add(new Setting(
-                CMSettings.Global.POWER_NOTIFICATIONS_RINGTONE,
+                LineageSettings.Global.POWER_NOTIFICATIONS_RINGTONE,
                 "R.string.def_power_notifications_ringtone"));
         GLOBAL_SETTINGS_DEFAULTS.add(new Setting(
-                CMSettings.Global.WEATHER_TEMPERATURE_UNIT,
+                LineageSettings.Global.WEATHER_TEMPERATURE_UNIT,
                 "R.integer.def_temperature_unit"));
         GLOBAL_SETTINGS_DEFAULTS.add(new Setting(
-                CMSettings.Global.DEV_FORCE_SHOW_NAVBAR,
+                LineageSettings.Global.DEV_FORCE_SHOW_NAVBAR,
                 "R.integer.def_force_show_navbar"));
     }
 
@@ -132,10 +132,10 @@ public class CMSettingsProviderDefaultsTest extends AndroidTestCase {
     protected void setUp() throws Exception {
         super.setUp();
         mContentResolver = getContext().getContentResolver();
-        mHasMigratedSettings = getContext().getSharedPreferences(CMSettingsProvider.TAG,
-                Context.MODE_PRIVATE).getBoolean(CMSettingsProvider.PREF_HAS_MIGRATED_CM_SETTINGS,
+        mHasMigratedSettings = getContext().getSharedPreferences(LineageSettingsProvider.TAG,
+                Context.MODE_PRIVATE).getBoolean(LineageSettingsProvider.PREF_HAS_MIGRATED_CM_SETTINGS,
                 false);
-        mRemoteResources = getRemoteResources("org.cyanogenmod.cmsettings");
+        mRemoteResources = getRemoteResources("org.cyanogenmod.lineagesettings");
     }
 
     @SmallTest
@@ -173,7 +173,7 @@ public class CMSettingsProviderDefaultsTest extends AndroidTestCase {
         TypedValue value = new TypedValue();
         try {
             int identifier = mRemoteResources.getIdentifier(
-                    setting.mDefResName, setting.mType, "org.cyanogenmod.cmsettings");
+                    setting.mDefResName, setting.mType, "org.cyanogenmod.lineagesettings");
             mRemoteResources.getValue(identifier, value, true);
         } catch (Resources.NotFoundException e) {
             // Resource not found, can't verify because it probably wasn't loaded in
@@ -220,23 +220,23 @@ public class CMSettingsProviderDefaultsTest extends AndroidTestCase {
                 case TypedValue.TYPE_NULL:
                     break;
             }
-        } catch (CMSettings.CMSettingNotFoundException e) {
+        } catch (LineageSettings.LineageSettingNotFoundException e) {
             e.printStackTrace();
             throw new AssertionError("Setting " + setting.mKey + " not found!");
         }
     }
 
     private int getIntForTable(Setting setting, String table)
-            throws CMSettings.CMSettingNotFoundException {
+            throws LineageSettings.LineageSettingNotFoundException {
         switch (table) {
             case CMDatabaseHelper.CMTableNames.TABLE_SYSTEM:
-                return CMSettings.System.getIntForUser(mContentResolver, setting.mKey,
+                return LineageSettings.System.getIntForUser(mContentResolver, setting.mKey,
                         UserHandle.USER_OWNER);
             case CMDatabaseHelper.CMTableNames.TABLE_SECURE:
-                return CMSettings.Secure.getIntForUser(mContentResolver, setting.mKey,
+                return LineageSettings.Secure.getIntForUser(mContentResolver, setting.mKey,
                         UserHandle.USER_OWNER);
             case CMDatabaseHelper.CMTableNames.TABLE_GLOBAL:
-                return CMSettings.Global.getIntForUser(mContentResolver, setting.mKey,
+                return LineageSettings.Global.getIntForUser(mContentResolver, setting.mKey,
                         UserHandle.USER_OWNER);
             default:
                 throw new AssertionError("Invalid or empty table!");
@@ -244,16 +244,16 @@ public class CMSettingsProviderDefaultsTest extends AndroidTestCase {
     }
 
     private String getStringForTable(Setting setting, String table)
-            throws CMSettings.CMSettingNotFoundException {
+            throws LineageSettings.LineageSettingNotFoundException {
         switch (table) {
             case CMDatabaseHelper.CMTableNames.TABLE_SYSTEM:
-                return CMSettings.System.getStringForUser(mContentResolver, setting.mKey,
+                return LineageSettings.System.getStringForUser(mContentResolver, setting.mKey,
                         UserHandle.USER_OWNER);
             case CMDatabaseHelper.CMTableNames.TABLE_SECURE:
-                return CMSettings.Secure.getStringForUser(mContentResolver, setting.mKey,
+                return LineageSettings.Secure.getStringForUser(mContentResolver, setting.mKey,
                         UserHandle.USER_OWNER);
             case CMDatabaseHelper.CMTableNames.TABLE_GLOBAL:
-                return CMSettings.Global.getStringForUser(mContentResolver, setting.mKey,
+                return LineageSettings.Global.getStringForUser(mContentResolver, setting.mKey,
                         UserHandle.USER_OWNER);
             default:
                 throw new AssertionError("Invalid or empty table!");

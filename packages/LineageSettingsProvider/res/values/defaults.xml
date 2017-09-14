@@ -17,41 +17,41 @@
 <resources>
     <!-- Defaults for System -->
 
-    <!-- Default for CMSettings.System.QS_QUICK_PULLDOWN
+    <!-- Default for LineageSettings.System.QS_QUICK_PULLDOWN
          0. Off
          1. Right
          2. Left -->
     <integer name="def_qs_quick_pulldown">0</integer>
 
-    <!-- Default for CMSettings.System.SYSTEM_PROFILES_ENABLED -->
+    <!-- Default for LineageSettings.System.SYSTEM_PROFILES_ENABLED -->
     <bool name="def_profiles_enabled">true</bool>
 
     <!-- Defaults for Secure -->
 
-    <!-- Default for CMSettings.Secure.ADVANCED_MODE -->
+    <!-- Default for LineageSettings.Secure.ADVANCED_MODE -->
     <bool name="def_advanced_mode">true</bool>
 
-    <!-- Default for CMSettings.Secure.DEFAULT_THEME_COMPONENTS -->
+    <!-- Default for LineageSettings.Secure.DEFAULT_THEME_COMPONENTS -->
     <string name="def_theme_components"></string>
 
-    <!-- Default for CMSettings.Secure.DEFAULT_THEME_PACKAGE -->
+    <!-- Default for LineageSettings.Secure.DEFAULT_THEME_PACKAGE -->
     <string name="def_theme_package"></string>
 
-    <!-- Defaults for CMSettings.Secure.DEV_FORCE_SHOW_NAVBAR -->
+    <!-- Defaults for LineageSettings.Secure.DEV_FORCE_SHOW_NAVBAR -->
     <integer name="def_force_show_navbar">0</integer>
 
     <!-- THESE DEFAULTS COME FROM org.cyanogenmod.platform.internal's config_defaultQuickSettingsTiles
          AND SHOULD BE OVERLAID THERE.
 
          DO NOT USE:
-         Default for CMSettings.Secure.QS_TILES
+         Default for LineageSettings.Secure.QS_TILES
          Comma-delimited, quick settings tiles. See QSConstants.java for a list of all available tiles
     <string name="def_qs_tiles">wifi,bt,cell,airplane,rotation,flashlight,location,cast,hotspot,live_display</string> -->
 
-    <!-- Default for CMSettings.Secure.STATS_COLLECTION -->
+    <!-- Default for LineageSettings.Secure.STATS_COLLECTION -->
     <bool name="def_stats_collection">false</bool>
 
-    <!-- Default for CMSettings.System.STATUS_BAR_BATTERY_STYLE
+    <!-- Default for LineageSettings.System.STATUS_BAR_BATTERY_STYLE
          * 0: Display the battery as icon in portrait mode
          * 2: Display the battery as a circle
          * 4: Hide the battery status information
@@ -61,38 +61,38 @@
          -->
     <integer name="def_battery_style">2</integer>
 
-    <!-- Default for CMSettings.Secure.QS_USE_MAIN_TILES -->
+    <!-- Default for LineageSettings.Secure.QS_USE_MAIN_TILES -->
     <bool name="def_sysui_qs_main_tiles">true</bool>
 
-    <!-- Default for CMSettings.Secure.LOCKSCREEN_VISUALIZER_ENABLED -->
+    <!-- Default for LineageSettings.Secure.LOCKSCREEN_VISUALIZER_ENABLED -->
     <bool name="def_lockscreen_visualizer">true</bool>
 
-    <!-- Default value of CMSettings.System.ENABLE_FORWARD_LOOKUP -->
+    <!-- Default value of LineageSettings.System.ENABLE_FORWARD_LOOKUP -->
     <integer name="def_forward_lookup">1</integer>
 
-    <!-- Default value of CMSettings.System.ENABLE_PEOPLE_LOOKUP -->
+    <!-- Default value of LineageSettings.System.ENABLE_PEOPLE_LOOKUP -->
     <integer name="def_people_lookup">1</integer>
 
-    <!-- Default value of CMSettings.System.ENABLE_REVERSE_LOOKUP -->
+    <!-- Default value of LineageSettings.System.ENABLE_REVERSE_LOOKUP -->
     <integer name="def_reverse_lookup">1</integer>
 
     <!-- Defaults for Global -->
 
-    <!-- Default for CMSettings.Global.DEVICE_NAME
+    <!-- Default for LineageSettings.Global.DEVICE_NAME
          $1=MODEL -->
     <string name="def_device_name">%1$s</string>
 
-    <!-- Default for CMSettings.Global.HEADS_UP_NOTIFICATIONS_ENABLED
+    <!-- Default for LineageSettings.Global.HEADS_UP_NOTIFICATIONS_ENABLED
          1==on -->
     <integer name="def_heads_up_enabled">1</integer>
 
-    <!-- Default for CMSettings.Global.POWER_NOTIFICATIONS_ENABLED -->
+    <!-- Default for LineageSettings.Global.POWER_NOTIFICATIONS_ENABLED -->
     <bool name="def_power_notifications_enabled">false</bool>
 
-    <!-- Default for CMSettings.Global.POWER_NOTIFICATIONS_VIBRATE -->
+    <!-- Default for LineageSettings.Global.POWER_NOTIFICATIONS_VIBRATE -->
     <bool name="def_power_notifications_vibrate">false</bool>
 
-    <!-- Default for CMSettings.Global.POWER_NOTIFICATIONS_RINGTONE -->
+    <!-- Default for LineageSettings.Global.POWER_NOTIFICATIONS_RINGTONE -->
     <string name="def_power_notifications_ringtone" translatable="false">content://settings/system/notification_sound</string>
 
     <!-- Default value for the notification LEDs brightness

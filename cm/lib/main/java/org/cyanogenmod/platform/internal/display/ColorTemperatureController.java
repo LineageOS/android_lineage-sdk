@@ -33,7 +33,7 @@ import java.util.BitSet;
 
 import cyanogenmod.hardware.CMHardwareManager;
 import cyanogenmod.hardware.LiveDisplayManager;
-import cyanogenmod.providers.CMSettings;
+import cyanogenmod.providers.LineageSettings;
 import cyanogenmod.util.ColorUtils;
 
 import static cyanogenmod.hardware.LiveDisplayManager.MODE_AUTO;
@@ -65,9 +65,9 @@ public class ColorTemperatureController extends LiveDisplayFeature {
     private static final long TWILIGHT_ADJUSTMENT_TIME = DateUtils.HOUR_IN_MILLIS * 1;
 
     private static final Uri DISPLAY_TEMPERATURE_DAY =
-            CMSettings.System.getUriFor(CMSettings.System.DISPLAY_TEMPERATURE_DAY);
+            LineageSettings.System.getUriFor(LineageSettings.System.DISPLAY_TEMPERATURE_DAY);
     private static final Uri DISPLAY_TEMPERATURE_NIGHT =
-            CMSettings.System.getUriFor(CMSettings.System.DISPLAY_TEMPERATURE_NIGHT);
+            LineageSettings.System.getUriFor(LineageSettings.System.DISPLAY_TEMPERATURE_NIGHT);
 
     public ColorTemperatureController(Context context,
             Handler handler, DisplayHardwareController displayHardware) {
@@ -342,21 +342,21 @@ public class ColorTemperatureController extends LiveDisplayFeature {
     }
 
     int getDayColorTemperature() {
-        return getInt(CMSettings.System.DISPLAY_TEMPERATURE_DAY,
+        return getInt(LineageSettings.System.DISPLAY_TEMPERATURE_DAY,
                 mDefaultDayTemperature);
     }
 
     void setDayColorTemperature(int temperature) {
-        putInt(CMSettings.System.DISPLAY_TEMPERATURE_DAY, temperature);
+        putInt(LineageSettings.System.DISPLAY_TEMPERATURE_DAY, temperature);
     }
 
     int getNightColorTemperature() {
-        return getInt(CMSettings.System.DISPLAY_TEMPERATURE_NIGHT,
+        return getInt(LineageSettings.System.DISPLAY_TEMPERATURE_NIGHT,
                 mDefaultNightTemperature);
     }
 
     void setNightColorTemperature(int temperature) {
-        putInt(CMSettings.System.DISPLAY_TEMPERATURE_NIGHT, temperature);
+        putInt(LineageSettings.System.DISPLAY_TEMPERATURE_NIGHT, temperature);
     }
 
     Range<Integer> getColorTemperatureRange() {
