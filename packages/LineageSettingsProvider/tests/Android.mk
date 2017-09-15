@@ -30,7 +30,7 @@ LOCAL_PROGUARD_ENABLED := optimization shrinktests
 LOCAL_PROGUARD_FLAG_FILES := proguard.flags
 
 LOCAL_STATIC_JAVA_LIBRARIES := \
-    org.cyanogenmod.platform.internal
+    org.lineageos.platform.internal
 
 include $(BUILD_PACKAGE)
 
@@ -50,7 +50,7 @@ LOCAL_PROGUARD_ENABLED := optimization shrinktests
 LOCAL_PROGUARD_FLAG_FILES := proguard.flags
 
 LOCAL_STATIC_JAVA_LIBRARIES := \
-    org.cyanogenmod.platform.internal
+    org.lineageos.platform.internal
 
 include $(BUILD_CMTS_PACKAGE)
 

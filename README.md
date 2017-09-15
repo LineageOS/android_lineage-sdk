@@ -13,7 +13,7 @@ Our stable releases are mirrored in [Maven Central](http://search.maven.org/#sea
 
 ```gradle
 dependencies {
-    compile 'org.cyanogenmod:platform.sdk:5.+'
+    compile 'org.lineageos:platform.sdk:5.+'
 }
 ```
 
@@ -33,7 +33,7 @@ You can target the `future` or `development` branch by setting your `dependencie
 
 ```gradle
 dependencies {
-    compile 'org.cyanogenmod:platform.sdk:6.0-SNAPSHOT'
+    compile 'org.lineageos:platform.sdk:6.0-SNAPSHOT'
 }
 ```
 

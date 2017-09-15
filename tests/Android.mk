@@ -19,7 +19,7 @@ include $(CLEAR_VARS)
 LOCAL_MODULE_TAGS := tests
 
 LOCAL_STATIC_JAVA_LIBRARIES := \
-    org.cyanogenmod.platform.sdk \
+    org.lineageos.platform.sdk \
     android-support-test \
     mockito-target
 
@@ -40,7 +40,7 @@ include $(CLEAR_VARS)
 LOCAL_MODULE_TAGS := tests
 
 LOCAL_STATIC_JAVA_LIBRARIES := \
-    org.cyanogenmod.platform.sdk \
+    org.lineageos.platform.sdk \
     android-support-test \
     mockito-target
 

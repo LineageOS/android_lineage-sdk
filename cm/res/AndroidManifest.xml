@@ -18,41 +18,41 @@
 -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:androidprv="http://schemas.android.com/apk/prv/res/android"
-    package="cyanogenmod.platform"
+    package="lineageos.platform"
     coreApp="true" android:sharedUserId="android.uid.system"
     android:sharedUserLabel="@string/cyanogenmod_system_label">
 
-    <protected-broadcast android:name="cyanogenmod.intent.action.SCREEN_CAMERA_GESTURE" />
-    <protected-broadcast android:name="cyanogenmod.intent.action.INITIALIZE_CM_HARDWARE" />
-    <protected-broadcast android:name="cyanogenmod.intent.action.ACTION_AUDIO_SESSIONS_CHANGED"
-                         android:permission="cyanogenmod.permission.MANAGE_AUDIO_SESSIONS" />
-    <protected-broadcast android:name="cyanogenmod.platform.intent.action.PROFILE_SELECTED" />
-    <protected-broadcast android:name="com.cyanogenmod.intent.action.HOTWORD_INPUT_CHANGED" />
+    <protected-broadcast android:name="lineageos.intent.action.SCREEN_CAMERA_GESTURE" />
+    <protected-broadcast android:name="lineageos.intent.action.INITIALIZE_CM_HARDWARE" />
+    <protected-broadcast android:name="lineageos.intent.action.ACTION_AUDIO_SESSIONS_CHANGED"
+                         android:permission="lineageos.permission.MANAGE_AUDIO_SESSIONS" />
+    <protected-broadcast android:name="lineageos.platform.intent.action.PROFILE_SELECTED" />
+    <protected-broadcast android:name="org.lineageos.intent.action.HOTWORD_INPUT_CHANGED" />
 
-    <protected-broadcast android:name="cyanogenmod.intent.action.UPDATE_PREFERENCE" />
-    <protected-broadcast android:name="cyanogenmod.intent.action.REFRESH_PREFERENCE" />
+    <protected-broadcast android:name="lineageos.intent.action.UPDATE_PREFERENCE" />
+    <protected-broadcast android:name="lineageos.intent.action.REFRESH_PREFERENCE" />
 
-    <protected-broadcast android:name="cyanogenmod.platform.intent.action.PROFILE_UPDATED" />
-    <protected-broadcast android:name="cyanogenmod.platform.intent.action.INTENT_ACTION_PROFILE_TRIGGER_STATE_CHANGED" />
+    <protected-broadcast android:name="lineageos.platform.intent.action.PROFILE_UPDATED" />
+    <protected-broadcast android:name="lineageos.platform.intent.action.INTENT_ACTION_PROFILE_TRIGGER_STATE_CHANGED" />
 
-    <protected-broadcast android:name="cyanogenmod.platform.intent.action.UPDATE_TWILIGHT_STATE" />
+    <protected-broadcast android:name="lineageos.platform.intent.action.UPDATE_TWILIGHT_STATE" />
 
     <!-- Must be required by an, to ensure that only the system can bind to it.
          @hide -->
-    <permission android:name="cyanogenmod.permission.BIND_CUSTOM_TILE_LISTENER_SERVICE"
+    <permission android:name="lineageos.permission.BIND_CUSTOM_TILE_LISTENER_SERVICE"
                 android:label="@string/permlab_bindCustomTileListenerService"
                 android:description="@string/permdesc_bindCustomTileListenerService"
                 android:protectionLevel="signature" />
 
     <!-- Allows a 3rd party application to publish or unpublish a quick settings tile -->
-    <permission android:name="cyanogenmod.permission.PUBLISH_CUSTOM_TILE"
+    <permission android:name="lineageos.permission.PUBLISH_CUSTOM_TILE"
                 android:label="@string/permlab_publishCustomTile"
                 android:description="@string/permdesc_publishCustomTile"
                 android:icon="@drawable/ic_launcher_cyanogenmod"
                 android:protectionLevel="normal" />
 
     <!-- Allows an app to make changes to the airplane mode and mobile data network settings -->
-    <permission android:name="cyanogenmod.permission.MODIFY_NETWORK_SETTINGS"
+    <permission android:name="lineageos.permission.MODIFY_NETWORK_SETTINGS"
                 android:label="@string/permlab_modifyNetworkSettings"
                 android:description="@string/permdesc_modifyNetworkSettings"
                 android:icon="@drawable/ic_launcher_cyanogenmod"
@@ -60,21 +60,21 @@
                 android:protectionLevel="signature|privileged" />
 
     <!-- Allows an app to make changes to the interruption mode sound settings -->
-    <permission android:name="cyanogenmod.permission.MODIFY_SOUND_SETTINGS"
+    <permission android:name="lineageos.permission.MODIFY_SOUND_SETTINGS"
                 android:label="@string/permlab_modifySoundSettings"
                 android:description="@string/permdesc_modifySoundSettings"
                 android:icon="@drawable/ic_launcher_cyanogenmod"
                 android:protectionLevel="normal" />
 
     <!-- Allows a 3rd party to view the phone SIM states and data connection -->
-    <permission android:name="cyanogenmod.permission.READ_MSIM_PHONE_STATE"
+    <permission android:name="lineageos.permission.READ_MSIM_PHONE_STATE"
                 android:label="@string/permlab_readMSPhoneState"
                 android:description="@string/permdesc_readMSPhoneState"
                 android:icon="@drawable/ic_launcher_cyanogenmod"
                 android:protectionLevel="normal" />
 
     <!-- Allows a 3rd party to modify the phone SIM states and data connection -->
-    <permission android:name="cyanogenmod.permission.MODIFY_MSIM_PHONE_STATE"
+    <permission android:name="lineageos.permission.MODIFY_MSIM_PHONE_STATE"
                 android:label="@string/permlab_modifyMSPhoneState"
                 android:description="@string/permdesc_modifyMSPhoneState"
                 android:icon="@drawable/ic_launcher_cyanogenmod"
@@ -82,47 +82,47 @@
 
     <!-- Allows an application access to the CM hardware abstraction framework
         <p>Not for use by third-party applications. -->
-    <permission android:name="cyanogenmod.permission.HARDWARE_ABSTRACTION_ACCESS"
+    <permission android:name="lineageos.permission.HARDWARE_ABSTRACTION_ACCESS"
                 android:label="@string/permlab_useHardwareFramework"
                 android:description="@string/permdesc_useHardwareFramework"
                 android:protectionLevel="signature|privileged" />
 
     <!-- Allows an application to write to CM system settings -->
-    <permission android:name="cyanogenmod.permission.WRITE_SETTINGS"
+    <permission android:name="lineageos.permission.WRITE_SETTINGS"
                 android:label="@string/permlab_writeSettings"
                 android:description="@string/permdesc_writeSettings"
                 android:protectionLevel="normal" />
 
     <!-- Allows an application to modify system profiles -->
-    <permission android:name="cyanogenmod.permission.MODIFY_PROFILES"
+    <permission android:name="lineageos.permission.MODIFY_PROFILES"
                 android:label="@string/permlab_modifyProfiles"
                 android:description="@string/permdesc_modifyProfiles"
                 android:protectionLevel="normal" />
 
     <!-- Allows an application to write to secure CM system settings.
         <p>Not for use by third-party applications. -->
-    <permission android:name="cyanogenmod.permission.WRITE_SECURE_SETTINGS"
+    <permission android:name="lineageos.permission.WRITE_SECURE_SETTINGS"
                 android:label="@string/permlab_writeSecureSettings"
                 android:description="@string/permdesc_writeSecureSettings"
                 android:protectionLevel="signature|privileged|development" />
 
     <!-- Allows an application to write alarms to the default alarm clock application
         <p>Not for use by third-party applications. -->
-    <permission android:name="cyanogenmod.permission.WRITE_ALARMS"
+    <permission android:name="lineageos.permission.WRITE_ALARMS"
                 android:permissionGroup="android.permission-group.SYSTEM_CLOCK"
                 android:protectionLevel="signature|privileged"
                 android:label="@string/permlab_write_alarms"
                 android:description="@string/permdesc_write_alarms"/>
 
     <!-- Allows an application to manage alarms on the default alarm clock application -->
-    <permission android:name="cyanogenmod.permission.MANAGE_ALARMS"
+    <permission android:name="lineageos.permission.MANAGE_ALARMS"
                 android:permissionGroup="android.permission-group.SYSTEM_CLOCK"
                 android:protectionLevel="normal"
                 android:label="@string/permlab_manage_alarms"
                 android:description="@string/permdesc_manage_alarms"/>
 
     <!-- Allows an application to read alarms from the default alarm clock application -->
-    <permission android:name="cyanogenmod.permission.READ_ALARMS"
+    <permission android:name="lineageos.permission.READ_ALARMS"
                 android:permissionGroup="android.permission-group.SYSTEM_CLOCK"
                 android:protectionLevel="normal"
                 android:label="@string/permlab_read_alarms"
@@ -130,14 +130,14 @@
 
     <!-- Allows an application to access persistent property storage
          <p>Not for use by third-party applications. -->
-    <permission android:name="cyanogenmod.permission.MANAGE_PERSISTENT_STORAGE"
+    <permission android:name="lineageos.permission.MANAGE_PERSISTENT_STORAGE"
                 android:label="@string/permlab_managePersistentStorage"
                 android:description="@string/permdesc_managePersistentStorage"
                 android:protectionLevel="signature|privileged" />
 
     <!-- Permission for accessing a provider of app suggestions
          <p>Not for use by third-party applications. -->
-    <permission android:name="cyanogenmod.permission.ACCESS_APP_SUGGESTIONS"
+    <permission android:name="lineageos.permission.ACCESS_APP_SUGGESTIONS"
                 android:label="@string/permlab_accessAppSuggestions"
                 android:description="@string/permdesc_accessAppSuggestions"
                 android:protectionLevel="signature|privileged|development" />
@@ -145,26 +145,26 @@
     <!-- Permission for adding/removing applications to protected apps
           <p>Not for use by third-party applications. -->
     <permission
-                android:name="cyanogenmod.permission.PROTECTED_APP"
+                android:name="lineageos.permission.PROTECTED_APP"
                 android:label="@string/permlab_protectedApp"
                 android:description="@string/permdesc_protectedApp"
                 android:protectionLevel="signature|privileged" />
 
     <!-- Allows an application to be used as a third party keyguard -->
-    <permission android:name="cyanogenmod.permission.THIRD_PARTY_KEYGUARD"
+    <permission android:name="lineageos.permission.THIRD_PARTY_KEYGUARD"
                 android:label="@string/permlab_thirdPartyKeyguard"
                 android:description="@string/permdesc_thirdPartyKeyguard"
                 android:protectionLevel="normal" />
 
     <!-- Allows an application to use ThemeManager -->
-    <permission android:name="cyanogenmod.permission.ACCESS_THEME_MANAGER"
+    <permission android:name="lineageos.permission.ACCESS_THEME_MANAGER"
                 android:label="@string/permlab_accessThemeService"
                 android:description="@string/permdesc_accessThemeService"
                 android:protectionLevel="normal" />
 
     <!-- Allows an application to read the current theme configuration and
          get information about the various themes currently installed -->
-    <permission android:name="cyanogenmod.permission.READ_THEMES"
+    <permission android:name="lineageos.permission.READ_THEMES"
                 android:label="@string/permlab_readThemes"
                 android:description="@string/permdesc_readThemesDesc"
                 android:protectionLevel="normal" />
@@ -172,27 +172,27 @@
     <!-- Allows an application to write the current theme configuration and
          write information about the various themes currently installed.
          Changing themes should be done through the service ACCESS_THEME_MANAGER -->
-    <permission android:name="cyanogenmod.permission.WRITE_THEMES"
+    <permission android:name="lineageos.permission.WRITE_THEMES"
                 android:label="@string/permlab_writeThemes"
                 android:description="@string/permdesc_writeThemesDesc"
                 android:protectionLevel="normal" />
 
     <!-- Allows low-level access to performance management.
          <p>Not for use by third-party applications. -->
-    <permission android:name="cyanogenmod.permission.PERFORMANCE_ACCESS"
+    <permission android:name="lineageos.permission.PERFORMANCE_ACCESS"
                 android:label="@string/permlab_perfAccess"
                 android:description="@string/permdesc_perfAccessDesc"
                 android:protectionLevel="signature|privileged" />
 
     <!-- Allows an application to access the live lock screen manager. -->
-    <permission android:name="cyanogenmod.permission.LIVE_LOCK_SCREEN_MANAGER_ACCESS"
+    <permission android:name="lineageos.permission.LIVE_LOCK_SCREEN_MANAGER_ACCESS"
                 android:label="@string/permlab_accessLiveLockScreenService"
                 android:description="@string/permdesc_accessLiveLockScreenService"
                 android:protectionLevel="dangerous" />
 
     <!-- Allows system apps privileged access to the live lock screen manager.
         @hide -->
-    <permission android:name="cyanogenmod.permission.LIVE_LOCK_SCREEN_MANAGER_ACCESS_PRIVATE"
+    <permission android:name="lineageos.permission.LIVE_LOCK_SCREEN_MANAGER_ACCESS_PRIVATE"
                 android:label="@string/permlab_accessLiveLockScreenServicePrivate"
                 android:description="@string/permdesc_accessLiveLockScreenServicePrivate"
                 android:protectionLevel="signature|privileged"
@@ -200,40 +200,40 @@
 
     <!-- Permission required to be held for a service that provides a LiveLockScreenManagerService
         @hide -->
-    <permission android:name="cyanogenmod.permission.LIVE_LOCK_SCREEN_MANAGER_PROVIDER"
+    <permission android:name="lineageos.permission.LIVE_LOCK_SCREEN_MANAGER_PROVIDER"
                 android:label="@string/permlab_accessLiveLockScreenServiceProvider"
                 android:description="@string/permdesc_accessLiveLockScreenServiceProvider"
                 android:protectionLevel="signature|privileged" />
 
     <!-- Allows an application to read the weather content from the provider-->
-    <permission android:name="cyanogenmod.permission.READ_WEATHER"
+    <permission android:name="lineageos.permission.READ_WEATHER"
                 android:label="@string/permlab_weather_read"
                 android:description="@string/permdesc_weather_read"
                 android:protectionLevel="normal"/>
 
     <!-- Allows an application to update the content of the weather provider
         <p>Not for use by third-party applications. -->
-    <permission android:name="cyanogenmod.permission.WRITE_WEATHER"
+    <permission android:name="lineageos.permission.WRITE_WEATHER"
                 android:label="@string/permlab_weather_write"
                 android:description="@string/permdesc_weather_write"
                 android:protectionLevel="signature|privileged" />
 
     <!-- Allows an application to be identified as a weather provider service -->
-    <permission android:name="cyanogenmod.permission.BIND_WEATHER_PROVIDER_SERVICE"
+    <permission android:name="lineageos.permission.BIND_WEATHER_PROVIDER_SERVICE"
                 android:label="@string/permlab_weather_bind"
                 android:description="@string/permdesc_weather_bind"
                 android:protectionLevel="signature|privileged"/>
 
     <!-- Allows an application to observe system-wide changes to audio sessions
          @hide -->
-    <permission android:name="cyanogenmod.permission.OBSERVE_AUDIO_SESSIONS"
+    <permission android:name="lineageos.permission.OBSERVE_AUDIO_SESSIONS"
                 android:label="@string/permlab_observe_audio_sessions"
                 android:description="@string/permdesc_observe_audio_sessions"
                 android:protectionLevel="normal"/>
 
     <!-- Allows an application to post system-wide changes to audio sessions
          @hide -->
-    <permission android:name="cyanogenmod.permission.MANAGE_AUDIO_SESSIONS"
+    <permission android:name="lineageos.permission.MANAGE_AUDIO_SESSIONS"
                 android:label="@string/permlab_manage_audio_sessions"
                 android:description="@string/permdesc_manage_audio_sessions"
                 android:protectionLevel="signature|privileged"
@@ -242,13 +242,13 @@
     <!-- Allows an application to access the weather service.
         <p>Although the protection is normal, this permission should be required ONLY by those apps
         meant to do something meaningful with the data provided by the service (LockClock, SysUI)-->
-    <permission android:name="cyanogenmod.permission.ACCESS_WEATHER_MANAGER"
+    <permission android:name="lineageos.permission.ACCESS_WEATHER_MANAGER"
                 android:label="@string/permlab_weather_access_mgr"
                 android:description="@string/permdesc_weather_access_mgr"
                 android:protectionLevel="normal"/>
 
     <!-- Allows an application to manage LiveDisplay -->
-    <permission android:name="cyanogenmod.permission.MANAGE_LIVEDISPLAY"
+    <permission android:name="lineageos.permission.MANAGE_LIVEDISPLAY"
                 android:label="@string/permlab_manageLiveDisplay"
                 android:description="@string/permdesc_manageLiveDisplay"
                 android:icon="@drawable/ic_launcher_cyanogenmod"
@@ -256,12 +256,12 @@
 
     <!-- Not meant for third parties. Allows brokering core services to other
          processes @hide -->
-    <permission android:name="cyanogenmod.permission.BIND_CORE_SERVICE"
+    <permission android:name="lineageos.permission.BIND_CORE_SERVICE"
                 android:protectionLevel="signature|privileged" />
 
     <!-- Not meant for third parties.
          @hide -->
-    <permission android:name="cyanogenmod.permission.SEND_PROTECTED_THEME_BROADCAST"
+    <permission android:name="lineageos.permission.SEND_PROTECTED_THEME_BROADCAST"
                 android:protectionLevel="signature|privileged" />
 
     <application android:process="system"
@@ -273,19 +273,19 @@
                  android:supportsRtl="true"/>
 
     <!-- Permission for reading the DataUsage database -->
-    <permission android:name="cyanogenmod.permission.READ_DATAUSAGE"
+    <permission android:name="lineageos.permission.READ_DATAUSAGE"
                 android:label="@string/permlab_dataUsageRead"
                 android:description="@string/permdesc_dataUsageRead"
                 android:protectionLevel="signature|privileged" />
 
     <!-- Permission for writing the DataUsage database -->
-    <permission android:name="cyanogenmod.permission.WRITE_DATAUSAGE"
+    <permission android:name="lineageos.permission.WRITE_DATAUSAGE"
                 android:label="@string/permlab_dataUsageWrite"
                 android:description="@string/permdesc_dataUsageWrite"
                 android:protectionLevel="signature|privileged" />
 
     <!-- Permission for managing remote preferences -->
-    <permission android:name="cyanogenmod.permission.MANAGE_REMOTE_PREFERENCES"
+    <permission android:name="lineageos.permission.MANAGE_REMOTE_PREFERENCES"
                 android:label="@string/permlab_manageRemotePrefs"
                 android:description="@string/permdesc_manageRemotePrefs"
                 android:protectionLevel="signature|privileged" />

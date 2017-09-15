@@ -18,11 +18,11 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.List;
 
-import cyanogenmod.app.CMStatusBarManager;
-import cyanogenmod.app.CustomTile;
-import cyanogenmod.app.Profile;
-import cyanogenmod.app.ProfileManager;
-import cyanogenmod.profiles.ConnectionSettings;
+import lineageos.app.CMStatusBarManager;
+import lineageos.app.CustomTile;
+import lineageos.app.Profile;
+import lineageos.app.ProfileManager;
+import lineageos.profiles.ConnectionSettings;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
