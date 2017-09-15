@@ -66,7 +66,7 @@ public class LineageSettingsProvider extends ContentProvider {
 
     private static final boolean USER_CHECK_THROWS = true;
 
-    public static final String PREF_HAS_MIGRATED_LINEAGE_SETTINGS = "has_migrated_cm13_settings";
+    public static final String PREF_HAS_MIGRATED_LINEAGE_SETTINGS = "has_migrated_cm141_settings";
 
     private static final Bundle NULL_SETTING = Bundle.forPair("value", null);
 
@@ -332,22 +332,6 @@ public class LineageSettingsProvider extends ContentProvider {
                         "get/set setting for user", null);
                 if (LOCAL_LOGV) Log.v(TAG, "   access setting for user " + callingUserId);
             }
-        }
-
-        boolean hasMigratedLineageSettings = mSharedPrefs.getBoolean(PREF_HAS_MIGRATED_LINEAGE_SETTINGS,
-                false);
-        final ComponentName preBootReceiver = new ComponentName("org.lineageos.lineagesettings",
-                "org.lineageos.lineagesettings.PreBootReceiver");
-        final PackageManager packageManager = getContext().getPackageManager();
-        if (!hasMigratedLineageSettings &&
-                packageManager.getComponentEnabledSetting(preBootReceiver)
-                        == PackageManager.COMPONENT_ENABLED_STATE_DISABLED ) {
-            if (LOCAL_LOGV) {
-                Log.d(TAG, "Reenabling component preboot receiver");
-            }
-            packageManager.setComponentEnabledSetting(preBootReceiver,
-                    PackageManager.COMPONENT_ENABLED_STATE_ENABLED,
-                    PackageManager.DONT_KILL_APP);
         }
 
         // Migrate methods
