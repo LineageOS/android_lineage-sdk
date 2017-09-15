@@ -44,11 +44,6 @@ public class PreBootReceiver extends BroadcastReceiver{
         try{
             contentProvider.call(contentResolver.getPackageName(),
                     LineageSettings.CALL_METHOD_MIGRATE_SETTINGS, null, null);
-
-            context.getPackageManager().setComponentEnabledSetting(
-                    new ComponentName(context, getClass()),
-                            PackageManager.COMPONENT_ENABLED_STATE_DISABLED,
-                                    PackageManager.DONT_KILL_APP);
         } catch (RemoteException ex) {
             Log.w(TAG, "Failed to trigger settings migration due to RemoteException");
         }
