@@ -20,7 +20,9 @@
     <!-- It is necessary to be a system app in order to update table versions in SystemProperties for
          LineageSettings to know whether or not the client side cache is up to date. It is also necessary
          to run in the system process in order to start the content provider prior to running migration
-         for CM settings on user starting -->
+         for Lineage settings on user starting -->
+
+    <original-package android:name="org.cyanogenmod.cmsettings" />
 
     <uses-permission android:name="android.permission.MANAGE_USERS" />
 
