@@ -61,9 +61,12 @@ public class LineageSettingsProvider extends ContentProvider {
     public static final String TAG = "LineageSettingsProvider";
     private static final boolean LOCAL_LOGV = false;
 
+    private static final String SHARED_PREF_NAME_OLD = "CMSettingsProvider";
+
     private static final boolean USER_CHECK_THROWS = true;
 
-    public static final String PREF_HAS_MIGRATED_LINEAGE_SETTINGS = "has_migrated_cm13_settings";
+    public static final String PREF_HAS_MIGRATED_LINEAGE_SETTINGS =
+            "migrated_settings_to_lineage_15_1";
 
     private static final Bundle NULL_SETTING = Bundle.forPair("value", null);
 
@@ -148,6 +151,9 @@ public class LineageSettingsProvider extends ContentProvider {
         if (!hasMigratedLineageSettings) {
             long startTime = System.currentTimeMillis();
 
+            // Remove any lingering old shared_prefs file
+            getContext().deleteSharedPreferences(SHARED_PREF_NAME_OLD);
+
             for (UserInfo user : mUserManager.getUsers()) {
                 migrateLineageSettingsForUser(user.id);
             }
@@ -167,6 +173,18 @@ public class LineageSettingsProvider extends ContentProvider {
     private void migrateLineageSettingsForUser(int userId) {
         synchronized (this) {
             if (LOCAL_LOGV) Log.d(TAG, "Lineage settings will be migrated for user id: " + userId);
+
+            // Rename database files (if needed)
+            LineageDatabaseHelper dbHelper = mDbHelpers.get(userId);
+            if (dbHelper != null) {
+                dbHelper.close();
+                mDbHelpers.delete(userId);
+            }
+            LineageDatabaseHelper.migrateDbFiles(getContext(), userId);
+            if (dbHelper != null) {
+                establishDbTracking(userId);
+                dbHelper = null;
+            }
 
             // Migrate system settings
             int rowsMigrated = migrateLineageSettingsForTable(userId,
@@ -294,22 +312,6 @@ public class LineageSettingsProvider extends ContentProvider {
                         "get/set setting for user", null);
                 if (LOCAL_LOGV) Log.v(TAG, "   access setting for user " + callingUserId);
             }
-        }
-
-        boolean hasMigratedLineageSettings = mSharedPrefs.getBoolean(PREF_HAS_MIGRATED_LINEAGE_SETTINGS,
-                false);
-        final ComponentName preBootReceiver = new ComponentName("org.lineageos.lineagesettings",
-                "org.lineageos.lineagesettings.PreBootReceiver");
-        final PackageManager packageManager = getContext().getPackageManager();
-        if (!hasMigratedLineageSettings &&
-                packageManager.getComponentEnabledSetting(preBootReceiver)
-                        == PackageManager.COMPONENT_ENABLED_STATE_DISABLED ) {
-            if (LOCAL_LOGV) {
-                Log.d(TAG, "Reenabling component preboot receiver");
-            }
-            packageManager.setComponentEnabledSetting(preBootReceiver,
-                    PackageManager.COMPONENT_ENABLED_STATE_ENABLED,
-                    PackageManager.DONT_KILL_APP);
         }
 
         // Migrate methods
