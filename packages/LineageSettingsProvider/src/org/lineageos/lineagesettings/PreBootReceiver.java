@@ -17,14 +17,13 @@
 package org.lineageos.lineagesettings;
 
 import android.content.BroadcastReceiver;
-import android.content.ComponentName;
 import android.content.ContentResolver;
 import android.content.Context;
 import android.content.IContentProvider;
 import android.content.Intent;
-import android.content.pm.PackageManager;
 import android.os.RemoteException;
 import android.util.Log;
+
 import lineageos.providers.LineageSettings;
 
 public class PreBootReceiver extends BroadcastReceiver{
@@ -44,11 +43,6 @@ public class PreBootReceiver extends BroadcastReceiver{
         try{
             contentProvider.call(contentResolver.getPackageName(),
                     LineageSettings.CALL_METHOD_MIGRATE_SETTINGS, null, null);
-
-            context.getPackageManager().setComponentEnabledSetting(
-                    new ComponentName(context, getClass()),
-                            PackageManager.COMPONENT_ENABLED_STATE_DISABLED,
-                                    PackageManager.DONT_KILL_APP);
         } catch (RemoteException ex) {
             Log.w(TAG, "Failed to trigger settings migration due to RemoteException");
         }
