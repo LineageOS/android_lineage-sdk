@@ -132,7 +132,7 @@ public final class LineageSettings {
         private final String mVersionSystemProperty;
         private final Uri mUri;
 
-        private static final String[] SELECT_VALUE =
+        private static final String[] SELECT_VALUE_PROJECTION =
                 new String[] { Settings.NameValueTable.VALUE };
         private static final String NAME_EQ_PLACEHOLDER = "name=?";
 
@@ -264,8 +264,9 @@ public final class LineageSettings {
 
             Cursor c = null;
             try {
-                c = cp.query(cr.getPackageName(), mUri, SELECT_VALUE, NAME_EQ_PLACEHOLDER,
-                        new String[]{name}, null, null);
+                Bundle queryArgs = ContentResolver.createSqlQueryBundle(
+                        NAME_EQ_PLACEHOLDER, new String[]{name}, null);
+                c = cp.query(cr.getPackageName(), mUri, SELECT_VALUE_PROJECTION, queryArgs, null);
                 if (c == null) {
                     Log.w(TAG, "Can't get key " + name + " from " + mUri);
                     return null;
