@@ -22,7 +22,7 @@ import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.util.MathUtils;
 
-import com.android.internal.util.cm.palette.Palette;
+import lineageos.util.palette.Palette;
 
 import java.util.Collections;
 import java.util.Comparator;
