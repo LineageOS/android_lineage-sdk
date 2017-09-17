@@ -22,6 +22,7 @@ import android.os.Parcel;
 import android.os.ParcelUuid;
 import android.os.Parcelable;
 import android.os.UserHandle;
+import android.media.AudioSystem;
 import android.provider.Settings;
 import android.text.TextUtils;
 import android.util.Log;
@@ -1228,12 +1229,34 @@ public final class Profile implements Parcelable, Comparable {
         return profile;
     }
 
+    private boolean dndAllowsRingChanges(Context context) {
+        int zenMode = Settings.Global.getInt(context.getContentResolver(),
+                Settings.Global.ZEN_MODE, Settings.Global.ZEN_MODE_OFF);
+        return zenMode != Settings.Global.ZEN_MODE_NO_INTERRUPTIONS &&
+                zenMode != Settings.Global.ZEN_MODE_ALARMS;
+    }
+
+    /** @hide */
+    public void updateRing(Context context) {
+        if (!dndAllowsRingChanges(context)) {
+            return;
+        }
+        // Set stream volume
+        StreamSettings sd = getSettingsForStream(AudioSystem.STREAM_RING);
+        if (sd != null) {
+            AudioManager am = (AudioManager) context.getSystemService(Context.AUDIO_SERVICE);
+            am.setStreamVolume(sd.getStreamId(), sd.getValue(), 0);
+        }
+        // Set ring mode
+        mRingMode.processOverride(context);
+    }
+
     /** @hide */
     public void doSelect(Context context, IKeyguardService keyguardService) {
         // Set stream volumes
         AudioManager am = (AudioManager) context.getSystemService(Context.AUDIO_SERVICE);
         for (StreamSettings sd : streams.values()) {
-            if (sd.isOverride()) {
+            if (sd.isOverride() && sd.getStreamId() != AudioSystem.STREAM_RING) {
                 am.setStreamVolume(sd.getStreamId(), sd.getValue(), 0);
             }
         }
@@ -1249,8 +1272,8 @@ public final class Profile implements Parcelable, Comparable {
             }
         }
 
-        // Set ring mode
-        mRingMode.processOverride(context);
+        updateRing(context);
+
         // Set airplane mode
         mAirplaneMode.processOverride(context);
 
