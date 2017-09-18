@@ -27,40 +27,40 @@ public class Build {
     /** Value used for when a build property is unknown. */
     public static final String UNKNOWN = "unknown";
 
-    /** A build ID utilized to distinguish cyanogenmod versions */
-    public static final String CYANOGENMOD_VERSION = getString("ro.cm.version");
+    /** A build ID utilized to distinguish lineageos versions */
+    public static final String LINEAGEOS_VERSION = getString("ro.lineage.version");
 
     /** A build ID string meant for displaying to the user */
-    public static final String CYANOGENMOD_DISPLAY_VERSION = getString("ro.cm.display.version");
+    public static final String LINEAGEOS_DISPLAY_VERSION = getString("ro.lineage.display.version");
 
     private static final SparseArray<String> sdkMap;
     static
     {
         sdkMap = new SparseArray<String>();
-        sdkMap.put(CM_VERSION_CODES.APRICOT, "Apricot");
-        sdkMap.put(CM_VERSION_CODES.BOYSENBERRY, "Boysenberry");
-        sdkMap.put(CM_VERSION_CODES.CANTALOUPE, "Cantaloupe");
-        sdkMap.put(CM_VERSION_CODES.DRAGON_FRUIT, "Dragon Fruit");
-        sdkMap.put(CM_VERSION_CODES.ELDERBERRY, "Elderberry");
-        sdkMap.put(CM_VERSION_CODES.FIG, "Fig");
-        sdkMap.put(CM_VERSION_CODES.GUAVA, "Guava");
+        sdkMap.put(LINEAGE_VERSION_CODES.APRICOT, "Apricot");
+        sdkMap.put(LINEAGE_VERSION_CODES.BOYSENBERRY, "Boysenberry");
+        sdkMap.put(LINEAGE_VERSION_CODES.CANTALOUPE, "Cantaloupe");
+        sdkMap.put(LINEAGE_VERSION_CODES.DRAGON_FRUIT, "Dragon Fruit");
+        sdkMap.put(LINEAGE_VERSION_CODES.ELDERBERRY, "Elderberry");
+        sdkMap.put(LINEAGE_VERSION_CODES.FIG, "Fig");
+        sdkMap.put(LINEAGE_VERSION_CODES.GUAVA, "Guava");
     }
 
     /** Various version strings. */
-    public static class CM_VERSION {
+    public static class LINEAGE_VERSION {
         /**
          * The user-visible SDK version of the framework; its possible
-         * values are defined in {@link Build.CM_VERSION_CODES}.
+         * values are defined in {@link Build.LINEAGE_VERSION_CODES}.
          *
-         * Will return 0 if the device does not support the CM SDK.
+         * Will return 0 if the device does not support the Lineage SDK.
          */
         public static final int SDK_INT = SystemProperties.getInt(
-                "ro.cm.build.version.plat.sdk", 0);
+                "ro.lineage.build.version.plat.sdk", 0);
     }
 
     /**
      * Enumeration of the currently known SDK version codes.  These are the
-     * values that can be found in {@link CM_VERSION#SDK_INT}.  Version numbers
+     * values that can be found in {@link LINEAGE_VERSION#SDK_INT}.  Version numbers
      * increment monotonically with each official platform release.
      *
      * To programmatically validate that a given API is available for use on the device,
@@ -71,7 +71,7 @@ public class Build {
      * <pre class="prettyprint">
      * private void removeActiveProfile() {
      *     Make sure we're running on BoysenBerry or higher to use Profiles API
-     *     if (Build.CM_VERSION.SDK_INT >= Build.CM_VERSION_CODES.BOYSENBERRY) {
+     *     if (Build.LINEAGE_VERSION.SDK_INT >= Build.LINEAGE_VERSION_CODES.BOYSENBERRY) {
      *         ProfileManager profileManager = ProfileManager.getInstance(this);
      *         Profile activeProfile = profileManager.getActiveProfile();
      *         if (activeProfile != null) {
@@ -81,7 +81,7 @@ public class Build {
      * }
      * </pre>
      */
-    public static class CM_VERSION_CODES {
+    public static class LINEAGE_VERSION_CODES {
         /**
          * June 2015: The first version of the platform sdk for CyanogenMod
          */
@@ -97,11 +97,11 @@ public class Build {
          * <li>New Expanded Styles for Custom Tiles via
          * {@link lineageos.app.CustomTile.RemoteExpandedStyle}
          * <li>Hardware Abstraction Framework Access via
-         * {@link lineageos.hardware.CMHardwareManager} (Not for use by 3rd parties)
-         * <li>MSIM API via {@link lineageos.app.CMTelephonyManager}
+         * {@link lineageos.hardware.LineageHardwareManager} (Not for use by 3rd parties)
+         * <li>MSIM API via {@link lineageos.app.LineageTelephonyManager}
          * <li>Interface for partners via {@link lineageos.app.PartnerInterface}
          * <li>Introductory Settings Provider {@link lineageos.providers.LineageSettings}
-         * <li>AlarmClock API via {@link lineageos.alarmclock.CyanogenModAlarmClock}
+         * <li>AlarmClock API via {@link lineageos.alarmclock.LineageOSAlarmClock}
          * </ul>
          */
         public static final int BOYSENBERRY = 2;
@@ -136,7 +136,7 @@ public class Build {
          * new features!</p>
          * <ul>
          * <li>Weather request api to fetch weather data from providers on the device
-         * {@link lineageos.weather.CMWeatherManager}</li>
+         * {@link lineageos.weather.LineageWeatherManager}</li>
          * <li>Weather provider api to provide weather data to any listener on the device
          * {@link lineageos.weatherservice.WeatherProviderService}</li>
          * <li>Extended capabilities of the {@link lineageos.externalviews.KeyguardExternalView}
@@ -159,7 +159,7 @@ public class Build {
          * new features!</p>
          * <ul>
          * <li>Ability to query and color balance ranges from the
-         * {@link lineageos.hardware.CMHardwareManager}, as well as do picture adjustment</li>
+         * {@link lineageos.hardware.LineageHardwareManager}, as well as do picture adjustment</li>
          * <li>Extended capabilities of the LiveDisplay interfaces, now providing
          * {@link lineageos.hardware.LiveDisplayConfig} and a dedicated
          * {@link lineageos.hardware.LiveDisplayManager}</li>

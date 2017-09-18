@@ -33,8 +33,8 @@ import lineageos.os.Concierge.ParcelInfo;
  * an application may create audio effects on the output stream.
  *
  * A list of global audio sessions can be obtained by calling
- * listAudioSessions() via {@link CMAudioManager}, or a component can listen
- * for the {@link CMAudioManager#ACTION_AUDIO_SESSIONS_CHANGED} broadcast.
+ * listAudioSessions() via {@link LineageAudioManager}, or a component can listen
+ * for the {@link LineageAudioManager#ACTION_AUDIO_SESSIONS_CHANGED} broadcast.
  *
  * @hide
  */
@@ -81,7 +81,7 @@ public final class AudioSessionInfo implements Parcelable {
         mChannelMask = in.readInt();
         mUid = in.readInt();
 
-        if (parcelableVersion > Build.CM_VERSION_CODES.FIG) {
+        if (parcelableVersion > Build.LINEAGE_VERSION_CODES.FIG) {
             // next-gen mind-altering shit goes here
         }
 

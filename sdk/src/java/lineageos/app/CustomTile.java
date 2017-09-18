@@ -138,7 +138,7 @@ public class CustomTile implements Parcelable {
         // Pattern here is that all new members should be added to the end of
         // the writeToParcel method. Then we step through each version, until the latest
         // API release to help unravel this parcel
-        if (parcelableVersion >= Build.CM_VERSION_CODES.APRICOT) {
+        if (parcelableVersion >= Build.LINEAGE_VERSION_CODES.APRICOT) {
             if (parcel.readInt() != 0) {
                 this.onClick = PendingIntent.CREATOR.createFromParcel(parcel);
             }
@@ -160,7 +160,7 @@ public class CustomTile implements Parcelable {
             this.icon = parcel.readInt();
         }
 
-        if (parcelableVersion >= Build.CM_VERSION_CODES.BOYSENBERRY) {
+        if (parcelableVersion >= Build.LINEAGE_VERSION_CODES.BOYSENBERRY) {
             this.resourcesPackageName = parcel.readString();
             this.collapsePanel = (parcel.readInt() == 1);
             if (parcel.readInt() != 0) {
@@ -172,7 +172,7 @@ public class CustomTile implements Parcelable {
             this.sensitiveData = (parcel.readInt() == 1);
         }
 
-        if (parcelableVersion >= Build.CM_VERSION_CODES.DRAGON_FRUIT) {
+        if (parcelableVersion >= Build.LINEAGE_VERSION_CODES.DRAGON_FRUIT) {
             if (parcel.readInt() != 0) {
                 this.onLongClick = PendingIntent.CREATOR.createFromParcel(parcel);
             }
@@ -381,14 +381,14 @@ public class CustomTile implements Parcelable {
             // Pattern here is that all new members should be added to the end of
             // the writeToParcel method. Then we step through each version, until the latest
             // API release to help unravel this parcel
-            if (parcelableVersion >= Build.CM_VERSION_CODES.APRICOT) {
+            if (parcelableVersion >= Build.LINEAGE_VERSION_CODES.APRICOT) {
                 if (parcel.readInt() != 0) {
                     expandedItems = parcel.createTypedArray(ExpandedItem.CREATOR);
                 }
                 styleId = parcel.readInt();
             }
 
-            if (parcelableVersion >= Build.CM_VERSION_CODES.BOYSENBERRY) {
+            if (parcelableVersion >= Build.LINEAGE_VERSION_CODES.BOYSENBERRY) {
                 if (parcel.readInt() != 0) {
                     contentViews = RemoteViews.CREATOR.createFromParcel(parcel);
                 }
@@ -667,7 +667,7 @@ public class CustomTile implements Parcelable {
             // Pattern here is that all new members should be added to the end of
             // the writeToParcel method. Then we step through each version, until the latest
             // API release to help unravel this parcel
-            if (parcelableVersion >= Build.CM_VERSION_CODES.APRICOT) {
+            if (parcelableVersion >= Build.LINEAGE_VERSION_CODES.APRICOT) {
                 if (parcel.readInt() != 0) {
                     onClickPendingIntent = PendingIntent.CREATOR.createFromParcel(parcel);
                 }
@@ -680,7 +680,7 @@ public class CustomTile implements Parcelable {
                 itemDrawableResourceId = parcel.readInt();
             }
 
-            if (parcelableVersion >= Build.CM_VERSION_CODES.BOYSENBERRY) {
+            if (parcelableVersion >= Build.LINEAGE_VERSION_CODES.BOYSENBERRY) {
                 if (parcel.readInt() != 0) {
                     itemBitmapResource = Bitmap.CREATOR.createFromParcel(parcel);
                 }

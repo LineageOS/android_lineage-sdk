@@ -29,7 +29,7 @@ import java.util.ArrayList;
 import java.util.BitSet;
 import java.util.List;
 
-import lineageos.hardware.CMHardwareManager;
+import lineageos.hardware.LineageHardwareManager;
 import lineageos.hardware.DisplayMode;
 import lineageos.hardware.HSIC;
 import lineageos.hardware.LiveDisplayManager;
@@ -39,7 +39,7 @@ public class PictureAdjustmentController extends LiveDisplayFeature {
 
     private static final String TAG = "LiveDisplay-PAC";
 
-    private final CMHardwareManager mHardware;
+    private final LineageHardwareManager mHardware;
     private final boolean mUsePictureAdjustment;
     private final boolean mHasDisplayModes;
 
@@ -47,10 +47,10 @@ public class PictureAdjustmentController extends LiveDisplayFeature {
 
     public PictureAdjustmentController(Context context, Handler handler) {
         super(context, handler);
-        mHardware = CMHardwareManager.getInstance(context);
-        mHasDisplayModes = mHardware.isSupported(CMHardwareManager.FEATURE_DISPLAY_MODES);
+        mHardware = LineageHardwareManager.getInstance(context);
+        mHasDisplayModes = mHardware.isSupported(LineageHardwareManager.FEATURE_DISPLAY_MODES);
 
-        boolean usePA = mHardware.isSupported(CMHardwareManager.FEATURE_PICTURE_ADJUSTMENT);
+        boolean usePA = mHardware.isSupported(LineageHardwareManager.FEATURE_PICTURE_ADJUSTMENT);
         if (usePA) {
             mRanges.addAll(mHardware.getPictureAdjustmentRanges());
             if (mRanges.size() < 4) {

@@ -58,7 +58,7 @@ public class PerformanceProfile implements Parcelable, Comparable<PerformancePro
         mDescription = in.readString();
         mBoostEnabled = in.readInt() == 1;
 
-        if (parcelableVersion >= Build.CM_VERSION_CODES.GUAVA) {
+        if (parcelableVersion >= Build.LINEAGE_VERSION_CODES.GUAVA) {
             // nothing yet
         }
 

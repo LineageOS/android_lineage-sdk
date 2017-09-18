@@ -30,9 +30,9 @@ class MigrationTest {
 
     public static final boolean DEBUG = true;
 
-    private static ArrayList<Setting> cmSystemSettingList = new ArrayList<Setting>();
-    private static ArrayList<Setting> cmSecureSettingList = new ArrayList<Setting>();
-    private static ArrayList<Setting> cmGlobalSettingList = new ArrayList<Setting>();
+    private static ArrayList<Setting> lineageSystemSettingList = new ArrayList<Setting>();
+    private static ArrayList<Setting> lineageSecureSettingList = new ArrayList<Setting>();
+    private static ArrayList<Setting> lineageGlobalSettingList = new ArrayList<Setting>();
 
     private static ArrayList<Setting> legacySystemSettings = new ArrayList<Setting>();
     private static ArrayList<Setting> legacySecureSettings = new ArrayList<Setting>();
@@ -104,18 +104,18 @@ class MigrationTest {
         //Requery
         SettingImageCommands lineageSettingImage =
                 new SettingImageCommands(SettingsConstants.LINEAGESETTINGS_AUTHORITY);
-        lineageSettingImage.addQuery(SettingsConstants.SYSTEM, cmSystemSettingList);
-        lineageSettingImage.addQuery(SettingsConstants.SECURE, cmSecureSettingList);
-        lineageSettingImage.addQuery(SettingsConstants.GLOBAL, cmGlobalSettingList);
+        lineageSettingImage.addQuery(SettingsConstants.SYSTEM, lineageSystemSettingList);
+        lineageSettingImage.addQuery(SettingsConstants.SECURE, lineageSecureSettingList);
+        lineageSettingImage.addQuery(SettingsConstants.GLOBAL, lineageGlobalSettingList);
         lineageSettingImage.execute();
 
         //Validate
         System.out.println("\n\nValidating " + SettingsConstants.SYSTEM + "...");
-        validate(legacySystemSettings, cmSystemSettingList);
+        validate(legacySystemSettings, lineageSystemSettingList);
         System.out.println("\n\nValidating " + SettingsConstants.SECURE + "...");
-        validate(legacySecureSettings, cmSecureSettingList);
+        validate(legacySecureSettings, lineageSecureSettingList);
         System.out.println("\n\nValidating " + SettingsConstants.GLOBAL + "...");
-        validate(legacyGlobalSettings, cmGlobalSettingList);
+        validate(legacyGlobalSettings, lineageGlobalSettingList);
         System.exit(0);
     }
 
@@ -156,7 +156,7 @@ class MigrationTest {
 
         if (legacySettings.size() != lineageSettings.size()) {
             System.err.println("Warning: Size mismatch: " + " legacy "
-                    + legacySettings.size() + " cm " + lineageSettings.size());
+                    + legacySettings.size() + " lineage " + lineageSettings.size());
         }
 
         for (int i = 0; i < legacySettings.size(); i++) {

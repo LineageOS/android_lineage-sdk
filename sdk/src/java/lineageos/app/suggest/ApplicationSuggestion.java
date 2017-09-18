@@ -62,7 +62,7 @@ public class ApplicationSuggestion implements Parcelable {
         ParcelInfo parcelInfo = Concierge.receiveParcel(in);
         int parcelableVersion = parcelInfo.getParcelVersion();
 
-        if (parcelableVersion >= Build.CM_VERSION_CODES.APRICOT) {
+        if (parcelableVersion >= Build.LINEAGE_VERSION_CODES.APRICOT) {
             mName = in.readString();
             mPackage = in.readString();
             mDownloadUri = in.readParcelable(Uri.class.getClassLoader());

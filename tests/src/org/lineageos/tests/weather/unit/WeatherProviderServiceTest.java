@@ -18,7 +18,7 @@ package org.lineageos.tests.weather.unit;
 
 import android.location.Location;
 import android.os.IBinder;
-import lineageos.weather.CMWeatherManager;
+import lineageos.weather.LineageWeatherManager;
 import lineageos.weather.RequestInfo;
 import lineageos.weather.WeatherLocation;
 import lineageos.weatherservice.IWeatherProviderService;
@@ -150,7 +150,7 @@ public class WeatherProviderServiceTest extends ThreadServiceTestCase<MockWeathe
                 int result = (int) invocation.getArguments()[2];
 
                 assertNotNull(requestInfo);
-                assertEquals(result, CMWeatherManager.RequestStatus.FAILED);
+                assertEquals(result, LineageWeatherManager.RequestStatus.FAILED);
 
                 latch.countDown();
                 return null;
@@ -158,7 +158,7 @@ public class WeatherProviderServiceTest extends ThreadServiceTestCase<MockWeathe
         }).when(client)
                 .setServiceRequestState(Mockito.any(RequestInfo.class),
                         Mockito.any(ServiceRequestResult.class),
-                                Mockito.eq(CMWeatherManager.RequestStatus.FAILED));
+                                Mockito.eq(LineageWeatherManager.RequestStatus.FAILED));
 
         Mockito.doAnswer(new Answer() {
             @Override
@@ -168,7 +168,7 @@ public class WeatherProviderServiceTest extends ThreadServiceTestCase<MockWeathe
                 int result = (int) invocation.getArguments()[2];
 
                 assertNotNull(requestInfo);
-                assertEquals(result, CMWeatherManager.RequestStatus.SUBMITTED_TOO_SOON);
+                assertEquals(result, LineageWeatherManager.RequestStatus.SUBMITTED_TOO_SOON);
 
                 latch.countDown();
                 return null;
@@ -176,7 +176,7 @@ public class WeatherProviderServiceTest extends ThreadServiceTestCase<MockWeathe
         }).when(client)
                 .setServiceRequestState(Mockito.any(RequestInfo.class),
                         Mockito.any(ServiceRequestResult.class),
-                        Mockito.eq(CMWeatherManager.RequestStatus.SUBMITTED_TOO_SOON));
+                        Mockito.eq(LineageWeatherManager.RequestStatus.SUBMITTED_TOO_SOON));
 
         Mockito.doAnswer(new Answer() {
             @Override
@@ -189,7 +189,7 @@ public class WeatherProviderServiceTest extends ThreadServiceTestCase<MockWeathe
                 assertNotNull(requestInfo);
                 assertNotNull(requestResult);
                 assertNotNull(requestResult.getLocationLookupList());
-                assertEquals(result, CMWeatherManager.RequestStatus.COMPLETED);
+                assertEquals(result, LineageWeatherManager.RequestStatus.COMPLETED);
 
                 latch.countDown();
                 return null;
@@ -197,7 +197,7 @@ public class WeatherProviderServiceTest extends ThreadServiceTestCase<MockWeathe
         }).when(client)
                 .setServiceRequestState(Mockito.any(RequestInfo.class),
                         Mockito.any(ServiceRequestResult.class),
-                        Mockito.eq(CMWeatherManager.RequestStatus.COMPLETED));
+                        Mockito.eq(LineageWeatherManager.RequestStatus.COMPLETED));
 
         provider.setServiceClient(client);
 
@@ -232,7 +232,7 @@ public class WeatherProviderServiceTest extends ThreadServiceTestCase<MockWeathe
                         .onRequestSubmitted(params.capture());
 
                 ServiceRequest request = params.getValue();
-                request.reject(CMWeatherManager.RequestStatus.SUBMITTED_TOO_SOON);
+                request.reject(LineageWeatherManager.RequestStatus.SUBMITTED_TOO_SOON);
             }
         });
 

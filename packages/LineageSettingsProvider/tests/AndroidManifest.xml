@@ -26,7 +26,7 @@
     <instrumentation
             android:name="android.test.InstrumentationTestRunner"
             android:targetPackage="org.lineageos.lineagesettings.tests"
-            android:label="CM Settings Provider Tests" />
+            android:label="Lineage Settings Provider Tests" />
 
     <application>
         <uses-library android:name="android.test.runner" />

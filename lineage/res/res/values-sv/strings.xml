@@ -18,7 +18,7 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Label for the LineageOS system components when they are shown to the user. -->
-  <string name="cyanogenmod_system_label">LineageOS System</string>
+  <string name="lineageos_system_label">LineageOS System</string>
   <string name="permlab_publishCustomTile">skapa en anpassad bricka inom snabbinställningspanelen</string>
   <string name="permdesc_publishCustomTile">Ger en app tillåtelse att publicera en snabbinställningsbricka.</string>
   <string name="permlab_modifyNetworkSettings">ändra systeminställningar för nätverk</string>
@@ -49,11 +49,11 @@
   <string name="permlab_read_alarms">åtkomst till schemalagda alarm</string>
   <string name="permdesc_read_alarms">Tillåt att en app läser dina schemalagda alarm.</string>
   <!-- Labels for the WRITE_SETTINGS permission -->
-  <string name="permlab_writeSettings">ändra CM systeminställningar</string>
-  <string name="permdesc_writeSettings">Tillåt att en app ändrar CM systeminställningar.</string>
+  <string name="permlab_writeSettings">ändra Lineage systeminställningar</string>
+  <string name="permdesc_writeSettings">Tillåt att en app ändrar Lineage systeminställningar.</string>
   <!-- Labels for the WRITE_SECURE_SETTINGS permission -->
-  <string name="permlab_writeSecureSettings">ändra CM säkra systeminställningar</string>
-  <string name="permdesc_writeSecureSettings">Tillåt att en app ändrar CM säkra systeminställningar. Inte för användning av normala appar.</string>
+  <string name="permlab_writeSecureSettings">ändra Lineage säkra systeminställningar</string>
+  <string name="permdesc_writeSecureSettings">Tillåt att en app ändrar Lineage säkra systeminställningar. Inte för användning av normala appar.</string>
   <!-- Labels for the MANAGE_PERSISTENT_STORAGE permission. -->
   <string name="permlab_managePersistentStorage">hantera beständig lagring</string>
   <string name="permdesc_managePersistentStorage">Tillåt att en app läser och skriver egenskaper som kan kvarstå efter en fabriksåterställning.</string>
@@ -143,8 +143,8 @@
   <!-- DataUsageProvider read permission title -->
   <!-- DataUsageProvider read permission description -->
   <!-- LiveDisplay manager permission -->
-  <!-- CMAudioService - observe session changes permission -->
-  <!-- CMAudioService - observe session changes permission -->
+  <!-- LineageAudioService - observe session changes permission -->
+  <!-- LineageAudioService - observe session changes permission -->
   <!-- QuickSettings: Themes tile -->
   <string name="qs_themes_label">Teman</string>
   <!-- Privacy Guard -->

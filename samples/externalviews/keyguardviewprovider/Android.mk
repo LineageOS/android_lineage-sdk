@@ -19,7 +19,7 @@ LOCAL_STATIC_JAVA_LIBRARIES := \
 
 LOCAL_SRC_FILES := $(call all-java-files-under, src/)
 
-LOCAL_PACKAGE_NAME := CMKeyguardExternalViewProvider
+LOCAL_PACKAGE_NAME := LineageKeyguardExternalViewProvider
 
 # Need a permission that is signature|privileged
 LOCAL_PRIVILEGED_MODULE := true

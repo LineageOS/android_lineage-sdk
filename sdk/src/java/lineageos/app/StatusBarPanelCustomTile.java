@@ -90,7 +90,7 @@ public class StatusBarPanelCustomTile implements Parcelable {
         // Pattern here is that all new members should be added to the end of
         // the writeToParcel method. Then we step through each version, until the latest
         // API release to help unravel this parcel
-        if (parcelableVersion >= Build.CM_VERSION_CODES.APRICOT) {
+        if (parcelableVersion >= Build.LINEAGE_VERSION_CODES.APRICOT) {
             // default
             tmpPkg = in.readString();
             tmpOpPkg = in.readString();
@@ -107,7 +107,7 @@ public class StatusBarPanelCustomTile implements Parcelable {
             tmpPostTime = in.readLong();
         }
 
-        if (parcelableVersion >= Build.CM_VERSION_CODES.BOYSENBERRY) {
+        if (parcelableVersion >= Build.LINEAGE_VERSION_CODES.BOYSENBERRY) {
             tmpResPkg = in.readString();
         }
 
@@ -152,7 +152,7 @@ public class StatusBarPanelCustomTile implements Parcelable {
     };
 
     /** The {@link lineageos.app.CustomTile} supplied to
-     * {@link lineageos.app.CMStatusBarManager#publishTile(int, lineageos.app.CustomTile)}.
+     * {@link lineageos.app.LineageStatusBarManager#publishTile(int, lineageos.app.CustomTile)}.
      */
     public CustomTile getCustomTile() {
         return customTile;
@@ -210,12 +210,12 @@ public class StatusBarPanelCustomTile implements Parcelable {
         return pkg;
     }
 
-    /** The id supplied to CMStatusBarManager */
+    /** The id supplied to LineageStatusBarManager */
     public int getId() {
         return id;
     }
 
-    /** The tag supplied to CMStatusBarManager or null if no tag was specified. */
+    /** The tag supplied to LineageStatusBarManager or null if no tag was specified. */
     public String getTag() {
         return tag;
     }

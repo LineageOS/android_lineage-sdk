@@ -20,7 +20,7 @@ import android.os.Parcel;
 import android.test.AndroidTestCase;
 
 import android.test.suitebuilder.annotation.SmallTest;
-import lineageos.app.CMContextConstants;
+import lineageos.app.LineageContextConstants;
 import lineageos.hardware.DisplayMode;
 
 /**
@@ -32,7 +32,7 @@ public class DisplayModeTest extends AndroidTestCase {
         super.setUp();
         // Only run this if we support hardware abstraction
         org.junit.Assume.assumeTrue(mContext.getPackageManager().hasSystemFeature(
-                CMContextConstants.Features.HARDWARE_ABSTRACTION));
+                LineageContextConstants.Features.HARDWARE_ABSTRACTION));
     }
 
     @SmallTest

@@ -202,7 +202,7 @@ public final class RingModeSettings implements Parcelable {
         // Pattern here is that all new members should be added to the end of
         // the writeToParcel method. Then we step through each version, until the latest
         // API release to help unravel this parcel
-        if (parcelableVersion >= Build.CM_VERSION_CODES.BOYSENBERRY) {
+        if (parcelableVersion >= Build.LINEAGE_VERSION_CODES.BOYSENBERRY) {
             mOverride = in.readInt() != 0;
             mValue = in.readString();
             mDirty = in.readInt() != 0;

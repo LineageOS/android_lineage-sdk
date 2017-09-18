@@ -28,7 +28,7 @@ import android.util.Log;
 
 import lineageos.app.ICustomTileListener;
 import lineageos.app.IStatusBarCustomTileHolder;
-import lineageos.app.ICMStatusBarManager;
+import lineageos.app.ILineageStatusBarManager;
 
 /**
  * A service that receives calls from the system when new custom tiles are
@@ -56,7 +56,7 @@ public class CustomTileListenerService extends Service {
             = "lineageos.app.CustomTileListenerService";
 
     private ICustomTileListenerWrapper mWrapper = null;
-    private ICMStatusBarManager mStatusBarService;
+    private ILineageStatusBarManager mStatusBarService;
     /** Only valid after a successful call to (@link registerAsService}. */
     private int mCurrentUser;
 
@@ -68,10 +68,10 @@ public class CustomTileListenerService extends Service {
         return mWrapper;
     }
 
-    private final ICMStatusBarManager getStatusBarInterface() {
+    private final ILineageStatusBarManager getStatusBarInterface() {
         if (mStatusBarService == null) {
-            mStatusBarService = ICMStatusBarManager.Stub.asInterface(
-                    ServiceManager.getService(CMContextConstants.CM_STATUS_BAR_SERVICE));
+            mStatusBarService = ILineageStatusBarManager.Stub.asInterface(
+                    ServiceManager.getService(LineageContextConstants.LINEAGE_STATUS_BAR_SERVICE));
         }
         return mStatusBarService;
     }
@@ -93,7 +93,7 @@ public class CustomTileListenerService extends Service {
         if (isBound()) {
             return;
         }
-        ICMStatusBarManager statusBarInterface = mStatusBarService;
+        ILineageStatusBarManager statusBarInterface = mStatusBarService;
         if (mStatusBarService != null) {
             mWrapper = new ICustomTileListenerWrapper();
             statusBarInterface.registerListener(mWrapper, componentName, currentUser);
@@ -110,7 +110,7 @@ public class CustomTileListenerService extends Service {
      */
     public void unregisterAsSystemService() throws RemoteException {
         if (isBound()) {
-            ICMStatusBarManager statusBarInterface = mStatusBarService;
+            ILineageStatusBarManager statusBarInterface = mStatusBarService;
             statusBarInterface.unregisterListener(mWrapper, mCurrentUser);
             mWrapper = null;
             mStatusBarService = null;
@@ -197,12 +197,12 @@ public class CustomTileListenerService extends Service {
     }
 
     /**
-     * Inform the {@link lineageos.app.CMStatusBarManager} about dismissal of a single custom tile.
+     * Inform the {@link lineageos.app.LineageStatusBarManager} about dismissal of a single custom tile.
      * <p>
      * Use this if your listener has a user interface that allows the user to dismiss individual
      * custom tiles, similar to the behavior of Android's status bar and notification panel.
      * It should be called after the user dismisses a single custom tile using your UI;
-     * upon being informed, the cmstatusbar manager will actually remove the custom tile
+     * upon being informed, the lineagestatusbar manager will actually remove the custom tile
      * and you will get an {@link #onCustomTileRemoved(StatusBarPanelCustomTile)} callback.
      * <P>
      *
@@ -217,7 +217,7 @@ public class CustomTileListenerService extends Service {
             mStatusBarService.removeCustomTileFromListener(
                     mWrapper, pkg, tag, id);
         } catch (android.os.RemoteException ex) {
-            Log.v(TAG, "Unable to contact cmstautusbar manager", ex);
+            Log.v(TAG, "Unable to contact lineagestatusbar manager", ex);
         }
     }
 

@@ -31,7 +31,7 @@ import org.lineageos.platform.internal.display.TwilightTracker.TwilightState;
 import java.io.PrintWriter;
 import java.util.BitSet;
 
-import lineageos.hardware.CMHardwareManager;
+import lineageos.hardware.LineageHardwareManager;
 import lineageos.hardware.LiveDisplayManager;
 import lineageos.providers.LineageSettings;
 import lineageos.util.ColorUtils;
@@ -60,7 +60,7 @@ public class ColorTemperatureController extends LiveDisplayFeature {
 
     private ValueAnimator mAnimator;
 
-    private final CMHardwareManager mHardware;
+    private final LineageHardwareManager mHardware;
 
     private static final long TWILIGHT_ADJUSTMENT_TIME = DateUtils.HOUR_IN_MILLIS * 1;
 
@@ -73,10 +73,10 @@ public class ColorTemperatureController extends LiveDisplayFeature {
             Handler handler, DisplayHardwareController displayHardware) {
         super(context, handler);
         mDisplayHardware = displayHardware;
-        mHardware = CMHardwareManager.getInstance(mContext);
+        mHardware = LineageHardwareManager.getInstance(mContext);
 
         mUseColorBalance = mHardware
-                .isSupported(CMHardwareManager.FEATURE_COLOR_BALANCE);
+                .isSupported(LineageHardwareManager.FEATURE_COLOR_BALANCE);
         mColorBalanceRange = mHardware.getColorBalanceRange();
 
         mUseTemperatureAdjustment = mUseColorBalance ||

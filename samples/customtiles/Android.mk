@@ -6,6 +6,6 @@ LOCAL_STATIC_JAVA_LIBRARIES := \
 
 LOCAL_SRC_FILES := $(call all-subdir-java-files)
 
-LOCAL_PACKAGE_NAME := CMCustomTiles
+LOCAL_PACKAGE_NAME := LineageCustomTiles
 
 include $(BUILD_PACKAGE)

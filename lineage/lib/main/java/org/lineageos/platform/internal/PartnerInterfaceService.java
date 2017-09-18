@@ -34,7 +34,7 @@ import android.provider.Settings;
 import android.telephony.TelephonyManager;
 import android.util.Log;
 import com.android.server.SystemService;
-import lineageos.app.CMContextConstants;
+import lineageos.app.LineageContextConstants;
 import lineageos.app.IPartnerInterface;
 import lineageos.app.PartnerInterface;
 import lineageos.media.MediaRecorder;
@@ -48,7 +48,7 @@ import java.security.interfaces.RSAPublicKey;
 
 /** @hide */
 
-public class PartnerInterfaceService extends CMSystemService {
+public class PartnerInterfaceService extends LineageSystemService {
 
     private static final String TAG = "LineageSettingsService";
 
@@ -60,12 +60,12 @@ public class PartnerInterfaceService extends CMSystemService {
     public PartnerInterfaceService(Context context) {
         super(context);
         mContext = context;
-        publishBinderService(CMContextConstants.CM_PARTNER_INTERFACE, mService);
+        publishBinderService(LineageContextConstants.LINEAGE_PARTNER_INTERFACE, mService);
     }
 
     @Override
     public String getFeatureDeclaration() {
-        return CMContextConstants.Features.PARTNER;
+        return LineageContextConstants.Features.PARTNER;
     }
 
     @Override

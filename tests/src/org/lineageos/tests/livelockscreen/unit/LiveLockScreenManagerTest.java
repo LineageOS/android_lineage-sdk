@@ -22,7 +22,7 @@ import android.os.RemoteException;
 import android.os.UserHandle;
 import android.test.AndroidTestCase;
 import android.test.mock.MockPackageManager;
-import lineageos.app.CMContextConstants;
+import lineageos.app.LineageContextConstants;
 import lineageos.app.ILiveLockScreenManager;
 import lineageos.app.LiveLockScreenInfo;
 import lineageos.app.LiveLockScreenManager;
@@ -44,7 +44,7 @@ public class LiveLockScreenManagerTest extends AndroidTestCase {
 
         PackageManager packageManager = Mockito.mock(MockPackageManager.class);
         Mockito.doReturn(true).when(packageManager).hasSystemFeature(
-                CMContextConstants.Features.LIVE_LOCK_SCREEN);
+                LineageContextConstants.Features.LIVE_LOCK_SCREEN);
 
         // Something else is initializing the manager
         Field f = LiveLockScreenManager.class.getDeclaredField("sInstance");
@@ -63,7 +63,7 @@ public class LiveLockScreenManagerTest extends AndroidTestCase {
 
         Mockito.verify(mMockContext, Mockito.times(1)).getPackageManager();
         Mockito.verify(packageManager, Mockito.times(1)).hasSystemFeature(
-                Mockito.eq(CMContextConstants.Features.LIVE_LOCK_SCREEN));
+                Mockito.eq(LineageContextConstants.Features.LIVE_LOCK_SCREEN));
         assertNotNull (mManager);
     }
 

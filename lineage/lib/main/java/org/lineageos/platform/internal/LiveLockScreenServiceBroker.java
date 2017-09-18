@@ -36,7 +36,7 @@ import android.util.Slog;
 
 import com.android.server.SystemService;
 
-import lineageos.app.CMContextConstants;
+import lineageos.app.LineageContextConstants;
 import lineageos.app.ILiveLockScreenChangeListener;
 import lineageos.app.ILiveLockScreenManager;
 import lineageos.app.ILiveLockScreenManagerProvider;
@@ -56,7 +56,7 @@ import java.util.List;
  * @hide
  */
 public class LiveLockScreenServiceBroker extends
-        BrokerableCMSystemService<ILiveLockScreenManagerProvider> {
+        BrokerableLineageSystemService<ILiveLockScreenManagerProvider> {
     private static final String TAG = LiveLockScreenServiceBroker.class.getSimpleName();
     private static final boolean DEBUG = false;
 
@@ -188,13 +188,13 @@ public class LiveLockScreenServiceBroker extends
 
     @Override
     public String getFeatureDeclaration() {
-        return CMContextConstants.Features.LIVE_LOCK_SCREEN;
+        return LineageContextConstants.Features.LIVE_LOCK_SCREEN;
     }
 
     @Override
     public void onStart() {
         if (DEBUG) Slog.d(TAG, "service started");
-        publishBinderService(CMContextConstants.CM_LIVE_LOCK_SCREEN_SERVICE, new BinderService());
+        publishBinderService(LineageContextConstants.LINEAGE_LIVE_LOCK_SCREEN_SERVICE, new BinderService());
     }
 
     @Override

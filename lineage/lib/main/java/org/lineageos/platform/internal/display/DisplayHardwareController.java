@@ -34,13 +34,13 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.BitSet;
 
-import lineageos.hardware.CMHardwareManager;
+import lineageos.hardware.LineageHardwareManager;
 import lineageos.hardware.LiveDisplayManager;
 import lineageos.providers.LineageSettings;
 
 public class DisplayHardwareController extends LiveDisplayFeature {
 
-    private final CMHardwareManager mHardware;
+    private final LineageHardwareManager mHardware;
 
     // hardware capabilities
     private final boolean mUseAutoContrast;
@@ -75,27 +75,27 @@ public class DisplayHardwareController extends LiveDisplayFeature {
     public DisplayHardwareController(Context context, Handler handler) {
         super(context, handler);
 
-        mHardware = CMHardwareManager.getInstance(mContext);
+        mHardware = LineageHardwareManager.getInstance(mContext);
         mUseCABC = mHardware
-                .isSupported(CMHardwareManager.FEATURE_ADAPTIVE_BACKLIGHT);
+                .isSupported(LineageHardwareManager.FEATURE_ADAPTIVE_BACKLIGHT);
         mDefaultCABC = mContext.getResources().getBoolean(
                 org.lineageos.platform.internal.R.bool.config_defaultCABC);
 
         mUseColorEnhancement = mHardware
-                .isSupported(CMHardwareManager.FEATURE_COLOR_ENHANCEMENT);
+                .isSupported(LineageHardwareManager.FEATURE_COLOR_ENHANCEMENT);
         mDefaultColorEnhancement = mContext.getResources().getBoolean(
                 org.lineageos.platform.internal.R.bool.config_defaultColorEnhancement);
 
         mUseAutoContrast = mHardware
-                .isSupported(CMHardwareManager.FEATURE_AUTO_CONTRAST);
+                .isSupported(LineageHardwareManager.FEATURE_AUTO_CONTRAST);
         mDefaultAutoContrast = mContext.getResources().getBoolean(
                 org.lineageos.platform.internal.R.bool.config_defaultAutoContrast);
 
         mUseColorAdjustment = mHardware
-                .isSupported(CMHardwareManager.FEATURE_DISPLAY_COLOR_CALIBRATION);
+                .isSupported(LineageHardwareManager.FEATURE_DISPLAY_COLOR_CALIBRATION);
 
         mUseDisplayModes = mHardware
-                .isSupported(CMHardwareManager.FEATURE_DISPLAY_MODES);
+                .isSupported(LineageHardwareManager.FEATURE_DISPLAY_MODES);
 
         if (mUseColorAdjustment) {
             mMaxColor = mHardware.getDisplayColorCalibrationMax();
@@ -217,7 +217,7 @@ public class DisplayHardwareController extends LiveDisplayFeature {
         if (!mUseAutoContrast) {
             return;
         }
-        mHardware.set(CMHardwareManager.FEATURE_AUTO_CONTRAST,
+        mHardware.set(LineageHardwareManager.FEATURE_AUTO_CONTRAST,
                 !isLowPowerMode() && isAutoContrastEnabled());
     }
 
@@ -228,7 +228,7 @@ public class DisplayHardwareController extends LiveDisplayFeature {
         if (!mUseColorEnhancement) {
             return;
         }
-        mHardware.set(CMHardwareManager.FEATURE_COLOR_ENHANCEMENT,
+        mHardware.set(LineageHardwareManager.FEATURE_COLOR_ENHANCEMENT,
                 !isLowPowerMode() && isColorEnhancementEnabled());
     }
 
@@ -239,7 +239,7 @@ public class DisplayHardwareController extends LiveDisplayFeature {
         if (!mUseCABC) {
             return;
         }
-        mHardware.set(CMHardwareManager.FEATURE_ADAPTIVE_BACKLIGHT,
+        mHardware.set(LineageHardwareManager.FEATURE_ADAPTIVE_BACKLIGHT,
                 !isLowPowerMode() && isCABCEnabled());
     }
 

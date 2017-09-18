@@ -1,4 +1,4 @@
-# CyanogenMod Platform SDK
+# LineageOS Platform SDK
 
 The Platform SDK provides a set of APIs that give you easy access to a variety of different features within LineageOS. The SDK exposes APIs and system level framework access in the Android framework that aren't available in any other distribution.
 
@@ -39,4 +39,4 @@ dependencies {
 
 ### WIKI
 
-For further inquiries regarding this project, please reference the [wiki](https://github.com/LineageOS/cm_platform_sdk/wiki).
+For further inquiries regarding this project, please reference the [wiki](https://github.com/LineageOS/android_lineage-sdk/wiki).

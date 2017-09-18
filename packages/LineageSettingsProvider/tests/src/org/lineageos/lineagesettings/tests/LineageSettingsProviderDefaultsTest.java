@@ -30,7 +30,7 @@ import android.text.TextUtils;
 import android.util.Log;
 import android.util.TypedValue;
 import lineageos.providers.LineageSettings;
-import org.lineageos.lineagesettings.CMDatabaseHelper;
+import org.lineageos.lineagesettings.LineageDatabaseHelper;
 import org.lineageos.lineagesettings.LineageSettingsProvider;
 import org.lineageos.lineagesettings.R;
 
@@ -133,7 +133,7 @@ public class LineageSettingsProviderDefaultsTest extends AndroidTestCase {
         super.setUp();
         mContentResolver = getContext().getContentResolver();
         mHasMigratedSettings = getContext().getSharedPreferences(LineageSettingsProvider.TAG,
-                Context.MODE_PRIVATE).getBoolean(LineageSettingsProvider.PREF_HAS_MIGRATED_CM_SETTINGS,
+                Context.MODE_PRIVATE).getBoolean(LineageSettingsProvider.PREF_HAS_MIGRATED_LINEAGE_SETTINGS,
                 false);
         mRemoteResources = getRemoteResources("org.lineageos.lineagesettings");
     }
@@ -142,7 +142,7 @@ public class LineageSettingsProviderDefaultsTest extends AndroidTestCase {
     public void testVerifySystemSettingsDefault() {
         if (verifyNotMigratedSettings()) {
             for (Setting setting : SYSTEM_SETTINGS_DEFAULTS) {
-                verifyDefaultSettingForTable(setting, CMDatabaseHelper.CMTableNames.TABLE_SYSTEM);
+                verifyDefaultSettingForTable(setting, LineageDatabaseHelper.LineageTableNames.TABLE_SYSTEM);
             }
         }
     }
@@ -151,7 +151,7 @@ public class LineageSettingsProviderDefaultsTest extends AndroidTestCase {
     public void testVerifySecureSettingsDefaults() {
         if (verifyNotMigratedSettings()) {
             for (Setting setting : SECURE_SETTINGS_DEFAULTS) {
-                verifyDefaultSettingForTable(setting, CMDatabaseHelper.CMTableNames.TABLE_SECURE);
+                verifyDefaultSettingForTable(setting, LineageDatabaseHelper.LineageTableNames.TABLE_SECURE);
             }
         }
     }
@@ -160,7 +160,7 @@ public class LineageSettingsProviderDefaultsTest extends AndroidTestCase {
     public void testVerifyGlobalSettingsDefaults() {
         if (verifyNotMigratedSettings()) {
             for (Setting setting : GLOBAL_SETTINGS_DEFAULTS) {
-                verifyDefaultSettingForTable(setting, CMDatabaseHelper.CMTableNames.TABLE_GLOBAL);
+                verifyDefaultSettingForTable(setting, LineageDatabaseHelper.LineageTableNames.TABLE_GLOBAL);
             }
         }
     }
@@ -229,13 +229,13 @@ public class LineageSettingsProviderDefaultsTest extends AndroidTestCase {
     private int getIntForTable(Setting setting, String table)
             throws LineageSettings.LineageSettingNotFoundException {
         switch (table) {
-            case CMDatabaseHelper.CMTableNames.TABLE_SYSTEM:
+            case LineageDatabaseHelper.LineageTableNames.TABLE_SYSTEM:
                 return LineageSettings.System.getIntForUser(mContentResolver, setting.mKey,
                         UserHandle.USER_OWNER);
-            case CMDatabaseHelper.CMTableNames.TABLE_SECURE:
+            case LineageDatabaseHelper.LineageTableNames.TABLE_SECURE:
                 return LineageSettings.Secure.getIntForUser(mContentResolver, setting.mKey,
                         UserHandle.USER_OWNER);
-            case CMDatabaseHelper.CMTableNames.TABLE_GLOBAL:
+            case LineageDatabaseHelper.LineageTableNames.TABLE_GLOBAL:
                 return LineageSettings.Global.getIntForUser(mContentResolver, setting.mKey,
                         UserHandle.USER_OWNER);
             default:
@@ -246,13 +246,13 @@ public class LineageSettingsProviderDefaultsTest extends AndroidTestCase {
     private String getStringForTable(Setting setting, String table)
             throws LineageSettings.LineageSettingNotFoundException {
         switch (table) {
-            case CMDatabaseHelper.CMTableNames.TABLE_SYSTEM:
+            case LineageDatabaseHelper.LineageTableNames.TABLE_SYSTEM:
                 return LineageSettings.System.getStringForUser(mContentResolver, setting.mKey,
                         UserHandle.USER_OWNER);
-            case CMDatabaseHelper.CMTableNames.TABLE_SECURE:
+            case LineageDatabaseHelper.LineageTableNames.TABLE_SECURE:
                 return LineageSettings.Secure.getStringForUser(mContentResolver, setting.mKey,
                         UserHandle.USER_OWNER);
-            case CMDatabaseHelper.CMTableNames.TABLE_GLOBAL:
+            case LineageDatabaseHelper.LineageTableNames.TABLE_GLOBAL:
                 return LineageSettings.Global.getStringForUser(mContentResolver, setting.mKey,
                         UserHandle.USER_OWNER);
             default:

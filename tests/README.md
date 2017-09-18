@@ -1,4 +1,4 @@
-## CM Platform SDK Tests
+## Lineage Platform SDK Tests
 The tests package contains both functional manual tests as well as unit
 tests which can be ran utilizing the InstrumentationTestRunner from android.
 

@@ -65,7 +65,7 @@ import java.util.regex.Pattern;
 public class BinderTransactionTest extends AndroidTestCase {
     private static final String TAG = BinderTransactionTest.class.getSimpleName();
     private static final String STUB_SUFFIX = "$Stub";
-    private static final String CYANOGENMOD_NAMESPACE = "cyanogenmod";
+    private static final String LINEAGEOS_NAMESPACE = "lineageos";
     private static final String TRANSACTION_PREFIX = "TRANSACTION_";
 
     private static final int NOT_FROM_PRIOR_RELEASE = -1;
@@ -95,7 +95,7 @@ public class BinderTransactionTest extends AndroidTestCase {
 
     private static void doSetup() {
         mKnownSdkClasses = MagicalDexHelper.getLoadedClasses(
-                CyanogenModTestApplication.getStaticApplicationContext(), CYANOGENMOD_NAMESPACE);
+                CyanogenModTestApplication.getStaticApplicationContext(), LINEAGEOS_NAMESPACE);
         sContext = CyanogenModTestApplication.getStaticApplicationContext();
         addInterfaces(ApiV2PriorReleaseInterfaces.getInterfaces());
         addInterfaces(ApiV4PriorReleaseInterfaces.getInterfaces());

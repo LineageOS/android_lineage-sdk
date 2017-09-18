@@ -352,7 +352,7 @@ public final class WeatherInfo implements Parcelable {
         ParcelInfo parcelInfo = Concierge.receiveParcel(parcel);
         int parcelableVersion = parcelInfo.getParcelVersion();
 
-        if (parcelableVersion >= Build.CM_VERSION_CODES.ELDERBERRY) {
+        if (parcelableVersion >= Build.LINEAGE_VERSION_CODES.ELDERBERRY) {
             mKey = parcel.readString();
             mCity = parcel.readString();
             mConditionCode = parcel.readInt();
@@ -559,7 +559,7 @@ public final class WeatherInfo implements Parcelable {
             ParcelInfo parcelInfo = Concierge.receiveParcel(parcel);
             int parcelableVersion = parcelInfo.getParcelVersion();
 
-            if (parcelableVersion >= Build.CM_VERSION_CODES.ELDERBERRY) {
+            if (parcelableVersion >= Build.LINEAGE_VERSION_CODES.ELDERBERRY) {
                 mKey = parcel.readString();
                 mLow = parcel.readDouble();
                 mHigh = parcel.readDouble();

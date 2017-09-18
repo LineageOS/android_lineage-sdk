@@ -18,7 +18,7 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Label for the LineageOS system components when they are shown to the user. -->
-  <string name="cyanogenmod_system_label">Система LineageOS</string>
+  <string name="lineageos_system_label">Система LineageOS</string>
   <string name="permlab_publishCustomTile">Создание пользовательских плиток на панели быстрых настроек</string>
   <string name="permdesc_publishCustomTile">Приложение сможет добавлять плитки на панель быстрых настроек.</string>
   <string name="permlab_modifyNetworkSettings">Изменение сетевых параметров системы</string>
@@ -52,7 +52,7 @@
   <string name="permlab_writeSettings">Изменение параметров системы</string>
   <string name="permdesc_writeSettings">Приложение сможет изменять параметры системы СМ.</string>
   <!-- Labels for the WRITE_SECURE_SETTINGS permission -->
-  <string name="permlab_writeSecureSettings">Изменение параметров безопасности системы CM</string>
+  <string name="permlab_writeSecureSettings">Изменение параметров безопасности системы Lineage</string>
   <string name="permdesc_writeSecureSettings">Приложение сможет изменять параметры безопасности системы. Это разрешение не используется обычными приложениями.</string>
   <!-- Labels for the MANAGE_PERSISTENT_STORAGE permission. -->
   <string name="permlab_managePersistentStorage">Управление хранилищем ПЗУ</string>
@@ -173,10 +173,10 @@
   <!-- LiveDisplay manager permission -->
   <string name="permlab_manageLiveDisplay">управление настройками LiveDisplay</string>
   <string name="permdesc_manageLiveDisplay">Приложение сможет изменять расширенные настройки экрана.</string>
-  <!-- CMAudioService - observe session changes permission -->
+  <!-- LineageAudioService - observe session changes permission -->
   <string name="permlab_observe_audio_sessions">просмотр изменений аудиосеансов</string>
   <string name="permdesc_observe_audio_sessions">Приложение сможет просматривать аудиопотоки, которые создаются или уничтожаются.</string>
-  <!-- CMAudioService - observe session changes permission -->
+  <!-- LineageAudioService - observe session changes permission -->
   <string name="permlab_manage_audio_sessions">управление изменениями аудиосеансов</string>
   <string name="permdesc_manage_audio_sessions">Приложение сможет изменять параметры аудиопотоков.</string>
   <!-- QuickSettings: Themes tile -->

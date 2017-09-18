@@ -33,31 +33,31 @@
     <uses-permission android:name="lineageos.permission.ACCESS_WEATHER_MANAGER" />
     <uses-permission android:name="android.permission.STATUS_BAR_SERVICE" />
 
-    <application android:name=".CyanogenModTestApplication"
+    <application android:name=".LineageOSTestApplication"
                  android:label="@string/app_name" android:icon="@drawable/ic_launcher">
         <uses-library android:name="android.test.runner" />
-        <activity android:name=".customtiles.CMStatusBarTest"
+        <activity android:name=".customtiles.LineageStatusBarTest"
                   android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".settings.CMPartnerInterfaceTest"
+        <activity android:name=".settings.LineagePartnerInterfaceTest"
                   android:label="@string/settings_tests_activity_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".alarmclock.CMAlarmClockTest"
+        <activity android:name=".alarmclock.LineageAlarmClockTest"
                   android:label="@string/alarm_tests_activity_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".telephony.CMTelephonyTest"
+        <activity android:name=".telephony.LineageTelephonyTest"
                   android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -78,7 +78,7 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".hardware.CMHardwareTest"
+        <activity android:name=".hardware.LineageHardwareTest"
                   android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>

@@ -44,7 +44,7 @@ import java.util.Map;
 import java.util.regex.Pattern;
 
 /**
- * LineageSettings contains CM specific preferences in System, Secure, and Global.
+ * LineageSettings contains Lineage specific preferences in System, Secure, and Global.
  */
 public final class LineageSettings {
     private static final String TAG = "LineageSettings";
@@ -116,12 +116,12 @@ public final class LineageSettings {
     public static final String CALL_METHOD_PUT_GLOBAL= "PUT_global";
 
     /**
-     * @hide - Private call() method on LineageSettingsProvider to migrate CM settings
+     * @hide - Private call() method on LineageSettingsProvider to migrate Lineage settings
      */
     public static final String CALL_METHOD_MIGRATE_SETTINGS = "migrate_settings";
 
     /**
-     * @hide - Private call() method on LineageSettingsProvider to migrate CM settings for a user
+     * @hide - Private call() method on LineageSettingsProvider to migrate Lineage settings for a user
      */
     public static final String CALL_METHOD_MIGRATE_SETTINGS_FOR_USER = "migrate_settings_for_user";
 
@@ -425,16 +425,16 @@ public final class LineageSettings {
     // endregion Validators
 
     /**
-     * System settings, containing miscellaneous CM system preferences. This table holds simple
+     * System settings, containing miscellaneous Lineage system preferences. This table holds simple
      * name/value pairs. There are convenience functions for accessing individual settings entries.
      */
     public static final class System extends Settings.NameValueTable {
         public static final Uri CONTENT_URI = Uri.parse("content://" + AUTHORITY + "/system");
 
-        public static final String SYS_PROP_CM_SETTING_VERSION = "sys.cm_settings_system_version";
+        public static final String SYS_PROP_LINEAGE_SETTING_VERSION = "sys.lineage_settings_system_version";
 
         private static final NameValueCache sNameValueCache = new NameValueCache(
-                SYS_PROP_CM_SETTING_VERSION,
+                SYS_PROP_LINEAGE_SETTING_VERSION,
                 CONTENT_URI,
                 CALL_METHOD_GET_SYSTEM,
                 CALL_METHOD_PUT_SYSTEM);
@@ -2187,17 +2187,17 @@ public final class LineageSettings {
     }
 
     /**
-     * Secure settings, containing miscellaneous CM secure preferences. This
+     * Secure settings, containing miscellaneous Lineage secure preferences. This
      * table holds simple name/value pairs. There are convenience
      * functions for accessing individual settings entries.
      */
     public static final class Secure extends Settings.NameValueTable {
         public static final Uri CONTENT_URI = Uri.parse("content://" + AUTHORITY + "/secure");
 
-        public static final String SYS_PROP_CM_SETTING_VERSION = "sys.cm_settings_secure_version";
+        public static final String SYS_PROP_LINEAGE_SETTING_VERSION = "sys.lineage_settings_secure_version";
 
         private static final NameValueCache sNameValueCache = new NameValueCache(
-                SYS_PROP_CM_SETTING_VERSION,
+                SYS_PROP_LINEAGE_SETTING_VERSION,
                 CONTENT_URI,
                 CALL_METHOD_GET_SECURE,
                 CALL_METHOD_PUT_SECURE);
@@ -2671,7 +2671,7 @@ public final class LineageSettings {
         /**
          * Whether the global stats collection setting has been successfully reported to server
          * @hide
-         * @deprecated {@link org.lineageos.lineageparts.cmstats.AnonymousStats} no longer uses this
+         * @deprecated {@link org.lineageos.lineageparts.lineagestats.AnonymousStats} no longer uses this
          */
         @Deprecated
         public static final String STATS_COLLECTION_REPORTED = "stats_collection_reported";
@@ -2797,7 +2797,7 @@ public final class LineageSettings {
 
         /**
          * This will be set to the system's current theme API version when ThemeService starts.
-         * It is useful for when an upgrade from one version of CM to another occurs.
+         * It is useful for when an upgrade from one version of Lineage to another occurs.
          * For example, after a user upgrades from CM11 to CM12, the value of this field
          * might be 19. ThemeService would then change the value to 21. This is useful
          * when an API change breaks a theme. Themeservice can identify old themes and
@@ -2899,15 +2899,15 @@ public final class LineageSettings {
         public static final String WEATHER_PROVIDER_SERVICE = "weather_provider_service";
 
         /**
-         * Set to 0 when we enter the CM Setup Wizard.
-         * Set to 1 when we exit the CM Setup Wizard.
+         * Set to 0 when we enter the Lineage Setup Wizard.
+         * Set to 1 when we exit the Lineage Setup Wizard.
          *
          * @deprecated Use {@link Secure#USER_SETUP_COMPLETE} or
          *             {@link Settings.Global#DEVICE_PROVISIONED} instead
          * @hide
          */
         @Deprecated
-        public static final String CM_SETUP_WIZARD_COMPLETED = "cm_setup_wizard_completed";
+        public static final String LINEAGE_SETUP_WIZARD_COMPLETED = "lineage_setup_wizard_completed";
 
         /**
          * Whether lock screen bluring is enabled on devices that support this feature
@@ -3051,17 +3051,17 @@ public final class LineageSettings {
     }
 
     /**
-     * Global settings, containing miscellaneous CM global preferences. This
+     * Global settings, containing miscellaneous Lineage global preferences. This
      * table holds simple name/value pairs. There are convenience
      * functions for accessing individual settings entries.
      */
     public static final class Global extends Settings.NameValueTable {
         public static final Uri CONTENT_URI = Uri.parse("content://" + AUTHORITY + "/global");
 
-        public static final String SYS_PROP_CM_SETTING_VERSION = "sys.cm_settings_global_version";
+        public static final String SYS_PROP_LINEAGE_SETTING_VERSION = "sys.lineage_settings_global_version";
 
         private static final NameValueCache sNameValueCache = new NameValueCache(
-                SYS_PROP_CM_SETTING_VERSION,
+                SYS_PROP_LINEAGE_SETTING_VERSION,
                 CONTENT_URI,
                 CALL_METHOD_GET_GLOBAL,
                 CALL_METHOD_PUT_GLOBAL);

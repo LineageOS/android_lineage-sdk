@@ -50,7 +50,7 @@ import java.util.Map;
 import java.util.Objects;
 import java.util.regex.Pattern;
 
-import lineageos.app.CMContextConstants;
+import lineageos.app.LineageContextConstants;
 import lineageos.power.IPerformanceManager;
 import lineageos.power.PerformanceManagerInternal;
 import lineageos.power.PerformanceProfile;
@@ -67,7 +67,7 @@ import static lineageos.providers.LineageSettings.Secure.putInt;
 /**
  * @hide
  */
-public class PerformanceManagerService extends CMSystemService {
+public class PerformanceManagerService extends LineageSystemService {
 
     private static final String TAG = "PerformanceManager";
 
@@ -196,12 +196,12 @@ public class PerformanceManagerService extends CMSystemService {
 
     @Override
     public String getFeatureDeclaration() {
-        return CMContextConstants.Features.PERFORMANCE;
+        return LineageContextConstants.Features.PERFORMANCE;
     }
 
     @Override
     public void onStart() {
-        publishBinderService(CMContextConstants.CM_PERFORMANCE_SERVICE, mBinder);
+        publishBinderService(LineageContextConstants.LINEAGE_PERFORMANCE_SERVICE, mBinder);
         publishLocalService(PerformanceManagerInternal.class, new LocalService());
     }
 
@@ -305,7 +305,7 @@ public class PerformanceManagerService extends CMSystemService {
             return false;
         }
 
-        // Enforce the performance access permission declared by cm's res package
+        // Enforce the performance access permission declared by lineage's res package
         mContext.enforceCallingOrSelfPermission(
                 lineageos.platform.Manifest.permission.PERFORMANCE_ACCESS, null);
 

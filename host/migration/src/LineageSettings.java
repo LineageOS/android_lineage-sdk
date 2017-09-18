@@ -17,13 +17,13 @@
 import java.util.Arrays;
 
 /**
- * LineageSettings contains CM specific preferences in System, Secure, and Global.
+ * LineageSettings contains Lineage specific preferences in System, Secure, and Global.
  */
 public final class LineageSettings {
     public static final String AUTHORITY = "lineagesettings";
 
     /**
-     * System settings, containing miscellaneous CM system preferences. This table holds simple
+     * System settings, containing miscellaneous Lineage system preferences. This table holds simple
      * name/value pairs. There are convenience functions for accessing individual settings entries.
      */
     public static final class System {
@@ -744,7 +744,7 @@ public final class LineageSettings {
     }
 
     /**
-     * Secure settings, containing miscellaneous CM secure preferences. This
+     * Secure settings, containing miscellaneous Lineage secure preferences. This
      * table holds simple name/value pairs. There are convenience
      * functions for accessing individual settings entries.
      */
@@ -1012,7 +1012,7 @@ public final class LineageSettings {
 
         /**
          * This will be set to the system's current theme API version when ThemeService starts.
-         * It is useful for when an upgrade from one version of CM to another occurs.
+         * It is useful for when an upgrade from one version of Lineage to another occurs.
          * For example, after a user upgrades from CM11 to CM12, the value of this field
          * might be 19. ThemeService would then change the value to 21. This is useful
          * when an API change breaks a theme. Themeservice can identify old themes and
@@ -1067,7 +1067,7 @@ public final class LineageSettings {
     }
 
     /**
-     * Global settings, containing miscellaneous CM global preferences. This
+     * Global settings, containing miscellaneous Lineage global preferences. This
      * table holds simple name/value pairs. There are convenience
      * functions for accessing individual settings entries.
      */

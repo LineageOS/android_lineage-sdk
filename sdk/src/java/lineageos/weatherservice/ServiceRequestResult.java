@@ -47,7 +47,7 @@ public final class ServiceRequestResult implements Parcelable {
         ParcelInfo parcelInfo = Concierge.receiveParcel(in);
         int parcelableVersion = parcelInfo.getParcelVersion();
 
-        if (parcelableVersion >= Build.CM_VERSION_CODES.ELDERBERRY) {
+        if (parcelableVersion >= Build.LINEAGE_VERSION_CODES.ELDERBERRY) {
             mKey = in.readString();
             int hasWeatherInfo = in.readInt();
             if (hasWeatherInfo == 1) {

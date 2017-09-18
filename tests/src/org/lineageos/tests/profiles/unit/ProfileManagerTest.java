@@ -23,7 +23,7 @@ import android.content.IntentFilter;
 import android.test.AndroidTestCase;
 import android.test.suitebuilder.annotation.SmallTest;
 import android.util.Log;
-import lineageos.app.CMContextConstants;
+import lineageos.app.LineageContextConstants;
 import lineageos.app.Profile;
 import lineageos.app.ProfileManager;
 import lineageos.app.IProfileManager;
@@ -44,7 +44,7 @@ public class ProfileManagerTest extends AndroidTestCase {
         mProfileManager = ProfileManager.getInstance(mContext);
         // Only run this if we support profiles service
         org.junit.Assume.assumeTrue(mContext.getPackageManager().hasSystemFeature(
-                CMContextConstants.Features.PROFILES));
+                LineageContextConstants.Features.PROFILES));
     }
 
     @SmallTest
@@ -130,7 +130,7 @@ public class ProfileManagerTest extends AndroidTestCase {
     public void testGetProfileNames() {
         ensureProfilesEnabled();
         String[] expectedProfileNames = new String[5];
-        // These defaults are pulled from the default xml in the cm platform resource package
+        // These defaults are pulled from the default xml in the lineage platform resource package
         Profile expectedProfile1 = mProfileManager.getProfile(
                 UUID.fromString("6a181391-12ef-4f43-a701-32b11ed69449"));
         Profile expectedProfile2 = mProfileManager.getProfile(
@@ -162,7 +162,7 @@ public class ProfileManagerTest extends AndroidTestCase {
     public void testGetProfiles() {
         ensureProfilesEnabled();
         Profile[] expectedProfiles = new Profile[5];
-        // These defaults are pulled from the default xml in the cm platform resource package
+        // These defaults are pulled from the default xml in the lineage platform resource package
         Profile expectedProfile1 = mProfileManager.getProfile(
                 UUID.fromString("6a181391-12ef-4f43-a701-32b11ed69449"));
         Profile expectedProfile2 = mProfileManager.getProfile(

@@ -37,9 +37,9 @@ import android.provider.BaseColumns;
  * </ul>
  *
  * <p>
- * Requires {@link lineageos.alarmclock.CyanogenModAlarmClock#READ_ALARMS_PERMISSION}
+ * Requires {@link lineageos.alarmclock.LineageOSAlarmClock#READ_ALARMS_PERMISSION}
  * to read from the provider.
- * Requires {@link lineageos.alarmclock.CyanogenModAlarmClock#WRITE_ALARMS_PERMISSION} to write
+ * Requires {@link lineageos.alarmclock.LineageOSAlarmClock#WRITE_ALARMS_PERMISSION} to write
  * to the provider.
  * </p>
  */

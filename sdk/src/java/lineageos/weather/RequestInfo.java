@@ -192,7 +192,7 @@ public final class RequestInfo implements Parcelable {
         ParcelInfo parcelInfo = Concierge.receiveParcel(parcel);
         int parcelableVersion = parcelInfo.getParcelVersion();
 
-        if (parcelableVersion >= Build.CM_VERSION_CODES.ELDERBERRY) {
+        if (parcelableVersion >= Build.LINEAGE_VERSION_CODES.ELDERBERRY) {
             mKey = parcel.readString();
             mRequestType = parcel.readInt();
             switch (mRequestType) {

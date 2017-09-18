@@ -26,7 +26,7 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
-import lineageos.app.CMContextConstants;
+import lineageos.app.LineageContextConstants;
 
 /**
  * LiveDisplay is an advanced set of features for improving
@@ -34,7 +34,7 @@ import lineageos.app.CMContextConstants;
  *
  * The backend service is constructed with a set of LiveDisplayFeatures
  * which provide capabilities such as outdoor mode, night mode,
- * and calibration. It interacts with CMHardwareService to relay
+ * and calibration. It interacts with LineageHardwareService to relay
  * changes down to the lower layers.
  *
  * Multiple adaptive modes are supported, and various hardware
@@ -151,7 +151,7 @@ public class LiveDisplayManager {
         sService = getService();
 
         if (!context.getPackageManager().hasSystemFeature(
-                CMContextConstants.Features.LIVEDISPLAY) || !checkService()) {
+                LineageContextConstants.Features.LIVEDISPLAY) || !checkService()) {
             Log.wtf(TAG, "Unable to get LiveDisplayService. The service either" +
                     " crashed, was not started, or the interface has been called to early in" +
                     " SystemServer init");
@@ -184,7 +184,7 @@ public class LiveDisplayManager {
         if (sService != null) {
             return sService;
         }
-        IBinder b = ServiceManager.getService(CMContextConstants.CM_LIVEDISPLAY_SERVICE);
+        IBinder b = ServiceManager.getService(LineageContextConstants.LINEAGE_LIVEDISPLAY_SERVICE);
         if (b != null) {
             sService = ILiveDisplayService.Stub.asInterface(b);
             return sService;
@@ -197,7 +197,7 @@ public class LiveDisplayManager {
      */
     private boolean checkService() {
         if (sService == null) {
-            Log.w(TAG, "not connected to CMHardwareManagerService");
+            Log.w(TAG, "not connected to LineageHardwareManagerService");
             return false;
         }
         return true;

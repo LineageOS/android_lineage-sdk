@@ -18,7 +18,7 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Label for the LineageOS system components when they are shown to the user. -->
-  <string name="cyanogenmod_system_label">Systém LineageOS</string>
+  <string name="lineageos_system_label">Systém LineageOS</string>
   <string name="permlab_publishCustomTile">vytvoření vlastní dlaždice do panelu rychlého nastavení</string>
   <string name="permdesc_publishCustomTile">Umožní vytvořit vlastní dlaždici v panelu rychlého nastavení.</string>
   <string name="permlab_modifyNetworkSettings">změnit systémové nastavení sítě</string>
@@ -38,7 +38,7 @@
   <string name="permdesc_modifyProfiles">Umožňuje upravovat systémové profily.</string>
   <!-- Labels for the HARDWARE_ABSTRACTION_ACCESS permission. -->
   <string name="permlab_useHardwareFramework">využití hardware zařízení</string>
-  <string name="permdesc_useHardwareFramework">Umožní přistupovat k hardware pomocí CM.</string>
+  <string name="permdesc_useHardwareFramework">Umožní přistupovat k hardware pomocí Lineage.</string>
   <!-- Labels for the WRITE_ALARMS permission. -->
   <string name="permlab_write_alarms">přímá změna budíků</string>
   <string name="permdesc_write_alarms">Umožňuje přidat, změnit nebo odebrat všechn budíky.</string>
@@ -49,10 +49,10 @@
   <string name="permlab_read_alarms">přístup k naplánovaným budíkům</string>
   <string name="permdesc_read_alarms">Umožní číst naplánované budíky.</string>
   <!-- Labels for the WRITE_SETTINGS permission -->
-  <string name="permlab_writeSettings">změnit CM systémové nastavení</string>
+  <string name="permlab_writeSettings">změnit Lineage systémové nastavení</string>
   <string name="permdesc_writeSettings">Umožní měnit systémové nastavení CyanogenMod.</string>
   <!-- Labels for the WRITE_SECURE_SETTINGS permission -->
-  <string name="permlab_writeSecureSettings">upravit nastavení zabezpečení systému CM</string>
+  <string name="permlab_writeSecureSettings">upravit nastavení zabezpečení systému Lineage</string>
   <string name="permdesc_writeSecureSettings">Umožní změnit nastavení zabezpečení systému CyanogenMod. Není určeno pro normální aplikace.</string>
   <!-- Labels for the MANAGE_PERSISTENT_STORAGE permission. -->
   <string name="permlab_managePersistentStorage">spravovat trvalé úložiště</string>
@@ -173,10 +173,10 @@
   <!-- LiveDisplay manager permission -->
   <string name="permlab_manageLiveDisplay">spravovat nastavení LiveDisplay</string>
   <string name="permdesc_manageLiveDisplay">Umožní nastavovat rozšířené nastavení obrazovky.</string>
-  <!-- CMAudioService - observe session changes permission -->
+  <!-- LineageAudioService - observe session changes permission -->
   <string name="permlab_observe_audio_sessions">sledovat změny audio relace</string>
   <string name="permdesc_observe_audio_sessions">Umožní sledovat vytváření a rušení zvukových zdrojů.</string>
-  <!-- CMAudioService - observe session changes permission -->
+  <!-- LineageAudioService - observe session changes permission -->
   <string name="permlab_manage_audio_sessions">upravovat změny audio relace</string>
   <string name="permdesc_manage_audio_sessions">Umožňuje aktualizovat zvukové relace.</string>
   <!-- QuickSettings: Themes tile -->

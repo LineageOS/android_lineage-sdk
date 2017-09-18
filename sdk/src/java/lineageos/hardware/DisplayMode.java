@@ -55,7 +55,7 @@ public class DisplayMode implements Parcelable {
         int tmpId = -1;
         String tmpName = null;
 
-        if (parcelableVersion >= Build.CM_VERSION_CODES.BOYSENBERRY) {
+        if (parcelableVersion >= Build.LINEAGE_VERSION_CODES.BOYSENBERRY) {
             tmpId = parcel.readInt();
             if (parcel.readInt() != 0) {
                 tmpName = parcel.readString();

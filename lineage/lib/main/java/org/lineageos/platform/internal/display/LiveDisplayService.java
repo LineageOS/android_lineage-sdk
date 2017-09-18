@@ -43,7 +43,7 @@ import com.android.server.power.BatterySaverPolicy.ServiceType;
 
 import org.lineageos.internal.util.QSConstants;
 import org.lineageos.internal.util.QSUtils;
-import org.lineageos.platform.internal.CMSystemService;
+import org.lineageos.platform.internal.LineageSystemService;
 import org.lineageos.platform.internal.R;
 import org.lineageos.platform.internal.common.UserContentObserver;
 import org.lineageos.platform.internal.display.TwilightTracker.TwilightListener;
@@ -57,8 +57,8 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Locale;
 
-import lineageos.app.CMContextConstants;
-import lineageos.app.CMStatusBarManager;
+import lineageos.app.LineageContextConstants;
+import lineageos.app.LineageStatusBarManager;
 import lineageos.app.CustomTile;
 import lineageos.hardware.HSIC;
 import lineageos.hardware.ILiveDisplayService;
@@ -78,10 +78,10 @@ import static lineageos.hardware.LiveDisplayManager.MODE_OUTDOOR;
  *
  * The service is constructed with a set of LiveDisplayFeatures
  * which provide capabilities such as outdoor mode, night mode,
- * and calibration. It interacts with CMHardwareService to relay
+ * and calibration. It interacts with LineageHardwareService to relay
  * changes down to the lower layers.
  */
-public class LiveDisplayService extends CMSystemService {
+public class LiveDisplayService extends LineageSystemService {
 
     private static final String TAG = "LiveDisplay";
 
@@ -153,7 +153,7 @@ public class LiveDisplayService extends CMSystemService {
 
     @Override
     public String getFeatureDeclaration() {
-        return CMContextConstants.Features.LIVEDISPLAY;
+        return LineageContextConstants.Features.LIVEDISPLAY;
     }
 
     @Override
@@ -163,7 +163,7 @@ public class LiveDisplayService extends CMSystemService {
 
     @Override
     public void onStart() {
-        publishBinderService(CMContextConstants.CM_LIVEDISPLAY_SERVICE, mBinder);
+        publishBinderService(LineageContextConstants.LINEAGE_LIVEDISPLAY_SERVICE, mBinder);
     }
 
     @Override
@@ -313,7 +313,7 @@ public class LiveDisplayService extends CMSystemService {
             final UserHandle user = new UserHandle(userId);
             final Context resourceContext = QSUtils.getQSTileContext(mContext, userId);
 
-            CMStatusBarManager statusBarManager = CMStatusBarManager.getInstance(mContext);
+            LineageStatusBarManager statusBarManager = LineageStatusBarManager.getInstance(mContext);
             CustomTile tile = new CustomTile.Builder(resourceContext)
                     .setLabel(mTileEntries[idx])
                     .setContentDescription(mTileDescriptionEntries[idx])
@@ -334,7 +334,7 @@ public class LiveDisplayService extends CMSystemService {
         final int userId = UserHandle.myUserId();
         long token = Binder.clearCallingIdentity();
         try {
-            CMStatusBarManager statusBarManager = CMStatusBarManager.getInstance(mContext);
+            LineageStatusBarManager statusBarManager = LineageStatusBarManager.getInstance(mContext);
             statusBarManager.removeTileAsUser(QSConstants.DYNAMIC_TILE_LIVE_DISPLAY,
                     LiveDisplayService.class.hashCode(), new UserHandle(userId));
         } finally {

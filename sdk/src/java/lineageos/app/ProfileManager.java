@@ -246,7 +246,7 @@ public class ProfileManager {
         sService = getService();
 
         if (context.getPackageManager().hasSystemFeature(
-                lineageos.app.CMContextConstants.Features.PROFILES) && sService == null) {
+                lineageos.app.LineageContextConstants.Features.PROFILES) && sService == null) {
             Log.wtf(TAG, "Unable to get ProfileManagerService. The service either" +
                     " crashed, was not started, or the interface has been called to early in" +
                     " SystemServer init");
@@ -270,7 +270,7 @@ public class ProfileManager {
         if (sService != null) {
             return sService;
         }
-        IBinder b = ServiceManager.getService(CMContextConstants.CM_PROFILE_SERVICE);
+        IBinder b = ServiceManager.getService(LineageContextConstants.LINEAGE_PROFILE_SERVICE);
         sService = IProfileManager.Stub.asInterface(b);
         return sService;
     }

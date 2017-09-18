@@ -18,7 +18,7 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Label for the LineageOS system components when they are shown to the user. -->
-  <string name="cyanogenmod_system_label">Система LineageOS</string>
+  <string name="lineageos_system_label">Система LineageOS</string>
   <string name="permlab_publishCustomTile">Створити власну плитку для панелі швидких налаштувань</string>
   <string name="permdesc_publishCustomTile">Дозволяє додатку створити плитку швидких налаштувань.</string>
   <string name="permlab_modifyNetworkSettings">змінювати налаштування мережі системи</string>
@@ -49,8 +49,8 @@
   <string name="permlab_read_alarms">доступ до запланованих будильників</string>
   <string name="permdesc_read_alarms">Дозволяє програмі читати заплановані сигнали будильника.</string>
   <!-- Labels for the WRITE_SETTINGS permission -->
-  <string name="permlab_writeSettings">змінювати налаштування CM</string>
-  <string name="permdesc_writeSettings">Дозволяє додатку змінювати системні налаштування CM.</string>
+  <string name="permlab_writeSettings">змінювати налаштування Lineage</string>
+  <string name="permdesc_writeSettings">Дозволяє додатку змінювати системні налаштування Lineage.</string>
   <!-- Labels for the WRITE_SECURE_SETTINGS permission -->
   <string name="permlab_writeSecureSettings">змінювати налаштування безпеки</string>
   <string name="permdesc_writeSecureSettings">Дозволяє додатку змінювати системні налаштування безпеки. Непотрібно звичайним додаткам.</string>
@@ -174,10 +174,10 @@
   <!-- LiveDisplay manager permission -->
   <string name="permlab_manageLiveDisplay">керування налаштуваннями LiveDisplay</string>
   <string name="permdesc_manageLiveDisplay">Дозволяє додатку керувати розширеними налаштуваннями дисплея.</string>
-  <!-- CMAudioService - observe session changes permission -->
+  <!-- LineageAudioService - observe session changes permission -->
   <string name="permlab_observe_audio_sessions">спостерігати за змінами аудіо сесії</string>
   <string name="permdesc_observe_audio_sessions">Дозволяє додатку переглядати аудіопотоки, які створюються або знищуються.</string>
-  <!-- CMAudioService - observe session changes permission -->
+  <!-- LineageAudioService - observe session changes permission -->
   <string name="permlab_manage_audio_sessions">керувати змінами аудіо сесії</string>
   <string name="permdesc_manage_audio_sessions">Дозволяє додатку змінювати параметри аудіопотоків.</string>
   <!-- QuickSettings: Themes tile -->

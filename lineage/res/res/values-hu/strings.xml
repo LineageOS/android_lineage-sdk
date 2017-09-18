@@ -18,7 +18,7 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Label for the LineageOS system components when they are shown to the user. -->
-  <string name="cyanogenmod_system_label">LineageOS rendszer</string>
+  <string name="lineageos_system_label">LineageOS rendszer</string>
   <string name="permlab_publishCustomTile">egy egyedi csempe létrehozása a gyors beállítások panelen</string>
   <string name="permdesc_publishCustomTile">Lehetővé teszi az alkalmazás számára, hogy gyors beállítások csempét hozzon létre.</string>
   <string name="permlab_modifyNetworkSettings">rendszer hálózati beállításainak módosítása</string>
@@ -38,7 +38,7 @@
   <string name="permdesc_modifyProfiles">Lehetővé teszi az alkalmazás számára a rendszerprofilok módosítását.</string>
   <!-- Labels for the HARDWARE_ABSTRACTION_ACCESS permission. -->
   <string name="permlab_useHardwareFramework">hardver keretrendszert használ</string>
-  <string name="permdesc_useHardwareFramework">Lehetővé teszi az alkalmazás számára, hogy a CM hardver hozzáférjen a keretrendszerhez.</string>
+  <string name="permdesc_useHardwareFramework">Lehetővé teszi az alkalmazás számára, hogy a Lineage hardver hozzáférjen a keretrendszerhez.</string>
   <!-- Labels for the WRITE_ALARMS permission. -->
   <string name="permlab_write_alarms">riasztások közvetlen megváltoztatása</string>
   <string name="permdesc_write_alarms">Lehetővé teszi az alkalmazás számára, hogy hozzáadja, módosítsa, vagy törölje az összes riasztást.</string>
@@ -49,11 +49,11 @@
   <string name="permlab_read_alarms">hozzáférés ütemezett riasztásokhoz</string>
   <string name="permdesc_read_alarms">Lehetővé teszi az alkalmazás számára, hogy olvassa az ütemezett riasztásait.</string>
   <!-- Labels for the WRITE_SETTINGS permission -->
-  <string name="permlab_writeSettings">CM rendszer beállításainak módosítása</string>
-  <string name="permdesc_writeSettings">Lehetővé teszi egy alkalmazás számára a CM rendszer beállításainak módosítását.</string>
+  <string name="permlab_writeSettings">Lineage rendszer beállításainak módosítása</string>
+  <string name="permdesc_writeSettings">Lehetővé teszi egy alkalmazás számára a Lineage rendszer beállításainak módosítását.</string>
   <!-- Labels for the WRITE_SECURE_SETTINGS permission -->
-  <string name="permlab_writeSecureSettings">CM biztonsági rendszer beállításainak módosítása</string>
-  <string name="permdesc_writeSecureSettings">Lehetővé teszi egy alkalmazás számára a CM biztonsági rendszer beállításainak módosítását. Szokásos alkalmazások számára nem használható.</string>
+  <string name="permlab_writeSecureSettings">Lineage biztonsági rendszer beállításainak módosítása</string>
+  <string name="permdesc_writeSecureSettings">Lehetővé teszi egy alkalmazás számára a Lineage biztonsági rendszer beállításainak módosítását. Szokásos alkalmazások számára nem használható.</string>
   <!-- Labels for the MANAGE_PERSISTENT_STORAGE permission. -->
   <string name="permlab_managePersistentStorage">állandó tároló kezelése</string>
   <string name="permdesc_managePersistentStorage">Lehetővé teszi az alkalmazás számára olyan tulajdonságok írását vagy olvasását, amelyek a gyári beállítások visszaállítása során is megmaradnak.</string>
@@ -173,10 +173,10 @@
   <!-- LiveDisplay manager permission -->
   <string name="permlab_manageLiveDisplay">LiveDisplay beállítások kezelése</string>
   <string name="permdesc_manageLiveDisplay">Lehetővé teszi az alkalmazás számára a speciális megjelenítési beállítások konfigurálását.</string>
-  <!-- CMAudioService - observe session changes permission -->
+  <!-- LineageAudioService - observe session changes permission -->
   <string name="permlab_observe_audio_sessions">audió munkamenet változásainak megfigyelése</string>
   <string name="permdesc_observe_audio_sessions">Lehetővé teszi az alkalmazás számára, hogy megfigyelje ahogy az audió folyamok létrejönnek és elpusztulnak.</string>
-  <!-- CMAudioService - observe session changes permission -->
+  <!-- LineageAudioService - observe session changes permission -->
   <string name="permlab_manage_audio_sessions">audió munkamenet változások kezelése</string>
   <string name="permdesc_manage_audio_sessions">Lehetővé teszi az alkalmazás számára, hogy audio stream frissítéseket küldjön.</string>
   <!-- QuickSettings: Themes tile -->

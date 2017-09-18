@@ -23,7 +23,7 @@ import android.test.AndroidTestCase;
 import android.test.suitebuilder.annotation.MediumTest;
 import android.test.suitebuilder.annotation.SmallTest;
 
-import lineageos.app.CMContextConstants;
+import lineageos.app.LineageContextConstants;
 import lineageos.app.Profile;
 import lineageos.profiles.AirplaneModeSettings;
 import lineageos.profiles.BrightnessSettings;
@@ -44,7 +44,7 @@ public class ProfileTest extends AndroidTestCase {
         super.setUp();
         // Only run this if we support profiles service
         org.junit.Assume.assumeTrue(mContext.getPackageManager().hasSystemFeature(
-                CMContextConstants.Features.PROFILES));
+                LineageContextConstants.Features.PROFILES));
     }
 
     @MediumTest

@@ -34,7 +34,7 @@ public class PreBootReceiver extends BroadcastReceiver{
     @Override
     public void onReceive(Context context, Intent intent) {
         if (LOCAL_LOGV) {
-            Log.d(TAG, "Received pre boot intent. Attempting to migrate CM settings.");
+            Log.d(TAG, "Received pre boot intent. Attempting to migrate Lineage settings.");
         }
 
         ContentResolver contentResolver = context.getContentResolver();

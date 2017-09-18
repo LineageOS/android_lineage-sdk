@@ -63,9 +63,9 @@ public class ApiV2PriorReleaseInterfaces {
         partnerMap.put("getCurrentHotwordPackageName", 6);
     }
 
-    //CMHardwareManager Aidl (ICMHardwareService)
+    //LineageHardwareManager Aidl (ILineageHardwareService)
     static {
-        Map<String, Integer> hardwareMap = getInternalInterfaceMap("ICMHardwareService");
+        Map<String, Integer> hardwareMap = getInternalInterfaceMap("ILineageHardwareService");
         // APRICOT + BOYSENBERRY + CANTALOUPE
         hardwareMap.put("getSupportedFeatures", 1);
         hardwareMap.put("get", 2);
@@ -93,9 +93,9 @@ public class ApiV2PriorReleaseInterfaces {
         hardwareMap.put("unRegisterThermalListener", 24);
     }
 
-    //CMStatusBarManager Aidl (ICMStatusBarManager)
+    //LineageStatusBarManager Aidl (ILineageStatusBarManager)
     static {
-        Map<String, Integer> statusBarMap = getInternalInterfaceMap("ICMStatusBarManager");
+        Map<String, Integer> statusBarMap = getInternalInterfaceMap("ILineageStatusBarManager");
         // APRICOT + BOYSENBERRY + CANTALOUPE
         statusBarMap.put("createCustomTileWithTag", 1);
         statusBarMap.put("removeCustomTileWithTag", 2);
@@ -112,9 +112,9 @@ public class ApiV2PriorReleaseInterfaces {
         suggestMap.put("getSuggestions", 2);
     }
 
-    //CMTelephonyManager Aidl (ICMTelephonyManager)
+    //LineageTelephonyManager Aidl (ILineageTelephonyManager)
     static {
-        Map<String, Integer> telephonyMap = getInternalInterfaceMap("ICMTelephonyManager");
+        Map<String, Integer> telephonyMap = getInternalInterfaceMap("ILineageTelephonyManager");
         // APRICOT + BOYSENBERRY + CANTALOUPE
         telephonyMap.put("getSubInformation", 1);
         telephonyMap.put("isSubActive", 2);

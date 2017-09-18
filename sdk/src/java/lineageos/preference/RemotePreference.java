@@ -77,9 +77,9 @@ public class RemotePreference extends SelfRemovingPreference
     public static final String META_REMOTE_KEY =
             "org.lineageos.settings.summary.key";
 
-    public static final String EXTRA_ENABLED = ":cm:pref_enabled";
-    public static final String EXTRA_KEY = ":cm:pref_key";
-    public static final String EXTRA_SUMMARY = ":cm:pref_summary";
+    public static final String EXTRA_ENABLED = ":lineage:pref_enabled";
+    public static final String EXTRA_KEY = ":lineage:pref_key";
+    public static final String EXTRA_SUMMARY = ":lineage:pref_summary";
 
     protected final Context mContext;
 

@@ -23,7 +23,7 @@ import android.util.Log;
 import android.util.Slog;
 import com.android.server.SystemService;
 
-import lineageos.app.CMContextConstants;
+import lineageos.app.LineageContextConstants;
 import lineageos.app.suggest.ApplicationSuggestion;
 import lineageos.app.suggest.IAppSuggestManager;
 
@@ -31,7 +31,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /** @hide */
-public class AppSuggestManagerService extends CMSystemService {
+public class AppSuggestManagerService extends LineageSystemService {
     private static final String TAG = "AppSgstMgrService";
     public static final boolean DEBUG = Log.isLoggable(TAG, Log.DEBUG);
 
@@ -63,7 +63,7 @@ public class AppSuggestManagerService extends CMSystemService {
 
     @Override
     public String getFeatureDeclaration() {
-        return CMContextConstants.Features.APP_SUGGEST;
+        return LineageContextConstants.Features.APP_SUGGEST;
     }
 
     @Override
@@ -77,6 +77,6 @@ public class AppSuggestManagerService extends CMSystemService {
         } else {
             Slog.i(TAG, "Bound to to suggest provider");
         }
-        publishBinderService(CMContextConstants.CM_APP_SUGGEST_SERVICE, mService);
+        publishBinderService(LineageContextConstants.LINEAGE_APP_SUGGEST_SERVICE, mService);
     }
 }

@@ -25,7 +25,7 @@ import java.nio.charset.Charset;
 import java.util.ArrayList;
 
 /**
- * This is to be run on a live CM 12.1 device.
+ * This is to be run on a live Lineage 12.1 device.
  */
 public class GenerateExampleSettings {
 

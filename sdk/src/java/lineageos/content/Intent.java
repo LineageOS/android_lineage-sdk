@@ -78,15 +78,15 @@ public class Intent {
             "lineageos.intent.action.SCREEN_CAMERA_GESTURE";
 
     /**
-     * Broadcast action: perform any initialization required for CMHW services.
+     * Broadcast action: perform any initialization required for LineageHW services.
      * Runs when the service receives the signal the device has booted, but
      * should happen before {@link android.content.Intent#ACTION_BOOT_COMPLETED}.
      *
      * Requires {@link lineageos.platform.Manifest.permission#HARDWARE_ABSTRACTION_ACCESS}.
      * @hide
      */
-    public static final String ACTION_INITIALIZE_CM_HARDWARE =
-            "lineageos.intent.action.INITIALIZE_CM_HARDWARE";
+    public static final String ACTION_INITIALIZE_LINEAGE_HARDWARE =
+            "lineageos.intent.action.INITIALIZE_LINEAGE_HARDWARE";
 
     /**
      * Broadcast Action: Indicate that an unrecoverable error happened during app launch.

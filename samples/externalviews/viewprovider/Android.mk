@@ -19,6 +19,6 @@ LOCAL_STATIC_JAVA_LIBRARIES := \
 
 LOCAL_SRC_FILES := $(call all-java-files-under, src/)
 
-LOCAL_PACKAGE_NAME := CMExternalViewProvider
+LOCAL_PACKAGE_NAME := LineageExternalViewProvider
 
 include $(BUILD_PACKAGE)

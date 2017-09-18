@@ -6,6 +6,6 @@ LOCAL_STATIC_JAVA_LIBRARIES := \
 
 LOCAL_SRC_FILES := $(call all-subdir-java-files)
 
-LOCAL_PACKAGE_NAME := CMProfiles
+LOCAL_PACKAGE_NAME := LineageProfiles
 
 include $(BUILD_PACKAGE)

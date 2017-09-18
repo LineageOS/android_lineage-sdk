@@ -24,10 +24,10 @@ import android.net.Uri;
 import android.test.AndroidTestCase;
 import android.test.suitebuilder.annotation.MediumTest;
 import android.test.suitebuilder.annotation.SmallTest;
-import lineageos.app.CMContextConstants;
+import lineageos.app.LineageContextConstants;
 import lineageos.app.CustomTile;
 import org.lineageos.tests.R;
-import org.lineageos.tests.customtiles.CMStatusBarTest;
+import org.lineageos.tests.customtiles.LineageStatusBarTest;
 import org.lineageos.tests.customtiles.DummySettings;
 
 import java.util.ArrayList;
@@ -40,9 +40,9 @@ public class CustomTileBuilderTest extends AndroidTestCase {
     @Override
     protected void setUp() throws Exception {
         super.setUp();
-        // Only run this if we support cm status bar service
+        // Only run this if we support lineage status bar service
         org.junit.Assume.assumeTrue(mContext.getPackageManager().hasSystemFeature(
-                CMContextConstants.Features.STATUSBAR));
+                LineageContextConstants.Features.STATUSBAR));
     }
 
     @SmallTest
@@ -186,7 +186,7 @@ public class CustomTileBuilderTest extends AndroidTestCase {
     @MediumTest
     public void testCustomTileBuilderExpandedListStyleSet() {
         PendingIntent intent = PendingIntent.getActivity(mContext, 0,
-                new Intent(mContext, CMStatusBarTest.class)
+                new Intent(mContext, LineageStatusBarTest.class)
                         .setFlags(Intent.FLAG_ACTIVITY_NEW_TASK), 0);
         ArrayList<CustomTile.ExpandedListItem> expandedListItems =
                 new ArrayList<CustomTile.ExpandedListItem>();
@@ -223,7 +223,7 @@ public class CustomTileBuilderTest extends AndroidTestCase {
     @MediumTest
     public void testCustomTileBuilderExpandedGridStyleSet() {
         PendingIntent intent = PendingIntent.getActivity(mContext, 0,
-                new Intent(mContext, CMStatusBarTest.class)
+                new Intent(mContext, LineageStatusBarTest.class)
                         .setFlags(Intent.FLAG_ACTIVITY_NEW_TASK), 0);
         ArrayList<CustomTile.ExpandedGridItem> expandedGridItems =
                 new ArrayList<CustomTile.ExpandedGridItem>();

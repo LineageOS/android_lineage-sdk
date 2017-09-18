@@ -51,7 +51,7 @@ import android.os.ParcelUuid;
 
 import com.android.server.SystemService;
 
-import lineageos.app.CMContextConstants;
+import lineageos.app.LineageContextConstants;
 import lineageos.app.Profile;
 import lineageos.app.ProfileGroup;
 import lineageos.app.ProfileManager;
@@ -70,7 +70,7 @@ import java.util.Set;
 import java.util.UUID;
 
 /** @hide */
-public class ProfileManagerService extends CMSystemService {
+public class ProfileManagerService extends LineageSystemService {
 
     private static final String TAG = "CMProfileService";
     // Enable the below for detailed logging of this class
@@ -234,17 +234,17 @@ public class ProfileManagerService extends CMSystemService {
         mContext = context;
         mHandler = new Handler(mHandlerCallback);
         if (context.getPackageManager().hasSystemFeature(
-                CMContextConstants.Features.PROFILES)) {
-            publishBinderService(CMContextConstants.CM_PROFILE_SERVICE, mService);
+                LineageContextConstants.Features.PROFILES)) {
+            publishBinderService(LineageContextConstants.LINEAGE_PROFILE_SERVICE, mService);
         } else {
-            Log.wtf(TAG, "CM profile service started by system server but feature xml not" +
+            Log.wtf(TAG, "Lineage profile service started by system server but feature xml not" +
                     " declared. Not publishing binder service!");
         }
     }
 
     @Override
     public String getFeatureDeclaration() {
-        return CMContextConstants.Features.PROFILES;
+        return LineageContextConstants.Features.PROFILES;
     }
 
     @Override

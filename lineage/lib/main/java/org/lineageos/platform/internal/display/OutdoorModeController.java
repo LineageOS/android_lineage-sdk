@@ -26,13 +26,13 @@ import android.os.Handler;
 import java.io.PrintWriter;
 import java.util.BitSet;
 
-import lineageos.hardware.CMHardwareManager;
+import lineageos.hardware.LineageHardwareManager;
 import lineageos.hardware.LiveDisplayManager;
 import lineageos.providers.LineageSettings;
 
 public class OutdoorModeController extends LiveDisplayFeature {
 
-    private final CMHardwareManager mHardware;
+    private final LineageHardwareManager mHardware;
     private AmbientLuxObserver mLuxObserver;
 
     // hardware capabilities
@@ -54,8 +54,8 @@ public class OutdoorModeController extends LiveDisplayFeature {
     public OutdoorModeController(Context context, Handler handler) {
         super(context, handler);
 
-        mHardware = CMHardwareManager.getInstance(mContext);
-        mUseOutdoorMode = mHardware.isSupported(CMHardwareManager.FEATURE_SUNLIGHT_ENHANCEMENT);
+        mHardware = LineageHardwareManager.getInstance(mContext);
+        mUseOutdoorMode = mHardware.isSupported(LineageHardwareManager.FEATURE_SUNLIGHT_ENHANCEMENT);
         mSelfManaged = mUseOutdoorMode && mHardware.isSunlightEnhancementSelfManaged();
 
         mDefaultOutdoorLux = mContext.getResources().getInteger(
@@ -115,7 +115,7 @@ public class OutdoorModeController extends LiveDisplayFeature {
         // face if they turn it back on in normal conditions
         if (!isScreenOn() && !mSelfManaged && getMode() != MODE_OUTDOOR) {
             mIsOutdoor = false;
-            mHardware.set(CMHardwareManager.FEATURE_SUNLIGHT_ENHANCEMENT, false);
+            mHardware.set(LineageHardwareManager.FEATURE_SUNLIGHT_ENHANCEMENT, false);
         }
     }
 
@@ -138,7 +138,7 @@ public class OutdoorModeController extends LiveDisplayFeature {
             pw.println("    mIsOutdoor=" + mIsOutdoor);
             pw.println("    mIsNight=" + isNight());
             pw.println("    hardware state=" +
-                    mHardware.get(CMHardwareManager.FEATURE_SUNLIGHT_ENHANCEMENT));
+                    mHardware.get(LineageHardwareManager.FEATURE_SUNLIGHT_ENHANCEMENT));
         }
         mLuxObserver.dump(pw);
     }
@@ -218,7 +218,7 @@ public class OutdoorModeController extends LiveDisplayFeature {
                     }
                 }
             }
-            mHardware.set(CMHardwareManager.FEATURE_SUNLIGHT_ENHANCEMENT, enabled);
+            mHardware.set(LineageHardwareManager.FEATURE_SUNLIGHT_ENHANCEMENT, enabled);
         }
     }
 

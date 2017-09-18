@@ -112,15 +112,15 @@ import java.util.Map;
                  forwardedKey, UserHandle.USER_CURRENT));
 
          // assert reading from both returns value 2
-         final String cmProviderValue = LineageSettings.System.getStringForUser(
+         final String lineageProviderValue = LineageSettings.System.getStringForUser(
                  getContext().getContentResolver(), forwardedKey, UserHandle.USER_CURRENT);
          final String settingsProviderValue = Settings.System.getStringForUser(
                  getContext().getContentResolver(), forwardedKey, UserHandle.USER_CURRENT);
-         assertEquals(cmProviderValue, settingsProviderValue);
+         assertEquals(lineageProviderValue, settingsProviderValue);
      }
 
      /**
-      * The new {@link LineageSettings.Secure#CM_SETUP_WIZARD_COMPLETED} cm specific provisioned flag
+      * The new {@link LineageSettings.Secure#LINEAGE_SETUP_WIZARD_COMPLETED} lineage specific provisioned flag
       * should be equal to the old {@link Settings.Global#DEVICE_PROVISIONED} flag on boot, or on
       * upgrade. These flags will almost always be equal, except during the provisioning process,
       * they may change at slightly different times.
@@ -132,16 +132,16 @@ import java.util.Map;
       */
      @Deprecated
      @SmallTest
-     public void testCMProvisionedFlagFallbackSet() {
-         final String newCmFlag = LineageSettings.Secure.getStringForUser(
-                 getContext().getContentResolver(), LineageSettings.Secure.CM_SETUP_WIZARD_COMPLETED,
+     public void testLineageProvisionedFlagFallbackSet() {
+         final String newLineageFlag = LineageSettings.Secure.getStringForUser(
+                 getContext().getContentResolver(), LineageSettings.Secure.LINEAGE_SETUP_WIZARD_COMPLETED,
                  UserHandle.USER_OWNER);
-         assertNotNull(newCmFlag);
+         assertNotNull(newLineageFlag);
 
          final String previousFlag = Settings.Global.getStringForUser(
                  getContext().getContentResolver(), Settings.Global.DEVICE_PROVISIONED,
                  UserHandle.USER_OWNER);
-         assertEquals(previousFlag, newCmFlag);
+         assertEquals(previousFlag, newLineageFlag);
      }
 
      private void testMigrateSettingsForUser(int userId) {

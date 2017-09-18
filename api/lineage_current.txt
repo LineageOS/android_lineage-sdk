@@ -52,8 +52,8 @@ package lineageos.alarmclock {
     field public static final java.lang.String YEAR = "year";
   }
 
-  public class CyanogenModAlarmClock {
-    ctor public CyanogenModAlarmClock();
+  public class LineageOSAlarmClock {
+    ctor public LineageOSAlarmClock();
     method public static android.content.Intent createAlarmIntent(android.content.Context);
     field public static final java.lang.String ACTION_SET_ALARM_ENABLED = "lineageos.alarmclock.SET_ALARM_ENABLED";
     field public static final java.lang.String EXTRA_ALARM_ID = "lineageos.intent.extra.alarmclock.ID";
@@ -66,8 +66,8 @@ package lineageos.alarmclock {
 
 package lineageos.app {
 
-  public class CMStatusBarManager {
-    method public static lineageos.app.CMStatusBarManager getInstance(android.content.Context);
+  public class LineageStatusBarManager {
+    method public static lineageos.app.LineageStatusBarManager getInstance(android.content.Context);
     method public void publishTile(int, lineageos.app.CustomTile);
     method public void publishTile(java.lang.String, int, lineageos.app.CustomTile);
     method public void publishTileAsUser(java.lang.String, int, lineageos.app.CustomTile, android.os.UserHandle);
@@ -76,8 +76,8 @@ package lineageos.app {
     method public void removeTileAsUser(java.lang.String, int, android.os.UserHandle);
   }
 
-  public class CMTelephonyManager {
-    method public static lineageos.app.CMTelephonyManager getInstance(android.content.Context);
+  public class LineageTelephonyManager {
+    method public static lineageos.app.LineageTelephonyManager getInstance(android.content.Context);
     method public java.util.List<android.telephony.SubscriptionInfo> getSubInformation();
     method public boolean isDataConnectionEnabled();
     method public boolean isDataConnectionSelectedOnSub(int);
@@ -444,7 +444,7 @@ package lineageos.externalviews {
 
 package lineageos.hardware {
 
-  public final class CMHardwareManager {
+  public final class LineageHardwareManager {
     method public boolean deletePersistentObject(java.lang.String);
     method public boolean get(int);
     method public int getColorBalance();
@@ -461,7 +461,7 @@ package lineageos.hardware {
     method public deprecated int getDisplayGammaCalibrationMin();
     method public lineageos.hardware.DisplayMode[] getDisplayModes();
     method public lineageos.hardware.TouchscreenGesture[] getTouchscreenGestures();
-    method public static lineageos.hardware.CMHardwareManager getInstance(android.content.Context);
+    method public static lineageos.hardware.LineageHardwareManager getInstance(android.content.Context);
     method public java.lang.String getLtoDestination();
     method public long getLtoDownloadInterval();
     method public java.lang.String getLtoSource();
@@ -664,18 +664,18 @@ package lineageos.os {
   public class Build {
     ctor public Build();
     method public static java.lang.String getNameForSDKInt(int);
-    field public static final java.lang.String CYANOGENMOD_DISPLAY_VERSION;
-    field public static final java.lang.String CYANOGENMOD_VERSION;
+    field public static final java.lang.String LINEAGEOS_DISPLAY_VERSION;
+    field public static final java.lang.String LINEAGEOS_VERSION;
     field public static final java.lang.String UNKNOWN = "unknown";
   }
 
-  public static class Build.CM_VERSION {
-    ctor public Build.CM_VERSION();
+  public static class Build.LINEAGE_VERSION {
+    ctor public Build.LINEAGE_VERSION();
     field public static final int SDK_INT;
   }
 
-  public static class Build.CM_VERSION_CODES {
-    ctor public Build.CM_VERSION_CODES();
+  public static class Build.LINEAGE_VERSION_CODES {
+    ctor public Build.LINEAGE_VERSION_CODES();
     field public static final int APRICOT = 1; // 0x1
     field public static final int BOYSENBERRY = 2; // 0x2
     field public static final int CANTALOUPE = 3; // 0x3
@@ -818,55 +818,55 @@ package lineageos.power {
 
 package lineageos.preference {
 
-  public class CMGlobalSettingSwitchPreference extends lineageos.preference.SelfRemovingSwitchPreference {
-    ctor public CMGlobalSettingSwitchPreference(android.content.Context, android.util.AttributeSet, int);
-    ctor public CMGlobalSettingSwitchPreference(android.content.Context, android.util.AttributeSet);
-    ctor public CMGlobalSettingSwitchPreference(android.content.Context);
+  public class LineageGlobalSettingSwitchPreference extends lineageos.preference.SelfRemovingSwitchPreference {
+    ctor public LineageGlobalSettingSwitchPreference(android.content.Context, android.util.AttributeSet, int);
+    ctor public LineageGlobalSettingSwitchPreference(android.content.Context, android.util.AttributeSet);
+    ctor public LineageGlobalSettingSwitchPreference(android.content.Context);
     method protected boolean getPersistedBoolean(boolean);
     method protected boolean isPersisted();
     method protected boolean persistBoolean(boolean);
   }
 
-  public class CMSecureSettingListPreference extends lineageos.preference.SelfRemovingListPreference {
-    ctor public CMSecureSettingListPreference(android.content.Context, android.util.AttributeSet, int);
-    ctor public CMSecureSettingListPreference(android.content.Context, android.util.AttributeSet);
+  public class LineageSecureSettingListPreference extends lineageos.preference.SelfRemovingListPreference {
+    ctor public LineageSecureSettingListPreference(android.content.Context, android.util.AttributeSet, int);
+    ctor public LineageSecureSettingListPreference(android.content.Context, android.util.AttributeSet);
     method public int getIntValue(int);
     method protected java.lang.String getPersistedString(java.lang.String);
     method protected boolean isPersisted();
     method protected boolean persistString(java.lang.String);
   }
 
-  public class CMSecureSettingSwitchPreference extends lineageos.preference.SelfRemovingSwitchPreference {
-    ctor public CMSecureSettingSwitchPreference(android.content.Context, android.util.AttributeSet, int);
-    ctor public CMSecureSettingSwitchPreference(android.content.Context, android.util.AttributeSet);
-    ctor public CMSecureSettingSwitchPreference(android.content.Context);
+  public class LineageSecureSettingSwitchPreference extends lineageos.preference.SelfRemovingSwitchPreference {
+    ctor public LineageSecureSettingSwitchPreference(android.content.Context, android.util.AttributeSet, int);
+    ctor public LineageSecureSettingSwitchPreference(android.content.Context, android.util.AttributeSet);
+    ctor public LineageSecureSettingSwitchPreference(android.content.Context);
     method protected boolean getPersistedBoolean(boolean);
     method protected boolean isPersisted();
     method protected boolean persistBoolean(boolean);
   }
 
-  public class CMSystemSettingDropDownPreference extends lineageos.preference.SelfRemovingDropDownPreference {
-    ctor public CMSystemSettingDropDownPreference(android.content.Context, android.util.AttributeSet, int);
-    ctor public CMSystemSettingDropDownPreference(android.content.Context, android.util.AttributeSet);
+  public class LineageSystemSettingDropDownPreference extends lineageos.preference.SelfRemovingDropDownPreference {
+    ctor public LineageSystemSettingDropDownPreference(android.content.Context, android.util.AttributeSet, int);
+    ctor public LineageSystemSettingDropDownPreference(android.content.Context, android.util.AttributeSet);
     method public int getIntValue(int);
     method protected java.lang.String getPersistedString(java.lang.String);
     method protected boolean isPersisted();
     method protected boolean persistString(java.lang.String);
   }
 
-  public class CMSystemSettingListPreference extends lineageos.preference.SelfRemovingListPreference {
-    ctor public CMSystemSettingListPreference(android.content.Context, android.util.AttributeSet, int);
-    ctor public CMSystemSettingListPreference(android.content.Context, android.util.AttributeSet);
+  public class LineageSystemSettingListPreference extends lineageos.preference.SelfRemovingListPreference {
+    ctor public LineageSystemSettingListPreference(android.content.Context, android.util.AttributeSet, int);
+    ctor public LineageSystemSettingListPreference(android.content.Context, android.util.AttributeSet);
     method public int getIntValue(int);
     method protected java.lang.String getPersistedString(java.lang.String);
     method protected boolean isPersisted();
     method protected boolean persistString(java.lang.String);
   }
 
-  public class CMSystemSettingSwitchPreference extends lineageos.preference.SelfRemovingSwitchPreference {
-    ctor public CMSystemSettingSwitchPreference(android.content.Context, android.util.AttributeSet, int);
-    ctor public CMSystemSettingSwitchPreference(android.content.Context, android.util.AttributeSet);
-    ctor public CMSystemSettingSwitchPreference(android.content.Context);
+  public class LineageSystemSettingSwitchPreference extends lineageos.preference.SelfRemovingSwitchPreference {
+    ctor public LineageSystemSettingSwitchPreference(android.content.Context, android.util.AttributeSet, int);
+    ctor public LineageSystemSettingSwitchPreference(android.content.Context, android.util.AttributeSet);
+    ctor public LineageSystemSettingSwitchPreference(android.content.Context);
     method protected boolean getPersistedBoolean(boolean);
     method protected boolean isPersisted();
     method protected boolean persistBoolean(boolean);
@@ -892,9 +892,9 @@ package lineageos.preference {
     method public void onRemoteUpdated(android.os.Bundle);
     field public static final java.lang.String ACTION_REFRESH_PREFERENCE = "lineageos.intent.action.REFRESH_PREFERENCE";
     field public static final java.lang.String ACTION_UPDATE_PREFERENCE = "lineageos.intent.action.UPDATE_PREFERENCE";
-    field public static final java.lang.String EXTRA_ENABLED = ":cm:pref_enabled";
-    field public static final java.lang.String EXTRA_KEY = ":cm:pref_key";
-    field public static final java.lang.String EXTRA_SUMMARY = ":cm:pref_summary";
+    field public static final java.lang.String EXTRA_ENABLED = ":lineage:pref_enabled";
+    field public static final java.lang.String EXTRA_KEY = ":lineage:pref_key";
+    field public static final java.lang.String EXTRA_SUMMARY = ":lineage:pref_summary";
     field public static final java.lang.String META_REMOTE_KEY = "org.lineageos.settings.summary.key";
     field public static final java.lang.String META_REMOTE_RECEIVER = "org.lineageos.settings.summary.receiver";
     field protected final android.content.Context mContext;
@@ -1111,7 +1111,7 @@ package lineageos.providers {
     method public static boolean putLong(android.content.ContentResolver, java.lang.String, long);
     method public static boolean putString(android.content.ContentResolver, java.lang.String, java.lang.String);
     field public static final android.net.Uri CONTENT_URI;
-    field public static final java.lang.String SYS_PROP_CM_SETTING_VERSION = "sys.cm_settings_global_version";
+    field public static final java.lang.String SYS_PROP_LINEAGE_SETTING_VERSION = "sys.lineage_settings_global_version";
     field public static final java.lang.String WEATHER_TEMPERATURE_UNIT = "weather_temperature_unit";
   }
 
@@ -1130,7 +1130,7 @@ package lineageos.providers {
     method public static boolean putLong(android.content.ContentResolver, java.lang.String, long);
     method public static boolean putString(android.content.ContentResolver, java.lang.String, java.lang.String);
     field public static final android.net.Uri CONTENT_URI;
-    field public static final java.lang.String SYS_PROP_CM_SETTING_VERSION = "sys.cm_settings_secure_version";
+    field public static final java.lang.String SYS_PROP_LINEAGE_SETTING_VERSION = "sys.lineage_settings_secure_version";
   }
 
   public static final class LineageSettings.System extends android.provider.Settings.NameValueTable {
@@ -1231,7 +1231,7 @@ package lineageos.providers {
     field public static final java.lang.String STYLUS_ICON_ENABLED = "stylus_icon_enabled";
     field public static final java.lang.String SWAP_VOLUME_KEYS_ON_ROTATION = "swap_volume_keys_on_rotation";
     field public static final java.lang.String SYSTEM_PROFILES_ENABLED = "system_profiles_enabled";
-    field public static final java.lang.String SYS_PROP_CM_SETTING_VERSION = "sys.cm_settings_system_version";
+    field public static final java.lang.String SYS_PROP_LINEAGE_SETTING_VERSION = "sys.lineage_settings_system_version";
     field public static final java.lang.String T9_SEARCH_INPUT_LOCALE = "t9_search_input_locale";
     field public static final java.lang.String TORCH_LONG_PRESS_POWER_GESTURE = "torch_long_press_power_gesture";
     field public static final java.lang.String TORCH_LONG_PRESS_POWER_TIMEOUT = "torch_long_press_power_timeout";
@@ -1388,22 +1388,22 @@ package lineageos.util {
 
 package lineageos.weather {
 
-  public class CMWeatherManager {
+  public class LineageWeatherManager {
     method public void cancelRequest(int);
     method public java.lang.String getActiveWeatherServiceProviderLabel();
-    method public static lineageos.weather.CMWeatherManager getInstance(android.content.Context);
-    method public int lookupCity(java.lang.String, lineageos.weather.CMWeatherManager.LookupCityRequestListener);
-    method public void registerWeatherServiceProviderChangeListener(lineageos.weather.CMWeatherManager.WeatherServiceProviderChangeListener);
-    method public int requestWeatherUpdate(android.location.Location, lineageos.weather.CMWeatherManager.WeatherUpdateRequestListener);
-    method public int requestWeatherUpdate(lineageos.weather.WeatherLocation, lineageos.weather.CMWeatherManager.WeatherUpdateRequestListener);
-    method public void unregisterWeatherServiceProviderChangeListener(lineageos.weather.CMWeatherManager.WeatherServiceProviderChangeListener);
+    method public static lineageos.weather.LineageWeatherManager getInstance(android.content.Context);
+    method public int lookupCity(java.lang.String, lineageos.weather.LineageWeatherManager.LookupCityRequestListener);
+    method public void registerWeatherServiceProviderChangeListener(lineageos.weather.LineageWeatherManager.WeatherServiceProviderChangeListener);
+    method public int requestWeatherUpdate(android.location.Location, lineageos.weather.LineageWeatherManager.WeatherUpdateRequestListener);
+    method public int requestWeatherUpdate(lineageos.weather.WeatherLocation, lineageos.weather.LineageWeatherManager.WeatherUpdateRequestListener);
+    method public void unregisterWeatherServiceProviderChangeListener(lineageos.weather.LineageWeatherManager.WeatherServiceProviderChangeListener);
   }
 
-  public static abstract interface CMWeatherManager.LookupCityRequestListener {
+  public static abstract interface LineageWeatherManager.LookupCityRequestListener {
     method public abstract void onLookupCityRequestCompleted(int, java.util.List<lineageos.weather.WeatherLocation>);
   }
 
-  public static final class CMWeatherManager.RequestStatus {
+  public static final class LineageWeatherManager.RequestStatus {
     field public static final int ALREADY_IN_PROGRESS = -3; // 0xfffffffd
     field public static final int COMPLETED = 1; // 0x1
     field public static final int FAILED = -1; // 0xffffffff
@@ -1411,11 +1411,11 @@ package lineageos.weather {
     field public static final int SUBMITTED_TOO_SOON = -2; // 0xfffffffe
   }
 
-  public static abstract interface CMWeatherManager.WeatherServiceProviderChangeListener {
+  public static abstract interface LineageWeatherManager.WeatherServiceProviderChangeListener {
     method public abstract void onWeatherServiceProviderChanged(java.lang.String);
   }
 
-  public static abstract interface CMWeatherManager.WeatherUpdateRequestListener {
+  public static abstract interface LineageWeatherManager.WeatherUpdateRequestListener {
     method public abstract void onWeatherRequestCompleted(int, lineageos.weather.WeatherInfo);
   }
 

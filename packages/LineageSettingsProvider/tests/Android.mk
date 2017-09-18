@@ -34,7 +34,7 @@ LOCAL_STATIC_JAVA_LIBRARIES := \
 
 include $(BUILD_PACKAGE)
 
-# Register as CMTS
+# Register as LineageTS
 include $(CLEAR_VARS)
 
 LOCAL_MODULE_TAGS := tests
@@ -52,5 +52,5 @@ LOCAL_PROGUARD_FLAG_FILES := proguard.flags
 LOCAL_STATIC_JAVA_LIBRARIES := \
     org.lineageos.platform.internal
 
-include $(BUILD_CMTS_PACKAGE)
+include $(BUILD_LineageTS_PACKAGE)
 

@@ -18,7 +18,7 @@ package org.lineageos.tests.power.unit;
 import android.test.AndroidTestCase;
 import android.test.suitebuilder.annotation.SmallTest;
 
-import lineageos.app.CMContextConstants;
+import lineageos.app.LineageContextConstants;
 import lineageos.power.IPerformanceManager;
 import lineageos.power.PerformanceManager;
 import lineageos.power.PerformanceProfile;
@@ -31,7 +31,7 @@ import lineageos.power.PerformanceProfile;
 public class PerfomanceManagerTest extends AndroidTestCase {
     private static final String TAG = PerfomanceManagerTest.class.getSimpleName();
     private static final int IMPOSSIBLE_POWER_PROFILE = -1;
-    private PerformanceManager mCMPerformanceManager;
+    private PerformanceManager mLineagePerformanceManager;
     private PerformanceProfile mSavedPerfProfile;
 
     @Override
@@ -39,32 +39,32 @@ public class PerfomanceManagerTest extends AndroidTestCase {
         super.setUp();
         // Only run this if we support performance abstraction
         org.junit.Assume.assumeTrue(mContext.getPackageManager().hasSystemFeature(
-                CMContextConstants.Features.PERFORMANCE));
-        mCMPerformanceManager = PerformanceManager.getInstance(mContext);
+                LineageContextConstants.Features.PERFORMANCE));
+        mLineagePerformanceManager = PerformanceManager.getInstance(mContext);
         // Save the perf profile for later restore.
-        mSavedPerfProfile = mCMPerformanceManager.getPowerProfile(
-                mCMPerformanceManager.getPowerProfile());
+        mSavedPerfProfile = mLineagePerformanceManager.getPowerProfile(
+                mLineagePerformanceManager.getPowerProfile());
     }
 
     @SmallTest
     public void testManagerExists() {
-        assertNotNull(mCMPerformanceManager);
+        assertNotNull(mLineagePerformanceManager);
     }
 
     @SmallTest
     public void testManagerServiceIsAvailable() {
-        IPerformanceManager icmStatusBarManager = mCMPerformanceManager.getService();
-        assertNotNull(icmStatusBarManager);
+        IPerformanceManager ilineageStatusBarManager = mLineagePerformanceManager.getService();
+        assertNotNull(ilineageStatusBarManager);
     }
 
     @SmallTest
     public void testPowerProfileCantBeSetIfNoneSupported() {
         // Assert that if we attempt to set a power profile if none supported
         // then we receive a failed response from the service.
-        if (mCMPerformanceManager.getNumberOfProfiles() == 0) {
+        if (mLineagePerformanceManager.getNumberOfProfiles() == 0) {
             for (int powerProfile = 0; powerProfile <
                     PerformanceManager.POSSIBLE_POWER_PROFILES.length; powerProfile++) {
-                assertFalse(mCMPerformanceManager.setPowerProfile(powerProfile));
+                assertFalse(mLineagePerformanceManager.setPowerProfile(powerProfile));
             }
         }
     }
@@ -82,15 +82,15 @@ public class PerfomanceManagerTest extends AndroidTestCase {
         // TODO: Don't skip powersave. Skipped due to powersave being ignored while device plugged
         for (int powerProfile = 1; powerProfile <
                 PerformanceManager.POSSIBLE_POWER_PROFILES.length; powerProfile++) {
-            if (powerProfile < mCMPerformanceManager.getNumberOfProfiles()) {
+            if (powerProfile < mLineagePerformanceManager.getNumberOfProfiles()) {
                 //It is supported, set it and test if it was set
-                if (mCMPerformanceManager.getPowerProfile() != powerProfile) {
-                    mCMPerformanceManager.setPowerProfile(powerProfile);
+                if (mLineagePerformanceManager.getPowerProfile() != powerProfile) {
+                    mLineagePerformanceManager.setPowerProfile(powerProfile);
                     // Verify that it was set correctly.
-                    assertEquals(powerProfile, mCMPerformanceManager.getPowerProfile());
+                    assertEquals(powerProfile, mLineagePerformanceManager.getPowerProfile());
                 }
             } else {
-                assertFalse(mCMPerformanceManager.setPowerProfile(powerProfile));
+                assertFalse(mLineagePerformanceManager.setPowerProfile(powerProfile));
             }
         }
     }
@@ -98,7 +98,7 @@ public class PerfomanceManagerTest extends AndroidTestCase {
     @SmallTest
     public void testGetPerfProfileHasAppProfiles() {
         // No application has power save by default
-        assertEquals(false, mCMPerformanceManager.getProfileHasAppProfiles(
+        assertEquals(false, mLineagePerformanceManager.getProfileHasAppProfiles(
                 PerformanceManager.PROFILE_POWER_SAVE));
     }
 
@@ -106,6 +106,6 @@ public class PerfomanceManagerTest extends AndroidTestCase {
     protected void tearDown() throws Exception {
         super.tearDown();
         // Reset
-        mCMPerformanceManager.setPowerProfile(mSavedPerfProfile.getId());
+        mLineagePerformanceManager.setPowerProfile(mSavedPerfProfile.getId());
     }
 }

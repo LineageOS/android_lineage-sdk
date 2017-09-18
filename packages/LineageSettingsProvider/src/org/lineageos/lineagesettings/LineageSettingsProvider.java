@@ -56,7 +56,7 @@ import java.util.Map;
 import java.util.Set;
 
 /**
- * The LineageSettingsProvider serves as a {@link ContentProvider} for CM specific settings
+ * The LineageSettingsProvider serves as a {@link ContentProvider} for Lineage specific settings
  */
 public class LineageSettingsProvider extends ContentProvider {
     public static final String TAG = "LineageSettingsProvider";
@@ -64,12 +64,12 @@ public class LineageSettingsProvider extends ContentProvider {
 
     private static final boolean USER_CHECK_THROWS = true;
 
-    public static final String PREF_HAS_MIGRATED_CM_SETTINGS = "has_migrated_cm13_settings";
+    public static final String PREF_HAS_MIGRATED_LINEAGE_SETTINGS = "has_migrated_cm13_settings";
 
     private static final Bundle NULL_SETTING = Bundle.forPair("value", null);
 
     // Each defined user has their own settings
-    protected final SparseArray<CMDatabaseHelper> mDbHelpers = new SparseArray<CMDatabaseHelper>();
+    protected final SparseArray<LineageDatabaseHelper> mDbHelpers = new SparseArray<LineageDatabaseHelper>();
 
     private static final int SYSTEM = 1;
     private static final int SECURE = 2;
@@ -85,17 +85,17 @@ public class LineageSettingsProvider extends ContentProvider {
     private static final UriMatcher sUriMatcher = new UriMatcher(UriMatcher.NO_MATCH);
 
     static {
-        sUriMatcher.addURI(LineageSettings.AUTHORITY, CMDatabaseHelper.CMTableNames.TABLE_SYSTEM,
+        sUriMatcher.addURI(LineageSettings.AUTHORITY, LineageDatabaseHelper.LineageTableNames.TABLE_SYSTEM,
                 SYSTEM);
-        sUriMatcher.addURI(LineageSettings.AUTHORITY, CMDatabaseHelper.CMTableNames.TABLE_SECURE,
+        sUriMatcher.addURI(LineageSettings.AUTHORITY, LineageDatabaseHelper.LineageTableNames.TABLE_SECURE,
                 SECURE);
-        sUriMatcher.addURI(LineageSettings.AUTHORITY, CMDatabaseHelper.CMTableNames.TABLE_GLOBAL,
+        sUriMatcher.addURI(LineageSettings.AUTHORITY, LineageDatabaseHelper.LineageTableNames.TABLE_GLOBAL,
                 GLOBAL);
-        sUriMatcher.addURI(LineageSettings.AUTHORITY, CMDatabaseHelper.CMTableNames.TABLE_SYSTEM +
+        sUriMatcher.addURI(LineageSettings.AUTHORITY, LineageDatabaseHelper.LineageTableNames.TABLE_SYSTEM +
                 ITEM_MATCHER, SYSTEM_ITEM_NAME);
-        sUriMatcher.addURI(LineageSettings.AUTHORITY, CMDatabaseHelper.CMTableNames.TABLE_SECURE +
+        sUriMatcher.addURI(LineageSettings.AUTHORITY, LineageDatabaseHelper.LineageTableNames.TABLE_SECURE +
                 ITEM_MATCHER, SECURE_ITEM_NAME);
-        sUriMatcher.addURI(LineageSettings.AUTHORITY, CMDatabaseHelper.CMTableNames.TABLE_GLOBAL +
+        sUriMatcher.addURI(LineageSettings.AUTHORITY, LineageDatabaseHelper.LineageTableNames.TABLE_GLOBAL +
                 ITEM_MATCHER, GLOBAL_ITEM_NAME);
     }
 
@@ -140,10 +140,10 @@ public class LineageSettingsProvider extends ContentProvider {
     // region Migration Methods
 
     /**
-     * Migrates CM settings for all existing users if this has not been run before.
+     * Migrates Lineage settings for all existing users if this has not been run before.
      */
     private void migrateLineageSettingsForExistingUsersIfNeeded() {
-        boolean hasMigratedLineageSettings = mSharedPrefs.getBoolean(PREF_HAS_MIGRATED_CM_SETTINGS,
+        boolean hasMigratedLineageSettings = mSharedPrefs.getBoolean(PREF_HAS_MIGRATED_LINEAGE_SETTINGS,
                 false);
 
         if (!hasMigratedLineageSettings) {
@@ -153,7 +153,7 @@ public class LineageSettingsProvider extends ContentProvider {
                 migrateLineageSettingsForUser(user.id);
             }
 
-            mSharedPrefs.edit().putBoolean(PREF_HAS_MIGRATED_CM_SETTINGS, true).commit();
+            mSharedPrefs.edit().putBoolean(PREF_HAS_MIGRATED_LINEAGE_SETTINGS, true).commit();
 
             // TODO: Add this as part of a boot message to the UI
             long timeDiffMillis = System.currentTimeMillis() - startTime;
@@ -162,34 +162,34 @@ public class LineageSettingsProvider extends ContentProvider {
     }
 
     /**
-     * Migrates CM settings for a specific user.
-     * @param userId The id of the user to run CM settings migration for.
+     * Migrates Lineage settings for a specific user.
+     * @param userId The id of the user to run Lineage settings migration for.
      */
     private void migrateLineageSettingsForUser(int userId) {
         synchronized (this) {
-            if (LOCAL_LOGV) Log.d(TAG, "CM settings will be migrated for user id: " + userId);
+            if (LOCAL_LOGV) Log.d(TAG, "Lineage settings will be migrated for user id: " + userId);
 
             // Migrate system settings
             int rowsMigrated = migrateLineageSettingsForTable(userId,
-                    CMDatabaseHelper.CMTableNames.TABLE_SYSTEM, LineageSettings.System.LEGACY_SYSTEM_SETTINGS);
-            if (LOCAL_LOGV) Log.d(TAG, "Migrated " + rowsMigrated + " to CM system table");
+                    LineageDatabaseHelper.LineageTableNames.TABLE_SYSTEM, LineageSettings.System.LEGACY_SYSTEM_SETTINGS);
+            if (LOCAL_LOGV) Log.d(TAG, "Migrated " + rowsMigrated + " to Lineage system table");
 
             // Migrate secure settings
             rowsMigrated = migrateLineageSettingsForTable(userId,
-                    CMDatabaseHelper.CMTableNames.TABLE_SECURE, LineageSettings.Secure.LEGACY_SECURE_SETTINGS);
-            if (LOCAL_LOGV) Log.d(TAG, "Migrated " + rowsMigrated + " to CM secure table");
+                    LineageDatabaseHelper.LineageTableNames.TABLE_SECURE, LineageSettings.Secure.LEGACY_SECURE_SETTINGS);
+            if (LOCAL_LOGV) Log.d(TAG, "Migrated " + rowsMigrated + " to Lineage secure table");
 
             // Migrate global settings
             rowsMigrated = migrateLineageSettingsForTable(userId,
-                    CMDatabaseHelper.CMTableNames.TABLE_GLOBAL, LineageSettings.Global.LEGACY_GLOBAL_SETTINGS);
-            if (LOCAL_LOGV) Log.d(TAG, "Migrated " + rowsMigrated + " to CM global table");
+                    LineageDatabaseHelper.LineageTableNames.TABLE_GLOBAL, LineageSettings.Global.LEGACY_GLOBAL_SETTINGS);
+            if (LOCAL_LOGV) Log.d(TAG, "Migrated " + rowsMigrated + " to Lineage global table");
         }
     }
 
     /**
-     * Migrates CM settings for a specific table and user id.
-     * @param userId The id of the user to run CM settings migration for.
-     * @param tableName The name of the table to run CM settings migration on.
+     * Migrates Lineage settings for a specific table and user id.
+     * @param userId The id of the user to run Lineage settings migration for.
+     * @param tableName The name of the table to run Lineage settings migration on.
      * @param settings An array of keys to migrate from {@link Settings} to {@link LineageSettings}
      * @return Number of rows migrated.
      */
@@ -201,11 +201,11 @@ public class LineageSettingsProvider extends ContentProvider {
         for (String settingsKey : settings) {
             String settingsValue = null;
 
-            if (tableName.equals(CMDatabaseHelper.CMTableNames.TABLE_SYSTEM)) {
+            if (tableName.equals(LineageDatabaseHelper.LineageTableNames.TABLE_SYSTEM)) {
                 settingsValue = Settings.System.getStringForUser(contentResolver, settingsKey,
                         userId);
             }
-            else if (tableName.equals(CMDatabaseHelper.CMTableNames.TABLE_SECURE)) {
+            else if (tableName.equals(LineageDatabaseHelper.LineageTableNames.TABLE_SECURE)) {
                 settingsValue = Settings.Secure.getStringForUser(contentResolver, settingsKey,
                         userId);
                 if (settingsValue != null && settingsKey.equals(LineageSettings.Secure.STATS_COLLECTION)
@@ -252,7 +252,7 @@ public class LineageSettingsProvider extends ContentProvider {
                     settingsValue = TextUtils.join(",", tiles);
                 }
             }
-            else if (tableName.equals(CMDatabaseHelper.CMTableNames.TABLE_GLOBAL)) {
+            else if (tableName.equals(LineageDatabaseHelper.LineageTableNames.TABLE_GLOBAL)) {
                 settingsValue = Settings.Global.getStringForUser(contentResolver, settingsKey,
                         userId);
             }
@@ -318,7 +318,7 @@ public class LineageSettingsProvider extends ContentProvider {
             }
         }
 
-        boolean hasMigratedLineageSettings = mSharedPrefs.getBoolean(PREF_HAS_MIGRATED_CM_SETTINGS,
+        boolean hasMigratedLineageSettings = mSharedPrefs.getBoolean(PREF_HAS_MIGRATED_LINEAGE_SETTINGS,
                 false);
         final ComponentName preBootReceiver = new ComponentName("org.lineageos.lineagesettings",
                 "org.lineageos.lineagesettings.PreBootReceiver");
@@ -454,7 +454,7 @@ public class LineageSettingsProvider extends ContentProvider {
         int code = sUriMatcher.match(uri);
         String tableName = getTableNameFromUriMatchCode(code);
 
-        CMDatabaseHelper dbHelper = getOrEstablishDatabase(getUserIdForTable(tableName, userId));
+        LineageDatabaseHelper dbHelper = getOrEstablishDatabase(getUserIdForTable(tableName, userId));
         SQLiteDatabase db = dbHelper.getReadableDatabase();
 
         SQLiteQueryBuilder queryBuilder = new SQLiteQueryBuilder();
@@ -512,7 +512,7 @@ public class LineageSettingsProvider extends ContentProvider {
         String tableName = getTableNameFromUri(uri);
         checkWritePermissions(tableName);
 
-        CMDatabaseHelper dbHelper = getOrEstablishDatabase(getUserIdForTable(tableName, userId));
+        LineageDatabaseHelper dbHelper = getOrEstablishDatabase(getUserIdForTable(tableName, userId));
         SQLiteDatabase db = dbHelper.getWritableDatabase();
 
         db.beginTransaction();
@@ -569,14 +569,14 @@ public class LineageSettingsProvider extends ContentProvider {
         String tableName = getTableNameFromUri(uri);
         checkWritePermissions(tableName);
 
-        CMDatabaseHelper dbHelper = getOrEstablishDatabase(getUserIdForTable(tableName, userId));
+        LineageDatabaseHelper dbHelper = getOrEstablishDatabase(getUserIdForTable(tableName, userId));
 
         // Validate value if inserting int System table
         final String name = values.getAsString(Settings.NameValueTable.NAME);
         final String value = values.getAsString(Settings.NameValueTable.VALUE);
-        if (CMDatabaseHelper.CMTableNames.TABLE_SYSTEM.equals(tableName)) {
+        if (LineageDatabaseHelper.LineageTableNames.TABLE_SYSTEM.equals(tableName)) {
             validateSystemSettingNameValue(name, value);
-        } else if (CMDatabaseHelper.CMTableNames.TABLE_SECURE.equals(tableName)) {
+        } else if (LineageDatabaseHelper.LineageTableNames.TABLE_SECURE.equals(tableName)) {
             validateSecureSettingValue(name, value);
         }
 
@@ -609,7 +609,7 @@ public class LineageSettingsProvider extends ContentProvider {
             checkWritePermissions(tableName);
 
             int callingUserId = UserHandle.getCallingUserId();
-            CMDatabaseHelper dbHelper = getOrEstablishDatabase(getUserIdForTable(tableName,
+            LineageDatabaseHelper dbHelper = getOrEstablishDatabase(getUserIdForTable(tableName,
                     callingUserId));
 
             SQLiteDatabase db = dbHelper.getWritableDatabase();
@@ -645,14 +645,14 @@ public class LineageSettingsProvider extends ContentProvider {
         // Validate value if updating System table
         final String name = values.getAsString(Settings.NameValueTable.NAME);
         final String value = values.getAsString(Settings.NameValueTable.VALUE);
-        if (CMDatabaseHelper.CMTableNames.TABLE_SYSTEM.equals(tableName)) {
+        if (LineageDatabaseHelper.LineageTableNames.TABLE_SYSTEM.equals(tableName)) {
             validateSystemSettingNameValue(name, value);
-        } else if (CMDatabaseHelper.CMTableNames.TABLE_SECURE.equals(tableName)) {
+        } else if (LineageDatabaseHelper.LineageTableNames.TABLE_SECURE.equals(tableName)) {
             validateSecureSettingValue(name, value);
         }
 
         int callingUserId = UserHandle.getCallingUserId();
-        CMDatabaseHelper dbHelper = getOrEstablishDatabase(getUserIdForTable(tableName,
+        LineageDatabaseHelper dbHelper = getOrEstablishDatabase(getUserIdForTable(tableName,
                 callingUserId));
 
         SQLiteDatabase db = dbHelper.getWritableDatabase();
@@ -669,12 +669,12 @@ public class LineageSettingsProvider extends ContentProvider {
     // endregion Content Provider Methods
 
     /**
-     * Tries to get a {@link CMDatabaseHelper} for the specified user and if it does not exist, a
-     * new instance of {@link CMDatabaseHelper} is created for the specified user and returned.
+     * Tries to get a {@link LineageDatabaseHelper} for the specified user and if it does not exist, a
+     * new instance of {@link LineageDatabaseHelper} is created for the specified user and returned.
      * @param callingUser
      * @return
      */
-    private CMDatabaseHelper getOrEstablishDatabase(int callingUser) {
+    private LineageDatabaseHelper getOrEstablishDatabase(int callingUser) {
         if (callingUser >= android.os.Process.SYSTEM_UID) {
             if (USER_CHECK_THROWS) {
                 throw new IllegalArgumentException("Uid rather than user handle: " + callingUser);
@@ -685,7 +685,7 @@ public class LineageSettingsProvider extends ContentProvider {
 
         long oldId = Binder.clearCallingIdentity();
         try {
-            CMDatabaseHelper dbHelper;
+            LineageDatabaseHelper dbHelper;
             synchronized (this) {
                 dbHelper = mDbHelpers.get(callingUser);
             }
@@ -702,23 +702,23 @@ public class LineageSettingsProvider extends ContentProvider {
     }
 
     /**
-     * Check if a {@link CMDatabaseHelper} exists for a user and if it doesn't, a new helper is
+     * Check if a {@link LineageDatabaseHelper} exists for a user and if it doesn't, a new helper is
      * created and added to the list of tracked database helpers
      * @param userId
      */
     private void establishDbTracking(int userId) {
-        CMDatabaseHelper dbHelper;
+        LineageDatabaseHelper dbHelper;
 
         synchronized (this) {
             dbHelper = mDbHelpers.get(userId);
             if (LOCAL_LOGV) {
-                Log.i(TAG, "Checking cm settings db helper for user " + userId);
+                Log.i(TAG, "Checking lineage settings db helper for user " + userId);
             }
             if (dbHelper == null) {
                 if (LOCAL_LOGV) {
-                    Log.i(TAG, "Installing new cm settings db helper for user " + userId);
+                    Log.i(TAG, "Installing new lineage settings db helper for user " + userId);
                 }
-                dbHelper = new CMDatabaseHelper(getContext(), userId);
+                dbHelper = new LineageDatabaseHelper(getContext(), userId);
                 mDbHelpers.append(userId, dbHelper);
             }
         }
@@ -737,13 +737,13 @@ public class LineageSettingsProvider extends ContentProvider {
      * @throws SecurityException if the caller is forbidden to write.
      */
     private void checkWritePermissions(String tableName) {
-        if ((CMDatabaseHelper.CMTableNames.TABLE_SECURE.equals(tableName) ||
-                CMDatabaseHelper.CMTableNames.TABLE_GLOBAL.equals(tableName)) &&
+        if ((LineageDatabaseHelper.LineageTableNames.TABLE_SECURE.equals(tableName) ||
+                LineageDatabaseHelper.LineageTableNames.TABLE_GLOBAL.equals(tableName)) &&
                 getContext().checkCallingOrSelfPermission(
                         lineageos.platform.Manifest.permission.WRITE_SECURE_SETTINGS) !=
                         PackageManager.PERMISSION_GRANTED) {
             throw new SecurityException(
-                    String.format("Permission denial: writing to cm secure settings requires %1$s",
+                    String.format("Permission denial: writing to lineage secure settings requires %1$s",
                             lineageos.platform.Manifest.permission.WRITE_SECURE_SETTINGS));
         }
     }
@@ -789,13 +789,13 @@ public class LineageSettingsProvider extends ContentProvider {
         switch (code) {
             case SYSTEM:
             case SYSTEM_ITEM_NAME:
-                return CMDatabaseHelper.CMTableNames.TABLE_SYSTEM;
+                return LineageDatabaseHelper.LineageTableNames.TABLE_SYSTEM;
             case SECURE:
             case SECURE_ITEM_NAME:
-                return CMDatabaseHelper.CMTableNames.TABLE_SECURE;
+                return LineageDatabaseHelper.LineageTableNames.TABLE_SECURE;
             case GLOBAL:
             case GLOBAL_ITEM_NAME:
-                return CMDatabaseHelper.CMTableNames.TABLE_GLOBAL;
+                return LineageDatabaseHelper.LineageTableNames.TABLE_GLOBAL;
             default:
                 throw new IllegalArgumentException("Invalid uri match code: " + code);
         }
@@ -809,7 +809,7 @@ public class LineageSettingsProvider extends ContentProvider {
      * @return User id
      */
     private int getUserIdForTable(String tableName, int userId) {
-        return CMDatabaseHelper.CMTableNames.TABLE_GLOBAL.equals(tableName) ?
+        return LineageDatabaseHelper.LineageTableNames.TABLE_GLOBAL.equals(tableName) ?
                 UserHandle.USER_OWNER : userId;
     }
 
@@ -821,13 +821,13 @@ public class LineageSettingsProvider extends ContentProvider {
      */
     private void notifyChange(Uri uri, String tableName, int userId) {
         String property = null;
-        final boolean isGlobal = tableName.equals(CMDatabaseHelper.CMTableNames.TABLE_GLOBAL);
-        if (tableName.equals(CMDatabaseHelper.CMTableNames.TABLE_SYSTEM)) {
-            property = LineageSettings.System.SYS_PROP_CM_SETTING_VERSION;
-        } else if (tableName.equals(CMDatabaseHelper.CMTableNames.TABLE_SECURE)) {
-            property = LineageSettings.Secure.SYS_PROP_CM_SETTING_VERSION;
+        final boolean isGlobal = tableName.equals(LineageDatabaseHelper.LineageTableNames.TABLE_GLOBAL);
+        if (tableName.equals(LineageDatabaseHelper.LineageTableNames.TABLE_SYSTEM)) {
+            property = LineageSettings.System.SYS_PROP_LINEAGE_SETTING_VERSION;
+        } else if (tableName.equals(LineageDatabaseHelper.LineageTableNames.TABLE_SECURE)) {
+            property = LineageSettings.Secure.SYS_PROP_LINEAGE_SETTING_VERSION;
         } else if (isGlobal) {
-            property = LineageSettings.Global.SYS_PROP_CM_SETTING_VERSION;
+            property = LineageSettings.Global.SYS_PROP_LINEAGE_SETTING_VERSION;
         }
 
         if (property != null) {

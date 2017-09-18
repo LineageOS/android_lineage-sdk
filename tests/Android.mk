@@ -27,7 +27,7 @@ LOCAL_DEX_PREOPT := false
 
 LOCAL_SRC_FILES := $(call all-subdir-java-files, src/)
 
-LOCAL_PACKAGE_NAME := CMPlatformTests
+LOCAL_PACKAGE_NAME := LineagePlatformTests
 LOCAL_CERTIFICATE := platform
 LOCAL_JAVA_LIBRARIES := android.test.runner
 LOCAL_PROGUARD_ENABLED := optimization shrinktests
@@ -35,7 +35,7 @@ LOCAL_PROGUARD_FLAG_FILES := proguard.flags
 
 include $(BUILD_PACKAGE)
 
-# Register as CMTS
+# Register as LineageTS
 include $(CLEAR_VARS)
 LOCAL_MODULE_TAGS := tests
 
@@ -53,4 +53,4 @@ LOCAL_CERTIFICATE := platform
 LOCAL_JAVA_LIBRARIES := android.test.runner
 LOCAL_PROGUARD_ENABLED := optimization shrinktests
 LOCAL_PROGUARD_FLAG_FILES := proguard.flags
-include $(BUILD_CMTS_PACKAGE)
+include $(BUILD_LineageTS_PACKAGE)

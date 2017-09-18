@@ -42,8 +42,8 @@ import static com.android.internal.R.styleable.Preference_icon;
 import static com.android.internal.R.styleable.Preference_key;
 import static com.android.internal.R.styleable.Preference_summary;
 import static com.android.internal.R.styleable.Preference_title;
-import static lineageos.platform.R.styleable.cm_Searchable;
-import static lineageos.platform.R.styleable.cm_Searchable_xmlRes;
+import static lineageos.platform.R.styleable.lineage_Searchable;
+import static lineageos.platform.R.styleable.lineage_Searchable_xmlRes;
 
 public class PartsList {
 
@@ -51,7 +51,7 @@ public class PartsList {
 
     private static final boolean DEBUG = Log.isLoggable(TAG, Log.VERBOSE);
 
-    public static final String EXTRA_PART = ":cm:part";
+    public static final String EXTRA_PART = ":lineage:part";
 
     public static final String LINEAGEPARTS_PACKAGE = "org.lineageos.lineageparts";
 
@@ -190,8 +190,8 @@ public class PartsList {
                     info.setFragmentClass(sa.getString(Preference_fragment));
                     info.setIconRes(sa.getResourceId(Preference_icon, 0));
 
-                    sa = res.obtainAttributes(attrs, cm_Searchable);
-                    info.setXmlRes(sa.getResourceId(cm_Searchable_xmlRes, 0));
+                    sa = res.obtainAttributes(attrs, lineage_Searchable);
+                    info.setXmlRes(sa.getResourceId(lineage_Searchable_xmlRes, 0));
 
                     sa.recycle();
 

@@ -84,7 +84,7 @@ public class PartnerInterface {
         }
         sService = getService();
         if (context.getPackageManager().hasSystemFeature(
-               CMContextConstants.Features.PARTNER) && sService == null) {
+               LineageContextConstants.Features.PARTNER) && sService == null) {
             throw new RuntimeException("Unable to get PartnerInterfaceService. The service" +
                     " either crashed, was not started, or the interface has been called to early" +
                     " in SystemServer init");
@@ -108,7 +108,7 @@ public class PartnerInterface {
         if (sService != null) {
             return sService;
         }
-        IBinder b = ServiceManager.getService(CMContextConstants.CM_PARTNER_INTERFACE);
+        IBinder b = ServiceManager.getService(LineageContextConstants.LINEAGE_PARTNER_INTERFACE);
         if (b != null) {
             sService = IPartnerInterface.Stub.asInterface(b);
             return sService;
