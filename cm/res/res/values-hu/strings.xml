@@ -88,6 +88,7 @@
   <string name="perf_profile_bias_power">Hatékonyság</string>
   <string name="perf_profile_bias_perf">Gyors</string>
   <!-- Performance profiles -->
+  <string name="perf_profile_pwrsv_summary">Maximális energiatakarékosság. Csökkenti a készülék teljesítményét</string>
   <string name="perf_profile_bal_summary">Egyensúly az optimális teljesítmény és az energiafogyasztás között</string>
   <string name="perf_profile_perf_summary">Nagy teljesítményű üzemmód. Hasznos az alacsony késleltetést és nagy teljesítményt igénylő alkalmazásokhoz, amikor a fogyasztás nem számít</string>
   <string name="perf_profile_bias_power_summary">Energiatakarékosság előnyben részesítése. Korlátozza a maximális CPU teljesítményt és optimalizálja az energiatakarékosságot a nagyobb késleltetés árán</string>

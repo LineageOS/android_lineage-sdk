@@ -88,6 +88,7 @@
   <string name="perf_profile_bias_power">Doeltreffendheid</string>
   <string name="perf_profile_bias_perf">Vinnige</string>
   <!-- Performance profiles -->
+  <string name="perf_profile_pwrsv_summary">Maksimum kragbesparings, verminder toestel prestasie</string>
   <string name="perf_profile_bal_summary">Balans van optimale prestasie en krageienskappe</string>
   <string name="perf_profile_perf_summary">Hoë-prestasiemodus. Nuttig vir toepaasings wat lae netwerklatensie en hoogste deurvoer vereis wanneer kragverbruik is nie \'n bron van kommer nie</string>
   <string name="perf_profile_bias_power_summary">Gee voorkeur aan kragbesparing. Beperk maksimum SVE-krag en optimeer vir kragbesparing ten koste van hoër netwerk latensie</string>
