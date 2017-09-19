@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package cyanogenmod.app;
+package lineageos.app;
 
 import android.annotation.NonNull;
 import android.annotation.Nullable;
@@ -42,13 +42,13 @@ public class LiveLockScreenManager {
      */
     @SdkConstant(SdkConstant.SdkConstantType.SERVICE_ACTION)
     public static final String SERVICE_INTERFACE
-            = "cyanogenmod.app.LiveLockScreenManagerService";
+            = "lineageos.app.LiveLockScreenManagerService";
 
     private LiveLockScreenManager(Context context) {
         mContext = context;
         sService = getService();
         if (context.getPackageManager().hasSystemFeature(
-                CMContextConstants.Features.LIVE_LOCK_SCREEN) && sService == null) {
+                LineageContextConstants.Features.LIVE_LOCK_SCREEN) && sService == null) {
             Log.wtf(TAG, "Unable to get LiveLockScreenManagerService. " +
                     "The service either crashed, was not started, or the interface has " +
                     "been called to early in SystemServer init");
@@ -57,7 +57,7 @@ public class LiveLockScreenManager {
 
     private ILiveLockScreenManager getService() {
         if (sService == null) {
-            IBinder b = ServiceManager.getService(CMContextConstants.CM_LIVE_LOCK_SCREEN_SERVICE);
+            IBinder b = ServiceManager.getService(LineageContextConstants.LINEAGE_LIVE_LOCK_SCREEN_SERVICE);
             if (b != null) {
                 sService = ILiveLockScreenManager.Stub.asInterface(b);
             }

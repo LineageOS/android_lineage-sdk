@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.cyanogenmod.platform.internal;
+package org.lineageos.platform.internal;
 
 import android.app.INotificationManager;
 import android.content.ContentResolver;
@@ -34,10 +34,10 @@ import android.provider.Settings;
 import android.telephony.TelephonyManager;
 import android.util.Log;
 import com.android.server.SystemService;
-import cyanogenmod.app.CMContextConstants;
-import cyanogenmod.app.IPartnerInterface;
-import cyanogenmod.app.PartnerInterface;
-import cyanogenmod.media.MediaRecorder;
+import lineageos.app.LineageContextConstants;
+import lineageos.app.IPartnerInterface;
+import lineageos.app.PartnerInterface;
+import lineageos.media.MediaRecorder;
 
 import java.io.ByteArrayInputStream;
 import java.security.PublicKey;
@@ -48,9 +48,9 @@ import java.security.interfaces.RSAPublicKey;
 
 /** @hide */
 
-public class PartnerInterfaceService extends CMSystemService {
+public class PartnerInterfaceService extends LineageSystemService {
 
-    private static final String TAG = "CMSettingsService";
+    private static final String TAG = "LineageSettingsService";
 
     private Context mContext;
     private TelephonyManager mTelephonyManager;
@@ -60,12 +60,12 @@ public class PartnerInterfaceService extends CMSystemService {
     public PartnerInterfaceService(Context context) {
         super(context);
         mContext = context;
-        publishBinderService(CMContextConstants.CM_PARTNER_INTERFACE, mService);
+        publishBinderService(LineageContextConstants.LINEAGE_PARTNER_INTERFACE, mService);
     }
 
     @Override
     public String getFeatureDeclaration() {
-        return CMContextConstants.Features.PARTNER;
+        return LineageContextConstants.Features.PARTNER;
     }
 
     @Override

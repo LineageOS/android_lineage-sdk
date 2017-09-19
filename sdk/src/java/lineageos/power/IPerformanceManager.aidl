@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package cyanogenmod.power;
+package lineageos.power;
 
-import cyanogenmod.power.PerformanceProfile;
+import lineageos.power.PerformanceProfile;
 
 /** @hide */
 interface IPerformanceManager {

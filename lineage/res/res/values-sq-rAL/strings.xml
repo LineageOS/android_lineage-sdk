@@ -18,7 +18,7 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Label for the LineageOS system components when they are shown to the user. -->
-  <string name="cyanogenmod_system_label">Sistemi LineageOS</string>
+  <string name="lineageos_system_label">Sistemi LineageOS</string>
   <string name="permlab_publishCustomTile">krijo një tjegull të personalizuar brenda panelit të parametrave të shpejtë</string>
   <string name="permdesc_publishCustomTile">Lejo një aplikacion që të publikojë një tjegull të parametrave të shpejtë.</string>
   <string name="permlab_modifyNetworkSettings">ndrysho parametrat e rrjetit të sistemit</string>
@@ -37,8 +37,8 @@
   <!-- Labels for the READ_ALARMS permission. -->
   <string name="permlab_read_alarms">akseso alarmet e caktuar</string>
   <!-- Labels for the WRITE_SETTINGS permission -->
-  <string name="permlab_writeSettings">modifiko parametrat e sistemit CM</string>
-  <string name="permdesc_writeSettings">Lejon një aplikacion që të modifikojë parametrat e sistemit CM.</string>
+  <string name="permlab_writeSettings">modifiko parametrat e sistemit Lineage</string>
+  <string name="permdesc_writeSettings">Lejon një aplikacion që të modifikojë parametrat e sistemit Lineage.</string>
   <!-- Labels for the WRITE_SECURE_SETTINGS permission -->
   <!-- Labels for the MANAGE_PERSISTENT_STORAGE permission. -->
   <!-- Labels for the ACCESS_APP_SUGGESTIONS permission -->
@@ -133,8 +133,8 @@
   <!-- LiveDisplay manager permission -->
   <string name="permlab_manageLiveDisplay">menaxho parametrat e LiveDisplay</string>
   <string name="permdesc_manageLiveDisplay">Lejon një aplikacion të konfigurojë parametra të përparuar të ekranit.</string>
-  <!-- CMAudioService - observe session changes permission -->
-  <!-- CMAudioService - observe session changes permission -->
+  <!-- LineageAudioService - observe session changes permission -->
+  <!-- LineageAudioService - observe session changes permission -->
   <!-- QuickSettings: Themes tile -->
   <string name="qs_themes_label">Temat</string>
   <string name="qs_themes_content_description">Personalizo temën</string>

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.cyanogenmod.tests;
+package org.lineageos.tests;
 
 import android.app.ListActivity;
 import android.os.Bundle;

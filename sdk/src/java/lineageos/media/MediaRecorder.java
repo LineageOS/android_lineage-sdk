@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package cyanogenmod.media;
+package lineageos.media;
 
 public class MediaRecorder {
     /**
@@ -47,7 +47,7 @@ public class MediaRecorder {
      */
     //@SdkConstant(SdkConstantType.BROADCAST_INTENT_ACTION)
     public static final String ACTION_HOTWORD_INPUT_CHANGED
-            = "com.cyanogenmod.intent.action.HOTWORD_INPUT_CHANGED";
+            = "org.lineageos.intent.action.HOTWORD_INPUT_CHANGED";
 
     /**
      * Extra for {@link #ACTION_HOTWORD_INPUT_CHANGED} that provides the package name of the
@@ -55,7 +55,7 @@ public class MediaRecorder {
      * purposes.
      */
     public static final String EXTRA_CURRENT_PACKAGE_NAME =
-            "com.cyanogenmod.intent.extra.CURRENT_PACKAGE_NAME";
+            "org.lineageos.intent.extra.CURRENT_PACKAGE_NAME";
 
     /**
      * Extra for {@link #ACTION_HOTWORD_INPUT_CHANGED} that provides the state of
@@ -63,7 +63,7 @@ public class MediaRecorder {
      * @hide
      */
     public static final String EXTRA_HOTWORD_INPUT_STATE =
-            "com.cyanogenmod.intent.extra.HOTWORD_INPUT_STATE";
+            "org.lineageos.intent.extra.HOTWORD_INPUT_STATE";
 
 
     public static class AudioSource {
@@ -76,7 +76,7 @@ public class MediaRecorder {
          * always-on software hotword detection, while gracefully giving in to any other application
          * that might want to read from the microphone.
          * </p>
-         * You must hold {@link cyanogenmod.media.MediaRecorder#CAPTURE_AUDIO_HOTWORD_PERMISSION}
+         * You must hold {@link lineageos.media.MediaRecorder#CAPTURE_AUDIO_HOTWORD_PERMISSION}
          * to use this audio source.
          */
         public static final int HOTWORD = 1999;

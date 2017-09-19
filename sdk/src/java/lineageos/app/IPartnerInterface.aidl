@@ -15,7 +15,7 @@
 ** limitations under the License.
 */
 
-package cyanogenmod.app;
+package lineageos.app;
 
 /** {@hide} */
 interface IPartnerInterface

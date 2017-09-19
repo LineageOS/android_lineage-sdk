@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package cyanogenmod.hardware;
+package lineageos.hardware;
 
 interface IThermalListenerCallback {
     void onThermalChanged(int state);

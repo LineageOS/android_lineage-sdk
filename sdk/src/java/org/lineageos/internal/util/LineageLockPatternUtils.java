@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.cyanogenmod.internal.util;
+package org.lineageos.internal.util;
 
 import android.content.ComponentName;
 import android.content.Context;
@@ -24,10 +24,10 @@ import android.text.TextUtils;
 
 import com.android.internal.widget.LockPatternUtils;
 
-import cyanogenmod.platform.Manifest;
-import cyanogenmod.providers.CMSettings;
+import lineageos.platform.Manifest;
+import lineageos.providers.LineageSettings;
 
-public class CmLockPatternUtils extends LockPatternUtils {
+public class LineageLockPatternUtils extends LockPatternUtils {
 
     /**
      * Third party keyguard component to be displayed within the keyguard
@@ -38,11 +38,11 @@ public class CmLockPatternUtils extends LockPatternUtils {
      * Action to be broadcasted when the third party keyguard component has been changed
      */
     public static final String ACTION_THIRD_PARTY_KEYGUARD_COMPONENT_CHANGED =
-            "org.cyanogenmod.internal.action.THIRD_PARTY_KEYGUARD_COMPONENT_CHANGED";
+            "org.lineageos.internal.action.THIRD_PARTY_KEYGUARD_COMPONENT_CHANGED";
 
     private Context mContext;
 
-    public CmLockPatternUtils(Context context) {
+    public LineageLockPatternUtils(Context context) {
         super(context);
         mContext = context;
     }
@@ -97,10 +97,10 @@ public class CmLockPatternUtils extends LockPatternUtils {
     }
 
     public boolean shouldPassToSecurityView(int userId) {
-        return getBoolean(CMSettings.Secure.LOCK_PASS_TO_SECURITY_VIEW, false, userId);
+        return getBoolean(LineageSettings.Secure.LOCK_PASS_TO_SECURITY_VIEW, false, userId);
     }
 
     public void setPassToSecurityView(boolean enabled, int userId) {
-        setBoolean(CMSettings.Secure.LOCK_PASS_TO_SECURITY_VIEW, enabled, userId);
+        setBoolean(LineageSettings.Secure.LOCK_PASS_TO_SECURITY_VIEW, enabled, userId);
     }
 }

@@ -1,4 +1,4 @@
-package org.cyanogenmod.tests.alarmclock;
+package org.lineageos.tests.alarmclock;
 
 import android.content.Intent;
 import android.database.Cursor;
@@ -7,15 +7,15 @@ import android.net.Uri;
 import android.provider.AlarmClock;
 import android.util.Log;
 import android.widget.Toast;
-import cyanogenmod.alarmclock.ClockContract;
-import cyanogenmod.alarmclock.CyanogenModAlarmClock;
-import org.cyanogenmod.tests.TestActivity;
+import lineageos.alarmclock.ClockContract;
+import lineageos.alarmclock.LineageOSAlarmClock;
+import org.lineageos.tests.TestActivity;
 
 /**
- * Tests functionality added in {@link cyanogenmod.alarmclock.CyanogenModAlarmClock}
+ * Tests functionality added in {@link lineageos.alarmclock.LineageOSAlarmClock}
  */
-public class CMAlarmClockTest extends TestActivity {
-    private static final String TAG = "CMAlarmClockTest";
+public class LineageAlarmClockTest extends TestActivity {
+    private static final String TAG = "LineageAlarmClockTest";
 
     private static final String[] ALARM_QUERY_COLUMNS = {
             ClockContract.AlarmsColumns._ID,
@@ -51,7 +51,7 @@ public class CMAlarmClockTest extends TestActivity {
             },
             new Test("Test create alarm") {
                 public void run() {
-                    Intent intent = CyanogenModAlarmClock.createAlarmIntent(CMAlarmClockTest.this);
+                    Intent intent = LineageOSAlarmClock.createAlarmIntent(LineageAlarmClockTest.this);
                     intent.putExtra(AlarmClock.EXTRA_HOUR, 13);
                     intent.putExtra(AlarmClock.EXTRA_MINUTES, 35);
                     intent.putExtra(AlarmClock.EXTRA_MESSAGE, "Test from third party!");
@@ -117,10 +117,10 @@ public class CMAlarmClockTest extends TestActivity {
      * @return The Intent to launch that will perform this action.
      */
     private Intent getIntentToSetAlarmEnabled(long alarmId, boolean enabledState) {
-        Intent intent = new Intent(CyanogenModAlarmClock.ACTION_SET_ALARM_ENABLED);
+        Intent intent = new Intent(LineageOSAlarmClock.ACTION_SET_ALARM_ENABLED);
         intent.setPackage("com.android.deskclock");
-        intent.putExtra(CyanogenModAlarmClock.EXTRA_ALARM_ID, alarmId);
-        intent.putExtra(CyanogenModAlarmClock.EXTRA_ENABLED, enabledState);
+        intent.putExtra(LineageOSAlarmClock.EXTRA_ALARM_ID, alarmId);
+        intent.putExtra(LineageOSAlarmClock.EXTRA_ENABLED, enabledState);
         return intent;
     }
 

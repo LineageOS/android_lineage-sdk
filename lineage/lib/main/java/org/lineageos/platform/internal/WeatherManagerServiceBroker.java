@@ -14,33 +14,33 @@
  * limitations under the License.
  */
 
-package org.cyanogenmod.platform.internal;
+package org.lineageos.platform.internal;
 
 import android.annotation.NonNull;
 import android.content.ComponentName;
 import android.content.Context;
 import android.os.IBinder;
 import android.os.RemoteException;
-import cyanogenmod.app.CMContextConstants;
-import cyanogenmod.platform.Manifest;
-import cyanogenmod.weather.ICMWeatherManager;
-import cyanogenmod.weather.IWeatherServiceProviderChangeListener;
-import cyanogenmod.weather.RequestInfo;
+import lineageos.app.LineageContextConstants;
+import lineageos.platform.Manifest;
+import lineageos.weather.ILineageWeatherManager;
+import lineageos.weather.IWeatherServiceProviderChangeListener;
+import lineageos.weather.RequestInfo;
 
-public class WeatherManagerServiceBroker extends BrokerableCMSystemService<ICMWeatherManager> {
+public class WeatherManagerServiceBroker extends BrokerableLineageSystemService<ILineageWeatherManager> {
 
     private Context mContext;
 
     private static final ComponentName TARGET_IMPLEMENTATION_COMPONENT =
-            new ComponentName("org.cyanogenmod.weatherservice",
-                    "org.cyanogenmod.weatherservice.WeatherManagerService");
+            new ComponentName("org.lineageos.weatherservice",
+                    "org.lineageos.weatherservice.WeatherManagerService");
 
     private void enforcePermission() {
         mContext.enforceCallingOrSelfPermission(
                 Manifest.permission.ACCESS_WEATHER_MANAGER, null);
     }
 
-    private final IBinder mService = new ICMWeatherManager.Stub() {
+    private final IBinder mService = new ILineageWeatherManager.Stub() {
 
         @Override
         public void updateWeather(RequestInfo info) throws RemoteException {
@@ -99,22 +99,22 @@ public class WeatherManagerServiceBroker extends BrokerableCMSystemService<ICMWe
 
     @Override
     public String getFeatureDeclaration() {
-        return CMContextConstants.Features.WEATHER_SERVICES;
+        return LineageContextConstants.Features.WEATHER_SERVICES;
     }
 
     @Override
     public void onStart() {
-        publishBinderService(CMContextConstants.CM_WEATHER_SERVICE, mService);
+        publishBinderService(LineageContextConstants.LINEAGE_WEATHER_SERVICE, mService);
     }
 
     @Override
-    protected ICMWeatherManager getIBinderAsIInterface(@NonNull IBinder service) {
-        return ICMWeatherManager.Stub.asInterface(service);
+    protected ILineageWeatherManager getIBinderAsIInterface(@NonNull IBinder service) {
+        return ILineageWeatherManager.Stub.asInterface(service);
     }
 
     @Override
-    protected ICMWeatherManager getDefaultImplementation() {
-        return new ICMWeatherManager.NoOp();
+    protected ILineageWeatherManager getDefaultImplementation() {
+        return new ILineageWeatherManager.NoOp();
     }
 
     @Override

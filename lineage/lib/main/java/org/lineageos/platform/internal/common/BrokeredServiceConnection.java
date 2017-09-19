@@ -14,25 +14,25 @@
  * limitations under the License.
  */
 
-package org.cyanogenmod.platform.internal.common;
+package org.lineageos.platform.internal.common;
 
 /**
  * The {@link BrokeredServiceConnection} provides callbacks for when a
- * {@link org.cyanogenmod.platform.internal.BrokerableCMSystemService} interface
+ * {@link org.lineageos.platform.internal.BrokerableLineageSystemService} interface
  * contract is either fulfilled and connected to an implementation or disconnected.
  */
 public interface BrokeredServiceConnection {
 
     /**
      * Callback that signifies that the given interface contract passed into the
-     * {@link org.cyanogenmod.platform.internal.BrokerableCMSystemService} is implemented
+     * {@link org.lineageos.platform.internal.BrokerableLineageSystemService} is implemented
      * and connected.
      */
     void onBrokeredServiceConnected();
 
     /**
      * Callback that signifies that the given implementation for the interface contract passed
-     * into the {@link org.cyanogenmod.platform.internal.BrokerableCMSystemService} is disconnected.
+     * into the {@link org.lineageos.platform.internal.BrokerableLineageSystemService} is disconnected.
      */
     void onBrokeredServiceDisconnected();
 }

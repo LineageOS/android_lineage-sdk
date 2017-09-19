@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.cyanogenmod.platform.internal.display;
+package org.lineageos.platform.internal.display;
 
 import android.animation.ValueAnimator;
 import android.animation.ValueAnimator.AnimatorUpdateListener;
@@ -26,20 +26,20 @@ import android.util.Range;
 import android.util.Slog;
 import android.view.animation.LinearInterpolator;
 
-import org.cyanogenmod.platform.internal.display.TwilightTracker.TwilightState;
+import org.lineageos.platform.internal.display.TwilightTracker.TwilightState;
 
 import java.io.PrintWriter;
 import java.util.BitSet;
 
-import cyanogenmod.hardware.CMHardwareManager;
-import cyanogenmod.hardware.LiveDisplayManager;
-import cyanogenmod.providers.CMSettings;
-import cyanogenmod.util.ColorUtils;
+import lineageos.hardware.LineageHardwareManager;
+import lineageos.hardware.LiveDisplayManager;
+import lineageos.providers.LineageSettings;
+import lineageos.util.ColorUtils;
 
-import static cyanogenmod.hardware.LiveDisplayManager.MODE_AUTO;
-import static cyanogenmod.hardware.LiveDisplayManager.MODE_DAY;
-import static cyanogenmod.hardware.LiveDisplayManager.MODE_NIGHT;
-import static cyanogenmod.hardware.LiveDisplayManager.MODE_OFF;
+import static lineageos.hardware.LiveDisplayManager.MODE_AUTO;
+import static lineageos.hardware.LiveDisplayManager.MODE_DAY;
+import static lineageos.hardware.LiveDisplayManager.MODE_NIGHT;
+import static lineageos.hardware.LiveDisplayManager.MODE_OFF;
 
 public class ColorTemperatureController extends LiveDisplayFeature {
 
@@ -60,40 +60,40 @@ public class ColorTemperatureController extends LiveDisplayFeature {
 
     private ValueAnimator mAnimator;
 
-    private final CMHardwareManager mHardware;
+    private final LineageHardwareManager mHardware;
 
     private static final long TWILIGHT_ADJUSTMENT_TIME = DateUtils.HOUR_IN_MILLIS * 1;
 
     private static final Uri DISPLAY_TEMPERATURE_DAY =
-            CMSettings.System.getUriFor(CMSettings.System.DISPLAY_TEMPERATURE_DAY);
+            LineageSettings.System.getUriFor(LineageSettings.System.DISPLAY_TEMPERATURE_DAY);
     private static final Uri DISPLAY_TEMPERATURE_NIGHT =
-            CMSettings.System.getUriFor(CMSettings.System.DISPLAY_TEMPERATURE_NIGHT);
+            LineageSettings.System.getUriFor(LineageSettings.System.DISPLAY_TEMPERATURE_NIGHT);
 
     public ColorTemperatureController(Context context,
             Handler handler, DisplayHardwareController displayHardware) {
         super(context, handler);
         mDisplayHardware = displayHardware;
-        mHardware = CMHardwareManager.getInstance(mContext);
+        mHardware = LineageHardwareManager.getInstance(mContext);
 
         mUseColorBalance = mHardware
-                .isSupported(CMHardwareManager.FEATURE_COLOR_BALANCE);
+                .isSupported(LineageHardwareManager.FEATURE_COLOR_BALANCE);
         mColorBalanceRange = mHardware.getColorBalanceRange();
 
         mUseTemperatureAdjustment = mUseColorBalance ||
                 mDisplayHardware.hasColorAdjustment();
 
         mDefaultDayTemperature = mContext.getResources().getInteger(
-                org.cyanogenmod.platform.internal.R.integer.config_dayColorTemperature);
+                org.lineageos.platform.internal.R.integer.config_dayColorTemperature);
         mDefaultNightTemperature = mContext.getResources().getInteger(
-                org.cyanogenmod.platform.internal.R.integer.config_nightColorTemperature);
+                org.lineageos.platform.internal.R.integer.config_nightColorTemperature);
 
         mColorTemperatureRange = Range.create(
                 mContext.getResources().getInteger(
-                        org.cyanogenmod.platform.internal.R.integer.config_minColorTemperature),
+                        org.lineageos.platform.internal.R.integer.config_minColorTemperature),
                 mContext.getResources().getInteger(
-                        org.cyanogenmod.platform.internal.R.integer.config_maxColorTemperature));
+                        org.lineageos.platform.internal.R.integer.config_maxColorTemperature));
 
-        mColorBalanceCurve = org.cyanogenmod.internal.util.MathUtils.powerCurve(
+        mColorBalanceCurve = org.lineageos.internal.util.MathUtils.powerCurve(
                 mColorTemperatureRange.getLower(),
                 mDefaultDayTemperature,
                 mColorTemperatureRange.getUpper());
@@ -254,7 +254,7 @@ public class ColorTemperatureController extends LiveDisplayFeature {
      * correct configuration at the device level!
      */
     private int mapColorTemperatureToBalance(int temperature) {
-        double z = org.cyanogenmod.internal.util.MathUtils.powerCurveToLinear(mColorBalanceCurve, temperature);
+        double z = org.lineageos.internal.util.MathUtils.powerCurveToLinear(mColorBalanceCurve, temperature);
         return Math.round(MathUtils.lerp((float)mColorBalanceRange.getLower(),
                 (float)mColorBalanceRange.getUpper(), (float)z));
     }
@@ -342,21 +342,21 @@ public class ColorTemperatureController extends LiveDisplayFeature {
     }
 
     int getDayColorTemperature() {
-        return getInt(CMSettings.System.DISPLAY_TEMPERATURE_DAY,
+        return getInt(LineageSettings.System.DISPLAY_TEMPERATURE_DAY,
                 mDefaultDayTemperature);
     }
 
     void setDayColorTemperature(int temperature) {
-        putInt(CMSettings.System.DISPLAY_TEMPERATURE_DAY, temperature);
+        putInt(LineageSettings.System.DISPLAY_TEMPERATURE_DAY, temperature);
     }
 
     int getNightColorTemperature() {
-        return getInt(CMSettings.System.DISPLAY_TEMPERATURE_NIGHT,
+        return getInt(LineageSettings.System.DISPLAY_TEMPERATURE_NIGHT,
                 mDefaultNightTemperature);
     }
 
     void setNightColorTemperature(int temperature) {
-        putInt(CMSettings.System.DISPLAY_TEMPERATURE_NIGHT, temperature);
+        putInt(LineageSettings.System.DISPLAY_TEMPERATURE_NIGHT, temperature);
     }
 
     Range<Integer> getColorTemperatureRange() {

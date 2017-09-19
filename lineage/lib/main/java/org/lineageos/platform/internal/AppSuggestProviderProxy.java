@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.cyanogenmod.platform.internal;
+package org.lineageos.platform.internal;
 
 import android.content.Context;
 import android.content.Intent;
@@ -23,8 +23,8 @@ import android.os.RemoteException;
 import android.util.Log;
 import com.android.server.ServiceWatcher;
 
-import cyanogenmod.app.suggest.ApplicationSuggestion;
-import cyanogenmod.app.suggest.IAppSuggestProvider;
+import lineageos.app.suggest.ApplicationSuggestion;
+import lineageos.app.suggest.IAppSuggestProvider;
 
 import java.util.ArrayList;
 import java.util.List;

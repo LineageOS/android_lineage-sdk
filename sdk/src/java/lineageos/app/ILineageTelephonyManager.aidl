@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package cyanogenmod.app;
+package lineageos.app;
 
 import android.telephony.SubscriptionInfo;
 
 import java.util.List;
 
 /** @hide */
-interface ICMTelephonyManager {
+interface ILineageTelephonyManager {
     // --- Methods below are for use by 3rd party applications to manage phone and data connection
     // You need the READ_MSIM_PHONE_STATE permission
     List<SubscriptionInfo> getSubInformation();

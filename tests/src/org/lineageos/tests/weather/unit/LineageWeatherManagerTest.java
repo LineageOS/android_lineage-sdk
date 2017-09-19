@@ -14,21 +14,21 @@
  * limitations under the License.
  */
 
-package org.cyanogenmod.tests.weather.unit;
+package org.lineageos.tests.weather.unit;
 
 import android.location.Location;
 import android.test.AndroidTestCase;
 import android.test.suitebuilder.annotation.MediumTest;
 import android.test.suitebuilder.annotation.SmallTest;
-import cyanogenmod.weather.CMWeatherManager;
-import cyanogenmod.weather.CMWeatherManager.LookupCityRequestListener;
-import cyanogenmod.weather.CMWeatherManager.WeatherServiceProviderChangeListener;
-import cyanogenmod.weather.CMWeatherManager.WeatherUpdateRequestListener;
-import cyanogenmod.weather.ICMWeatherManager;
-import cyanogenmod.weather.RequestInfo;
-import cyanogenmod.weather.WeatherInfo;
-import cyanogenmod.weather.WeatherLocation;
-import org.cyanogenmod.tests.common.MockIBinderStubForInterface;
+import lineageos.weather.LineageWeatherManager;
+import lineageos.weather.LineageWeatherManager.LookupCityRequestListener;
+import lineageos.weather.LineageWeatherManager.WeatherServiceProviderChangeListener;
+import lineageos.weather.LineageWeatherManager.WeatherUpdateRequestListener;
+import lineageos.weather.ILineageWeatherManager;
+import lineageos.weather.RequestInfo;
+import lineageos.weather.WeatherInfo;
+import lineageos.weather.WeatherLocation;
+import org.lineageos.tests.common.MockIBinderStubForInterface;
 import org.mockito.Mockito;
 import org.mockito.invocation.InvocationOnMock;
 import org.mockito.stubbing.Answer;
@@ -38,43 +38,43 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.CountDownLatch;
 
-public class CMWeatherManagerTest extends AndroidTestCase {
+public class LineageWeatherManagerTest extends AndroidTestCase {
 
-    private CMWeatherManager mWeatherManager;
+    private LineageWeatherManager mWeatherManager;
     private static final String CITY_NAME = "Seattle, WA";
     private static final int COUNTDOWN = 1;
     private static final int REQUEST_ID = 42;
     private static final String MOCKED_WEATHER_PROVIDER_LABEL = "Mock'd Weather Service";
-    private ICMWeatherManager.Stub mICMWeatherManagerSpy;
+    private ILineageWeatherManager.Stub mILineageWeatherManagerSpy;
 
     @Override
     protected void setUp() throws Exception {
         super.setUp();
-        setUpMockICMWeatherManager();
+        setUpMockILineageWeatherManager();
     }
 
-    private void setUpMockICMWeatherManager() {
-        mWeatherManager = CMWeatherManager.getInstance(getContext());
+    private void setUpMockILineageWeatherManager() {
+        mWeatherManager = LineageWeatherManager.getInstance(getContext());
         Field f;
         try {
             f = mWeatherManager.getClass().getDeclaredField("sWeatherManagerService");
             f.setAccessible(true);
 
-            mICMWeatherManagerSpy
-                    = MockIBinderStubForInterface.getMockInterface(ICMWeatherManager.Stub.class);
-            f.set(mWeatherManager, mICMWeatherManagerSpy);
+            mILineageWeatherManagerSpy
+                    = MockIBinderStubForInterface.getMockInterface(ILineageWeatherManager.Stub.class);
+            f.set(mWeatherManager, mILineageWeatherManagerSpy);
 
             Mockito.doAnswer(new WeatherUpdateRequestAnswer())
-                    .when(mICMWeatherManagerSpy).updateWeather(Mockito.any(RequestInfo.class));
+                    .when(mILineageWeatherManagerSpy).updateWeather(Mockito.any(RequestInfo.class));
 
             Mockito.doAnswer(new LookUpCityAnswer())
-                    .when(mICMWeatherManagerSpy).lookupCity(Mockito.any(RequestInfo.class));
+                    .when(mILineageWeatherManagerSpy).lookupCity(Mockito.any(RequestInfo.class));
 
             Mockito.doAnswer(new GetActiveWeatherServiceProviderLabelAnser())
-                    .when(mICMWeatherManagerSpy).getActiveWeatherServiceProviderLabel();
+                    .when(mILineageWeatherManagerSpy).getActiveWeatherServiceProviderLabel();
 
             Mockito.doAnswer(new CancelRequestAnswer())
-                    .when(mICMWeatherManagerSpy).cancelRequest(Mockito.eq(REQUEST_ID));
+                    .when(mILineageWeatherManagerSpy).cancelRequest(Mockito.eq(REQUEST_ID));
         } catch (Exception e) {
             throw new AssertionError(e);
         }
@@ -93,7 +93,7 @@ public class CMWeatherManagerTest extends AndroidTestCase {
             final WeatherInfo weatherInfo = new WeatherInfo.Builder(CITY_NAME,
                     30d, requestInfo.getTemperatureUnit()).build();
             requestInfo.getRequestListener().onWeatherRequestCompleted(requestInfo,
-                    CMWeatherManager.RequestStatus.COMPLETED, weatherInfo);
+                    LineageWeatherManager.RequestStatus.COMPLETED, weatherInfo);
             return REQUEST_ID;
         }
     }
@@ -108,7 +108,7 @@ public class CMWeatherManagerTest extends AndroidTestCase {
             assertNotNull(cityName);
             locations.add(new WeatherLocation.Builder(cityName).build());
             requestInfo.getRequestListener().onLookupCityRequestCompleted(requestInfo,
-                    CMWeatherManager.RequestStatus.COMPLETED, locations);
+                    LineageWeatherManager.RequestStatus.COMPLETED, locations);
             return REQUEST_ID;
         }
     }
@@ -147,7 +147,7 @@ public class CMWeatherManagerTest extends AndroidTestCase {
                     public void onLookupCityRequestCompleted(int status,
                             List<WeatherLocation> locations) {
                         final int totalLocations = locations != null ? locations.size() : 0;
-                        if (status != CMWeatherManager.RequestStatus.COMPLETED
+                        if (status != LineageWeatherManager.RequestStatus.COMPLETED
                                 || totalLocations < 1) {
                             error[0] = true;
                         }
@@ -197,7 +197,7 @@ public class CMWeatherManagerTest extends AndroidTestCase {
         mWeatherManager.requestWeatherUpdate(weatherLocation, new WeatherUpdateRequestListener() {
             @Override
             public void onWeatherRequestCompleted(int status, WeatherInfo weatherInfo) {
-                if (status != CMWeatherManager.RequestStatus.COMPLETED
+                if (status != LineageWeatherManager.RequestStatus.COMPLETED
                         || !weatherInfo.getCity().equals(CITY_NAME)) {
                     error[0] = true;
                 }
@@ -220,7 +220,7 @@ public class CMWeatherManagerTest extends AndroidTestCase {
         mWeatherManager.requestWeatherUpdate(location, new WeatherUpdateRequestListener() {
             @Override
             public void onWeatherRequestCompleted(int status, WeatherInfo weatherInfo) {
-                if (status != CMWeatherManager.RequestStatus.COMPLETED
+                if (status != LineageWeatherManager.RequestStatus.COMPLETED
                         || !weatherInfo.getCity().equals(CITY_NAME)) {
                     error[0] = true;
                 }

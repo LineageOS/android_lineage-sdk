@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package cyanogenmod.profiles;
+package lineageos.profiles;
 
 import android.app.admin.DevicePolicyManager;
 import android.content.Context;
@@ -26,10 +26,10 @@ import android.util.Log;
 import com.android.internal.policy.IKeyguardService;
 /* import com.android.internal.policy.PolicyManager; */
 
-import cyanogenmod.app.Profile;
-import cyanogenmod.os.Build;
-import cyanogenmod.os.Concierge;
-import cyanogenmod.os.Concierge.ParcelInfo;
+import lineageos.app.Profile;
+import lineageos.os.Build;
+import lineageos.os.Concierge;
+import lineageos.os.Concierge.ParcelInfo;
 
 /**
  * The {@link LockSettings} class allows for overriding and setting the
@@ -168,7 +168,7 @@ public final class LockSettings implements Parcelable {
         // Pattern here is that all new members should be added to the end of
         // the writeToParcel method. Then we step through each version, until the latest
         // API release to help unravel this parcel
-        if (parcelableVersion >= Build.CM_VERSION_CODES.BOYSENBERRY) {
+        if (parcelableVersion >= Build.LINEAGE_VERSION_CODES.BOYSENBERRY) {
             mValue = in.readInt();
             mDirty = in.readInt() != 0;
         }

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package cyanogenmod.app;
+package lineageos.app;
 
 import android.annotation.SdkConstant;
 
@@ -22,121 +22,121 @@ import android.annotation.SdkConstant;
  * @hide
  * TODO: We need to somehow make these managers accessible via getSystemService
  */
-public final class CMContextConstants {
+public final class LineageContextConstants {
 
     /**
      * @hide
      */
-    private CMContextConstants() {
+    private LineageContextConstants() {
         // Empty constructor
     }
 
     /**
      * Use with {@link android.content.Context#getSystemService} to retrieve a
-     * {@link cyanogenmod.app.CMStatusBarManager} for informing the user of
+     * {@link lineageos.app.LineageStatusBarManager} for informing the user of
      * background events.
      *
      * @see android.content.Context#getSystemService
-     * @see cyanogenmod.app.CMStatusBarManager
+     * @see lineageos.app.LineageStatusBarManager
      */
-    public static final String CM_STATUS_BAR_SERVICE = "cmstatusbar";
+    public static final String LINEAGE_STATUS_BAR_SERVICE = "lineagestatusbar";
 
     /**
      * Use with {@link android.content.Context#getSystemService} to retrieve a
-     * {@link cyanogenmod.app.ProfileManager} for informing the user of
+     * {@link lineageos.app.ProfileManager} for informing the user of
      * background events.
      *
      * @see android.content.Context#getSystemService
-     * @see cyanogenmod.app.ProfileManager
+     * @see lineageos.app.ProfileManager
      *
      * @hide
      */
-    public static final String CM_PROFILE_SERVICE = "profile";
+    public static final String LINEAGE_PROFILE_SERVICE = "profile";
 
     /**
      * Use with {@link android.content.Context#getSystemService} to retrieve a
-     * {@link cyanogenmod.app.PartnerInterface} interact with system settings.
+     * {@link lineageos.app.PartnerInterface} interact with system settings.
      *
      * @see android.content.Context#getSystemService
-     * @see cyanogenmod.app.PartnerInterface
+     * @see lineageos.app.PartnerInterface
      *
      * @hide
      */
-    public static final String CM_PARTNER_INTERFACE = "cmpartnerinterface";
+    public static final String LINEAGE_PARTNER_INTERFACE = "lineagepartnerinterface";
 
     /**
      * Use with {@link android.content.Context#getSystemService} to retrieve a
-     * {@link cyanogenmod.app.CMTelephonyManager} to manage the phone and
+     * {@link lineageos.app.LineageTelephonyManager} to manage the phone and
      * data connection.
      *
      * @see android.content.Context#getSystemService
-     * @see cyanogenmod.app.CMTelephonyManager
+     * @see lineageos.app.LineageTelephonyManager
      *
      * @hide
      */
-    public static final String CM_TELEPHONY_MANAGER_SERVICE = "cmtelephonymanager";
+    public static final String LINEAGE_TELEPHONY_MANAGER_SERVICE = "lineagetelephonymanager";
 
     /**
      * Use with {@link android.content.Context#getSystemService} to retrieve a
-     * {@link cyanogenmod.hardware.CMHardwareManager} to manage the extended
+     * {@link lineageos.hardware.LineageHardwareManager} to manage the extended
      * hardware features of the device.
      *
      * @see android.content.Context#getSystemService
-     * @see cyanogenmod.hardware.CMHardwareManager
+     * @see lineageos.hardware.LineageHardwareManager
      *
      * @hide
      */
-    public static final String CM_HARDWARE_SERVICE = "cmhardware";
+    public static final String LINEAGE_HARDWARE_SERVICE = "lineagehardware";
 
     /**
      * @hide
      */
-    public static final String CM_APP_SUGGEST_SERVICE = "cmappsuggest";
+    public static final String LINEAGE_APP_SUGGEST_SERVICE = "lineageappsuggest";
 
     /**
      * Control device power profile and characteristics.
      *
      * @hide
      */
-    public static final String CM_PERFORMANCE_SERVICE = "cmperformance";
+    public static final String LINEAGE_PERFORMANCE_SERVICE = "lineageperformance";
 
     /**
      * Controls changing and applying themes
      *
      * @hide
      */
-    public static final String CM_THEME_SERVICE = "cmthemes";
+    public static final String LINEAGE_THEME_SERVICE = "lineagethemes";
 
     /**
      * Manages composed icons
      *
      * @hide
      */
-    public static final String CM_ICON_CACHE_SERVICE = "cmiconcache";
+    public static final String LINEAGE_ICON_CACHE_SERVICE = "lineageiconcache";
 
     /**
      * @hide
      */
-    public static final String CM_LIVE_LOCK_SCREEN_SERVICE = "cmlivelockscreen";
+    public static final String LINEAGE_LIVE_LOCK_SCREEN_SERVICE = "lineagelivelockscreen";
 
     /**
      * Use with {@link android.content.Context#getSystemService} to retrieve a
-     * {@link cyanogenmod.weather.CMWeatherManager} to manage the weather service
+     * {@link lineageos.weather.LineageWeatherManager} to manage the weather service
      * settings and request weather updates
      *
      * @see android.content.Context#getSystemService
-     * @see cyanogenmod.weather.CMWeatherManager
+     * @see lineageos.weather.LineageWeatherManager
      *
      * @hide
      */
-    public static final String CM_WEATHER_SERVICE = "cmweather";
+    public static final String LINEAGE_WEATHER_SERVICE = "lineageweather";
 
     /**
      * Manages display color adjustments
      *
      * @hide
      */
-    public static final String CM_LIVEDISPLAY_SERVICE = "cmlivedisplay";
+    public static final String LINEAGE_LIVEDISPLAY_SERVICE = "lineagelivedisplay";
 
 
     /**
@@ -144,75 +144,75 @@ public final class CMContextConstants {
      *
      * @hide
      */
-    public static final String CM_AUDIO_SERVICE = "cmaudio";
+    public static final String LINEAGE_AUDIO_SERVICE = "lineageaudio";
 
     /**
-     * Features supported by the CMSDK.
+     * Features supported by the Lineage SDK.
      */
     public static class Features {
         /**
          * Feature for {@link PackageManager#getSystemAvailableFeatures} and
          * {@link PackageManager#hasSystemFeature}: The device includes the hardware abstraction
-         * framework service utilized by the cmsdk.
+         * framework service utilized by the lineage sdk.
          */
         @SdkConstant(SdkConstant.SdkConstantType.FEATURE)
-        public static final String HARDWARE_ABSTRACTION = "org.cyanogenmod.hardware";
+        public static final String HARDWARE_ABSTRACTION = "org.lineageos.hardware";
 
         /**
          * Feature for {@link PackageManager#getSystemAvailableFeatures} and
-         * {@link PackageManager#hasSystemFeature}: The device includes the cm status bar service
-         * utilzed by the cmsdk.
+         * {@link PackageManager#hasSystemFeature}: The device includes the lineage status bar service
+         * utilzed by the lineage sdk.
          */
         @SdkConstant(SdkConstant.SdkConstantType.FEATURE)
-        public static final String STATUSBAR = "org.cyanogenmod.statusbar";
+        public static final String STATUSBAR = "org.lineageos.statusbar";
 
         /**
          * Feature for {@link PackageManager#getSystemAvailableFeatures} and
-         * {@link PackageManager#hasSystemFeature}: The device includes the cm profiles service
-         * utilized by the cmsdk.
+         * {@link PackageManager#hasSystemFeature}: The device includes the lineage profiles service
+         * utilized by the lineage sdk.
          */
         @SdkConstant(SdkConstant.SdkConstantType.FEATURE)
-        public static final String PROFILES = "org.cyanogenmod.profiles";
+        public static final String PROFILES = "org.lineageos.profiles";
 
         /**
          * Feature for {@link PackageManager#getSystemAvailableFeatures} and
-         * {@link PackageManager#hasSystemFeature}: The device includes the cm app suggest service
-         * utilized by the cmsdk.
+         * {@link PackageManager#hasSystemFeature}: The device includes the lineage app suggest service
+         * utilized by the lineage sdk.
          */
         @SdkConstant(SdkConstant.SdkConstantType.FEATURE)
-        public static final String APP_SUGGEST = "org.cyanogenmod.appsuggest";
+        public static final String APP_SUGGEST = "org.lineageos.appsuggest";
 
         /**
          * Feature for {@link PackageManager#getSystemAvailableFeatures} and
-         * {@link PackageManager#hasSystemFeature}: The device includes the cm telephony service
-         * utilized by the cmsdk.
+         * {@link PackageManager#hasSystemFeature}: The device includes the lineage telephony service
+         * utilized by the lineage sdk.
          */
         @SdkConstant(SdkConstant.SdkConstantType.FEATURE)
-        public static final String TELEPHONY = "org.cyanogenmod.telephony";
+        public static final String TELEPHONY = "org.lineageos.telephony";
 
         /**
          * Feature for {@link PackageManager#getSystemAvailableFeatures} and
-         * {@link PackageManager#hasSystemFeature}: The device includes the cm theme service
-         * utilized by the cmsdk.
+         * {@link PackageManager#hasSystemFeature}: The device includes the lineage theme service
+         * utilized by the lineage sdk.
          */
         @SdkConstant(SdkConstant.SdkConstantType.FEATURE)
-        public static final String THEMES = "org.cyanogenmod.theme";
+        public static final String THEMES = "org.lineageos.theme";
 
         /**
          * Feature for {@link PackageManager#getSystemAvailableFeatures} and
-         * {@link PackageManager#hasSystemFeature}: The device includes the cm performance service
-         * utilized by the cmsdk.
+         * {@link PackageManager#hasSystemFeature}: The device includes the lineage performance service
+         * utilized by the lineage sdk.
          */
         @SdkConstant(SdkConstant.SdkConstantType.FEATURE)
-        public static final String PERFORMANCE = "org.cyanogenmod.performance";
+        public static final String PERFORMANCE = "org.lineageos.performance";
 
         /**
          * Feature for {@link PackageManager#getSystemAvailableFeatures} and
-         * {@link PackageManager#hasSystemFeature}: The device includes the cm partner service
-         * utilized by the cmsdk.
+         * {@link PackageManager#hasSystemFeature}: The device includes the lineage partner service
+         * utilized by the lineage sdk.
          */
         @SdkConstant(SdkConstant.SdkConstantType.FEATURE)
-        public static final String PARTNER = "org.cyanogenmod.partner";
+        public static final String PARTNER = "org.lineageos.partner";
 
         /*
          * Feature for {@link PackageManager#getSystemAvailableFeatures} and
@@ -220,30 +220,30 @@ public final class CMContextConstants {
          * feature.
          */
         @SdkConstant(SdkConstant.SdkConstantType.FEATURE)
-        public static final String LIVE_LOCK_SCREEN = "org.cyanogenmod.livelockscreen";
+        public static final String LIVE_LOCK_SCREEN = "org.lineageos.livelockscreen";
 
         /**
          * Feature for {@link PackageManager#getSystemAvailableFeatures} and
-         * {@link PackageManager#hasSystemFeature}: The device includes the cm weather weather
-         * service utilized by the cmsdk.
+         * {@link PackageManager#hasSystemFeature}: The device includes the lineage weather weather
+         * service utilized by the lineage sdk.
          */
         @SdkConstant(SdkConstant.SdkConstantType.FEATURE)
-        public static final String WEATHER_SERVICES = "org.cyanogenmod.weather";
+        public static final String WEATHER_SERVICES = "org.lineageos.weather";
 
         /**
          * Feature for {@link PackageManager#getSystemAvailableFeatures} and
          * {@link PackageManager#hasSystemFeature}: The device includes the LiveDisplay service
-         * utilized by the cmsdk.
+         * utilized by the lineage sdk.
          */
         @SdkConstant(SdkConstant.SdkConstantType.FEATURE)
-        public static final String LIVEDISPLAY = "org.cyanogenmod.livedisplay";
+        public static final String LIVEDISPLAY = "org.lineageos.livedisplay";
 
         /**
          * Feature for {@link PackageManager#getSystemAvailableFeatures} and
-         * {@link PackageManager#hasSystemFeature}: The device includes the CM audio extensions
-         * utilized by the cmsdk.
+         * {@link PackageManager#hasSystemFeature}: The device includes the Lineage audio extensions
+         * utilized by the lineage sdk.
          */
         @SdkConstant(SdkConstant.SdkConstantType.FEATURE)
-        public static final String AUDIO = "org.cyanogenmod.audio";
+        public static final String AUDIO = "org.lineageos.audio";
     }
 }

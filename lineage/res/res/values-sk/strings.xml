@@ -18,7 +18,7 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Label for the LineageOS system components when they are shown to the user. -->
-  <string name="cyanogenmod_system_label">Systém LineageOS</string>
+  <string name="lineageos_system_label">Systém LineageOS</string>
   <string name="permlab_publishCustomTile">vytvoriť vlastnú dlaždicu v paneli rýchlych nastavení</string>
   <string name="permdesc_publishCustomTile">Umožňuje aplikácii vytvoriť dlaždicu v rýchlych nastaveniach.</string>
   <string name="permlab_modifyNetworkSettings">zmeniť systémové nastavenia siete</string>
@@ -38,7 +38,7 @@
   <string name="permdesc_modifyProfiles">Umožňuje aplikácii upraviť systémové profily.</string>
   <!-- Labels for the HARDWARE_ABSTRACTION_ACCESS permission. -->
   <string name="permlab_useHardwareFramework">používať hardvérový framework</string>
-  <string name="permdesc_useHardwareFramework">Umožňuje aplikácii pristupovať k hardvérovému frameworku CM.</string>
+  <string name="permdesc_useHardwareFramework">Umožňuje aplikácii pristupovať k hardvérovému frameworku Lineage.</string>
   <!-- Labels for the WRITE_ALARMS permission. -->
   <string name="permlab_write_alarms">priamo zmeniť budíky</string>
   <string name="permdesc_write_alarms">Umožňuje aplikácii pridať, upraviť alebo odstrániť všetky vaše budíky.</string>
@@ -49,11 +49,11 @@
   <string name="permlab_read_alarms">prístup k naplánovaným budíkom</string>
   <string name="permdesc_read_alarms">Umožňuje aplikácii čítať vaše naplánované budíky.</string>
   <!-- Labels for the WRITE_SETTINGS permission -->
-  <string name="permlab_writeSettings">upraviť systémové nastavenia CM</string>
-  <string name="permdesc_writeSettings">Umožňuje aplikácii zmeniť systémové nastavenia CM.</string>
+  <string name="permlab_writeSettings">upraviť systémové nastavenia Lineage</string>
+  <string name="permdesc_writeSettings">Umožňuje aplikácii zmeniť systémové nastavenia Lineage.</string>
   <!-- Labels for the WRITE_SECURE_SETTINGS permission -->
-  <string name="permlab_writeSecureSettings">upraviť zabezpečené systémové nastavenia CM</string>
-  <string name="permdesc_writeSecureSettings">Umožňuje aplikácii zmeniť zabezpečené systémové nastavenia CM. Nie je určené pre normálne aplikácie.</string>
+  <string name="permlab_writeSecureSettings">upraviť zabezpečené systémové nastavenia Lineage</string>
+  <string name="permdesc_writeSecureSettings">Umožňuje aplikácii zmeniť zabezpečené systémové nastavenia Lineage. Nie je určené pre normálne aplikácie.</string>
   <!-- Labels for the MANAGE_PERSISTENT_STORAGE permission. -->
   <string name="permlab_managePersistentStorage">spravovať trvalé úložisko</string>
   <string name="permdesc_managePersistentStorage">Umožňuje aplikácii čítanie alebo zápis vlastností, ktoré môžu pretrvávať po obnove továrenských nastavení.</string>
@@ -173,10 +173,10 @@
   <!-- LiveDisplay manager permission -->
   <string name="permlab_manageLiveDisplay">spravovať nastavenia LiveDisplay</string>
   <string name="permdesc_manageLiveDisplay">Umožní aplikácii nastavovať pokročilé nastavenia obrazovky.</string>
-  <!-- CMAudioService - observe session changes permission -->
+  <!-- LineageAudioService - observe session changes permission -->
   <string name="permlab_observe_audio_sessions">pozorovať zmeny audio sedenia</string>
   <string name="permdesc_observe_audio_sessions">Umožní aplikácii sledovať vytváranie a rušenie zvukových zdrojov.</string>
-  <!-- CMAudioService - observe session changes permission -->
+  <!-- LineageAudioService - observe session changes permission -->
   <string name="permlab_manage_audio_sessions">spravovať zmeny audio relácie</string>
   <string name="permdesc_manage_audio_sessions">Umožňuje aktualizovať zvukové relácie.</string>
   <!-- QuickSettings: Themes tile -->

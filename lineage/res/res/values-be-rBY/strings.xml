@@ -18,7 +18,7 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Label for the LineageOS system components when they are shown to the user. -->
-  <string name="cyanogenmod_system_label">Сістэма LineageOS</string>
+  <string name="lineageos_system_label">Сістэма LineageOS</string>
   <string name="permlab_publishCustomTile">Стварэнне самавольных плітак у панэлі хуткіх налад</string>
   <string name="permdesc_publishCustomTile">Дадатак зможа дадаваць пліткі ў панэль хуткіх налад.</string>
   <string name="permlab_modifyNetworkSettings">Змена сеціўных налад сістэмы</string>
@@ -38,7 +38,7 @@
   <string name="permdesc_modifyProfiles">Дазваляць дадаткам змяняць сістэмныя профілі.</string>
   <!-- Labels for the HARDWARE_ABSTRACTION_ACCESS permission. -->
   <string name="permlab_useHardwareFramework">Узаемадзеянне з абсталяваннем</string>
-  <string name="permdesc_useHardwareFramework">Дадатак зможа атрымваць доступ да падсістэмы апаратных абстракцый CyanogenMod.</string>
+  <string name="permdesc_useHardwareFramework">Дадатак зможа атрымваць доступ да падсістэмы апаратных абстракцый LineageOS.</string>
   <!-- Labels for the WRITE_ALARMS permission. -->
   <string name="permlab_write_alarms">змена будзільнікаў</string>
   <string name="permdesc_write_alarms">Дадатак зможа дадаваць, змяняць ці выдаляць любыя будзільнікі.</string>
@@ -151,8 +151,8 @@
   <!-- DataUsageProvider read permission description -->
   <!-- LiveDisplay manager permission -->
   <string name="permlab_manageLiveDisplay">кіраванне наладамі LiveDisplay</string>
-  <!-- CMAudioService - observe session changes permission -->
-  <!-- CMAudioService - observe session changes permission -->
+  <!-- LineageAudioService - observe session changes permission -->
+  <!-- LineageAudioService - observe session changes permission -->
   <!-- QuickSettings: Themes tile -->
   <string name="qs_themes_label">Знешні выгляд</string>
   <!-- Privacy Guard -->

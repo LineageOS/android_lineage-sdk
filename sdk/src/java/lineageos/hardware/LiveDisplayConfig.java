@@ -13,14 +13,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package cyanogenmod.hardware;
+package lineageos.hardware;
 
-import static cyanogenmod.hardware.LiveDisplayManager.FEATURE_COLOR_BALANCE;
-import static cyanogenmod.hardware.LiveDisplayManager.FEATURE_FIRST;
-import static cyanogenmod.hardware.LiveDisplayManager.FEATURE_LAST;
-import static cyanogenmod.hardware.LiveDisplayManager.MODE_FIRST;
-import static cyanogenmod.hardware.LiveDisplayManager.MODE_LAST;
-import static cyanogenmod.hardware.LiveDisplayManager.MODE_OFF;
+import static lineageos.hardware.LiveDisplayManager.FEATURE_COLOR_BALANCE;
+import static lineageos.hardware.LiveDisplayManager.FEATURE_FIRST;
+import static lineageos.hardware.LiveDisplayManager.FEATURE_LAST;
+import static lineageos.hardware.LiveDisplayManager.MODE_FIRST;
+import static lineageos.hardware.LiveDisplayManager.MODE_LAST;
+import static lineageos.hardware.LiveDisplayManager.MODE_OFF;
 
 import android.os.Parcel;
 import android.os.Parcelable;
@@ -30,9 +30,9 @@ import java.util.Arrays;
 import java.util.BitSet;
 import java.util.List;
 
-import cyanogenmod.os.Build;
-import cyanogenmod.os.Concierge;
-import cyanogenmod.os.Concierge.ParcelInfo;
+import lineageos.os.Build;
+import lineageos.os.Concierge;
+import lineageos.os.Concierge.ParcelInfo;
 
 /**
  * Holder class for LiveDisplay static configuration.
@@ -112,7 +112,7 @@ public class LiveDisplayConfig implements Parcelable {
         int maxColorBalance = 0;
         float[] paRanges = new float[10];
 
-        if (parcelableVersion >= Build.CM_VERSION_CODES.FIG) {
+        if (parcelableVersion >= Build.LINEAGE_VERSION_CODES.FIG) {
             capabilities = parcel.readLong();
             defaultMode = parcel.readInt();
             defaultDayTemperature = parcel.readInt();

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.cyanogenmod.tests.livelockscreen.unit;
+package org.lineageos.tests.livelockscreen.unit;
 
 import android.content.Context;
 import android.content.pm.PackageManager;
@@ -22,11 +22,11 @@ import android.os.RemoteException;
 import android.os.UserHandle;
 import android.test.AndroidTestCase;
 import android.test.mock.MockPackageManager;
-import cyanogenmod.app.CMContextConstants;
-import cyanogenmod.app.ILiveLockScreenManager;
-import cyanogenmod.app.LiveLockScreenInfo;
-import cyanogenmod.app.LiveLockScreenManager;
-import org.cyanogenmod.tests.common.MockIBinderStubForInterface;
+import lineageos.app.LineageContextConstants;
+import lineageos.app.ILiveLockScreenManager;
+import lineageos.app.LiveLockScreenInfo;
+import lineageos.app.LiveLockScreenManager;
+import org.lineageos.tests.common.MockIBinderStubForInterface;
 import org.mockito.Mockito;
 import org.mockito.invocation.InvocationOnMock;
 import org.mockito.stubbing.Answer;
@@ -44,7 +44,7 @@ public class LiveLockScreenManagerTest extends AndroidTestCase {
 
         PackageManager packageManager = Mockito.mock(MockPackageManager.class);
         Mockito.doReturn(true).when(packageManager).hasSystemFeature(
-                CMContextConstants.Features.LIVE_LOCK_SCREEN);
+                LineageContextConstants.Features.LIVE_LOCK_SCREEN);
 
         // Something else is initializing the manager
         Field f = LiveLockScreenManager.class.getDeclaredField("sInstance");
@@ -63,7 +63,7 @@ public class LiveLockScreenManagerTest extends AndroidTestCase {
 
         Mockito.verify(mMockContext, Mockito.times(1)).getPackageManager();
         Mockito.verify(packageManager, Mockito.times(1)).hasSystemFeature(
-                Mockito.eq(CMContextConstants.Features.LIVE_LOCK_SCREEN));
+                Mockito.eq(LineageContextConstants.Features.LIVE_LOCK_SCREEN));
         assertNotNull (mManager);
     }
 

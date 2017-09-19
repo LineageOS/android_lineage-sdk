@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package org.cyanogenmod.tests.hardware.unit;
+package org.lineageos.tests.hardware.unit;
 
 import android.os.Parcel;
 import android.test.AndroidTestCase;
 
 import android.test.suitebuilder.annotation.SmallTest;
-import cyanogenmod.app.CMContextConstants;
-import cyanogenmod.hardware.DisplayMode;
+import lineageos.app.LineageContextConstants;
+import lineageos.hardware.DisplayMode;
 
 /**
  * Created by adnan on 9/1/15.
@@ -32,7 +32,7 @@ public class DisplayModeTest extends AndroidTestCase {
         super.setUp();
         // Only run this if we support hardware abstraction
         org.junit.Assume.assumeTrue(mContext.getPackageManager().hasSystemFeature(
-                CMContextConstants.Features.HARDWARE_ABSTRACTION));
+                LineageContextConstants.Features.HARDWARE_ABSTRACTION));
     }
 
     @SmallTest

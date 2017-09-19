@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package cyanogenmod.preference;
+package lineageos.preference;
 
 import android.content.Context;
 import android.support.v7.preference.ListPreference;

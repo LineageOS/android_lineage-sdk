@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package cyanogenmod.providers;
+package lineageos.providers;
 
 import android.content.ContentResolver;
 import android.net.Uri;
@@ -28,7 +28,7 @@ import android.net.Uri;
 public final class DataUsageContract {
 
     /** The authority for the DataUsage provider */
-    public static final String DATAUSAGE_AUTHORITY = "org.cyanogenmod.providers.datausage";
+    public static final String DATAUSAGE_AUTHORITY = "org.lineageos.providers.datausage";
     public static final String DATAUSAGE_TABLE = "datausage";
 
     /** The content URI for the top-level datausage authority */

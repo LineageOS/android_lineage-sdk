@@ -18,7 +18,7 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Label for the LineageOS system components when they are shown to the user. -->
-  <string name="cyanogenmod_system_label">LineageOS sistema</string>
+  <string name="lineageos_system_label">LineageOS sistema</string>
   <string name="permlab_publishCustomTile">sortu lauza pertsonalizatu bat ezarpen azkarren panelean</string>
   <string name="permdesc_publishCustomTile">Ezarpen azkarretako lauza bat argitaratzea ahalbidetzen dio aplikazioari.</string>
   <string name="permlab_modifyNetworkSettings">aldatu sistemaren sare ezarpenak</string>
@@ -38,7 +38,7 @@
   <string name="permdesc_modifyProfiles">Sistemaren profilak aldatzea ahalbidetzen dio aplikazioari.</string>
   <!-- Labels for the HARDWARE_ABSTRACTION_ACCESS permission. -->
   <string name="permlab_useHardwareFramework">hardware markoa erabili</string>
-  <string name="permdesc_useHardwareFramework">CM hardware markoa atzitzea ahalbidetzen dio aplikazioari.</string>
+  <string name="permdesc_useHardwareFramework">Lineage hardware markoa atzitzea ahalbidetzen dio aplikazioari.</string>
   <!-- Labels for the WRITE_ALARMS permission. -->
   <string name="permlab_write_alarms">zuzenean aldatu alarmak</string>
   <string name="permdesc_write_alarms">Zure alarma guztiak gehitu, aldatu, edo ezabatzea ahalbidetzen dio aplikazioari.</string>
@@ -49,11 +49,11 @@
   <string name="permlab_read_alarms">atzitu programatutako alarmak</string>
   <string name="permdesc_read_alarms">Programatutako alarmak irakurtzea ahalbidetzen dio aplikazioari.</string>
   <!-- Labels for the WRITE_SETTINGS permission -->
-  <string name="permlab_writeSettings">aldatu CM sistemaren ezarpenak</string>
-  <string name="permdesc_writeSettings">CM sistemaren ezarpenak aldatzea ahalbidetzen dio aplikazioari.</string>
+  <string name="permlab_writeSettings">aldatu Lineage sistemaren ezarpenak</string>
+  <string name="permdesc_writeSettings">Lineage sistemaren ezarpenak aldatzea ahalbidetzen dio aplikazioari.</string>
   <!-- Labels for the WRITE_SECURE_SETTINGS permission -->
-  <string name="permlab_writeSecureSettings">aldatu CM sistemaren ezarpen seguruak</string>
-  <string name="permdesc_writeSecureSettings">CM sistemaren ezarpen seguruak aldatzea ahalbidetzen dio aplikazioari. Aplikazio arruntek ez dute behar.</string>
+  <string name="permlab_writeSecureSettings">aldatu Lineage sistemaren ezarpen seguruak</string>
+  <string name="permdesc_writeSecureSettings">Lineage sistemaren ezarpen seguruak aldatzea ahalbidetzen dio aplikazioari. Aplikazio arruntek ez dute behar.</string>
   <!-- Labels for the MANAGE_PERSISTENT_STORAGE permission. -->
   <string name="permlab_managePersistentStorage">kudeatu behin betiko biltegiratzea</string>
   <string name="permdesc_managePersistentStorage">Gailua lantegiko ezarpenetara leheneratuta ere mantenduko diren ezaugarriak irakurri edo idaztea ahalbidetzen dio aplikazioari.</string>
@@ -173,10 +173,10 @@
   <!-- LiveDisplay manager permission -->
   <string name="permlab_manageLiveDisplay">LiveDisplay ezarpenak kudeatu</string>
   <string name="permdesc_manageLiveDisplay">Pantailaren ezarpen aurreratuak ezartzea ahalbidetzen dio aplikazioari.</string>
-  <!-- CMAudioService - observe session changes permission -->
+  <!-- LineageAudioService - observe session changes permission -->
   <string name="permlab_observe_audio_sessions">audio saio aldaketak aztertu</string>
   <string name="permdesc_observe_audio_sessions">Audio jarioen sorrerak eta suntsiketak aztertzea ahalbidetzen dio aplikazioari.</string>
-  <!-- CMAudioService - observe session changes permission -->
+  <!-- LineageAudioService - observe session changes permission -->
   <string name="permlab_manage_audio_sessions">audio saioen aldaketak kudeatu</string>
   <string name="permdesc_manage_audio_sessions">Audio jarioen eguneratzeak bidaltzea ahalbidetzen dio aplikazioari.</string>
   <!-- QuickSettings: Themes tile -->

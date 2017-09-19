@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package org.cyanogenmod.tests.livelockscreen.unit;
+package org.lineageos.tests.livelockscreen.unit;
 
 import android.content.ComponentName;
 import android.test.AndroidTestCase;
 import android.test.suitebuilder.annotation.SmallTest;
 
-import cyanogenmod.app.LiveLockScreenInfo;
+import lineageos.app.LiveLockScreenInfo;
 
 public class LiveLockScreenInfoBuilderTest extends AndroidTestCase {
 

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.cyanogenmod.tests.customtiles;
+package org.lineageos.tests.customtiles;
 
 import android.os.Bundle;
 import android.preference.PreferenceActivity;

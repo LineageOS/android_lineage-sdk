@@ -1,12 +1,12 @@
-package org.cyanogenmod.tests.settings;
+package org.lineageos.tests.settings;
 
-import org.cyanogenmod.tests.TestActivity;
-import cyanogenmod.app.PartnerInterface;
+import org.lineageos.tests.TestActivity;
+import lineageos.app.PartnerInterface;
 
 /**
- * Tests functionality added in {@link cyanogenmod.app.PartnerInterface}
+ * Tests functionality added in {@link lineageos.app.PartnerInterface}
  */
-public class CMPartnerInterfaceTest extends TestActivity {
+public class LineagePartnerInterfaceTest extends TestActivity {
 
     // Zen Mode to 15 minutes
     private static final long ZEN_MODE_DURATION_15_MINUTES_MS = 15 * 60000;

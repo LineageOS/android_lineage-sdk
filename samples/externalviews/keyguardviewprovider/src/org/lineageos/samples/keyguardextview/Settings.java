@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.cyanogenmod.samples.keyguardextview;
+package org.lineageos.samples.keyguardextview;
 
 import android.app.Activity;
 import android.os.Bundle;

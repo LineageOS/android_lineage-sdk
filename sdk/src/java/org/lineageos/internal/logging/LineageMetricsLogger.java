@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package org.cyanogenmod.internal.logging;
+package org.lineageos.internal.logging;
 
 import com.android.internal.logging.MetricsLogger;
 
 /**
  * Serves as a central location for logging constants that is android release agnostic.
  */
-public class CMMetricsLogger extends MetricsLogger {
+public class LineageMetricsLogger extends MetricsLogger {
     private static final int BASE = -Integer.MAX_VALUE;
     //Since we never want to collide, lets start at the back and move inward
     public static final int DONT_LOG = BASE + 1;

@@ -13,13 +13,13 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.cyanogenmod.tests.hardware.unit;
+package org.lineageos.tests.hardware.unit;
 
 import android.test.AndroidTestCase;
 import android.test.suitebuilder.annotation.SmallTest;
 
-import cyanogenmod.app.CMContextConstants;
-import cyanogenmod.hardware.CMHardwareManager;
+import lineageos.app.LineageContextConstants;
+import lineageos.hardware.LineageHardwareManager;
 
 import java.util.Arrays;
 import java.util.Random;
@@ -27,15 +27,15 @@ import java.util.UUID;
 
 public class PersistentStorageTest extends AndroidTestCase {
 
-    private CMHardwareManager mHardwareManager;
+    private LineageHardwareManager mHardwareManager;
 
     @Override
     protected void setUp() throws Exception {
         super.setUp();
         // Only run this if we support hardware abstraction
         org.junit.Assume.assumeTrue(mContext.getPackageManager().hasSystemFeature(
-                CMContextConstants.Features.HARDWARE_ABSTRACTION));
-        mHardwareManager = CMHardwareManager.getInstance(mContext);
+                LineageContextConstants.Features.HARDWARE_ABSTRACTION));
+        mHardwareManager = LineageHardwareManager.getInstance(mContext);
     }
 
     @SmallTest
@@ -92,7 +92,7 @@ public class PersistentStorageTest extends AndroidTestCase {
 
     @SmallTest
     public void testPersistentString() {
-        assertTrue(mHardwareManager.isSupported(CMHardwareManager.FEATURE_PERSISTENT_STORAGE));
+        assertTrue(mHardwareManager.isSupported(LineageHardwareManager.FEATURE_PERSISTENT_STORAGE));
 
         String testKey = UUID.randomUUID().toString();
         String testString = "IM IN UR STORAGE";
@@ -118,7 +118,7 @@ public class PersistentStorageTest extends AndroidTestCase {
 
     @SmallTest
     public void testPersistentInteger() {
-        assertTrue(mHardwareManager.isSupported(CMHardwareManager.FEATURE_PERSISTENT_STORAGE));
+        assertTrue(mHardwareManager.isSupported(LineageHardwareManager.FEATURE_PERSISTENT_STORAGE));
 
         String testKey = UUID.randomUUID().toString();
         int testInt = 49152;
@@ -138,7 +138,7 @@ public class PersistentStorageTest extends AndroidTestCase {
 
     @SmallTest
     public void testPersistentBytes() {
-        assertTrue(mHardwareManager.isSupported(CMHardwareManager.FEATURE_PERSISTENT_STORAGE));
+        assertTrue(mHardwareManager.isSupported(LineageHardwareManager.FEATURE_PERSISTENT_STORAGE));
 
         String testKey = UUID.randomUUID().toString();
         byte[] testArray = new byte[1024];

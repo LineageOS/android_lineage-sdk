@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.cyanogenmod.tests.profiles.unit;
+package org.lineageos.tests.profiles.unit;
 
 import android.media.AudioManager;
 import android.os.Parcel;
@@ -23,14 +23,14 @@ import android.test.AndroidTestCase;
 import android.test.suitebuilder.annotation.MediumTest;
 import android.test.suitebuilder.annotation.SmallTest;
 
-import cyanogenmod.app.CMContextConstants;
-import cyanogenmod.app.Profile;
-import cyanogenmod.profiles.AirplaneModeSettings;
-import cyanogenmod.profiles.BrightnessSettings;
-import cyanogenmod.profiles.ConnectionSettings;
-import cyanogenmod.profiles.LockSettings;
-import cyanogenmod.profiles.RingModeSettings;
-import cyanogenmod.profiles.StreamSettings;
+import lineageos.app.LineageContextConstants;
+import lineageos.app.Profile;
+import lineageos.profiles.AirplaneModeSettings;
+import lineageos.profiles.BrightnessSettings;
+import lineageos.profiles.ConnectionSettings;
+import lineageos.profiles.LockSettings;
+import lineageos.profiles.RingModeSettings;
+import lineageos.profiles.StreamSettings;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -44,7 +44,7 @@ public class ProfileTest extends AndroidTestCase {
         super.setUp();
         // Only run this if we support profiles service
         org.junit.Assume.assumeTrue(mContext.getPackageManager().hasSystemFeature(
-                CMContextConstants.Features.PROFILES));
+                LineageContextConstants.Features.PROFILES));
     }
 
     @MediumTest

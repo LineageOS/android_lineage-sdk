@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.cyanogenmod.tests.versioning.unit.apiv5;
+package org.lineageos.tests.versioning.unit.apiv5;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -97,12 +97,12 @@ public class ApiV5PriorReleaseInterfaces {
         llChangeListener.put("onLiveLockScreenChanged", 1);
     }
 
-    //CMAudioManager Aidl (ICMAudioService)
+    //LineageAudioManager Aidl (ILineageAudioService)
     static {
-        Map<String, Integer> cmAudioService =
-                getInternalInterfaceMap("ICMAudioService");
+        Map<String, Integer> lineageAudioService =
+                getInternalInterfaceMap("ILineageAudioService");
         //ELDERBERRY BEGIN
-        cmAudioService.put("listAudioSessions", 1);
+        lineageAudioService.put("listAudioSessions", 1);
     }
 
     //ThemeChangeListener Aidl (IThemeChangeListener)
@@ -142,17 +142,17 @@ public class ApiV5PriorReleaseInterfaces {
         themes.put("getLastThemeChangeRequestType", 13);
     }
 
-    //CMWeatherManager Aidl (ICMWeatherManager)
+    //LineageWeatherManager Aidl (ILineageWeatherManager)
     static {
-        Map<String, Integer> icmWeatherManager =
-                getInternalInterfaceMap("ICMWeatherManager");
+        Map<String, Integer> ilineageWeatherManager =
+                getInternalInterfaceMap("ILineageWeatherManager");
         //ELDERBERRY BEGIN
-        icmWeatherManager.put("updateWeather", 1);
-        icmWeatherManager.put("lookupCity ", 2);
-        icmWeatherManager.put("registerWeatherServiceProviderChangeListener", 3);
-        icmWeatherManager.put("unregisterWeatherServiceProviderChangeListener", 4);
-        icmWeatherManager.put("getActiveWeatherServiceProviderLabel", 5);
-        icmWeatherManager.put("cancelRequest", 6);
+        ilineageWeatherManager.put("updateWeather", 1);
+        ilineageWeatherManager.put("lookupCity ", 2);
+        ilineageWeatherManager.put("registerWeatherServiceProviderChangeListener", 3);
+        ilineageWeatherManager.put("unregisterWeatherServiceProviderChangeListener", 4);
+        ilineageWeatherManager.put("getActiveWeatherServiceProviderLabel", 5);
+        ilineageWeatherManager.put("cancelRequest", 6);
     }
 
     //RequestInfoListener Aidl (IRequestInfoListener)

@@ -14,37 +14,37 @@
  * limitations under the License.
  */
 
-package org.cyanogenmod.tests.hardware.unit;
+package org.lineageos.tests.hardware.unit;
 
 import android.test.AndroidTestCase;
 import android.test.suitebuilder.annotation.SmallTest;
 
-import cyanogenmod.app.CMContextConstants;
-import cyanogenmod.hardware.CMHardwareManager;
-import cyanogenmod.hardware.ICMHardwareService;
+import lineageos.app.LineageContextConstants;
+import lineageos.hardware.LineageHardwareManager;
+import lineageos.hardware.ILineageHardwareService;
 
 /**
  * Created by adnan on 9/1/15.
  */
-public class CMHardwareManagerTest extends AndroidTestCase {
-    private CMHardwareManager mCMHardwareManager;
+public class LineageHardwareManagerTest extends AndroidTestCase {
+    private LineageHardwareManager mLineageHardwareManager;
     @Override
     protected void setUp() throws Exception {
         super.setUp();
         // Only run this if we support hardware abstraction
         org.junit.Assume.assumeTrue(mContext.getPackageManager().hasSystemFeature(
-                CMContextConstants.Features.HARDWARE_ABSTRACTION));
-        mCMHardwareManager = CMHardwareManager.getInstance(mContext);
+                LineageContextConstants.Features.HARDWARE_ABSTRACTION));
+        mLineageHardwareManager = LineageHardwareManager.getInstance(mContext);
     }
 
     @SmallTest
     public void testManagerExists() {
-        assertNotNull(mCMHardwareManager);
+        assertNotNull(mLineageHardwareManager);
     }
 
     @SmallTest
     public void testManagerServiceIsAvailable() {
-        ICMHardwareService icmStatusBarManager = mCMHardwareManager.getService();
-        assertNotNull(icmStatusBarManager);
+        ILineageHardwareService ilineageStatusBarManager = mLineageHardwareManager.getService();
+        assertNotNull(ilineageStatusBarManager);
     }
 }
