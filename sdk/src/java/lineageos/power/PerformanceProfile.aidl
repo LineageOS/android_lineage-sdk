@@ -14,6 +14,6 @@
  * limitations under the License.
  */
 
-package cyanogenmod.power;
+package lineageos.power;
 
 parcelable PerformanceProfile;

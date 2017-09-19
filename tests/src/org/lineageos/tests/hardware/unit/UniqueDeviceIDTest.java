@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.cyanogenmod.tests.hardware.unit;
+package org.lineageos.tests.hardware.unit;
 
 import android.os.Build;
 import android.os.SystemProperties;
@@ -22,28 +22,28 @@ import android.test.AndroidTestCase;
 import android.test.suitebuilder.annotation.SmallTest;
 import android.text.TextUtils;
 
-import cyanogenmod.hardware.CMHardwareManager;
+import lineageos.hardware.LineageHardwareManager;
 
 public class UniqueDeviceIDTest extends AndroidTestCase {
     private static final String TAG = UniqueDeviceIDTest.class.getSimpleName();
     private static final int MINIMUM_LENGTH = 3;
-    private CMHardwareManager mCMHardwareManager;
+    private LineageHardwareManager mLineageHardwareManager;
 
-    //TODO: Use the TYPE declaration from CMHardwareManager public interface in future
+    //TODO: Use the TYPE declaration from LineageHardwareManager public interface in future
     private static final int TYPE_MMC0_CID = 0;
 
     @Override
     protected void setUp() throws Exception {
         super.setUp();
-        mCMHardwareManager = CMHardwareManager.getInstance(mContext);
+        mLineageHardwareManager = LineageHardwareManager.getInstance(mContext);
     }
 
     @SmallTest
     public void testGetSerialNumber() {
-        final int feature = CMHardwareManager.FEATURE_SERIAL_NUMBER;
-        if (mCMHardwareManager.isSupported(feature)) {
+        final int feature = LineageHardwareManager.FEATURE_SERIAL_NUMBER;
+        if (mLineageHardwareManager.isSupported(feature)) {
             String notExpectedSerialNo = SystemProperties.get("ro.serialno");
-            String actualSerialNo = mCMHardwareManager.getSerialNumber();
+            String actualSerialNo = mLineageHardwareManager.getSerialNumber();
             assertNotNull(actualSerialNo);
             assertNotSame(notExpectedSerialNo, actualSerialNo);
         }
@@ -51,10 +51,10 @@ public class UniqueDeviceIDTest extends AndroidTestCase {
 
     @SmallTest
     public void testGetUniqueDeviceId() {
-        final int feature = CMHardwareManager.FEATURE_UNIQUE_DEVICE_ID;
+        final int feature = LineageHardwareManager.FEATURE_UNIQUE_DEVICE_ID;
         assertFeatureEnabledOnRetail(feature);
-        if (mCMHardwareManager.isSupported(feature)) {
-            String uniqueDeviceId = mCMHardwareManager.getUniqueDeviceId();
+        if (mLineageHardwareManager.isSupported(feature)) {
+            String uniqueDeviceId = mLineageHardwareManager.getUniqueDeviceId();
             //FIXME: This is based off the default implementation in cyngn/hw, make more robust
             assertNotNull(uniqueDeviceId);
             assertTrue(uniqueDeviceId.length() >= MINIMUM_LENGTH);
@@ -64,7 +64,7 @@ public class UniqueDeviceIDTest extends AndroidTestCase {
 
     private void assertFeatureEnabledOnRetail(int feature) {
         if (TextUtils.equals(Build.TYPE, "user")) {
-            assertTrue(mCMHardwareManager.isSupported(feature));
+            assertTrue(mLineageHardwareManager.isSupported(feature));
         }
     }
 

@@ -16,7 +16,7 @@
      limitations under the License.
 -->
 <resources>
-    <java-symbol type="drawable" name="ic_launcher_cyanogenmod" />
+    <java-symbol type="drawable" name="ic_launcher_lineageos" />
 
     <java-symbol type="bool" name="config_enableAppSuggestOverlay"/>
     <java-symbol type="string" name="config_appSuggestProviderPackageName"/>
@@ -111,15 +111,15 @@
     <java-symbol type="string" name="theme_reset_notification_title" />
     <java-symbol type="string" name="theme_reset_notification_message" />
 
-    <!-- External CM specific core services -->
-    <java-symbol type="array" name="config_externalCMServices" />
+    <!-- External Lineage specific core services -->
+    <java-symbol type="array" name="config_externalLineageServices" />
 
     <!-- Themes tile -->
     <java-symbol type="string" name="qs_themes_label" />
     <java-symbol type="string" name="qs_themes_content_description" />
     <java-symbol type="drawable" name="ic_qs_themes" />
 
-    <!-- CM system server -->
+    <!-- Lineage system server -->
     <java-symbol type="string" name="config_externalSystemServer" />
 
     <!-- Settings -->

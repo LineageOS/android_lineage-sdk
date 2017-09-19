@@ -14,6 +14,6 @@
  * limitations under the License.
  */
 
-package cyanogenmod.media;
+package lineageos.media;
 
 parcelable AudioSessionInfo;

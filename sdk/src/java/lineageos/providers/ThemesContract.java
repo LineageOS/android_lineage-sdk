@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package cyanogenmod.providers;
+package lineageos.providers;
 
 import android.net.Uri;
 
@@ -26,7 +26,7 @@ import android.net.Uri;
  */
 public class ThemesContract {
     /** The authority for the themes provider */
-    public static final String AUTHORITY = "com.cyanogenmod.themes";
+    public static final String AUTHORITY = "org.lineageos.themes";
     /** A content:// style uri to the authority for the themes provider */
     public static final Uri AUTHORITY_URI = Uri.parse("content://" + AUTHORITY);
 

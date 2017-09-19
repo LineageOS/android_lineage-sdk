@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.cyanogenmod.samples.customtiles;
+package org.lineageos.samples.customtiles;
 
 import android.app.Activity;
 import android.app.PendingIntent;
@@ -26,10 +26,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import cyanogenmod.app.CMStatusBarManager;
-import cyanogenmod.app.CustomTile;
+import lineageos.app.LineageStatusBarManager;
+import lineageos.app.CustomTile;
 
-import org.cyanogenmod.samples.customtiles.R;
+import org.lineageos.samples.customtiles.R;
 
 import java.util.ArrayList;
 
@@ -43,7 +43,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
     public static final int CUSTOM_TILE_LIST_ID = 2;
     public static final int CUSTOM_TILE_GRID_ID = 3;
     public static final String ACTION_TOGGLE_STATE =
-            "org.cyanogenmod.samples.customtiles.ACTION_TOGGLE_STATE";
+            "org.lineageos.samples.customtiles.ACTION_TOGGLE_STATE";
     public static final String STATE = "state";
 
     private Button mCustomTileButton;
@@ -87,7 +87,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
                         .shouldCollapsePanel(false)
                         .setIcon(R.drawable.ic_launcher)
                         .build();
-                CMStatusBarManager.getInstance(this)
+                LineageStatusBarManager.getInstance(this)
                         .publishTile(CUSTOM_TILE_ID, mCustomTile);
                 break;
             case R.id.custom_tile_list_expanded_button:
@@ -111,7 +111,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
                         .setLabel("CustomTile Expanded List")
                         .setIcon(R.drawable.ic_launcher)
                         .build();
-                CMStatusBarManager.getInstance(this)
+                LineageStatusBarManager.getInstance(this)
                         .publishTile(CUSTOM_TILE_LIST_ID, mCustomTile);
                 break;
             case R.id.custom_tile_grid_expanded_button:
@@ -133,7 +133,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
                         .setLabel("CustomTile Expanded Grid")
                         .setIcon(R.drawable.ic_launcher)
                         .build();
-                CMStatusBarManager.getInstance(this)
+                LineageStatusBarManager.getInstance(this)
                         .publishTile(CUSTOM_TILE_GRID_ID, mCustomTile);
                 break;
         }

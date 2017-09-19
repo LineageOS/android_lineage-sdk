@@ -18,7 +18,7 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Label for the LineageOS system components when they are shown to the user. -->
-  <string name="cyanogenmod_system_label">Sistema LineageOS</string>
+  <string name="lineageos_system_label">Sistema LineageOS</string>
   <string name="permlab_publishCustomTile">crear una caxella personalizada dientro\'l panel d\'axustes rápidos</string>
   <string name="permdesc_publishCustomTile">Permite qu\'una aplicación espublize una caxella d\'axustes rápidos.</string>
   <string name="permlab_modifyNetworkSettings">camudar los axustes de rede del sistema</string>
@@ -38,7 +38,7 @@
   <string name="permdesc_modifyProfiles">Permite qu\'una aplicación modifique los perfiles del sistema.</string>
   <!-- Labels for the HARDWARE_ABSTRACTION_ACCESS permission. -->
   <string name="permlab_useHardwareFramework">usar framework de hardware</string>
-  <string name="permdesc_useHardwareFramework">Permite qu\'una aplicación acceda al framework de hardware de CM.</string>
+  <string name="permdesc_useHardwareFramework">Permite qu\'una aplicación acceda al framework de hardware de Lineage.</string>
   <!-- Labels for the WRITE_ALARMS permission. -->
   <string name="permlab_write_alarms">camudar direutamente les alarmes</string>
   <string name="permdesc_write_alarms">Permite qu\'una aplicación amieste, modifique o desanicie toles tos alarmes.</string>
@@ -49,11 +49,11 @@
   <string name="permlab_read_alarms">acceder a alarmes planificaes</string>
   <string name="permdesc_read_alarms">Permite qu\'una aplicación llea les tos alarmes planificaes.</string>
   <!-- Labels for the WRITE_SETTINGS permission -->
-  <string name="permlab_writeSettings">modificar axustes del sistema CM</string>
-  <string name="permdesc_writeSettings">Permite qu\'una aplicación modifique los axustes del sistema CM.</string>
+  <string name="permlab_writeSettings">modificar axustes del sistema Lineage</string>
+  <string name="permdesc_writeSettings">Permite qu\'una aplicación modifique los axustes del sistema Lineage.</string>
   <!-- Labels for the WRITE_SECURE_SETTINGS permission -->
-  <string name="permlab_writeSecureSettings">modificar axustes del sistema de seguranza CM</string>
-  <string name="permdesc_writeSecureSettings">Permite qu\'una aplicación modifique los axustes del sistema de seguranza de CM. Nun s\'usa pa les aplicaciones normales.</string>
+  <string name="permlab_writeSecureSettings">modificar axustes del sistema de seguranza Lineage</string>
+  <string name="permdesc_writeSecureSettings">Permite qu\'una aplicación modifique los axustes del sistema de seguranza de Lineage. Nun s\'usa pa les aplicaciones normales.</string>
   <!-- Labels for the MANAGE_PERSISTENT_STORAGE permission. -->
   <string name="permlab_managePersistentStorage">xestionar almacenamientu persistente</string>
   <string name="permdesc_managePersistentStorage">Permite qu\'una aplicación llea o escriba propiedaes que quiciabes persistan dempués de reafitar el preséu.</string>
@@ -151,10 +151,10 @@
   <!-- LiveDisplay manager permission -->
   <string name="permlab_manageLiveDisplay">xestionar axustes de LiveDisplay</string>
   <string name="permdesc_manageLiveDisplay">Permite qu\'una aplicación configure los axustes avanzaos de pantalla.</string>
-  <!-- CMAudioService - observe session changes permission -->
+  <!-- LineageAudioService - observe session changes permission -->
   <string name="permlab_observe_audio_sessions">mirar camudancies de sesiones d\'audiu</string>
   <string name="permdesc_observe_audio_sessions">Permite qu\'una aplicación mire los fluxos d\'audiu que se creen y destrúin.</string>
-  <!-- CMAudioService - observe session changes permission -->
+  <!-- LineageAudioService - observe session changes permission -->
   <string name="permlab_manage_audio_sessions">xestionar camudancies de sesiones d\'audiu</string>
   <string name="permdesc_manage_audio_sessions">Permite qu\'una aplicación unvie anovamientos de fluxos d\'audiu.</string>
   <!-- QuickSettings: Themes tile -->

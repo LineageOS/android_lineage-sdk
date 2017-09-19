@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package cyanogenmod.alarmclock;
+package lineageos.alarmclock;
 
 import android.content.ComponentName;
 import android.content.Context;
@@ -26,13 +26,13 @@ import android.provider.AlarmClock;
 import java.util.List;
 
 /**
- * The CyanogenModAlarmClock class contains utilities for interacting with
- * a variety of Alarm features that the CyanogenMod AlarmClock application
+ * The LineageOSAlarmClock class contains utilities for interacting with
+ * a variety of Alarm features that the LineageOS AlarmClock application
  * (based on AOSP DeskClock) supports.
  */
-public class CyanogenModAlarmClock {
+public class LineageOSAlarmClock {
     /**
-     * The package name of the CyanogenMod DeskClock application.
+     * The package name of the LineageOS DeskClock application.
      */
     private static final String DESKCLOCK_PACKAGE = "com.android.deskclock";
 
@@ -43,26 +43,26 @@ public class CyanogenModAlarmClock {
      * @see #ACTION_SET_ALARM_ENABLED
      */
     public static final String MODIFY_ALARMS_PERMISSION
-            = "cyanogenmod.alarmclock.permission.MODIFY_ALARMS";
+            = "lineageos.alarmclock.permission.MODIFY_ALARMS";
 
     /**
      * Allows an application to have read access to all alarms in the
-     * CyanogenMod DeskClock application.
+     * LineageOS DeskClock application.
      *
-     * @see cyanogenmod.alarmclock.ClockContract
+     * @see lineageos.alarmclock.ClockContract
      */
     public static final String READ_ALARMS_PERMISSION
-            = "cyanogenmod.alarmclock.permission.READ_ALARMS";
+            = "lineageos.alarmclock.permission.READ_ALARMS";
 
     /**
      * Allows an application to have write access to all alarms in the
-     * CyanogenMod DeskClock application. This is a system level permission.
+     * LineageOS DeskClock application. This is a system level permission.
      *
-     * @see cyanogenmod.alarmclock.ClockContract
+     * @see lineageos.alarmclock.ClockContract
      * @hide
      */
     public static final String WRITE_ALARMS_PERMISSION
-            = "cyanogenmod.alarmclock.permission.WRITE_ALARMS";
+            = "lineageos.alarmclock.permission.WRITE_ALARMS";
 
     /**
      * Service Action: Set an existing alarm to be either enabled or disabled.
@@ -83,13 +83,13 @@ public class CyanogenModAlarmClock {
      * <h3>Request parameters</h3>
      * <ul>
      *     <li>{@link #EXTRA_ALARM_ID} <em>(required)</em>: The id of the alarm to modify,
-     *     as stored in {@link cyanogenmod.alarmclock.ClockContract.AlarmsColumns#_ID}</li>
+     *     as stored in {@link lineageos.alarmclock.ClockContract.AlarmsColumns#_ID}</li>
      *     <li>{@link #EXTRA_ENABLED} <em>(required)</em>: Whether to set this alarm to be enabled
      *     or disabled. </li>
      * </ul>
      */
     public static final String ACTION_SET_ALARM_ENABLED
-            = "cyanogenmod.alarmclock.SET_ALARM_ENABLED";
+            = "lineageos.alarmclock.SET_ALARM_ENABLED";
 
     /**
      * Bundle extra: The id of the alarm.
@@ -99,13 +99,13 @@ public class CyanogenModAlarmClock {
      * This extra is required.
      * </p><p>
      * The value is an {@link Long} and is the ID stored in
-     * {@link cyanogenmod.alarmclock.ClockContract.AlarmsColumns#_ID} for this alarm.
+     * {@link lineageos.alarmclock.ClockContract.AlarmsColumns#_ID} for this alarm.
      * </p>
      *
      * @see #ACTION_SET_ALARM_ENABLED
      * @see #EXTRA_ENABLED
      */
-    public static final String EXTRA_ALARM_ID = "cyanogenmod.intent.extra.alarmclock.ID";
+    public static final String EXTRA_ALARM_ID = "lineageos.intent.extra.alarmclock.ID";
 
     /**
      * Bundle extra: Whether to set the alarm to enabled to disabled.
@@ -121,12 +121,12 @@ public class CyanogenModAlarmClock {
      * @see #ACTION_SET_ALARM_ENABLED
      * @see #EXTRA_ALARM_ID
      */
-    public static final String EXTRA_ENABLED = "cyanogenmod.intent.extra.alarmclock.ENABLED";
+    public static final String EXTRA_ENABLED = "lineageos.intent.extra.alarmclock.ENABLED";
 
     /**
      * <p>
      * Retrieves an Intent that is prepopulated with the proper action and ComponentName to
-     * create a new alarm in the CyanogenMod DeskClock application.
+     * create a new alarm in the LineageOS DeskClock application.
      * </p>
      * <p> The action will be set to {@link android.provider.AlarmClock#ACTION_SET_ALARM}. Use the
      * Intent extras contained at {@link android.provider.AlarmClock} to configure the alarm.
@@ -136,7 +136,7 @@ public class CyanogenModAlarmClock {
      * </p>
      *
      * @see android.provider.AlarmClock#ACTION_SET_ALARM
-     * @return The Intent to create a new alarm with the CyanogenMod DeskClock application.
+     * @return The Intent to create a new alarm with the LineageOS DeskClock application.
      */
     public static Intent createAlarmIntent(Context context) {
         Intent intent = new Intent();

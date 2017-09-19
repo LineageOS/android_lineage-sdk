@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package cyanogenmod.themes;
+package lineageos.themes;
 
 /** {@hide} */
 oneway interface IThemeProcessingListener {

@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package org.cyanogenmod.tests.profiles.unit;
+package org.lineageos.tests.profiles.unit;
 
 import android.test.AndroidTestCase;
 import android.test.suitebuilder.annotation.SmallTest;
-import cyanogenmod.app.Profile;
-import cyanogenmod.profiles.LockSettings;
+import lineageos.app.Profile;
+import lineageos.profiles.LockSettings;
 
 public class LockSettingsTest extends AndroidTestCase {
 

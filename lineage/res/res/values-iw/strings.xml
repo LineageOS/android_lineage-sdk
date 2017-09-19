@@ -18,7 +18,7 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Label for the LineageOS system components when they are shown to the user. -->
-  <string name="cyanogenmod_system_label">מערכת LineageOS</string>
+  <string name="lineageos_system_label">מערכת LineageOS</string>
   <string name="permlab_publishCustomTile">צור אריח מותאם אישית בתוך לוח ההגדרות המהירות</string>
   <string name="permdesc_publishCustomTile">מאפשר ליישום לפרסם אריח הגדרות מותאם אישית.</string>
   <string name="permlab_modifyNetworkSettings">שנה את הגדרות הרשת של המערכת</string>
@@ -38,7 +38,7 @@
   <string name="permdesc_modifyProfiles">מאפשר ליישום לשנות פרופילי מערכת.</string>
   <!-- Labels for the HARDWARE_ABSTRACTION_ACCESS permission. -->
   <string name="permlab_useHardwareFramework">השתמש במסגרת חומרה</string>
-  <string name="permdesc_useHardwareFramework">מאפשר ליישום לגשת למסגרת החומרתית של CM.</string>
+  <string name="permdesc_useHardwareFramework">מאפשר ליישום לגשת למסגרת החומרתית של Lineage.</string>
   <!-- Labels for the WRITE_ALARMS permission. -->
   <string name="permlab_write_alarms">שנה ישירות שעונים מעוררים</string>
   <string name="permdesc_write_alarms">מאפשר ליישום להוסיף, לשנות או למחוק את כל השעונים המעוררים שלך.</string>
@@ -49,11 +49,11 @@
   <string name="permlab_read_alarms">גישה לשעונים מעוררים שנקבעו</string>
   <string name="permdesc_read_alarms">מאפשר ליישום לקרוא את השעונים המעוררים שנקבעו.</string>
   <!-- Labels for the WRITE_SETTINGS permission -->
-  <string name="permlab_writeSettings">שנה הגדרות מערכת CM</string>
-  <string name="permdesc_writeSettings">מאפשר ליישום לשנות את הגדרות מערכת CM.</string>
+  <string name="permlab_writeSettings">שנה הגדרות מערכת Lineage</string>
+  <string name="permdesc_writeSettings">מאפשר ליישום לשנות את הגדרות מערכת Lineage.</string>
   <!-- Labels for the WRITE_SECURE_SETTINGS permission -->
-  <string name="permlab_writeSecureSettings">שנה הגדרות מאובטחות של מערכת CM</string>
-  <string name="permdesc_writeSecureSettings">מאפשר ליישום לשנות את ההגדרות המאובטחות של מערכת CM. לא לשימוש ביישומים רגילים.</string>
+  <string name="permlab_writeSecureSettings">שנה הגדרות מאובטחות של מערכת Lineage</string>
+  <string name="permdesc_writeSecureSettings">מאפשר ליישום לשנות את ההגדרות המאובטחות של מערכת Lineage. לא לשימוש ביישומים רגילים.</string>
   <!-- Labels for the MANAGE_PERSISTENT_STORAGE permission. -->
   <string name="permlab_managePersistentStorage">נהל אחסון תמידי</string>
   <string name="permdesc_managePersistentStorage">מאפשר ליישום לקרוא או לכתוב נתונים והגדרות העלולים לשרוד גם לאחר איפוס המכשיר להגדרות היצרן.</string>
@@ -173,10 +173,10 @@
   <!-- LiveDisplay manager permission -->
   <string name="permlab_manageLiveDisplay">נהל הגדרות livedisplay</string>
   <string name="permdesc_manageLiveDisplay">מאפשר ליישום לקבוע הגדרות תצוגה מתקדמות.</string>
-  <!-- CMAudioService - observe session changes permission -->
+  <!-- LineageAudioService - observe session changes permission -->
   <string name="permlab_observe_audio_sessions">הרשאה לקבלת עדכוני פעולות במערכת השמע</string>
   <string name="permdesc_observe_audio_sessions">מאפשר ליישום לקבל עדכוני יצירה וסגירה של זרמי שמע.</string>
-  <!-- CMAudioService - observe session changes permission -->
+  <!-- LineageAudioService - observe session changes permission -->
   <string name="permlab_manage_audio_sessions">נהל עדכוני פעולות במערכת השמע</string>
   <string name="permdesc_manage_audio_sessions">מאפשר ליישום לשלוח עדכוני זרימת שמע.</string>
   <!-- QuickSettings: Themes tile -->

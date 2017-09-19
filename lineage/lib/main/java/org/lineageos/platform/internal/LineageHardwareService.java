@@ -14,7 +14,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.cyanogenmod.platform.internal;
+package org.lineageos.platform.internal;
 
 import android.content.Context;
 import android.content.Intent;
@@ -28,49 +28,49 @@ import android.util.Range;
 
 import com.android.server.SystemService;
 
-import cyanogenmod.app.CMContextConstants;
-import cyanogenmod.hardware.ICMHardwareService;
-import cyanogenmod.hardware.CMHardwareManager;
-import cyanogenmod.hardware.DisplayMode;
-import cyanogenmod.hardware.IThermalListenerCallback;
-import cyanogenmod.hardware.ThermalListenerCallback;
-import cyanogenmod.hardware.HSIC;
-import cyanogenmod.hardware.TouchscreenGesture;
+import lineageos.app.LineageContextConstants;
+import lineageos.hardware.ILineageHardwareService;
+import lineageos.hardware.LineageHardwareManager;
+import lineageos.hardware.DisplayMode;
+import lineageos.hardware.IThermalListenerCallback;
+import lineageos.hardware.ThermalListenerCallback;
+import lineageos.hardware.HSIC;
+import lineageos.hardware.TouchscreenGesture;
 
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import org.cyanogenmod.hardware.AdaptiveBacklight;
-import org.cyanogenmod.hardware.AutoContrast;
-import org.cyanogenmod.hardware.ColorBalance;
-import org.cyanogenmod.hardware.ColorEnhancement;
-import org.cyanogenmod.hardware.DisplayColorCalibration;
-import org.cyanogenmod.hardware.DisplayGammaCalibration;
-import org.cyanogenmod.hardware.DisplayModeControl;
-import org.cyanogenmod.hardware.HighTouchSensitivity;
-import org.cyanogenmod.hardware.KeyDisabler;
-import org.cyanogenmod.hardware.LongTermOrbits;
-import org.cyanogenmod.hardware.PersistentStorage;
-import org.cyanogenmod.hardware.PictureAdjustment;
-import org.cyanogenmod.hardware.SerialNumber;
-import org.cyanogenmod.hardware.SunlightEnhancement;
-import org.cyanogenmod.hardware.ThermalMonitor;
-import org.cyanogenmod.hardware.ThermalUpdateCallback;
-import org.cyanogenmod.hardware.TouchscreenGestures;
-import org.cyanogenmod.hardware.TouchscreenHovering;
-import org.cyanogenmod.hardware.UniqueDeviceId;
-import org.cyanogenmod.hardware.VibratorHW;
+import org.lineageos.hardware.AdaptiveBacklight;
+import org.lineageos.hardware.AutoContrast;
+import org.lineageos.hardware.ColorBalance;
+import org.lineageos.hardware.ColorEnhancement;
+import org.lineageos.hardware.DisplayColorCalibration;
+import org.lineageos.hardware.DisplayGammaCalibration;
+import org.lineageos.hardware.DisplayModeControl;
+import org.lineageos.hardware.HighTouchSensitivity;
+import org.lineageos.hardware.KeyDisabler;
+import org.lineageos.hardware.LongTermOrbits;
+import org.lineageos.hardware.PersistentStorage;
+import org.lineageos.hardware.PictureAdjustment;
+import org.lineageos.hardware.SerialNumber;
+import org.lineageos.hardware.SunlightEnhancement;
+import org.lineageos.hardware.ThermalMonitor;
+import org.lineageos.hardware.ThermalUpdateCallback;
+import org.lineageos.hardware.TouchscreenGestures;
+import org.lineageos.hardware.TouchscreenHovering;
+import org.lineageos.hardware.UniqueDeviceId;
+import org.lineageos.hardware.VibratorHW;
 
 /** @hide */
-public class CMHardwareService extends CMSystemService implements ThermalUpdateCallback {
+public class LineageHardwareService extends LineageSystemService implements ThermalUpdateCallback {
 
     private static final boolean DEBUG = true;
-    private static final String TAG = CMHardwareService.class.getSimpleName();
+    private static final String TAG = LineageHardwareService.class.getSimpleName();
 
     private final Context mContext;
-    private final CMHardwareInterface mCmHwImpl;
+    private final LineageHardwareInterface mLineageHwImpl;
     private int mCurrentThermalState = ThermalListenerCallback.State.STATE_UNKNOWN;
     private RemoteCallbackList<IThermalListenerCallback> mRemoteCallbackList;
 
@@ -78,7 +78,7 @@ public class CMHardwareService extends CMSystemService implements ThermalUpdateC
             new ArrayMap<String, String>();
     private final boolean mFilterDisplayModes;
 
-    private interface CMHardwareInterface {
+    private interface LineageHardwareInterface {
         public int getSupportedFeatures();
         public boolean get(int feature);
         public boolean set(int feature, boolean enable);
@@ -125,49 +125,49 @@ public class CMHardwareService extends CMSystemService implements ThermalUpdateC
         public boolean setTouchscreenGestureEnabled(TouchscreenGesture gesture, boolean state);
     }
 
-    private class LegacyCMHardware implements CMHardwareInterface {
+    private class LegacyLineageHardware implements LineageHardwareInterface {
 
         private int mSupportedFeatures = 0;
 
-        public LegacyCMHardware() {
+        public LegacyLineageHardware() {
             if (AdaptiveBacklight.isSupported())
-                mSupportedFeatures |= CMHardwareManager.FEATURE_ADAPTIVE_BACKLIGHT;
+                mSupportedFeatures |= LineageHardwareManager.FEATURE_ADAPTIVE_BACKLIGHT;
             if (ColorEnhancement.isSupported())
-                mSupportedFeatures |= CMHardwareManager.FEATURE_COLOR_ENHANCEMENT;
+                mSupportedFeatures |= LineageHardwareManager.FEATURE_COLOR_ENHANCEMENT;
             if (DisplayColorCalibration.isSupported())
-                mSupportedFeatures |= CMHardwareManager.FEATURE_DISPLAY_COLOR_CALIBRATION;
+                mSupportedFeatures |= LineageHardwareManager.FEATURE_DISPLAY_COLOR_CALIBRATION;
             if (DisplayGammaCalibration.isSupported())
-                mSupportedFeatures |= CMHardwareManager.FEATURE_DISPLAY_GAMMA_CALIBRATION;
+                mSupportedFeatures |= LineageHardwareManager.FEATURE_DISPLAY_GAMMA_CALIBRATION;
             if (HighTouchSensitivity.isSupported())
-                mSupportedFeatures |= CMHardwareManager.FEATURE_HIGH_TOUCH_SENSITIVITY;
+                mSupportedFeatures |= LineageHardwareManager.FEATURE_HIGH_TOUCH_SENSITIVITY;
             if (KeyDisabler.isSupported())
-                mSupportedFeatures |= CMHardwareManager.FEATURE_KEY_DISABLE;
+                mSupportedFeatures |= LineageHardwareManager.FEATURE_KEY_DISABLE;
             if (LongTermOrbits.isSupported())
-                mSupportedFeatures |= CMHardwareManager.FEATURE_LONG_TERM_ORBITS;
+                mSupportedFeatures |= LineageHardwareManager.FEATURE_LONG_TERM_ORBITS;
             if (SerialNumber.isSupported())
-                mSupportedFeatures |= CMHardwareManager.FEATURE_SERIAL_NUMBER;
+                mSupportedFeatures |= LineageHardwareManager.FEATURE_SERIAL_NUMBER;
             if (SunlightEnhancement.isSupported())
-                mSupportedFeatures |= CMHardwareManager.FEATURE_SUNLIGHT_ENHANCEMENT;
+                mSupportedFeatures |= LineageHardwareManager.FEATURE_SUNLIGHT_ENHANCEMENT;
             if (VibratorHW.isSupported())
-                mSupportedFeatures |= CMHardwareManager.FEATURE_VIBRATOR;
+                mSupportedFeatures |= LineageHardwareManager.FEATURE_VIBRATOR;
             if (TouchscreenHovering.isSupported())
-                mSupportedFeatures |= CMHardwareManager.FEATURE_TOUCH_HOVERING;
+                mSupportedFeatures |= LineageHardwareManager.FEATURE_TOUCH_HOVERING;
             if (AutoContrast.isSupported())
-                mSupportedFeatures |= CMHardwareManager.FEATURE_AUTO_CONTRAST;
+                mSupportedFeatures |= LineageHardwareManager.FEATURE_AUTO_CONTRAST;
             if (DisplayModeControl.isSupported())
-                mSupportedFeatures |= CMHardwareManager.FEATURE_DISPLAY_MODES;
+                mSupportedFeatures |= LineageHardwareManager.FEATURE_DISPLAY_MODES;
             if (PersistentStorage.isSupported())
-                mSupportedFeatures |= CMHardwareManager.FEATURE_PERSISTENT_STORAGE;
+                mSupportedFeatures |= LineageHardwareManager.FEATURE_PERSISTENT_STORAGE;
             if (ThermalMonitor.isSupported())
-                mSupportedFeatures |= CMHardwareManager.FEATURE_THERMAL_MONITOR;
+                mSupportedFeatures |= LineageHardwareManager.FEATURE_THERMAL_MONITOR;
             if (UniqueDeviceId.isSupported())
-                mSupportedFeatures |= CMHardwareManager.FEATURE_UNIQUE_DEVICE_ID;
+                mSupportedFeatures |= LineageHardwareManager.FEATURE_UNIQUE_DEVICE_ID;
             if (ColorBalance.isSupported())
-                mSupportedFeatures |= CMHardwareManager.FEATURE_COLOR_BALANCE;
+                mSupportedFeatures |= LineageHardwareManager.FEATURE_COLOR_BALANCE;
             if (PictureAdjustment.isSupported())
-                mSupportedFeatures |= CMHardwareManager.FEATURE_PICTURE_ADJUSTMENT;
+                mSupportedFeatures |= LineageHardwareManager.FEATURE_PICTURE_ADJUSTMENT;
             if (TouchscreenGestures.isSupported())
-                mSupportedFeatures |= CMHardwareManager.FEATURE_TOUCHSCREEN_GESTURES;
+                mSupportedFeatures |= LineageHardwareManager.FEATURE_TOUCHSCREEN_GESTURES;
         }
 
         public int getSupportedFeatures() {
@@ -176,21 +176,21 @@ public class CMHardwareService extends CMSystemService implements ThermalUpdateC
 
         public boolean get(int feature) {
             switch(feature) {
-                case CMHardwareManager.FEATURE_ADAPTIVE_BACKLIGHT:
+                case LineageHardwareManager.FEATURE_ADAPTIVE_BACKLIGHT:
                     return AdaptiveBacklight.isEnabled();
-                case CMHardwareManager.FEATURE_COLOR_ENHANCEMENT:
+                case LineageHardwareManager.FEATURE_COLOR_ENHANCEMENT:
                     return ColorEnhancement.isEnabled();
-                case CMHardwareManager.FEATURE_HIGH_TOUCH_SENSITIVITY:
+                case LineageHardwareManager.FEATURE_HIGH_TOUCH_SENSITIVITY:
                     return HighTouchSensitivity.isEnabled();
-                case CMHardwareManager.FEATURE_KEY_DISABLE:
+                case LineageHardwareManager.FEATURE_KEY_DISABLE:
                     return KeyDisabler.isActive();
-                case CMHardwareManager.FEATURE_SUNLIGHT_ENHANCEMENT:
+                case LineageHardwareManager.FEATURE_SUNLIGHT_ENHANCEMENT:
                     return SunlightEnhancement.isEnabled();
-                case CMHardwareManager.FEATURE_TOUCH_HOVERING:
+                case LineageHardwareManager.FEATURE_TOUCH_HOVERING:
                     return TouchscreenHovering.isEnabled();
-                case CMHardwareManager.FEATURE_AUTO_CONTRAST:
+                case LineageHardwareManager.FEATURE_AUTO_CONTRAST:
                     return AutoContrast.isEnabled();
-                case CMHardwareManager.FEATURE_THERMAL_MONITOR:
+                case LineageHardwareManager.FEATURE_THERMAL_MONITOR:
                     return ThermalMonitor.isEnabled();
                 default:
                     Log.e(TAG, "feature " + feature + " is not a boolean feature");
@@ -200,19 +200,19 @@ public class CMHardwareService extends CMSystemService implements ThermalUpdateC
 
         public boolean set(int feature, boolean enable) {
             switch(feature) {
-                case CMHardwareManager.FEATURE_ADAPTIVE_BACKLIGHT:
+                case LineageHardwareManager.FEATURE_ADAPTIVE_BACKLIGHT:
                     return AdaptiveBacklight.setEnabled(enable);
-                case CMHardwareManager.FEATURE_COLOR_ENHANCEMENT:
+                case LineageHardwareManager.FEATURE_COLOR_ENHANCEMENT:
                     return ColorEnhancement.setEnabled(enable);
-                case CMHardwareManager.FEATURE_HIGH_TOUCH_SENSITIVITY:
+                case LineageHardwareManager.FEATURE_HIGH_TOUCH_SENSITIVITY:
                     return HighTouchSensitivity.setEnabled(enable);
-                case CMHardwareManager.FEATURE_KEY_DISABLE:
+                case LineageHardwareManager.FEATURE_KEY_DISABLE:
                     return KeyDisabler.setActive(enable);
-                case CMHardwareManager.FEATURE_SUNLIGHT_ENHANCEMENT:
+                case LineageHardwareManager.FEATURE_SUNLIGHT_ENHANCEMENT:
                     return SunlightEnhancement.setEnabled(enable);
-                case CMHardwareManager.FEATURE_TOUCH_HOVERING:
+                case LineageHardwareManager.FEATURE_TOUCH_HOVERING:
                     return TouchscreenHovering.setEnabled(enable);
-                case CMHardwareManager.FEATURE_AUTO_CONTRAST:
+                case LineageHardwareManager.FEATURE_AUTO_CONTRAST:
                     return AutoContrast.setEnabled(enable);
                 default:
                     Log.e(TAG, "feature " + feature + " is not a boolean feature");
@@ -239,11 +239,11 @@ public class CMHardwareService extends CMSystemService implements ThermalUpdateC
 
         private String rgbToString(int[] rgb) {
             StringBuilder builder = new StringBuilder();
-            builder.append(rgb[CMHardwareManager.COLOR_CALIBRATION_RED_INDEX]);
+            builder.append(rgb[LineageHardwareManager.COLOR_CALIBRATION_RED_INDEX]);
             builder.append(" ");
-            builder.append(rgb[CMHardwareManager.COLOR_CALIBRATION_GREEN_INDEX]);
+            builder.append(rgb[LineageHardwareManager.COLOR_CALIBRATION_GREEN_INDEX]);
             builder.append(" ");
-            builder.append(rgb[CMHardwareManager.COLOR_CALIBRATION_BLUE_INDEX]);
+            builder.append(rgb[LineageHardwareManager.COLOR_CALIBRATION_BLUE_INDEX]);
             return builder.toString();
         }
 
@@ -254,14 +254,14 @@ public class CMHardwareService extends CMSystemService implements ThermalUpdateC
                 return null;
             }
             int[] currentCalibration = new int[6];
-            currentCalibration[CMHardwareManager.COLOR_CALIBRATION_RED_INDEX] = rgb[0];
-            currentCalibration[CMHardwareManager.COLOR_CALIBRATION_GREEN_INDEX] = rgb[1];
-            currentCalibration[CMHardwareManager.COLOR_CALIBRATION_BLUE_INDEX] = rgb[2];
-            currentCalibration[CMHardwareManager.COLOR_CALIBRATION_DEFAULT_INDEX] =
+            currentCalibration[LineageHardwareManager.COLOR_CALIBRATION_RED_INDEX] = rgb[0];
+            currentCalibration[LineageHardwareManager.COLOR_CALIBRATION_GREEN_INDEX] = rgb[1];
+            currentCalibration[LineageHardwareManager.COLOR_CALIBRATION_BLUE_INDEX] = rgb[2];
+            currentCalibration[LineageHardwareManager.COLOR_CALIBRATION_DEFAULT_INDEX] =
                 DisplayColorCalibration.getDefValue();
-            currentCalibration[CMHardwareManager.COLOR_CALIBRATION_MIN_INDEX] =
+            currentCalibration[LineageHardwareManager.COLOR_CALIBRATION_MIN_INDEX] =
                 DisplayColorCalibration.getMinValue();
-            currentCalibration[CMHardwareManager.COLOR_CALIBRATION_MAX_INDEX] =
+            currentCalibration[LineageHardwareManager.COLOR_CALIBRATION_MAX_INDEX] =
                 DisplayColorCalibration.getMaxValue();
             return currentCalibration;
         }
@@ -281,12 +281,12 @@ public class CMHardwareService extends CMSystemService implements ThermalUpdateC
                 return null;
             }
             int[] currentCalibration = new int[5];
-            currentCalibration[CMHardwareManager.GAMMA_CALIBRATION_RED_INDEX] = rgb[0];
-            currentCalibration[CMHardwareManager.GAMMA_CALIBRATION_GREEN_INDEX] = rgb[1];
-            currentCalibration[CMHardwareManager.GAMMA_CALIBRATION_BLUE_INDEX] = rgb[2];
-            currentCalibration[CMHardwareManager.GAMMA_CALIBRATION_MIN_INDEX] =
+            currentCalibration[LineageHardwareManager.GAMMA_CALIBRATION_RED_INDEX] = rgb[0];
+            currentCalibration[LineageHardwareManager.GAMMA_CALIBRATION_GREEN_INDEX] = rgb[1];
+            currentCalibration[LineageHardwareManager.GAMMA_CALIBRATION_BLUE_INDEX] = rgb[2];
+            currentCalibration[LineageHardwareManager.GAMMA_CALIBRATION_MIN_INDEX] =
                 DisplayGammaCalibration.getMinValue(idx);
-            currentCalibration[CMHardwareManager.GAMMA_CALIBRATION_MAX_INDEX] =
+            currentCalibration[LineageHardwareManager.GAMMA_CALIBRATION_MAX_INDEX] =
                 DisplayGammaCalibration.getMaxValue(idx);
             return currentCalibration;
         }
@@ -297,11 +297,11 @@ public class CMHardwareService extends CMSystemService implements ThermalUpdateC
 
         public int[] getVibratorIntensity() {
             int[] vibrator = new int[5];
-            vibrator[CMHardwareManager.VIBRATOR_INTENSITY_INDEX] = VibratorHW.getCurIntensity();
-            vibrator[CMHardwareManager.VIBRATOR_DEFAULT_INDEX] = VibratorHW.getDefaultIntensity();
-            vibrator[CMHardwareManager.VIBRATOR_MIN_INDEX] = VibratorHW.getMinIntensity();
-            vibrator[CMHardwareManager.VIBRATOR_MAX_INDEX] = VibratorHW.getMaxIntensity();
-            vibrator[CMHardwareManager.VIBRATOR_WARNING_INDEX] = VibratorHW.getWarningThreshold();
+            vibrator[LineageHardwareManager.VIBRATOR_INTENSITY_INDEX] = VibratorHW.getCurIntensity();
+            vibrator[LineageHardwareManager.VIBRATOR_DEFAULT_INDEX] = VibratorHW.getDefaultIntensity();
+            vibrator[LineageHardwareManager.VIBRATOR_MIN_INDEX] = VibratorHW.getMinIntensity();
+            vibrator[LineageHardwareManager.VIBRATOR_MAX_INDEX] = VibratorHW.getMaxIntensity();
+            vibrator[LineageHardwareManager.VIBRATOR_WARNING_INDEX] = VibratorHW.getWarningThreshold();
             return vibrator;
         }
 
@@ -402,18 +402,18 @@ public class CMHardwareService extends CMSystemService implements ThermalUpdateC
         }
     }
 
-    private CMHardwareInterface getImpl(Context context) {
-        return new LegacyCMHardware();
+    private LineageHardwareInterface getImpl(Context context) {
+        return new LegacyLineageHardware();
     }
 
-    public CMHardwareService(Context context) {
+    public LineageHardwareService(Context context) {
         super(context);
         mContext = context;
-        mCmHwImpl = getImpl(context);
-        publishBinderService(CMContextConstants.CM_HARDWARE_SERVICE, mService);
+        mLineageHwImpl = getImpl(context);
+        publishBinderService(LineageContextConstants.LINEAGE_HARDWARE_SERVICE, mService);
 
         final String[] mappings = mContext.getResources().getStringArray(
-                org.cyanogenmod.platform.internal.R.array.config_displayModeMappings);
+                org.lineageos.platform.internal.R.array.config_displayModeMappings);
         if (mappings != null && mappings.length > 0) {
             for (String mapping : mappings) {
                 String[] split = mapping.split(":");
@@ -423,21 +423,21 @@ public class CMHardwareService extends CMSystemService implements ThermalUpdateC
             }
         }
         mFilterDisplayModes = mContext.getResources().getBoolean(
-                org.cyanogenmod.platform.internal.R.bool.config_filterDisplayModes);
+                org.lineageos.platform.internal.R.bool.config_filterDisplayModes);
     }
 
     @Override
     public String getFeatureDeclaration() {
-        return CMContextConstants.Features.HARDWARE_ABSTRACTION;
+        return LineageContextConstants.Features.HARDWARE_ABSTRACTION;
     }
 
     @Override
     public void onBootPhase(int phase) {
         if (phase == PHASE_BOOT_COMPLETED) {
-            Intent intent = new Intent(cyanogenmod.content.Intent.ACTION_INITIALIZE_CM_HARDWARE);
+            Intent intent = new Intent(lineageos.content.Intent.ACTION_INITIALIZE_LINEAGE_HARDWARE);
             intent.addFlags(Intent.FLAG_RECEIVER_FOREGROUND);
             mContext.sendBroadcastAsUser(intent, UserHandle.ALL,
-                    cyanogenmod.platform.Manifest.permission.HARDWARE_ABSTRACTION_ACCESS);
+                    lineageos.platform.Manifest.permission.HARDWARE_ABSTRACTION_ACCESS);
         }
     }
 
@@ -478,7 +478,7 @@ public class CMHardwareService extends CMSystemService implements ThermalUpdateC
         return null;
     }
 
-    private final IBinder mService = new ICMHardwareService.Stub() {
+    private final IBinder mService = new ILineageHardwareService.Stub() {
 
         private boolean isSupported(int feature) {
             return (getSupportedFeatures() & feature) == feature;
@@ -487,48 +487,48 @@ public class CMHardwareService extends CMSystemService implements ThermalUpdateC
         @Override
         public int getSupportedFeatures() {
             mContext.enforceCallingOrSelfPermission(
-                    cyanogenmod.platform.Manifest.permission.HARDWARE_ABSTRACTION_ACCESS, null);
-            return mCmHwImpl.getSupportedFeatures();
+                    lineageos.platform.Manifest.permission.HARDWARE_ABSTRACTION_ACCESS, null);
+            return mLineageHwImpl.getSupportedFeatures();
         }
 
         @Override
         public boolean get(int feature) {
             mContext.enforceCallingOrSelfPermission(
-                    cyanogenmod.platform.Manifest.permission.HARDWARE_ABSTRACTION_ACCESS, null);
+                    lineageos.platform.Manifest.permission.HARDWARE_ABSTRACTION_ACCESS, null);
             if (!isSupported(feature)) {
                 Log.e(TAG, "feature " + feature + " is not supported");
                 return false;
             }
-            return mCmHwImpl.get(feature);
+            return mLineageHwImpl.get(feature);
         }
 
         @Override
         public boolean set(int feature, boolean enable) {
             mContext.enforceCallingOrSelfPermission(
-                    cyanogenmod.platform.Manifest.permission.HARDWARE_ABSTRACTION_ACCESS, null);
+                    lineageos.platform.Manifest.permission.HARDWARE_ABSTRACTION_ACCESS, null);
             if (!isSupported(feature)) {
                 Log.e(TAG, "feature " + feature + " is not supported");
                 return false;
             }
-            return mCmHwImpl.set(feature, enable);
+            return mLineageHwImpl.set(feature, enable);
         }
 
         @Override
         public int[] getDisplayColorCalibration() {
             mContext.enforceCallingOrSelfPermission(
-                    cyanogenmod.platform.Manifest.permission.HARDWARE_ABSTRACTION_ACCESS, null);
-            if (!isSupported(CMHardwareManager.FEATURE_DISPLAY_COLOR_CALIBRATION)) {
+                    lineageos.platform.Manifest.permission.HARDWARE_ABSTRACTION_ACCESS, null);
+            if (!isSupported(LineageHardwareManager.FEATURE_DISPLAY_COLOR_CALIBRATION)) {
                 Log.e(TAG, "Display color calibration is not supported");
                 return null;
             }
-            return mCmHwImpl.getDisplayColorCalibration();
+            return mLineageHwImpl.getDisplayColorCalibration();
         }
 
         @Override
         public boolean setDisplayColorCalibration(int[] rgb) {
             mContext.enforceCallingOrSelfPermission(
-                    cyanogenmod.platform.Manifest.permission.HARDWARE_ABSTRACTION_ACCESS, null);
-            if (!isSupported(CMHardwareManager.FEATURE_DISPLAY_COLOR_CALIBRATION)) {
+                    lineageos.platform.Manifest.permission.HARDWARE_ABSTRACTION_ACCESS, null);
+            if (!isSupported(LineageHardwareManager.FEATURE_DISPLAY_COLOR_CALIBRATION)) {
                 Log.e(TAG, "Display color calibration is not supported");
                 return false;
             }
@@ -536,150 +536,150 @@ public class CMHardwareService extends CMSystemService implements ThermalUpdateC
                 Log.e(TAG, "Invalid color calibration");
                 return false;
             }
-            return mCmHwImpl.setDisplayColorCalibration(rgb);
+            return mLineageHwImpl.setDisplayColorCalibration(rgb);
         }
 
         @Override
         public int getNumGammaControls() {
             mContext.enforceCallingOrSelfPermission(
-                    cyanogenmod.platform.Manifest.permission.HARDWARE_ABSTRACTION_ACCESS, null);
-            if (!isSupported(CMHardwareManager.FEATURE_DISPLAY_GAMMA_CALIBRATION)) {
+                    lineageos.platform.Manifest.permission.HARDWARE_ABSTRACTION_ACCESS, null);
+            if (!isSupported(LineageHardwareManager.FEATURE_DISPLAY_GAMMA_CALIBRATION)) {
                 Log.e(TAG, "Display gamma calibration is not supported");
                 return 0;
             }
-            return mCmHwImpl.getNumGammaControls();
+            return mLineageHwImpl.getNumGammaControls();
         }
 
         @Override
         public int[] getDisplayGammaCalibration(int idx) {
             mContext.enforceCallingOrSelfPermission(
-                    cyanogenmod.platform.Manifest.permission.HARDWARE_ABSTRACTION_ACCESS, null);
-            if (!isSupported(CMHardwareManager.FEATURE_DISPLAY_GAMMA_CALIBRATION)) {
+                    lineageos.platform.Manifest.permission.HARDWARE_ABSTRACTION_ACCESS, null);
+            if (!isSupported(LineageHardwareManager.FEATURE_DISPLAY_GAMMA_CALIBRATION)) {
                 Log.e(TAG, "Display gamma calibration is not supported");
                 return null;
             }
-            return mCmHwImpl.getDisplayGammaCalibration(idx);
+            return mLineageHwImpl.getDisplayGammaCalibration(idx);
         }
 
         @Override
         public boolean setDisplayGammaCalibration(int idx, int[] rgb) {
             mContext.enforceCallingOrSelfPermission(
-                    cyanogenmod.platform.Manifest.permission.HARDWARE_ABSTRACTION_ACCESS, null);
-            if (!isSupported(CMHardwareManager.FEATURE_DISPLAY_GAMMA_CALIBRATION)) {
+                    lineageos.platform.Manifest.permission.HARDWARE_ABSTRACTION_ACCESS, null);
+            if (!isSupported(LineageHardwareManager.FEATURE_DISPLAY_GAMMA_CALIBRATION)) {
                 Log.e(TAG, "Display gamma calibration is not supported");
                 return false;
             }
-            return mCmHwImpl.setDisplayGammaCalibration(idx, rgb);
+            return mLineageHwImpl.setDisplayGammaCalibration(idx, rgb);
         }
 
         @Override
         public int[] getVibratorIntensity() {
             mContext.enforceCallingOrSelfPermission(
-                    cyanogenmod.platform.Manifest.permission.HARDWARE_ABSTRACTION_ACCESS, null);
-            if (!isSupported(CMHardwareManager.FEATURE_VIBRATOR)) {
+                    lineageos.platform.Manifest.permission.HARDWARE_ABSTRACTION_ACCESS, null);
+            if (!isSupported(LineageHardwareManager.FEATURE_VIBRATOR)) {
                 Log.e(TAG, "Vibrator is not supported");
                 return null;
             }
-            return mCmHwImpl.getVibratorIntensity();
+            return mLineageHwImpl.getVibratorIntensity();
         }
 
         @Override
         public boolean setVibratorIntensity(int intensity) {
             mContext.enforceCallingOrSelfPermission(
-                    cyanogenmod.platform.Manifest.permission.HARDWARE_ABSTRACTION_ACCESS, null);
-            if (!isSupported(CMHardwareManager.FEATURE_VIBRATOR)) {
+                    lineageos.platform.Manifest.permission.HARDWARE_ABSTRACTION_ACCESS, null);
+            if (!isSupported(LineageHardwareManager.FEATURE_VIBRATOR)) {
                 Log.e(TAG, "Vibrator is not supported");
                 return false;
             }
-            return mCmHwImpl.setVibratorIntensity(intensity);
+            return mLineageHwImpl.setVibratorIntensity(intensity);
         }
 
         @Override
         public String getLtoSource() {
             mContext.enforceCallingOrSelfPermission(
-                    cyanogenmod.platform.Manifest.permission.HARDWARE_ABSTRACTION_ACCESS, null);
-            if (!isSupported(CMHardwareManager.FEATURE_LONG_TERM_ORBITS)) {
+                    lineageos.platform.Manifest.permission.HARDWARE_ABSTRACTION_ACCESS, null);
+            if (!isSupported(LineageHardwareManager.FEATURE_LONG_TERM_ORBITS)) {
                 Log.e(TAG, "Long term orbits is not supported");
                 return null;
             }
-            return mCmHwImpl.getLtoSource();
+            return mLineageHwImpl.getLtoSource();
         }
 
         @Override
         public String getLtoDestination() {
             mContext.enforceCallingOrSelfPermission(
-                    cyanogenmod.platform.Manifest.permission.HARDWARE_ABSTRACTION_ACCESS, null);
-            if (!isSupported(CMHardwareManager.FEATURE_LONG_TERM_ORBITS)) {
+                    lineageos.platform.Manifest.permission.HARDWARE_ABSTRACTION_ACCESS, null);
+            if (!isSupported(LineageHardwareManager.FEATURE_LONG_TERM_ORBITS)) {
                 Log.e(TAG, "Long term orbits is not supported");
                 return null;
             }
-            return mCmHwImpl.getLtoDestination();
+            return mLineageHwImpl.getLtoDestination();
         }
 
         @Override
         public long getLtoDownloadInterval() {
             mContext.enforceCallingOrSelfPermission(
-                    cyanogenmod.platform.Manifest.permission.HARDWARE_ABSTRACTION_ACCESS, null);
-            if (!isSupported(CMHardwareManager.FEATURE_LONG_TERM_ORBITS)) {
+                    lineageos.platform.Manifest.permission.HARDWARE_ABSTRACTION_ACCESS, null);
+            if (!isSupported(LineageHardwareManager.FEATURE_LONG_TERM_ORBITS)) {
                 Log.e(TAG, "Long term orbits is not supported");
                 return 0;
             }
-            return mCmHwImpl.getLtoDownloadInterval();
+            return mLineageHwImpl.getLtoDownloadInterval();
         }
 
         @Override
         public String getSerialNumber() {
             mContext.enforceCallingOrSelfPermission(
-                    cyanogenmod.platform.Manifest.permission.HARDWARE_ABSTRACTION_ACCESS, null);
-            if (!isSupported(CMHardwareManager.FEATURE_SERIAL_NUMBER)) {
+                    lineageos.platform.Manifest.permission.HARDWARE_ABSTRACTION_ACCESS, null);
+            if (!isSupported(LineageHardwareManager.FEATURE_SERIAL_NUMBER)) {
                 Log.e(TAG, "Serial number is not supported");
                 return null;
             }
-            return mCmHwImpl.getSerialNumber();
+            return mLineageHwImpl.getSerialNumber();
         }
 
         @Override
         public String getUniqueDeviceId() {
             mContext.enforceCallingOrSelfPermission(
-                    cyanogenmod.platform.Manifest.permission.HARDWARE_ABSTRACTION_ACCESS, null);
-            if (!isSupported(CMHardwareManager.FEATURE_UNIQUE_DEVICE_ID)) {
+                    lineageos.platform.Manifest.permission.HARDWARE_ABSTRACTION_ACCESS, null);
+            if (!isSupported(LineageHardwareManager.FEATURE_UNIQUE_DEVICE_ID)) {
                 Log.e(TAG, "Unique device ID is not supported");
                 return null;
             }
-            return mCmHwImpl.getUniqueDeviceId();
+            return mLineageHwImpl.getUniqueDeviceId();
         }
 
         @Override
         public boolean requireAdaptiveBacklightForSunlightEnhancement() {
             mContext.enforceCallingOrSelfPermission(
-                    cyanogenmod.platform.Manifest.permission.HARDWARE_ABSTRACTION_ACCESS, null);
-            if (!isSupported(CMHardwareManager.FEATURE_SUNLIGHT_ENHANCEMENT)) {
+                    lineageos.platform.Manifest.permission.HARDWARE_ABSTRACTION_ACCESS, null);
+            if (!isSupported(LineageHardwareManager.FEATURE_SUNLIGHT_ENHANCEMENT)) {
                 Log.e(TAG, "Sunlight enhancement is not supported");
                 return false;
             }
-            return mCmHwImpl.requireAdaptiveBacklightForSunlightEnhancement();
+            return mLineageHwImpl.requireAdaptiveBacklightForSunlightEnhancement();
         }
 
         @Override
         public boolean isSunlightEnhancementSelfManaged() {
             mContext.enforceCallingOrSelfPermission(
-                    cyanogenmod.platform.Manifest.permission.HARDWARE_ABSTRACTION_ACCESS, null);
-            if (!isSupported(CMHardwareManager.FEATURE_SUNLIGHT_ENHANCEMENT)) {
+                    lineageos.platform.Manifest.permission.HARDWARE_ABSTRACTION_ACCESS, null);
+            if (!isSupported(LineageHardwareManager.FEATURE_SUNLIGHT_ENHANCEMENT)) {
                 Log.e(TAG, "Sunlight enhancement is not supported");
                 return false;
             }
-            return mCmHwImpl.isSunlightEnhancementSelfManaged();
+            return mLineageHwImpl.isSunlightEnhancementSelfManaged();
         }
 
         @Override
         public DisplayMode[] getDisplayModes() {
             mContext.enforceCallingOrSelfPermission(
-                    cyanogenmod.platform.Manifest.permission.HARDWARE_ABSTRACTION_ACCESS, null);
-            if (!isSupported(CMHardwareManager.FEATURE_DISPLAY_MODES)) {
+                    lineageos.platform.Manifest.permission.HARDWARE_ABSTRACTION_ACCESS, null);
+            if (!isSupported(LineageHardwareManager.FEATURE_DISPLAY_MODES)) {
                 Log.e(TAG, "Display modes are not supported");
                 return null;
             }
-            final DisplayMode[] modes = mCmHwImpl.getDisplayModes();
+            final DisplayMode[] modes = mLineageHwImpl.getDisplayModes();
             if (modes == null) {
                 return null;
             }
@@ -696,40 +696,40 @@ public class CMHardwareService extends CMSystemService implements ThermalUpdateC
         @Override
         public DisplayMode getCurrentDisplayMode() {
             mContext.enforceCallingOrSelfPermission(
-                    cyanogenmod.platform.Manifest.permission.HARDWARE_ABSTRACTION_ACCESS, null);
-            if (!isSupported(CMHardwareManager.FEATURE_DISPLAY_MODES)) {
+                    lineageos.platform.Manifest.permission.HARDWARE_ABSTRACTION_ACCESS, null);
+            if (!isSupported(LineageHardwareManager.FEATURE_DISPLAY_MODES)) {
                 Log.e(TAG, "Display modes are not supported");
                 return null;
             }
-            return remapDisplayMode(mCmHwImpl.getCurrentDisplayMode());
+            return remapDisplayMode(mLineageHwImpl.getCurrentDisplayMode());
         }
 
         @Override
         public DisplayMode getDefaultDisplayMode() {
             mContext.enforceCallingOrSelfPermission(
-                    cyanogenmod.platform.Manifest.permission.HARDWARE_ABSTRACTION_ACCESS, null);
-            if (!isSupported(CMHardwareManager.FEATURE_DISPLAY_MODES)) {
+                    lineageos.platform.Manifest.permission.HARDWARE_ABSTRACTION_ACCESS, null);
+            if (!isSupported(LineageHardwareManager.FEATURE_DISPLAY_MODES)) {
                 Log.e(TAG, "Display modes are not supported");
                 return null;
             }
-            return remapDisplayMode(mCmHwImpl.getDefaultDisplayMode());
+            return remapDisplayMode(mLineageHwImpl.getDefaultDisplayMode());
         }
 
         @Override
         public boolean setDisplayMode(DisplayMode mode, boolean makeDefault) {
             mContext.enforceCallingOrSelfPermission(
-                    cyanogenmod.platform.Manifest.permission.HARDWARE_ABSTRACTION_ACCESS, null);
-            if (!isSupported(CMHardwareManager.FEATURE_DISPLAY_MODES)) {
+                    lineageos.platform.Manifest.permission.HARDWARE_ABSTRACTION_ACCESS, null);
+            if (!isSupported(LineageHardwareManager.FEATURE_DISPLAY_MODES)) {
                 Log.e(TAG, "Display modes are not supported");
                 return false;
             }
-            return mCmHwImpl.setDisplayMode(mode, makeDefault);
+            return mLineageHwImpl.setDisplayMode(mode, makeDefault);
         }
 
         @Override
         public boolean writePersistentBytes(String key, byte[] value) {
             mContext.enforceCallingOrSelfPermission(
-                    cyanogenmod.platform.Manifest.permission.MANAGE_PERSISTENT_STORAGE, null);
+                    lineageos.platform.Manifest.permission.MANAGE_PERSISTENT_STORAGE, null);
             if (key == null || key.length() == 0 || key.length() > 64) {
                 Log.e(TAG, "Invalid key: " + key);
                 return false;
@@ -739,33 +739,33 @@ public class CMHardwareService extends CMSystemService implements ThermalUpdateC
                 Log.e(TAG, "Invalid value: " + (value != null ? Arrays.toString(value) : null));
                 return false;
             }
-            if (!isSupported(CMHardwareManager.FEATURE_PERSISTENT_STORAGE)) {
+            if (!isSupported(LineageHardwareManager.FEATURE_PERSISTENT_STORAGE)) {
                 Log.e(TAG, "Persistent storage is not supported");
                 return false;
             }
-            return mCmHwImpl.writePersistentBytes(key, value);
+            return mLineageHwImpl.writePersistentBytes(key, value);
         }
 
         @Override
         public byte[] readPersistentBytes(String key) {
             mContext.enforceCallingOrSelfPermission(
-                    cyanogenmod.platform.Manifest.permission.MANAGE_PERSISTENT_STORAGE, null);
+                    lineageos.platform.Manifest.permission.MANAGE_PERSISTENT_STORAGE, null);
             if (key == null || key.length() == 0 || key.length() > 64) {
                 Log.e(TAG, "Invalid key: " + key);
                 return null;
             }
-            if (!isSupported(CMHardwareManager.FEATURE_PERSISTENT_STORAGE)) {
+            if (!isSupported(LineageHardwareManager.FEATURE_PERSISTENT_STORAGE)) {
                 Log.e(TAG, "Persistent storage is not supported");
                 return null;
             }
-            return mCmHwImpl.readPersistentBytes(key);
+            return mLineageHwImpl.readPersistentBytes(key);
         }
 
         @Override
         public int getThermalState() {
             mContext.enforceCallingOrSelfPermission(
-                    cyanogenmod.platform.Manifest.permission.HARDWARE_ABSTRACTION_ACCESS, null);
-            if (isSupported(CMHardwareManager.FEATURE_THERMAL_MONITOR)) {
+                    lineageos.platform.Manifest.permission.HARDWARE_ABSTRACTION_ACCESS, null);
+            if (isSupported(LineageHardwareManager.FEATURE_THERMAL_MONITOR)) {
                 return mCurrentThermalState;
             }
             return ThermalListenerCallback.State.STATE_UNKNOWN;
@@ -774,8 +774,8 @@ public class CMHardwareService extends CMSystemService implements ThermalUpdateC
         @Override
         public boolean registerThermalListener(IThermalListenerCallback callback) {
             mContext.enforceCallingOrSelfPermission(
-                    cyanogenmod.platform.Manifest.permission.HARDWARE_ABSTRACTION_ACCESS, null);
-            if (isSupported(CMHardwareManager.FEATURE_THERMAL_MONITOR)) {
+                    lineageos.platform.Manifest.permission.HARDWARE_ABSTRACTION_ACCESS, null);
+            if (isSupported(LineageHardwareManager.FEATURE_THERMAL_MONITOR)) {
                 return mRemoteCallbackList.register(callback);
             }
             return false;
@@ -784,8 +784,8 @@ public class CMHardwareService extends CMSystemService implements ThermalUpdateC
         @Override
         public boolean unRegisterThermalListener(IThermalListenerCallback callback) {
             mContext.enforceCallingOrSelfPermission(
-                    cyanogenmod.platform.Manifest.permission.HARDWARE_ABSTRACTION_ACCESS, null);
-            if (isSupported(CMHardwareManager.FEATURE_THERMAL_MONITOR)) {
+                    lineageos.platform.Manifest.permission.HARDWARE_ABSTRACTION_ACCESS, null);
+            if (isSupported(LineageHardwareManager.FEATURE_THERMAL_MONITOR)) {
                 return mRemoteCallbackList.unregister(callback);
             }
             return false;
@@ -794,9 +794,9 @@ public class CMHardwareService extends CMSystemService implements ThermalUpdateC
         @Override
         public int getColorBalanceMin() {
             mContext.enforceCallingOrSelfPermission(
-                    cyanogenmod.platform.Manifest.permission.HARDWARE_ABSTRACTION_ACCESS, null);
-            if (isSupported(CMHardwareManager.FEATURE_COLOR_BALANCE)) {
-                return mCmHwImpl.getColorBalanceMin();
+                    lineageos.platform.Manifest.permission.HARDWARE_ABSTRACTION_ACCESS, null);
+            if (isSupported(LineageHardwareManager.FEATURE_COLOR_BALANCE)) {
+                return mLineageHwImpl.getColorBalanceMin();
             }
             return 0;
         }
@@ -804,9 +804,9 @@ public class CMHardwareService extends CMSystemService implements ThermalUpdateC
         @Override
         public int getColorBalanceMax() {
             mContext.enforceCallingOrSelfPermission(
-                    cyanogenmod.platform.Manifest.permission.HARDWARE_ABSTRACTION_ACCESS, null);
-            if (isSupported(CMHardwareManager.FEATURE_COLOR_BALANCE)) {
-                return mCmHwImpl.getColorBalanceMax();
+                    lineageos.platform.Manifest.permission.HARDWARE_ABSTRACTION_ACCESS, null);
+            if (isSupported(LineageHardwareManager.FEATURE_COLOR_BALANCE)) {
+                return mLineageHwImpl.getColorBalanceMax();
             }
             return 0;
         }
@@ -814,9 +814,9 @@ public class CMHardwareService extends CMSystemService implements ThermalUpdateC
         @Override
         public int getColorBalance() {
             mContext.enforceCallingOrSelfPermission(
-                    cyanogenmod.platform.Manifest.permission.HARDWARE_ABSTRACTION_ACCESS, null);
-            if (isSupported(CMHardwareManager.FEATURE_COLOR_BALANCE)) {
-                return mCmHwImpl.getColorBalance();
+                    lineageos.platform.Manifest.permission.HARDWARE_ABSTRACTION_ACCESS, null);
+            if (isSupported(LineageHardwareManager.FEATURE_COLOR_BALANCE)) {
+                return mLineageHwImpl.getColorBalance();
             }
             return 0;
         }
@@ -824,9 +824,9 @@ public class CMHardwareService extends CMSystemService implements ThermalUpdateC
         @Override
         public boolean setColorBalance(int value) {
             mContext.enforceCallingOrSelfPermission(
-                    cyanogenmod.platform.Manifest.permission.HARDWARE_ABSTRACTION_ACCESS, null);
-            if (isSupported(CMHardwareManager.FEATURE_COLOR_BALANCE)) {
-                return mCmHwImpl.setColorBalance(value);
+                    lineageos.platform.Manifest.permission.HARDWARE_ABSTRACTION_ACCESS, null);
+            if (isSupported(LineageHardwareManager.FEATURE_COLOR_BALANCE)) {
+                return mLineageHwImpl.setColorBalance(value);
             }
             return false;
         }
@@ -834,9 +834,9 @@ public class CMHardwareService extends CMSystemService implements ThermalUpdateC
         @Override
         public HSIC getPictureAdjustment() {
             mContext.enforceCallingOrSelfPermission(
-                    cyanogenmod.platform.Manifest.permission.HARDWARE_ABSTRACTION_ACCESS, null);
-            if (isSupported(CMHardwareManager.FEATURE_PICTURE_ADJUSTMENT)) {
-                return mCmHwImpl.getPictureAdjustment();
+                    lineageos.platform.Manifest.permission.HARDWARE_ABSTRACTION_ACCESS, null);
+            if (isSupported(LineageHardwareManager.FEATURE_PICTURE_ADJUSTMENT)) {
+                return mLineageHwImpl.getPictureAdjustment();
             }
             return new HSIC(0.0f, 0.0f, 0.0f, 0.0f, 0.0f);
         }
@@ -844,9 +844,9 @@ public class CMHardwareService extends CMSystemService implements ThermalUpdateC
         @Override
         public HSIC getDefaultPictureAdjustment() {
             mContext.enforceCallingOrSelfPermission(
-                    cyanogenmod.platform.Manifest.permission.HARDWARE_ABSTRACTION_ACCESS, null);
-            if (isSupported(CMHardwareManager.FEATURE_PICTURE_ADJUSTMENT)) {
-                return mCmHwImpl.getDefaultPictureAdjustment();
+                    lineageos.platform.Manifest.permission.HARDWARE_ABSTRACTION_ACCESS, null);
+            if (isSupported(LineageHardwareManager.FEATURE_PICTURE_ADJUSTMENT)) {
+                return mLineageHwImpl.getDefaultPictureAdjustment();
             }
             return new HSIC(0.0f, 0.0f, 0.0f, 0.0f, 0.0f);
         }
@@ -854,9 +854,9 @@ public class CMHardwareService extends CMSystemService implements ThermalUpdateC
         @Override
         public boolean setPictureAdjustment(HSIC hsic) {
             mContext.enforceCallingOrSelfPermission(
-                    cyanogenmod.platform.Manifest.permission.HARDWARE_ABSTRACTION_ACCESS, null);
-            if (isSupported(CMHardwareManager.FEATURE_PICTURE_ADJUSTMENT) && hsic != null) {
-                return mCmHwImpl.setPictureAdjustment(hsic);
+                    lineageos.platform.Manifest.permission.HARDWARE_ABSTRACTION_ACCESS, null);
+            if (isSupported(LineageHardwareManager.FEATURE_PICTURE_ADJUSTMENT) && hsic != null) {
+                return mLineageHwImpl.setPictureAdjustment(hsic);
             }
             return false;
         }
@@ -864,9 +864,9 @@ public class CMHardwareService extends CMSystemService implements ThermalUpdateC
         @Override
         public float[] getPictureAdjustmentRanges() {
             mContext.enforceCallingOrSelfPermission(
-                    cyanogenmod.platform.Manifest.permission.HARDWARE_ABSTRACTION_ACCESS, null);
-            if (isSupported(CMHardwareManager.FEATURE_COLOR_BALANCE)) {
-                final List<Range<Float>> r = mCmHwImpl.getPictureAdjustmentRanges();
+                    lineageos.platform.Manifest.permission.HARDWARE_ABSTRACTION_ACCESS, null);
+            if (isSupported(LineageHardwareManager.FEATURE_COLOR_BALANCE)) {
+                final List<Range<Float>> r = mLineageHwImpl.getPictureAdjustmentRanges();
                 return new float[] {
                         r.get(0).getLower(), r.get(0).getUpper(),
                         r.get(1).getLower(), r.get(1).getUpper(),
@@ -880,23 +880,23 @@ public class CMHardwareService extends CMSystemService implements ThermalUpdateC
         @Override
         public TouchscreenGesture[] getTouchscreenGestures() {
             mContext.enforceCallingOrSelfPermission(
-                    cyanogenmod.platform.Manifest.permission.HARDWARE_ABSTRACTION_ACCESS, null);
-            if (!isSupported(CMHardwareManager.FEATURE_TOUCHSCREEN_GESTURES)) {
+                    lineageos.platform.Manifest.permission.HARDWARE_ABSTRACTION_ACCESS, null);
+            if (!isSupported(LineageHardwareManager.FEATURE_TOUCHSCREEN_GESTURES)) {
                 Log.e(TAG, "Touchscreen gestures are not supported");
                 return null;
             }
-            return mCmHwImpl.getTouchscreenGestures();
+            return mLineageHwImpl.getTouchscreenGestures();
         }
 
         @Override
         public boolean setTouchscreenGestureEnabled(TouchscreenGesture gesture, boolean state) {
             mContext.enforceCallingOrSelfPermission(
-                    cyanogenmod.platform.Manifest.permission.HARDWARE_ABSTRACTION_ACCESS, null);
-            if (!isSupported(CMHardwareManager.FEATURE_TOUCHSCREEN_GESTURES)) {
+                    lineageos.platform.Manifest.permission.HARDWARE_ABSTRACTION_ACCESS, null);
+            if (!isSupported(LineageHardwareManager.FEATURE_TOUCHSCREEN_GESTURES)) {
                 Log.e(TAG, "Touchscreen gestures are not supported");
                 return false;
             }
-            return mCmHwImpl.setTouchscreenGestureEnabled(gesture, state);
+            return mLineageHwImpl.setTouchscreenGestureEnabled(gesture, state);
         }
     };
 }

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package cyanogenmod.power;
+package lineageos.power;
 
 import android.content.Intent;
 

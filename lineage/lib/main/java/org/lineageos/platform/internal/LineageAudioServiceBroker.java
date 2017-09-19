@@ -13,9 +13,9 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.cyanogenmod.platform.internal;
+package org.lineageos.platform.internal;
 
-import org.cyanogenmod.platform.internal.common.BrokeredServiceConnection;
+import org.lineageos.platform.internal.common.BrokeredServiceConnection;
 
 import android.annotation.NonNull;
 import android.annotation.SdkConstant;
@@ -33,22 +33,22 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-import cyanogenmod.app.CMContextConstants;
-import cyanogenmod.media.AudioSessionInfo;
-import cyanogenmod.media.ICMAudioService;
+import lineageos.app.LineageContextConstants;
+import lineageos.media.AudioSessionInfo;
+import lineageos.media.ILineageAudioService;
 
-public class CMAudioServiceBroker extends BrokerableCMSystemService<ICMAudioService> {
+public class LineageAudioServiceBroker extends BrokerableLineageSystemService<ILineageAudioService> {
 
-    private static final String TAG = "CMAudioServiceBroker";
+    private static final String TAG = "LineageAudioServiceBroker";
     private static final boolean DEBUG = Log.isLoggable(TAG, Log.DEBUG);
 
     private final Context mContext;
 
     private static final ComponentName TARGET_IMPLEMENTATION_COMPONENT =
-            new ComponentName("org.cyanogenmod.cmaudio.service",
-                    "org.cyanogenmod.cmaudio.service.CMAudioService");
+            new ComponentName("org.lineageos.lineageaudio.service",
+                    "org.lineageos.lineageaudio.service.LineageAudioService");
 
-    public CMAudioServiceBroker(Context context) {
+    public LineageAudioServiceBroker(Context context) {
         super(context);
         mContext = context;
     }
@@ -57,7 +57,7 @@ public class CMAudioServiceBroker extends BrokerableCMSystemService<ICMAudioServ
     public void onBootPhase(int phase) {
         super.onBootPhase(phase);
         if (phase == PHASE_THIRD_PARTY_APPS_CAN_START) {
-            publishBinderService(CMContextConstants.CM_AUDIO_SERVICE, new BinderService());
+            publishBinderService(LineageContextConstants.LINEAGE_AUDIO_SERVICE, new BinderService());
         }
     }
 
@@ -67,12 +67,12 @@ public class CMAudioServiceBroker extends BrokerableCMSystemService<ICMAudioServ
     }
 
     @Override
-    protected ICMAudioService getIBinderAsIInterface(@NonNull IBinder service) {
-        return ICMAudioService.Stub.asInterface(service);
+    protected ILineageAudioService getIBinderAsIInterface(@NonNull IBinder service) {
+        return ILineageAudioService.Stub.asInterface(service);
     }
 
     @Override
-    protected ICMAudioService getDefaultImplementation() {
+    protected ILineageAudioService getDefaultImplementation() {
         return mServiceStubForFailure;
     }
 
@@ -83,15 +83,15 @@ public class CMAudioServiceBroker extends BrokerableCMSystemService<ICMAudioServ
 
     private void checkPermission() {
         mContext.enforceCallingOrSelfPermission(
-                cyanogenmod.platform.Manifest.permission.OBSERVE_AUDIO_SESSIONS, null);
+                lineageos.platform.Manifest.permission.OBSERVE_AUDIO_SESSIONS, null);
     }
 
     @Override
     public String getFeatureDeclaration() {
-        return CMContextConstants.Features.AUDIO;
+        return LineageContextConstants.Features.AUDIO;
     }
 
-    private final ICMAudioService mServiceStubForFailure = new ICMAudioService.Stub() {
+    private final ILineageAudioService mServiceStubForFailure = new ILineageAudioService.Stub() {
         @Override
         public List<AudioSessionInfo> listAudioSessions(int streamType) throws RemoteException {
             checkPermission();
@@ -99,7 +99,7 @@ public class CMAudioServiceBroker extends BrokerableCMSystemService<ICMAudioServ
         }
     };
 
-    private final class BinderService extends ICMAudioService.Stub {
+    private final class BinderService extends ILineageAudioService.Stub {
         @Override
         public List<AudioSessionInfo> listAudioSessions(int streamType) throws RemoteException {
             checkPermission();
@@ -111,7 +111,7 @@ public class CMAudioServiceBroker extends BrokerableCMSystemService<ICMAudioServ
             mContext.enforceCallingOrSelfPermission(android.Manifest.permission.DUMP, TAG);
 
             pw.println();
-            pw.println("CMAudio Service State:");
+            pw.println("LineageAudio Service State:");
             try {
                 List<AudioSessionInfo> sessions = listAudioSessions(-1);
                 if (sessions.size() > 0) {

@@ -18,7 +18,7 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Label for the LineageOS system components when they are shown to the user. -->
-  <string name="cyanogenmod_system_label">Сістэма LineageOS</string>
+  <string name="lineageos_system_label">Сістэма LineageOS</string>
   <string name="permlab_publishCustomTile">Стварэнне самавольных плітак у панэлі хуткіх налад</string>
   <string name="permdesc_publishCustomTile">Дадатак зможа дадаваць пліткі ў панэль хуткіх налад.</string>
   <string name="permlab_modifyNetworkSettings">Змена сеціўных налад сістэмы</string>
@@ -154,8 +154,8 @@
   <!-- DataUsageProvider read permission description -->
   <!-- LiveDisplay manager permission -->
   <string name="permlab_manageLiveDisplay">кіраванне наладамі LiveDisplay</string>
-  <!-- CMAudioService - observe session changes permission -->
-  <!-- CMAudioService - observe session changes permission -->
+  <!-- LineageAudioService - observe session changes permission -->
+  <!-- LineageAudioService - observe session changes permission -->
   <!-- QuickSettings: Themes tile -->
   <string name="qs_themes_label">Знешні выгляд</string>
   <!-- Custom booot dexopt -->

@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package cyanogenmod.power;
+package lineageos.power;
 
 import android.content.Context;
 import android.os.IBinder;
@@ -26,7 +26,7 @@ import java.util.Collections;
 import java.util.SortedSet;
 import java.util.TreeSet;
 
-import cyanogenmod.app.CMContextConstants;
+import lineageos.app.LineageContextConstants;
 
 /**
  *
@@ -87,7 +87,7 @@ public class PerformanceManager {
     /**
      * Broadcast sent when profile is changed
      */
-    public static final String POWER_PROFILE_CHANGED = "cyanogenmod.power.PROFILE_CHANGED";
+    public static final String POWER_PROFILE_CHANGED = "lineageos.power.PROFILE_CHANGED";
 
     private static IPerformanceManager sService;
     private static PerformanceManager sInstance;
@@ -95,7 +95,7 @@ public class PerformanceManager {
     private PerformanceManager(Context context) {
         sService = getService();
         if (context.getPackageManager().hasSystemFeature(
-                CMContextConstants.Features.PERFORMANCE) && sService == null) {
+                LineageContextConstants.Features.PERFORMANCE) && sService == null) {
             Log.wtf(TAG, "Unable to get PerformanceManagerService. The service" +
                     " either crashed, was not started, or the interface has been called to early" +
                     " in SystemServer init");
@@ -120,7 +120,7 @@ public class PerformanceManager {
         if (sService != null) {
             return sService;
         }
-        IBinder b = ServiceManager.getService(CMContextConstants.CM_PERFORMANCE_SERVICE);
+        IBinder b = ServiceManager.getService(LineageContextConstants.LINEAGE_PERFORMANCE_SERVICE);
         if (b != null) {
             sService = IPerformanceManager.Stub.asInterface(b);
             return sService;

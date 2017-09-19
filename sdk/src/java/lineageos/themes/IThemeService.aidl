@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package cyanogenmod.themes;
+package lineageos.themes;
 
-import cyanogenmod.themes.IThemeChangeListener;
-import cyanogenmod.themes.IThemeProcessingListener;
-import cyanogenmod.themes.ThemeChangeRequest;
+import lineageos.themes.IThemeChangeListener;
+import lineageos.themes.IThemeProcessingListener;
+import lineageos.themes.ThemeChangeRequest;
 
 import java.util.Map;
 

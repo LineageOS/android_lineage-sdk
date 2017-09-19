@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.cyanogenmod.tests.media.unit;
+package org.lineageos.tests.media.unit;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -35,25 +35,25 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 
-import cyanogenmod.app.CMContextConstants;
-import cyanogenmod.media.AudioSessionInfo;
-import cyanogenmod.media.CMAudioManager;
-import cyanogenmod.media.ICMAudioService;
+import lineageos.app.LineageContextConstants;
+import lineageos.media.AudioSessionInfo;
+import lineageos.media.LineageAudioManager;
+import lineageos.media.ILineageAudioService;
 
-public class CMAudioManagerTest extends AndroidTestCase {
+public class LineageAudioManagerTest extends AndroidTestCase {
 
-    private static final String TAG = "CMAudioManagerTest";
+    private static final String TAG = "LineageAudioManagerTest";
 
-    private CMAudioManager mCMAudioManager;
+    private LineageAudioManager mLineageAudioManager;
 
     @Override
     protected void setUp() throws Exception {
         super.setUp();
 
         Assume.assumeTrue(mContext.getPackageManager().hasSystemFeature(
-                CMContextConstants.Features.AUDIO));
+                LineageContextConstants.Features.AUDIO));
 
-        mCMAudioManager = CMAudioManager.getInstance(mContext);
+        mLineageAudioManager = LineageAudioManager.getInstance(mContext);
     }
 
     /**
@@ -61,7 +61,7 @@ public class CMAudioManagerTest extends AndroidTestCase {
      */
     @SmallTest
     public void testManagerExists() {
-        assertNotNull(mCMAudioManager);
+        assertNotNull(mLineageAudioManager);
     }
 
     /**
@@ -69,7 +69,7 @@ public class CMAudioManagerTest extends AndroidTestCase {
      */
     @SmallTest
     public void testManagerServiceIsAvailable() {
-        ICMAudioService service = CMAudioManager.getService();
+        ILineageAudioService service = LineageAudioManager.getService();
         assertNotNull(service);
     }
 
@@ -97,7 +97,7 @@ public class CMAudioManagerTest extends AndroidTestCase {
     }
 
     /**
-     * EXPECT: CMAudioManager.ACTION_AUDIO_SESSIONS_CHANGED should be broadcast when
+     * EXPECT: LineageAudioManager.ACTION_AUDIO_SESSIONS_CHANGED should be broadcast when
      * audio sessions are opened and closed.
      *
      * We register a receiver for the broadcast, create an AudioTrack, and wait to
@@ -107,7 +107,7 @@ public class CMAudioManagerTest extends AndroidTestCase {
     @SmallTest
     public void testSessionInfoBroadcast() throws Exception {
 
-        IntentFilter filter = new IntentFilter(CMAudioManager.ACTION_AUDIO_SESSIONS_CHANGED);
+        IntentFilter filter = new IntentFilter(LineageAudioManager.ACTION_AUDIO_SESSIONS_CHANGED);
         AudioSessionReceiver receiver = new AudioSessionReceiver(2);
         mContext.registerReceiver(receiver, filter);
 
@@ -149,7 +149,7 @@ public class CMAudioManagerTest extends AndroidTestCase {
      */
     @SmallTest
     public void testSymphonyOfDestruction() throws Exception {
-        IntentFilter filter = new IntentFilter(CMAudioManager.ACTION_AUDIO_SESSIONS_CHANGED);
+        IntentFilter filter = new IntentFilter(LineageAudioManager.ACTION_AUDIO_SESSIONS_CHANGED);
         AudioSessionReceiver receiver = new AudioSessionReceiver(SESSIONS * 2);
         mContext.registerReceiver(receiver, filter);
 
@@ -202,9 +202,9 @@ public class CMAudioManagerTest extends AndroidTestCase {
         public void onReceive(Context context, Intent intent) {
             assertNotNull(intent);
 
-            boolean added = intent.getBooleanExtra(CMAudioManager.EXTRA_SESSION_ADDED, false);
+            boolean added = intent.getBooleanExtra(LineageAudioManager.EXTRA_SESSION_ADDED, false);
 
-            AudioSessionInfo info = intent.getParcelableExtra(CMAudioManager.EXTRA_SESSION_INFO);
+            AudioSessionInfo info = intent.getParcelableExtra(LineageAudioManager.EXTRA_SESSION_INFO);
             Log.d(TAG, "onReceive: " + info);
 
             assertNotNull(info);
@@ -239,7 +239,7 @@ public class CMAudioManagerTest extends AndroidTestCase {
     };
 
     private AudioSessionInfo findAudioSessionInfo(int sessionId) {
-        List<AudioSessionInfo> infos = mCMAudioManager.listAudioSessions(AudioManager.STREAM_MUSIC);
+        List<AudioSessionInfo> infos = mLineageAudioManager.listAudioSessions(AudioManager.STREAM_MUSIC);
         for (AudioSessionInfo info : infos) {
             if (info.getSessionId() == sessionId) {
                 return info;

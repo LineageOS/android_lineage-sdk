@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package org.cyanogenmod.tests.versioning;
+package org.lineageos.tests.versioning;
 
 import android.widget.Toast;
-import cyanogenmod.os.Build;
+import lineageos.os.Build;
 
-import org.cyanogenmod.tests.TestActivity;
+import org.lineageos.tests.TestActivity;
 
 public class VersioningTest extends TestActivity {
     @Override
@@ -36,23 +36,23 @@ public class VersioningTest extends TestActivity {
             new Test("test retrieve version") {
                 public void run() {
                     Toast.makeText(VersioningTest.this,
-                            "Current API version is " + Build.CM_VERSION.SDK_INT + " which is "
-                                    + Build.getNameForSDKInt(Build.CM_VERSION.SDK_INT),
+                            "Current API version is " + Build.LINEAGE_VERSION.SDK_INT + " which is "
+                                    + Build.getNameForSDKInt(Build.LINEAGE_VERSION.SDK_INT),
                             Toast.LENGTH_SHORT).show();
                 }
             },
             new Test("test target version larger") {
                 public void run() {
-                    int currentapiVersion = Build.CM_VERSION.SDK_INT;
-                    if (currentapiVersion >= Build.CM_VERSION_CODES.APRICOT){
+                    int currentapiVersion = Build.LINEAGE_VERSION.SDK_INT;
+                    if (currentapiVersion >= Build.LINEAGE_VERSION_CODES.APRICOT){
                         Toast.makeText(VersioningTest.this,
                                 "Current API version is greater or equal to "
-                                        + Build.getNameForSDKInt(Build.CM_VERSION_CODES.APRICOT),
+                                        + Build.getNameForSDKInt(Build.LINEAGE_VERSION_CODES.APRICOT),
                                 Toast.LENGTH_LONG).show();
                     } else{
                         Toast.makeText(VersioningTest.this,
                                 "Current API version is below target SKD version "
-                                        + Build.CM_VERSION_CODES.APRICOT,
+                                        + Build.LINEAGE_VERSION_CODES.APRICOT,
                                 Toast.LENGTH_SHORT).show();
                     }
                 }

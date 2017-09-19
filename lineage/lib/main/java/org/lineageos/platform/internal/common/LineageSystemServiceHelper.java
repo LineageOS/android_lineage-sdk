@@ -14,28 +14,28 @@
  * limitations under the License.
  */
 
-package org.cyanogenmod.platform.internal.common;
+package org.lineageos.platform.internal.common;
 
 import android.content.Context;
-import org.cyanogenmod.platform.internal.CMSystemService;
+import org.lineageos.platform.internal.LineageSystemService;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
 
 /**
- * Helper methods for fetching a CMSystemService from a class declaration
+ * Helper methods for fetching a LineageSystemService from a class declaration
  */
-public class CMSystemServiceHelper {
+public class LineageSystemServiceHelper {
     private Context mContext;
 
-    public CMSystemServiceHelper(Context context) {
+    public LineageSystemServiceHelper(Context context) {
         mContext = context;
     }
 
-    public CMSystemService getServiceFor(String className) {
-        final Class<CMSystemService> serviceClass;
+    public LineageSystemService getServiceFor(String className) {
+        final Class<LineageSystemService> serviceClass;
         try {
-            serviceClass = (Class<CMSystemService>)Class.forName(className);
+            serviceClass = (Class<LineageSystemService>)Class.forName(className);
         } catch (ClassNotFoundException ex) {
             throw new RuntimeException("Failed to create service " + className
                     + ": service class not found", ex);
@@ -44,7 +44,7 @@ public class CMSystemServiceHelper {
         return getServiceFromClass(serviceClass);
     }
 
-    public <T extends CMSystemService> T getServiceFromClass(Class<T> serviceClass) {
+    public <T extends LineageSystemService> T getServiceFromClass(Class<T> serviceClass) {
         final T service;
         try {
             Constructor<T> constructor = serviceClass.getConstructor(Context.class);

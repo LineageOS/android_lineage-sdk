@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package cyanogenmod.app;
+package lineageos.app;
 
 import android.content.Context;
 import android.media.AudioManager;
@@ -27,16 +27,16 @@ import android.text.TextUtils;
 import android.util.Log;
 
 import com.android.internal.policy.IKeyguardService;
-import cyanogenmod.os.Build;
-import cyanogenmod.profiles.AirplaneModeSettings;
-import cyanogenmod.profiles.BrightnessSettings;
-import cyanogenmod.profiles.ConnectionSettings;
-import cyanogenmod.profiles.LockSettings;
-import cyanogenmod.profiles.RingModeSettings;
-import cyanogenmod.profiles.StreamSettings;
+import lineageos.os.Build;
+import lineageos.profiles.AirplaneModeSettings;
+import lineageos.profiles.BrightnessSettings;
+import lineageos.profiles.ConnectionSettings;
+import lineageos.profiles.LockSettings;
+import lineageos.profiles.RingModeSettings;
+import lineageos.profiles.StreamSettings;
 
-import cyanogenmod.os.Concierge;
-import cyanogenmod.os.Concierge.ParcelInfo;
+import lineageos.os.Concierge;
+import lineageos.os.Concierge.ParcelInfo;
 
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
@@ -236,7 +236,7 @@ public final class Profile implements Parcelable, Comparable {
             // Pattern here is that all new members should be added to the end of
             // the writeToParcel method. Then we step through each version, until the latest
             // API release to help unravel this parcel
-            if (parcelableVersion >= Build.CM_VERSION_CODES.BOYSENBERRY) {
+            if (parcelableVersion >= Build.LINEAGE_VERSION_CODES.BOYSENBERRY) {
                 mType = in.readInt();
                 mId = in.readString();
                 mState = in.readInt();
@@ -646,7 +646,7 @@ public final class Profile implements Parcelable, Comparable {
         // Pattern here is that all new members should be added to the end of
         // the writeToParcel method. Then we step through each version, until the latest
         // API release to help unravel this parcel
-        if (parcelableVersion >= Build.CM_VERSION_CODES.BOYSENBERRY) {
+        if (parcelableVersion >= Build.LINEAGE_VERSION_CODES.BOYSENBERRY) {
             if (in.readInt() != 0) {
                 mName = in.readString();
             }
@@ -702,7 +702,7 @@ public final class Profile implements Parcelable, Comparable {
             mExpandedDesktopMode = in.readInt();
             mDozeMode = in.readInt();
         }
-        if (parcelableVersion >= Build.CM_VERSION_CODES.ELDERBERRY) {
+        if (parcelableVersion >= Build.LINEAGE_VERSION_CODES.ELDERBERRY) {
             mNotificationLightMode = in.readInt();
             if (in.readInt() != 0) {
                 for (ConnectionSettings connection :
@@ -1127,7 +1127,7 @@ public final class Profile implements Parcelable, Comparable {
 
         if (value != null) {
             profileNameResId = context.getResources().getIdentifier(value, "string",
-                    "cyanogenmod.platform");
+                    "lineageos.platform");
             if (profileNameResId > 0) {
                 profileName = context.getResources().getString(profileNameResId);
             }
@@ -1206,7 +1206,7 @@ public final class Profile implements Parcelable, Comparable {
                 }
                 if (name.equals("connectionDescriptor")) {
                     ConnectionSettings cs = ConnectionSettings.fromXml(xpp, context);
-                    if (Build.CM_VERSION.SDK_INT >= Build.CM_VERSION_CODES.ELDERBERRY
+                    if (Build.LINEAGE_VERSION.SDK_INT >= Build.LINEAGE_VERSION_CODES.ELDERBERRY
                             && cs.getConnectionId() == ConnectionSettings.PROFILE_CONNECTION_2G3G4G) {
                         profile.networkConnectionSubIds.put(cs.getSubId(), cs);
                     } else {

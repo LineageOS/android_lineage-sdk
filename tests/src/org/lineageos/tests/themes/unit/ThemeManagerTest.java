@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.cyanogenmod.tests.themes.unit;
+package org.lineageos.tests.themes.unit;
 
 import android.content.ContentResolver;
 import android.content.Context;
@@ -26,12 +26,12 @@ import android.test.suitebuilder.annotation.SmallTest;
 import android.text.TextUtils;
 import android.util.Log;
 
-import cyanogenmod.providers.CMSettings;
-import cyanogenmod.providers.ThemesContract;
-import cyanogenmod.themes.IThemeService;
-import cyanogenmod.themes.ThemeChangeRequest;
-import cyanogenmod.themes.ThemeManager;
-import cyanogenmod.themes.ThemeManager.ThemeChangeListener;
+import lineageos.providers.LineageSettings;
+import lineageos.providers.ThemesContract;
+import lineageos.themes.IThemeService;
+import lineageos.themes.ThemeChangeRequest;
+import lineageos.themes.ThemeManager;
+import lineageos.themes.ThemeManager.ThemeChangeListener;
 
 import org.mockito.Mockito;
 
@@ -78,8 +78,8 @@ public class ThemeManagerTest extends AndroidTestCase {
 
     @SmallTest
     public void testManagerServiceIsAvailable() {
-        IThemeService icmStatusBarManager = mThemeManager.getService();
-        assertNotNull(icmStatusBarManager);
+        IThemeService ilineageStatusBarManager = mThemeManager.getService();
+        assertNotNull(ilineageStatusBarManager);
     }
 
     @SmallTest
@@ -610,8 +610,8 @@ public class ThemeManagerTest extends AndroidTestCase {
     }
 
     private static String getDefaultThemePackageName(Context context) {
-        final String defaultThemePkg = CMSettings.Secure.getString(context.getContentResolver(),
-                CMSettings.Secure.DEFAULT_THEME_PACKAGE);
+        final String defaultThemePkg = LineageSettings.Secure.getString(context.getContentResolver(),
+                LineageSettings.Secure.DEFAULT_THEME_PACKAGE);
         if (!TextUtils.isEmpty(defaultThemePkg)) {
             PackageManager pm = context.getPackageManager();
             try {

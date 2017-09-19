@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package cyanogenmod.app;
+package lineageos.app;
 
 import android.content.Context;
 import android.os.IBinder;
@@ -26,30 +26,30 @@ import android.util.Slog;
 
 import java.util.List;
 
-import cyanogenmod.app.CMContextConstants;
+import lineageos.app.LineageContextConstants;
 
 /**
- * The CMTelephonyManager allows you to view and manage the phone state and
+ * The LineageTelephonyManager allows you to view and manage the phone state and
  * the data connection, with multiple SIMs support.
  *
  * <p>
- * To get the instance of this class, utilize CMTelephonyManager#getInstance(Context context)
+ * To get the instance of this class, utilize LineageTelephonyManager#getInstance(Context context)
  */
-public class CMTelephonyManager {
+public class LineageTelephonyManager {
 
     /**
      * Subscription ID used to set the default Phone and SMS to "ask every time".
      */
     public static final int ASK_FOR_SUBSCRIPTION_ID = 0;
 
-    private static final String TAG = "CMTelephonyManager";
+    private static final String TAG = "LineageTelephonyManager";
     private static boolean localLOGD = Log.isLoggable(TAG, Log.DEBUG);
 
-    private static ICMTelephonyManager sService;
-    private static CMTelephonyManager sCMTelephonyManagerInstance;
+    private static ILineageTelephonyManager sService;
+    private static LineageTelephonyManager sLineageTelephonyManagerInstance;
     private Context mContext;
 
-    private CMTelephonyManager(Context context) {
+    private LineageTelephonyManager(Context context) {
         Context appContext = context.getApplicationContext();
         if (appContext != null) {
             mContext = appContext;
@@ -58,34 +58,34 @@ public class CMTelephonyManager {
         }
         sService = getService();
 
-        if (context.getPackageManager().hasSystemFeature(CMContextConstants.Features.TELEPHONY)
+        if (context.getPackageManager().hasSystemFeature(LineageContextConstants.Features.TELEPHONY)
                 && sService == null) {
-            Log.wtf(TAG, "Unable to get CMTelephonyManagerService. " +
+            Log.wtf(TAG, "Unable to get LineageTelephonyManagerService. " +
                     "The service either crashed, was not started, or the interface has been " +
                     "called to early in SystemServer init");
         }
     }
 
     /**
-     * Get or create an instance of the {@link cyanogenmod.app.CMTelephonyManager}
+     * Get or create an instance of the {@link lineageos.app.LineageTelephonyManager}
      *
-     * @return {@link cyanogenmod.app.CMTelephonyManager}
+     * @return {@link lineageos.app.LineageTelephonyManager}
      */
-    public static CMTelephonyManager getInstance(Context context) {
-        if (sCMTelephonyManagerInstance == null) {
-            sCMTelephonyManagerInstance = new CMTelephonyManager(context);
+    public static LineageTelephonyManager getInstance(Context context) {
+        if (sLineageTelephonyManagerInstance == null) {
+            sLineageTelephonyManagerInstance = new LineageTelephonyManager(context);
         }
-        return sCMTelephonyManagerInstance;
+        return sLineageTelephonyManagerInstance;
     }
 
     /** @hide */
-    public ICMTelephonyManager getService() {
+    public ILineageTelephonyManager getService() {
         if (sService != null) {
             return sService;
         }
-        IBinder b = ServiceManager.getService(CMContextConstants.CM_TELEPHONY_MANAGER_SERVICE);
+        IBinder b = ServiceManager.getService(LineageContextConstants.LINEAGE_TELEPHONY_MANAGER_SERVICE);
         if (b != null) {
-            sService = ICMTelephonyManager.Stub.asInterface(b);
+            sService = ILineageTelephonyManager.Stub.asInterface(b);
             return sService;
         }
         return null;
@@ -100,7 +100,7 @@ public class CMTelephonyManager {
      */
     public List<SubscriptionInfo> getSubInformation() {
         if (sService == null) {
-            Log.w(TAG, "not connected to CMTelephonyManager");
+            Log.w(TAG, "not connected to LineageTelephonyManager");
             return null;
         }
 
@@ -117,7 +117,7 @@ public class CMTelephonyManager {
                 Log.w(TAG, "the subscription list is empty");
             }
         } catch (RemoteException e) {
-            Slog.w(TAG, "warning: no cm telephony manager service");
+            Slog.w(TAG, "warning: no lineage telephony manager service");
         }
 
         return subInfoList;
@@ -134,7 +134,7 @@ public class CMTelephonyManager {
      */
     public boolean isSubActive(int subId) {
         if (sService == null) {
-            Log.w(TAG, "not connected to CMTelephonyManager");
+            Log.w(TAG, "not connected to LineageTelephonyManager");
             return false;
         }
 
@@ -150,7 +150,7 @@ public class CMTelephonyManager {
                 Log.v(TAG, pkg + " getting the SIM state with subscription " + subId + " as active: " + simActive);
             }
         } catch (RemoteException e) {
-            Slog.w(TAG, "warning: no cm telephony manager service");
+            Slog.w(TAG, "warning: no lineage telephony manager service");
         }
 
         return simActive;
@@ -167,7 +167,7 @@ public class CMTelephonyManager {
      */
     public void setSubState(int subId, boolean state) {
         if (sService == null) {
-            Log.w(TAG, "not connected to CMTelephonyManager");
+            Log.w(TAG, "not connected to LineageTelephonyManager");
             return;
         }
 
@@ -179,7 +179,7 @@ public class CMTelephonyManager {
         try {
             sService.setSubState(subId, state);
         } catch (RemoteException e) {
-            Slog.w(TAG, "warning: no cm telephony manager service");
+            Slog.w(TAG, "warning: no lineage telephony manager service");
         }
     }
 
@@ -197,7 +197,7 @@ public class CMTelephonyManager {
      */
     public boolean isDataConnectionSelectedOnSub(int subId) {
         if (sService == null) {
-            Log.w(TAG, "not connected to CMTelephonyManager");
+            Log.w(TAG, "not connected to LineageTelephonyManager");
             return false;
         }
 
@@ -214,7 +214,7 @@ public class CMTelephonyManager {
                         subId + " as active: " + dataConnectionActiveOnSim);
             }
         } catch (RemoteException e) {
-            Slog.w(TAG, "warning: no cm telephony manager service");
+            Slog.w(TAG, "warning: no lineage telephony manager service");
         }
 
         return dataConnectionActiveOnSim;
@@ -230,7 +230,7 @@ public class CMTelephonyManager {
      */
     public boolean isDataConnectionEnabled() {
         if (sService == null) {
-            Log.w(TAG, "not connected to CMTelephonyManager");
+            Log.w(TAG, "not connected to LineageTelephonyManager");
             return false;
         }
 
@@ -246,7 +246,7 @@ public class CMTelephonyManager {
                 Log.v(TAG, pkg + " getting if the network data connection is enabled: " + dataConnectionEnabled);
             }
         } catch (RemoteException e) {
-            Slog.w(TAG, "warning: no cm telephony manager service");
+            Slog.w(TAG, "warning: no lineage telephony manager service");
         }
 
         return dataConnectionEnabled;
@@ -259,7 +259,7 @@ public class CMTelephonyManager {
      */
     public void setDataConnectionState(boolean state) {
         if (sService == null) {
-            Log.w(TAG, "not connected to CMTelephonyManager");
+            Log.w(TAG, "not connected to LineageTelephonyManager");
             return;
         }
 
@@ -271,7 +271,7 @@ public class CMTelephonyManager {
         try {
             sService.setDataConnectionState(state);
         } catch (RemoteException e) {
-            Slog.w(TAG, "warning: no cm telephony manager service");
+            Slog.w(TAG, "warning: no lineage telephony manager service");
         }
     }
 
@@ -286,7 +286,7 @@ public class CMTelephonyManager {
      */
     public void setDataConnectionSelectedOnSub(int subId) {
         if (sService == null) {
-            Log.w(TAG, "not connected to CMTelephonyManager");
+            Log.w(TAG, "not connected to LineageTelephonyManager");
             return;
         }
 
@@ -298,7 +298,7 @@ public class CMTelephonyManager {
         try {
             sService.setDataConnectionSelectedOnSub(subId);
         } catch (RemoteException e) {
-            Slog.w(TAG, "warning: no cm telephony manager service");
+            Slog.w(TAG, "warning: no lineage telephony manager service");
         }
     }
 
@@ -313,7 +313,7 @@ public class CMTelephonyManager {
      */
     public void setDefaultPhoneSub(int subId) {
         if (sService == null) {
-            Log.w(TAG, "not connected to CMTelephonyManager");
+            Log.w(TAG, "not connected to LineageTelephonyManager");
             return;
         }
 
@@ -325,7 +325,7 @@ public class CMTelephonyManager {
         try {
             sService.setDefaultPhoneSub(subId);
         } catch (RemoteException e) {
-            Slog.w(TAG, "warning: no cm telephony manager service");
+            Slog.w(TAG, "warning: no lineage telephony manager service");
         }
     }
 
@@ -340,7 +340,7 @@ public class CMTelephonyManager {
      */
     public void setDefaultSmsSub(int subId) {
         if (sService == null) {
-            Log.w(TAG, "not connected to CMTelephonyManager");
+            Log.w(TAG, "not connected to LineageTelephonyManager");
             return;
         }
 
@@ -352,7 +352,7 @@ public class CMTelephonyManager {
         try {
             sService.setDefaultSmsSub(subId);
         } catch (RemoteException e) {
-            Slog.w(TAG, "warning: no cm telephony manager service");
+            Slog.w(TAG, "warning: no lineage telephony manager service");
         }
     }
 }
