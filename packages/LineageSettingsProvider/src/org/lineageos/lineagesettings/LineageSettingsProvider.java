@@ -50,10 +50,12 @@ import org.lineageos.internal.util.QSUtils;
 
 import lineageos.providers.LineageSettings;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.regex.Pattern;
 
 /**
  * The LineageSettingsProvider serves as a {@link ContentProvider} for Lineage specific settings
@@ -226,8 +228,8 @@ public class LineageSettingsProvider extends ContentProvider {
                                 + settingsValue);
                     }
 
-                    final List<String> tiles = Settings.Secure.getDelimitedStringAsList(
-                            contentResolver, settingsKey, ",");
+                    final List<String> tiles = delimitedStringToList(
+                            Settings.Secure.getString(contentResolver, settingsKey), ",");
 
                     if (!tiles.contains(QSConstants.TILE_DND)) {
                         tiles.add(QSConstants.TILE_DND);
@@ -282,6 +284,26 @@ public class LineageSettingsProvider extends ContentProvider {
         }
 
         return rowsInserted;
+    }
+
+    /**
+     * Get a delimited string returned as a list
+     * @param s to convert to a list
+     * @param delimiter to split the list with
+     * @return list of strings for the string provided
+     */
+    private List<String> delimitedStringToList(String s, String delimiter) {
+        List<String> list = new ArrayList<String>();
+        if (!TextUtils.isEmpty(s)) {
+            final String[] array = TextUtils.split(s, Pattern.quote(delimiter));
+            for (String item : array) {
+                if (TextUtils.isEmpty(item)) {
+                    continue;
+                }
+                list.add(item);
+            }
+        }
+        return list;
     }
 
     /**
