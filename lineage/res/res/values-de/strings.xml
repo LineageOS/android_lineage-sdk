@@ -18,7 +18,7 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Label for the LineageOS system components when they are shown to the user. -->
-  <string name="cyanogenmod_system_label">LineageOS-System</string>
+  <string name="lineageos_system_label">LineageOS-System</string>
   <string name="permlab_publishCustomTile">eine Kachel in den Schnelleinstellungen erstellen</string>
   <string name="permdesc_publishCustomTile">Ermöglicht der App, eine Kachel in den Schnelleinstellungen anzuzeigen.</string>
   <string name="permlab_modifyNetworkSettings">System-Netzwerkeinstellungen ändern</string>
@@ -38,7 +38,7 @@
   <string name="permdesc_modifyProfiles">Ermöglicht der App, Systemprofile zu ändern.</string>
   <!-- Labels for the HARDWARE_ABSTRACTION_ACCESS permission. -->
   <string name="permlab_useHardwareFramework">Hardware-Framework verwenden</string>
-  <string name="permdesc_useHardwareFramework">Ermöglicht der App, auf das CM-Hardware-Framework zuzugreifen.</string>
+  <string name="permdesc_useHardwareFramework">Ermöglicht der App, auf das Lineage-Hardware-Framework zuzugreifen.</string>
   <!-- Labels for the WRITE_ALARMS permission. -->
   <string name="permlab_write_alarms">Alarme direkt ändern</string>
   <string name="permdesc_write_alarms">Ermöglicht der App das Hinzufügen, Ändern oder Löschen Ihrer Alarme.</string>
@@ -49,11 +49,11 @@
   <string name="permlab_read_alarms">auf geplante Alarme zugreifen</string>
   <string name="permdesc_read_alarms">Ermöglicht der App, Ihre geplanten Alarme auszulesen.</string>
   <!-- Labels for the WRITE_SETTINGS permission -->
-  <string name="permlab_writeSettings">CM-Systemeinstellungen ändern</string>
-  <string name="permdesc_writeSettings">Ermöglicht der App, CM-Systemeinstellungen zu ändern.</string>
+  <string name="permlab_writeSettings">Lineage-Systemeinstellungen ändern</string>
+  <string name="permdesc_writeSettings">Ermöglicht der App, Lineage-Systemeinstellungen zu ändern.</string>
   <!-- Labels for the WRITE_SECURE_SETTINGS permission -->
-  <string name="permlab_writeSecureSettings">CM-Sicherheits-Systemeinstellungen ändern</string>
-  <string name="permdesc_writeSecureSettings">Ermöglicht der App, CM-Sicherheits-Systemeinstellungen zu ändern. Nicht für die Nutzung durch normale Anwendungen bestimmt.</string>
+  <string name="permlab_writeSecureSettings">Lineage-Sicherheits-Systemeinstellungen ändern</string>
+  <string name="permdesc_writeSecureSettings">Ermöglicht der App, Lineage-Sicherheits-Systemeinstellungen zu ändern. Nicht für die Nutzung durch normale Anwendungen bestimmt.</string>
   <!-- Labels for the MANAGE_PERSISTENT_STORAGE permission. -->
   <string name="permlab_managePersistentStorage">permanenten Speicher verwalten</string>
   <string name="permdesc_managePersistentStorage">Ermöglicht der App, Eigenschaften auszulesen oder zu speichern, die auch beim Zurücksetzen auf die Werkseinstellungen erhalten bleiben können.</string>
@@ -173,10 +173,10 @@
   <!-- LiveDisplay manager permission -->
   <string name="permlab_manageLiveDisplay">LiveDisplay-Einstellungen verwalten</string>
   <string name="permdesc_manageLiveDisplay">Erlaubt der App, erweiterte Displayeinstellungen vorzunehmen.</string>
-  <!-- CMAudioService - observe session changes permission -->
+  <!-- LineageAudioService - observe session changes permission -->
   <string name="permlab_observe_audio_sessions">Audiositzungsänderungen überwachen</string>
   <string name="permdesc_observe_audio_sessions">Erlaubt einer App, die Erstellung und Löschung von Audio-Streams zu überwachen.</string>
-  <!-- CMAudioService - observe session changes permission -->
+  <!-- LineageAudioService - observe session changes permission -->
   <string name="permlab_manage_audio_sessions">Audiositzungsänderungen verwalten</string>
   <string name="permdesc_manage_audio_sessions">Ermöglicht einer App, Audiostream-Aktualisierungen zu senden.</string>
   <!-- QuickSettings: Themes tile -->

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.cyanogenmod.platform.internal;
+package org.lineageos.platform.internal;
 
 import android.app.ActivityManager;
 import android.app.AppGlobals;
@@ -41,26 +41,26 @@ import android.util.Slog;
 
 import com.android.server.SystemService;
 
-import cyanogenmod.app.CMContextConstants;
-import cyanogenmod.app.CustomTile;
-import cyanogenmod.app.CustomTileListenerService;
-import cyanogenmod.app.StatusBarPanelCustomTile;
-import cyanogenmod.app.ICustomTileListener;
-import cyanogenmod.app.ICMStatusBarManager;
-import cyanogenmod.app.IStatusBarCustomTileHolder;
+import lineageos.app.LineageContextConstants;
+import lineageos.app.CustomTile;
+import lineageos.app.CustomTileListenerService;
+import lineageos.app.StatusBarPanelCustomTile;
+import lineageos.app.ICustomTileListener;
+import lineageos.app.ILineageStatusBarManager;
+import lineageos.app.IStatusBarCustomTileHolder;
 
-import org.cyanogenmod.internal.statusbar.ExternalQuickSettingsRecord;
+import org.lineageos.internal.statusbar.ExternalQuickSettingsRecord;
 
 import java.util.ArrayList;
 
-import org.cyanogenmod.platform.internal.R;
+import org.lineageos.platform.internal.R;
 
 /**
  * Internal service which manages interactions with system ui elements
  * @hide
  */
-public class CMStatusBarManagerService extends CMSystemService {
-    private static final String TAG = "CMStatusBarManagerService";
+public class LineageStatusBarManagerService extends LineageSystemService {
+    private static final String TAG = "LineageStatusBarManagerService";
 
     private Context mContext;
     private Handler mHandler = new Handler();
@@ -77,21 +77,21 @@ public class CMStatusBarManagerService extends CMSystemService {
     final ArrayMap<String, ExternalQuickSettingsRecord> mCustomTileByKey =
             new ArrayMap<String, ExternalQuickSettingsRecord>();
 
-    public CMStatusBarManagerService(Context context) {
+    public LineageStatusBarManagerService(Context context) {
         super(context);
         mContext = context;
     }
 
     @Override
     public String getFeatureDeclaration() {
-        return CMContextConstants.Features.STATUSBAR;
+        return LineageContextConstants.Features.STATUSBAR;
     }
 
     @Override
     public void onStart() {
-        Log.d(TAG, "registerCMStatusBar cmstatusbar: " + this);
+        Log.d(TAG, "registerLineageStatusBar lineagestatusbar: " + this);
         mCustomTileListeners = new CustomTileListeners();
-        publishBinderService(CMContextConstants.CM_STATUS_BAR_SERVICE, mService);
+        publishBinderService(LineageContextConstants.LINEAGE_STATUS_BAR_SERVICE, mService);
 
         IntentFilter pkgFilter = new IntentFilter();
         pkgFilter.addAction(Intent.ACTION_PACKAGE_ADDED);
@@ -180,7 +180,7 @@ public class CMStatusBarManagerService extends CMSystemService {
         }
     };
 
-    private final IBinder mService = new ICMStatusBarManager.Stub() {
+    private final IBinder mService = new ILineageStatusBarManager.Stub() {
         /**
          * @hide
          */
@@ -208,7 +208,7 @@ public class CMStatusBarManagerService extends CMSystemService {
          * Register a listener binder directly with the status bar manager.
          *
          * Only works with system callers. Apps should extend
-         * {@link cyanogenmod.app.CustomTileListenerService}.
+         * {@link lineageos.app.CustomTileListenerService}.
          * @hide
          */
         @Override
@@ -526,13 +526,13 @@ public class CMStatusBarManagerService extends CMSystemService {
 
     private void enforceCustomTilePublish() {
         mContext.enforceCallingOrSelfPermission(
-                cyanogenmod.platform.Manifest.permission.PUBLISH_CUSTOM_TILE,
+                lineageos.platform.Manifest.permission.PUBLISH_CUSTOM_TILE,
                 "StatusBarManagerService");
     }
 
     private void enforceBindCustomTileListener() {
         mContext.enforceCallingOrSelfPermission(
-                cyanogenmod.platform.Manifest.permission.BIND_CUSTOM_TILE_LISTENER_SERVICE,
+                lineageos.platform.Manifest.permission.BIND_CUSTOM_TILE_LISTENER_SERVICE,
                 "StatusBarManagerService");
     }
 
@@ -544,7 +544,7 @@ public class CMStatusBarManagerService extends CMSystemService {
     public class CustomTileListeners extends ManagedServices {
 
         public CustomTileListeners() {
-            super(CMStatusBarManagerService.this.mContext, mHandler, mQSTileList, mUserProfiles);
+            super(LineageStatusBarManagerService.this.mContext, mHandler, mQSTileList, mUserProfiles);
         }
 
         @Override
@@ -555,7 +555,7 @@ public class CMStatusBarManagerService extends CMSystemService {
             //TODO: Implement this in the future
             //c.secureSettingName = Settings.Secure.ENABLED_CUSTOM_TILE_LISTENERS;
             c.bindPermission =
-                    cyanogenmod.platform.Manifest.permission.BIND_CUSTOM_TILE_LISTENER_SERVICE;
+                    lineageos.platform.Manifest.permission.BIND_CUSTOM_TILE_LISTENER_SERVICE;
             //TODO: Implement this in the future
             //c.settingsAction = Settings.ACTION_CUSTOM_TILE_LISTENER_SETTINGS;
             c.clientLabel = R.string.custom_tile_listener_binding_label;

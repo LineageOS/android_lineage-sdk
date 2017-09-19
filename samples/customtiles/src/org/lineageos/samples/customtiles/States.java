@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.cyanogenmod.samples.customtiles;
+package org.lineageos.samples.customtiles;
 
 /**
  * Created by Adnan on 4/30/15.

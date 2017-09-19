@@ -14,10 +14,10 @@
      limitations under the License.
 -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="org.cyanogenmod.cmsettings.tests">
+          package="org.lineageos.lineagesettings.tests">
 
-    <uses-permission android:name="cyanogenmod.permission.WRITE_SETTINGS"/>
-    <uses-permission android:name="cyanogenmod.permission.WRITE_SECURE_SETTINGS"/>
+    <uses-permission android:name="lineageos.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="lineageos.permission.WRITE_SECURE_SETTINGS"/>
     <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
     <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS"/>
     <uses-permission android:name="android.permission.INTERACT_ACROSS_USERS_FULL" />
@@ -25,8 +25,8 @@
 
     <instrumentation
             android:name="android.test.InstrumentationTestRunner"
-            android:targetPackage="org.cyanogenmod.cmsettings.tests"
-            android:label="CM Settings Provider Tests" />
+            android:targetPackage="org.lineageos.lineagesettings.tests"
+            android:label="Lineage Settings Provider Tests" />
 
     <application>
         <uses-library android:name="android.test.runner" />

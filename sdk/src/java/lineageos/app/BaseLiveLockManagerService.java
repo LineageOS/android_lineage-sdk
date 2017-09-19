@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package cyanogenmod.app;
+package lineageos.app;
 
 import android.annotation.NonNull;
 import android.app.AppGlobals;
@@ -29,7 +29,7 @@ import android.os.RemoteException;
 import android.os.UserHandle;
 import android.util.Log;
 
-import cyanogenmod.platform.Manifest;
+import lineageos.platform.Manifest;
 
 /**
  * Base Live lock screen manager service to be extended by applications that implement the
@@ -107,7 +107,7 @@ abstract public class BaseLiveLockManagerService extends Service
 
     /**
      * Returns true if the caller has been granted the
-     * {@link cyanogenmod.platform.Manifest.permission#LIVE_LOCK_SCREEN_MANAGER_ACCESS_PRIVATE}
+     * {@link lineageos.platform.Manifest.permission#LIVE_LOCK_SCREEN_MANAGER_ACCESS_PRIVATE}
      * permission.
      *
      * @return
@@ -118,7 +118,7 @@ abstract public class BaseLiveLockManagerService extends Service
     }
 
     /**
-     * Enforces the {@link cyanogenmod.platform.Manifest.permission#LIVE_LOCK_SCREEN_MANAGER_ACCESS}
+     * Enforces the {@link lineageos.platform.Manifest.permission#LIVE_LOCK_SCREEN_MANAGER_ACCESS}
      * permission.
      */
     protected final void enforceAccessPermission() {
@@ -130,7 +130,7 @@ abstract public class BaseLiveLockManagerService extends Service
 
     /**
      * Enforces the
-     * {@link cyanogenmod.platform.Manifest.permission#LIVE_LOCK_SCREEN_MANAGER_ACCESS_PRIVATE}
+     * {@link lineageos.platform.Manifest.permission#LIVE_LOCK_SCREEN_MANAGER_ACCESS_PRIVATE}
      * permission.
      */
     protected final void enforcePrivateAccessPermission() {
@@ -141,7 +141,7 @@ abstract public class BaseLiveLockManagerService extends Service
     /**
      * Enforces the LLS being shown/canceled is from the calling package or from a system app that
      * has the
-     * {@link cyanogenmod.platform.Manifest.permission#LIVE_LOCK_SCREEN_MANAGER_ACCESS_PRIVATE}
+     * {@link lineageos.platform.Manifest.permission#LIVE_LOCK_SCREEN_MANAGER_ACCESS_PRIVATE}
      * permission.
      *
      * @param pkg Package name of caller

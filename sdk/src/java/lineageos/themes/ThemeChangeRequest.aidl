@@ -14,6 +14,6 @@
  * limitations under the License.
  */
 
-package cyanogenmod.themes;
+package lineageos.themes;
 
 parcelable ThemeChangeRequest;

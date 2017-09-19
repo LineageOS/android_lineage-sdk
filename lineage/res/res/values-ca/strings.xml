@@ -18,7 +18,7 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Label for the LineageOS system components when they are shown to the user. -->
-  <string name="cyanogenmod_system_label">Sistema de LineageOS</string>
+  <string name="lineageos_system_label">Sistema de LineageOS</string>
   <string name="permlab_publishCustomTile">crea una cel·la personalitzada al panell d\'ajustos ràpids</string>
   <string name="permdesc_publishCustomTile">Permet a una aplicació publicar una cel·la d\'ajustos ràpids.</string>
   <string name="permlab_modifyNetworkSettings">canvia la configuració de xarxa de sistema</string>
@@ -38,7 +38,7 @@
   <string name="permdesc_modifyProfiles">Permet a una aplicació modificar els perfils del sistema.</string>
   <!-- Labels for the HARDWARE_ABSTRACTION_ACCESS permission. -->
   <string name="permlab_useHardwareFramework">utilitza el marc de hardware</string>
-  <string name="permdesc_useHardwareFramework">Permet a una aplicació accedir al marc de hardware de CM.</string>
+  <string name="permdesc_useHardwareFramework">Permet a una aplicació accedir al marc de hardware de Lineage.</string>
   <!-- Labels for the WRITE_ALARMS permission. -->
   <string name="permlab_write_alarms">canviar directament les alarmes</string>
   <string name="permdesc_write_alarms">Permet a una aplicació afegir, modificar o esborrar totes les teves alarmes.</string>
@@ -49,11 +49,11 @@
   <string name="permlab_read_alarms">accedir a les alarmes programades</string>
   <string name="permdesc_read_alarms">Permet a una aplicació llegir les teves alarmes programades.</string>
   <!-- Labels for the WRITE_SETTINGS permission -->
-  <string name="permlab_writeSettings">modificar la configuració del sistema CM</string>
-  <string name="permdesc_writeSettings">Permet a una aplicació modificar la configuració del sistema CM.</string>
+  <string name="permlab_writeSettings">modificar la configuració del sistema Lineage</string>
+  <string name="permdesc_writeSettings">Permet a una aplicació modificar la configuració del sistema Lineage.</string>
   <!-- Labels for the WRITE_SECURE_SETTINGS permission -->
-  <string name="permlab_writeSecureSettings">modificar la configuració segura del sistema CM</string>
-  <string name="permdesc_writeSecureSettings">Permet a una aplicació modificar la configuració segura del sistema CM. No utilitzar en aplicacions normals.</string>
+  <string name="permlab_writeSecureSettings">modificar la configuració segura del sistema Lineage</string>
+  <string name="permdesc_writeSecureSettings">Permet a una aplicació modificar la configuració segura del sistema Lineage. No utilitzar en aplicacions normals.</string>
   <!-- Labels for the MANAGE_PERSISTENT_STORAGE permission. -->
   <string name="permlab_managePersistentStorage">gestiona l\'emmagatzematge persistent</string>
   <string name="permdesc_managePersistentStorage">Permet a una aplicació llegir o escriure propietats que poden persistir després d\'un reinici a la configuració de fàbrica.</string>
@@ -173,10 +173,10 @@
   <!-- LiveDisplay manager permission -->
   <string name="permlab_manageLiveDisplay">administra la configuració de LiveDisplay</string>
   <string name="permdesc_manageLiveDisplay">Permet a una aplicació configurar les opcions de visualització avançades.</string>
-  <!-- CMAudioService - observe session changes permission -->
+  <!-- LineageAudioService - observe session changes permission -->
   <string name="permlab_observe_audio_sessions">observa els canvis en la sessió de so</string>
   <string name="permdesc_observe_audio_sessions">Permet a una aplicació observar els fluxos de so que són creats i destruïts.</string>
-  <!-- CMAudioService - observe session changes permission -->
+  <!-- LineageAudioService - observe session changes permission -->
   <string name="permlab_manage_audio_sessions">administra els canvis en la sessió de so</string>
   <string name="permdesc_manage_audio_sessions">Permet a una aplicació enviar actualitzacions de transmissió d\'àudio.</string>
   <!-- QuickSettings: Themes tile -->

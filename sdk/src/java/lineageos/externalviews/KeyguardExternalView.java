@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package cyanogenmod.externalviews;
+package lineageos.externalviews;
 
 import android.app.Activity;
 import android.app.Application;
@@ -37,7 +37,7 @@ import java.util.LinkedList;
 
 /**
  * This class provides a placeholder view for hosting an external view, provided by a
- * {@link cyanogenmod.externalviews.KeyguardExternalViewProviderService}, within the lock screen.
+ * {@link lineageos.externalviews.KeyguardExternalViewProviderService}, within the lock screen.
  *
  * <p>This class is intended to only be used within the SystemUi process.</p>
  * @hide
@@ -54,13 +54,13 @@ public class KeyguardExternalView extends View implements ViewTreeObserver.OnPre
 
     /**
      * Category defining an activity to call to request permissions that a
-     * {@link cyanogenmod.externalviews.KeyguardExternalViewProviderService} will need.  Apps that
-     * provide a {@link cyanogenmod.externalviews.KeyguardExternalViewProviderService} should
+     * {@link lineageos.externalviews.KeyguardExternalViewProviderService} will need.  Apps that
+     * provide a {@link lineageos.externalviews.KeyguardExternalViewProviderService} should
      * check that they have the required permission before making any method calls that would
      * require a dangerous permission to be granted.
      */
     public static final String CATEGORY_KEYGUARD_GRANT_PERMISSION
-            = "org.cyanogenmod.intent.category.KEYGUARD_GRANT_PERMISSION";
+            = "org.lineageos.intent.category.KEYGUARD_GRANT_PERMISSION";
 
     private LinkedList<Runnable> mQueue = new LinkedList<Runnable>();
 
@@ -91,7 +91,7 @@ public class KeyguardExternalView extends View implements ViewTreeObserver.OnPre
      * @param context
      * @param attributeSet
      * @param componentName The component name for the
-     *                      {@link cyanogenmod.externalviews.KeyguardExternalViewProviderService}
+     *                      {@link lineageos.externalviews.KeyguardExternalViewProviderService}
      *                      that will be bound to create the external view.
      */
     public KeyguardExternalView(Context context, AttributeSet attributeSet, ComponentName componentName) {
@@ -284,10 +284,10 @@ public class KeyguardExternalView extends View implements ViewTreeObserver.OnPre
     }
 
     /**
-     * Sets the component of the {@link cyanogenmod.externalviews.KeyguardExternalViewProviderService}
+     * Sets the component of the {@link lineageos.externalviews.KeyguardExternalViewProviderService}
      * to be used for this ExternalView.  If a provider is already connected to this view, it is
      * first unbound before binding to the new provider.
-     * @param componentName The {@link cyanogenmod.externalviews.KeyguardExternalViewProviderService}
+     * @param componentName The {@link lineageos.externalviews.KeyguardExternalViewProviderService}
      *                      to bind to.
      */
     public void setProviderComponent(ComponentName componentName) {
@@ -401,7 +401,7 @@ public class KeyguardExternalView extends View implements ViewTreeObserver.OnPre
 
     /**
      * External views provided by a
-     * {@link cyanogenmod.externalviews.KeyguardExternalViewProviderService} can be either
+     * {@link lineageos.externalviews.KeyguardExternalViewProviderService} can be either
      * interactive or non-interactive.
      *
      * <p>A non-interactive component does not receive any input events and functions similar to a
@@ -417,9 +417,9 @@ public class KeyguardExternalView extends View implements ViewTreeObserver.OnPre
     }
 
     /**
-     * Registers a {@link cyanogenmod.externalviews.KeyguardExternalView.KeyguardExternalViewCallbacks}
+     * Registers a {@link lineageos.externalviews.KeyguardExternalView.KeyguardExternalViewCallbacks}
      * for receiving events from the
-     * {@link cyanogenmod.externalviews.KeyguardExternalViewProviderService}
+     * {@link lineageos.externalviews.KeyguardExternalViewProviderService}
      * @param callback The callback to register
      */
     public void registerKeyguardExternalViewCallback(KeyguardExternalViewCallbacks callback) {
@@ -428,7 +428,7 @@ public class KeyguardExternalView extends View implements ViewTreeObserver.OnPre
 
     /**
      * Unregister a previously registered
-     * {@link cyanogenmod.externalviews.KeyguardExternalView.KeyguardExternalViewCallbacks}
+     * {@link lineageos.externalviews.KeyguardExternalView.KeyguardExternalViewCallbacks}
      * @param callback The callback to unregister
      */
     public void unregisterKeyguardExternalViewCallback(KeyguardExternalViewCallbacks callback) {
@@ -439,9 +439,9 @@ public class KeyguardExternalView extends View implements ViewTreeObserver.OnPre
     }
 
     /**
-     * Registers a {@link cyanogenmod.externalviews.KeyguardExternalView.OnWindowAttachmentChangedListener}
+     * Registers a {@link lineageos.externalviews.KeyguardExternalView.OnWindowAttachmentChangedListener}
      * for receiving events from the
-     * {@link cyanogenmod.externalviews.KeyguardExternalViewProviderService}
+     * {@link lineageos.externalviews.KeyguardExternalViewProviderService}
      * @param listener The callback to register
      *
      * @hide
@@ -453,7 +453,7 @@ public class KeyguardExternalView extends View implements ViewTreeObserver.OnPre
 
     /**
      * Unregister a previously registered
-     * {@link cyanogenmod.externalviews.KeyguardExternalView.OnWindowAttachmentChangedListener}
+     * {@link lineageos.externalviews.KeyguardExternalView.OnWindowAttachmentChangedListener}
      * @param listener The callback to unregister
      *
      * @hide
@@ -467,9 +467,9 @@ public class KeyguardExternalView extends View implements ViewTreeObserver.OnPre
     }
 
     /**
-     * Callback interface for a {@link cyanogenmod.externalviews.KeyguardExternalViewProviderService}
+     * Callback interface for a {@link lineageos.externalviews.KeyguardExternalViewProviderService}
      * to send events to the host's registered
-     * {@link cyanogenmod.externalviews.KeyguardExternalView.KeyguardExternalViewCallbacks}
+     * {@link lineageos.externalviews.KeyguardExternalView.KeyguardExternalViewCallbacks}
      */
     public interface KeyguardExternalViewCallbacks {
         boolean requestDismiss();

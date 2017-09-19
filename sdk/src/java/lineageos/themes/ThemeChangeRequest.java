@@ -13,21 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package cyanogenmod.themes;
+package lineageos.themes;
 
 //import android.content.pm.ThemeUtils;
 import android.content.res.ThemeConfig;
 import android.os.Parcel;
 import android.os.Parcelable;
 
-import cyanogenmod.os.Concierge;
-import cyanogenmod.os.Concierge.ParcelInfo;
+import lineageos.os.Concierge;
+import lineageos.os.Concierge.ParcelInfo;
 
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 
-import static cyanogenmod.providers.ThemesContract.ThemesColumns.*;
+import static lineageos.providers.ThemesContract.ThemesColumns.*;
 
 public final class ThemeChangeRequest implements Parcelable {
     public static final int DEFAULT_WALLPAPER_ID = -1;

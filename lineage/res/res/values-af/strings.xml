@@ -18,7 +18,7 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Label for the LineageOS system components when they are shown to the user. -->
-  <string name="cyanogenmod_system_label">LineageOS Stelsel</string>
+  <string name="lineageos_system_label">LineageOS Stelsel</string>
   <string name="permlab_publishCustomTile">Skep \'n persoonlike teël binne die vinnige instellings paneel</string>
   <string name="permdesc_publishCustomTile">Laat \'n program toe om \'n vinnige instellings teël te publiseer.</string>
   <string name="permlab_modifyNetworkSettings">verander stelsel se netwerk instellings</string>
@@ -38,7 +38,7 @@
   <string name="permdesc_modifyProfiles">Laat \'n toep toe om stelsel profiele te verander.</string>
   <!-- Labels for the HARDWARE_ABSTRACTION_ACCESS permission. -->
   <string name="permlab_useHardwareFramework">gebruik hardeware raamwerk</string>
-  <string name="permdesc_useHardwareFramework">Laat program toegang tot die CM hardeware raamwerk.</string>
+  <string name="permdesc_useHardwareFramework">Laat program toegang tot die Lineage hardeware raamwerk.</string>
   <!-- Labels for the WRITE_ALARMS permission. -->
   <string name="permlab_write_alarms">verander direk jou wekkers</string>
   <string name="permdesc_write_alarms">Laat \'n toep toe om by te voeg, te verander of al jou alarms te verwyder.</string>
@@ -49,11 +49,11 @@
   <string name="permlab_read_alarms">toegang na geskeduleerde wekkers</string>
   <string name="permdesc_read_alarms">Laat \'n toep toe om jou geskeduleerde wekkers te lees.</string>
   <!-- Labels for the WRITE_SETTINGS permission -->
-  <string name="permlab_writeSettings">verander CM stelsel instellings</string>
-  <string name="permdesc_writeSettings">Laat \'n toep toe om CM stelsel instellings te verander.</string>
+  <string name="permlab_writeSettings">verander Lineage stelsel instellings</string>
+  <string name="permdesc_writeSettings">Laat \'n toep toe om Lineage stelsel instellings te verander.</string>
   <!-- Labels for the WRITE_SECURE_SETTINGS permission -->
-  <string name="permlab_writeSecureSettings">verander CM veilige instellings</string>
-  <string name="permdesc_writeSecureSettings">Laat \'n toep toe om CM veilige stelsel instellings te verander. Nie vir gebruik deur normale toeps nie.</string>
+  <string name="permlab_writeSecureSettings">verander Lineage veilige instellings</string>
+  <string name="permdesc_writeSecureSettings">Laat \'n toep toe om Lineage veilige stelsel instellings te verander. Nie vir gebruik deur normale toeps nie.</string>
   <!-- Labels for the MANAGE_PERSISTENT_STORAGE permission. -->
   <string name="permlab_managePersistentStorage">bestuur aanhoudende spasie</string>
   <string name="permdesc_managePersistentStorage">Laat \'n toep toe om eienskappe te skryf of lees, al word jou toestel herstel na fabriek instellings.</string>
@@ -174,10 +174,10 @@
   <!-- LiveDisplay manager permission -->
   <string name="permlab_manageLiveDisplay">bestuur LiveDisplay instellings</string>
   <string name="permdesc_manageLiveDisplay">Laat \'n toep toe om gevorderde skerm instellings te konfigureer.</string>
-  <!-- CMAudioService - observe session changes permission -->
+  <!-- LineageAudioService - observe session changes permission -->
   <string name="permlab_observe_audio_sessions">neem oudio-sessie verandering waar</string>
   <string name="permdesc_observe_audio_sessions">Laat \'n toep toe, om oudio-strome wat geskep en vernietig word, waar te neem.</string>
-  <!-- CMAudioService - observe session changes permission -->
+  <!-- LineageAudioService - observe session changes permission -->
   <string name="permlab_manage_audio_sessions">bestuur oudio-sessie veranderinge</string>
   <string name="permdesc_manage_audio_sessions">Laat \'n toep toe om oudio-stroom bywerkings te stuur.</string>
   <!-- QuickSettings: Themes tile -->

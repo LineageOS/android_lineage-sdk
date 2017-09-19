@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.cyanogenmod.tests.hardware;
+package org.lineageos.tests.hardware;
 
 import android.os.Bundle;
 
@@ -23,31 +23,31 @@ import android.widget.Toast;
 import java.util.Arrays;
 import java.util.List;
 
-import cyanogenmod.hardware.CMHardwareManager;
-import cyanogenmod.hardware.DisplayMode;
+import lineageos.hardware.LineageHardwareManager;
+import lineageos.hardware.DisplayMode;
 
-import org.cyanogenmod.tests.TestActivity;
+import org.lineageos.tests.TestActivity;
 
 /**
  * Created by adnan on 8/31/15.
  */
-public class CMHardwareTest extends TestActivity {
-    private CMHardwareManager mHardwareManager;
+public class LineageHardwareTest extends TestActivity {
+    private LineageHardwareManager mHardwareManager;
 
     private static final List<Integer> FEATURES = Arrays.asList(
-            CMHardwareManager.FEATURE_ADAPTIVE_BACKLIGHT,
-            CMHardwareManager.FEATURE_COLOR_ENHANCEMENT,
-            CMHardwareManager.FEATURE_DISPLAY_COLOR_CALIBRATION,
-            CMHardwareManager.FEATURE_DISPLAY_GAMMA_CALIBRATION,
-            CMHardwareManager.FEATURE_HIGH_TOUCH_SENSITIVITY,
-            CMHardwareManager.FEATURE_KEY_DISABLE,
-            CMHardwareManager.FEATURE_LONG_TERM_ORBITS,
-            CMHardwareManager.FEATURE_SERIAL_NUMBER,
-            CMHardwareManager.FEATURE_SUNLIGHT_ENHANCEMENT,
-            CMHardwareManager.FEATURE_TOUCH_HOVERING,
-            CMHardwareManager.FEATURE_AUTO_CONTRAST,
-            CMHardwareManager.FEATURE_DISPLAY_MODES,
-            CMHardwareManager.FEATURE_PERSISTENT_STORAGE
+            LineageHardwareManager.FEATURE_ADAPTIVE_BACKLIGHT,
+            LineageHardwareManager.FEATURE_COLOR_ENHANCEMENT,
+            LineageHardwareManager.FEATURE_DISPLAY_COLOR_CALIBRATION,
+            LineageHardwareManager.FEATURE_DISPLAY_GAMMA_CALIBRATION,
+            LineageHardwareManager.FEATURE_HIGH_TOUCH_SENSITIVITY,
+            LineageHardwareManager.FEATURE_KEY_DISABLE,
+            LineageHardwareManager.FEATURE_LONG_TERM_ORBITS,
+            LineageHardwareManager.FEATURE_SERIAL_NUMBER,
+            LineageHardwareManager.FEATURE_SUNLIGHT_ENHANCEMENT,
+            LineageHardwareManager.FEATURE_TOUCH_HOVERING,
+            LineageHardwareManager.FEATURE_AUTO_CONTRAST,
+            LineageHardwareManager.FEATURE_DISPLAY_MODES,
+            LineageHardwareManager.FEATURE_PERSISTENT_STORAGE
     );
 
     private static final List<String> FEATURE_STRINGS = Arrays.asList(
@@ -67,19 +67,19 @@ public class CMHardwareTest extends TestActivity {
     );
 
     private static final List<Integer> BOOLEAN_FEATURES = Arrays.asList(
-            CMHardwareManager.FEATURE_ADAPTIVE_BACKLIGHT,
-            CMHardwareManager.FEATURE_COLOR_ENHANCEMENT,
-            CMHardwareManager.FEATURE_HIGH_TOUCH_SENSITIVITY,
-            CMHardwareManager.FEATURE_KEY_DISABLE,
-            CMHardwareManager.FEATURE_SUNLIGHT_ENHANCEMENT,
-            CMHardwareManager.FEATURE_TOUCH_HOVERING,
-            CMHardwareManager.FEATURE_AUTO_CONTRAST
+            LineageHardwareManager.FEATURE_ADAPTIVE_BACKLIGHT,
+            LineageHardwareManager.FEATURE_COLOR_ENHANCEMENT,
+            LineageHardwareManager.FEATURE_HIGH_TOUCH_SENSITIVITY,
+            LineageHardwareManager.FEATURE_KEY_DISABLE,
+            LineageHardwareManager.FEATURE_SUNLIGHT_ENHANCEMENT,
+            LineageHardwareManager.FEATURE_TOUCH_HOVERING,
+            LineageHardwareManager.FEATURE_AUTO_CONTRAST
     );
 
     @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
-        mHardwareManager = CMHardwareManager.getInstance(this);
+        mHardwareManager = LineageHardwareManager.getInstance(this);
     }
 
     @Override
@@ -93,70 +93,70 @@ public class CMHardwareTest extends TestActivity {
     }
 
     private boolean vibratorSupported() {
-        if (mHardwareManager.isSupported(CMHardwareManager.FEATURE_VIBRATOR)) {
+        if (mHardwareManager.isSupported(LineageHardwareManager.FEATURE_VIBRATOR)) {
             return true;
         } else {
-            Toast.makeText(CMHardwareTest.this, "Vibrator not supported",
+            Toast.makeText(LineageHardwareTest.this, "Vibrator not supported",
                     Toast.LENGTH_SHORT).show();
             return false;
         }
     }
 
     private boolean displayColorCalibrationSupported() {
-        if (mHardwareManager.isSupported(CMHardwareManager.FEATURE_DISPLAY_COLOR_CALIBRATION)) {
+        if (mHardwareManager.isSupported(LineageHardwareManager.FEATURE_DISPLAY_COLOR_CALIBRATION)) {
             return true;
         } else {
-            Toast.makeText(CMHardwareTest.this, "Display Color Calibration not supported",
+            Toast.makeText(LineageHardwareTest.this, "Display Color Calibration not supported",
                     Toast.LENGTH_SHORT).show();
             return false;
         }
     }
 
     private boolean ltoSupported() {
-        if (mHardwareManager.isSupported(CMHardwareManager.FEATURE_LONG_TERM_ORBITS)) {
+        if (mHardwareManager.isSupported(LineageHardwareManager.FEATURE_LONG_TERM_ORBITS)) {
             return true;
         } else {
-            Toast.makeText(CMHardwareTest.this, "Long Term Orbits not supported",
+            Toast.makeText(LineageHardwareTest.this, "Long Term Orbits not supported",
                     Toast.LENGTH_SHORT).show();
             return false;
         }
     }
 
     private boolean serialSupported() {
-        if (mHardwareManager.isSupported(CMHardwareManager.FEATURE_SERIAL_NUMBER)) {
+        if (mHardwareManager.isSupported(LineageHardwareManager.FEATURE_SERIAL_NUMBER)) {
             return true;
         } else {
-            Toast.makeText(CMHardwareTest.this, "Serial number not supported",
+            Toast.makeText(LineageHardwareTest.this, "Serial number not supported",
                     Toast.LENGTH_SHORT).show();
             return false;
         }
     }
 
     private boolean uniqueDeviceIdSupported() {
-        if (mHardwareManager.isSupported(CMHardwareManager.FEATURE_UNIQUE_DEVICE_ID)) {
+        if (mHardwareManager.isSupported(LineageHardwareManager.FEATURE_UNIQUE_DEVICE_ID)) {
             return true;
         } else {
-            Toast.makeText(CMHardwareTest.this, "Unique device ID not supported",
+            Toast.makeText(LineageHardwareTest.this, "Unique device ID not supported",
                     Toast.LENGTH_SHORT).show();
             return false;
         }
     }
 
     private boolean displayModesSupported() {
-        if (mHardwareManager.isSupported(CMHardwareManager.FEATURE_DISPLAY_MODES)) {
+        if (mHardwareManager.isSupported(LineageHardwareManager.FEATURE_DISPLAY_MODES)) {
             return true;
         } else {
-            Toast.makeText(CMHardwareTest.this, "Display modes not supported",
+            Toast.makeText(LineageHardwareTest.this, "Display modes not supported",
                     Toast.LENGTH_SHORT).show();
             return false;
         }
     }
 
     private boolean persistentStorageSupported() {
-        if (mHardwareManager.isSupported(CMHardwareManager.FEATURE_PERSISTENT_STORAGE)) {
+        if (mHardwareManager.isSupported(LineageHardwareManager.FEATURE_PERSISTENT_STORAGE)) {
             return true;
         } else {
-            Toast.makeText(CMHardwareTest.this, "Persistent storage not supported",
+            Toast.makeText(LineageHardwareTest.this, "Persistent storage not supported",
                     Toast.LENGTH_SHORT).show();
             return false;
         }
@@ -165,7 +165,7 @@ public class CMHardwareTest extends TestActivity {
     private Test[] mTests = new Test[] {
             new Test("Test get supported features") {
                 public void run() {
-                    Toast.makeText(CMHardwareTest.this, "Supported features " +
+                    Toast.makeText(LineageHardwareTest.this, "Supported features " +
                                     mHardwareManager.getSupportedFeatures(),
                             Toast.LENGTH_SHORT).show();
                 }
@@ -184,7 +184,7 @@ public class CMHardwareTest extends TestActivity {
                         builder.append("Feature " + feature + "\n")
                                 .append("is supported " + supported + "\n");
                     }
-                    Toast.makeText(CMHardwareTest.this, "Supported features " +
+                    Toast.makeText(LineageHardwareTest.this, "Supported features " +
                                     builder.toString(),
                             Toast.LENGTH_SHORT).show();
                 }
@@ -198,7 +198,7 @@ public class CMHardwareTest extends TestActivity {
                                 .append("is enabled " + mHardwareManager.isSupported(feature)
                                         + "\n");
                     }
-                    Toast.makeText(CMHardwareTest.this, "Features " +
+                    Toast.makeText(LineageHardwareTest.this, "Features " +
                                     builder.toString(),
                             Toast.LENGTH_SHORT).show();
                 }
@@ -207,7 +207,7 @@ public class CMHardwareTest extends TestActivity {
                 @Override
                 protected void run() {
                     if (vibratorSupported()) {
-                        Toast.makeText(CMHardwareTest.this, "Vibrator intensity " +
+                        Toast.makeText(LineageHardwareTest.this, "Vibrator intensity " +
                                         mHardwareManager.getVibratorIntensity(),
                                 Toast.LENGTH_SHORT).show();
                     }
@@ -217,7 +217,7 @@ public class CMHardwareTest extends TestActivity {
                 @Override
                 protected void run() {
                     if (vibratorSupported()) {
-                        Toast.makeText(CMHardwareTest.this, "Vibrator default intensity " +
+                        Toast.makeText(LineageHardwareTest.this, "Vibrator default intensity " +
                                         mHardwareManager.getVibratorDefaultIntensity(),
                                 Toast.LENGTH_SHORT).show();
                     }
@@ -227,7 +227,7 @@ public class CMHardwareTest extends TestActivity {
                 @Override
                 protected void run() {
                     if (vibratorSupported()) {
-                        Toast.makeText(CMHardwareTest.this, "Vibrator max intensity " +
+                        Toast.makeText(LineageHardwareTest.this, "Vibrator max intensity " +
                                         mHardwareManager.getVibratorMaxIntensity(),
                                 Toast.LENGTH_SHORT).show();
                     }
@@ -237,7 +237,7 @@ public class CMHardwareTest extends TestActivity {
                 @Override
                 protected void run() {
                     if (vibratorSupported()) {
-                        Toast.makeText(CMHardwareTest.this, "Vibrator min intensity " +
+                        Toast.makeText(LineageHardwareTest.this, "Vibrator min intensity " +
                                         mHardwareManager.getVibratorMinIntensity(),
                                 Toast.LENGTH_SHORT).show();
                     }
@@ -247,7 +247,7 @@ public class CMHardwareTest extends TestActivity {
                 @Override
                 protected void run() {
                     if (vibratorSupported()) {
-                        Toast.makeText(CMHardwareTest.this, "Vibrator min intensity " +
+                        Toast.makeText(LineageHardwareTest.this, "Vibrator min intensity " +
                                         mHardwareManager.getVibratorWarningIntensity(),
                                 Toast.LENGTH_SHORT).show();
                     }
@@ -257,7 +257,7 @@ public class CMHardwareTest extends TestActivity {
                 @Override
                 protected void run() {
                     if (displayColorCalibrationSupported()) {
-                        Toast.makeText(CMHardwareTest.this, "Display Color Calibration " +
+                        Toast.makeText(LineageHardwareTest.this, "Display Color Calibration " +
                                         mHardwareManager.getDisplayColorCalibration(),
                                 Toast.LENGTH_SHORT).show();
                     }
@@ -267,7 +267,7 @@ public class CMHardwareTest extends TestActivity {
                 @Override
                 protected void run() {
                     if (displayColorCalibrationSupported()) {
-                        Toast.makeText(CMHardwareTest.this, "Default Display Color Calibration " +
+                        Toast.makeText(LineageHardwareTest.this, "Default Display Color Calibration " +
                                         mHardwareManager.getDisplayColorCalibrationDefault(),
                                 Toast.LENGTH_SHORT).show();
                     }
@@ -277,7 +277,7 @@ public class CMHardwareTest extends TestActivity {
                 @Override
                 protected void run() {
                     if (displayColorCalibrationSupported()) {
-                        Toast.makeText(CMHardwareTest.this, "Display Color Calibration Max " +
+                        Toast.makeText(LineageHardwareTest.this, "Display Color Calibration Max " +
                                         mHardwareManager.getDisplayColorCalibrationMax(),
                                 Toast.LENGTH_SHORT).show();
                     }
@@ -287,7 +287,7 @@ public class CMHardwareTest extends TestActivity {
                 @Override
                 protected void run() {
                     if (displayColorCalibrationSupported()) {
-                        Toast.makeText(CMHardwareTest.this, "Display Color Calibration Min " +
+                        Toast.makeText(LineageHardwareTest.this, "Display Color Calibration Min " +
                                         mHardwareManager.getDisplayColorCalibrationMin(),
                                 Toast.LENGTH_SHORT).show();
                     }
@@ -305,7 +305,7 @@ public class CMHardwareTest extends TestActivity {
                 @Override
                 protected void run() {
                     if (ltoSupported()) {
-                        Toast.makeText(CMHardwareTest.this, "Long Term Orbit Source " +
+                        Toast.makeText(LineageHardwareTest.this, "Long Term Orbit Source " +
                                         mHardwareManager.getLtoSource(),
                                 Toast.LENGTH_SHORT).show();
                     }
@@ -315,7 +315,7 @@ public class CMHardwareTest extends TestActivity {
                 @Override
                 protected void run() {
                     if (ltoSupported()) {
-                        Toast.makeText(CMHardwareTest.this, "Long Term Orbit Destination " +
+                        Toast.makeText(LineageHardwareTest.this, "Long Term Orbit Destination " +
                                         mHardwareManager.getLtoDestination(),
                                 Toast.LENGTH_SHORT).show();
                     }
@@ -325,7 +325,7 @@ public class CMHardwareTest extends TestActivity {
                 @Override
                 protected void run() {
                     if (ltoSupported()) {
-                        Toast.makeText(CMHardwareTest.this, "Long Term Orbit Download Interval " +
+                        Toast.makeText(LineageHardwareTest.this, "Long Term Orbit Download Interval " +
                                         mHardwareManager.getLtoDownloadInterval(),
                                 Toast.LENGTH_SHORT).show();
                     }
@@ -335,7 +335,7 @@ public class CMHardwareTest extends TestActivity {
                 @Override
                 protected void run() {
                     if (serialSupported()) {
-                        Toast.makeText(CMHardwareTest.this, "Serial number " +
+                        Toast.makeText(LineageHardwareTest.this, "Serial number " +
                                         mHardwareManager.getSerialNumber(),
                                 Toast.LENGTH_SHORT).show();
                     }
@@ -345,7 +345,7 @@ public class CMHardwareTest extends TestActivity {
                 @Override
                 protected void run() {
                     if (uniqueDeviceIdSupported()) {
-                        Toast.makeText(CMHardwareTest.this, "Unique Device ID " +
+                        Toast.makeText(LineageHardwareTest.this, "Unique Device ID " +
                                         mHardwareManager.getUniqueDeviceId(),
                                 Toast.LENGTH_SHORT).show();
                     }
@@ -359,7 +359,7 @@ public class CMHardwareTest extends TestActivity {
                         for (DisplayMode displayMode : mHardwareManager.getDisplayModes()) {
                             builder.append("Display mode " + displayMode.name + "\n");
                         }
-                        Toast.makeText(CMHardwareTest.this, "Display modes: \n"
+                        Toast.makeText(LineageHardwareTest.this, "Display modes: \n"
                                         + builder.toString(), Toast.LENGTH_SHORT).show();
                     }
                 }
@@ -368,7 +368,7 @@ public class CMHardwareTest extends TestActivity {
                 @Override
                 protected void run() {
                     if (displayModesSupported()) {
-                        Toast.makeText(CMHardwareTest.this, "Default Display Mode " +
+                        Toast.makeText(LineageHardwareTest.this, "Default Display Mode " +
                                         mHardwareManager.getCurrentDisplayMode(),
                                 Toast.LENGTH_SHORT).show();
                     }
@@ -378,7 +378,7 @@ public class CMHardwareTest extends TestActivity {
                 @Override
                 protected void run() {
                     if (displayModesSupported()) {
-                        Toast.makeText(CMHardwareTest.this, "Default Display Mode " +
+                        Toast.makeText(LineageHardwareTest.this, "Default Display Mode " +
                                         mHardwareManager.getCurrentDisplayMode(),
                                 Toast.LENGTH_SHORT).show();
                     }

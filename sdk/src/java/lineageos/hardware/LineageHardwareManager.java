@@ -14,7 +14,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package cyanogenmod.hardware;
+package lineageos.hardware;
 
 import android.content.Context;
 import android.os.IBinder;
@@ -25,8 +25,8 @@ import android.util.Range;
 
 import com.android.internal.annotations.VisibleForTesting;
 
-import cyanogenmod.app.CMContextConstants;
-import cyanogenmod.hardware.HSIC;
+import lineageos.app.LineageContextConstants;
+import lineageos.hardware.HSIC;
 
 import java.io.UnsupportedEncodingException;
 import java.lang.IllegalArgumentException;
@@ -36,17 +36,17 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
- * Manages access to CyanogenMod hardware extensions
+ * Manages access to LineageOS hardware extensions
  *
  *  <p>
  *  This manager requires the HARDWARE_ABSTRACTION_ACCESS permission.
  *  <p>
- *  To get the instance of this class, utilize CMHardwareManager#getInstance(Context context)
+ *  To get the instance of this class, utilize LineageHardwareManager#getInstance(Context context)
  */
-public final class CMHardwareManager {
-    private static final String TAG = "CMHardwareManager";
+public final class LineageHardwareManager {
+    private static final String TAG = "LineageHardwareManager";
 
-    private static ICMHardwareService sService;
+    private static ILineageHardwareService sService;
 
     private Context mContext;
 
@@ -113,7 +113,7 @@ public final class CMHardwareManager {
     /**
      * Double-tap the touch panel to wake up the device
      *
-     * @deprecated This functionality is replaced by AOSP's implementation as of CM 13.0.
+     * @deprecated This functionality is replaced by AOSP's implementation as of Lineage 13.0.
      */
     @Deprecated
     @VisibleForTesting
@@ -190,12 +190,12 @@ public final class CMHardwareManager {
         FEATURE_THERMAL_MONITOR
     );
 
-    private static CMHardwareManager sCMHardwareManagerInstance;
+    private static LineageHardwareManager sLineageHardwareManagerInstance;
 
     /**
      * @hide to prevent subclassing from outside of the framework
      */
-    private CMHardwareManager(Context context) {
+    private LineageHardwareManager(Context context) {
         Context appContext = context.getApplicationContext();
         if (appContext != null) {
             mContext = appContext;
@@ -205,33 +205,33 @@ public final class CMHardwareManager {
         sService = getService();
 
         if (context.getPackageManager().hasSystemFeature(
-                CMContextConstants.Features.HARDWARE_ABSTRACTION) && !checkService()) {
-            Log.wtf(TAG, "Unable to get CMHardwareService. The service either" +
+                LineageContextConstants.Features.HARDWARE_ABSTRACTION) && !checkService()) {
+            Log.wtf(TAG, "Unable to get LineageHardwareService. The service either" +
                     " crashed, was not started, or the interface has been called to early in" +
                     " SystemServer init");
         }
     }
 
     /**
-     * Get or create an instance of the {@link cyanogenmod.hardware.CMHardwareManager}
+     * Get or create an instance of the {@link lineageos.hardware.LineageHardwareManager}
      * @param context
-     * @return {@link CMHardwareManager}
+     * @return {@link LineageHardwareManager}
      */
-    public static CMHardwareManager getInstance(Context context) {
-        if (sCMHardwareManagerInstance == null) {
-            sCMHardwareManagerInstance = new CMHardwareManager(context);
+    public static LineageHardwareManager getInstance(Context context) {
+        if (sLineageHardwareManagerInstance == null) {
+            sLineageHardwareManagerInstance = new LineageHardwareManager(context);
         }
-        return sCMHardwareManagerInstance;
+        return sLineageHardwareManagerInstance;
     }
 
     /** @hide */
-    public static ICMHardwareService getService() {
+    public static ILineageHardwareService getService() {
         if (sService != null) {
             return sService;
         }
-        IBinder b = ServiceManager.getService(CMContextConstants.CM_HARDWARE_SERVICE);
+        IBinder b = ServiceManager.getService(LineageContextConstants.LINEAGE_HARDWARE_SERVICE);
         if (b != null) {
-            sService = ICMHardwareService.Stub.asInterface(b);
+            sService = ILineageHardwareService.Stub.asInterface(b);
             return sService;
         }
         return null;
@@ -251,9 +251,9 @@ public final class CMHardwareManager {
     }
 
     /**
-     * Determine if a CM Hardware feature is supported on this device
+     * Determine if a Lineage Hardware feature is supported on this device
      *
-     * @param feature The CM Hardware feature to query
+     * @param feature The Lineage Hardware feature to query
      *
      * @return true if the feature is supported, false otherwise.
      */
@@ -286,7 +286,7 @@ public final class CMHardwareManager {
      *
      * Only used for features which have simple enable/disable controls.
      *
-     * @param feature the CM Hardware feature to query
+     * @param feature the Lineage Hardware feature to query
      *
      * @return true if the feature is enabled, false otherwise.
      */
@@ -309,7 +309,7 @@ public final class CMHardwareManager {
      *
      * Only used for features which have simple enable/disable controls.
      *
-     * @param feature the CM Hardware feature to set
+     * @param feature the Lineage Hardware feature to set
      * @param enable true to enable, false to disale
      *
      * @return true if the feature is enabled, false otherwise.
@@ -1003,14 +1003,14 @@ public final class CMHardwareManager {
      */
     private boolean checkService() {
         if (sService == null) {
-            Log.w(TAG, "not connected to CMHardwareManagerService");
+            Log.w(TAG, "not connected to LineageHardwareManagerService");
             return false;
         }
         return true;
     }
 
     /**
-     * @return current thermal {@link cyanogenmod.hardware.ThermalListenerCallback.State}
+     * @return current thermal {@link lineageos.hardware.ThermalListenerCallback.State}
      */
     public int getThermalState() {
         try {

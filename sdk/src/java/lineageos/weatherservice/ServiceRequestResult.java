@@ -14,18 +14,18 @@
  * limitations under the License.
  */
 
-package cyanogenmod.weatherservice;
+package lineageos.weatherservice;
 
 import android.annotation.NonNull;
 import android.os.Parcel;
 import android.os.Parcelable;
 
 import android.text.TextUtils;
-import cyanogenmod.os.Build;
-import cyanogenmod.os.Concierge;
-import cyanogenmod.os.Concierge.ParcelInfo;
-import cyanogenmod.weather.WeatherLocation;
-import cyanogenmod.weather.WeatherInfo;
+import lineageos.os.Build;
+import lineageos.os.Concierge;
+import lineageos.os.Concierge.ParcelInfo;
+import lineageos.weather.WeatherLocation;
+import lineageos.weather.WeatherInfo;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -47,7 +47,7 @@ public final class ServiceRequestResult implements Parcelable {
         ParcelInfo parcelInfo = Concierge.receiveParcel(in);
         int parcelableVersion = parcelInfo.getParcelVersion();
 
-        if (parcelableVersion >= Build.CM_VERSION_CODES.ELDERBERRY) {
+        if (parcelableVersion >= Build.LINEAGE_VERSION_CODES.ELDERBERRY) {
             mKey = in.readString();
             int hasWeatherInfo = in.readInt();
             if (hasWeatherInfo == 1) {

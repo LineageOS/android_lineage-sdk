@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.cyanogenmod.tests.settings.unit;
+package org.lineageos.tests.settings.unit;
 
 import android.app.INotificationManager;
 import android.content.Context;
@@ -35,17 +35,17 @@ import android.provider.Settings;
 import android.text.format.DateUtils;
 import android.util.Log;
 
-import cyanogenmod.app.CMContextConstants;
-import cyanogenmod.app.PartnerInterface;
+import lineageos.app.LineageContextConstants;
+import lineageos.app.PartnerInterface;
 
 import java.util.List;
 
 /**
  * Unit test for PartnerInterface
  */
-public class CMPartnerInterfaceTest extends AndroidTestCase {
+public class LineagePartnerInterfaceTest extends AndroidTestCase {
 
-    private static final String TAG = "CMPartnerInterfaceTest";
+    private static final String TAG = "LineagePartnerInterfaceTest";
 
     private PartnerInterface mPartnerInterface;
 
@@ -54,7 +54,7 @@ public class CMPartnerInterfaceTest extends AndroidTestCase {
         super.setUp();
         // Only run this if we support partner interfaces
         org.junit.Assume.assumeTrue(mContext.getPackageManager().hasSystemFeature(
-                CMContextConstants.Features.PARTNER));
+                LineageContextConstants.Features.PARTNER));
         mPartnerInterface = PartnerInterface.getInstance(getContext());
 
         setupAirplaneModeTests();
@@ -221,7 +221,7 @@ public class CMPartnerInterfaceTest extends AndroidTestCase {
 
                         if (bufferSize != AudioRecord.ERROR_BAD_VALUE) {
                             AudioRecord recorder = new AudioRecord(
-                                    cyanogenmod.media.MediaRecorder.AudioSource.HOTWORD,
+                                    lineageos.media.MediaRecorder.AudioSource.HOTWORD,
                                     rate, channelConfig, audioFormat, bufferSize);
 
                             if (recorder.getState() == AudioRecord.STATE_INITIALIZED)

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.cyanogenmod.tests.customtiles.unit;
+package org.lineageos.tests.customtiles.unit;
 
 import android.app.PendingIntent;
 import android.content.ComponentName;
@@ -30,38 +30,38 @@ import android.test.suitebuilder.annotation.SmallTest;
 import android.text.TextUtils;
 import android.util.Log;
 
-import cyanogenmod.app.CMContextConstants;
-import cyanogenmod.app.CMStatusBarManager;
-import cyanogenmod.app.CustomTile;
-import cyanogenmod.app.CustomTileListenerService;
-import cyanogenmod.app.ICMStatusBarManager;
-import org.cyanogenmod.tests.R;
+import lineageos.app.LineageContextConstants;
+import lineageos.app.LineageStatusBarManager;
+import lineageos.app.CustomTile;
+import lineageos.app.CustomTileListenerService;
+import lineageos.app.ILineageStatusBarManager;
+import org.lineageos.tests.R;
 
 import java.util.concurrent.CountDownLatch;
 
-public class CMStatusBarManagerTest extends AndroidTestCase {
-    private static final String TAG = CMStatusBarManagerTest.class.getSimpleName();
+public class LineageStatusBarManagerTest extends AndroidTestCase {
+    private static final String TAG = LineageStatusBarManagerTest.class.getSimpleName();
     private static final int COUNTDOWN = 1;
-    private CMStatusBarManager mCMStatusBarManager;
+    private LineageStatusBarManager mLineageStatusBarManager;
 
     @Override
     protected void setUp() throws Exception {
         super.setUp();
-        // Only run this if we support cm status bar service
+        // Only run this if we support lineage status bar service
         org.junit.Assume.assumeTrue(mContext.getPackageManager().hasSystemFeature(
-                CMContextConstants.Features.STATUSBAR));
-        mCMStatusBarManager = CMStatusBarManager.getInstance(mContext);
+                LineageContextConstants.Features.STATUSBAR));
+        mLineageStatusBarManager = LineageStatusBarManager.getInstance(mContext);
     }
 
     @SmallTest
     public void testManagerExists() {
-        assertNotNull(mCMStatusBarManager);
+        assertNotNull(mLineageStatusBarManager);
     }
 
     @SmallTest
     public void testManagerServiceIsAvailable() {
-        ICMStatusBarManager icmHardwareManagerService = mCMStatusBarManager.getService();
-        assertNotNull(icmHardwareManagerService);
+        ILineageStatusBarManager ilineageHardwareManagerService = mLineageStatusBarManager.getService();
+        assertNotNull(ilineageHardwareManagerService);
     }
 
     @MediumTest
@@ -115,12 +115,12 @@ public class CMStatusBarManagerTest extends AndroidTestCase {
                         super.onListenerConnected();
                         Log.d(TAG, "Connected");
                         // publish
-                        mCMStatusBarManager.publishTileAsUser(null, 1337, expectedCustomTile,
+                        mLineageStatusBarManager.publishTileAsUser(null, 1337, expectedCustomTile,
                                 expectedUserHandle);
                     }
 
                     @Override
-                    public void onCustomTilePosted(cyanogenmod.app.StatusBarPanelCustomTile sbc) {
+                    public void onCustomTilePosted(lineageos.app.StatusBarPanelCustomTile sbc) {
                         super.onCustomTilePosted(sbc);
                         Log.d(TAG, "Posted " + sbc.getCustomTile());
                         if (TextUtils.equals(expectedCustomTile.label, sbc.getCustomTile().label)) {
@@ -138,7 +138,7 @@ public class CMStatusBarManagerTest extends AndroidTestCase {
             throw new AssertionError(e);
         }
 
-        mCMStatusBarManager.removeTileAsUser(null, 1337, expectedUserHandle);
+        mLineageStatusBarManager.removeTileAsUser(null, 1337, expectedUserHandle);
 
         unregisterCustomTileListenerService(customTileListenerService);
     }
@@ -155,11 +155,11 @@ public class CMStatusBarManagerTest extends AndroidTestCase {
                         super.onListenerConnected();
                         Log.d(TAG, "Connected");
                         // publish as user
-                        mCMStatusBarManager.publishTile(1338, expectedCustomTile);
+                        mLineageStatusBarManager.publishTile(1338, expectedCustomTile);
                     }
 
                     @Override
-                    public void onCustomTilePosted(cyanogenmod.app.StatusBarPanelCustomTile sbc) {
+                    public void onCustomTilePosted(lineageos.app.StatusBarPanelCustomTile sbc) {
                         super.onCustomTilePosted(sbc);
                         Log.d(TAG, "Posted " + sbc.getCustomTile());
                         if (TextUtils.equals(expectedCustomTile.label, sbc.getCustomTile().label)) {
@@ -168,7 +168,7 @@ public class CMStatusBarManagerTest extends AndroidTestCase {
                     }
 
                     @Override
-                    public void onCustomTileRemoved(cyanogenmod.app.StatusBarPanelCustomTile sbc) {
+                    public void onCustomTileRemoved(lineageos.app.StatusBarPanelCustomTile sbc) {
                         super.onCustomTileRemoved(sbc);
                         Log.d(TAG, "Removed " + sbc.getCustomTile());
                         if (TextUtils.equals(expectedCustomTile.label, sbc.getCustomTile().label)) {
@@ -206,7 +206,7 @@ public class CMStatusBarManagerTest extends AndroidTestCase {
                     + " custom tile listener service");
             customTileListenerService.registerAsSystemService(mContext,
                     new ComponentName(mContext.getPackageName(),
-                            CMStatusBarManagerTest.this.getClass().getCanonicalName()),
+                            LineageStatusBarManagerTest.this.getClass().getCanonicalName()),
                     UserHandle.USER_ALL);
         } catch (RemoteException e) {
             throw new AssertionError(e);

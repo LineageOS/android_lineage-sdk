@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package org.cyanogenmod.platform.internal;
+package org.lineageos.platform.internal;
 
 import android.content.Context;
 import com.android.server.SystemService;
 
-public abstract class CMSystemService extends SystemService {
-    public CMSystemService(Context context) {
+public abstract class LineageSystemService extends SystemService {
+    public LineageSystemService(Context context) {
         super(context);
     }
 

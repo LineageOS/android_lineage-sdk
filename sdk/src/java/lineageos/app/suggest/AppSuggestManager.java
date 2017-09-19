@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package cyanogenmod.app.suggest;
+package lineageos.app.suggest;
 
 import android.content.Context;
 import android.content.Intent;
@@ -31,12 +31,12 @@ import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 
-import cyanogenmod.app.CMContextConstants;
-import cyanogenmod.app.suggest.ApplicationSuggestion;
+import lineageos.app.LineageContextConstants;
+import lineageos.app.suggest.ApplicationSuggestion;
 
 /**
  * Provides an interface to get information about suggested apps for an intent which may include
- * applications not installed on the device. This is used by the CMResolver in order to provide
+ * applications not installed on the device. This is used by the LineageResolver in order to provide
  * suggestions when an intent is fired but no application exists for the given intent.
  *
  * @hide
@@ -68,7 +68,7 @@ public class AppSuggestManager {
 
         sInstance = new AppSuggestManager(context);
 
-        if (context.getPackageManager().hasSystemFeature(CMContextConstants.Features.APP_SUGGEST)
+        if (context.getPackageManager().hasSystemFeature(LineageContextConstants.Features.APP_SUGGEST)
                 && sImpl == null) {
             throw new RuntimeException("Unable to get AppSuggestManagerService. " +
                     "The service either crashed, was not started, or the interface has been" +
@@ -86,7 +86,7 @@ public class AppSuggestManager {
     /** @hide */
     public static synchronized IAppSuggestManager getService() {
         if (sImpl == null) {
-            IBinder b = ServiceManager.getService(CMContextConstants.CM_APP_SUGGEST_SERVICE);
+            IBinder b = ServiceManager.getService(LineageContextConstants.LINEAGE_APP_SUGGEST_SERVICE);
             if (b != null) {
                 sImpl = IAppSuggestManager.Stub.asInterface(b);
             } else {

@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package org.cyanogenmod.tests.versioning.unit;
+package org.lineageos.tests.versioning.unit;
 
 import android.test.suitebuilder.annotation.SmallTest;
-import cyanogenmod.os.Build;
+import lineageos.os.Build;
 
 import android.test.AndroidTestCase;
-import cyanogenmod.os.Concierge;
+import lineageos.os.Concierge;
 
 /**
  * Created by adnan on 7/14/15.
@@ -34,17 +34,17 @@ public class BuildTest extends AndroidTestCase {
 
     @SmallTest
     public void testFetchSdkApiLevelExists() {
-        assertNotNull(Build.CM_VERSION.SDK_INT);
+        assertNotNull(Build.LINEAGE_VERSION.SDK_INT);
     }
 
     @SmallTest
     public void testSdkApiLevelCurrent() {
-        assertEquals(Concierge.PARCELABLE_VERSION, Build.CM_VERSION.SDK_INT);
+        assertEquals(Concierge.PARCELABLE_VERSION, Build.LINEAGE_VERSION.SDK_INT);
     }
 
     @SmallTest
     public void testSdkApiLevelCanMatch() {
-        String apiName = Build.getNameForSDKInt(Build.CM_VERSION.SDK_INT);
+        String apiName = Build.getNameForSDKInt(Build.LINEAGE_VERSION.SDK_INT);
         assertNotNull(apiName);
         assertEquals(Build.getNameForSDKInt(Concierge.PARCELABLE_VERSION), apiName);
     }
@@ -52,7 +52,7 @@ public class BuildTest extends AndroidTestCase {
     @SmallTest
     public void testSdkApiLevelSkippedIfGreaterThanAllowed() {
         int i = 0;
-        if (Build.CM_VERSION.SDK_INT > Concierge.PARCELABLE_VERSION + 1) {
+        if (Build.LINEAGE_VERSION.SDK_INT > Concierge.PARCELABLE_VERSION + 1) {
             i++;
         }
         assertEquals(0, i);

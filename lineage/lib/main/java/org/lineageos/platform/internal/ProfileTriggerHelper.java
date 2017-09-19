@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.cyanogenmod.platform.internal;
+package org.lineageos.platform.internal;
 
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
@@ -33,10 +33,10 @@ import android.os.UserHandle;
 import android.text.TextUtils;
 import android.util.ArraySet;
 import android.util.Log;
-import cyanogenmod.app.Profile;
-import cyanogenmod.app.Profile.ProfileTrigger;
-import cyanogenmod.app.ProfileManager;
-import cyanogenmod.providers.CMSettings;
+import lineageos.app.Profile;
+import lineageos.app.Profile.ProfileTrigger;
+import lineageos.app.ProfileManager;
+import lineageos.providers.LineageSettings;
 
 import java.util.Set;
 import java.util.UUID;
@@ -85,13 +85,13 @@ public class ProfileTriggerHelper extends BroadcastReceiver {
         updateEnabled();
 
         mContext.getContentResolver().registerContentObserver(
-                CMSettings.System.getUriFor(CMSettings.System.SYSTEM_PROFILES_ENABLED), false,
+                LineageSettings.System.getUriFor(LineageSettings.System.SYSTEM_PROFILES_ENABLED), false,
                 mSettingsObserver);
     }
 
     public void updateEnabled() {
-        boolean enabled = CMSettings.System.getInt(mContext.getContentResolver(),
-                CMSettings.System.SYSTEM_PROFILES_ENABLED, 1) == 1;
+        boolean enabled = LineageSettings.System.getInt(mContext.getContentResolver(),
+                LineageSettings.System.SYSTEM_PROFILES_ENABLED, 1) == 1;
         if (enabled && !mFilterRegistered) {
             Log.v(TAG, "Enabling");
             mContext.registerReceiver(this, mIntentFilter);
