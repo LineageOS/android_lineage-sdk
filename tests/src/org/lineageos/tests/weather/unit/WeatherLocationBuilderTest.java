@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package org.cyanogenmod.tests.weather.unit;
+package org.lineageos.tests.weather.unit;
 
 import android.os.Parcel;
 import android.test.AndroidTestCase;
 import android.test.suitebuilder.annotation.SmallTest;
-import cyanogenmod.weather.WeatherLocation;
+import lineageos.weather.WeatherLocation;
 
 public class WeatherLocationBuilderTest extends AndroidTestCase {
 

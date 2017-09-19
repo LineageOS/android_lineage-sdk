@@ -18,7 +18,7 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Label for the LineageOS system components when they are shown to the user. -->
-  <string name="cyanogenmod_system_label">سیستم سایانوژن‌مود</string>
+  <string name="lineageos_system_label">سیستم سایانوژن‌مود</string>
   <string name="permlab_publishCustomTile">ایجاد کاشی سفارشی در پنل تنظیمات سریع</string>
   <string name="permdesc_publishCustomTile">به برنامه اجازه می‌دهد یک کاشی در تنظیمات سریع ایجاد کند.</string>
   <string name="permlab_modifyNetworkSettings">تغییر تنظیمات شبکه‌ی سیستم</string>
@@ -38,7 +38,7 @@
   <string name="permdesc_modifyProfiles">به برنامه اجازه می‌دهد تا پروفایل‌های سیستم را تغییر دهد.</string>
   <!-- Labels for the HARDWARE_ABSTRACTION_ACCESS permission. -->
   <string name="permlab_useHardwareFramework">استفاده از چارچوب سخت‌افزار</string>
-  <string name="permdesc_useHardwareFramework">به برنامه اجازه می‌دهد به چارچوب سخت‌افزار CM دسترسی داشته باشد.</string>
+  <string name="permdesc_useHardwareFramework">به برنامه اجازه می‌دهد به چارچوب سخت‌افزار Lineage دسترسی داشته باشد.</string>
   <!-- Labels for the WRITE_ALARMS permission. -->
   <string name="permlab_write_alarms">تغییر مستقیم هشدارها</string>
   <string name="permdesc_write_alarms">به برنامه اجازه افزودن، تغییر یا حذف تمام هشدارهای دستگاه را می‌دهد.</string>
@@ -49,11 +49,11 @@
   <string name="permlab_read_alarms">دسترسی به هشدارهای زمان‌بندی شده</string>
   <string name="permdesc_read_alarms">به برنامه اجازه می‌دهد هشدارهای زمان‌بندی شده را مشاهده کند.</string>
   <!-- Labels for the WRITE_SETTINGS permission -->
-  <string name="permlab_writeSettings">تغییر تنظیمات سیستم CM</string>
-  <string name="permdesc_writeSettings">به برنامه اجازه می‌دهد که تنظیمات سیستم CM را تغییر دهد.</string>
+  <string name="permlab_writeSettings">تغییر تنظیمات سیستم Lineage</string>
+  <string name="permdesc_writeSettings">به برنامه اجازه می‌دهد که تنظیمات سیستم Lineage را تغییر دهد.</string>
   <!-- Labels for the WRITE_SECURE_SETTINGS permission -->
-  <string name="permlab_writeSecureSettings">تغییر تنظیمات امنیت سیستم CM</string>
-  <string name="permdesc_writeSecureSettings">به برنامه اجازه می‌دهد تا تنظیمات امنیت سیستم CM را تغییر دهد. برای استفاده برنامه‌های عادی پیشنهاد نمی‌شود.</string>
+  <string name="permlab_writeSecureSettings">تغییر تنظیمات امنیت سیستم Lineage</string>
+  <string name="permdesc_writeSecureSettings">به برنامه اجازه می‌دهد تا تنظیمات امنیت سیستم Lineage را تغییر دهد. برای استفاده برنامه‌های عادی پیشنهاد نمی‌شود.</string>
   <!-- Labels for the MANAGE_PERSISTENT_STORAGE permission. -->
   <string name="permlab_managePersistentStorage">مدیریت حافظه پایدار</string>
   <string name="permdesc_managePersistentStorage">به برنامه اجازه می‌دهد ویژگی‌هایی را مشاهده و ویرایش کند که بعد از تنظیم مجدد کارخانه ممکن است باقی بماند.</string>
@@ -105,8 +105,8 @@
   <!-- DataUsageProvider read permission title -->
   <!-- DataUsageProvider read permission description -->
   <!-- LiveDisplay manager permission -->
-  <!-- CMAudioService - observe session changes permission -->
-  <!-- CMAudioService - observe session changes permission -->
+  <!-- LineageAudioService - observe session changes permission -->
+  <!-- LineageAudioService - observe session changes permission -->
   <!-- QuickSettings: Themes tile -->
   <!-- Privacy Guard -->
   <!-- Permissions used by remote preferences -->

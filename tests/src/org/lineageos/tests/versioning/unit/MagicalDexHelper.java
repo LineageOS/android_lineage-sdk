@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.cyanogenmod.tests.versioning.unit;
+package org.lineageos.tests.versioning.unit;
 
 import android.content.Context;
 import dalvik.system.DexFile;

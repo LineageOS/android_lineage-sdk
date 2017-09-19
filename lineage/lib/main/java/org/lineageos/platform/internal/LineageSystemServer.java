@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.cyanogenmod.platform.internal;
+package org.lineageos.platform.internal;
 
 import android.content.Context;
 import android.os.SystemProperties;
@@ -22,24 +22,24 @@ import android.util.Slog;
 import com.android.server.LocalServices;
 import com.android.server.SystemServiceManager;
 
-import org.cyanogenmod.platform.internal.common.CMSystemServiceHelper;
+import org.lineageos.platform.internal.common.LineageSystemServiceHelper;
 
 /**
- * Base CM System Server which handles the starting and states of various CM
+ * Base Lineage System Server which handles the starting and states of various Lineage
  * specific system services. Since its part of the main looper provided by the system
  * server, it will be available indefinitely (until all the things die).
  */
-public class CMSystemServer {
-    private static final String TAG = "CMSystemServer";
+public class LineageSystemServer {
+    private static final String TAG = "LineageSystemServer";
     private Context mSystemContext;
-    private CMSystemServiceHelper mSystemServiceHelper;
+    private LineageSystemServiceHelper mSystemServiceHelper;
 
     private static final String ENCRYPTING_STATE = "trigger_restart_min_framework";
     private static final String ENCRYPTED_STATE = "1";
 
-    public CMSystemServer(Context systemContext) {
+    public LineageSystemServer(Context systemContext) {
         mSystemContext = systemContext;
-        mSystemServiceHelper = new CMSystemServiceHelper(mSystemContext);
+        mSystemServiceHelper = new LineageSystemServiceHelper(mSystemContext);
     }
 
     public static boolean coreAppsOnly() {
@@ -60,7 +60,7 @@ public class CMSystemServer {
             startServices();
         } catch (Throwable ex) {
             Slog.e("System", "******************************************");
-            Slog.e("System", "************ Failure starting cm system services", ex);
+            Slog.e("System", "************ Failure starting lineage system services", ex);
             throw ex;
         }
     }
@@ -69,20 +69,20 @@ public class CMSystemServer {
         final Context context = mSystemContext;
         final SystemServiceManager ssm = LocalServices.getService(SystemServiceManager.class);
         String[] externalServices = context.getResources().getStringArray(
-                org.cyanogenmod.platform.internal.R.array.config_externalCMServices);
+                org.lineageos.platform.internal.R.array.config_externalLineageServices);
 
         for (String service : externalServices) {
             try {
                 Slog.i(TAG, "Attempting to start service " + service);
-                CMSystemService cmSystemService =  mSystemServiceHelper.getServiceFor(service);
+                LineageSystemService lineageSystemService =  mSystemServiceHelper.getServiceFor(service);
                 if (context.getPackageManager().hasSystemFeature(
-                        cmSystemService.getFeatureDeclaration())) {
-                    if (coreAppsOnly() && !cmSystemService.isCoreService()) {
+                        lineageSystemService.getFeatureDeclaration())) {
+                    if (coreAppsOnly() && !lineageSystemService.isCoreService()) {
                         Slog.d(TAG, "Not starting " + service +
                                 " - only parsing core apps");
                     } else {
                         Slog.i(TAG, "Starting service " + service);
-                        ssm.startService(cmSystemService.getClass());
+                        ssm.startService(lineageSystemService.getClass());
                     }
                 } else {
                     Slog.i(TAG, "Not starting service " + service +

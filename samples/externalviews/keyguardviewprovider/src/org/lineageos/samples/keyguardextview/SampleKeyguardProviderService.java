@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.cyanogenmod.samples.keyguardextview;
+package org.lineageos.samples.keyguardextview;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -23,7 +23,7 @@ import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
-import cyanogenmod.externalviews.KeyguardExternalViewProviderService;
+import lineageos.externalviews.KeyguardExternalViewProviderService;
 
 public class SampleKeyguardProviderService extends KeyguardExternalViewProviderService {
 

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.cyanogenmod.platform.internal.display;
+package org.lineageos.platform.internal.display;
 
 import android.app.AlarmManager;
 import android.app.PendingIntent;
@@ -51,7 +51,7 @@ public final class TwilightTracker {
     private static final String TAG = "TwilightTracker";
     private static final boolean DEBUG = false;
     private static final String ACTION_UPDATE_TWILIGHT_STATE =
-            "cyanogenmod.platform.intent.action.UPDATE_TWILIGHT_STATE";
+            "lineageos.platform.intent.action.UPDATE_TWILIGHT_STATE";
 
     private final Object mLock = new Object();
 

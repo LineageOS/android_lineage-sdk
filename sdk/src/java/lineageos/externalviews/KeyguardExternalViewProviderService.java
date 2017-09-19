@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package cyanogenmod.externalviews;
+package lineageos.externalviews;
 
 import android.app.Service;
 import android.content.Context;
@@ -50,7 +50,7 @@ import java.util.concurrent.FutureTask;
  * wish to provide a view to be displayed within the lock screen should extend this service.
  *
  * <p>Applications extending this class should include the
- * {@link cyanogenmod.platform.Manifest.permission#THIRD_PARTY_KEYGUARD} permission in their
+ * {@link lineageos.platform.Manifest.permission#THIRD_PARTY_KEYGUARD} permission in their
  * manifest</p>
 
  * <p>Applications extending this class should also extend
@@ -68,12 +68,12 @@ public abstract class KeyguardExternalViewProviderService extends Service {
      *
      * <p>{@code
      *  <intent-filter>
-     *      <action android:name="cyanogenmod.externalviews.KeyguardExternalViewProviderService"/>
+     *      <action android:name="lineageos.externalviews.KeyguardExternalViewProviderService"/>
      *  </intent-filter>
      *}</p>
      */
     public static final String SERVICE_INTERFACE =
-            "cyanogenmod.externalviews.KeyguardExternalViewProviderService";
+            "lineageos.externalviews.KeyguardExternalViewProviderService";
 
     /**
      * Name under which an external keyguard view publishes information about itself.
@@ -81,7 +81,7 @@ public abstract class KeyguardExternalViewProviderService extends Service {
      * a <code>&lt;lockscreen&gt;</code>
      * tag.
      */
-    public static final String META_DATA = "cyanogenmod.externalviews.keyguard";
+    public static final String META_DATA = "lineageos.externalviews.keyguard";
 
     private WindowManager mWindowManager;
     private final Handler mHandler = new Handler();
@@ -595,7 +595,7 @@ public abstract class KeyguardExternalViewProviderService extends Service {
          * attention.  The user will still be able to bring the notifications back into view by
          * sliding down from the status bar.
          * Calling this method has no effect for non-interactive components.</p>
-         * @deprecated As of SDK version {@link cyanogenmod.os.Build.CM_VERSION_CODES#ELDERBERRY}
+         * @deprecated As of SDK version {@link lineageos.os.Build.LINEAGE_VERSION_CODES#ELDERBERRY}
          * this does nothing.
          */
         @Deprecated

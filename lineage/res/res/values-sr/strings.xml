@@ -18,7 +18,7 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Label for the LineageOS system components when they are shown to the user. -->
-  <string name="cyanogenmod_system_label">Систем LineageOS</string>
+  <string name="lineageos_system_label">Систем LineageOS</string>
   <string name="permlab_publishCustomTile">прављење прилагођених плочица на панелу са брзим подешавањима</string>
   <string name="permdesc_publishCustomTile">Апликација може да додаје плочице на панел са брзим подешавањима.</string>
   <string name="permlab_modifyNetworkSettings">промена мрежних подешавања система</string>
@@ -173,10 +173,10 @@
   <!-- LiveDisplay manager permission -->
   <string name="permlab_manageLiveDisplay">управљање подешавањима LiveDisplay-а</string>
   <string name="permdesc_manageLiveDisplay">Апликација може да мења подешавања напредног приказа.</string>
-  <!-- CMAudioService - observe session changes permission -->
+  <!-- LineageAudioService - observe session changes permission -->
   <string name="permlab_observe_audio_sessions">преглед измена звучних сесија</string>
   <string name="permdesc_observe_audio_sessions">Апликација може да прегледа звучне токове који се стварају и нестају.</string>
-  <!-- CMAudioService - observe session changes permission -->
+  <!-- LineageAudioService - observe session changes permission -->
   <string name="permlab_manage_audio_sessions">управљање изменама звучних сесија</string>
   <string name="permdesc_manage_audio_sessions">Апликација може да мења параметре звучних токова.</string>
   <!-- QuickSettings: Themes tile -->

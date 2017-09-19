@@ -18,7 +18,7 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Label for the LineageOS system components when they are shown to the user. -->
-  <string name="cyanogenmod_system_label">Σύστημα LineageOS</string>
+  <string name="lineageos_system_label">Σύστημα LineageOS</string>
   <string name="permlab_publishCustomTile">δημιουργία προσαρμοσμένου πλακιδίου στον Πίνακα Γρήγορων ρυθμίσεων</string>
   <string name="permdesc_publishCustomTile">Επιτρέπει σε μία εφαρμογή τη δημιουργία πλακιδίου στον Πίνακα Γρήγορων ρυθμίσεων.</string>
   <string name="permlab_modifyNetworkSettings">αλλαγή ρυθμίσεων δικτύου συστήματος</string>
@@ -38,7 +38,7 @@
   <string name="permdesc_modifyProfiles">Επιτρέπει σε μια εφαρμογή να τροποποιεί τα προφίλ του συστήματος.</string>
   <!-- Labels for the HARDWARE_ABSTRACTION_ACCESS permission. -->
   <string name="permlab_useHardwareFramework">χρήση του πλαισίου υλικού</string>
-  <string name="permdesc_useHardwareFramework">Επιτρέπει σε μια εφαρμογή την πρόσβαση στο πλαίσιο υλικού του CM.</string>
+  <string name="permdesc_useHardwareFramework">Επιτρέπει σε μια εφαρμογή την πρόσβαση στο πλαίσιο υλικού του Lineage.</string>
   <!-- Labels for the WRITE_ALARMS permission. -->
   <string name="permlab_write_alarms">άμεση επεξεργασία αφυπνίσεων</string>
   <string name="permdesc_write_alarms">Επιτρέπει σε μια εφαρμογή να προσθέσει, να τροποποιήσει ή να διαγράψει όλες τις αφυπνίσεις.</string>
@@ -49,11 +49,11 @@
   <string name="permlab_read_alarms">ανάγνωση προγραμματισμένων αφυπνίσεων</string>
   <string name="permdesc_read_alarms">Επιτρέπει σε μια εφαρμογή να διαβάσει τις προγραμματισμένες αφυπνίσεις.</string>
   <!-- Labels for the WRITE_SETTINGS permission -->
-  <string name="permlab_writeSettings">τροποποίηση ρυθμίσεων συστήματος CM</string>
-  <string name="permdesc_writeSettings">Επιτρέπει σε μια εφαρμογή να τροποποιεί τις ρυθμίσεις συστήματος του CM.</string>
+  <string name="permlab_writeSettings">τροποποίηση ρυθμίσεων συστήματος Lineage</string>
+  <string name="permdesc_writeSettings">Επιτρέπει σε μια εφαρμογή να τροποποιεί τις ρυθμίσεις συστήματος του Lineage.</string>
   <!-- Labels for the WRITE_SECURE_SETTINGS permission -->
-  <string name="permlab_writeSecureSettings">τροποποίηση ασφαλών ρυθμίσεων συστήματος CM</string>
-  <string name="permdesc_writeSecureSettings">Επιτρέπει σε μια εφαρμογή να τροποποιεί τις ασφαλείς ρυθμίσεις συστήματος του CM. Δεν χρησιμοποιείται από κανονικές εφαρμογές.</string>
+  <string name="permlab_writeSecureSettings">τροποποίηση ασφαλών ρυθμίσεων συστήματος Lineage</string>
+  <string name="permdesc_writeSecureSettings">Επιτρέπει σε μια εφαρμογή να τροποποιεί τις ασφαλείς ρυθμίσεις συστήματος του Lineage. Δεν χρησιμοποιείται από κανονικές εφαρμογές.</string>
   <!-- Labels for the MANAGE_PERSISTENT_STORAGE permission. -->
   <string name="permlab_managePersistentStorage">διαχείριση επίμονου χώρου αποθήκευσης</string>
   <string name="permdesc_managePersistentStorage">Επιτρέπει σε μια εφαρμογή να διαβάσει ή να γράψει ιδιότητες που μπορούν να επιμείνουν ακόμη και μετά από μια επαναφορά εργοστασιακών ρυθμίσεων.</string>
@@ -173,10 +173,10 @@
   <!-- LiveDisplay manager permission -->
   <string name="permlab_manageLiveDisplay">διαχείριση ρυθμίσεων LiveDisplay</string>
   <string name="permdesc_manageLiveDisplay">Επιτρέπει σε μια εφαρμογή να τροποποιεί τις ρυθμίσεις οθόνης για προχωρημένους.</string>
-  <!-- CMAudioService - observe session changes permission -->
+  <!-- LineageAudioService - observe session changes permission -->
   <string name="permlab_observe_audio_sessions">παρατήρηση αλλαγών στις συνεδρίες ήχου</string>
   <string name="permdesc_observe_audio_sessions">Επιτρέπει σε μια εφαρμογή να παρατηρεί τις ροές ήχου να δημιουργούνται και να καταστρέφονται.</string>
-  <!-- CMAudioService - observe session changes permission -->
+  <!-- LineageAudioService - observe session changes permission -->
   <string name="permlab_manage_audio_sessions">διαχείριση αλλαγών στις συνεδρίες ήχου</string>
   <string name="permdesc_manage_audio_sessions">Επιτρέπει σε μια εφαρμογή να στέλνει ενημερώσεις στη ροή ήχου.</string>
   <!-- QuickSettings: Themes tile -->

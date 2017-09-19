@@ -14,24 +14,24 @@
  * limitations under the License.
  */
 
-package cyanogenmod.preference;
+package lineageos.preference;
 
 import android.content.Context;
 import android.util.AttributeSet;
 
-import cyanogenmod.providers.CMSettings;
+import lineageos.providers.LineageSettings;
 
-public class CMSecureSettingSwitchPreference extends SelfRemovingSwitchPreference {
+public class LineageSecureSettingSwitchPreference extends SelfRemovingSwitchPreference {
 
-    public CMSecureSettingSwitchPreference(Context context, AttributeSet attrs, int defStyle) {
+    public LineageSecureSettingSwitchPreference(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
     }
 
-    public CMSecureSettingSwitchPreference(Context context, AttributeSet attrs) {
+    public LineageSecureSettingSwitchPreference(Context context, AttributeSet attrs) {
         super(context, attrs);
     }
 
-    public CMSecureSettingSwitchPreference(Context context) {
+    public LineageSecureSettingSwitchPreference(Context context) {
         super(context);
     }
 
@@ -42,7 +42,7 @@ public class CMSecureSettingSwitchPreference extends SelfRemovingSwitchPreferenc
                 // It's already there, so the same as persisting
                 return true;
             }
-            CMSettings.Secure.putInt(getContext().getContentResolver(), getKey(), value ? 1 : 0);
+            LineageSettings.Secure.putInt(getContext().getContentResolver(), getKey(), value ? 1 : 0);
             return true;
         }
         return false;
@@ -53,12 +53,12 @@ public class CMSecureSettingSwitchPreference extends SelfRemovingSwitchPreferenc
         if (!shouldPersist()) {
             return defaultReturnValue;
         }
-        return CMSettings.Secure.getInt(getContext().getContentResolver(),
+        return LineageSettings.Secure.getInt(getContext().getContentResolver(),
                 getKey(), defaultReturnValue ? 1 : 0) != 0;
     }
 
     @Override
     protected boolean isPersisted() {
-        return CMSettings.Secure.getString(getContext().getContentResolver(), getKey()) != null;
+        return LineageSettings.Secure.getString(getContext().getContentResolver(), getKey()) != null;
     }
 }

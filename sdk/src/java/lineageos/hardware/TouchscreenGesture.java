@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package cyanogenmod.hardware;
+package lineageos.hardware;
 
 import android.os.Parcel;
 import android.os.Parcelable;

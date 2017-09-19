@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.cyanogenmod.internal.util;
+package org.lineageos.internal.util;
 
 import android.util.Log;
 

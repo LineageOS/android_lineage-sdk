@@ -61,7 +61,7 @@ public class QueryCommand extends Command {
         commandList.add(SettingsConstants.CONTENT_URI + getAuthority() + uri);
         commandList.add("--projection");
         commandList.add(PROJECTION);
-        commandList.add("--show-type"); //this is totally awesomely cm specific
+        commandList.add("--show-type"); //this is totally awesomely lineage specific
         commandList.add("true");
         commands = commandList.toArray(new String[commandList.size()]);
         if (MigrationTest.DEBUG) {

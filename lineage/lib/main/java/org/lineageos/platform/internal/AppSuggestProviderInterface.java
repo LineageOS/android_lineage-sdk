@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package org.cyanogenmod.platform.internal;
+package org.lineageos.platform.internal;
 
 import android.content.Intent;
-import cyanogenmod.app.suggest.ApplicationSuggestion;
+import lineageos.app.suggest.ApplicationSuggestion;
 
 import java.util.List;
 

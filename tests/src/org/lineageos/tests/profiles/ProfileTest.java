@@ -14,22 +14,22 @@
  * limitations under the License.
  */
 
-package org.cyanogenmod.tests.profiles;
+package org.lineageos.tests.profiles;
 
 import android.media.AudioManager;
 import android.os.Bundle;
 
-import cyanogenmod.app.Profile;
-import cyanogenmod.app.Profile.Type;
+import lineageos.app.Profile;
+import lineageos.app.Profile.Type;
 
-import cyanogenmod.app.ProfileManager;
-import cyanogenmod.profiles.AirplaneModeSettings;
-import cyanogenmod.profiles.BrightnessSettings;
-import cyanogenmod.profiles.ConnectionSettings;
-import cyanogenmod.profiles.LockSettings;
-import cyanogenmod.profiles.RingModeSettings;
-import cyanogenmod.profiles.StreamSettings;
-import org.cyanogenmod.tests.TestActivity;
+import lineageos.app.ProfileManager;
+import lineageos.profiles.AirplaneModeSettings;
+import lineageos.profiles.BrightnessSettings;
+import lineageos.profiles.ConnectionSettings;
+import lineageos.profiles.LockSettings;
+import lineageos.profiles.RingModeSettings;
+import lineageos.profiles.StreamSettings;
+import org.lineageos.tests.TestActivity;
 
 import java.util.ArrayList;
 import java.util.UUID;

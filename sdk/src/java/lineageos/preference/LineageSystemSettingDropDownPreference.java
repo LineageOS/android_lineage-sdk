@@ -13,20 +13,20 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package cyanogenmod.preference;
+package lineageos.preference;
 
 import android.content.Context;
 import android.util.AttributeSet;
 
-import cyanogenmod.providers.CMSettings;
+import lineageos.providers.LineageSettings;
 
 
-public class CMSystemSettingDropDownPreference extends SelfRemovingDropDownPreference {
-    public CMSystemSettingDropDownPreference(Context context, AttributeSet attrs, int defStyle) {
+public class LineageSystemSettingDropDownPreference extends SelfRemovingDropDownPreference {
+    public LineageSystemSettingDropDownPreference(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
     }
 
-    public CMSystemSettingDropDownPreference(Context context, AttributeSet attrs) {
+    public LineageSystemSettingDropDownPreference(Context context, AttributeSet attrs) {
         super(context, attrs);
     }
 
@@ -37,7 +37,7 @@ public class CMSystemSettingDropDownPreference extends SelfRemovingDropDownPrefe
                 // It's already there, so the same as persisting
                 return true;
             }
-            CMSettings.System.putString(getContext().getContentResolver(), getKey(), value);
+            LineageSettings.System.putString(getContext().getContentResolver(), getKey(), value);
             return true;
         }
         return false;
@@ -48,13 +48,13 @@ public class CMSystemSettingDropDownPreference extends SelfRemovingDropDownPrefe
         if (!shouldPersist()) {
             return defaultReturnValue;
         }
-        String value = CMSettings.System.getString(getContext().getContentResolver(), getKey());
+        String value = LineageSettings.System.getString(getContext().getContentResolver(), getKey());
         return value == null ? defaultReturnValue : value;
     }
 
     @Override
     protected boolean isPersisted() {
-        return CMSettings.System.getString(getContext().getContentResolver(), getKey()) != null;
+        return LineageSettings.System.getString(getContext().getContentResolver(), getKey()) != null;
     }
 
     public int getIntValue(int defValue) {

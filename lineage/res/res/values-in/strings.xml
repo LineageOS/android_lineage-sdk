@@ -18,7 +18,7 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Label for the LineageOS system components when they are shown to the user. -->
-  <string name="cyanogenmod_system_label">Sistem LineageOS</string>
+  <string name="lineageos_system_label">Sistem LineageOS</string>
   <string name="permlab_publishCustomTile">membuat ikon kustom dalam panel setelan cepat</string>
   <string name="permdesc_publishCustomTile">Izinkan aplikasi untuk mempublikasikan ikon pengaturan cepat.</string>
   <string name="permlab_modifyNetworkSettings">ubah pengaturan jaringan sistem</string>
@@ -37,7 +37,7 @@
   <string name="permlab_modifyProfiles">memodifikasi profil sistem</string>
   <!-- Labels for the HARDWARE_ABSTRACTION_ACCESS permission. -->
   <string name="permlab_useHardwareFramework">gunakan hardware framework</string>
-  <string name="permdesc_useHardwareFramework">Izinkan aplikasi untuk mengakses hardware framework CM.</string>
+  <string name="permdesc_useHardwareFramework">Izinkan aplikasi untuk mengakses hardware framework Lineage.</string>
   <!-- Labels for the WRITE_ALARMS permission. -->
   <string name="permlab_write_alarms">secara langsung mengubah alarm</string>
   <string name="permdesc_write_alarms">Mengizinkan aplikasi untuk menambah, mengubah atau menghapus semua alarm.</string>
@@ -48,11 +48,11 @@
   <string name="permlab_read_alarms">akses alarm terjadwal</string>
   <string name="permdesc_read_alarms">Mengizinkan aplikasi untuk melihat alarm terjadwal.</string>
   <!-- Labels for the WRITE_SETTINGS permission -->
-  <string name="permlab_writeSettings">mengubah pengaturan sistem CM</string>
-  <string name="permdesc_writeSettings">Mengizinkan aplikasi untuk memodifikasi pengaturan sistem CM.</string>
+  <string name="permlab_writeSettings">mengubah pengaturan sistem Lineage</string>
+  <string name="permdesc_writeSettings">Mengizinkan aplikasi untuk memodifikasi pengaturan sistem Lineage.</string>
   <!-- Labels for the WRITE_SECURE_SETTINGS permission -->
-  <string name="permlab_writeSecureSettings">mengubah pengaturan sistem aman CM</string>
-  <string name="permdesc_writeSecureSettings">Memungkinkan aplikasi untuk memodifikasi pengaturan sistem aman CM. Tidak untuk digunakan oleh aplikasi normal.</string>
+  <string name="permlab_writeSecureSettings">mengubah pengaturan sistem aman Lineage</string>
+  <string name="permdesc_writeSecureSettings">Memungkinkan aplikasi untuk memodifikasi pengaturan sistem aman Lineage. Tidak untuk digunakan oleh aplikasi normal.</string>
   <!-- Labels for the MANAGE_PERSISTENT_STORAGE permission. -->
   <string name="permlab_managePersistentStorage">mengatur penyimpanan tetap</string>
   <string name="permdesc_managePersistentStorage">Memungkinkan aplikasi untuk membaca atau menulis properti yang dapat bertahan dari setel ulang ke pabrik.</string>
@@ -171,10 +171,10 @@
   <!-- LiveDisplay manager permission -->
   <string name="permlab_manageLiveDisplay">kelola pengaturan LiveDisplay</string>
   <string name="permdesc_manageLiveDisplay">Izinkan aplikasi untuk mengonfigurasi pengaturan tampilan lanjutan.</string>
-  <!-- CMAudioService - observe session changes permission -->
+  <!-- LineageAudioService - observe session changes permission -->
   <string name="permlab_observe_audio_sessions">pantau perubahan sesi audio</string>
   <string name="permdesc_observe_audio_sessions">Izinkan aplikasi untuk memantau pengaliran audio yang dibuat dan dihilangkan.</string>
-  <!-- CMAudioService - observe session changes permission -->
+  <!-- LineageAudioService - observe session changes permission -->
   <string name="permlab_manage_audio_sessions">kelola perubahan sesi audio</string>
   <string name="permdesc_manage_audio_sessions">Memungkinkan aplikasi untuk mengirim pembaruan stream audio.</string>
   <!-- QuickSettings: Themes tile -->

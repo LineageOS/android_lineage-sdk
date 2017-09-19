@@ -18,7 +18,7 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Label for the LineageOS system components when they are shown to the user. -->
-  <string name="cyanogenmod_system_label">Hệ thống LineageOS</string>
+  <string name="lineageos_system_label">Hệ thống LineageOS</string>
   <string name="permlab_publishCustomTile">tạo một ô tùy chỉnh trong bảng cài đặt nhanh</string>
   <string name="permdesc_publishCustomTile">Cho phép một ứng dụng taọ ô mới trong cài đặt nhanh.</string>
   <string name="permlab_modifyNetworkSettings">thay đổi cài đặt hệ thống mạng</string>
@@ -38,7 +38,7 @@
   <string name="permdesc_modifyProfiles">Cho phép một ứng dụng sửa đổi cấu hình hệ thống.</string>
   <!-- Labels for the HARDWARE_ABSTRACTION_ACCESS permission. -->
   <string name="permlab_useHardwareFramework">dùng khung làm việc phần cứng</string>
-  <string name="permdesc_useHardwareFramework">Cho phép ứng dụng truy cập khung làm việc phần cứng CM.</string>
+  <string name="permdesc_useHardwareFramework">Cho phép ứng dụng truy cập khung làm việc phần cứng Lineage.</string>
   <!-- Labels for the WRITE_ALARMS permission. -->
   <string name="permlab_write_alarms">trực tiếp thay đổi báo thức</string>
   <string name="permdesc_write_alarms">Cho phép ứng dụng thêm, chỉnh sửa hoặc xóa tất cả các báo thức của bạn.</string>
@@ -49,11 +49,11 @@
   <string name="permlab_read_alarms">truy cập các báo thức đã lên lịch</string>
   <string name="permdesc_read_alarms">Cho phép ứng dụng đọc các báo thức đã lên lịch của bạn.</string>
   <!-- Labels for the WRITE_SETTINGS permission -->
-  <string name="permlab_writeSettings">sửa đổi cài đặt hệ thống CM</string>
-  <string name="permdesc_writeSettings">Cho phép một ứng dụng sửa đổi cài đặt hệ thống CM.</string>
+  <string name="permlab_writeSettings">sửa đổi cài đặt hệ thống Lineage</string>
+  <string name="permdesc_writeSettings">Cho phép một ứng dụng sửa đổi cài đặt hệ thống Lineage.</string>
   <!-- Labels for the WRITE_SECURE_SETTINGS permission -->
-  <string name="permlab_writeSecureSettings">sửa đổi cài đặt hệ thống an toàn CM</string>
-  <string name="permdesc_writeSecureSettings">Cho phép ứng dụng sửa đổi cài đặt hệ thống an toàn CM. Không cho ứng dụng bình thường sử dụng.</string>
+  <string name="permlab_writeSecureSettings">sửa đổi cài đặt hệ thống an toàn Lineage</string>
+  <string name="permdesc_writeSecureSettings">Cho phép ứng dụng sửa đổi cài đặt hệ thống an toàn Lineage. Không cho ứng dụng bình thường sử dụng.</string>
   <!-- Labels for the MANAGE_PERSISTENT_STORAGE permission. -->
   <string name="permlab_managePersistentStorage">quản lý bộ lưu trữ vĩnh viễn</string>
   <string name="permdesc_managePersistentStorage">Cho phép ứng dụng đọc hoặc ghi thuộc tính có thể vẫn tồn tại sau khi đặt lại mặc định nhà sản xuất.</string>
@@ -173,10 +173,10 @@
   <!-- LiveDisplay manager permission -->
   <string name="permlab_manageLiveDisplay">quản lý cài đặt LiveDisplay</string>
   <string name="permdesc_manageLiveDisplay">Cho phép ứng dụng thiết lập cấu hình cài đặt hiển thị nâng cao.</string>
-  <!-- CMAudioService - observe session changes permission -->
+  <!-- LineageAudioService - observe session changes permission -->
   <string name="permlab_observe_audio_sessions">quan sát các thay đổi về phiên âm thanh</string>
   <string name="permdesc_observe_audio_sessions">Cho phép ứng dụng quan sát dòng âm thanh được tạo và bị hủy.</string>
-  <!-- CMAudioService - observe session changes permission -->
+  <!-- LineageAudioService - observe session changes permission -->
   <string name="permlab_manage_audio_sessions">quản lý thay đổi âm thanh phiên</string>
   <string name="permdesc_manage_audio_sessions">Cho phép một ứng dụng gửi thông tin các cập nhật stream âm thanh.</string>
   <!-- QuickSettings: Themes tile -->

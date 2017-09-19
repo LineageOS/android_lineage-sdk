@@ -1,4 +1,4 @@
-package cyanogenmod.alarmclock {
+package lineageos.alarmclock {
 
   public final class ClockContract {
     field public static final java.lang.String AUTHORITY = "com.android.deskclock";
@@ -14,7 +14,7 @@ package cyanogenmod.alarmclock {
     field public static final java.lang.String VIBRATE = "vibrate";
   }
 
-  public static abstract interface ClockContract.AlarmsColumns implements cyanogenmod.alarmclock.ClockContract.AlarmSettingColumns {
+  public static abstract interface ClockContract.AlarmsColumns implements lineageos.alarmclock.ClockContract.AlarmSettingColumns {
     field public static final android.net.Uri CONTENT_URI;
     field public static final java.lang.String DAYS_OF_WEEK = "daysofweek";
     field public static final java.lang.String DELETE_AFTER_USE = "delete_after_use";
@@ -31,7 +31,7 @@ package cyanogenmod.alarmclock {
     field public static final java.lang.String TIMEZONE_OFFSET = "timezone_offset";
   }
 
-  public static abstract interface ClockContract.InstancesColumns implements cyanogenmod.alarmclock.ClockContract.AlarmSettingColumns {
+  public static abstract interface ClockContract.InstancesColumns implements lineageos.alarmclock.ClockContract.AlarmSettingColumns {
     field public static final java.lang.String ALARM_ID = "alarm_id";
     field public static final java.lang.String ALARM_STATE = "alarm_state";
     field public static final android.net.Uri CONTENT_URI;
@@ -52,32 +52,32 @@ package cyanogenmod.alarmclock {
     field public static final java.lang.String YEAR = "year";
   }
 
-  public class CyanogenModAlarmClock {
-    ctor public CyanogenModAlarmClock();
+  public class LineageOSAlarmClock {
+    ctor public LineageOSAlarmClock();
     method public static android.content.Intent createAlarmIntent(android.content.Context);
-    field public static final java.lang.String ACTION_SET_ALARM_ENABLED = "cyanogenmod.alarmclock.SET_ALARM_ENABLED";
-    field public static final java.lang.String EXTRA_ALARM_ID = "cyanogenmod.intent.extra.alarmclock.ID";
-    field public static final java.lang.String EXTRA_ENABLED = "cyanogenmod.intent.extra.alarmclock.ENABLED";
-    field public static final java.lang.String MODIFY_ALARMS_PERMISSION = "cyanogenmod.alarmclock.permission.MODIFY_ALARMS";
-    field public static final java.lang.String READ_ALARMS_PERMISSION = "cyanogenmod.alarmclock.permission.READ_ALARMS";
+    field public static final java.lang.String ACTION_SET_ALARM_ENABLED = "lineageos.alarmclock.SET_ALARM_ENABLED";
+    field public static final java.lang.String EXTRA_ALARM_ID = "lineageos.intent.extra.alarmclock.ID";
+    field public static final java.lang.String EXTRA_ENABLED = "lineageos.intent.extra.alarmclock.ENABLED";
+    field public static final java.lang.String MODIFY_ALARMS_PERMISSION = "lineageos.alarmclock.permission.MODIFY_ALARMS";
+    field public static final java.lang.String READ_ALARMS_PERMISSION = "lineageos.alarmclock.permission.READ_ALARMS";
   }
 
 }
 
-package cyanogenmod.app {
+package lineageos.app {
 
-  public class CMStatusBarManager {
-    method public static cyanogenmod.app.CMStatusBarManager getInstance(android.content.Context);
-    method public void publishTile(int, cyanogenmod.app.CustomTile);
-    method public void publishTile(java.lang.String, int, cyanogenmod.app.CustomTile);
-    method public void publishTileAsUser(java.lang.String, int, cyanogenmod.app.CustomTile, android.os.UserHandle);
+  public class LineageStatusBarManager {
+    method public static lineageos.app.LineageStatusBarManager getInstance(android.content.Context);
+    method public void publishTile(int, lineageos.app.CustomTile);
+    method public void publishTile(java.lang.String, int, lineageos.app.CustomTile);
+    method public void publishTileAsUser(java.lang.String, int, lineageos.app.CustomTile, android.os.UserHandle);
     method public void removeTile(int);
     method public void removeTile(java.lang.String, int);
     method public void removeTileAsUser(java.lang.String, int, android.os.UserHandle);
   }
 
-  public class CMTelephonyManager {
-    method public static cyanogenmod.app.CMTelephonyManager getInstance(android.content.Context);
+  public class LineageTelephonyManager {
+    method public static lineageos.app.LineageTelephonyManager getInstance(android.content.Context);
     method public java.util.List<android.telephony.SubscriptionInfo> getSubInformation();
     method public boolean isDataConnectionEnabled();
     method public boolean isDataConnectionSelectedOnSub(int);
@@ -92,15 +92,15 @@ package cyanogenmod.app {
   public class CustomTile implements android.os.Parcelable {
     ctor public CustomTile(android.os.Parcel);
     ctor public CustomTile();
-    method public cyanogenmod.app.CustomTile clone();
+    method public lineageos.app.CustomTile clone();
     method public int describeContents();
     method public void writeToParcel(android.os.Parcel, int);
-    field public static final android.os.Parcelable.Creator<cyanogenmod.app.CustomTile> CREATOR;
+    field public static final android.os.Parcelable.Creator<lineageos.app.CustomTile> CREATOR;
     field public static final int PSEUDO_GRID_ITEM_MAX_COUNT = 9; // 0x9
     field public boolean collapsePanel;
     field public java.lang.String contentDescription;
     field public android.app.PendingIntent deleteIntent;
-    field public cyanogenmod.app.CustomTile.ExpandedStyle expandedStyle;
+    field public lineageos.app.CustomTile.ExpandedStyle expandedStyle;
     field public int icon;
     field public java.lang.String label;
     field public android.app.PendingIntent onClick;
@@ -113,24 +113,24 @@ package cyanogenmod.app {
 
   public static class CustomTile.Builder {
     ctor public CustomTile.Builder(android.content.Context);
-    method public cyanogenmod.app.CustomTile build();
-    method public cyanogenmod.app.CustomTile.Builder hasSensitiveData(boolean);
-    method public cyanogenmod.app.CustomTile.Builder setContentDescription(java.lang.String);
-    method public cyanogenmod.app.CustomTile.Builder setContentDescription(int);
-    method public cyanogenmod.app.CustomTile.Builder setDeleteIntent(android.app.PendingIntent);
-    method public cyanogenmod.app.CustomTile.Builder setExpandedStyle(cyanogenmod.app.CustomTile.ExpandedStyle);
-    method public cyanogenmod.app.CustomTile.Builder setIcon(int);
-    method public cyanogenmod.app.CustomTile.Builder setIcon(android.graphics.Bitmap);
-    method public cyanogenmod.app.CustomTile.Builder setLabel(java.lang.String);
-    method public cyanogenmod.app.CustomTile.Builder setLabel(int);
-    method public cyanogenmod.app.CustomTile.Builder setOnClickIntent(android.app.PendingIntent);
-    method public cyanogenmod.app.CustomTile.Builder setOnClickUri(android.net.Uri);
-    method public cyanogenmod.app.CustomTile.Builder setOnLongClickIntent(android.app.PendingIntent);
-    method public cyanogenmod.app.CustomTile.Builder setOnSettingsClickIntent(android.content.Intent);
-    method public cyanogenmod.app.CustomTile.Builder shouldCollapsePanel(boolean);
+    method public lineageos.app.CustomTile build();
+    method public lineageos.app.CustomTile.Builder hasSensitiveData(boolean);
+    method public lineageos.app.CustomTile.Builder setContentDescription(java.lang.String);
+    method public lineageos.app.CustomTile.Builder setContentDescription(int);
+    method public lineageos.app.CustomTile.Builder setDeleteIntent(android.app.PendingIntent);
+    method public lineageos.app.CustomTile.Builder setExpandedStyle(lineageos.app.CustomTile.ExpandedStyle);
+    method public lineageos.app.CustomTile.Builder setIcon(int);
+    method public lineageos.app.CustomTile.Builder setIcon(android.graphics.Bitmap);
+    method public lineageos.app.CustomTile.Builder setLabel(java.lang.String);
+    method public lineageos.app.CustomTile.Builder setLabel(int);
+    method public lineageos.app.CustomTile.Builder setOnClickIntent(android.app.PendingIntent);
+    method public lineageos.app.CustomTile.Builder setOnClickUri(android.net.Uri);
+    method public lineageos.app.CustomTile.Builder setOnLongClickIntent(android.app.PendingIntent);
+    method public lineageos.app.CustomTile.Builder setOnSettingsClickIntent(android.content.Intent);
+    method public lineageos.app.CustomTile.Builder shouldCollapsePanel(boolean);
   }
 
-  public static class CustomTile.ExpandedGridItem extends cyanogenmod.app.CustomTile.ExpandedItem {
+  public static class CustomTile.ExpandedGridItem extends lineageos.app.CustomTile.ExpandedItem {
     ctor public CustomTile.ExpandedGridItem();
     method public void setExpandedGridItemBitmap(android.graphics.Bitmap);
     method public void setExpandedGridItemDrawable(int);
@@ -142,7 +142,7 @@ package cyanogenmod.app {
     ctor protected CustomTile.ExpandedItem(android.os.Parcel);
     method public int describeContents();
     method public void writeToParcel(android.os.Parcel, int);
-    field public static final android.os.Parcelable.Creator<cyanogenmod.app.CustomTile.ExpandedItem> CREATOR;
+    field public static final android.os.Parcelable.Creator<lineageos.app.CustomTile.ExpandedItem> CREATOR;
     field public android.graphics.Bitmap itemBitmapResource;
     field public int itemDrawableResourceId;
     field public java.lang.String itemSummary;
@@ -150,7 +150,7 @@ package cyanogenmod.app {
     field public android.app.PendingIntent onClickPendingIntent;
   }
 
-  public static class CustomTile.ExpandedListItem extends cyanogenmod.app.CustomTile.ExpandedItem {
+  public static class CustomTile.ExpandedListItem extends lineageos.app.CustomTile.ExpandedItem {
     ctor public CustomTile.ExpandedListItem();
     method public void setExpandedListItemBitmap(android.graphics.Bitmap);
     method public void setExpandedListItemDrawable(int);
@@ -162,26 +162,26 @@ package cyanogenmod.app {
   public static class CustomTile.ExpandedStyle implements android.os.Parcelable {
     method public int describeContents();
     method public android.widget.RemoteViews getContentViews();
-    method public cyanogenmod.app.CustomTile.ExpandedItem[] getExpandedItems();
+    method public lineageos.app.CustomTile.ExpandedItem[] getExpandedItems();
     method public int getStyle();
     method public void writeToParcel(android.os.Parcel, int);
-    field public static final android.os.Parcelable.Creator<cyanogenmod.app.CustomTile.ExpandedStyle> CREATOR;
+    field public static final android.os.Parcelable.Creator<lineageos.app.CustomTile.ExpandedStyle> CREATOR;
     field public static final int GRID_STYLE = 0; // 0x0
     field public static final int LIST_STYLE = 1; // 0x1
     field public static final int REMOTE_STYLE = 2; // 0x2
   }
 
-  public static class CustomTile.GridExpandedStyle extends cyanogenmod.app.CustomTile.ExpandedStyle {
+  public static class CustomTile.GridExpandedStyle extends lineageos.app.CustomTile.ExpandedStyle {
     ctor public CustomTile.GridExpandedStyle();
-    method public void setGridItems(java.util.ArrayList<cyanogenmod.app.CustomTile.ExpandedGridItem>);
+    method public void setGridItems(java.util.ArrayList<lineageos.app.CustomTile.ExpandedGridItem>);
   }
 
-  public static class CustomTile.ListExpandedStyle extends cyanogenmod.app.CustomTile.ExpandedStyle {
+  public static class CustomTile.ListExpandedStyle extends lineageos.app.CustomTile.ExpandedStyle {
     ctor public CustomTile.ListExpandedStyle();
-    method public void setListItems(java.util.ArrayList<cyanogenmod.app.CustomTile.ExpandedListItem>);
+    method public void setListItems(java.util.ArrayList<lineageos.app.CustomTile.ExpandedListItem>);
   }
 
-  public static class CustomTile.RemoteExpandedStyle extends cyanogenmod.app.CustomTile.ExpandedStyle {
+  public static class CustomTile.RemoteExpandedStyle extends lineageos.app.CustomTile.ExpandedStyle {
     ctor public CustomTile.RemoteExpandedStyle();
     method public void setRemoteViews(android.widget.RemoteViews);
   }
@@ -189,20 +189,20 @@ package cyanogenmod.app {
   public class CustomTileListenerService extends android.app.Service {
     ctor public CustomTileListenerService();
     method public android.os.IBinder onBind(android.content.Intent);
-    method public void onCustomTilePosted(cyanogenmod.app.StatusBarPanelCustomTile);
-    method public void onCustomTileRemoved(cyanogenmod.app.StatusBarPanelCustomTile);
+    method public void onCustomTilePosted(lineageos.app.StatusBarPanelCustomTile);
+    method public void onCustomTileRemoved(lineageos.app.StatusBarPanelCustomTile);
     method public void onListenerConnected();
     method public final void removeCustomTile(java.lang.String, java.lang.String, int);
-    field public static final java.lang.String SERVICE_INTERFACE = "cyanogenmod.app.CustomTileListenerService";
+    field public static final java.lang.String SERVICE_INTERFACE = "lineageos.app.CustomTileListenerService";
   }
 
   public class LiveLockScreenInfo implements android.os.Parcelable {
     ctor public LiveLockScreenInfo(android.content.ComponentName, int);
     ctor public LiveLockScreenInfo();
-    method public cyanogenmod.app.LiveLockScreenInfo clone();
+    method public lineageos.app.LiveLockScreenInfo clone();
     method public int describeContents();
     method public void writeToParcel(android.os.Parcel, int);
-    field public static final android.os.Parcelable.Creator<cyanogenmod.app.LiveLockScreenInfo> CREATOR;
+    field public static final android.os.Parcelable.Creator<lineageos.app.LiveLockScreenInfo> CREATOR;
     field public static final int PRIORITY_DEFAULT = 0; // 0x0
     field public static final int PRIORITY_HIGH = 1; // 0x1
     field public static final int PRIORITY_LOW = -1; // 0xffffffff
@@ -214,31 +214,31 @@ package cyanogenmod.app {
 
   public static class LiveLockScreenInfo.Builder {
     ctor public LiveLockScreenInfo.Builder();
-    method public cyanogenmod.app.LiveLockScreenInfo build();
-    method public cyanogenmod.app.LiveLockScreenInfo.Builder setComponent(android.content.ComponentName);
-    method public cyanogenmod.app.LiveLockScreenInfo.Builder setPriority(int);
+    method public lineageos.app.LiveLockScreenInfo build();
+    method public lineageos.app.LiveLockScreenInfo.Builder setComponent(android.content.ComponentName);
+    method public lineageos.app.LiveLockScreenInfo.Builder setPriority(int);
   }
 
   public class LiveLockScreenManager {
     method public void cancel(int);
-    method public cyanogenmod.app.LiveLockScreenInfo getDefaultLiveLockScreen();
-    method public static cyanogenmod.app.LiveLockScreenManager getInstance(android.content.Context);
-    method public void setDefaultLiveLockScreen(cyanogenmod.app.LiveLockScreenInfo);
-    method public boolean show(int, cyanogenmod.app.LiveLockScreenInfo);
-    field public static final java.lang.String SERVICE_INTERFACE = "cyanogenmod.app.LiveLockScreenManagerService";
+    method public lineageos.app.LiveLockScreenInfo getDefaultLiveLockScreen();
+    method public static lineageos.app.LiveLockScreenManager getInstance(android.content.Context);
+    method public void setDefaultLiveLockScreen(lineageos.app.LiveLockScreenInfo);
+    method public boolean show(int, lineageos.app.LiveLockScreenInfo);
+    field public static final java.lang.String SERVICE_INTERFACE = "lineageos.app.LiveLockScreenManagerService";
   }
 
   public class PartnerInterface {
     method public java.lang.String getCurrentHotwordPackageName();
-    method public static cyanogenmod.app.PartnerInterface getInstance(android.content.Context);
+    method public static lineageos.app.PartnerInterface getInstance(android.content.Context);
     method public void rebootDevice();
     method public void setAirplaneModeEnabled(boolean);
     method public void setMobileDataEnabled(boolean);
     method public boolean setZenMode(int);
     method public boolean setZenModeWithDuration(int, long);
     method public void shutdownDevice();
-    field public static final java.lang.String MODIFY_NETWORK_SETTINGS_PERMISSION = "cyanogenmod.permission.MODIFY_NETWORK_SETTINGS";
-    field public static final java.lang.String MODIFY_SOUND_SETTINGS_PERMISSION = "cyanogenmod.permission.MODIFY_SOUND_SETTINGS";
+    field public static final java.lang.String MODIFY_NETWORK_SETTINGS_PERMISSION = "lineageos.permission.MODIFY_NETWORK_SETTINGS";
+    field public static final java.lang.String MODIFY_SOUND_SETTINGS_PERMISSION = "lineageos.permission.MODIFY_SOUND_SETTINGS";
     field public static final int ZEN_MODE_IMPORTANT_INTERRUPTIONS = 1; // 0x1
     field public static final int ZEN_MODE_NO_INTERRUPTIONS = 2; // 0x2
     field public static final int ZEN_MODE_OFF = 0; // 0x0
@@ -249,38 +249,38 @@ package cyanogenmod.app {
     method public void addSecondaryUuid(java.util.UUID);
     method public int compareTo(java.lang.Object);
     method public int describeContents();
-    method public cyanogenmod.profiles.AirplaneModeSettings getAirplaneMode();
-    method public cyanogenmod.profiles.BrightnessSettings getBrightness();
-    method public cyanogenmod.profiles.ConnectionSettings getConnectionSettingWithSubId(int);
-    method public java.util.Collection<cyanogenmod.profiles.ConnectionSettings> getConnectionSettings();
+    method public lineageos.profiles.AirplaneModeSettings getAirplaneMode();
+    method public lineageos.profiles.BrightnessSettings getBrightness();
+    method public lineageos.profiles.ConnectionSettings getConnectionSettingWithSubId(int);
+    method public java.util.Collection<lineageos.profiles.ConnectionSettings> getConnectionSettings();
     method public int getDozeMode();
     method public int getExpandedDesktopMode();
     method public java.lang.String getName();
     method public int getNotificationLightMode();
     method public int getProfileType();
-    method public cyanogenmod.profiles.RingModeSettings getRingMode();
-    method public cyanogenmod.profiles.LockSettings getScreenLockMode();
+    method public lineageos.profiles.RingModeSettings getRingMode();
+    method public lineageos.profiles.LockSettings getScreenLockMode();
     method public java.util.UUID[] getSecondaryUuids();
-    method public cyanogenmod.profiles.ConnectionSettings getSettingsForConnection(int);
-    method public cyanogenmod.profiles.StreamSettings getSettingsForStream(int);
-    method public java.util.Collection<cyanogenmod.profiles.StreamSettings> getStreamSettings();
+    method public lineageos.profiles.ConnectionSettings getSettingsForConnection(int);
+    method public lineageos.profiles.StreamSettings getSettingsForStream(int);
+    method public java.util.Collection<lineageos.profiles.StreamSettings> getStreamSettings();
     method public int getTriggerState(int, java.lang.String);
-    method public java.util.ArrayList<cyanogenmod.app.Profile.ProfileTrigger> getTriggersFromType(int);
+    method public java.util.ArrayList<lineageos.app.Profile.ProfileTrigger> getTriggersFromType(int);
     method public java.util.UUID getUuid();
     method public boolean isConditionalType();
-    method public void setAirplaneMode(cyanogenmod.profiles.AirplaneModeSettings);
-    method public void setBrightness(cyanogenmod.profiles.BrightnessSettings);
-    method public void setConnectionSettings(cyanogenmod.profiles.ConnectionSettings);
+    method public void setAirplaneMode(lineageos.profiles.AirplaneModeSettings);
+    method public void setBrightness(lineageos.profiles.BrightnessSettings);
+    method public void setConnectionSettings(lineageos.profiles.ConnectionSettings);
     method public void setDozeMode(int);
     method public void setExpandedDesktopMode(int);
     method public void setName(java.lang.String);
     method public void setNotificationLightMode(int);
     method public void setProfileType(int);
-    method public void setRingMode(cyanogenmod.profiles.RingModeSettings);
-    method public void setScreenLockMode(cyanogenmod.profiles.LockSettings);
+    method public void setRingMode(lineageos.profiles.RingModeSettings);
+    method public void setScreenLockMode(lineageos.profiles.LockSettings);
     method public void setSecondaryUuids(java.util.List<java.util.UUID>);
-    method public void setStreamSettings(cyanogenmod.profiles.StreamSettings);
-    method public void setTrigger(cyanogenmod.app.Profile.ProfileTrigger);
+    method public void setStreamSettings(lineageos.profiles.StreamSettings);
+    method public void setTrigger(lineageos.app.Profile.ProfileTrigger);
     method public void writeToParcel(android.os.Parcel, int);
   }
 
@@ -344,47 +344,47 @@ package cyanogenmod.app {
   }
 
   public class ProfileManager {
-    method public void addProfile(cyanogenmod.app.Profile);
-    method public cyanogenmod.app.Profile getActiveProfile();
-    method public static cyanogenmod.app.ProfileManager getInstance(android.content.Context);
-    method public deprecated cyanogenmod.app.Profile getProfile(java.lang.String);
-    method public cyanogenmod.app.Profile getProfile(java.util.UUID);
+    method public void addProfile(lineageos.app.Profile);
+    method public lineageos.app.Profile getActiveProfile();
+    method public static lineageos.app.ProfileManager getInstance(android.content.Context);
+    method public deprecated lineageos.app.Profile getProfile(java.lang.String);
+    method public lineageos.app.Profile getProfile(java.util.UUID);
     method public java.lang.String[] getProfileNames();
-    method public cyanogenmod.app.Profile[] getProfiles();
+    method public lineageos.app.Profile[] getProfiles();
     method public boolean isProfilesEnabled();
     method public boolean profileExists(java.lang.String);
     method public boolean profileExists(java.util.UUID);
-    method public void removeProfile(cyanogenmod.app.Profile);
+    method public void removeProfile(lineageos.app.Profile);
     method public void resetAll();
     method public deprecated void setActiveProfile(java.lang.String);
     method public void setActiveProfile(java.util.UUID);
-    method public void updateProfile(cyanogenmod.app.Profile);
-    field public static final java.lang.String ACTION_PROFILE_PICKER = "cyanogenmod.platform.intent.action.PROFILE_PICKER";
+    method public void updateProfile(lineageos.app.Profile);
+    field public static final java.lang.String ACTION_PROFILE_PICKER = "lineageos.platform.intent.action.PROFILE_PICKER";
     field public static final java.lang.String EXTRA_LAST_PROFILE_NAME = "lastName";
     field public static final java.lang.String EXTRA_LAST_PROFILE_UUID = "lastUuid";
     field public static final java.lang.String EXTRA_PROFILES_STATE = "profile_state";
-    field public static final java.lang.String EXTRA_PROFILE_DIALOG_THEME = "cyanogenmod.platform.intent.extra.profile.DIALOG_THEME";
-    field public static final java.lang.String EXTRA_PROFILE_EXISTING_UUID = "cyanogenmod.platform.extra.profile.EXISTING_UUID";
+    field public static final java.lang.String EXTRA_PROFILE_DIALOG_THEME = "lineageos.platform.intent.extra.profile.DIALOG_THEME";
+    field public static final java.lang.String EXTRA_PROFILE_EXISTING_UUID = "lineageos.platform.extra.profile.EXISTING_UUID";
     field public static final java.lang.String EXTRA_PROFILE_NAME = "name";
-    field public static final java.lang.String EXTRA_PROFILE_PICKED_UUID = "cyanogenmod.platform.intent.extra.profile.PICKED_UUID";
-    field public static final java.lang.String EXTRA_PROFILE_SHOW_NONE = "cyanogenmod.platform.intent.extra.profile.SHOW_NONE";
-    field public static final java.lang.String EXTRA_PROFILE_TITLE = "cyanogenmod.platform.intent.extra.profile.TITLE";
+    field public static final java.lang.String EXTRA_PROFILE_PICKED_UUID = "lineageos.platform.intent.extra.profile.PICKED_UUID";
+    field public static final java.lang.String EXTRA_PROFILE_SHOW_NONE = "lineageos.platform.intent.extra.profile.SHOW_NONE";
+    field public static final java.lang.String EXTRA_PROFILE_TITLE = "lineageos.platform.intent.extra.profile.TITLE";
     field public static final java.lang.String EXTRA_PROFILE_UUID = "uuid";
-    field public static final java.lang.String INTENT_ACTION_PROFILE_SELECTED = "cyanogenmod.platform.intent.action.PROFILE_SELECTED";
-    field public static final java.lang.String INTENT_ACTION_PROFILE_UPDATED = "cyanogenmod.platform.intent.action.PROFILE_UPDATED";
+    field public static final java.lang.String INTENT_ACTION_PROFILE_SELECTED = "lineageos.platform.intent.action.PROFILE_SELECTED";
+    field public static final java.lang.String INTENT_ACTION_PROFILE_UPDATED = "lineageos.platform.intent.action.PROFILE_UPDATED";
     field public static final java.util.UUID NO_PROFILE;
-    field public static final java.lang.String PROFILES_STATE_CHANGED_ACTION = "cyanogenmod.platform.app.profiles.PROFILES_STATE_CHANGED";
+    field public static final java.lang.String PROFILES_STATE_CHANGED_ACTION = "lineageos.platform.app.profiles.PROFILES_STATE_CHANGED";
     field public static final int PROFILES_STATE_DISABLED = 0; // 0x0
     field public static final int PROFILES_STATE_ENABLED = 1; // 0x1
   }
 
   public class StatusBarPanelCustomTile implements android.os.Parcelable {
-    ctor public StatusBarPanelCustomTile(java.lang.String, java.lang.String, java.lang.String, int, java.lang.String, int, int, cyanogenmod.app.CustomTile, android.os.UserHandle);
-    ctor public StatusBarPanelCustomTile(java.lang.String, java.lang.String, java.lang.String, int, java.lang.String, int, int, cyanogenmod.app.CustomTile, android.os.UserHandle, long);
+    ctor public StatusBarPanelCustomTile(java.lang.String, java.lang.String, java.lang.String, int, java.lang.String, int, int, lineageos.app.CustomTile, android.os.UserHandle);
+    ctor public StatusBarPanelCustomTile(java.lang.String, java.lang.String, java.lang.String, int, java.lang.String, int, int, lineageos.app.CustomTile, android.os.UserHandle, long);
     ctor public StatusBarPanelCustomTile(android.os.Parcel);
-    method public cyanogenmod.app.StatusBarPanelCustomTile clone();
+    method public lineageos.app.StatusBarPanelCustomTile clone();
     method public int describeContents();
-    method public cyanogenmod.app.CustomTile getCustomTile();
+    method public lineageos.app.CustomTile getCustomTile();
     method public int getId();
     method public java.lang.String getKey();
     method public java.lang.String getPackage();
@@ -393,36 +393,36 @@ package cyanogenmod.app {
     method public android.os.UserHandle getUser();
     method public int getUserId();
     method public void writeToParcel(android.os.Parcel, int);
-    field public static final android.os.Parcelable.Creator<cyanogenmod.app.StatusBarPanelCustomTile> CREATOR;
+    field public static final android.os.Parcelable.Creator<lineageos.app.StatusBarPanelCustomTile> CREATOR;
   }
 
 }
 
-package cyanogenmod.content {
+package lineageos.content {
 
   public class Intent {
     ctor public Intent();
-    field public static final java.lang.String ACTION_PROTECTED = "cyanogenmod.intent.action.PACKAGE_PROTECTED";
-    field public static final java.lang.String ACTION_PROTECTED_CHANGED = "cyanogenmod.intent.action.PROTECTED_COMPONENT_UPDATE";
-    field public static final java.lang.String ACTION_THEME_INSTALLED = "cyanogenmod.intent.action.THEME_INSTALLED";
-    field public static final java.lang.String ACTION_THEME_REMOVED = "cyanogenmod.intent.action.THEME_REMOVED";
-    field public static final java.lang.String ACTION_THEME_UPDATED = "cyanogenmod.intent.action.THEME_UPDATED";
-    field public static final java.lang.String CATEGORY_THEME_PACKAGE_INSTALLED_STATE_CHANGE = "cyanogenmod.intent.category.THEME_PACKAGE_INSTALL_STATE_CHANGE";
-    field public static final java.lang.String EXTRA_PROTECTED_COMPONENTS = "cyanogenmod.intent.extra.PACKAGE_PROTECTED_COMPONENTS";
-    field public static final java.lang.String EXTRA_PROTECTED_STATE = "cyanogenmod.intent.extra.PACKAGE_PROTECTED_STATE";
+    field public static final java.lang.String ACTION_PROTECTED = "lineageos.intent.action.PACKAGE_PROTECTED";
+    field public static final java.lang.String ACTION_PROTECTED_CHANGED = "lineageos.intent.action.PROTECTED_COMPONENT_UPDATE";
+    field public static final java.lang.String ACTION_THEME_INSTALLED = "lineageos.intent.action.THEME_INSTALLED";
+    field public static final java.lang.String ACTION_THEME_REMOVED = "lineageos.intent.action.THEME_REMOVED";
+    field public static final java.lang.String ACTION_THEME_UPDATED = "lineageos.intent.action.THEME_UPDATED";
+    field public static final java.lang.String CATEGORY_THEME_PACKAGE_INSTALLED_STATE_CHANGE = "lineageos.intent.category.THEME_PACKAGE_INSTALL_STATE_CHANGE";
+    field public static final java.lang.String EXTRA_PROTECTED_COMPONENTS = "lineageos.intent.extra.PACKAGE_PROTECTED_COMPONENTS";
+    field public static final java.lang.String EXTRA_PROTECTED_STATE = "lineageos.intent.extra.PACKAGE_PROTECTED_STATE";
     field public static final java.lang.String URI_SCHEME_PACKAGE = "package";
   }
 
 }
 
-package cyanogenmod.externalviews {
+package lineageos.externalviews {
 
   public abstract class KeyguardExternalViewProviderService extends android.app.Service {
     ctor public KeyguardExternalViewProviderService();
-    method protected abstract cyanogenmod.externalviews.KeyguardExternalViewProviderService.Provider createExternalView(android.os.Bundle);
+    method protected abstract lineageos.externalviews.KeyguardExternalViewProviderService.Provider createExternalView(android.os.Bundle);
     method public final android.os.IBinder onBind(android.content.Intent);
-    field public static final java.lang.String META_DATA = "cyanogenmod.externalviews.keyguard";
-    field public static final java.lang.String SERVICE_INTERFACE = "cyanogenmod.externalviews.KeyguardExternalViewProviderService";
+    field public static final java.lang.String META_DATA = "lineageos.externalviews.keyguard";
+    field public static final java.lang.String SERVICE_INTERFACE = "lineageos.externalviews.KeyguardExternalViewProviderService";
   }
 
   protected abstract class KeyguardExternalViewProviderService.Provider {
@@ -446,16 +446,16 @@ package cyanogenmod.externalviews {
 
 }
 
-package cyanogenmod.hardware {
+package lineageos.hardware {
 
-  public final class CMHardwareManager {
+  public final class LineageHardwareManager {
     method public boolean deletePersistentObject(java.lang.String);
     method public boolean get(int);
     method public int getColorBalance();
     method public android.util.Range<java.lang.Integer> getColorBalanceRange();
-    method public cyanogenmod.hardware.DisplayMode getCurrentDisplayMode();
-    method public cyanogenmod.hardware.DisplayMode getDefaultDisplayMode();
-    method public cyanogenmod.hardware.HSIC getDefaultPictureAdjustment();
+    method public lineageos.hardware.DisplayMode getCurrentDisplayMode();
+    method public lineageos.hardware.DisplayMode getDefaultDisplayMode();
+    method public lineageos.hardware.HSIC getDefaultPictureAdjustment();
     method public int[] getDisplayColorCalibration();
     method public int getDisplayColorCalibrationDefault();
     method public int getDisplayColorCalibrationMax();
@@ -463,14 +463,14 @@ package cyanogenmod.hardware {
     method public deprecated int[] getDisplayGammaCalibration(int);
     method public deprecated int getDisplayGammaCalibrationMax();
     method public deprecated int getDisplayGammaCalibrationMin();
-    method public cyanogenmod.hardware.DisplayMode[] getDisplayModes();
-    method public cyanogenmod.hardware.TouchscreenGesture[] getTouchscreenGestures();
-    method public static cyanogenmod.hardware.CMHardwareManager getInstance(android.content.Context);
+    method public lineageos.hardware.DisplayMode[] getDisplayModes();
+    method public lineageos.hardware.TouchscreenGesture[] getTouchscreenGestures();
+    method public static lineageos.hardware.LineageHardwareManager getInstance(android.content.Context);
     method public java.lang.String getLtoDestination();
     method public long getLtoDownloadInterval();
     method public java.lang.String getLtoSource();
     method public deprecated int getNumGammaControls();
-    method public cyanogenmod.hardware.HSIC getPictureAdjustment();
+    method public lineageos.hardware.HSIC getPictureAdjustment();
     method public java.util.List<android.util.Range<java.lang.Float>> getPictureAdjustmentRanges();
     method public java.lang.String getSerialNumber();
     method public int getSupportedFeatures();
@@ -486,17 +486,17 @@ package cyanogenmod.hardware {
     method public byte[] readPersistentBytes(java.lang.String);
     method public int readPersistentInt(java.lang.String);
     method public java.lang.String readPersistentString(java.lang.String);
-    method public boolean registerThermalListener(cyanogenmod.hardware.ThermalListenerCallback);
+    method public boolean registerThermalListener(lineageos.hardware.ThermalListenerCallback);
     method public boolean requireAdaptiveBacklightForSunlightEnhancement();
     method public boolean set(int, boolean);
     method public boolean setColorBalance(int);
     method public boolean setDisplayColorCalibration(int[]);
     method public deprecated boolean setDisplayGammaCalibration(int, int[]);
-    method public boolean setDisplayMode(cyanogenmod.hardware.DisplayMode, boolean);
-    method public boolean setPictureAdjustment(cyanogenmod.hardware.HSIC);
-    method public boolean setTouchscreenGestureEnabled(cyanogenmod.hardware.TouchscreenGesture, boolean);
+    method public boolean setDisplayMode(lineageos.hardware.DisplayMode, boolean);
+    method public boolean setPictureAdjustment(lineageos.hardware.HSIC);
+    method public boolean setTouchscreenGestureEnabled(lineageos.hardware.TouchscreenGesture, boolean);
     method public boolean setVibratorIntensity(int);
-    method public boolean unRegisterThermalListener(cyanogenmod.hardware.ThermalListenerCallback);
+    method public boolean unRegisterThermalListener(lineageos.hardware.ThermalListenerCallback);
     method public boolean writePersistentBytes(java.lang.String, byte[]);
     method public boolean writePersistentInt(java.lang.String, int);
     method public boolean writePersistentString(java.lang.String, java.lang.String);
@@ -534,7 +534,7 @@ package cyanogenmod.hardware {
     ctor public HSIC(float, float, float, float, float);
     method public int describeContents();
     method public java.lang.String flatten();
-    method public static cyanogenmod.hardware.HSIC fromFloatArray(float[]);
+    method public static lineageos.hardware.HSIC fromFloatArray(float[]);
     method public float getContrast();
     method public float getHue();
     method public float getIntensity();
@@ -542,7 +542,7 @@ package cyanogenmod.hardware {
     method public float getSaturationThreshold();
     method public float[] toFloatArray();
     method public int[] toRGB();
-    method public static cyanogenmod.hardware.HSIC unflattenFrom(java.lang.String) throws java.lang.NumberFormatException;
+    method public static lineageos.hardware.HSIC unflattenFrom(java.lang.String) throws java.lang.NumberFormatException;
     method public void writeToParcel(android.os.Parcel, int);
   }
 
@@ -559,10 +559,10 @@ package cyanogenmod.hardware {
     method public abstract void onThermalChanged(int) throws android.os.RemoteException;
   }
 
-  public static abstract class IThermalListenerCallback.Stub extends android.os.Binder implements cyanogenmod.hardware.IThermalListenerCallback {
+  public static abstract class IThermalListenerCallback.Stub extends android.os.Binder implements lineageos.hardware.IThermalListenerCallback {
     ctor public IThermalListenerCallback.Stub();
     method public android.os.IBinder asBinder();
-    method public static cyanogenmod.hardware.IThermalListenerCallback asInterface(android.os.IBinder);
+    method public static lineageos.hardware.IThermalListenerCallback asInterface(android.os.IBinder);
     method public boolean onTransact(int, android.os.Parcel, android.os.Parcel, int) throws android.os.RemoteException;
   }
 
@@ -592,13 +592,13 @@ package cyanogenmod.hardware {
 
   public class LiveDisplayManager {
     method public float[] getColorAdjustment();
-    method public cyanogenmod.hardware.LiveDisplayConfig getConfig();
+    method public lineageos.hardware.LiveDisplayConfig getConfig();
     method public int getDayColorTemperature();
-    method public cyanogenmod.hardware.HSIC getDefaultPictureAdjustment();
-    method public static synchronized cyanogenmod.hardware.LiveDisplayManager getInstance(android.content.Context);
+    method public lineageos.hardware.HSIC getDefaultPictureAdjustment();
+    method public static synchronized lineageos.hardware.LiveDisplayManager getInstance(android.content.Context);
     method public int getMode();
     method public int getNightColorTemperature();
-    method public cyanogenmod.hardware.HSIC getPictureAdjustment();
+    method public lineageos.hardware.HSIC getPictureAdjustment();
     method public boolean isAutoContrastEnabled();
     method public boolean isAutomaticOutdoorModeEnabled();
     method public boolean isCABCEnabled();
@@ -611,7 +611,7 @@ package cyanogenmod.hardware {
     method public boolean setDayColorTemperature(int);
     method public boolean setMode(int);
     method public boolean setNightColorTemperature(int);
-    method public boolean setPictureAdjustment(cyanogenmod.hardware.HSIC);
+    method public boolean setPictureAdjustment(lineageos.hardware.HSIC);
     field public static final int ADJUSTMENT_CONTRAST = 3; // 0x3
     field public static final int ADJUSTMENT_HUE = 0; // 0x0
     field public static final int ADJUSTMENT_INTENSITY = 2; // 0x2
@@ -631,7 +631,7 @@ package cyanogenmod.hardware {
     field public static final int MODE_OUTDOOR = 3; // 0x3
   }
 
-  public abstract class ThermalListenerCallback extends cyanogenmod.hardware.IThermalListenerCallback.Stub {
+  public abstract class ThermalListenerCallback extends lineageos.hardware.IThermalListenerCallback.Stub {
     ctor public ThermalListenerCallback();
   }
 
@@ -647,13 +647,13 @@ package cyanogenmod.hardware {
 
 }
 
-package cyanogenmod.media {
+package lineageos.media {
 
   public class MediaRecorder {
     ctor public MediaRecorder();
-    field public static final java.lang.String ACTION_HOTWORD_INPUT_CHANGED = "com.cyanogenmod.intent.action.HOTWORD_INPUT_CHANGED";
+    field public static final java.lang.String ACTION_HOTWORD_INPUT_CHANGED = "org.lineageos.intent.action.HOTWORD_INPUT_CHANGED";
     field public static final java.lang.String CAPTURE_AUDIO_HOTWORD_PERMISSION = "android.permission.CAPTURE_AUDIO_HOTWORD";
-    field public static final java.lang.String EXTRA_CURRENT_PACKAGE_NAME = "com.cyanogenmod.intent.extra.CURRENT_PACKAGE_NAME";
+    field public static final java.lang.String EXTRA_CURRENT_PACKAGE_NAME = "org.lineageos.intent.extra.CURRENT_PACKAGE_NAME";
   }
 
   public static class MediaRecorder.AudioSource {
@@ -663,23 +663,23 @@ package cyanogenmod.media {
 
 }
 
-package cyanogenmod.os {
+package lineageos.os {
 
   public class Build {
     ctor public Build();
     method public static java.lang.String getNameForSDKInt(int);
-    field public static final java.lang.String CYANOGENMOD_DISPLAY_VERSION;
-    field public static final java.lang.String CYANOGENMOD_VERSION;
+    field public static final java.lang.String LINEAGEOS_DISPLAY_VERSION;
+    field public static final java.lang.String LINEAGEOS_VERSION;
     field public static final java.lang.String UNKNOWN = "unknown";
   }
 
-  public static class Build.CM_VERSION {
-    ctor public Build.CM_VERSION();
+  public static class Build.LINEAGE_VERSION {
+    ctor public Build.LINEAGE_VERSION();
     field public static final int SDK_INT;
   }
 
-  public static class Build.CM_VERSION_CODES {
-    ctor public Build.CM_VERSION_CODES();
+  public static class Build.LINEAGE_VERSION_CODES {
+    ctor public Build.LINEAGE_VERSION_CODES();
     field public static final int APRICOT = 1; // 0x1
     field public static final int BOYSENBERRY = 2; // 0x2
     field public static final int CANTALOUPE = 3; // 0x3
@@ -690,8 +690,8 @@ package cyanogenmod.os {
   }
 
   public final class Concierge {
-    method public static cyanogenmod.os.Concierge.ParcelInfo prepareParcel(android.os.Parcel);
-    method public static cyanogenmod.os.Concierge.ParcelInfo receiveParcel(android.os.Parcel);
+    method public static lineageos.os.Concierge.ParcelInfo prepareParcel(android.os.Parcel);
+    method public static lineageos.os.Concierge.ParcelInfo receiveParcel(android.os.Parcel);
   }
 
   public static final class Concierge.ParcelInfo {
@@ -701,7 +701,7 @@ package cyanogenmod.os {
 
 }
 
-package cyanogenmod.platform {
+package lineageos.platform {
 
   public final class Manifest {
     ctor public Manifest();
@@ -709,35 +709,35 @@ package cyanogenmod.platform {
 
   public static final class Manifest.permission {
     ctor public Manifest.permission();
-    field public static final java.lang.String ACCESS_APP_SUGGESTIONS = "cyanogenmod.permission.ACCESS_APP_SUGGESTIONS";
-    field public static final java.lang.String ACCESS_THEME_MANAGER = "cyanogenmod.permission.ACCESS_THEME_MANAGER";
-    field public static final java.lang.String ACCESS_WEATHER_MANAGER = "cyanogenmod.permission.ACCESS_WEATHER_MANAGER";
-    field public static final java.lang.String BIND_WEATHER_PROVIDER_SERVICE = "cyanogenmod.permission.BIND_WEATHER_PROVIDER_SERVICE";
-    field public static final java.lang.String HARDWARE_ABSTRACTION_ACCESS = "cyanogenmod.permission.HARDWARE_ABSTRACTION_ACCESS";
-    field public static final java.lang.String LIVE_LOCK_SCREEN_MANAGER_ACCESS = "cyanogenmod.permission.LIVE_LOCK_SCREEN_MANAGER_ACCESS";
-    field public static final java.lang.String MANAGE_ALARMS = "cyanogenmod.permission.MANAGE_ALARMS";
-    field public static final java.lang.String MANAGE_LIVEDISPLAY = "cyanogenmod.permission.MANAGE_LIVEDISPLAY";
-    field public static final java.lang.String MANAGE_PERSISTENT_STORAGE = "cyanogenmod.permission.MANAGE_PERSISTENT_STORAGE";
-    field public static final java.lang.String MANAGE_REMOTE_PREFERENCES = "cyanogenmod.permission.MANAGE_REMOTE_PREFERENCES";
-    field public static final java.lang.String MODIFY_MSIM_PHONE_STATE = "cyanogenmod.permission.MODIFY_MSIM_PHONE_STATE";
-    field public static final java.lang.String MODIFY_NETWORK_SETTINGS = "cyanogenmod.permission.MODIFY_NETWORK_SETTINGS";
-    field public static final java.lang.String MODIFY_PROFILES = "cyanogenmod.permission.MODIFY_PROFILES";
-    field public static final java.lang.String MODIFY_SOUND_SETTINGS = "cyanogenmod.permission.MODIFY_SOUND_SETTINGS";
-    field public static final java.lang.String PERFORMANCE_ACCESS = "cyanogenmod.permission.PERFORMANCE_ACCESS";
-    field public static final java.lang.String PROTECTED_APP = "cyanogenmod.permission.PROTECTED_APP";
-    field public static final java.lang.String PUBLISH_CUSTOM_TILE = "cyanogenmod.permission.PUBLISH_CUSTOM_TILE";
-    field public static final java.lang.String READ_ALARMS = "cyanogenmod.permission.READ_ALARMS";
-    field public static final java.lang.String READ_DATAUSAGE = "cyanogenmod.permission.READ_DATAUSAGE";
-    field public static final java.lang.String READ_MSIM_PHONE_STATE = "cyanogenmod.permission.READ_MSIM_PHONE_STATE";
-    field public static final java.lang.String READ_THEMES = "cyanogenmod.permission.READ_THEMES";
-    field public static final java.lang.String READ_WEATHER = "cyanogenmod.permission.READ_WEATHER";
-    field public static final java.lang.String THIRD_PARTY_KEYGUARD = "cyanogenmod.permission.THIRD_PARTY_KEYGUARD";
-    field public static final java.lang.String WRITE_ALARMS = "cyanogenmod.permission.WRITE_ALARMS";
-    field public static final java.lang.String WRITE_DATAUSAGE = "cyanogenmod.permission.WRITE_DATAUSAGE";
-    field public static final java.lang.String WRITE_SECURE_SETTINGS = "cyanogenmod.permission.WRITE_SECURE_SETTINGS";
-    field public static final java.lang.String WRITE_SETTINGS = "cyanogenmod.permission.WRITE_SETTINGS";
-    field public static final java.lang.String WRITE_THEMES = "cyanogenmod.permission.WRITE_THEMES";
-    field public static final java.lang.String WRITE_WEATHER = "cyanogenmod.permission.WRITE_WEATHER";
+    field public static final java.lang.String ACCESS_APP_SUGGESTIONS = "lineageos.permission.ACCESS_APP_SUGGESTIONS";
+    field public static final java.lang.String ACCESS_THEME_MANAGER = "lineageos.permission.ACCESS_THEME_MANAGER";
+    field public static final java.lang.String ACCESS_WEATHER_MANAGER = "lineageos.permission.ACCESS_WEATHER_MANAGER";
+    field public static final java.lang.String BIND_WEATHER_PROVIDER_SERVICE = "lineageos.permission.BIND_WEATHER_PROVIDER_SERVICE";
+    field public static final java.lang.String HARDWARE_ABSTRACTION_ACCESS = "lineageos.permission.HARDWARE_ABSTRACTION_ACCESS";
+    field public static final java.lang.String LIVE_LOCK_SCREEN_MANAGER_ACCESS = "lineageos.permission.LIVE_LOCK_SCREEN_MANAGER_ACCESS";
+    field public static final java.lang.String MANAGE_ALARMS = "lineageos.permission.MANAGE_ALARMS";
+    field public static final java.lang.String MANAGE_LIVEDISPLAY = "lineageos.permission.MANAGE_LIVEDISPLAY";
+    field public static final java.lang.String MANAGE_PERSISTENT_STORAGE = "lineageos.permission.MANAGE_PERSISTENT_STORAGE";
+    field public static final java.lang.String MANAGE_REMOTE_PREFERENCES = "lineageos.permission.MANAGE_REMOTE_PREFERENCES";
+    field public static final java.lang.String MODIFY_MSIM_PHONE_STATE = "lineageos.permission.MODIFY_MSIM_PHONE_STATE";
+    field public static final java.lang.String MODIFY_NETWORK_SETTINGS = "lineageos.permission.MODIFY_NETWORK_SETTINGS";
+    field public static final java.lang.String MODIFY_PROFILES = "lineageos.permission.MODIFY_PROFILES";
+    field public static final java.lang.String MODIFY_SOUND_SETTINGS = "lineageos.permission.MODIFY_SOUND_SETTINGS";
+    field public static final java.lang.String PERFORMANCE_ACCESS = "lineageos.permission.PERFORMANCE_ACCESS";
+    field public static final java.lang.String PROTECTED_APP = "lineageos.permission.PROTECTED_APP";
+    field public static final java.lang.String PUBLISH_CUSTOM_TILE = "lineageos.permission.PUBLISH_CUSTOM_TILE";
+    field public static final java.lang.String READ_ALARMS = "lineageos.permission.READ_ALARMS";
+    field public static final java.lang.String READ_DATAUSAGE = "lineageos.permission.READ_DATAUSAGE";
+    field public static final java.lang.String READ_MSIM_PHONE_STATE = "lineageos.permission.READ_MSIM_PHONE_STATE";
+    field public static final java.lang.String READ_THEMES = "lineageos.permission.READ_THEMES";
+    field public static final java.lang.String READ_WEATHER = "lineageos.permission.READ_WEATHER";
+    field public static final java.lang.String THIRD_PARTY_KEYGUARD = "lineageos.permission.THIRD_PARTY_KEYGUARD";
+    field public static final java.lang.String WRITE_ALARMS = "lineageos.permission.WRITE_ALARMS";
+    field public static final java.lang.String WRITE_DATAUSAGE = "lineageos.permission.WRITE_DATAUSAGE";
+    field public static final java.lang.String WRITE_SECURE_SETTINGS = "lineageos.permission.WRITE_SECURE_SETTINGS";
+    field public static final java.lang.String WRITE_SETTINGS = "lineageos.permission.WRITE_SETTINGS";
+    field public static final java.lang.String WRITE_THEMES = "lineageos.permission.WRITE_THEMES";
+    field public static final java.lang.String WRITE_WEATHER = "lineageos.permission.WRITE_WEATHER";
   }
 
   public final class R {
@@ -787,19 +787,19 @@ package cyanogenmod.platform {
 
 }
 
-package cyanogenmod.power {
+package lineageos.power {
 
   public class PerformanceManager {
-    method public cyanogenmod.power.PerformanceProfile getActivePowerProfile();
-    method public static cyanogenmod.power.PerformanceManager getInstance(android.content.Context);
+    method public lineageos.power.PerformanceProfile getActivePowerProfile();
+    method public static lineageos.power.PerformanceManager getInstance(android.content.Context);
     method public int getNumberOfProfiles();
     method public int getPowerProfile();
-    method public cyanogenmod.power.PerformanceProfile getPowerProfile(int);
-    method public java.util.SortedSet<cyanogenmod.power.PerformanceProfile> getPowerProfiles();
+    method public lineageos.power.PerformanceProfile getPowerProfile(int);
+    method public java.util.SortedSet<lineageos.power.PerformanceProfile> getPowerProfiles();
     method public boolean getProfileHasAppProfiles(int);
     method public boolean setPowerProfile(int);
-    method public boolean setPowerProfile(cyanogenmod.power.PerformanceProfile);
-    field public static final java.lang.String POWER_PROFILE_CHANGED = "cyanogenmod.power.PROFILE_CHANGED";
+    method public boolean setPowerProfile(lineageos.power.PerformanceProfile);
+    field public static final java.lang.String POWER_PROFILE_CHANGED = "lineageos.power.PROFILE_CHANGED";
     field public static final int PROFILE_BALANCED = 1; // 0x1
     field public static final int PROFILE_BIAS_PERFORMANCE = 4; // 0x4
     field public static final int PROFILE_BIAS_POWER_SAVE = 3; // 0x3
@@ -810,7 +810,7 @@ package cyanogenmod.power {
 
   public class PerformanceProfile implements java.lang.Comparable android.os.Parcelable {
     ctor public PerformanceProfile(int, float, java.lang.String, java.lang.String, boolean);
-    method public int compareTo(cyanogenmod.power.PerformanceProfile);
+    method public int compareTo(lineageos.power.PerformanceProfile);
     method public int describeContents();
     method public java.lang.String getDescription();
     method public int getId();
@@ -818,68 +818,68 @@ package cyanogenmod.power {
     method public float getWeight();
     method public boolean isBoostEnabled();
     method public void writeToParcel(android.os.Parcel, int);
-    field public static final android.os.Parcelable.Creator<cyanogenmod.power.PerformanceProfile> CREATOR;
+    field public static final android.os.Parcelable.Creator<lineageos.power.PerformanceProfile> CREATOR;
   }
 
 }
 
-package cyanogenmod.preference {
+package lineageos.preference {
 
-  public class CMGlobalSettingSwitchPreference extends cyanogenmod.preference.SelfRemovingSwitchPreference {
-    ctor public CMGlobalSettingSwitchPreference(android.content.Context, android.util.AttributeSet, int);
-    ctor public CMGlobalSettingSwitchPreference(android.content.Context, android.util.AttributeSet);
-    ctor public CMGlobalSettingSwitchPreference(android.content.Context);
+  public class LineageGlobalSettingSwitchPreference extends lineageos.preference.SelfRemovingSwitchPreference {
+    ctor public LineageGlobalSettingSwitchPreference(android.content.Context, android.util.AttributeSet, int);
+    ctor public LineageGlobalSettingSwitchPreference(android.content.Context, android.util.AttributeSet);
+    ctor public LineageGlobalSettingSwitchPreference(android.content.Context);
     method protected boolean getPersistedBoolean(boolean);
     method protected boolean isPersisted();
     method protected boolean persistBoolean(boolean);
   }
 
-  public class CMSecureSettingListPreference extends cyanogenmod.preference.SelfRemovingListPreference {
-    ctor public CMSecureSettingListPreference(android.content.Context, android.util.AttributeSet, int);
-    ctor public CMSecureSettingListPreference(android.content.Context, android.util.AttributeSet);
+  public class LineageSecureSettingListPreference extends lineageos.preference.SelfRemovingListPreference {
+    ctor public LineageSecureSettingListPreference(android.content.Context, android.util.AttributeSet, int);
+    ctor public LineageSecureSettingListPreference(android.content.Context, android.util.AttributeSet);
     method public int getIntValue(int);
     method protected java.lang.String getPersistedString(java.lang.String);
     method protected boolean isPersisted();
     method protected boolean persistString(java.lang.String);
   }
 
-  public class CMSecureSettingSwitchPreference extends cyanogenmod.preference.SelfRemovingSwitchPreference {
-    ctor public CMSecureSettingSwitchPreference(android.content.Context, android.util.AttributeSet, int);
-    ctor public CMSecureSettingSwitchPreference(android.content.Context, android.util.AttributeSet);
-    ctor public CMSecureSettingSwitchPreference(android.content.Context);
+  public class LineageSecureSettingSwitchPreference extends lineageos.preference.SelfRemovingSwitchPreference {
+    ctor public LineageSecureSettingSwitchPreference(android.content.Context, android.util.AttributeSet, int);
+    ctor public LineageSecureSettingSwitchPreference(android.content.Context, android.util.AttributeSet);
+    ctor public LineageSecureSettingSwitchPreference(android.content.Context);
     method protected boolean getPersistedBoolean(boolean);
     method protected boolean isPersisted();
     method protected boolean persistBoolean(boolean);
   }
 
-  public class CMSystemSettingDropDownPreference extends cyanogenmod.preference.SelfRemovingDropDownPreference {
-    ctor public CMSystemSettingDropDownPreference(android.content.Context, android.util.AttributeSet, int);
-    ctor public CMSystemSettingDropDownPreference(android.content.Context, android.util.AttributeSet);
+  public class LineageSystemSettingDropDownPreference extends lineageos.preference.SelfRemovingDropDownPreference {
+    ctor public LineageSystemSettingDropDownPreference(android.content.Context, android.util.AttributeSet, int);
+    ctor public LineageSystemSettingDropDownPreference(android.content.Context, android.util.AttributeSet);
     method public int getIntValue(int);
     method protected java.lang.String getPersistedString(java.lang.String);
     method protected boolean isPersisted();
     method protected boolean persistString(java.lang.String);
   }
 
-  public class CMSystemSettingListPreference extends cyanogenmod.preference.SelfRemovingListPreference {
-    ctor public CMSystemSettingListPreference(android.content.Context, android.util.AttributeSet, int);
-    ctor public CMSystemSettingListPreference(android.content.Context, android.util.AttributeSet);
+  public class LineageSystemSettingListPreference extends lineageos.preference.SelfRemovingListPreference {
+    ctor public LineageSystemSettingListPreference(android.content.Context, android.util.AttributeSet, int);
+    ctor public LineageSystemSettingListPreference(android.content.Context, android.util.AttributeSet);
     method public int getIntValue(int);
     method protected java.lang.String getPersistedString(java.lang.String);
     method protected boolean isPersisted();
     method protected boolean persistString(java.lang.String);
   }
 
-  public class CMSystemSettingSwitchPreference extends cyanogenmod.preference.SelfRemovingSwitchPreference {
-    ctor public CMSystemSettingSwitchPreference(android.content.Context, android.util.AttributeSet, int);
-    ctor public CMSystemSettingSwitchPreference(android.content.Context, android.util.AttributeSet);
-    ctor public CMSystemSettingSwitchPreference(android.content.Context);
+  public class LineageSystemSettingSwitchPreference extends lineageos.preference.SelfRemovingSwitchPreference {
+    ctor public LineageSystemSettingSwitchPreference(android.content.Context, android.util.AttributeSet, int);
+    ctor public LineageSystemSettingSwitchPreference(android.content.Context, android.util.AttributeSet);
+    ctor public LineageSystemSettingSwitchPreference(android.content.Context);
     method protected boolean getPersistedBoolean(boolean);
     method protected boolean isPersisted();
     method protected boolean persistBoolean(boolean);
   }
 
-  public class GlobalSettingSwitchPreference extends cyanogenmod.preference.SelfRemovingSwitchPreference {
+  public class GlobalSettingSwitchPreference extends lineageos.preference.SelfRemovingSwitchPreference {
     ctor public GlobalSettingSwitchPreference(android.content.Context, android.util.AttributeSet, int);
     ctor public GlobalSettingSwitchPreference(android.content.Context, android.util.AttributeSet);
     ctor public GlobalSettingSwitchPreference(android.content.Context);
@@ -888,7 +888,7 @@ package cyanogenmod.preference {
     method protected boolean persistBoolean(boolean);
   }
 
-  public class RemotePreference extends cyanogenmod.preference.SelfRemovingPreference {
+  public class RemotePreference extends lineageos.preference.SelfRemovingPreference {
     ctor public RemotePreference(android.content.Context, android.util.AttributeSet, int, int);
     ctor public RemotePreference(android.content.Context, android.util.AttributeSet, int);
     ctor public RemotePreference(android.content.Context, android.util.AttributeSet);
@@ -897,13 +897,13 @@ package cyanogenmod.preference {
     method public void onAttached();
     method public void onDetached();
     method public void onRemoteUpdated(android.os.Bundle);
-    field public static final java.lang.String ACTION_REFRESH_PREFERENCE = "cyanogenmod.intent.action.REFRESH_PREFERENCE";
-    field public static final java.lang.String ACTION_UPDATE_PREFERENCE = "cyanogenmod.intent.action.UPDATE_PREFERENCE";
-    field public static final java.lang.String EXTRA_ENABLED = ":cm:pref_enabled";
-    field public static final java.lang.String EXTRA_KEY = ":cm:pref_key";
-    field public static final java.lang.String EXTRA_SUMMARY = ":cm:pref_summary";
-    field public static final java.lang.String META_REMOTE_KEY = "org.cyanogenmod.settings.summary.key";
-    field public static final java.lang.String META_REMOTE_RECEIVER = "org.cyanogenmod.settings.summary.receiver";
+    field public static final java.lang.String ACTION_REFRESH_PREFERENCE = "lineageos.intent.action.REFRESH_PREFERENCE";
+    field public static final java.lang.String ACTION_UPDATE_PREFERENCE = "lineageos.intent.action.UPDATE_PREFERENCE";
+    field public static final java.lang.String EXTRA_ENABLED = ":lineage:pref_enabled";
+    field public static final java.lang.String EXTRA_KEY = ":lineage:pref_key";
+    field public static final java.lang.String EXTRA_SUMMARY = ":lineage:pref_summary";
+    field public static final java.lang.String META_REMOTE_KEY = "org.lineageos.settings.summary.key";
+    field public static final java.lang.String META_REMOTE_RECEIVER = "org.lineageos.settings.summary.receiver";
     field protected final android.content.Context mContext;
   }
 
@@ -915,7 +915,7 @@ package cyanogenmod.preference {
     method public void onReceive(android.content.Context, android.content.Intent);
   }
 
-  public class SecureSettingSwitchPreference extends cyanogenmod.preference.SelfRemovingSwitchPreference {
+  public class SecureSettingSwitchPreference extends lineageos.preference.SelfRemovingSwitchPreference {
     ctor public SecureSettingSwitchPreference(android.content.Context, android.util.AttributeSet, int);
     ctor public SecureSettingSwitchPreference(android.content.Context, android.util.AttributeSet);
     ctor public SecureSettingSwitchPreference(android.content.Context);
@@ -962,22 +962,22 @@ package cyanogenmod.preference {
   }
 
   public class SettingsHelper {
-    method public static synchronized cyanogenmod.preference.SettingsHelper get(android.content.Context);
+    method public static synchronized lineageos.preference.SettingsHelper get(android.content.Context);
     method public boolean getBoolean(android.net.Uri, boolean);
     method public int getInt(android.net.Uri, int);
     method public java.lang.String getString(android.net.Uri);
     method public void putBoolean(android.net.Uri, boolean);
     method public void putInt(android.net.Uri, int);
     method public void putString(android.net.Uri, java.lang.String);
-    method public void startWatching(cyanogenmod.preference.SettingsHelper.OnSettingsChangeListener, android.net.Uri...);
-    method public void stopWatching(cyanogenmod.preference.SettingsHelper.OnSettingsChangeListener);
+    method public void startWatching(lineageos.preference.SettingsHelper.OnSettingsChangeListener, android.net.Uri...);
+    method public void stopWatching(lineageos.preference.SettingsHelper.OnSettingsChangeListener);
   }
 
   public static abstract interface SettingsHelper.OnSettingsChangeListener {
     method public abstract void onSettingsChanged(android.net.Uri);
   }
 
-  public class SystemSettingSwitchPreference extends cyanogenmod.preference.SelfRemovingSwitchPreference {
+  public class SystemSettingSwitchPreference extends lineageos.preference.SelfRemovingSwitchPreference {
     ctor public SystemSettingSwitchPreference(android.content.Context, android.util.AttributeSet, int);
     ctor public SystemSettingSwitchPreference(android.content.Context, android.util.AttributeSet);
     ctor public SystemSettingSwitchPreference(android.content.Context);
@@ -988,7 +988,7 @@ package cyanogenmod.preference {
 
 }
 
-package cyanogenmod.profiles {
+package lineageos.profiles {
 
   public final class AirplaneModeSettings implements android.os.Parcelable {
     ctor public AirplaneModeSettings(android.os.Parcel);
@@ -1090,27 +1090,27 @@ package cyanogenmod.profiles {
 
 }
 
-package cyanogenmod.providers {
+package lineageos.providers {
 
-  public final class CMSettings {
-    ctor public CMSettings();
-    field public static final java.lang.String ACTION_DATA_USAGE = "cyanogenmod.settings.ACTION_DATA_USAGE";
-    field public static final java.lang.String ACTION_LIVEDISPLAY_SETTINGS = "cyanogenmod.settings.LIVEDISPLAY_SETTINGS";
-    field public static final java.lang.String AUTHORITY = "cmsettings";
+  public final class LineageSettings {
+    ctor public LineageSettings();
+    field public static final java.lang.String ACTION_DATA_USAGE = "lineageos.settings.ACTION_DATA_USAGE";
+    field public static final java.lang.String ACTION_LIVEDISPLAY_SETTINGS = "lineageos.settings.LIVEDISPLAY_SETTINGS";
+    field public static final java.lang.String AUTHORITY = "lineagesettings";
   }
 
-  public static class CMSettings.CMSettingNotFoundException extends android.util.AndroidException {
-    ctor public CMSettings.CMSettingNotFoundException(java.lang.String);
+  public static class LineageSettings.LineageSettingNotFoundException extends android.util.AndroidException {
+    ctor public LineageSettings.LineageSettingNotFoundException(java.lang.String);
   }
 
-  public static final class CMSettings.Global extends android.provider.Settings.NameValueTable {
-    ctor public CMSettings.Global();
+  public static final class LineageSettings.Global extends android.provider.Settings.NameValueTable {
+    ctor public LineageSettings.Global();
     method public static float getFloat(android.content.ContentResolver, java.lang.String, float);
-    method public static float getFloat(android.content.ContentResolver, java.lang.String) throws cyanogenmod.providers.CMSettings.CMSettingNotFoundException;
+    method public static float getFloat(android.content.ContentResolver, java.lang.String) throws lineageos.providers.LineageSettings.LineageSettingNotFoundException;
     method public static int getInt(android.content.ContentResolver, java.lang.String, int);
-    method public static int getInt(android.content.ContentResolver, java.lang.String) throws cyanogenmod.providers.CMSettings.CMSettingNotFoundException;
+    method public static int getInt(android.content.ContentResolver, java.lang.String) throws lineageos.providers.LineageSettings.LineageSettingNotFoundException;
     method public static long getLong(android.content.ContentResolver, java.lang.String, long);
-    method public static long getLong(android.content.ContentResolver, java.lang.String) throws cyanogenmod.providers.CMSettings.CMSettingNotFoundException;
+    method public static long getLong(android.content.ContentResolver, java.lang.String) throws lineageos.providers.LineageSettings.LineageSettingNotFoundException;
     method public static java.lang.String getString(android.content.ContentResolver, java.lang.String);
     method public static android.net.Uri getUriFor(java.lang.String);
     method public static boolean putFloat(android.content.ContentResolver, java.lang.String, float);
@@ -1118,18 +1118,18 @@ package cyanogenmod.providers {
     method public static boolean putLong(android.content.ContentResolver, java.lang.String, long);
     method public static boolean putString(android.content.ContentResolver, java.lang.String, java.lang.String);
     field public static final android.net.Uri CONTENT_URI;
-    field public static final java.lang.String SYS_PROP_CM_SETTING_VERSION = "sys.cm_settings_global_version";
+    field public static final java.lang.String SYS_PROP_LINEAGE_SETTING_VERSION = "sys.lineage_settings_global_version";
     field public static final java.lang.String WEATHER_TEMPERATURE_UNIT = "weather_temperature_unit";
   }
 
-  public static final class CMSettings.Secure extends android.provider.Settings.NameValueTable {
-    ctor public CMSettings.Secure();
+  public static final class LineageSettings.Secure extends android.provider.Settings.NameValueTable {
+    ctor public LineageSettings.Secure();
     method public static float getFloat(android.content.ContentResolver, java.lang.String, float);
-    method public static float getFloat(android.content.ContentResolver, java.lang.String) throws cyanogenmod.providers.CMSettings.CMSettingNotFoundException;
+    method public static float getFloat(android.content.ContentResolver, java.lang.String) throws lineageos.providers.LineageSettings.LineageSettingNotFoundException;
     method public static int getInt(android.content.ContentResolver, java.lang.String, int);
-    method public static int getInt(android.content.ContentResolver, java.lang.String) throws cyanogenmod.providers.CMSettings.CMSettingNotFoundException;
+    method public static int getInt(android.content.ContentResolver, java.lang.String) throws lineageos.providers.LineageSettings.LineageSettingNotFoundException;
     method public static long getLong(android.content.ContentResolver, java.lang.String, long);
-    method public static long getLong(android.content.ContentResolver, java.lang.String) throws cyanogenmod.providers.CMSettings.CMSettingNotFoundException;
+    method public static long getLong(android.content.ContentResolver, java.lang.String) throws lineageos.providers.LineageSettings.LineageSettingNotFoundException;
     method public static java.lang.String getString(android.content.ContentResolver, java.lang.String);
     method public static android.net.Uri getUriFor(java.lang.String);
     method public static boolean putFloat(android.content.ContentResolver, java.lang.String, float);
@@ -1137,17 +1137,17 @@ package cyanogenmod.providers {
     method public static boolean putLong(android.content.ContentResolver, java.lang.String, long);
     method public static boolean putString(android.content.ContentResolver, java.lang.String, java.lang.String);
     field public static final android.net.Uri CONTENT_URI;
-    field public static final java.lang.String SYS_PROP_CM_SETTING_VERSION = "sys.cm_settings_secure_version";
+    field public static final java.lang.String SYS_PROP_LINEAGE_SETTING_VERSION = "sys.lineage_settings_secure_version";
   }
 
-  public static final class CMSettings.System extends android.provider.Settings.NameValueTable {
-    ctor public CMSettings.System();
+  public static final class LineageSettings.System extends android.provider.Settings.NameValueTable {
+    ctor public LineageSettings.System();
     method public static float getFloat(android.content.ContentResolver, java.lang.String, float);
-    method public static float getFloat(android.content.ContentResolver, java.lang.String) throws cyanogenmod.providers.CMSettings.CMSettingNotFoundException;
+    method public static float getFloat(android.content.ContentResolver, java.lang.String) throws lineageos.providers.LineageSettings.LineageSettingNotFoundException;
     method public static int getInt(android.content.ContentResolver, java.lang.String, int);
-    method public static int getInt(android.content.ContentResolver, java.lang.String) throws cyanogenmod.providers.CMSettings.CMSettingNotFoundException;
+    method public static int getInt(android.content.ContentResolver, java.lang.String) throws lineageos.providers.LineageSettings.LineageSettingNotFoundException;
     method public static long getLong(android.content.ContentResolver, java.lang.String, long);
-    method public static long getLong(android.content.ContentResolver, java.lang.String) throws cyanogenmod.providers.CMSettings.CMSettingNotFoundException;
+    method public static long getLong(android.content.ContentResolver, java.lang.String) throws lineageos.providers.LineageSettings.LineageSettingNotFoundException;
     method public static java.lang.String getString(android.content.ContentResolver, java.lang.String);
     method public static android.net.Uri getUriFor(java.lang.String);
     method public static boolean putFloat(android.content.ContentResolver, java.lang.String, float);
@@ -1238,7 +1238,7 @@ package cyanogenmod.providers {
     field public static final java.lang.String STYLUS_ICON_ENABLED = "stylus_icon_enabled";
     field public static final java.lang.String SWAP_VOLUME_KEYS_ON_ROTATION = "swap_volume_keys_on_rotation";
     field public static final java.lang.String SYSTEM_PROFILES_ENABLED = "system_profiles_enabled";
-    field public static final java.lang.String SYS_PROP_CM_SETTING_VERSION = "sys.cm_settings_system_version";
+    field public static final java.lang.String SYS_PROP_LINEAGE_SETTING_VERSION = "sys.lineage_settings_system_version";
     field public static final java.lang.String T9_SEARCH_INPUT_LOCALE = "t9_search_input_locale";
     field public static final java.lang.String TORCH_LONG_PRESS_POWER_GESTURE = "torch_long_press_power_gesture";
     field public static final java.lang.String TORCH_LONG_PRESS_POWER_TIMEOUT = "torch_long_press_power_timeout";
@@ -1272,7 +1272,7 @@ package cyanogenmod.providers {
     field public static final java.lang.String CONTENT_ITEM_TYPE = "vnd.android.cursor.itemdatausage_item";
     field public static final java.lang.String CONTENT_TYPE = "vnd.android.cursor.dirdatausage_item";
     field public static final android.net.Uri CONTENT_URI;
-    field public static final java.lang.String DATAUSAGE_AUTHORITY = "org.cyanogenmod.providers.datausage";
+    field public static final java.lang.String DATAUSAGE_AUTHORITY = "org.lineageos.providers.datausage";
     field public static final java.lang.String DATAUSAGE_TABLE = "datausage";
     field public static final java.lang.String ENABLE = "enable";
     field public static final java.lang.String EXTRA = "extra";
@@ -1288,7 +1288,7 @@ package cyanogenmod.providers {
 
   public class ThemesContract {
     ctor public ThemesContract();
-    field public static final java.lang.String AUTHORITY = "com.cyanogenmod.themes";
+    field public static final java.lang.String AUTHORITY = "com.lineageos.themes";
     field public static final android.net.Uri AUTHORITY_URI;
   }
 
@@ -1428,7 +1428,7 @@ package cyanogenmod.providers {
 
   public class WeatherContract {
     ctor public WeatherContract();
-    field public static final java.lang.String AUTHORITY = "com.cyanogenmod.weather";
+    field public static final java.lang.String AUTHORITY = "org.lineageos.weather";
     field public static final android.net.Uri AUTHORITY_URI;
   }
 
@@ -1517,7 +1517,7 @@ package cyanogenmod.providers {
 
 }
 
-package cyanogenmod.themes {
+package lineageos.themes {
 
   public final class ThemeChangeRequest implements android.os.Parcelable {
     method public int describeContents();
@@ -1532,72 +1532,72 @@ package cyanogenmod.themes {
     method public int getNumChangesRequested();
     method public java.lang.String getOverlayThemePackageName();
     method public final java.util.Map<java.lang.String, java.lang.String> getPerAppOverlays();
-    method public cyanogenmod.themes.ThemeChangeRequest.RequestType getReqeustType();
+    method public lineageos.themes.ThemeChangeRequest.RequestType getReqeustType();
     method public java.lang.String getRingtoneThemePackageName();
     method public java.lang.String getStatusBarThemePackageName();
     method public final java.util.Map<java.lang.String, java.lang.String> getThemeComponentsMap();
     method public long getWallpaperId();
     method public java.lang.String getWallpaperThemePackageName();
     method public void writeToParcel(android.os.Parcel, int);
-    field public static final android.os.Parcelable.Creator<cyanogenmod.themes.ThemeChangeRequest> CREATOR;
+    field public static final android.os.Parcelable.Creator<lineageos.themes.ThemeChangeRequest> CREATOR;
     field public static final int DEFAULT_WALLPAPER_ID = -1; // 0xffffffff
   }
 
   public static class ThemeChangeRequest.Builder {
     ctor public ThemeChangeRequest.Builder();
     ctor public ThemeChangeRequest.Builder(android.content.res.ThemeConfig);
-    method public cyanogenmod.themes.ThemeChangeRequest build();
-    method public cyanogenmod.themes.ThemeChangeRequest.Builder setAlarm(java.lang.String);
-    method public cyanogenmod.themes.ThemeChangeRequest.Builder setAppOverlay(java.lang.String, java.lang.String);
-    method public cyanogenmod.themes.ThemeChangeRequest.Builder setBootanimation(java.lang.String);
-    method public cyanogenmod.themes.ThemeChangeRequest.Builder setComponent(java.lang.String, java.lang.String);
-    method public cyanogenmod.themes.ThemeChangeRequest.Builder setFont(java.lang.String);
-    method public cyanogenmod.themes.ThemeChangeRequest.Builder setIcons(java.lang.String);
-    method public cyanogenmod.themes.ThemeChangeRequest.Builder setLiveLockScreen(java.lang.String);
-    method public cyanogenmod.themes.ThemeChangeRequest.Builder setLockWallpaper(java.lang.String);
-    method public cyanogenmod.themes.ThemeChangeRequest.Builder setNavBar(java.lang.String);
-    method public cyanogenmod.themes.ThemeChangeRequest.Builder setNotification(java.lang.String);
-    method public cyanogenmod.themes.ThemeChangeRequest.Builder setOverlay(java.lang.String);
-    method public cyanogenmod.themes.ThemeChangeRequest.Builder setRequestType(cyanogenmod.themes.ThemeChangeRequest.RequestType);
-    method public cyanogenmod.themes.ThemeChangeRequest.Builder setRingtone(java.lang.String);
-    method public cyanogenmod.themes.ThemeChangeRequest.Builder setStatusBar(java.lang.String);
-    method public cyanogenmod.themes.ThemeChangeRequest.Builder setWallpaper(java.lang.String);
-    method public cyanogenmod.themes.ThemeChangeRequest.Builder setWallpaperId(long);
+    method public lineageos.themes.ThemeChangeRequest build();
+    method public lineageos.themes.ThemeChangeRequest.Builder setAlarm(java.lang.String);
+    method public lineageos.themes.ThemeChangeRequest.Builder setAppOverlay(java.lang.String, java.lang.String);
+    method public lineageos.themes.ThemeChangeRequest.Builder setBootanimation(java.lang.String);
+    method public lineageos.themes.ThemeChangeRequest.Builder setComponent(java.lang.String, java.lang.String);
+    method public lineageos.themes.ThemeChangeRequest.Builder setFont(java.lang.String);
+    method public lineageos.themes.ThemeChangeRequest.Builder setIcons(java.lang.String);
+    method public lineageos.themes.ThemeChangeRequest.Builder setLiveLockScreen(java.lang.String);
+    method public lineageos.themes.ThemeChangeRequest.Builder setLockWallpaper(java.lang.String);
+    method public lineageos.themes.ThemeChangeRequest.Builder setNavBar(java.lang.String);
+    method public lineageos.themes.ThemeChangeRequest.Builder setNotification(java.lang.String);
+    method public lineageos.themes.ThemeChangeRequest.Builder setOverlay(java.lang.String);
+    method public lineageos.themes.ThemeChangeRequest.Builder setRequestType(lineageos.themes.ThemeChangeRequest.RequestType);
+    method public lineageos.themes.ThemeChangeRequest.Builder setRingtone(java.lang.String);
+    method public lineageos.themes.ThemeChangeRequest.Builder setStatusBar(java.lang.String);
+    method public lineageos.themes.ThemeChangeRequest.Builder setWallpaper(java.lang.String);
+    method public lineageos.themes.ThemeChangeRequest.Builder setWallpaperId(long);
   }
 
   public static final class ThemeChangeRequest.RequestType extends java.lang.Enum {
-    method public static cyanogenmod.themes.ThemeChangeRequest.RequestType valueOf(java.lang.String);
-    method public static final cyanogenmod.themes.ThemeChangeRequest.RequestType[] values();
-    enum_constant public static final cyanogenmod.themes.ThemeChangeRequest.RequestType THEME_REMOVED;
-    enum_constant public static final cyanogenmod.themes.ThemeChangeRequest.RequestType THEME_RESET;
-    enum_constant public static final cyanogenmod.themes.ThemeChangeRequest.RequestType THEME_UPDATED;
-    enum_constant public static final cyanogenmod.themes.ThemeChangeRequest.RequestType USER_REQUEST;
-    enum_constant public static final cyanogenmod.themes.ThemeChangeRequest.RequestType USER_REQUEST_MIXNMATCH;
+    method public static lineageos.themes.ThemeChangeRequest.RequestType valueOf(java.lang.String);
+    method public static final lineageos.themes.ThemeChangeRequest.RequestType[] values();
+    enum_constant public static final lineageos.themes.ThemeChangeRequest.RequestType THEME_REMOVED;
+    enum_constant public static final lineageos.themes.ThemeChangeRequest.RequestType THEME_RESET;
+    enum_constant public static final lineageos.themes.ThemeChangeRequest.RequestType THEME_UPDATED;
+    enum_constant public static final lineageos.themes.ThemeChangeRequest.RequestType USER_REQUEST;
+    enum_constant public static final lineageos.themes.ThemeChangeRequest.RequestType USER_REQUEST_MIXNMATCH;
   }
 
   public class ThemeManager {
-    method public deprecated void addClient(cyanogenmod.themes.ThemeManager.ThemeChangeListener);
+    method public deprecated void addClient(lineageos.themes.ThemeManager.ThemeChangeListener);
     method public void applyDefaultTheme();
-    method public static cyanogenmod.themes.ThemeManager getInstance(android.content.Context);
-    method public cyanogenmod.themes.ThemeChangeRequest.RequestType getLastThemeChangeRequestType();
+    method public static lineageos.themes.ThemeManager getInstance(android.content.Context);
+    method public lineageos.themes.ThemeChangeRequest.RequestType getLastThemeChangeRequestType();
     method public long getLastThemeChangeTime();
     method public int getProgress();
     method public boolean isThemeApplying();
     method public boolean isThemeBeingProcessed(java.lang.String);
-    method public deprecated void onClientDestroyed(cyanogenmod.themes.ThemeManager.ThemeChangeListener);
-    method public deprecated void onClientPaused(cyanogenmod.themes.ThemeManager.ThemeChangeListener);
-    method public deprecated void onClientResumed(cyanogenmod.themes.ThemeManager.ThemeChangeListener);
+    method public deprecated void onClientDestroyed(lineageos.themes.ThemeManager.ThemeChangeListener);
+    method public deprecated void onClientPaused(lineageos.themes.ThemeManager.ThemeChangeListener);
+    method public deprecated void onClientResumed(lineageos.themes.ThemeManager.ThemeChangeListener);
     method public boolean processThemeResources(java.lang.String);
-    method public void registerProcessingListener(cyanogenmod.themes.ThemeManager.ThemeProcessingListener);
-    method public void registerThemeChangeListener(cyanogenmod.themes.ThemeManager.ThemeChangeListener);
-    method public deprecated void removeClient(cyanogenmod.themes.ThemeManager.ThemeChangeListener);
+    method public void registerProcessingListener(lineageos.themes.ThemeManager.ThemeProcessingListener);
+    method public void registerThemeChangeListener(lineageos.themes.ThemeManager.ThemeChangeListener);
+    method public deprecated void removeClient(lineageos.themes.ThemeManager.ThemeChangeListener);
     method public void requestThemeChange(java.lang.String, java.util.List<java.lang.String>);
     method public void requestThemeChange(java.lang.String, java.util.List<java.lang.String>, boolean);
     method public void requestThemeChange(java.util.Map<java.lang.String, java.lang.String>);
     method public void requestThemeChange(java.util.Map<java.lang.String, java.lang.String>, boolean);
-    method public void requestThemeChange(cyanogenmod.themes.ThemeChangeRequest, boolean);
-    method public void unregisterProcessingListener(cyanogenmod.themes.ThemeManager.ThemeProcessingListener);
-    method public void unregisterThemeChangeListener(cyanogenmod.themes.ThemeManager.ThemeChangeListener);
+    method public void requestThemeChange(lineageos.themes.ThemeChangeRequest, boolean);
+    method public void unregisterProcessingListener(lineageos.themes.ThemeManager.ThemeProcessingListener);
+    method public void unregisterThemeChangeListener(lineageos.themes.ThemeManager.ThemeChangeListener);
   }
 
   public static abstract interface ThemeManager.ThemeChangeListener {
@@ -1611,7 +1611,7 @@ package cyanogenmod.themes {
 
 }
 
-package cyanogenmod.util {
+package lineageos.util {
 
   public class ColorUtils {
     ctor public ColorUtils();
@@ -1627,24 +1627,24 @@ package cyanogenmod.util {
 
 }
 
-package cyanogenmod.weather {
+package lineageos.weather {
 
-  public class CMWeatherManager {
+  public class LineageWeatherManager {
     method public void cancelRequest(int);
     method public java.lang.String getActiveWeatherServiceProviderLabel();
-    method public static cyanogenmod.weather.CMWeatherManager getInstance(android.content.Context);
-    method public int lookupCity(java.lang.String, cyanogenmod.weather.CMWeatherManager.LookupCityRequestListener);
-    method public void registerWeatherServiceProviderChangeListener(cyanogenmod.weather.CMWeatherManager.WeatherServiceProviderChangeListener);
-    method public int requestWeatherUpdate(android.location.Location, cyanogenmod.weather.CMWeatherManager.WeatherUpdateRequestListener);
-    method public int requestWeatherUpdate(cyanogenmod.weather.WeatherLocation, cyanogenmod.weather.CMWeatherManager.WeatherUpdateRequestListener);
-    method public void unregisterWeatherServiceProviderChangeListener(cyanogenmod.weather.CMWeatherManager.WeatherServiceProviderChangeListener);
+    method public static lineageos.weather.LineageWeatherManager getInstance(android.content.Context);
+    method public int lookupCity(java.lang.String, lineageos.weather.LineageWeatherManager.LookupCityRequestListener);
+    method public void registerWeatherServiceProviderChangeListener(lineageos.weather.LineageWeatherManager.WeatherServiceProviderChangeListener);
+    method public int requestWeatherUpdate(android.location.Location, lineageos.weather.LineageWeatherManager.WeatherUpdateRequestListener);
+    method public int requestWeatherUpdate(lineageos.weather.WeatherLocation, lineageos.weather.LineageWeatherManager.WeatherUpdateRequestListener);
+    method public void unregisterWeatherServiceProviderChangeListener(lineageos.weather.LineageWeatherManager.WeatherServiceProviderChangeListener);
   }
 
-  public static abstract interface CMWeatherManager.LookupCityRequestListener {
-    method public abstract void onLookupCityRequestCompleted(int, java.util.List<cyanogenmod.weather.WeatherLocation>);
+  public static abstract interface LineageWeatherManager.LookupCityRequestListener {
+    method public abstract void onLookupCityRequestCompleted(int, java.util.List<lineageos.weather.WeatherLocation>);
   }
 
-  public static final class CMWeatherManager.RequestStatus {
+  public static final class LineageWeatherManager.RequestStatus {
     field public static final int ALREADY_IN_PROGRESS = -3; // 0xfffffffd
     field public static final int COMPLETED = 1; // 0x1
     field public static final int FAILED = -1; // 0xffffffff
@@ -1652,12 +1652,12 @@ package cyanogenmod.weather {
     field public static final int SUBMITTED_TOO_SOON = -2; // 0xfffffffe
   }
 
-  public static abstract interface CMWeatherManager.WeatherServiceProviderChangeListener {
+  public static abstract interface LineageWeatherManager.WeatherServiceProviderChangeListener {
     method public abstract void onWeatherServiceProviderChanged(java.lang.String);
   }
 
-  public static abstract interface CMWeatherManager.WeatherUpdateRequestListener {
-    method public abstract void onWeatherRequestCompleted(int, cyanogenmod.weather.WeatherInfo);
+  public static abstract interface LineageWeatherManager.WeatherUpdateRequestListener {
+    method public abstract void onWeatherRequestCompleted(int, lineageos.weather.WeatherInfo);
   }
 
   public final class RequestInfo implements android.os.Parcelable {
@@ -1666,9 +1666,9 @@ package cyanogenmod.weather {
     method public android.location.Location getLocation();
     method public int getRequestType();
     method public int getTemperatureUnit();
-    method public cyanogenmod.weather.WeatherLocation getWeatherLocation();
+    method public lineageos.weather.WeatherLocation getWeatherLocation();
     method public void writeToParcel(android.os.Parcel, int);
-    field public static final android.os.Parcelable.Creator<cyanogenmod.weather.RequestInfo> CREATOR;
+    field public static final android.os.Parcelable.Creator<lineageos.weather.RequestInfo> CREATOR;
     field public static final int TYPE_LOOKUP_CITY_NAME_REQ = 3; // 0x3
     field public static final int TYPE_WEATHER_BY_GEO_LOCATION_REQ = 1; // 0x1
     field public static final int TYPE_WEATHER_BY_WEATHER_LOCATION_REQ = 2; // 0x2
@@ -1678,7 +1678,7 @@ package cyanogenmod.weather {
     method public int describeContents();
     method public java.lang.String getCity();
     method public int getConditionCode();
-    method public java.util.List<cyanogenmod.weather.WeatherInfo.DayForecast> getForecasts();
+    method public java.util.List<lineageos.weather.WeatherInfo.DayForecast> getForecasts();
     method public double getHumidity();
     method public double getTemperature();
     method public int getTemperatureUnit();
@@ -1689,19 +1689,19 @@ package cyanogenmod.weather {
     method public double getWindSpeed();
     method public int getWindSpeedUnit();
     method public void writeToParcel(android.os.Parcel, int);
-    field public static final android.os.Parcelable.Creator<cyanogenmod.weather.WeatherInfo> CREATOR;
+    field public static final android.os.Parcelable.Creator<lineageos.weather.WeatherInfo> CREATOR;
   }
 
   public static class WeatherInfo.Builder {
     ctor public WeatherInfo.Builder(java.lang.String, double, int);
-    method public cyanogenmod.weather.WeatherInfo build();
-    method public cyanogenmod.weather.WeatherInfo.Builder setForecast(java.util.List<cyanogenmod.weather.WeatherInfo.DayForecast>);
-    method public cyanogenmod.weather.WeatherInfo.Builder setHumidity(double);
-    method public cyanogenmod.weather.WeatherInfo.Builder setTimestamp(long);
-    method public cyanogenmod.weather.WeatherInfo.Builder setTodaysHigh(double);
-    method public cyanogenmod.weather.WeatherInfo.Builder setTodaysLow(double);
-    method public cyanogenmod.weather.WeatherInfo.Builder setWeatherCondition(int);
-    method public cyanogenmod.weather.WeatherInfo.Builder setWind(double, double, int);
+    method public lineageos.weather.WeatherInfo build();
+    method public lineageos.weather.WeatherInfo.Builder setForecast(java.util.List<lineageos.weather.WeatherInfo.DayForecast>);
+    method public lineageos.weather.WeatherInfo.Builder setHumidity(double);
+    method public lineageos.weather.WeatherInfo.Builder setTimestamp(long);
+    method public lineageos.weather.WeatherInfo.Builder setTodaysHigh(double);
+    method public lineageos.weather.WeatherInfo.Builder setTodaysLow(double);
+    method public lineageos.weather.WeatherInfo.Builder setWeatherCondition(int);
+    method public lineageos.weather.WeatherInfo.Builder setWind(double, double, int);
   }
 
   public static class WeatherInfo.DayForecast implements android.os.Parcelable {
@@ -1710,14 +1710,14 @@ package cyanogenmod.weather {
     method public double getHigh();
     method public double getLow();
     method public void writeToParcel(android.os.Parcel, int);
-    field public static final android.os.Parcelable.Creator<cyanogenmod.weather.WeatherInfo.DayForecast> CREATOR;
+    field public static final android.os.Parcelable.Creator<lineageos.weather.WeatherInfo.DayForecast> CREATOR;
   }
 
   public static class WeatherInfo.DayForecast.Builder {
     ctor public WeatherInfo.DayForecast.Builder(int);
-    method public cyanogenmod.weather.WeatherInfo.DayForecast build();
-    method public cyanogenmod.weather.WeatherInfo.DayForecast.Builder setHigh(double);
-    method public cyanogenmod.weather.WeatherInfo.DayForecast.Builder setLow(double);
+    method public lineageos.weather.WeatherInfo.DayForecast build();
+    method public lineageos.weather.WeatherInfo.DayForecast.Builder setHigh(double);
+    method public lineageos.weather.WeatherInfo.DayForecast.Builder setLow(double);
   }
 
   public final class WeatherLocation implements android.os.Parcelable {
@@ -1729,43 +1729,43 @@ package cyanogenmod.weather {
     method public java.lang.String getPostalCode();
     method public java.lang.String getState();
     method public void writeToParcel(android.os.Parcel, int);
-    field public static final android.os.Parcelable.Creator<cyanogenmod.weather.WeatherLocation> CREATOR;
+    field public static final android.os.Parcelable.Creator<lineageos.weather.WeatherLocation> CREATOR;
   }
 
   public static class WeatherLocation.Builder {
     ctor public WeatherLocation.Builder(java.lang.String, java.lang.String);
     ctor public WeatherLocation.Builder(java.lang.String);
-    method public cyanogenmod.weather.WeatherLocation build();
-    method public cyanogenmod.weather.WeatherLocation.Builder setCountry(java.lang.String);
-    method public cyanogenmod.weather.WeatherLocation.Builder setCountryId(java.lang.String);
-    method public cyanogenmod.weather.WeatherLocation.Builder setPostalCode(java.lang.String);
-    method public cyanogenmod.weather.WeatherLocation.Builder setState(java.lang.String);
+    method public lineageos.weather.WeatherLocation build();
+    method public lineageos.weather.WeatherLocation.Builder setCountry(java.lang.String);
+    method public lineageos.weather.WeatherLocation.Builder setCountryId(java.lang.String);
+    method public lineageos.weather.WeatherLocation.Builder setPostalCode(java.lang.String);
+    method public lineageos.weather.WeatherLocation.Builder setState(java.lang.String);
   }
 
 }
 
-package cyanogenmod.weatherservice {
+package lineageos.weatherservice {
 
   public final class ServiceRequest {
-    method public void complete(cyanogenmod.weatherservice.ServiceRequestResult);
+    method public void complete(lineageos.weatherservice.ServiceRequestResult);
     method public void fail();
-    method public cyanogenmod.weather.RequestInfo getRequestInfo();
+    method public lineageos.weather.RequestInfo getRequestInfo();
     method public void reject(int);
   }
 
   public final class ServiceRequestResult implements android.os.Parcelable {
     method public int describeContents();
-    method public java.util.List<cyanogenmod.weather.WeatherLocation> getLocationLookupList();
-    method public cyanogenmod.weather.WeatherInfo getWeatherInfo();
+    method public java.util.List<lineageos.weather.WeatherLocation> getLocationLookupList();
+    method public lineageos.weather.WeatherInfo getWeatherInfo();
     method public void writeToParcel(android.os.Parcel, int);
-    field public static final android.os.Parcelable.Creator<cyanogenmod.weatherservice.ServiceRequestResult> CREATOR;
+    field public static final android.os.Parcelable.Creator<lineageos.weatherservice.ServiceRequestResult> CREATOR;
   }
 
   public static class ServiceRequestResult.Builder {
     ctor public ServiceRequestResult.Builder();
-    ctor public ServiceRequestResult.Builder(cyanogenmod.weather.WeatherInfo);
-    ctor public ServiceRequestResult.Builder(java.util.List<cyanogenmod.weather.WeatherLocation>);
-    method public cyanogenmod.weatherservice.ServiceRequestResult build();
+    ctor public ServiceRequestResult.Builder(lineageos.weather.WeatherInfo);
+    ctor public ServiceRequestResult.Builder(java.util.List<lineageos.weather.WeatherLocation>);
+    method public lineageos.weatherservice.ServiceRequestResult build();
   }
 
   public abstract class WeatherProviderService extends android.app.Service {
@@ -1774,10 +1774,10 @@ package cyanogenmod.weatherservice {
     method public final android.os.IBinder onBind(android.content.Intent);
     method protected void onConnected();
     method protected void onDisconnected();
-    method protected abstract void onRequestCancelled(cyanogenmod.weatherservice.ServiceRequest);
-    method protected abstract void onRequestSubmitted(cyanogenmod.weatherservice.ServiceRequest);
-    field public static final java.lang.String SERVICE_INTERFACE = "cyanogenmod.weatherservice.WeatherProviderService";
-    field public static final java.lang.String SERVICE_META_DATA = "cyanogenmod.weatherservice";
+    method protected abstract void onRequestCancelled(lineageos.weatherservice.ServiceRequest);
+    method protected abstract void onRequestSubmitted(lineageos.weatherservice.ServiceRequest);
+    field public static final java.lang.String SERVICE_INTERFACE = "lineageos.weatherservice.WeatherProviderService";
+    field public static final java.lang.String SERVICE_META_DATA = "lineageos.weatherservice";
   }
 
 }

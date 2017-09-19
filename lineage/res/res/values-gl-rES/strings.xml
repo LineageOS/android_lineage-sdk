@@ -18,7 +18,7 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Label for the LineageOS system components when they are shown to the user. -->
-  <string name="cyanogenmod_system_label">Sistema LineageOS</string>
+  <string name="lineageos_system_label">Sistema LineageOS</string>
   <string name="permlab_publishCustomTile">crear un botón personalizado no panel de axustes rápidos</string>
   <string name="permdesc_publishCustomTile">Permite a unha aplicación publicar un botón de axustes rápidos.</string>
   <string name="permlab_modifyNetworkSettings">cambiar a configuración de rede do sistema</string>
@@ -49,11 +49,11 @@
   <string name="permlab_read_alarms">acceder ás alarmas programadas</string>
   <string name="permdesc_read_alarms">Permítellee a unha aplicación ler todas as alarmas que teña programadas.</string>
   <!-- Labels for the WRITE_SETTINGS permission -->
-  <string name="permlab_writeSettings">modificar os axustes de CM do sistema</string>
-  <string name="permdesc_writeSettings">Permítelle a unha aplicación modificar os axustes de CM do sistema.</string>
+  <string name="permlab_writeSettings">modificar os axustes de Lineage do sistema</string>
+  <string name="permdesc_writeSettings">Permítelle a unha aplicación modificar os axustes de Lineage do sistema.</string>
   <!-- Labels for the WRITE_SECURE_SETTINGS permission -->
-  <string name="permlab_writeSecureSettings">modificar a configuración de seguridade do sistema CM</string>
-  <string name="permdesc_writeSecureSettings">Permítelle a unha aplicación modificar a configuración de seguridade do sistema CM. As aplicacións normais non deberían utilizar este permiso.</string>
+  <string name="permlab_writeSecureSettings">modificar a configuración de seguridade do sistema Lineage</string>
+  <string name="permdesc_writeSecureSettings">Permítelle a unha aplicación modificar a configuración de seguridade do sistema Lineage. As aplicacións normais non deberían utilizar este permiso.</string>
   <!-- Labels for the MANAGE_PERSISTENT_STORAGE permission. -->
   <string name="permlab_managePersistentStorage">Xestionar almacenamento persistente</string>
   <string name="permdesc_managePersistentStorage">Permítelle a unha aplicación ler ou escribir propiedades que poden persisitir tras unha restauración de fábrica.</string>
@@ -174,10 +174,10 @@
   <!-- LiveDisplay manager permission -->
   <string name="permlab_manageLiveDisplay">xestionar os axustes de LiveDisplay</string>
   <string name="permdesc_manageLiveDisplay">Permite que unha aplicación poida configurar os axustes de pantalla avanzados.</string>
-  <!-- CMAudioService - observe session changes permission -->
+  <!-- LineageAudioService - observe session changes permission -->
   <string name="permlab_observe_audio_sessions">observar os cambios na sesión de son</string>
   <string name="permdesc_observe_audio_sessions">Permite a unha aplicación observar os fluxos de son que se crean e se destrúen.</string>
-  <!-- CMAudioService - observe session changes permission -->
+  <!-- LineageAudioService - observe session changes permission -->
   <string name="permlab_manage_audio_sessions">xestionar os trocos da sesión de son</string>
   <string name="permdesc_manage_audio_sessions">Permite a unha aplicación enviar actualizacións de fluxo de son.</string>
   <!-- QuickSettings: Themes tile -->

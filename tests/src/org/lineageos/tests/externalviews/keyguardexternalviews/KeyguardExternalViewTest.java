@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.cyanogenmod.tests.externalviews.keyguardexternalviews;
+package org.lineageos.tests.externalviews.keyguardexternalviews;
 
 import android.content.ComponentName;
 import android.content.Context;
@@ -26,11 +26,11 @@ import android.os.IBinder;
 import android.os.RemoteException;
 import android.test.AndroidTestCase;
 import android.view.WindowManager;
-import cyanogenmod.externalviews.IExternalViewProviderFactory;
-import cyanogenmod.externalviews.IKeyguardExternalViewCallbacks;
-import cyanogenmod.externalviews.IKeyguardExternalViewProvider;
-import cyanogenmod.externalviews.KeyguardExternalView;
-import org.cyanogenmod.tests.common.MockIBinderStubForInterface;
+import lineageos.externalviews.IExternalViewProviderFactory;
+import lineageos.externalviews.IKeyguardExternalViewCallbacks;
+import lineageos.externalviews.IKeyguardExternalViewProvider;
+import lineageos.externalviews.KeyguardExternalView;
+import org.lineageos.tests.common.MockIBinderStubForInterface;
 import org.mockito.Mockito;
 import org.mockito.invocation.InvocationOnMock;
 import org.mockito.stubbing.Answer;

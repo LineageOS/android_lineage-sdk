@@ -15,6 +15,6 @@
  * limitations under the License.
  */
 
-package cyanogenmod.hardware;
+package lineageos.hardware;
 
 parcelable TouchscreenGesture;

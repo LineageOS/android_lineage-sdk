@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.cyanogenmod.tests.versioning.unit;
+package org.lineageos.tests.versioning.unit;
 
 import android.test.AndroidTestCase;
 import android.test.suitebuilder.annotation.LargeTest;
@@ -31,7 +31,7 @@ import java.util.Enumeration;
  */
 public class ClassPathTest extends AndroidTestCase {
 
-    private static final String CYANOGENMOD_NAMESPACE = "cyanogenmod";
+    private static final String LINEAGEOS_NAMESPACE = "lineageos";
     private static final String PATH_TO_SYSTEM_FRAMEWORK = "/system/framework";
 
     private ArrayList<String> mKnownSdkClasses;
@@ -39,7 +39,7 @@ public class ClassPathTest extends AndroidTestCase {
     @Override
     protected void setUp() throws Exception {
         super.setUp();
-        mKnownSdkClasses = MagicalDexHelper.getLoadedClasses(mContext, CYANOGENMOD_NAMESPACE);
+        mKnownSdkClasses = MagicalDexHelper.getLoadedClasses(mContext, LINEAGEOS_NAMESPACE);
     }
 
     @SmallTest

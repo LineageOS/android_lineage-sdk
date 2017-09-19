@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.cyanogenmod.tests.customtiles;
+package org.lineageos.tests.customtiles;
 
 import android.app.PendingIntent;
 import android.content.Intent;
@@ -24,21 +24,21 @@ import android.net.Uri;
 import android.os.Handler;
 
 import android.widget.RemoteViews;
-import cyanogenmod.app.CustomTile;
-import cyanogenmod.app.CMStatusBarManager;
+import lineageos.app.CustomTile;
+import lineageos.app.LineageStatusBarManager;
 
-import org.cyanogenmod.tests.R;
+import org.lineageos.tests.R;
 
-import org.cyanogenmod.tests.TestActivity;
+import org.lineageos.tests.TestActivity;
 
 import java.util.ArrayList;
 
-public class CMStatusBarTest extends TestActivity {
+public class LineageStatusBarTest extends TestActivity {
 
     private static final int CUSTOM_TILE_ID = 1337;
     private static final int CUSTOM_TILE_SETTINGS_ID = 1336;
     private CustomTile mCustomTile;
-    private CMStatusBarManager mCMStatusBarManager;
+    private LineageStatusBarManager mLineageStatusBarManager;
 
     Handler mHandler = new Handler();
 
@@ -49,23 +49,23 @@ public class CMStatusBarTest extends TestActivity {
 
     @Override
     protected Test[] tests() {
-        mCMStatusBarManager = CMStatusBarManager.getInstance(this);
+        mLineageStatusBarManager = LineageStatusBarManager.getInstance(this);
         return mTests;
     }
 
     private Test[] mTests = new Test[] {
             new Test("test publish tile") {
                 public void run() {
-                    PendingIntent intent = PendingIntent.getActivity(CMStatusBarTest.this, 0,
-                            new Intent(CMStatusBarTest.this, CMStatusBarTest.class)
+                    PendingIntent intent = PendingIntent.getActivity(LineageStatusBarTest.this, 0,
+                            new Intent(LineageStatusBarTest.this, LineageStatusBarTest.class)
                                     .setFlags(Intent.FLAG_ACTIVITY_NEW_TASK), 0);
-                    mCustomTile = new CustomTile.Builder(CMStatusBarTest.this)
+                    mCustomTile = new CustomTile.Builder(LineageStatusBarTest.this)
                             .setLabel("Test From SDK")
                             .setIcon(R.drawable.ic_launcher)
                             .setOnClickIntent(intent)
                             .setContentDescription("Content description")
                             .build();
-                    mCMStatusBarManager.publishTile(CUSTOM_TILE_ID, mCustomTile);
+                    mLineageStatusBarManager.publishTile(CUSTOM_TILE_ID, mCustomTile);
                 }
             },
 
@@ -74,17 +74,17 @@ public class CMStatusBarTest extends TestActivity {
                     int resourceInt = R.drawable.ic_whatshot_white_24dp;
                     Bitmap bitmap = BitmapFactory.decodeResource(getResources(),
                             resourceInt);
-                    PendingIntent intent = PendingIntent.getActivity(CMStatusBarTest.this, 0,
-                            new Intent(CMStatusBarTest.this, CMStatusBarTest.class)
+                    PendingIntent intent = PendingIntent.getActivity(LineageStatusBarTest.this, 0,
+                            new Intent(LineageStatusBarTest.this, LineageStatusBarTest.class)
                                     .setFlags(Intent.FLAG_ACTIVITY_NEW_TASK), 0);
-                    mCustomTile = new CustomTile.Builder(CMStatusBarTest.this)
+                    mCustomTile = new CustomTile.Builder(LineageStatusBarTest.this)
                             .setLabel("Test From SDK - remote icon")
                             .setIcon(bitmap)
                             .setOnClickIntent(intent)
                             .shouldCollapsePanel(true)
                             .setContentDescription("Content description")
                             .build();
-                    mCMStatusBarManager.publishTile(CUSTOM_TILE_ID, mCustomTile);
+                    mLineageStatusBarManager.publishTile(CUSTOM_TILE_ID, mCustomTile);
                 }
             },
 
@@ -92,17 +92,17 @@ public class CMStatusBarTest extends TestActivity {
                 public void run() {
                     mHandler.postDelayed(new Runnable() {
                         public void run() {
-                            PendingIntent intent = PendingIntent.getActivity(CMStatusBarTest.this, 0,
-                                    new Intent(CMStatusBarTest.this, CMStatusBarTest.class)
+                            PendingIntent intent = PendingIntent.getActivity(LineageStatusBarTest.this, 0,
+                                    new Intent(LineageStatusBarTest.this, LineageStatusBarTest.class)
                                             .setFlags(Intent.FLAG_ACTIVITY_NEW_TASK), 0);
-                            mCustomTile = new CustomTile.Builder(CMStatusBarTest.this)
+                            mCustomTile = new CustomTile.Builder(LineageStatusBarTest.this)
                                     .setLabel("Test 3 seconds")
                                     .setIcon(R.drawable.ic_launcher)
                                     .setOnClickIntent(intent)
                                     .shouldCollapsePanel(true)
                                     .setContentDescription("Content description")
                                     .build();
-                            mCMStatusBarManager.publishTile(CUSTOM_TILE_ID, mCustomTile);
+                            mLineageStatusBarManager.publishTile(CUSTOM_TILE_ID, mCustomTile);
                         }
                     }, 3000);
                 }
@@ -112,14 +112,14 @@ public class CMStatusBarTest extends TestActivity {
                 public void run() {
                     if (mCustomTile != null) {
                         mCustomTile.label = "Update From SDK";
-                        mCMStatusBarManager.publishTile(CUSTOM_TILE_ID, mCustomTile);
+                        mLineageStatusBarManager.publishTile(CUSTOM_TILE_ID, mCustomTile);
                     }
                 }
             },
 
             new Test("test remove tile") {
                 public void run() {
-                    mCMStatusBarManager.removeTile(CUSTOM_TILE_ID);
+                    mLineageStatusBarManager.removeTile(CUSTOM_TILE_ID);
                 }
             },
 
@@ -127,7 +127,7 @@ public class CMStatusBarTest extends TestActivity {
                 public void run() {
                     mHandler.postDelayed(new Runnable() {
                         public void run() {
-                            mCMStatusBarManager.removeTile(CUSTOM_TILE_ID);
+                            mLineageStatusBarManager.removeTile(CUSTOM_TILE_ID);
                         }
                     }, 3000);
                 }
@@ -135,65 +135,65 @@ public class CMStatusBarTest extends TestActivity {
 
             new Test("test publish tile with settings") {
                 public void run() {
-                    CustomTile customTile = new CustomTile.Builder(CMStatusBarTest.this)
+                    CustomTile customTile = new CustomTile.Builder(LineageStatusBarTest.this)
                             .setLabel("Test Settings From SDK")
                             .setIcon(R.drawable.ic_launcher)
-                            .setOnSettingsClickIntent(new Intent(CMStatusBarTest.this,
+                            .setOnSettingsClickIntent(new Intent(LineageStatusBarTest.this,
                                     DummySettings.class)
                                     .setFlags(Intent.FLAG_ACTIVITY_NEW_TASK))
                             .setContentDescription("Content description")
                             .build();
-                    CMStatusBarManager.getInstance(CMStatusBarTest.this)
+                    LineageStatusBarManager.getInstance(LineageStatusBarTest.this)
                             .publishTile(CUSTOM_TILE_SETTINGS_ID, customTile);
                 }
             },
 
             new Test("test publish tile with long press") {
                 public void run() {
-                    CustomTile customTile = new CustomTile.Builder(CMStatusBarTest.this)
+                    CustomTile customTile = new CustomTile.Builder(LineageStatusBarTest.this)
                             .setLabel("Test Long press From SDK")
                             .setIcon(R.drawable.ic_launcher)
-                            .setOnLongClickIntent(PendingIntent.getActivity(CMStatusBarTest.this, 0,
-                                    new Intent(CMStatusBarTest.this,DummySettings.class)
+                            .setOnLongClickIntent(PendingIntent.getActivity(LineageStatusBarTest.this, 0,
+                                    new Intent(LineageStatusBarTest.this,DummySettings.class)
                                             .setFlags(Intent.FLAG_ACTIVITY_NEW_TASK), 0))
                             .setContentDescription("Content description")
                             .build();
-                    CMStatusBarManager.getInstance(CMStatusBarTest.this)
+                    LineageStatusBarManager.getInstance(LineageStatusBarTest.this)
                             .publishTile(CUSTOM_TILE_SETTINGS_ID, customTile);
                 }
             },
 
             new Test("test publish tile with delete intent") {
                 public void run() {
-                    Intent intent = new Intent(CMStatusBarTest.this, DummySettings.class);
+                    Intent intent = new Intent(LineageStatusBarTest.this, DummySettings.class);
                     PendingIntent pendingIntent =
-                            PendingIntent.getActivity(CMStatusBarTest.this, 0, intent, 0);
-                    CustomTile customTile = new CustomTile.Builder(CMStatusBarTest.this)
+                            PendingIntent.getActivity(LineageStatusBarTest.this, 0, intent, 0);
+                    CustomTile customTile = new CustomTile.Builder(LineageStatusBarTest.this)
                             .setLabel("Test Settings From SDK")
                             .setIcon(R.drawable.ic_launcher)
                             .setDeleteIntent(pendingIntent)
                             .setContentDescription("Content description")
                             .build();
-                    CMStatusBarManager.getInstance(CMStatusBarTest.this)
+                    LineageStatusBarManager.getInstance(LineageStatusBarTest.this)
                             .publishTile(CUSTOM_TILE_SETTINGS_ID, customTile);
                 }
             },
 
             new Test("test publish tile with custom uri") {
                 public void run() {
-                    CustomTile customTile = new CustomTile.Builder(CMStatusBarTest.this)
+                    CustomTile customTile = new CustomTile.Builder(LineageStatusBarTest.this)
                             .setIcon(R.drawable.ic_launcher)
                             .setOnClickUri(Uri.parse("http://tasker.dinglisch.net"))
                             .build();
-                    CMStatusBarManager.getInstance(CMStatusBarTest.this)
+                    LineageStatusBarManager.getInstance(LineageStatusBarTest.this)
                             .publishTile(CUSTOM_TILE_SETTINGS_ID, customTile);
                 }
             },
 
             new Test("test publish tile with expanded list") {
                 public void run() {
-                    PendingIntent intent = PendingIntent.getActivity(CMStatusBarTest.this, 0,
-                            new Intent(CMStatusBarTest.this, CMStatusBarTest.class)
+                    PendingIntent intent = PendingIntent.getActivity(LineageStatusBarTest.this, 0,
+                            new Intent(LineageStatusBarTest.this, LineageStatusBarTest.class)
                                     .setFlags(Intent.FLAG_ACTIVITY_NEW_TASK), 0);
                     ArrayList<CustomTile.ExpandedListItem> expandedListItems =
                             new ArrayList<CustomTile.ExpandedListItem>();
@@ -210,24 +210,24 @@ public class CMStatusBarTest extends TestActivity {
                     CustomTile.ListExpandedStyle listExpandedStyle =
                             new CustomTile.ListExpandedStyle();
                     listExpandedStyle.setListItems(expandedListItems);
-                    CustomTile customTile = new CustomTile.Builder(CMStatusBarTest.this)
+                    CustomTile customTile = new CustomTile.Builder(LineageStatusBarTest.this)
                             .setLabel("Test Expanded List Style From SDK")
                             .setIcon(R.drawable.ic_launcher)
                             .setExpandedStyle(listExpandedStyle)
-                            .setOnSettingsClickIntent(new Intent(CMStatusBarTest.this,
+                            .setOnSettingsClickIntent(new Intent(LineageStatusBarTest.this,
                                     DummySettings.class)
                                     .setFlags(Intent.FLAG_ACTIVITY_NEW_TASK))
                             .setContentDescription("Content description")
                             .build();
-                    CMStatusBarManager.getInstance(CMStatusBarTest.this)
+                    LineageStatusBarManager.getInstance(LineageStatusBarTest.this)
                             .publishTile(CUSTOM_TILE_SETTINGS_ID, customTile);
                 }
             },
 
             new Test("test publish tile with expanded list with bitmaps") {
                 public void run() {
-                    PendingIntent intent = PendingIntent.getActivity(CMStatusBarTest.this, 0,
-                            new Intent(CMStatusBarTest.this, CMStatusBarTest.class)
+                    PendingIntent intent = PendingIntent.getActivity(LineageStatusBarTest.this, 0,
+                            new Intent(LineageStatusBarTest.this, LineageStatusBarTest.class)
                                     .setFlags(Intent.FLAG_ACTIVITY_NEW_TASK), 0);
                     ArrayList<CustomTile.ExpandedListItem> expandedListItems =
                             new ArrayList<CustomTile.ExpandedListItem>();
@@ -247,24 +247,24 @@ public class CMStatusBarTest extends TestActivity {
                     CustomTile.ListExpandedStyle listExpandedStyle =
                             new CustomTile.ListExpandedStyle();
                     listExpandedStyle.setListItems(expandedListItems);
-                    CustomTile customTile = new CustomTile.Builder(CMStatusBarTest.this)
+                    CustomTile customTile = new CustomTile.Builder(LineageStatusBarTest.this)
                             .setLabel("Test Expanded List Style From SDK")
                             .setIcon(R.drawable.ic_launcher)
                             .setExpandedStyle(listExpandedStyle)
-                            .setOnSettingsClickIntent(new Intent(CMStatusBarTest.this,
+                            .setOnSettingsClickIntent(new Intent(LineageStatusBarTest.this,
                                     DummySettings.class)
                                     .setFlags(Intent.FLAG_ACTIVITY_NEW_TASK))
                             .setContentDescription("Content description")
                             .build();
-                    CMStatusBarManager.getInstance(CMStatusBarTest.this)
+                    LineageStatusBarManager.getInstance(LineageStatusBarTest.this)
                             .publishTile(CUSTOM_TILE_SETTINGS_ID, customTile);
                 }
             },
 
             new Test("test publish tile with expanded grid") {
                 public void run() {
-                    PendingIntent intent = PendingIntent.getActivity(CMStatusBarTest.this, 0,
-                            new Intent(CMStatusBarTest.this, CMStatusBarTest.class)
+                    PendingIntent intent = PendingIntent.getActivity(LineageStatusBarTest.this, 0,
+                            new Intent(LineageStatusBarTest.this, LineageStatusBarTest.class)
                                     .setFlags(Intent.FLAG_ACTIVITY_NEW_TASK), 0);
                     ArrayList<CustomTile.ExpandedGridItem> expandedGridItems =
                             new ArrayList<CustomTile.ExpandedGridItem>();
@@ -280,24 +280,24 @@ public class CMStatusBarTest extends TestActivity {
                     CustomTile.GridExpandedStyle gridExpandedStyle =
                             new CustomTile.GridExpandedStyle();
                     gridExpandedStyle.setGridItems(expandedGridItems);
-                    CustomTile customTile = new CustomTile.Builder(CMStatusBarTest.this)
+                    CustomTile customTile = new CustomTile.Builder(LineageStatusBarTest.this)
                             .setLabel("Test Expanded Grid Style From SDK")
                             .setIcon(R.drawable.ic_launcher)
                             .setExpandedStyle(gridExpandedStyle)
-                            .setOnSettingsClickIntent(new Intent(CMStatusBarTest.this,
+                            .setOnSettingsClickIntent(new Intent(LineageStatusBarTest.this,
                                     DummySettings.class)
                                     .setFlags(Intent.FLAG_ACTIVITY_NEW_TASK))
                             .setContentDescription("Content description")
                             .build();
-                    CMStatusBarManager.getInstance(CMStatusBarTest.this)
+                    LineageStatusBarManager.getInstance(LineageStatusBarTest.this)
                             .publishTile(CUSTOM_TILE_SETTINGS_ID, customTile);
                 }
             },
 
             new Test("test publish tile with expanded grid with bitmaps") {
                 public void run() {
-                    PendingIntent intent = PendingIntent.getActivity(CMStatusBarTest.this, 0,
-                            new Intent(CMStatusBarTest.this, CMStatusBarTest.class)
+                    PendingIntent intent = PendingIntent.getActivity(LineageStatusBarTest.this, 0,
+                            new Intent(LineageStatusBarTest.this, LineageStatusBarTest.class)
                                     .setFlags(Intent.FLAG_ACTIVITY_NEW_TASK), 0);
                     ArrayList<CustomTile.ExpandedGridItem> expandedGridItems =
                             new ArrayList<CustomTile.ExpandedGridItem>();
@@ -316,16 +316,16 @@ public class CMStatusBarTest extends TestActivity {
                     CustomTile.GridExpandedStyle gridExpandedStyle =
                             new CustomTile.GridExpandedStyle();
                     gridExpandedStyle.setGridItems(expandedGridItems);
-                    CustomTile customTile = new CustomTile.Builder(CMStatusBarTest.this)
+                    CustomTile customTile = new CustomTile.Builder(LineageStatusBarTest.this)
                             .setLabel("Test Expanded Grid Style From SDK")
                             .setIcon(R.drawable.ic_launcher)
                             .setExpandedStyle(gridExpandedStyle)
-                            .setOnSettingsClickIntent(new Intent(CMStatusBarTest.this,
+                            .setOnSettingsClickIntent(new Intent(LineageStatusBarTest.this,
                                     DummySettings.class)
                                     .setFlags(Intent.FLAG_ACTIVITY_NEW_TASK))
                             .setContentDescription("Content description")
                             .build();
-                    CMStatusBarManager.getInstance(CMStatusBarTest.this)
+                    LineageStatusBarManager.getInstance(LineageStatusBarTest.this)
                             .publishTile(CUSTOM_TILE_SETTINGS_ID, customTile);
                 }
             },
@@ -338,7 +338,7 @@ public class CMStatusBarTest extends TestActivity {
                     Intent daneshIntent = new Intent(Intent.ACTION_VIEW)
                             .setFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
                             .setData(Uri.parse("http://www.reddit.com/r/daneshsayings"));
-                    PendingIntent intent = PendingIntent.getActivity(CMStatusBarTest.this, 0,
+                    PendingIntent intent = PendingIntent.getActivity(LineageStatusBarTest.this, 0,
                             daneshIntent, 0);
                     contentView.setOnClickPendingIntent(R.id.whats_hot_click, intent);
 
@@ -346,16 +346,16 @@ public class CMStatusBarTest extends TestActivity {
                             new CustomTile.RemoteExpandedStyle();
                     remoteExpandedStyle.setRemoteViews(contentView);
 
-                    CustomTile customTile = new CustomTile.Builder(CMStatusBarTest.this)
+                    CustomTile customTile = new CustomTile.Builder(LineageStatusBarTest.this)
                             .setLabel("Test Expanded Remote Style From SDK")
                             .setIcon(R.drawable.ic_launcher)
                             .setExpandedStyle(remoteExpandedStyle)
-                            .setOnSettingsClickIntent(new Intent(CMStatusBarTest.this,
+                            .setOnSettingsClickIntent(new Intent(LineageStatusBarTest.this,
                                     DummySettings.class)
                                     .setFlags(Intent.FLAG_ACTIVITY_NEW_TASK))
                             .setContentDescription("Content description")
                             .build();
-                    CMStatusBarManager.getInstance(CMStatusBarTest.this)
+                    LineageStatusBarManager.getInstance(LineageStatusBarTest.this)
                             .publishTile(CUSTOM_TILE_SETTINGS_ID, customTile);
                 }
             },

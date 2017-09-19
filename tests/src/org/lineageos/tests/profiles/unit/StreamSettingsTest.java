@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package org.cyanogenmod.tests.profiles.unit;
+package org.lineageos.tests.profiles.unit;
 
 import android.media.AudioManager;
 import android.test.AndroidTestCase;
 import android.test.suitebuilder.annotation.SmallTest;
-import cyanogenmod.profiles.StreamSettings;
+import lineageos.profiles.StreamSettings;
 
 public class StreamSettingsTest extends AndroidTestCase {
 

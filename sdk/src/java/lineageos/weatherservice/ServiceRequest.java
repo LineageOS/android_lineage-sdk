@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package cyanogenmod.weatherservice;
+package lineageos.weatherservice;
 
 import android.annotation.NonNull;
 import android.os.RemoteException;
-import cyanogenmod.weather.CMWeatherManager;
-import cyanogenmod.weather.RequestInfo;
+import lineageos.weather.LineageWeatherManager;
+import lineageos.weather.RequestInfo;
 
 /**
  * This class represents a request submitted by the system to the active weather provider service
@@ -42,7 +42,7 @@ public final class ServiceRequest {
 
     /**
      * Obtains the request information
-     * @return {@link cyanogenmod.weather.RequestInfo}
+     * @return {@link lineageos.weather.RequestInfo}
      */
     public RequestInfo getRequestInfo() {
         return mInfo;
@@ -64,7 +64,7 @@ public final class ServiceRequest {
                                         + " contain a valid WeatherInfo object");
                             }
                             mClient.setServiceRequestState(mInfo, result,
-                                    CMWeatherManager.RequestStatus.COMPLETED);
+                                    LineageWeatherManager.RequestStatus.COMPLETED);
                             break;
                         case RequestInfo.TYPE_LOOKUP_CITY_NAME_REQ:
                             if (result.getLocationLookupList() == null
@@ -72,10 +72,10 @@ public final class ServiceRequest {
                                 //In case the user decided to mark this request as completed with
                                 //null or empty list. It's not necessarily a failure
                                 mClient.setServiceRequestState(mInfo, null,
-                                        CMWeatherManager.RequestStatus.NO_MATCH_FOUND);
+                                        LineageWeatherManager.RequestStatus.NO_MATCH_FOUND);
                             } else {
                                 mClient.setServiceRequestState(mInfo, result,
-                                        CMWeatherManager.RequestStatus.COMPLETED);
+                                        LineageWeatherManager.RequestStatus.COMPLETED);
                             }
                             break;
                     }
@@ -99,11 +99,11 @@ public final class ServiceRequest {
                         case RequestInfo.TYPE_WEATHER_BY_GEO_LOCATION_REQ:
                         case RequestInfo.TYPE_WEATHER_BY_WEATHER_LOCATION_REQ:
                             mClient.setServiceRequestState(mInfo, null,
-                                    CMWeatherManager.RequestStatus.FAILED);
+                                    LineageWeatherManager.RequestStatus.FAILED);
                             break;
                         case RequestInfo.TYPE_LOOKUP_CITY_NAME_REQ:
                             mClient.setServiceRequestState(mInfo, null,
-                                    CMWeatherManager.RequestStatus.FAILED);
+                                    LineageWeatherManager.RequestStatus.FAILED);
                             break;
                     }
                 } catch (RemoteException e) {
@@ -117,8 +117,8 @@ public final class ServiceRequest {
      * This method should be called if the service decides not to honor the request. Note this
      * method will accept only the following values.
      * <ul>
-     * <li>{@link cyanogenmod.weather.CMWeatherManager.RequestStatus#SUBMITTED_TOO_SOON}</li>
-     * <li>{@link cyanogenmod.weather.CMWeatherManager.RequestStatus#ALREADY_IN_PROGRESS}</li>
+     * <li>{@link lineageos.weather.LineageWeatherManager.RequestStatus#SUBMITTED_TOO_SOON}</li>
+     * <li>{@link lineageos.weather.LineageWeatherManager.RequestStatus#ALREADY_IN_PROGRESS}</li>
      * </ul>
      * Attempting to pass any other value will get you an IllegalArgumentException
      * @param status
@@ -127,8 +127,8 @@ public final class ServiceRequest {
         synchronized (this) {
             if (mStatus.equals(Status.IN_PROGRESS)) {
                 switch (status) {
-                    case CMWeatherManager.RequestStatus.ALREADY_IN_PROGRESS:
-                    case CMWeatherManager.RequestStatus.SUBMITTED_TOO_SOON:
+                    case LineageWeatherManager.RequestStatus.ALREADY_IN_PROGRESS:
+                    case LineageWeatherManager.RequestStatus.SUBMITTED_TOO_SOON:
                         try {
                             mClient.setServiceRequestState(mInfo, null, status);
                         } catch (RemoteException e) {

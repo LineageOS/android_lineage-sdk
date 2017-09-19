@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.cyanogenmod.tests.util;
+package org.lineageos.tests.util;
 
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
@@ -23,7 +23,7 @@ import android.graphics.Paint;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.ColorDrawable;
 import android.test.AndroidTestCase;
-import cyanogenmod.util.ColorUtils;
+import lineageos.util.ColorUtils;
 import org.mockito.Mockito;
 import org.mockito.invocation.InvocationOnMock;
 import org.mockito.stubbing.Answer;

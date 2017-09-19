@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.cyanogenmod.platform.internal;
+package org.lineageos.platform.internal;
 
 import android.annotation.Nullable;
 import android.content.ComponentName;
@@ -36,16 +36,16 @@ import android.util.Slog;
 
 import com.android.server.SystemService;
 
-import cyanogenmod.app.CMContextConstants;
-import cyanogenmod.app.ILiveLockScreenChangeListener;
-import cyanogenmod.app.ILiveLockScreenManager;
-import cyanogenmod.app.ILiveLockScreenManagerProvider;
-import cyanogenmod.app.LiveLockScreenInfo;
-import cyanogenmod.app.LiveLockScreenManager;
-import cyanogenmod.platform.Manifest;
-import cyanogenmod.providers.CMSettings;
+import lineageos.app.LineageContextConstants;
+import lineageos.app.ILiveLockScreenChangeListener;
+import lineageos.app.ILiveLockScreenManager;
+import lineageos.app.ILiveLockScreenManagerProvider;
+import lineageos.app.LiveLockScreenInfo;
+import lineageos.app.LiveLockScreenManager;
+import lineageos.platform.Manifest;
+import lineageos.providers.LineageSettings;
 
-import org.cyanogenmod.platform.internal.common.BrokeredServiceConnection;
+import org.lineageos.platform.internal.common.BrokeredServiceConnection;
 
 import java.util.List;
 
@@ -56,7 +56,7 @@ import java.util.List;
  * @hide
  */
 public class LiveLockScreenServiceBroker extends
-        BrokerableCMSystemService<ILiveLockScreenManagerProvider> {
+        BrokerableLineageSystemService<ILiveLockScreenManagerProvider> {
     private static final String TAG = LiveLockScreenServiceBroker.class.getSimpleName();
     private static final boolean DEBUG = false;
 
@@ -188,13 +188,13 @@ public class LiveLockScreenServiceBroker extends
 
     @Override
     public String getFeatureDeclaration() {
-        return CMContextConstants.Features.LIVE_LOCK_SCREEN;
+        return LineageContextConstants.Features.LIVE_LOCK_SCREEN;
     }
 
     @Override
     public void onStart() {
         if (DEBUG) Slog.d(TAG, "service started");
-        publishBinderService(CMContextConstants.CM_LIVE_LOCK_SCREEN_SERVICE, new BinderService());
+        publishBinderService(LineageContextConstants.LINEAGE_LIVE_LOCK_SCREEN_SERVICE, new BinderService());
     }
 
     @Override
@@ -262,8 +262,8 @@ public class LiveLockScreenServiceBroker extends
             if (DEBUG) Slog.d(TAG, "Third party apps ready");
 
             // Initialize the default LLS component
-            String defComponent = CMSettings.Secure.getString(mContext.getContentResolver(),
-                    CMSettings.Secure.DEFAULT_LIVE_LOCK_SCREEN_COMPONENT);
+            String defComponent = LineageSettings.Secure.getString(mContext.getContentResolver(),
+                    LineageSettings.Secure.DEFAULT_LIVE_LOCK_SCREEN_COMPONENT);
             if (!TextUtils.isEmpty(defComponent)) {
                 mDefaultLlsInfo = new LiveLockScreenInfo.Builder()
                         .setComponent(ComponentName.unflattenFromString(defComponent))
@@ -275,7 +275,7 @@ public class LiveLockScreenServiceBroker extends
 
     /**
      * Enforces the
-     * {@link cyanogenmod.platform.Manifest.permission#LIVE_LOCK_SCREEN_MANAGER_ACCESS_PRIVATE}
+     * {@link lineageos.platform.Manifest.permission#LIVE_LOCK_SCREEN_MANAGER_ACCESS_PRIVATE}
      * permission.
      */
     private void enforcePrivateAccessPermission() {
@@ -305,8 +305,8 @@ public class LiveLockScreenServiceBroker extends
 
         long token = Binder.clearCallingIdentity();
         try {
-            CMSettings.Secure.putString(mContext.getContentResolver(),
-                    CMSettings.Secure.DEFAULT_LIVE_LOCK_SCREEN_COMPONENT,
+            LineageSettings.Secure.putString(mContext.getContentResolver(),
+                    LineageSettings.Secure.DEFAULT_LIVE_LOCK_SCREEN_COMPONENT,
                     (llsInfo != null && llsInfo.component != null)
                             ? llsInfo.component.flattenToString()
                             : "");
@@ -324,8 +324,8 @@ public class LiveLockScreenServiceBroker extends
 
     private void setLiveLockScreenEnabledInternal(boolean enabled) {
         long token = Binder.clearCallingIdentity();
-        CMSettings.Secure.putInt(mContext.getContentResolver(),
-                CMSettings.Secure.LIVE_LOCK_SCREEN_ENABLED, enabled ? 1 : 0);
+        LineageSettings.Secure.putInt(mContext.getContentResolver(),
+                LineageSettings.Secure.LIVE_LOCK_SCREEN_ENABLED, enabled ? 1 : 0);
         Binder.restoreCallingIdentity(token);
     }
 }

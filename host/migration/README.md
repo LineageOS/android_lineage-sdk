@@ -1,4 +1,4 @@
-## CMSettings Migration Test
+## LineageSettings Migration Test
 The tests host library contains a simple interface which calls down to a client interface on the device
 to take a snapshot of the current settings, forces an update with the current build defined in params,
 then verifies the settings post migration.
