@@ -18,7 +18,7 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Label for the LineageOS system components when they are shown to the user. -->
-  <string name="cyanogenmod_system_label">ସିଆନୋଜେନ୍‍ମୋଡ୍‍ ସିଷ୍ଟମ୍‍</string>
+  <string name="lineageos_system_label">ସିଆନୋଜେନ୍‍ମୋଡ୍‍ ସିଷ୍ଟମ୍‍</string>
   <string name="permlab_publishCustomTile">ଦ୍ରୁତ ସେଟିଂସମୂହ ପ୍ୟାନେଲ୍‍ ମଧ୍ୟରେ ଏକ କଷ୍ଟମ୍‍ ଟାଇଲ୍‍ ସୃଷ୍ଟି କରନ୍ତୁ</string>
   <string name="permdesc_publishCustomTile">ଏକ ଦ୍ରୁତ ସେଟିଂସମୂହ ଟାଇଲ୍‍ ପ୍ରକାଶନ କରିବା ପାଇଁ ଆପ୍ଲିକେସନ୍‍କୁ ଅନୁମତି ଦେଇଥାଏ</string>
   <string name="permlab_modifyNetworkSettings">ସିଷ୍ଟମ୍‍ ନେଟ୍‍ୱାର୍କ ସେଟିଂସମୂହ ପରିବର୍ତ୍ତନ କରନ୍ତୁ</string>
@@ -38,7 +38,7 @@
   <string name="permdesc_modifyProfiles">ସିଷ୍ଟମ୍‍ ପ୍ରୋଫାଇଲ୍‍ ସମ୍ପାଦନା କରିବାକୁ ଆପ୍ଲିକେସନ୍‍କୁ ଅନୁମତି ଦିଏ।</string>
   <!-- Labels for the HARDWARE_ABSTRACTION_ACCESS permission. -->
   <string name="permlab_useHardwareFramework">ହାର୍ଡ୍‍ଓୟାର୍‍ ଫ୍ରେମ୍‍ୱାର୍କ୍‍ ବ୍ୟବହାର କରନ୍ତୁ</string>
-  <string name="permdesc_useHardwareFramework">CM ହାର୍ଡ୍‍ଓୟାର୍‍ ଫ୍ରେମ୍‍ୱାର୍କ୍ ଆକ୍‍ସେସ୍‍ କରିବାକୁ ଆପ୍ଲିକେସନ୍‍କୁ ଅନୁମତି ଦିଏ।</string>
+  <string name="permdesc_useHardwareFramework">Lineage ହାର୍ଡ୍‍ଓୟାର୍‍ ଫ୍ରେମ୍‍ୱାର୍କ୍ ଆକ୍‍ସେସ୍‍ କରିବାକୁ ଆପ୍ଲିକେସନ୍‍କୁ ଅନୁମତି ଦିଏ।</string>
   <!-- Labels for the WRITE_ALARMS permission. -->
   <string name="permlab_write_alarms">ଆଲାର୍ମ୍‍ଗୁଡିକୁ ସିଧାସଳଖ ପରିବର୍ତ୍ତନ କରନ୍ତୁ</string>
   <string name="permdesc_write_alarms">ଆପଣଙ୍କର ସମ୍ସ୍ତ ଆଲାର୍ମ୍‍ ଯୋଗ, ସମ୍ପାଦନା ବା ବିଲୋପ କରିବାକୁ ଆପ୍ଲିକେସନ୍‍କୁ ଅନୁମତି ଦିଏ।</string>
@@ -49,11 +49,11 @@
   <string name="permlab_read_alarms">ସୂଚୀଭୁକ୍ତ ଆଲାର୍ମ୍‍ଗୁଡିକୁ ଆକ୍‍ସେସ୍‍‍ କରନ୍ତୁ</string>
   <string name="permdesc_read_alarms">ଆପଣଙ୍କ ସୂଚୀଭୁକ୍ତ ଆଲାର୍ମ୍‍ଗୁଡିକୁ ଆକ୍‍ସେସ୍‍‍ କରିବାକୁ ଆପ୍ଲିକେସନ୍‍କୁ ଅନୁମତି ଦିଏ।</string>
   <!-- Labels for the WRITE_SETTINGS permission -->
-  <string name="permlab_writeSettings">CM ସିଷ୍ଟମ୍‍ ସେଟିଂସମୂହ ସମ୍ପାଦନା କରନ୍ତୁ</string>
-  <string name="permdesc_writeSettings">CM ସିଷ୍ଟମ୍‍ ସେଟିଂସମୂହ ସମ୍ପାଦନା କରିବାକୁ ଆପ୍ଲିକେସନ୍‍କୁ ଅନୁମତି ଦିଏ।</string>
+  <string name="permlab_writeSettings">Lineage ସିଷ୍ଟମ୍‍ ସେଟିଂସମୂହ ସମ୍ପାଦନା କରନ୍ତୁ</string>
+  <string name="permdesc_writeSettings">Lineage ସିଷ୍ଟମ୍‍ ସେଟିଂସମୂହ ସମ୍ପାଦନା କରିବାକୁ ଆପ୍ଲିକେସନ୍‍କୁ ଅନୁମତି ଦିଏ।</string>
   <!-- Labels for the WRITE_SECURE_SETTINGS permission -->
-  <string name="permlab_writeSecureSettings">CM ସୁରଷିତ ସିଷ୍ଟମ୍‍ ସେଟିଂସମୂହ ସମ୍ପାଦନା</string>
-  <string name="permdesc_writeSecureSettings">CM ସୁରଷିତ ସିଷ୍ଟମ୍‍ ସେଟିଂସମୂହ‍ ସମ୍ପାଦନା କରିବାକୁ ଆପ୍ଲିକେସନ୍‍କୁ ଅନୁମତି ଦିଏ। ସାଧାରଣ ଆପ୍ଲିକେସନଗୁଡିକ ଦ୍ଵାରା ବ୍ୟବହାରରେ ନାହିଁ।</string>
+  <string name="permlab_writeSecureSettings">Lineage ସୁରଷିତ ସିଷ୍ଟମ୍‍ ସେଟିଂସମୂହ ସମ୍ପାଦନା</string>
+  <string name="permdesc_writeSecureSettings">Lineage ସୁରଷିତ ସିଷ୍ଟମ୍‍ ସେଟିଂସମୂହ‍ ସମ୍ପାଦନା କରିବାକୁ ଆପ୍ଲିକେସନ୍‍କୁ ଅନୁମତି ଦିଏ। ସାଧାରଣ ଆପ୍ଲିକେସନଗୁଡିକ ଦ୍ଵାରା ବ୍ୟବହାରରେ ନାହିଁ।</string>
   <!-- Labels for the MANAGE_PERSISTENT_STORAGE permission. -->
   <string name="permlab_managePersistentStorage">ସ୍ଥାୟୀ ଷ୍ଟୋରେଜ୍‍ ପରିଚାଳନା କରନ୍ତୁ</string>
   <string name="permdesc_managePersistentStorage">ଏକ ଫ୍ୟାକ୍ଟରୀ ରିସେଟ୍‍ ମାଧ୍ୟମରେ ଯେଉଁ ଗୁଣାବଳି ଥ୍ୟାୟୀ ହୋଇ ରହିଥାଏ ତାହା ପଢିବା ବା ଲେଖିବା ପାଇଁ ଆପ୍ଲିକେସନ୍‍କୁ ଅନୁମତି ଦିଏ।</string>
@@ -126,8 +126,8 @@
   <!-- DataUsageProvider read permission title -->
   <!-- DataUsageProvider read permission description -->
   <!-- LiveDisplay manager permission -->
-  <!-- CMAudioService - observe session changes permission -->
-  <!-- CMAudioService - observe session changes permission -->
+  <!-- LineageAudioService - observe session changes permission -->
+  <!-- LineageAudioService - observe session changes permission -->
   <!-- QuickSettings: Themes tile -->
   <!-- Privacy Guard -->
   <!-- Permissions used by remote preferences -->

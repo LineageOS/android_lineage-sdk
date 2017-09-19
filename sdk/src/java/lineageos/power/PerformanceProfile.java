@@ -13,15 +13,15 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package cyanogenmod.power;
+package lineageos.power;
 
 import android.os.Parcel;
 import android.os.Parcelable;
 
 import java.util.Objects;
 
-import cyanogenmod.os.Build;
-import cyanogenmod.os.Concierge;
+import lineageos.os.Build;
+import lineageos.os.Concierge;
 
 /**
  * Encapsulates information about an available system power/peformance profile, managed
@@ -58,7 +58,7 @@ public class PerformanceProfile implements Parcelable, Comparable<PerformancePro
         mDescription = in.readString();
         mBoostEnabled = in.readInt() == 1;
 
-        if (parcelableVersion >= Build.CM_VERSION_CODES.GUAVA) {
+        if (parcelableVersion >= Build.LINEAGE_VERSION_CODES.GUAVA) {
             // nothing yet
         }
 

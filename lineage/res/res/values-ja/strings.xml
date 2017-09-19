@@ -18,7 +18,7 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Label for the LineageOS system components when they are shown to the user. -->
-  <string name="cyanogenmod_system_label">LineageOS システム</string>
+  <string name="lineageos_system_label">LineageOS システム</string>
   <string name="permlab_publishCustomTile">クイック設定パネルでのカスタムタイルの作成</string>
   <string name="permdesc_publishCustomTile">クイック設定タイルの作成をアプリに許可します</string>
   <string name="permlab_modifyNetworkSettings">システムのネットワークの設定の変更</string>
@@ -173,10 +173,10 @@
   <!-- LiveDisplay manager permission -->
   <string name="permlab_manageLiveDisplay">LiveDisplayの設定の管理</string>
   <string name="permdesc_manageLiveDisplay">ディスプレイの詳細設定をアプリに許可します。</string>
-  <!-- CMAudioService - observe session changes permission -->
+  <!-- LineageAudioService - observe session changes permission -->
   <string name="permlab_observe_audio_sessions">オーディオセッションの変更の監視</string>
   <string name="permdesc_observe_audio_sessions">オーディオストリームの作成および破棄の監視をアプリに許可します。</string>
-  <!-- CMAudioService - observe session changes permission -->
+  <!-- LineageAudioService - observe session changes permission -->
   <string name="permlab_manage_audio_sessions">オーディオセッションの変更の管理</string>
   <string name="permdesc_manage_audio_sessions">オーディオストリームの更新の送信をアプリに許可します。</string>
   <!-- QuickSettings: Themes tile -->

@@ -1,15 +1,15 @@
-package org.cyanogenmod.tests.telephony;
+package org.lineageos.tests.telephony;
 
 import android.telephony.SubscriptionManager;
 import android.widget.Toast;
-import org.cyanogenmod.tests.TestActivity;
+import org.lineageos.tests.TestActivity;
 
-import cyanogenmod.app.CMTelephonyManager;
+import lineageos.app.LineageTelephonyManager;
 
 /**
  * Created by adnan on 8/6/15.
  */
-public class CMTelephonyTest extends TestActivity {
+public class LineageTelephonyTest extends TestActivity {
     @Override
     protected String tag() {
         return null;
@@ -23,77 +23,77 @@ public class CMTelephonyTest extends TestActivity {
     private Test[] mTests = new Test[] {
             new Test("test retreive list of subscription information") {
                 public void run() {
-                    CMTelephonyManager cmTelephonyManager =
-                            CMTelephonyManager.getInstance(CMTelephonyTest.this);
-                    Toast.makeText(CMTelephonyTest.this, "Test retrieve info "
-                                    + cmTelephonyManager.getSubInformation().toString(),
+                    LineageTelephonyManager lineageTelephonyManager =
+                            LineageTelephonyManager.getInstance(LineageTelephonyTest.this);
+                    Toast.makeText(LineageTelephonyTest.this, "Test retrieve info "
+                                    + lineageTelephonyManager.getSubInformation().toString(),
                             Toast.LENGTH_SHORT).show();
                 }
             },
             new Test("test is default subscription active") {
                 public void run() {
-                    CMTelephonyManager cmTelephonyManager =
-                            CMTelephonyManager.getInstance(CMTelephonyTest.this);
-                    Toast.makeText(CMTelephonyTest.this, "Test default sub active "
-                                    + cmTelephonyManager.isSubActive(
+                    LineageTelephonyManager lineageTelephonyManager =
+                            LineageTelephonyManager.getInstance(LineageTelephonyTest.this);
+                    Toast.makeText(LineageTelephonyTest.this, "Test default sub active "
+                                    + lineageTelephonyManager.isSubActive(
                                     SubscriptionManager.getDefaultSubscriptionId()),
                             Toast.LENGTH_SHORT).show();
                 }
             },
             new Test("test setSubState on default subscription") {
                 public void run() {
-                    CMTelephonyManager cmTelephonyManager =
-                            CMTelephonyManager.getInstance(CMTelephonyTest.this);
-                    cmTelephonyManager.setSubState(SubscriptionManager.getDefaultSubscriptionId(), true);
+                    LineageTelephonyManager lineageTelephonyManager =
+                            LineageTelephonyManager.getInstance(LineageTelephonyTest.this);
+                    lineageTelephonyManager.setSubState(SubscriptionManager.getDefaultSubscriptionId(), true);
                 }
             },
             new Test("test is data enabled on default sub") {
                 public void run() {
-                    CMTelephonyManager cmTelephonyManager =
-                            CMTelephonyManager.getInstance(CMTelephonyTest.this);
-                    Toast.makeText(CMTelephonyTest.this, "Test default sub data "
-                                    + cmTelephonyManager.isDataConnectionSelectedOnSub(
+                    LineageTelephonyManager lineageTelephonyManager =
+                            LineageTelephonyManager.getInstance(LineageTelephonyTest.this);
+                    Toast.makeText(LineageTelephonyTest.this, "Test default sub data "
+                                    + lineageTelephonyManager.isDataConnectionSelectedOnSub(
                                     SubscriptionManager.getDefaultSubscriptionId()),
                             Toast.LENGTH_SHORT).show();
                 }
             },
             new Test("test is data enabled") {
                 public void run() {
-                    CMTelephonyManager cmTelephonyManager =
-                            CMTelephonyManager.getInstance(CMTelephonyTest.this);
-                    Toast.makeText(CMTelephonyTest.this, "Test data enabled "
-                                    + cmTelephonyManager.isDataConnectionEnabled(),
+                    LineageTelephonyManager lineageTelephonyManager =
+                            LineageTelephonyManager.getInstance(LineageTelephonyTest.this);
+                    Toast.makeText(LineageTelephonyTest.this, "Test data enabled "
+                                    + lineageTelephonyManager.isDataConnectionEnabled(),
                             Toast.LENGTH_SHORT).show();
                 }
             },
             new Test("test setDataConnectionState") {
                 public void run() {
-                    CMTelephonyManager cmTelephonyManager =
-                            CMTelephonyManager.getInstance(CMTelephonyTest.this);
-                    cmTelephonyManager.setDataConnectionState(true);
+                    LineageTelephonyManager lineageTelephonyManager =
+                            LineageTelephonyManager.getInstance(LineageTelephonyTest.this);
+                    lineageTelephonyManager.setDataConnectionState(true);
                 }
             },
             new Test("test setDataConnectionSelectedOnSub") {
                 public void run() {
-                    CMTelephonyManager cmTelephonyManager =
-                            CMTelephonyManager.getInstance(CMTelephonyTest.this);
-                    cmTelephonyManager.setDataConnectionSelectedOnSub(
+                    LineageTelephonyManager lineageTelephonyManager =
+                            LineageTelephonyManager.getInstance(LineageTelephonyTest.this);
+                    lineageTelephonyManager.setDataConnectionSelectedOnSub(
                             SubscriptionManager.getDefaultSubscriptionId());
                 }
             },
             new Test("test setDefaultPhoneSub") {
                 public void run() {
-                    CMTelephonyManager cmTelephonyManager =
-                            CMTelephonyManager.getInstance(CMTelephonyTest.this);
-                    cmTelephonyManager.setDefaultPhoneSub(
+                    LineageTelephonyManager lineageTelephonyManager =
+                            LineageTelephonyManager.getInstance(LineageTelephonyTest.this);
+                    lineageTelephonyManager.setDefaultPhoneSub(
                             SubscriptionManager.getDefaultSubscriptionId());
                 }
             },
             new Test("test setDefaultSmsSub") {
                 public void run() {
-                    CMTelephonyManager cmTelephonyManager =
-                            CMTelephonyManager.getInstance(CMTelephonyTest.this);
-                    cmTelephonyManager.setDefaultSmsSub(
+                    LineageTelephonyManager lineageTelephonyManager =
+                            LineageTelephonyManager.getInstance(LineageTelephonyTest.this);
+                    lineageTelephonyManager.setDefaultSmsSub(
                             SubscriptionManager.getDefaultSubscriptionId());
                 }
             },

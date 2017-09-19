@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.cyanogenmod.cmsettings;
+package org.lineageos.lineagesettings;
 
 import android.content.ContentValues;
 import android.content.Context;
@@ -34,22 +34,22 @@ import android.provider.Settings;
 import android.text.TextUtils;
 import android.util.DisplayMetrics;
 import android.util.Log;
-import cyanogenmod.providers.CMSettings;
+import lineageos.providers.LineageSettings;
 
 import java.io.File;
 
 /**
- * The CMDatabaseHelper allows creation of a database to store CM specific settings for a user
+ * The LineageDatabaseHelper allows creation of a database to store Lineage specific settings for a user
  * in System, Secure, and Global tables.
  */
-public class CMDatabaseHelper extends SQLiteOpenHelper{
-    private static final String TAG = "CMDatabaseHelper";
+public class LineageDatabaseHelper extends SQLiteOpenHelper{
+    private static final String TAG = "LineageDatabaseHelper";
     private static final boolean LOCAL_LOGV = false;
 
-    private static final String DATABASE_NAME = "cmsettings.db";
+    private static final String DATABASE_NAME = "lineagesettings.db";
     private static final int DATABASE_VERSION = 8;
 
-    public static class CMTableNames {
+    public static class LineageTableNames {
         public static final String TABLE_SYSTEM = "system";
         public static final String TABLE_SECURE = "secure";
         public static final String TABLE_GLOBAL = "global";
@@ -92,11 +92,11 @@ public class CMDatabaseHelper extends SQLiteOpenHelper{
     }
 
     /**
-     * Creates an instance of {@link CMDatabaseHelper}
+     * Creates an instance of {@link LineageDatabaseHelper}
      * @param context
      * @param userId
      */
-    public CMDatabaseHelper(Context context, int userId) {
+    public LineageDatabaseHelper(Context context, int userId) {
         super(context, dbNameForUser(userId), null, DATABASE_VERSION);
         mContext = context;
         mUserHandle = userId;
@@ -120,18 +120,18 @@ public class CMDatabaseHelper extends SQLiteOpenHelper{
         db.beginTransaction();
 
         try {
-            createDbTable(db, CMTableNames.TABLE_SYSTEM);
-            createDbTable(db, CMTableNames.TABLE_SECURE);
+            createDbTable(db, LineageTableNames.TABLE_SYSTEM);
+            createDbTable(db, LineageTableNames.TABLE_SECURE);
 
             if (mUserHandle == UserHandle.USER_OWNER) {
-                createDbTable(db, CMTableNames.TABLE_GLOBAL);
+                createDbTable(db, LineageTableNames.TABLE_GLOBAL);
             }
 
             loadSettings(db);
 
             db.setTransactionSuccessful();
 
-            if (LOCAL_LOGV) Log.d(TAG, "Successfully created tables for cm settings db");
+            if (LOCAL_LOGV) Log.d(TAG, "Successfully created tables for lineage settings db");
         } finally {
             db.endTransaction();
         }
@@ -176,7 +176,7 @@ public class CMDatabaseHelper extends SQLiteOpenHelper{
             try {
                 stmt = db.compileStatement("INSERT INTO secure(name,value)"
                         + " VALUES(?,?);");
-                loadStringSetting(stmt, CMSettings.Secure.PROTECTED_COMPONENT_MANAGERS,
+                loadStringSetting(stmt, LineageSettings.Secure.PROTECTED_COMPONENT_MANAGERS,
                         R.string.def_protected_component_managers);
                 db.setTransactionSuccessful();
             } finally {
@@ -195,7 +195,7 @@ public class CMDatabaseHelper extends SQLiteOpenHelper{
                             + " VALUES(?,?);");
                     final String provisionedFlag = Settings.Global.getString(
                             mContext.getContentResolver(), Settings.Global.DEVICE_PROVISIONED);
-                    loadSetting(stmt, CMSettings.Secure.CM_SETUP_WIZARD_COMPLETED, provisionedFlag);
+                    loadSetting(stmt, LineageSettings.Secure.LINEAGE_SETUP_WIZARD_COMPLETED, provisionedFlag);
                     db.setTransactionSuccessful();
                 } finally {
                     if (stmt != null) stmt.close();
@@ -212,7 +212,7 @@ public class CMDatabaseHelper extends SQLiteOpenHelper{
                 try {
                     stmt = db.compileStatement("INSERT INTO global(name,value)"
                             + " VALUES(?,?);");
-                    loadIntegerSetting(stmt, CMSettings.Global.WEATHER_TEMPERATURE_UNIT,
+                    loadIntegerSetting(stmt, LineageSettings.Global.WEATHER_TEMPERATURE_UNIT,
                             R.integer.def_temperature_unit);
                     db.setTransactionSuccessful();
                 } finally {
@@ -226,9 +226,9 @@ public class CMDatabaseHelper extends SQLiteOpenHelper{
         if (upgradeVersion < 6) {
             // Move force_show_navbar to global
             if (mUserHandle == UserHandle.USER_OWNER) {
-                moveSettingsToNewTable(db, CMTableNames.TABLE_SECURE,
-                        CMTableNames.TABLE_GLOBAL, new String[] {
-                        CMSettings.Secure.DEV_FORCE_SHOW_NAVBAR
+                moveSettingsToNewTable(db, LineageTableNames.TABLE_SECURE,
+                        LineageTableNames.TABLE_GLOBAL, new String[] {
+                        LineageSettings.Secure.DEV_FORCE_SHOW_NAVBAR
                 }, true);
             }
             upgradeVersion = 6;
@@ -240,18 +240,18 @@ public class CMDatabaseHelper extends SQLiteOpenHelper{
                 SQLiteStatement stmt = null;
                 try {
                     stmt = db.compileStatement("SELECT value FROM system WHERE name=?");
-                    stmt.bindString(1, CMSettings.System.STATUS_BAR_CLOCK);
+                    stmt.bindString(1, LineageSettings.System.STATUS_BAR_CLOCK);
                     long value = stmt.simpleQueryForLong();
 
                     if (value != 0) {
                         stmt = db.compileStatement("UPDATE system SET value=? WHERE name=?");
                         stmt.bindLong(1, value - 1);
-                        stmt.bindString(2, CMSettings.System.STATUS_BAR_CLOCK);
+                        stmt.bindString(2, LineageSettings.System.STATUS_BAR_CLOCK);
                         stmt.execute();
                     }
                     db.setTransactionSuccessful();
                 } catch (SQLiteDoneException ex) {
-                    // CMSettings.System.STATUS_BAR_CLOCK is not set
+                    // LineageSettings.System.STATUS_BAR_CLOCK is not set
                 } finally {
                     if (stmt != null) stmt.close();
                     db.endTransaction();
@@ -267,7 +267,7 @@ public class CMDatabaseHelper extends SQLiteOpenHelper{
                 stmt = db.compileStatement("UPDATE secure SET value=? WHERE name=?");
                 stmt.bindString(1, mContext.getResources()
                         .getString(R.string.def_protected_component_managers));
-                stmt.bindString(2, CMSettings.Secure.PROTECTED_COMPONENT_MANAGERS);
+                stmt.bindString(2, LineageSettings.Secure.PROTECTED_COMPONENT_MANAGERS);
                 stmt.execute();
                 db.setTransactionSuccessful();
             } finally {
@@ -281,13 +281,13 @@ public class CMDatabaseHelper extends SQLiteOpenHelper{
         if (upgradeVersion < newVersion) {
             Log.w(TAG, "Got stuck trying to upgrade db. Old version: " + oldVersion
                     + ", version stuck at: " +  upgradeVersion + ", new version: "
-                            + newVersion + ". Must wipe the cm settings provider.");
+                            + newVersion + ". Must wipe the lineage settings provider.");
 
-            dropDbTable(db, CMTableNames.TABLE_SYSTEM);
-            dropDbTable(db, CMTableNames.TABLE_SECURE);
+            dropDbTable(db, LineageTableNames.TABLE_SYSTEM);
+            dropDbTable(db, LineageTableNames.TABLE_SECURE);
 
             if (mUserHandle == UserHandle.USER_OWNER) {
-                dropDbTable(db, CMTableNames.TABLE_GLOBAL);
+                dropDbTable(db, LineageTableNames.TABLE_GLOBAL);
             }
 
             onCreate(db);
@@ -362,42 +362,42 @@ public class CMDatabaseHelper extends SQLiteOpenHelper{
             stmt = db.compileStatement("INSERT OR IGNORE INTO secure(name,value)"
                     + " VALUES(?,?);");
             // Secure
-            loadBooleanSetting(stmt, CMSettings.Secure.ADVANCED_MODE,
+            loadBooleanSetting(stmt, LineageSettings.Secure.ADVANCED_MODE,
                     R.bool.def_advanced_mode);
 
             loadRegionLockedStringSetting(stmt,
-                    CMSettings.Secure.DEFAULT_THEME_COMPONENTS, R.string.def_theme_components);
+                    LineageSettings.Secure.DEFAULT_THEME_COMPONENTS, R.string.def_theme_components);
 
             loadRegionLockedStringSetting(stmt,
-                    CMSettings.Secure.DEFAULT_THEME_PACKAGE, R.string.def_theme_package);
+                    LineageSettings.Secure.DEFAULT_THEME_PACKAGE, R.string.def_theme_package);
 
-            loadIntegerSetting(stmt, CMSettings.Secure.DEV_FORCE_SHOW_NAVBAR,
+            loadIntegerSetting(stmt, LineageSettings.Secure.DEV_FORCE_SHOW_NAVBAR,
                     R.integer.def_force_show_navbar);
 
-            loadStringSetting(stmt, CMSettings.Secure.QS_TILES,
-                    org.cyanogenmod.platform.internal.
+            loadStringSetting(stmt, LineageSettings.Secure.QS_TILES,
+                    org.lineageos.platform.internal.
                             R.string.config_defaultQuickSettingsTiles);
 
-            loadBooleanSetting(stmt, CMSettings.Secure.QS_USE_MAIN_TILES,
+            loadBooleanSetting(stmt, LineageSettings.Secure.QS_USE_MAIN_TILES,
                     R.bool.def_sysui_qs_main_tiles);
 
-            loadBooleanSetting(stmt, CMSettings.Secure.STATS_COLLECTION,
+            loadBooleanSetting(stmt, LineageSettings.Secure.STATS_COLLECTION,
                     R.bool.def_stats_collection);
 
-            loadBooleanSetting(stmt, CMSettings.Secure.LOCKSCREEN_VISUALIZER_ENABLED,
+            loadBooleanSetting(stmt, LineageSettings.Secure.LOCKSCREEN_VISUALIZER_ENABLED,
                     R.bool.def_lockscreen_visualizer);
 
             loadStringSetting(stmt,
-                    CMSettings.Secure.PROTECTED_COMPONENT_MANAGERS,
+                    LineageSettings.Secure.PROTECTED_COMPONENT_MANAGERS,
                     R.string.def_protected_component_managers);
 
             loadStringSetting(stmt,
-                    CMSettings.Secure.ENABLED_EVENT_LIVE_LOCKS_KEY,
+                    LineageSettings.Secure.ENABLED_EVENT_LIVE_LOCKS_KEY,
                     R.string.def_enabled_event_lls_components);
 
             final String provisionedFlag = Settings.Global.getString(mContext.getContentResolver(),
                     Settings.Global.DEVICE_PROVISIONED);
-            loadSetting(stmt, CMSettings.Secure.CM_SETUP_WIZARD_COMPLETED, provisionedFlag);
+            loadSetting(stmt, LineageSettings.Secure.LINEAGE_SETUP_WIZARD_COMPLETED, provisionedFlag);
         } finally {
             if (stmt != null) stmt.close();
         }
@@ -409,38 +409,38 @@ public class CMDatabaseHelper extends SQLiteOpenHelper{
             stmt = db.compileStatement("INSERT OR IGNORE INTO system(name,value)"
                     + " VALUES(?,?);");
             // System
-            loadIntegerSetting(stmt, CMSettings.System.STATUS_BAR_QUICK_QS_PULLDOWN,
+            loadIntegerSetting(stmt, LineageSettings.System.STATUS_BAR_QUICK_QS_PULLDOWN,
                     R.integer.def_qs_quick_pulldown);
 
-            loadIntegerSetting(stmt, CMSettings.System.NOTIFICATION_LIGHT_BRIGHTNESS_LEVEL,
+            loadIntegerSetting(stmt, LineageSettings.System.NOTIFICATION_LIGHT_BRIGHTNESS_LEVEL,
                     R.integer.def_notification_brightness_level);
 
-            loadBooleanSetting(stmt, CMSettings.System.NOTIFICATION_LIGHT_MULTIPLE_LEDS_ENABLE,
+            loadBooleanSetting(stmt, LineageSettings.System.NOTIFICATION_LIGHT_MULTIPLE_LEDS_ENABLE,
                     R.bool.def_notification_multiple_leds);
 
-            loadBooleanSetting(stmt, CMSettings.System.SYSTEM_PROFILES_ENABLED,
+            loadBooleanSetting(stmt, LineageSettings.System.SYSTEM_PROFILES_ENABLED,
                     R.bool.def_profiles_enabled);
 
-            loadIntegerSetting(stmt, CMSettings.System.ENABLE_FORWARD_LOOKUP,
+            loadIntegerSetting(stmt, LineageSettings.System.ENABLE_FORWARD_LOOKUP,
                     R.integer.def_forward_lookup);
 
-            loadIntegerSetting(stmt, CMSettings.System.ENABLE_PEOPLE_LOOKUP,
+            loadIntegerSetting(stmt, LineageSettings.System.ENABLE_PEOPLE_LOOKUP,
                     R.integer.def_people_lookup);
 
-            loadIntegerSetting(stmt, CMSettings.System.ENABLE_REVERSE_LOOKUP,
+            loadIntegerSetting(stmt, LineageSettings.System.ENABLE_REVERSE_LOOKUP,
                     R.integer.def_reverse_lookup);
 
-            loadBooleanSetting(stmt, CMSettings.System.NOTIFICATION_LIGHT_PULSE_CUSTOM_ENABLE,
+            loadBooleanSetting(stmt, LineageSettings.System.NOTIFICATION_LIGHT_PULSE_CUSTOM_ENABLE,
                     R.bool.def_notification_pulse_custom_enable);
 
-            loadBooleanSetting(stmt, CMSettings.System.SWAP_VOLUME_KEYS_ON_ROTATION,
+            loadBooleanSetting(stmt, LineageSettings.System.SWAP_VOLUME_KEYS_ON_ROTATION,
                     R.bool.def_swap_volume_keys_on_rotation);
 
-            loadIntegerSetting(stmt, CMSettings.System.STATUS_BAR_BATTERY_STYLE,
+            loadIntegerSetting(stmt, LineageSettings.System.STATUS_BAR_BATTERY_STYLE,
                     R.integer.def_battery_style);
 
             if (mContext.getResources().getBoolean(R.bool.def_notification_pulse_custom_enable)) {
-                loadStringSetting(stmt, CMSettings.System.NOTIFICATION_LIGHT_PULSE_CUSTOM_VALUES,
+                loadStringSetting(stmt, LineageSettings.System.NOTIFICATION_LIGHT_PULSE_CUSTOM_VALUES,
                         R.string.def_notification_pulse_custom_value);
             }
         } finally {
@@ -455,18 +455,18 @@ public class CMDatabaseHelper extends SQLiteOpenHelper{
                     + " VALUES(?,?);");
             // Global
             loadBooleanSetting(stmt,
-                    CMSettings.Global.POWER_NOTIFICATIONS_ENABLED,
+                    LineageSettings.Global.POWER_NOTIFICATIONS_ENABLED,
                     R.bool.def_power_notifications_enabled);
 
             loadBooleanSetting(stmt,
-                    CMSettings.Global.POWER_NOTIFICATIONS_VIBRATE,
+                    LineageSettings.Global.POWER_NOTIFICATIONS_VIBRATE,
                     R.bool.def_power_notifications_vibrate);
 
             loadStringSetting(stmt,
-                    CMSettings.Global.POWER_NOTIFICATIONS_RINGTONE,
+                    LineageSettings.Global.POWER_NOTIFICATIONS_RINGTONE,
                     R.string.def_power_notifications_ringtone);
 
-            loadIntegerSetting(stmt, CMSettings.Global.WEATHER_TEMPERATURE_UNIT,
+            loadIntegerSetting(stmt, LineageSettings.Global.WEATHER_TEMPERATURE_UNIT,
                     R.integer.def_temperature_unit);
         } finally {
             if (stmt != null) stmt.close();

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package cyanogenmod.weatherservice;
+package lineageos.weatherservice;
 
 import android.annotation.SdkConstant;
 import android.app.Service;
@@ -24,7 +24,7 @@ import android.os.Handler;
 import android.os.IBinder;
 import android.os.Looper;
 import android.os.Message;
-import cyanogenmod.weather.RequestInfo;
+import lineageos.weather.RequestInfo;
 
 import java.util.Collections;
 import java.util.Set;
@@ -37,18 +37,18 @@ import java.util.WeakHashMap;
  *
  * A weather provider service is declared as any other service in an AndroidManifest.xml but it must
  * also specify that in handles the {@link android.content.Intent} with action
- * {@link #SERVICE_INTERFACE cyanogenmod.weatherservice.WeatherProviderService}. Failure to declare
+ * {@link #SERVICE_INTERFACE lineageos.weatherservice.WeatherProviderService}. Failure to declare
  * this intent will cause the system to ignore the weather provider service. Additionally, a
  * weather provider service must request the
- * {@link cyanogenmod.platform.Manifest.permission#BIND_WEATHER_PROVIDER_SERVICE} permission to
+ * {@link lineageos.platform.Manifest.permission#BIND_WEATHER_PROVIDER_SERVICE} permission to
  * ensure that only the system can bind to it. Failure to request this permission will cause the
  * system to ignore this weather provider service. Following is an example declaration:
  *
  * <pre>
  *    &lt;service android:name=".MyWeatherProviderService"
- *          android:permission="cyanogenmod.permission.BIND_WEATHER_PROVIDER_SERVICE"&gt;
+ *          android:permission="lineageos.permission.BIND_WEATHER_PROVIDER_SERVICE"&gt;
  *      &lt;intent-filter&gt;
- *          &lt;action android:name="cyanogenmod.weatherservice.WeatherProviderService" /&gt;
+ *          &lt;action android:name="lineageos.weatherservice.WeatherProviderService" /&gt;
  *      &lt;intent-filter&gt;
  *      . . .
  *    &lt;/service&gt;
@@ -68,7 +68,7 @@ public abstract class WeatherProviderService extends Service {
      */
     @SdkConstant(SdkConstant.SdkConstantType.SERVICE_ACTION)
     public static final String SERVICE_INTERFACE
-            = "cyanogenmod.weatherservice.WeatherProviderService";
+            = "lineageos.weatherservice.WeatherProviderService";
 
     /**
      * Name under which a {@link WeatherProviderService} publishes information about itself.
@@ -76,7 +76,7 @@ public abstract class WeatherProviderService extends Service {
      * a <code>&lt;weather-provider-service&gt;</code>
      * tag.
      */
-    public static final String SERVICE_META_DATA = "cyanogenmod.weatherservice";
+    public static final String SERVICE_META_DATA = "lineageos.weatherservice";
 
     @Override
     protected final void attachBaseContext(Context base) {

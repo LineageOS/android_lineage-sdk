@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package cyanogenmod.weather.util;
+package lineageos.weather.util;
 
 
-import cyanogenmod.providers.WeatherContract;
+import lineageos.providers.WeatherContract;
 
 import java.text.DecimalFormat;
 

@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package cyanogenmod.preference;
+package lineageos.preference;
 
 import android.app.Activity;
 import android.content.BroadcastReceiver;
@@ -33,11 +33,11 @@ import java.util.Map;
 import java.util.Objects;
 import java.util.Set;
 
-import cyanogenmod.platform.Manifest;
+import lineageos.platform.Manifest;
 
-import static cyanogenmod.preference.RemotePreference.ACTION_REFRESH_PREFERENCE;
-import static cyanogenmod.preference.RemotePreference.ACTION_UPDATE_PREFERENCE;
-import static cyanogenmod.preference.RemotePreference.EXTRA_KEY;
+import static lineageos.preference.RemotePreference.ACTION_REFRESH_PREFERENCE;
+import static lineageos.preference.RemotePreference.ACTION_UPDATE_PREFERENCE;
+import static lineageos.preference.RemotePreference.EXTRA_KEY;
 
 /**
  * Manages attaching and detaching of RemotePreferences and optimizes callbacks

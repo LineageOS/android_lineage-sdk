@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package cyanogenmod.app;
+package lineageos.app;
 
 /**
  * The id value here matches the framework. Unknown is given a -1 value since future

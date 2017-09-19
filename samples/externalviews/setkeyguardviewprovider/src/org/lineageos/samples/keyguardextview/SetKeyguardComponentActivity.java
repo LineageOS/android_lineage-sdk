@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.cyanogenmod.samples.setkeyguardextview;
+package org.lineageos.samples.setkeyguardextview;
 
 import android.app.Activity;
 import android.content.ComponentName;
@@ -24,11 +24,11 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
-import org.cyanogenmod.internal.util.CmLockPatternUtils;
+import org.lineageos.internal.util.LineageLockPatternUtils;
 
 public class SetKeyguardComponentActivity extends Activity {
     private static final String TAG = SetKeyguardComponentActivity.class.getSimpleName();
-    private static final String KEYGUARD_PACKAGE = "org.cyanogenmod.samples.keyguardextview";
+    private static final String KEYGUARD_PACKAGE = "org.lineageos.samples.keyguardextview";
     private static final String KEYGUARD_COMPONENT =
             KEYGUARD_PACKAGE + ".SampleKeyguardProviderService";
 
@@ -62,8 +62,8 @@ public class SetKeyguardComponentActivity extends Activity {
     }
 
     private void setKeyguardComponent(ComponentName cn) {
-        CmLockPatternUtils lockPatternUtils =
-                new CmLockPatternUtils(this);
+        LineageLockPatternUtils lockPatternUtils =
+                new LineageLockPatternUtils(this);
         try {
             lockPatternUtils.setThirdPartyKeyguard(cn);
         } catch (PackageManager.NameNotFoundException e) {

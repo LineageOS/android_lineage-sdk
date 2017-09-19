@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package cyanogenmod.weather;
+package lineageos.weather;
 
 /** @hide */
 oneway interface IWeatherServiceProviderChangeListener {

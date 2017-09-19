@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package org.cyanogenmod.tests.profiles.unit;
+package org.lineageos.tests.profiles.unit;
 
 import android.test.AndroidTestCase;
 import android.test.suitebuilder.annotation.SmallTest;
-import cyanogenmod.profiles.AirplaneModeSettings;
+import lineageos.profiles.AirplaneModeSettings;
 
 public class AirplaneModeSettingsTest extends AndroidTestCase {
 

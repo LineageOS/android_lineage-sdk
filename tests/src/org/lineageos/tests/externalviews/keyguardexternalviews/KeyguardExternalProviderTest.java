@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.cyanogenmod.tests.externalviews.keyguardexternalviews;
+package org.lineageos.tests.externalviews.keyguardexternalviews;
 
 import android.content.Context;
 import android.content.Intent;
@@ -24,12 +24,12 @@ import android.test.ServiceTestCase;
 import android.view.*;
 import android.widget.Space;
 import android.widget.TextView;
-import cyanogenmod.externalviews.IExternalViewProviderFactory;
-import cyanogenmod.externalviews.IKeyguardExternalViewCallbacks;
-import cyanogenmod.externalviews.IKeyguardExternalViewProvider;
-import cyanogenmod.externalviews.KeyguardExternalViewProviderService;
-import org.cyanogenmod.tests.common.MockIBinderStubForInterface;
-import org.cyanogenmod.tests.common.ThreadServiceTestCase;
+import lineageos.externalviews.IExternalViewProviderFactory;
+import lineageos.externalviews.IKeyguardExternalViewCallbacks;
+import lineageos.externalviews.IKeyguardExternalViewProvider;
+import lineageos.externalviews.KeyguardExternalViewProviderService;
+import org.lineageos.tests.common.MockIBinderStubForInterface;
+import org.lineageos.tests.common.ThreadServiceTestCase;
 import org.junit.Assert;
 import org.mockito.ArgumentCaptor;
 import org.mockito.Mockito;

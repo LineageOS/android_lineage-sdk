@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package cyanogenmod.weatherservice;
+package lineageos.weatherservice;
 
-import cyanogenmod.weather.RequestInfo;
-import cyanogenmod.weatherservice.ServiceRequestResult;
+import lineageos.weather.RequestInfo;
+import lineageos.weatherservice.ServiceRequestResult;
 
 /** @hide */
 oneway interface IWeatherProviderServiceClient {

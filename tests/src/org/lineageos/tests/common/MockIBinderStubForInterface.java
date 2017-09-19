@@ -14,7 +14,7 @@
   * limitations under the License.
   */
 
-package org.cyanogenmod.tests.common;
+package org.lineageos.tests.common;
 
 import android.os.IBinder;
 import android.os.IInterface;

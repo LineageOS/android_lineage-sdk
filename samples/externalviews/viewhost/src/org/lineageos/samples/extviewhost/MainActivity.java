@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package org.cyanogenmod.samples.extviewhost;
+package org.lineageos.samples.extviewhost;
 
 import android.app.Activity;
 import android.content.ComponentName;
 import android.os.Bundle;
 
-import cyanogenmod.externalviews.ExternalView;
+import lineageos.externalviews.ExternalView;
 
 public class MainActivity extends Activity {
 
@@ -29,8 +29,8 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ExternalView ev = (ExternalView) findViewById(R.id.external_view);
-        ComponentName cn = new ComponentName("org.cyanogenmod.samples.extview",
-                "org.cyanogenmod.samples.extview.SampleProviderService");
+        ComponentName cn = new ComponentName("org.lineageos.samples.extview",
+                "org.lineageos.samples.extview.SampleProviderService");
         ev.setProviderComponent(cn);
     }
 

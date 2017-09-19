@@ -14,18 +14,18 @@
  * limitations under the License.
  */
 
-package cyanogenmod.weather;
+package lineageos.weather;
 
 import android.annotation.NonNull;
 import android.os.Parcel;
 import android.os.Parcelable;
 import android.text.TextUtils;
-import cyanogenmod.os.Build;
-import cyanogenmod.os.Concierge;
-import cyanogenmod.os.Concierge.ParcelInfo;
-import cyanogenmod.providers.WeatherContract;
-import cyanogenmod.weatherservice.ServiceRequest;
-import cyanogenmod.weatherservice.ServiceRequestResult;
+import lineageos.os.Build;
+import lineageos.os.Concierge;
+import lineageos.os.Concierge.ParcelInfo;
+import lineageos.providers.WeatherContract;
+import lineageos.weatherservice.ServiceRequest;
+import lineageos.weatherservice.ServiceRequestResult;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -33,7 +33,7 @@ import java.util.UUID;
 
 /**
  * This class represents the weather information that a
- * {@link cyanogenmod.weatherservice.WeatherProviderService} will use to update the weather content
+ * {@link lineageos.weatherservice.WeatherProviderService} will use to update the weather content
  * provider. A weather provider service will be called by the system to process an update
  * request at any time. If the service successfully processes the request, then the weather provider
  * service is responsible of calling
@@ -82,7 +82,7 @@ public final class WeatherInfo implements Parcelable {
          * @param temperature A valid temperature value. Attempting pass an invalid double value,
          *                    will get you an IllegalArgumentException
          * @param tempUnit A valid temperature unit value. See
-         *                 {@link cyanogenmod.providers.WeatherContract.WeatherColumns.TempUnit} for
+         *                 {@link lineageos.providers.WeatherContract.WeatherColumns.TempUnit} for
          *                 valid values. Attempting to pass an invalid temperature unit will get you
          *                 an IllegalArgumentException
          */
@@ -131,7 +131,7 @@ public final class WeatherInfo implements Parcelable {
          * @param windDirection The wind direction. Attempting to pass an invalid double value will
          *                      get you an IllegalArgumentException
          * @param windSpeedUnit A valid wind speed direction unit. See
-         *                      {@link cyanogenmod.providers.WeatherContract.WeatherColumns.WindSpeedUnit}
+         *                      {@link lineageos.providers.WeatherContract.WeatherColumns.WindSpeedUnit}
          *                      for valid values. Attempting to pass an invalid speed unit will get
          *                      you an IllegalArgumentException
          * @return The {@link Builder} instance
@@ -154,7 +154,7 @@ public final class WeatherInfo implements Parcelable {
 
         /**
          * @param conditionCode A valid weather condition code. See
-         *                      {@link cyanogenmod.providers.WeatherContract.WeatherColumns.WeatherCode}
+         *                      {@link lineageos.providers.WeatherContract.WeatherColumns.WeatherCode}
          *                      for valid codes. Attempting to pass an invalid code will get you an
          *                      IllegalArgumentException.
          * @return The {@link Builder} instance
@@ -339,7 +339,7 @@ public final class WeatherInfo implements Parcelable {
     }
 
     /**
-     * @return List of {@link cyanogenmod.weather.WeatherInfo.DayForecast}. This list will contain
+     * @return List of {@link lineageos.weather.WeatherInfo.DayForecast}. This list will contain
      * the forecast weather for the upcoming days. If you want to know today's high and low
      * temperatures, use {@link WeatherInfo#getTodaysHigh()} and {@link WeatherInfo#getTodaysLow()}
      */
@@ -352,7 +352,7 @@ public final class WeatherInfo implements Parcelable {
         ParcelInfo parcelInfo = Concierge.receiveParcel(parcel);
         int parcelableVersion = parcelInfo.getParcelVersion();
 
-        if (parcelableVersion >= Build.CM_VERSION_CODES.ELDERBERRY) {
+        if (parcelableVersion >= Build.LINEAGE_VERSION_CODES.ELDERBERRY) {
             mKey = parcel.readString();
             mCity = parcel.readString();
             mConditionCode = parcel.readInt();
@@ -447,7 +447,7 @@ public final class WeatherInfo implements Parcelable {
 
             /**
              * @param conditionCode A valid weather condition code. See
-             * {@link cyanogenmod.providers.WeatherContract.WeatherColumns.WeatherCode} for valid
+             * {@link lineageos.providers.WeatherContract.WeatherColumns.WeatherCode} for valid
              *                      values. Attempting to pass an invalid code will get you an
              *                      IllegalArgumentException
              */
@@ -559,7 +559,7 @@ public final class WeatherInfo implements Parcelable {
             ParcelInfo parcelInfo = Concierge.receiveParcel(parcel);
             int parcelableVersion = parcelInfo.getParcelVersion();
 
-            if (parcelableVersion >= Build.CM_VERSION_CODES.ELDERBERRY) {
+            if (parcelableVersion >= Build.LINEAGE_VERSION_CODES.ELDERBERRY) {
                 mKey = parcel.readString();
                 mLow = parcel.readDouble();
                 mHigh = parcel.readDouble();

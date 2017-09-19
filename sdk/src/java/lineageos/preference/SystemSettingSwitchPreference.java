@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package cyanogenmod.preference;
+package lineageos.preference;
 
 import android.content.Context;
 import android.provider.Settings;

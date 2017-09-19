@@ -18,7 +18,7 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Label for the LineageOS system components when they are shown to the user. -->
-  <string name="cyanogenmod_system_label">LineageOS System</string>
+  <string name="lineageos_system_label">LineageOS System</string>
   <string name="permlab_publishCustomTile">opprett en egendefinert flis i hurtiginnstillingspanelet</string>
   <string name="permdesc_publishCustomTile">Tillater en app å publisere en hurtiginnstillingsflis.</string>
   <string name="permlab_modifyNetworkSettings">endre innstillingene for nettverk</string>
@@ -49,11 +49,11 @@
   <string name="permlab_read_alarms">tilgang til planlagte alarmer</string>
   <string name="permdesc_read_alarms">Gir en app tilgang til å lese av dine planlagte alarmer.</string>
   <!-- Labels for the WRITE_SETTINGS permission -->
-  <string name="permlab_writeSettings">endre CM systeminnstillinger</string>
-  <string name="permdesc_writeSettings">Gir en app tilgang til å endre CMs systeminnstillinger.</string>
+  <string name="permlab_writeSettings">endre Lineage systeminnstillinger</string>
+  <string name="permdesc_writeSettings">Gir en app tilgang til å endre Lineages systeminnstillinger.</string>
   <!-- Labels for the WRITE_SECURE_SETTINGS permission -->
-  <string name="permlab_writeSecureSettings">endre CM sikker systeminnstillinger</string>
-  <string name="permdesc_writeSecureSettings">Gir en app tilgang til å endre CM sikkerhets-systeminnstillinger. Tilgangen bør ikke gis til normale apper.</string>
+  <string name="permlab_writeSecureSettings">endre Lineage sikker systeminnstillinger</string>
+  <string name="permdesc_writeSecureSettings">Gir en app tilgang til å endre Lineage sikkerhets-systeminnstillinger. Tilgangen bør ikke gis til normale apper.</string>
   <!-- Labels for the MANAGE_PERSISTENT_STORAGE permission. -->
   <string name="permlab_managePersistentStorage">administrere permanent lager</string>
   <string name="permdesc_managePersistentStorage">Gir en app tilgang til å lese eller skrive egenskaper, som kan overleve gjenoppretting av fabrikkinnstillinger.</string>
@@ -174,10 +174,10 @@
   <!-- LiveDisplay manager permission -->
   <string name="permlab_manageLiveDisplay">behandle LiveDisplay innstillinger</string>
   <string name="permdesc_manageLiveDisplay">Tillater en app å konfigurere avanserte skjerminnstillinger.</string>
-  <!-- CMAudioService - observe session changes permission -->
+  <!-- LineageAudioService - observe session changes permission -->
   <string name="permlab_observe_audio_sessions">observer lydøkt-endringer</string>
   <string name="permdesc_observe_audio_sessions">Tillater en app å observere om lyd-strømmer blir lagd eller ødelagt.</string>
-  <!-- CMAudioService - observe session changes permission -->
+  <!-- LineageAudioService - observe session changes permission -->
   <string name="permlab_manage_audio_sessions">administrer lyd økt endringer</string>
   <string name="permdesc_manage_audio_sessions">Gir en app tillatelse til å sende lydstrømning oppdateringer.</string>
   <!-- QuickSettings: Themes tile -->
