@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.cyanogenmod.tests;
+package org.lineageos.tests;
 
 import android.app.Application;
 import android.content.Context;
@@ -22,7 +22,7 @@ import android.content.Context;
 /**
  * Created by adnan on 2/4/16.
  */
-public class CyanogenModTestApplication extends Application {
+public class LineageOSTestApplication extends Application {
     private static Context sApplicationContext;
 
     @Override

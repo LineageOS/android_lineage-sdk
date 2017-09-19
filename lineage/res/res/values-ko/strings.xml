@@ -18,7 +18,7 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Label for the LineageOS system components when they are shown to the user. -->
-  <string name="cyanogenmod_system_label">LineageOS 시스템</string>
+  <string name="lineageos_system_label">LineageOS 시스템</string>
   <string name="permlab_publishCustomTile">빠른 설정 패널에 사용자 정의 타일 생성</string>
   <string name="permdesc_publishCustomTile">앱이 빠른 설정 타일을 만들 수 있도록 허용합니다.</string>
   <string name="permlab_modifyNetworkSettings">시스템 네트워크 설정 변경</string>
@@ -38,7 +38,7 @@
   <string name="permdesc_modifyProfiles">앱이 시스템 프로필을 수정할 수 있도록 허용합니다.</string>
   <!-- Labels for the HARDWARE_ABSTRACTION_ACCESS permission. -->
   <string name="permlab_useHardwareFramework">하드웨어 프레임워크 사용</string>
-  <string name="permdesc_useHardwareFramework">앱이 CM 하드웨어 프레임워크에 접근할 수 있도록 허용합니다.</string>
+  <string name="permdesc_useHardwareFramework">앱이 Lineage 하드웨어 프레임워크에 접근할 수 있도록 허용합니다.</string>
   <!-- Labels for the WRITE_ALARMS permission. -->
   <string name="permlab_write_alarms">알람을 직접 변경</string>
   <string name="permdesc_write_alarms">앱이 알람을 추가, 변경 또는 삭제할 수 있도록 허용합니다.</string>
@@ -49,11 +49,11 @@
   <string name="permlab_read_alarms">예정된 알람 접근</string>
   <string name="permdesc_read_alarms">앱이 예정된 알람을 볼 수 있도록 허용합니다.</string>
   <!-- Labels for the WRITE_SETTINGS permission -->
-  <string name="permlab_writeSettings">CM 시스템 설정 수정</string>
-  <string name="permdesc_writeSettings">앱이 CM 시스템 설정을 수정할 수 있도록 허용합니다.</string>
+  <string name="permlab_writeSettings">Lineage 시스템 설정 수정</string>
+  <string name="permdesc_writeSettings">앱이 Lineage 시스템 설정을 수정할 수 있도록 허용합니다.</string>
   <!-- Labels for the WRITE_SECURE_SETTINGS permission -->
-  <string name="permlab_writeSecureSettings">CM 보안 시스템 설정 수정</string>
-  <string name="permdesc_writeSecureSettings">앱이 CM 보안 시스템 설정을 수정할 수 있도록 허용합니다. 일반 앱을 위한 것이 아닙니다.</string>
+  <string name="permlab_writeSecureSettings">Lineage 보안 시스템 설정 수정</string>
+  <string name="permdesc_writeSecureSettings">앱이 Lineage 보안 시스템 설정을 수정할 수 있도록 허용합니다. 일반 앱을 위한 것이 아닙니다.</string>
   <!-- Labels for the MANAGE_PERSISTENT_STORAGE permission. -->
   <string name="permlab_managePersistentStorage">상주 저장소 관리</string>
   <string name="permdesc_managePersistentStorage">공장 초기화 후에도 지속될 수 있는 속성의 읽기 쓰기를 허용합니다.</string>
@@ -173,10 +173,10 @@
   <!-- LiveDisplay manager permission -->
   <string name="permlab_manageLiveDisplay">LiveDisplay 설정 관리</string>
   <string name="permdesc_manageLiveDisplay">앱이 고급 디스플레이 설정을 변경할 수 있도록 허용합니다.</string>
-  <!-- CMAudioService - observe session changes permission -->
+  <!-- LineageAudioService - observe session changes permission -->
   <string name="permlab_observe_audio_sessions">오디오 세션 변화 관찰</string>
   <string name="permdesc_observe_audio_sessions">앱이 오디오 스트림이 생성되고 제거되는 것을 관찰할 수 있도록 허용합니다.</string>
-  <!-- CMAudioService - observe session changes permission -->
+  <!-- LineageAudioService - observe session changes permission -->
   <string name="permlab_manage_audio_sessions">오디오 세션 변경 관리</string>
   <string name="permdesc_manage_audio_sessions">앱을 통해 오디오 스트림 업데이트를 보내도록 합니다.</string>
   <!-- QuickSettings: Themes tile -->

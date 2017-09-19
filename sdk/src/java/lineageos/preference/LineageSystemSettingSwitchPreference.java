@@ -14,24 +14,24 @@
  * limitations under the License.
  */
 
-package cyanogenmod.preference;
+package lineageos.preference;
 
 import android.content.Context;
 import android.util.AttributeSet;
 
-import cyanogenmod.providers.CMSettings;
+import lineageos.providers.LineageSettings;
 
-public class CMSystemSettingSwitchPreference extends SelfRemovingSwitchPreference {
+public class LineageSystemSettingSwitchPreference extends SelfRemovingSwitchPreference {
 
-    public CMSystemSettingSwitchPreference(Context context, AttributeSet attrs, int defStyle) {
+    public LineageSystemSettingSwitchPreference(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
     }
 
-    public CMSystemSettingSwitchPreference(Context context, AttributeSet attrs) {
+    public LineageSystemSettingSwitchPreference(Context context, AttributeSet attrs) {
         super(context, attrs);
     }
 
-    public CMSystemSettingSwitchPreference(Context context) {
+    public LineageSystemSettingSwitchPreference(Context context) {
         super(context);
     }
 
@@ -42,7 +42,7 @@ public class CMSystemSettingSwitchPreference extends SelfRemovingSwitchPreferenc
                 // It's already there, so the same as persisting
                 return true;
             }
-            CMSettings.System.putInt(getContext().getContentResolver(), getKey(), value ? 1 : 0);
+            LineageSettings.System.putInt(getContext().getContentResolver(), getKey(), value ? 1 : 0);
             return true;
         }
         return false;
@@ -53,12 +53,12 @@ public class CMSystemSettingSwitchPreference extends SelfRemovingSwitchPreferenc
         if (!shouldPersist()) {
             return defaultReturnValue;
         }
-        return CMSettings.System.getInt(getContext().getContentResolver(),
+        return LineageSettings.System.getInt(getContext().getContentResolver(),
                 getKey(), defaultReturnValue ? 1 : 0) != 0;
     }
 
     @Override
     protected boolean isPersisted() {
-        return CMSettings.System.getString(getContext().getContentResolver(), getKey()) != null;
+        return LineageSettings.System.getString(getContext().getContentResolver(), getKey()) != null;
     }
 }

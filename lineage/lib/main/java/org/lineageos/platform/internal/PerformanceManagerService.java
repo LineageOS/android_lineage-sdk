@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.cyanogenmod.platform.internal;
+package org.lineageos.platform.internal;
 
 import android.content.BroadcastReceiver;
 import android.content.ComponentName;
@@ -48,24 +48,24 @@ import java.util.Map;
 import java.util.Objects;
 import java.util.regex.Pattern;
 
-import cyanogenmod.app.CMContextConstants;
-import cyanogenmod.power.IPerformanceManager;
-import cyanogenmod.power.PerformanceManagerInternal;
-import cyanogenmod.power.PerformanceProfile;
+import lineageos.app.LineageContextConstants;
+import lineageos.power.IPerformanceManager;
+import lineageos.power.PerformanceManagerInternal;
+import lineageos.power.PerformanceProfile;
 
-import static cyanogenmod.power.PerformanceManager.PROFILE_BALANCED;
-import static cyanogenmod.power.PerformanceManager.PROFILE_HIGH_PERFORMANCE;
-import static cyanogenmod.power.PerformanceManager.PROFILE_POWER_SAVE;
-import static cyanogenmod.providers.CMSettings.Secure.APP_PERFORMANCE_PROFILES_ENABLED;
-import static cyanogenmod.providers.CMSettings.Secure.PERFORMANCE_PROFILE;
-import static cyanogenmod.providers.CMSettings.Secure.getInt;
-import static cyanogenmod.providers.CMSettings.Secure.getUriFor;
-import static cyanogenmod.providers.CMSettings.Secure.putInt;
+import static lineageos.power.PerformanceManager.PROFILE_BALANCED;
+import static lineageos.power.PerformanceManager.PROFILE_HIGH_PERFORMANCE;
+import static lineageos.power.PerformanceManager.PROFILE_POWER_SAVE;
+import static lineageos.providers.LineageSettings.Secure.APP_PERFORMANCE_PROFILES_ENABLED;
+import static lineageos.providers.LineageSettings.Secure.PERFORMANCE_PROFILE;
+import static lineageos.providers.LineageSettings.Secure.getInt;
+import static lineageos.providers.LineageSettings.Secure.getUriFor;
+import static lineageos.providers.LineageSettings.Secure.putInt;
 
 /**
  * @hide
  */
-public class PerformanceManagerService extends CMSystemService {
+public class PerformanceManagerService extends LineageSystemService {
 
     private static final String TAG = "PerformanceManager";
 
@@ -194,12 +194,12 @@ public class PerformanceManagerService extends CMSystemService {
 
     @Override
     public String getFeatureDeclaration() {
-        return CMContextConstants.Features.PERFORMANCE;
+        return LineageContextConstants.Features.PERFORMANCE;
     }
 
     @Override
     public void onStart() {
-        publishBinderService(CMContextConstants.CM_PERFORMANCE_SERVICE, mBinder);
+        publishBinderService(LineageContextConstants.LINEAGE_PERFORMANCE_SERVICE, mBinder);
         publishLocalService(PerformanceManagerInternal.class, new LocalService());
     }
 
@@ -303,9 +303,9 @@ public class PerformanceManagerService extends CMSystemService {
             return false;
         }
 
-        // Enforce the performance access permission declared by cm's res package
+        // Enforce the performance access permission declared by lineage's res package
         mContext.enforceCallingOrSelfPermission(
-                cyanogenmod.platform.Manifest.permission.PERFORMANCE_ACCESS, null);
+                lineageos.platform.Manifest.permission.PERFORMANCE_ACCESS, null);
 
         long token = Binder.clearCallingIdentity();
 

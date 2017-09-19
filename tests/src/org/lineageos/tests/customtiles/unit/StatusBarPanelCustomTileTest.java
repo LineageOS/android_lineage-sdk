@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.cyanogenmod.tests.customtiles.unit;
+package org.lineageos.tests.customtiles.unit;
 
 import android.app.PendingIntent;
 import android.content.Intent;
@@ -25,11 +25,11 @@ import android.os.UserHandle;
 import android.test.AndroidTestCase;
 import android.test.suitebuilder.annotation.MediumTest;
 import android.test.suitebuilder.annotation.SmallTest;
-import cyanogenmod.app.CMContextConstants;
-import cyanogenmod.app.CustomTile;
-import cyanogenmod.app.StatusBarPanelCustomTile;
-import org.cyanogenmod.tests.R;
-import org.cyanogenmod.tests.customtiles.DummySettings;
+import lineageos.app.LineageContextConstants;
+import lineageos.app.CustomTile;
+import lineageos.app.StatusBarPanelCustomTile;
+import org.lineageos.tests.R;
+import org.lineageos.tests.customtiles.DummySettings;
 
 import java.util.ArrayList;
 
@@ -40,9 +40,9 @@ public class StatusBarPanelCustomTileTest extends AndroidTestCase {
     @Override
     protected void setUp() throws Exception {
         super.setUp();
-        // Only run this if we support cm status bar service
+        // Only run this if we support lineage status bar service
         org.junit.Assume.assumeTrue(mContext.getPackageManager().hasSystemFeature(
-                CMContextConstants.Features.STATUSBAR));
+                LineageContextConstants.Features.STATUSBAR));
     }
 
     @SmallTest

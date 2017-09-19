@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.cyanogenmod.tests.versioning.unit.apiv4;
+package org.lineageos.tests.versioning.unit.apiv4;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -39,16 +39,16 @@ public class ApiV4PriorReleaseInterfaces {
         partnerMap.put("setZenModeWithDuration", 7);
     }
 
-    //CMHardwareManager Aidl (ICMHardwareService)
+    //LineageHardwareManager Aidl (ILineageHardwareService)
     static {
-        Map<String, Integer> hardwareMap = getInternalInterfaceMap("ICMHardwareService");
+        Map<String, Integer> hardwareMap = getInternalInterfaceMap("ILineageHardwareService");
         // APRICOT + BOYSENBERRY + CANTALOUPE to 24
         // DRAGONFRUIT BEGIN
         hardwareMap.put("isSunlightEnhancementSelfManaged", 25);
         hardwareMap.put("getUniqueDeviceId", 26);
     }
 
-    //CMStatusBarManager Aidl (ICMStatusBarManager)
+    //LineageStatusBarManager Aidl (ILineageStatusBarManager)
     static {
         // APRICOT + BOYSENBERRY + CANTALOUPE to 5
         // DRAGONFRUIT BEGIN
@@ -60,7 +60,7 @@ public class ApiV4PriorReleaseInterfaces {
         // DRAGONFRUIT BEGIN
     }
 
-    //CMTelephonyManager Aidl (ICMTelephonyManager)
+    //LineageTelephonyManager Aidl (ILineageTelephonyManager)
     static {
         // APRICOT + BOYSENBERRY + CANTALOUPE to 9
         // DRAGONFRUIT BEGIN

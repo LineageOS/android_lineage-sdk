@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package cyanogenmod.externalviews;
+package lineageos.externalviews;
 
 import android.graphics.Rect;
 
-import cyanogenmod.externalviews.IKeyguardExternalViewCallbacks;
+import lineageos.externalviews.IKeyguardExternalViewCallbacks;
 
 /** @hide */
 interface IKeyguardExternalViewProvider

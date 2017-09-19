@@ -15,9 +15,9 @@
 ** limitations under the License.
 */
 
-package cyanogenmod.app;
+package lineageos.app;
 
-import cyanogenmod.app.Profile;
+import lineageos.app.Profile;
 import android.app.NotificationGroup;
 import android.os.ParcelUuid;
 

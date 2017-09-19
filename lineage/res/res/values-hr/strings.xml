@@ -18,7 +18,7 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Label for the LineageOS system components when they are shown to the user. -->
-  <string name="cyanogenmod_system_label">LineageOS sustav</string>
+  <string name="lineageos_system_label">LineageOS sustav</string>
   <string name="permlab_publishCustomTile">stvori prilagođenu pločicu u brzim postavkama</string>
   <string name="permdesc_publishCustomTile">Dopušta aplikaciji da stvori pločicu u brzim postavkama.</string>
   <string name="permlab_modifyNetworkSettings">promijeni sistemske postavke mreže</string>
@@ -38,7 +38,7 @@
   <string name="permdesc_modifyProfiles">Dopušta aplikaciji da izmijeni profile sustava.</string>
   <!-- Labels for the HARDWARE_ABSTRACTION_ACCESS permission. -->
   <string name="permlab_useHardwareFramework">koristi hardware framework</string>
-  <string name="permdesc_useHardwareFramework">Dopušta aplikaciji pristupiti CM hardware framework.</string>
+  <string name="permdesc_useHardwareFramework">Dopušta aplikaciji pristupiti Lineage hardware framework.</string>
   <!-- Labels for the WRITE_ALARMS permission. -->
   <string name="permlab_write_alarms">izravno promijeni alarme</string>
   <string name="permdesc_write_alarms">Dopušta aplikaciji dodavanje, izmijenu ili brisanje svih alarma.</string>
@@ -49,11 +49,11 @@
   <string name="permlab_read_alarms">pristup zakazanim alarmima</string>
   <string name="permdesc_read_alarms">Dopušta aplikaciji čitati zakazane alarme.</string>
   <!-- Labels for the WRITE_SETTINGS permission -->
-  <string name="permlab_writeSettings">izmijeni postavke sustava CM</string>
-  <string name="permdesc_writeSettings">Dopušta aplikaciji da izmijeni postavke sustava CM.</string>
+  <string name="permlab_writeSettings">izmijeni postavke sustava Lineage</string>
+  <string name="permdesc_writeSettings">Dopušta aplikaciji da izmijeni postavke sustava Lineage.</string>
   <!-- Labels for the WRITE_SECURE_SETTINGS permission -->
-  <string name="permlab_writeSecureSettings">promijeni CM postavke sigurnosti sustava</string>
-  <string name="permdesc_writeSecureSettings">Dopušta aplikaciji da promjeni CM postavke sigurnosti sustava. Nije za korištenje kod normalnih aplikacija.</string>
+  <string name="permlab_writeSecureSettings">promijeni Lineage postavke sigurnosti sustava</string>
+  <string name="permdesc_writeSecureSettings">Dopušta aplikaciji da promjeni Lineage postavke sigurnosti sustava. Nije za korištenje kod normalnih aplikacija.</string>
   <!-- Labels for the MANAGE_PERSISTENT_STORAGE permission. -->
   <string name="permlab_managePersistentStorage">upravljanje stalnom pohranom</string>
   <string name="permdesc_managePersistentStorage">Dopušta aplikaciji čitati ili pisati svojstva koja ostaju poslije resetiranja na tvorničke postavke.</string>
@@ -172,10 +172,10 @@
   <!-- LiveDisplay manager permission -->
   <string name="permlab_manageLiveDisplay">upravljanje postavkama LiveDisplay-a</string>
   <string name="permdesc_manageLiveDisplay">Omogućuje aplikaciji konfiguriranje postavki naprednog prikaza.</string>
-  <!-- CMAudioService - observe session changes permission -->
+  <!-- LineageAudioService - observe session changes permission -->
   <string name="permlab_observe_audio_sessions">promatraj promjene zvučnih sesija</string>
   <string name="permdesc_observe_audio_sessions">Dopušta aplikaciji promatrati tijek zvuka dok je kreiran i prekinut.</string>
-  <!-- CMAudioService - observe session changes permission -->
+  <!-- LineageAudioService - observe session changes permission -->
   <string name="permlab_manage_audio_sessions">upravljaj promjenama zvučnih sesija</string>
   <string name="permdesc_manage_audio_sessions">Omogućuje aplikaciji slanje ažuriranja audio streama.</string>
   <!-- QuickSettings: Themes tile -->

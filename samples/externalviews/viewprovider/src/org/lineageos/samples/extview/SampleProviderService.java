@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package org.cyanogenmod.samples.extview;
+package org.lineageos.samples.extview;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
-import cyanogenmod.externalviews.ExternalViewProviderService;
+import lineageos.externalviews.ExternalViewProviderService;
 
 public class SampleProviderService extends ExternalViewProviderService {
     @Override

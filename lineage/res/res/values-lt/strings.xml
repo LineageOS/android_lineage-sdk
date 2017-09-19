@@ -18,7 +18,7 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Label for the LineageOS system components when they are shown to the user. -->
-  <string name="cyanogenmod_system_label">„LineageOS“ sistema</string>
+  <string name="lineageos_system_label">„LineageOS“ sistema</string>
   <string name="permlab_publishCustomTile">sukurti tinkintą plytelę per greitųjų nustatymų skydelį</string>
   <string name="permdesc_publishCustomTile">Leidžia programai paskelbti greitųjų nustatymų plytelę.</string>
   <string name="permlab_modifyNetworkSettings">keisti sistemos tinklo nustatymus</string>
@@ -38,7 +38,7 @@
   <string name="permdesc_modifyProfiles">Leidžia programai keisti sistemos profilius.</string>
   <!-- Labels for the HARDWARE_ABSTRACTION_ACCESS permission. -->
   <string name="permlab_useHardwareFramework">naudoti aparatinės įrangos sistemą</string>
-  <string name="permdesc_useHardwareFramework">Leidžia programai pasiekti CM aparatinės įrangos sistemą.</string>
+  <string name="permdesc_useHardwareFramework">Leidžia programai pasiekti Lineage aparatinės įrangos sistemą.</string>
   <!-- Labels for the WRITE_ALARMS permission. -->
   <string name="permlab_write_alarms">tiesiogiai pakeisti signalus</string>
   <string name="permdesc_write_alarms">Leidžia programai pridėti, pakeisti arba ištrinti visus jūsų signalus.</string>
@@ -49,11 +49,11 @@
   <string name="permlab_read_alarms">pasiekti suplanuotus signalus</string>
   <string name="permdesc_read_alarms">Leidžia programai skaityti jūsų suplanuotus signalus.</string>
   <!-- Labels for the WRITE_SETTINGS permission -->
-  <string name="permlab_writeSettings">keisti CM sistemos nustatymus</string>
-  <string name="permdesc_writeSettings">Leidžia programai keisti CM sistemos nustatymus.</string>
+  <string name="permlab_writeSettings">keisti Lineage sistemos nustatymus</string>
+  <string name="permdesc_writeSettings">Leidžia programai keisti Lineage sistemos nustatymus.</string>
   <!-- Labels for the WRITE_SECURE_SETTINGS permission -->
-  <string name="permlab_writeSecureSettings">keisti CM sistemos saugos nustatymus</string>
-  <string name="permdesc_writeSecureSettings">Leidžia programai keisti CM sistemos saugos nustatymus. Neskirta naudoti įprastoms programoms.</string>
+  <string name="permlab_writeSecureSettings">keisti Lineage sistemos saugos nustatymus</string>
+  <string name="permdesc_writeSecureSettings">Leidžia programai keisti Lineage sistemos saugos nustatymus. Neskirta naudoti įprastoms programoms.</string>
   <!-- Labels for the MANAGE_PERSISTENT_STORAGE permission. -->
   <string name="permlab_managePersistentStorage">valdyti nuolatinę saugykla</string>
   <string name="permdesc_managePersistentStorage">Leidžia programai skaityti ar rašyti įrašus, kurie gali išlikti net atstačius gamyklinius nustatymus.</string>
@@ -105,8 +105,8 @@
   <!-- DataUsageProvider read permission title -->
   <!-- DataUsageProvider read permission description -->
   <!-- LiveDisplay manager permission -->
-  <!-- CMAudioService - observe session changes permission -->
-  <!-- CMAudioService - observe session changes permission -->
+  <!-- LineageAudioService - observe session changes permission -->
+  <!-- LineageAudioService - observe session changes permission -->
   <!-- QuickSettings: Themes tile -->
   <!-- Privacy Guard -->
   <!-- Permissions used by remote preferences -->

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package cyanogenmod.app;
+package lineageos.app;
 
 import android.content.Context;
 import android.os.IBinder;
@@ -63,13 +63,13 @@ public class PartnerInterface {
      * such as enabling or disabling airplane mode.
      */
     public static final String MODIFY_NETWORK_SETTINGS_PERMISSION =
-            "cyanogenmod.permission.MODIFY_NETWORK_SETTINGS";
+            "lineageos.permission.MODIFY_NETWORK_SETTINGS";
 
     /**
      * Allows an application to change system sound settings, such as the zen mode.
      */
     public static final String MODIFY_SOUND_SETTINGS_PERMISSION =
-            "cyanogenmod.permission.MODIFY_SOUND_SETTINGS";
+            "lineageos.permission.MODIFY_SOUND_SETTINGS";
 
     private static final String TAG = "PartnerInterface";
 
@@ -84,7 +84,7 @@ public class PartnerInterface {
         }
         sService = getService();
         if (context.getPackageManager().hasSystemFeature(
-               CMContextConstants.Features.PARTNER) && sService == null) {
+               LineageContextConstants.Features.PARTNER) && sService == null) {
             throw new RuntimeException("Unable to get PartnerInterfaceService. The service" +
                     " either crashed, was not started, or the interface has been called to early" +
                     " in SystemServer init");
@@ -92,7 +92,7 @@ public class PartnerInterface {
     }
 
     /**
-     * Get or create an instance of the {@link cyanogenmod.app.PartnerInterface}
+     * Get or create an instance of the {@link lineageos.app.PartnerInterface}
      * @param context
      * @return {@link PartnerInterface}
      */
@@ -108,7 +108,7 @@ public class PartnerInterface {
         if (sService != null) {
             return sService;
         }
-        IBinder b = ServiceManager.getService(CMContextConstants.CM_PARTNER_INTERFACE);
+        IBinder b = ServiceManager.getService(LineageContextConstants.LINEAGE_PARTNER_INTERFACE);
         if (b != null) {
             sService = IPartnerInterface.Stub.asInterface(b);
             return sService;
@@ -245,7 +245,7 @@ public class PartnerInterface {
 
     /**
      * Retrieves the package name of the application that currently holds the
-     * {@link cyanogenmod.media.MediaRecorder.AudioSource#HOTWORD} input.
+     * {@link lineageos.media.MediaRecorder.AudioSource#HOTWORD} input.
      * @return The package name or null if no application currently holds the HOTWORD input.
      */
     public String getCurrentHotwordPackageName() {

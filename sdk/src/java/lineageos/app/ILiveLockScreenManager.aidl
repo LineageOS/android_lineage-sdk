@@ -14,10 +14,10 @@
 ** limitations under the License.
 */
 
-package cyanogenmod.app;
+package lineageos.app;
 
-import cyanogenmod.app.ILiveLockScreenChangeListener;
-import cyanogenmod.app.LiveLockScreenInfo;
+import lineageos.app.ILiveLockScreenChangeListener;
+import lineageos.app.LiveLockScreenInfo;
 
 /** @hide */
 interface ILiveLockScreenManager {

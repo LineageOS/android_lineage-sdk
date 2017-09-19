@@ -15,7 +15,7 @@
      limitations under the License.
 -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="org.cyanogenmod.samples.setkeyguardextview"
+          package="org.lineageos.samples.setkeyguardextview"
           android:versionCode="1"
           android:versionName="1.0">
 

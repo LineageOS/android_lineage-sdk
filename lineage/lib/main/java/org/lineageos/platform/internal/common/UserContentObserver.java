@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License
  */
-package org.cyanogenmod.platform.internal.common;
+package org.lineageos.platform.internal.common;
 
 import android.app.ActivityManagerNative;
 import android.app.IUserSwitchObserver;

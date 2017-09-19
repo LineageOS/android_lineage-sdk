@@ -18,7 +18,7 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Label for the LineageOS system components when they are shown to the user. -->
-  <string name="cyanogenmod_system_label">LineageOS 系统</string>
+  <string name="lineageos_system_label">LineageOS 系统</string>
   <string name="permlab_publishCustomTile">在快速设置面板中创建一个自定义瓷块</string>
   <string name="permdesc_publishCustomTile">允许应用发布一个快速设置瓷片。</string>
   <string name="permlab_modifyNetworkSettings">更改系统网络设置</string>
@@ -38,7 +38,7 @@
   <string name="permdesc_modifyProfiles">允许应用修改系统配置文件。</string>
   <!-- Labels for the HARDWARE_ABSTRACTION_ACCESS permission. -->
   <string name="permlab_useHardwareFramework">使用硬件框架</string>
-  <string name="permdesc_useHardwareFramework">允许应用访问 CM 硬件框架。</string>
+  <string name="permdesc_useHardwareFramework">允许应用访问 Lineage 硬件框架。</string>
   <!-- Labels for the WRITE_ALARMS permission. -->
   <string name="permlab_write_alarms">直接修改闹钟</string>
   <string name="permdesc_write_alarms">允许应用添加、修改或删除您的闹钟。</string>
@@ -49,11 +49,11 @@
   <string name="permlab_read_alarms">访问已计划的闹钟</string>
   <string name="permdesc_read_alarms">允许应用读取您已计划的闹钟。</string>
   <!-- Labels for the WRITE_SETTINGS permission -->
-  <string name="permlab_writeSettings">修改 CM 系统设置</string>
-  <string name="permdesc_writeSettings">允许应用修改 CM 系统设置。</string>
+  <string name="permlab_writeSettings">修改 Lineage 系统设置</string>
+  <string name="permdesc_writeSettings">允许应用修改 Lineage 系统设置。</string>
   <!-- Labels for the WRITE_SECURE_SETTINGS permission -->
-  <string name="permlab_writeSecureSettings">修改 CM 系统安全设置</string>
-  <string name="permdesc_writeSecureSettings">允许应用修改 CM 系统安全设置。不供正常应用使用。</string>
+  <string name="permlab_writeSecureSettings">修改 Lineage 系统安全设置</string>
+  <string name="permdesc_writeSecureSettings">允许应用修改 Lineage 系统安全设置。不供正常应用使用。</string>
   <!-- Labels for the MANAGE_PERSISTENT_STORAGE permission. -->
   <string name="permlab_managePersistentStorage">管理永久存储</string>
   <string name="permdesc_managePersistentStorage">允许应用读取或写入出厂设置后仍可保持的属性。</string>
@@ -173,10 +173,10 @@
   <!-- LiveDisplay manager permission -->
   <string name="permlab_manageLiveDisplay">管理 LiveDisplay 设置</string>
   <string name="permdesc_manageLiveDisplay">允许应用配置高级显示设置。</string>
-  <!-- CMAudioService - observe session changes permission -->
+  <!-- LineageAudioService - observe session changes permission -->
   <string name="permlab_observe_audio_sessions">观察音频会话变动</string>
   <string name="permdesc_observe_audio_sessions">允许应用观察音频流的创建和销毁。</string>
-  <!-- CMAudioService - observe session changes permission -->
+  <!-- LineageAudioService - observe session changes permission -->
   <string name="permlab_manage_audio_sessions">管理音频会话变动</string>
   <string name="permdesc_manage_audio_sessions">允许应用发送音频流更新。</string>
   <!-- QuickSettings: Themes tile -->

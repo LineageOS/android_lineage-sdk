@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package org.cyanogenmod.tests.themes.unit;
+package org.lineageos.tests.themes.unit;
 
 import android.test.AndroidTestCase;
 import android.test.suitebuilder.annotation.SmallTest;
-import cyanogenmod.providers.ThemesContract;
+import lineageos.providers.ThemesContract;
 
 public class ThemesContractTests extends AndroidTestCase {
     private static final String TAG = ThemesContract.class.getSimpleName();

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.cyanogenmod.platform.internal;
+package org.lineageos.platform.internal;
 
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
@@ -28,7 +28,7 @@ import android.net.wifi.WifiSsid;
 import android.os.Message;
 import android.util.ArraySet;
 import com.android.internal.policy.IKeyguardService;
-import cyanogenmod.providers.CMSettings;
+import lineageos.providers.LineageSettings;
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
 import org.xmlpull.v1.XmlPullParserFactory;
@@ -51,11 +51,11 @@ import android.os.ParcelUuid;
 
 import com.android.server.SystemService;
 
-import cyanogenmod.app.CMContextConstants;
-import cyanogenmod.app.Profile;
-import cyanogenmod.app.ProfileGroup;
-import cyanogenmod.app.ProfileManager;
-import cyanogenmod.app.IProfileManager;
+import lineageos.app.LineageContextConstants;
+import lineageos.app.Profile;
+import lineageos.app.ProfileGroup;
+import lineageos.app.ProfileManager;
+import lineageos.app.IProfileManager;
 
 import java.util.Collection;
 import java.io.File;
@@ -70,7 +70,7 @@ import java.util.Set;
 import java.util.UUID;
 
 /** @hide */
-public class ProfileManagerService extends CMSystemService {
+public class ProfileManagerService extends LineageSystemService {
 
     private static final String TAG = "CMProfileService";
     // Enable the below for detailed logging of this class
@@ -222,8 +222,8 @@ public class ProfileManagerService extends CMSystemService {
 
         @Override
         public void onChange(boolean selfChange, Uri uri) {
-            int state = CMSettings.System.getInt(mContext.getContentResolver(),
-                    CMSettings.System.SYSTEM_PROFILES_ENABLED,
+            int state = LineageSettings.System.getInt(mContext.getContentResolver(),
+                    LineageSettings.System.SYSTEM_PROFILES_ENABLED,
                     ProfileManager.PROFILES_STATE_ENABLED);
             mHandler.obtainMessage(MSG_SEND_PROFILE_STATE, state, 0 /* unused */).sendToTarget();
         }
@@ -234,17 +234,17 @@ public class ProfileManagerService extends CMSystemService {
         mContext = context;
         mHandler = new Handler(mHandlerCallback);
         if (context.getPackageManager().hasSystemFeature(
-                CMContextConstants.Features.PROFILES)) {
-            publishBinderService(CMContextConstants.CM_PROFILE_SERVICE, mService);
+                LineageContextConstants.Features.PROFILES)) {
+            publishBinderService(LineageContextConstants.LINEAGE_PROFILE_SERVICE, mService);
         } else {
-            Log.wtf(TAG, "CM profile service started by system server but feature xml not" +
+            Log.wtf(TAG, "Lineage profile service started by system server but feature xml not" +
                     " declared. Not publishing binder service!");
         }
     }
 
     @Override
     public String getFeatureDeclaration() {
-        return CMContextConstants.Features.PROFILES;
+        return LineageContextConstants.Features.PROFILES;
     }
 
     @Override
@@ -252,8 +252,8 @@ public class ProfileManagerService extends CMSystemService {
         mBackupManager = new BackupManager(mContext);
 
         mWildcardGroup = new NotificationGroup(
-                mContext.getString(org.cyanogenmod.platform.internal.R.string.wildcardProfile),
-                org.cyanogenmod.platform.internal.R.string.wildcardProfile,
+                mContext.getString(org.lineageos.platform.internal.R.string.wildcardProfile),
+                org.lineageos.platform.internal.R.string.wildcardProfile,
                 mWildcardUUID);
 
         initialize();
@@ -281,7 +281,7 @@ public class ProfileManagerService extends CMSystemService {
             bindKeyguard();
         } else if (phase == PHASE_BOOT_COMPLETED) {
             mContext.getContentResolver().registerContentObserver(
-                    CMSettings.System.getUriFor(CMSettings.System.SYSTEM_PROFILES_ENABLED),
+                    LineageSettings.System.getUriFor(LineageSettings.System.SYSTEM_PROFILES_ENABLED),
                     false, new ProfilesObserver(mHandler), UserHandle.USER_ALL);
         }
     }
@@ -551,8 +551,8 @@ public class ProfileManagerService extends CMSystemService {
         public boolean isEnabled() {
             long token = clearCallingIdentity();
             try {
-                return CMSettings.System.getIntForUser(mContext.getContentResolver(),
-                        CMSettings.System.SYSTEM_PROFILES_ENABLED,
+                return LineageSettings.System.getIntForUser(mContext.getContentResolver(),
+                        LineageSettings.System.SYSTEM_PROFILES_ENABLED,
                         ProfileManager.PROFILES_STATE_ENABLED,
                         UserHandle.USER_CURRENT) == ProfileManager.PROFILES_STATE_ENABLED;
             } finally {
@@ -662,7 +662,7 @@ public class ProfileManagerService extends CMSystemService {
 
     private void enforceChangePermissions() {
         mContext.enforceCallingOrSelfPermission(
-                cyanogenmod.platform.Manifest.permission.MODIFY_PROFILES,
+                lineageos.platform.Manifest.permission.MODIFY_PROFILES,
                 "You do not have permissions to change the Profile Manager.");
     }
 
@@ -731,7 +731,7 @@ public class ProfileManagerService extends CMSystemService {
 
     private void initialiseStructure() throws XmlPullParserException, IOException {
         XmlResourceParser xml = mContext.getResources().getXml(
-                org.cyanogenmod.platform.internal.R.xml.profile_default);
+                org.lineageos.platform.internal.R.xml.profile_default);
         try {
             loadXml(xml, mContext);
             mDirty = true;

@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package org.cyanogenmod.internal.statusbar;
+package org.lineageos.internal.statusbar;
 
 import android.os.UserHandle;
 import com.android.internal.annotations.VisibleForTesting;
 
-import cyanogenmod.app.CustomTile;
-import cyanogenmod.app.StatusBarPanelCustomTile;
+import lineageos.app.CustomTile;
+import lineageos.app.StatusBarPanelCustomTile;
 
 /**
  * @hide

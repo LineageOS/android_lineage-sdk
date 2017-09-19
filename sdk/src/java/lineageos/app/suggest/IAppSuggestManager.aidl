@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package cyanogenmod.app.suggest;
+package lineageos.app.suggest;
 
 import android.content.Intent;
 
-import cyanogenmod.app.suggest.ApplicationSuggestion;
+import lineageos.app.suggest.ApplicationSuggestion;
 
 /**
  * @hide

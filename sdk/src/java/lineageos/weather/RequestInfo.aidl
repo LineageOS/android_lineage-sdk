@@ -14,6 +14,6 @@
  * limitations under the License.
  */
 
-package cyanogenmod.weather;
+package lineageos.weather;
 
 parcelable RequestInfo;
