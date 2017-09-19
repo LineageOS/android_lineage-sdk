@@ -18,7 +18,7 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Label for the LineageOS system components when they are shown to the user. -->
-  <string name="cyanogenmod_system_label">LineageOS Süsteem</string>
+  <string name="lineageos_system_label">LineageOS Süsteem</string>
   <string name="permlab_publishCustomTile">loo kohandatud tahvel kiirseadete paneelil</string>
   <string name="permdesc_publishCustomTile">Lubab rakendusel avaldada kiirseadete tahvli.</string>
   <string name="permlab_modifyNetworkSettings">süsteemi võrgusätete muutmine</string>
@@ -34,7 +34,7 @@
   <!-- Labels for the MODIFY_PROFILES permission. -->
   <!-- Labels for the HARDWARE_ABSTRACTION_ACCESS permission. -->
   <string name="permlab_useHardwareFramework">kasutada riistvara raamistikku</string>
-  <string name="permdesc_useHardwareFramework">Annab rakendusele ligipääsu CM riistvara raamistikule.</string>
+  <string name="permdesc_useHardwareFramework">Annab rakendusele ligipääsu Lineage riistvara raamistikule.</string>
   <!-- Labels for the WRITE_ALARMS permission. -->
   <!-- Labels for the MANAGE_ALARMS permission. -->
   <!-- Labels for the READ_ALARMS permission. -->
@@ -89,8 +89,8 @@
   <!-- DataUsageProvider read permission title -->
   <!-- DataUsageProvider read permission description -->
   <!-- LiveDisplay manager permission -->
-  <!-- CMAudioService - observe session changes permission -->
-  <!-- CMAudioService - observe session changes permission -->
+  <!-- LineageAudioService - observe session changes permission -->
+  <!-- LineageAudioService - observe session changes permission -->
   <!-- QuickSettings: Themes tile -->
   <!-- Privacy Guard -->
   <!-- Permissions used by remote preferences -->

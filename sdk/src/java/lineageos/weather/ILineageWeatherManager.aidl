@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package cyanogenmod.weather;
+package lineageos.weather;
 
-import cyanogenmod.weather.IWeatherServiceProviderChangeListener;
-import cyanogenmod.weather.RequestInfo;
+import lineageos.weather.IWeatherServiceProviderChangeListener;
+import lineageos.weather.RequestInfo;
 
 /** @hide */
-interface ICMWeatherManager {
+interface ILineageWeatherManager {
     oneway void updateWeather(in RequestInfo info);
     oneway void lookupCity(in RequestInfo info);
     oneway void registerWeatherServiceProviderChangeListener(

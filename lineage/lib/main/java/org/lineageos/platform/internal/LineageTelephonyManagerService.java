@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.cyanogenmod.platform.internal;
+package org.lineageos.platform.internal;
 
 import com.android.server.SystemService;
 
@@ -27,22 +27,22 @@ import android.util.Log;
 
 import java.util.List;
 
-import cyanogenmod.app.CMContextConstants;
-import cyanogenmod.app.CMTelephonyManager;
-import cyanogenmod.app.ICMTelephonyManager;
+import lineageos.app.LineageContextConstants;
+import lineageos.app.LineageTelephonyManager;
+import lineageos.app.ILineageTelephonyManager;
 
 /**
  * Internal service which manages interactions with the phone and data connection
  *
  * @hide
  */
-public class CMTelephonyManagerService extends CMSystemService {
-    private static final String TAG = "CMTelephonyManagerSrv";
+public class LineageTelephonyManagerService extends LineageSystemService {
+    private static final String TAG = "LineageTelephonyManagerSrv";
     private static boolean localLOGD = Log.isLoggable(TAG, Log.DEBUG);
 
     private TelephonyManager mTelephonyManager;
     private Context mContext;
-    private final IBinder mService = new ICMTelephonyManager.Stub() {
+    private final IBinder mService = new ILineageTelephonyManager.Stub() {
 
         /**
          * Returns the available SIM subscription information.
@@ -69,7 +69,7 @@ public class CMTelephonyManagerService extends CMSystemService {
         @Override
         public boolean isSubActive(int subId) {
             enforceTelephonyReadPermission();
-            return CMTelephonyManagerService.this.isSubActive(subId);
+            return LineageTelephonyManagerService.this.isSubActive(subId);
         }
 
         /**
@@ -85,7 +85,7 @@ public class CMTelephonyManagerService extends CMSystemService {
         @Override
         public void setSubState(int subId, boolean state) {
             enforceTelephonyModifyPermission();
-            CMTelephonyManagerService.this.setSubState(subId, state);
+            LineageTelephonyManagerService.this.setSubState(subId, state);
         }
 
         /**
@@ -103,7 +103,7 @@ public class CMTelephonyManagerService extends CMSystemService {
          */
         public boolean isDataConnectionSelectedOnSub(int subId) {
             enforceTelephonyReadPermission();
-            return CMTelephonyManagerService.this.isDataConnectionSelectedOnSub(subId);
+            return LineageTelephonyManagerService.this.isDataConnectionSelectedOnSub(subId);
         }
 
         /**
@@ -117,7 +117,7 @@ public class CMTelephonyManagerService extends CMSystemService {
          */
         public boolean isDataConnectionEnabled() {
             enforceTelephonyReadPermission();
-            return CMTelephonyManagerService.this.isDataConnectionEnabled();
+            return LineageTelephonyManagerService.this.isDataConnectionEnabled();
         }
 
         /**
@@ -128,7 +128,7 @@ public class CMTelephonyManagerService extends CMSystemService {
          */
         public void setDataConnectionState(boolean state) {
             enforceTelephonyModifyPermission();
-            CMTelephonyManagerService.this.setDataConnectionState(state);
+            LineageTelephonyManagerService.this.setDataConnectionState(state);
         }
 
         /**
@@ -142,7 +142,7 @@ public class CMTelephonyManagerService extends CMSystemService {
          */
         public void setDataConnectionSelectedOnSub(int subId) {
             enforceTelephonyModifyPermission();
-            CMTelephonyManagerService.this.setDataConnectionSelectedOnSub(subId);
+            LineageTelephonyManagerService.this.setDataConnectionSelectedOnSub(subId);
         }
 
         /**
@@ -157,7 +157,7 @@ public class CMTelephonyManagerService extends CMSystemService {
          */
         public void setDefaultPhoneSub(int subId) {
             enforceTelephonyModifyPermission();
-            CMTelephonyManagerService.this.setDefaultPhoneSub(subId);
+            LineageTelephonyManagerService.this.setDefaultPhoneSub(subId);
         }
 
         /**
@@ -172,26 +172,26 @@ public class CMTelephonyManagerService extends CMSystemService {
          */
         public void setDefaultSmsSub(int subId) {
             enforceTelephonyModifyPermission();
-            CMTelephonyManagerService.this.setDefaultSmsSub(subId);
+            LineageTelephonyManagerService.this.setDefaultSmsSub(subId);
         }
     };
 
-    public CMTelephonyManagerService(Context context) {
+    public LineageTelephonyManagerService(Context context) {
         super(context);
         mContext = context;
     }
 
     @Override
     public String getFeatureDeclaration() {
-        return CMContextConstants.Features.TELEPHONY;
+        return LineageContextConstants.Features.TELEPHONY;
     }
 
     @Override
     public void onStart() {
         if (localLOGD) {
-            Log.d(TAG, "CM telephony manager service start: " + this);
+            Log.d(TAG, "Lineage telephony manager service start: " + this);
         }
-        publishBinderService(CMContextConstants.CM_TELEPHONY_MANAGER_SERVICE, mService);
+        publishBinderService(LineageContextConstants.LINEAGE_TELEPHONY_MANAGER_SERVICE, mService);
         mTelephonyManager = (TelephonyManager) mContext.getSystemService(Context.TELEPHONY_SERVICE);
     }
 
@@ -310,7 +310,7 @@ public class CMTelephonyManagerService extends CMSystemService {
         }
 
         SubscriptionManager subscriptionManager = SubscriptionManager.from(mContext);
-        /*if (subId == CMTelephonyManager.ASK_FOR_SUBSCRIPTION_ID) {
+        /*if (subId == LineageTelephonyManager.ASK_FOR_SUBSCRIPTION_ID) {
             if (localLOGD) {
                 Log.d(TAG, "Activates the prompt for phone calls");
             }
@@ -328,7 +328,7 @@ public class CMTelephonyManagerService extends CMSystemService {
         }
 
         SubscriptionManager subscriptionManager = SubscriptionManager.from(mContext);
-        /*if (subId == CMTelephonyManager.ASK_FOR_SUBSCRIPTION_ID) {
+        /*if (subId == LineageTelephonyManager.ASK_FOR_SUBSCRIPTION_ID) {
             if (localLOGD) {
                 Log.d(TAG, "Activates the prompt for SMS");
             }
@@ -342,13 +342,13 @@ public class CMTelephonyManagerService extends CMSystemService {
 
     private void enforceTelephonyReadPermission() {
         mContext.enforceCallingOrSelfPermission(
-                cyanogenmod.platform.Manifest.permission.READ_MSIM_PHONE_STATE,
-                "CMTelephonyManagerService");
+                lineageos.platform.Manifest.permission.READ_MSIM_PHONE_STATE,
+                "LineageTelephonyManagerService");
     }
 
     private void enforceTelephonyModifyPermission() {
         mContext.enforceCallingOrSelfPermission(
-                cyanogenmod.platform.Manifest.permission.MODIFY_MSIM_PHONE_STATE,
-                "CMTelephonyManagerService");
+                lineageos.platform.Manifest.permission.MODIFY_MSIM_PHONE_STATE,
+                "LineageTelephonyManagerService");
     }
 }

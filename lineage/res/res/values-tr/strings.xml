@@ -18,7 +18,7 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Label for the LineageOS system components when they are shown to the user. -->
-  <string name="cyanogenmod_system_label">LineageOS Sistemi</string>
+  <string name="lineageos_system_label">LineageOS Sistemi</string>
   <string name="permlab_publishCustomTile">hızlı ayarlar paneli içinde özel bir kare oluştur</string>
   <string name="permdesc_publishCustomTile">Uygulamalara hızlı ayarlar karesi oluşturma izni verir.</string>
   <string name="permlab_modifyNetworkSettings">sistem ağ ayarlarını değiştir</string>
@@ -38,7 +38,7 @@
   <string name="permdesc_modifyProfiles">Uygulamaya sistem profillerini değiştirme izni verir.</string>
   <!-- Labels for the HARDWARE_ABSTRACTION_ACCESS permission. -->
   <string name="permlab_useHardwareFramework">donanım altyapısını kullan</string>
-  <string name="permdesc_useHardwareFramework">Uygulamanın CM donanım altyapısına erişimine izin verir.</string>
+  <string name="permdesc_useHardwareFramework">Uygulamanın Lineage donanım altyapısına erişimine izin verir.</string>
   <!-- Labels for the WRITE_ALARMS permission. -->
   <string name="permlab_write_alarms">doğrudan alarmları değiştir</string>
   <string name="permdesc_write_alarms">Uygulamalarınıza alarm ekleme, değiştirme ya da tümünü silme izni verir.</string>
@@ -49,11 +49,11 @@
   <string name="permlab_read_alarms">programlı alarmlara eriş</string>
   <string name="permdesc_read_alarms">Uygulamalara planlanan alarmları okuma izni verir.</string>
   <!-- Labels for the WRITE_SETTINGS permission -->
-  <string name="permlab_writeSettings">CM sistem ayarlarını değiştir</string>
-  <string name="permdesc_writeSettings">Uygulamalara CM sistem ayarlarını değiştirme izni verir.</string>
+  <string name="permlab_writeSettings">Lineage sistem ayarlarını değiştir</string>
+  <string name="permdesc_writeSettings">Uygulamalara Lineage sistem ayarlarını değiştirme izni verir.</string>
   <!-- Labels for the WRITE_SECURE_SETTINGS permission -->
-  <string name="permlab_writeSecureSettings">CM güvenli sistem ayarlarını değiştir</string>
-  <string name="permdesc_writeSecureSettings">Uygulamalara CM güvenli sistem ayarlarını değiştirme izni verir. Normal uygulamalar için değildir.</string>
+  <string name="permlab_writeSecureSettings">Lineage güvenli sistem ayarlarını değiştir</string>
+  <string name="permdesc_writeSecureSettings">Uygulamalara Lineage güvenli sistem ayarlarını değiştirme izni verir. Normal uygulamalar için değildir.</string>
   <!-- Labels for the MANAGE_PERSISTENT_STORAGE permission. -->
   <string name="permlab_managePersistentStorage">kalıcı depolama alanını yönet</string>
   <string name="permdesc_managePersistentStorage">Uygulamalara fabrika ayarlarına dönüldüğünde kalıcı özellikleri okuma ve yazma izni verir.</string>
@@ -175,10 +175,10 @@ uyguladığınız temayı değiştirmesine izin verir.</string>
   <!-- LiveDisplay manager permission -->
   <string name="permlab_manageLiveDisplay">LiveDisplay ayarlarını yönet</string>
   <string name="permdesc_manageLiveDisplay">Uygulamalara gelişmiş ekran ayarlarını düzenleme izni verir.</string>
-  <!-- CMAudioService - observe session changes permission -->
+  <!-- LineageAudioService - observe session changes permission -->
   <string name="permlab_observe_audio_sessions">ses oturum değişikliklerini gözlemle</string>
   <string name="permdesc_observe_audio_sessions">Bir uygulamanın, ses akışlarınının oluşturulma ve yok edilmesinde gözlem yapmasına izin verir.</string>
-  <!-- CMAudioService - observe session changes permission -->
+  <!-- LineageAudioService - observe session changes permission -->
   <string name="permlab_manage_audio_sessions">sesli oturum değişikliklerini yönet</string>
   <string name="permdesc_manage_audio_sessions">Bir uygulamaya ses akış güncellemeleri gönderme izni verir.</string>
   <!-- QuickSettings: Themes tile -->

@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package cyanogenmod.hardware;
+package lineageos.hardware;
 
-import cyanogenmod.hardware.HSIC;
-import cyanogenmod.hardware.LiveDisplayConfig;
+import lineageos.hardware.HSIC;
+import lineageos.hardware.LiveDisplayConfig;
 
 /** @hide */
 interface ILiveDisplayService {

@@ -15,6 +15,6 @@
 -->
 
 <permissions>
-    <library name="org.cyanogenmod.platform"
-            file="/system/framework/org.cyanogenmod.platform.jar" />
+    <library name="org.lineageos.platform"
+            file="/system/framework/org.lineageos.platform.jar" />
 </permissions>

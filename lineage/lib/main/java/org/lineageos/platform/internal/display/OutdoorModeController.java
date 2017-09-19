@@ -13,11 +13,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.cyanogenmod.platform.internal.display;
+package org.lineageos.platform.internal.display;
 
-import static cyanogenmod.hardware.LiveDisplayManager.MODE_AUTO;
-import static cyanogenmod.hardware.LiveDisplayManager.MODE_DAY;
-import static cyanogenmod.hardware.LiveDisplayManager.MODE_OUTDOOR;
+import static lineageos.hardware.LiveDisplayManager.MODE_AUTO;
+import static lineageos.hardware.LiveDisplayManager.MODE_DAY;
+import static lineageos.hardware.LiveDisplayManager.MODE_OUTDOOR;
 
 import android.content.Context;
 import android.net.Uri;
@@ -26,13 +26,13 @@ import android.os.Handler;
 import java.io.PrintWriter;
 import java.util.BitSet;
 
-import cyanogenmod.hardware.CMHardwareManager;
-import cyanogenmod.hardware.LiveDisplayManager;
-import cyanogenmod.providers.CMSettings;
+import lineageos.hardware.LineageHardwareManager;
+import lineageos.hardware.LiveDisplayManager;
+import lineageos.providers.LineageSettings;
 
 public class OutdoorModeController extends LiveDisplayFeature {
 
-    private final CMHardwareManager mHardware;
+    private final LineageHardwareManager mHardware;
     private AmbientLuxObserver mLuxObserver;
 
     // hardware capabilities
@@ -54,16 +54,16 @@ public class OutdoorModeController extends LiveDisplayFeature {
     public OutdoorModeController(Context context, Handler handler) {
         super(context, handler);
 
-        mHardware = CMHardwareManager.getInstance(mContext);
-        mUseOutdoorMode = mHardware.isSupported(CMHardwareManager.FEATURE_SUNLIGHT_ENHANCEMENT);
+        mHardware = LineageHardwareManager.getInstance(mContext);
+        mUseOutdoorMode = mHardware.isSupported(LineageHardwareManager.FEATURE_SUNLIGHT_ENHANCEMENT);
         mSelfManaged = mUseOutdoorMode && mHardware.isSunlightEnhancementSelfManaged();
 
         mDefaultOutdoorLux = mContext.getResources().getInteger(
-                org.cyanogenmod.platform.internal.R.integer.config_outdoorAmbientLux);
+                org.lineageos.platform.internal.R.integer.config_outdoorAmbientLux);
         mOutdoorLuxHysteresis = mContext.getResources().getInteger(
-                org.cyanogenmod.platform.internal.R.integer.config_outdoorAmbientLuxHysteresis);
+                org.lineageos.platform.internal.R.integer.config_outdoorAmbientLuxHysteresis);
         mDefaultAutoOutdoorMode = mContext.getResources().getBoolean(
-                org.cyanogenmod.platform.internal.R.bool.config_defaultAutoOutdoorMode);
+                org.lineageos.platform.internal.R.bool.config_defaultAutoOutdoorMode);
     }
 
     @Override
@@ -78,7 +78,7 @@ public class OutdoorModeController extends LiveDisplayFeature {
         }
 
         registerSettings(
-                CMSettings.System.getUriFor(CMSettings.System.DISPLAY_AUTO_OUTDOOR_MODE));
+                LineageSettings.System.getUriFor(LineageSettings.System.DISPLAY_AUTO_OUTDOOR_MODE));
     }
 
     @Override
@@ -115,7 +115,7 @@ public class OutdoorModeController extends LiveDisplayFeature {
         // face if they turn it back on in normal conditions
         if (!isScreenOn() && !mSelfManaged && getMode() != MODE_OUTDOOR) {
             mIsOutdoor = false;
-            mHardware.set(CMHardwareManager.FEATURE_SUNLIGHT_ENHANCEMENT, false);
+            mHardware.set(LineageHardwareManager.FEATURE_SUNLIGHT_ENHANCEMENT, false);
         }
     }
 
@@ -138,7 +138,7 @@ public class OutdoorModeController extends LiveDisplayFeature {
             pw.println("    mIsOutdoor=" + mIsOutdoor);
             pw.println("    mIsNight=" + isNight());
             pw.println("    hardware state=" +
-                    mHardware.get(CMHardwareManager.FEATURE_SUNLIGHT_ENHANCEMENT));
+                    mHardware.get(LineageHardwareManager.FEATURE_SUNLIGHT_ENHANCEMENT));
         }
         mLuxObserver.dump(pw);
     }
@@ -218,7 +218,7 @@ public class OutdoorModeController extends LiveDisplayFeature {
                     }
                 }
             }
-            mHardware.set(CMHardwareManager.FEATURE_SUNLIGHT_ENHANCEMENT, enabled);
+            mHardware.set(LineageHardwareManager.FEATURE_SUNLIGHT_ENHANCEMENT, enabled);
         }
     }
 
@@ -242,13 +242,13 @@ public class OutdoorModeController extends LiveDisplayFeature {
         if (!mUseOutdoorMode) {
             return false;
         }
-        putBoolean(CMSettings.System.DISPLAY_AUTO_OUTDOOR_MODE, enabled);
+        putBoolean(LineageSettings.System.DISPLAY_AUTO_OUTDOOR_MODE, enabled);
         return true;
     }
 
     boolean isAutomaticOutdoorModeEnabled() {
         return mUseOutdoorMode &&
-                getBoolean(CMSettings.System.DISPLAY_AUTO_OUTDOOR_MODE,
+                getBoolean(LineageSettings.System.DISPLAY_AUTO_OUTDOOR_MODE,
                            getDefaultAutoOutdoorMode());
     }
 

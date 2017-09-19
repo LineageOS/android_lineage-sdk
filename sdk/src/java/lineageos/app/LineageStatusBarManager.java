@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package cyanogenmod.app;
+package lineageos.app;
 
 import android.content.Context;
 import android.os.IBinder;
@@ -24,10 +24,10 @@ import android.os.UserHandle;
 import android.util.Log;
 import android.util.Slog;
 
-import cyanogenmod.app.ICMStatusBarManager;
+import lineageos.app.ILineageStatusBarManager;
 
 /**
- * The CMStatusBarManager allows you to publish and remove CustomTiles within the
+ * The LineageStatusBarManager allows you to publish and remove CustomTiles within the
  * Quick Settings Panel.
  *
  * <p>
@@ -44,20 +44,20 @@ import cyanogenmod.app.ICMStatusBarManager;
  * this custom tile.
  *
  * <p>
- * To get the instance of this class, utilize CMStatusBarManager#getInstance(Context context)
+ * To get the instance of this class, utilize LineageStatusBarManager#getInstance(Context context)
  *
- * @see cyanogenmod.app.CustomTile
+ * @see lineageos.app.CustomTile
  */
-public class CMStatusBarManager {
-    private static final String TAG = "CMStatusBarManager";
+public class LineageStatusBarManager {
+    private static final String TAG = "LineageStatusBarManager";
     private static boolean localLOGV = false;
 
     private Context mContext;
 
-    private static ICMStatusBarManager sService;
+    private static ILineageStatusBarManager sService;
 
-    private static CMStatusBarManager sCMStatusBarManagerInstance;
-    private CMStatusBarManager(Context context) {
+    private static LineageStatusBarManager sLineageStatusBarManagerInstance;
+    private LineageStatusBarManager(Context context) {
         Context appContext = context.getApplicationContext();
         if (appContext != null) {
             mContext = appContext;
@@ -67,23 +67,23 @@ public class CMStatusBarManager {
         sService = getService();
 
         if (context.getPackageManager().hasSystemFeature(
-                cyanogenmod.app.CMContextConstants.Features.STATUSBAR) && sService == null) {
-            Log.wtf(TAG, "Unable to get CMStatusBarService. The service either" +
+                lineageos.app.LineageContextConstants.Features.STATUSBAR) && sService == null) {
+            Log.wtf(TAG, "Unable to get LineageStatusBarService. The service either" +
                     " crashed, was not started, or the interface has been called to early in" +
                     " SystemServer init");
         }
     }
 
     /**
-     * Get or create an instance of the {@link cyanogenmod.app.CMStatusBarManager}
+     * Get or create an instance of the {@link lineageos.app.LineageStatusBarManager}
      * @param context
-     * @return {@link cyanogenmod.app.CMStatusBarManager}
+     * @return {@link lineageos.app.LineageStatusBarManager}
      */
-    public static CMStatusBarManager getInstance(Context context) {
-        if (sCMStatusBarManagerInstance == null) {
-            sCMStatusBarManagerInstance = new CMStatusBarManager(context);
+    public static LineageStatusBarManager getInstance(Context context) {
+        if (sLineageStatusBarManagerInstance == null) {
+            sLineageStatusBarManagerInstance = new LineageStatusBarManager(context);
         }
-        return sCMStatusBarManagerInstance;
+        return sLineageStatusBarManagerInstance;
     }
 
     /**
@@ -91,7 +91,7 @@ public class CMStatusBarManager {
      * the same id has already been posted by your application and has not yet been removed, it
      * will be replaced by the updated information.
      *
-     * You will need the cyanogenmod.permission.PUBLISH_CUSTOM_TILE
+     * You will need the lineageos.permission.PUBLISH_CUSTOM_TILE
      * to utilize this functionality.
      *
      * @param id An identifier for this customTile unique within your
@@ -108,18 +108,18 @@ public class CMStatusBarManager {
      * the same tag and id has already been posted by your application and has not yet been
      * removed, it will be replaced by the updated information.
      *
-     * You will need the cyanogenmod.permission.PUBLISH_CUSTOM_TILE
+     * You will need the lineageos.permission.PUBLISH_CUSTOM_TILE
      * to utilize this functionality.
      *
      * @param tag A string identifier for this custom tile.  May be {@code null}.
      * @param id An identifier for this custom tile.  The pair (tag, id) must be unique
      *        within your application.
-     * @param customTile A {@link cyanogenmod.app.CustomTile} object describing what to
+     * @param customTile A {@link lineageos.app.CustomTile} object describing what to
      *        show the user. Must not be null.
      */
     public void publishTile(String tag, int id, CustomTile customTile) {
         if (sService == null) {
-            Log.w(TAG, "not connected to CMStatusBarManagerService");
+            Log.w(TAG, "not connected to LineageStatusBarManagerService");
             return;
         }
 
@@ -133,27 +133,27 @@ public class CMStatusBarManager {
                 Log.w(TAG, "notify: id corrupted: sent " + id + ", got back " + idOut[0]);
             }
         } catch (RemoteException e) {
-            Slog.w("CMStatusBarManager", "warning: no cm status bar service");
+            Slog.w("LineageStatusBarManager", "warning: no lineage status bar service");
         }
     }
 
     /**
-     * Similar to {@link cyanogenmod.app.CMStatusBarManager#publishTile(int id, cyanogenmod.app.CustomTile)},
+     * Similar to {@link lineageos.app.LineageStatusBarManager#publishTile(int id, lineageos.app.CustomTile)},
      * however lets you specify a {@link android.os.UserHandle}
      *
-     * You will need the cyanogenmod.permission.PUBLISH_CUSTOM_TILE
+     * You will need the lineageos.permission.PUBLISH_CUSTOM_TILE
      * to utilize this functionality.
      *
      * @param tag A string identifier for this custom tile.  May be {@code null}.
      * @param id An identifier for this custom tile.  The pair (tag, id) must be unique
      *        within your application.
-     * @param customTile A {@link cyanogenmod.app.CustomTile} object describing what to
+     * @param customTile A {@link lineageos.app.CustomTile} object describing what to
      *        show the user. Must not be null.
      * @param user A user handle to publish the tile as.
      */
     public void publishTileAsUser(String tag, int id, CustomTile customTile, UserHandle user) {
         if (sService == null) {
-            Log.w(TAG, "not connected to CMStatusBarManagerService");
+            Log.w(TAG, "not connected to LineageStatusBarManagerService");
             return;
         }
 
@@ -167,14 +167,14 @@ public class CMStatusBarManager {
                 Log.w(TAG, "notify: id corrupted: sent " + id + ", got back " + idOut[0]);
             }
         } catch (RemoteException e) {
-            Slog.w("CMStatusBarManager", "warning: no cm status bar service");
+            Slog.w("LineageStatusBarManager", "warning: no lineage status bar service");
         }
     }
 
     /**
      * Remove a custom tile that's currently published to the StatusBarPanel.
      *
-     * You will need the cyanogenmod.permission.PUBLISH_CUSTOM_TILE
+     * You will need the lineageos.permission.PUBLISH_CUSTOM_TILE
      * to utilize this functionality.
      *
      * @param id The identifier for the custom tile to be removed.
@@ -186,7 +186,7 @@ public class CMStatusBarManager {
     /**
      * Remove a custom tile that's currently published to the StatusBarPanel.
      *
-     * You will need the cyanogenmod.platform.PUBLISH_CUSTOM_TILE
+     * You will need the lineageos.platform.PUBLISH_CUSTOM_TILE
      * to utilize this functionality.
      *
      * @param tag The string identifier for the custom tile to be removed.
@@ -194,7 +194,7 @@ public class CMStatusBarManager {
      */
     public void removeTile(String tag, int id) {
         if (sService == null) {
-            Log.w(TAG, "not connected to CMStatusBarManagerService");
+            Log.w(TAG, "not connected to LineageStatusBarManagerService");
             return;
         }
 
@@ -203,15 +203,15 @@ public class CMStatusBarManager {
         try {
             sService.removeCustomTileWithTag(pkg, tag, id, UserHandle.myUserId());
         } catch (RemoteException e) {
-            Slog.w("CMStatusBarManager", "warning: no cm status bar service");
+            Slog.w("LineageStatusBarManager", "warning: no lineage status bar service");
         }
     }
 
     /**
-     * Similar to {@link cyanogenmod.app.CMStatusBarManager#removeTile(String tag, int id)}
+     * Similar to {@link lineageos.app.LineageStatusBarManager#removeTile(String tag, int id)}
      * however lets you specific a {@link android.os.UserHandle}
      *
-     * You will need the cyanogenmod.platform.PUBLISH_CUSTOM_TILE
+     * You will need the lineageos.platform.PUBLISH_CUSTOM_TILE
      * to utilize this functionality.
      *
      * @param tag The string identifier for the custom tile to be removed.
@@ -220,7 +220,7 @@ public class CMStatusBarManager {
      */
     public void removeTileAsUser(String tag, int id, UserHandle user) {
         if (sService == null) {
-            Log.w(TAG, "not connected to CMStatusBarManagerService");
+            Log.w(TAG, "not connected to LineageStatusBarManagerService");
             return;
         }
 
@@ -233,13 +233,13 @@ public class CMStatusBarManager {
     }
 
     /** @hide */
-    public ICMStatusBarManager getService() {
+    public ILineageStatusBarManager getService() {
         if (sService != null) {
             return sService;
         }
-        IBinder b = ServiceManager.getService(CMContextConstants.CM_STATUS_BAR_SERVICE);
+        IBinder b = ServiceManager.getService(LineageContextConstants.LINEAGE_STATUS_BAR_SERVICE);
         if (b != null) {
-            sService = ICMStatusBarManager.Stub.asInterface(b);
+            sService = ILineageStatusBarManager.Stub.asInterface(b);
             return sService;
         }
         return null;

@@ -14,16 +14,16 @@
  * limitations under the License.
  */
 
-package cyanogenmod.app.suggest;
+package lineageos.app.suggest;
 
 import android.annotation.NonNull;
 import android.net.Uri;
 import android.os.Parcel;
 import android.os.Parcelable;
 
-import cyanogenmod.os.Build;
-import cyanogenmod.os.Concierge;
-import cyanogenmod.os.Concierge.ParcelInfo;
+import lineageos.os.Build;
+import lineageos.os.Concierge;
+import lineageos.os.Concierge.ParcelInfo;
 
 /**
  * @hide
@@ -62,7 +62,7 @@ public class ApplicationSuggestion implements Parcelable {
         ParcelInfo parcelInfo = Concierge.receiveParcel(in);
         int parcelableVersion = parcelInfo.getParcelVersion();
 
-        if (parcelableVersion >= Build.CM_VERSION_CODES.APRICOT) {
+        if (parcelableVersion >= Build.LINEAGE_VERSION_CODES.APRICOT) {
             mName = in.readString();
             mPackage = in.readString();
             mDownloadUri = in.readParcelable(Uri.class.getClassLoader());

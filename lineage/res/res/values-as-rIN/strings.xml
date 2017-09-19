@@ -18,7 +18,7 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Label for the LineageOS system components when they are shown to the user. -->
-  <string name="cyanogenmod_system_label">LineageOS ছিষ্টেম</string>
+  <string name="lineageos_system_label">LineageOS ছিষ্টেম</string>
   <string name="permlab_publishCustomTile">দ্ৰুত ছেটিংছ পেনেল ভিতৰত এটা কাষ্টম টাইল সৃষ্টি কৰা</string>
   <string name="permdesc_publishCustomTile">এটা এপ্প্‌ক দ্ৰুত ছেটিং টাইল প্ৰকাশ কৰিবলৈ অনুমতি দিয়ে।</string>
   <string name="permlab_modifyNetworkSettings">ছিষ্টেম নেটৱৰ্ক ছেটিং পৰিৱৰ্তন কৰা</string>
@@ -38,7 +38,7 @@
   <string name="permdesc_modifyProfiles">এটা এপ্প্‌ক ছিষ্টেম প্ৰ\'ফাইল সংশোধন কৰিবলৈ অনুমতি দিয়ে</string>
   <!-- Labels for the HARDWARE_ABSTRACTION_ACCESS permission. -->
   <string name="permlab_useHardwareFramework">হাৰ্ডৱেৰ ফ্ৰেমৱৰ্ক ব্যৱহাৰ কৰক</string>
-  <string name="permdesc_useHardwareFramework">এটা এপ্প্‌ক CM হাৰ্ডৱেৰ ফ্ৰেমৱৰ্কত প্ৰৱেশ কৰিবলৈ অনুমতি দিয়ে।</string>
+  <string name="permdesc_useHardwareFramework">এটা এপ্প্‌ক Lineage হাৰ্ডৱেৰ ফ্ৰেমৱৰ্কত প্ৰৱেশ কৰিবলৈ অনুমতি দিয়ে।</string>
   <!-- Labels for the WRITE_ALARMS permission. -->
   <string name="permlab_write_alarms">প্ৰত্যক্ষভাবে এলাৰ্ম পৰিৱৰ্তন কৰক</string>
   <string name="permdesc_write_alarms">এটা এপ্প্‌ক আপোনাৰ এলাৰ্ম যোগ কৰিবলৈ, সংশোধন কৰিবলৈ আৰু সকলোবোৰ বিলোপ কৰিবলৈ অনুমতি দিয়ে।</string>
@@ -49,11 +49,11 @@
   <string name="permlab_read_alarms">অনুসূচীত এলাৰ্মত প্ৰৱেশ কৰক</string>
   <string name="permdesc_read_alarms">এটা এপ্প্‌ক আপোনাৰ অনুসূচীত এলাৰ্মবোৰ পঢ়িবলৈ অনুমতি দিয়ে।</string>
   <!-- Labels for the WRITE_SETTINGS permission -->
-  <string name="permlab_writeSettings">CM ছিষ্টেম ছেটিংচ সংশোধন কৰক</string>
-  <string name="permdesc_writeSettings">এটা এপ্প্‌ক CM ছিষ্টেম ছেটিং সংশোধন কৰিবলৈ অনুমতি দিয়ে</string>
+  <string name="permlab_writeSettings">Lineage ছিষ্টেম ছেটিংচ সংশোধন কৰক</string>
+  <string name="permdesc_writeSettings">এটা এপ্প্‌ক Lineage ছিষ্টেম ছেটিং সংশোধন কৰিবলৈ অনুমতি দিয়ে</string>
   <!-- Labels for the WRITE_SECURE_SETTINGS permission -->
-  <string name="permlab_writeSecureSettings">CM চিকিওৰ ছিষ্টেম ছেটিংচ সংশোধন কৰক</string>
-  <string name="permdesc_writeSecureSettings">এটা এপ্প্‌ক CM চিকিওৰ ছিষ্টেম ছেটিং সংশোধন কৰিবলৈ অনুমতি দিয়ে সাধাৰণ এপ্প্‌সমূহৰ ব্যৱহাৰৰ কাৰণে নহয়৷</string>
+  <string name="permlab_writeSecureSettings">Lineage চিকিওৰ ছিষ্টেম ছেটিংচ সংশোধন কৰক</string>
+  <string name="permdesc_writeSecureSettings">এটা এপ্প্‌ক Lineage চিকিওৰ ছিষ্টেম ছেটিং সংশোধন কৰিবলৈ অনুমতি দিয়ে সাধাৰণ এপ্প্‌সমূহৰ ব্যৱহাৰৰ কাৰণে নহয়৷</string>
   <!-- Labels for the MANAGE_PERSISTENT_STORAGE permission. -->
   <string name="permlab_managePersistentStorage">নিৰবিচ্ছিন্ন ষ্ট\'ৰেজ প্ৰবন্ধন কৰক</string>
   <string name="permdesc_managePersistentStorage">এটা এপ্প্‌ক ধৰ্মবোৰ পঢ়িবলৈ বা লিখিবলৈ অনুমতি দিয়ে যিবোৰ ফেক্টৰী ৰিছেটৰ মাধ্যমত চলি থাকিব পাৰে।</string>
@@ -126,8 +126,8 @@
   <!-- DataUsageProvider read permission title -->
   <!-- DataUsageProvider read permission description -->
   <!-- LiveDisplay manager permission -->
-  <!-- CMAudioService - observe session changes permission -->
-  <!-- CMAudioService - observe session changes permission -->
+  <!-- LineageAudioService - observe session changes permission -->
+  <!-- LineageAudioService - observe session changes permission -->
   <!-- QuickSettings: Themes tile -->
   <!-- Privacy Guard -->
   <!-- Permissions used by remote preferences -->

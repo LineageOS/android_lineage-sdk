@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.cyanogenmod.platform.internal.display;
+package org.lineageos.platform.internal.display;
 
 import android.content.Context;
 import android.net.Uri;
@@ -29,17 +29,17 @@ import java.util.ArrayList;
 import java.util.BitSet;
 import java.util.List;
 
-import cyanogenmod.hardware.CMHardwareManager;
-import cyanogenmod.hardware.DisplayMode;
-import cyanogenmod.hardware.HSIC;
-import cyanogenmod.hardware.LiveDisplayManager;
-import cyanogenmod.providers.CMSettings;
+import lineageos.hardware.LineageHardwareManager;
+import lineageos.hardware.DisplayMode;
+import lineageos.hardware.HSIC;
+import lineageos.hardware.LiveDisplayManager;
+import lineageos.providers.LineageSettings;
 
 public class PictureAdjustmentController extends LiveDisplayFeature {
 
     private static final String TAG = "LiveDisplay-PAC";
 
-    private final CMHardwareManager mHardware;
+    private final LineageHardwareManager mHardware;
     private final boolean mUsePictureAdjustment;
     private final boolean mHasDisplayModes;
 
@@ -47,10 +47,10 @@ public class PictureAdjustmentController extends LiveDisplayFeature {
 
     public PictureAdjustmentController(Context context, Handler handler) {
         super(context, handler);
-        mHardware = CMHardwareManager.getInstance(context);
-        mHasDisplayModes = mHardware.isSupported(CMHardwareManager.FEATURE_DISPLAY_MODES);
+        mHardware = LineageHardwareManager.getInstance(context);
+        mHasDisplayModes = mHardware.isSupported(LineageHardwareManager.FEATURE_DISPLAY_MODES);
 
-        boolean usePA = mHardware.isSupported(CMHardwareManager.FEATURE_PICTURE_ADJUSTMENT);
+        boolean usePA = mHardware.isSupported(LineageHardwareManager.FEATURE_PICTURE_ADJUSTMENT);
         if (usePA) {
             mRanges.addAll(mHardware.getPictureAdjustmentRanges());
             if (mRanges.size() < 4) {
@@ -77,7 +77,7 @@ public class PictureAdjustmentController extends LiveDisplayFeature {
         }
 
         registerSettings(
-                CMSettings.System.getUriFor(CMSettings.System.DISPLAY_PICTURE_ADJUSTMENT));
+                LineageSettings.System.getUriFor(LineageSettings.System.DISPLAY_PICTURE_ADJUSTMENT));
     }
 
     @Override
@@ -213,7 +213,7 @@ public class PictureAdjustmentController extends LiveDisplayFeature {
     private SparseArray<HSIC> unpackPreference() {
         final SparseArray<HSIC> ret = new SparseArray<HSIC>();
 
-        String pref = getString(CMSettings.System.DISPLAY_PICTURE_ADJUSTMENT);
+        String pref = getString(LineageSettings.System.DISPLAY_PICTURE_ADJUSTMENT);
         if (pref != null) {
             String[] byMode = TextUtils.split(pref, ",");
             for (String mode : byMode) {
@@ -236,7 +236,7 @@ public class PictureAdjustmentController extends LiveDisplayFeature {
             }
             sb.append(id).append(":").append(m.flatten());
         }
-        putString(CMSettings.System.DISPLAY_PICTURE_ADJUSTMENT, sb.toString());
+        putString(LineageSettings.System.DISPLAY_PICTURE_ADJUSTMENT, sb.toString());
     }
 
 }

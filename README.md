@@ -1,10 +1,10 @@
-# CyanogenMod Platform SDK
+# LineageOS Platform SDK
 
 The Platform SDK provides a set of APIs that give you easy access to a variety of different features within LineageOS. The SDK exposes APIs and system level framework access in the Android framework that aren't available in any other distribution.
 
 ## Setup
 
-You can either [download](https://github.com/LineageOS/android_prebuilts_cmsdk/tree/master/current) from prebuilts hosted on github or pull directly via Gradle.
+You can either [download](https://github.com/LineageOS/android_prebuilts_lineagesdk/tree/master/current) from prebuilts hosted on github or pull directly via Gradle.
 
 
 ### Building against release artifacts
@@ -13,7 +13,7 @@ Our stable releases are mirrored in [Maven Central](http://search.maven.org/#sea
 
 ```gradle
 dependencies {
-    compile 'org.cyanogenmod:platform.sdk:5.+'
+    compile 'org.lineageos:platform.sdk:5.+'
 }
 ```
 
@@ -33,10 +33,10 @@ You can target the `future` or `development` branch by setting your `dependencie
 
 ```gradle
 dependencies {
-    compile 'org.cyanogenmod:platform.sdk:6.0-SNAPSHOT'
+    compile 'org.lineageos:platform.sdk:6.0-SNAPSHOT'
 }
 ```
 
 ### WIKI
 
-For further inquiries regarding this project, please reference the [wiki](https://github.com/LineageOS/cm_platform_sdk/wiki).
+For further inquiries regarding this project, please reference the [wiki](https://github.com/LineageOS/android_lineage-sdk/wiki).

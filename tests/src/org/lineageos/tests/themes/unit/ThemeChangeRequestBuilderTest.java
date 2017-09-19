@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package org.cyanogenmod.tests.themes.unit;
+package org.lineageos.tests.themes.unit;
 
 import android.content.res.ThemeConfig;
 import android.test.AndroidTestCase;
 import android.test.suitebuilder.annotation.SmallTest;
 
-import cyanogenmod.themes.ThemeChangeRequest;
+import lineageos.themes.ThemeChangeRequest;
 
 import java.util.HashMap;
 import java.util.Map;

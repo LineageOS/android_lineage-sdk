@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package org.cyanogenmod.tests.weather.unit;
+package org.lineageos.tests.weather.unit;
 
-import cyanogenmod.weatherservice.ServiceRequest;
-import cyanogenmod.weatherservice.WeatherProviderService;
+import lineageos.weatherservice.ServiceRequest;
+import lineageos.weatherservice.WeatherProviderService;
 import org.mockito.Mockito;
 
 public class MockWeatherProviderService extends WeatherProviderService {

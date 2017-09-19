@@ -14,53 +14,53 @@
  * limitations under the License.
  */
 
-package cyanogenmod.os;
+package lineageos.os;
 
 import android.os.SystemProperties;
 import android.text.TextUtils;
 import android.util.SparseArray;
 
 /**
- * Information about the current CyanogenMod build, extracted from system properties.
+ * Information about the current LineageOS build, extracted from system properties.
  */
 public class Build {
     /** Value used for when a build property is unknown. */
     public static final String UNKNOWN = "unknown";
 
-    /** A build ID utilized to distinguish cyanogenmod versions */
-    public static final String CYANOGENMOD_VERSION = getString("ro.cm.version");
+    /** A build ID utilized to distinguish lineageos versions */
+    public static final String LINEAGEOS_VERSION = getString("ro.lineage.version");
 
     /** A build ID string meant for displaying to the user */
-    public static final String CYANOGENMOD_DISPLAY_VERSION = getString("ro.cm.display.version");
+    public static final String LINEAGEOS_DISPLAY_VERSION = getString("ro.lineage.display.version");
 
     private static final SparseArray<String> sdkMap;
     static
     {
         sdkMap = new SparseArray<String>();
-        sdkMap.put(CM_VERSION_CODES.APRICOT, "Apricot");
-        sdkMap.put(CM_VERSION_CODES.BOYSENBERRY, "Boysenberry");
-        sdkMap.put(CM_VERSION_CODES.CANTALOUPE, "Cantaloupe");
-        sdkMap.put(CM_VERSION_CODES.DRAGON_FRUIT, "Dragon Fruit");
-        sdkMap.put(CM_VERSION_CODES.ELDERBERRY, "Elderberry");
-        sdkMap.put(CM_VERSION_CODES.FIG, "Fig");
-        sdkMap.put(CM_VERSION_CODES.GUAVA, "Guava");
+        sdkMap.put(LINEAGE_VERSION_CODES.APRICOT, "Apricot");
+        sdkMap.put(LINEAGE_VERSION_CODES.BOYSENBERRY, "Boysenberry");
+        sdkMap.put(LINEAGE_VERSION_CODES.CANTALOUPE, "Cantaloupe");
+        sdkMap.put(LINEAGE_VERSION_CODES.DRAGON_FRUIT, "Dragon Fruit");
+        sdkMap.put(LINEAGE_VERSION_CODES.ELDERBERRY, "Elderberry");
+        sdkMap.put(LINEAGE_VERSION_CODES.FIG, "Fig");
+        sdkMap.put(LINEAGE_VERSION_CODES.GUAVA, "Guava");
     }
 
     /** Various version strings. */
-    public static class CM_VERSION {
+    public static class LINEAGE_VERSION {
         /**
          * The user-visible SDK version of the framework; its possible
-         * values are defined in {@link Build.CM_VERSION_CODES}.
+         * values are defined in {@link Build.LINEAGE_VERSION_CODES}.
          *
-         * Will return 0 if the device does not support the CM SDK.
+         * Will return 0 if the device does not support the Lineage SDK.
          */
         public static final int SDK_INT = SystemProperties.getInt(
-                "ro.cm.build.version.plat.sdk", 0);
+                "ro.lineage.build.version.plat.sdk", 0);
     }
 
     /**
      * Enumeration of the currently known SDK version codes.  These are the
-     * values that can be found in {@link CM_VERSION#SDK_INT}.  Version numbers
+     * values that can be found in {@link LINEAGE_VERSION#SDK_INT}.  Version numbers
      * increment monotonically with each official platform release.
      *
      * To programmatically validate that a given API is available for use on the device,
@@ -71,7 +71,7 @@ public class Build {
      * <pre class="prettyprint">
      * private void removeActiveProfile() {
      *     Make sure we're running on BoysenBerry or higher to use Profiles API
-     *     if (Build.CM_VERSION.SDK_INT >= Build.CM_VERSION_CODES.BOYSENBERRY) {
+     *     if (Build.LINEAGE_VERSION.SDK_INT >= Build.LINEAGE_VERSION_CODES.BOYSENBERRY) {
      *         ProfileManager profileManager = ProfileManager.getInstance(this);
      *         Profile activeProfile = profileManager.getActiveProfile();
      *         if (activeProfile != null) {
@@ -81,7 +81,7 @@ public class Build {
      * }
      * </pre>
      */
-    public static class CM_VERSION_CODES {
+    public static class LINEAGE_VERSION_CODES {
         /**
          * June 2015: The first version of the platform sdk for CyanogenMod
          */
@@ -93,15 +93,15 @@ public class Build {
          * <p>Applications targeting this or a later release will get these
          * new features:</p>
          * <ul>
-         * <li>Profiles API via {@link cyanogenmod.app.ProfileManager}
+         * <li>Profiles API via {@link lineageos.app.ProfileManager}
          * <li>New Expanded Styles for Custom Tiles via
-         * {@link cyanogenmod.app.CustomTile.RemoteExpandedStyle}
+         * {@link lineageos.app.CustomTile.RemoteExpandedStyle}
          * <li>Hardware Abstraction Framework Access via
-         * {@link cyanogenmod.hardware.CMHardwareManager} (Not for use by 3rd parties)
-         * <li>MSIM API via {@link cyanogenmod.app.CMTelephonyManager}
-         * <li>Interface for partners via {@link cyanogenmod.app.PartnerInterface}
-         * <li>Introductory Settings Provider {@link cyanogenmod.providers.CMSettings}
-         * <li>AlarmClock API via {@link cyanogenmod.alarmclock.CyanogenModAlarmClock}
+         * {@link lineageos.hardware.LineageHardwareManager} (Not for use by 3rd parties)
+         * <li>MSIM API via {@link lineageos.app.LineageTelephonyManager}
+         * <li>Interface for partners via {@link lineageos.app.PartnerInterface}
+         * <li>Introductory Settings Provider {@link lineageos.providers.LineageSettings}
+         * <li>AlarmClock API via {@link lineageos.alarmclock.LineageOSAlarmClock}
          * </ul>
          */
         public static final int BOYSENBERRY = 2;
@@ -119,12 +119,12 @@ public class Build {
          * new features:</p>
          * <ul>
          * <li>External views api, and specifically Keyguard interfaces for making
-         * live lockscreens via {@link cyanogenmod.externalviews.KeyguardExternalView}</li>
+         * live lockscreens via {@link lineageos.externalviews.KeyguardExternalView}</li>
          * <li>Inclusion of the PerformanceManager interfaces, allowing an application to specify
          * the type of mode to have the device be placed in via
-         * {@link cyanogenmod.power.PerformanceManager}</li>
+         * {@link lineageos.power.PerformanceManager}</li>
          * <li>Numerous new "System" settings exposed via the
-         * {@link cyanogenmod.providers.CMSettings.System} interface</li>
+         * {@link lineageos.providers.LineageSettings.System} interface</li>
          * </ul>
          */
         public static final int DRAGON_FRUIT = 4;
@@ -136,17 +136,17 @@ public class Build {
          * new features!</p>
          * <ul>
          * <li>Weather request api to fetch weather data from providers on the device
-         * {@link cyanogenmod.weather.CMWeatherManager}</li>
+         * {@link lineageos.weather.LineageWeatherManager}</li>
          * <li>Weather provider api to provide weather data to any listener on the device
-         * {@link cyanogenmod.weatherservice.WeatherProviderService}</li>
-         * <li>Extended capabilities of the {@link cyanogenmod.externalviews.KeyguardExternalView}
+         * {@link lineageos.weatherservice.WeatherProviderService}</li>
+         * <li>Extended capabilities of the {@link lineageos.externalviews.KeyguardExternalView}
          * interfaces to provide immersive and interactive experiences on the lockscreen.</li>
-         * <li>Themes interfaces have found a new home in the cmsdk, thus we allow access
+         * <li>Themes interfaces have found a new home in the lineagesdk, thus we allow access
          * to 3rd parties requesting theme changes on the platform via
-         * {@link cyanogenmod.themes.ThemeManager} and
-         * {@link cyanogenmod.themes.ThemeChangeRequest}</li>
-         * <li>Full access to the {@link cyanogenmod.providers.ThemesContract} and provider</li>
-         * <li>Parceling helper class {@link cyanogenmod.os.Concierge} to help with parcel
+         * {@link lineageos.themes.ThemeManager} and
+         * {@link lineageos.themes.ThemeChangeRequest}</li>
+         * <li>Full access to the {@link lineageos.providers.ThemesContract} and provider</li>
+         * <li>Parceling helper class {@link lineageos.os.Concierge} to help with parcel
          * headers and protocol revisions</li>
          * </ul>
          */
@@ -159,12 +159,12 @@ public class Build {
          * new features!</p>
          * <ul>
          * <li>Ability to query and color balance ranges from the
-         * {@link cyanogenmod.hardware.CMHardwareManager}, as well as do picture adjustment</li>
+         * {@link lineageos.hardware.LineageHardwareManager}, as well as do picture adjustment</li>
          * <li>Extended capabilities of the LiveDisplay interfaces, now providing
-         * {@link cyanogenmod.hardware.LiveDisplayConfig} and a dedicated
-         * {@link cyanogenmod.hardware.LiveDisplayManager}</li>
+         * {@link lineageos.hardware.LiveDisplayConfig} and a dedicated
+         * {@link lineageos.hardware.LiveDisplayManager}</li>
          * <li>Added new settings, such as LOCKSCREEN_ROTATION and DISPLAY_LOW_POWER
-         * to {@link cyanogenmod.providers.CMSettings}</li>
+         * to {@link lineageos.providers.LineageSettings}</li>
          * </ul>
          *
          * Signing out, Adnan \u270C

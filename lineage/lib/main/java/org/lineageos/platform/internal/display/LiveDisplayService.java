@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.cyanogenmod.platform.internal.display;
+package org.lineageos.platform.internal.display;
 
 import android.app.Notification;
 import android.app.NotificationManager;
@@ -39,13 +39,13 @@ import com.android.internal.util.ArrayUtils;
 import com.android.server.LocalServices;
 import com.android.server.ServiceThread;
 
-import org.cyanogenmod.internal.util.QSConstants;
-import org.cyanogenmod.internal.util.QSUtils;
-import org.cyanogenmod.platform.internal.CMSystemService;
-import org.cyanogenmod.platform.internal.R;
-import org.cyanogenmod.platform.internal.common.UserContentObserver;
-import org.cyanogenmod.platform.internal.display.TwilightTracker.TwilightListener;
-import org.cyanogenmod.platform.internal.display.TwilightTracker.TwilightState;
+import org.lineageos.internal.util.QSConstants;
+import org.lineageos.internal.util.QSUtils;
+import org.lineageos.platform.internal.LineageSystemService;
+import org.lineageos.platform.internal.R;
+import org.lineageos.platform.internal.common.UserContentObserver;
+import org.lineageos.platform.internal.display.TwilightTracker.TwilightListener;
+import org.lineageos.platform.internal.display.TwilightTracker.TwilightState;
 
 import java.io.FileDescriptor;
 import java.io.PrintWriter;
@@ -55,20 +55,20 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Locale;
 
-import cyanogenmod.app.CMContextConstants;
-import cyanogenmod.app.CMStatusBarManager;
-import cyanogenmod.app.CustomTile;
-import cyanogenmod.hardware.HSIC;
-import cyanogenmod.hardware.ILiveDisplayService;
-import cyanogenmod.hardware.LiveDisplayConfig;
-import cyanogenmod.providers.CMSettings;
+import lineageos.app.LineageContextConstants;
+import lineageos.app.LineageStatusBarManager;
+import lineageos.app.CustomTile;
+import lineageos.hardware.HSIC;
+import lineageos.hardware.ILiveDisplayService;
+import lineageos.hardware.LiveDisplayConfig;
+import lineageos.providers.LineageSettings;
 
-import static cyanogenmod.hardware.LiveDisplayManager.FEATURE_MANAGED_OUTDOOR_MODE;
-import static cyanogenmod.hardware.LiveDisplayManager.MODE_DAY;
-import static cyanogenmod.hardware.LiveDisplayManager.MODE_FIRST;
-import static cyanogenmod.hardware.LiveDisplayManager.MODE_LAST;
-import static cyanogenmod.hardware.LiveDisplayManager.MODE_OFF;
-import static cyanogenmod.hardware.LiveDisplayManager.MODE_OUTDOOR;
+import static lineageos.hardware.LiveDisplayManager.FEATURE_MANAGED_OUTDOOR_MODE;
+import static lineageos.hardware.LiveDisplayManager.MODE_DAY;
+import static lineageos.hardware.LiveDisplayManager.MODE_FIRST;
+import static lineageos.hardware.LiveDisplayManager.MODE_LAST;
+import static lineageos.hardware.LiveDisplayManager.MODE_OFF;
+import static lineageos.hardware.LiveDisplayManager.MODE_OUTDOOR;
 
 /**
  * LiveDisplay is an advanced set of features for improving
@@ -76,10 +76,10 @@ import static cyanogenmod.hardware.LiveDisplayManager.MODE_OUTDOOR;
  *
  * The service is constructed with a set of LiveDisplayFeatures
  * which provide capabilities such as outdoor mode, night mode,
- * and calibration. It interacts with CMHardwareService to relay
+ * and calibration. It interacts with LineageHardwareService to relay
  * changes down to the lower layers.
  */
-public class LiveDisplayService extends CMSystemService {
+public class LiveDisplayService extends LineageSystemService {
 
     private static final String TAG = "LiveDisplay";
 
@@ -110,7 +110,7 @@ public class LiveDisplayService extends CMSystemService {
     private String[] mTileValues;
     private int[] mTileEntryIconRes;
 
-    private static String ACTION_NEXT_MODE = "cyanogenmod.hardware.NEXT_LIVEDISPLAY_MODE";
+    private static String ACTION_NEXT_MODE = "lineageos.hardware.NEXT_LIVEDISPLAY_MODE";
 
     static int MODE_CHANGED = 1;
     static int DISPLAY_CHANGED = 2;
@@ -151,7 +151,7 @@ public class LiveDisplayService extends CMSystemService {
 
     @Override
     public String getFeatureDeclaration() {
-        return CMContextConstants.Features.LIVEDISPLAY;
+        return LineageContextConstants.Features.LIVEDISPLAY;
     }
 
     @Override
@@ -161,7 +161,7 @@ public class LiveDisplayService extends CMSystemService {
 
     @Override
     public void onStart() {
-        publishBinderService(CMContextConstants.CM_LIVEDISPLAY_SERVICE, mBinder);
+        publishBinderService(LineageContextConstants.LINEAGE_LIVEDISPLAY_SERVICE, mBinder);
     }
 
     @Override
@@ -193,7 +193,7 @@ public class LiveDisplayService extends CMSystemService {
 
             // static config
             int defaultMode = mContext.getResources().getInteger(
-                    org.cyanogenmod.platform.internal.R.integer.config_defaultLiveDisplayMode);
+                    org.lineageos.platform.internal.R.integer.config_defaultLiveDisplayMode);
 
             mConfig = new LiveDisplayConfig(capabilities, defaultMode,
                     mCTC.getDefaultDayTemperature(), mCTC.getDefaultNightTemperature(),
@@ -310,7 +310,7 @@ public class LiveDisplayService extends CMSystemService {
             final UserHandle user = new UserHandle(userId);
             final Context resourceContext = QSUtils.getQSTileContext(mContext, userId);
 
-            CMStatusBarManager statusBarManager = CMStatusBarManager.getInstance(mContext);
+            LineageStatusBarManager statusBarManager = LineageStatusBarManager.getInstance(mContext);
             CustomTile tile = new CustomTile.Builder(resourceContext)
                     .setLabel(mTileEntries[idx])
                     .setContentDescription(mTileDescriptionEntries[idx])
@@ -331,7 +331,7 @@ public class LiveDisplayService extends CMSystemService {
         final int userId = UserHandle.myUserId();
         long token = Binder.clearCallingIdentity();
         try {
-            CMStatusBarManager statusBarManager = CMStatusBarManager.getInstance(mContext);
+            LineageStatusBarManager statusBarManager = LineageStatusBarManager.getInstance(mContext);
             statusBarManager.removeTileAsUser(QSConstants.DYNAMIC_TILE_LIVE_DISPLAY,
                     LiveDisplayService.class.hashCode(), new UserHandle(userId));
         } finally {
@@ -346,7 +346,7 @@ public class LiveDisplayService extends CMSystemService {
     }
 
     private PendingIntent getCustomTileLongClickPendingIntent() {
-        Intent i = new Intent(CMSettings.ACTION_LIVEDISPLAY_SETTINGS);
+        Intent i = new Intent(LineageSettings.ACTION_LIVEDISPLAY_SETTINGS);
         i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         return PendingIntent.getActivityAsUser(mContext, 0, i,
                 PendingIntent.FLAG_UPDATE_CURRENT, null, UserHandle.CURRENT);
@@ -379,7 +379,7 @@ public class LiveDisplayService extends CMSystemService {
         @Override
         public boolean setMode(int mode) {
             mContext.enforceCallingOrSelfPermission(
-                    cyanogenmod.platform.Manifest.permission.MANAGE_LIVEDISPLAY, null);
+                    lineageos.platform.Manifest.permission.MANAGE_LIVEDISPLAY, null);
             if (!mConfig.hasModeSupport()) {
                 return false;
             }
@@ -394,7 +394,7 @@ public class LiveDisplayService extends CMSystemService {
         @Override
         public boolean setColorAdjustment(float[] adj) {
             mContext.enforceCallingOrSelfPermission(
-                    cyanogenmod.platform.Manifest.permission.MANAGE_LIVEDISPLAY, null);
+                    lineageos.platform.Manifest.permission.MANAGE_LIVEDISPLAY, null);
             return mDHC.setColorAdjustment(adj);
         }
 
@@ -406,7 +406,7 @@ public class LiveDisplayService extends CMSystemService {
         @Override
         public  boolean setAutoContrastEnabled(boolean enabled) {
             mContext.enforceCallingOrSelfPermission(
-                    cyanogenmod.platform.Manifest.permission.MANAGE_LIVEDISPLAY, null);
+                    lineageos.platform.Manifest.permission.MANAGE_LIVEDISPLAY, null);
             return mDHC.setAutoContrastEnabled(enabled);
         }
 
@@ -418,7 +418,7 @@ public class LiveDisplayService extends CMSystemService {
         @Override
         public boolean setCABCEnabled(boolean enabled) {
             mContext.enforceCallingOrSelfPermission(
-                    cyanogenmod.platform.Manifest.permission.MANAGE_LIVEDISPLAY, null);
+                    lineageos.platform.Manifest.permission.MANAGE_LIVEDISPLAY, null);
             return mDHC.setCABCEnabled(enabled);
         }
 
@@ -430,7 +430,7 @@ public class LiveDisplayService extends CMSystemService {
         @Override
         public boolean setColorEnhancementEnabled(boolean enabled) {
             mContext.enforceCallingOrSelfPermission(
-                    cyanogenmod.platform.Manifest.permission.MANAGE_LIVEDISPLAY, null);
+                    lineageos.platform.Manifest.permission.MANAGE_LIVEDISPLAY, null);
             return mDHC.setColorEnhancementEnabled(enabled);
         }
 
@@ -442,7 +442,7 @@ public class LiveDisplayService extends CMSystemService {
         @Override
         public boolean setAutomaticOutdoorModeEnabled(boolean enabled) {
             mContext.enforceCallingOrSelfPermission(
-                    cyanogenmod.platform.Manifest.permission.MANAGE_LIVEDISPLAY, null);
+                    lineageos.platform.Manifest.permission.MANAGE_LIVEDISPLAY, null);
             return mOMC.setAutomaticOutdoorModeEnabled(enabled);
         }
 
@@ -454,7 +454,7 @@ public class LiveDisplayService extends CMSystemService {
         @Override
         public boolean setDayColorTemperature(int temperature) {
             mContext.enforceCallingOrSelfPermission(
-                    cyanogenmod.platform.Manifest.permission.MANAGE_LIVEDISPLAY, null);
+                    lineageos.platform.Manifest.permission.MANAGE_LIVEDISPLAY, null);
             mCTC.setDayColorTemperature(temperature);
             return true;
         }
@@ -467,7 +467,7 @@ public class LiveDisplayService extends CMSystemService {
         @Override
         public boolean setNightColorTemperature(int temperature) {
             mContext.enforceCallingOrSelfPermission(
-                    cyanogenmod.platform.Manifest.permission.MANAGE_LIVEDISPLAY, null);
+                    lineageos.platform.Manifest.permission.MANAGE_LIVEDISPLAY, null);
             mCTC.setNightColorTemperature(temperature);
             return true;
         }
@@ -542,7 +542,7 @@ public class LiveDisplayService extends CMSystemService {
     private final class ModeObserver extends UserContentObserver {
 
         private final Uri MODE_SETTING =
-                CMSettings.System.getUriFor(CMSettings.System.DISPLAY_TEMPERATURE_MODE);
+                LineageSettings.System.getUriFor(LineageSettings.System.DISPLAY_TEMPERATURE_MODE);
 
         ModeObserver(Handler handler) {
             super(handler);
@@ -565,13 +565,13 @@ public class LiveDisplayService extends CMSystemService {
         }
 
         int getMode() {
-            return getInt(CMSettings.System.DISPLAY_TEMPERATURE_MODE,
+            return getInt(LineageSettings.System.DISPLAY_TEMPERATURE_MODE,
                     mConfig.getDefaultMode());
         }
 
         boolean setMode(int mode) {
             if (mConfig.hasFeature(mode) && mode >= MODE_FIRST && mode <= MODE_LAST) {
-                putInt(CMSettings.System.DISPLAY_TEMPERATURE_MODE, mode);
+                putInt(LineageSettings.System.DISPLAY_TEMPERATURE_MODE, mode);
                 if (mode != mConfig.getDefaultMode()) {
                     stopNudgingMe();
                 }
@@ -599,16 +599,16 @@ public class LiveDisplayService extends CMSystemService {
     private int getSunsetCounter() {
         // Counter used to determine when we should tell the user about this feature.
         // If it's not used after 3 sunsets, we'll show the hint once.
-        return CMSettings.System.getIntForUser(mContext.getContentResolver(),
-                CMSettings.System.LIVE_DISPLAY_HINTED,
+        return LineageSettings.System.getIntForUser(mContext.getContentResolver(),
+                LineageSettings.System.LIVE_DISPLAY_HINTED,
                 -3,
                 UserHandle.USER_CURRENT);
     }
 
 
     private void updateSunsetCounter(int count) {
-        CMSettings.System.putIntForUser(mContext.getContentResolver(),
-                CMSettings.System.LIVE_DISPLAY_HINTED,
+        LineageSettings.System.putIntForUser(mContext.getContentResolver(),
+                LineageSettings.System.LIVE_DISPLAY_HINTED,
                 count,
                 UserHandle.USER_CURRENT);
         mAwaitingNudge = count > 0;
@@ -650,18 +650,18 @@ public class LiveDisplayService extends CMSystemService {
         }
         if (counter == 0) {
             //show the notification and don't come back here
-            final Intent intent = new Intent(CMSettings.ACTION_LIVEDISPLAY_SETTINGS);
+            final Intent intent = new Intent(LineageSettings.ACTION_LIVEDISPLAY_SETTINGS);
             PendingIntent result = PendingIntent.getActivity(
                     mContext, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT);
             Notification.Builder builder = new Notification.Builder(mContext)
                     .setContentTitle(mContext.getResources().getString(
-                            org.cyanogenmod.platform.internal.R.string.live_display_title))
+                            org.lineageos.platform.internal.R.string.live_display_title))
                     .setContentText(mContext.getResources().getString(
-                            org.cyanogenmod.platform.internal.R.string.live_display_hint))
-                    .setSmallIcon(org.cyanogenmod.platform.internal.R.drawable.ic_livedisplay_notif)
+                            org.lineageos.platform.internal.R.string.live_display_hint))
+                    .setSmallIcon(org.lineageos.platform.internal.R.drawable.ic_livedisplay_notif)
                     .setStyle(new Notification.BigTextStyle().bigText(mContext.getResources()
                              .getString(
-                                     org.cyanogenmod.platform.internal.R.string.live_display_hint)))
+                                     org.lineageos.platform.internal.R.string.live_display_hint)))
                     .setContentIntent(result)
                     .setAutoCancel(true);
 
@@ -674,12 +674,12 @@ public class LiveDisplayService extends CMSystemService {
     }
 
     private int getInt(String setting, int defValue) {
-        return CMSettings.System.getIntForUser(mContext.getContentResolver(),
+        return LineageSettings.System.getIntForUser(mContext.getContentResolver(),
                 setting, defValue, UserHandle.USER_CURRENT);
     }
 
     private void putInt(String setting, int value) {
-        CMSettings.System.putIntForUser(mContext.getContentResolver(),
+        LineageSettings.System.putIntForUser(mContext.getContentResolver(),
                 setting, value, UserHandle.USER_CURRENT);
     }
 }

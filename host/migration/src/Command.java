@@ -49,7 +49,7 @@ public class Command implements Runnable {
     protected static boolean filter(String uri, Setting setting) {
         switch (uri) {
             case SettingsConstants.SYSTEM:
-                if (!CMSettings.System.isLegacySetting(setting.getKey())) {
+                if (!LineageSettings.System.isLegacySetting(setting.getKey())) {
                     return true;
                 }
                 break;
@@ -57,12 +57,12 @@ public class Command implements Runnable {
                 if (SettingsConstants.Ignorables.SECURE_SETTINGS.contains(setting.getKey())) {
                     return true;
                 }
-                if (!CMSettings.Secure.isLegacySetting(setting.getKey())) {
+                if (!LineageSettings.Secure.isLegacySetting(setting.getKey())) {
                     return true;
                 }
                 break;
             case SettingsConstants.GLOBAL:
-                if (!CMSettings.Global.isLegacySetting(setting.getKey())) {
+                if (!LineageSettings.Global.isLegacySetting(setting.getKey())) {
                     return true;
                 }
                 break;

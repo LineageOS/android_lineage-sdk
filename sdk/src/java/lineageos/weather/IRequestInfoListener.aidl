@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package cyanogenmod.weather;
+package lineageos.weather;
 
-import cyanogenmod.weather.RequestInfo;
-import cyanogenmod.weather.WeatherInfo;
-import cyanogenmod.weather.WeatherLocation;
+import lineageos.weather.RequestInfo;
+import lineageos.weather.WeatherInfo;
+import lineageos.weather.WeatherLocation;
 
 import java.util.List;
 

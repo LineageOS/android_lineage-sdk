@@ -18,7 +18,7 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Label for the LineageOS system components when they are shown to the user. -->
-  <string name="cyanogenmod_system_label">Système LineageOS</string>
+  <string name="lineageos_system_label">Système LineageOS</string>
   <string name="permlab_publishCustomTile">créer un raccourci personnalisé dans la fenêtre de configuration rapide</string>
   <string name="permdesc_publishCustomTile">Autorise une application à insérer un raccourci de configuration rapide.</string>
   <string name="permlab_modifyNetworkSettings">modifier les paramètres réseau du système</string>
@@ -38,7 +38,7 @@
   <string name="permdesc_modifyProfiles">Permet à une application de modifier les profils système.</string>
   <!-- Labels for the HARDWARE_ABSTRACTION_ACCESS permission. -->
   <string name="permlab_useHardwareFramework">utiliser le framework matériel</string>
-  <string name="permdesc_useHardwareFramework">Permet à une application d\'accéder au framework matériel de CM.</string>
+  <string name="permdesc_useHardwareFramework">Permet à une application d\'accéder au framework matériel de Lineage.</string>
   <!-- Labels for the WRITE_ALARMS permission. -->
   <string name="permlab_write_alarms">modifier directement les alarmes</string>
   <string name="permdesc_write_alarms">Autorise une application à ajouter, modifier ou supprimer toutes vos alarmes.</string>
@@ -49,11 +49,11 @@
   <string name="permlab_read_alarms">accéder aux alarmes planifiées</string>
   <string name="permdesc_read_alarms">Autorise une application à lire vos alarmes planifiées</string>
   <!-- Labels for the WRITE_SETTINGS permission -->
-  <string name="permlab_writeSettings">modifier les paramètres système CM</string>
-  <string name="permdesc_writeSettings">Autorise une application à modifier les paramètres système de CM.</string>
+  <string name="permlab_writeSettings">modifier les paramètres système Lineage</string>
+  <string name="permdesc_writeSettings">Autorise une application à modifier les paramètres système de Lineage.</string>
   <!-- Labels for the WRITE_SECURE_SETTINGS permission -->
-  <string name="permlab_writeSecureSettings">modifier les paramètres système sécurisés de CM</string>
-  <string name="permdesc_writeSecureSettings">Autorise une application à modifier des paramètres système sécurisés de CM. Ne pas utiliser pour des applications normales.</string>
+  <string name="permlab_writeSecureSettings">modifier les paramètres système sécurisés de Lineage</string>
+  <string name="permdesc_writeSecureSettings">Autorise une application à modifier des paramètres système sécurisés de Lineage. Ne pas utiliser pour des applications normales.</string>
   <!-- Labels for the MANAGE_PERSISTENT_STORAGE permission. -->
   <string name="permlab_managePersistentStorage">gérer le stockage permanent</string>
   <string name="permdesc_managePersistentStorage">Autorise une application à lire ou à écrire des propriétés qui pourraient persister après une réinitialisation d\'usine.</string>
@@ -174,10 +174,10 @@
   <!-- LiveDisplay manager permission -->
   <string name="permlab_manageLiveDisplay">gérer les paramètres de LiveDisplay</string>
   <string name="permdesc_manageLiveDisplay">Permet à une application de configurer les paramètres avancés de l\'affichage.</string>
-  <!-- CMAudioService - observe session changes permission -->
+  <!-- LineageAudioService - observe session changes permission -->
   <string name="permlab_observe_audio_sessions">observer les changements de session audio</string>
   <string name="permdesc_observe_audio_sessions">Permet à une application d\'observer la création et destruction des flux audio.</string>
-  <!-- CMAudioService - observe session changes permission -->
+  <!-- LineageAudioService - observe session changes permission -->
   <string name="permlab_manage_audio_sessions">gérer les changements de session audio</string>
   <string name="permdesc_manage_audio_sessions">Autorise une application à envoyer des mises à jour du flux audio.</string>
   <!-- QuickSettings: Themes tile -->

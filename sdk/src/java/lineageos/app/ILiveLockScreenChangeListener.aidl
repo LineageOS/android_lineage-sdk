@@ -14,9 +14,9 @@
 ** limitations under the License.
 */
 
-package cyanogenmod.app;
+package lineageos.app;
 
-import cyanogenmod.app.LiveLockScreenInfo;
+import lineageos.app.LiveLockScreenInfo;
 
 /**
  * Listener interface for notifying clients that the current Live lock screen has changed.

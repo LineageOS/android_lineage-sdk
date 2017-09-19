@@ -1,4 +1,4 @@
-package org.cyanogenmod.tests.common;
+package org.lineageos.tests.common;
 
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.Semaphore;

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package cyanogenmod.app;
+package lineageos.app;
 
 import android.annotation.NonNull;
 import android.content.ComponentName;
@@ -23,9 +23,9 @@ import android.os.Parcelable;
 
 import android.text.TextUtils;
 
-import cyanogenmod.os.Build;
-import cyanogenmod.os.Concierge;
-import cyanogenmod.os.Concierge.ParcelInfo;
+import lineageos.os.Build;
+import lineageos.os.Concierge;
+import lineageos.os.Concierge.ParcelInfo;
 
 /**
  * Data structure defining a Live lock screen.
@@ -59,7 +59,7 @@ public class LiveLockScreenInfo implements Parcelable {
 
     /**
      * The component, which implements
-     * {@link cyanogenmod.externalviews.KeyguardExternalViewProviderService}, to display for this
+     * {@link lineageos.externalviews.KeyguardExternalViewProviderService}, to display for this
      * live lock screen.
      */
     public ComponentName component;

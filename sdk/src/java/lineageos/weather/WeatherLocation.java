@@ -14,15 +14,15 @@
  * limitations under the License.
  */
 
-package cyanogenmod.weather;
+package lineageos.weather;
 
 import android.os.Parcel;
 import android.os.Parcelable;
 
 import android.text.TextUtils;
-import cyanogenmod.os.Build;
-import cyanogenmod.os.Concierge;
-import cyanogenmod.os.Concierge.ParcelInfo;
+import lineageos.os.Build;
+import lineageos.os.Concierge;
+import lineageos.os.Concierge.ParcelInfo;
 
 import java.util.UUID;
 
@@ -192,7 +192,7 @@ public final class WeatherLocation implements Parcelable{
         ParcelInfo parcelInfo = Concierge.receiveParcel(in);
         int parcelableVersion = parcelInfo.getParcelVersion();
 
-        if (parcelableVersion >= Build.CM_VERSION_CODES.ELDERBERRY) {
+        if (parcelableVersion >= Build.LINEAGE_VERSION_CODES.ELDERBERRY) {
             mKey = in.readString();
             mCityId = in.readString();
             mCity = in.readString();

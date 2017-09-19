@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.cyanogenmod.platform.internal;
+package org.lineageos.platform.internal;
 
 import android.annotation.NonNull;
 import android.annotation.Nullable;
@@ -30,14 +30,14 @@ import android.os.Message;
 import android.os.SystemClock;
 import android.util.Slog;
 
-import cyanogenmod.platform.Manifest;
+import lineageos.platform.Manifest;
 
 import com.android.internal.util.Preconditions;
 
-import org.cyanogenmod.platform.internal.common.BrokeredServiceConnection;
+import org.lineageos.platform.internal.common.BrokeredServiceConnection;
 
-public abstract class BrokerableCMSystemService<T extends IInterface> extends CMSystemService {
-    private static final String TAG = BrokerableCMSystemService.class.getSimpleName();
+public abstract class BrokerableLineageSystemService<T extends IInterface> extends LineageSystemService {
+    private static final String TAG = BrokerableLineageSystemService.class.getSimpleName();
 
     private static final int MSG_TRY_CONNECTING = 1;
     private static final long SERVICE_CONNECTION_WAIT_TIME_MS = 4 * 1000L; // 4 seconds
@@ -46,7 +46,7 @@ public abstract class BrokerableCMSystemService<T extends IInterface> extends CM
     private BrokeredServiceConnection mBrokeredServiceConnection;
     private T mImplementingBinderInterface;
 
-    public BrokerableCMSystemService(Context context) {
+    public BrokerableLineageSystemService(Context context) {
         super(context);
         mContext = context;
     }
@@ -209,9 +209,9 @@ public abstract class BrokerableCMSystemService<T extends IInterface> extends CM
         @Override
         public void onServiceConnected(ComponentName name, IBinder service) {
             Slog.i(TAG, "Implementation service connected");
-            synchronized (BrokerableCMSystemService.this) {
+            synchronized (BrokerableLineageSystemService.this) {
                 mImplementingBinderInterface = getIBinderAsIInterface(service);
-                BrokerableCMSystemService.this.notifyAll();
+                BrokerableLineageSystemService.this.notifyAll();
                 if (mBrokeredServiceConnection != null) {
                     Slog.i(TAG, "Notifying service connected");
                     mBrokeredServiceConnection.onBrokeredServiceConnected();
@@ -222,9 +222,9 @@ public abstract class BrokerableCMSystemService<T extends IInterface> extends CM
         @Override
         public void onServiceDisconnected(ComponentName name) {
             Slog.i(TAG, "Implementation service unexpectedly disconnected");
-            synchronized (BrokerableCMSystemService.this) {
+            synchronized (BrokerableLineageSystemService.this) {
                 mImplementingBinderInterface = null;
-                BrokerableCMSystemService.this.notifyAll();
+                BrokerableLineageSystemService.this.notifyAll();
                 if (mBrokeredServiceConnection != null) {
                     mBrokeredServiceConnection.onBrokeredServiceDisconnected();
                 }

@@ -18,7 +18,7 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Label for the LineageOS system components when they are shown to the user. -->
-  <string name="cyanogenmod_system_label">ระบบ LineageOS</string>
+  <string name="lineageos_system_label">ระบบ LineageOS</string>
   <string name="permlab_publishCustomTile">สร้างไทล์ที่กำหนดเองในแผงการตั้งค่าแบบรวดเร็ว</string>
   <string name="permdesc_publishCustomTile">อนุญาตให้แอปแสดงไทล์การตั้งค่าแบบรวดเร็ว</string>
   <string name="permlab_modifyNetworkSettings">เปลี่ยนการตั้งค่าเครือข่ายระบบ</string>
@@ -38,7 +38,7 @@
   <string name="permdesc_modifyProfiles">อนุญาตให้แอปปรับแต่งโปรไฟล์ระบบ</string>
   <!-- Labels for the HARDWARE_ABSTRACTION_ACCESS permission. -->
   <string name="permlab_useHardwareFramework">ใช้ฮาร์ดแวร์เฟรมเวิร์ค</string>
-  <string name="permdesc_useHardwareFramework">อนุญาตให้แอพเข้าถึง CM ฮาร์ดแวร์เฟรมเวิร์ค</string>
+  <string name="permdesc_useHardwareFramework">อนุญาตให้แอพเข้าถึง Lineage ฮาร์ดแวร์เฟรมเวิร์ค</string>
   <!-- Labels for the WRITE_ALARMS permission. -->
   <string name="permlab_write_alarms">เปลี่ยนการปลุกเตือนโดยตรง</string>
   <string name="permdesc_write_alarms">อนุญาตให้แอปเพิ่ม ปรับแต่ง หรือลบการปลุกเตือนทั้งหมดของคุณ</string>
@@ -49,11 +49,11 @@
   <string name="permlab_read_alarms">การเข้าถึงการปลุกเตือนที่กำหนดไว้</string>
   <string name="permdesc_read_alarms">อนุญาตให้แอปอ่านการปลุกเตือนที่กำหนดไว้</string>
   <!-- Labels for the WRITE_SETTINGS permission -->
-  <string name="permlab_writeSettings">ปรับแต่งการตั้งค่าระบบ CM</string>
-  <string name="permdesc_writeSettings">อนุญาตให้แอปปรับการตั้งค่าระบบ CM</string>
+  <string name="permlab_writeSettings">ปรับแต่งการตั้งค่าระบบ Lineage</string>
+  <string name="permdesc_writeSettings">อนุญาตให้แอปปรับการตั้งค่าระบบ Lineage</string>
   <!-- Labels for the WRITE_SECURE_SETTINGS permission -->
-  <string name="permlab_writeSecureSettings">ปรับแต่งการตั้งค่าระบบความปลอดภัยของ CM</string>
-  <string name="permdesc_writeSecureSettings">อนุญาตให้แอปปรับแต่งการตั้งค่าระบบความปลอดภัยของ CM ไม่ใช่เพื่อให้แอปปกตินำไปใช้</string>
+  <string name="permlab_writeSecureSettings">ปรับแต่งการตั้งค่าระบบความปลอดภัยของ Lineage</string>
+  <string name="permdesc_writeSecureSettings">อนุญาตให้แอปปรับแต่งการตั้งค่าระบบความปลอดภัยของ Lineage ไม่ใช่เพื่อให้แอปปกตินำไปใช้</string>
   <!-- Labels for the MANAGE_PERSISTENT_STORAGE permission. -->
   <string name="permlab_managePersistentStorage">จัดการพื้นที่จัดเก็บถาวร</string>
   <string name="permdesc_managePersistentStorage">อนุญาตให้แอปอ่านหรือเขียนคุณสมบัติซึ่งอาจยังมีอยู่จากการรีเซ็ตของโรงงาน</string>
@@ -168,10 +168,10 @@
   <!-- LiveDisplay manager permission -->
   <string name="permlab_manageLiveDisplay">จัดการตั้งค่า LiveDisplay</string>
   <string name="permdesc_manageLiveDisplay">อนุญาตให้แอปตั้งค่าการแสดงผลขั้นสูง</string>
-  <!-- CMAudioService - observe session changes permission -->
+  <!-- LineageAudioService - observe session changes permission -->
   <string name="permlab_observe_audio_sessions">สังเกตการเปลี่ยนแปลงเซสชันเสียง</string>
   <string name="permdesc_observe_audio_sessions">อนุญาตให้แอปสังเกตกระแสข้อมูลเสียงที่กำลังถูกสร้างและทำลาย</string>
-  <!-- CMAudioService - observe session changes permission -->
+  <!-- LineageAudioService - observe session changes permission -->
   <!-- QuickSettings: Themes tile -->
   <string name="qs_themes_label">รูปแบบธีม</string>
   <string name="qs_themes_content_description">กำหนดรูปแบบธีมเอง</string>

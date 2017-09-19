@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package cyanogenmod.themes;
+package lineageos.themes;
 
 import android.content.Context;
 import android.os.Handler;
@@ -25,8 +25,8 @@ import android.os.ServiceManager;
 import android.util.ArraySet;
 import android.util.Log;
 
-import cyanogenmod.app.CMContextConstants;
-import cyanogenmod.themes.ThemeChangeRequest.RequestType;
+import lineageos.app.LineageContextConstants;
+import lineageos.themes.ThemeChangeRequest.RequestType;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -51,7 +51,7 @@ public class ThemeManager {
     private ThemeManager(Context context) {
         sService = getService();
         if (context.getPackageManager().hasSystemFeature(
-                CMContextConstants.Features.THEMES) && sService == null) {
+                LineageContextConstants.Features.THEMES) && sService == null) {
             Log.wtf(TAG, "Unable to get ThemeManagerService. The service either" +
                     " crashed, was not started, or the interface has been called to early in" +
                     " SystemServer init");
@@ -72,7 +72,7 @@ public class ThemeManager {
         if (sService != null) {
             return sService;
         }
-        IBinder b = ServiceManager.getService(CMContextConstants.CM_THEME_SERVICE);
+        IBinder b = ServiceManager.getService(LineageContextConstants.LINEAGE_THEME_SERVICE);
         if (b != null) {
             sService = IThemeService.Stub.asInterface(b);
             return sService;

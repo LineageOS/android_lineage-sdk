@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.cyanogenmod.samples.customtiles;
+package org.lineageos.samples.customtiles;
 
 import android.app.PendingIntent;
 import android.content.BroadcastReceiver;
@@ -23,10 +23,10 @@ import android.content.Intent;
 import android.net.Uri;
 
 import android.text.TextUtils;
-import cyanogenmod.app.CMStatusBarManager;
-import cyanogenmod.app.CustomTile;
+import lineageos.app.LineageStatusBarManager;
+import lineageos.app.CustomTile;
 
-import org.cyanogenmod.samples.customtiles.R;
+import org.lineageos.samples.customtiles.R;
 
 /**
  * Created by Adnan on 4/30/15.
@@ -65,7 +65,7 @@ public class TileReceiver extends BroadcastReceiver {
                     .setIcon(R.drawable.ic_launcher)
                     .build();
 
-            CMStatusBarManager.getInstance(context)
+            LineageStatusBarManager.getInstance(context)
                     .publishTile(MainActivity.CUSTOM_TILE_ID, customTile);
         }
     }
