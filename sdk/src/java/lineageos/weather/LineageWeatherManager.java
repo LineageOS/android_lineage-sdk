@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package cyanogenmod.weather;
+package lineageos.weather;
 
 import android.annotation.NonNull;
 import android.content.ComponentName;
@@ -26,9 +26,9 @@ import android.os.RemoteException;
 import android.os.ServiceManager;
 import android.util.ArraySet;
 import android.util.Log;
-import cyanogenmod.app.CMContextConstants;
-import cyanogenmod.providers.CMSettings;
-import cyanogenmod.providers.WeatherContract;
+import lineageos.app.LineageContextConstants;
+import lineageos.providers.LineageSettings;
+import lineageos.providers.WeatherContract;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -40,10 +40,10 @@ import java.util.Set;
 /**
  * Provides access to the weather services in the device.
  */
-public class CMWeatherManager {
+public class LineageWeatherManager {
 
-    private static ICMWeatherManager sWeatherManagerService;
-    private static CMWeatherManager sInstance;
+    private static ILineageWeatherManager sWeatherManagerService;
+    private static LineageWeatherManager sInstance;
     private Context mContext;
     private Map<RequestInfo,WeatherUpdateRequestListener> mWeatherUpdateRequestListeners
             = Collections.synchronizedMap(new HashMap<RequestInfo,WeatherUpdateRequestListener>());
@@ -52,7 +52,7 @@ public class CMWeatherManager {
     private Handler mHandler;
     private Set<WeatherServiceProviderChangeListener> mProviderChangedListeners = new ArraySet<>();
 
-    private static final String TAG = CMWeatherManager.class.getSimpleName();
+    private static final String TAG = LineageWeatherManager.class.getSimpleName();
 
 
     /**
@@ -84,38 +84,38 @@ public class CMWeatherManager {
         public static final int NO_MATCH_FOUND = -4;
     }
 
-    private CMWeatherManager(Context context) {
+    private LineageWeatherManager(Context context) {
         Context appContext = context.getApplicationContext();
         mContext = (appContext != null) ? appContext : context;
         sWeatherManagerService = getService();
 
         if (context.getPackageManager().hasSystemFeature(
-                CMContextConstants.Features.WEATHER_SERVICES) && (sWeatherManagerService == null)) {
-            Log.wtf(TAG, "Unable to bind the CMWeatherManagerService");
+                LineageContextConstants.Features.WEATHER_SERVICES) && (sWeatherManagerService == null)) {
+            Log.wtf(TAG, "Unable to bind the LineageWeatherManagerService");
         }
         mHandler = new Handler(appContext.getMainLooper());
     }
 
     /**
-     * Gets or creates an instance of the {@link cyanogenmod.weather.CMWeatherManager}
+     * Gets or creates an instance of the {@link lineageos.weather.LineageWeatherManager}
      * @param context
-     * @return {@link CMWeatherManager}
+     * @return {@link LineageWeatherManager}
      */
-    public static CMWeatherManager getInstance(Context context) {
+    public static LineageWeatherManager getInstance(Context context) {
         if (sInstance == null) {
-            sInstance = new CMWeatherManager(context);
+            sInstance = new LineageWeatherManager(context);
         }
         return sInstance;
     }
 
     /** @hide */
-    public static ICMWeatherManager getService() {
+    public static ILineageWeatherManager getService() {
         if (sWeatherManagerService != null) {
             return sWeatherManagerService;
         }
-        IBinder binder = ServiceManager.getService(CMContextConstants.CM_WEATHER_SERVICE);
+        IBinder binder = ServiceManager.getService(LineageContextConstants.LINEAGE_WEATHER_SERVICE);
         if (binder != null) {
-            sWeatherManagerService = ICMWeatherManager.Stub.asInterface(binder);
+            sWeatherManagerService = ILineageWeatherManager.Stub.asInterface(binder);
             return sWeatherManagerService;
         }
         return null;
@@ -140,8 +140,8 @@ public class CMWeatherManager {
         }
 
         try {
-            int tempUnit = CMSettings.Global.getInt(mContext.getContentResolver(),
-                    CMSettings.Global.WEATHER_TEMPERATURE_UNIT,
+            int tempUnit = LineageSettings.Global.getInt(mContext.getContentResolver(),
+                    LineageSettings.Global.WEATHER_TEMPERATURE_UNIT,
                         WeatherContract.WeatherColumns.TempUnit.FAHRENHEIT);
 
             RequestInfo info = new RequestInfo
@@ -161,7 +161,7 @@ public class CMWeatherManager {
      * Forces the weather service to request the latest weather information for the provided
      * WeatherLocation. This is the preferred method for requesting a weather update.
      *
-     * @param weatherLocation A {@link cyanogenmod.weather.WeatherLocation} that was previously
+     * @param weatherLocation A {@link lineageos.weather.WeatherLocation} that was previously
      *                        obtained by calling
      *                        {@link #lookupCity(String, LookupCityRequestListener)}
      * @param listener {@link WeatherUpdateRequestListener} To be notified once the active weather
@@ -178,8 +178,8 @@ public class CMWeatherManager {
         }
 
         try {
-            int tempUnit = CMSettings.Global.getInt(mContext.getContentResolver(),
-                    CMSettings.Global.WEATHER_TEMPERATURE_UNIT,
+            int tempUnit = LineageSettings.Global.getInt(mContext.getContentResolver(),
+                    LineageSettings.Global.WEATHER_TEMPERATURE_UNIT,
                         WeatherContract.WeatherColumns.TempUnit.FAHRENHEIT);
 
             RequestInfo info = new RequestInfo
@@ -201,7 +201,7 @@ public class CMWeatherManager {
      * @param city The city name
      * @param listener {@link LookupCityRequestListener} To be notified once the request has been
      *                                                  completed. Upon success, a list of
-     *                                                  {@link cyanogenmod.weather.WeatherLocation}
+     *                                                  {@link lineageos.weather.WeatherLocation}
      *                                                  will be provided
      * @return An integer that identifies the request submitted to the weather service.
      * Note that this method might return -1 if an error occurred while trying to submit

@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package cyanogenmod.media;
+package lineageos.media;
 
-import cyanogenmod.media.AudioSessionInfo;
+import lineageos.media.AudioSessionInfo;
 
 /** @hide */
-interface ICMAudioService {
+interface ILineageAudioService {
 
     List<AudioSessionInfo> listAudioSessions(int streamType);
 

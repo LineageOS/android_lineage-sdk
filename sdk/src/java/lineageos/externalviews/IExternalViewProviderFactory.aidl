@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package cyanogenmod.externalviews;
+package lineageos.externalviews;
 
 import android.os.Bundle;
 

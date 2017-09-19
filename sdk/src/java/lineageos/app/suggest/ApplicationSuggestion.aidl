@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package cyanogenmod.app.suggest;
+package lineageos.app.suggest;
 
 /**
  * @hide

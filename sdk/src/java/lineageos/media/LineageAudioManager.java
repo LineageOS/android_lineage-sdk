@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package cyanogenmod.media;
+package lineageos.media;
 
 import android.content.Context;
 import android.os.IBinder;
@@ -25,11 +25,11 @@ import android.util.Log;
 import java.util.Collections;
 import java.util.List;
 
-import cyanogenmod.app.CMContextConstants;
+import lineageos.app.LineageContextConstants;
 
 /**
  * Manager for extended audio system capabilities provided by
- * CyanogenMod.
+ * LineageOS.
  *
  * Currently, this API provides an application the ability to
  * query active global audio sessions, and receive broadcasts
@@ -38,7 +38,7 @@ import cyanogenmod.app.CMContextConstants;
  * Applications wishing to receive audio session information
  * should register for the {@link ACTION_AUDIO_SESSIONS_CHANGED}
  * broadcast. This broadcast requires an application to hold the
- * {@link cyanogenmod.permission.OBSERVE_AUDIO_SESSIONS}
+ * {@link lineageos.permission.OBSERVE_AUDIO_SESSIONS}
  * permission. When receiving the broadcast, {@link EXTRA_SESSION_INFO}
  * will hold the {@link AudioSessionInfo} object associated
  * with the session. {@link EXTRA_SESSION_ADDED} will hold
@@ -55,15 +55,15 @@ import cyanogenmod.app.CMContextConstants;
  *
  * @hide
  */
-public final class CMAudioManager {
+public final class LineageAudioManager {
 
-    private static final String TAG = "CMAudioManager";
+    private static final String TAG = "LineageAudioManager";
 
     /**
      * Broadcast sent when audio session are added and removed.
      */
     public static final String ACTION_AUDIO_SESSIONS_CHANGED =
-            "cyanogenmod.intent.action.ACTION_AUDIO_SESSIONS_CHANGED";
+            "lineageos.intent.action.ACTION_AUDIO_SESSIONS_CHANGED";
 
     /**
      * Extra containing {@link AudioSessionInfo}
@@ -77,13 +77,13 @@ public final class CMAudioManager {
 
     private Context mContext;
 
-    private static CMAudioManager sInstance;
-    private static ICMAudioService sService;
+    private static LineageAudioManager sInstance;
+    private static ILineageAudioService sService;
 
     /**
      * @hide to prevent subclassing from outside of the framework
      */
-    private CMAudioManager(Context context) {
+    private LineageAudioManager(Context context) {
         Context appContext = context.getApplicationContext();
         if (appContext != null) {
             mContext = appContext;
@@ -94,33 +94,33 @@ public final class CMAudioManager {
         sService = getService();
 
         if (!context.getPackageManager().hasSystemFeature(
-                CMContextConstants.Features.AUDIO) || !checkService()) {
-            Log.wtf(TAG, "Unable to get CMAudioService. The service either" +
+                LineageContextConstants.Features.AUDIO) || !checkService()) {
+            Log.wtf(TAG, "Unable to get LineageAudioService. The service either" +
                     " crashed, was not started, or the interface has been called to early in" +
                     " SystemServer init");
         }
     }
 
     /**
-     * Get or create an instance of the {@link cyanogenmod.media.CMAudioManager}
+     * Get or create an instance of the {@link lineageos.media.LineageAudioManager}
      * @param context
-     * @return {@link CMAudioManager}
+     * @return {@link LineageAudioManager}
      */
-    public synchronized static CMAudioManager getInstance(Context context) {
+    public synchronized static LineageAudioManager getInstance(Context context) {
         if (sInstance == null) {
-            sInstance = new CMAudioManager(context);
+            sInstance = new LineageAudioManager(context);
         }
         return sInstance;
     }
 
     /** @hide */
-    public static ICMAudioService getService() {
+    public static ILineageAudioService getService() {
         if (sService != null) {
             return sService;
         }
-        IBinder b = ServiceManager.getService(CMContextConstants.CM_AUDIO_SERVICE);
+        IBinder b = ServiceManager.getService(LineageContextConstants.LINEAGE_AUDIO_SERVICE);
         if (b != null) {
-            sService = ICMAudioService.Stub.asInterface(b);
+            sService = ILineageAudioService.Stub.asInterface(b);
             return sService;
         }
         return null;
@@ -131,7 +131,7 @@ public final class CMAudioManager {
      */
     private boolean checkService() {
         if (sService == null) {
-            Log.w(TAG, "not connected to CMAudioService");
+            Log.w(TAG, "not connected to LineageAudioService");
             return false;
         }
         return true;

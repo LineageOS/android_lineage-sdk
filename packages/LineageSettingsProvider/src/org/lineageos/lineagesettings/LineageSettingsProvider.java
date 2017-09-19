@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.cyanogenmod.cmsettings;
+package org.lineageos.lineagesettings;
 
 import android.app.ActivityManager;
 import android.content.BroadcastReceiver;
@@ -45,10 +45,10 @@ import android.text.TextUtils;
 import android.util.Log;
 import android.util.SparseArray;
 
-import org.cyanogenmod.internal.util.QSConstants;
-import org.cyanogenmod.internal.util.QSUtils;
+import org.lineageos.internal.util.QSConstants;
+import org.lineageos.internal.util.QSUtils;
 
-import cyanogenmod.providers.CMSettings;
+import lineageos.providers.LineageSettings;
 
 import java.util.HashMap;
 import java.util.List;
@@ -56,20 +56,20 @@ import java.util.Map;
 import java.util.Set;
 
 /**
- * The CMSettingsProvider serves as a {@link ContentProvider} for CM specific settings
+ * The LineageSettingsProvider serves as a {@link ContentProvider} for Lineage specific settings
  */
-public class CMSettingsProvider extends ContentProvider {
-    public static final String TAG = "CMSettingsProvider";
+public class LineageSettingsProvider extends ContentProvider {
+    public static final String TAG = "LineageSettingsProvider";
     private static final boolean LOCAL_LOGV = false;
 
     private static final boolean USER_CHECK_THROWS = true;
 
-    public static final String PREF_HAS_MIGRATED_CM_SETTINGS = "has_migrated_cm13_settings";
+    public static final String PREF_HAS_MIGRATED_LINEAGE_SETTINGS = "has_migrated_cm13_settings";
 
     private static final Bundle NULL_SETTING = Bundle.forPair("value", null);
 
     // Each defined user has their own settings
-    protected final SparseArray<CMDatabaseHelper> mDbHelpers = new SparseArray<CMDatabaseHelper>();
+    protected final SparseArray<LineageDatabaseHelper> mDbHelpers = new SparseArray<LineageDatabaseHelper>();
 
     private static final int SYSTEM = 1;
     private static final int SECURE = 2;
@@ -85,17 +85,17 @@ public class CMSettingsProvider extends ContentProvider {
     private static final UriMatcher sUriMatcher = new UriMatcher(UriMatcher.NO_MATCH);
 
     static {
-        sUriMatcher.addURI(CMSettings.AUTHORITY, CMDatabaseHelper.CMTableNames.TABLE_SYSTEM,
+        sUriMatcher.addURI(LineageSettings.AUTHORITY, LineageDatabaseHelper.LineageTableNames.TABLE_SYSTEM,
                 SYSTEM);
-        sUriMatcher.addURI(CMSettings.AUTHORITY, CMDatabaseHelper.CMTableNames.TABLE_SECURE,
+        sUriMatcher.addURI(LineageSettings.AUTHORITY, LineageDatabaseHelper.LineageTableNames.TABLE_SECURE,
                 SECURE);
-        sUriMatcher.addURI(CMSettings.AUTHORITY, CMDatabaseHelper.CMTableNames.TABLE_GLOBAL,
+        sUriMatcher.addURI(LineageSettings.AUTHORITY, LineageDatabaseHelper.LineageTableNames.TABLE_GLOBAL,
                 GLOBAL);
-        sUriMatcher.addURI(CMSettings.AUTHORITY, CMDatabaseHelper.CMTableNames.TABLE_SYSTEM +
+        sUriMatcher.addURI(LineageSettings.AUTHORITY, LineageDatabaseHelper.LineageTableNames.TABLE_SYSTEM +
                 ITEM_MATCHER, SYSTEM_ITEM_NAME);
-        sUriMatcher.addURI(CMSettings.AUTHORITY, CMDatabaseHelper.CMTableNames.TABLE_SECURE +
+        sUriMatcher.addURI(LineageSettings.AUTHORITY, LineageDatabaseHelper.LineageTableNames.TABLE_SECURE +
                 ITEM_MATCHER, SECURE_ITEM_NAME);
-        sUriMatcher.addURI(CMSettings.AUTHORITY, CMDatabaseHelper.CMTableNames.TABLE_GLOBAL +
+        sUriMatcher.addURI(LineageSettings.AUTHORITY, LineageDatabaseHelper.LineageTableNames.TABLE_GLOBAL +
                 ITEM_MATCHER, GLOBAL_ITEM_NAME);
     }
 
@@ -105,7 +105,7 @@ public class CMSettingsProvider extends ContentProvider {
 
     @Override
     public boolean onCreate() {
-        if (LOCAL_LOGV) Log.d(TAG, "Creating CMSettingsProvider");
+        if (LOCAL_LOGV) Log.d(TAG, "Creating LineageSettingsProvider");
 
         mUserManager = UserManager.get(getContext());
 
@@ -113,7 +113,7 @@ public class CMSettingsProvider extends ContentProvider {
 
         mUriBuilder = new Uri.Builder();
         mUriBuilder.scheme(ContentResolver.SCHEME_CONTENT);
-        mUriBuilder.authority(CMSettings.AUTHORITY);
+        mUriBuilder.authority(LineageSettings.AUTHORITY);
 
         mSharedPrefs = getContext().getSharedPreferences(TAG, Context.MODE_PRIVATE);
 
@@ -140,20 +140,20 @@ public class CMSettingsProvider extends ContentProvider {
     // region Migration Methods
 
     /**
-     * Migrates CM settings for all existing users if this has not been run before.
+     * Migrates Lineage settings for all existing users if this has not been run before.
      */
-    private void migrateCMSettingsForExistingUsersIfNeeded() {
-        boolean hasMigratedCMSettings = mSharedPrefs.getBoolean(PREF_HAS_MIGRATED_CM_SETTINGS,
+    private void migrateLineageSettingsForExistingUsersIfNeeded() {
+        boolean hasMigratedLineageSettings = mSharedPrefs.getBoolean(PREF_HAS_MIGRATED_LINEAGE_SETTINGS,
                 false);
 
-        if (!hasMigratedCMSettings) {
+        if (!hasMigratedLineageSettings) {
             long startTime = System.currentTimeMillis();
 
             for (UserInfo user : mUserManager.getUsers()) {
-                migrateCMSettingsForUser(user.id);
+                migrateLineageSettingsForUser(user.id);
             }
 
-            mSharedPrefs.edit().putBoolean(PREF_HAS_MIGRATED_CM_SETTINGS, true).commit();
+            mSharedPrefs.edit().putBoolean(PREF_HAS_MIGRATED_LINEAGE_SETTINGS, true).commit();
 
             // TODO: Add this as part of a boot message to the UI
             long timeDiffMillis = System.currentTimeMillis() - startTime;
@@ -162,38 +162,38 @@ public class CMSettingsProvider extends ContentProvider {
     }
 
     /**
-     * Migrates CM settings for a specific user.
-     * @param userId The id of the user to run CM settings migration for.
+     * Migrates Lineage settings for a specific user.
+     * @param userId The id of the user to run Lineage settings migration for.
      */
-    private void migrateCMSettingsForUser(int userId) {
+    private void migrateLineageSettingsForUser(int userId) {
         synchronized (this) {
-            if (LOCAL_LOGV) Log.d(TAG, "CM settings will be migrated for user id: " + userId);
+            if (LOCAL_LOGV) Log.d(TAG, "Lineage settings will be migrated for user id: " + userId);
 
             // Migrate system settings
-            int rowsMigrated = migrateCMSettingsForTable(userId,
-                    CMDatabaseHelper.CMTableNames.TABLE_SYSTEM, CMSettings.System.LEGACY_SYSTEM_SETTINGS);
-            if (LOCAL_LOGV) Log.d(TAG, "Migrated " + rowsMigrated + " to CM system table");
+            int rowsMigrated = migrateLineageSettingsForTable(userId,
+                    LineageDatabaseHelper.LineageTableNames.TABLE_SYSTEM, LineageSettings.System.LEGACY_SYSTEM_SETTINGS);
+            if (LOCAL_LOGV) Log.d(TAG, "Migrated " + rowsMigrated + " to Lineage system table");
 
             // Migrate secure settings
-            rowsMigrated = migrateCMSettingsForTable(userId,
-                    CMDatabaseHelper.CMTableNames.TABLE_SECURE, CMSettings.Secure.LEGACY_SECURE_SETTINGS);
-            if (LOCAL_LOGV) Log.d(TAG, "Migrated " + rowsMigrated + " to CM secure table");
+            rowsMigrated = migrateLineageSettingsForTable(userId,
+                    LineageDatabaseHelper.LineageTableNames.TABLE_SECURE, LineageSettings.Secure.LEGACY_SECURE_SETTINGS);
+            if (LOCAL_LOGV) Log.d(TAG, "Migrated " + rowsMigrated + " to Lineage secure table");
 
             // Migrate global settings
-            rowsMigrated = migrateCMSettingsForTable(userId,
-                    CMDatabaseHelper.CMTableNames.TABLE_GLOBAL, CMSettings.Global.LEGACY_GLOBAL_SETTINGS);
-            if (LOCAL_LOGV) Log.d(TAG, "Migrated " + rowsMigrated + " to CM global table");
+            rowsMigrated = migrateLineageSettingsForTable(userId,
+                    LineageDatabaseHelper.LineageTableNames.TABLE_GLOBAL, LineageSettings.Global.LEGACY_GLOBAL_SETTINGS);
+            if (LOCAL_LOGV) Log.d(TAG, "Migrated " + rowsMigrated + " to Lineage global table");
         }
     }
 
     /**
-     * Migrates CM settings for a specific table and user id.
-     * @param userId The id of the user to run CM settings migration for.
-     * @param tableName The name of the table to run CM settings migration on.
-     * @param settings An array of keys to migrate from {@link Settings} to {@link CMSettings}
+     * Migrates Lineage settings for a specific table and user id.
+     * @param userId The id of the user to run Lineage settings migration for.
+     * @param tableName The name of the table to run Lineage settings migration on.
+     * @param settings An array of keys to migrate from {@link Settings} to {@link LineageSettings}
      * @return Number of rows migrated.
      */
-    private int migrateCMSettingsForTable(int userId, String tableName, String[] settings) {
+    private int migrateLineageSettingsForTable(int userId, String tableName, String[] settings) {
         ContentResolver contentResolver = getContext().getContentResolver();
         ContentValues[] contentValues = new ContentValues[settings.length];
 
@@ -201,15 +201,15 @@ public class CMSettingsProvider extends ContentProvider {
         for (String settingsKey : settings) {
             String settingsValue = null;
 
-            if (tableName.equals(CMDatabaseHelper.CMTableNames.TABLE_SYSTEM)) {
+            if (tableName.equals(LineageDatabaseHelper.LineageTableNames.TABLE_SYSTEM)) {
                 settingsValue = Settings.System.getStringForUser(contentResolver, settingsKey,
                         userId);
             }
-            else if (tableName.equals(CMDatabaseHelper.CMTableNames.TABLE_SECURE)) {
+            else if (tableName.equals(LineageDatabaseHelper.LineageTableNames.TABLE_SECURE)) {
                 settingsValue = Settings.Secure.getStringForUser(contentResolver, settingsKey,
                         userId);
-                if (settingsValue != null && settingsKey.equals(CMSettings.Secure.STATS_COLLECTION)
-                        && CMSettings.Secure.getStringForUser(contentResolver, settingsKey, userId)
+                if (settingsValue != null && settingsKey.equals(LineageSettings.Secure.STATS_COLLECTION)
+                        && LineageSettings.Secure.getStringForUser(contentResolver, settingsKey, userId)
                         != null) {
                     // incorrect migration from YOG4P -> YOG7D failed to remove
                     // Settings.Secure.STATS_COLLECTION after migration; so it may exist in both
@@ -218,7 +218,7 @@ public class CMSettingsProvider extends ContentProvider {
                 }
 
                 // insert dnd, edit tiles for upgrade from 12.1 -> 13.0
-                if (CMSettings.Secure.QS_TILES.equals(settingsKey) && (settingsValue != null
+                if (LineageSettings.Secure.QS_TILES.equals(settingsKey) && (settingsValue != null
                         && (!settingsValue.contains(QSConstants.TILE_DND)
                         || !settingsValue.contains(QSConstants.TILE_EDIT)))) {
                     if (LOCAL_LOGV) {
@@ -238,7 +238,7 @@ public class CMSettingsProvider extends ContentProvider {
 
                         // use value in old database
                         boolean nineTilesPerPage = Settings.Secure.getInt(contentResolver,
-                                CMSettings.Secure.QS_USE_MAIN_TILES, 0) == 1;
+                                LineageSettings.Secure.QS_USE_MAIN_TILES, 0) == 1;
 
                         final int TILES_PER_PAGE = nineTilesPerPage ? 9 : 8;
 
@@ -252,7 +252,7 @@ public class CMSettingsProvider extends ContentProvider {
                     settingsValue = TextUtils.join(",", tiles);
                 }
             }
-            else if (tableName.equals(CMDatabaseHelper.CMTableNames.TABLE_GLOBAL)) {
+            else if (tableName.equals(LineageDatabaseHelper.LineageTableNames.TABLE_GLOBAL)) {
                 settingsValue = Settings.Global.getStringForUser(contentResolver, settingsKey,
                         userId);
             }
@@ -309,7 +309,7 @@ public class CMSettingsProvider extends ContentProvider {
 
         int callingUserId = UserHandle.getCallingUserId();
         if (args != null) {
-            int reqUser = args.getInt(CMSettings.CALL_METHOD_USER_KEY, callingUserId);
+            int reqUser = args.getInt(LineageSettings.CALL_METHOD_USER_KEY, callingUserId);
             if (reqUser != callingUserId) {
                 callingUserId = ActivityManager.handleIncomingUser(Binder.getCallingPid(),
                         Binder.getCallingUid(), reqUser, false, true,
@@ -318,12 +318,12 @@ public class CMSettingsProvider extends ContentProvider {
             }
         }
 
-        boolean hasMigratedCMSettings = mSharedPrefs.getBoolean(PREF_HAS_MIGRATED_CM_SETTINGS,
+        boolean hasMigratedLineageSettings = mSharedPrefs.getBoolean(PREF_HAS_MIGRATED_LINEAGE_SETTINGS,
                 false);
-        final ComponentName preBootReceiver = new ComponentName("org.cyanogenmod.cmsettings",
-                "org.cyanogenmod.cmsettings.PreBootReceiver");
+        final ComponentName preBootReceiver = new ComponentName("org.lineageos.lineagesettings",
+                "org.lineageos.lineagesettings.PreBootReceiver");
         final PackageManager packageManager = getContext().getPackageManager();
-        if (!hasMigratedCMSettings &&
+        if (!hasMigratedLineageSettings &&
                 packageManager.getComponentEnabledSetting(preBootReceiver)
                         == PackageManager.COMPONENT_ENABLED_STATE_DISABLED ) {
             if (LOCAL_LOGV) {
@@ -335,25 +335,25 @@ public class CMSettingsProvider extends ContentProvider {
         }
 
         // Migrate methods
-        if (CMSettings.CALL_METHOD_MIGRATE_SETTINGS.equals(method)) {
-            migrateCMSettingsForExistingUsersIfNeeded();
+        if (LineageSettings.CALL_METHOD_MIGRATE_SETTINGS.equals(method)) {
+            migrateLineageSettingsForExistingUsersIfNeeded();
 
             return null;
-        } else if (CMSettings.CALL_METHOD_MIGRATE_SETTINGS_FOR_USER.equals(method)) {
-            migrateCMSettingsForUser(callingUserId);
+        } else if (LineageSettings.CALL_METHOD_MIGRATE_SETTINGS_FOR_USER.equals(method)) {
+            migrateLineageSettingsForUser(callingUserId);
 
             return null;
         }
 
         // Get methods
-        if (CMSettings.CALL_METHOD_GET_SYSTEM.equals(method)) {
-            return lookupSingleValue(callingUserId, CMSettings.System.CONTENT_URI, request);
+        if (LineageSettings.CALL_METHOD_GET_SYSTEM.equals(method)) {
+            return lookupSingleValue(callingUserId, LineageSettings.System.CONTENT_URI, request);
         }
-        else if (CMSettings.CALL_METHOD_GET_SECURE.equals(method)) {
-            return lookupSingleValue(callingUserId, CMSettings.Secure.CONTENT_URI, request);
+        else if (LineageSettings.CALL_METHOD_GET_SECURE.equals(method)) {
+            return lookupSingleValue(callingUserId, LineageSettings.Secure.CONTENT_URI, request);
         }
-        else if (CMSettings.CALL_METHOD_GET_GLOBAL.equals(method)) {
-            return lookupSingleValue(callingUserId, CMSettings.Global.CONTENT_URI, request);
+        else if (LineageSettings.CALL_METHOD_GET_GLOBAL.equals(method)) {
+            return lookupSingleValue(callingUserId, LineageSettings.Global.CONTENT_URI, request);
         }
 
         // Put methods - new value is in the args bundle under the key named by
@@ -363,10 +363,10 @@ public class CMSettingsProvider extends ContentProvider {
 
         // Framework can't do automatic permission checking for calls, so we need
         // to do it here.
-        if (CMSettings.CALL_METHOD_PUT_SYSTEM.equals(method)) {
-            enforceWritePermission(cyanogenmod.platform.Manifest.permission.WRITE_SETTINGS);
+        if (LineageSettings.CALL_METHOD_PUT_SYSTEM.equals(method)) {
+            enforceWritePermission(lineageos.platform.Manifest.permission.WRITE_SETTINGS);
         } else {
-            enforceWritePermission(cyanogenmod.platform.Manifest.permission.WRITE_SECURE_SETTINGS);
+            enforceWritePermission(lineageos.platform.Manifest.permission.WRITE_SECURE_SETTINGS);
         }
 
         // Put methods
@@ -374,14 +374,14 @@ public class CMSettingsProvider extends ContentProvider {
         values.put(Settings.NameValueTable.NAME, request);
         values.put(Settings.NameValueTable.VALUE, newValue);
 
-        if (CMSettings.CALL_METHOD_PUT_SYSTEM.equals(method)) {
-            insertForUser(callingUserId, CMSettings.System.CONTENT_URI, values);
+        if (LineageSettings.CALL_METHOD_PUT_SYSTEM.equals(method)) {
+            insertForUser(callingUserId, LineageSettings.System.CONTENT_URI, values);
         }
-        else if (CMSettings.CALL_METHOD_PUT_SECURE.equals(method)) {
-            insertForUser(callingUserId, CMSettings.Secure.CONTENT_URI, values);
+        else if (LineageSettings.CALL_METHOD_PUT_SECURE.equals(method)) {
+            insertForUser(callingUserId, LineageSettings.Secure.CONTENT_URI, values);
         }
-        else if (CMSettings.CALL_METHOD_PUT_GLOBAL.equals(method)) {
-            insertForUser(callingUserId, CMSettings.Global.CONTENT_URI, values);
+        else if (LineageSettings.CALL_METHOD_PUT_GLOBAL.equals(method)) {
+            insertForUser(callingUserId, LineageSettings.Global.CONTENT_URI, values);
         }
 
         return null;
@@ -454,7 +454,7 @@ public class CMSettingsProvider extends ContentProvider {
         int code = sUriMatcher.match(uri);
         String tableName = getTableNameFromUriMatchCode(code);
 
-        CMDatabaseHelper dbHelper = getOrEstablishDatabase(getUserIdForTable(tableName, userId));
+        LineageDatabaseHelper dbHelper = getOrEstablishDatabase(getUserIdForTable(tableName, userId));
         SQLiteDatabase db = dbHelper.getReadableDatabase();
 
         SQLiteQueryBuilder queryBuilder = new SQLiteQueryBuilder();
@@ -512,7 +512,7 @@ public class CMSettingsProvider extends ContentProvider {
         String tableName = getTableNameFromUri(uri);
         checkWritePermissions(tableName);
 
-        CMDatabaseHelper dbHelper = getOrEstablishDatabase(getUserIdForTable(tableName, userId));
+        LineageDatabaseHelper dbHelper = getOrEstablishDatabase(getUserIdForTable(tableName, userId));
         SQLiteDatabase db = dbHelper.getWritableDatabase();
 
         db.beginTransaction();
@@ -569,14 +569,14 @@ public class CMSettingsProvider extends ContentProvider {
         String tableName = getTableNameFromUri(uri);
         checkWritePermissions(tableName);
 
-        CMDatabaseHelper dbHelper = getOrEstablishDatabase(getUserIdForTable(tableName, userId));
+        LineageDatabaseHelper dbHelper = getOrEstablishDatabase(getUserIdForTable(tableName, userId));
 
         // Validate value if inserting int System table
         final String name = values.getAsString(Settings.NameValueTable.NAME);
         final String value = values.getAsString(Settings.NameValueTable.VALUE);
-        if (CMDatabaseHelper.CMTableNames.TABLE_SYSTEM.equals(tableName)) {
+        if (LineageDatabaseHelper.LineageTableNames.TABLE_SYSTEM.equals(tableName)) {
             validateSystemSettingNameValue(name, value);
-        } else if (CMDatabaseHelper.CMTableNames.TABLE_SECURE.equals(tableName)) {
+        } else if (LineageDatabaseHelper.LineageTableNames.TABLE_SECURE.equals(tableName)) {
             validateSecureSettingValue(name, value);
         }
 
@@ -609,7 +609,7 @@ public class CMSettingsProvider extends ContentProvider {
             checkWritePermissions(tableName);
 
             int callingUserId = UserHandle.getCallingUserId();
-            CMDatabaseHelper dbHelper = getOrEstablishDatabase(getUserIdForTable(tableName,
+            LineageDatabaseHelper dbHelper = getOrEstablishDatabase(getUserIdForTable(tableName,
                     callingUserId));
 
             SQLiteDatabase db = dbHelper.getWritableDatabase();
@@ -626,7 +626,7 @@ public class CMSettingsProvider extends ContentProvider {
 
     @Override
     public int update(Uri uri, ContentValues values, String selection, String[] selectionArgs) {
-        // NOTE: update() is never called by the front-end CMSettings API, and updates that
+        // NOTE: update() is never called by the front-end LineageSettings API, and updates that
         // wind up affecting rows in Secure that are globally shared will not have the
         // intended effect (the update will be invisible to the rest of the system).
         // This should have no practical effect, since writes to the Secure db can only
@@ -645,14 +645,14 @@ public class CMSettingsProvider extends ContentProvider {
         // Validate value if updating System table
         final String name = values.getAsString(Settings.NameValueTable.NAME);
         final String value = values.getAsString(Settings.NameValueTable.VALUE);
-        if (CMDatabaseHelper.CMTableNames.TABLE_SYSTEM.equals(tableName)) {
+        if (LineageDatabaseHelper.LineageTableNames.TABLE_SYSTEM.equals(tableName)) {
             validateSystemSettingNameValue(name, value);
-        } else if (CMDatabaseHelper.CMTableNames.TABLE_SECURE.equals(tableName)) {
+        } else if (LineageDatabaseHelper.LineageTableNames.TABLE_SECURE.equals(tableName)) {
             validateSecureSettingValue(name, value);
         }
 
         int callingUserId = UserHandle.getCallingUserId();
-        CMDatabaseHelper dbHelper = getOrEstablishDatabase(getUserIdForTable(tableName,
+        LineageDatabaseHelper dbHelper = getOrEstablishDatabase(getUserIdForTable(tableName,
                 callingUserId));
 
         SQLiteDatabase db = dbHelper.getWritableDatabase();
@@ -669,12 +669,12 @@ public class CMSettingsProvider extends ContentProvider {
     // endregion Content Provider Methods
 
     /**
-     * Tries to get a {@link CMDatabaseHelper} for the specified user and if it does not exist, a
-     * new instance of {@link CMDatabaseHelper} is created for the specified user and returned.
+     * Tries to get a {@link LineageDatabaseHelper} for the specified user and if it does not exist, a
+     * new instance of {@link LineageDatabaseHelper} is created for the specified user and returned.
      * @param callingUser
      * @return
      */
-    private CMDatabaseHelper getOrEstablishDatabase(int callingUser) {
+    private LineageDatabaseHelper getOrEstablishDatabase(int callingUser) {
         if (callingUser >= android.os.Process.SYSTEM_UID) {
             if (USER_CHECK_THROWS) {
                 throw new IllegalArgumentException("Uid rather than user handle: " + callingUser);
@@ -685,7 +685,7 @@ public class CMSettingsProvider extends ContentProvider {
 
         long oldId = Binder.clearCallingIdentity();
         try {
-            CMDatabaseHelper dbHelper;
+            LineageDatabaseHelper dbHelper;
             synchronized (this) {
                 dbHelper = mDbHelpers.get(callingUser);
             }
@@ -702,23 +702,23 @@ public class CMSettingsProvider extends ContentProvider {
     }
 
     /**
-     * Check if a {@link CMDatabaseHelper} exists for a user and if it doesn't, a new helper is
+     * Check if a {@link LineageDatabaseHelper} exists for a user and if it doesn't, a new helper is
      * created and added to the list of tracked database helpers
      * @param userId
      */
     private void establishDbTracking(int userId) {
-        CMDatabaseHelper dbHelper;
+        LineageDatabaseHelper dbHelper;
 
         synchronized (this) {
             dbHelper = mDbHelpers.get(userId);
             if (LOCAL_LOGV) {
-                Log.i(TAG, "Checking cm settings db helper for user " + userId);
+                Log.i(TAG, "Checking lineage settings db helper for user " + userId);
             }
             if (dbHelper == null) {
                 if (LOCAL_LOGV) {
-                    Log.i(TAG, "Installing new cm settings db helper for user " + userId);
+                    Log.i(TAG, "Installing new lineage settings db helper for user " + userId);
                 }
-                dbHelper = new CMDatabaseHelper(getContext(), userId);
+                dbHelper = new LineageDatabaseHelper(getContext(), userId);
                 mDbHelpers.append(userId, dbHelper);
             }
         }
@@ -737,14 +737,14 @@ public class CMSettingsProvider extends ContentProvider {
      * @throws SecurityException if the caller is forbidden to write.
      */
     private void checkWritePermissions(String tableName) {
-        if ((CMDatabaseHelper.CMTableNames.TABLE_SECURE.equals(tableName) ||
-                CMDatabaseHelper.CMTableNames.TABLE_GLOBAL.equals(tableName)) &&
+        if ((LineageDatabaseHelper.LineageTableNames.TABLE_SECURE.equals(tableName) ||
+                LineageDatabaseHelper.LineageTableNames.TABLE_GLOBAL.equals(tableName)) &&
                 getContext().checkCallingOrSelfPermission(
-                        cyanogenmod.platform.Manifest.permission.WRITE_SECURE_SETTINGS) !=
+                        lineageos.platform.Manifest.permission.WRITE_SECURE_SETTINGS) !=
                         PackageManager.PERMISSION_GRANTED) {
             throw new SecurityException(
-                    String.format("Permission denial: writing to cm secure settings requires %1$s",
-                            cyanogenmod.platform.Manifest.permission.WRITE_SECURE_SETTINGS));
+                    String.format("Permission denial: writing to lineage secure settings requires %1$s",
+                            lineageos.platform.Manifest.permission.WRITE_SECURE_SETTINGS));
         }
     }
 
@@ -789,13 +789,13 @@ public class CMSettingsProvider extends ContentProvider {
         switch (code) {
             case SYSTEM:
             case SYSTEM_ITEM_NAME:
-                return CMDatabaseHelper.CMTableNames.TABLE_SYSTEM;
+                return LineageDatabaseHelper.LineageTableNames.TABLE_SYSTEM;
             case SECURE:
             case SECURE_ITEM_NAME:
-                return CMDatabaseHelper.CMTableNames.TABLE_SECURE;
+                return LineageDatabaseHelper.LineageTableNames.TABLE_SECURE;
             case GLOBAL:
             case GLOBAL_ITEM_NAME:
-                return CMDatabaseHelper.CMTableNames.TABLE_GLOBAL;
+                return LineageDatabaseHelper.LineageTableNames.TABLE_GLOBAL;
             default:
                 throw new IllegalArgumentException("Invalid uri match code: " + code);
         }
@@ -809,25 +809,25 @@ public class CMSettingsProvider extends ContentProvider {
      * @return User id
      */
     private int getUserIdForTable(String tableName, int userId) {
-        return CMDatabaseHelper.CMTableNames.TABLE_GLOBAL.equals(tableName) ?
+        return LineageDatabaseHelper.LineageTableNames.TABLE_GLOBAL.equals(tableName) ?
                 UserHandle.USER_OWNER : userId;
     }
 
     /**
      * Modify setting version for an updated table before notifying of change. The
-     * {@link CMSettings} class uses these to provide client-side caches.
+     * {@link LineageSettings} class uses these to provide client-side caches.
      * @param uri to send notifications for
      * @param userId
      */
     private void notifyChange(Uri uri, String tableName, int userId) {
         String property = null;
-        final boolean isGlobal = tableName.equals(CMDatabaseHelper.CMTableNames.TABLE_GLOBAL);
-        if (tableName.equals(CMDatabaseHelper.CMTableNames.TABLE_SYSTEM)) {
-            property = CMSettings.System.SYS_PROP_CM_SETTING_VERSION;
-        } else if (tableName.equals(CMDatabaseHelper.CMTableNames.TABLE_SECURE)) {
-            property = CMSettings.Secure.SYS_PROP_CM_SETTING_VERSION;
+        final boolean isGlobal = tableName.equals(LineageDatabaseHelper.LineageTableNames.TABLE_GLOBAL);
+        if (tableName.equals(LineageDatabaseHelper.LineageTableNames.TABLE_SYSTEM)) {
+            property = LineageSettings.System.SYS_PROP_LINEAGE_SETTING_VERSION;
+        } else if (tableName.equals(LineageDatabaseHelper.LineageTableNames.TABLE_SECURE)) {
+            property = LineageSettings.Secure.SYS_PROP_LINEAGE_SETTING_VERSION;
         } else if (isGlobal) {
-            property = CMSettings.Global.SYS_PROP_CM_SETTING_VERSION;
+            property = LineageSettings.Global.SYS_PROP_LINEAGE_SETTING_VERSION;
         }
 
         if (property != null) {
@@ -847,7 +847,7 @@ public class CMSettingsProvider extends ContentProvider {
     }
 
     private void validateSystemSettingNameValue(String name, String value) {
-        CMSettings.Validator validator = CMSettings.System.VALIDATORS.get(name);
+        LineageSettings.Validator validator = LineageSettings.System.VALIDATORS.get(name);
         if (validator == null) {
             throw new IllegalArgumentException("Invalid setting: " + name);
         }
@@ -859,7 +859,7 @@ public class CMSettingsProvider extends ContentProvider {
     }
 
     private void validateSecureSettingValue(String name, String value) {
-        CMSettings.Validator validator = CMSettings.Secure.VALIDATORS.get(name);
+        LineageSettings.Validator validator = LineageSettings.Secure.VALIDATORS.get(name);
 
         // Not all secure settings have validators, but if a validator exists, the validate method
         // should return true

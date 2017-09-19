@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.cyanogenmod.platform.internal;
+package org.lineageos.platform.internal;
 
 import android.content.Context;
 import android.content.Intent;
@@ -23,21 +23,21 @@ import android.util.Log;
 import android.util.Slog;
 import com.android.server.SystemService;
 
-import cyanogenmod.app.CMContextConstants;
-import cyanogenmod.app.suggest.ApplicationSuggestion;
-import cyanogenmod.app.suggest.IAppSuggestManager;
+import lineageos.app.LineageContextConstants;
+import lineageos.app.suggest.ApplicationSuggestion;
+import lineageos.app.suggest.IAppSuggestManager;
 
 import java.util.ArrayList;
 import java.util.List;
 
 /** @hide */
-public class AppSuggestManagerService extends CMSystemService {
+public class AppSuggestManagerService extends LineageSystemService {
     private static final String TAG = "AppSgstMgrService";
     public static final boolean DEBUG = Log.isLoggable(TAG, Log.DEBUG);
 
     public static final String NAME = "appsuggest";
 
-    public static final String ACTION = "org.cyanogenmod.app.suggest";
+    public static final String ACTION = "org.lineageos.app.suggest";
 
     private AppSuggestProviderInterface mImpl;
     private Context mContext;
@@ -63,7 +63,7 @@ public class AppSuggestManagerService extends CMSystemService {
 
     @Override
     public String getFeatureDeclaration() {
-        return CMContextConstants.Features.APP_SUGGEST;
+        return LineageContextConstants.Features.APP_SUGGEST;
     }
 
     @Override
@@ -77,6 +77,6 @@ public class AppSuggestManagerService extends CMSystemService {
         } else {
             Slog.i(TAG, "Bound to to suggest provider");
         }
-        publishBinderService(CMContextConstants.CM_APP_SUGGEST_SERVICE, mService);
+        publishBinderService(LineageContextConstants.LINEAGE_APP_SUGGEST_SERVICE, mService);
     }
 }

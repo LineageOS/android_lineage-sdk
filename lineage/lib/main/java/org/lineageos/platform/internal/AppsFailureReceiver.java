@@ -14,7 +14,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.cyanogenmod.platform.internal;
+package org.lineageos.platform.internal;
 
 import android.app.Notification;
 import android.app.NotificationManager;
@@ -26,14 +26,14 @@ import android.os.RemoteException;
 import android.os.ServiceManager;
 import android.os.SystemClock;
 
-import org.cyanogenmod.internal.util.ThemeUtils;
+import org.lineageos.internal.util.ThemeUtils;
 
-import cyanogenmod.app.CMContextConstants;
-import cyanogenmod.themes.IThemeService;
-import cyanogenmod.themes.ThemeChangeRequest;
-import cyanogenmod.themes.ThemeChangeRequest.RequestType;
+import lineageos.app.LineageContextConstants;
+import lineageos.themes.IThemeService;
+import lineageos.themes.ThemeChangeRequest;
+import lineageos.themes.ThemeChangeRequest.RequestType;
 
-import static cyanogenmod.content.Intent.ACTION_APP_FAILURE;
+import static lineageos.content.Intent.ACTION_APP_FAILURE;
 
 public class AppsFailureReceiver extends BroadcastReceiver {
 
@@ -63,7 +63,7 @@ public class AppsFailureReceiver extends BroadcastReceiver {
                 if (mFailuresCount == FAILURES_THRESHOLD) {
                     // let the theme manager take care of getting us back on the default theme
                     IThemeService tm = IThemeService.Stub.asInterface(ServiceManager
-                            .getService(CMContextConstants.CM_THEME_SERVICE));
+                            .getService(LineageContextConstants.LINEAGE_THEME_SERVICE));
                     final String themePkgName = ThemeConfig.SYSTEM_DEFAULT;
                     ThemeChangeRequest.Builder builder = new ThemeChangeRequest.Builder();
                     builder.setOverlay(themePkgName)

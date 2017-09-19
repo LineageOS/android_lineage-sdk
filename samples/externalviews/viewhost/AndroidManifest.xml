@@ -15,7 +15,7 @@
      limitations under the License.
 -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="org.cyanogenmod.samples.extviewhost" >
+    package="org.lineageos.samples.extviewhost" >
 
     <uses-sdk android:minSdkVersion="23" android:targetSdkVersion="23" />
 

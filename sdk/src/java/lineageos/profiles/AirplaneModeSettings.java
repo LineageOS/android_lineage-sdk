@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package cyanogenmod.profiles;
+package lineageos.profiles;
 
 import android.content.Context;
 import android.content.Intent;
@@ -22,9 +22,9 @@ import android.provider.Settings;
 import android.os.Parcel;
 import android.os.Parcelable;
 
-import cyanogenmod.os.Build;
-import cyanogenmod.os.Concierge;
-import cyanogenmod.os.Concierge.ParcelInfo;
+import lineageos.os.Build;
+import lineageos.os.Concierge;
+import lineageos.os.Concierge.ParcelInfo;
 
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
@@ -212,7 +212,7 @@ public final class AirplaneModeSettings implements Parcelable {
         // Pattern here is that all new members should be added to the end of
         // the writeToParcel method. Then we step through each version, until the latest
         // API release to help unravel this parcel
-        if (parcelableVersion >= Build.CM_VERSION_CODES.BOYSENBERRY) {
+        if (parcelableVersion >= Build.LINEAGE_VERSION_CODES.BOYSENBERRY) {
             mOverride = in.readInt() != 0;
             mValue = in.readInt();
             mDirty = in.readInt() != 0;

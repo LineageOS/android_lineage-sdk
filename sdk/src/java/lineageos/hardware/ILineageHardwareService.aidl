@@ -15,15 +15,15 @@
  * limitations under the License.
  */
 
-package cyanogenmod.hardware;
+package lineageos.hardware;
 
-import cyanogenmod.hardware.DisplayMode;
-import cyanogenmod.hardware.HSIC;
-import cyanogenmod.hardware.IThermalListenerCallback;
-import cyanogenmod.hardware.TouchscreenGesture;
+import lineageos.hardware.DisplayMode;
+import lineageos.hardware.HSIC;
+import lineageos.hardware.IThermalListenerCallback;
+import lineageos.hardware.TouchscreenGesture;
 
 /** @hide */
-interface ICMHardwareService {
+interface ILineageHardwareService {
 
     int getSupportedFeatures();
     boolean get(int feature);

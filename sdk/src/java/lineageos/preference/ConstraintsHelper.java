@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package cyanogenmod.preference;
+package lineageos.preference;
 
 import android.content.Context;
 import android.content.Intent;
@@ -39,8 +39,8 @@ import java.util.List;
 import java.util.Objects;
 import java.util.Set;
 
-import cyanogenmod.hardware.CMHardwareManager;
-import cyanogenmod.platform.R;
+import lineageos.hardware.LineageHardwareManager;
+import lineageos.platform.R;
 
 
 /**
@@ -74,9 +74,9 @@ public class ConstraintsHelper {
         mPref = pref;
 
         TypedArray a = context.getResources().obtainAttributes(attrs,
-                R.styleable.cm_SelfRemovingPreference);
-        mSummaryMinLines = a.getInteger(R.styleable.cm_SelfRemovingPreference_minSummaryLines, -1);
-        mReplacesKey = a.getString(R.styleable.cm_SelfRemovingPreference_replacesKey);
+                R.styleable.lineage_SelfRemovingPreference);
+        mSummaryMinLines = a.getInteger(R.styleable.lineage_SelfRemovingPreference_minSummaryLines, -1);
+        mReplacesKey = a.getString(R.styleable.lineage_SelfRemovingPreference_replacesKey);
         setAvailable(checkConstraints());
 
         Log.d(TAG, "construct key=" + mPref.getKey() + " available=" + mAvailable);
@@ -135,18 +135,18 @@ public class ConstraintsHelper {
         }
 
         TypedArray a = mContext.getResources().obtainAttributes(mAttrs,
-                R.styleable.cm_SelfRemovingPreference);
+                R.styleable.lineage_SelfRemovingPreference);
 
         try {
 
             // Check if the current user is an owner
-            boolean rOwner = a.getBoolean(R.styleable.cm_SelfRemovingPreference_requiresOwner, false);
+            boolean rOwner = a.getBoolean(R.styleable.lineage_SelfRemovingPreference_requiresOwner, false);
             if (rOwner && UserHandle.myUserId() != UserHandle.USER_OWNER) {
                 return false;
             }
 
             // Check if a specific package is installed
-            String rPackage = a.getString(R.styleable.cm_SelfRemovingPreference_requiresPackage);
+            String rPackage = a.getString(R.styleable.lineage_SelfRemovingPreference_requiresPackage);
             if (rPackage != null) {
                 boolean negated = isNegated(rPackage);
                 if (negated) {
@@ -159,7 +159,7 @@ public class ConstraintsHelper {
             }
 
             // Check if an intent can be resolved to handle the given action
-            String rAction = a.getString(R.styleable.cm_SelfRemovingPreference_requiresAction);
+            String rAction = a.getString(R.styleable.lineage_SelfRemovingPreference_requiresAction);
             if (rAction != null) {
                 boolean negated = isNegated(rAction);
                 if (negated) {
@@ -172,15 +172,15 @@ public class ConstraintsHelper {
             }
 
             // Check if a system feature is available
-            String rFeature = a.getString(R.styleable.cm_SelfRemovingPreference_requiresFeature);
+            String rFeature = a.getString(R.styleable.lineage_SelfRemovingPreference_requiresFeature);
             if (rFeature != null) {
                 boolean negated = isNegated(rFeature);
                 if (negated) {
                     rFeature = rFeature.substring(1);
                 }
-                boolean available = rFeature.startsWith("cmhardware:") ?
-                        CMHardwareManager.getInstance(mContext).isSupported(
-                                rFeature.substring("cmhardware:".length())) :
+                boolean available = rFeature.startsWith("lineagehardware:") ?
+                        LineageHardwareManager.getInstance(mContext).isSupported(
+                                rFeature.substring("lineagehardware:".length())) :
                         hasSystemFeature(mContext, rFeature);
                 if (available == negated) {
                     return false;
@@ -188,7 +188,7 @@ public class ConstraintsHelper {
             }
 
             // Check a boolean system property
-            String rProperty = a.getString(R.styleable.cm_SelfRemovingPreference_requiresProperty);
+            String rProperty = a.getString(R.styleable.lineage_SelfRemovingPreference_requiresProperty);
             if (rProperty != null) {
                 boolean negated = isNegated(rProperty);
                 if (negated) {
@@ -203,7 +203,7 @@ public class ConstraintsHelper {
 
             // Check a config resource. This can be a bool or a string. A null string
             // fails the constraint.
-            TypedValue tv = a.peekValue(R.styleable.cm_SelfRemovingPreference_requiresConfig);
+            TypedValue tv = a.peekValue(R.styleable.lineage_SelfRemovingPreference_requiresConfig);
             if (tv != null) {
                 if (tv.type == TypedValue.TYPE_STRING) {
                     if (tv.resourceId != 0) {

@@ -17,10 +17,10 @@ LOCAL_PATH := $(call my-dir)
 
 include $(CLEAR_VARS)
 
-LOCAL_PACKAGE_NAME := org.cyanogenmod.platform-res
+LOCAL_PACKAGE_NAME := org.lineageos.platform-res
 LOCAL_CERTIFICATE := platform
 LOCAL_AAPT_FLAGS := --auto-add-overlay
-LOCAL_AAPT_FLAGS += --private-symbols org.cyanogenmod.platform.internal
+LOCAL_AAPT_FLAGS += --private-symbols org.lineageos.platform.internal
 LOCAL_RESOURCE_DIR := $(addprefix $(LOCAL_PATH)/, res)
 LOCAL_RESOURCE_DIR += $(LOCAL_PATH)/../../sdk/res/res
 

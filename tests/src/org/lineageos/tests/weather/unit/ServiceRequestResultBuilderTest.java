@@ -14,15 +14,15 @@
  * limitations under the License.
  */
 
-package org.cyanogenmod.tests.weather.unit;
+package org.lineageos.tests.weather.unit;
 
 import android.os.Parcel;
 import android.test.AndroidTestCase;
 import android.test.suitebuilder.annotation.SmallTest;
-import cyanogenmod.providers.WeatherContract;
-import cyanogenmod.weather.WeatherInfo;
-import cyanogenmod.weather.WeatherLocation;
-import cyanogenmod.weatherservice.ServiceRequestResult;
+import lineageos.providers.WeatherContract;
+import lineageos.weather.WeatherInfo;
+import lineageos.weather.WeatherLocation;
+import lineageos.weatherservice.ServiceRequestResult;
 
 import java.util.ArrayList;
 import java.util.List;

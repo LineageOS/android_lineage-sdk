@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package cyanogenmod.hardware;
+package lineageos.hardware;
 
 /**
  * Callback class to register for thermal state changes

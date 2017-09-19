@@ -18,7 +18,7 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Label for the LineageOS system components when they are shown to the user. -->
-  <string name="cyanogenmod_system_label">Sistem LineageOS</string>
+  <string name="lineageos_system_label">Sistem LineageOS</string>
   <string name="permlab_publishCustomTile">creează un chenar personalizat în panoul de setări rapide</string>
   <string name="permdesc_publishCustomTile">Permite unei aplicații să publice un chenar de setări rapide.</string>
   <string name="permlab_modifyNetworkSettings">modifică setările de rețea ale sistemului</string>
@@ -38,7 +38,7 @@
   <string name="permdesc_modifyProfiles">Permite unei aplicații să modifice profilurile de sistem.</string>
   <!-- Labels for the HARDWARE_ABSTRACTION_ACCESS permission. -->
   <string name="permlab_useHardwareFramework">folosește framework-ul hardware</string>
-  <string name="permdesc_useHardwareFramework">Permite unei aplicații să acceseze framework-ul CM hardware.</string>
+  <string name="permdesc_useHardwareFramework">Permite unei aplicații să acceseze framework-ul Lineage hardware.</string>
   <!-- Labels for the WRITE_ALARMS permission. -->
   <string name="permlab_write_alarms">schimbă direct alarme</string>
   <string name="permdesc_write_alarms">Permite unei aplicații să adauge, modifice sau să șteargă toate alarmele.</string>
@@ -49,11 +49,11 @@
   <string name="permlab_read_alarms">accesează alarme programate</string>
   <string name="permdesc_read_alarms">Permite unei aplicații să citească alarmele programate.</string>
   <!-- Labels for the WRITE_SETTINGS permission -->
-  <string name="permlab_writeSettings">modifică setările de sistem CM</string>
-  <string name="permdesc_writeSettings">Permite unei aplicații să modifice setările de sistem CM.</string>
+  <string name="permlab_writeSettings">modifică setările de sistem Lineage</string>
+  <string name="permdesc_writeSettings">Permite unei aplicații să modifice setările de sistem Lineage.</string>
   <!-- Labels for the WRITE_SECURE_SETTINGS permission -->
-  <string name="permlab_writeSecureSettings">modifică setările de siguranță sistem CM</string>
-  <string name="permdesc_writeSecureSettings">Permite unei aplicații să modifice setările de sistem CM sigure. Nu este utilizabilă de către aplicațiile normale.</string>
+  <string name="permlab_writeSecureSettings">modifică setările de siguranță sistem Lineage</string>
+  <string name="permdesc_writeSecureSettings">Permite unei aplicații să modifice setările de sistem Lineage sigure. Nu este utilizabilă de către aplicațiile normale.</string>
   <!-- Labels for the MANAGE_PERSISTENT_STORAGE permission. -->
   <string name="permlab_managePersistentStorage">gestionează stocare persistentă</string>
   <string name="permdesc_managePersistentStorage">Permite unei aplicații să citească sau să scrie proprietăți ce se pot menține în urma unei reveniri la setările din fabrică.</string>
@@ -174,10 +174,10 @@
   <!-- LiveDisplay manager permission -->
   <string name="permlab_manageLiveDisplay">gestionează setările LiveDisplay</string>
   <string name="permdesc_manageLiveDisplay">Permite unei aplicații să configureze setările de afișare avansate.</string>
-  <!-- CMAudioService - observe session changes permission -->
+  <!-- LineageAudioService - observe session changes permission -->
   <string name="permlab_observe_audio_sessions">observă schimbări sesiune audio</string>
   <string name="permdesc_observe_audio_sessions">Permite unei aplicații să observe dacă fluxurile audio sunt create şi distruse.</string>
-  <!-- CMAudioService - observe session changes permission -->
+  <!-- LineageAudioService - observe session changes permission -->
   <string name="permlab_manage_audio_sessions">gestionează schimbările de sesiune audio</string>
   <string name="permdesc_manage_audio_sessions">Permite unei aplicații să trimită actualizări de flux audio.</string>
   <!-- QuickSettings: Themes tile -->

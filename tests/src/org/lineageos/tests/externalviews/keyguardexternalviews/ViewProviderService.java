@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package org.cyanogenmod.tests.externalviews.keyguardexternalviews;
+package org.lineageos.tests.externalviews.keyguardexternalviews;
 
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Space;
-import cyanogenmod.externalviews.KeyguardExternalViewProviderService;
+import lineageos.externalviews.KeyguardExternalViewProviderService;
 import org.mockito.Mockito;
 
 public class ViewProviderService extends KeyguardExternalViewProviderService {

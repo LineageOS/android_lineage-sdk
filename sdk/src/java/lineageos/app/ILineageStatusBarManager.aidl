@@ -14,15 +14,15 @@
  * limitations under the License.
  */
 
-package cyanogenmod.app;
+package lineageos.app;
 
 import android.content.ComponentName;
 
-import cyanogenmod.app.CustomTile;
-import cyanogenmod.app.ICustomTileListener;
+import lineageos.app.CustomTile;
+import lineageos.app.ICustomTileListener;
 
 /** @hide */
-interface ICMStatusBarManager {
+interface ILineageStatusBarManager {
     // --- Methods below are for use by 3rd party applications to publish quick
     // settings tiles to the status bar panel
     // You need the PUBLISH_CUSTOM_TILE permission

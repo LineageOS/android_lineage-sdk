@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.cyanogenmod.internal.themes;
+package org.lineageos.internal.themes;
 
 import android.graphics.Bitmap;
 

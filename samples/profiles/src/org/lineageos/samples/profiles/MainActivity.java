@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.cyanogenmod.samples.profiles;
+package org.lineageos.samples.profiles;
 
 import android.app.Activity;
 import android.content.Context;
@@ -24,9 +24,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-import cyanogenmod.app.Profile;
-import cyanogenmod.app.ProfileManager;
-import cyanogenmod.profiles.ConnectionSettings;
+import lineageos.app.Profile;
+import lineageos.app.ProfileManager;
+import lineageos.profiles.ConnectionSettings;
 
 import java.util.ArrayList;
 import java.util.List;

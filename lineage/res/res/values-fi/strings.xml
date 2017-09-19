@@ -18,7 +18,7 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Label for the LineageOS system components when they are shown to the user. -->
-  <string name="cyanogenmod_system_label">LineageOS Järjestelmä</string>
+  <string name="lineageos_system_label">LineageOS Järjestelmä</string>
   <string name="permlab_publishCustomTile">luo mukautettu tiili pika-asetuspaneeliin</string>
   <string name="permdesc_publishCustomTile">Sallii sovelluksen julkaista pika-asetustiiliä.</string>
   <string name="permlab_modifyNetworkSettings">muuta järjestelmän verkkoasetuksia</string>
@@ -38,7 +38,7 @@
   <string name="permdesc_modifyProfiles">Sallii sovelluksen muokata järjestelmäprofiileja.</string>
   <!-- Labels for the HARDWARE_ABSTRACTION_ACCESS permission. -->
   <string name="permlab_useHardwareFramework">käytä laitteiston kehystä</string>
-  <string name="permdesc_useHardwareFramework">Sallii sovelluksen pääsyn CM-laitteiston kehykseen.</string>
+  <string name="permdesc_useHardwareFramework">Sallii sovelluksen pääsyn Lineage-laitteiston kehykseen.</string>
   <!-- Labels for the WRITE_ALARMS permission. -->
   <string name="permlab_write_alarms">muuta hälytyksiä suoraan</string>
   <string name="permdesc_write_alarms">Sallii sovelluksen lisätä, muokata tai poistaa kaikki hälytyksesi.</string>
@@ -49,11 +49,11 @@
   <string name="permlab_read_alarms">käytä ajoitettua hälytystä</string>
   <string name="permdesc_read_alarms">Sallii sovelluksen lukea ajoitettuja hälytyksiä.</string>
   <!-- Labels for the WRITE_SETTINGS permission -->
-  <string name="permlab_writeSettings">muokkaa CM-järjestelmän asetuksia</string>
-  <string name="permdesc_writeSettings">Sallii sovelluksen muokata CM-järjestelmän asetuksia.</string>
+  <string name="permlab_writeSettings">muokkaa Lineage-järjestelmän asetuksia</string>
+  <string name="permdesc_writeSettings">Sallii sovelluksen muokata Lineage-järjestelmän asetuksia.</string>
   <!-- Labels for the WRITE_SECURE_SETTINGS permission -->
-  <string name="permlab_writeSecureSettings">muokkaa CM-järjestelmän turvallisuusasetuksia</string>
-  <string name="permdesc_writeSecureSettings">Sallii sovelluksen muokata CM-järjestelmän turvallisuusasetuksia. Ei normaalin sovelluksen käytettäväksi.</string>
+  <string name="permlab_writeSecureSettings">muokkaa Lineage-järjestelmän turvallisuusasetuksia</string>
+  <string name="permdesc_writeSecureSettings">Sallii sovelluksen muokata Lineage-järjestelmän turvallisuusasetuksia. Ei normaalin sovelluksen käytettäväksi.</string>
   <!-- Labels for the MANAGE_PERSISTENT_STORAGE permission. -->
   <string name="permlab_managePersistentStorage">hallitse pysyvää tallennustilaa</string>
   <string name="permdesc_managePersistentStorage">Sallii sovelluksen lukea tai kirjoittaa ominaisuuksia jotka voivat säilyä tehdasasetusten palautuksen jälkeen.</string>
@@ -173,10 +173,10 @@
   <!-- LiveDisplay manager permission -->
   <string name="permlab_manageLiveDisplay">hallitse LiveDisplay-asetuksia</string>
   <string name="permdesc_manageLiveDisplay">Sallii sovelluksen määrittää kehittyneitä näytön asetuksia.</string>
-  <!-- CMAudioService - observe session changes permission -->
+  <!-- LineageAudioService - observe session changes permission -->
   <string name="permlab_observe_audio_sessions">tutki ääni-istunnon muutoksia</string>
   <string name="permdesc_observe_audio_sessions">Sallii sovelluksen tarkastella milloin ääntä luodaan ja tuhotaan.</string>
-  <!-- CMAudioService - observe session changes permission -->
+  <!-- LineageAudioService - observe session changes permission -->
   <string name="permlab_manage_audio_sessions">hallitse ääni-istunnon muutoksia</string>
   <string name="permdesc_manage_audio_sessions">Sallii sovelluksen lähettää äänisyötteen päivityksiä.</string>
   <!-- QuickSettings: Themes tile -->

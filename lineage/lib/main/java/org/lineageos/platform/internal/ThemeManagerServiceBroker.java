@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.cyanogenmod.platform.internal;
+package org.lineageos.platform.internal;
 
 import android.annotation.NonNull;
 import android.content.ComponentName;
@@ -30,32 +30,32 @@ import android.system.StructStat;
 import android.util.Log;
 import android.util.Slog;
 
-import cyanogenmod.app.CMContextConstants;
-import cyanogenmod.platform.Manifest;
-import cyanogenmod.themes.IThemeChangeListener;
-import cyanogenmod.themes.IThemeProcessingListener;
-import cyanogenmod.themes.IThemeService;
-import cyanogenmod.themes.ThemeChangeRequest;
+import lineageos.app.LineageContextConstants;
+import lineageos.platform.Manifest;
+import lineageos.themes.IThemeChangeListener;
+import lineageos.themes.IThemeProcessingListener;
+import lineageos.themes.IThemeService;
+import lineageos.themes.ThemeChangeRequest;
 
-import org.cyanogenmod.internal.util.ThemeUtils;
-import org.cyanogenmod.platform.internal.common.BrokeredServiceConnection;
+import org.lineageos.internal.util.ThemeUtils;
+import org.lineageos.platform.internal.common.BrokeredServiceConnection;
 
 import java.io.File;
 
-import static cyanogenmod.platform.Manifest.permission.ACCESS_THEME_MANAGER;
+import static lineageos.platform.Manifest.permission.ACCESS_THEME_MANAGER;
 
 /**
  * Theme service broker for connecting clients to a backing theme manager service.
  *
  * @hide
  */
-public class ThemeManagerServiceBroker extends BrokerableCMSystemService<IThemeService> {
+public class ThemeManagerServiceBroker extends BrokerableLineageSystemService<IThemeService> {
     private static final String TAG = ThemeManagerServiceBroker.class.getSimpleName();
     private static final boolean DEBUG = false;
 
     private static final ComponentName SERVICE_COMPONENT =
-            new ComponentName("org.cyanogenmod.themeservice",
-                    "org.cyanogenmod.themeservice.ThemeManagerService");
+            new ComponentName("org.lineageos.themeservice",
+                    "org.lineageos.themeservice.ThemeManagerService");
 
     // Cached change listeners
     private final RemoteCallbackList<IThemeChangeListener> mChangeListeners =
@@ -240,13 +240,13 @@ public class ThemeManagerServiceBroker extends BrokerableCMSystemService<IThemeS
 
     @Override
     public String getFeatureDeclaration() {
-        return CMContextConstants.Features.THEMES;
+        return LineageContextConstants.Features.THEMES;
     }
 
     @Override
     public void onStart() {
         if (DEBUG) Slog.d(TAG, "service started");
-        publishBinderService(CMContextConstants.CM_THEME_SERVICE, new BinderService());
+        publishBinderService(LineageContextConstants.LINEAGE_THEME_SERVICE, new BinderService());
     }
 
     @Override

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.cyanogenmod.platform.internal;
+package org.lineageos.platform.internal;
 
 import android.annotation.NonNull;
 import android.content.ComponentName;
@@ -23,21 +23,21 @@ import android.graphics.Bitmap;
 import android.os.IBinder;
 import android.os.RemoteException;
 
-import cyanogenmod.app.CMContextConstants;
+import lineageos.app.LineageContextConstants;
 
-import org.cyanogenmod.internal.themes.IIconCacheManager;
-import org.cyanogenmod.platform.internal.common.BrokeredServiceConnection;
+import org.lineageos.internal.themes.IIconCacheManager;
+import org.lineageos.platform.internal.common.BrokeredServiceConnection;
 
 /**
  * Icon cache service broker for connecting clients to a backing icon cache manager service.
  *
  * @hide
  */
-public class IconCacheManagerServiceBroker extends BrokerableCMSystemService<IIconCacheManager> {
+public class IconCacheManagerServiceBroker extends BrokerableLineageSystemService<IIconCacheManager> {
 
     private static final ComponentName SERVICE_COMPONENT =
-            new ComponentName("org.cyanogenmod.themeservice",
-                    "org.cyanogenmod.themeservice.IconCacheManagerService");
+            new ComponentName("org.lineageos.themeservice",
+                    "org.lineageos.themeservice.IconCacheManagerService");
 
     private final IIconCacheManager mServiceStubForFailure = new IIconCacheManager.Stub() {
         @Override
@@ -70,7 +70,7 @@ public class IconCacheManagerServiceBroker extends BrokerableCMSystemService<IIc
 
     @Override
     public String getFeatureDeclaration() {
-        return CMContextConstants.Features.THEMES;
+        return LineageContextConstants.Features.THEMES;
     }
 
     @Override
@@ -90,11 +90,11 @@ public class IconCacheManagerServiceBroker extends BrokerableCMSystemService<IIc
 
     @Override
     public void onStart() {
-        publishBinderService(CMContextConstants.CM_ICON_CACHE_SERVICE, new BinderService());
+        publishBinderService(LineageContextConstants.LINEAGE_ICON_CACHE_SERVICE, new BinderService());
     }
 
     @Override
     protected String getComponentFilteringPermission() {
-        return cyanogenmod.platform.Manifest.permission.ACCESS_THEME_MANAGER;
+        return lineageos.platform.Manifest.permission.ACCESS_THEME_MANAGER;
     }
 }
