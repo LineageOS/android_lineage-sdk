@@ -39,6 +39,7 @@ LOCAL_MODULE := org.lineageos.platform
 LOCAL_MODULE_TAGS := optional
 
 lineage_sdk_LOCAL_JAVA_LIBRARIES := \
+    android-support-annotations \
     android-support-v7-preference \
     android-support-v7-recyclerview \
     android-support-v14-preference
@@ -157,6 +158,9 @@ lineage_sdk_exclude_files := 'lineageos/library'
 LOCAL_JAR_EXCLUDE_PACKAGES := $(lineage_sdk_exclude_files)
 LOCAL_JAR_EXCLUDE_FILES := none
 
+LOCAL_JAVA_LIBRARIES := \
+    $(lineage_sdk_LOCAL_JAVA_LIBRARIES)
+
 LOCAL_STATIC_JAVA_LIBRARIES := org.lineageos.platform.sdk
 
 include $(BUILD_STATIC_JAVA_LIBRARY)
@@ -203,7 +207,9 @@ lineage_platform_docs_src_files := \
     $(call all-html-files-under, $(lineage_sdk_src))
 
 lineage_platform_docs_java_libraries := \
-    org.lineageos.platform.sdk
+    android-support-v4 \
+    org.lineageos.platform.sdk \
+    $(lineage_sdk_LOCAL_JAVA_LIBRARIES)
 
 # SDK version as defined
 lineage_platform_docs_SDK_VERSION := 15.1
@@ -216,7 +222,8 @@ lineage_platform_docs_LOCAL_MODULE_CLASS := JAVA_LIBRARIES
 lineage_platform_docs_LOCAL_DROIDDOC_SOURCE_PATH := \
     $(lineage_platform_docs_src_files)
 
-intermediates.COMMON := $(call intermediates-dir-for,$(LOCAL_MODULE_CLASS),org.lineageos.platform.sdk,,COMMON)
+lineage_platform_docs_LOCAL_ADDITIONAL_JAVA_DIR := \
+    $(call intermediates-dir-for,JAVA_LIBRARIES,org.lineageos.platform.sdk,,COMMON)
 
 # ====  the api stubs and current.xml ===========================
 include $(CLEAR_VARS)
@@ -227,7 +234,7 @@ LOCAL_INTERMEDIATE_SOURCES:= $(lineage_platform_LOCAL_INTERMEDIATE_SOURCES)
 LOCAL_JAVA_LIBRARIES:= $(lineage_platform_docs_java_libraries)
 LOCAL_MODULE_CLASS:= $(lineage_platform_docs_LOCAL_MODULE_CLASS)
 LOCAL_DROIDDOC_SOURCE_PATH:= $(lineage_platform_docs_LOCAL_DROIDDOC_SOURCE_PATH)
-LOCAL_ADDITIONAL_JAVA_DIR:= $(intermediates.COMMON)/src
+LOCAL_ADDITIONAL_JAVA_DIR:= $(lineage_platform_docs_LOCAL_ADDITIONAL_JAVA_DIR)
 LOCAL_ADDITIONAL_DEPENDENCIES:= $(lineage_platform_docs_LOCAL_ADDITIONAL_DEPENDENCIES)
 
 LOCAL_MODULE := lineage-api-stubs
@@ -264,7 +271,7 @@ LOCAL_MODULE_CLASS := JAVA_LIBRARIES
 LOCAL_MODULE_TAGS := optional
 
 LOCAL_SRC_FILES := $(lineage_platform_docs_src_files)
-LOCAL_ADDITONAL_JAVA_DIR := $(intermediates.COMMON)/src
+LOCAL_ADDITONAL_JAVA_DIR := $(lineage_platform_docs_LOCAL_ADDITIONAL_JAVA_DIR)
 
 LOCAL_IS_HOST_MODULE := false
 LOCAL_DROIDDOC_CUSTOM_TEMPLATE_DIR := vendor/lineage/build/tools/droiddoc/templates-lineage-sdk
@@ -301,4 +308,4 @@ include $(call first-makefiles-under,$(LOCAL_PATH))
 # ===========================================================
 lineage_platform_docs_src_files :=
 lineage_platform_docs_java_libraries :=
-intermediates.COMMON :=
+lineage_platform_docs_LOCAL_ADDITIONAL_JAVA_DIR :=
