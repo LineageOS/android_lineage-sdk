@@ -43,6 +43,8 @@ lineagesdk_LOCAL_JAVA_LIBRARIES := \
     android-support-v7-recyclerview \
     android-support-v14-preference
 
+lineageplat_docs_LOCAL_ADDITIONAL_DEPENDENCIES := $(lineagesdk_LOCAL_JAVA_LIBRARIES)
+
 LOCAL_JAVA_LIBRARIES := \
     services \
     org.lineageos.hardware \
@@ -229,7 +231,7 @@ include $(CLEAR_VARS)
 LOCAL_SRC_FILES:= \
     $(lineageplat_docs_src_files)
 LOCAL_INTERMEDIATE_SOURCES:= $(lineageplat_LOCAL_INTERMEDIATE_SOURCES)
-LOCAL_JAVA_LIBRARIES:= $(lineageplat_docs_java_libraries)
+LOCAL_JAVA_LIBRARIES:= $(lineageplat_docs_java_libraries) $(lineagesdk_LOCAL_JAVA_LIBRARIES) android-support-annotations android-support-v4
 LOCAL_MODULE_CLASS:= $(lineageplat_docs_LOCAL_MODULE_CLASS)
 LOCAL_DROIDDOC_SOURCE_PATH:= $(lineageplat_docs_LOCAL_DROIDDOC_SOURCE_PATH)
 LOCAL_ADDITIONAL_JAVA_DIR:= $(intermediates.COMMON)/src
@@ -237,7 +239,7 @@ LOCAL_ADDITIONAL_DEPENDENCIES:= $(lineageplat_docs_LOCAL_ADDITIONAL_DEPENDENCIES
 
 LOCAL_MODULE := lineage-api-stubs
 
-LOCAL_DROIDDOC_CUSTOM_TEMPLATE_DIR:= build/tools/droiddoc/templates-sdk
+LOCAL_DROIDDOC_CUSTOM_TEMPLATE_DIR:= external/doclava/res/assets/templates-sdk
 
 LOCAL_DROIDDOC_OPTIONS:= \
         -stubs $(TARGET_OUT_COMMON_INTERMEDIATES)/JAVA_LIBRARIES/lineagesdk_stubs_current_intermediates/src \
@@ -273,7 +275,8 @@ LOCAL_IS_HOST_MODULE := false
 LOCAL_DROIDDOC_CUSTOM_TEMPLATE_DIR := vendor/lineage/build/tools/droiddoc/templates-lineagesdk
 LOCAL_ADDITIONAL_DEPENDENCIES := \
     services \
-    org.lineageos.hardware
+    org.lineageos.hardware \
+    $(lineagesdk_LOCAL_JAVA_LIBRARIES)
 
 LOCAL_JAVA_LIBRARIES := $(lineageplat_docs_java_libraries)
 
