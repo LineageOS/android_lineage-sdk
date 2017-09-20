@@ -221,6 +221,9 @@ lineage_platform_docs_LOCAL_MODULE_CLASS := JAVA_LIBRARIES
 lineage_platform_docs_LOCAL_DROIDDOC_SOURCE_PATH := \
     $(lineage_platform_docs_src_files)
 
+lineage_platform_docs_LOCAL_ADDITIONAL_DEPENDENCIES := \
+    $(lineage_sdk_LOCAL_JAVA_LIBRARIES)
+
 intermediates.COMMON := $(call intermediates-dir-for,$(LOCAL_MODULE_CLASS),org.lineageos.platform.sdk,,COMMON)
 
 # ====  the api stubs and current.xml ===========================
@@ -229,7 +232,7 @@ include $(CLEAR_VARS)
 LOCAL_SRC_FILES:= \
     $(lineage_platform_docs_src_files)
 LOCAL_INTERMEDIATE_SOURCES:= $(lineage_platform_LOCAL_INTERMEDIATE_SOURCES)
-LOCAL_JAVA_LIBRARIES:= $(lineage_platform_docs_java_libraries)
+LOCAL_JAVA_LIBRARIES:= $(lineage_platform_docs_java_libraries) android-support-annotations android-support-v4
 LOCAL_MODULE_CLASS:= $(lineage_platform_docs_LOCAL_MODULE_CLASS)
 LOCAL_DROIDDOC_SOURCE_PATH:= $(lineage_platform_docs_LOCAL_DROIDDOC_SOURCE_PATH)
 LOCAL_ADDITIONAL_JAVA_DIR:= $(intermediates.COMMON)/src
@@ -237,7 +240,7 @@ LOCAL_ADDITIONAL_DEPENDENCIES:= $(lineage_platform_docs_LOCAL_ADDITIONAL_DEPENDE
 
 LOCAL_MODULE := lineage-api-stubs
 
-LOCAL_DROIDDOC_CUSTOM_TEMPLATE_DIR:= build/tools/droiddoc/templates-sdk
+LOCAL_DROIDDOC_CUSTOM_TEMPLATE_DIR:= external/doclava/res/assets/templates-sdk
 
 LOCAL_DROIDDOC_OPTIONS:= \
         -stubs $(TARGET_OUT_COMMON_INTERMEDIATES)/JAVA_LIBRARIES/lineage-sdk_stubs_current_intermediates/src \
@@ -273,7 +276,8 @@ LOCAL_IS_HOST_MODULE := false
 LOCAL_DROIDDOC_CUSTOM_TEMPLATE_DIR := vendor/lineage/build/tools/droiddoc/templates-lineage-sdk
 LOCAL_ADDITIONAL_DEPENDENCIES := \
     services \
-    org.lineageos.hardware
+    org.lineageos.hardware \
+    $(lineage_sdk_LOCAL_JAVA_LIBRARIES)
 
 LOCAL_JAVA_LIBRARIES := $(lineage_platform_docs_java_libraries)
 
