@@ -125,6 +125,7 @@
     <!-- About device info screen -->
     <java-symbol type="string" name="build_date" />
     <java-symbol type="string" name="lineage_api_level" />
+    <java-symbol type="string" name="lineage_updates" />
     <java-symbol type="string" name="lineage_version" />
 
     <!-- General purpose use "unknown" string -->

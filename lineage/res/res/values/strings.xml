@@ -203,6 +203,8 @@
     <string name="build_date">Build date</string>
     <!-- About device screen, LineageOS API Level -->
     <string name="lineage_api_level">LineageOS API level</string>
+    <!-- About device screen, LineageOS updates -->
+    <string name="lineage_updates">LineageOS updates</string>
     <!-- About device screen, LineageOS version -->
     <string name="lineage_version">LineageOS version</string>
 
