@@ -208,8 +208,8 @@ public class LineageTelephonyManagerService extends LineageSystemService {
         boolean validSubscriptionId = SubscriptionManager.isValidSubscriptionId(subId);
 
         if (validSubscriptionId) {
-            int simState = SubscriptionManager.getSimStateForSlotIdx(
-                    SubscriptionManager.getSlotId(subId));
+            int simState = SubscriptionManager.getSimStateForSlotIndex(
+                    SubscriptionManager.getSlotIndex(subId));
             switch (simState) {
                 case TelephonyManager.SIM_STATE_ABSENT:
                 case TelephonyManager.SIM_STATE_CARD_IO_ERROR:
