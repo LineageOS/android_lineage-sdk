@@ -31,12 +31,14 @@ import android.os.IBinder;
 import android.os.Looper;
 import android.os.Message;
 import android.os.PowerManagerInternal;
+import android.os.PowerSaveState;
 import android.os.Process;
 import android.os.RemoteException;
 import android.util.ArrayMap;
 import android.util.Slog;
 
 import com.android.server.ServiceThread;
+import com.android.server.power.BatterySaverPolicy.ServiceType;
 
 import java.io.FileDescriptor;
 import java.io.PrintWriter;
@@ -117,6 +119,10 @@ public class PerformanceManagerService extends LineageSystemService {
     // Events on the handler
     private static final int MSG_CPU_BOOST    = 1;
     private static final int MSG_SET_PROFILE  = 2;
+
+    // PowerManager ServiceType to use when we're only
+    // interested in gleaning global battery saver state.
+    private static final int SERVICE_TYPE_DUMMY = ServiceType.GPS;
 
     public PerformanceManagerService(Context context) {
         super(context);
@@ -562,7 +568,8 @@ public class PerformanceManagerService extends LineageSystemService {
             PowerManagerInternal.LowPowerModeListener() {
 
                 @Override
-                public void onLowPowerModeChanged(boolean enabled) {
+                public void onLowPowerModeChanged(PowerSaveState state) {
+                    final boolean enabled = state.globalBatterySaverEnabled;
                     synchronized (mLock) {
                         if (enabled == mLowPowerModeEnabled) {
                             return;
@@ -573,6 +580,11 @@ public class PerformanceManagerService extends LineageSystemService {
                         mLowPowerModeEnabled = enabled;
                         applyAppProfileLocked();
                     }
+                }
+
+                @Override
+                public int getServiceType() {
+                    return SERVICE_TYPE_DUMMY;
                 }
             };
 
