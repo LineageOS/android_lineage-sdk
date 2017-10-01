@@ -31,6 +31,7 @@ import android.os.Binder;
 import android.os.Handler;
 import android.os.IBinder;
 import android.os.PowerManagerInternal;
+import android.os.PowerSaveState;
 import android.os.Process;
 import android.os.UserHandle;
 import android.view.Display;
@@ -38,6 +39,7 @@ import android.view.Display;
 import com.android.internal.util.ArrayUtils;
 import com.android.server.LocalServices;
 import com.android.server.ServiceThread;
+import com.android.server.power.BatterySaverPolicy.ServiceType;
 
 import org.lineageos.internal.util.QSConstants;
 import org.lineageos.internal.util.QSUtils;
@@ -116,6 +118,10 @@ public class LiveDisplayService extends LineageSystemService {
     static int DISPLAY_CHANGED = 2;
     static int TWILIGHT_CHANGED = 4;
     static int ALL_CHANGED = 255;
+
+    // PowerManager ServiceType to use when we're only
+    // interested in gleaning global battery saver state.
+    private static final int SERVICE_TYPE_DUMMY = ServiceType.GPS;
 
     static class State {
         public boolean mLowPowerMode = false;
@@ -213,7 +219,9 @@ public class LiveDisplayService extends LineageSystemService {
 
             PowerManagerInternal pmi = LocalServices.getService(PowerManagerInternal.class);
             pmi.registerLowPowerModeObserver(mLowPowerModeListener);
-            mState.mLowPowerMode = pmi.getLowPowerModeEnabled();
+            // ServiceType does not matter when retrieving global saver mode.
+            mState.mLowPowerMode =
+                    pmi.getLowPowerState(SERVICE_TYPE_DUMMY).globalBatterySaverEnabled;
 
             mTwilightTracker.registerListener(mTwilightListener, mHandler);
             mState.mTwilight = mTwilightTracker.getCurrentState();
@@ -530,11 +538,17 @@ public class LiveDisplayService extends LineageSystemService {
     private PowerManagerInternal.LowPowerModeListener mLowPowerModeListener =
             new PowerManagerInternal.LowPowerModeListener() {
         @Override
-        public void onLowPowerModeChanged(boolean lowPowerMode) {
+        public void onLowPowerModeChanged(PowerSaveState state) {
+            final boolean lowPowerMode = state.globalBatterySaverEnabled;
             if (lowPowerMode != mState.mLowPowerMode) {
                 mState.mLowPowerMode = lowPowerMode;
                 updateFeatures(MODE_CHANGED);
             }
+         }
+
+         @Override
+         public int getServiceType() {
+             return SERVICE_TYPE_DUMMY;
          }
     };
 
