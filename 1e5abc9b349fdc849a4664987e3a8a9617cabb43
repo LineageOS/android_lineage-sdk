@@ -16,6 +16,24 @@
       "revId": "1e5abc9b349fdc849a4664987e3a8a9617cabb43",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "abd8d02e_c59a9f1d",
+        "filename": "packages/LineageSettingsProvider/AndroidManifest.xml",
+        "patchSetId": 8
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2017-10-04T08:34:49Z",
+      "side": 1,
+      "message": "And it should be LineageSettings, as it appears in line 21.",
+      "parentUuid": "c44e0ed1_3aebbf20",
+      "revId": "1e5abc9b349fdc849a4664987e3a8a9617cabb43",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
     }
   ]
 }
