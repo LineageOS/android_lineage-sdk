@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "c44e0ed1_3aebbf20",
+        "filename": "packages/LineageSettingsProvider/AndroidManifest.xml",
+        "patchSetId": 8
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 7880
+      },
+      "writtenOn": "2017-10-04T08:30:06Z",
+      "side": 1,
+      "message": "This change should be in the change for step 2 of the rebrand: https://review.lineageos.org/c/190471/",
+      "revId": "1e5abc9b349fdc849a4664987e3a8a9617cabb43",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    }
+  ]
+}
