@@ -34,6 +34,24 @@
       "revId": "1e5abc9b349fdc849a4664987e3a8a9617cabb43",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "7db9c271_63d2072a",
+        "filename": "packages/LineageSettingsProvider/AndroidManifest.xml",
+        "patchSetId": 8
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 3075
+      },
+      "writtenOn": "2017-10-04T16:11:15Z",
+      "side": 1,
+      "message": "Good call, will do",
+      "parentUuid": "abd8d02e_c59a9f1d",
+      "revId": "1e5abc9b349fdc849a4664987e3a8a9617cabb43",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
     }
   ]
 }
