@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "b453a42a_c3d858ef",
+        "filename": "packages/LineageSettingsProvider/src/org/lineageos/lineagesettings/LineageSettingsProvider.java",
+        "patchSetId": 5
+      },
+      "lineNbr": 289,
+      "author": {
+        "id": 7880
+      },
+      "writtenOn": "2017-10-04T09:05:38Z",
+      "side": 1,
+      "message": "It\u0027s probably a good idea to add a doc comment here. Something like (based on the original commit):\n       /**\n         * Get a delimited string returned as a list\n         * @param s to convert to a list\n         * @param delimiter to split the list with\n         * @return list of strings for a specific string\n         * @hide\n         */",
+      "revId": "3cdaacdb789dbbaf24583349261e54398c9963c9",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    }
+  ]
+}
