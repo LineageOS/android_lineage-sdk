@@ -52,6 +52,24 @@
       "revId": "1e5abc9b349fdc849a4664987e3a8a9617cabb43",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "1219af91_7ebf1996",
+        "filename": "packages/LineageSettingsProvider/AndroidManifest.xml",
+        "patchSetId": 8
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 3075
+      },
+      "writtenOn": "2017-10-06T02:20:25Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7db9c271_63d2072a",
+      "revId": "1e5abc9b349fdc849a4664987e3a8a9617cabb43",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
     }
   ]
 }
