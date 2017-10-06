@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3be3224c_a1abfd92",
+        "filename": "lineage/lib/main/java/org/lineageos/platform/internal/ProfileManagerService.java",
+        "patchSetId": 7
+      },
+      "lineNbr": 75,
+      "author": {
+        "id": 2936
+      },
+      "writtenOn": "2017-10-06T04:19:52Z",
+      "side": 1,
+      "message": "Missed this instance.",
+      "range": {
+        "startLine": 75,
+        "startChar": 39,
+        "endLine": 75,
+        "endChar": 55
+      },
+      "revId": "6e841dc77c360ac51bc17f9598ec359f39afcfaf",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
