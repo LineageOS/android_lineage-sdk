@@ -16,6 +16,24 @@
       "revId": "fb25b20b364bb8281bfe2daff9de93eaecf79203",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "3e333178_088eaad9",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 9
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 3075
+      },
+      "writtenOn": "2017-10-06T22:12:40Z",
+      "side": 1,
+      "message": "Agreed.  The \"internal\" comes from that being where I originally tried placing it ;-)\n\nI\u0027ll look at this whole commit again (which is why I\u0027ve not so far put my own +1 on it).",
+      "parentUuid": "a35f6168_e333ae0c",
+      "revId": "fb25b20b364bb8281bfe2daff9de93eaecf79203",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
     }
   ]
 }
