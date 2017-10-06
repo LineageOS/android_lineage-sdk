@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "a35f6168_e333ae0c",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 9
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 7880
+      },
+      "writtenOn": "2017-10-06T22:09:28Z",
+      "side": 1,
+      "message": "If these aren\u0027t going into the internal SDK, \"lineage platform internal\" is probably wrong. Simply \"sdk\" or something else sounds fine.",
+      "revId": "fb25b20b364bb8281bfe2daff9de93eaecf79203",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    }
+  ]
+}
