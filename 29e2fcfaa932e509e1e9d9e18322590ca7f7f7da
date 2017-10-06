@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "7a77e4fa_35578186",
+        "filename": "lineage/lib/main/java/org/lineageos/platform/internal/PerformanceManagerService.java",
+        "patchSetId": 5
+      },
+      "lineNbr": 580,
+      "author": {
+        "id": 3075
+      },
+      "writtenOn": "2017-10-06T16:43:36Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "a16b3a30_5c6ef513",
+      "revId": "29e2fcfaa932e509e1e9d9e18322590ca7f7f7da",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6f13e5d3_31f9ecdd",
         "filename": "lineage/lib/main/java/org/lineageos/platform/internal/PerformanceManagerService.java",
         "patchSetId": 5
@@ -30,6 +48,30 @@
       "writtenOn": "2017-10-06T15:42:21Z",
       "side": 1,
       "message": "Maybe define an int constant int SERVICE_TYPE_DUMMY \u003d ServiceType.GPS; for readability?",
+      "range": {
+        "startLine": 583,
+        "startChar": 39,
+        "endLine": 583,
+        "endChar": 42
+      },
+      "revId": "29e2fcfaa932e509e1e9d9e18322590ca7f7f7da",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "547c25da_07d4cc31",
+        "filename": "lineage/lib/main/java/org/lineageos/platform/internal/PerformanceManagerService.java",
+        "patchSetId": 5
+      },
+      "lineNbr": 583,
+      "author": {
+        "id": 3075
+      },
+      "writtenOn": "2017-10-06T16:43:36Z",
+      "side": 1,
+      "message": "Nice idea.  Done.",
+      "parentUuid": "6f13e5d3_31f9ecdd",
       "range": {
         "startLine": 583,
         "startChar": 39,
