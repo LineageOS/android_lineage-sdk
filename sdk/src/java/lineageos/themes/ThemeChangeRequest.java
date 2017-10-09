@@ -16,6 +16,7 @@
 package lineageos.themes;
 
 //import android.content.pm.ThemeUtils;
+/*
 import android.content.res.ThemeConfig;
 import android.os.Parcel;
 import android.os.Parcelable;
@@ -97,6 +98,7 @@ public final class ThemeChangeRequest implements Parcelable {
      * Get the mapping for per app themes
      * @return A mapping of apps and the theme to apply for each one. or null if none set.
      */
+    /*
     public final Map<String, String> getPerAppOverlays() {
         return Collections.unmodifiableMap(mPerAppOverlays);
     }
@@ -318,7 +320,9 @@ public final class ThemeChangeRequest implements Parcelable {
                     this.setAppOverlay(appPkgName, themes.get(appPkgName).getOverlayPkgName());
                 }
                 */
+                /*
             }
         }
     }
 }
+*/

@@ -21,6 +21,7 @@ import android.app.NotificationManager;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
+/*
 import android.content.res.ThemeConfig;
 import android.os.RemoteException;
 import android.os.ServiceManager;
@@ -85,6 +86,7 @@ public class AppsFailureReceiver extends BroadcastReceiver {
                         postThemeResetNotification(context);
                     } catch (RemoteException e) {
                         /* ignore */
+                    /*
                     }
                 }
             }
@@ -99,6 +101,7 @@ public class AppsFailureReceiver extends BroadcastReceiver {
      * Posts a notification to let the user know their theme was reset
      * @param context
      */
+    /*
     private void postThemeResetNotification(Context context) {
         NotificationManager nm =
                 (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
@@ -118,3 +121,4 @@ public class AppsFailureReceiver extends BroadcastReceiver {
         nm.notify(R.string.theme_reset_notification_title, notice);
     }
 }
+*/

@@ -25,6 +25,7 @@ import android.os.ServiceManager;
 import android.util.ArraySet;
 import android.util.Log;
 
+/*
 import lineageos.app.LineageContextConstants;
 import lineageos.themes.ThemeChangeRequest.RequestType;
 
@@ -38,6 +39,7 @@ import java.util.Set;
  * Manages changing and applying of themes.
  * <p>Get an instance of this class by calling blah blah blah</p>
  */
+/*
 public class ThemeManager {
     private static final String TAG = ThemeManager.class.getName();
     private static IThemeService sService;
@@ -68,6 +70,7 @@ public class ThemeManager {
     }
 
     /** @hide */
+    /*
     public static IThemeService getService() {
         if (sService != null) {
             return sService;
@@ -164,6 +167,7 @@ public class ThemeManager {
     /**
      * @deprecated Use {@link ThemeManager#registerThemeChangeListener(ThemeChangeListener)} instead
      */
+    /*
     @Deprecated
     public void addClient(ThemeChangeListener listener) {
         registerThemeChangeListener(listener);
@@ -173,6 +177,7 @@ public class ThemeManager {
      * @deprecated Use {@link ThemeManager#unregisterThemeChangeListener(ThemeChangeListener)}
      * instead
      */
+    /*
     @Deprecated
     public void removeClient(ThemeChangeListener listener) {
         unregisterThemeChangeListener(listener);
@@ -182,6 +187,7 @@ public class ThemeManager {
      * @deprecated Use {@link ThemeManager#unregisterThemeChangeListener(ThemeChangeListener)}
      * instead
      */
+    /*
     @Deprecated
     public void onClientPaused(ThemeChangeListener listener) {
         unregisterThemeChangeListener(listener);
@@ -190,6 +196,7 @@ public class ThemeManager {
     /**
      * @deprecated Use {@link ThemeManager#registerThemeChangeListener(ThemeChangeListener)} instead
      */
+    /*
     @Deprecated
     public void onClientResumed(ThemeChangeListener listener) {
         registerThemeChangeListener(listener);
@@ -199,6 +206,7 @@ public class ThemeManager {
      * @deprecated Use {@link ThemeManager#unregisterThemeChangeListener(ThemeChangeListener)}
      * instead
      */
+    /*
     @Deprecated
     public void onClientDestroyed(ThemeChangeListener listener) {
         unregisterThemeChangeListener(listener);
@@ -208,6 +216,7 @@ public class ThemeManager {
      * Register a {@link ThemeChangeListener} to be notified when a theme is done being processed.
      * @param listener {@link ThemeChangeListener} to register
      */
+    /*
     public void registerThemeChangeListener(ThemeChangeListener listener) {
         synchronized (mChangeListeners) {
             if (mChangeListeners.contains(listener)) {
@@ -228,6 +237,7 @@ public class ThemeManager {
      * Unregister a {@link ThemeChangeListener}
      * @param listener {@link ThemeChangeListener} to unregister
      */
+    /*
     public void unregisterThemeChangeListener(ThemeChangeListener listener) {
         synchronized (mChangeListeners) {
             mChangeListeners.remove(listener);
@@ -246,6 +256,7 @@ public class ThemeManager {
      * processed.
      * @param listener {@link ThemeProcessingListener} to register
      */
+    /*
     public void registerProcessingListener(ThemeProcessingListener listener) {
         synchronized (mProcessingListeners) {
             if (mProcessingListeners.contains(listener)) {
@@ -266,6 +277,7 @@ public class ThemeManager {
      * Unregister a {@link ThemeProcessingListener}.
      * @param listener {@link ThemeProcessingListener} to unregister
      */
+    /*
     public void unregisterProcessingListener(ThemeProcessingListener listener) {
         synchronized (mProcessingListeners) {
             mProcessingListeners.remove(listener);
@@ -394,3 +406,4 @@ public class ThemeManager {
     }
 }
 
+*/

@@ -16,6 +16,7 @@
 
 package lineageos.themes;
 
+/*
 import lineageos.themes.IThemeChangeListener;
 import lineageos.themes.IThemeProcessingListener;
 import lineageos.themes.ThemeChangeRequest;
@@ -24,6 +25,7 @@ import java.util.Map;
 
 /** {@hide} */
 interface IThemeService {
+    /*
     oneway void requestThemeChangeUpdates(in IThemeChangeListener listener);
     oneway void removeUpdates(in IThemeChangeListener listener);
 
@@ -41,4 +43,5 @@ interface IThemeService {
 
     long getLastThemeChangeTime();
     int getLastThemeChangeRequestType();
+    */
 }

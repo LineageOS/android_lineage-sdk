@@ -30,6 +30,7 @@ import android.system.StructStat;
 import android.util.Log;
 import android.util.Slog;
 
+/*
 import lineageos.app.LineageContextConstants;
 import lineageos.platform.Manifest;
 import lineageos.themes.IThemeChangeListener;
@@ -49,6 +50,7 @@ import static lineageos.platform.Manifest.permission.ACCESS_THEME_MANAGER;
  *
  * @hide
  */
+/*
 public class ThemeManagerServiceBroker extends BrokerableLineageSystemService<IThemeService> {
     private static final String TAG = ThemeManagerServiceBroker.class.getSimpleName();
     private static final boolean DEBUG = false;
@@ -289,6 +291,7 @@ public class ThemeManagerServiceBroker extends BrokerableLineageSystemService<IT
                 }
             } catch (RemoteException e) {
                     /* ignore */
+                    /*
             } finally {
                 mChangeListeners.finishBroadcast();
             }
@@ -303,6 +306,7 @@ public class ThemeManagerServiceBroker extends BrokerableLineageSystemService<IT
                 }
             } catch (RemoteException e) {
                     /* ignore */
+                    /*
             } finally {
                 mProcessingListeners.finishBroadcast();
             }
@@ -320,6 +324,7 @@ public class ThemeManagerServiceBroker extends BrokerableLineageSystemService<IT
     /**
      * @return True if {@link ThemeUtils#SYSTEM_THEME_ALARM_PATH} is not writable by other users
      */
+    /*
     private boolean shouldMigrateFilePermissions() {
         return isUserWritable(ThemeUtils.SYSTEM_THEME_ALARM_PATH);
     }
@@ -329,6 +334,7 @@ public class ThemeManagerServiceBroker extends BrokerableLineageSystemService<IT
      * brokered service to write theme data files.  SELinux policies will not allow random third
      * party apps to write to this location.
      */
+    /*
     private void migrateFilePermissions() {
         File[] files = new File(ThemeUtils.SYSTEM_THEME_PATH).listFiles();
         for (File file : files) {
@@ -370,3 +376,4 @@ public class ThemeManagerServiceBroker extends BrokerableLineageSystemService<IT
         return false;
     }
 }
+*/

@@ -25,6 +25,7 @@ import android.content.IntentFilter;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.PackageParser;
+/*
 import android.content.res.AssetManager;
 import android.content.res.ThemeConfig;
 import android.database.Cursor;
@@ -67,6 +68,7 @@ import static android.content.res.ThemeConfig.SYSTEM_DEFAULT;
 /**
  * @hide
  */
+/*
 public class ThemeUtils {
     private static final String TAG = ThemeUtils.class.getSimpleName();
 
@@ -127,9 +129,11 @@ public class ThemeUtils {
     public static final int SYSTEM_TARGET_API = 0;
 
     /* Path to cached theme resources */
+    /*
     public static final String RESOURCE_CACHE_DIR = "/data/resource-cache/";
 
     /* Path inside a theme APK to the overlay folder */
+    /*
     public static final String OVERLAY_PATH = "assets/overlays/";
     public static final String ICONS_PATH = "assets/icons/";
     public static final String COMMON_RES_PATH = "assets/overlays/common/";
@@ -163,6 +167,7 @@ public class ThemeUtils {
      * Returns a mutable list of all theme components
      * @return
      */
+    /*
     public static List<String> getAllComponents() {
         List<String> components = new ArrayList<>(SUPPORTED_THEME_COMPONENTS.size());
         components.addAll(SUPPORTED_THEME_COMPONENTS);
@@ -174,6 +179,7 @@ public class ThemeUtils {
      *  NOTE: This queries the themes content provider. If there isn't a provider installed
      *  or if it is too early in the boot process this method will not work.
      */
+    /*
     public static List<String> getSupportedComponents(Context context, String pkgName) {
         List<String> supportedComponents = new ArrayList<>();
 
@@ -204,6 +210,7 @@ public class ThemeUtils {
      * @param context
      * @return
      */
+    /*
     public static Map<String, String> getDefaultComponents(Context context) {
         String defaultThemePkg = getDefaultThemePackageName(context);
         List<String> defaultComponents = null;
@@ -232,6 +239,7 @@ public class ThemeUtils {
      * @param pkgName
      * @return
      */
+    /*
     public static String getIconPackDir(String pkgName) {
         return getOverlayResourceCacheDir(pkgName) + File.separator + "icons";
     }
@@ -269,6 +277,7 @@ public class ThemeUtils {
     /**
      * Create SYSTEM_THEME_PATH directory if it does not exist
      */
+    /*
     public static void createThemeDirIfNotExists() {
         createDirIfNotExists(SYSTEM_THEME_PATH);
     }
@@ -276,6 +285,7 @@ public class ThemeUtils {
     /**
      * Create SYSTEM_FONT_PATH directory if it does not exist
      */
+    /*
     public static void createFontDirIfNotExists() {
         createDirIfNotExists(SYSTEM_THEME_FONT_PATH);
     }
@@ -283,6 +293,7 @@ public class ThemeUtils {
     /**
      * Create SYSTEM_THEME_RINGTONE_PATH directory if it does not exist
      */
+    /*
     public static void createRingtoneDirIfNotExists() {
         createDirIfNotExists(SYSTEM_THEME_RINGTONE_PATH);
     }
@@ -290,6 +301,7 @@ public class ThemeUtils {
     /**
      * Create SYSTEM_THEME_NOTIFICATION_PATH directory if it does not exist
      */
+    /*
     public static void createNotificationDirIfNotExists() {
         createDirIfNotExists(SYSTEM_THEME_NOTIFICATION_PATH);
     }
@@ -297,6 +309,7 @@ public class ThemeUtils {
     /**
      * Create SYSTEM_THEME_ALARM_PATH directory if it does not exist
      */
+    /*
     public static void createAlarmDirIfNotExists() {
         createDirIfNotExists(SYSTEM_THEME_ALARM_PATH);
     }
@@ -304,6 +317,7 @@ public class ThemeUtils {
     /**
      * Create SYSTEM_THEME_ICON_CACHE_DIR directory if it does not exist
      */
+    /*
     public static void createIconCacheDirIfNotExists() {
         createDirIfNotExists(SYSTEM_THEME_ICON_CACHE_DIR);
     }
@@ -380,6 +394,7 @@ public class ThemeUtils {
      * @param themePkgName
      * @return Root resource cache path for the given theme
      */
+    /*
     public static String getOverlayResourceCacheDir(String themePkgName) {
         return RESOURCE_CACHE_DIR + themePkgName;
     }
@@ -390,6 +405,7 @@ public class ThemeUtils {
      * @param themePkg
      * @return Path to the resource cache for this target and theme
      */
+    /*
     public static String getTargetCacheDir(String targetPkgName, PackageInfo themePkg) {
         return getTargetCacheDir(targetPkgName, themePkg.packageName);
     }
@@ -407,6 +423,7 @@ public class ThemeUtils {
      * @param context Base context
      * @return Themed context
      */
+    /*
     public static Context createUiContext(final Context context) {
         try {
             Context uiContext = context.createPackageContext("com.android.systemui",
@@ -426,6 +443,7 @@ public class ThemeUtils {
      * @param dst Path to store the newly created bootanimation.zip
      * @throws IOException
      */
+    /*
     public static void copyAndScaleBootAnimation(Context context, InputStream input, String dst)
             throws IOException {
         final OutputStream os = new FileOutputStream(dst);
@@ -626,6 +644,7 @@ public class ThemeUtils {
      * @param component
      * @return
      */
+    /*
     public static boolean isPerAppThemeComponent(String component) {
         return !(DEFAULT_PKG.equals(component)
                 || ThemeConfig.SYSTEMUI_STATUS_BAR_PKG.equals(component)
@@ -639,6 +658,7 @@ public class ThemeUtils {
      * @param assets
      * @return
      */
+    /*
     private static String getFirstNonEmptyAsset(String[] assets) {
         if (assets == null) return null;
         String filename = null;
@@ -685,3 +705,4 @@ public class ThemeUtils {
         }
     }
 }
+*/

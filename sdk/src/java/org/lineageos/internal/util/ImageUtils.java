@@ -31,8 +31,10 @@ import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.InputStream;
 
+/*
 import lineageos.providers.ThemesContract.PreviewColumns;
 import lineageos.providers.ThemesContract.ThemesColumns;
+*/
 
 import libcore.io.IoUtils;
 
@@ -135,6 +137,7 @@ public class ImageUtils {
      *
      * @return a new InputStream of the cropped image/*"
      */
+    /*
     public static InputStream getCroppedKeyguardStream(String pkgName, Context context)
             throws IllegalArgumentException {
         if (TextUtils.isEmpty(pkgName)) {
@@ -180,6 +183,7 @@ public class ImageUtils {
      *
      * @return a new InputStream of the cropped image/*"
      */
+    /*
     public static InputStream getCroppedWallpaperStream(String pkgName, long wallpaperId,
             Context context) {
         if (TextUtils.isEmpty(pkgName)) {
@@ -328,5 +332,6 @@ public class ImageUtils {
         }
         return wpPath;
     }
+    */
 }
 
