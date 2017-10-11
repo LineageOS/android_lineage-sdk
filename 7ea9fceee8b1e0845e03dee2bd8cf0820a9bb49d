@@ -91,6 +91,30 @@
       "revId": "7ea9fceee8b1e0845e03dee2bd8cf0820a9bb49d",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "d6630319_b646ee3f",
+        "filename": "sdk/src/java/org/lineageos/internal/util/QSUtils.java",
+        "patchSetId": 16
+      },
+      "lineNbr": 244,
+      "author": {
+        "id": 3075
+      },
+      "writtenOn": "2017-10-11T22:18:14Z",
+      "side": 1,
+      "message": "Yep, looks like it.  I don\u0027t see deviceSupportsLte() referenced anywhere in frameworks, packages or cmsdk in cm-14.1.",
+      "parentUuid": "bc488719_c43971b3",
+      "range": {
+        "startLine": 244,
+        "startChar": 56,
+        "endLine": 244,
+        "endChar": 72
+      },
+      "revId": "7ea9fceee8b1e0845e03dee2bd8cf0820a9bb49d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
