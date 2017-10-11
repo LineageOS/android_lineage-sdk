@@ -1,0 +1,96 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4bc72db2_aa0f4b9d",
+        "filename": "lineage/lib/main/java/org/lineageos/platform/internal/PartnerInterfaceService.java",
+        "patchSetId": 16
+      },
+      "lineNbr": 274,
+      "author": {
+        "id": 848
+      },
+      "writtenOn": "2017-10-11T19:18:43Z",
+      "side": 1,
+      "message": "Was for cortana, entire class can die",
+      "range": {
+        "startLine": 274,
+        "startChar": 40,
+        "endLine": 274,
+        "endChar": 73
+      },
+      "revId": "7ea9fceee8b1e0845e03dee2bd8cf0820a9bb49d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "367e7ec9_a0774afe",
+        "filename": "sdk/src/java/org/lineageos/internal/util/LineageLockPatternUtils.java",
+        "patchSetId": 16
+      },
+      "lineNbr": 69,
+      "author": {
+        "id": 848
+      },
+      "writtenOn": "2017-10-11T19:18:43Z",
+      "side": 1,
+      "message": "Can be dropped, was used for LiveLockscreen implementation",
+      "range": {
+        "startLine": 69,
+        "startChar": 18,
+        "endLine": 69,
+        "endChar": 48
+      },
+      "revId": "7ea9fceee8b1e0845e03dee2bd8cf0820a9bb49d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a05ab7fe_f763980a",
+        "filename": "sdk/src/java/org/lineageos/internal/util/LineageLockPatternUtils.java",
+        "patchSetId": 16
+      },
+      "lineNbr": 109,
+      "author": {
+        "id": 848
+      },
+      "writtenOn": "2017-10-11T19:18:43Z",
+      "side": 1,
+      "message": "I believe this was only required to support Third_Party_Keyguard",
+      "range": {
+        "startLine": 109,
+        "startChar": 49,
+        "endLine": 109,
+        "endChar": 75
+      },
+      "revId": "7ea9fceee8b1e0845e03dee2bd8cf0820a9bb49d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "bc488719_c43971b3",
+        "filename": "sdk/src/java/org/lineageos/internal/util/QSUtils.java",
+        "patchSetId": 16
+      },
+      "lineNbr": 244,
+      "author": {
+        "id": 848
+      },
+      "writtenOn": "2017-10-11T19:18:43Z",
+      "side": 1,
+      "message": "Probably droppable",
+      "range": {
+        "startLine": 244,
+        "startChar": 56,
+        "endLine": 244,
+        "endChar": 72
+      },
+      "revId": "7ea9fceee8b1e0845e03dee2bd8cf0820a9bb49d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
