@@ -31,14 +31,6 @@ public class ApiV4PriorReleaseInterfaces {
         profilesMap.put("isEnabled", 20);
     }
 
-    //PartnerInterface Aidl (IPartnerInterface)
-    static {
-        Map<String, Integer> partnerMap = getInternalInterfaceMap("IPartnerInterface");
-        // APRICOT + BOYSENBERRY + CANTALOUPE to 6
-        // DRAGONFRUIT BEGIN
-        partnerMap.put("setZenModeWithDuration", 7);
-    }
-
     //LineageHardwareManager Aidl (ILineageHardwareService)
     static {
         Map<String, Integer> hardwareMap = getInternalInterfaceMap("ILineageHardwareService");

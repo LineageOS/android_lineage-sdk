@@ -40,13 +40,6 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".settings.LineagePartnerInterfaceTest"
-                  android:label="@string/settings_tests_activity_name">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-                <category android:name="android.intent.category.LAUNCHER"/>
-            </intent-filter>
-        </activity>
         <activity android:name=".alarmclock.LineageAlarmClockTest"
                   android:label="@string/alarm_tests_activity_name">
             <intent-filter>

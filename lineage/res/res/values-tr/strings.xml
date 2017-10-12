@@ -129,18 +129,6 @@
   <string name="permlab_perfAccess">performans yöneticisine erişim</string>
   <!-- Performance manager permission description -->
   <string name="permdesc_perfAccessDesc">Bir uygulamanın performans hizmetine erişimine izin verir. Normal uygulamalar için gerekli değildir.</string>
-  <!-- Access live lock screen manager service permission label -->
-  <string name="permlab_accessLiveLockScreenService">canlı kilit ekranı yöneticisi hizmetine erişme</string>
-  <!-- Access live lock screen manager service permission description -->
-  <string name="permdesc_accessLiveLockScreenService">Bir uygulamanın canlı kilit ekranı yöneticisi hizmetine erişmesine izin verir.</string>
-  <!-- Privileged access live lock screen manager service permission label -->
-  <string name="permlab_accessLiveLockScreenServicePrivate">canlı kilit ekranı yöneticisi hizmetine erişme</string>
-  <!-- Privileged access live lock screen manager service permission description -->
-  <string name="permdesc_accessLiveLockScreenServicePrivate">Sistem uygulamalarının, canlı kilit ekranı yönetici hizmetine erişimine izin verir.</string>
-  <!-- Live lock screen manager service provider permission label -->
-  <string name="permlab_accessLiveLockScreenServiceProvider">canlı kilit ekranı yönetici hizmeti sağlama</string>
-  <!-- Live lock screen manager service provider permission description -->
-  <string name="permdesc_accessLiveLockScreenServiceProvider">Bir hizmetin canlı kilit ekranı yönetici hizmeti sağlamasına izin verir.</string>
   <!-- Weather Service strings -->
   <string name="permlab_weather_read">hava durumunu oku</string>
   <string name="permdesc_weather_read">Bir uygulamanın hava durumu sağlayıcısından içerik okumasına izin verir.</string>

@@ -124,18 +124,6 @@
   <string name="permlab_perfAccess">الوصول إلى مدير الأداء</string>
   <!-- Performance manager permission description -->
   <string name="permdesc_perfAccessDesc">السماح للتطبيق بالوصول إلى خدمة الأداء. ينبغي ألا يكون ضرورياً للتطبيقات العادية.</string>
-  <!-- Access live lock screen manager service permission label -->
-  <string name="permlab_accessLiveLockScreenService">الوصول إلى خدمة مدير شاشة القفل المباشرة</string>
-  <!-- Access live lock screen manager service permission description -->
-  <string name="permdesc_accessLiveLockScreenService">يسمح لتطبيق معين بالوصول إلى خدمة مدير شاشة التأمين المباشرة.</string>
-  <!-- Privileged access live lock screen manager service permission label -->
-  <string name="permlab_accessLiveLockScreenServicePrivate">الوصول إلى خدمة مدير شاشة التأمين المباشرة</string>
-  <!-- Privileged access live lock screen manager service permission description -->
-  <string name="permdesc_accessLiveLockScreenServicePrivate">يسمح لتطبيقات النظام معين بالوصول إلى خدمة مدير شاشة التأمين المباشرة.</string>
-  <!-- Live lock screen manager service provider permission label -->
-  <string name="permlab_accessLiveLockScreenServiceProvider">توفير خدمة مدير شاشة التأمين المباشرة</string>
-  <!-- Live lock screen manager service provider permission description -->
-  <string name="permdesc_accessLiveLockScreenServiceProvider">يسمح لخدمة معينة لتوفير خدمة مدير شاشة التأمين المباشرة.</string>
   <!-- Weather Service strings -->
   <string name="permlab_weather_read">قراءة الطقس</string>
   <string name="permdesc_weather_read">يسمح لتطبيق معين بقراءة المحتوى من موفر الطقس.</string>

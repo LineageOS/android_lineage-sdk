@@ -129,18 +129,6 @@
   <string name="permlab_perfAccess">성능 관리자에 액세스</string>
   <!-- Performance manager permission description -->
   <string name="permdesc_perfAccessDesc">앱이 성능 서비스에 접근할 수 있도록 허용합니다. 일반 앱에서는 필요 없는 권한입니다.</string>
-  <!-- Access live lock screen manager service permission label -->
-  <string name="permlab_accessLiveLockScreenService">라이브 잠금 화면 관리자 서비스에 접근</string>
-  <!-- Access live lock screen manager service permission description -->
-  <string name="permdesc_accessLiveLockScreenService">앱이 라이브 잠금 화면 관리자 서비스에 접근할 수 있도록 허용합니다.</string>
-  <!-- Privileged access live lock screen manager service permission label -->
-  <string name="permlab_accessLiveLockScreenServicePrivate">라이브 잠금 화면 관리자 서비스에 접근</string>
-  <!-- Privileged access live lock screen manager service permission description -->
-  <string name="permdesc_accessLiveLockScreenServicePrivate">시스템 앱이 라이브 잠금 화면 관리자 서비스에 접근할 수 있도록 허용합니다.</string>
-  <!-- Live lock screen manager service provider permission label -->
-  <string name="permlab_accessLiveLockScreenServiceProvider">라이브 잠금 화면 관리자 서비스 제공</string>
-  <!-- Live lock screen manager service provider permission description -->
-  <string name="permdesc_accessLiveLockScreenServiceProvider">앱이 라이브 잠금 화면 관리자 서비스를 제공할 수 있도록 허용합니다.</string>
   <!-- Weather Service strings -->
   <string name="permlab_weather_read">날씨 확인</string>
   <string name="permdesc_weather_read">앱이 날씨 제공자로부터 날씨를 확인할 수 있도록 허용합니다.</string>

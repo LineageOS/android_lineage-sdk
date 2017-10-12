@@ -55,17 +55,6 @@ public final class LineageContextConstants {
 
     /**
      * Use with {@link android.content.Context#getSystemService} to retrieve a
-     * {@link lineageos.app.PartnerInterface} interact with system settings.
-     *
-     * @see android.content.Context#getSystemService
-     * @see lineageos.app.PartnerInterface
-     *
-     * @hide
-     */
-    public static final String LINEAGE_PARTNER_INTERFACE = "lineagepartnerinterface";
-
-    /**
-     * Use with {@link android.content.Context#getSystemService} to retrieve a
      * {@link lineageos.app.LineageTelephonyManager} to manage the phone and
      * data connection.
      *
@@ -106,11 +95,6 @@ public final class LineageContextConstants {
      * @hide
      */
     public static final String LINEAGE_ICON_CACHE_SERVICE = "lineageiconcache";
-
-    /**
-     * @hide
-     */
-    public static final String LINEAGE_LIVE_LOCK_SCREEN_SERVICE = "lineagelivelockscreen";
 
     /**
      * Use with {@link android.content.Context#getSystemService} to retrieve a
@@ -190,22 +174,6 @@ public final class LineageContextConstants {
          */
         @SdkConstant(SdkConstant.SdkConstantType.FEATURE)
         public static final String PERFORMANCE = "org.lineageos.performance";
-
-        /**
-         * Feature for {@link PackageManager#getSystemAvailableFeatures} and
-         * {@link PackageManager#hasSystemFeature}: The device includes the lineage partner service
-         * utilized by the lineage sdk.
-         */
-        @SdkConstant(SdkConstant.SdkConstantType.FEATURE)
-        public static final String PARTNER = "org.lineageos.partner";
-
-        /*
-         * Feature for {@link PackageManager#getSystemAvailableFeatures} and
-         * {@link PackageManager#hasSystemFeature}: The device includes the Live lock screen
-         * feature.
-         */
-        @SdkConstant(SdkConstant.SdkConstantType.FEATURE)
-        public static final String LIVE_LOCK_SCREEN = "org.lineageos.livelockscreen";
 
         /**
          * Feature for {@link PackageManager#getSystemAvailableFeatures} and

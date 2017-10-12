@@ -99,7 +99,6 @@ public class Build {
          * <li>Hardware Abstraction Framework Access via
          * {@link lineageos.hardware.LineageHardwareManager} (Not for use by 3rd parties)
          * <li>MSIM API via {@link lineageos.app.LineageTelephonyManager}
-         * <li>Interface for partners via {@link lineageos.app.PartnerInterface}
          * <li>Introductory Settings Provider {@link lineageos.providers.LineageSettings}
          * <li>AlarmClock API via {@link lineageos.alarmclock.LineageOSAlarmClock}
          * </ul>

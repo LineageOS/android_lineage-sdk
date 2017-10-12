@@ -129,18 +129,6 @@
   <string name="permlab_perfAccess">доступ до менеджера продуктивності</string>
   <!-- Performance manager permission description -->
   <string name="permdesc_perfAccessDesc">Дозволяє додатку отримувати доступ до менеджера продуктивності. Цей дозвіл не потрібний звичайним додаткам.</string>
-  <!-- Access live lock screen manager service permission label -->
-  <string name="permlab_accessLiveLockScreenService">доступ до сервісу живого екрану блокування</string>
-  <!-- Access live lock screen manager service permission description -->
-  <string name="permdesc_accessLiveLockScreenService">Надає додатку доступ до сервісу керування живим екраном блокування.</string>
-  <!-- Privileged access live lock screen manager service permission label -->
-  <string name="permlab_accessLiveLockScreenServicePrivate">доступ до сервісу живого екрану блокування</string>
-  <!-- Privileged access live lock screen manager service permission description -->
-  <string name="permdesc_accessLiveLockScreenServicePrivate">Надає системним додаткам доступ до сервісу керування живим екраном блокування.</string>
-  <!-- Live lock screen manager service provider permission label -->
-  <string name="permlab_accessLiveLockScreenServiceProvider">доступ до сервісу живого екрану блокування</string>
-  <!-- Live lock screen manager service provider permission description -->
-  <string name="permdesc_accessLiveLockScreenServiceProvider">Дозволяє додатку доступ до сервісу живого екрану блокування.</string>
   <!-- Weather Service strings -->
   <string name="permlab_weather_read">читати погоду</string>
   <string name="permdesc_weather_read">Дозволити додатку читати дані від провайдера погоди.</string>
