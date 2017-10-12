@@ -129,18 +129,6 @@
   <string name="permlab_perfAccess">Zugriff auf Leistungsmanager</string>
   <!-- Performance manager permission description -->
   <string name="permdesc_perfAccessDesc">Ermöglicht einer App den Zugriff auf den Leistungsdienst. Wird für normale Apps nicht benötigt.</string>
-  <!-- Access live lock screen manager service permission label -->
-  <string name="permlab_accessLiveLockScreenService">auf Verwaltungsdienst der animierten Bildschirmsperre zugreifen</string>
-  <!-- Access live lock screen manager service permission description -->
-  <string name="permdesc_accessLiveLockScreenService">Ermöglicht einer App, auf den Verwaltungdienst der animierten Bildschirmsperre zuzugreifen.</string>
-  <!-- Privileged access live lock screen manager service permission label -->
-  <string name="permlab_accessLiveLockScreenServicePrivate">auf Verwaltungsdienst der animierten Bildschirmsperre zugreifen</string>
-  <!-- Privileged access live lock screen manager service permission description -->
-  <string name="permdesc_accessLiveLockScreenServicePrivate">Ermöglicht System-Apps den Zugriff auf den Verwaltungsdienst der animierten Bildschirmsperre.</string>
-  <!-- Live lock screen manager service provider permission label -->
-  <string name="permlab_accessLiveLockScreenServiceProvider">Verwaltungsdienst für animierte Bildschirmsperre anbieten</string>
-  <!-- Live lock screen manager service provider permission description -->
-  <string name="permdesc_accessLiveLockScreenServiceProvider">Ermöglicht einer App, auf den Verwaltungsdienst der animierten Bildschirmsperre zuzugreifen.</string>
   <!-- Weather Service strings -->
   <string name="permlab_weather_read">Wetter auslesen</string>
   <string name="permdesc_weather_read">Ermöglicht einer App, Inhalte des Wetterdatenanbieters auszulesen.</string>

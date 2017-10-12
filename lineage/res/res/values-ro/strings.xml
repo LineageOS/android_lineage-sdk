@@ -129,18 +129,6 @@
   <string name="permlab_perfAccess">acces la managerul de performanță</string>
   <!-- Performance manager permission description -->
   <string name="permdesc_perfAccessDesc">Permite unei aplicații să acceseze serviciul de performanță. Aplicațiile normale nu au nevoie de aceasta.</string>
-  <!-- Access live lock screen manager service permission label -->
-  <string name="permlab_accessLiveLockScreenService">acces la serviciul managerului live lockscreen</string>
-  <!-- Access live lock screen manager service permission description -->
-  <string name="permdesc_accessLiveLockScreenService">Permite unei aplicații să acceseze serviciul managerului live lockscreen.</string>
-  <!-- Privileged access live lock screen manager service permission label -->
-  <string name="permlab_accessLiveLockScreenServicePrivate">acces la serviciul managerului live lockscreen</string>
-  <!-- Privileged access live lock screen manager service permission description -->
-  <string name="permdesc_accessLiveLockScreenServicePrivate">Permite aplicațiilor de sistem să acceseze serviciul managerului live lockscreen.</string>
-  <!-- Live lock screen manager service provider permission label -->
-  <string name="permlab_accessLiveLockScreenServiceProvider">furnizează serviciul managerului live lockscreen</string>
-  <!-- Live lock screen manager service provider permission description -->
-  <string name="permdesc_accessLiveLockScreenServiceProvider">Permite unui serviciu să furnizeze serviciul managerului live lockscreen.</string>
   <!-- Weather Service strings -->
   <string name="permlab_weather_read">citește vremea</string>
   <string name="permdesc_weather_read">Permite unei aplicații să citească conținutul furnizorului de vreme.</string>

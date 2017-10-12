@@ -129,18 +129,6 @@
   <string name="permlab_perfAccess">acessar o gerenciador de desempenho</string>
   <!-- Performance manager permission description -->
   <string name="permdesc_perfAccessDesc">Permite que um aplicativo acesse o serviço de desempenho. Nunca deve ser necessário para aplicativos normais.</string>
-  <!-- Access live lock screen manager service permission label -->
-  <string name="permlab_accessLiveLockScreenService">acesso ao serviço de gerenciamento da tela de bloqueio animada</string>
-  <!-- Access live lock screen manager service permission description -->
-  <string name="permdesc_accessLiveLockScreenService">Permite que um aplicativo acesse o serviço de gerenciamento da tela de bloqueio animada.</string>
-  <!-- Privileged access live lock screen manager service permission label -->
-  <string name="permlab_accessLiveLockScreenServicePrivate">acesso ao serviço de gerenciamento da tela de bloqueio animada</string>
-  <!-- Privileged access live lock screen manager service permission description -->
-  <string name="permdesc_accessLiveLockScreenServicePrivate">Permite que os aplicativos do sistema acessem o serviço de gerenciamento da tela de bloqueio animada.</string>
-  <!-- Live lock screen manager service provider permission label -->
-  <string name="permlab_accessLiveLockScreenServiceProvider">fornecer o serviço de gerenciador de tela de bloqueio animada</string>
-  <!-- Live lock screen manager service provider permission description -->
-  <string name="permdesc_accessLiveLockScreenServiceProvider">Permite que um serviço forneça o serviço de gerenciador de tela de bloqueio animada.</string>
   <!-- Weather Service strings -->
   <string name="permlab_weather_read">ler previsão do tempo</string>
   <string name="permdesc_weather_read">Permite que um aplicativo leia o conteúdo do provedor da previsão do tempo.</string>

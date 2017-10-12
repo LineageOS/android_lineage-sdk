@@ -129,18 +129,6 @@
   <string name="permlab_perfAccess">存取效能管理員</string>
   <!-- Performance manager permission description -->
   <string name="permdesc_perfAccessDesc">允許應用程式存取效能服務 。一般應用程式不需使用。</string>
-  <!-- Access live lock screen manager service permission label -->
-  <string name="permlab_accessLiveLockScreenService">存取活動鎖定畫面管理員服務</string>
-  <!-- Access live lock screen manager service permission description -->
-  <string name="permdesc_accessLiveLockScreenService">允許應用程式存取活動鎖定畫面管理員服務。</string>
-  <!-- Privileged access live lock screen manager service permission label -->
-  <string name="permlab_accessLiveLockScreenServicePrivate">存取活動鎖定畫面管理員服務</string>
-  <!-- Privileged access live lock screen manager service permission description -->
-  <string name="permdesc_accessLiveLockScreenServicePrivate">允許系統應用程式存取活動鎖定畫面管理員服務。</string>
-  <!-- Live lock screen manager service provider permission label -->
-  <string name="permlab_accessLiveLockScreenServiceProvider">提供活動鎖定畫面管理員服務</string>
-  <!-- Live lock screen manager service provider permission description -->
-  <string name="permdesc_accessLiveLockScreenServiceProvider">允許服務提供活動鎖定畫面管理員服務。</string>
   <!-- Weather Service strings -->
   <string name="permlab_weather_read">讀取天氣資料</string>
   <string name="permdesc_weather_read">允許應用程式從天氣資訊供應商讀取資料內容</string>

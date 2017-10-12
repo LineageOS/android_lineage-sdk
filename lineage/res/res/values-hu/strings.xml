@@ -129,18 +129,6 @@
   <string name="permlab_perfAccess">hozzáférés a teljesítmény kezelőhöz</string>
   <!-- Performance manager permission description -->
   <string name="permdesc_perfAccessDesc">Lehetővé teszi az alkalmazás számára, hogy hozzáférjen a teljesítmény szolgáltatáshoz. Általános alkalmazásoknak soha nem kell ilyen engedély.</string>
-  <!-- Access live lock screen manager service permission label -->
-  <string name="permlab_accessLiveLockScreenService">hozzáférés élő zárképernyő-kezelő szolgáltatáshoz</string>
-  <!-- Access live lock screen manager service permission description -->
-  <string name="permdesc_accessLiveLockScreenService">Lehetővé teszi az alkalmazás számára az élő zárképernyő-kezelő szolgáltatás elérését.</string>
-  <!-- Privileged access live lock screen manager service permission label -->
-  <string name="permlab_accessLiveLockScreenServicePrivate">hozzáférés élő zárképernyő-kezelő szolgáltatáshoz</string>
-  <!-- Privileged access live lock screen manager service permission description -->
-  <string name="permdesc_accessLiveLockScreenServicePrivate">Lehetővé teszi a rendszeralkalmazások számára az élő zárképernyő-kezelő szolgáltatás elérését.</string>
-  <!-- Live lock screen manager service provider permission label -->
-  <string name="permlab_accessLiveLockScreenServiceProvider">élő zárképernyő-kezelő szolgáltatás biztosítása</string>
-  <!-- Live lock screen manager service provider permission description -->
-  <string name="permdesc_accessLiveLockScreenServiceProvider">Lehetővé teszi a szolgáltatás számára az élő zárképernyő-kezelő szolgáltatás biztosítását.</string>
   <!-- Weather Service strings -->
   <string name="permlab_weather_read">időjárás olvasása</string>
   <string name="permdesc_weather_read">Lehetővé teszi az alkalmazás számára az időjárás szolgáltatói tartalom olvasását.</string>

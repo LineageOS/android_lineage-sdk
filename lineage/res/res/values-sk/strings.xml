@@ -129,18 +129,6 @@
   <string name="permlab_perfAccess">prístup k správe výkonu</string>
   <!-- Performance manager permission description -->
   <string name="permdesc_perfAccessDesc">Umožňuje aplikácii prístup k správe výkonu. Toto povolenie nie je bežné pre štandardné aplikácie.</string>
-  <!-- Access live lock screen manager service permission label -->
-  <string name="permlab_accessLiveLockScreenService">prístup k službe správcu živých uzamykacích obrazoviek</string>
-  <!-- Access live lock screen manager service permission description -->
-  <string name="permdesc_accessLiveLockScreenService">Umožní aplikácii prístup k správcovi služby živých uzamykacích obrazoviek.</string>
-  <!-- Privileged access live lock screen manager service permission label -->
-  <string name="permlab_accessLiveLockScreenServicePrivate">prístup k službe správcu živých uzamykacích obrazoviek</string>
-  <!-- Privileged access live lock screen manager service permission description -->
-  <string name="permdesc_accessLiveLockScreenServicePrivate">Umožní systémovým aplikáciám prístup k správcovi služby živých uzamykacích obrazoviek.</string>
-  <!-- Live lock screen manager service provider permission label -->
-  <string name="permlab_accessLiveLockScreenServiceProvider">poskytnúť správcu služby živých uzamykacích obrazoviek</string>
-  <!-- Live lock screen manager service provider permission description -->
-  <string name="permdesc_accessLiveLockScreenServiceProvider">Umožní službe poskytnúť správcu služby živých uzamykacích obrazoviek.</string>
   <!-- Weather Service strings -->
   <string name="permlab_weather_read">čítať počasie</string>
   <string name="permdesc_weather_read">Umožní aplikácii čítať obsah z poskytovateľa počasia.</string>

@@ -196,54 +196,6 @@ package lineageos.app {
     field public static final java.lang.String SERVICE_INTERFACE = "lineageos.app.CustomTileListenerService";
   }
 
-  public class LiveLockScreenInfo implements android.os.Parcelable {
-    ctor public LiveLockScreenInfo(android.content.ComponentName, int);
-    ctor public LiveLockScreenInfo();
-    method public lineageos.app.LiveLockScreenInfo clone();
-    method public int describeContents();
-    method public void writeToParcel(android.os.Parcel, int);
-    field public static final android.os.Parcelable.Creator<lineageos.app.LiveLockScreenInfo> CREATOR;
-    field public static final int PRIORITY_DEFAULT = 0; // 0x0
-    field public static final int PRIORITY_HIGH = 1; // 0x1
-    field public static final int PRIORITY_LOW = -1; // 0xffffffff
-    field public static final int PRIORITY_MAX = 2; // 0x2
-    field public static final int PRIORITY_MIN = -2; // 0xfffffffe
-    field public android.content.ComponentName component;
-    field public int priority;
-  }
-
-  public static class LiveLockScreenInfo.Builder {
-    ctor public LiveLockScreenInfo.Builder();
-    method public lineageos.app.LiveLockScreenInfo build();
-    method public lineageos.app.LiveLockScreenInfo.Builder setComponent(android.content.ComponentName);
-    method public lineageos.app.LiveLockScreenInfo.Builder setPriority(int);
-  }
-
-  public class LiveLockScreenManager {
-    method public void cancel(int);
-    method public lineageos.app.LiveLockScreenInfo getDefaultLiveLockScreen();
-    method public static lineageos.app.LiveLockScreenManager getInstance(android.content.Context);
-    method public void setDefaultLiveLockScreen(lineageos.app.LiveLockScreenInfo);
-    method public boolean show(int, lineageos.app.LiveLockScreenInfo);
-    field public static final java.lang.String SERVICE_INTERFACE = "lineageos.app.LiveLockScreenManagerService";
-  }
-
-  public class PartnerInterface {
-    method public java.lang.String getCurrentHotwordPackageName();
-    method public static lineageos.app.PartnerInterface getInstance(android.content.Context);
-    method public void rebootDevice();
-    method public void setAirplaneModeEnabled(boolean);
-    method public void setMobileDataEnabled(boolean);
-    method public boolean setZenMode(int);
-    method public boolean setZenModeWithDuration(int, long);
-    method public void shutdownDevice();
-    field public static final java.lang.String MODIFY_NETWORK_SETTINGS_PERMISSION = "lineageos.permission.MODIFY_NETWORK_SETTINGS";
-    field public static final java.lang.String MODIFY_SOUND_SETTINGS_PERMISSION = "lineageos.permission.MODIFY_SOUND_SETTINGS";
-    field public static final int ZEN_MODE_IMPORTANT_INTERRUPTIONS = 1; // 0x1
-    field public static final int ZEN_MODE_NO_INTERRUPTIONS = 2; // 0x2
-    field public static final int ZEN_MODE_OFF = 0; // 0x0
-  }
-
   public final class Profile implements java.lang.Comparable android.os.Parcelable {
     ctor public Profile(java.lang.String);
     method public void addSecondaryUuid(java.util.UUID);
@@ -709,7 +661,6 @@ package lineageos.platform {
     field public static final java.lang.String ACCESS_WEATHER_MANAGER = "lineageos.permission.ACCESS_WEATHER_MANAGER";
     field public static final java.lang.String BIND_WEATHER_PROVIDER_SERVICE = "lineageos.permission.BIND_WEATHER_PROVIDER_SERVICE";
     field public static final java.lang.String HARDWARE_ABSTRACTION_ACCESS = "lineageos.permission.HARDWARE_ABSTRACTION_ACCESS";
-    field public static final java.lang.String LIVE_LOCK_SCREEN_MANAGER_ACCESS = "lineageos.permission.LIVE_LOCK_SCREEN_MANAGER_ACCESS";
     field public static final java.lang.String MANAGE_ALARMS = "lineageos.permission.MANAGE_ALARMS";
     field public static final java.lang.String MANAGE_LIVEDISPLAY = "lineageos.permission.MANAGE_LIVEDISPLAY";
     field public static final java.lang.String MANAGE_PERSISTENT_STORAGE = "lineageos.permission.MANAGE_PERSISTENT_STORAGE";

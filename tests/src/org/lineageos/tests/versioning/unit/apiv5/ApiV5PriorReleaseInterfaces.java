@@ -59,44 +59,6 @@ public class ApiV5PriorReleaseInterfaces {
         kgExtViewProviderMap.put("onLockscreenSlideOffsetChanged", 11);
     }
 
-    //LiveLockscreenManager Aidl (ILiveLockScreenManager)
-    static {
-        Map<String, Integer> llScreenManagerMap =
-                getInternalInterfaceMap("ILiveLockScreenManager");
-        //ELDERBERRY BEGIN
-        llScreenManagerMap.put("enqueueLiveLockScreen", 1);
-        llScreenManagerMap.put("cancelLiveLockScreen", 2);
-        llScreenManagerMap.put("getCurrentLiveLockScreen", 3);
-        llScreenManagerMap.put("getDefaultLiveLockScreen", 4);
-        llScreenManagerMap.put("setDefaultLiveLockScreen", 5);
-        llScreenManagerMap.put("setLiveLockScreenEnabled", 6);
-        llScreenManagerMap.put("getLiveLockScreenEnabled ", 7);
-        llScreenManagerMap.put("registerChangeListener", 8);
-        llScreenManagerMap.put("unregisterChangeListener", 9);
-    }
-
-    //BaseLiveLockManagerService Aidl (ILiveLockScreenManagerProvider)
-    static {
-        Map<String, Integer> llManagerProvider =
-                getInternalInterfaceMap("ILiveLockScreenManagerProvider");
-        //ELDERBERRY BEGIN
-        llManagerProvider.put("enqueueLiveLockScreen", 1);
-        llManagerProvider.put("cancelLiveLockScreen", 2);
-        llManagerProvider.put("getCurrentLiveLockScreen", 3);
-        llManagerProvider.put("updateDefaultLiveLockScreen", 4);
-        llManagerProvider.put("getLiveLockScreenEnabled ", 5);
-        llManagerProvider.put("registerChangeListener", 6);
-        llManagerProvider.put("unregisterChangeListener", 7);
-    }
-
-    //LiveLockScreenChangeListener Aidl (ILiveLockScreenChangeListener)
-    static{
-        Map<String, Integer> llChangeListener =
-                getInternalInterfaceMap("ILiveLockScreenChangeListener");
-        //ELDERBERRY BEGIN
-        llChangeListener.put("onLiveLockScreenChanged", 1);
-    }
-
     //LineageAudioManager Aidl (ILineageAudioService)
     static {
         Map<String, Integer> lineageAudioService =

@@ -118,12 +118,6 @@
   <string name="permlab_perfAccess">komma åt prestandahanteraren</string>
   <!-- Performance manager permission description -->
   <string name="permdesc_perfAccessDesc">Ger en app åtkomst till prestandatjänsten. Ska aldrig behövas för vanliga appar.</string>
-  <!-- Access live lock screen manager service permission label -->
-  <!-- Access live lock screen manager service permission description -->
-  <!-- Privileged access live lock screen manager service permission label -->
-  <!-- Privileged access live lock screen manager service permission description -->
-  <!-- Live lock screen manager service provider permission label -->
-  <!-- Live lock screen manager service provider permission description -->
   <!-- Weather Service strings -->
   <string name="permlab_weather_write">uppdatera väderleverantör</string>
   <!-- DataUsageProvider write permission title -->

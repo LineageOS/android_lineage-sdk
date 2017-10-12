@@ -51,18 +51,6 @@ public class ApiV2PriorReleaseInterfaces {
         profilesMap.put("resetAll", 19);
     }
 
-    //PartnerInterface Aidl (IPartnerInterface)
-    static {
-        Map<String, Integer> partnerMap = getInternalInterfaceMap("IPartnerInterface");
-        // APRICOT + BOYSENBERRY + CANTALOUPE
-        partnerMap.put("setAirplaneModeEnabled", 1);
-        partnerMap.put("setMobileDataEnabled", 2);
-        partnerMap.put("setZenMode", 3);
-        partnerMap.put("shutdown", 4);
-        partnerMap.put("reboot", 5);
-        partnerMap.put("getCurrentHotwordPackageName", 6);
-    }
-
     //LineageHardwareManager Aidl (ILineageHardwareService)
     static {
         Map<String, Integer> hardwareMap = getInternalInterfaceMap("ILineageHardwareService");
