@@ -91,34 +91,6 @@ public class ApiV4PriorReleaseInterfaces {
         extViewProviderMap.put("alterWindow", 7);
     }
 
-    //KeyguardExternalViewCallbacks Aidl (IKeyguardExternalViewCallbacks)
-    static {
-        Map<String, Integer> kgExtViewCbMap =
-                getInternalInterfaceMap("IKeyguardExternalViewCallbacks");
-        // DRAGONFRUIT BEGIN
-        kgExtViewCbMap.put("requestDismiss", 1);
-        kgExtViewCbMap.put("requestDismissAndStartActivity", 2);
-        kgExtViewCbMap.put("collapseNotificationPanel", 3);
-        kgExtViewCbMap.put("setInteractivity", 4);
-    }
-
-    //KeyguardExternalViewProvider Aidl (IKeyguardExternalViewProvider)
-    static {
-        Map<String, Integer> kgExtViewProviderMap =
-                getInternalInterfaceMap("IKeyguardExternalViewProvider");
-        // DRAGONFRUIT BEGIN
-        kgExtViewProviderMap.put("onAttach", 1);
-        kgExtViewProviderMap.put("onDetach", 2);
-        kgExtViewProviderMap.put("onKeyguardShowing", 3);
-        kgExtViewProviderMap.put("onKeyguardDismissed" , 4);
-        kgExtViewProviderMap.put("onBouncerShowing", 5);
-        kgExtViewProviderMap.put("onScreenTurnedOn", 6);
-        kgExtViewProviderMap.put("onScreenTurnedOff", 7);
-        kgExtViewProviderMap.put("registerCallback", 8);
-        kgExtViewProviderMap.put("unregisterCallback", 9);
-        kgExtViewProviderMap.put("alterWindow", 10);
-    }
-
     protected static Map<String, Integer> getInternalInterfaceMap(String targetInterface) {
         Map<String, Integer> internalMap = mApiMethodsAndValues.get(targetInterface);
         if (internalMap == null) {

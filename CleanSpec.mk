@@ -42,7 +42,6 @@ $(call add-clean-step, rm -rf $(OUT_DIR)/target/common/obj/JAVA_LIBRARIES/org.li
 $(call add-clean-step, rm -rf $(OUT_DIR)/target/common/obj/JAVA_LIBRARIES/org.lineageos.platform.sdk_intermediates)
 $(call add-clean-step, rm -rf $(OUT_DIR)/target/common/obj/JAVA_LIBRARIES/org.lineageos.platform.internal_intermediates)
 $(call add-clean-step, rm -rf $(OUT_DIR)/target/common/obj/JAVA_LIBRARIES/lineage-sdk_stubs_current_intermediates)
-# KeyguardExternalView uses a new interface which requires cleaning to avoid a runtime exception
 $(call add-clean-step, rm -rf $(OUT_DIR)/target/common/obj/JAVA_LIBRARIES/org.lineageos.platform_intermediates)
 $(call add-clean-step, rm -rf $(OUT_DIR)/target/common/obj/JAVA_LIBRARIES/org.lineageos.platform.sdk_intermediates)
 # Purge out the api stubs timestamp files (they're used as a dependency for checkapi-lineage)

@@ -39,26 +39,6 @@ public class ApiV5PriorReleaseInterfaces {
         // ELDERBERRY BEGIN
     }
 
-    //KeyguardExternalViewCallbacks Aidl (IKeyguardExternalViewCallbacks)
-    static {
-        Map<String, Integer> kgExtViewCbMap =
-                getInternalInterfaceMap("IKeyguardExternalViewCallbacks");
-        // DRAGONFRUIT TO 4
-        // ELDERBERRY BEGIN
-        kgExtViewCbMap.put("onAttachedToWindow", 5);
-        kgExtViewCbMap.put("onDetachedFromWindow", 6);
-        kgExtViewCbMap.put("slideLockscreenIn", 7);
-    }
-
-    //KeyguardExternalViewProvider Aidl (IKeyguardExternalViewProvider)
-    static {
-        Map<String, Integer> kgExtViewProviderMap =
-                getInternalInterfaceMap("IKeyguardExternalViewProvider");
-        // DRAGONFRUIT TO 10
-        // ELDERBERRY BEGIN
-        kgExtViewProviderMap.put("onLockscreenSlideOffsetChanged", 11);
-    }
-
     //LineageAudioManager Aidl (ILineageAudioService)
     static {
         Map<String, Integer> lineageAudioService =
