@@ -100,10 +100,6 @@
   <string name="live_display_outdoor">ఆరుబయట (ప్రకాశవంతమైన సూర్యుడు)</string>
   <string name="live_display_outdoor_summary">ఆరుబయటి సెట్టింగులను మాత్రమే ఉపయోగించుము</string>
   <string name="live_display_hint">ప్రత్యక్ష ప్రదర్శన మీ కంటిపై ఒత్తిడిని తగ్గించడానికి సహాయపడుతుంది మరియు రాత్రి సమయంలో నిద్రపోవడానికి సహకరిస్తుంది. దానిని ప్రయత్నించి చూడడానికి ఇక్కడ క్లిక్ చేయండి!</string>
-  <!-- Third party keyguard permission label -->
-  <string name="permlab_thirdPartyKeyguard">మూడవ పక్షం లాక్ స్క్రీన్</string>
-  <!-- Third party keyguard permission description -->
-  <string name="permdesc_thirdPartyKeyguard">ఒక ప్రోగ్రాం అసురక్షిత లాక్ స్క్రీనుగా ఉపయోగించబడడానికి అనుమతినిస్తుంది.</string>
   <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
   <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
   <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->

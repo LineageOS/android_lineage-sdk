@@ -115,10 +115,6 @@
   <string name="accessibility_quick_settings_live_display_changed_day">LiveDisplay переключён в дневной режим.</string>
   <string name="accessibility_quick_settings_live_display_changed_night">LiveDisplay переключён в ночной режим.</string>
   <string name="accessibility_quick_settings_live_display_changed_outdoor">LiveDisplay переключён в режим «на улице».</string>
-  <!-- Third party keyguard permission label -->
-  <string name="permlab_thirdPartyKeyguard">cторонний экран блокировки</string>
-  <!-- Third party keyguard permission description -->
-  <string name="permdesc_thirdPartyKeyguard">Приложение сможет работать в качестве небезопасного метода блокировки экрана.</string>
   <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
   <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
   <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->

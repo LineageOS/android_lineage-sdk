@@ -115,10 +115,6 @@
   <string name="accessibility_quick_settings_live_display_changed_day">LiveDisplay gewijzigd naar dagstand.</string>
   <string name="accessibility_quick_settings_live_display_changed_night">LiveDisplay gewijzigd naar nachtstand.</string>
   <string name="accessibility_quick_settings_live_display_changed_outdoor">LiveDisplay gewijzigd naar buitenstand.</string>
-  <!-- Third party keyguard permission label -->
-  <string name="permlab_thirdPartyKeyguard">vergrendelingsscherm van derden</string>
-  <!-- Third party keyguard permission description -->
-  <string name="permdesc_thirdPartyKeyguard">Hiermee kan de app gebruikt worden als onbeveiligd vergrendelingsscherm.</string>
   <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
   <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
   <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->

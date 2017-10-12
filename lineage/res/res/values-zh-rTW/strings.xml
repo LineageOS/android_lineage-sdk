@@ -115,10 +115,6 @@
   <string name="accessibility_quick_settings_live_display_changed_day">LiveDisplay 已變更為日間模式</string>
   <string name="accessibility_quick_settings_live_display_changed_night">LiveDisplay 已變更為夜間模式</string>
   <string name="accessibility_quick_settings_live_display_changed_outdoor">LiveDisplay 已變更為戶外模式</string>
-  <!-- Third party keyguard permission label -->
-  <string name="permlab_thirdPartyKeyguard">第三方鎖定畫面</string>
-  <!-- Third party keyguard permission description -->
-  <string name="permdesc_thirdPartyKeyguard">允許應用程式用作不安全的鎖定畫面。</string>
   <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
   <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
   <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->

@@ -104,10 +104,6 @@
   <string name="accessibility_quick_settings_live_display_auto">LiveDisplay: automatiskt läge.</string>
   <string name="accessibility_quick_settings_live_display_day">LiveDisplay: dagläge.</string>
   <string name="accessibility_quick_settings_live_display_night">LiveDisplay: nattläge.</string>
-  <!-- Third party keyguard permission label -->
-  <string name="permlab_thirdPartyKeyguard">tredjepartslåsskärm</string>
-  <!-- Third party keyguard permission description -->
-  <string name="permdesc_thirdPartyKeyguard">Tillåter en applikation att användas som osäker låsskärm.</string>
   <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
   <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
   <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
