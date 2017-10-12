@@ -86,8 +86,7 @@ lineage_framework_module := $(LOCAL_INSTALLED_MODULE)
 # the source for this library.
 lineage_framework_res_R_stamp := \
     $(call intermediates-dir-for,APPS,org.lineageos.platform-res,,COMMON)/src/R.stamp
-$(full_classes_compiled_jar): $(lineage_framework_res_R_stamp)
-$(built_dex_intermediate): $(lineage_framework_res_R_stamp)
+LOCAL_ADDITIONAL_DEPENDENCIES := $(lineage_framework_res_R_stamp)
 
 $(lineage_framework_module): | $(dir $(lineage_framework_module))org.lineageos.platform-res.apk
 
@@ -137,9 +136,7 @@ LOCAL_JAVA_LIBRARIES := \
 # the source for this library.
 lineage_framework_res_R_stamp := \
     $(call intermediates-dir-for,APPS,org.lineageos.platform-res,,COMMON)/src/R.stamp
-$(full_classes_compiled_jar): $(lineage_framework_res_R_stamp)
-$(built_dex_intermediate): $(lineage_framework_res_R_stamp)
-$(full_target): $(lineage_framework_built) $(gen)
+LOCAL_ADDITIONAL_DEPENDENCIES := $(lineage_framework_res_R_stamp)
 include $(BUILD_STATIC_JAVA_LIBRARY)
 
 # the sdk as an aar for publish, not built as part of full target
