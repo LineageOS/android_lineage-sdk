@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "28a9542e_5cfc93f0",
+        "filename": "sdk/src/java/org/lineageos/internal/util/QSUtils.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 304,
+      "author": {
+        "id": 7880
+      },
+      "writtenOn": "2017-10-12T08:34:32Z",
+      "side": 1,
+      "message": "Unrelated change",
+      "revId": "3dcc141684e8956bdf4abc9b528e5aac155c95a0",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
