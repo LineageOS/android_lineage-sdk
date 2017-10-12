@@ -115,10 +115,6 @@
   <string name="accessibility_quick_settings_live_display_changed_day">LiveDisplay changé en mode jour.</string>
   <string name="accessibility_quick_settings_live_display_changed_night">LiveDisplay changé en mode nuit.</string>
   <string name="accessibility_quick_settings_live_display_changed_outdoor">LiveDisplay changé en mode plein air.</string>
-  <!-- Third party keyguard permission label -->
-  <string name="permlab_thirdPartyKeyguard">écran de verrouillage alternatif</string>
-  <!-- Third party keyguard permission description -->
-  <string name="permdesc_thirdPartyKeyguard">Permet à l\'application d\'être utilisée comme un écran de verrouillage non sécurisé.</string>
   <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
   <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
   <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->

@@ -115,10 +115,6 @@
   <string name="accessibility_quick_settings_live_display_changed_day">LiveDisplay nappali módra változtatva.</string>
   <string name="accessibility_quick_settings_live_display_changed_night">LiveDisplay éjszakai módra változtatva.</string>
   <string name="accessibility_quick_settings_live_display_changed_outdoor">LiveDisplay szabadtéri módra változtatva.</string>
-  <!-- Third party keyguard permission label -->
-  <string name="permlab_thirdPartyKeyguard">harmadik fél zárképernyő</string>
-  <!-- Third party keyguard permission description -->
-  <string name="permdesc_thirdPartyKeyguard">Lehetővé teszi az alkalmazás számára, hogy egy nem biztonságos zárképernyőként használja.</string>
   <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
   <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
   <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
