@@ -96,6 +96,10 @@
   <string name="accessibility_quick_settings_live_display_changed_day">LiveDisplay u kthye në profilin e ditës.</string>
   <string name="accessibility_quick_settings_live_display_changed_night">LiveDisplay u kthye në profilin e natës.</string>
   <string name="accessibility_quick_settings_live_display_changed_outdoor">LiveDisplay u kthye në profilin jashtë shtëpisë.</string>
+  <!-- Third party keyguard permission label -->
+  <string name="permlab_thirdPartyKeyguard">ekran bllokues i mundësuar nga një palë e tretë</string>
+  <!-- Third party keyguard permission description -->
+  <string name="permdesc_thirdPartyKeyguard">Lejon një aplikacion që të përdoret si një ekran bllokues i pasigurtë.</string>
   <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
   <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
   <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->

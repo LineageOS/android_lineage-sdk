@@ -110,6 +110,10 @@
   <string name="accessibility_quick_settings_live_display_night">LiveDisplay: ноч.</string>
   <string name="accessibility_quick_settings_live_display_changed_off">LiveDisplay выключаны.</string>
   <string name="accessibility_quick_settings_live_display_changed_auto">LiveDisplay зменены на аўтаматычны рэжым.</string>
+  <!-- Third party keyguard permission label -->
+  <string name="permlab_thirdPartyKeyguard">Іншы экран блакавання</string>
+  <!-- Third party keyguard permission description -->
+  <string name="permdesc_thirdPartyKeyguard">Дадатак зможа працаваць у якасці небяспечнага метаду блакавання экрана.</string>
   <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
   <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
   <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->

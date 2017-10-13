@@ -100,6 +100,10 @@
   <string name="live_display_outdoor">આઉટડોર (તેજ તડકો)</string>
   <string name="live_display_outdoor_summary">ફકત આઉટડોર સેટિંગ્સનો ઉપયોગ કરો</string>
   <string name="live_display_hint">લાઇવડિસ્પ્લેથી આંખો પરની તાણ ઘટાડી શકાય છે અને તમને રાતે સૂવામાં મદદરૂપ થઈ શકે. અજમાવવા અહીં ક્લિક કરો!</string>
+  <!-- Third party keyguard permission label -->
+  <string name="permlab_thirdPartyKeyguard">ત્રાહિત પક્ષ લૉક સ્ક્રીન</string>
+  <!-- Third party keyguard permission description -->
+  <string name="permdesc_thirdPartyKeyguard">ઍપને અસુરક્ષિત લૉક સ્ક્રીન તરીકે ઉપયોગ કરવાની છૂટ આપે છે.</string>
   <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
   <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
   <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->

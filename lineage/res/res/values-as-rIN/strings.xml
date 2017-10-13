@@ -100,6 +100,10 @@
   <string name="live_display_outdoor">আউটডোৰ (উজ্জ্বল ৰ\'দ)</string>
   <string name="live_display_outdoor_summary">কেৱল আউটডোৰ ছেটিংচ ব্যৱহাৰ কৰক</string>
   <string name="live_display_hint">লাইভপ্রদর্শন আপোনাৰ চকুৰ ওপৰত চাপ কমাব পাৰে আৰু ৰাতি শোৱাত সহায় কৰিব পাৰে। ইয়াক চেষ্টা কৰি চাবলৈ ইয়াত ক্লিক কৰক!</string>
+  <!-- Third party keyguard permission label -->
+  <string name="permlab_thirdPartyKeyguard">তৃতীয় পক্ষৰ লক স্ক্ৰীণ</string>
+  <!-- Third party keyguard permission description -->
+  <string name="permdesc_thirdPartyKeyguard">এটা এপ্প্‌ক অসুৰক্ষিত লক স্ক্ৰীণ হিচাপে ব্যৱহাৰ কৰিবলৈ অনুমতি দিয়ে।</string>
   <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
   <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
   <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->

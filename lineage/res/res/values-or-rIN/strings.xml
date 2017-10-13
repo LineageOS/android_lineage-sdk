@@ -100,6 +100,10 @@
   <string name="live_display_outdoor">ଆଉଟ୍‍ଡୋର୍‍ (ଟାଣ ଖରା)</string>
   <string name="live_display_outdoor_summary">କେବଳ ଆଉଟ୍‍ଡୋର୍‍ ସେଟିଂସ୍‍ ବ୍ୟବହାର କରନ୍ତୁ</string>
   <string name="live_display_hint">ଲାଇଭ୍‍ଡିସ୍‍ପ୍ଲେ ଆଇଷ୍ଟ୍ରେନ୍‍ କମାଇବାରେ ଓ ରାତିରେ ଆପଣଙ୍କୁ ଶୋଇବାରେ ସାହାଯ୍ୟ କରିପାରେ। ଏହା ବ୍ୟବହାର କରିବା ପାଇଁ ଏଠାରେ କ୍ଲିକ୍‍ କରନ୍ତୁ!</string>
+  <!-- Third party keyguard permission label -->
+  <string name="permlab_thirdPartyKeyguard">ତୃତୀୟ ପଷ ଲକ୍‍ ସ୍କ୍ରିନ୍‍</string>
+  <!-- Third party keyguard permission description -->
+  <string name="permdesc_thirdPartyKeyguard">ଅସୁରଷିତ ଲକ୍‍ ସ୍କ୍ରିନ୍‍ ଭାବେ ବ୍ୟବହୃତ ହେବା ପାଇଁ ଆପ୍ଲିକେସନ୍‍କୁ ଅ୍ନୁମତି ଦିଏ</string>
   <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
   <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
   <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->

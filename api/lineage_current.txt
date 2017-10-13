@@ -645,6 +645,7 @@ package lineageos.platform {
     field public static final java.lang.String READ_DATAUSAGE = "lineageos.permission.READ_DATAUSAGE";
     field public static final java.lang.String READ_MSIM_PHONE_STATE = "lineageos.permission.READ_MSIM_PHONE_STATE";
     field public static final java.lang.String READ_WEATHER = "lineageos.permission.READ_WEATHER";
+    field public static final java.lang.String THIRD_PARTY_KEYGUARD = "lineageos.permission.THIRD_PARTY_KEYGUARD";
     field public static final java.lang.String WRITE_ALARMS = "lineageos.permission.WRITE_ALARMS";
     field public static final java.lang.String WRITE_DATAUSAGE = "lineageos.permission.WRITE_DATAUSAGE";
     field public static final java.lang.String WRITE_SECURE_SETTINGS = "lineageos.permission.WRITE_SECURE_SETTINGS";

@@ -100,6 +100,10 @@
   <string name="live_display_outdoor">ഔട്ട്ഡോർ (തെളിഞ്ഞ സൂര്യൻ)</string>
   <string name="live_display_outdoor_summary">ഔട്ട്ഡോർ ക്രമീകരണങ്ങൾ മാത്രം ഉപയോഗിക്കുക</string>
   <string name="live_display_hint">ലൈവ്ഡിസ്പ്ലേ നിങ്ങളുടെ കണ്ണിന്റെ സമ്മര്‍ദ്ദം കുറയ്ക്കുകയും രാത്രി ഉറങ്ങാൻ നിങ്ങളെ സഹായിക്കുകയും ചെയ്യുന്നു. ഇത് പരീക്ഷിക്കാൻ ഇവിടെ ക്ലിക്ക് ചെയ്യുക!</string>
+  <!-- Third party keyguard permission label -->
+  <string name="permlab_thirdPartyKeyguard">മൂന്നാം കക്ഷി ലോക്ക് സ്ക്രീൻ</string>
+  <!-- Third party keyguard permission description -->
+  <string name="permdesc_thirdPartyKeyguard">സുരക്ഷിതമല്ലാത്ത ലോക്ക് സ്ക്രീന്‍ ആയി ഉപയോഗിക്കുവാന്‍ ഒരു ആപ്ലിക്കേഷനെ അനുവദിക്കുന്നു.</string>
   <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
   <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
   <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->

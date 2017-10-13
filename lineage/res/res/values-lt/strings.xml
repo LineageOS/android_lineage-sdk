@@ -81,6 +81,8 @@
   <!-- Performance profiles -->
   <!-- LiveDisplay strings -->
   <string name="live_display_night">Naktis</string>
+  <!-- Third party keyguard permission label -->
+  <!-- Third party keyguard permission description -->
   <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
   <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
   <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
