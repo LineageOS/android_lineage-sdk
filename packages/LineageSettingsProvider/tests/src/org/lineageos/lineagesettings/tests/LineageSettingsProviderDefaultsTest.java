@@ -65,9 +65,6 @@ public class LineageSettingsProviderDefaultsTest extends AndroidTestCase {
                 LineageSettings.System.ENABLE_REVERSE_LOOKUP,
                 "R.integer.def_reverse_lookup"));
         SYSTEM_SETTINGS_DEFAULTS.add(new Setting(
-                LineageSettings.System.NOTIFICATION_LIGHT_MULTIPLE_LEDS_ENABLE,
-                "R.bool.def_notification_multiple_leds"));
-        SYSTEM_SETTINGS_DEFAULTS.add(new Setting(
                 LineageSettings.System.SYSTEM_PROFILES_ENABLED,
                 "R.bool.def_profiles_enabled"));
         SYSTEM_SETTINGS_DEFAULTS.add(new Setting(

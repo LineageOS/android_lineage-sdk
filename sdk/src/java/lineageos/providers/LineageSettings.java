@@ -1669,17 +1669,6 @@ public final class LineageSettings {
                 new InclusiveIntegerRangeValidator(1, 255);
 
         /**
-         * Whether to use the all the LEDs for the notifications or just one.
-         * 0 = 0ff, 1 = on
-         */
-        public static final String NOTIFICATION_LIGHT_MULTIPLE_LEDS_ENABLE =
-                "notification_light_multiple_leds_enable";
-
-        /** @hide */
-        public static final Validator NOTIFICATION_LIGHT_MULTIPLE_LEDS_ENABLE_VALIDATOR =
-                sBooleanValidator;
-
-        /**
          * Whether to allow notifications with the screen on or DayDreams.
          * The value is boolean (1 or 0). Default will always be false.
          */
@@ -1995,7 +1984,6 @@ public final class LineageSettings {
                 LineageSettings.System.STATUS_BAR_NOTIF_COUNT,
                 LineageSettings.System.CALL_RECORDING_FORMAT,
                 LineageSettings.System.NOTIFICATION_LIGHT_BRIGHTNESS_LEVEL,
-                LineageSettings.System.NOTIFICATION_LIGHT_MULTIPLE_LEDS_ENABLE,
                 LineageSettings.System.NOTIFICATION_LIGHT_SCREEN_ON,
                 LineageSettings.System.NOTIFICATION_LIGHT_PULSE_DEFAULT_COLOR,
                 LineageSettings.System.NOTIFICATION_LIGHT_PULSE_DEFAULT_LED_ON,
@@ -2156,8 +2144,6 @@ public final class LineageSettings {
             VALIDATORS.put(CALL_RECORDING_FORMAT, CALL_RECORDING_FORMAT_VALIDATOR);
             VALIDATORS.put(NOTIFICATION_LIGHT_BRIGHTNESS_LEVEL,
                     NOTIFICATION_LIGHT_BRIGHTNESS_LEVEL_VALIDATOR);
-            VALIDATORS.put(NOTIFICATION_LIGHT_MULTIPLE_LEDS_ENABLE,
-                    NOTIFICATION_LIGHT_MULTIPLE_LEDS_ENABLE_VALIDATOR);
             VALIDATORS.put(NOTIFICATION_LIGHT_SCREEN_ON,
                     NOTIFICATION_LIGHT_SCREEN_ON_VALIDATOR);
             VALIDATORS.put(NOTIFICATION_LIGHT_PULSE_DEFAULT_COLOR,

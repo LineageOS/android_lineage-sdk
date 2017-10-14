@@ -1118,7 +1118,6 @@ package lineageos.providers {
     field public static final java.lang.String NAVIGATION_BAR_MENU_ARROW_KEYS = "navigation_bar_menu_arrow_keys";
     field public static final java.lang.String NAV_BUTTONS = "nav_buttons";
     field public static final java.lang.String NOTIFICATION_LIGHT_BRIGHTNESS_LEVEL = "notification_light_brightness_level";
-    field public static final java.lang.String NOTIFICATION_LIGHT_MULTIPLE_LEDS_ENABLE = "notification_light_multiple_leds_enable";
     field public static final java.lang.String NOTIFICATION_LIGHT_PULSE_CALL_COLOR = "notification_light_pulse_call_color";
     field public static final java.lang.String NOTIFICATION_LIGHT_PULSE_CALL_LED_OFF = "notification_light_pulse_call_led_off";
     field public static final java.lang.String NOTIFICATION_LIGHT_PULSE_CALL_LED_ON = "notification_light_pulse_call_led_on";
