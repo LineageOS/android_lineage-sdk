@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fb3441f9_56d84e55",
+        "filename": "lineage/lib/main/java/org/lineageos/platform/internal/display/ColorTemperatureController.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 82,
+      "author": {
+        "id": 14088
+      },
+      "writtenOn": "2017-10-15T05:02:15Z",
+      "side": 1,
+      "message": "empty line not needed",
+      "range": {
+        "startLine": 82,
+        "startChar": 0,
+        "endLine": 82,
+        "endChar": 0
+      },
+      "revId": "a57b687d529703d11f8a0a7a0c1480817d74e313",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6bbc9210_c8235519",
+        "filename": "lineage/lib/main/java/org/lineageos/platform/internal/display/ColorTemperatureController.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 457,
+      "author": {
+        "id": 14088
+      },
+      "writtenOn": "2017-10-15T05:02:15Z",
+      "side": 1,
+      "message": "remove new line",
+      "range": {
+        "startLine": 457,
+        "startChar": 0,
+        "endLine": 457,
+        "endChar": 0
+      },
+      "revId": "a57b687d529703d11f8a0a7a0c1480817d74e313",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
