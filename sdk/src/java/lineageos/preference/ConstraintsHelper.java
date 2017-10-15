@@ -296,7 +296,7 @@ public class ConstraintsHelper {
         return fallbackAttr;
     }
 
-    public void onBindViewHolder(PreferenceViewHolder holder) {
+    public void onAttached() {
         checkIntent();
 
         if (isAvailable() && mReplacesKey != null) {
@@ -304,7 +304,9 @@ public class ConstraintsHelper {
         }
 
         Graveyard.get(mContext).summonReaper(mPref.getPreferenceManager());
+    }
 
+    public void onBindViewHolder(PreferenceViewHolder holder) {
         if (!isAvailable()) {
             return;
         }
@@ -321,7 +323,7 @@ public class ConstraintsHelper {
      * If we want to keep this at the preference level vs the fragment level, we need to
      * collate all the preferences that need to be removed when attached to the
      * hierarchy, then purge them all when loading is complete. The Graveyard keeps track
-     * of this, and will reap the dead during the first call to onBindViewHolder.
+     * of this, and will reap the dead during the first call to onAttached.
      */
     private static class Graveyard {
 
