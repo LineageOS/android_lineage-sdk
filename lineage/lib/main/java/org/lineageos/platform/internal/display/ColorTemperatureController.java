@@ -80,6 +80,13 @@ public class ColorTemperatureController extends LiveDisplayFeature {
     private static final Uri DISPLAY_TEMPERATURE_NIGHT =
             LineageSettings.System.getUriFor(LineageSettings.System.DISPLAY_TEMPERATURE_NIGHT);
 
+    private static final Uri DISPLAY_NIGHT_START_TIME =
+            LineageSettings.System.getUriFor(LineageSettings.System.DISPLAY_NIGHT_START_TIME);
+    private static final Uri DISPLAY_NIGHT_END_TIME =
+            LineageSettings.System.getUriFor(LineageSettings.System.DISPLAY_NIGHT_END_TIME);
+    private static final Uri DISPLAY_TRANSITION_MODE =
+            LineageSettings.System.getUriFor(LineageSettings.System.DISPLAY_TRANSITION_MODE);
+
     public ColorTemperatureController(Context context,
             Handler handler, DisplayHardwareController displayHardware) {
         super(context, handler);
@@ -436,11 +443,23 @@ public class ColorTemperatureController extends LiveDisplayFeature {
     private int getTwilightK() {
         float adjustment = 1.0f;
         final TwilightState twilight = getTwilight();
+        if (getTransitionMode() == 1) {
+            long todaySunrise    = getNightEndTime();
+            long todaySunset     = getNightStartTime();
+            long tomorrowSunrise = getNightEndTime();
+            long yesterdaySunset = getNightStartTime();
+        } else {
+            long todaySunrise    = twilight.getTodaySunrise();
+            long todaySunset     = twilight.getTodaySunset();
+            long tomorrowSunrise = twilight.getTomorrowSunrise();
+            long yesterdaySunset = twilight.getYesterdaySunset();
+        }
+
 
         if (twilight != null) {
             final long now = System.currentTimeMillis();
-            adjustment = adj(now, twilight.getYesterdaySunset(), twilight.getTodaySunrise()) *
-                    adj(now, twilight.getTodaySunset(), twilight.getTomorrowSunrise());
+            adjustment = adj(now, yesterdaySunset, todaySunrise *
+                    adj(now, todaySunset, tomorrowSunrise;
         }
 
         return (int)MathUtils.lerp(mNightTemperature, mDayTemperature, adjustment);
@@ -474,6 +493,33 @@ public class ColorTemperatureController extends LiveDisplayFeature {
 
     void setNightColorTemperature(int temperature) {
         putInt(LineageSettings.System.DISPLAY_TEMPERATURE_NIGHT, temperature);
+    }
+
+    float getNightStartTime() {
+        return getFloat(LineageSettings.System.DISPLAY_NIGHT_START_TIME,
+                mDefaultNightStartTime);
+    }
+
+    void setNightStartTime(float time) {
+        putFloat(LineageSettings.System.DISPLAY_NIGHT_START_TIME, time);
+    }
+
+    float getNightEndTime() {
+        return getFloat(LineageSettings.System.DISPLAY_NIGHT_END_TIME,
+                mDefaultNightEndTime);
+    }
+
+    void setNightEndTime(float time) {
+        putFloat(LineageSettings.System.DISPLAY_NIGHT_END_TIME, time);
+    }
+
+    int getTransitionMode() {
+        return getInt(LineageSettings.System.DISPLAY_TRANSITION_MODE,
+                mDefaultTransitionMode);
+    }
+
+    void setTransitionMode(int mode) {
+        putInt(LineageSettings.System.DISPLAY_TRANSITION_MODE, mode);
     }
 
     Range<Integer> getColorTemperatureRange() {
