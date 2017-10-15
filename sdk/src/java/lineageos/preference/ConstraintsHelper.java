@@ -296,7 +296,7 @@ public class ConstraintsHelper {
         return fallbackAttr;
     }
 
-    public void onBindViewHolder(PreferenceViewHolder holder) {
+    public void onAttached() {
         checkIntent();
 
         if (isAvailable() && mReplacesKey != null) {
@@ -304,7 +304,9 @@ public class ConstraintsHelper {
         }
 
         Graveyard.get(mContext).summonReaper(mPref.getPreferenceManager());
+    }
 
+    public void onBindViewHolder(PreferenceViewHolder holder) {
         if (!isAvailable()) {
             return;
         }
