@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "e35685f3_5af73a0a",
+        "filename": "sdk/src/java/lineageos/preference/ConstraintsHelper.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 326,
+      "author": {
+        "id": 11883
+      },
+      "writtenOn": "2017-10-16T03:31:02Z",
+      "side": 1,
+      "message": "onAttached now",
+      "revId": "e3b43194db9a4f0d013478a35f81f0250fe8db9a",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
