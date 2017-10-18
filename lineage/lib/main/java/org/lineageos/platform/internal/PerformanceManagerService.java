@@ -233,10 +233,7 @@ public class PerformanceManagerService extends LineageSystemService {
         if (phase == PHASE_SYSTEM_SERVICES_READY && !mSystemReady) {
             synchronized (mLock) {
                 mPm = getLocalService(PowerManagerInternal.class);
-                /* BRINGUP: requires https://review.lineageos.org/#/c/65793/
-                mNumProfiles = mPm.getFeature(POWER_FEATURE_SUPPORTED_PROFILES);
-                */
-                mNumProfiles = 0;
+                mNumProfiles = mPm.getSupportedProfilesCount();
 
                 if (hasProfiles()) {
                     populateProfilesLocked();
@@ -294,9 +291,7 @@ public class PerformanceManagerService extends LineageSystemService {
         if (!isProfileSame && profile != PROFILE_POWER_SAVE &&
                 mActiveProfile == PROFILE_POWER_SAVE) {
             long token = Binder.clearCallingIdentity();
-            /* BRINGUP: requires https://review.lineageos.org/#/c/65793/
             mPm.setPowerSaveMode(false);
-            */
             Binder.restoreCallingIdentity(token);
         }
 
@@ -476,12 +471,6 @@ public class PerformanceManagerService extends LineageSystemService {
     };
 
     private final class LocalService implements PerformanceManagerInternal {
-
-        @Override
-        public void cpuBoost(int duration) {
-            cpuBoostInternal(duration);
-        }
-
         @Override
         public void activityResumed(Intent intent) {
             String activityName = null;
@@ -557,11 +546,11 @@ public class PerformanceManagerService extends LineageSystemService {
         public void handleMessage(Message msg) {
             switch (msg.what) {
                 case MSG_CPU_BOOST:
-                    mPm.powerHint(POWER_HINT_CPU_BOOST, msg.arg1);
+                    mPm.boost(msg.arg1);
                     mBoostLog.log(BoostLog.CPU_BOOST, "duration=" + msg.arg1);
                     break;
                 case MSG_SET_PROFILE:
-                    mPm.powerHint(POWER_HINT_SET_PROFILE, msg.arg1);
+                    mPm.setProfile((byte)msg.arg1);
                     mBoostLog.log((msg.arg2 == 1 ? BoostLog.USER_PROFILE : BoostLog.APP_PROFILE),
                             "profile=" + msg.arg1);
                     break;
