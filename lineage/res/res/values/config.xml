@@ -96,9 +96,10 @@
          LIGHTS_PULSATING_LED = 8
          LIGHTS_SEGMENTED_BATTERY_LED = 16
          LIGHTS_ADJUSTABLE_NOTIFICATION_LED_BRIGHTNESS = 32
+         LIGHTS_BATTERY_LED = 64
 
-         For example, a device support pulsating, RGB notification and
-         battery LEDs would set this config to 11. -->
+         For example, a device with notification and battery lights that supports
+         pulsating and RGB control would set this config to 75. -->
     <integer name="config_deviceLightCapabilities">8</integer>
 
     <!-- Default, comma-delimited, quick settings tiles. See QSConstants.java for a list of all available tiles -->
