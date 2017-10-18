@@ -23,5 +23,4 @@ public interface PerformanceManagerInternal {
 
     void activityResumed(Intent intent);
 
-    void cpuBoost(int duration);
 }
