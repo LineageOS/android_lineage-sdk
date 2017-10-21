@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "97080a21_ad290963",
+        "filename": "sdk/src/java/lineageos/preference/ConstraintsHelper.java",
+        "patchSetId": 8
+      },
+      "lineNbr": 324,
+      "author": {
+        "id": 3075
+      },
+      "writtenOn": "2017-10-21T05:39:59Z",
+      "side": 1,
+      "message": "Before Luca points this out, I will later update the comment here if we decide that the setVisible approach is okay.",
+      "revId": "a4f4a118cbbbe56b5e385a250a7c499f5879ed12",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
