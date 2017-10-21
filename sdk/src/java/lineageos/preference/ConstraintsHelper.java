@@ -217,6 +217,12 @@ public class ConstraintsHelper {
                             return false;
                         }
                     }
+                } else if (tv.type == TypedValue.TYPE_INT_DEC && tv.resourceId != 0) {
+                    int mask = a.getInt(
+                            R.styleable.lineage_SelfRemovingPreference_requiresConfigMask, -1);
+                    if (tv.data == 0 || (mask >=0 && (tv.data & mask) == 0)) {
+                        return false;
+                    }
                 }
             }
         } finally {
