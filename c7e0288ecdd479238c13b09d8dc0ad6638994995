@@ -22,6 +22,29 @@
       "revId": "c7e0288ecdd479238c13b09d8dc0ad6638994995",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2a15acd4_1e52726f",
+        "filename": "sdk/src/java/lineageos/preference/ConstraintsHelper.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 220,
+      "author": {
+        "id": 11883
+      },
+      "writtenOn": "2017-10-21T09:02:16Z",
+      "side": 1,
+      "message": "you should move this in under the first if check",
+      "range": {
+        "startLine": 220,
+        "startChar": 65,
+        "endLine": 220,
+        "endChar": 83
+      },
+      "revId": "c7e0288ecdd479238c13b09d8dc0ad6638994995",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
