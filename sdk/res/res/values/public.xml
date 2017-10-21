@@ -3,6 +3,7 @@
   <public type="attr" name="requiresPackage" id="0x3f010002" />
   <public type="attr" name="requiresFeature" id="0x3f010003" />
   <public type="attr" name="requiresConfig" id="0x3f010004" />
+  <public type="attr" name="requiresConfigMask" id="0x3f01000b" />
   <public type="attr" name="requiresProperty" id="0x3f010005" />
   <public type="attr" name="requiresOwner" id="0x3f010006" />
   <public type="attr" name="xmlRes" id="0x3f010007" />
