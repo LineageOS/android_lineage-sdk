@@ -201,21 +201,25 @@ public class ConstraintsHelper {
                 }
             }
 
-            // Check a config resource. This can be a bool or a string. A null string
-            // fails the constraint.
+            // Check a config resource. This can be a bool, string or integer.
+            // The preference is removed if any of the following are true:
+            // * A bool resource is false.
+            // * A string resource is null.
+            // * An integer resource is zero.
+            // * An integer is non-zero and when bitwise logically ANDed with
+            //   attribute requiresConfigMask, the result is zero.
             TypedValue tv = a.peekValue(R.styleable.lineage_SelfRemovingPreference_requiresConfig);
-            if (tv != null) {
-                if (tv.type == TypedValue.TYPE_STRING) {
-                    if (tv.resourceId != 0) {
-                        if (mContext.getResources().getString(tv.resourceId) == null) {
-                            return false;
-                        }
-                    }
-                } else if (tv.type == TypedValue.TYPE_INT_BOOLEAN) {
-                    if (tv.resourceId != 0) {
-                        if (tv.data == 0) {
-                            return false;
-                        }
+            if (tv != null && tv.resourceId != 0) {
+                if (tv.type == TypedValue.TYPE_STRING &&
+                        mContext.getResources().getString(tv.resourceId) == null) {
+                    return false;
+                } else if (tv.type == TypedValue.TYPE_INT_BOOLEAN && tv.data == 0) {
+                    return false;
+                } else if (tv.type == TypedValue.TYPE_INT_DEC) {
+                    int mask = a.getInt(
+                            R.styleable.lineage_SelfRemovingPreference_requiresConfigMask, -1);
+                    if (tv.data == 0 || (mask >= 0 && (tv.data & mask) == 0)) {
+                        return false;
                     }
                 }
             }

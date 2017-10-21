@@ -3,6 +3,7 @@
     <java-symbol type="attr" name="requiresPackage" />
     <java-symbol type="attr" name="requiresFeature" />
     <java-symbol type="attr" name="requiresConfig" />
+    <java-symbol type="attr" name="requiresConfigMask" />
     <java-symbol type="attr" name="requiresProperty" />
     <java-symbol type="attr" name="requiresOwner" />
     <java-symbol type="attr" name="requiresAction" />
