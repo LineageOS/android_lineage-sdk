@@ -118,4 +118,7 @@
 
     <!-- BurnIn protection -->
     <java-symbol type="bool" name="config_enableBurnInProtection" />
+
+    <!-- Notification light mappings -->
+    <java-symbol type="array" name="notification_light_package_mapping" />
 </resources>
