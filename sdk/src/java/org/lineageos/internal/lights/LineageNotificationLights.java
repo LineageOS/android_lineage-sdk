@@ -1,0 +1,331 @@
+/**
+ * Copyright (C) 2015 The CyanogenMod Project
+ * Copyright (C) 2017 The LineageOS Project
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+package org.lineageos.internal.lights;
+
+import android.app.KeyguardManager;
+import android.app.Notification;
+import android.content.Context;
+import android.content.ContentResolver;
+import android.content.pm.PackageManager;
+import android.content.pm.PackageManager.NameNotFoundException;
+import android.content.res.Resources;
+import android.database.ContentObserver;
+import android.graphics.drawable.Drawable;
+import android.os.Handler;
+import android.os.UserHandle;
+import android.provider.Settings;
+import android.text.TextUtils;
+import android.util.ArrayMap;
+import android.util.Log;
+
+import lineageos.providers.LineageSettings;
+import lineageos.util.ColorUtils;
+import org.lineageos.internal.lights.LightsCapabilities;
+
+import java.util.Map;
+
+public final class LineageNotificationLights {
+    private static final String TAG = "LineageNotificationLights";
+
+    // Notification light maximum brightness value to use.
+    private static final int LIGHT_BRIGHTNESS_MAXIMUM = 255;
+
+    // Light capabilities
+    private boolean mAdjustableNotificationLedBrightness;
+    private boolean mMultiColorNotificationLed;
+
+    // Light config
+    private int mNotificationLedBrightnessLevel = LIGHT_BRIGHTNESS_MAXIMUM;
+    private boolean mAutoGenerateNotificationColor = true;
+    public boolean mScreenOnEnabled = false;
+    private int mDefaultNotificationColor;
+    private int mDefaultNotificationLedOn;
+    private int mDefaultNotificationLedOff;
+
+    private ArrayMap<String, LedValues> mNotificationPulseCustomLedValues;
+    private Map<String, String> mPackageNameMappings;
+    private final ArrayMap<String, Integer> mGeneratedPackageLedColors =
+        new ArrayMap<String, Integer>();
+
+    // For checking lockscreen status
+    private KeyguardManager mKeyguardManager;
+
+    private final SettingsObserver mSettingsObserver;
+
+    private final Context mContext;
+
+    public static class LedValues {
+        public int color;
+        public int onMs;
+        public int offMs;
+        public int brightness;
+    }
+
+    public interface LedUpdater {
+        public void update();
+    }
+    private final LedUpdater mLedUpdater;
+
+    public LineageNotificationLights(Context context, LedUpdater ledUpdater) {
+        mContext = context;
+        mLedUpdater = ledUpdater;
+
+        final Resources res = mContext.getResources();
+
+        mKeyguardManager =
+                (KeyguardManager) mContext.getSystemService(Context.KEYGUARD_SERVICE);
+
+        mDefaultNotificationColor = res.getColor(
+                com.android.internal.R.color.config_defaultNotificationColor);
+        mDefaultNotificationLedOn = res.getInteger(
+                com.android.internal.R.integer.config_defaultNotificationLedOn);
+        mDefaultNotificationLedOff = res.getInteger(
+                com.android.internal.R.integer.config_defaultNotificationLedOff);
+
+        mMultiColorNotificationLed = LightsCapabilities.supports(
+                mContext, LightsCapabilities.LIGHTS_RGB_NOTIFICATION_LED);
+
+        mNotificationPulseCustomLedValues = new ArrayMap<String, LedValues>();
+
+        mPackageNameMappings = new ArrayMap<String, String>();
+        final String[] defaultMapping = res.getStringArray(
+                org.lineageos.platform.internal.R.array.notification_light_package_mapping);
+        for (String mapping : defaultMapping) {
+            String[] map = mapping.split("\\|");
+            mPackageNameMappings.put(map[0], map[1]);
+        }
+
+        mAdjustableNotificationLedBrightness = LightsCapabilities.supports(
+                mContext, LightsCapabilities.LIGHTS_ADJUSTABLE_NOTIFICATION_LED_BRIGHTNESS);
+
+        mSettingsObserver = new SettingsObserver(new Handler());
+        mSettingsObserver.observe();
+    }
+
+    // TODO: put this somewhere else
+    public boolean isKeyguardLocked() {
+        return mKeyguardManager != null && mKeyguardManager.isKeyguardLocked();
+    }
+
+    private void parseNotificationPulseCustomValuesString(String customLedValuesString) {
+        if (TextUtils.isEmpty(customLedValuesString)) {
+            return;
+        }
+
+        for (String packageValuesString : customLedValuesString.split("\\|")) {
+            String[] packageValues = packageValuesString.split("=");
+            if (packageValues.length != 2) {
+                Log.e(TAG, "Error parsing custom led values for unknown package");
+                continue;
+            }
+            String packageName = packageValues[0];
+            String[] values = packageValues[1].split(";");
+            if (values.length != 3) {
+                Log.e(TAG, "Error parsing custom led values '"
+                        + packageValues[1] + "' for " + packageName);
+                continue;
+            }
+            LedValues ledValues = new LedValues();
+            try {
+                ledValues.color = Integer.parseInt(values[0]);
+                ledValues.onMs = Integer.parseInt(values[1]);
+                ledValues.offMs = Integer.parseInt(values[2]);
+            } catch (NumberFormatException e) {
+                Log.e(TAG, "Error parsing custom led values '"
+                        + packageValues[1] + "' for " + packageName);
+                continue;
+            }
+            mNotificationPulseCustomLedValues.put(packageName, ledValues);
+        }
+    }
+
+    private LedValues getLedValuesForPackageName(String packageName) {
+        return mNotificationPulseCustomLedValues.get(mapPackage(packageName));
+    }
+
+    private int generateLedColorForPackageName(String packageName) {
+        if (!mAutoGenerateNotificationColor) {
+            return mDefaultNotificationColor;
+        }
+        if (!mMultiColorNotificationLed) {
+            return mDefaultNotificationColor;
+        }
+        final String mapping = mapPackage(packageName);
+        int color = mDefaultNotificationColor;
+
+        if (mGeneratedPackageLedColors.containsKey(mapping)) {
+            return mGeneratedPackageLedColors.get(mapping);
+        }
+
+        PackageManager pm = mContext.getPackageManager();
+        Drawable icon;
+        try {
+            icon = pm.getApplicationIcon(mapping);
+        } catch (NameNotFoundException e) {
+            Log.e(TAG, e.getMessage(), e);
+            return color;
+        }
+
+        color = ColorUtils.generateAlertColorFromDrawable(icon);
+        mGeneratedPackageLedColors.put(mapping, color);
+
+        return color;
+    }
+
+    private String mapPackage(String pkg) {
+        if (!mPackageNameMappings.containsKey(pkg)) {
+            return pkg;
+        }
+        return mPackageNameMappings.get(pkg);
+    }
+
+    public LedValues calcLights(LedValues ledValues, String packageName, boolean forcedOn,
+            boolean screenOn, boolean inCall, boolean isDefaultLights) {
+        // Don't flash while we are in a call or screen is on
+        // (unless forcedOn via Notification extra EXTRA_FORCE_SHOW_LGHTS)
+        final boolean enableLed;
+        if (forcedOn) {
+            enableLed = true;
+        } else if (!mScreenOnEnabled && (inCall || screenOn)) {
+            enableLed = false;
+        } else {
+            enableLed = true;
+        }
+        if (!enableLed) {
+            // Return null to indicate should turn off
+            return null;
+        }
+
+        ledValues.brightness = mAdjustableNotificationLedBrightness ?
+                mNotificationLedBrightnessLevel : LIGHT_BRIGHTNESS_MAXIMUM;
+
+        final LedValues ledValuesPkg = getLedValuesForPackageName(packageName);
+
+        // Use package specific values that the user has chosen.
+        if (ledValuesPkg != null) {
+            ledValues.color = ledValuesPkg.color != 0 ?
+                    ledValuesPkg.color : generateLedColorForPackageName(packageName);
+            ledValues.onMs = ledValuesPkg.onMs >= 0 ?
+                    ledValuesPkg.onMs : mDefaultNotificationLedOn;
+            ledValues.offMs = ledValuesPkg.offMs >= 0 ?
+                    ledValuesPkg.offMs : mDefaultNotificationLedOff;
+        } else if (isDefaultLights) {
+            ledValues.color = generateLedColorForPackageName(packageName);
+        }
+
+        return ledValues;
+    }
+
+    public void update() {
+        mSettingsObserver.update();
+    }
+
+    class SettingsObserver extends ContentObserver {
+        SettingsObserver(Handler handler) {
+            super(handler);
+        }
+
+        void observe() {
+            ContentResolver resolver = mContext.getContentResolver();
+
+            resolver.registerContentObserver(LineageSettings.System.getUriFor(
+                    LineageSettings.System.NOTIFICATION_LIGHT_PULSE_DEFAULT_COLOR),
+                    false, this, UserHandle.USER_ALL);
+            resolver.registerContentObserver(LineageSettings.System.getUriFor(
+                    LineageSettings.System.NOTIFICATION_LIGHT_PULSE_DEFAULT_LED_ON),
+                    false, this, UserHandle.USER_ALL);
+            resolver.registerContentObserver(LineageSettings.System.getUriFor(
+                    LineageSettings.System.NOTIFICATION_LIGHT_PULSE_DEFAULT_LED_OFF),
+                    false, this, UserHandle.USER_ALL);
+            resolver.registerContentObserver(LineageSettings.System.getUriFor(
+                    LineageSettings.System.NOTIFICATION_LIGHT_PULSE_CUSTOM_ENABLE),
+                    false, this, UserHandle.USER_ALL);
+            resolver.registerContentObserver(LineageSettings.System.getUriFor(
+                    LineageSettings.System.NOTIFICATION_LIGHT_PULSE_CUSTOM_VALUES),
+                    false, this, UserHandle.USER_ALL);
+            resolver.registerContentObserver(LineageSettings.System.getUriFor(
+                    LineageSettings.System.NOTIFICATION_LIGHT_SCREEN_ON),
+                    false, this, UserHandle.USER_ALL);
+            resolver.registerContentObserver(LineageSettings.System.getUriFor(
+                    LineageSettings.System.NOTIFICATION_LIGHT_COLOR_AUTO), false,
+                    this, UserHandle.USER_ALL);
+            if (mAdjustableNotificationLedBrightness) {
+                resolver.registerContentObserver(LineageSettings.System.getUriFor(
+                        LineageSettings.System.NOTIFICATION_LIGHT_BRIGHTNESS_LEVEL),
+                        false, this, UserHandle.USER_ALL);
+            }
+
+            update();
+        }
+
+        @Override public void onChange(boolean selfChange) {
+            update();
+        }
+
+        private void update() {
+            ContentResolver resolver = mContext.getContentResolver();
+            Resources res = mContext.getResources();
+
+            // Automatically pick a color for LED if not set
+            mAutoGenerateNotificationColor = LineageSettings.System.getIntForUser(resolver,
+                    LineageSettings.System.NOTIFICATION_LIGHT_COLOR_AUTO,
+                    1, UserHandle.USER_CURRENT) != 0;
+
+            // LED default color
+            mDefaultNotificationColor = LineageSettings.System.getIntForUser(resolver,
+                    LineageSettings.System.NOTIFICATION_LIGHT_PULSE_DEFAULT_COLOR,
+                    mDefaultNotificationColor, UserHandle.USER_CURRENT);
+
+            // LED default on MS
+            mDefaultNotificationLedOn = LineageSettings.System.getIntForUser(resolver,
+                    LineageSettings.System.NOTIFICATION_LIGHT_PULSE_DEFAULT_LED_ON,
+                    mDefaultNotificationLedOn, UserHandle.USER_CURRENT);
+
+            // LED default off MS
+            mDefaultNotificationLedOff = LineageSettings.System.getIntForUser(resolver,
+                    LineageSettings.System.NOTIFICATION_LIGHT_PULSE_DEFAULT_LED_OFF,
+                    mDefaultNotificationLedOff, UserHandle.USER_CURRENT);
+
+            // LED generated notification colors
+            mGeneratedPackageLedColors.clear();
+
+            // LED custom notification colors
+            mNotificationPulseCustomLedValues.clear();
+            if (LineageSettings.System.getIntForUser(resolver,
+                    LineageSettings.System.NOTIFICATION_LIGHT_PULSE_CUSTOM_ENABLE, 0,
+                    UserHandle.USER_CURRENT) != 0) {
+                parseNotificationPulseCustomValuesString(LineageSettings.System.getStringForUser(
+                        resolver, LineageSettings.System.NOTIFICATION_LIGHT_PULSE_CUSTOM_VALUES,
+                        UserHandle.USER_CURRENT));
+            }
+
+            // Notification LED brightness
+            if (mAdjustableNotificationLedBrightness) {
+                mNotificationLedBrightnessLevel = LineageSettings.System.getIntForUser(resolver,
+                        LineageSettings.System.NOTIFICATION_LIGHT_BRIGHTNESS_LEVEL,
+                        LIGHT_BRIGHTNESS_MAXIMUM, UserHandle.USER_CURRENT);
+            }
+
+            // Notification lights with screen on
+            mScreenOnEnabled = (LineageSettings.System.getIntForUser(resolver,
+                    LineageSettings.System.NOTIFICATION_LIGHT_SCREEN_ON, 0,
+                    UserHandle.USER_CURRENT) != 0);
+
+            mLedUpdater.update();
+        }
+    }
+}
