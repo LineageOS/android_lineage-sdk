@@ -45,6 +45,30 @@
       "revId": "c7e0288ecdd479238c13b09d8dc0ad6638994995",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "920b3593_20d841e3",
+        "filename": "sdk/src/java/lineageos/preference/ConstraintsHelper.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 220,
+      "author": {
+        "id": 3075
+      },
+      "writtenOn": "2017-10-22T02:22:38Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "2a15acd4_1e52726f",
+      "range": {
+        "startLine": 220,
+        "startChar": 65,
+        "endLine": 220,
+        "endChar": 83
+      },
+      "revId": "c7e0288ecdd479238c13b09d8dc0ad6638994995",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
