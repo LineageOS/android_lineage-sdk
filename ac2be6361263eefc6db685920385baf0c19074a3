@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9b5360a5_a028646d",
+        "filename": "sdk/src/java/org/lineageos/internal/lights/LightsCapabilities.java",
+        "patchSetId": 5
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2017-10-25T06:54:51Z",
+      "side": 1,
+      "message": "May be better to add new lines in between the declarations so that the comments for each one can be read more clearly.",
+      "range": {
+        "startLine": 21,
+        "startChar": 0,
+        "endLine": 36,
+        "endChar": 52
+      },
+      "revId": "ac2be6361263eefc6db685920385baf0c19074a3",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
