@@ -22,6 +22,30 @@
       "revId": "ac2be6361263eefc6db685920385baf0c19074a3",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "e7b6eb65_0cb29858",
+        "filename": "sdk/src/java/org/lineageos/internal/lights/LightsCapabilities.java",
+        "patchSetId": 5
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 3075
+      },
+      "writtenOn": "2017-10-25T18:17:18Z",
+      "side": 1,
+      "message": "Agreed it was tough going as it was originally.\n\nDone.",
+      "parentUuid": "9b5360a5_a028646d",
+      "range": {
+        "startLine": 21,
+        "startChar": 0,
+        "endLine": 36,
+        "endChar": 52
+      },
+      "revId": "ac2be6361263eefc6db685920385baf0c19074a3",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
