@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "a575e2cc_6be2dc42",
+        "filename": "sdk/src/java/org/lineageos/internal/lights/LineageNotificationLights.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 13589
+      },
+      "writtenOn": "2017-10-25T07:48:01Z",
+      "side": 1,
+      "message": "I\u0027d prefer not having this member public and add a getter instead.",
+      "revId": "106a7df3de602aa75d5ba6840556a4bff3d9ace1",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
