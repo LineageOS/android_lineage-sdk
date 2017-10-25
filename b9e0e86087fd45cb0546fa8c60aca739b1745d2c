@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "325118fd_7b1ea25c",
+        "filename": "sdk/src/java/lineageos/preference/ConstraintsHelper.java",
+        "patchSetId": 5
+      },
+      "lineNbr": 218,
+      "author": {
+        "id": 11883
+      },
+      "writtenOn": "2017-10-25T03:43:23Z",
+      "side": 1,
+      "message": "remove duplicate tvresourceid check?",
+      "revId": "b9e0e86087fd45cb0546fa8c60aca739b1745d2c",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
