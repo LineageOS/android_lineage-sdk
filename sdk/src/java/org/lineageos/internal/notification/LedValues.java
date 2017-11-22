@@ -95,6 +95,24 @@ public class LedValues {
         mOffMs = offMs;
     }
 
+    public void applyAlphaToBrightness() {
+        final int alpha = (mColor >> 24) & 0xFF;
+        if (alpha > 0 && alpha < 255) {
+            mBrightness = mBrightness * alpha / 255;
+        }
+        mColor |= 0xFF000000;
+    }
+
+    public void applyBrightnessToColor() {
+        if (mBrightness > 0 && mBrightness < 255) {
+            int red   = ((mColor >> 16) & 0xFF) * mBrightness / 255;
+            int green = ((mColor >>  8) & 0xFF) * mBrightness / 255;
+            int blue  = (mColor & 0xFF) * mBrightness / 255;
+            mColor = (red << 16) | (green << 8) | blue;
+            mBrightness = 255;
+        }
+    }
+
     @Override
     public String toString() {
         return "enabled=" + mEnabled + " color=#" + String.format("%08X", mColor)

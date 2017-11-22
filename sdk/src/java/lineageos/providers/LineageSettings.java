@@ -1658,11 +1658,38 @@ public final class LineageSettings {
                 new InclusiveIntegerRangeValidator(0, 1);
 
         /**
+         * Contains the battery light maximum brightness to use.
+         * Values range from 1 to 255
+         */
+        public static final String BATTERY_LIGHT_BRIGHTNESS_LEVEL =
+                "battery_light_brightness_level";
+
+        /**
+         * Contains the battery light maximum brightness to use when Do Not
+         * Disturb is active.
+         * Values range from 1 to 255
+         */
+        public static final String BATTERY_LIGHT_BRIGHTNESS_LEVEL_ZEN =
+                "battery_light_brightness_level_zen";
+
+        /** @hide */
+        public static final Validator BATTERY_LIGHT_BRIGHTNESS_LEVEL_VALIDATOR =
+                new InclusiveIntegerRangeValidator(1, 255);
+
+        /**
          * Contains the notifications light maximum brightness to use.
          * Values range from 1 to 255
          */
         public static final String NOTIFICATION_LIGHT_BRIGHTNESS_LEVEL =
                 "notification_light_brightness_level";
+
+        /**
+         * Contains the notifications light maximum brightness to use when Do Not
+         * Disturb is active.
+         * Values range from 1 to 255
+         */
+        public static final String NOTIFICATION_LIGHT_BRIGHTNESS_LEVEL_ZEN =
+                "notification_light_brightness_level_zen";
 
         /** @hide */
         public static final Validator NOTIFICATION_LIGHT_BRIGHTNESS_LEVEL_VALIDATOR =
@@ -2160,7 +2187,13 @@ public final class LineageSettings {
                     USE_EDGE_SERVICE_FOR_GESTURES_VALIDATOR);
             VALIDATORS.put(STATUS_BAR_NOTIF_COUNT, STATUS_BAR_NOTIF_COUNT_VALIDATOR);
             VALIDATORS.put(CALL_RECORDING_FORMAT, CALL_RECORDING_FORMAT_VALIDATOR);
+            VALIDATORS.put(BATTERY_LIGHT_BRIGHTNESS_LEVEL,
+                    BATTERY_LIGHT_BRIGHTNESS_LEVEL_VALIDATOR);
+            VALIDATORS.put(BATTERY_LIGHT_BRIGHTNESS_LEVEL_ZEN,
+                    BATTERY_LIGHT_BRIGHTNESS_LEVEL_VALIDATOR);
             VALIDATORS.put(NOTIFICATION_LIGHT_BRIGHTNESS_LEVEL,
+                    NOTIFICATION_LIGHT_BRIGHTNESS_LEVEL_VALIDATOR);
+            VALIDATORS.put(NOTIFICATION_LIGHT_BRIGHTNESS_LEVEL_ZEN,
                     NOTIFICATION_LIGHT_BRIGHTNESS_LEVEL_VALIDATOR);
             VALIDATORS.put(NOTIFICATION_LIGHT_SCREEN_ON,
                     NOTIFICATION_LIGHT_SCREEN_ON_VALIDATOR);
