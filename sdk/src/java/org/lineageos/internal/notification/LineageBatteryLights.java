@@ -16,13 +16,18 @@
 
 package org.lineageos.internal.notification;
 
+import android.app.NotificationManager;
+import android.content.BroadcastReceiver;
 import android.content.ContentResolver;
 import android.content.Context;
+import android.content.Intent;
+import android.content.IntentFilter;
 import android.content.res.Resources;
 import android.database.ContentObserver;
 import android.os.BatteryManager;
 import android.os.Handler;
 import android.os.UserHandle;
+import android.provider.Settings.Global;
 import android.util.Slog;
 
 import lineageos.providers.LineageSettings;
@@ -37,6 +42,7 @@ public final class LineageBatteryLights {
     // Battery light capabilities.
     private final boolean mMultiColorLed;
     private final boolean mUseSegmentedBatteryLed;
+    private final boolean mAdjustableBrightness;
 
     // Battery light intended operational state.
     private boolean mLightEnabled = false; // Disable until observer is started
@@ -44,8 +50,13 @@ public final class LineageBatteryLights {
     private int mBatteryLowARGB;
     private int mBatteryMediumARGB;
     private int mBatteryFullARGB;
+    private int mBatteryBrightness;
+    private int mBatteryBrightnessZen;
 
     private final Context mContext;
+
+    private NotificationManager mNotificationManager;
+    private int mZenMode;
 
     public interface LedUpdater {
         public void update();
@@ -64,6 +75,22 @@ public final class LineageBatteryLights {
         // in the alpha channel of the color and let the HAL sort it out.
         mUseSegmentedBatteryLed = LightsCapabilities.supports(
                 mContext, LightsCapabilities.LIGHTS_SEGMENTED_BATTERY_LED);
+
+        // Determine whether brightness modification should be available.
+        mAdjustableBrightness = !mUseSegmentedBatteryLed && mMultiColorLed;
+
+        // Watch for zen mode changes
+        mNotificationManager = mContext.getSystemService(NotificationManager.class);
+        IntentFilter filter = new IntentFilter(
+                NotificationManager.ACTION_INTERRUPTION_FILTER_CHANGED);
+        context.registerReceiver(new BroadcastReceiver() {
+                    @Override
+                    public void onReceive(Context context, Intent intent) {
+                        mZenMode = mNotificationManager.getZenMode();
+                        mLedUpdater.update();
+                    }
+                }, filter);
+        mZenMode = mNotificationManager.getZenMode();
 
         SettingsObserver observer = new SettingsObserver(new Handler());
         observer.observe();
@@ -84,8 +111,17 @@ public final class LineageBatteryLights {
             return;
         }
 
-        ledValues.setBrightness(mUseSegmentedBatteryLed ?
-                level : LedValues.LIGHT_BRIGHTNESS_MAXIMUM);
+        final int brightness;
+        if (mUseSegmentedBatteryLed) {
+            brightness = level;
+        } else if (!mAdjustableBrightness) {
+            brightness = LedValues.LIGHT_BRIGHTNESS_MAXIMUM;
+        } else if (mZenMode == Global.ZEN_MODE_OFF) {
+            brightness = mBatteryBrightness;
+        } else {
+            brightness = mBatteryBrightnessZen;
+        }
+        ledValues.setBrightness(brightness);
 
         if (low) {
             if (status == BatteryManager.BATTERY_STATUS_CHARGING) {
@@ -114,6 +150,11 @@ public final class LineageBatteryLights {
         if (ledValues.getColor() != 0) {
             ledValues.setEnabled(true);
         }
+        // Apply brightness level to color value.
+        if (mAdjustableBrightness) {
+            ledValues.applyBrightnessToColor();
+        }
+
         if (DEBUG) {
             Slog.i(TAG, "calcLights output: ledValues={ " + ledValues + " }");
         }
@@ -150,6 +191,18 @@ public final class LineageBatteryLights {
                         UserHandle.USER_ALL);
             }
 
+            // Adjustable brightness levels are available.
+            if (mAdjustableBrightness) {
+                // Battery brightness level
+                resolver.registerContentObserver(LineageSettings.System.getUriFor(
+                        LineageSettings.System.BATTERY_LIGHT_BRIGHTNESS_LEVEL), false, this,
+                        UserHandle.USER_ALL);
+                // Battery brightness level in Do Not Disturb mode
+                resolver.registerContentObserver(LineageSettings.System.getUriFor(
+                        LineageSettings.System.BATTERY_LIGHT_BRIGHTNESS_LEVEL_ZEN), false, this,
+                        UserHandle.USER_ALL);
+            }
+
             update();
         }
 
@@ -180,6 +233,18 @@ public final class LineageBatteryLights {
             mBatteryFullARGB = LineageSettings.System.getInt(resolver,
                     LineageSettings.System.BATTERY_LIGHT_FULL_COLOR, res.getInteger(
                     com.android.internal.R.integer.config_notificationsBatteryFullARGB));
+
+            // Adjustable brightness levels are available.
+            if (mAdjustableBrightness) {
+                // Battery brightness level
+                mBatteryBrightness = LineageSettings.System.getInt(resolver,
+                        LineageSettings.System.BATTERY_LIGHT_BRIGHTNESS_LEVEL,
+                        LedValues.LIGHT_BRIGHTNESS_MAXIMUM);
+                // Battery brightness level in Do Not Disturb mode
+                mBatteryBrightnessZen = LineageSettings.System.getInt(resolver,
+                        LineageSettings.System.BATTERY_LIGHT_BRIGHTNESS_LEVEL_ZEN,
+                        LedValues.LIGHT_BRIGHTNESS_MAXIMUM);
+            }
 
             mLedUpdater.update();
         }
