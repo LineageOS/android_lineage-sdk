@@ -32,6 +32,7 @@ import android.graphics.drawable.Drawable;
 import android.os.Handler;
 import android.os.UserHandle;
 import android.provider.Settings;
+import android.provider.Settings.Global;
 import android.text.TextUtils;
 import android.util.ArrayMap;
 import android.util.Slog;
@@ -41,6 +42,7 @@ import lineageos.util.ColorUtils;
 
 import org.lineageos.internal.notification.LedValues;
 import org.lineageos.internal.notification.LightsCapabilities;
+import org.lineageos.internal.notification.LineageNotification;
 
 import java.util.Map;
 
@@ -49,13 +51,20 @@ public final class LineageNotificationLights {
     private static final boolean DEBUG = false;
 
     // Light capabilities
-    private boolean mAdjustableNotificationLedBrightness;
+    // Whether the notification light is RGB adjustable.
     private boolean mMultiColorNotificationLed;
+    // Whether the lights HAL supports changing brightness.
+    private boolean mHALAdjustableBrightness;
+    // Whether the light should be considered brightness adjustable
+    // (via HAL or via modifying RGB values).
+    private boolean mCanAdjustBrightness;
 
     // Light config
     private boolean mAutoGenerateNotificationColor;
     private boolean mScreenOnEnabled;
+    private boolean mZenAllowLights;
     private int mNotificationLedBrightnessLevel;
+    private int mNotificationLedBrightnessLevelZen;
     private int mDefaultNotificationColor;
     private int mDefaultNotificationLedOn;
     private int mDefaultNotificationLedOff;
@@ -64,6 +73,8 @@ public final class LineageNotificationLights {
     private Map<String, String> mPackageNameMappings;
     private final ArrayMap<String, Integer> mGeneratedPackageLedColors =
             new ArrayMap<String, Integer>();
+
+    private int mZenMode;
 
     // For checking lockscreen status
     private KeyguardManager mKeyguardManager;
@@ -83,7 +94,7 @@ public final class LineageNotificationLights {
 
         final Resources res = mContext.getResources();
 
-        mAdjustableNotificationLedBrightness = LightsCapabilities.supports(
+        mHALAdjustableBrightness = LightsCapabilities.supports(
                 mContext, LightsCapabilities.LIGHTS_ADJUSTABLE_NOTIFICATION_LED_BRIGHTNESS);
 
         mDefaultNotificationColor = res.getColor(
@@ -95,6 +106,10 @@ public final class LineageNotificationLights {
 
         mMultiColorNotificationLed = LightsCapabilities.supports(
                 mContext, LightsCapabilities.LIGHTS_RGB_NOTIFICATION_LED);
+
+        // We support brightness adjustment if either the HAL supports it
+        // or the light is RGB adjustable.
+        mCanAdjustBrightness = mHALAdjustableBrightness || mMultiColorNotificationLed;
 
         mNotificationPulseCustomLedValues = new ArrayMap<String, LedValues>();
 
@@ -197,27 +212,69 @@ public final class LineageNotificationLights {
         return mPackageNameMappings.get(pkg);
     }
 
+    public boolean isForcedOn(Notification n) {
+        if (n.extras != null) {
+            return n.extras.getBoolean(LineageNotification.EXTRA_FORCE_SHOW_LIGHTS, false);
+        }
+        return false;
+    }
+
+    private int getForcedBrightness(Notification n) {
+        if (n.extras != null) {
+            return n.extras.getInt(LineageNotification.EXTRA_FORCE_LIGHT_BRIGHTNESS, 0);
+        }
+        return 0;
+    }
+
+    public void setZenMode(int zenMode) {
+        mZenMode = zenMode;
+        mLedUpdater.update();
+    }
+
     // Called by NotificationManagerService updateLightsLocked().
     // Takes the lights values as requested by a notification and
     // updates them according to the active Lineage feature settings.
-    public void calcLights(LedValues ledValues, String packageName, boolean forcedOn,
-            boolean screenOn, boolean inCall, boolean isDefaultLights, int suppressedEffects) {
-        if (DEBUG) {
-            Slog.i(TAG, "calcLights input: ledValues={ " + ledValues + " } packageName="
-                    + packageName + " forcedOn=" + forcedOn + " screenOn=" + screenOn
-                    + " inCall=" + inCall + " isDefaultLights=" + isDefaultLights
-                    + " suppressedEffects=" + suppressedEffects);
-        }
-
+    public void calcLights(LedValues ledValues, String packageName, Notification n,
+            boolean screenActive, int suppressedEffects) {
+        final boolean forcedOn = isForcedOn(n);
+        final int forcedBrightness = getForcedBrightness(n);
+        final boolean isDefaultLights = (n.defaults & Notification.DEFAULT_LIGHTS) != 0;
         final boolean suppressScreenOff =
                 (suppressedEffects & SUPPRESSED_EFFECT_SCREEN_OFF) != 0;
         final boolean suppressScreenOn =
                 (suppressedEffects & SUPPRESSED_EFFECT_SCREEN_ON) != 0;
-        final boolean screenActive = screenOn || inCall;
+
+        if (DEBUG) {
+            Slog.i(TAG, "calcLights input: "
+                    + " ledValues={ " + ledValues + " }"
+                    + " packageName=" + packageName
+                    + " notification=" + n
+                    + " screenActive=" + screenActive
+                    + " suppressedEffects=" + suppressedEffects
+                    + " forcedOn=" + forcedOn
+                    + " forcedBrightness=" + forcedBrightness
+                    + " isDefaultLights=" + isDefaultLights
+                    + " suppressScreenOff=" + suppressScreenOff
+                    + " suppressScreenOn=" + suppressScreenOn
+                    + " mCanAdjustBrightness=" + mCanAdjustBrightness
+                    + " mHALAdjustableBrightness=" + mHALAdjustableBrightness
+                    + " mAutoGenerateNotificationColor=" + mAutoGenerateNotificationColor
+                    + " mMultiColorNotificationLed=" + mMultiColorNotificationLed
+                    + " mNotificationLedBrightnessLevel=" + mNotificationLedBrightnessLevel
+                    + " mNotificationLedBrightnessLevelZen=" + mNotificationLedBrightnessLevelZen
+                    + " mScreenOnEnabled= " + mScreenOnEnabled
+                    + " mZenAllowLights=" + mZenAllowLights
+                    + " mZenMode=" + mZenMode
+            );
+        }
+
         final boolean enableLed;
         if (forcedOn) {
             // Forced on always enables
             enableLed = true;
+        } else if (!mZenAllowLights && mZenMode != Global.ZEN_MODE_OFF) {
+            // DnD configured to disable lights in all modes (except when off).
+            enableLed = false;
         } else if (screenActive && (!mScreenOnEnabled || suppressScreenOn)) {
             // Screen on cases where we disable
             enableLed = false;
@@ -233,8 +290,18 @@ public final class LineageNotificationLights {
             return;
         }
 
-        ledValues.setBrightness(mAdjustableNotificationLedBrightness ?
-                mNotificationLedBrightnessLevel : LedValues.LIGHT_BRIGHTNESS_MAXIMUM);
+        final int brightness;
+        if (!mCanAdjustBrightness) {
+            // No brightness support available
+            brightness = LedValues.LIGHT_BRIGHTNESS_MAXIMUM;
+        } else if (forcedBrightness > 0) {
+            brightness = forcedBrightness;
+        } else if (mZenMode == Global.ZEN_MODE_OFF) {
+            brightness = mNotificationLedBrightnessLevel;
+        } else {
+            brightness = mNotificationLedBrightnessLevelZen;
+        }
+        ledValues.setBrightness(brightness);
 
         final LedValues ledValuesPkg = getLedValuesForPackageName(packageName);
 
@@ -250,6 +317,12 @@ public final class LineageNotificationLights {
             ledValues.setColor(generateLedColorForPackageName(packageName));
             ledValues.setOnMs(mDefaultNotificationLedOn);
             ledValues.setOffMs(mDefaultNotificationLedOff);
+        }
+        // If lights HAL does not support adjustable notification brightness then
+        // scale color value here instead.
+        if (mCanAdjustBrightness && !mHALAdjustableBrightness) {
+            ledValues.applyAlphaToBrightness();
+            ledValues.applyBrightnessToColor();
         }
         if (DEBUG) {
             Slog.i(TAG, "calcLights output: ledValues={ " + ledValues + " }");
@@ -285,11 +358,19 @@ public final class LineageNotificationLights {
             resolver.registerContentObserver(LineageSettings.System.getUriFor(
                     LineageSettings.System.NOTIFICATION_LIGHT_COLOR_AUTO), false,
                     this, UserHandle.USER_ALL);
-            if (mAdjustableNotificationLedBrightness) {
+
+            if (mCanAdjustBrightness) {
                 resolver.registerContentObserver(LineageSettings.System.getUriFor(
                         LineageSettings.System.NOTIFICATION_LIGHT_BRIGHTNESS_LEVEL),
                         false, this, UserHandle.USER_ALL);
+                resolver.registerContentObserver(LineageSettings.System.getUriFor(
+                        LineageSettings.System.NOTIFICATION_LIGHT_BRIGHTNESS_LEVEL_ZEN),
+                        false, this, UserHandle.USER_ALL);
             }
+
+            resolver.registerContentObserver(LineageSettings.System.getUriFor(
+                    LineageSettings.System.ZEN_ALLOW_LIGHTS), false, this,
+                    UserHandle.USER_ALL);
 
             update();
         }
@@ -336,17 +417,26 @@ public final class LineageNotificationLights {
                         UserHandle.USER_CURRENT));
             }
 
-            // Notification LED brightness
-            if (mAdjustableNotificationLedBrightness) {
-                mNotificationLedBrightnessLevel = LineageSettings.System.getIntForUser(resolver,
-                        LineageSettings.System.NOTIFICATION_LIGHT_BRIGHTNESS_LEVEL,
-                        LedValues.LIGHT_BRIGHTNESS_MAXIMUM, UserHandle.USER_CURRENT);
-            }
-
             // Notification lights with screen on
             mScreenOnEnabled = (LineageSettings.System.getIntForUser(resolver,
                     LineageSettings.System.NOTIFICATION_LIGHT_SCREEN_ON, 0,
                     UserHandle.USER_CURRENT) != 0);
+
+            // Adustable notification LED brightness.
+            if (mCanAdjustBrightness) {
+                // Normal brightness.
+                mNotificationLedBrightnessLevel = LineageSettings.System.getIntForUser(resolver,
+                        LineageSettings.System.NOTIFICATION_LIGHT_BRIGHTNESS_LEVEL,
+                        LedValues.LIGHT_BRIGHTNESS_MAXIMUM, UserHandle.USER_CURRENT);
+                // Brightness in Do Not Disturb mode.
+                mNotificationLedBrightnessLevelZen = LineageSettings.System.getIntForUser(
+                        resolver, LineageSettings.System.NOTIFICATION_LIGHT_BRIGHTNESS_LEVEL_ZEN,
+                        LedValues.LIGHT_BRIGHTNESS_MAXIMUM, UserHandle.USER_CURRENT);
+            }
+
+            mZenAllowLights = LineageSettings.System.getIntForUser(resolver,
+                        LineageSettings.System.ZEN_ALLOW_LIGHTS,
+                        1, UserHandle.USER_CURRENT) != 0;
 
             mLedUpdater.update();
         }

@@ -78,9 +78,21 @@
     <!-- Default for LineageSettings.Global.POWER_NOTIFICATIONS_RINGTONE -->
     <string name="def_power_notifications_ringtone" translatable="false">content://settings/system/notification_sound</string>
 
+    <!-- Default value for the battery LEDs brightness -->
+    <integer name="def_battery_brightness_level">255</integer>
+
+    <!-- Default value for the notification LEDs brightness
+         when Do Not Disturb is active -->
+    <integer name="def_battery_brightness_level_zen">255</integer>
+
     <!-- Default value for the notification LEDs brightness
          on devices equiped with configurable LED controller -->
     <integer name="def_notification_brightness_level">255</integer>
+
+    <!-- Default value for the notification LEDs brightness
+         on devices equiped with configurable LED controller
+         when Do Not Disturb is active -->
+    <integer name="def_notification_brightness_level_zen">255</integer>
 
     <!-- Default value for notification LED customization -->
     <bool name="def_notification_pulse_custom_enable">false</bool>
