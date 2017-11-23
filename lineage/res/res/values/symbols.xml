@@ -121,4 +121,12 @@
 
     <!-- Notification light mappings -->
     <java-symbol type="array" name="notification_light_package_mapping" />
+
+    <!-- About device info screen -->
+    <java-symbol type="string" name="build_date" />
+    <java-symbol type="string" name="lineage_api_level" />
+    <java-symbol type="string" name="lineage_version" />
+
+    <!-- General purpose use "unknown" string -->
+    <java-symbol type="string" name="unknown" />
 </resources>
