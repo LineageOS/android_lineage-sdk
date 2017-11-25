@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "180cac9a_8fe59912",
+        "filename": "sdk/src/java/org/lineageos/internal/util/RebootUtils.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 13589
+      },
+      "writtenOn": "2017-11-25T23:38:22Z",
+      "side": 1,
+      "message": "Could km ever be null ? During the boot for some reason ?",
+      "revId": "b79b8f288a233ee96c01f72e2d8a40e6fca53575",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
