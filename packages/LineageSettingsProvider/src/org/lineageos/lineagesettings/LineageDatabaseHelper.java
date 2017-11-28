@@ -1,5 +1,6 @@
 /**
  * Copyright (c) 2015, The CyanogenMod Project
+ * Copyright (c) 2017, The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -34,7 +35,10 @@ import android.provider.Settings;
 import android.text.TextUtils;
 import android.util.DisplayMetrics;
 import android.util.Log;
+
 import lineageos.providers.LineageSettings;
+
+import org.lineageos.internal.util.FileUtils;
 
 import java.io.File;
 
@@ -47,6 +51,7 @@ public class LineageDatabaseHelper extends SQLiteOpenHelper{
     private static final boolean LOCAL_LOGV = false;
 
     private static final String DATABASE_NAME = "lineagesettings.db";
+    private static final String DATABASE_NAME_OLD = "cmsettings.db";
     private static final int DATABASE_VERSION = 8;
 
     public static class LineageTableNames {
@@ -78,17 +83,53 @@ public class LineageDatabaseHelper extends SQLiteOpenHelper{
      * @param userId The database path for this user
      * @return The database path string
      */
-    static String dbNameForUser(final int userId) {
+    private static String dbNameForUser(final int userId, final String baseName) {
         // The owner gets the unadorned db name;
         if (userId == UserHandle.USER_OWNER) {
-            return DATABASE_NAME;
+            return baseName;
         } else {
             // Place the database in the user-specific data tree so that it's
             // cleaned up automatically when the user is deleted.
             File databaseFile = new File(
-                    Environment.getUserSystemDirectory(userId), DATABASE_NAME);
+                    Environment.getUserSystemDirectory(userId), baseName);
             return databaseFile.getPath();
         }
+    }
+
+    /**
+     * Rename a database and any related files
+     */
+    private static void renameDb(String oldDb, String newDb) {
+        if (FileUtils.rename(oldDb, newDb)) {
+            // Move any additional sqlite files that might exist.
+            // The list of suffixes is taken from fw/b SQLiteDatabase.java deleteDatabase().
+            final String[] suffixes = { "-journal", "-shm", "-wal" };
+            for (String s: suffixes) {
+                if (FileUtils.fileExists(oldDb + s)) {
+                    FileUtils.rename(oldDb + s, newDb + s);
+                }
+            }
+         } else {
+            Log.e(TAG, "Found old settings db " + oldDb + " but could not rename it to " + newDb);
+         }
+    }
+
+    /**
+     * Get the database name, triggering any old db file rename tasks in the process.
+     */
+    private static String getDbName(int userId) {
+        final String dbName = dbNameForUser(userId, DATABASE_NAME);
+
+        // If no settings db exists, look for an old one (and rename)
+        if (!FileUtils.fileExists(dbName)) {
+            final String dbNameOld = dbNameForUser(userId, DATABASE_NAME_OLD);
+            // Only rename databases that we know we can write to (after renaming)
+            if (FileUtils.isFileWritable(dbNameOld)) {
+                renameDb(dbNameOld, dbName);
+            }
+        }
+
+        return dbName;
     }
 
     /**
@@ -97,7 +138,7 @@ public class LineageDatabaseHelper extends SQLiteOpenHelper{
      * @param userId
      */
     public LineageDatabaseHelper(Context context, int userId) {
-        super(context, dbNameForUser(userId), null, DATABASE_VERSION);
+        super(context, getDbName(userId), null, DATABASE_VERSION);
         mContext = context;
         mUserHandle = userId;
 
