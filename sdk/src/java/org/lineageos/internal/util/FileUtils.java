@@ -25,6 +25,8 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.lang.NullPointerException;
+import java.lang.SecurityException;
 
 public final class FileUtils {
     private static final String TAG = "FileUtils";
@@ -121,5 +123,40 @@ public final class FileUtils {
     public static boolean isFileWritable(String fileName) {
         final File file = new File(fileName);
         return file.exists() && file.canWrite();
+    }
+
+    /**
+     * Deletes an existing file
+     *
+     * @return true if the delete was successful, false if not
+     */
+    public static boolean delete(String fileName) {
+        final File file = new File(fileName);
+        boolean ok = false;
+        try {
+            ok = file.delete();
+        } catch (SecurityException e) {
+            Log.w(TAG, "SecurityException trying to delete " + fileName, e);
+        }
+        return ok;
+    }
+
+    /**
+     * Renames an existing file
+     *
+     * @return true if the rename was successful, false if not
+     */
+    public static boolean rename(String srcPath, String dstPath) {
+        final File srcFile = new File(srcPath);
+        final File dstFile = new File(dstPath);
+        boolean ok = false;
+        try {
+            ok = srcFile.renameTo(dstFile);
+        } catch (SecurityException e) {
+            Log.w(TAG, "SecurityException trying to rename " + srcPath + " to " + dstPath, e);
+        } catch (NullPointerException e) {
+            Log.e(TAG, "NullPointerException trying to rename " + srcPath + " to " + dstPath, e);
+        }
+        return ok;
     }
 }
