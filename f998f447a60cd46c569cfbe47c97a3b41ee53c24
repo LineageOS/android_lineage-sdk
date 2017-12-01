@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "dbafcd30_2ef66fcd",
+        "filename": "packages/LineageSettingsProvider/src/org/lineageos/lineagesettings/LineageSettingsProvider.java",
+        "patchSetId": 18
+      },
+      "lineNbr": 71,
+      "author": {
+        "id": 3075
+      },
+      "writtenOn": "2017-12-01T01:29:36Z",
+      "side": 1,
+      "message": "I realised it would make more sense if the string was named after the new version you\u0027re installing.  Sure enough:\ncm-12.1 was \"has_migrated_cm_settings\"\ncm-13.0 was \"has_migrated_cm13_settings\"\ncm-14.1 forgot to bump it ;-)\n\nWill update",
+      "revId": "f998f447a60cd46c569cfbe47c97a3b41ee53c24",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
