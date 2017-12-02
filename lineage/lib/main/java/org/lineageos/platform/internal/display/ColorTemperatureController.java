@@ -186,7 +186,7 @@ public class ColorTemperatureController extends LiveDisplayFeature {
         int temperature = mDayTemperature;
         int mode = getMode();
 
-        if (mode == MODE_OFF || isLowPowerMode()) {
+        if (mode == MODE_OFF) {
             temperature = mDefaultDayTemperature;
         } else if (mode == MODE_NIGHT) {
             temperature = mNightTemperature;

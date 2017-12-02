@@ -250,12 +250,10 @@ public class DisplayHardwareController extends LiveDisplayFeature {
 
         final float[] rgb = getDefaultAdjustment();
 
-        if (!isLowPowerMode()) {
-            copyColors(mColorAdjustment, rgb);
-            rgb[0] *= mAdditionalAdjustment[0];
-            rgb[1] *= mAdditionalAdjustment[1];
-            rgb[2] *= mAdditionalAdjustment[2];
-        }
+        copyColors(mColorAdjustment, rgb);
+        rgb[0] *= mAdditionalAdjustment[0];
+        rgb[1] *= mAdditionalAdjustment[1];
+        rgb[2] *= mAdditionalAdjustment[2];
 
         if (DEBUG) {
             Slog.d(TAG, "updateColorAdjustment: " + Arrays.toString(rgb));
