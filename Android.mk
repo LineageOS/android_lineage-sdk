@@ -234,7 +234,7 @@ LOCAL_ADDITIONAL_DEPENDENCIES:= $(lineage_platform_docs_LOCAL_ADDITIONAL_DEPENDE
 
 LOCAL_MODULE := lineage-api-stubs
 
-LOCAL_DROIDDOC_CUSTOM_TEMPLATE_DIR:= build/tools/droiddoc/templates-sdk
+LOCAL_DROIDDOC_CUSTOM_TEMPLATE_DIR:= external/doclava/res/assets/templates-sdk
 
 LOCAL_DROIDDOC_OPTIONS:= \
         -stubs $(TARGET_OUT_COMMON_INTERMEDIATES)/JAVA_LIBRARIES/lineage-sdk_stubs_current_intermediates/src \
