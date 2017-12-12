@@ -331,7 +331,7 @@ public class ConstraintsHelper {
      */
     private static class Graveyard {
 
-        private final Set<String> mDeathRow = new ArraySet<>();
+        private Set<String> mDeathRow = new ArraySet<>();
 
         private static Graveyard sInstance;
 
@@ -374,13 +374,16 @@ public class ConstraintsHelper {
 
         public void summonReaper(PreferenceManager mgr) {
             synchronized (mDeathRow) {
+                Set<String> notReadyForReap = new ArraySet<>();
                 for (String dead : mDeathRow) {
                     Preference deadPref = mgr.findPreference(dead);
                     if (deadPref != null) {
                         deadPref.setVisible(false);
+                    } else {
+                        notReadyForReap.add(dead);
                     }
                 }
-                mDeathRow.clear();
+                mDeathRow = notReadyForReap;
             }
         }
     }
