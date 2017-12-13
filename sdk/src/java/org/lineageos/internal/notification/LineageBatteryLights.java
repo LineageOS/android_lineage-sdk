@@ -35,6 +35,7 @@ public final class LineageBatteryLights {
     private final boolean DEBUG = false;
 
     // Battery light capabilities.
+    private final boolean mHasBatteryLed;
     private final boolean mMultiColorLed;
     private final boolean mUseSegmentedBatteryLed;
 
@@ -56,6 +57,10 @@ public final class LineageBatteryLights {
         mContext = context;
         mLedUpdater = ledUpdater;
 
+        // Does the device have a battery LED ?
+        mHasBatteryLed = LightsCapabilities.supports(
+                mContext, LightsCapabilities.LIGHTS_BATTERY_LED);
+
         // Does the device support changing battery LED colors?
         mMultiColorLed = LightsCapabilities.supports(
                 mContext, LightsCapabilities.LIGHTS_RGB_BATTERY_LED);
@@ -67,6 +72,10 @@ public final class LineageBatteryLights {
 
         SettingsObserver observer = new SettingsObserver(new Handler());
         observer.observe();
+    }
+
+    public boolean isSupported() {
+        return mHasBatteryLed;
     }
 
     public void calcLights(LedValues ledValues, int level, int status, boolean low) {
