@@ -116,6 +116,10 @@
     <java-symbol type="array" name="config_deviceKeyHandlerLibs" />
     <java-symbol type="array" name="config_deviceKeyHandlerClasses" />
 
+    <!-- Device hardware keys -->
+    <java-symbol type="integer" name="config_deviceHardwareKeys" />
+    <java-symbol type="integer" name="config_deviceHardwareWakeKeys" />
+
     <!-- BurnIn protection -->
     <java-symbol type="bool" name="config_enableBurnInProtection" />
 
