@@ -372,13 +372,29 @@ public class ConstraintsHelper {
             return null;
         }
 
+        private void hidePreference(PreferenceManager mgr, Preference pref) {
+            pref.setVisible(false);
+            // Hide the group if nothing is visible
+            final PreferenceGroup group = getParent(pref, pref);
+            boolean allHidden = true;
+            for (int i = 0; i < group.getPreferenceCount(); i++) {
+                if (group.getPreference(i).isVisible()) {
+                    allHidden = false;
+                    break;
+                }
+            }
+            if (allHidden) {
+                group.setVisible(false);
+            }
+        }
+
         public void summonReaper(PreferenceManager mgr) {
             synchronized (mDeathRow) {
                 Set<String> notReadyForReap = new ArraySet<>();
                 for (String dead : mDeathRow) {
                     Preference deadPref = mgr.findPreference(dead);
                     if (deadPref != null) {
-                        deadPref.setVisible(false);
+                        hidePreference(mgr, deadPref);
                     } else {
                         notReadyForReap.add(dead);
                     }
