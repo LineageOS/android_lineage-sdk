@@ -16,7 +16,42 @@
 
 package org.lineageos.internal.util;
 
+import android.content.ContentResolver;
+import android.os.UserHandle;
+
+import lineageos.providers.LineageSettings;
+
 public class DeviceKeysConstants {
+    // Available custom actions to perform on a key press.
+    // Must match values for KEY_HOME_LONG_PRESS_ACTION in:
+    //   sdk/src/java/lineageos/providers/LineageSettings.java
+    public enum Action {
+        NOTHING,
+        MENU,
+        APP_SWITCH,
+        SEARCH,
+        VOICE_SEARCH,
+        IN_APP_SEARCH,
+        LAUNCH_CAMERA,
+        SLEEP,
+        LAST_APP,
+        SPLIT_SCREEN,
+        SINGLE_HAND_LEFT,
+        SINGLE_HAND_RIGHT;
+
+        public static Action fromIntSafe(int id) {
+            if (id < NOTHING.ordinal() || id > Action.values().length) {
+                return NOTHING;
+            }
+            return Action.values()[id];
+        }
+
+        public static Action fromSettings(ContentResolver cr, String setting, Action def) {
+            return fromIntSafe(LineageSettings.System.getIntForUser(cr,
+                    setting, def.ordinal(), UserHandle.USER_CURRENT));
+        }
+    }
+
     // Masks for checking presence of hardware keys.
     // Must match values in:
     //   lineage/res/res/values/config.xml
