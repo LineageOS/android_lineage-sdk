@@ -187,11 +187,6 @@
     <string name="permlab_observe_audio_sessions">observe audio session changes</string>
     <string name="permdesc_observe_audio_sessions">Allows an app to observe audio streams being created and destroyed.</string>
 
-    <!-- LineageAudioService - observe session changes permission -->
-    <string name="permlab_manage_audio_sessions">manage audio session changes</string>
-    <string name="permdesc_manage_audio_sessions">Allows an app to send audio stream updates.</string>
-
-
     <!-- Privacy Guard -->
     <string name="privacy_guard_manager_title">Privacy Guard</string>
 
