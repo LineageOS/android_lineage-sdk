@@ -172,7 +172,7 @@
     <permission android:name="lineageos.permission.BIND_WEATHER_PROVIDER_SERVICE"
                 android:label="@string/permlab_weather_bind"
                 android:description="@string/permdesc_weather_bind"
-                android:protectionLevel="signature|privileged"/>
+                android:protectionLevel="signature"/>
 
     <!-- Allows an application to observe system-wide changes to audio sessions
          @hide -->
