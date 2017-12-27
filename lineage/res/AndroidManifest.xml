@@ -196,11 +196,6 @@
                 android:icon="@drawable/ic_launcher_lineageos"
                 android:protectionLevel="normal" />
 
-    <!-- Not meant for third parties. Allows brokering core services to other
-         processes @hide -->
-    <permission android:name="lineageos.permission.BIND_CORE_SERVICE"
-                android:protectionLevel="signature|privileged" />
-
     <application android:process="system"
                  android:persistent="true"
                  android:hasCode="false"
