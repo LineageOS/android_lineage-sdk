@@ -1271,6 +1271,15 @@ public final class LineageSettings {
                 sColorValidator;
 
         /**
+         * Whether to use dark theme
+         */
+        public static final String DARK_THEME = "dark_theme";
+
+        /** @hide */
+        public static final Validator DARK_THEME_VALIDATOR =
+                sNonNegativeIntegerValidator;
+
+        /**
          * Sprint MWI Quirk: Show message wait indicator notifications
          * @hide
          */
@@ -2198,6 +2207,7 @@ public final class LineageSettings {
                     DISPLAY_PICTURE_ADJUSTMENT_VALIDATOR);
             VALIDATORS.put(ACCELEROMETER_ROTATION_ANGLES,
                     ACCELEROMETER_ROTATION_ANGLES_VALIDATOR);
+            VALIDATORS.put(DARK_THEME, DARK_THEME_VALIDATOR);
             VALIDATORS.put(__MAGICAL_TEST_PASSING_ENABLER,
                     __MAGICAL_TEST_PASSING_ENABLER_VALIDATOR);
         };
