@@ -143,4 +143,8 @@
 
     <!-- General purpose use "unknown" string -->
     <java-symbol type="string" name="unknown" />
+
+    <!-- Last app switch animations -->
+    <java-symbol type="anim" name="last_app_in" />
+    <java-symbol type="anim" name="last_app_out" />
 </resources>
