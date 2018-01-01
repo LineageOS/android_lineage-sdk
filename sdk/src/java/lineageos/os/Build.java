@@ -44,6 +44,7 @@ public class Build {
         sdkMap.put(LINEAGE_VERSION_CODES.ELDERBERRY, "Elderberry");
         sdkMap.put(LINEAGE_VERSION_CODES.FIG, "Fig");
         sdkMap.put(LINEAGE_VERSION_CODES.GUAVA, "Guava");
+        sdkMap.put(LINEAGE_VERSION_CODES.HACKBERRY, "Hackberry");
     }
 
     /** Various version strings. */
@@ -174,6 +175,11 @@ public class Build {
          * Unreleased preliminary version starting from CM14
          */
         public static final int GUAVA = 7;
+
+        /**
+         * Unreleased preliminary version starting from LineageOS 15.1
+         */
+        public static final int HACKBERRY = 8;
     }
 
     /**
