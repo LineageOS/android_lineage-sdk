@@ -66,29 +66,6 @@ package lineageos.alarmclock {
 
 package lineageos.app {
 
-  public class LineageStatusBarManager {
-    method public static lineageos.app.LineageStatusBarManager getInstance(android.content.Context);
-    method public void publishTile(int, lineageos.app.CustomTile);
-    method public void publishTile(java.lang.String, int, lineageos.app.CustomTile);
-    method public void publishTileAsUser(java.lang.String, int, lineageos.app.CustomTile, android.os.UserHandle);
-    method public void removeTile(int);
-    method public void removeTile(java.lang.String, int);
-    method public void removeTileAsUser(java.lang.String, int, android.os.UserHandle);
-  }
-
-  public class LineageTelephonyManager {
-    method public static lineageos.app.LineageTelephonyManager getInstance(android.content.Context);
-    method public java.util.List<android.telephony.SubscriptionInfo> getSubInformation();
-    method public boolean isDataConnectionEnabled();
-    method public boolean isDataConnectionSelectedOnSub(int);
-    method public boolean isSubActive(int);
-    method public void setDataConnectionState(boolean);
-    method public void setDefaultPhoneSub(int);
-    method public void setDefaultSmsSub(int);
-    method public void setSubState(int, boolean);
-    field public static final int ASK_FOR_SUBSCRIPTION_ID = 0; // 0x0
-  }
-
   public class CustomTile implements android.os.Parcelable {
     ctor public CustomTile(android.os.Parcel);
     ctor public CustomTile();
@@ -194,6 +171,29 @@ package lineageos.app {
     method public void onListenerConnected();
     method public final void removeCustomTile(java.lang.String, java.lang.String, int);
     field public static final java.lang.String SERVICE_INTERFACE = "lineageos.app.CustomTileListenerService";
+  }
+
+  public class LineageStatusBarManager {
+    method public static lineageos.app.LineageStatusBarManager getInstance(android.content.Context);
+    method public void publishTile(int, lineageos.app.CustomTile);
+    method public void publishTile(java.lang.String, int, lineageos.app.CustomTile);
+    method public void publishTileAsUser(java.lang.String, int, lineageos.app.CustomTile, android.os.UserHandle);
+    method public void removeTile(int);
+    method public void removeTile(java.lang.String, int);
+    method public void removeTileAsUser(java.lang.String, int, android.os.UserHandle);
+  }
+
+  public class LineageTelephonyManager {
+    method public static lineageos.app.LineageTelephonyManager getInstance(android.content.Context);
+    method public java.util.List<android.telephony.SubscriptionInfo> getSubInformation();
+    method public boolean isDataConnectionEnabled();
+    method public boolean isDataConnectionSelectedOnSub(int);
+    method public boolean isSubActive(int);
+    method public void setDataConnectionState(boolean);
+    method public void setDefaultPhoneSub(int);
+    method public void setDefaultSmsSub(int);
+    method public void setSubState(int, boolean);
+    field public static final int ASK_FOR_SUBSCRIPTION_ID = 0; // 0x0
   }
 
   public final class Profile implements java.lang.Comparable android.os.Parcelable {
@@ -358,12 +358,46 @@ package lineageos.content {
     field public static final java.lang.String ACTION_PROTECTED_CHANGED = "lineageos.intent.action.PROTECTED_COMPONENT_UPDATE";
     field public static final java.lang.String EXTRA_PROTECTED_COMPONENTS = "lineageos.intent.extra.PACKAGE_PROTECTED_COMPONENTS";
     field public static final java.lang.String EXTRA_PROTECTED_STATE = "lineageos.intent.extra.PACKAGE_PROTECTED_STATE";
-    field public static final java.lang.String URI_SCHEME_PACKAGE = "package";
   }
 
 }
 
 package lineageos.hardware {
+
+  public class DisplayMode implements android.os.Parcelable {
+    ctor public DisplayMode(int, java.lang.String);
+    method public int describeContents();
+    method public void writeToParcel(android.os.Parcel, int);
+    field public final int id;
+    field public final java.lang.String name;
+  }
+
+  public class HSIC implements android.os.Parcelable {
+    ctor public HSIC(float, float, float, float, float);
+    method public int describeContents();
+    method public java.lang.String flatten();
+    method public static lineageos.hardware.HSIC fromFloatArray(float[]);
+    method public float getContrast();
+    method public float getHue();
+    method public float getIntensity();
+    method public float getSaturation();
+    method public float getSaturationThreshold();
+    method public float[] toFloatArray();
+    method public int[] toRGB();
+    method public static lineageos.hardware.HSIC unflattenFrom(java.lang.String) throws java.lang.NumberFormatException;
+    method public void writeToParcel(android.os.Parcel, int);
+  }
+
+  public abstract interface IThermalListenerCallback implements android.os.IInterface {
+    method public abstract void onThermalChanged(int) throws android.os.RemoteException;
+  }
+
+  public static abstract class IThermalListenerCallback.Stub extends android.os.Binder implements lineageos.hardware.IThermalListenerCallback {
+    ctor public IThermalListenerCallback.Stub();
+    method public android.os.IBinder asBinder();
+    method public static lineageos.hardware.IThermalListenerCallback asInterface(android.os.IBinder);
+    method public boolean onTransact(int, android.os.Parcel, android.os.Parcel, int) throws android.os.RemoteException;
+  }
 
   public final class LineageHardwareManager {
     method public boolean deletePersistentObject(java.lang.String);
@@ -381,7 +415,6 @@ package lineageos.hardware {
     method public deprecated int getDisplayGammaCalibrationMax();
     method public deprecated int getDisplayGammaCalibrationMin();
     method public lineageos.hardware.DisplayMode[] getDisplayModes();
-    method public lineageos.hardware.TouchscreenGesture[] getTouchscreenGestures();
     method public static lineageos.hardware.LineageHardwareManager getInstance(android.content.Context);
     method public java.lang.String getLtoDestination();
     method public long getLtoDownloadInterval();
@@ -392,6 +425,7 @@ package lineageos.hardware {
     method public java.lang.String getSerialNumber();
     method public int getSupportedFeatures();
     method public int getThermalState();
+    method public lineageos.hardware.TouchscreenGesture[] getTouchscreenGestures();
     method public java.lang.String getUniqueDeviceId();
     method public int getVibratorDefaultIntensity();
     method public int getVibratorIntensity();
@@ -433,54 +467,10 @@ package lineageos.hardware {
     field public static final int FEATURE_SUNLIGHT_ENHANCEMENT = 256; // 0x100
     field public static final deprecated int FEATURE_TAP_TO_WAKE = 512; // 0x200
     field public static final int FEATURE_THERMAL_MONITOR = 32768; // 0x8000
-    field public static final int FEATURE_TOUCH_HOVERING = 2048; // 0x800
     field public static final int FEATURE_TOUCHSCREEN_GESTURES = 524288; // 0x80000
+    field public static final int FEATURE_TOUCH_HOVERING = 2048; // 0x800
     field public static final int FEATURE_UNIQUE_DEVICE_ID = 65536; // 0x10000
     field public static final int FEATURE_VIBRATOR = 1024; // 0x400
-  }
-
-  public class DisplayMode implements android.os.Parcelable {
-    ctor public DisplayMode(int, java.lang.String);
-    method public int describeContents();
-    method public void writeToParcel(android.os.Parcel, int);
-    field public final int id;
-    field public final java.lang.String name;
-  }
-
-  public class HSIC implements android.os.Parcelable {
-    ctor public HSIC(float, float, float, float, float);
-    method public int describeContents();
-    method public java.lang.String flatten();
-    method public static lineageos.hardware.HSIC fromFloatArray(float[]);
-    method public float getContrast();
-    method public float getHue();
-    method public float getIntensity();
-    method public float getSaturation();
-    method public float getSaturationThreshold();
-    method public float[] toFloatArray();
-    method public int[] toRGB();
-    method public static lineageos.hardware.HSIC unflattenFrom(java.lang.String) throws java.lang.NumberFormatException;
-    method public void writeToParcel(android.os.Parcel, int);
-  }
-
-  public class TouchscreenGesture implements android.os.Parcelable {
-    ctor public TouchscreenGesture(int, java.lang.String, int);
-    method public int describeContents();
-    method public void writeToParcel(android.os.Parcel, int);
-    field public final int id;
-    field public final java.lang.String name;
-    field public final int keycode;
-  }
-
-  public abstract interface IThermalListenerCallback implements android.os.IInterface {
-    method public abstract void onThermalChanged(int) throws android.os.RemoteException;
-  }
-
-  public static abstract class IThermalListenerCallback.Stub extends android.os.Binder implements lineageos.hardware.IThermalListenerCallback {
-    ctor public IThermalListenerCallback.Stub();
-    method public android.os.IBinder asBinder();
-    method public static lineageos.hardware.IThermalListenerCallback asInterface(android.os.IBinder);
-    method public boolean onTransact(int, android.os.Parcel, android.os.Parcel, int) throws android.os.RemoteException;
   }
 
   public class LiveDisplayConfig implements android.os.Parcelable {
@@ -562,6 +552,15 @@ package lineageos.hardware {
     field public static final int STATE_WARM_RISING = 2; // 0x2
   }
 
+  public class TouchscreenGesture implements android.os.Parcelable {
+    ctor public TouchscreenGesture(int, java.lang.String, int);
+    method public int describeContents();
+    method public void writeToParcel(android.os.Parcel, int);
+    field public final int id;
+    field public final int keycode;
+    field public final java.lang.String name;
+  }
+
 }
 
 package lineageos.media {
@@ -604,6 +603,7 @@ package lineageos.os {
     field public static final int ELDERBERRY = 5; // 0x5
     field public static final int FIG = 6; // 0x6
     field public static final int GUAVA = 7; // 0x7
+    field public static final int HACKBERRY = 8; // 0x8
   }
 
   public final class Concierge {
@@ -682,10 +682,6 @@ package lineageos.platform {
     ctor public R.drawable();
   }
 
-  public static final class R.id {
-    ctor public R.id();
-  }
-
   public static final class R.integer {
     ctor public R.integer();
   }
@@ -738,67 +734,46 @@ package lineageos.power {
 
 package lineageos.preference {
 
+  public class GlobalSettingSwitchPreference extends lineageos.preference.SelfRemovingSwitchPreference {
+    ctor public GlobalSettingSwitchPreference(android.content.Context, android.util.AttributeSet, int);
+    ctor public GlobalSettingSwitchPreference(android.content.Context, android.util.AttributeSet);
+    ctor public GlobalSettingSwitchPreference(android.content.Context);
+  }
+
   public class LineageGlobalSettingSwitchPreference extends lineageos.preference.SelfRemovingSwitchPreference {
     ctor public LineageGlobalSettingSwitchPreference(android.content.Context, android.util.AttributeSet, int);
     ctor public LineageGlobalSettingSwitchPreference(android.content.Context, android.util.AttributeSet);
     ctor public LineageGlobalSettingSwitchPreference(android.content.Context);
-    method protected boolean getPersistedBoolean(boolean);
-    method protected boolean isPersisted();
-    method protected boolean persistBoolean(boolean);
   }
 
   public class LineageSecureSettingListPreference extends lineageos.preference.SelfRemovingListPreference {
     ctor public LineageSecureSettingListPreference(android.content.Context, android.util.AttributeSet, int);
     ctor public LineageSecureSettingListPreference(android.content.Context, android.util.AttributeSet);
     method public int getIntValue(int);
-    method protected java.lang.String getPersistedString(java.lang.String);
-    method protected boolean isPersisted();
-    method protected boolean persistString(java.lang.String);
   }
 
   public class LineageSecureSettingSwitchPreference extends lineageos.preference.SelfRemovingSwitchPreference {
     ctor public LineageSecureSettingSwitchPreference(android.content.Context, android.util.AttributeSet, int);
     ctor public LineageSecureSettingSwitchPreference(android.content.Context, android.util.AttributeSet);
     ctor public LineageSecureSettingSwitchPreference(android.content.Context);
-    method protected boolean getPersistedBoolean(boolean);
-    method protected boolean isPersisted();
-    method protected boolean persistBoolean(boolean);
   }
 
   public class LineageSystemSettingDropDownPreference extends lineageos.preference.SelfRemovingDropDownPreference {
     ctor public LineageSystemSettingDropDownPreference(android.content.Context, android.util.AttributeSet, int);
     ctor public LineageSystemSettingDropDownPreference(android.content.Context, android.util.AttributeSet);
     method public int getIntValue(int);
-    method protected java.lang.String getPersistedString(java.lang.String);
-    method protected boolean isPersisted();
-    method protected boolean persistString(java.lang.String);
   }
 
   public class LineageSystemSettingListPreference extends lineageos.preference.SelfRemovingListPreference {
     ctor public LineageSystemSettingListPreference(android.content.Context, android.util.AttributeSet, int);
     ctor public LineageSystemSettingListPreference(android.content.Context, android.util.AttributeSet);
     method public int getIntValue(int);
-    method protected java.lang.String getPersistedString(java.lang.String);
-    method protected boolean isPersisted();
-    method protected boolean persistString(java.lang.String);
   }
 
   public class LineageSystemSettingSwitchPreference extends lineageos.preference.SelfRemovingSwitchPreference {
     ctor public LineageSystemSettingSwitchPreference(android.content.Context, android.util.AttributeSet, int);
     ctor public LineageSystemSettingSwitchPreference(android.content.Context, android.util.AttributeSet);
     ctor public LineageSystemSettingSwitchPreference(android.content.Context);
-    method protected boolean getPersistedBoolean(boolean);
-    method protected boolean isPersisted();
-    method protected boolean persistBoolean(boolean);
-  }
-
-  public class GlobalSettingSwitchPreference extends lineageos.preference.SelfRemovingSwitchPreference {
-    ctor public GlobalSettingSwitchPreference(android.content.Context, android.util.AttributeSet, int);
-    ctor public GlobalSettingSwitchPreference(android.content.Context, android.util.AttributeSet);
-    ctor public GlobalSettingSwitchPreference(android.content.Context);
-    method protected boolean getPersistedBoolean(boolean);
-    method protected boolean isPersisted();
-    method protected boolean persistBoolean(boolean);
   }
 
   public class RemotePreference extends lineageos.preference.SelfRemovingPreference {
@@ -807,8 +782,6 @@ package lineageos.preference {
     ctor public RemotePreference(android.content.Context, android.util.AttributeSet);
     method public android.content.Intent getReceiverIntent();
     method protected java.lang.String getRemoteKey(android.os.Bundle);
-    method public void onAttached();
-    method public void onDetached();
     method public void onRemoteUpdated(android.os.Bundle);
     field public static final java.lang.String ACTION_REFRESH_PREFERENCE = "lineageos.intent.action.REFRESH_PREFERENCE";
     field public static final java.lang.String ACTION_UPDATE_PREFERENCE = "lineageos.intent.action.UPDATE_PREFERENCE";
@@ -832,45 +805,38 @@ package lineageos.preference {
     ctor public SecureSettingSwitchPreference(android.content.Context, android.util.AttributeSet, int);
     ctor public SecureSettingSwitchPreference(android.content.Context, android.util.AttributeSet);
     ctor public SecureSettingSwitchPreference(android.content.Context);
-    method protected boolean getPersistedBoolean(boolean);
-    method protected boolean isPersisted();
-    method protected boolean persistBoolean(boolean);
   }
 
-  public class SelfRemovingDropDownPreference extends DropDownPreference {
+  public class SelfRemovingDropDownPreference extends android.support.v7.preference.DropDownPreference {
     ctor public SelfRemovingDropDownPreference(android.content.Context, android.util.AttributeSet, int);
     ctor public SelfRemovingDropDownPreference(android.content.Context, android.util.AttributeSet);
     ctor public SelfRemovingDropDownPreference(android.content.Context);
     method public boolean isAvailable();
-    method public void onBindViewHolder(PreferenceViewHolder);
     method public void setAvailable(boolean);
   }
 
-  public class SelfRemovingListPreference extends ListPreference {
+  public class SelfRemovingListPreference extends android.support.v7.preference.ListPreference {
     ctor public SelfRemovingListPreference(android.content.Context, android.util.AttributeSet, int);
     ctor public SelfRemovingListPreference(android.content.Context, android.util.AttributeSet);
     ctor public SelfRemovingListPreference(android.content.Context);
     method public boolean isAvailable();
-    method public void onBindViewHolder(PreferenceViewHolder);
     method public void setAvailable(boolean);
   }
 
-  public class SelfRemovingPreference extends Preference {
+  public class SelfRemovingPreference extends android.support.v7.preference.Preference {
     ctor public SelfRemovingPreference(android.content.Context, android.util.AttributeSet, int, int);
     ctor public SelfRemovingPreference(android.content.Context, android.util.AttributeSet, int);
     ctor public SelfRemovingPreference(android.content.Context, android.util.AttributeSet);
     ctor public SelfRemovingPreference(android.content.Context);
     method public boolean isAvailable();
-    method public void onBindViewHolder(PreferenceViewHolder);
     method public void setAvailable(boolean);
   }
 
-  public class SelfRemovingSwitchPreference extends SwitchPreference {
+  public class SelfRemovingSwitchPreference extends android.support.v14.preference.SwitchPreference {
     ctor public SelfRemovingSwitchPreference(android.content.Context, android.util.AttributeSet, int);
     ctor public SelfRemovingSwitchPreference(android.content.Context, android.util.AttributeSet);
     ctor public SelfRemovingSwitchPreference(android.content.Context);
     method public boolean isAvailable();
-    method public void onBindViewHolder(PreferenceViewHolder);
     method public void setAvailable(boolean);
   }
 
@@ -894,9 +860,6 @@ package lineageos.preference {
     ctor public SystemSettingSwitchPreference(android.content.Context, android.util.AttributeSet, int);
     ctor public SystemSettingSwitchPreference(android.content.Context, android.util.AttributeSet);
     ctor public SystemSettingSwitchPreference(android.content.Context);
-    method protected boolean getPersistedBoolean(boolean);
-    method protected boolean isPersisted();
-    method protected boolean persistBoolean(boolean);
   }
 
 }
@@ -1005,15 +968,44 @@ package lineageos.profiles {
 
 package lineageos.providers {
 
+  public final class DataUsageContract {
+    ctor public DataUsageContract();
+    field public static final java.lang.String ACTIVE = "active";
+    field public static final android.net.Uri BASE_CONTENT_URI;
+    field public static final java.lang.String BYTES = "bytes";
+    field public static final int COLUMN_OF_ACTIVE = 3; // 0x3
+    field public static final int COLUMN_OF_BYTES = 5; // 0x5
+    field public static final int COLUMN_OF_ENABLE = 2; // 0x2
+    field public static final int COLUMN_OF_EXTRA = 10; // 0xa
+    field public static final int COLUMN_OF_FAST_AVG = 8; // 0x8
+    field public static final int COLUMN_OF_FAST_SAMPLES = 9; // 0x9
+    field public static final int COLUMN_OF_ID = 0; // 0x0
+    field public static final int COLUMN_OF_LABEL = 4; // 0x4
+    field public static final int COLUMN_OF_SLOW_AVG = 6; // 0x6
+    field public static final int COLUMN_OF_SLOW_SAMPLES = 7; // 0x7
+    field public static final int COLUMN_OF_UID = 1; // 0x1
+    field public static final java.lang.String CONTENT_ITEM_TYPE = "vnd.android.cursor.itemdatausage_item";
+    field public static final java.lang.String CONTENT_TYPE = "vnd.android.cursor.dirdatausage_item";
+    field public static final android.net.Uri CONTENT_URI;
+    field public static final java.lang.String DATAUSAGE_AUTHORITY = "org.lineageos.providers.datausage";
+    field public static final java.lang.String DATAUSAGE_TABLE = "datausage";
+    field public static final java.lang.String ENABLE = "enable";
+    field public static final java.lang.String EXTRA = "extra";
+    field public static final java.lang.String FAST_AVG = "fast_avg";
+    field public static final java.lang.String FAST_SAMPLES = "fast_samples";
+    field public static final java.lang.String LABEL = "label";
+    field public static final java.lang.String[] PROJECTION_ALL;
+    field public static final java.lang.String SLOW_AVG = "slow_avg";
+    field public static final java.lang.String SLOW_SAMPLES = "slow_samples";
+    field public static final java.lang.String UID = "uid";
+    field public static final java.lang.String _ID = "_id";
+  }
+
   public final class LineageSettings {
     ctor public LineageSettings();
     field public static final java.lang.String ACTION_DATA_USAGE = "lineageos.settings.ACTION_DATA_USAGE";
     field public static final java.lang.String ACTION_LIVEDISPLAY_SETTINGS = "lineageos.settings.LIVEDISPLAY_SETTINGS";
     field public static final java.lang.String AUTHORITY = "lineagesettings";
-  }
-
-  public static class LineageSettings.LineageSettingNotFoundException extends android.util.AndroidException {
-    ctor public LineageSettings.LineageSettingNotFoundException(java.lang.String);
   }
 
   public static final class LineageSettings.Global extends android.provider.Settings.NameValueTable {
@@ -1033,6 +1025,10 @@ package lineageos.providers {
     field public static final android.net.Uri CONTENT_URI;
     field public static final java.lang.String SYS_PROP_LINEAGE_SETTING_VERSION = "sys.lineage_settings_global_version";
     field public static final java.lang.String WEATHER_TEMPERATURE_UNIT = "weather_temperature_unit";
+  }
+
+  public static class LineageSettings.LineageSettingNotFoundException extends android.util.AndroidException {
+    ctor public LineageSettings.LineageSettingNotFoundException(java.lang.String);
   }
 
   public static final class LineageSettings.Secure extends android.provider.Settings.NameValueTable {
@@ -1141,7 +1137,6 @@ package lineageos.providers {
     field public static final java.lang.String STATUS_BAR_AM_PM = "status_bar_am_pm";
     field public static final java.lang.String STATUS_BAR_BATTERY_STYLE = "status_bar_battery_style";
     field public static final java.lang.String STATUS_BAR_BRIGHTNESS_CONTROL = "status_bar_brightness_control";
-    field public static final java.lang.String SYSTEMUI_BURNIN_PROTECTION = "systemui_burnin_protection";
     field public static final java.lang.String STATUS_BAR_CLOCK = "status_bar_clock";
     field public static final java.lang.String STATUS_BAR_IME_SWITCHER = "status_bar_ime_switcher";
     field public static final java.lang.String STATUS_BAR_NOTIF_COUNT = "status_bar_notif_count";
@@ -1150,6 +1145,7 @@ package lineageos.providers {
     field public static final java.lang.String STATUS_BAR_SHOW_WEATHER = "status_bar_show_weather";
     field public static final java.lang.String STYLUS_ICON_ENABLED = "stylus_icon_enabled";
     field public static final java.lang.String SWAP_VOLUME_KEYS_ON_ROTATION = "swap_volume_keys_on_rotation";
+    field public static final java.lang.String SYSTEMUI_BURNIN_PROTECTION = "systemui_burnin_protection";
     field public static final java.lang.String SYSTEM_PROFILES_ENABLED = "system_profiles_enabled";
     field public static final java.lang.String SYS_PROP_LINEAGE_SETTING_VERSION = "sys.lineage_settings_system_version";
     field public static final java.lang.String T9_SEARCH_INPUT_LOCALE = "t9_search_input_locale";
@@ -1164,39 +1160,6 @@ package lineageos.providers {
     field public static final java.lang.String VOLUME_WAKE_SCREEN = "volume_wake_screen";
     field public static final java.lang.String ZEN_ALLOW_LIGHTS = "allow_lights";
     field public static final java.lang.String ZEN_PRIORITY_ALLOW_LIGHTS = "zen_priority_allow_lights";
-  }
-
-  public final class DataUsageContract {
-    ctor public DataUsageContract();
-    field public static final java.lang.String ACTIVE = "active";
-    field public static final android.net.Uri BASE_CONTENT_URI;
-    field public static final java.lang.String BYTES = "bytes";
-    field public static final int COLUMN_OF_ACTIVE = 3; // 0x3
-    field public static final int COLUMN_OF_BYTES = 5; // 0x5
-    field public static final int COLUMN_OF_ENABLE = 2; // 0x2
-    field public static final int COLUMN_OF_EXTRA = 10; // 0xa
-    field public static final int COLUMN_OF_FAST_AVG = 8; // 0x8
-    field public static final int COLUMN_OF_FAST_SAMPLES = 9; // 0x9
-    field public static final int COLUMN_OF_ID = 0; // 0x0
-    field public static final int COLUMN_OF_LABEL = 4; // 0x4
-    field public static final int COLUMN_OF_SLOW_AVG = 6; // 0x6
-    field public static final int COLUMN_OF_SLOW_SAMPLES = 7; // 0x7
-    field public static final int COLUMN_OF_UID = 1; // 0x1
-    field public static final java.lang.String CONTENT_ITEM_TYPE = "vnd.android.cursor.itemdatausage_item";
-    field public static final java.lang.String CONTENT_TYPE = "vnd.android.cursor.dirdatausage_item";
-    field public static final android.net.Uri CONTENT_URI;
-    field public static final java.lang.String DATAUSAGE_AUTHORITY = "org.lineageos.providers.datausage";
-    field public static final java.lang.String DATAUSAGE_TABLE = "datausage";
-    field public static final java.lang.String ENABLE = "enable";
-    field public static final java.lang.String EXTRA = "extra";
-    field public static final java.lang.String FAST_AVG = "fast_avg";
-    field public static final java.lang.String FAST_SAMPLES = "fast_samples";
-    field public static final java.lang.String LABEL = "label";
-    field public static final java.lang.String[] PROJECTION_ALL;
-    field public static final java.lang.String SLOW_AVG = "slow_avg";
-    field public static final java.lang.String SLOW_SAMPLES = "slow_samples";
-    field public static final java.lang.String UID = "uid";
-    field public static final java.lang.String _ID = "_id";
   }
 
   public class WeatherContract {
