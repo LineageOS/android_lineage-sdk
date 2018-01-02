@@ -290,13 +290,6 @@ LOCAL_DROIDDOC_OPTIONS := \
         -hdf sdk.version $(lineage_platform_docs_docs_SDK_VERSION) \
         -hdf sdk.rel.id $(lineage_platform_docs_docs_SDK_REL_ID) \
         -hdf sdk.preview 0 \
-        -since $(LINEAGE_SRC_API_DIR)/1.txt 1 \
-        -since $(LINEAGE_SRC_API_DIR)/2.txt 2 \
-        -since $(LINEAGE_SRC_API_DIR)/3.txt 3 \
-        -since $(LINEAGE_SRC_API_DIR)/4.txt 4 \
-        -since $(LINEAGE_SRC_API_DIR)/5.txt 5 \
-        -since $(LINEAGE_SRC_API_DIR)/6.txt 6 \
-        -since $(LINEAGE_SRC_API_DIR)/7.txt 7 \
         -since $(LINEAGE_SRC_API_DIR)/8.txt 8
 
 $(full_target): $(lineage_framework_built) $(gen)
