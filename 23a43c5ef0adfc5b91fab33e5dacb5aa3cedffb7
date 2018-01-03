@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9fea5e82_bd4046c3",
+        "filename": "lineage/lib/main/java/org/lineageos/platform/internal/display/ColorTemperatureController.java",
+        "patchSetId": 5
+      },
+      "lineNbr": 315,
+      "author": {
+        "id": 8328
+      },
+      "writtenOn": "2018-01-03T20:37:12Z",
+      "side": 1,
+      "message": ";",
+      "revId": "23a43c5ef0adfc5b91fab33e5dacb5aa3cedffb7",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
