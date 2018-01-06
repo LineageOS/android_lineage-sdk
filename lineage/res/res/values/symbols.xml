@@ -130,4 +130,47 @@
 
     <!-- General purpose use "unknown" string -->
     <java-symbol type="string" name="unknown" />
+
+    <!-- Themeables -->
+
+    <!-- Global -->
+    <java-symbol type="bool" name="platform_global_is_light" />
+    <!-- Calculator -->
+    <java-symbol type="color" name="platform_app_calculator_color_primary" />
+    <java-symbol type="color" name="platform_app_calculator_color_pad_light" />
+    <java-symbol type="color" name="platform_app_calculator_color_pad" />
+    <!-- Contacts -->
+    <java-symbol type="color" name="platform_app_contacts_color_primary" />
+    <java-symbol type="color" name="platform_app_contacts_color_primary_dark" />
+    <!-- Dialer -->
+    <java-symbol type="color" name="platform_app_dialer_color_primary" />
+    <java-symbol type="color" name="platform_app_dialer_color_primary_dark" />
+    <!-- DocumentsUI -->
+    <java-symbol type="color" name="platform_app_documents_color_primary" />
+    <java-symbol type="color" name="platform_app_documents_color_primary_dark" />
+    <java-symbol type="color" name="platform_app_documents_color_accent" />
+    <java-symbol type="color" name="platform_app_documents_color_accent_dark" />
+    <!-- Eleven -->
+    <java-symbol type="color" name="platform_app_music_color_primary_light" />
+    <java-symbol type="color" name="platform_app_music_color_primary" />
+    <java-symbol type="color" name="platform_app_music_color_primary_dark" />
+    <java-symbol type="color" name="platform_app_music_color_accent" />
+    <!-- Email -->
+    <java-symbol type="color" name="platform_app_email_color_primary" />
+    <java-symbol type="color" name="platform_app_email_color_primary_dark" />
+    <!-- Gallery -->
+    <java-symbol type="color" name="platform_app_gallery_color_primary" />
+    <java-symbol type="color" name="platform_app_gallery_color_primary_dark" />
+    <java-symbol type="color" name="platform_app_gallery_color_accent" />
+    <!-- Jelly -->
+    <java-symbol type="color" name="platform_app_jelly_color_primary" />
+    <java-symbol type="color" name="platform_app_jelly_color_primary_dark" />
+    <java-symbol type="color" name="platform_app_jelly_color_accent" />
+    <!-- Messaging -->
+    <java-symbol type="color" name="platform_app_messaging_color_primary" />
+    <java-symbol type="color" name="platform_app_messaging_color_primary_dark" />
+    <java-symbol type="color" name="platform_app_messaging_color_accent" />
+    <!-- Recorder -->
+    <java-symbol type="color" name="platform_app_recorder_color_screen" />
+    <java-symbol type="color" name="platform_app_recorder_color_sound" />
 </resources>
