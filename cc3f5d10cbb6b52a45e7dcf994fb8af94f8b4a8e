@@ -16,6 +16,24 @@
       "revId": "cc3f5d10cbb6b52a45e7dcf994fb8af94f8b4a8e",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "c7fa7419_a8beda24",
+        "filename": "lineage/res/res/values/config.xml",
+        "patchSetId": 8
+      },
+      "lineNbr": 186,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2018-01-06T22:28:15Z",
+      "side": 1,
+      "message": "I know, it\u0027s stated in the commit message.",
+      "parentUuid": "5e9d0c20_8574f0e9",
+      "revId": "cc3f5d10cbb6b52a45e7dcf994fb8af94f8b4a8e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
