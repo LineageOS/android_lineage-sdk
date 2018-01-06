@@ -1,0 +1,59 @@
+<!--
+     Copyright (C) 2018 The LineageOS Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources>
+    <!-- Global temeables -->
+    <boolean name="platform_global_is_light">true</boolean>
+
+    <!-- Apps -->
+    <!-- Calculator -->
+    <color name="platform_app_calculator_color_primary">#0097A7</color>
+    <color name="platform_app_calculator_color_pad_light">#636363</color>
+    <color name="platform_app_calculator_color_pad">#434343</color>
+    <!-- Contacts -->
+    <color name="platform_app_contacts_color_primary">#2a56c6</color>
+    <color name="platform_app_contacts_color_primary_dark">#1c3aa9</color>
+    <!-- Dialer -->
+    <color name="platform_app_dialer_color_primary">#2A56C6</color>
+    <color name="platform_app_dialer_color_primary_dark">#1C3AA9</color>
+    <!-- DocumentsUI -->
+    <color name="platform_app_documents_color_primary">#1976D2</color>
+    <color name="platform_app_documents_color_primary_dark">#ff254FAE</color>
+    <color name="platform_app_documents_color_accent">#ff254FAE</color>
+    <color name="platform_app_documents_color_accent_dark">@*android:color/accent_device_default_dark</color>
+    <!-- Eleven -->
+    <color name="platform_app_music_color_primary_light">#444444</color>
+    <color name="platform_app_music_color_primary">#333333</color>
+    <color name="platform_app_music_color_primary_dark">#282828</color>
+    <color name="platform_app_music_color_accent">#009688</color>
+    <!-- Email -->
+    <color name="platform_app_email_color_primary">#e7790d</color>
+    <color name="platform_app_email_color_primary_dark">#d06d0c</color>
+    <!-- Gallery -->
+    <color name="platform_app_gallery_color_primary">#333333</color>
+    <color name="platform_app_gallery_color_primary_dark">#000000</color>
+    <color name="platform_app_gallery_color_accent">#33b5e5</color>
+    <!-- Jelly -->
+    <color name="platform_app_jelly_color_primary">#fafafa</color>
+    <color name="platform_app_jelly_color_primary_dark">#e0e0e0</color>
+    <color name="platform_app_jelly_color_accent">#ff4081</color>
+    <!-- Messaging -->
+    <color name="platform_app_messaging_color_primary">#689F38</color>
+    <color name="platform_app_messaging_color_primary_dark">#537F2D</color>
+    <color name="platform_app_messaging_color_accent">#FF9800</color>
+    <!-- Recorder -->
+    <color name="platform_app_recorder_color_screen">#4e888a</color>
+    <color name="platform_app_recorder_color_sound">#f19645</color>
+</resources>
