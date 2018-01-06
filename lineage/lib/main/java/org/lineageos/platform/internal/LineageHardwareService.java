@@ -865,7 +865,7 @@ public class LineageHardwareService extends LineageSystemService implements Ther
         public float[] getPictureAdjustmentRanges() {
             mContext.enforceCallingOrSelfPermission(
                     lineageos.platform.Manifest.permission.HARDWARE_ABSTRACTION_ACCESS, null);
-            if (isSupported(LineageHardwareManager.FEATURE_COLOR_BALANCE)) {
+            if (isSupported(LineageHardwareManager.FEATURE_PICTURE_ADJUSTMENT)) {
                 final List<Range<Float>> r = mLineageHwImpl.getPictureAdjustmentRanges();
                 return new float[] {
                         r.get(0).getLower(), r.get(0).getUpper(),
