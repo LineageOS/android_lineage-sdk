@@ -148,4 +148,7 @@
     <!-- Back kill -->
     <java-symbol type="string" name="app_killed_message" />
     <java-symbol type="integer" name="config_backKillTimeout" />
+
+    <!-- Camera key type -->
+    <java-symbol type="bool" name="config_singleStageCameraKey" />
 </resources>
