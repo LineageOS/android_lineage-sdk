@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "24034957_92f3cf11",
+        "filename": "sdk/src/java/org/lineageos/internal/buttons/LineageButtons.java",
+        "patchSetId": 11
+      },
+      "lineNbr": 165,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2018-01-12T08:23:11Z",
+      "side": 1,
+      "message": "mVolBtnMusicControls \u003d (LineageSettings.System.getIntForUser(resolver,\n                    LineageSettings.System.VOLBTN_MUSIC_CONTROLS, 1, UserHandle.USER_CURRENT) \u003d\u003d 1);",
+      "range": {
+        "startLine": 164,
+        "startChar": 0,
+        "endLine": 165,
+        "endChar": 74
+      },
+      "revId": "5cf3c8ff06081171306d90a7ac97c0e3b45bfb6a",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
