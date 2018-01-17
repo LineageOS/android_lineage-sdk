@@ -208,4 +208,16 @@
 
     <!-- Long-press back kill application -->
     <string name="app_killed_message">Application killed</string>
+
+    <!-- Accent colors -->
+    <string name="accent_black">Carbon</string>
+    <string name="accent_blue">Blueberry</string>
+    <string name="accent_brown">Cocoa</string>
+    <string name="accent_cyan">Cyan</string>
+    <string name="accent_green">Forest</string>
+    <string name="accent_orange">Pumpkin</string>
+    <string name="accent_pink">Cherry</string>
+    <string name="accent_purple">Lavender</string>
+    <string name="accent_red">Tomato</string>
+    <string name="accent_yellow">Banana</string>
 </resources>
