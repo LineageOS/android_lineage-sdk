@@ -147,4 +147,16 @@
     <java-symbol type="string" name="megabitspersecond_short" />
     <java-symbol type="string" name="kilobytespersecond_short" />
     <java-symbol type="string" name="megabytespersecond_short" />
+
+    <!-- Accent colors -->
+    <java-symbol type="string" name="accent_black" />
+    <java-symbol type="string" name="accent_blue" />
+    <java-symbol type="string" name="accent_brown" />
+    <java-symbol type="string" name="accent_cyan" />
+    <java-symbol type="string" name="accent_green" />
+    <java-symbol type="string" name="accent_orange" />
+    <java-symbol type="string" name="accent_pink" />
+    <java-symbol type="string" name="accent_purple" />
+    <java-symbol type="string" name="accent_red" />
+    <java-symbol type="string" name="accent_yellow" />
 </resources>
