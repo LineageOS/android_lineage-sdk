@@ -151,4 +151,16 @@
     <!-- Back kill -->
     <java-symbol type="string" name="app_killed_message" />
     <java-symbol type="integer" name="config_backKillTimeout" />
+
+    <!-- Accent colors -->
+    <java-symbol type="string" name="accent_black" />
+    <java-symbol type="string" name="accent_blue" />
+    <java-symbol type="string" name="accent_brown" />
+    <java-symbol type="string" name="accent_cyan" />
+    <java-symbol type="string" name="accent_green" />
+    <java-symbol type="string" name="accent_orange" />
+    <java-symbol type="string" name="accent_pink" />
+    <java-symbol type="string" name="accent_purple" />
+    <java-symbol type="string" name="accent_red" />
+    <java-symbol type="string" name="accent_yellow" />
 </resources>
