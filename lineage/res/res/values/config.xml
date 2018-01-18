@@ -55,6 +55,14 @@
     <!-- BurnIn protection. This should be enabled on devices that have OLED displays -->
     <bool name="config_enableBurnInProtection">false</bool>
 
+    <!-- Lineage hardware features that should be disabled.
+         The value should be the logical OR of LineageHardwareManager
+         FEATURE_* constants.
+         Typical use case is if a vendor blob claims support for
+         something that doesn't actually work.
+         Also useful for testing behavior when features aren't present. -->
+    <integer name="config_disableHardwareFeatures">0</integer>
+
     <!-- Default values for LiveDisplay -->
     <integer name="config_dayColorTemperature">6500</integer>
     <integer name="config_nightColorTemperature">4800</integer>

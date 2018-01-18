@@ -168,6 +168,9 @@ public class LineageHardwareService extends LineageSystemService implements Ther
                 mSupportedFeatures |= LineageHardwareManager.FEATURE_PICTURE_ADJUSTMENT;
             if (TouchscreenGestures.isSupported())
                 mSupportedFeatures |= LineageHardwareManager.FEATURE_TOUCHSCREEN_GESTURES;
+            // Remove any features that were requested to be disabled by config.
+            mSupportedFeatures &= ~mContext.getResources().getInteger(
+                    org.lineageos.platform.internal.R.integer.config_disableHardwareFeatures);
         }
 
         public int getSupportedFeatures() {
