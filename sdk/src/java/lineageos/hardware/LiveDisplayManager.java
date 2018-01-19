@@ -482,4 +482,19 @@ public class LiveDisplayManager {
         }
         return null;
     }
+
+    /**
+     * Determine whether night mode is enabled (be it automatic or manual)
+     */
+    public boolean isNightModeEnabled() {
+        // This method might be called before config has been set up
+        // so a NPE would have been thrown, just report night mode is disabled instead
+        try {
+            return getMode() == MODE_NIGHT || sService.isNight();
+        } catch (NullPointerException e) {
+            Log.w(TAG, "Can\'t check whether night mode is enabled because the service isn\'t ready");
+        } catch (RemoteException ignored) {
+        }
+        return false;
+    }
 }

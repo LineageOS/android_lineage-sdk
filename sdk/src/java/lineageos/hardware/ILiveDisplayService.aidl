@@ -52,4 +52,5 @@ interface ILiveDisplayService {
     HSIC getPictureAdjustment();
     HSIC getDefaultPictureAdjustment();
     boolean setPictureAdjustment(in HSIC adj);
+    boolean isNight();
 }
