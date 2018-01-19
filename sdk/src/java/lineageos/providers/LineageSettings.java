@@ -334,6 +334,13 @@ public final class LineageSettings {
         }
     };
 
+    private static final Validator sNonNullStringValidator = new Validator() {
+        @Override
+        public boolean validate(String value) {
+            return value != null;
+        }
+    };
+
     private static final class DiscreteValueValidator implements Validator {
         private final String[] mValues;
 
@@ -1292,6 +1299,28 @@ public final class LineageSettings {
                 sBooleanValidator;
 
         /**
+         * Whether to use dark theme
+         * 0: automatic - based on wallpaper
+         * 1: time - based on LiveDisplay status
+         * 2: force light
+         * 3: force dark
+         */
+        public static final String BERRY_GLOBAL_STYLE = "berry_global_style";
+
+        /** @hide */
+        public static final Validator BERRY_GLOBAL_STYLE_VALIDATOR =
+                new InclusiveIntegerRangeValidator(0, 3);
+
+        /**
+         * Current accent package name
+         */
+        public static final String BERRY_CURRENT_ACCENT = "berry_current_accent";
+
+        /** @hide */
+        public static final Validator BERRY_CURRENT_ACCENT_VALIDATOR =
+                sNonNullStringValidator;
+
+        /**
          * Enable looking up of phone numbers of nearby places
          * 0 = 0ff, 1 = on
          */
@@ -2148,6 +2177,8 @@ public final class LineageSettings {
             VALIDATORS.put(BATTERY_LIGHT_FULL_COLOR, BATTERY_LIGHT_FULL_COLOR_VALIDATOR);
             VALIDATORS.put(ENABLE_MWI_NOTIFICATION, ENABLE_MWI_NOTIFICATION_VALIDATOR);
             VALIDATORS.put(PROXIMITY_ON_WAKE, PROXIMITY_ON_WAKE_VALIDATOR);
+            VALIDATORS.put(BERRY_GLOBAL_STYLE, BERRY_GLOBAL_STYLE_VALIDATOR);
+            VALIDATORS.put(BERRY_CURRENT_ACCENT, BERRY_CURRENT_ACCENT_VALIDATOR);
             VALIDATORS.put(ENABLE_FORWARD_LOOKUP, ENABLE_FORWARD_LOOKUP_VALIDATOR);
             VALIDATORS.put(ENABLE_PEOPLE_LOOKUP, ENABLE_PEOPLE_LOOKUP_VALIDATOR);
             VALIDATORS.put(ENABLE_REVERSE_LOOKUP, ENABLE_REVERSE_LOOKUP_VALIDATOR);
