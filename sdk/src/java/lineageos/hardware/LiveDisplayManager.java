@@ -482,4 +482,15 @@ public class LiveDisplayManager {
         }
         return null;
     }
+
+    /**
+     * Determine whether night mode is enabled (be it automatic or manual)
+     */
+    public boolean isNightModeEnabled() {
+        try {
+            return getMode() == MODE_NIGHT || sService.isNight();
+        } catch (RemoteException e) {
+        }
+        return false;
+    }
 }
