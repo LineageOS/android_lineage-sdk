@@ -279,6 +279,7 @@ package lineageos.hardware {
     method public boolean setMode(int);
     method public boolean setNightColorTemperature(int);
     method public boolean setPictureAdjustment(lineageos.hardware.HSIC);
+    method public boolean isNightModeEnabled();
     field public static final int ADJUSTMENT_CONTRAST = 3; // 0x3
     field public static final int ADJUSTMENT_HUE = 0; // 0x0
     field public static final int ADJUSTMENT_INTENSITY = 2; // 0x2
