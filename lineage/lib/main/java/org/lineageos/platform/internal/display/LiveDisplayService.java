@@ -508,6 +508,12 @@ public class LiveDisplayService extends LineageSystemService {
                 mFeatures.get(i).dump(pw);
             }
         }
+
+        @Override
+        public boolean isNight() {
+            final TwilightState twilight = mTwilightTracker.getCurrentState();
+            return twilight != null && twilight.isNight();
+        }
     };
 
     // Listener for screen on/off events
@@ -695,5 +701,10 @@ public class LiveDisplayService extends LineageSystemService {
     private void putInt(String setting, int value) {
         LineageSettings.System.putIntForUser(mContext.getContentResolver(),
                 setting, value, UserHandle.USER_CURRENT);
+    }
+
+    public boolean isNight() {
+        final TwilightState twilight = mTwilightTracker.getCurrentState();
+        return twilight != null && twilight.isNight();
     }
 }
