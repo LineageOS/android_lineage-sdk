@@ -143,7 +143,7 @@ public abstract class LiveDisplayFeature {
         return mState.mTwilight;
     }
 
-    protected final boolean isNight() {
+    public final boolean isNight() {
         return mState.mTwilight != null && mState.mTwilight.isNight();
     }
 
