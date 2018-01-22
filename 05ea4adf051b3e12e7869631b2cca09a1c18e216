@@ -16,6 +16,24 @@
       "revId": "05ea4adf051b3e12e7869631b2cca09a1c18e216",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "d8a77900_7c5b9f10",
+        "filename": "sdk/src/java/lineageos/providers/LineageSettings.java",
+        "patchSetId": 17
+      },
+      "lineNbr": 3042,
+      "author": {
+        "id": 3075
+      },
+      "writtenOn": "2018-01-22T21:23:56Z",
+      "side": 1,
+      "message": "I expect Bruno put it there deliberately for separation but the other validator blocks above are all shoved together so I removed the line instead.",
+      "parentUuid": "5b4ec9c2_f57800e7",
+      "revId": "05ea4adf051b3e12e7869631b2cca09a1c18e216",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
