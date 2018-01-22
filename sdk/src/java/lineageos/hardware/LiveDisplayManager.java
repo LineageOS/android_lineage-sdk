@@ -160,7 +160,7 @@ public class LiveDisplayManager {
         try {
             mConfig = sService.getConfig();
             if (mConfig == null) {
-                throw new RuntimeException("Unable to get LiveDisplay configuration!");
+                Log.w(TAG, "Unable to get LiveDisplay configuration!");
             }
         } catch (RemoteException e) {
             throw new RuntimeException("Unable to fetch LiveDisplay configuration!", e);
