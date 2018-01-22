@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "f77c10c3_a66d90a3",
+        "filename": "sdk/src/java/lineageos/providers/LineageSettings.java",
+        "patchSetId": 13
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 13028
+      },
+      "writtenOn": "2018-01-22T10:27:26Z",
+      "side": 1,
+      "message": "* Copyright (C) 2017, The LineageOS Project",
+      "range": {
+        "startLine": 3,
+        "startChar": 0,
+        "endLine": 3,
+        "endChar": 44
+      },
+      "revId": "278a1812721d2936d2c712ea864e9bca3c344de6",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6c3da370_8a418366",
+        "filename": "sdk/src/java/lineageos/providers/LineageSettings.java",
+        "patchSetId": 13
+      },
+      "lineNbr": 3049,
+      "author": {
+        "id": 13028
+      },
+      "writtenOn": "2018-01-22T10:27:26Z",
+      "side": 1,
+      "message": "These fit into one line each",
+      "range": {
+        "startLine": 3042,
+        "startChar": 0,
+        "endLine": 3049,
+        "endChar": 56
+      },
+      "revId": "278a1812721d2936d2c712ea864e9bca3c344de6",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
