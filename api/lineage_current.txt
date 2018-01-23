@@ -388,17 +388,6 @@ package lineageos.hardware {
     method public void writeToParcel(android.os.Parcel, int);
   }
 
-  public abstract interface IThermalListenerCallback implements android.os.IInterface {
-    method public abstract void onThermalChanged(int) throws android.os.RemoteException;
-  }
-
-  public static abstract class IThermalListenerCallback.Stub extends android.os.Binder implements lineageos.hardware.IThermalListenerCallback {
-    ctor public IThermalListenerCallback.Stub();
-    method public android.os.IBinder asBinder();
-    method public static lineageos.hardware.IThermalListenerCallback asInterface(android.os.IBinder);
-    method public boolean onTransact(int, android.os.Parcel, android.os.Parcel, int) throws android.os.RemoteException;
-  }
-
   public final class LineageHardwareManager {
     method public boolean get(int);
     method public int getColorBalance();
@@ -423,7 +412,6 @@ package lineageos.hardware {
     method public java.util.List<android.util.Range<java.lang.Float>> getPictureAdjustmentRanges();
     method public java.lang.String getSerialNumber();
     method public int getSupportedFeatures();
-    method public int getThermalState();
     method public lineageos.hardware.TouchscreenGesture[] getTouchscreenGestures();
     method public int getVibratorDefaultIntensity();
     method public int getVibratorIntensity();
@@ -432,7 +420,6 @@ package lineageos.hardware {
     method public int getVibratorWarningIntensity();
     method public boolean isSunlightEnhancementSelfManaged();
     method public boolean isSupported(int);
-    method public boolean registerThermalListener(lineageos.hardware.ThermalListenerCallback);
     method public boolean requireAdaptiveBacklightForSunlightEnhancement();
     method public boolean set(int, boolean);
     method public boolean setColorBalance(int);
@@ -442,7 +429,6 @@ package lineageos.hardware {
     method public boolean setPictureAdjustment(lineageos.hardware.HSIC);
     method public boolean setTouchscreenGestureEnabled(lineageos.hardware.TouchscreenGesture, boolean);
     method public boolean setVibratorIntensity(int);
-    method public boolean unRegisterThermalListener(lineageos.hardware.ThermalListenerCallback);
     field public static final int FEATURE_ADAPTIVE_BACKLIGHT = 1; // 0x1
     field public static final int FEATURE_AUTO_CONTRAST = 4096; // 0x1000
     field public static final int FEATURE_COLOR_BALANCE = 131072; // 0x20000
@@ -456,7 +442,6 @@ package lineageos.hardware {
     field public static final int FEATURE_PICTURE_ADJUSTMENT = 262144; // 0x40000
     field public static final int FEATURE_SERIAL_NUMBER = 128; // 0x80
     field public static final int FEATURE_SUNLIGHT_ENHANCEMENT = 256; // 0x100
-    field public static final int FEATURE_THERMAL_MONITOR = 32768; // 0x8000
     field public static final int FEATURE_TOUCHSCREEN_GESTURES = 524288; // 0x80000
     field public static final int FEATURE_TOUCH_HOVERING = 2048; // 0x800
     field public static final int FEATURE_VIBRATOR = 1024; // 0x400
@@ -525,20 +510,6 @@ package lineageos.hardware {
     field public static final int MODE_NIGHT = 1; // 0x1
     field public static final int MODE_OFF = 0; // 0x0
     field public static final int MODE_OUTDOOR = 3; // 0x3
-  }
-
-  public abstract class ThermalListenerCallback extends lineageos.hardware.IThermalListenerCallback.Stub {
-    ctor public ThermalListenerCallback();
-  }
-
-  public static final class ThermalListenerCallback.State {
-    ctor public ThermalListenerCallback.State();
-    method public static final java.lang.String toString(int);
-    field public static final int STATE_COOL = 0; // 0x0
-    field public static final int STATE_CRITICAL = 3; // 0x3
-    field public static final int STATE_UNKNOWN = -1; // 0xffffffff
-    field public static final int STATE_WARM_FALLING = 1; // 0x1
-    field public static final int STATE_WARM_RISING = 2; // 0x2
   }
 
   public class TouchscreenGesture implements android.os.Parcelable {

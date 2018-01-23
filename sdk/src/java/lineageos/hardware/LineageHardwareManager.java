@@ -135,12 +135,6 @@ public final class LineageHardwareManager {
     public static final int FEATURE_DISPLAY_MODES = 0x2000;
 
     /**
-     * Thermal change monitor
-     */
-    @VisibleForTesting
-    public static final int FEATURE_THERMAL_MONITOR = 0x8000;
-
-    /**
      * Color balance
      */
     @VisibleForTesting
@@ -165,8 +159,7 @@ public final class LineageHardwareManager {
         FEATURE_KEY_DISABLE,
         FEATURE_SUNLIGHT_ENHANCEMENT,
         FEATURE_TOUCH_HOVERING,
-        FEATURE_AUTO_CONTRAST,
-        FEATURE_THERMAL_MONITOR
+        FEATURE_AUTO_CONTRAST
     );
 
     private static LineageHardwareManager sLineageHardwareManagerInstance;
@@ -847,47 +840,6 @@ public final class LineageHardwareManager {
             return false;
         }
         return true;
-    }
-
-    /**
-     * @return current thermal {@link lineageos.hardware.ThermalListenerCallback.State}
-     */
-    public int getThermalState() {
-        try {
-            if (checkService()) {
-                return sService.getThermalState();
-            }
-        } catch (RemoteException e) {
-        }
-        return ThermalListenerCallback.State.STATE_UNKNOWN;
-    }
-
-   /**
-    * Register a callback to be notified of thermal state changes
-    * @return boolean indicating whether register succeeded or failed
-    */
-    public boolean registerThermalListener(ThermalListenerCallback thermalCallback) {
-        try {
-            if (checkService()) {
-                return sService.registerThermalListener(thermalCallback);
-            }
-        } catch (RemoteException e) {
-        }
-        return false;
-    }
-
-   /**
-    * Unregister a callback previously registered to be notified of thermal state changes
-    * @return boolean indicating whether un-registering succeeded or failed
-    */
-    public boolean unRegisterThermalListener(ThermalListenerCallback thermalCallback) {
-        try {
-            if (checkService()) {
-                return sService.unRegisterThermalListener(thermalCallback);
-            }
-        } catch (RemoteException e) {
-        }
-        return false;
     }
 
     /**

@@ -19,7 +19,6 @@ package lineageos.hardware;
 
 import lineageos.hardware.DisplayMode;
 import lineageos.hardware.HSIC;
-import lineageos.hardware.IThermalListenerCallback;
 import lineageos.hardware.TouchscreenGesture;
 
 /** @hide */
@@ -52,9 +51,6 @@ interface ILineageHardwareService {
     DisplayMode getDefaultDisplayMode();
     boolean setDisplayMode(in DisplayMode mode, boolean makeDefault);
 
-    int getThermalState();
-    boolean registerThermalListener(IThermalListenerCallback callback);
-    boolean unRegisterThermalListener(IThermalListenerCallback callback);
     boolean isSunlightEnhancementSelfManaged();
 
     int getColorBalanceMin();

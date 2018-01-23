@@ -32,8 +32,6 @@ import lineageos.app.LineageContextConstants;
 import lineageos.hardware.ILineageHardwareService;
 import lineageos.hardware.LineageHardwareManager;
 import lineageos.hardware.DisplayMode;
-import lineageos.hardware.IThermalListenerCallback;
-import lineageos.hardware.ThermalListenerCallback;
 import lineageos.hardware.HSIC;
 import lineageos.hardware.TouchscreenGesture;
 
@@ -55,22 +53,18 @@ import org.lineageos.hardware.LongTermOrbits;
 import org.lineageos.hardware.PictureAdjustment;
 import org.lineageos.hardware.SerialNumber;
 import org.lineageos.hardware.SunlightEnhancement;
-import org.lineageos.hardware.ThermalMonitor;
-import org.lineageos.hardware.ThermalUpdateCallback;
 import org.lineageos.hardware.TouchscreenGestures;
 import org.lineageos.hardware.TouchscreenHovering;
 import org.lineageos.hardware.VibratorHW;
 
 /** @hide */
-public class LineageHardwareService extends LineageSystemService implements ThermalUpdateCallback {
+public class LineageHardwareService extends LineageSystemService {
 
     private static final boolean DEBUG = true;
     private static final String TAG = LineageHardwareService.class.getSimpleName();
 
     private final Context mContext;
     private final LineageHardwareInterface mLineageHwImpl;
-    private int mCurrentThermalState = ThermalListenerCallback.State.STATE_UNKNOWN;
-    private RemoteCallbackList<IThermalListenerCallback> mRemoteCallbackList;
 
     private final ArrayMap<String, String> mDisplayModeMappings =
             new ArrayMap<String, String>();
@@ -150,8 +144,6 @@ public class LineageHardwareService extends LineageSystemService implements Ther
                 mSupportedFeatures |= LineageHardwareManager.FEATURE_AUTO_CONTRAST;
             if (DisplayModeControl.isSupported())
                 mSupportedFeatures |= LineageHardwareManager.FEATURE_DISPLAY_MODES;
-            if (ThermalMonitor.isSupported())
-                mSupportedFeatures |= LineageHardwareManager.FEATURE_THERMAL_MONITOR;
             if (ColorBalance.isSupported())
                 mSupportedFeatures |= LineageHardwareManager.FEATURE_COLOR_BALANCE;
             if (PictureAdjustment.isSupported())
@@ -180,8 +172,6 @@ public class LineageHardwareService extends LineageSystemService implements Ther
                     return TouchscreenHovering.isEnabled();
                 case LineageHardwareManager.FEATURE_AUTO_CONTRAST:
                     return AutoContrast.isEnabled();
-                case LineageHardwareManager.FEATURE_THERMAL_MONITOR:
-                    return ThermalMonitor.isEnabled();
                 default:
                     Log.e(TAG, "feature " + feature + " is not a boolean feature");
                     return false;
@@ -421,26 +411,6 @@ public class LineageHardwareService extends LineageSystemService implements Ther
 
     @Override
     public void onStart() {
-        if (ThermalMonitor.isSupported()) {
-            ThermalMonitor.initialize(this);
-            mRemoteCallbackList = new RemoteCallbackList<IThermalListenerCallback>();
-        }
-    }
-
-    @Override
-    public void setThermalState(int state) {
-        mCurrentThermalState = state;
-        int i = mRemoteCallbackList.beginBroadcast();
-        while (i > 0) {
-            i--;
-            try {
-                mRemoteCallbackList.getBroadcastItem(i).onThermalChanged(state);
-            } catch (RemoteException e) {
-                // The RemoteCallbackList will take care of removing
-                // the dead object for us.
-            }
-        }
-        mRemoteCallbackList.finishBroadcast();
     }
 
     private DisplayMode remapDisplayMode(DisplayMode in) {
@@ -691,36 +661,6 @@ public class LineageHardwareService extends LineageSystemService implements Ther
                 return false;
             }
             return mLineageHwImpl.setDisplayMode(mode, makeDefault);
-        }
-
-        @Override
-        public int getThermalState() {
-            mContext.enforceCallingOrSelfPermission(
-                    lineageos.platform.Manifest.permission.HARDWARE_ABSTRACTION_ACCESS, null);
-            if (isSupported(LineageHardwareManager.FEATURE_THERMAL_MONITOR)) {
-                return mCurrentThermalState;
-            }
-            return ThermalListenerCallback.State.STATE_UNKNOWN;
-        }
-
-        @Override
-        public boolean registerThermalListener(IThermalListenerCallback callback) {
-            mContext.enforceCallingOrSelfPermission(
-                    lineageos.platform.Manifest.permission.HARDWARE_ABSTRACTION_ACCESS, null);
-            if (isSupported(LineageHardwareManager.FEATURE_THERMAL_MONITOR)) {
-                return mRemoteCallbackList.register(callback);
-            }
-            return false;
-        }
-
-        @Override
-        public boolean unRegisterThermalListener(IThermalListenerCallback callback) {
-            mContext.enforceCallingOrSelfPermission(
-                    lineageos.platform.Manifest.permission.HARDWARE_ABSTRACTION_ACCESS, null);
-            if (isSupported(LineageHardwareManager.FEATURE_THERMAL_MONITOR)) {
-                return mRemoteCallbackList.unregister(callback);
-            }
-            return false;
         }
 
         @Override
