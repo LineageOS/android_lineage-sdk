@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "00f656b1_701a55bc",
+        "filename": "sdk/src/java/org/lineageos/internal/statusbar/NetworkTraffic.java",
+        "patchSetId": 19
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 3075
+      },
+      "writtenOn": "2018-01-23T01:38:44Z",
+      "side": 1,
+      "message": "Derp, this needs to go.",
+      "revId": "e7c8d4a17255d055576b9d5182384d024ad526c5",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
