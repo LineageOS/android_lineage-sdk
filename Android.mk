@@ -25,7 +25,7 @@ LOCAL_PATH := $(call my-dir)
 lineage_platform_res := APPS/org.lineageos.platform-res_intermediates/src
 
 # List of packages used in lineage-api-stubs
-lineage_stub_packages := lineageos.alarmclock:lineageos.app:lineageos.content:lineageos.externalviews:lineageos.hardware:lineageos.media:lineageos.os:lineageos.preference:lineageos.profiles:lineageos.providers:lineageos.platform:lineageos.power:lineageos.util:lineageos.weather:lineageos.weatherservice
+lineage_stub_packages := lineageos.alarmclock:lineageos.app:lineageos.content:lineageos.hardware:lineageos.media:lineageos.os:lineageos.preference:lineageos.profiles:lineageos.providers:lineageos.platform:lineageos.power:lineageos.util:lineageos.weather:lineageos.weatherservice
 
 # The LineageOS Platform Framework Library
 # ============================================================
