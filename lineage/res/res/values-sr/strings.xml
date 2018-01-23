@@ -25,15 +25,6 @@
   <!-- Labels for the HARDWARE_ABSTRACTION_ACCESS permission. -->
   <string name="permlab_useHardwareFramework">коришћење хардверског оквира</string>
   <string name="permdesc_useHardwareFramework">Апликација може да приступа хардверском оквиру LineageOS-а.</string>
-  <!-- Labels for the WRITE_ALARMS permission. -->
-  <string name="permlab_write_alarms">директна промена аларма</string>
-  <string name="permdesc_write_alarms">Апликација може да додаје, мења или брише аларме.</string>
-  <!-- Labels for the MANAGE_ALARMS permission. -->
-  <string name="permlab_manage_alarms">укључивање/искључивање заказаних аларма</string>
-  <string name="permdesc_manage_alarms">Апликација може да укључује или искључује заказане аларме.</string>
-  <!-- Labels for the READ_ALARMS permission. -->
-  <string name="permlab_read_alarms">приступ заказаним алармима</string>
-  <string name="permdesc_read_alarms">Апликација може да чита заказане аларме.</string>
   <!-- Labels for the WRITE_SETTINGS permission -->
   <string name="permlab_writeSettings">мењање подешавања система</string>
   <string name="permdesc_writeSettings">Апликација може да мења подешавања система.</string>

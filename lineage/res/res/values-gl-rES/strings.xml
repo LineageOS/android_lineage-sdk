@@ -25,15 +25,6 @@
   <!-- Labels for the HARDWARE_ABSTRACTION_ACCESS permission. -->
   <string name="permlab_useHardwareFramework">utilizar o contorno de traballo do hardware</string>
   <string name="permdesc_useHardwareFramework">Permítelle a unha aplicación acceder ao contorno de traballo do hardware.</string>
-  <!-- Labels for the WRITE_ALARMS permission. -->
-  <string name="permlab_write_alarms">cambiar alarmas directamente</string>
-  <string name="permdesc_write_alarms">Permítelle a unha aplicación engadir, modificar ou eliminar todas as súas alarmas.</string>
-  <!-- Labels for the MANAGE_ALARMS permission. -->
-  <string name="permlab_manage_alarms">trocar as alarmas programadas</string>
-  <string name="permdesc_manage_alarms">Permítelle a unha aplicación activar ou desactivar as alarmas que teña programadas.</string>
-  <!-- Labels for the READ_ALARMS permission. -->
-  <string name="permlab_read_alarms">acceder ás alarmas programadas</string>
-  <string name="permdesc_read_alarms">Permítellee a unha aplicación ler todas as alarmas que teña programadas.</string>
   <!-- Labels for the WRITE_SETTINGS permission -->
   <string name="permlab_writeSettings">modificar os axustes de Lineage do sistema</string>
   <string name="permdesc_writeSettings">Permítelle a unha aplicación modificar os axustes de Lineage do sistema.</string>

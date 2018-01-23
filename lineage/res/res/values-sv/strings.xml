@@ -25,15 +25,6 @@
   <!-- Labels for the HARDWARE_ABSTRACTION_ACCESS permission. -->
   <string name="permlab_useHardwareFramework">använda hårdvaruramverk</string>
   <string name="permdesc_useHardwareFramework">Ger en app åtkomst till LineageOS hårdvaruramverk.</string>
-  <!-- Labels for the WRITE_ALARMS permission. -->
-  <string name="permlab_write_alarms">ändra alarm direkt</string>
-  <string name="permdesc_write_alarms">Tillåter att en app lägger till, ändrar eller tar bort alla dina alarm.</string>
-  <!-- Labels for the MANAGE_ALARMS permission. -->
-  <string name="permlab_manage_alarms">växla schemalagda alarm</string>
-  <string name="permdesc_manage_alarms">Tillåter att en app sätter på eller stänger av dina schemalagda alarm.</string>
-  <!-- Labels for the READ_ALARMS permission. -->
-  <string name="permlab_read_alarms">åtkomst till schemalagda alarm</string>
-  <string name="permdesc_read_alarms">Tillåt att en app läser dina schemalagda alarm.</string>
   <!-- Labels for the WRITE_SETTINGS permission -->
   <string name="permlab_writeSettings">ändra Lineage systeminställningar</string>
   <string name="permdesc_writeSettings">Tillåt att en app ändrar Lineage systeminställningar.</string>

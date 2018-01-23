@@ -25,15 +25,6 @@
   <!-- Labels for the HARDWARE_ABSTRACTION_ACCESS permission. -->
   <string name="permlab_useHardwareFramework">dùng khung làm việc phần cứng</string>
   <string name="permdesc_useHardwareFramework">Cho phép ứng dụng truy cập khung làm việc phần cứng Lineage.</string>
-  <!-- Labels for the WRITE_ALARMS permission. -->
-  <string name="permlab_write_alarms">trực tiếp thay đổi báo thức</string>
-  <string name="permdesc_write_alarms">Cho phép ứng dụng thêm, chỉnh sửa hoặc xóa tất cả các báo thức của bạn.</string>
-  <!-- Labels for the MANAGE_ALARMS permission. -->
-  <string name="permlab_manage_alarms">bật/tắt báo thức đã lên lịch</string>
-  <string name="permdesc_manage_alarms">Cho phép ứng dụng bật hoặc tắt các báo thức đã lên lịch của bạn.</string>
-  <!-- Labels for the READ_ALARMS permission. -->
-  <string name="permlab_read_alarms">truy cập các báo thức đã lên lịch</string>
-  <string name="permdesc_read_alarms">Cho phép ứng dụng đọc các báo thức đã lên lịch của bạn.</string>
   <!-- Labels for the WRITE_SETTINGS permission -->
   <string name="permlab_writeSettings">sửa đổi cài đặt hệ thống Lineage</string>
   <string name="permdesc_writeSettings">Cho phép một ứng dụng sửa đổi cài đặt hệ thống Lineage.</string>

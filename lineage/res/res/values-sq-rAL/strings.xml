@@ -23,11 +23,6 @@
   <string name="permlab_modifyProfiles">modifiko profilet e sistemit</string>
   <string name="permdesc_modifyProfiles">Lejon një aplikacion që të modifikojë profilet e sistemit.</string>
   <!-- Labels for the HARDWARE_ABSTRACTION_ACCESS permission. -->
-  <!-- Labels for the WRITE_ALARMS permission. -->
-  <string name="permlab_write_alarms">ndrysho direkt alarmet</string>
-  <!-- Labels for the MANAGE_ALARMS permission. -->
-  <!-- Labels for the READ_ALARMS permission. -->
-  <string name="permlab_read_alarms">akseso alarmet e caktuar</string>
   <!-- Labels for the WRITE_SETTINGS permission -->
   <string name="permlab_writeSettings">modifiko parametrat e sistemit Lineage</string>
   <string name="permdesc_writeSettings">Lejon një aplikacion që të modifikojë parametrat e sistemit Lineage.</string>

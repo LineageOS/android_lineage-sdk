@@ -24,15 +24,6 @@
   <!-- Labels for the HARDWARE_ABSTRACTION_ACCESS permission. -->
   <string name="permlab_useHardwareFramework">gunakan hardware framework</string>
   <string name="permdesc_useHardwareFramework">Izinkan aplikasi untuk mengakses hardware framework Lineage.</string>
-  <!-- Labels for the WRITE_ALARMS permission. -->
-  <string name="permlab_write_alarms">secara langsung mengubah alarm</string>
-  <string name="permdesc_write_alarms">Mengizinkan aplikasi untuk menambah, mengubah atau menghapus semua alarm.</string>
-  <!-- Labels for the MANAGE_ALARMS permission. -->
-  <string name="permlab_manage_alarms">hidup/matikan alarm terjadwal</string>
-  <string name="permdesc_manage_alarms">Mengizinkan aplikasi untuk menyalakan atau mematikan alarm terjadwal.</string>
-  <!-- Labels for the READ_ALARMS permission. -->
-  <string name="permlab_read_alarms">akses alarm terjadwal</string>
-  <string name="permdesc_read_alarms">Mengizinkan aplikasi untuk melihat alarm terjadwal.</string>
   <!-- Labels for the WRITE_SETTINGS permission -->
   <string name="permlab_writeSettings">mengubah pengaturan sistem Lineage</string>
   <string name="permdesc_writeSettings">Mengizinkan aplikasi untuk memodifikasi pengaturan sistem Lineage.</string>

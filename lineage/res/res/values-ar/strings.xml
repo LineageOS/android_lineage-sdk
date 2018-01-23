@@ -25,15 +25,6 @@
   <!-- Labels for the HARDWARE_ABSTRACTION_ACCESS permission. -->
   <string name="permlab_useHardwareFramework">استخدام إطار عمل الجهاز</string>
   <string name="permdesc_useHardwareFramework">يسمح للتطبيق بالوصول إلى إطار عمل جهاز Lineage.</string>
-  <!-- Labels for the WRITE_ALARMS permission. -->
-  <string name="permlab_write_alarms">تغيير التنبيهات مباشرةً</string>
-  <string name="permdesc_write_alarms">السماح للتطبيق بإضافة أو تعديل أو حذف كل التنبيهات الخاصة بك.</string>
-  <!-- Labels for the MANAGE_ALARMS permission. -->
-  <string name="permlab_manage_alarms">التبديل بين التنبيهات المجدولة</string>
-  <string name="permdesc_manage_alarms">السماح للتطبيق بتشغيل أو إيقاف تشغيل التنبيهات المجدولة.</string>
-  <!-- Labels for the READ_ALARMS permission. -->
-  <string name="permlab_read_alarms">الوصول إلى التنبيهات المجدولة</string>
-  <string name="permdesc_read_alarms">السماح للتطبيق بقراءة تنبيهاتك المجدولة.</string>
   <!-- Labels for the WRITE_SETTINGS permission -->
   <string name="permlab_writeSettings">تعديل إعدادات نظام Lineage</string>
   <string name="permdesc_writeSettings">السماح للتطبيق بتعديل إعدادات نظام Lineage.</string>

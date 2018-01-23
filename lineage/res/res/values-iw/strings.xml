@@ -25,15 +25,6 @@
   <!-- Labels for the HARDWARE_ABSTRACTION_ACCESS permission. -->
   <string name="permlab_useHardwareFramework">השתמש במסגרת חומרה</string>
   <string name="permdesc_useHardwareFramework">מאפשר ליישום לגשת למסגרת החומרתית של Lineage.</string>
-  <!-- Labels for the WRITE_ALARMS permission. -->
-  <string name="permlab_write_alarms">שנה ישירות שעונים מעוררים</string>
-  <string name="permdesc_write_alarms">מאפשר ליישום להוסיף, לשנות או למחוק את כל השעונים המעוררים שלך.</string>
-  <!-- Labels for the MANAGE_ALARMS permission. -->
-  <string name="permlab_manage_alarms">הפעל/כבה שעונים מעוררים שנקבעו</string>
-  <string name="permdesc_manage_alarms">מאפשר ליישום להפעיל או לכבות שעונים מעוררים שנקבעו.</string>
-  <!-- Labels for the READ_ALARMS permission. -->
-  <string name="permlab_read_alarms">גישה לשעונים מעוררים שנקבעו</string>
-  <string name="permdesc_read_alarms">מאפשר ליישום לקרוא את השעונים המעוררים שנקבעו.</string>
   <!-- Labels for the WRITE_SETTINGS permission -->
   <string name="permlab_writeSettings">שנה הגדרות מערכת Lineage</string>
   <string name="permdesc_writeSettings">מאפשר ליישום לשנות את הגדרות מערכת Lineage.</string>

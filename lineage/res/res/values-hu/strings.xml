@@ -25,15 +25,6 @@
   <!-- Labels for the HARDWARE_ABSTRACTION_ACCESS permission. -->
   <string name="permlab_useHardwareFramework">hardver keretrendszert használ</string>
   <string name="permdesc_useHardwareFramework">Lehetővé teszi az alkalmazás számára, hogy a Lineage hardver hozzáférjen a keretrendszerhez.</string>
-  <!-- Labels for the WRITE_ALARMS permission. -->
-  <string name="permlab_write_alarms">riasztások közvetlen megváltoztatása</string>
-  <string name="permdesc_write_alarms">Lehetővé teszi az alkalmazás számára, hogy hozzáadja, módosítsa, vagy törölje az összes riasztást.</string>
-  <!-- Labels for the MANAGE_ALARMS permission. -->
-  <string name="permlab_manage_alarms">ütemezett riasztások kapcsolása</string>
-  <string name="permdesc_manage_alarms">Lehetővé teszi az alkalmazás számára, hogy ki/bekapcsolja az ütemezett riasztásokat.</string>
-  <!-- Labels for the READ_ALARMS permission. -->
-  <string name="permlab_read_alarms">hozzáférés ütemezett riasztásokhoz</string>
-  <string name="permdesc_read_alarms">Lehetővé teszi az alkalmazás számára, hogy olvassa az ütemezett riasztásait.</string>
   <!-- Labels for the WRITE_SETTINGS permission -->
   <string name="permlab_writeSettings">Lineage rendszer beállításainak módosítása</string>
   <string name="permdesc_writeSettings">Lehetővé teszi egy alkalmazás számára a Lineage rendszer beállításainak módosítását.</string>

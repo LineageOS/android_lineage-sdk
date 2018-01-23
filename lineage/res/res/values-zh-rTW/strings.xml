@@ -25,15 +25,6 @@
   <!-- Labels for the HARDWARE_ABSTRACTION_ACCESS permission. -->
   <string name="permlab_useHardwareFramework">使用硬體框架</string>
   <string name="permdesc_useHardwareFramework">允許應用程式存取 Lineage 硬體框架。</string>
-  <!-- Labels for the WRITE_ALARMS permission. -->
-  <string name="permlab_write_alarms">直接修改鬧鐘</string>
-  <string name="permdesc_write_alarms">允許應用程式增加、修改或刪除您的鬧鐘。</string>
-  <!-- Labels for the MANAGE_ALARMS permission. -->
-  <string name="permlab_manage_alarms">切換至已設定的鬧鐘</string>
-  <string name="permdesc_manage_alarms">允許應用程式開啟或關閉已設定的鬧鐘。</string>
-  <!-- Labels for the READ_ALARMS permission. -->
-  <string name="permlab_read_alarms">讀取已設定的鬧鐘</string>
-  <string name="permdesc_read_alarms">允許應用程式讀取已設定的鬧鐘。</string>
   <!-- Labels for the WRITE_SETTINGS permission -->
   <string name="permlab_writeSettings">修改 Lineage 系統設定</string>
   <string name="permdesc_writeSettings">允許應用程式更改 Lineage 系統設定</string>

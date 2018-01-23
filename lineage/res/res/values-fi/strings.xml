@@ -25,15 +25,6 @@
   <!-- Labels for the HARDWARE_ABSTRACTION_ACCESS permission. -->
   <string name="permlab_useHardwareFramework">käytä laitteiston kehystä</string>
   <string name="permdesc_useHardwareFramework">Sallii sovelluksen pääsyn Lineage-laitteiston kehykseen.</string>
-  <!-- Labels for the WRITE_ALARMS permission. -->
-  <string name="permlab_write_alarms">muuta hälytyksiä suoraan</string>
-  <string name="permdesc_write_alarms">Sallii sovelluksen lisätä, muokata tai poistaa kaikki hälytyksesi.</string>
-  <!-- Labels for the MANAGE_ALARMS permission. -->
-  <string name="permlab_manage_alarms">ota hälytys käyttöön</string>
-  <string name="permdesc_manage_alarms">Sallii sovelluksen ottaa hälytyksen käyttöön tai poistaa sen käytöstä.</string>
-  <!-- Labels for the READ_ALARMS permission. -->
-  <string name="permlab_read_alarms">käytä ajoitettua hälytystä</string>
-  <string name="permdesc_read_alarms">Sallii sovelluksen lukea ajoitettuja hälytyksiä.</string>
   <!-- Labels for the WRITE_SETTINGS permission -->
   <string name="permlab_writeSettings">muokkaa Lineage-järjestelmän asetuksia</string>
   <string name="permdesc_writeSettings">Sallii sovelluksen muokata Lineage-järjestelmän asetuksia.</string>

@@ -25,15 +25,6 @@
   <!-- Labels for the HARDWARE_ABSTRACTION_ACCESS permission. -->
   <string name="permlab_useHardwareFramework">Използване на framework хардуер</string>
   <string name="permdesc_useHardwareFramework">Разрешава на едно приложение да достъпва до framework хардуера на Lineage.</string>
-  <!-- Labels for the WRITE_ALARMS permission. -->
-  <string name="permlab_write_alarms">промяна на аларми</string>
-  <string name="permdesc_write_alarms">Разрешава на приложението да добавя, променяте или изтрива аларми.</string>
-  <!-- Labels for the MANAGE_ALARMS permission. -->
-  <string name="permlab_manage_alarms">Промяна на планираните аларми</string>
-  <string name="permdesc_manage_alarms">Позволява на приложението да активира/деактивира плануаните аларми.</string>
-  <!-- Labels for the READ_ALARMS permission. -->
-  <string name="permlab_read_alarms">достъп до планувана аларма</string>
-  <string name="permdesc_read_alarms">Позволява на приложението преглед на плануваните аларми.</string>
   <!-- Labels for the WRITE_SETTINGS permission -->
   <string name="permlab_writeSettings">Модифициране на СМ системни настройки</string>
   <string name="permdesc_writeSettings">Позволява на приложението да модифицира СМ системни настройки.</string>

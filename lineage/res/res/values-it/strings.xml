@@ -25,15 +25,6 @@
   <!-- Labels for the HARDWARE_ABSTRACTION_ACCESS permission. -->
   <string name="permlab_useHardwareFramework">utilizza framework hardware</string>
   <string name="permdesc_useHardwareFramework">Consenti ad un\'app di accedere al framework hardware di Lineage.</string>
-  <!-- Labels for the WRITE_ALARMS permission. -->
-  <string name="permlab_write_alarms">modifica le sveglie</string>
-  <string name="permdesc_write_alarms">Consenti ad un\'app di aggiungere, modificare o eliminare tutti i tuoi allarmi.</string>
-  <!-- Labels for the MANAGE_ALARMS permission. -->
-  <string name="permlab_manage_alarms">cambia avvisi programmati</string>
-  <string name="permdesc_manage_alarms">Consenti ad un\'app di attivare o disattivare i tuoi avvisi programmati.</string>
-  <!-- Labels for the READ_ALARMS permission. -->
-  <string name="permlab_read_alarms">accesso avvisi programmati</string>
-  <string name="permdesc_read_alarms">Consenti all\'app di leggere i tuoi avvisi programmati.</string>
   <!-- Labels for the WRITE_SETTINGS permission -->
   <string name="permlab_writeSettings">modifica le impostazioni di sistema Lineage</string>
   <string name="permdesc_writeSettings">Consenti ad un\'app di modificare le impostazioni di sistema Lineage.</string>

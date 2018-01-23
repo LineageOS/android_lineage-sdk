@@ -25,15 +25,6 @@
   <!-- Labels for the HARDWARE_ABSTRACTION_ACCESS permission. -->
   <string name="permlab_useHardwareFramework">χρήση του πλαισίου υλικού</string>
   <string name="permdesc_useHardwareFramework">Επιτρέπει σε μια εφαρμογή την πρόσβαση στο πλαίσιο υλικού του Lineage.</string>
-  <!-- Labels for the WRITE_ALARMS permission. -->
-  <string name="permlab_write_alarms">άμεση επεξεργασία αφυπνίσεων</string>
-  <string name="permdesc_write_alarms">Επιτρέπει σε μια εφαρμογή να προσθέσει, να τροποποιήσει ή να διαγράψει όλες τις αφυπνίσεις.</string>
-  <!-- Labels for the MANAGE_ALARMS permission. -->
-  <string name="permlab_manage_alarms">εναλλαγή προγραμματισμένων αφυπνίσεων</string>
-  <string name="permdesc_manage_alarms">Επιτρέπει σε μια εφαρμογή να ενεργοποιήσει ή να απενεργοποιήσει τις προγραμματισμένες αφυπνίσεις.</string>
-  <!-- Labels for the READ_ALARMS permission. -->
-  <string name="permlab_read_alarms">ανάγνωση προγραμματισμένων αφυπνίσεων</string>
-  <string name="permdesc_read_alarms">Επιτρέπει σε μια εφαρμογή να διαβάσει τις προγραμματισμένες αφυπνίσεις.</string>
   <!-- Labels for the WRITE_SETTINGS permission -->
   <string name="permlab_writeSettings">τροποποίηση ρυθμίσεων συστήματος Lineage</string>
   <string name="permdesc_writeSettings">Επιτρέπει σε μια εφαρμογή να τροποποιεί τις ρυθμίσεις συστήματος του Lineage.</string>

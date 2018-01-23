@@ -25,15 +25,6 @@
   <!-- Labels for the HARDWARE_ABSTRACTION_ACCESS permission. -->
   <string name="permlab_useHardwareFramework">folosește framework-ul hardware</string>
   <string name="permdesc_useHardwareFramework">Permite unei aplicații să acceseze framework-ul Lineage hardware.</string>
-  <!-- Labels for the WRITE_ALARMS permission. -->
-  <string name="permlab_write_alarms">schimbă direct alarme</string>
-  <string name="permdesc_write_alarms">Permite unei aplicații să adauge, modifice sau să șteargă toate alarmele.</string>
-  <!-- Labels for the MANAGE_ALARMS permission. -->
-  <string name="permlab_manage_alarms">comută alarme programate</string>
-  <string name="permdesc_manage_alarms">Permite unei aplicații să pornească sau să oprească alarmele programate.</string>
-  <!-- Labels for the READ_ALARMS permission. -->
-  <string name="permlab_read_alarms">accesează alarme programate</string>
-  <string name="permdesc_read_alarms">Permite unei aplicații să citească alarmele programate.</string>
   <!-- Labels for the WRITE_SETTINGS permission -->
   <string name="permlab_writeSettings">modifică setările de sistem Lineage</string>
   <string name="permdesc_writeSettings">Permite unei aplicații să modifice setările de sistem Lineage.</string>

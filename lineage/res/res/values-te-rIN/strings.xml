@@ -25,15 +25,6 @@
   <!-- Labels for the HARDWARE_ABSTRACTION_ACCESS permission. -->
   <string name="permlab_useHardwareFramework">వినియోగదారు హార్డ్‌వేర్‌ ఫ్రేమ్‌వర్క్</string>
   <string name="permdesc_useHardwareFramework">Lineage హార్డ్‌వేర్‌ ఫ్రేమ్‌వర్కుకు ప్రాప్తి పొందడానికి ప్రోగ్రాంకి అనుమతినిస్తుంది.</string>
-  <!-- Labels for the WRITE_ALARMS permission. -->
-  <string name="permlab_write_alarms">నేరుగా అలారంలను మార్చుము</string>
-  <string name="permdesc_write_alarms">మీ యొక్క అన్ని అలారంలను జోడించేందుకు, సవరించేందుకు లేదా తొలిగించేందుకు ప్రోగ్రాంకి అనుమతినిస్తుంది.</string>
-  <!-- Labels for the MANAGE_ALARMS permission. -->
-  <string name="permlab_manage_alarms">షెడ్యూల్ చేయబడిన అలారంలను ద్విక్రియం చేయుము</string>
-  <string name="permdesc_manage_alarms">మీచే షెడ్యూల్ చేయబడిన అలారంలను ఆన్ లేదా ఆఫ్ చేసేందుకు ప్రోగ్రాంకి అనుమతినిస్తుంది.</string>
-  <!-- Labels for the READ_ALARMS permission. -->
-  <string name="permlab_read_alarms">షెడ్యూల్ చేయబడిన అలారంలను ప్రాప్తి చేయుము</string>
-  <string name="permdesc_read_alarms">మీచే షెడ్యూల్ చేయబడిన అలారంలను చదివేందుకు ప్రోగ్రాంకి అనుమతినిస్తుంది.</string>
   <!-- Labels for the WRITE_SETTINGS permission -->
   <string name="permlab_writeSettings">Lineage సిస్టమ్ సెట్టింగులను సవరించుము</string>
   <string name="permdesc_writeSettings">Lineage సిస్టమ్ సెట్టింగులను సవరించేందుకు ప్రోగ్రాంకి అనుమతినిస్తుంది.</string>

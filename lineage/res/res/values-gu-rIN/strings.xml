@@ -25,15 +25,6 @@
   <!-- Labels for the HARDWARE_ABSTRACTION_ACCESS permission. -->
   <string name="permlab_useHardwareFramework">હાર્ડવેર ફ્રેમવર્કનો ઉપયોગ કરો</string>
   <string name="permdesc_useHardwareFramework">ઍપને Lineage હાર્ડવેર ફ્રેમવર્કની ઍક્સેસની પરવાનગી આપે છે.</string>
-  <!-- Labels for the WRITE_ALARMS permission. -->
-  <string name="permlab_write_alarms">અલાર્મ સીધા પરિવર્તન કરો</string>
-  <string name="permdesc_write_alarms">ઍપને તમારા તમામ અલાર્મ ઉમેરવાની, ફેરફાર કરવાની અને ભૂંસવાની પરવાનગી આપે છે.</string>
-  <!-- Labels for the MANAGE_ALARMS permission. -->
-  <string name="permlab_manage_alarms">અનુસૂચિત અલાર્મ ટૉગલ કરો</string>
-  <string name="permdesc_manage_alarms">ઍપને તમારા અનુસૂચિત અલાર્મ ચાલુ કરવા અથવા બંધ કરવાની પરવાનગી આપે છે.</string>
-  <!-- Labels for the READ_ALARMS permission. -->
-  <string name="permlab_read_alarms">અનુસૂચિત અલાર્મ ઍક્સેસ કરો</string>
-  <string name="permdesc_read_alarms">ઍપને તમારા અનુસૂચિત અલાર્મ વાંચવાની પરવાનગી આપે છે.</string>
   <!-- Labels for the WRITE_SETTINGS permission -->
   <string name="permlab_writeSettings">Lineage સિસ્ટમ સેટિંગ્સમાં ફેરફાર કરો</string>
   <string name="permdesc_writeSettings">ઍપને Lineage સિસ્ટમ સેટિંગ્સમાં ફેરફાર કરવાની પરવાનગી આપે છે.</string>

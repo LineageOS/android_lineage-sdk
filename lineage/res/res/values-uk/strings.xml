@@ -25,15 +25,6 @@
   <!-- Labels for the HARDWARE_ABSTRACTION_ACCESS permission. -->
   <string name="permlab_useHardwareFramework">Взаємодія із обладнанням</string>
   <string name="permdesc_useHardwareFramework">Додаток зможе отримувати доступ до підсистеми апаратних абстракцій LineageOS.</string>
-  <!-- Labels for the WRITE_ALARMS permission. -->
-  <string name="permlab_write_alarms">безпосередньо змінювати будильники</string>
-  <string name="permdesc_write_alarms">Дозволяє програмі додавати, змінювати або видаляти налаштування сигналів будильника.</string>
-  <!-- Labels for the MANAGE_ALARMS permission. -->
-  <string name="permlab_manage_alarms">перемикання запланованих будильників</string>
-  <string name="permdesc_manage_alarms">Дозволяє програмі вмикати або вимикати будильники.</string>
-  <!-- Labels for the READ_ALARMS permission. -->
-  <string name="permlab_read_alarms">доступ до запланованих будильників</string>
-  <string name="permdesc_read_alarms">Дозволяє програмі читати заплановані сигнали будильника.</string>
   <!-- Labels for the WRITE_SETTINGS permission -->
   <string name="permlab_writeSettings">змінювати налаштування Lineage</string>
   <string name="permdesc_writeSettings">Дозволяє додатку змінювати системні налаштування Lineage.</string>

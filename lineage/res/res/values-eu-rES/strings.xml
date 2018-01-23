@@ -25,15 +25,6 @@
   <!-- Labels for the HARDWARE_ABSTRACTION_ACCESS permission. -->
   <string name="permlab_useHardwareFramework">hardware markoa erabili</string>
   <string name="permdesc_useHardwareFramework">Lineage hardware markoa atzitzea ahalbidetzen dio aplikazioari.</string>
-  <!-- Labels for the WRITE_ALARMS permission. -->
-  <string name="permlab_write_alarms">zuzenean aldatu alarmak</string>
-  <string name="permdesc_write_alarms">Zure alarma guztiak gehitu, aldatu, edo ezabatzea ahalbidetzen dio aplikazioari.</string>
-  <!-- Labels for the MANAGE_ALARMS permission. -->
-  <string name="permlab_manage_alarms">txandakatu programatutako alarmak</string>
-  <string name="permdesc_manage_alarms">Programatutako alarmak piztu edo itzaltzea ahalbidetzen dio aplikazioari.</string>
-  <!-- Labels for the READ_ALARMS permission. -->
-  <string name="permlab_read_alarms">atzitu programatutako alarmak</string>
-  <string name="permdesc_read_alarms">Programatutako alarmak irakurtzea ahalbidetzen dio aplikazioari.</string>
   <!-- Labels for the WRITE_SETTINGS permission -->
   <string name="permlab_writeSettings">aldatu Lineage sistemaren ezarpenak</string>
   <string name="permdesc_writeSettings">Lineage sistemaren ezarpenak aldatzea ahalbidetzen dio aplikazioari.</string>

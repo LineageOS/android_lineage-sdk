@@ -25,15 +25,6 @@
   <!-- Labels for the HARDWARE_ABSTRACTION_ACCESS permission. -->
   <string name="permlab_useHardwareFramework">uporabi strojno ogrodje</string>
   <string name="permdesc_useHardwareFramework">Dovoli aplikaciji dostop do strojnega ogrodja Lineage.</string>
-  <!-- Labels for the WRITE_ALARMS permission. -->
-  <string name="permlab_write_alarms">neposredno spreminjanje budilk</string>
-  <string name="permdesc_write_alarms">Dovoli aplikaciji dodajanje, spreminjanje in brisanje vseh vaših budilk.</string>
-  <!-- Labels for the MANAGE_ALARMS permission. -->
-  <string name="permlab_manage_alarms">preklop načrtovanih budilk</string>
-  <string name="permdesc_manage_alarms">Dovoli aplikaciji vklop in izklop vaših načrtovanih budilk.</string>
-  <!-- Labels for the READ_ALARMS permission. -->
-  <string name="permlab_read_alarms">dostop do načrtovanih budilk</string>
-  <string name="permdesc_read_alarms">Dovoli aplikaciji branje vaših načrtovanih budilk.</string>
   <!-- Labels for the WRITE_SETTINGS permission -->
   <string name="permlab_writeSettings">spreminjanje sistemskih nastavitev Lineage</string>
   <string name="permdesc_writeSettings">Dovoli aplikaciji spreminjanje sistemskih nastavitev Lineage.</string>

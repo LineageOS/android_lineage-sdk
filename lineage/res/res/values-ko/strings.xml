@@ -25,15 +25,6 @@
   <!-- Labels for the HARDWARE_ABSTRACTION_ACCESS permission. -->
   <string name="permlab_useHardwareFramework">하드웨어 프레임워크 사용</string>
   <string name="permdesc_useHardwareFramework">앱이 Lineage 하드웨어 프레임워크에 접근할 수 있도록 허용합니다.</string>
-  <!-- Labels for the WRITE_ALARMS permission. -->
-  <string name="permlab_write_alarms">알람을 직접 변경</string>
-  <string name="permdesc_write_alarms">앱이 알람을 추가, 변경 또는 삭제할 수 있도록 허용합니다.</string>
-  <!-- Labels for the MANAGE_ALARMS permission. -->
-  <string name="permlab_manage_alarms">예정된 알람 설정/해제</string>
-  <string name="permdesc_manage_alarms">앱이 예정된 알람을 켜고 끌 수 있도록 허용합니다.</string>
-  <!-- Labels for the READ_ALARMS permission. -->
-  <string name="permlab_read_alarms">예정된 알람 접근</string>
-  <string name="permdesc_read_alarms">앱이 예정된 알람을 볼 수 있도록 허용합니다.</string>
   <!-- Labels for the WRITE_SETTINGS permission -->
   <string name="permlab_writeSettings">Lineage 시스템 설정 수정</string>
   <string name="permdesc_writeSettings">앱이 Lineage 시스템 설정을 수정할 수 있도록 허용합니다.</string>

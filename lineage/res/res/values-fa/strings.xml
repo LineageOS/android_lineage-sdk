@@ -25,15 +25,6 @@
   <!-- Labels for the HARDWARE_ABSTRACTION_ACCESS permission. -->
   <string name="permlab_useHardwareFramework">استفاده از چارچوب سخت‌افزار</string>
   <string name="permdesc_useHardwareFramework">به برنامه اجازه می‌دهد به چارچوب سخت‌افزار Lineage دسترسی داشته باشد.</string>
-  <!-- Labels for the WRITE_ALARMS permission. -->
-  <string name="permlab_write_alarms">تغییر مستقیم هشدارها</string>
-  <string name="permdesc_write_alarms">به برنامه اجازه افزودن، تغییر یا حذف تمام هشدارهای دستگاه را می‌دهد.</string>
-  <!-- Labels for the MANAGE_ALARMS permission. -->
-  <string name="permlab_manage_alarms">تغییر در وضعیت هشدارهای زمان‌بندی شده</string>
-  <string name="permdesc_manage_alarms">به برنامه اجازه می‌دهد هشدارهای زمان‌بندی شده را خاموش یا روشن کند.</string>
-  <!-- Labels for the READ_ALARMS permission. -->
-  <string name="permlab_read_alarms">دسترسی به هشدارهای زمان‌بندی شده</string>
-  <string name="permdesc_read_alarms">به برنامه اجازه می‌دهد هشدارهای زمان‌بندی شده را مشاهده کند.</string>
   <!-- Labels for the WRITE_SETTINGS permission -->
   <string name="permlab_writeSettings">تغییر تنظیمات سیستم Lineage</string>
   <string name="permdesc_writeSettings">به برنامه اجازه می‌دهد که تنظیمات سیستم Lineage را تغییر دهد.</string>

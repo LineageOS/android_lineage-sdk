@@ -25,15 +25,6 @@
   <!-- Labels for the HARDWARE_ABSTRACTION_ACCESS permission. -->
   <string name="permlab_useHardwareFramework">utiliser le framework matériel</string>
   <string name="permdesc_useHardwareFramework">Permet à une application d\'accéder au framework matériel de Lineage.</string>
-  <!-- Labels for the WRITE_ALARMS permission. -->
-  <string name="permlab_write_alarms">modifier directement les alarmes</string>
-  <string name="permdesc_write_alarms">Autorise une application à ajouter, modifier ou supprimer toutes vos alarmes.</string>
-  <!-- Labels for the MANAGE_ALARMS permission. -->
-  <string name="permlab_manage_alarms">activer/désactiver les alarmes planifiées</string>
-  <string name="permdesc_manage_alarms">Autorise une application à activer ou désactiver vos alarmes planifiées</string>
-  <!-- Labels for the READ_ALARMS permission. -->
-  <string name="permlab_read_alarms">accéder aux alarmes planifiées</string>
-  <string name="permdesc_read_alarms">Autorise une application à lire vos alarmes planifiées</string>
   <!-- Labels for the WRITE_SETTINGS permission -->
   <string name="permlab_writeSettings">modifier les paramètres système Lineage</string>
   <string name="permdesc_writeSettings">Autorise une application à modifier les paramètres système de Lineage.</string>

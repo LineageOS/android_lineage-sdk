@@ -25,15 +25,6 @@
   <!-- Labels for the HARDWARE_ABSTRACTION_ACCESS permission. -->
   <string name="permlab_useHardwareFramework">வன்பொருள் கட்டமைப்பைப் பயன்படுத்து</string>
   <string name="permdesc_useHardwareFramework">ஒரு பயன்பாடானது Lineage வன்பொருள் கட்டமைப்பை அணுக அனுமதிக்கிறது.</string>
-  <!-- Labels for the WRITE_ALARMS permission. -->
-  <string name="permlab_write_alarms">அலாரங்களை நேரடியாக மாற்று</string>
-  <string name="permdesc_write_alarms">ஒரு பயன்பாடானது உங்கள் அலாரங்கள் அனைத்தையும் சேர்க்க, மாற்றியமைக்க அல்லது நீக்க அனுமதிக்கிறது.</string>
-  <!-- Labels for the MANAGE_ALARMS permission. -->
-  <string name="permlab_manage_alarms">திட்டமிடப்பட்ட அலாரங்களை நிலைமாற்று</string>
-  <string name="permdesc_manage_alarms">ஒரு பயன்பாடானது உங்கள் திட்டமிடப்பட்ட அலாரங்களை ஆன் அல்லது ஆஃப் செய்ய அனுமதிக்கிறது</string>
-  <!-- Labels for the READ_ALARMS permission. -->
-  <string name="permlab_read_alarms">திட்டமிடப்பட்ட அலாரங்களை அணுகு</string>
-  <string name="permdesc_read_alarms">ஒரு பயன்பாடானது உங்கள் திட்டமிடப்பட்ட அலாரங்களை படிக்க அனுமதிக்கிறது.</string>
   <!-- Labels for the WRITE_SETTINGS permission -->
   <string name="permlab_writeSettings">Lineage கணினி அமைப்புகளை மாற்றியமை</string>
   <string name="permdesc_writeSettings">ஒரு பயன்பாடானது Lineage கணினி அமைப்புகளை மாற்றியமைக்க அனுமதிக்கிறது</string>

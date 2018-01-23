@@ -25,15 +25,6 @@
   <!-- Labels for the HARDWARE_ABSTRACTION_ACCESS permission. -->
   <string name="permlab_useHardwareFramework">Взаимодействие с оборудованием</string>
   <string name="permdesc_useHardwareFramework">Приложение сможет получать доступ к подсистеме аппаратных абстракций LineageOS.</string>
-  <!-- Labels for the WRITE_ALARMS permission. -->
-  <string name="permlab_write_alarms">Изменение будильников</string>
-  <string name="permdesc_write_alarms">Приложение сможет добавлять, изменять или удалять любые будильники.</string>
-  <!-- Labels for the MANAGE_ALARMS permission. -->
-  <string name="permlab_manage_alarms">Изменение состояния будильников</string>
-  <string name="permdesc_manage_alarms">Приложение сможет включать или отключать установленные будильники.</string>
-  <!-- Labels for the READ_ALARMS permission. -->
-  <string name="permlab_read_alarms">Доступ к будильникам</string>
-  <string name="permdesc_read_alarms">Приложение сможет просматривать данные об установленных будильниках.</string>
   <!-- Labels for the WRITE_SETTINGS permission -->
   <string name="permlab_writeSettings">Изменение параметров системы</string>
   <string name="permdesc_writeSettings">Приложение сможет изменять параметры системы СМ.</string>

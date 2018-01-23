@@ -25,15 +25,6 @@
   <!-- Labels for the HARDWARE_ABSTRACTION_ACCESS permission. -->
   <string name="permlab_useHardwareFramework">ହାର୍ଡ୍‍ଓୟାର୍‍ ଫ୍ରେମ୍‍ୱାର୍କ୍‍ ବ୍ୟବହାର କରନ୍ତୁ</string>
   <string name="permdesc_useHardwareFramework">Lineage ହାର୍ଡ୍‍ଓୟାର୍‍ ଫ୍ରେମ୍‍ୱାର୍କ୍ ଆକ୍‍ସେସ୍‍ କରିବାକୁ ଆପ୍ଲିକେସନ୍‍କୁ ଅନୁମତି ଦିଏ।</string>
-  <!-- Labels for the WRITE_ALARMS permission. -->
-  <string name="permlab_write_alarms">ଆଲାର୍ମ୍‍ଗୁଡିକୁ ସିଧାସଳଖ ପରିବର୍ତ୍ତନ କରନ୍ତୁ</string>
-  <string name="permdesc_write_alarms">ଆପଣଙ୍କର ସମ୍ସ୍ତ ଆଲାର୍ମ୍‍ ଯୋଗ, ସମ୍ପାଦନା ବା ବିଲୋପ କରିବାକୁ ଆପ୍ଲିକେସନ୍‍କୁ ଅନୁମତି ଦିଏ।</string>
-  <!-- Labels for the MANAGE_ALARMS permission. -->
-  <string name="permlab_manage_alarms">ସୂଚୀଭୁକ୍ତ ଆଲାର୍ମ୍‍ଗୁଡିକୁ ଟୋଗଲ୍‍ କରନ୍ତୁ</string>
-  <string name="permdesc_manage_alarms">ସୂଚୀ୍ଭୂକ୍ତ ଆଲାର୍ମ୍‍ଗୁ୍ଡିକୁ ଟୋଗଲ୍‍ କରନ୍ତୁଆପଣଙ୍କ ସୂଚୀଭୁକ୍ତ ଆଲାର୍ମ୍‍ଗୁଡିକୁ ଟର୍ନ୍ ଅନ୍ ବା ଅଫ୍‍ କରିବା ପାଇଁ ଆପ୍ଲିକେସନ୍‍କୁ ଅନୁମତି ଦିଏ।</string>
-  <!-- Labels for the READ_ALARMS permission. -->
-  <string name="permlab_read_alarms">ସୂଚୀଭୁକ୍ତ ଆଲାର୍ମ୍‍ଗୁଡିକୁ ଆକ୍‍ସେସ୍‍‍ କରନ୍ତୁ</string>
-  <string name="permdesc_read_alarms">ଆପଣଙ୍କ ସୂଚୀଭୁକ୍ତ ଆଲାର୍ମ୍‍ଗୁଡିକୁ ଆକ୍‍ସେସ୍‍‍ କରିବାକୁ ଆପ୍ଲିକେସନ୍‍କୁ ଅନୁମତି ଦିଏ।</string>
   <!-- Labels for the WRITE_SETTINGS permission -->
   <string name="permlab_writeSettings">Lineage ସିଷ୍ଟମ୍‍ ସେଟିଂସମୂହ ସମ୍ପାଦନା କରନ୍ତୁ</string>
   <string name="permdesc_writeSettings">Lineage ସିଷ୍ଟମ୍‍ ସେଟିଂସମୂହ ସମ୍ପାଦନା କରିବାକୁ ଆପ୍ଲିକେସନ୍‍କୁ ଅନୁମତି ଦିଏ।</string>

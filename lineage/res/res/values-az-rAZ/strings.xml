@@ -25,15 +25,6 @@
   <!-- Labels for the HARDWARE_ABSTRACTION_ACCESS permission. -->
   <string name="permlab_useHardwareFramework">avadanlıq bünövrəsindən istifadə et</string>
   <string name="permdesc_useHardwareFramework">Tətbiqetmənin Lineage avadanlıq bünövrəsinə müraciətinə icazə verər.</string>
-  <!-- Labels for the WRITE_ALARMS permission. -->
-  <string name="permlab_write_alarms">birbaşa zəngli saatları dəyişdir</string>
-  <string name="permdesc_write_alarms">Tətbiqetməyə zəngli saat əlavə etmə, dəyişdirmə və silmə icazəsi verər.</string>
-  <!-- Labels for the MANAGE_ALARMS permission. -->
-  <string name="permlab_manage_alarms">müəyyən zəngli saatları aç/bağla</string>
-  <string name="permdesc_manage_alarms">Tətbiqetməyə müəyyən zəngli saatları açma və ya bağlama icazəsi verər.</string>
-  <!-- Labels for the READ_ALARMS permission. -->
-  <string name="permlab_read_alarms">müəyyən zəngli saatlara müraciət</string>
-  <string name="permdesc_read_alarms">Tətbiqetməyə müəyyən zəngli saatları oxuma icazəsi verər.</string>
   <!-- Labels for the WRITE_SETTINGS permission -->
   <string name="permlab_writeSettings">Lineage sistem tənzimləmələrini dəyişdir</string>
   <string name="permdesc_writeSettings">Tətbiqetməyə Lineage sistem tənzimləmələrini dəyişmə icazəsi verər.</string>

@@ -25,15 +25,6 @@
   <!-- Labels for the HARDWARE_ABSTRACTION_ACCESS permission. -->
   <string name="permlab_useHardwareFramework">ใช้ฮาร์ดแวร์เฟรมเวิร์ค</string>
   <string name="permdesc_useHardwareFramework">อนุญาตให้แอพเข้าถึง Lineage ฮาร์ดแวร์เฟรมเวิร์ค</string>
-  <!-- Labels for the WRITE_ALARMS permission. -->
-  <string name="permlab_write_alarms">เปลี่ยนการปลุกเตือนโดยตรง</string>
-  <string name="permdesc_write_alarms">อนุญาตให้แอปเพิ่ม ปรับแต่ง หรือลบการปลุกเตือนทั้งหมดของคุณ</string>
-  <!-- Labels for the MANAGE_ALARMS permission. -->
-  <string name="permlab_manage_alarms">สลับการปลุกเตือนที่กำหนดไว้</string>
-  <string name="permdesc_manage_alarms">อนุญาตให้แอปเปิดหรือปิดการปลุกเตือนที่คุณกำหนดไว้</string>
-  <!-- Labels for the READ_ALARMS permission. -->
-  <string name="permlab_read_alarms">การเข้าถึงการปลุกเตือนที่กำหนดไว้</string>
-  <string name="permdesc_read_alarms">อนุญาตให้แอปอ่านการปลุกเตือนที่กำหนดไว้</string>
   <!-- Labels for the WRITE_SETTINGS permission -->
   <string name="permlab_writeSettings">ปรับแต่งการตั้งค่าระบบ Lineage</string>
   <string name="permdesc_writeSettings">อนุญาตให้แอปปรับการตั้งค่าระบบ Lineage</string>

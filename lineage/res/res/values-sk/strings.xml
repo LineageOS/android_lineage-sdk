@@ -25,15 +25,6 @@
   <!-- Labels for the HARDWARE_ABSTRACTION_ACCESS permission. -->
   <string name="permlab_useHardwareFramework">používať hardvérový framework</string>
   <string name="permdesc_useHardwareFramework">Umožňuje aplikácii pristupovať k hardvérovému frameworku Lineage.</string>
-  <!-- Labels for the WRITE_ALARMS permission. -->
-  <string name="permlab_write_alarms">priamo zmeniť budíky</string>
-  <string name="permdesc_write_alarms">Umožňuje aplikácii pridať, upraviť alebo odstrániť všetky vaše budíky.</string>
-  <!-- Labels for the MANAGE_ALARMS permission. -->
-  <string name="permlab_manage_alarms">prepnúť naplánované budíky</string>
-  <string name="permdesc_manage_alarms">Umožňuje aplikácii zapnúť alebo vypnúť všetky naplánované budíky.</string>
-  <!-- Labels for the READ_ALARMS permission. -->
-  <string name="permlab_read_alarms">prístup k naplánovaným budíkom</string>
-  <string name="permdesc_read_alarms">Umožňuje aplikácii čítať vaše naplánované budíky.</string>
   <!-- Labels for the WRITE_SETTINGS permission -->
   <string name="permlab_writeSettings">upraviť systémové nastavenia Lineage</string>
   <string name="permdesc_writeSettings">Umožňuje aplikácii zmeniť systémové nastavenia Lineage.</string>

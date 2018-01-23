@@ -25,15 +25,6 @@
   <!-- Labels for the HARDWARE_ABSTRACTION_ACCESS permission. -->
   <string name="permlab_useHardwareFramework">koristi hardware framework</string>
   <string name="permdesc_useHardwareFramework">Dopušta aplikaciji pristupiti Lineage hardware framework.</string>
-  <!-- Labels for the WRITE_ALARMS permission. -->
-  <string name="permlab_write_alarms">izravno promijeni alarme</string>
-  <string name="permdesc_write_alarms">Dopušta aplikaciji dodavanje, izmijenu ili brisanje svih alarma.</string>
-  <!-- Labels for the MANAGE_ALARMS permission. -->
-  <string name="permlab_manage_alarms">uključi/isključi zakazane alarme</string>
-  <string name="permdesc_manage_alarms">Dopušta aplikaciji da uključi ili isključi zakazane alarme.</string>
-  <!-- Labels for the READ_ALARMS permission. -->
-  <string name="permlab_read_alarms">pristup zakazanim alarmima</string>
-  <string name="permdesc_read_alarms">Dopušta aplikaciji čitati zakazane alarme.</string>
   <!-- Labels for the WRITE_SETTINGS permission -->
   <string name="permlab_writeSettings">izmijeni postavke sustava Lineage</string>
   <string name="permdesc_writeSettings">Dopušta aplikaciji da izmijeni postavke sustava Lineage.</string>

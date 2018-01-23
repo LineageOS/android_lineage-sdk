@@ -23,9 +23,6 @@
   <!-- Labels for the HARDWARE_ABSTRACTION_ACCESS permission. -->
   <string name="permlab_useHardwareFramework">kasutada riistvara raamistikku</string>
   <string name="permdesc_useHardwareFramework">Annab rakendusele ligipääsu Lineage riistvara raamistikule.</string>
-  <!-- Labels for the WRITE_ALARMS permission. -->
-  <!-- Labels for the MANAGE_ALARMS permission. -->
-  <!-- Labels for the READ_ALARMS permission. -->
   <!-- Labels for the WRITE_SETTINGS permission -->
   <!-- Labels for the WRITE_SECURE_SETTINGS permission -->
   <!-- Labels for the PROTECTED_APP permission. -->

@@ -25,15 +25,6 @@
   <!-- Labels for the HARDWARE_ABSTRACTION_ACCESS permission. -->
   <string name="permlab_useHardwareFramework">hardware-framework gebruiken</string>
   <string name="permdesc_useHardwareFramework">Hiermee kan de app toegang krijgen tot het hardware-framework van Lineage.</string>
-  <!-- Labels for the WRITE_ALARMS permission. -->
-  <string name="permlab_write_alarms">rechtstreeks alarmen wijzigen</string>
-  <string name="permdesc_write_alarms">Hiermee kan de app alarmen toevoegen, bewerken of verwijderen.</string>
-  <!-- Labels for the MANAGE_ALARMS permission. -->
-  <string name="permlab_manage_alarms">geplande alarmen in-/uitschakelen</string>
-  <string name="permdesc_manage_alarms">Hiermee kan de app uw geplande alarmen in-/uitschakelen.</string>
-  <!-- Labels for the READ_ALARMS permission. -->
-  <string name="permlab_read_alarms">toegang tot geplande alarmen</string>
-  <string name="permdesc_read_alarms">Hiermee kan de app uw geplande alarmen lezen.</string>
   <!-- Labels for the WRITE_SETTINGS permission -->
   <string name="permlab_writeSettings">Lineage-systeeminstellingen wijzigen</string>
   <string name="permdesc_writeSettings">Hiermee kan de app de systeeminstellingen van Lineage wijzigen.</string>

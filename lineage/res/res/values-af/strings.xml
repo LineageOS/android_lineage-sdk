@@ -25,15 +25,6 @@
   <!-- Labels for the HARDWARE_ABSTRACTION_ACCESS permission. -->
   <string name="permlab_useHardwareFramework">gebruik hardeware raamwerk</string>
   <string name="permdesc_useHardwareFramework">Laat program toegang tot die Lineage hardeware raamwerk.</string>
-  <!-- Labels for the WRITE_ALARMS permission. -->
-  <string name="permlab_write_alarms">verander direk jou wekkers</string>
-  <string name="permdesc_write_alarms">Laat \'n toep toe om by te voeg, te verander of al jou alarms te verwyder.</string>
-  <!-- Labels for the MANAGE_ALARMS permission. -->
-  <string name="permlab_manage_alarms">verander geskeduleerde wekkers</string>
-  <string name="permdesc_manage_alarms">Laat \'n toep toe om geskeduleerde wekkers aan en af te skakel.</string>
-  <!-- Labels for the READ_ALARMS permission. -->
-  <string name="permlab_read_alarms">toegang na geskeduleerde wekkers</string>
-  <string name="permdesc_read_alarms">Laat \'n toep toe om jou geskeduleerde wekkers te lees.</string>
   <!-- Labels for the WRITE_SETTINGS permission -->
   <string name="permlab_writeSettings">verander Lineage stelsel instellings</string>
   <string name="permdesc_writeSettings">Laat \'n toep toe om Lineage stelsel instellings te verander.</string>

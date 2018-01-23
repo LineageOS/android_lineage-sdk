@@ -25,15 +25,6 @@
   <!-- Labels for the HARDWARE_ABSTRACTION_ACCESS permission. -->
   <string name="permlab_useHardwareFramework">হাৰ্ডৱেৰ ফ্ৰেমৱৰ্ক ব্যৱহাৰ কৰক</string>
   <string name="permdesc_useHardwareFramework">এটা এপ্প্‌ক Lineage হাৰ্ডৱেৰ ফ্ৰেমৱৰ্কত প্ৰৱেশ কৰিবলৈ অনুমতি দিয়ে।</string>
-  <!-- Labels for the WRITE_ALARMS permission. -->
-  <string name="permlab_write_alarms">প্ৰত্যক্ষভাবে এলাৰ্ম পৰিৱৰ্তন কৰক</string>
-  <string name="permdesc_write_alarms">এটা এপ্প্‌ক আপোনাৰ এলাৰ্ম যোগ কৰিবলৈ, সংশোধন কৰিবলৈ আৰু সকলোবোৰ বিলোপ কৰিবলৈ অনুমতি দিয়ে।</string>
-  <!-- Labels for the MANAGE_ALARMS permission. -->
-  <string name="permlab_manage_alarms">অনুসূচীত এলাৰ্ম টগল কৰক</string>
-  <string name="permdesc_manage_alarms">এটা এপ্প্‌ক আপোনাৰ অনুসূচীত এলাৰ্মবোৰ অন বা অফ কৰিবলৈ অনুমতি দিয়ে।</string>
-  <!-- Labels for the READ_ALARMS permission. -->
-  <string name="permlab_read_alarms">অনুসূচীত এলাৰ্মত প্ৰৱেশ কৰক</string>
-  <string name="permdesc_read_alarms">এটা এপ্প্‌ক আপোনাৰ অনুসূচীত এলাৰ্মবোৰ পঢ়িবলৈ অনুমতি দিয়ে।</string>
   <!-- Labels for the WRITE_SETTINGS permission -->
   <string name="permlab_writeSettings">Lineage ছিষ্টেম ছেটিংচ সংশোধন কৰক</string>
   <string name="permdesc_writeSettings">এটা এপ্প্‌ক Lineage ছিষ্টেম ছেটিং সংশোধন কৰিবলৈ অনুমতি দিয়ে</string>

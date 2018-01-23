@@ -25,15 +25,6 @@
   <!-- Labels for the HARDWARE_ABSTRACTION_ACCESS permission. -->
   <string name="permlab_useHardwareFramework">हार्डवेअर फ्रेमवर्क वापरा</string>
   <string name="permdesc_useHardwareFramework">अॅपला Lineage हार्डवेअर फ्रेमवर्कमध्ये ऍक्सेस करण्याची परवानगी देते.</string>
-  <!-- Labels for the WRITE_ALARMS permission. -->
-  <string name="permlab_write_alarms">अलार्म्स थेट बदला</string>
-  <string name="permdesc_write_alarms">अॅपला तुमचे सर्व अलार्म्स जोडू, सुधारित करू किंवा हटवू देते.</string>
-  <!-- Labels for the MANAGE_ALARMS permission. -->
-  <string name="permlab_manage_alarms">शेड्युल केलेले अलार्म्स टॉगल करा</string>
-  <string name="permdesc_manage_alarms">अॅपला तुमचे शेड्युल केलेले अलार्म्स चालू किंवा बंद करण्याची परवानगी देते.</string>
-  <!-- Labels for the READ_ALARMS permission. -->
-  <string name="permlab_read_alarms">शेड्युल केलेल्या अलार्म्समध्ये ऍक्सेस करा</string>
-  <string name="permdesc_read_alarms">अॅपला तुमचे शेड्युल केलेले अलार्म्स वाचू देते.</string>
   <!-- Labels for the WRITE_SETTINGS permission -->
   <string name="permlab_writeSettings">Lineage सिस्टिम सेटिंग्ज सुधारित करा</string>
   <string name="permdesc_writeSettings">अॅपला Lineage सिस्टिम सेटिंग्ज सुधारित करण्याची परवानगी देते.</string>

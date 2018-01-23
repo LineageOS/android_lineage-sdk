@@ -25,15 +25,6 @@
   <!-- Labels for the HARDWARE_ABSTRACTION_ACCESS permission. -->
   <string name="permlab_useHardwareFramework">Узаемадзеянне з абсталяваннем</string>
   <string name="permdesc_useHardwareFramework">Дадатак зможа атрымваць доступ да падсістэмы апаратных абстракцый LineageOS.</string>
-  <!-- Labels for the WRITE_ALARMS permission. -->
-  <string name="permlab_write_alarms">змена будзільнікаў</string>
-  <string name="permdesc_write_alarms">Дадатак зможа дадаваць, змяняць ці выдаляць любыя будзільнікі.</string>
-  <!-- Labels for the MANAGE_ALARMS permission. -->
-  <string name="permlab_manage_alarms">змена стану будзільнікаў</string>
-  <string name="permdesc_manage_alarms">Дадатак зможа ўключаць ці адключаць усталяваныя будзільнікі.</string>
-  <!-- Labels for the READ_ALARMS permission. -->
-  <string name="permlab_read_alarms">доступ да будзільнікаў</string>
-  <string name="permdesc_read_alarms">Дадатак зможа праглядаць дадзеныя пра ўсталяваныя будзільнікі.</string>
   <!-- Labels for the WRITE_SETTINGS permission -->
   <string name="permlab_writeSettings">змена параметраў сістэмы</string>
   <string name="permdesc_writeSettings">Дадатак зможа змяняць сістэмныя налады СМ.</string>

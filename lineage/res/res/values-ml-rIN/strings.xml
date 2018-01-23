@@ -25,15 +25,6 @@
   <!-- Labels for the HARDWARE_ABSTRACTION_ACCESS permission. -->
   <string name="permlab_useHardwareFramework">ഹാര്‍ഡ്‌വെയര്‍ ഫ്രെയിംവര്‍ക്ക് ഉപയോഗിക്കുക</string>
   <string name="permdesc_useHardwareFramework">Lineage ഹാര്‍ഡ്‌വെയര്‍ ഫ്രെയിംവര്‍ക്കിലേക്ക് പ്രവേശിക്കാന്‍ ഒരു ആപ്ലിക്കേഷനെ അനുവദിക്കുന്നു.</string>
-  <!-- Labels for the WRITE_ALARMS permission. -->
-  <string name="permlab_write_alarms">അലാറങ്ങൾ നേരിട്ട് മാറ്റുക</string>
-  <string name="permdesc_write_alarms">നിങ്ങളുടെ അലാറങ്ങൾ ചേർക്കുന്നതിനും പരിഷ്ക്കരിക്കുന്നതിനും അല്ലെങ്കിൽ എല്ലാം ഇല്ലാതാക്കുന്നതിനും ഒരു ആപ്ലിക്കേഷനെ അനുവദിക്കുന്നു.</string>
-  <!-- Labels for the MANAGE_ALARMS permission. -->
-  <string name="permlab_manage_alarms">ഷെഡ്യൂൾ ചെയ്ത അലാറങ്ങൾ ടോഗിള്‍ ചെയ്യുക</string>
-  <string name="permdesc_manage_alarms">ഷെഡ്യൂൾ ചെയ്ത നിങ്ങളുടെ അലാറങ്ങൾ ഓണ്‍ അല്ലെങ്കില്‍ ഓഫ് ചെയ്യാന്‍ ഒരു ആപ്ലിക്കേഷനെ അനുവദിക്കുന്നു.</string>
-  <!-- Labels for the READ_ALARMS permission. -->
-  <string name="permlab_read_alarms">ഷെഡ്യൂൾ ചെയ്ത അലാറങ്ങളിലേക്ക് പ്രവേശിക്കുക</string>
-  <string name="permdesc_read_alarms">ഷെഡ്യൂൾ ചെയ്ത നിങ്ങളുടെ അലാറങ്ങൾ റീഡ് ചെയ്യാന്‍ ഒരു ആപ്ലിക്കേഷനെ അനുവദിക്കുന്നു.</string>
   <!-- Labels for the WRITE_SETTINGS permission -->
   <string name="permlab_writeSettings">Lineage സിസ്റ്റം ക്രമീകരണങ്ങൾ പരിഷ്‌ക്കരിക്കുക</string>
   <string name="permdesc_writeSettings">Lineage സിസ്റ്റം ക്രമീകരണങ്ങൾ പരിഷ്ക്കരിക്കുവാന്‍ ഒരു ആപ്ലിക്കേഷനെ അനുവദിക്കുന്നു.</string>

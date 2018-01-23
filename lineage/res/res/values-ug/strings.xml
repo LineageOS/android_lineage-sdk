@@ -25,15 +25,6 @@
   <!-- Labels for the HARDWARE_ABSTRACTION_ACCESS permission. -->
   <string name="permlab_useHardwareFramework">قاتتىق دىتال جازىسىنى ئىشلىتىش</string>
   <string name="permdesc_useHardwareFramework">ئەپنىڭ Lineage قاتتىق دىتال جازىسىنى زىيارەت قىلىشىغا يول قويۇش.</string>
-  <!-- Labels for the WRITE_ALARMS permission. -->
-  <string name="permlab_write_alarms">قوڭغۇراقنى بىۋاستە ئۆزگەرتىش</string>
-  <string name="permdesc_write_alarms">ئەپنىڭ قوڭغۇراق قوشۇش ياكى ئۆچۈرۈشىگە يول قويۇش.</string>
-  <!-- Labels for the MANAGE_ALARMS permission. -->
-  <string name="permlab_manage_alarms">پىلاندىكى قوڭغۇراقنى ئېچىپ تاقاش</string>
-  <string name="permdesc_manage_alarms">ئەپنىڭ پىلاندىكى قوڭغۇراقنى ئېچىپ تاقىشىغا يول قويۇش.</string>
-  <!-- Labels for the READ_ALARMS permission. -->
-  <string name="permlab_read_alarms">پىلاندىكى قوڭغۇراقنى زىيارەت قىلىش</string>
-  <string name="permdesc_read_alarms">ئەپنىڭ پىلاندىكى قوڭغۇراقنى زىيارەت قىلىشغا يول قويۇش.</string>
   <!-- Labels for the WRITE_SETTINGS permission -->
   <string name="permlab_writeSettings">سىستېما Lineageنىڭ تەڭشىكىنى ئۆزگەرتىش</string>
   <string name="permdesc_writeSettings">سىستېما Lineageنىڭ تەڭشىكىنى ئۆزگەرتىشكە يول قويۇش.</string>

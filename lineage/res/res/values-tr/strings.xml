@@ -25,15 +25,6 @@
   <!-- Labels for the HARDWARE_ABSTRACTION_ACCESS permission. -->
   <string name="permlab_useHardwareFramework">donanım altyapısını kullan</string>
   <string name="permdesc_useHardwareFramework">Uygulamanın Lineage donanım altyapısına erişimine izin verir.</string>
-  <!-- Labels for the WRITE_ALARMS permission. -->
-  <string name="permlab_write_alarms">doğrudan alarmları değiştir</string>
-  <string name="permdesc_write_alarms">Uygulamalarınıza alarm ekleme, değiştirme ya da tümünü silme izni verir.</string>
-  <!-- Labels for the MANAGE_ALARMS permission. -->
-  <string name="permlab_manage_alarms">programlı alarmları aç/kapa</string>
-  <string name="permdesc_manage_alarms">Uygulamaya planlı alarmları açma kapama izni verir.</string>
-  <!-- Labels for the READ_ALARMS permission. -->
-  <string name="permlab_read_alarms">programlı alarmlara eriş</string>
-  <string name="permdesc_read_alarms">Uygulamalara planlanan alarmları okuma izni verir.</string>
   <!-- Labels for the WRITE_SETTINGS permission -->
   <string name="permlab_writeSettings">Lineage sistem ayarlarını değiştir</string>
   <string name="permdesc_writeSettings">Uygulamalara Lineage sistem ayarlarını değiştirme izni verir.</string>
