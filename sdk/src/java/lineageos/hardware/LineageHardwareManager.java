@@ -111,15 +111,6 @@ public final class LineageHardwareManager {
     public static final int FEATURE_SUNLIGHT_ENHANCEMENT = 0x100;
 
     /**
-     * Double-tap the touch panel to wake up the device
-     *
-     * @deprecated This functionality is replaced by AOSP's implementation as of Lineage 13.0.
-     */
-    @Deprecated
-    @VisibleForTesting
-    public static final int FEATURE_TAP_TO_WAKE = 0x200;
-
-    /**
      * Variable vibrator intensity
      */
     @VisibleForTesting
