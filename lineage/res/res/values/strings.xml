@@ -19,12 +19,6 @@
     <!-- Label for the LineageOS system components when they are shown to the user. -->
     <string name="lineageos_system_label">LineageOS System</string>
 
-
-
-
-
-
-
     <!-- Labels for the MODIFY_PROFILES permission. -->
     <string name="permlab_modifyProfiles">modify system profiles</string>
     <string name="permdesc_modifyProfiles">Allows an app to modify system profiles.</string>
@@ -33,9 +27,6 @@
     <string name="permlab_useHardwareFramework">use hardware framework</string>
     <string name="permdesc_useHardwareFramework">Allows an app access to the Lineage hardware framework.</string>
 
-
-
-
     <!-- Labels for the WRITE_SETTINGS permission -->
     <string name="permlab_writeSettings">modify Lineage system settings</string>
     <string name="permdesc_writeSettings">Allows an app to modify Lineage system settings.</string>
@@ -43,7 +34,6 @@
     <!-- Labels for the WRITE_SECURE_SETTINGS permission -->
     <string name="permlab_writeSecureSettings">modify Lineage secure system settings</string>
     <string name="permdesc_writeSecureSettings">Allows an app to modify Lineage secure system settings. Not for use by normal apps.</string>
-
 
     <!-- Labels for the PROTECTED_APP permission. -->
     <string name="permlab_protectedApp">add and remove apps to protected apps</string>
@@ -82,7 +72,6 @@
     <string name="perf_profile_bias_power_summary">Favor power savings. Limit maximum CPU power and optimize for power saving at the cost of higher latency</string>
     <string name="perf_profile_bias_perf_summary">Favor performance. Reduces latency with slightly increased power consumption</string>
 
-
     <!-- LiveDisplay strings -->
     <string name="live_display_title" translatable="false">LiveDisplay</string>
     <string name="live_display_auto">Automatic</string>
@@ -108,23 +97,10 @@
     <string name="accessibility_quick_settings_live_display_changed_night">LiveDisplay changed to night mode.</string>
     <string name="accessibility_quick_settings_live_display_changed_outdoor">LiveDisplay changed to outdoor mode.</string>
 
-
-
-
-    <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-    <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-
-    <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-    <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-
-    <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-    <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-
     <!-- Performance manager permission title -->
     <string name="permlab_perfAccess">access performance manager</string>
     <!-- Performance manager permission description -->
     <string name="permdesc_perfAccessDesc">Allows an app to access the performance service. Should never be needed for normal apps.</string>
-
 
     <!-- Weather Service strings -->
     <string name="permlab_weather_read">read weather</string>
