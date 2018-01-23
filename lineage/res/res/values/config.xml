@@ -78,16 +78,6 @@
          pulsating and RGB control would set this config to 75. -->
     <integer name="config_deviceLightCapabilities">8</integer>
 
-    <!-- Wifi Service -->
-    <!-- Whether to make default hotspot security NONE-->
-    <bool name="config_wifiHotspotSecurityNone">false</bool>
-    <!-- Default wi-fi hotspot ssid -->
-    <string name="config_wifiHotSpotSsid" translatable="false"></string>
-    <!-- Default wi-fi hotspot pass -->
-    <string name="config_wifiHotSpotPass" translatable="false"></string>
-    <!-- Default wi-fi direct name -->
-    <string name="config_wifiDirectName" translatable="false"></string>
-
     <!-- Defines external services to be started by the LineageSystemServer at boot. The service itself
          should publish as a binder services in its onStart -->
     <string-array name="config_externalLineageServices">
