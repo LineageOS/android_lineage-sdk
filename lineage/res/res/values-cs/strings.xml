@@ -54,9 +54,6 @@
   <!-- Labels for the WRITE_SECURE_SETTINGS permission -->
   <string name="permlab_writeSecureSettings">upravit nastavení zabezpečení systému Lineage</string>
   <string name="permdesc_writeSecureSettings">Umožní změnit nastavení zabezpečení systému LineageOS. Není určeno pro normální aplikace.</string>
-  <!-- Labels for the MANAGE_PERSISTENT_STORAGE permission. -->
-  <string name="permlab_managePersistentStorage">spravovat trvalé úložiště</string>
-  <string name="permdesc_managePersistentStorage">Umožňuje číst a zapisovat vlastnosti, které mohou přetrvat při tovární obnově.</string>
   <!-- Labels for the ACCESS_APP_SUGGESTIONS permission -->
   <string name="permlab_accessAppSuggestions">přístup k návrhům aplikací</string>
   <string name="permdesc_accessAppSuggestions">Povoluje přistupovat k návrhům aplikací.</string>

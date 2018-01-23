@@ -54,9 +54,6 @@
   <!-- Labels for the WRITE_SECURE_SETTINGS permission -->
   <string name="permlab_writeSecureSettings">Lineage സുരക്ഷാ സംവിധാന ക്രമീകരണങ്ങൾ പരിഷ്‌ക്കരിക്കുക</string>
   <string name="permdesc_writeSecureSettings">Lineage സുരക്ഷിത സിസ്റ്റം ക്രമീകരണങ്ങൾ പരിഷ്ക്കരിക്കുവാന്‍ ഒരു ആപ്ലിക്കേഷനെ അനുവദിക്കുന്നു. സാധാരണ ആപ്ലിക്കേഷനുകൾക്ക് ഉപയോഗിക്കാനുള്ളതല്ല.</string>
-  <!-- Labels for the MANAGE_PERSISTENT_STORAGE permission. -->
-  <string name="permlab_managePersistentStorage">സ്ഥിര സംഭരണം മാനേജ് ചെയ്യുക</string>
-  <string name="permdesc_managePersistentStorage">ഫാക്ടറി റീസെറ്റ് മുഖേന നിലനില്‍ക്കുന്ന പ്രോപ്പര്‍ട്ടീസ് റീഡ് അല്ലെങ്കില്‍ വ്രൈറ്റ് ചെയ്യാന്‍ ഒരു ആപ്ലിക്കേഷനെ അനുവദിക്കുന്നു.</string>
   <!-- Labels for the ACCESS_APP_SUGGESTIONS permission -->
   <string name="permlab_accessAppSuggestions">ആപ്ലിക്കേഷന്‍ നിർദ്ദേശങ്ങളിലേക്ക് പ്രവേശിക്കുക</string>
   <string name="permdesc_accessAppSuggestions">ആപ്ലിക്കേഷന്‍ നിർദ്ദേശങ്ങളിലേക്ക് പ്രവേശിക്കുവാന്‍ ഒരു ആപ്ലിക്കേഷനെ അനുവദിക്കുന്നു.</string>

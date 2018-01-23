@@ -54,9 +54,6 @@
   <!-- Labels for the WRITE_SECURE_SETTINGS permission -->
   <string name="permlab_writeSecureSettings">keisti Lineage sistemos saugos nustatymus</string>
   <string name="permdesc_writeSecureSettings">Leidžia programai keisti Lineage sistemos saugos nustatymus. Neskirta naudoti įprastoms programoms.</string>
-  <!-- Labels for the MANAGE_PERSISTENT_STORAGE permission. -->
-  <string name="permlab_managePersistentStorage">valdyti nuolatinę saugykla</string>
-  <string name="permdesc_managePersistentStorage">Leidžia programai skaityti ar rašyti įrašus, kurie gali išlikti net atstačius gamyklinius nustatymus.</string>
   <!-- Labels for the ACCESS_APP_SUGGESTIONS permission -->
   <!-- Label to show for a service that is running because it is observing the user's custom tiles. -->
   <string name="custom_tile_listener_binding_label">Tinkintos plytelės klausytojas</string>

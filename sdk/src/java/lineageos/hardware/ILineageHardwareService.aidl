@@ -52,9 +52,6 @@ interface ILineageHardwareService {
     DisplayMode getDefaultDisplayMode();
     boolean setDisplayMode(in DisplayMode mode, boolean makeDefault);
 
-    boolean writePersistentBytes(String key, in byte[] bytes);
-    byte[] readPersistentBytes(String key);
-
     int getThermalState();
     boolean registerThermalListener(IThermalListenerCallback callback);
     boolean unRegisterThermalListener(IThermalListenerCallback callback);

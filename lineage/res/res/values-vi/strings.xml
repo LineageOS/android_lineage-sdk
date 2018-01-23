@@ -54,9 +54,6 @@
   <!-- Labels for the WRITE_SECURE_SETTINGS permission -->
   <string name="permlab_writeSecureSettings">sửa đổi cài đặt hệ thống an toàn Lineage</string>
   <string name="permdesc_writeSecureSettings">Cho phép ứng dụng sửa đổi cài đặt hệ thống an toàn Lineage. Không cho ứng dụng bình thường sử dụng.</string>
-  <!-- Labels for the MANAGE_PERSISTENT_STORAGE permission. -->
-  <string name="permlab_managePersistentStorage">quản lý bộ lưu trữ vĩnh viễn</string>
-  <string name="permdesc_managePersistentStorage">Cho phép ứng dụng đọc hoặc ghi thuộc tính có thể vẫn tồn tại sau khi đặt lại mặc định nhà sản xuất.</string>
   <!-- Labels for the ACCESS_APP_SUGGESTIONS permission -->
   <string name="permlab_accessAppSuggestions">truy cập các đề xuất ứng dụng</string>
   <string name="permdesc_accessAppSuggestions">Cho phép ứng dụng truy cập đề xuất ứng dụng.</string>

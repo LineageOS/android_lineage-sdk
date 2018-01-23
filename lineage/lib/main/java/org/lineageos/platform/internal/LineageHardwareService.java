@@ -52,7 +52,6 @@ import org.lineageos.hardware.DisplayModeControl;
 import org.lineageos.hardware.HighTouchSensitivity;
 import org.lineageos.hardware.KeyDisabler;
 import org.lineageos.hardware.LongTermOrbits;
-import org.lineageos.hardware.PersistentStorage;
 import org.lineageos.hardware.PictureAdjustment;
 import org.lineageos.hardware.SerialNumber;
 import org.lineageos.hardware.SunlightEnhancement;
@@ -106,9 +105,6 @@ public class LineageHardwareService extends LineageSystemService implements Ther
         public DisplayMode getDefaultDisplayMode();
         public boolean setDisplayMode(DisplayMode mode, boolean makeDefault);
 
-        public boolean writePersistentBytes(String key, byte[] value);
-        public byte[] readPersistentBytes(String key);
-
         public int getColorBalanceMin();
         public int getColorBalanceMax();
         public int getColorBalance();
@@ -154,8 +150,6 @@ public class LineageHardwareService extends LineageSystemService implements Ther
                 mSupportedFeatures |= LineageHardwareManager.FEATURE_AUTO_CONTRAST;
             if (DisplayModeControl.isSupported())
                 mSupportedFeatures |= LineageHardwareManager.FEATURE_DISPLAY_MODES;
-            if (PersistentStorage.isSupported())
-                mSupportedFeatures |= LineageHardwareManager.FEATURE_PERSISTENT_STORAGE;
             if (ThermalMonitor.isSupported())
                 mSupportedFeatures |= LineageHardwareManager.FEATURE_THERMAL_MONITOR;
             if (ColorBalance.isSupported())
@@ -344,14 +338,6 @@ public class LineageHardwareService extends LineageSystemService implements Ther
 
         public boolean setDisplayMode(DisplayMode mode, boolean makeDefault) {
             return DisplayModeControl.setMode(mode, makeDefault);
-        }
-
-        public boolean writePersistentBytes(String key, byte[] value) {
-            return PersistentStorage.set(key, value);
-        }
-
-        public byte[] readPersistentBytes(String key) {
-            return PersistentStorage.get(key);
         }
 
         public int getColorBalanceMin() {
@@ -705,41 +691,6 @@ public class LineageHardwareService extends LineageSystemService implements Ther
                 return false;
             }
             return mLineageHwImpl.setDisplayMode(mode, makeDefault);
-        }
-
-        @Override
-        public boolean writePersistentBytes(String key, byte[] value) {
-            mContext.enforceCallingOrSelfPermission(
-                    lineageos.platform.Manifest.permission.MANAGE_PERSISTENT_STORAGE, null);
-            if (key == null || key.length() == 0 || key.length() > 64) {
-                Log.e(TAG, "Invalid key: " + key);
-                return false;
-            }
-            // A null value is delete
-            if (value != null && (value.length > 4096 || value.length == 0)) {
-                Log.e(TAG, "Invalid value: " + (value != null ? Arrays.toString(value) : null));
-                return false;
-            }
-            if (!isSupported(LineageHardwareManager.FEATURE_PERSISTENT_STORAGE)) {
-                Log.e(TAG, "Persistent storage is not supported");
-                return false;
-            }
-            return mLineageHwImpl.writePersistentBytes(key, value);
-        }
-
-        @Override
-        public byte[] readPersistentBytes(String key) {
-            mContext.enforceCallingOrSelfPermission(
-                    lineageos.platform.Manifest.permission.MANAGE_PERSISTENT_STORAGE, null);
-            if (key == null || key.length() == 0 || key.length() > 64) {
-                Log.e(TAG, "Invalid key: " + key);
-                return null;
-            }
-            if (!isSupported(LineageHardwareManager.FEATURE_PERSISTENT_STORAGE)) {
-                Log.e(TAG, "Persistent storage is not supported");
-                return null;
-            }
-            return mLineageHwImpl.readPersistentBytes(key);
         }
 
         @Override

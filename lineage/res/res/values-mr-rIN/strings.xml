@@ -54,9 +54,6 @@
   <!-- Labels for the WRITE_SECURE_SETTINGS permission -->
   <string name="permlab_writeSecureSettings">Lineage सुरक्षित सिस्टिम सेटिंग्ज सुधारित करा</string>
   <string name="permdesc_writeSecureSettings">अॅपला Lineage सुरक्षित सिस्टिम सेटिंग्ज सुधारित करण्याची परवानगी देते. सामान्य अॅपद्वारे वापरासाठी नाही.</string>
-  <!-- Labels for the MANAGE_PERSISTENT_STORAGE permission. -->
-  <string name="permlab_managePersistentStorage">पर्सिस्टंट संग्रह व्यवस्थापित करा</string>
-  <string name="permdesc_managePersistentStorage">अॅपला गुणधर्म वाचू किंवा लिहू देते जे फॅक्टरी रीसेटद्वारे पर्सिस्ट होऊ शकतात.</string>
   <!-- Labels for the ACCESS_APP_SUGGESTIONS permission -->
   <string name="permlab_accessAppSuggestions">अनुप्रयोग सूचनांमध्ये ऍक्सेस करा</string>
   <string name="permdesc_accessAppSuggestions">अनुप्रयोगाला अनुप्रयोग सूचनांमध्ये ऍक्सेस करण्याची परवानगी देते.</string>

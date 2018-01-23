@@ -54,9 +54,6 @@
   <!-- Labels for the WRITE_SECURE_SETTINGS permission -->
   <string name="permlab_writeSecureSettings">修改 Lineage 系統安全設定</string>
   <string name="permdesc_writeSecureSettings">允許應用程式修改 Lineage 安全系統設定，非供一般應用程式使用。</string>
-  <!-- Labels for the MANAGE_PERSISTENT_STORAGE permission. -->
-  <string name="permlab_managePersistentStorage">管理永久儲存空間</string>
-  <string name="permdesc_managePersistentStorage">允許應用程式讀/寫一些重設後仍可保存的屬性。</string>
   <!-- Labels for the ACCESS_APP_SUGGESTIONS permission -->
   <string name="permlab_accessAppSuggestions">存取應用程式建議</string>
   <string name="permdesc_accessAppSuggestions">允許應用程式存取應用程式建議。</string>

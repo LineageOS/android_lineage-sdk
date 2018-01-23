@@ -54,9 +54,6 @@
   <!-- Labels for the WRITE_SECURE_SETTINGS permission -->
   <string name="permlab_writeSecureSettings">Lineage biztonsági rendszer beállításainak módosítása</string>
   <string name="permdesc_writeSecureSettings">Lehetővé teszi egy alkalmazás számára a Lineage biztonsági rendszer beállításainak módosítását. Szokásos alkalmazások számára nem használható.</string>
-  <!-- Labels for the MANAGE_PERSISTENT_STORAGE permission. -->
-  <string name="permlab_managePersistentStorage">állandó tároló kezelése</string>
-  <string name="permdesc_managePersistentStorage">Lehetővé teszi az alkalmazás számára olyan tulajdonságok írását vagy olvasását, amelyek a gyári beállítások visszaállítása során is megmaradnak.</string>
   <!-- Labels for the ACCESS_APP_SUGGESTIONS permission -->
   <string name="permlab_accessAppSuggestions">hozzáférés az alkalmazás javaslatokhoz</string>
   <string name="permdesc_accessAppSuggestions">Lehetővé teszi az alkalmazás számára az alkalmazás javaslatokhoz való hozzáférést.</string>

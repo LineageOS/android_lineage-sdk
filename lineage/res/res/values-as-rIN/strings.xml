@@ -54,9 +54,6 @@
   <!-- Labels for the WRITE_SECURE_SETTINGS permission -->
   <string name="permlab_writeSecureSettings">Lineage চিকিওৰ ছিষ্টেম ছেটিংচ সংশোধন কৰক</string>
   <string name="permdesc_writeSecureSettings">এটা এপ্প্‌ক Lineage চিকিওৰ ছিষ্টেম ছেটিং সংশোধন কৰিবলৈ অনুমতি দিয়ে সাধাৰণ এপ্প্‌সমূহৰ ব্যৱহাৰৰ কাৰণে নহয়৷</string>
-  <!-- Labels for the MANAGE_PERSISTENT_STORAGE permission. -->
-  <string name="permlab_managePersistentStorage">নিৰবিচ্ছিন্ন ষ্ট\'ৰেজ প্ৰবন্ধন কৰক</string>
-  <string name="permdesc_managePersistentStorage">এটা এপ্প্‌ক ধৰ্মবোৰ পঢ়িবলৈ বা লিখিবলৈ অনুমতি দিয়ে যিবোৰ ফেক্টৰী ৰিছেটৰ মাধ্যমত চলি থাকিব পাৰে।</string>
   <!-- Labels for the ACCESS_APP_SUGGESTIONS permission -->
   <string name="permlab_accessAppSuggestions">এপ্প্‌ পৰামৰ্শত প্ৰৱেশ কৰক</string>
   <string name="permdesc_accessAppSuggestions">এটা এপ্প্‌ক এপ্প্‌ পৰামৰ্শত প্ৰৱেশ কৰিবলৈ অনুমতি দিয়ে।</string>

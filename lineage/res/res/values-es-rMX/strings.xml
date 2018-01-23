@@ -27,7 +27,6 @@
   <!-- Labels for the READ_ALARMS permission. -->
   <!-- Labels for the WRITE_SETTINGS permission -->
   <!-- Labels for the WRITE_SECURE_SETTINGS permission -->
-  <!-- Labels for the MANAGE_PERSISTENT_STORAGE permission. -->
   <!-- Labels for the ACCESS_APP_SUGGESTIONS permission -->
   <string name="permlab_accessAppSuggestions">acceder a las sugerencias de aplicaciones</string>
   <string name="permdesc_accessAppSuggestions">Permite que una aplicación acceda a las sugerencias de aplicaciones.</string>

@@ -54,9 +54,6 @@
   <!-- Labels for the WRITE_SECURE_SETTINGS permission -->
   <string name="permlab_writeSecureSettings">ændre systemindstillinger for Lineage sikkerhed</string>
   <string name="permdesc_writeSecureSettings">Tillader en app at ændre systemindstillinger for Lineage sikkerhed. Bør ikke anvendes til normale apps.</string>
-  <!-- Labels for the MANAGE_PERSISTENT_STORAGE permission. -->
-  <string name="permlab_managePersistentStorage">administrere permanent lager</string>
-  <string name="permdesc_managePersistentStorage">Tillader en app at læse eller skrive egenskaber, som kan overleve en gendannelse af fabriksdata.</string>
   <!-- Labels for the ACCESS_APP_SUGGESTIONS permission -->
   <string name="permlab_accessAppSuggestions">adgang til app-forslag</string>
   <string name="permdesc_accessAppSuggestions">Tillader en app at få adgang til app-forslag.</string>

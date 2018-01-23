@@ -40,7 +40,6 @@
   <string name="permlab_writeSettings">modifiko parametrat e sistemit Lineage</string>
   <string name="permdesc_writeSettings">Lejon një aplikacion që të modifikojë parametrat e sistemit Lineage.</string>
   <!-- Labels for the WRITE_SECURE_SETTINGS permission -->
-  <!-- Labels for the MANAGE_PERSISTENT_STORAGE permission. -->
   <!-- Labels for the ACCESS_APP_SUGGESTIONS permission -->
   <string name="permlab_accessAppSuggestions">akseso aplikacionet e sygjeruara</string>
   <string name="permdesc_accessAppSuggestions">Lejon një aplikacion të aksesojë listën e aplikacioneve të sygjeruara.</string>

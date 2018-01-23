@@ -54,9 +54,6 @@
   <!-- Labels for the WRITE_SECURE_SETTINGS permission -->
   <string name="permlab_writeSecureSettings">τροποποίηση ασφαλών ρυθμίσεων συστήματος Lineage</string>
   <string name="permdesc_writeSecureSettings">Επιτρέπει σε μια εφαρμογή να τροποποιεί τις ασφαλείς ρυθμίσεις συστήματος του Lineage. Δεν χρησιμοποιείται από κανονικές εφαρμογές.</string>
-  <!-- Labels for the MANAGE_PERSISTENT_STORAGE permission. -->
-  <string name="permlab_managePersistentStorage">διαχείριση επίμονου χώρου αποθήκευσης</string>
-  <string name="permdesc_managePersistentStorage">Επιτρέπει σε μια εφαρμογή να διαβάσει ή να γράψει ιδιότητες που μπορούν να επιμείνουν ακόμη και μετά από μια επαναφορά εργοστασιακών ρυθμίσεων.</string>
   <!-- Labels for the ACCESS_APP_SUGGESTIONS permission -->
   <string name="permlab_accessAppSuggestions">πρόσβαση στις προτάσεις εφαρμογών</string>
   <string name="permdesc_accessAppSuggestions">Επιτρέπει σε μια εφαρμογή την πρόσβαση στις προτάσεις εφαρμογών.</string>

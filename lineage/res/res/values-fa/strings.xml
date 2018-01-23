@@ -54,9 +54,6 @@
   <!-- Labels for the WRITE_SECURE_SETTINGS permission -->
   <string name="permlab_writeSecureSettings">تغییر تنظیمات امنیت سیستم Lineage</string>
   <string name="permdesc_writeSecureSettings">به برنامه اجازه می‌دهد تا تنظیمات امنیت سیستم Lineage را تغییر دهد. برای استفاده برنامه‌های عادی پیشنهاد نمی‌شود.</string>
-  <!-- Labels for the MANAGE_PERSISTENT_STORAGE permission. -->
-  <string name="permlab_managePersistentStorage">مدیریت حافظه پایدار</string>
-  <string name="permdesc_managePersistentStorage">به برنامه اجازه می‌دهد ویژگی‌هایی را مشاهده و ویرایش کند که بعد از تنظیم مجدد کارخانه ممکن است باقی بماند.</string>
   <!-- Labels for the ACCESS_APP_SUGGESTIONS permission -->
   <!-- Label to show for a service that is running because it is observing the user's custom tiles. -->
   <string name="custom_tile_listener_binding_label">پیرو کاشی شخصی</string>

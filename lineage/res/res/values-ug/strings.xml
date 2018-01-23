@@ -54,9 +54,6 @@
   <!-- Labels for the WRITE_SECURE_SETTINGS permission -->
   <string name="permlab_writeSecureSettings">سىستېما Lineageنىڭ بىخەتەرلىك تەڭشىكىنى ئۆزگەرتىش</string>
   <string name="permdesc_writeSecureSettings">ئەپنىڭ سىستېما Lineageنىڭ بىخەتەرلىك تەڭشىكىنى ئۆزگەرتىشگە يول قويۇش.</string>
-  <!-- Labels for the MANAGE_PERSISTENT_STORAGE permission. -->
-  <string name="permlab_managePersistentStorage">ئەبەدى ساقلىغۇچنى باشقۇرۇش</string>
-  <string name="permdesc_managePersistentStorage">ئەپنىڭ زاۋۇت ئەسلىگە قايتۇرغاندىن كىيىن ئۆزگەرمەيدىغان خۇسۇسىيىتىنى ئوقۇپ ۋە يېزىشىغا يول قويۇش.</string>
   <!-- Labels for the ACCESS_APP_SUGGESTIONS permission -->
   <string name="permlab_accessAppSuggestions">ئەپنىڭ چۈشەندۈرۈلىشىگە ئېرىشىش</string>
   <string name="permdesc_accessAppSuggestions">بىرەر ئەپنىڭ ئەپ چۈشەندۈرۈشىگە ئېرىشىشگە رۇخسەت قىلىش.</string>

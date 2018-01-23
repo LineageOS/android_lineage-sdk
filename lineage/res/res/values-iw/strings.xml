@@ -54,9 +54,6 @@
   <!-- Labels for the WRITE_SECURE_SETTINGS permission -->
   <string name="permlab_writeSecureSettings">שנה הגדרות מאובטחות של מערכת Lineage</string>
   <string name="permdesc_writeSecureSettings">מאפשר ליישום לשנות את ההגדרות המאובטחות של מערכת Lineage. לא לשימוש ביישומים רגילים.</string>
-  <!-- Labels for the MANAGE_PERSISTENT_STORAGE permission. -->
-  <string name="permlab_managePersistentStorage">נהל אחסון תמידי</string>
-  <string name="permdesc_managePersistentStorage">מאפשר ליישום לקרוא או לכתוב נתונים והגדרות העלולים לשרוד גם לאחר איפוס המכשיר להגדרות היצרן.</string>
   <!-- Labels for the ACCESS_APP_SUGGESTIONS permission -->
   <string name="permlab_accessAppSuggestions">גישה להצעות יישומים</string>
   <string name="permdesc_accessAppSuggestions">מאפשר ליישום לגשת להצעות יישומים.</string>

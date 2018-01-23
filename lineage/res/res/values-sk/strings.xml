@@ -54,9 +54,6 @@
   <!-- Labels for the WRITE_SECURE_SETTINGS permission -->
   <string name="permlab_writeSecureSettings">upraviť zabezpečené systémové nastavenia Lineage</string>
   <string name="permdesc_writeSecureSettings">Umožňuje aplikácii zmeniť zabezpečené systémové nastavenia Lineage. Nie je určené pre normálne aplikácie.</string>
-  <!-- Labels for the MANAGE_PERSISTENT_STORAGE permission. -->
-  <string name="permlab_managePersistentStorage">spravovať trvalé úložisko</string>
-  <string name="permdesc_managePersistentStorage">Umožňuje aplikácii čítanie alebo zápis vlastností, ktoré môžu pretrvávať po obnove továrenských nastavení.</string>
   <!-- Labels for the ACCESS_APP_SUGGESTIONS permission -->
   <string name="permlab_accessAppSuggestions">prístup k návrhom aplikácií</string>
   <string name="permdesc_accessAppSuggestions">Umožní aplikácii prístup k návrhom aplikácií.</string>

@@ -53,9 +53,6 @@
   <!-- Labels for the WRITE_SECURE_SETTINGS permission -->
   <string name="permlab_writeSecureSettings">mengubah pengaturan sistem aman Lineage</string>
   <string name="permdesc_writeSecureSettings">Memungkinkan aplikasi untuk memodifikasi pengaturan sistem aman Lineage. Tidak untuk digunakan oleh aplikasi normal.</string>
-  <!-- Labels for the MANAGE_PERSISTENT_STORAGE permission. -->
-  <string name="permlab_managePersistentStorage">mengatur penyimpanan tetap</string>
-  <string name="permdesc_managePersistentStorage">Memungkinkan aplikasi untuk membaca atau menulis properti yang dapat bertahan dari setel ulang ke pabrik.</string>
   <!-- Labels for the ACCESS_APP_SUGGESTIONS permission -->
   <string name="permlab_accessAppSuggestions">akses saran aplikasi</string>
   <string name="permdesc_accessAppSuggestions">Mengizinkan aplikasi untuk mengakses saran aplikasi.</string>

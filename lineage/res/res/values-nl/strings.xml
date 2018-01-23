@@ -54,9 +54,6 @@
   <!-- Labels for the WRITE_SECURE_SETTINGS permission -->
   <string name="permlab_writeSecureSettings">beveiligde Lineage-systeeminstellingen wijzigen</string>
   <string name="permdesc_writeSecureSettings">Hiermee kan de app de beveiligde systeeminstellingen van Lineage wijzigen. Niet voor gebruik door normale apps.</string>
-  <!-- Labels for the MANAGE_PERSISTENT_STORAGE permission. -->
-  <string name="permlab_managePersistentStorage">blijvende opslag beheren</string>
-  <string name="permdesc_managePersistentStorage">Hiermee kan de app eigenschappen lezen of schrijven die blijven bestaan na terugzetten naar fabrieksinstellingen.</string>
   <!-- Labels for the ACCESS_APP_SUGGESTIONS permission -->
   <string name="permlab_accessAppSuggestions">toegang tot app-suggesties</string>
   <string name="permdesc_accessAppSuggestions">Hiermee kan de app toegang krijgen tot app-suggesties.</string>

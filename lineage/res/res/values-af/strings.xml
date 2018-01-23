@@ -54,9 +54,6 @@
   <!-- Labels for the WRITE_SECURE_SETTINGS permission -->
   <string name="permlab_writeSecureSettings">verander Lineage veilige instellings</string>
   <string name="permdesc_writeSecureSettings">Laat \'n toep toe om Lineage veilige stelsel instellings te verander. Nie vir gebruik deur normale toeps nie.</string>
-  <!-- Labels for the MANAGE_PERSISTENT_STORAGE permission. -->
-  <string name="permlab_managePersistentStorage">bestuur aanhoudende spasie</string>
-  <string name="permdesc_managePersistentStorage">Laat \'n toep toe om eienskappe te skryf of lees, al word jou toestel herstel na fabriek instellings.</string>
   <!-- Labels for the ACCESS_APP_SUGGESTIONS permission -->
   <string name="permlab_accessAppSuggestions">toegang na toep voorstelle</string>
   <string name="permdesc_accessAppSuggestions">Laat \'n toep toegang na toep voorstelle.</string>

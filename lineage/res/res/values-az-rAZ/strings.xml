@@ -54,9 +54,6 @@
   <!-- Labels for the WRITE_SECURE_SETTINGS permission -->
   <string name="permlab_writeSecureSettings">Lineage təhlükəsiz sistem tənzimləmələrini dəyişdir</string>
   <string name="permdesc_writeSecureSettings">Tətbiqetməyə Lineage təhlükəsiz sistem tənzimləmələrini dəyişmə icazəsi verər. Normal tətbiqetmələr üçün deyil.</string>
-  <!-- Labels for the MANAGE_PERSISTENT_STORAGE permission. -->
-  <string name="permlab_managePersistentStorage">davamlı saxlama sahəsini idarə et</string>
-  <string name="permdesc_managePersistentStorage">Tətbiqetməyə zavod tənzimləmələrinə qayıtdıqda davamlı qalıcı xüsusiyyətləri oxuma və ya yazma icazəsi verər.</string>
   <!-- Labels for the ACCESS_APP_SUGGESTIONS permission -->
   <string name="permlab_accessAppSuggestions">tətbiqetmə təkliflərinə müraciət et</string>
   <string name="permdesc_accessAppSuggestions">Tətbiqetmənin tətbiqetmə təkliflərinə müraciətinə icazə verər.</string>

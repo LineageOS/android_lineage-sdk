@@ -54,9 +54,6 @@
   <!-- Labels for the WRITE_SECURE_SETTINGS permission -->
   <string name="permlab_writeSecureSettings">aldatu Lineage sistemaren ezarpen seguruak</string>
   <string name="permdesc_writeSecureSettings">Lineage sistemaren ezarpen seguruak aldatzea ahalbidetzen dio aplikazioari. Aplikazio arruntek ez dute behar.</string>
-  <!-- Labels for the MANAGE_PERSISTENT_STORAGE permission. -->
-  <string name="permlab_managePersistentStorage">kudeatu behin betiko biltegiratzea</string>
-  <string name="permdesc_managePersistentStorage">Gailua lantegiko ezarpenetara leheneratuta ere mantenduko diren ezaugarriak irakurri edo idaztea ahalbidetzen dio aplikazioari.</string>
   <!-- Labels for the ACCESS_APP_SUGGESTIONS permission -->
   <string name="permlab_accessAppSuggestions">aplikazio aholkuak atzitu</string>
   <string name="permdesc_accessAppSuggestions">Aplikazio proposamenak atzitzea ahalbidetzen dio aplikazioari.</string>

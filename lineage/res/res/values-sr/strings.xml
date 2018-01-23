@@ -54,9 +54,6 @@
   <!-- Labels for the WRITE_SECURE_SETTINGS permission -->
   <string name="permlab_writeSecureSettings">мењање подешавања безбедности система</string>
   <string name="permdesc_writeSecureSettings">Апликација може да мења подешавања безбедности система. Ова дозвола није потребна нормалним апликацијама.</string>
-  <!-- Labels for the MANAGE_PERSISTENT_STORAGE permission. -->
-  <string name="permlab_managePersistentStorage">управљање непрекидном меморијом</string>
-  <string name="permdesc_managePersistentStorage">Апликација може да чита и пише својства која могу остати након враћања фабричких подешавања.</string>
   <!-- Labels for the ACCESS_APP_SUGGESTIONS permission -->
   <string name="permlab_accessAppSuggestions">приступ предложеним апликацијама</string>
   <string name="permdesc_accessAppSuggestions">Апликација може да приступа предложеним апликацијама.</string>

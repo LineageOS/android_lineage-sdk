@@ -54,9 +54,6 @@
   <!-- Labels for the WRITE_SECURE_SETTINGS permission -->
   <string name="permlab_writeSecureSettings">spreminjanje varnih sistemskih nastavitev Lineage</string>
   <string name="permdesc_writeSecureSettings">Dovoli aplikaciji spreminjanje varnih sistemskih nastavitev Lineage. Običajne aplikacije tega ne uporabljajo.</string>
-  <!-- Labels for the MANAGE_PERSISTENT_STORAGE permission. -->
-  <string name="permlab_managePersistentStorage">upravljanje vztrajne pom. naprave</string>
-  <string name="permdesc_managePersistentStorage">Dovoli aplikaciji branje ali pisanje lastnosti, ki se ohranijo po ponastavitvi na tovarniške vrednosti.</string>
   <!-- Labels for the ACCESS_APP_SUGGESTIONS permission -->
   <string name="permlab_accessAppSuggestions">dostop do predlogov aplikacij</string>
   <string name="permdesc_accessAppSuggestions">Dovoli aplikaciji dostop do predlogov aplikacij.</string>

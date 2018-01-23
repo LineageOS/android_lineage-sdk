@@ -54,9 +54,6 @@
   <!-- Labels for the WRITE_SECURE_SETTINGS permission -->
   <string name="permlab_writeSecureSettings">muokkaa Lineage-järjestelmän turvallisuusasetuksia</string>
   <string name="permdesc_writeSecureSettings">Sallii sovelluksen muokata Lineage-järjestelmän turvallisuusasetuksia. Ei normaalin sovelluksen käytettäväksi.</string>
-  <!-- Labels for the MANAGE_PERSISTENT_STORAGE permission. -->
-  <string name="permlab_managePersistentStorage">hallitse pysyvää tallennustilaa</string>
-  <string name="permdesc_managePersistentStorage">Sallii sovelluksen lukea tai kirjoittaa ominaisuuksia jotka voivat säilyä tehdasasetusten palautuksen jälkeen.</string>
   <!-- Labels for the ACCESS_APP_SUGGESTIONS permission -->
   <string name="permlab_accessAppSuggestions">käyttää sovellusehdotuksia</string>
   <string name="permdesc_accessAppSuggestions">Sallii sovelluksen käyttää sovellusehdotuksia.</string>

@@ -54,9 +54,6 @@
   <!-- Labels for the WRITE_SECURE_SETTINGS permission -->
   <string name="permlab_writeSecureSettings">змінювати налаштування безпеки</string>
   <string name="permdesc_writeSecureSettings">Дозволяє додатку змінювати системні налаштування безпеки. Непотрібно звичайним додаткам.</string>
-  <!-- Labels for the MANAGE_PERSISTENT_STORAGE permission. -->
-  <string name="permlab_managePersistentStorage">керування постійною пам\'яттю даних</string>
-  <string name="permdesc_managePersistentStorage">Дозволяє додатку зчитувати і записувати властивості, які можуть зберігатися навіть після відновлення заводських налаштувань.</string>
   <!-- Labels for the ACCESS_APP_SUGGESTIONS permission -->
   <string name="permlab_accessAppSuggestions">Доступ до рекомендованих додатків</string>
   <string name="permdesc_accessAppSuggestions">Додаток зможе отримувати доступ до списку рекомендованих додатків.</string>

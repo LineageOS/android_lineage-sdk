@@ -54,9 +54,6 @@
   <!-- Labels for the WRITE_SECURE_SETTINGS permission -->
   <string name="permlab_writeSecureSettings">ปรับแต่งการตั้งค่าระบบความปลอดภัยของ Lineage</string>
   <string name="permdesc_writeSecureSettings">อนุญาตให้แอปปรับแต่งการตั้งค่าระบบความปลอดภัยของ Lineage ไม่ใช่เพื่อให้แอปปกตินำไปใช้</string>
-  <!-- Labels for the MANAGE_PERSISTENT_STORAGE permission. -->
-  <string name="permlab_managePersistentStorage">จัดการพื้นที่จัดเก็บถาวร</string>
-  <string name="permdesc_managePersistentStorage">อนุญาตให้แอปอ่านหรือเขียนคุณสมบัติซึ่งอาจยังมีอยู่จากการรีเซ็ตของโรงงาน</string>
   <!-- Labels for the ACCESS_APP_SUGGESTIONS permission -->
   <string name="permlab_accessAppSuggestions">เข้าถึงคำแนะนำแอป</string>
   <string name="permdesc_accessAppSuggestions">อรนุญาตให้แอปเข้าถึงคำแนะนำแอป</string>

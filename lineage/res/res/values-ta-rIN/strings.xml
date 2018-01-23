@@ -54,9 +54,6 @@
   <!-- Labels for the WRITE_SECURE_SETTINGS permission -->
   <string name="permlab_writeSecureSettings">Lineage பாதுகாப்பான கணினி அமைப்புகளை மாற்றியமை</string>
   <string name="permdesc_writeSecureSettings">ஒரு பயன்பாடானது Lineage பாதுகாப்பான கணினி அமைப்புகளை மாற்றியமைக்க அனுமதிக்கிறது. இயல்பான பயன்பாடுகளின் பயன்பாட்டிற்காக அல்ல</string>
-  <!-- Labels for the MANAGE_PERSISTENT_STORAGE permission. -->
-  <string name="permlab_managePersistentStorage">விடாப்பிடியான சேமிப்பகத்தை நிர்வகி</string>
-  <string name="permdesc_managePersistentStorage">ஒரு பயன்பாடானது ஒரு தொழிற்சாலை மீட்டமைத்தலின் மூலம் தொடர்கின்ற பண்புகளை படிக்க அல்லது எழுத அனுமதிக்கிறது</string>
   <!-- Labels for the ACCESS_APP_SUGGESTIONS permission -->
   <string name="permlab_accessAppSuggestions">பயன்பாட்டு பரிந்துரைகளை அணுகு</string>
   <string name="permdesc_accessAppSuggestions">ஒரு பயன்பாடானது பயன்பாட்டு பரிந்துரைர்களை அணுக அனுமதிக்கிறது.</string>

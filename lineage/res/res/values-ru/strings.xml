@@ -54,9 +54,6 @@
   <!-- Labels for the WRITE_SECURE_SETTINGS permission -->
   <string name="permlab_writeSecureSettings">Изменение параметров безопасности системы Lineage</string>
   <string name="permdesc_writeSecureSettings">Приложение сможет изменять параметры безопасности системы. Это разрешение не используется обычными приложениями.</string>
-  <!-- Labels for the MANAGE_PERSISTENT_STORAGE permission. -->
-  <string name="permlab_managePersistentStorage">Управление хранилищем ПЗУ</string>
-  <string name="permdesc_managePersistentStorage">Приложение сможет читать или записывать свойства, которые могут сохраняться после сброса настроек.</string>
   <!-- Labels for the ACCESS_APP_SUGGESTIONS permission -->
   <string name="permlab_accessAppSuggestions">доступ к списку рекомендованных приложений</string>
   <string name="permdesc_accessAppSuggestions">Приложение сможет получать доступ к списку рекомендованных приложений.</string>

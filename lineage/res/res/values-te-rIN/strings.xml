@@ -54,9 +54,6 @@
   <!-- Labels for the WRITE_SECURE_SETTINGS permission -->
   <string name="permlab_writeSecureSettings">Lineage సురక్షిత సిస్టమ్ సెట్టింగులను సవరించుము</string>
   <string name="permdesc_writeSecureSettings">Lineage సురక్షిత సిస్టమ్ సెట్టింగులను సవరించడానికి ప్రోగ్రాంకి అనుమతినిస్తుంది. సాధారణ ప్రోగ్రాంలచే ఉపయోగించబడటానికి కాదు.</string>
-  <!-- Labels for the MANAGE_PERSISTENT_STORAGE permission. -->
-  <string name="permlab_managePersistentStorage">నిరంతర నిల్వను నిర్వహించుము</string>
-  <string name="permdesc_managePersistentStorage">ఫ్యాక్టరీ రీసెట్ ద్వారా కొనసాగే అవకాశం ఉన్న లక్షణాలను చదవడానికి లేదా వ్రాయడానికి ప్రోగ్రాంకి అనుమతినిస్తుంది.</string>
   <!-- Labels for the ACCESS_APP_SUGGESTIONS permission -->
   <string name="permlab_accessAppSuggestions">ప్రోగ్రాం సూచనలను ప్రాప్తి చేయుము</string>
   <string name="permdesc_accessAppSuggestions">ప్రోగ్రాం సూచనలకు ప్రాప్తి పొందేందుకు ప్రోగ్రాంకి  అనుమతిస్తుంది</string>
