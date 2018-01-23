@@ -89,13 +89,6 @@ public class Intent {
             "lineageos.intent.action.INITIALIZE_LINEAGE_HARDWARE";
 
     /**
-     * Broadcast Action: Indicate that an unrecoverable error happened during app launch.
-     * Could indicate that curently applied theme is malicious.
-     * @hide
-     */
-    public static final String ACTION_APP_FAILURE = "lineageos.intent.action.APP_FAILURE";
-
-    /**
      * Broadcast action: lid state changed
      * @hide
      */
