@@ -26,7 +26,6 @@
     <protected-broadcast android:name="lineageos.intent.action.INITIALIZE_LINEAGE_HARDWARE" />
     <protected-broadcast android:name="lineageos.intent.action.ACTION_AUDIO_SESSIONS_CHANGED" />
     <protected-broadcast android:name="lineageos.platform.intent.action.PROFILE_SELECTED" />
-    <protected-broadcast android:name="org.lineageos.intent.action.HOTWORD_INPUT_CHANGED" />
 
     <protected-broadcast android:name="lineageos.intent.action.UPDATE_PREFERENCE" />
     <protected-broadcast android:name="lineageos.intent.action.REFRESH_PREFERENCE" />
