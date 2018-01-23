@@ -60,8 +60,6 @@ interface ILineageHardwareService {
     boolean unRegisterThermalListener(IThermalListenerCallback callback);
     boolean isSunlightEnhancementSelfManaged();
 
-    String getUniqueDeviceId();
-
     int getColorBalanceMin();
     int getColorBalanceMax();
     int getColorBalance();

@@ -156,12 +156,6 @@ public final class LineageHardwareManager {
     public static final int FEATURE_THERMAL_MONITOR = 0x8000;
 
     /**
-     * Unique device ID
-     */
-    @VisibleForTesting
-    public static final int FEATURE_UNIQUE_DEVICE_ID = 0x10000;
-
-    /**
      * Color balance
      */
     @VisibleForTesting
@@ -784,19 +778,6 @@ public final class LineageHardwareManager {
         try {
             if (checkService()) {
                 return sService.getSerialNumber();
-            }
-        } catch (RemoteException e) {
-        }
-        return null;
-    }
-
-    /**
-     * @return an id that's both unique and deterministic for the device
-     */
-    public String getUniqueDeviceId() {
-        try {
-            if (checkService()) {
-                return sService.getUniqueDeviceId();
             }
         } catch (RemoteException e) {
         }

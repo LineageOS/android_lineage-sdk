@@ -60,7 +60,6 @@ import org.lineageos.hardware.ThermalMonitor;
 import org.lineageos.hardware.ThermalUpdateCallback;
 import org.lineageos.hardware.TouchscreenGestures;
 import org.lineageos.hardware.TouchscreenHovering;
-import org.lineageos.hardware.UniqueDeviceId;
 import org.lineageos.hardware.VibratorHW;
 
 /** @hide */
@@ -98,7 +97,6 @@ public class LineageHardwareService extends LineageSystemService implements Ther
         public long getLtoDownloadInterval();
 
         public String getSerialNumber();
-        public String getUniqueDeviceId();
 
         public boolean requireAdaptiveBacklightForSunlightEnhancement();
         public boolean isSunlightEnhancementSelfManaged();
@@ -160,8 +158,6 @@ public class LineageHardwareService extends LineageSystemService implements Ther
                 mSupportedFeatures |= LineageHardwareManager.FEATURE_PERSISTENT_STORAGE;
             if (ThermalMonitor.isSupported())
                 mSupportedFeatures |= LineageHardwareManager.FEATURE_THERMAL_MONITOR;
-            if (UniqueDeviceId.isSupported())
-                mSupportedFeatures |= LineageHardwareManager.FEATURE_UNIQUE_DEVICE_ID;
             if (ColorBalance.isSupported())
                 mSupportedFeatures |= LineageHardwareManager.FEATURE_COLOR_BALANCE;
             if (PictureAdjustment.isSupported())
@@ -324,10 +320,6 @@ public class LineageHardwareService extends LineageSystemService implements Ther
 
         public String getSerialNumber() {
             return SerialNumber.getSerialNumber();
-        }
-
-        public String getUniqueDeviceId() {
-            return UniqueDeviceId.getUniqueDeviceId();
         }
 
         public boolean requireAdaptiveBacklightForSunlightEnhancement() {
@@ -636,17 +628,6 @@ public class LineageHardwareService extends LineageSystemService implements Ther
                 return null;
             }
             return mLineageHwImpl.getSerialNumber();
-        }
-
-        @Override
-        public String getUniqueDeviceId() {
-            mContext.enforceCallingOrSelfPermission(
-                    lineageos.platform.Manifest.permission.HARDWARE_ABSTRACTION_ACCESS, null);
-            if (!isSupported(LineageHardwareManager.FEATURE_UNIQUE_DEVICE_ID)) {
-                Log.e(TAG, "Unique device ID is not supported");
-                return null;
-            }
-            return mLineageHwImpl.getUniqueDeviceId();
         }
 
         @Override
