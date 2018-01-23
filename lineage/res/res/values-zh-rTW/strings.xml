@@ -19,10 +19,6 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Label for the LineageOS system components when they are shown to the user. -->
   <string name="lineageos_system_label">LineageOS 系統</string>
-  <string name="permlab_modifyNetworkSettings">變更系統網路設定</string>
-  <string name="permdesc_modifyNetworkSettings">允許應用程式修改飛航模式和行動數據網路設定。</string>
-  <string name="permlab_modifySoundSettings">變更系統音效設定</string>
-  <string name="permdesc_modifySoundSettings">允許應用程式變更中斷模式音效設定。</string>
   <!-- Labels for the READ_MSIM_PHONE_STATE permission. -->
   <string name="permlab_readMSPhoneState">在支援多張 SIM 卡的裝置上查看電話狀態和數據連線</string>
   <string name="permdesc_readMSPhoneState">允許應用程式查看支援多張 SIM 卡的裝置的電話狀態和數據連線</string>

@@ -19,10 +19,6 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Label for the LineageOS system components when they are shown to the user. -->
   <string name="lineageos_system_label">LineageOS Järjestelmä</string>
-  <string name="permlab_modifyNetworkSettings">muuta järjestelmän verkkoasetuksia</string>
-  <string name="permdesc_modifyNetworkSettings">Sallii sovelluksen tehdä muutoksia lentokonetilan ja mobiiliverkon asetuksiin.</string>
-  <string name="permlab_modifySoundSettings">muuta järjestelmän ääniasetuksia</string>
-  <string name="permdesc_modifySoundSettings">Sallii sovelluksen tehdä muutoksia keskeytystilan ääniasetuksiin.</string>
   <!-- Labels for the READ_MSIM_PHONE_STATE permission. -->
   <string name="permlab_readMSPhoneState">tarkastele puhelimen tilaa ja datayhteyttä useamman SIM-kortin tuella</string>
   <string name="permdesc_readMSPhoneState">Sallii sovelluksen tarkastella puhelimen tilaa ja datayhteyden tietoja usean SIM-kortin tuella.</string>

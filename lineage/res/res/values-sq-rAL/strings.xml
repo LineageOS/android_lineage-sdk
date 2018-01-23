@@ -19,10 +19,6 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Label for the LineageOS system components when they are shown to the user. -->
   <string name="lineageos_system_label">Sistemi LineageOS</string>
-  <string name="permlab_modifyNetworkSettings">ndrysho parametrat e rrjetit të sistemit</string>
-  <string name="permdesc_modifyNetworkSettings">Lejon një aplikacion që bëjë ndryshime në parametrat e profilit Avion dhe në ato të rrjetit të internetit të celularit.</string>
-  <string name="permlab_modifySoundSettings">ndrysho parametrat e tingujve të sistemit</string>
-  <string name="permdesc_modifySoundSettings">Lejon aplikacionin që të ndryshojë parametrat e tingujve për mënyrën e ndërhyrjes.</string>
   <!-- Labels for the READ_MSIM_PHONE_STATE permission. -->
   <!-- Labels for the MODIFY_MSIM_PHONE_STATE permission. -->
   <!-- Labels for the MODIFY_PROFILES permission. -->

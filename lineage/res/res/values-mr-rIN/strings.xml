@@ -19,10 +19,6 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Label for the LineageOS system components when they are shown to the user. -->
   <string name="lineageos_system_label">LineageOS सिस्टिम</string>
-  <string name="permlab_modifyNetworkSettings">सिस्टिम नेटवर्क सेटिंग्ज बदला</string>
-  <string name="permdesc_modifyNetworkSettings">अॅपला विमान मोड आणि मोबाईल डेटा नेटवर्क सेटिंग्जमध्ये बदल करण्याची परवानगी देते.</string>
-  <string name="permlab_modifySoundSettings">सिस्टिम ध्वनी सेटिंग्ज बदला</string>
-  <string name="permdesc_modifySoundSettings">अॅपला व्यत्यय मोड ध्वनी सेटिंग्जमध्ये बदल करण्याची परवानगी देते.</string>
   <!-- Labels for the READ_MSIM_PHONE_STATE permission. -->
   <string name="permlab_readMSPhoneState">फोन स्थिती आणि डेटा कनेक्शन अनेक सिम च्या सहयोगाने पाहा</string>
   <string name="permdesc_readMSPhoneState">अॅपला फोन स्थिती आणि डेटा कनेक्शन अनेक सिम च्या सहयोगाने पाहू देते.</string>

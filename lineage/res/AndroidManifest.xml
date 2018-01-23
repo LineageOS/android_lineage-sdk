@@ -36,20 +36,6 @@
 
     <protected-broadcast android:name="lineageos.platform.intent.action.UPDATE_TWILIGHT_STATE" />
 
-    <!-- Allows an app to make changes to the airplane mode and mobile data network settings -->
-    <permission android:name="lineageos.permission.MODIFY_NETWORK_SETTINGS"
-                android:label="@string/permlab_modifyNetworkSettings"
-                android:description="@string/permdesc_modifyNetworkSettings"
-                android:icon="@drawable/ic_launcher_lineageos"
-                android:protectionLevel="signature|privileged" />
-
-    <!-- Allows an app to make changes to the interruption mode sound settings -->
-    <permission android:name="lineageos.permission.MODIFY_SOUND_SETTINGS"
-                android:label="@string/permlab_modifySoundSettings"
-                android:description="@string/permdesc_modifySoundSettings"
-                android:icon="@drawable/ic_launcher_lineageos"
-                android:protectionLevel="normal" />
-
     <!-- Allows a 3rd party to view the phone SIM states and data connection -->
     <permission android:name="lineageos.permission.READ_MSIM_PHONE_STATE"
                 android:label="@string/permlab_readMSPhoneState"

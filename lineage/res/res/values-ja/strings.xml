@@ -19,10 +19,6 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Label for the LineageOS system components when they are shown to the user. -->
   <string name="lineageos_system_label">LineageOS システム</string>
-  <string name="permlab_modifyNetworkSettings">システムのネットワークの設定の変更</string>
-  <string name="permdesc_modifyNetworkSettings">機内モードとモバイルデータネットワークの設定を変更することをアプリに許可します。</string>
-  <string name="permlab_modifySoundSettings">システムの音の設定</string>
-  <string name="permdesc_modifySoundSettings">サイレントモードの音の設定を変更することをアプリに許可します。</string>
   <!-- Labels for the READ_MSIM_PHONE_STATE permission. -->
   <string name="permlab_readMSPhoneState">マルチSIMをサポートする端末の状態とデータ接続の表示</string>
   <string name="permdesc_readMSPhoneState">マルチSIMをサポートする端末の状態とデータ接続の表示をアプリに許可します。</string>

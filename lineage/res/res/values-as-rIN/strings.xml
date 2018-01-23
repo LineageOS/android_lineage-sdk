@@ -19,10 +19,6 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Label for the LineageOS system components when they are shown to the user. -->
   <string name="lineageos_system_label">LineageOS ছিষ্টেম</string>
-  <string name="permlab_modifyNetworkSettings">ছিষ্টেম নেটৱৰ্ক ছেটিং পৰিৱৰ্তন কৰা</string>
-  <string name="permdesc_modifyNetworkSettings">এটা এপ্প্‌ক এয়াৰপ্লেন মোড আৰু ম\'বাইল ডাটা নেটৱৰ্ক ছেটিংছ পৰিৱৰ্তন কৰিবলৈ অনুমতি দিয়ে।</string>
-  <string name="permlab_modifySoundSettings">ছিষ্টেম নেটৱৰ্ক ছেটিং পৰিৱৰ্তন কৰা</string>
-  <string name="permdesc_modifySoundSettings">এটা এপ্প্‌ক ব্যাঘাত মোড ধ্বনি ছেটিংছ পৰিৱৰ্তন কৰিবলৈ অনুমতি দিয়ে।</string>
   <!-- Labels for the READ_MSIM_PHONE_STATE permission. -->
   <string name="permlab_readMSPhoneState">একাধিক SIMৰ সমৰ্থনত ফোন অৱস্থা আৰু ডাটা সংযোগ চাওক</string>
   <string name="permdesc_readMSPhoneState">এটা এপ্প্‌ক একাধিক SIMৰ সমৰ্থনত ফোন অৱস্থা আৰু ডাটা সংযোগ চাবলৈ অনুমতি দিয়ে।</string>

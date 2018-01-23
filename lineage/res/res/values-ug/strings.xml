@@ -19,10 +19,6 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Label for the LineageOS system components when they are shown to the user. -->
   <string name="lineageos_system_label">LineageOS سىستېمىسى</string>
-  <string name="permlab_modifyNetworkSettings">سىستېمىنىڭ تور تەڭشىنى ئۆزگەرتىش</string>
-  <string name="permdesc_modifyNetworkSettings">ئەپنىڭ ئۇچۇش ھالىتى ۋە تور ئېقىم تەڭشىكىنى ئۆزگەرتىشىگە يول قويۇش.</string>
-  <string name="permlab_modifySoundSettings">سىستېما ئاۋاز تەڭشىكىنى ئۆزگەرتىش</string>
-  <string name="permdesc_modifySoundSettings">ئەپنىڭ ئاۋارە قىلىش ھالىتى تەڭشىكىنى ئۆزگەرتىشىگە يول قويۇش.</string>
   <!-- Labels for the READ_MSIM_PHONE_STATE permission. -->
   <string name="permlab_readMSPhoneState">كۆپ SIM كارتا قوللايدىغان تېلېفون ھالىتى ۋە تور ئۇلىنىشىنى كۆرۈش</string>
   <string name="permdesc_readMSPhoneState">ئەپنىڭ كۆپ SIM كارتا قوللايدىغان تېلېفون ھالىتى ۋە تور ئۇلىنىشىنى كۆرۈشگە يول قويۇش.</string>

@@ -19,10 +19,6 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Label for the LineageOS system components when they are shown to the user. -->
   <string name="lineageos_system_label">LineageOS System</string>
-  <string name="permlab_modifyNetworkSettings">ändra systeminställningar för nätverk</string>
-  <string name="permdesc_modifyNetworkSettings">Tillåter att en app gör ändringar för flygplansläge och nätverksinställningar för mobildata.</string>
-  <string name="permlab_modifySoundSettings">Ändra systemets ljudinställningar</string>
-  <string name="permdesc_modifySoundSettings">Tillåter att en app ändrar på ljudinställningarnas avbrottsläge.</string>
   <!-- Labels for the READ_MSIM_PHONE_STATE permission. -->
   <string name="permlab_readMSPhoneState">visa telefonens status och dataförbindelsestöd med flera SIM-kort</string>
   <string name="permdesc_readMSPhoneState">Tillåter att en app visar telefonens status och dataförbindelsestöd med flera SIM-kort.</string>

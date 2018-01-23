@@ -19,10 +19,6 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Label for the LineageOS system components when they are shown to the user. -->
   <string name="lineageos_system_label">LineageOS sustav</string>
-  <string name="permlab_modifyNetworkSettings">promijeni sistemske postavke mreže</string>
-  <string name="permdesc_modifyNetworkSettings">Dopušta aplikaciji mijenjanje postavki za zrakoplovni način i mobilne podatke.</string>
-  <string name="permlab_modifySoundSettings">promijeni postavke zvukova sustava</string>
-  <string name="permdesc_modifySoundSettings">Dopušta aplikaciji promijeniti postavke za mod prekidanja zvuka.</string>
   <!-- Labels for the READ_MSIM_PHONE_STATE permission. -->
   <string name="permlab_readMSPhoneState">prikaz stanja telefona i veze uz podršku za više SIM-ova</string>
   <string name="permdesc_readMSPhoneState">Dopušta aplikaciji prikaz stanja telefona i veze uz podršku za više SIM-ova.</string>

@@ -19,10 +19,6 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Label for the LineageOS system components when they are shown to the user. -->
   <string name="lineageos_system_label">ସିଆନୋଜେନ୍‍ମୋଡ୍‍ ସିଷ୍ଟମ୍‍</string>
-  <string name="permlab_modifyNetworkSettings">ସିଷ୍ଟମ୍‍ ନେଟ୍‍ୱାର୍କ ସେଟିଂସମୂହ ପରିବର୍ତ୍ତନ କରନ୍ତୁ</string>
-  <string name="permdesc_modifyNetworkSettings">ଏକ ଆପ୍ଲିକେସନ୍‍କୁ ବିମାନ ମୋଡ୍‍ରେ ଓ ମୋବାଇଲ୍‍ ଡାଟା ନେଟ୍‍ୱାର୍କ ସେଟିଂସମୂହ‍ରେ ପରିବର୍ତ୍ତନ କରାଇବାକୁ ଅନୁମତି ଦେଇଥାଏ।</string>
-  <string name="permlab_modifySoundSettings">ସିଷ୍ଟମ୍‍ ସାଉଣ୍ଡ ସେଟିଂସମୂହ‍ରେ ପରିବର୍ତ୍ତନ କରନ୍ତୁ।</string>
-  <string name="permdesc_modifySoundSettings">ଏକ ଆପ୍ଲିକେସନ୍‍କୁ ଇଣ୍ଟରପ୍ସନ୍‍ ମୋଡ୍‍ ସାଉଣ୍ଡ ସେଟିଂସମୂହ‍ରେ ପରିବର୍ତ୍ତନ କରାଇବାକୁ ଅନୁମତି ଦେଇଥାଏ।</string>
   <!-- Labels for the READ_MSIM_PHONE_STATE permission. -->
   <string name="permlab_readMSPhoneState">ଏକାଧିକ SIMର ସମଥନ ସହିତ ଫୋନ୍‍ ଥିତି ଓ ଡାଟା ସଂଯୋଗ ଦେଖନ୍ତୁ</string>
   <string name="permdesc_readMSPhoneState">ଏକାଧିକ SIMର ସମଥନ ସହିତ ଫୋନ୍‍ ସ୍ଥିତି ଓ ଡାଟା ସଂଯୋଗ ଦେଖିବାକୁ ଆପ୍ଲିକେସନ୍‍କୁ ଅନୁମତି ଦିଏ।</string>
