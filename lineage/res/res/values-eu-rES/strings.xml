@@ -54,9 +54,6 @@
   <!-- Labels for the WRITE_SECURE_SETTINGS permission -->
   <string name="permlab_writeSecureSettings">aldatu Lineage sistemaren ezarpen seguruak</string>
   <string name="permdesc_writeSecureSettings">Lineage sistemaren ezarpen seguruak aldatzea ahalbidetzen dio aplikazioari. Aplikazio arruntek ez dute behar.</string>
-  <!-- Labels for the ACCESS_APP_SUGGESTIONS permission -->
-  <string name="permlab_accessAppSuggestions">aplikazio aholkuak atzitu</string>
-  <string name="permdesc_accessAppSuggestions">Aplikazio proposamenak atzitzea ahalbidetzen dio aplikazioari.</string>
   <!-- Label to show for a service that is running because it is observing the user's custom tiles. -->
   <string name="custom_tile_listener_binding_label">Lauza pertsonalizatuaren entzulea</string>
   <!-- Labels for the PROTECTED_APP permission. -->

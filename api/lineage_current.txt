@@ -586,7 +586,6 @@ package lineageos.platform {
 
   public static final class Manifest.permission {
     ctor public Manifest.permission();
-    field public static final java.lang.String ACCESS_APP_SUGGESTIONS = "lineageos.permission.ACCESS_APP_SUGGESTIONS";
     field public static final java.lang.String ACCESS_WEATHER_MANAGER = "lineageos.permission.ACCESS_WEATHER_MANAGER";
     field public static final java.lang.String BIND_WEATHER_PROVIDER_SERVICE = "lineageos.permission.BIND_WEATHER_PROVIDER_SERVICE";
     field public static final java.lang.String HARDWARE_ABSTRACTION_ACCESS = "lineageos.permission.HARDWARE_ABSTRACTION_ACCESS";

@@ -54,9 +54,6 @@
   <!-- Labels for the WRITE_SECURE_SETTINGS permission -->
   <string name="permlab_writeSecureSettings">змяняць параметры бяспекі сістэмы</string>
   <string name="permdesc_writeSecureSettings">Дадатак зможа змяняць абароненыя налады сістэмы. Гэты дазвол не выкарыстоўваецца звычайнымі дадаткамі.</string>
-  <!-- Labels for the ACCESS_APP_SUGGESTIONS permission -->
-  <string name="permlab_accessAppSuggestions">доступ да спіса рэкамендаваных дадаткаў</string>
-  <string name="permdesc_accessAppSuggestions">Дадатак зможа атрымваць доступ да спісу рэкамендаваных дадаткаў.</string>
   <!-- Label to show for a service that is running because it is observing the user's custom tiles. -->
   <string name="custom_tile_listener_binding_label">Слухач карыстацкіх плітак</string>
   <!-- Labels for the PROTECTED_APP permission. -->

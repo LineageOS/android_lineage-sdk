@@ -54,9 +54,6 @@
   <!-- Labels for the WRITE_SECURE_SETTINGS permission -->
   <string name="permlab_writeSecureSettings">upraviť zabezpečené systémové nastavenia Lineage</string>
   <string name="permdesc_writeSecureSettings">Umožňuje aplikácii zmeniť zabezpečené systémové nastavenia Lineage. Nie je určené pre normálne aplikácie.</string>
-  <!-- Labels for the ACCESS_APP_SUGGESTIONS permission -->
-  <string name="permlab_accessAppSuggestions">prístup k návrhom aplikácií</string>
-  <string name="permdesc_accessAppSuggestions">Umožní aplikácii prístup k návrhom aplikácií.</string>
   <!-- Label to show for a service that is running because it is observing the user's custom tiles. -->
   <string name="custom_tile_listener_binding_label">Zoznam vlastných dlaždíc</string>
   <!-- Labels for the PROTECTED_APP permission. -->

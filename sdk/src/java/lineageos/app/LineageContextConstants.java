@@ -78,11 +78,6 @@ public final class LineageContextConstants {
     public static final String LINEAGE_HARDWARE_SERVICE = "lineagehardware";
 
     /**
-     * @hide
-     */
-    public static final String LINEAGE_APP_SUGGEST_SERVICE = "lineageappsuggest";
-
-    /**
      * Control device power profile and characteristics.
      *
      * @hide
@@ -150,14 +145,6 @@ public final class LineageContextConstants {
          */
         @SdkConstant(SdkConstant.SdkConstantType.FEATURE)
         public static final String PROFILES = "org.lineageos.profiles";
-
-        /**
-         * Feature for {@link PackageManager#getSystemAvailableFeatures} and
-         * {@link PackageManager#hasSystemFeature}: The device includes the lineage app suggest service
-         * utilized by the lineage sdk.
-         */
-        @SdkConstant(SdkConstant.SdkConstantType.FEATURE)
-        public static final String APP_SUGGEST = "org.lineageos.appsuggest";
 
         /**
          * Feature for {@link PackageManager#getSystemAvailableFeatures} and

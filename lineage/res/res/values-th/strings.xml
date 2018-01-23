@@ -54,9 +54,6 @@
   <!-- Labels for the WRITE_SECURE_SETTINGS permission -->
   <string name="permlab_writeSecureSettings">ปรับแต่งการตั้งค่าระบบความปลอดภัยของ Lineage</string>
   <string name="permdesc_writeSecureSettings">อนุญาตให้แอปปรับแต่งการตั้งค่าระบบความปลอดภัยของ Lineage ไม่ใช่เพื่อให้แอปปกตินำไปใช้</string>
-  <!-- Labels for the ACCESS_APP_SUGGESTIONS permission -->
-  <string name="permlab_accessAppSuggestions">เข้าถึงคำแนะนำแอป</string>
-  <string name="permdesc_accessAppSuggestions">อรนุญาตให้แอปเข้าถึงคำแนะนำแอป</string>
   <!-- Label to show for a service that is running because it is observing the user's custom tiles. -->
   <string name="custom_tile_listener_binding_label">บริการกำหนดเองของไทล์</string>
   <!-- Labels for the PROTECTED_APP permission. -->

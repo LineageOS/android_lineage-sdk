@@ -54,9 +54,6 @@
   <!-- Labels for the WRITE_SECURE_SETTINGS permission -->
   <string name="permlab_writeSecureSettings">修改 Lineage 系统安全设置</string>
   <string name="permdesc_writeSecureSettings">允许应用修改 Lineage 系统安全设置。不供正常应用使用。</string>
-  <!-- Labels for the ACCESS_APP_SUGGESTIONS permission -->
-  <string name="permlab_accessAppSuggestions">访问应用建议</string>
-  <string name="permdesc_accessAppSuggestions">允许应用访问应用建议。</string>
   <!-- Label to show for a service that is running because it is observing the user's custom tiles. -->
   <string name="custom_tile_listener_binding_label">自定义瓷块侦听器</string>
   <!-- Labels for the PROTECTED_APP permission. -->

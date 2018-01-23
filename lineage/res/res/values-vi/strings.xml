@@ -54,9 +54,6 @@
   <!-- Labels for the WRITE_SECURE_SETTINGS permission -->
   <string name="permlab_writeSecureSettings">sửa đổi cài đặt hệ thống an toàn Lineage</string>
   <string name="permdesc_writeSecureSettings">Cho phép ứng dụng sửa đổi cài đặt hệ thống an toàn Lineage. Không cho ứng dụng bình thường sử dụng.</string>
-  <!-- Labels for the ACCESS_APP_SUGGESTIONS permission -->
-  <string name="permlab_accessAppSuggestions">truy cập các đề xuất ứng dụng</string>
-  <string name="permdesc_accessAppSuggestions">Cho phép ứng dụng truy cập đề xuất ứng dụng.</string>
   <!-- Label to show for a service that is running because it is observing the user's custom tiles. -->
   <string name="custom_tile_listener_binding_label">Lắng nghe ô tuỳ chỉnh</string>
   <!-- Labels for the PROTECTED_APP permission. -->

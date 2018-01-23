@@ -53,9 +53,6 @@
   <!-- Labels for the WRITE_SECURE_SETTINGS permission -->
   <string name="permlab_writeSecureSettings">mengubah pengaturan sistem aman Lineage</string>
   <string name="permdesc_writeSecureSettings">Memungkinkan aplikasi untuk memodifikasi pengaturan sistem aman Lineage. Tidak untuk digunakan oleh aplikasi normal.</string>
-  <!-- Labels for the ACCESS_APP_SUGGESTIONS permission -->
-  <string name="permlab_accessAppSuggestions">akses saran aplikasi</string>
-  <string name="permdesc_accessAppSuggestions">Mengizinkan aplikasi untuk mengakses saran aplikasi.</string>
   <!-- Label to show for a service that is running because it is observing the user's custom tiles. -->
   <string name="custom_tile_listener_binding_label">Daftar ikon kustom</string>
   <!-- Labels for the PROTECTED_APP permission. -->

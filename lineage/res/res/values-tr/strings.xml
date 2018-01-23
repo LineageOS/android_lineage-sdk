@@ -54,9 +54,6 @@
   <!-- Labels for the WRITE_SECURE_SETTINGS permission -->
   <string name="permlab_writeSecureSettings">Lineage güvenli sistem ayarlarını değiştir</string>
   <string name="permdesc_writeSecureSettings">Uygulamalara Lineage güvenli sistem ayarlarını değiştirme izni verir. Normal uygulamalar için değildir.</string>
-  <!-- Labels for the ACCESS_APP_SUGGESTIONS permission -->
-  <string name="permlab_accessAppSuggestions">uygulama önerilerine eriş</string>
-  <string name="permdesc_accessAppSuggestions">Bir uygulamanın uygulama önerilerine erişiminine izin verir.</string>
   <!-- Label to show for a service that is running because it is observing the user's custom tiles. -->
   <string name="custom_tile_listener_binding_label">Özel kare takipçisi</string>
   <!-- Labels for the PROTECTED_APP permission. -->

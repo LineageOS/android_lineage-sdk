@@ -54,9 +54,6 @@
   <!-- Labels for the WRITE_SECURE_SETTINGS permission -->
   <string name="permlab_writeSecureSettings">Lineage চিকিওৰ ছিষ্টেম ছেটিংচ সংশোধন কৰক</string>
   <string name="permdesc_writeSecureSettings">এটা এপ্প্‌ক Lineage চিকিওৰ ছিষ্টেম ছেটিং সংশোধন কৰিবলৈ অনুমতি দিয়ে সাধাৰণ এপ্প্‌সমূহৰ ব্যৱহাৰৰ কাৰণে নহয়৷</string>
-  <!-- Labels for the ACCESS_APP_SUGGESTIONS permission -->
-  <string name="permlab_accessAppSuggestions">এপ্প্‌ পৰামৰ্শত প্ৰৱেশ কৰক</string>
-  <string name="permdesc_accessAppSuggestions">এটা এপ্প্‌ক এপ্প্‌ পৰামৰ্শত প্ৰৱেশ কৰিবলৈ অনুমতি দিয়ে।</string>
   <!-- Label to show for a service that is running because it is observing the user's custom tiles. -->
   <string name="custom_tile_listener_binding_label">কাষ্টম টাইল শ্ৰোতা</string>
   <!-- Labels for the PROTECTED_APP permission. -->

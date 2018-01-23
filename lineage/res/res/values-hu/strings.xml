@@ -54,9 +54,6 @@
   <!-- Labels for the WRITE_SECURE_SETTINGS permission -->
   <string name="permlab_writeSecureSettings">Lineage biztonsági rendszer beállításainak módosítása</string>
   <string name="permdesc_writeSecureSettings">Lehetővé teszi egy alkalmazás számára a Lineage biztonsági rendszer beállításainak módosítását. Szokásos alkalmazások számára nem használható.</string>
-  <!-- Labels for the ACCESS_APP_SUGGESTIONS permission -->
-  <string name="permlab_accessAppSuggestions">hozzáférés az alkalmazás javaslatokhoz</string>
-  <string name="permdesc_accessAppSuggestions">Lehetővé teszi az alkalmazás számára az alkalmazás javaslatokhoz való hozzáférést.</string>
   <!-- Label to show for a service that is running because it is observing the user's custom tiles. -->
   <string name="custom_tile_listener_binding_label">Egyéni csempe figyelőszolgáltatás</string>
   <!-- Labels for the PROTECTED_APP permission. -->

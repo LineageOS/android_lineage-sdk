@@ -54,9 +54,6 @@
   <!-- Labels for the WRITE_SECURE_SETTINGS permission -->
   <string name="permlab_writeSecureSettings">Lineage 보안 시스템 설정 수정</string>
   <string name="permdesc_writeSecureSettings">앱이 Lineage 보안 시스템 설정을 수정할 수 있도록 허용합니다. 일반 앱을 위한 것이 아닙니다.</string>
-  <!-- Labels for the ACCESS_APP_SUGGESTIONS permission -->
-  <string name="permlab_accessAppSuggestions">앱 제안 접근</string>
-  <string name="permdesc_accessAppSuggestions">앱이 앱 제안에 접근하도록 허용합니다.</string>
   <!-- Label to show for a service that is running because it is observing the user's custom tiles. -->
   <string name="custom_tile_listener_binding_label">사용자 정의 타일 확인</string>
   <!-- Labels for the PROTECTED_APP permission. -->

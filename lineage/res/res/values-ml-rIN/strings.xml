@@ -54,9 +54,6 @@
   <!-- Labels for the WRITE_SECURE_SETTINGS permission -->
   <string name="permlab_writeSecureSettings">Lineage സുരക്ഷാ സംവിധാന ക്രമീകരണങ്ങൾ പരിഷ്‌ക്കരിക്കുക</string>
   <string name="permdesc_writeSecureSettings">Lineage സുരക്ഷിത സിസ്റ്റം ക്രമീകരണങ്ങൾ പരിഷ്ക്കരിക്കുവാന്‍ ഒരു ആപ്ലിക്കേഷനെ അനുവദിക്കുന്നു. സാധാരണ ആപ്ലിക്കേഷനുകൾക്ക് ഉപയോഗിക്കാനുള്ളതല്ല.</string>
-  <!-- Labels for the ACCESS_APP_SUGGESTIONS permission -->
-  <string name="permlab_accessAppSuggestions">ആപ്ലിക്കേഷന്‍ നിർദ്ദേശങ്ങളിലേക്ക് പ്രവേശിക്കുക</string>
-  <string name="permdesc_accessAppSuggestions">ആപ്ലിക്കേഷന്‍ നിർദ്ദേശങ്ങളിലേക്ക് പ്രവേശിക്കുവാന്‍ ഒരു ആപ്ലിക്കേഷനെ അനുവദിക്കുന്നു.</string>
   <!-- Label to show for a service that is running because it is observing the user's custom tiles. -->
   <string name="custom_tile_listener_binding_label">കസ്റ്റം ടൈൽ ലിസണർ</string>
   <!-- Labels for the PROTECTED_APP permission. -->

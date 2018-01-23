@@ -54,9 +54,6 @@
   <!-- Labels for the WRITE_SECURE_SETTINGS permission -->
   <string name="permlab_writeSecureSettings">beveiligde Lineage-systeeminstellingen wijzigen</string>
   <string name="permdesc_writeSecureSettings">Hiermee kan de app de beveiligde systeeminstellingen van Lineage wijzigen. Niet voor gebruik door normale apps.</string>
-  <!-- Labels for the ACCESS_APP_SUGGESTIONS permission -->
-  <string name="permlab_accessAppSuggestions">toegang tot app-suggesties</string>
-  <string name="permdesc_accessAppSuggestions">Hiermee kan de app toegang krijgen tot app-suggesties.</string>
   <!-- Label to show for a service that is running because it is observing the user's custom tiles. -->
   <string name="custom_tile_listener_binding_label">Aangepaste tegel-service</string>
   <!-- Labels for the PROTECTED_APP permission. -->

@@ -54,9 +54,6 @@
   <!-- Labels for the WRITE_SECURE_SETTINGS permission -->
   <string name="permlab_writeSecureSettings">verander Lineage veilige instellings</string>
   <string name="permdesc_writeSecureSettings">Laat \'n toep toe om Lineage veilige stelsel instellings te verander. Nie vir gebruik deur normale toeps nie.</string>
-  <!-- Labels for the ACCESS_APP_SUGGESTIONS permission -->
-  <string name="permlab_accessAppSuggestions">toegang na toep voorstelle</string>
-  <string name="permdesc_accessAppSuggestions">Laat \'n toep toegang na toep voorstelle.</string>
   <!-- Label to show for a service that is running because it is observing the user's custom tiles. -->
   <string name="custom_tile_listener_binding_label">Pasgemaakte teël luisteraar</string>
   <!-- Labels for the PROTECTED_APP permission. -->

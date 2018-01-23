@@ -54,9 +54,6 @@
   <!-- Labels for the WRITE_SECURE_SETTINGS permission -->
   <string name="permlab_writeSecureSettings">LineageOS セキュアシステム設定の変更</string>
   <string name="permdesc_writeSecureSettings">LineageOS セキュアシステム設定の変更をアプリに許可します。通常のアプリ用ではありません。</string>
-  <!-- Labels for the ACCESS_APP_SUGGESTIONS permission -->
-  <string name="permlab_accessAppSuggestions">アプリの候補へのアクセス</string>
-  <string name="permdesc_accessAppSuggestions">アプリの候補へのアクセスをアプリに許可します。</string>
   <!-- Label to show for a service that is running because it is observing the user's custom tiles. -->
   <string name="custom_tile_listener_binding_label">カスタムタイルリスナー</string>
   <!-- Labels for the PROTECTED_APP permission. -->
