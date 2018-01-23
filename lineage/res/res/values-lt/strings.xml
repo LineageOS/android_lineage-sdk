@@ -19,12 +19,6 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Label for the LineageOS system components when they are shown to the user. -->
   <string name="lineageos_system_label">„LineageOS“ sistema</string>
-  <!-- Labels for the READ_MSIM_PHONE_STATE permission. -->
-  <string name="permlab_readMSPhoneState">pažiūrėti telefono būseną ir duomenų ryšį su kelių SIM palaikymu</string>
-  <string name="permdesc_readMSPhoneState">Leidžia programai pažiūrėti telefono būseną ir duomenų ryšį su kelių SIM palaikymu.</string>
-  <!-- Labels for the MODIFY_MSIM_PHONE_STATE permission. -->
-  <string name="permlab_modifyMSPhoneState">keisti telefono būseną ir duomenų ryšį su kelių SIM palaikymu</string>
-  <string name="permdesc_modifyMSPhoneState">Leidžia programai keisti telefono būseną ir duomenų ryšį su kelių SIM palaikymu.</string>
   <!-- Labels for the MODIFY_PROFILES permission. -->
   <string name="permlab_modifyProfiles">keisti sistemos profilius</string>
   <string name="permdesc_modifyProfiles">Leidžia programai keisti sistemos profilius.</string>

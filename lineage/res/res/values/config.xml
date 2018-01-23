@@ -92,7 +92,6 @@
          should publish as a binder services in its onStart -->
     <string-array name="config_externalLineageServices">
         <item>org.lineageos.platform.internal.ProfileManagerService</item>
-        <item>org.lineageos.platform.internal.LineageTelephonyManagerService</item>
         <item>org.lineageos.platform.internal.LineageHardwareService</item>
         <item>org.lineageos.platform.internal.PerformanceManagerService</item>
         <item>org.lineageos.platform.internal.LineageWeatherManagerService</item>

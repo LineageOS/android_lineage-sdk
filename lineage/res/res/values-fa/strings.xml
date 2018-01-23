@@ -19,12 +19,6 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Label for the LineageOS system components when they are shown to the user. -->
   <string name="lineageos_system_label">سیستم سایانوژن‌مود</string>
-  <!-- Labels for the READ_MSIM_PHONE_STATE permission. -->
-  <string name="permlab_readMSPhoneState">مشاهده وضعیت تلفن و اتصال داده با پشتیبانی از چندین سیم کارت</string>
-  <string name="permdesc_readMSPhoneState">به برنامه اجازه مشاهده وضعیت تلفن و اتصال داده را با پشتیبانی از چندین سیم کارت می‌دهد.</string>
-  <!-- Labels for the MODIFY_MSIM_PHONE_STATE permission. -->
-  <string name="permlab_modifyMSPhoneState">تغییر وضعیت تلفن و اتصال داده با پشتیبانی از چندین سیم کارت</string>
-  <string name="permdesc_modifyMSPhoneState">به برنامه اجازه ویرایش وضعیت تلفن و اتصال داده را با پشتیبانی از چندین سیم کارت می‌دهد.</string>
   <!-- Labels for the MODIFY_PROFILES permission. -->
   <string name="permlab_modifyProfiles">تغییر پروفایل‌های سیستم</string>
   <string name="permdesc_modifyProfiles">به برنامه اجازه می‌دهد تا پروفایل‌های سیستم را تغییر دهد.</string>

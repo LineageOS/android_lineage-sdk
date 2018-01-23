@@ -19,12 +19,6 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Label for the LineageOS system components when they are shown to the user. -->
   <string name="lineageos_system_label">Hệ thống LineageOS</string>
-  <!-- Labels for the READ_MSIM_PHONE_STATE permission. -->
-  <string name="permlab_readMSPhoneState">xem tình trạng điện thoại và kết nối dữ liệu với hỗ trợ đa SIM</string>
-  <string name="permdesc_readMSPhoneState">Cho phép ứng dụng xem tình trạng điện thoại và kết nối dữ liệu với hỗ trợ đa SIM.</string>
-  <!-- Labels for the MODIFY_MSIM_PHONE_STATE permission. -->
-  <string name="permlab_modifyMSPhoneState">thay đổi tình trạng điện thoại và kết nối dữ liệu với hỗ trợ đa SIM</string>
-  <string name="permdesc_modifyMSPhoneState">Cho phép ứng dụng thay đổi tình trạng điện thoại và kết nối dữ liệu với hỗ trợ đa SIM.</string>
   <!-- Labels for the MODIFY_PROFILES permission. -->
   <string name="permlab_modifyProfiles">sửa đổi cấu hình hệ thống</string>
   <string name="permdesc_modifyProfiles">Cho phép một ứng dụng sửa đổi cấu hình hệ thống.</string>

@@ -23,13 +23,7 @@
 
 
 
-    <!-- Labels for the READ_MSIM_PHONE_STATE permission. -->
-    <string name="permlab_readMSPhoneState">view the phone state and data connection with support to multiple SIMs</string>
-    <string name="permdesc_readMSPhoneState">Allows an app to view the phone state and data connection with support to multiple SIMs.</string>
 
-    <!-- Labels for the MODIFY_MSIM_PHONE_STATE permission. -->
-    <string name="permlab_modifyMSPhoneState">modify the phone state and data connection with support to multiple SIMs</string>
-    <string name="permdesc_modifyMSPhoneState">Allows an app to modify the phone state and data connection with support to multiple SIMs.</string>
 
     <!-- Labels for the MODIFY_PROFILES permission. -->
     <string name="permlab_modifyProfiles">modify system profiles</string>

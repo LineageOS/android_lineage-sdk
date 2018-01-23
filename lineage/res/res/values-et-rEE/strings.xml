@@ -19,12 +19,6 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Label for the LineageOS system components when they are shown to the user. -->
   <string name="lineageos_system_label">LineageOS Süsteem</string>
-  <!-- Labels for the READ_MSIM_PHONE_STATE permission. -->
-  <string name="permlab_readMSPhoneState">telefoni oleku ja andmeühenduse vaatamine, toetades mitmeid SIMe</string>
-  <string name="permdesc_readMSPhoneState">Võimaldab rakendusel vaadata telefoni olekut ja andmeühendust, toetades mitmeid SIMe.</string>
-  <!-- Labels for the MODIFY_MSIM_PHONE_STATE permission. -->
-  <string name="permlab_modifyMSPhoneState">telefoni oleku ja andmeühenduse muutmine, toetades mitmeid SIMe</string>
-  <string name="permdesc_modifyMSPhoneState">Võimaldab rakendusel muuta telefoni olekut ja andmeühendust, toetades mitmeid SIMe.</string>
   <!-- Labels for the MODIFY_PROFILES permission. -->
   <!-- Labels for the HARDWARE_ABSTRACTION_ACCESS permission. -->
   <string name="permlab_useHardwareFramework">kasutada riistvara raamistikku</string>

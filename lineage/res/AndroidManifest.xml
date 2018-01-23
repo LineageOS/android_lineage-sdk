@@ -36,20 +36,6 @@
 
     <protected-broadcast android:name="lineageos.platform.intent.action.UPDATE_TWILIGHT_STATE" />
 
-    <!-- Allows a 3rd party to view the phone SIM states and data connection -->
-    <permission android:name="lineageos.permission.READ_MSIM_PHONE_STATE"
-                android:label="@string/permlab_readMSPhoneState"
-                android:description="@string/permdesc_readMSPhoneState"
-                android:icon="@drawable/ic_launcher_lineageos"
-                android:protectionLevel="normal" />
-
-    <!-- Allows a 3rd party to modify the phone SIM states and data connection -->
-    <permission android:name="lineageos.permission.MODIFY_MSIM_PHONE_STATE"
-                android:label="@string/permlab_modifyMSPhoneState"
-                android:description="@string/permdesc_modifyMSPhoneState"
-                android:icon="@drawable/ic_launcher_lineageos"
-                android:protectionLevel="normal" />
-
     <!-- Allows an application access to the Lineage hardware abstraction framework
         <p>Not for use by third-party applications. -->
     <permission android:name="lineageos.permission.HARDWARE_ABSTRACTION_ACCESS"

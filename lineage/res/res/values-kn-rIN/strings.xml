@@ -19,12 +19,6 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Label for the LineageOS system components when they are shown to the user. -->
   <string name="lineageos_system_label">LineageOS ಸಿಸ್ಟಂ</string>
-  <!-- Labels for the READ_MSIM_PHONE_STATE permission. -->
-  <string name="permlab_readMSPhoneState">ಬಹು ಸಿಮ್‍ಗಳ ಬೆಂಬಲದ ಜೊತೆ ಫೋನ್ ಸ್ಥಿತಿ ಮತ್ತು ಡೇಟಾ ಸಂಪರ್ಕವನ್ನು ವೀಕ್ಷಿಸುವಿಕೆ</string>
-  <string name="permdesc_readMSPhoneState">ಒಂದು ಆಪ್‍ಗೆ ಬಹು ಸಿಮ್‍ಗಳ ಬೆಂಬಲದ ಜೊತೆ ಫೋನ್ ಸ್ಥಿತಿ ಮತ್ತು ಡೇಟಾ ಸಂಪರ್ಕವನ್ನು ವೀಕ್ಷಿಸಲು ಅನುಮತಿಸುತ್ತದೆ.</string>
-  <!-- Labels for the MODIFY_MSIM_PHONE_STATE permission. -->
-  <string name="permlab_modifyMSPhoneState">ಬಹು ಸಿಮ್‍ಗಳ ಬೆಂಬಲದ ಜೊತೆ ಫೋನ್ ಸ್ಥಿತಿ ಮತ್ತು ಡೇಟಾ ಸಂಪರ್ಕವನ್ನು ಮಾರ್ಪಡಿಸುವಿಕೆ</string>
-  <string name="permdesc_modifyMSPhoneState">ಒಂದು ಆಪ್‍ಗೆ ಬಹು ಸಿಮ್‍ಗಳ ಬೆಂಬಲದ ಜೊತೆ ಫೋನ್ ಸ್ಥಿತಿ ಮತ್ತು ಡೇಟಾ ಸಂಪರ್ಕವನ್ನು ಮಾರ್ಪಡಿಸಲು ಅನುಮತಿಸುತ್ತದೆ.</string>
   <!-- Labels for the MODIFY_PROFILES permission. -->
   <string name="permlab_modifyProfiles">ಸಿಸ್ಟಂ ಪ್ರೋಫೈಲ್‍ಗಳನ್ನು ಮಾರ್ಪಡಿಸು</string>
   <string name="permdesc_modifyProfiles">ಒಂದು ಆಪ್‍ಗೆ ಸಿಸ್ಟಂ ಪ್ರೊಫೈಲ್‍ಗಳನ್ನು ಮಾರ್ಪಡಿಸಲು ಅನುಮತಿಸುತ್ತದೆ.</string>

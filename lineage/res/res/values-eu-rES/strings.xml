@@ -19,12 +19,6 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Label for the LineageOS system components when they are shown to the user. -->
   <string name="lineageos_system_label">LineageOS sistema</string>
-  <!-- Labels for the READ_MSIM_PHONE_STATE permission. -->
-  <string name="permlab_readMSPhoneState">ikusi telefonoaren egoera eta datu konexioa hainbat SIM txartelentzako euskarriarekin</string>
-  <string name="permdesc_readMSPhoneState">Telefonoaren egoera eta datu konexioa hainbat SIM txartelentzako euskarriarekin ikustea ahalbidetzen dio aplikazioari.</string>
-  <!-- Labels for the MODIFY_MSIM_PHONE_STATE permission. -->
-  <string name="permlab_modifyMSPhoneState">aldatu telefonoaren egoera eta datu konexioa hainbat SIM txartelentzako euskarriarekin</string>
-  <string name="permdesc_modifyMSPhoneState">Telefonoaren egoera eta datu konexioa hainbat SIM txartelentzako euskarriarekin aldatzea ahalbidetzen dio aplikazioari.</string>
   <!-- Labels for the MODIFY_PROFILES permission. -->
   <string name="permlab_modifyProfiles">aldatu sistemaren profilak</string>
   <string name="permdesc_modifyProfiles">Sistemaren profilak aldatzea ahalbidetzen dio aplikazioari.</string>

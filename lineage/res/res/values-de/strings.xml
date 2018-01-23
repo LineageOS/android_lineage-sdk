@@ -19,12 +19,6 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Label for the LineageOS system components when they are shown to the user. -->
   <string name="lineageos_system_label">LineageOS-System</string>
-  <!-- Labels for the READ_MSIM_PHONE_STATE permission. -->
-  <string name="permlab_readMSPhoneState">Systemstatus und Datenverbindung auf Unterstützung von mehreren SIM-Karten überprüfen</string>
-  <string name="permdesc_readMSPhoneState">Ermöglicht der App, den Systemstatus und die Datenverbindung auf Unterstützung von mehreren SIM-Karten zu überprüfen.</string>
-  <!-- Labels for the MODIFY_MSIM_PHONE_STATE permission. -->
-  <string name="permlab_modifyMSPhoneState">Systemstatus und Datenverbindung zur Unterstützung von mehreren SIM-Karten anpassen</string>
-  <string name="permdesc_modifyMSPhoneState">Ermöglicht der App, den Systemstatus und die Datenverbindung zur Unterstützung von mehreren SIM-Karten anzupassen.</string>
   <!-- Labels for the MODIFY_PROFILES permission. -->
   <string name="permlab_modifyProfiles">Systemprofile ändern</string>
   <string name="permdesc_modifyProfiles">Ermöglicht der App, Systemprofile zu ändern.</string>

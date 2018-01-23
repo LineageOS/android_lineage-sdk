@@ -66,19 +66,6 @@ package lineageos.alarmclock {
 
 package lineageos.app {
 
-  public class LineageTelephonyManager {
-    method public static lineageos.app.LineageTelephonyManager getInstance(android.content.Context);
-    method public java.util.List<android.telephony.SubscriptionInfo> getSubInformation();
-    method public boolean isDataConnectionEnabled();
-    method public boolean isDataConnectionSelectedOnSub(int);
-    method public boolean isSubActive(int);
-    method public void setDataConnectionState(boolean);
-    method public void setDefaultPhoneSub(int);
-    method public void setDefaultSmsSub(int);
-    method public void setSubState(int, boolean);
-    field public static final int ASK_FOR_SUBSCRIPTION_ID = 0; // 0x0
-  }
-
   public final class Profile implements java.lang.Comparable android.os.Parcelable {
     ctor public Profile(java.lang.String);
     method public void addSecondaryUuid(java.util.UUID);
