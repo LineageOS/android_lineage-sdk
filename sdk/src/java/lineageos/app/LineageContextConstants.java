@@ -33,16 +33,6 @@ public final class LineageContextConstants {
 
     /**
      * Use with {@link android.content.Context#getSystemService} to retrieve a
-     * {@link lineageos.app.LineageStatusBarManager} for informing the user of
-     * background events.
-     *
-     * @see android.content.Context#getSystemService
-     * @see lineageos.app.LineageStatusBarManager
-     */
-    public static final String LINEAGE_STATUS_BAR_SERVICE = "lineagestatusbar";
-
-    /**
-     * Use with {@link android.content.Context#getSystemService} to retrieve a
      * {@link lineageos.app.ProfileManager} for informing the user of
      * background events.
      *
@@ -129,14 +119,6 @@ public final class LineageContextConstants {
          */
         @SdkConstant(SdkConstant.SdkConstantType.FEATURE)
         public static final String HARDWARE_ABSTRACTION = "org.lineageos.hardware";
-
-        /**
-         * Feature for {@link PackageManager#getSystemAvailableFeatures} and
-         * {@link PackageManager#hasSystemFeature}: The device includes the lineage status bar service
-         * utilzed by the lineage sdk.
-         */
-        @SdkConstant(SdkConstant.SdkConstantType.FEATURE)
-        public static final String STATUSBAR = "org.lineageos.statusbar";
 
         /**
          * Feature for {@link PackageManager#getSystemAvailableFeatures} and

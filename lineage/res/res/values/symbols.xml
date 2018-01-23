@@ -18,8 +18,6 @@
 <resources>
     <java-symbol type="drawable" name="ic_launcher_lineageos" />
 
-    <java-symbol type="string" name="custom_tile_listener_binding_label" />
-
     <!-- Profiles -->
     <java-symbol type="xml" name="profile_default" />
     <java-symbol type="string" name="wildcardProfile" />
@@ -89,9 +87,6 @@
 
     <!-- On-device lights (LED) capabilities -->
     <java-symbol type="integer" name="config_deviceLightCapabilities" />
-
-    <!-- Quick Settings tile defaults -->
-    <java-symbol type="string" name="config_defaultQuickSettingsTiles" />
 
     <!-- Wifi Service -->
     <java-symbol type="string" name="config_wifiHotSpotSsid" />

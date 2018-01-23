@@ -19,14 +19,10 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Label for the LineageOS system components when they are shown to the user. -->
   <string name="lineageos_system_label">Systém LineageOS</string>
-  <string name="permlab_publishCustomTile">vytvoření vlastní dlaždice do panelu rychlého nastavení</string>
-  <string name="permdesc_publishCustomTile">Umožní vytvořit vlastní dlaždici v panelu rychlého nastavení.</string>
   <string name="permlab_modifyNetworkSettings">změnit systémové nastavení sítě</string>
   <string name="permdesc_modifyNetworkSettings">Umožňuje přepnout zařízení do režimu „V letadle“ a nastavení mobilní datové sítě.</string>
   <string name="permlab_modifySoundSettings">změnit systémové nastavení zvuku</string>
   <string name="permdesc_modifySoundSettings">Umožňuje změnit nastavení režimu přerušení zvuku.</string>
-  <string name="permlab_bindCustomTileListenerService">vázat službu na vlastní dlaždici</string>
-  <string name="permdesc_bindCustomTileListenerService">Umožní navázat rozhraní nejvyšší úrovně na službu dlaždice.</string>
   <!-- Labels for the READ_MSIM_PHONE_STATE permission. -->
   <string name="permlab_readMSPhoneState">zobrazit stav telefonu a datové připojení s podporou více SIM</string>
   <string name="permdesc_readMSPhoneState">Umožňuj prohlížet stav telefonu a datového spojení s podporou více SIM.</string>
@@ -54,8 +50,6 @@
   <!-- Labels for the WRITE_SECURE_SETTINGS permission -->
   <string name="permlab_writeSecureSettings">upravit nastavení zabezpečení systému Lineage</string>
   <string name="permdesc_writeSecureSettings">Umožní změnit nastavení zabezpečení systému LineageOS. Není určeno pro normální aplikace.</string>
-  <!-- Label to show for a service that is running because it is observing the user's custom tiles. -->
-  <string name="custom_tile_listener_binding_label">Služba vlastní dlaždice</string>
   <!-- Labels for the PROTECTED_APP permission. -->
   <string name="permlab_protectedApp">přidat nebo odstranit aplikace z chráněných aplikací</string>
   <string name="permdesc_protectedApp">Umožňuje označit aplikace jako chráněné a zamknout je.</string>

@@ -19,14 +19,10 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Label for the LineageOS system components when they are shown to the user. -->
   <string name="lineageos_system_label">LineageOS அமைப்பு</string>
-  <string name="permlab_publishCustomTile">விரைவு அமைப்புகள் பேனல் உள்ளே ஒரு தனிப்பயன் டைலை உருவாக்கு</string>
-  <string name="permdesc_publishCustomTile">ஒரு பயன்பாடானது ஒரு விரைவு அமைப்புகள் டைலை பிரசுரிக்க அனுமதிக்கிறது.</string>
   <string name="permlab_modifyNetworkSettings">அமைப்பின் நெட்வொர்க் அமைப்புகளை மாற்றுதல்</string>
   <string name="permdesc_modifyNetworkSettings">ஒரு பயன்பாடானது விமான பயன்முறைக்கும்   மொபைல் தரவு பிணைய அமைப்புகளுக்கும் மாற்றத்தை ஏற்படுத்த அனுமதிக்கிறது.</string>
   <string name="permlab_modifySoundSettings">கணினி ஒலி அமைப்புகளை மாற்றவும்</string>
   <string name="permdesc_modifySoundSettings">ஒரு பயன்பாடானது இடையூறு பயன்முறை அமைப்புகளுக்கு மாற்றத்தை ஏற்படுத்த அனுமதிக்கிறது.</string>
-  <string name="permlab_bindCustomTileListenerService">தனிப்பயனாக்க டைல் கவனிப்பவர் சேவையுடன் கட்டவும்</string>
-  <string name="permdesc_bindCustomTileListenerService">பயன்பாடானது தனிப்பயனாக்க டைல் கவனிப்பவர் சேவையின் முதல்-நிலை இடைமுகத்தோடு கட்ட அனுமதிக்கிறது.</string>
   <!-- Labels for the READ_MSIM_PHONE_STATE permission. -->
   <string name="permlab_readMSPhoneState">தொலைப்பேசி நிலை மற்றும் தரவு இணைப்பை பல SIMகளுக்கான ஆதரவுடன் காண்க</string>
   <string name="permdesc_readMSPhoneState">பயன்பாடானது தொலைப்பேசி நிலை மற்றும் தரவு இணைப்பை பல SIMகளுக்கான ஆதரவுடன் காண அனுமதிக்கிறது.</string>
@@ -54,8 +50,6 @@
   <!-- Labels for the WRITE_SECURE_SETTINGS permission -->
   <string name="permlab_writeSecureSettings">Lineage பாதுகாப்பான கணினி அமைப்புகளை மாற்றியமை</string>
   <string name="permdesc_writeSecureSettings">ஒரு பயன்பாடானது Lineage பாதுகாப்பான கணினி அமைப்புகளை மாற்றியமைக்க அனுமதிக்கிறது. இயல்பான பயன்பாடுகளின் பயன்பாட்டிற்காக அல்ல</string>
-  <!-- Label to show for a service that is running because it is observing the user's custom tiles. -->
-  <string name="custom_tile_listener_binding_label">தனிப்பயனாக்க டைல் கவனிப்பவர்</string>
   <!-- Labels for the PROTECTED_APP permission. -->
   <string name="permlab_protectedApp">பயன்பாடுகளை பாதுகாக்க பயன்பாடுகளை சேர்க்கவும் மற்றும் அகற்றவும்</string>
   <string name="permdesc_protectedApp">மற்ற பயன்பாடுகள் பாதுகாக்கப்பட்டவை என்று குறிப்பிட்டு அவற்றை பூட்டுவதற்கு ஒரு பயன்பாட்டை அனுமதிக்கிறது.</string>

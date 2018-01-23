@@ -19,14 +19,10 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Label for the LineageOS system components when they are shown to the user. -->
   <string name="lineageos_system_label">LineageOS 시스템</string>
-  <string name="permlab_publishCustomTile">빠른 설정 패널에 사용자 정의 타일 생성</string>
-  <string name="permdesc_publishCustomTile">앱이 빠른 설정 타일을 만들 수 있도록 허용합니다.</string>
   <string name="permlab_modifyNetworkSettings">시스템 네트워크 설정 변경</string>
   <string name="permdesc_modifyNetworkSettings">앱이 비행기 모드와 모바일 데이터 네트워크 설정을 변경할 수 있도록 허용합니다.</string>
   <string name="permlab_modifySoundSettings">시스템 소리 설정 변경</string>
   <string name="permdesc_modifySoundSettings">앱이 알림 차단 모드의 소리 설정을 변경할 수 있도록 허용합니다.</string>
-  <string name="permlab_bindCustomTileListenerService">사용자 정의 타일 확인 서비스에 연결</string>
-  <string name="permdesc_bindCustomTileListenerService">앱이 사용자 정의 타일 확인 서비스의 최상위 인터페이스에 연결하도록 허용합니다.</string>
   <!-- Labels for the READ_MSIM_PHONE_STATE permission. -->
   <string name="permlab_readMSPhoneState">여러 개의 SIM 카드를 지원하면서 휴대전화의 상태와 데이터 연결 상태를 확인</string>
   <string name="permdesc_readMSPhoneState">앱이 여러 개의 SIM 카드를 지원하면서 휴대전화의 상태와 데이터 연결 상태를 확인하도록 허용합니다.</string>
@@ -54,8 +50,6 @@
   <!-- Labels for the WRITE_SECURE_SETTINGS permission -->
   <string name="permlab_writeSecureSettings">Lineage 보안 시스템 설정 수정</string>
   <string name="permdesc_writeSecureSettings">앱이 Lineage 보안 시스템 설정을 수정할 수 있도록 허용합니다. 일반 앱을 위한 것이 아닙니다.</string>
-  <!-- Label to show for a service that is running because it is observing the user's custom tiles. -->
-  <string name="custom_tile_listener_binding_label">사용자 정의 타일 확인</string>
   <!-- Labels for the PROTECTED_APP permission. -->
   <string name="permlab_protectedApp">보호된 앱 추가/제거</string>
   <string name="permdesc_protectedApp">앱이 다른 앱을 보호됨으로 표시하고 잠글 수 있도록 허용합니다.</string>

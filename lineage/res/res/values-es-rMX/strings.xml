@@ -27,7 +27,6 @@
   <!-- Labels for the READ_ALARMS permission. -->
   <!-- Labels for the WRITE_SETTINGS permission -->
   <!-- Labels for the WRITE_SECURE_SETTINGS permission -->
-  <!-- Label to show for a service that is running because it is observing the user's custom tiles. -->
   <!-- Labels for the PROTECTED_APP permission. -->
   <string name="permlab_protectedApp">añadir y quitar aplicaciones a aplicaciones protegidas</string>
   <string name="permdesc_protectedApp">Permite que una aplicación marque a otras aplicaciones como protegidas y las bloquee.</string>

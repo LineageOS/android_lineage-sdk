@@ -19,14 +19,10 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Label for the LineageOS system components when they are shown to the user. -->
   <string name="lineageos_system_label">LineageOS Stelsel</string>
-  <string name="permlab_publishCustomTile">Skep \'n persoonlike teël binne die vinnige instellings paneel</string>
-  <string name="permdesc_publishCustomTile">Laat \'n program toe om \'n vinnige instellings teël te publiseer.</string>
   <string name="permlab_modifyNetworkSettings">verander stelsel se netwerk instellings</string>
   <string name="permdesc_modifyNetworkSettings">Laat \'n toep toe om veranderinge te maak aan vliegtuigmodus en mobiele netwerk instellings.</string>
   <string name="permlab_modifySoundSettings">verander stelsel klank instellings</string>
   <string name="permdesc_modifySoundSettings">Laat \'n toep toe om veranderinge te maak aan die onderbreking modus klank instellings.</string>
-  <string name="permlab_bindCustomTileListenerService">Verbind aan a pasgemaakte teël luisteraar diens</string>
-  <string name="permdesc_bindCustomTileListenerService">Laat toe die program om te bind aan a top vlak koppelvlak van \'n pasgemaakte teël luister diens.</string>
   <!-- Labels for the READ_MSIM_PHONE_STATE permission. -->
   <string name="permlab_readMSPhoneState">kyk na die foon status en data koppeling met ondersteuning na menigvuldige SIMs</string>
   <string name="permdesc_readMSPhoneState">Laat \'n toep toe om te kyk na die foon status en data koppeling met ondersteuning van menigvuldige SIM.</string>
@@ -54,8 +50,6 @@
   <!-- Labels for the WRITE_SECURE_SETTINGS permission -->
   <string name="permlab_writeSecureSettings">verander Lineage veilige instellings</string>
   <string name="permdesc_writeSecureSettings">Laat \'n toep toe om Lineage veilige stelsel instellings te verander. Nie vir gebruik deur normale toeps nie.</string>
-  <!-- Label to show for a service that is running because it is observing the user's custom tiles. -->
-  <string name="custom_tile_listener_binding_label">Pasgemaakte teël luisteraar</string>
   <!-- Labels for the PROTECTED_APP permission. -->
   <string name="permlab_protectedApp">voegby of verwyder toeps na beskermde toeps</string>
   <string name="permdesc_protectedApp">Laat \'n toep toe om ander toeps as beskermde toep te merk en hulle toe te sluit.</string>

@@ -19,14 +19,10 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Label for the LineageOS system components when they are shown to the user. -->
   <string name="lineageos_system_label">Σύστημα LineageOS</string>
-  <string name="permlab_publishCustomTile">δημιουργία προσαρμοσμένου πλακιδίου στον Πίνακα Γρήγορων ρυθμίσεων</string>
-  <string name="permdesc_publishCustomTile">Επιτρέπει σε μία εφαρμογή τη δημιουργία πλακιδίου στον Πίνακα Γρήγορων ρυθμίσεων.</string>
   <string name="permlab_modifyNetworkSettings">αλλαγή ρυθμίσεων δικτύου συστήματος</string>
   <string name="permdesc_modifyNetworkSettings">Επιτρέπει σε μια εφαρμογή να κάνει αλλαγές στις ρυθμίσεις λειτουργίας πτήσης και δεδομένων κινητής τηλεφωνίας.</string>
   <string name="permlab_modifySoundSettings">αλλαγή ρυθμίσεων ήχου συστήματος</string>
   <string name="permdesc_modifySoundSettings">Επιτρέπει σε μια εφαρμογή να κάνει αλλαγές στις ρυθμίσεις ήχου για τις διακοπές.</string>
-  <string name="permlab_bindCustomTileListenerService">σύνδεση σε ένα listener υπηρεσίας προσαρμοσμένων πλακιδίων</string>
-  <string name="permdesc_bindCustomTileListenerService">Επιτρέπει στην εφαρμογή τη σύνδεση στο ανώτατο επίπεδο διασύνδεσης ενός listener υπηρεσίας προσαρμοσμένων πλακιδίων.</string>
   <!-- Labels for the READ_MSIM_PHONE_STATE permission. -->
   <string name="permlab_readMSPhoneState">εμφάνιση κατάστασης του τηλεφώνου και της σύνδεσης δεδομένων με υποστήριξη για πολλαπλές SIM</string>
   <string name="permdesc_readMSPhoneState">Επιτρέπει σε μια εφαρμογή να εμφανίζει την κατάσταση του τηλεφώνου και της σύνδεσης δεδομένων με υποστήριξη για πολλαπλές SIM.</string>
@@ -54,8 +50,6 @@
   <!-- Labels for the WRITE_SECURE_SETTINGS permission -->
   <string name="permlab_writeSecureSettings">τροποποίηση ασφαλών ρυθμίσεων συστήματος Lineage</string>
   <string name="permdesc_writeSecureSettings">Επιτρέπει σε μια εφαρμογή να τροποποιεί τις ασφαλείς ρυθμίσεις συστήματος του Lineage. Δεν χρησιμοποιείται από κανονικές εφαρμογές.</string>
-  <!-- Label to show for a service that is running because it is observing the user's custom tiles. -->
-  <string name="custom_tile_listener_binding_label">Listener προσαρμοσμένων πλακιδίων</string>
   <!-- Labels for the PROTECTED_APP permission. -->
   <string name="permlab_protectedApp">προσθαφαίρεση εφαρμογών στις προστατευμένες εφαρμογές</string>
   <string name="permdesc_protectedApp">Επιτρέπει σε μια εφαρμογή την επισήμανση άλλων εφαρμογών ως προστατευμένων και κλείδωμα τους.</string>

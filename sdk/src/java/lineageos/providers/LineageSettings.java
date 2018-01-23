@@ -2650,19 +2650,6 @@ public final class LineageSettings {
         public static final String QS_SHOW_AUTO_BRIGHTNESS = "qs_show_auto_brightness";
 
         /**
-         * List of QS tile names
-         * @hide
-         */
-        public static final String QS_TILES = "sysui_qs_tiles";
-
-        /**
-         * Use "main" tiles on the first row of the quick settings panel
-         * 0 = no, 1 = yes
-         * @hide
-         */
-        public static final String QS_USE_MAIN_TILES = "sysui_qs_main_tiles";
-
-        /**
          * Global stats collection
          * @hide
          */
@@ -2912,8 +2899,6 @@ public final class LineageSettings {
                 LineageSettings.Secure.POWER_MENU_ACTIONS,
                 LineageSettings.Secure.STATS_COLLECTION,
                 LineageSettings.Secure.QS_SHOW_BRIGHTNESS_SLIDER,
-                LineageSettings.Secure.QS_TILES,
-                LineageSettings.Secure.QS_USE_MAIN_TILES,
                 LineageSettings.Secure.NAVIGATION_RING_TARGETS[0],
                 LineageSettings.Secure.NAVIGATION_RING_TARGETS[1],
                 LineageSettings.Secure.NAVIGATION_RING_TARGETS[2],

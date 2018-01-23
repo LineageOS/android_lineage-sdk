@@ -19,14 +19,10 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Label for the LineageOS system components when they are shown to the user. -->
   <string name="lineageos_system_label">LineageOS સિસ્ટમ</string>
-  <string name="permlab_publishCustomTile">ક્વિક સેટિંગ્સ પૅનલની અંદર કસ્ટમ ટાઇલ સર્જો</string>
-  <string name="permdesc_publishCustomTile">ઍપને ક્વિક સેટિંગ્સ ટાઇલ પ્રકાશિત કરવાની પરવાનગી આપે છે.</string>
   <string name="permlab_modifyNetworkSettings">સિસ્ટમ નેટવર્ક સેટિંગ્સ પરિવર્તન કરો</string>
   <string name="permdesc_modifyNetworkSettings">ઍપને એરપ્લેન મોડ અને મોબાઇલ ડેટા નેટવર્ક સેટિંગ્સમાં પરિવર્તનો કરવાની પરવાનગી આપે છે.</string>
   <string name="permlab_modifySoundSettings">સિસ્ટમ સાઉન્ડ સેટિંગ્સ પરિવર્તન કરો</string>
   <string name="permdesc_modifySoundSettings">ઍપને વિક્ષેપ મોડ સાઉન્ડ સેટિંગ્સમાં પરિવર્તનો કરવાની પરવાનગી આપે છે.</string>
-  <string name="permlab_bindCustomTileListenerService">કસ્ટમ ટાઇલ લિસ્નર સેવા સાથે બાંધો</string>
-  <string name="permdesc_bindCustomTileListenerService">ઍપને કસ્ટમ ટાઇલ લિસ્નર સેવાના ટોચ-સ્તરના ઇન્ટરફેસ સાથે બંધાવાની પરવાનગી આપે છે.</string>
   <!-- Labels for the READ_MSIM_PHONE_STATE permission. -->
   <string name="permlab_readMSPhoneState">બહુવિધ SIMsના સ‌મર્થન સહ ફોન સ્થિતિ અને ડેટા જોડાણ જુઓ</string>
   <string name="permdesc_readMSPhoneState">ઍપને બહુવિધ SIMsના સ‌મર્થન સહ ફોન સ્થિતિ અને ડેટા જોડાણ જોવાની પરવાનગી કરી આપે છે.</string>
@@ -54,8 +50,6 @@
   <!-- Labels for the WRITE_SECURE_SETTINGS permission -->
   <string name="permlab_writeSecureSettings">Lineage સુ‌રક્ષિત સિસ્ટમ સેટિંગ્સમાં ફેરફાર કરો</string>
   <string name="permdesc_writeSecureSettings">ઍપને Lineage સુ‌રક્ષિત સિસ્ટમ સેટિંગ્સમાં ફેરફાર કરવાની પરવાનગી આપે છે. સામાન્ય એપ્સ દ્વારા ઉપયોગ માટે નથી.</string>
-  <!-- Label to show for a service that is running because it is observing the user's custom tiles. -->
-  <string name="custom_tile_listener_binding_label">કસ્ટમ ટાઇલ લિસ્નર</string>
   <!-- Labels for the PROTECTED_APP permission. -->
   <string name="permlab_protectedApp">ઍડ અને કાઢી નાંખો એપ્લિકેશન્સ રક્ષણ કરો</string>
   <string name="permdesc_protectedApp">ઍપને અન્ય એપ્લિકેશન્સ પર સુરક્ષિત તરીકે અંકિત કરી તે લૉક કરવાની છૂટ આપે છે.</string>

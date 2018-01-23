@@ -19,14 +19,10 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Label for the LineageOS system components when they are shown to the user. -->
   <string name="lineageos_system_label">LineageOS Järjestelmä</string>
-  <string name="permlab_publishCustomTile">luo mukautettu tiili pika-asetuspaneeliin</string>
-  <string name="permdesc_publishCustomTile">Sallii sovelluksen julkaista pika-asetustiiliä.</string>
   <string name="permlab_modifyNetworkSettings">muuta järjestelmän verkkoasetuksia</string>
   <string name="permdesc_modifyNetworkSettings">Sallii sovelluksen tehdä muutoksia lentokonetilan ja mobiiliverkon asetuksiin.</string>
   <string name="permlab_modifySoundSettings">muuta järjestelmän ääniasetuksia</string>
   <string name="permdesc_modifySoundSettings">Sallii sovelluksen tehdä muutoksia keskeytystilan ääniasetuksiin.</string>
-  <string name="permlab_bindCustomTileListenerService">kiinnitä mukautettu tiili kuuntelupalveluun</string>
-  <string name="permdesc_bindCustomTileListenerService">Sallii haltijan kiinnittää mukautetun tiilen kuuntelupalvelun käyttöliittymään.</string>
   <!-- Labels for the READ_MSIM_PHONE_STATE permission. -->
   <string name="permlab_readMSPhoneState">tarkastele puhelimen tilaa ja datayhteyttä useamman SIM-kortin tuella</string>
   <string name="permdesc_readMSPhoneState">Sallii sovelluksen tarkastella puhelimen tilaa ja datayhteyden tietoja usean SIM-kortin tuella.</string>
@@ -54,8 +50,6 @@
   <!-- Labels for the WRITE_SECURE_SETTINGS permission -->
   <string name="permlab_writeSecureSettings">muokkaa Lineage-järjestelmän turvallisuusasetuksia</string>
   <string name="permdesc_writeSecureSettings">Sallii sovelluksen muokata Lineage-järjestelmän turvallisuusasetuksia. Ei normaalin sovelluksen käytettäväksi.</string>
-  <!-- Label to show for a service that is running because it is observing the user's custom tiles. -->
-  <string name="custom_tile_listener_binding_label">Mukautetun tiilen kuuntelija</string>
   <!-- Labels for the PROTECTED_APP permission. -->
   <string name="permlab_protectedApp">lisätä ja poistaa suojattuja sovelluksia</string>
   <string name="permdesc_protectedApp">Antaa sovelluksen merkitä muita sovelluksia suojatuiksi ja lukita ne.</string>

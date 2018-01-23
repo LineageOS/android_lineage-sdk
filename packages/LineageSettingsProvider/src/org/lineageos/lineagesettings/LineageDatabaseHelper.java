@@ -368,13 +368,6 @@ public class LineageDatabaseHelper extends SQLiteOpenHelper{
             loadIntegerSetting(stmt, LineageSettings.Secure.DEV_FORCE_SHOW_NAVBAR,
                     R.integer.def_force_show_navbar);
 
-            loadStringSetting(stmt, LineageSettings.Secure.QS_TILES,
-                    org.lineageos.platform.internal.
-                            R.string.config_defaultQuickSettingsTiles);
-
-            loadBooleanSetting(stmt, LineageSettings.Secure.QS_USE_MAIN_TILES,
-                    R.bool.def_sysui_qs_main_tiles);
-
             loadBooleanSetting(stmt, LineageSettings.Secure.STATS_COLLECTION,
                     R.bool.def_stats_collection);
 

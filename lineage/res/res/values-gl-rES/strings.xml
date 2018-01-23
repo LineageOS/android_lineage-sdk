@@ -19,14 +19,10 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Label for the LineageOS system components when they are shown to the user. -->
   <string name="lineageos_system_label">Sistema LineageOS</string>
-  <string name="permlab_publishCustomTile">crear un botón personalizado no panel de axustes rápidos</string>
-  <string name="permdesc_publishCustomTile">Permite a unha aplicación publicar un botón de axustes rápidos.</string>
   <string name="permlab_modifyNetworkSettings">cambiar a configuración de rede do sistema</string>
   <string name="permdesc_modifyNetworkSettings">Permite que unha aplicación cambie ao modo avión e a configuración da rede de datos móbil.</string>
   <string name="permlab_modifySoundSettings">cambiar axustes de sonido</string>
   <string name="permdesc_modifySoundSettings">Permítelle a unha aplicación mudar os axustes de son no modo sen interrupcións.</string>
-  <string name="permlab_bindCustomTileListenerService">vincular a un servizo de escoita personalizado</string>
-  <string name="permdesc_bindCustomTileListenerService">Permítelle á aplicación vincularse á interface superior dun servizo de escoita personalizado.</string>
   <!-- Labels for the READ_MSIM_PHONE_STATE permission. -->
   <string name="permlab_readMSPhoneState">ver o estado do teléfono e a conexión de datos con capacidade para varias tarxetas SIM</string>
   <string name="permdesc_readMSPhoneState">Permítelle a unha aplicación ver o estado do teléfono e conexión de datos con capacidade para varias tarxetas SIM.</string>
@@ -54,8 +50,6 @@
   <!-- Labels for the WRITE_SECURE_SETTINGS permission -->
   <string name="permlab_writeSecureSettings">modificar a configuración de seguridade do sistema Lineage</string>
   <string name="permdesc_writeSecureSettings">Permítelle a unha aplicación modificar a configuración de seguridade do sistema Lineage. As aplicacións normais non deberían utilizar este permiso.</string>
-  <!-- Label to show for a service that is running because it is observing the user's custom tiles. -->
-  <string name="custom_tile_listener_binding_label">Botón de escoita personalizado</string>
   <!-- Labels for the PROTECTED_APP permission. -->
   <string name="permlab_protectedApp">engadir e eliminar apps das aplicacións protexidas</string>
   <string name="permdesc_protectedApp">Permitirlle a unha aplicación marcar outras como protexidas e bloquealas.</string>

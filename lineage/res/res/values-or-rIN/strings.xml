@@ -19,14 +19,10 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Label for the LineageOS system components when they are shown to the user. -->
   <string name="lineageos_system_label">ସିଆନୋଜେନ୍‍ମୋଡ୍‍ ସିଷ୍ଟମ୍‍</string>
-  <string name="permlab_publishCustomTile">ଦ୍ରୁତ ସେଟିଂସମୂହ ପ୍ୟାନେଲ୍‍ ମଧ୍ୟରେ ଏକ କଷ୍ଟମ୍‍ ଟାଇଲ୍‍ ସୃଷ୍ଟି କରନ୍ତୁ</string>
-  <string name="permdesc_publishCustomTile">ଏକ ଦ୍ରୁତ ସେଟିଂସମୂହ ଟାଇଲ୍‍ ପ୍ରକାଶନ କରିବା ପାଇଁ ଆପ୍ଲିକେସନ୍‍କୁ ଅନୁମତି ଦେଇଥାଏ</string>
   <string name="permlab_modifyNetworkSettings">ସିଷ୍ଟମ୍‍ ନେଟ୍‍ୱାର୍କ ସେଟିଂସମୂହ ପରିବର୍ତ୍ତନ କରନ୍ତୁ</string>
   <string name="permdesc_modifyNetworkSettings">ଏକ ଆପ୍ଲିକେସନ୍‍କୁ ବିମାନ ମୋଡ୍‍ରେ ଓ ମୋବାଇଲ୍‍ ଡାଟା ନେଟ୍‍ୱାର୍କ ସେଟିଂସମୂହ‍ରେ ପରିବର୍ତ୍ତନ କରାଇବାକୁ ଅନୁମତି ଦେଇଥାଏ।</string>
   <string name="permlab_modifySoundSettings">ସିଷ୍ଟମ୍‍ ସାଉଣ୍ଡ ସେଟିଂସମୂହ‍ରେ ପରିବର୍ତ୍ତନ କରନ୍ତୁ।</string>
   <string name="permdesc_modifySoundSettings">ଏକ ଆପ୍ଲିକେସନ୍‍କୁ ଇଣ୍ଟରପ୍ସନ୍‍ ମୋଡ୍‍ ସାଉଣ୍ଡ ସେଟିଂସମୂହ‍ରେ ପରିବର୍ତ୍ତନ କରାଇବାକୁ ଅନୁମତି ଦେଇଥାଏ।</string>
-  <string name="permlab_bindCustomTileListenerService">ଏକ କଷ୍ଟମ୍‍ ଟାଇଲ୍‍ ଲିସ୍‍ନର୍‍ ସେବା ସହ ଯୋଡନ୍ତୁ</string>
-  <string name="permdesc_bindCustomTileListenerService">ଏକ କଷ୍ଟମ୍‍ ଟାଇଲ୍‍ ଲିସ୍‍ନର୍‍ ସେବାର ଇଣ୍ଟରଫେସ୍‍ ସହିତ ଆପ୍ଲିକେସନ୍‍କୁ ଯୋଡିବାକୁ ଅନୁମତି ଦିଏ।</string>
   <!-- Labels for the READ_MSIM_PHONE_STATE permission. -->
   <string name="permlab_readMSPhoneState">ଏକାଧିକ SIMର ସମଥନ ସହିତ ଫୋନ୍‍ ଥିତି ଓ ଡାଟା ସଂଯୋଗ ଦେଖନ୍ତୁ</string>
   <string name="permdesc_readMSPhoneState">ଏକାଧିକ SIMର ସମଥନ ସହିତ ଫୋନ୍‍ ସ୍ଥିତି ଓ ଡାଟା ସଂଯୋଗ ଦେଖିବାକୁ ଆପ୍ଲିକେସନ୍‍କୁ ଅନୁମତି ଦିଏ।</string>
@@ -54,8 +50,6 @@
   <!-- Labels for the WRITE_SECURE_SETTINGS permission -->
   <string name="permlab_writeSecureSettings">Lineage ସୁରଷିତ ସିଷ୍ଟମ୍‍ ସେଟିଂସମୂହ ସମ୍ପାଦନା</string>
   <string name="permdesc_writeSecureSettings">Lineage ସୁରଷିତ ସିଷ୍ଟମ୍‍ ସେଟିଂସମୂହ‍ ସମ୍ପାଦନା କରିବାକୁ ଆପ୍ଲିକେସନ୍‍କୁ ଅନୁମତି ଦିଏ। ସାଧାରଣ ଆପ୍ଲିକେସନଗୁଡିକ ଦ୍ଵାରା ବ୍ୟବହାରରେ ନାହିଁ।</string>
-  <!-- Label to show for a service that is running because it is observing the user's custom tiles. -->
-  <string name="custom_tile_listener_binding_label">ଟାଇଲ୍‍ ଲିସ୍‍ନର୍‍ କଷ୍ଟମ୍‍ କରନ୍ତୁ</string>
   <!-- Labels for the PROTECTED_APP permission. -->
   <string name="permlab_protectedApp">ସୁରଷିତ ଆପ୍ଲିକେସନ୍‍ଗୁଡିକରୁ ଆପ୍ଲିକେସନ୍‍କୁ ଯୋଗ ବା ଅପସାରଣ କରନ୍ତୁ</string>
   <string name="permdesc_protectedApp">ଅନ୍ୟ ଆପ୍ଲିକେସନ୍‍ଗୁଡିକ ସୁରଷିତ ଭାବେ ଚିହ୍ନିତ କରିବାକୁ ଓ ସେଗୁଡିକୁ ଲକ୍‍ କରିବା ପାଇଁ ଆପ୍ଲିକେସନ୍‍କୁ ଅନୁମତି ଦିଏ।</string>

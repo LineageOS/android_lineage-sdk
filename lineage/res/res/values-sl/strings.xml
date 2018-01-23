@@ -19,14 +19,10 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Label for the LineageOS system components when they are shown to the user. -->
   <string name="lineageos_system_label">Sistem LineageOS</string>
-  <string name="permlab_publishCustomTile">ustvarjanje ploščice po meri na plošči za Hitre nastavitve</string>
-  <string name="permdesc_publishCustomTile">Dovoli aplikaciji, da objavi ploščico za Hitre nastavitve.</string>
   <string name="permlab_modifyNetworkSettings">spreminjanje sistemskih nastavitev omrežja</string>
   <string name="permdesc_modifyNetworkSettings">Dovoli aplikaciji, da naredi spremembe v načinu za letalo in nastavitvah omrežja mobilnih podatkov.</string>
   <string name="permlab_modifySoundSettings">spreminjanje sistemskih nastavitev zvoka</string>
   <string name="permdesc_modifySoundSettings">Dovoli aplikaciji, da naredi spremembe v zvočnih nastavitvah načina prekinitve.</string>
-  <string name="permlab_bindCustomTileListenerService">veži na storitev poslušalnika ploščic po meri</string>
-  <string name="permdesc_bindCustomTileListenerService">Dovoli aplikaciji, da se veže na vrhnji vmesnik storitve poslušalnika ploščic po meri.</string>
   <!-- Labels for the READ_MSIM_PHONE_STATE permission. -->
   <string name="permlab_readMSPhoneState">ogled stanja telefona in podatkovnih povezav s podporo za več kartic SIM</string>
   <string name="permdesc_readMSPhoneState">Dovoli aplikaciji ogled stanja telefona in podatkovnih povezav s podporo za več kartic SIM.</string>
@@ -54,8 +50,6 @@
   <!-- Labels for the WRITE_SECURE_SETTINGS permission -->
   <string name="permlab_writeSecureSettings">spreminjanje varnih sistemskih nastavitev Lineage</string>
   <string name="permdesc_writeSecureSettings">Dovoli aplikaciji spreminjanje varnih sistemskih nastavitev Lineage. Običajne aplikacije tega ne uporabljajo.</string>
-  <!-- Label to show for a service that is running because it is observing the user's custom tiles. -->
-  <string name="custom_tile_listener_binding_label">Poslušalnik ploščic po meri</string>
   <!-- Labels for the PROTECTED_APP permission. -->
   <string name="permlab_protectedApp">dodajanje in odstranjevanje aplikacij k/iz zaščitenih aplikacij</string>
   <string name="permdesc_protectedApp">Dovoli aplikaciji, da označi druge aplikacije kot zaščitene in jih zaklene.</string>

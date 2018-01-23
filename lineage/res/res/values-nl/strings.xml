@@ -19,14 +19,10 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Label for the LineageOS system components when they are shown to the user. -->
   <string name="lineageos_system_label">LineageOS-systeem</string>
-  <string name="permlab_publishCustomTile">een aangepaste tegel aanmaken in het snelle instellingenpaneel</string>
-  <string name="permdesc_publishCustomTile">Hiermee kan een app een tegel toevoegen aan snelle instellingen.</string>
   <string name="permlab_modifyNetworkSettings">systeemnetwerkinstellingen wijzigen</string>
   <string name="permdesc_modifyNetworkSettings">Hiermee kan de app wijzigingen aanbrengen in de vliegtuigmodus en de mobiele netwerkinstellingen.</string>
   <string name="permlab_modifySoundSettings">systeemgeluidinstellingen wijzigen</string>
   <string name="permdesc_modifySoundSettings">Hiermee kan de app wijzigingen aanbrengen in de onderbrekingsinstellingen van meldingen.</string>
-  <string name="permlab_bindCustomTileListenerService">koppelen aan aangepaste tegel-service</string>
-  <string name="permdesc_bindCustomTileListenerService">Hiermee kan de app koppelen aan de systeeminterface voor het aanmaken van tegels.</string>
   <!-- Labels for the READ_MSIM_PHONE_STATE permission. -->
   <string name="permlab_readMSPhoneState">telefoonstatus en gegevensverbinding bekijken met ondersteuning voor multi-SIM</string>
   <string name="permdesc_readMSPhoneState">Hiermee kan de app de status van de telefoon en de gegevensverbinding weergeven met ondersteuning voor meerdere simkaarten.</string>
@@ -54,8 +50,6 @@
   <!-- Labels for the WRITE_SECURE_SETTINGS permission -->
   <string name="permlab_writeSecureSettings">beveiligde Lineage-systeeminstellingen wijzigen</string>
   <string name="permdesc_writeSecureSettings">Hiermee kan de app de beveiligde systeeminstellingen van Lineage wijzigen. Niet voor gebruik door normale apps.</string>
-  <!-- Label to show for a service that is running because it is observing the user's custom tiles. -->
-  <string name="custom_tile_listener_binding_label">Aangepaste tegel-service</string>
   <!-- Labels for the PROTECTED_APP permission. -->
   <string name="permlab_protectedApp">toevoegen en verwijderen van apps aan beschermde apps</string>
   <string name="permdesc_protectedApp">Hiermee kan de app andere apps als beschermd aanmerken en vergrendelen.</string>

@@ -19,14 +19,10 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Label for the LineageOS system components when they are shown to the user. -->
   <string name="lineageos_system_label">LineageOS Система</string>
-  <string name="permlab_publishCustomTile">създаване на потребителска плочка чрез панел за бързи настройки</string>
-  <string name="permdesc_publishCustomTile">Позволява на приложение да публикува плочка с бързи настройки.</string>
   <string name="permlab_modifyNetworkSettings">промяна на системните мрежови настройки</string>
   <string name="permdesc_modifyNetworkSettings">Позволява да направите промени в самолетния режим и мобилните мрежови настройки.</string>
   <string name="permlab_modifySoundSettings">промени  системните настройки на звука</string>
   <string name="permdesc_modifySoundSettings">Позволява на приложението да направи промени в настройките за прекъсване режим звука.</string>
-  <string name="permlab_bindCustomTileListenerService">свържи с услугата за регистриране на докосвания по потребителските бутони</string>
-  <string name="permdesc_bindCustomTileListenerService">Позволява на приложението връзката с последното ниво на интерфейса на услугата за регистриране на докосвания по потребителските бутони.</string>
   <!-- Labels for the READ_MSIM_PHONE_STATE permission. -->
   <string name="permlab_readMSPhoneState">Прегледайте състоянието на вашият телефон и мрежовите данни с поддръжка на множество СИМ карти</string>
   <string name="permdesc_readMSPhoneState">Разрешаване за достъп на прилажения до информация за състоянието на телефона с поддръжка на множество СИМ карти.</string>
@@ -54,8 +50,6 @@
   <!-- Labels for the WRITE_SECURE_SETTINGS permission -->
   <string name="permlab_writeSecureSettings">Модифициране настройките на Lineage сигурността</string>
   <string name="permdesc_writeSecureSettings">Разрешава на проложението да променя системните настройки на сигурността. Това разрешение не се използва от нормални приложения.</string>
-  <!-- Label to show for a service that is running because it is observing the user's custom tiles. -->
-  <string name="custom_tile_listener_binding_label">Регистратор на допир за потребителските бутони</string>
   <!-- Labels for the PROTECTED_APP permission. -->
   <string name="permlab_protectedApp">Прибави/Премахни приложение към/от списъка със защитени приложения</string>
   <string name="permdesc_protectedApp">Позволява на приложението да маркира други приложения, като защитени и да ги заключва.</string>

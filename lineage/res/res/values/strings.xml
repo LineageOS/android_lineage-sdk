@@ -19,8 +19,6 @@
     <!-- Label for the LineageOS system components when they are shown to the user. -->
     <string name="lineageos_system_label">LineageOS System</string>
 
-    <string name="permlab_publishCustomTile">create a custom tile within quick settings panel</string>
-    <string name="permdesc_publishCustomTile">Allows an app to publish a quick settings tile.</string>
 
     <string name="permlab_modifyNetworkSettings">change system network settings</string>
     <string name="permdesc_modifyNetworkSettings">Allows an app to make changes to the airplane mode and mobile data network settings.</string>
@@ -28,8 +26,6 @@
     <string name="permlab_modifySoundSettings">change system sound settings</string>
     <string name="permdesc_modifySoundSettings">Allows an app to make changes to the interruption mode sound settings.</string>
 
-    <string name="permlab_bindCustomTileListenerService">bind to a custom tile listener service</string>
-    <string name="permdesc_bindCustomTileListenerService">Allows the app to bind to the top-level interface of a custom tile listener service.</string>
 
     <!-- Labels for the READ_MSIM_PHONE_STATE permission. -->
     <string name="permlab_readMSPhoneState">view the phone state and data connection with support to multiple SIMs</string>
@@ -67,8 +63,6 @@
     <string name="permlab_writeSecureSettings">modify Lineage secure system settings</string>
     <string name="permdesc_writeSecureSettings">Allows an app to modify Lineage secure system settings. Not for use by normal apps.</string>
 
-    <!-- Label to show for a service that is running because it is observing the user's custom tiles. -->
-    <string name="custom_tile_listener_binding_label">Custom tile listener</string>
 
     <!-- Labels for the PROTECTED_APP permission. -->
     <string name="permlab_protectedApp">add and remove apps to protected apps</string>

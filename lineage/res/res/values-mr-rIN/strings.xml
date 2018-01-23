@@ -19,14 +19,10 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Label for the LineageOS system components when they are shown to the user. -->
   <string name="lineageos_system_label">LineageOS सिस्टिम</string>
-  <string name="permlab_publishCustomTile">जलद सेटिंग्ज पॅनेलमध्ये एक सानुकूल टाईल तयार करा</string>
-  <string name="permdesc_publishCustomTile">अॅपला एक जलद सेटिंग्ज टाईल प्रकाशित करण्याची परवानगी देते.</string>
   <string name="permlab_modifyNetworkSettings">सिस्टिम नेटवर्क सेटिंग्ज बदला</string>
   <string name="permdesc_modifyNetworkSettings">अॅपला विमान मोड आणि मोबाईल डेटा नेटवर्क सेटिंग्जमध्ये बदल करण्याची परवानगी देते.</string>
   <string name="permlab_modifySoundSettings">सिस्टिम ध्वनी सेटिंग्ज बदला</string>
   <string name="permdesc_modifySoundSettings">अॅपला व्यत्यय मोड ध्वनी सेटिंग्जमध्ये बदल करण्याची परवानगी देते.</string>
-  <string name="permlab_bindCustomTileListenerService">सानुकूल टाईल श्रोता सेवेस बांधा</string>
-  <string name="permdesc_bindCustomTileListenerService">अॅपला सानुकूल टाईल श्रोता सेवेच्या सर्वोच्च-पातळी इंटरफेसला बांधू देते.</string>
   <!-- Labels for the READ_MSIM_PHONE_STATE permission. -->
   <string name="permlab_readMSPhoneState">फोन स्थिती आणि डेटा कनेक्शन अनेक सिम च्या सहयोगाने पाहा</string>
   <string name="permdesc_readMSPhoneState">अॅपला फोन स्थिती आणि डेटा कनेक्शन अनेक सिम च्या सहयोगाने पाहू देते.</string>
@@ -54,8 +50,6 @@
   <!-- Labels for the WRITE_SECURE_SETTINGS permission -->
   <string name="permlab_writeSecureSettings">Lineage सुरक्षित सिस्टिम सेटिंग्ज सुधारित करा</string>
   <string name="permdesc_writeSecureSettings">अॅपला Lineage सुरक्षित सिस्टिम सेटिंग्ज सुधारित करण्याची परवानगी देते. सामान्य अॅपद्वारे वापरासाठी नाही.</string>
-  <!-- Label to show for a service that is running because it is observing the user's custom tiles. -->
-  <string name="custom_tile_listener_binding_label">टाईल श्रोता सानुकूल करा</string>
   <!-- Labels for the PROTECTED_APP permission. -->
   <string name="permlab_protectedApp">संरक्षित अनुप्रयोगांना अनुप्रयोग जोडा आणि काढा</string>
   <string name="permdesc_protectedApp">अनुप्रयोगाला इतर अनुप्रयोगांना संरक्षित म्हणून खूण करू देते आणि त्यांना लॉक करते.</string>

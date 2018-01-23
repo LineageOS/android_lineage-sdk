@@ -19,14 +19,10 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Label for the LineageOS system components when they are shown to the user. -->
   <string name="lineageos_system_label">LineageOS ছিষ্টেম</string>
-  <string name="permlab_publishCustomTile">দ্ৰুত ছেটিংছ পেনেল ভিতৰত এটা কাষ্টম টাইল সৃষ্টি কৰা</string>
-  <string name="permdesc_publishCustomTile">এটা এপ্প্‌ক দ্ৰুত ছেটিং টাইল প্ৰকাশ কৰিবলৈ অনুমতি দিয়ে।</string>
   <string name="permlab_modifyNetworkSettings">ছিষ্টেম নেটৱৰ্ক ছেটিং পৰিৱৰ্তন কৰা</string>
   <string name="permdesc_modifyNetworkSettings">এটা এপ্প্‌ক এয়াৰপ্লেন মোড আৰু ম\'বাইল ডাটা নেটৱৰ্ক ছেটিংছ পৰিৱৰ্তন কৰিবলৈ অনুমতি দিয়ে।</string>
   <string name="permlab_modifySoundSettings">ছিষ্টেম নেটৱৰ্ক ছেটিং পৰিৱৰ্তন কৰা</string>
   <string name="permdesc_modifySoundSettings">এটা এপ্প্‌ক ব্যাঘাত মোড ধ্বনি ছেটিংছ পৰিৱৰ্তন কৰিবলৈ অনুমতি দিয়ে।</string>
-  <string name="permlab_bindCustomTileListenerService">কাষ্টম টাইল শ্ৰোতা সেৱাৰ সৈতে বাইণ্ড</string>
-  <string name="permdesc_bindCustomTileListenerService">এপ্প্‌টোক কাষ্টম টাইল শ্ৰোতা সেৱাৰ শীৰ্ষ-স্তৰৰ ইণ্টাৰফেচৰ সৈতে বাইণ্ড কৰিবলৈ অনুমতি দিয়ে।</string>
   <!-- Labels for the READ_MSIM_PHONE_STATE permission. -->
   <string name="permlab_readMSPhoneState">একাধিক SIMৰ সমৰ্থনত ফোন অৱস্থা আৰু ডাটা সংযোগ চাওক</string>
   <string name="permdesc_readMSPhoneState">এটা এপ্প্‌ক একাধিক SIMৰ সমৰ্থনত ফোন অৱস্থা আৰু ডাটা সংযোগ চাবলৈ অনুমতি দিয়ে।</string>
@@ -54,8 +50,6 @@
   <!-- Labels for the WRITE_SECURE_SETTINGS permission -->
   <string name="permlab_writeSecureSettings">Lineage চিকিওৰ ছিষ্টেম ছেটিংচ সংশোধন কৰক</string>
   <string name="permdesc_writeSecureSettings">এটা এপ্প্‌ক Lineage চিকিওৰ ছিষ্টেম ছেটিং সংশোধন কৰিবলৈ অনুমতি দিয়ে সাধাৰণ এপ্প্‌সমূহৰ ব্যৱহাৰৰ কাৰণে নহয়৷</string>
-  <!-- Label to show for a service that is running because it is observing the user's custom tiles. -->
-  <string name="custom_tile_listener_binding_label">কাষ্টম টাইল শ্ৰোতা</string>
   <!-- Labels for the PROTECTED_APP permission. -->
   <string name="permlab_protectedApp">প্ৰতিৰোধী এপ্প্‌ৰ পৰা এপ্প্‌ যোগ কৰক আৰু আঁতৰ কৰক</string>
   <string name="permdesc_protectedApp">এটা এপ্প্‌ক অন্যান্য এপ্প্‌বোৰ প্ৰতিৰোধী হিচাপে চিহ্নিত কৰিবলৈ আৰু লক কৰিবলৈ অনুমতি দিয়ে।</string>

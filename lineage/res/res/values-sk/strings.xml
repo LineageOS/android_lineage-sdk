@@ -19,14 +19,10 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Label for the LineageOS system components when they are shown to the user. -->
   <string name="lineageos_system_label">Systém LineageOS</string>
-  <string name="permlab_publishCustomTile">vytvoriť vlastnú dlaždicu v paneli rýchlych nastavení</string>
-  <string name="permdesc_publishCustomTile">Umožňuje aplikácii vytvoriť dlaždicu v rýchlych nastaveniach.</string>
   <string name="permlab_modifyNetworkSettings">zmeniť systémové nastavenia siete</string>
   <string name="permdesc_modifyNetworkSettings">Umožňuje aplikácii vykonávať zmeny nastavení režimu v lietadle a mobilného dátového pripojenia.</string>
   <string name="permlab_modifySoundSettings">zmeniť systémové nastavenia zvuku</string>
   <string name="permdesc_modifySoundSettings">Umožňuje aplikácii vykonávať zmeny nastavení zvuku pre režim prerušenia.</string>
-  <string name="permlab_bindCustomTileListenerService">viazať službu na vlastnú dlaždicu</string>
-  <string name="permdesc_bindCustomTileListenerService">Umožňuje aplikácii nadviazať rozhranie najvyššej úrovne na službu dlaždice.</string>
   <!-- Labels for the READ_MSIM_PHONE_STATE permission. -->
   <string name="permlab_readMSPhoneState">zobraziť stav telefónu a dátového pripojenia s podporou viacerých SIM</string>
   <string name="permdesc_readMSPhoneState">Umožňuje aplikácii zobraziť stav telefónu a dátového pripojenia s podporou viacerých SIM.</string>
@@ -54,8 +50,6 @@
   <!-- Labels for the WRITE_SECURE_SETTINGS permission -->
   <string name="permlab_writeSecureSettings">upraviť zabezpečené systémové nastavenia Lineage</string>
   <string name="permdesc_writeSecureSettings">Umožňuje aplikácii zmeniť zabezpečené systémové nastavenia Lineage. Nie je určené pre normálne aplikácie.</string>
-  <!-- Label to show for a service that is running because it is observing the user's custom tiles. -->
-  <string name="custom_tile_listener_binding_label">Zoznam vlastných dlaždíc</string>
   <!-- Labels for the PROTECTED_APP permission. -->
   <string name="permlab_protectedApp">pridať a odobrať aplikácie z chránených aplikácií</string>
   <string name="permdesc_protectedApp">Umožní aplikácii označiť iné aplikácie ako chránené a zamknúť ich.</string>

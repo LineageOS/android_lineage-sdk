@@ -19,14 +19,10 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Label for the LineageOS system components when they are shown to the user. -->
   <string name="lineageos_system_label">LineageOS System</string>
-  <string name="permlab_publishCustomTile">opprett en egendefinert flis i hurtiginnstillingspanelet</string>
-  <string name="permdesc_publishCustomTile">Tillater en app å publisere en hurtiginnstillingsflis.</string>
   <string name="permlab_modifyNetworkSettings">endre innstillingene for nettverk</string>
   <string name="permdesc_modifyNetworkSettings">Tillat en app å gjøre endringer i flymodus og mobildatainnstillinger.</string>
   <string name="permlab_modifySoundSettings">endre systemets lydinnstillinger</string>
   <string name="permdesc_modifySoundSettings">Gir en app tilgang til å gjøre endringer i avbrudd-modus lydinnstillingene.</string>
-  <string name="permlab_bindCustomTileListenerService">binde til en egendefinert flis-lyttertjeneste</string>
-  <string name="permdesc_bindCustomTileListenerService">Tillater at en app kan bindes til det øverste nivået i grensesnittet til en tilpasset flis-lyttertjeneste.</string>
   <!-- Labels for the READ_MSIM_PHONE_STATE permission. -->
   <string name="permlab_readMSPhoneState">vis telefonens status og forbindelse med støtte til flere SIM-kort</string>
   <string name="permdesc_readMSPhoneState">Gir en app tilgang til å se telefonens status og forbindelse med støtte til flere SIM-kort.</string>
@@ -54,8 +50,6 @@
   <!-- Labels for the WRITE_SECURE_SETTINGS permission -->
   <string name="permlab_writeSecureSettings">endre Lineage sikker systeminnstillinger</string>
   <string name="permdesc_writeSecureSettings">Gir en app tilgang til å endre Lineage sikkerhets-systeminnstillinger. Tilgangen bør ikke gis til normale apper.</string>
-  <!-- Label to show for a service that is running because it is observing the user's custom tiles. -->
-  <string name="custom_tile_listener_binding_label">Egendefinerte flis lytter</string>
   <!-- Labels for the PROTECTED_APP permission. -->
   <string name="permlab_protectedApp">gjør apper beskyttet/ubeskyttet</string>
   <string name="permdesc_protectedApp">Tillat en app å merke andre apper som beskyttet og låse dem.</string>

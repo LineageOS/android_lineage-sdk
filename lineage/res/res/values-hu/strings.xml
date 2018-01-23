@@ -19,14 +19,10 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Label for the LineageOS system components when they are shown to the user. -->
   <string name="lineageos_system_label">LineageOS rendszer</string>
-  <string name="permlab_publishCustomTile">egy egyedi csempe létrehozása a gyors beállítások panelen</string>
-  <string name="permdesc_publishCustomTile">Lehetővé teszi az alkalmazás számára, hogy gyors beállítások csempét hozzon létre.</string>
   <string name="permlab_modifyNetworkSettings">rendszer hálózati beállításainak módosítása</string>
   <string name="permdesc_modifyNetworkSettings">Lehetővé teszi az alkalmazás számára, hogy módosítsa a repülőgép üzemmódot és a mobil adathálózat beállításokat.</string>
   <string name="permlab_modifySoundSettings">rendszer hangbeállításainak módosítása</string>
   <string name="permdesc_modifySoundSettings">Lehetővé teszi az alkalmazás számára, hogy módosítsa a zavaró mód hangbeállításait.</string>
-  <string name="permlab_bindCustomTileListenerService">egyéni csempe figyelőszolgáltatáshoz kötés</string>
-  <string name="permdesc_bindCustomTileListenerService">Lehetővé teszi az alkalmazás számára, hogy a legfelső szintű illesztőjéhez kösse az egyéni csempe figyelőszolgáltatást.</string>
   <!-- Labels for the READ_MSIM_PHONE_STATE permission. -->
   <string name="permlab_readMSPhoneState">telefon állapotának és adatkapcsolatának megtekintése több SIM támogatásával</string>
   <string name="permdesc_readMSPhoneState">Lehetővé teszi az alkalmazás számára, hogy megtekintse a telefon állapotát és az adatkapcsolatot több SIM támogatásával.</string>
@@ -54,8 +50,6 @@
   <!-- Labels for the WRITE_SECURE_SETTINGS permission -->
   <string name="permlab_writeSecureSettings">Lineage biztonsági rendszer beállításainak módosítása</string>
   <string name="permdesc_writeSecureSettings">Lehetővé teszi egy alkalmazás számára a Lineage biztonsági rendszer beállításainak módosítását. Szokásos alkalmazások számára nem használható.</string>
-  <!-- Label to show for a service that is running because it is observing the user's custom tiles. -->
-  <string name="custom_tile_listener_binding_label">Egyéni csempe figyelőszolgáltatás</string>
   <!-- Labels for the PROTECTED_APP permission. -->
   <string name="permlab_protectedApp">alkalmazások hozzáadása vagy eltávolítása a védett alkalmazásokból</string>
   <string name="permdesc_protectedApp">Lehetővé teszi az alkalmazás számára más alkalmazások védetté nyilvánítását és azok zárolását.</string>

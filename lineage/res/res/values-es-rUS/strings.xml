@@ -19,14 +19,10 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Label for the LineageOS system components when they are shown to the user. -->
   <string name="lineageos_system_label">Sistema de LineageOS</string>
-  <string name="permlab_publishCustomTile">crea un control personalizado en el panel de ajustes rápidos</string>
-  <string name="permdesc_publishCustomTile">Permite que la aplicación pueda publicar un control de ajustes rápidos.</string>
   <string name="permlab_modifyNetworkSettings">cambiar ajustes de red del sistema</string>
   <string name="permdesc_modifyNetworkSettings">Permite a una aplicación realizar cambios en el modo avión y sobre los ajustes de red de los datos móviles.</string>
   <string name="permlab_modifySoundSettings">cambiar ajustes de sonido del sistema</string>
   <string name="permdesc_modifySoundSettings">Permite a una aplicación realizar cambios a los ajustes de sonido del modo de interrupción.</string>
-  <string name="permlab_bindCustomTileListenerService">unirse a un servicio para escuchar controles personalizados</string>
-  <string name="permdesc_bindCustomTileListenerService">Permitir que la aplicación pueda unirse a una interfaz de alto nivel de un servicio para escuchar controles personalizados.</string>
   <!-- Labels for the READ_MSIM_PHONE_STATE permission. -->
   <string name="permlab_readMSPhoneState">ver el estado del teléfono y la conexión de datos con soporte SIM múltiple</string>
   <string name="permdesc_readMSPhoneState">Permite a una aplicación ver el estado del teléfono y la conexión de datos con soporte SIM múltiple.</string>
@@ -54,8 +50,6 @@
   <!-- Labels for the WRITE_SECURE_SETTINGS permission -->
   <string name="permlab_writeSecureSettings">modificar los ajustes del sistema seguro de Lineage</string>
   <string name="permdesc_writeSecureSettings">Permite que una aplicación modifique los ajustes del sistema seguro de Lineage. No es para el uso de aplicaciones normales.</string>
-  <!-- Label to show for a service that is running because it is observing the user's custom tiles. -->
-  <string name="custom_tile_listener_binding_label">Escucha de control personalizado</string>
   <!-- Labels for the PROTECTED_APP permission. -->
   <string name="permlab_protectedApp">añadir y quitar aplicaciones a aplicaciones protegidas</string>
   <string name="permdesc_protectedApp">Permite que una aplicación marque a otras aplicaciones como protegidas y las bloquee.</string>

@@ -19,14 +19,10 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Label for the LineageOS system components when they are shown to the user. -->
   <string name="lineageos_system_label">Sistem LineageOS</string>
-  <string name="permlab_publishCustomTile">creează un chenar personalizat în panoul de setări rapide</string>
-  <string name="permdesc_publishCustomTile">Permite unei aplicații să publice un chenar de setări rapide.</string>
   <string name="permlab_modifyNetworkSettings">modifică setările de rețea ale sistemului</string>
   <string name="permdesc_modifyNetworkSettings">Permite unei aplicații să modifice modul avion și setările de date mobile.</string>
   <string name="permlab_modifySoundSettings">modifică setările de sunet ale sistemului</string>
   <string name="permdesc_modifySoundSettings">Permite unei aplicații să facă modificări în setările modului de întrerupere al sunetului.</string>
-  <string name="permlab_bindCustomTileListenerService">leagă de un chenar personalizat al serviciului de ascultare</string>
-  <string name="permdesc_bindCustomTileListenerService">Permite unei aplicații să se lege de interfața de nivel superior a unui chenar personalizat al serviciului de ascultare.</string>
   <!-- Labels for the READ_MSIM_PHONE_STATE permission. -->
   <string name="permlab_readMSPhoneState">citește starea telefonului și a conexiunii de date cu suport pentru SIM-uri multiple</string>
   <string name="permdesc_readMSPhoneState">Permite unei aplicații să citească starea telefonului și a conexiunii de date cu suport pentru SIM-uri multiple.</string>
@@ -54,8 +50,6 @@
   <!-- Labels for the WRITE_SECURE_SETTINGS permission -->
   <string name="permlab_writeSecureSettings">modifică setările de siguranță sistem Lineage</string>
   <string name="permdesc_writeSecureSettings">Permite unei aplicații să modifice setările de sistem Lineage sigure. Nu este utilizabilă de către aplicațiile normale.</string>
-  <!-- Label to show for a service that is running because it is observing the user's custom tiles. -->
-  <string name="custom_tile_listener_binding_label">Urmăritor de chenar personalizat</string>
   <!-- Labels for the PROTECTED_APP permission. -->
   <string name="permlab_protectedApp">adăugați sau eliminați aplicații din aplicațiile protejate</string>
   <string name="permdesc_protectedApp">Permite unei aplicații să marcheze alte aplicații ca protejate și să le blocheze.</string>

@@ -19,14 +19,10 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Label for the LineageOS system components when they are shown to the user. -->
   <string name="lineageos_system_label">LineageOS sustav</string>
-  <string name="permlab_publishCustomTile">stvori prilagođenu pločicu u brzim postavkama</string>
-  <string name="permdesc_publishCustomTile">Dopušta aplikaciji da stvori pločicu u brzim postavkama.</string>
   <string name="permlab_modifyNetworkSettings">promijeni sistemske postavke mreže</string>
   <string name="permdesc_modifyNetworkSettings">Dopušta aplikaciji mijenjanje postavki za zrakoplovni način i mobilne podatke.</string>
   <string name="permlab_modifySoundSettings">promijeni postavke zvukova sustava</string>
   <string name="permdesc_modifySoundSettings">Dopušta aplikaciji promijeniti postavke za mod prekidanja zvuka.</string>
-  <string name="permlab_bindCustomTileListenerService">vezuje za zadanu pločicu usluga nadgledanja</string>
-  <string name="permdesc_bindCustomTileListenerService">Omogućuje aplikaciji da se veže za sučelje najviše razine prilagođene pločice usluga nadgledanja.</string>
   <!-- Labels for the READ_MSIM_PHONE_STATE permission. -->
   <string name="permlab_readMSPhoneState">prikaz stanja telefona i veze uz podršku za više SIM-ova</string>
   <string name="permdesc_readMSPhoneState">Dopušta aplikaciji prikaz stanja telefona i veze uz podršku za više SIM-ova.</string>
@@ -54,8 +50,6 @@
   <!-- Labels for the WRITE_SECURE_SETTINGS permission -->
   <string name="permlab_writeSecureSettings">promijeni Lineage postavke sigurnosti sustava</string>
   <string name="permdesc_writeSecureSettings">Dopušta aplikaciji da promjeni Lineage postavke sigurnosti sustava. Nije za korištenje kod normalnih aplikacija.</string>
-  <!-- Label to show for a service that is running because it is observing the user's custom tiles. -->
-  <string name="custom_tile_listener_binding_label">Prilagođena pločica nadgledanja</string>
   <!-- Labels for the PROTECTED_APP permission. -->
   <string name="permlab_protectedApp">dodavanje ili uklanjanje aplikacije za zaštićene aplikacije</string>
   <string name="permdesc_protectedApp">Omogućuje aplikaciji da označi druge aplikacije kao zaštićene i zaključa ih.</string>

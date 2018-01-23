@@ -19,14 +19,10 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Label for the LineageOS system components when they are shown to the user. -->
   <string name="lineageos_system_label">LineageOS Sistemi</string>
-  <string name="permlab_publishCustomTile">hızlı ayarlar paneli içinde özel bir kare oluştur</string>
-  <string name="permdesc_publishCustomTile">Uygulamalara hızlı ayarlar karesi oluşturma izni verir.</string>
   <string name="permlab_modifyNetworkSettings">sistem ağ ayarlarını değiştir</string>
   <string name="permdesc_modifyNetworkSettings">Uygulamalara uçak modunu ve mobil veri şebeke ayarlarını değiştirme izni verir.</string>
   <string name="permlab_modifySoundSettings">sistem ses ayarlarını değiştir</string>
   <string name="permdesc_modifySoundSettings">Kesme modu, uygulamaya ses ayarlarını değiştirme izni verir.</string>
-  <string name="permlab_bindCustomTileListenerService">özel bir kare takip hizmetine bağla</string>
-  <string name="permdesc_bindCustomTileListenerService">Uygulamanın özel bir kare takip hizmetinin üst düzey arayüzüne bağlanmasına izin verir.</string>
   <!-- Labels for the READ_MSIM_PHONE_STATE permission. -->
   <string name="permlab_readMSPhoneState">telefon durumunu ve çoklu SIMler ile veri bağlantısı desteğini görüntüle</string>
   <string name="permdesc_readMSPhoneState">Uygulamalara telefon durumunu ve çoklu SIMler ile veri bağlantısı desteğini görüntüleme imkanı verir.</string>
@@ -54,8 +50,6 @@
   <!-- Labels for the WRITE_SECURE_SETTINGS permission -->
   <string name="permlab_writeSecureSettings">Lineage güvenli sistem ayarlarını değiştir</string>
   <string name="permdesc_writeSecureSettings">Uygulamalara Lineage güvenli sistem ayarlarını değiştirme izni verir. Normal uygulamalar için değildir.</string>
-  <!-- Label to show for a service that is running because it is observing the user's custom tiles. -->
-  <string name="custom_tile_listener_binding_label">Özel kare takipçisi</string>
   <!-- Labels for the PROTECTED_APP permission. -->
   <string name="permlab_protectedApp">korunan uygulamalara uygulama ekle ya da kaldır</string>
   <string name="permdesc_protectedApp">Uygulamalara diğer uygulamaları korunan uygulama olarak işaretleme ve kilitleme izni verir.</string>

@@ -36,20 +36,6 @@
 
     <protected-broadcast android:name="lineageos.platform.intent.action.UPDATE_TWILIGHT_STATE" />
 
-    <!-- Must be required by an, to ensure that only the system can bind to it.
-         @hide -->
-    <permission android:name="lineageos.permission.BIND_CUSTOM_TILE_LISTENER_SERVICE"
-                android:label="@string/permlab_bindCustomTileListenerService"
-                android:description="@string/permdesc_bindCustomTileListenerService"
-                android:protectionLevel="signature" />
-
-    <!-- Allows a 3rd party application to publish or unpublish a quick settings tile -->
-    <permission android:name="lineageos.permission.PUBLISH_CUSTOM_TILE"
-                android:label="@string/permlab_publishCustomTile"
-                android:description="@string/permdesc_publishCustomTile"
-                android:icon="@drawable/ic_launcher_lineageos"
-                android:protectionLevel="normal" />
-
     <!-- Allows an app to make changes to the airplane mode and mobile data network settings -->
     <permission android:name="lineageos.permission.MODIFY_NETWORK_SETTINGS"
                 android:label="@string/permlab_modifyNetworkSettings"

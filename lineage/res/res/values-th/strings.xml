@@ -19,14 +19,10 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Label for the LineageOS system components when they are shown to the user. -->
   <string name="lineageos_system_label">ระบบ LineageOS</string>
-  <string name="permlab_publishCustomTile">สร้างไทล์ที่กำหนดเองในแผงการตั้งค่าแบบรวดเร็ว</string>
-  <string name="permdesc_publishCustomTile">อนุญาตให้แอปแสดงไทล์การตั้งค่าแบบรวดเร็ว</string>
   <string name="permlab_modifyNetworkSettings">เปลี่ยนการตั้งค่าเครือข่ายระบบ</string>
   <string name="permdesc_modifyNetworkSettings">อนุญาตให้แอปทำการเปลี่ยนแปลงโหมดเครื่องบินและการตั้งค่าเครือข่ายข้อมูลมือถือ</string>
   <string name="permlab_modifySoundSettings">เปลี่ยนการตั้งค่าเสียงของระบบ</string>
   <string name="permdesc_modifySoundSettings">อนุญาตให้แอปทำการเปลี่ยนแปลงการตั้งค่าเสียงโหมดการหยุดชะงัก</string>
-  <string name="permlab_bindCustomTileListenerService">ผูกมัดไว้กับบริการผู้ฟังของไทล์ที่กำหนดเอง</string>
-  <string name="permdesc_bindCustomTileListenerService">อนุญาตให้แอปผูกตัวเองไว้กับอินเตอร์เฟซระดับบนของบริการสำหรับไทล์ที่กำหนดเอง</string>
   <!-- Labels for the READ_MSIM_PHONE_STATE permission. -->
   <string name="permlab_readMSPhoneState">ดูสถานะและการเชื่อมต่อข้อมูลของโทรศัพท์ด้วยการให้ความช่วยเหลือกับ SIM หลายอัน</string>
   <string name="permdesc_readMSPhoneState">อนุญาตให้แอปดูสถานะและการเชื่อมต่อข้อมูลของโทรศัพท์ด้วยการให้ความช่วยเหลือกับ SIM หลายอัน</string>
@@ -54,8 +50,6 @@
   <!-- Labels for the WRITE_SECURE_SETTINGS permission -->
   <string name="permlab_writeSecureSettings">ปรับแต่งการตั้งค่าระบบความปลอดภัยของ Lineage</string>
   <string name="permdesc_writeSecureSettings">อนุญาตให้แอปปรับแต่งการตั้งค่าระบบความปลอดภัยของ Lineage ไม่ใช่เพื่อให้แอปปกตินำไปใช้</string>
-  <!-- Label to show for a service that is running because it is observing the user's custom tiles. -->
-  <string name="custom_tile_listener_binding_label">บริการกำหนดเองของไทล์</string>
   <!-- Labels for the PROTECTED_APP permission. -->
   <string name="permlab_protectedApp">เพิ่มและลบแอปจากแอปที่ได้รับการป้องกัน</string>
   <string name="permdesc_protectedApp">อนุญาคให้แอปทำเครื่องหมายว่าแอปอื่นได้รับการป้องกันและล็อคมันไว้</string>

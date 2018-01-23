@@ -19,14 +19,10 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Label for the LineageOS system components when they are shown to the user. -->
   <string name="lineageos_system_label">Sistema LineageOS</string>
-  <string name="permlab_publishCustomTile">criar um mosaico personalizado no painel de definições rápidas</string>
-  <string name="permdesc_publishCustomTile">Permite que uma aplicação publique um mosaico de definições rápidas.</string>
   <string name="permlab_modifyNetworkSettings">alterar as definições de rede do sistema</string>
   <string name="permdesc_modifyNetworkSettings">Permite que uma aplicação altere o estado do modo de avião e as definições dos dados móveis.</string>
   <string name="permlab_modifySoundSettings">alterar as definições de som do sistema</string>
   <string name="permdesc_modifySoundSettings">Permite que uma aplicação faça alterações às definições do modo de interrupção do som.</string>
-  <string name="permlab_bindCustomTileListenerService">vincular a um serviço de escuta de mosaicos personalizados</string>
-  <string name="permdesc_bindCustomTileListenerService">Permite que a aplicação se vincule a uma interface de nível superior de um serviço de escuta de mosaico personalizado.</string>
   <!-- Labels for the READ_MSIM_PHONE_STATE permission. -->
   <string name="permlab_readMSPhoneState">ver o estado do telefone e a ligação de dados com suporte para vários cartões SIM</string>
   <string name="permdesc_readMSPhoneState">Permite que uma aplicação veja o estado do telefone e a ligação de dados com suporte para vários cartões SIM.</string>
@@ -54,8 +50,6 @@
   <!-- Labels for the WRITE_SECURE_SETTINGS permission -->
   <string name="permlab_writeSecureSettings">modificar as definições de sistema seguro Lineage</string>
   <string name="permdesc_writeSecureSettings">Permite que uma aplicação modifique as definições de sistema seguro Lineage. Nunca deverá ser necessário para aplicações normais.</string>
-  <!-- Label to show for a service that is running because it is observing the user's custom tiles. -->
-  <string name="custom_tile_listener_binding_label">Escuta de mosaicos personalizados</string>
   <!-- Labels for the PROTECTED_APP permission. -->
   <string name="permlab_protectedApp">adicionar ou remover aplicações às aplicações protegidas</string>
   <string name="permdesc_protectedApp">Permite que uma aplicação marque outras aplicações como protegidas e as bloqueie.</string>

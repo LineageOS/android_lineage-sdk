@@ -19,14 +19,10 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Label for the LineageOS system components when they are shown to the user. -->
   <string name="lineageos_system_label">Hệ thống LineageOS</string>
-  <string name="permlab_publishCustomTile">tạo một ô tùy chỉnh trong bảng cài đặt nhanh</string>
-  <string name="permdesc_publishCustomTile">Cho phép một ứng dụng taọ ô mới trong cài đặt nhanh.</string>
   <string name="permlab_modifyNetworkSettings">thay đổi cài đặt hệ thống mạng</string>
   <string name="permdesc_modifyNetworkSettings">Cho phép ứng dụng thay đổi cài đặt chế độ máy bay và mạng dữ liệu di động.</string>
   <string name="permlab_modifySoundSettings">thay đổi cài đặt âm thanh hệ thống</string>
   <string name="permdesc_modifySoundSettings">Cho phép ứng dụng thay đổi cài đặt âm thanh chế độ gián đoạn.</string>
-  <string name="permlab_bindCustomTileListenerService">liên kết với một dịch vụ lắng nghe ô tùy chỉnh</string>
-  <string name="permdesc_bindCustomTileListenerService">Cho phép ứng dụng liên kết với giao diện cấp cao nhất của dịch vụ lắng nghe ô tuỳ chỉnh.</string>
   <!-- Labels for the READ_MSIM_PHONE_STATE permission. -->
   <string name="permlab_readMSPhoneState">xem tình trạng điện thoại và kết nối dữ liệu với hỗ trợ đa SIM</string>
   <string name="permdesc_readMSPhoneState">Cho phép ứng dụng xem tình trạng điện thoại và kết nối dữ liệu với hỗ trợ đa SIM.</string>
@@ -54,8 +50,6 @@
   <!-- Labels for the WRITE_SECURE_SETTINGS permission -->
   <string name="permlab_writeSecureSettings">sửa đổi cài đặt hệ thống an toàn Lineage</string>
   <string name="permdesc_writeSecureSettings">Cho phép ứng dụng sửa đổi cài đặt hệ thống an toàn Lineage. Không cho ứng dụng bình thường sử dụng.</string>
-  <!-- Label to show for a service that is running because it is observing the user's custom tiles. -->
-  <string name="custom_tile_listener_binding_label">Lắng nghe ô tuỳ chỉnh</string>
   <!-- Labels for the PROTECTED_APP permission. -->
   <string name="permlab_protectedApp">thêm và xoá ứng dụng trong danh sách ứng dụng được bảo vệ</string>
   <string name="permdesc_protectedApp">Cho phép ứng dụng đánh dấu ứng dụng khác là được bảo vệ và khoá chúng.</string>

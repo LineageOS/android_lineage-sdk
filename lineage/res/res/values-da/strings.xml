@@ -19,14 +19,10 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Label for the LineageOS system components when they are shown to the user. -->
   <string name="lineageos_system_label">LineageOS System</string>
-  <string name="permlab_publishCustomTile">opret en brugerdefineret flise i panelet til hurtige indstillinger</string>
-  <string name="permdesc_publishCustomTile">Tillader en app at lave en flise med hurtig indstilling.</string>
   <string name="permlab_modifyNetworkSettings">ændre indstillinger for system netværk</string>
   <string name="permdesc_modifyNetworkSettings">Tillader en app at foretage ændringer i flytilstand og netværksopsætning for mobildata.</string>
   <string name="permlab_modifySoundSettings">ændre systemets lydindstillinger</string>
   <string name="permdesc_modifySoundSettings">Tillader en app at foretage ændringer i indstillingerne for tilstanden lydafbrydelse.</string>
-  <string name="permlab_bindCustomTileListenerService">forbind til en tilpasset fliseservice-lytter</string>
-  <string name="permdesc_bindCustomTileListenerService">Tillader en app at oprette forbindelse til brugerfladen på højeste niveau i en tilpasset fliseservice-lytter.</string>
   <!-- Labels for the READ_MSIM_PHONE_STATE permission. -->
   <string name="permlab_readMSPhoneState">se status for forbindelse og data med understøttelse af flere SIM-kort</string>
   <string name="permdesc_readMSPhoneState">Gør det muligt for en app at se status for forbindelse og data med understøttelse af flere SIM-kort.</string>
@@ -54,8 +50,6 @@
   <!-- Labels for the WRITE_SECURE_SETTINGS permission -->
   <string name="permlab_writeSecureSettings">ændre systemindstillinger for Lineage sikkerhed</string>
   <string name="permdesc_writeSecureSettings">Tillader en app at ændre systemindstillinger for Lineage sikkerhed. Bør ikke anvendes til normale apps.</string>
-  <!-- Label to show for a service that is running because it is observing the user's custom tiles. -->
-  <string name="custom_tile_listener_binding_label">Tilpasset fliseservice-lytter</string>
   <!-- Labels for the PROTECTED_APP permission. -->
   <string name="permlab_protectedApp">tilføj og fjern apps til beskyttet apps</string>
   <string name="permdesc_protectedApp">Tillader en app at markere andre apps som beskyttet samt låse dem.</string>

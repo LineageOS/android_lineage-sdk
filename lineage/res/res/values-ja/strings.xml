@@ -19,14 +19,10 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Label for the LineageOS system components when they are shown to the user. -->
   <string name="lineageos_system_label">LineageOS システム</string>
-  <string name="permlab_publishCustomTile">クイック設定パネルでのカスタムタイルの作成</string>
-  <string name="permdesc_publishCustomTile">クイック設定タイルの作成をアプリに許可します</string>
   <string name="permlab_modifyNetworkSettings">システムのネットワークの設定の変更</string>
   <string name="permdesc_modifyNetworkSettings">機内モードとモバイルデータネットワークの設定を変更することをアプリに許可します。</string>
   <string name="permlab_modifySoundSettings">システムの音の設定</string>
   <string name="permdesc_modifySoundSettings">サイレントモードの音の設定を変更することをアプリに許可します。</string>
-  <string name="permlab_bindCustomTileListenerService">カスタムタイルリスナーサービスのバインド</string>
-  <string name="permdesc_bindCustomTileListenerService">カスタムタイルリスナーサービスのトップレベルインターフェースへのバインドをアプリに許可します</string>
   <!-- Labels for the READ_MSIM_PHONE_STATE permission. -->
   <string name="permlab_readMSPhoneState">マルチSIMをサポートする端末の状態とデータ接続の表示</string>
   <string name="permdesc_readMSPhoneState">マルチSIMをサポートする端末の状態とデータ接続の表示をアプリに許可します。</string>
@@ -54,8 +50,6 @@
   <!-- Labels for the WRITE_SECURE_SETTINGS permission -->
   <string name="permlab_writeSecureSettings">LineageOS セキュアシステム設定の変更</string>
   <string name="permdesc_writeSecureSettings">LineageOS セキュアシステム設定の変更をアプリに許可します。通常のアプリ用ではありません。</string>
-  <!-- Label to show for a service that is running because it is observing the user's custom tiles. -->
-  <string name="custom_tile_listener_binding_label">カスタムタイルリスナー</string>
   <!-- Labels for the PROTECTED_APP permission. -->
   <string name="permlab_protectedApp">アプリの保護へのアプリの追加と削除</string>
   <string name="permdesc_protectedApp">他のアプリを保護に設定してロックすることをアプリに許可します。</string>

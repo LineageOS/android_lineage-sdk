@@ -19,14 +19,10 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Label for the LineageOS system components when they are shown to the user. -->
   <string name="lineageos_system_label">Сістэма LineageOS</string>
-  <string name="permlab_publishCustomTile">Стварэнне самавольных плітак у панэлі хуткіх налад</string>
-  <string name="permdesc_publishCustomTile">Дадатак зможа дадаваць пліткі ў панэль хуткіх налад.</string>
   <string name="permlab_modifyNetworkSettings">Змена сеціўных налад сістэмы</string>
   <string name="permdesc_modifyNetworkSettings">Дадатак дазваляе змяняць рэжымы: лёту і мабільнай перадачы дадзеных.</string>
   <string name="permlab_modifySoundSettings">Змена гукавых налад сістэмы</string>
   <string name="permdesc_modifySoundSettings">Дазваляе дадатку змяняць рэжым: перапынення гуку.</string>
-  <string name="permlab_bindCustomTileListenerService">Прывязка да службы слухача карыстацкіх плітак</string>
-  <string name="permdesc_bindCustomTileListenerService">Дазваляе карыстальніку ўсталёўваць прывязку да інтэрфейсу верхняга роўня службы слухача карыстацкіх плітак.</string>
   <!-- Labels for the READ_MSIM_PHONE_STATE permission. -->
   <string name="permlab_readMSPhoneState">прагляд стану тэлефона і перадачы дадзеных з падтрымкай некалькіх SIM-карт</string>
   <string name="permdesc_readMSPhoneState">Дазволіць дадатку доступ да інфармацыі пра стан тэлефона і перадачы дадзеных з падтрымкай некалькіх SIM-карт.</string>
@@ -54,8 +50,6 @@
   <!-- Labels for the WRITE_SECURE_SETTINGS permission -->
   <string name="permlab_writeSecureSettings">змяняць параметры бяспекі сістэмы</string>
   <string name="permdesc_writeSecureSettings">Дадатак зможа змяняць абароненыя налады сістэмы. Гэты дазвол не выкарыстоўваецца звычайнымі дадаткамі.</string>
-  <!-- Label to show for a service that is running because it is observing the user's custom tiles. -->
-  <string name="custom_tile_listener_binding_label">Слухач карыстацкіх плітак</string>
   <!-- Labels for the PROTECTED_APP permission. -->
   <string name="permlab_protectedApp">даданне і выдаленне запісаў пераліку абароненых дадаткаў</string>
   <string name="permdesc_protectedApp">Дадатак зможа адзначаць іншыя дадаткі як абароненыя і блакаваць іх.</string>

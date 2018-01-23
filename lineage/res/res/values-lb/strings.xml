@@ -19,12 +19,8 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Label for the LineageOS system components when they are shown to the user. -->
   <string name="lineageos_system_label">LineageOS-System</string>
-  <string name="permlab_publishCustomTile">eng Kachel an de séieren Astellungen uweisen</string>
-  <string name="permdesc_publishCustomTile">Erlaabt der App, eng Kachel an de séieren Astellungen uweisen.</string>
   <string name="permlab_modifyNetworkSettings">Netzwierkastellunge vum System änneren</string>
   <string name="permlab_modifySoundSettings">Tounastellunge vum System änneren</string>
-  <string name="permlab_bindCustomTileListenerService">en eegenene Kachel-Lauschter-Service ubannen</string>
-  <string name="permdesc_bindCustomTileListenerService">Erlaabt der App, sech op dem ieweschtem Niveau un d\'Schnëttstell vun engem Kachel-Lauschter-Service unzebannen.</string>
   <!-- Labels for the READ_MSIM_PHONE_STATE permission. -->
   <string name="permlab_readMSPhoneState">Systemstatus an Dateconnectioun op Ënnerstëtzung vu méi SIM-Kaarten iwwerpréiwen</string>
   <string name="permdesc_readMSPhoneState">Erlaabt der App, de Systemstatus an d\'Dateconnectioun op Ënnerstëtzung vu méi SIM-Kaarten z\'iwwerpréiwen.</string>
@@ -40,8 +36,6 @@
   <!-- Labels for the READ_ALARMS permission. -->
   <!-- Labels for the WRITE_SETTINGS permission -->
   <!-- Labels for the WRITE_SECURE_SETTINGS permission -->
-  <!-- Label to show for a service that is running because it is observing the user's custom tiles. -->
-  <string name="custom_tile_listener_binding_label">Eegene Kachel-Lauschter-Service</string>
   <!-- Labels for the PROTECTED_APP permission. -->
   <!-- Profiles -->
   <!-- Names of default profiles. -->

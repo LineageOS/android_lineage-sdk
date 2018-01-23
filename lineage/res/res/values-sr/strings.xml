@@ -19,14 +19,10 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Label for the LineageOS system components when they are shown to the user. -->
   <string name="lineageos_system_label">Систем LineageOS</string>
-  <string name="permlab_publishCustomTile">прављење прилагођених плочица на панелу са брзим подешавањима</string>
-  <string name="permdesc_publishCustomTile">Апликација може да додаје плочице на панел са брзим подешавањима.</string>
   <string name="permlab_modifyNetworkSettings">промена мрежних подешавања система</string>
   <string name="permdesc_modifyNetworkSettings">Апликација може да мења подешавања режима рада у авиону и мобилне мреже за пренос података.</string>
   <string name="permlab_modifySoundSettings">промена подешавања звука система</string>
   <string name="permdesc_modifySoundSettings">Апликација може да мења подешавања звука за режим обавештења.</string>
-  <string name="permlab_bindCustomTileListenerService">повезивање са услугом за надгледање прилагођених плочица</string>
-  <string name="permdesc_bindCustomTileListenerService">Апликација може да успостави везу са интерфејсом највишег нивоа за услугу надгледања прилагођених плочица.</string>
   <!-- Labels for the READ_MSIM_PHONE_STATE permission. -->
   <string name="permlab_readMSPhoneState">преглед стања телефона и преноса података са подршком за више SIM картица</string>
   <string name="permdesc_readMSPhoneState">Апликација може да приступа информацијама о стању телефона и преносу података са подршком за више SIM картица.</string>
@@ -54,8 +50,6 @@
   <!-- Labels for the WRITE_SECURE_SETTINGS permission -->
   <string name="permlab_writeSecureSettings">мењање подешавања безбедности система</string>
   <string name="permdesc_writeSecureSettings">Апликација може да мења подешавања безбедности система. Ова дозвола није потребна нормалним апликацијама.</string>
-  <!-- Label to show for a service that is running because it is observing the user's custom tiles. -->
-  <string name="custom_tile_listener_binding_label">Надгледање прилагођених плочица</string>
   <!-- Labels for the PROTECTED_APP permission. -->
   <string name="permlab_protectedApp">додавање и уклањање апликација са списка заштићених</string>
   <string name="permdesc_protectedApp">Апликација може да означава друге апликације као заштићене и закључа их.</string>

@@ -19,8 +19,6 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Label for the LineageOS system components when they are shown to the user. -->
   <string name="lineageos_system_label">Sistemi LineageOS</string>
-  <string name="permlab_publishCustomTile">krijo një tjegull të personalizuar brenda panelit të parametrave të shpejtë</string>
-  <string name="permdesc_publishCustomTile">Lejo një aplikacion që të publikojë një tjegull të parametrave të shpejtë.</string>
   <string name="permlab_modifyNetworkSettings">ndrysho parametrat e rrjetit të sistemit</string>
   <string name="permdesc_modifyNetworkSettings">Lejon një aplikacion që bëjë ndryshime në parametrat e profilit Avion dhe në ato të rrjetit të internetit të celularit.</string>
   <string name="permlab_modifySoundSettings">ndrysho parametrat e tingujve të sistemit</string>
@@ -40,7 +38,6 @@
   <string name="permlab_writeSettings">modifiko parametrat e sistemit Lineage</string>
   <string name="permdesc_writeSettings">Lejon një aplikacion që të modifikojë parametrat e sistemit Lineage.</string>
   <!-- Labels for the WRITE_SECURE_SETTINGS permission -->
-  <!-- Label to show for a service that is running because it is observing the user's custom tiles. -->
   <!-- Labels for the PROTECTED_APP permission. -->
   <string name="permdesc_protectedApp">Lejon një aplikacion që t\'i etiketojë aplikacionet e tjera si të mbrojtura dhe t\'i bllokojë ato.</string>
   <!-- Profiles -->

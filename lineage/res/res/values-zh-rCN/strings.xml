@@ -19,14 +19,10 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Label for the LineageOS system components when they are shown to the user. -->
   <string name="lineageos_system_label">LineageOS 系统</string>
-  <string name="permlab_publishCustomTile">在快速设置面板中创建一个自定义瓷块</string>
-  <string name="permdesc_publishCustomTile">允许应用发布一个快速设置瓷片。</string>
   <string name="permlab_modifyNetworkSettings">更改系统网络设置</string>
   <string name="permdesc_modifyNetworkSettings">允许应用修改飞行模式和移动数据网络设置。</string>
   <string name="permlab_modifySoundSettings">修改系统声音设置</string>
   <string name="permdesc_modifySoundSettings">允许应用修改打扰模式的声音设置。</string>
-  <string name="permlab_bindCustomTileListenerService">绑定到自定义瓷片侦听器服务</string>
-  <string name="permdesc_bindCustomTileListenerService">允许应用绑定到自定义瓷片侦听器服务的顶层界面。</string>
   <!-- Labels for the READ_MSIM_PHONE_STATE permission. -->
   <string name="permlab_readMSPhoneState">查看支持多 SIM 卡的手机状态和数据连接</string>
   <string name="permdesc_readMSPhoneState">允许应用查看基于多 SIM 卡的手机状态和数据连接情况。</string>
@@ -54,8 +50,6 @@
   <!-- Labels for the WRITE_SECURE_SETTINGS permission -->
   <string name="permlab_writeSecureSettings">修改 Lineage 系统安全设置</string>
   <string name="permdesc_writeSecureSettings">允许应用修改 Lineage 系统安全设置。不供正常应用使用。</string>
-  <!-- Label to show for a service that is running because it is observing the user's custom tiles. -->
-  <string name="custom_tile_listener_binding_label">自定义瓷块侦听器</string>
   <!-- Labels for the PROTECTED_APP permission. -->
   <string name="permlab_protectedApp">从受保护的应用中添加或删除应用</string>
   <string name="permdesc_protectedApp">允许应用标记受保护的应用并将其锁定。</string>

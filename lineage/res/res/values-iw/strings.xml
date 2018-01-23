@@ -19,14 +19,10 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Label for the LineageOS system components when they are shown to the user. -->
   <string name="lineageos_system_label">מערכת LineageOS</string>
-  <string name="permlab_publishCustomTile">צור אריח מותאם אישית בתוך לוח ההגדרות המהירות</string>
-  <string name="permdesc_publishCustomTile">מאפשר ליישום לפרסם אריח הגדרות מותאם אישית.</string>
   <string name="permlab_modifyNetworkSettings">שנה את הגדרות הרשת של המערכת</string>
   <string name="permdesc_modifyNetworkSettings">מאפשר ליישום לבצע שינויים בהגדרות מצב הטיסה ורשת הנתונים הניידים.</string>
   <string name="permlab_modifySoundSettings">שנה את הגדרות השמע של המערכת</string>
   <string name="permdesc_modifySoundSettings">מאפשר ליישום לבצע שינויים בהגדרות השמע של מצב ההפרעה.</string>
-  <string name="permlab_bindCustomTileListenerService">קשור לשירות המאזין לאריחים מותאמים אישית</string>
-  <string name="permdesc_bindCustomTileListenerService">מאפשר ליישום להיקשר לממשק רמה עליונה של שירות המאזין לאריחים מותאמים אישית.</string>
   <!-- Labels for the READ_MSIM_PHONE_STATE permission. -->
   <string name="permlab_readMSPhoneState">הצג את מצב המכשיר ואת חיבור הנתונים עם תמיכה בכרטיסי SIM מרובים</string>
   <string name="permdesc_readMSPhoneState">מאפשר ליישום להציג את מצב המכשיר ואת חיבור הנתונים עם תמיכה בכרטיסי SIM מרובים.</string>
@@ -54,8 +50,6 @@
   <!-- Labels for the WRITE_SECURE_SETTINGS permission -->
   <string name="permlab_writeSecureSettings">שנה הגדרות מאובטחות של מערכת Lineage</string>
   <string name="permdesc_writeSecureSettings">מאפשר ליישום לשנות את ההגדרות המאובטחות של מערכת Lineage. לא לשימוש ביישומים רגילים.</string>
-  <!-- Label to show for a service that is running because it is observing the user's custom tiles. -->
-  <string name="custom_tile_listener_binding_label">מאזין אריחים מותאמים אישית</string>
   <!-- Labels for the PROTECTED_APP permission. -->
   <string name="permlab_protectedApp">הוספה והסרה של יישומים מהיישומים המוגנים</string>
   <string name="permdesc_protectedApp">מאפשר ליישום לסמן יישומים אחרים כמוגנים ולנעול אותם.</string>

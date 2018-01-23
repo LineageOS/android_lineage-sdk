@@ -19,14 +19,10 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Label for the LineageOS system components when they are shown to the user. -->
   <string name="lineageos_system_label">LineageOS ಸಿಸ್ಟಂ</string>
-  <string name="permlab_publishCustomTile">ತ್ವರಿತ ಸೆಟ್ಟಿಂಗ್ಸ್ ಪ್ಯಾನೆಲ್ ಒಳಗೆಯೇ ಒಂದು ಕಸ್ಟಮ್ ಟೈಲ್ ರಚಿಸಿ</string>
-  <string name="permdesc_publishCustomTile">ಒಂದು ಆಪ್‍ಗೆ ತ್ವರಿತ ಸೆಟ್ಟಿಂಗ್ಸ್ ಟೈಲನ್ನು ಮುದ್ರಿಸಲು ಅನುಮತಿಸುತ್ತದೆ.</string>
   <string name="permlab_modifyNetworkSettings">ಸಿಸ್ಟಂ ನೆಟ್‍ವರ್ಕ್ ಸೆಟ್ಟಿಂಗ್ಸ್ ಬದಲಿಸು</string>
   <string name="permdesc_modifyNetworkSettings">ಒಂದು ಆಪ್‍ಗೆ ಏರೋಪ್ಲೇನ್ ಮೋಡ್ ಮತ್ತು ಮೊಬೈಲ್ ಡೇಟಾ ನೆಟ್‍ವರ್ಕ್ ಸೆಟ್ಟಿಂಗ್ಸನ್ನು ಬದಲಾಯಿಸಲು ಅನುಮತಿಸುತ್ತದೆ.</string>
   <string name="permlab_modifySoundSettings">ಸಿಸ್ಟಂ ಶಬ್ಧ ಸೆಟ್ಟಿಂಗ್ಸ್ ಬದಲಾಯಿಸು</string>
   <string name="permdesc_modifySoundSettings">ಒಂದು ಆಪ್‍ಗೆ ಅಡಚಣೆ ಮೋಡ್ ಶಬ್ಧ ಸೆಟ್ಟಿಂಗ್ಸನ್ನು ಬದಲಾಯಿಸಲು ಅನುಮತಿಸುತ್ತದೆ.</string>
-  <string name="permlab_bindCustomTileListenerService">ಕಸ್ಟಮ್ ಟೈಲ್ ಲಿಸ್ನರ್ ಸೇವೆಗೆ ಬೈಂಡ್ ಮಾಡು</string>
-  <string name="permdesc_bindCustomTileListenerService">ಆಪ್‍ಗೆ ಕಸ್ಟಮ್ ಟೈಲ್ ಲಿಸ್ನರ್‍ ಸೇವೆಯ ಮೇಲ್ದರ್ಜೆಯ ಇಂಟರ್ಫೇಸ್‍ಗೆ ಬೈಂಡ್ ಮಾಡಲು ಅನುಮತಿಸುತ್ತದೆ.</string>
   <!-- Labels for the READ_MSIM_PHONE_STATE permission. -->
   <string name="permlab_readMSPhoneState">ಬಹು ಸಿಮ್‍ಗಳ ಬೆಂಬಲದ ಜೊತೆ ಫೋನ್ ಸ್ಥಿತಿ ಮತ್ತು ಡೇಟಾ ಸಂಪರ್ಕವನ್ನು ವೀಕ್ಷಿಸುವಿಕೆ</string>
   <string name="permdesc_readMSPhoneState">ಒಂದು ಆಪ್‍ಗೆ ಬಹು ಸಿಮ್‍ಗಳ ಬೆಂಬಲದ ಜೊತೆ ಫೋನ್ ಸ್ಥಿತಿ ಮತ್ತು ಡೇಟಾ ಸಂಪರ್ಕವನ್ನು ವೀಕ್ಷಿಸಲು ಅನುಮತಿಸುತ್ತದೆ.</string>
@@ -54,8 +50,6 @@
   <!-- Labels for the WRITE_SECURE_SETTINGS permission -->
   <string name="permlab_writeSecureSettings">Lineage ಸುರಕ್ಷಿತ ಸೆಟ್ಟಿಂಗ್ಸನ್ನು ಮಾರ್ಪಡಿಸು</string>
   <string name="permdesc_writeSecureSettings">ಒಂದು ಆಪ್‍ಗೆ Lineage ಸುರಕ್ಷಿತ ಸೆಟ್ಟಿಂಗ್ಸನ್ನು ಮಾರ್ಪಡಿಸಲು ಅನುಮತಿಸುತ್ತದೆ. ಸಾಮಾನ್ಯ ಆಪ್‍ಗಳ ಬಳಕೆಗಲ್ಲ.</string>
-  <!-- Label to show for a service that is running because it is observing the user's custom tiles. -->
-  <string name="custom_tile_listener_binding_label">ಕಸ್ಟಮ್ ಟೈಲ್ ಲಿಸ್ನರ್</string>
   <!-- Labels for the PROTECTED_APP permission. -->
   <string name="permlab_protectedApp">ಸಂರಕ್ಷಿತ ಅಪ್ಲಿಕೇಶನ್‌ಗಳಿಗೆ ಅಪ್ಲಿಕೇಶನ್‌ಗಳನ್ನು ಸೇರಿಸಿ ಮತ್ತು ತೆಗೆಯಿರಿ</string>
   <string name="permdesc_protectedApp">ಇತರ ಅಪ್ಲಿಗಳನ್ನು ಸಂರಕ್ಷಿತಗೊಳಿಸಲು ಮತ್ತು ಅವುಗಳನ್ನು ಲಾಕ್‌ ಮಾಡಲು ಒಂದು ಅಪ್ಲಿಕೇಶನ್‌ ಅನುವು ಮಾಡಿ</string>

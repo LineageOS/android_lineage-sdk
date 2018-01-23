@@ -78,9 +78,6 @@
          pulsating and RGB control would set this config to 75. -->
     <integer name="config_deviceLightCapabilities">8</integer>
 
-    <!-- Default, comma-delimited, quick settings tiles. See QSConstants.java for a list of all available tiles -->
-    <string name="config_defaultQuickSettingsTiles">wifi,bt,dnd,cell,airplane,rotation,location,edit,flashlight,cast,hotspot,inversion,live_display</string>
-
     <!-- Wifi Service -->
     <!-- Whether to make default hotspot security NONE-->
     <bool name="config_wifiHotspotSecurityNone">false</bool>
@@ -94,7 +91,6 @@
     <!-- Defines external services to be started by the LineageSystemServer at boot. The service itself
          should publish as a binder services in its onStart -->
     <string-array name="config_externalLineageServices">
-        <item>org.lineageos.platform.internal.LineageStatusBarManagerService</item>
         <item>org.lineageos.platform.internal.ProfileManagerService</item>
         <item>org.lineageos.platform.internal.LineageTelephonyManagerService</item>
         <item>org.lineageos.platform.internal.LineageHardwareService</item>
