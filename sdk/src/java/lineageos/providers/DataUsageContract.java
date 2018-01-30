@@ -110,13 +110,6 @@ public final class DataUsageContract {
     public static final String FAST_SAMPLES    = "fast_samples";
 
     /**
-     * Extra information used debugging purposes - collects up to 1000 samples so that
-     * algorithm can be manually verified
-     * <P>Type: TEXT</P>
-     */
-    public static final String EXTRA           = "extra";
-
-    /**
      * The mime type of a directory of items
      */
     public static final String CONTENT_TYPE =
@@ -142,7 +135,6 @@ public final class DataUsageContract {
             SLOW_SAMPLES,
             FAST_AVG,
             FAST_SAMPLES,
-            EXTRA
     };
 
     /**
@@ -158,7 +150,4 @@ public final class DataUsageContract {
     public static final int COLUMN_OF_SLOW_SAMPLES = 7;
     public static final int COLUMN_OF_FAST_AVG     = 8;
     public static final int COLUMN_OF_FAST_SAMPLES = 9;
-    public static final int COLUMN_OF_EXTRA        = 10;
-
-
 }
