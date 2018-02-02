@@ -1,5 +1,6 @@
 /*
  * Copyright (C) 2016 The CyanogenMod Project
+ * Copyright (C) 2018 The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -26,7 +27,7 @@ import android.util.Range;
 import android.util.Slog;
 import android.view.animation.LinearInterpolator;
 
-import org.lineageos.platform.internal.display.TwilightTracker.TwilightState;
+import com.android.server.twilight.TwilightState;
 
 import java.io.PrintWriter;
 import java.util.BitSet;
@@ -191,7 +192,15 @@ public class ColorTemperatureController extends LiveDisplayFeature {
         } else if (mode == MODE_NIGHT) {
             temperature = mNightTemperature;
         } else if (mode == MODE_AUTO) {
-            temperature = getTwilightK();
+            final int twilightTemp = getTwilightK();
+            if (twilightTemp >= 0) {
+                temperature = twilightTemp;
+            } else {
+                if (DEBUG) {
+                    Slog.d(TAG, "updateColorTemperature: getTwilightK returned < 0; "
+                            + "maintaining existing temperature");
+                }
+            }
         }
 
         if (DEBUG) {
@@ -203,6 +212,7 @@ public class ColorTemperatureController extends LiveDisplayFeature {
 
         if (isTransitioning()) {
             // fire again in a minute
+            mHandler.removeCallbacks(mTransitionRunnable);
             mHandler.postDelayed(mTransitionRunnable, DateUtils.MINUTE_IN_MILLIS);
         }
     }
@@ -260,6 +270,10 @@ public class ColorTemperatureController extends LiveDisplayFeature {
     }
 
     private synchronized void setDisplayTemperature(int temperature) {
+        if (temperature < 0) {
+            // We're in not yet initialized state, silently ignore.
+            return;
+        }
         if (!mColorTemperatureRange.contains(temperature)) {
             Slog.e(TAG, "Color temperature out of range: " + temperature);
             return;
@@ -283,49 +297,46 @@ public class ColorTemperatureController extends LiveDisplayFeature {
     }
 
     /**
-     * Where is the sun anyway? This calculation determines day or night, and scales
-     * the value around sunset/sunrise for a smooth transition.
-     *
-     * @param now
-     * @param sunset
-     * @param sunrise
-     * @return float between 0 and 1
-     */
-    private static float adj(long now, long sunset, long sunrise) {
-        if (sunset < 0 || sunrise < 0
-                || now < sunset || now > (sunrise + TWILIGHT_ADJUSTMENT_TIME)) {
-            return 1.0f;
-        }
-
-        if (now <= (sunset + TWILIGHT_ADJUSTMENT_TIME)) {
-            return MathUtils.lerp(1.0f, 0.0f,
-                    (float) (now - sunset) / TWILIGHT_ADJUSTMENT_TIME);
-        }
-
-        if (now >= sunrise) {
-            return MathUtils.lerp(1.0f, 0.0f,
-                    (float) ((sunrise + TWILIGHT_ADJUSTMENT_TIME) - now) / TWILIGHT_ADJUSTMENT_TIME);
-        }
-
-        return 0.0f;
-    }
-
-    /**
      * Determine the color temperature we should use for the display based on
      * the position of the sun.
      *
-     * @return color temperature in Kelvin
+     * @return color temperature in Kelvin or -1 if current state can't be determined.
      */
     private int getTwilightK() {
-        float adjustment = 1.0f;
         final TwilightState twilight = getTwilight();
-
-        if (twilight != null) {
-            final long now = System.currentTimeMillis();
-            adjustment = adj(now, twilight.getYesterdaySunset(), twilight.getTodaySunrise()) *
-                    adj(now, twilight.getTodaySunset(), twilight.getTomorrowSunrise());
+        if (twilight == null) {
+            return -1;
         }
 
+        final long now = System.currentTimeMillis();
+        final long sunrise = twilight.sunriseTimeMillis();
+        final long sunset = twilight.sunsetTimeMillis();
+        final float adjustment;
+
+        // Sanity checks
+        if (sunrise <= 0 || sunset <= 0) {
+            return -1;
+        }
+
+        if (now >= sunrise && now < sunset) {
+            // It's daytime
+            if (now < sunrise + TWILIGHT_ADJUSTMENT_TIME) {
+                adjustment = MathUtils.lerp(0.0f, 1.0f, (float) (now - sunrise) /
+                        TWILIGHT_ADJUSTMENT_TIME);
+            } else {
+                adjustment = 1.0f;
+            }
+        } else if (now >= sunset && now < sunrise) {
+            // It's nighttime
+            if (now < sunset + TWILIGHT_ADJUSTMENT_TIME) {
+                adjustment = MathUtils.lerp(1.0f, 0.0f, (float) (now - sunset) /
+                        TWILIGHT_ADJUSTMENT_TIME);
+            } else {
+                adjustment = 0.0f;
+            }
+        } else {
+            return -1;
+        }
         return (int)MathUtils.lerp(mNightTemperature, mDayTemperature, adjustment);
     }
 
