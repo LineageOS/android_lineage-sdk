@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "245b1447_3fe2450e",
+        "filename": "lineage/lib/main/java/org/lineageos/platform/internal/display/LiveDisplayService.java",
+        "patchSetId": 5
+      },
+      "lineNbr": 567,
+      "author": {
+        "id": 3075
+      },
+      "writtenOn": "2018-02-05T02:49:58Z",
+      "side": 1,
+      "message": "It doesn\u0027t look like this method is needed ?",
+      "revId": "97c38125c357539ca55850d2ad34c29846399acd",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
