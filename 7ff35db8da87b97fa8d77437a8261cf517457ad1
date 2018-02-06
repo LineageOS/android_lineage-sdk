@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "c757cb07_3e019d33",
+        "filename": "lineage/res/res/drawable/stat_sys_network_traffic_down.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 11883
+      },
+      "writtenOn": "2018-02-06T17:24:13Z",
+      "side": 1,
+      "message": "yea no, plain copy the vectors if you do that",
+      "range": {
+        "startLine": 4,
+        "startChar": 0,
+        "endLine": 4,
+        "endChar": 31
+      },
+      "revId": "7ff35db8da87b97fa8d77437a8261cf517457ad1",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
