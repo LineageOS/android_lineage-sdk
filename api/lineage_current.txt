@@ -429,7 +429,6 @@ package lineageos.power {
     method public int getPowerProfile();
     method public lineageos.power.PerformanceProfile getPowerProfile(int);
     method public java.util.SortedSet<lineageos.power.PerformanceProfile> getPowerProfiles();
-    method public boolean getProfileHasAppProfiles(int);
     method public boolean setPowerProfile(int);
     method public boolean setPowerProfile(lineageos.power.PerformanceProfile);
     field public static final java.lang.String POWER_PROFILE_CHANGED = "lineageos.power.PROFILE_CHANGED";
@@ -442,14 +441,13 @@ package lineageos.power {
   }
 
   public class PerformanceProfile implements java.lang.Comparable android.os.Parcelable {
-    ctor public PerformanceProfile(int, float, java.lang.String, java.lang.String, boolean);
+    ctor public PerformanceProfile(int, float, java.lang.String, java.lang.String);
     method public int compareTo(lineageos.power.PerformanceProfile);
     method public int describeContents();
     method public java.lang.String getDescription();
     method public int getId();
     method public java.lang.String getName();
     method public float getWeight();
-    method public boolean isBoostEnabled();
     method public void writeToParcel(android.os.Parcel, int);
     field public static final android.os.Parcelable.Creator<lineageos.power.PerformanceProfile> CREATOR;
   }
