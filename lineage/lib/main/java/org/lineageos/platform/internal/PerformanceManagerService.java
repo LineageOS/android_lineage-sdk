@@ -1,5 +1,6 @@
 /*
  * Copyright (C) 2014 The CyanogenMod Project
+ *               2018 The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -17,7 +18,6 @@
 package org.lineageos.platform.internal;
 
 import android.content.BroadcastReceiver;
-import android.content.ComponentName;
 import android.content.ContentResolver;
 import android.content.Context;
 import android.content.Intent;
@@ -44,21 +44,16 @@ import java.io.FileDescriptor;
 import java.io.PrintWriter;
 import java.util.ArrayDeque;
 import java.util.Date;
-import java.util.LinkedHashMap;
 import java.util.Locale;
 import java.util.Map;
 import java.util.Objects;
-import java.util.regex.Pattern;
 
 import lineageos.app.LineageContextConstants;
 import lineageos.power.IPerformanceManager;
-import lineageos.power.PerformanceManagerInternal;
 import lineageos.power.PerformanceProfile;
 
 import static lineageos.power.PerformanceManager.PROFILE_BALANCED;
-import static lineageos.power.PerformanceManager.PROFILE_HIGH_PERFORMANCE;
 import static lineageos.power.PerformanceManager.PROFILE_POWER_SAVE;
-import static lineageos.providers.LineageSettings.Secure.APP_PERFORMANCE_PROFILES_ENABLED;
 import static lineageos.providers.LineageSettings.Secure.PERFORMANCE_PROFILE;
 import static lineageos.providers.LineageSettings.Secure.getInt;
 import static lineageos.providers.LineageSettings.Secure.getUriFor;
@@ -75,16 +70,14 @@ public class PerformanceManagerService extends LineageSystemService {
 
     private final Context mContext;
 
-    private final LinkedHashMap<Pattern, Integer>    mAppProfiles = new LinkedHashMap<>();
     private final ArrayMap<Integer, PerformanceProfile> mProfiles = new ArrayMap<>();
 
     private int mNumProfiles = 0;
 
     private final ServiceThread mHandlerThread;
-    private final BoostHandler mHandler;
+    private final HintHandler mHandler;
 
     // keep in sync with hardware/libhardware/include/hardware/power.h
-    private final int POWER_HINT_CPU_BOOST    = 0x00000110;
     private final int POWER_HINT_SET_PROFILE  = 0x00000111;
 
     private final int POWER_FEATURE_SUPPORTED_PROFILES = 0x00001000;
@@ -94,31 +87,20 @@ public class PerformanceManagerService extends LineageSystemService {
     // Observes user-controlled settings
     private PerformanceSettingsObserver mObserver;
 
-    // Max time (microseconds) to allow a CPU boost for
-    private static final int MAX_CPU_BOOST_TIME = 5000000;
-
-    // Standard weights
-    private static final float WEIGHT_POWER_SAVE       = 0.0f;
-    private static final float WEIGHT_BALANCED         = 0.5f;
-    private static final float WEIGHT_HIGH_PERFORMANCE = 1.0f;
-
     // Take lock when accessing mProfiles
     private final Object mLock = new Object();
 
     // Manipulate state variables under lock
     private boolean mLowPowerModeEnabled = false;
     private boolean mSystemReady         = false;
-    private boolean mBoostEnabled        = true;
     private int     mUserProfile         = -1;
     private int     mActiveProfile       = -1;
-    private String  mCurrentActivityName = null;
 
     // Dumpable circular buffer for boost logging
-    private final BoostLog mBoostLog = new BoostLog();
+    private final PerformanceLog mPerformanceLog = new PerformanceLog();
 
     // Events on the handler
-    private static final int MSG_CPU_BOOST    = 1;
-    private static final int MSG_SET_PROFILE  = 2;
+    private static final int MSG_SET_PROFILE  = 1;
 
     // PowerManager ServiceType to use when we're only
     // interested in gleaning global battery saver state.
@@ -128,21 +110,6 @@ public class PerformanceManagerService extends LineageSystemService {
         super(context);
 
         mContext = context;
-        Resources res = context.getResources();
-
-        String[] activities = res.getStringArray(R.array.config_auto_perf_activities);
-        if (activities != null && activities.length > 0) {
-            for (int i = 0; i < activities.length; i++) {
-                String[] info = activities[i].split(",");
-                if (info.length == 2) {
-                    mAppProfiles.put(Pattern.compile(info[0]), Integer.valueOf(info[1]));
-                    if (DEBUG) {
-                        Slog.d(TAG, String.format(Locale.US,"App profile #%d: %s => %s",
-                                i, info[0], info[1]));
-                    }
-                }
-            }
-        }
 
         // We need a higher priority thread to handle these requests in front of
         // everything else asynchronously
@@ -150,13 +117,10 @@ public class PerformanceManagerService extends LineageSystemService {
                 Process.THREAD_PRIORITY_DISPLAY, false /*allowIo*/);
         mHandlerThread.start();
 
-        mHandler = new BoostHandler(mHandlerThread.getLooper());
+        mHandler = new HintHandler(mHandlerThread.getLooper());
     }
 
     private class PerformanceSettingsObserver extends ContentObserver {
-
-        private final Uri APP_PERFORMANCE_PROFILES_ENABLED_URI =
-                getUriFor(APP_PERFORMANCE_PROFILES_ENABLED);
 
         private final Uri PERFORMANCE_PROFILE_URI =
                 getUriFor(PERFORMANCE_PROFILE);
@@ -170,10 +134,8 @@ public class PerformanceManagerService extends LineageSystemService {
 
         public void observe(boolean enabled) {
             if (enabled) {
-                mCR.registerContentObserver(APP_PERFORMANCE_PROFILES_ENABLED_URI, false, this);
                 mCR.registerContentObserver(PERFORMANCE_PROFILE_URI, false, this);
                 onChange(false);
-
             } else {
                 mCR.unregisterContentObserver(this);
             }
@@ -182,14 +144,8 @@ public class PerformanceManagerService extends LineageSystemService {
         @Override
         public void onChange(boolean selfChange) {
             int profile = getInt(mCR, PERFORMANCE_PROFILE, PROFILE_BALANCED);
-            boolean boost = getInt(mCR, APP_PERFORMANCE_PROFILES_ENABLED, 1) == 1;
 
             synchronized (mLock) {
-                if (hasProfiles() && mProfiles.containsKey(profile)) {
-                    boost = boost && mProfiles.get(profile).isBoostEnabled();
-                }
-
-                mBoostEnabled = boost;
                 if (mUserProfile < 0) {
                     mUserProfile = profile;
                     setPowerProfileLocked(mUserProfile, false);
@@ -206,7 +162,6 @@ public class PerformanceManagerService extends LineageSystemService {
     @Override
     public void onStart() {
         publishBinderService(LineageContextConstants.LINEAGE_PERFORMANCE_SERVICE, mBinder);
-        publishLocalService(PerformanceManagerInternal.class, new LocalService());
     }
 
     private void populateProfilesLocked() {
@@ -224,7 +179,7 @@ public class PerformanceManagerService extends LineageSystemService {
             }
             float weight = Float.valueOf(profileWeights[i]);
             mProfiles.put(profileIds[i], new PerformanceProfile(profileIds[i],
-                    weight, profileNames[i], profileDescs[i], shouldUseOptimizations(weight)));
+                    weight, profileNames[i], profileDescs[i]));
         }
     }
 
@@ -256,10 +211,6 @@ public class PerformanceManagerService extends LineageSystemService {
 
     private boolean hasProfiles() {
         return mNumProfiles > 0;
-    }
-
-    private boolean hasAppProfiles() {
-        return hasProfiles() && mBoostEnabled && mAppProfiles.size() > 0;
     }
 
     /**
@@ -325,45 +276,7 @@ public class PerformanceManagerService extends LineageSystemService {
         return true;
     }
 
-    private int getProfileForActivity(String componentName) {
-        int profile = -1;
-        if (componentName != null) {
-            for (Map.Entry<Pattern, Integer> entry : mAppProfiles.entrySet()) {
-                if (entry.getKey().matcher(componentName).matches()) {
-                    profile = entry.getValue();
-                    break;
-                }
-            }
-        }
-        if (DEBUG) {
-            Slog.d(TAG, "getProfileForActivity: activity=" + componentName + " profile=" + profile);
-        }
-        return profile < 0 ? mUserProfile : profile;
-    }
-
-    private static boolean shouldUseOptimizations(float weight) {
-        return weight >= (WEIGHT_BALANCED / 2) &&
-               weight <= (WEIGHT_BALANCED + (WEIGHT_BALANCED / 2));
-    }
-
-    private void cpuBoostInternal(int duration) {
-        if (!mSystemReady) {
-            Slog.e(TAG, "System is not ready, dropping cpu boost request");
-            return;
-        }
-
-        if (!mBoostEnabled) {
-            return;
-        }
-
-        if (duration > 0 && duration <= MAX_CPU_BOOST_TIME) {
-            mHandler.obtainMessage(MSG_CPU_BOOST, duration, 0).sendToTarget();
-        } else {
-            Slog.e(TAG, "Invalid boost duration: " + duration);
-        }
-    }
-
-    private void applyAppProfileLocked() {
+    private void applyProfileLocked() {
         if (!hasProfiles()) {
             // don't have profiles, bail.
             return;
@@ -373,8 +286,6 @@ public class PerformanceManagerService extends LineageSystemService {
         if (mLowPowerModeEnabled) {
             // LPM always wins
             profile = PROFILE_POWER_SAVE;
-        } else if (hasAppProfiles()) {
-            profile = getProfileForActivity(mCurrentActivityName);
         } else {
             profile = mUserProfile;
         }
@@ -389,16 +300,6 @@ public class PerformanceManagerService extends LineageSystemService {
             synchronized (mLock) {
                 return setPowerProfileLocked(profile, true);
             }
-        }
-
-        /**
-         * Boost the CPU
-         *
-         * @param duration Duration to boost the CPU for, in milliseconds.
-         */
-        @Override
-        public void cpuBoost(int duration) {
-            cpuBoostInternal(duration);
         }
 
         @Override
@@ -443,7 +344,6 @@ public class PerformanceManagerService extends LineageSystemService {
                 pw.println();
                 pw.println("PerformanceManager Service State:");
                 pw.println();
-                pw.println(" Boost enabled: " + mBoostEnabled);
 
                 if (!hasProfiles()) {
                     pw.println(" No profiles available.");
@@ -459,48 +359,17 @@ public class PerformanceManagerService extends LineageSystemService {
                     for (Map.Entry<Integer, PerformanceProfile> profile : mProfiles.entrySet()) {
                         pw.println("  " + profile.getKey() + ": " + profile.getValue().toString());
                     }
-                    if (hasAppProfiles()) {
-                        pw.println();
-                        pw.println(" App trigger count: " + mAppProfiles.size());
-                    }
                     pw.println();
-                    mBoostLog.dump(pw);
+                    mPerformanceLog.dump(pw);
                 }
             }
         }
     };
 
-    private final class LocalService implements PerformanceManagerInternal {
-
-        @Override
-        public void cpuBoost(int duration) {
-            cpuBoostInternal(duration);
-        }
-
-        @Override
-        public void activityResumed(Intent intent) {
-            String activityName = null;
-            if (intent != null) {
-                final ComponentName cn = intent.getComponent();
-                if (cn != null) {
-                    activityName = cn.flattenToString();
-                }
-            }
-
-            synchronized (mLock) {
-                mCurrentActivityName = activityName;
-                applyAppProfileLocked();
-            }
-        }
-    }
-
-    private static class BoostLog {
-        static final int APP_PROFILE  = 0;
-        static final int CPU_BOOST    = 1;
+    private static class PerformanceLog {
         static final int USER_PROFILE = 2;
 
-        static final String[] EVENTS = new String[] {
-                "APP_PROFILE", "CPU_BOOST", "USER_PROFILE" };
+        static final String[] EVENTS = new String[] { "USER_PROFILE" };
 
         private static final int LOG_BUF_SIZE = 25;
 
@@ -529,7 +398,7 @@ public class PerformanceManagerService extends LineageSystemService {
 
         void dump(PrintWriter pw) {
             synchronized (mBuffer) {
-                pw.println(" Boost log:");
+                pw.println("Performance log:");
                 for (Entry entry : mBuffer) {
                     pw.println(String.format("  %1$tH:%1$tM:%1$tS.%1$tL: %2$14s  %3$s",
                             new Date(entry.timestamp), EVENTS[entry.event], entry.info));
@@ -542,23 +411,18 @@ public class PerformanceManagerService extends LineageSystemService {
     /**
      * Handler for asynchronous operations performed by the performance manager.
      */
-    private final class BoostHandler extends Handler {
+    private final class HintHandler extends Handler {
 
-        public BoostHandler(Looper looper) {
+        public HintHandler(Looper looper) {
             super(looper, null, true /*async*/);
         }
 
         @Override
         public void handleMessage(Message msg) {
             switch (msg.what) {
-                case MSG_CPU_BOOST:
-                    mPm.powerHint(POWER_HINT_CPU_BOOST, msg.arg1);
-                    mBoostLog.log(BoostLog.CPU_BOOST, "duration=" + msg.arg1);
-                    break;
                 case MSG_SET_PROFILE:
                     mPm.powerHint(POWER_HINT_SET_PROFILE, msg.arg1);
-                    mBoostLog.log((msg.arg2 == 1 ? BoostLog.USER_PROFILE : BoostLog.APP_PROFILE),
-                            "profile=" + msg.arg1);
+                    mPerformanceLog.log(PerformanceLog.USER_PROFILE, "profile=" + msg.arg1);
                     break;
             }
         }
@@ -578,7 +442,7 @@ public class PerformanceManagerService extends LineageSystemService {
                             Slog.d(TAG, "low power mode enabled: " + enabled);
                         }
                         mLowPowerModeEnabled = enabled;
-                        applyAppProfileLocked();
+                        applyProfileLocked();
                     }
                 }
 

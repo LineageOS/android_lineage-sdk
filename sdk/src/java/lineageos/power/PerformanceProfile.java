@@ -37,15 +37,11 @@ public class PerformanceProfile implements Parcelable, Comparable<PerformancePro
 
     private final String mDescription;
 
-    private final boolean mBoostEnabled;
-
-    public PerformanceProfile(int id, float weight, String name, String description,
-                              boolean boostEnabled) {
+    public PerformanceProfile(int id, float weight, String name, String description) {
         mId = id;
         mWeight = weight;
         mName = name;
         mDescription = description;
-        mBoostEnabled = boostEnabled;
     }
 
     private PerformanceProfile(Parcel in) {
@@ -56,7 +52,6 @@ public class PerformanceProfile implements Parcelable, Comparable<PerformancePro
         mWeight = in.readFloat();
         mName = in.readString();
         mDescription = in.readString();
-        mBoostEnabled = in.readInt() == 1;
 
         if (parcelableVersion >= Build.LINEAGE_VERSION_CODES.GUAVA) {
             // nothing yet
@@ -104,17 +99,6 @@ public class PerformanceProfile implements Parcelable, Comparable<PerformancePro
         return mDescription;
     }
 
-    /**
-     * Whether or not per-app profiles and boosting will be used when this
-     * profile is active. Far-end modes (powersave / high performance) do
-     * not use boosting.
-     *
-     * @return true if boosting and per-app optimization will be used
-     */
-    public boolean isBoostEnabled() {
-        return mBoostEnabled;
-    }
-
     @Override
     public int describeContents() {
         return 0;
@@ -128,7 +112,6 @@ public class PerformanceProfile implements Parcelable, Comparable<PerformancePro
         dest.writeFloat(mWeight);
         dest.writeString(mName);
         dest.writeString(mDescription);
-        dest.writeInt(mBoostEnabled ? 1 : 0);
 
         parcelInfo.complete();
     }
@@ -170,7 +153,7 @@ public class PerformanceProfile implements Parcelable, Comparable<PerformancePro
 
     @Override
     public String toString() {
-        return String.format("PerformanceProfile[id=%d, weight=%f, name=%s desc=%s " +
-                "boostEnabled=%b]", mId, mWeight, mName, mDescription, mBoostEnabled);
+        return String.format("PerformanceProfile[id=%d, weight=%f, name=%s desc=%s]",
+                mId, mWeight, mName, mDescription);
     }
 }
