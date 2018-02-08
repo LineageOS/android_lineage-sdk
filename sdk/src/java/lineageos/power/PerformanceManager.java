@@ -137,23 +137,6 @@ public class PerformanceManager {
     }
 
     /**
-     * Boost the CPU. Boosts the cpu for the given duration in microseconds.
-     * Requires the {@link android.Manifest.permission#CPU_BOOST} permission.
-     *
-     * @param duration in microseconds to boost the CPU
-     * @hide
-     */
-    public void cpuBoost(int duration)
-    {
-        try {
-            if (checkService()) {
-                sService.cpuBoost(duration);
-            }
-        } catch (RemoteException e) {
-        }
-    }
-
-    /**
      * Returns the number of supported profiles, -1 if unsupported
      * This is queried via the PowerHAL.
      */
@@ -252,24 +235,6 @@ public class PerformanceManager {
             try {
                 if (checkService()) {
                     ret = sService.getActivePowerProfile();
-                }
-            } catch (RemoteException e) {
-                // nothing
-            }
-        }
-        return ret;
-    }
-    /**
-     * Check if profile has app-specific profiles
-     *
-     * Returns true if profile has app-specific profiles.
-     */
-    public boolean getProfileHasAppProfiles(int profile) {
-        boolean ret = false;
-        if (mNumberOfProfiles > 0) {
-            try {
-                if (checkService()) {
-                    ret = sService.getPowerProfileById(profile).isBoostEnabled();
                 }
             } catch (RemoteException e) {
                 // nothing
