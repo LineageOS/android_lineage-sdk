@@ -238,11 +238,11 @@ public final class LineageNotificationLights {
             boolean screenActive, int suppressedEffects) {
         final boolean forcedOn = isForcedOn(n);
         final int forcedBrightness = getForcedBrightness(n);
-        final boolean isDefaultLights = (n.defaults & Notification.DEFAULT_LIGHTS) != 0;
         final boolean suppressScreenOff =
                 (suppressedEffects & SUPPRESSED_EFFECT_SCREEN_OFF) != 0;
         final boolean suppressScreenOn =
                 (suppressedEffects & SUPPRESSED_EFFECT_SCREEN_ON) != 0;
+        final int notificationColor = n.color;
 
         if (DEBUG) {
             Slog.i(TAG, "calcLights input: "
@@ -253,7 +253,7 @@ public final class LineageNotificationLights {
                     + " suppressedEffects=" + suppressedEffects
                     + " forcedOn=" + forcedOn
                     + " forcedBrightness=" + forcedBrightness
-                    + " isDefaultLights=" + isDefaultLights
+                    + " notificationColor#" + String.format("%08X", notificationColor)
                     + " suppressScreenOff=" + suppressScreenOff
                     + " suppressScreenOn=" + suppressScreenOn
                     + " mCanAdjustBrightness=" + mCanAdjustBrightness
@@ -313,8 +313,14 @@ public final class LineageNotificationLights {
                     ledValuesPkg.getOnMs() : mDefaultNotificationLedOn);
             ledValues.setOffMs(ledValuesPkg.getOffMs() >= 0 ?
                     ledValuesPkg.getOffMs() : mDefaultNotificationLedOff);
-        } else if (isDefaultLights) {
-            ledValues.setColor(generateLedColorForPackageName(packageName));
+        } else if (ledValues.getColor() == 0) {
+            int c = notificationColor & 0xFFFFFF;
+            if (c != 0x0 && c != 0xFFFFFF) {
+                c = ColorUtils.findPerceptuallyNearestSolidColor(c);
+            } else {
+                c = generateLedColorForPackageName(packageName);
+            }
+            ledValues.setColor(c);
             ledValues.setOnMs(mDefaultNotificationLedOn);
             ledValues.setOffMs(mDefaultNotificationLedOff);
         }
