@@ -71,4 +71,5 @@ public class LineageMetricsLogger extends MetricsLogger {
     public static final int TILE_THEMES = BASE + 43;
     public static final int TILE_LOCATION_DETAIL = BASE + 44;
     public static final int TILE_READING_MODE = BASE + 45;
+    public static final int TILE_ONEHAND_MODE = BASE + 46;
 }
