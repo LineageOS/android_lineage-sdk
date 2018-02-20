@@ -159,4 +159,6 @@
     <java-symbol type="string" name="accent_purple" />
     <java-symbol type="string" name="accent_red" />
     <java-symbol type="string" name="accent_yellow" />
+
+    <java-symbol type="array" name="config_vendorPlatformSignatures" />
 </resources>
