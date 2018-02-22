@@ -24,13 +24,13 @@
   <string name="permdesc_modifyProfiles">Приложение сможет изменять настройки системных профилей.</string>
   <!-- Labels for the HARDWARE_ABSTRACTION_ACCESS permission. -->
   <string name="permlab_useHardwareFramework">Взаимодействие с оборудованием</string>
-  <string name="permdesc_useHardwareFramework">Приложение сможет получать доступ к подсистеме аппаратных абстракций LineageOS.</string>
+  <string name="permdesc_useHardwareFramework">Позволяет приложенияю использовать аппаратный фреймворк Lineage.</string>
   <!-- Labels for the WRITE_SETTINGS permission -->
-  <string name="permlab_writeSettings">Изменение параметров системы</string>
-  <string name="permdesc_writeSettings">Приложение сможет изменять параметры системы СМ.</string>
+  <string name="permlab_writeSettings">изменить настройки системы Lineage</string>
+  <string name="permdesc_writeSettings">Приложение сможет изменять настройки системы Lineage.</string>
   <!-- Labels for the WRITE_SECURE_SETTINGS permission -->
-  <string name="permlab_writeSecureSettings">Изменение параметров безопасности системы Lineage</string>
-  <string name="permdesc_writeSecureSettings">Приложение сможет изменять параметры безопасности системы. Это разрешение не используется обычными приложениями.</string>
+  <string name="permlab_writeSecureSettings">изменение настроек системы безопасности Lineage</string>
+  <string name="permdesc_writeSecureSettings">Позволяет приложению изменять параметры безопасности системы Lineage. Не используется в обычных приложениях.</string>
   <!-- Labels for the PROTECTED_APP permission. -->
   <string name="permlab_protectedApp">добавление и удаление записей перечня защищенных приложений</string>
   <string name="permdesc_protectedApp">Приложение сможет помечать другие приложения как защищённые и блокировать их.</string>
@@ -84,12 +84,6 @@
   <string name="accessibility_quick_settings_live_display_changed_day">LiveDisplay переключён в дневной режим.</string>
   <string name="accessibility_quick_settings_live_display_changed_night">LiveDisplay переключён в ночной режим.</string>
   <string name="accessibility_quick_settings_live_display_changed_outdoor">LiveDisplay переключён в режим «на улице».</string>
-  <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
   <!-- Performance manager permission title -->
   <string name="permlab_perfAccess">доступ к менеджеру производительности</string>
   <!-- Performance manager permission description -->
@@ -117,12 +111,27 @@
   <!-- LineageAudioService - observe session changes permission -->
   <string name="permlab_observe_audio_sessions">просмотр изменений аудиосеансов</string>
   <string name="permdesc_observe_audio_sessions">Приложение сможет просматривать аудиопотоки, которые создаются или уничтожаются.</string>
-  <!-- LineageAudioService - observe session changes permission -->
-  <string name="permlab_manage_audio_sessions">управление изменениями аудиосеансов</string>
-  <string name="permdesc_manage_audio_sessions">Приложение сможет изменять параметры аудиопотоков.</string>
   <!-- Privacy Guard -->
   <string name="privacy_guard_manager_title">Защищенный режим</string>
   <!-- Permissions used by remote preferences -->
   <string name="permlab_manageRemotePrefs">управление удаленными параметрами</string>
   <string name="permdesc_manageRemotePrefs">Приложение сможет управлять удаленными параметрами</string>
+  <!-- About device screen, build date -->
+  <string name="build_date">Дата сборки</string>
+  <!-- About device screen, LineageOS API Level -->
+  <string name="lineage_api_level">Версия API LineageOS</string>
+  <!-- About device screen, LineageOS updates -->
+  <string name="lineage_updates">Обновления LineageOS</string>
+  <!-- About device screen, LineageOS version -->
+  <string name="lineage_version">Версия LineageOS</string>
+  <!-- General purpose use "unknown" string -->
+  <string name="unknown">Неизвестно</string>
+  <!-- Long-press back kill application -->
+  <string name="app_killed_message">Приложение закрыто</string>
+  <!-- Status bar network traffic monitor strings -->
+  <string name="kilobitspersecond_short">кбит/с</string>
+  <string name="megabitspersecond_short">Мбит/с</string>
+  <string name="kilobytespersecond_short">кБ/с</string>
+  <string name="megabytespersecond_short">МБ/с</string>
+  <!-- Accent colors -->
 </resources>

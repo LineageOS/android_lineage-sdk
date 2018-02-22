@@ -18,19 +18,13 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Label for the LineageOS system components when they are shown to the user. -->
-  <string name="lineageos_system_label">LineageOS Stelsel</string>
   <!-- Labels for the MODIFY_PROFILES permission. -->
   <string name="permlab_modifyProfiles">verander stelsel profiele</string>
   <string name="permdesc_modifyProfiles">Laat \'n toep toe om stelsel profiele te verander.</string>
   <!-- Labels for the HARDWARE_ABSTRACTION_ACCESS permission. -->
   <string name="permlab_useHardwareFramework">gebruik hardeware raamwerk</string>
-  <string name="permdesc_useHardwareFramework">Laat program toegang tot die Lineage hardeware raamwerk.</string>
   <!-- Labels for the WRITE_SETTINGS permission -->
-  <string name="permlab_writeSettings">verander Lineage stelsel instellings</string>
-  <string name="permdesc_writeSettings">Laat \'n toep toe om Lineage stelsel instellings te verander.</string>
   <!-- Labels for the WRITE_SECURE_SETTINGS permission -->
-  <string name="permlab_writeSecureSettings">verander Lineage veilige instellings</string>
-  <string name="permdesc_writeSecureSettings">Laat \'n toep toe om Lineage veilige stelsel instellings te verander. Nie vir gebruik deur normale toeps nie.</string>
   <!-- Labels for the PROTECTED_APP permission. -->
   <string name="permlab_protectedApp">voegby of verwyder toeps na beskermde toeps</string>
   <string name="permdesc_protectedApp">Laat \'n toep toe om ander toeps as beskermde toep te merk en hulle toe te sluit.</string>
@@ -84,12 +78,6 @@
   <string name="accessibility_quick_settings_live_display_changed_day">LiveDisplay verander na dag modus.</string>
   <string name="accessibility_quick_settings_live_display_changed_night">LiveDisplay verander na nag modus.</string>
   <string name="accessibility_quick_settings_live_display_changed_outdoor">LiveDisplay verander na buitelug modus.</string>
-  <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
   <!-- Performance manager permission title -->
   <string name="permlab_perfAccess">toegang na prestasie bestuurder</string>
   <!-- Performance manager permission description -->
@@ -117,12 +105,17 @@
   <!-- LineageAudioService - observe session changes permission -->
   <string name="permlab_observe_audio_sessions">neem oudio-sessie verandering waar</string>
   <string name="permdesc_observe_audio_sessions">Laat \'n toep toe, om oudio-strome wat geskep en vernietig word, waar te neem.</string>
-  <!-- LineageAudioService - observe session changes permission -->
-  <string name="permlab_manage_audio_sessions">bestuur oudio-sessie veranderinge</string>
-  <string name="permdesc_manage_audio_sessions">Laat \'n toep toe om oudio-stroom bywerkings te stuur.</string>
   <!-- Privacy Guard -->
   <string name="privacy_guard_manager_title">Privaatheidswag</string>
   <!-- Permissions used by remote preferences -->
   <string name="permlab_manageRemotePrefs">bestuur afgeleë opsies</string>
   <string name="permdesc_manageRemotePrefs">Laat \'n toepassing toe om afgeleë opsies te bestuur</string>
+  <!-- About device screen, build date -->
+  <!-- About device screen, LineageOS API Level -->
+  <!-- About device screen, LineageOS updates -->
+  <!-- About device screen, LineageOS version -->
+  <!-- General purpose use "unknown" string -->
+  <!-- Long-press back kill application -->
+  <!-- Status bar network traffic monitor strings -->
+  <!-- Accent colors -->
 </resources>

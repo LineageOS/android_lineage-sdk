@@ -29,13 +29,12 @@
   <!-- Name of wildcard profile. -->
   <!-- Performance profiles -->
   <!-- Performance profiles -->
+  <string name="perf_profile_pwrsv_summary">Arbedion pŵer gorau, gan leihau perfformiad y ddyfais.</string>
+  <string name="perf_profile_bal_summary">Cydbwysedd o berfformiad optimaidd a nodweddion pŵer.</string>
+  <string name="perf_profile_perf_summary">Modd perfformiad uchel. Mae hwn yn ddefnyddiol ar gyfer apiau sydd angen cuddni isel a thrwybwn uchel pan nad oes achos pryderu am ddefnyddio pŵer.</string>
+  <string name="perf_profile_bias_power_summary">Ffafrio arbedion pŵer. Mae hyn yn cyfyngu pŵer y prosesydd ac yn ei optimeiddio ar gyfer arbed defnydd pŵer ar draul cuddni uwch.</string>
+  <string name="perf_profile_bias_perf_summary">Ffafrio perfformiad da. Mae\'n lleihau cuddni gyda defnydd pŵer uwch.</string>
   <!-- LiveDisplay strings -->
-  <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
   <!-- Performance manager permission title -->
   <!-- Performance manager permission description -->
   <!-- Weather Service strings -->
@@ -45,7 +44,17 @@
   <!-- DataUsageProvider read permission description -->
   <!-- LiveDisplay manager permission -->
   <!-- LineageAudioService - observe session changes permission -->
-  <!-- LineageAudioService - observe session changes permission -->
   <!-- Privacy Guard -->
+  <string name="privacy_guard_manager_title">Gwarchodydd Preifatrwydd</string>
   <!-- Permissions used by remote preferences -->
+  <string name="permlab_manageRemotePrefs">rheoli gosodiadau o bell</string>
+  <string name="permdesc_manageRemotePrefs">Mae\'n caniatáu ap i reoli gosodiadau o bell.</string>
+  <!-- About device screen, build date -->
+  <!-- About device screen, LineageOS API Level -->
+  <!-- About device screen, LineageOS updates -->
+  <!-- About device screen, LineageOS version -->
+  <!-- General purpose use "unknown" string -->
+  <!-- Long-press back kill application -->
+  <!-- Status bar network traffic monitor strings -->
+  <!-- Accent colors -->
 </resources>

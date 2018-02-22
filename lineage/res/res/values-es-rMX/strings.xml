@@ -47,12 +47,6 @@
   <string name="live_display_outdoor">Al aire libre (luz del sol)</string>
   <string name="live_display_outdoor_summary">Utilizar solo los ajustes al aire libre</string>
   <string name="live_display_hint">LiveDisplay puede ayudar a reducir la fatiga visual y ayudarte a dormir por la noche. ¡Haz clic aquí para probarlo!</string>
-  <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
   <!-- Performance manager permission title -->
   <string name="permlab_perfAccess">acceder al supervisor de rendimiento</string>
   <!-- Performance manager permission description -->
@@ -64,7 +58,14 @@
   <!-- DataUsageProvider read permission description -->
   <!-- LiveDisplay manager permission -->
   <!-- LineageAudioService - observe session changes permission -->
-  <!-- LineageAudioService - observe session changes permission -->
   <!-- Privacy Guard -->
   <!-- Permissions used by remote preferences -->
+  <!-- About device screen, build date -->
+  <!-- About device screen, LineageOS API Level -->
+  <!-- About device screen, LineageOS updates -->
+  <!-- About device screen, LineageOS version -->
+  <!-- General purpose use "unknown" string -->
+  <!-- Long-press back kill application -->
+  <!-- Status bar network traffic monitor strings -->
+  <!-- Accent colors -->
 </resources>

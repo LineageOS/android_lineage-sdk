@@ -18,19 +18,13 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Label for the LineageOS system components when they are shown to the user. -->
-  <string name="lineageos_system_label">LineageOS System</string>
   <!-- Labels for the MODIFY_PROFILES permission. -->
   <string name="permlab_modifyProfiles">ändra systemprofiler</string>
   <string name="permdesc_modifyProfiles">Tillåter att en app ändrar systemprofiler.</string>
   <!-- Labels for the HARDWARE_ABSTRACTION_ACCESS permission. -->
   <string name="permlab_useHardwareFramework">använda hårdvaruramverk</string>
-  <string name="permdesc_useHardwareFramework">Ger en app åtkomst till LineageOS hårdvaruramverk.</string>
   <!-- Labels for the WRITE_SETTINGS permission -->
-  <string name="permlab_writeSettings">ändra Lineage systeminställningar</string>
-  <string name="permdesc_writeSettings">Tillåt att en app ändrar Lineage systeminställningar.</string>
   <!-- Labels for the WRITE_SECURE_SETTINGS permission -->
-  <string name="permlab_writeSecureSettings">ändra Lineage säkra systeminställningar</string>
-  <string name="permdesc_writeSecureSettings">Tillåt att en app ändrar Lineage säkra systeminställningar. Inte för användning av normala appar.</string>
   <!-- Labels for the PROTECTED_APP permission. -->
   <string name="permlab_protectedApp">lägg till och ta bort appar som skyddade appar</string>
   <string name="permdesc_protectedApp">Ger en app tillstånd att markera andra appar som skyddade och låsa dem.</string>
@@ -73,12 +67,6 @@
   <string name="accessibility_quick_settings_live_display_auto">LiveDisplay: automatiskt läge.</string>
   <string name="accessibility_quick_settings_live_display_day">LiveDisplay: dagläge.</string>
   <string name="accessibility_quick_settings_live_display_night">LiveDisplay: nattläge.</string>
-  <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
   <!-- Performance manager permission title -->
   <string name="permlab_perfAccess">komma åt prestandahanteraren</string>
   <!-- Performance manager permission description -->
@@ -91,7 +79,21 @@
   <!-- DataUsageProvider read permission description -->
   <!-- LiveDisplay manager permission -->
   <!-- LineageAudioService - observe session changes permission -->
-  <!-- LineageAudioService - observe session changes permission -->
   <!-- Privacy Guard -->
+  <string name="privacy_guard_manager_title">Integritetsskydd</string>
   <!-- Permissions used by remote preferences -->
+  <!-- About device screen, build date -->
+  <!-- About device screen, LineageOS API Level -->
+  <!-- About device screen, LineageOS updates -->
+  <string name="lineage_updates">LineageOS-uppdateringar</string>
+  <!-- About device screen, LineageOS version -->
+  <string name="lineage_version">LineageOS-version</string>
+  <!-- General purpose use "unknown" string -->
+  <!-- Long-press back kill application -->
+  <!-- Status bar network traffic monitor strings -->
+  <string name="kilobitspersecond_short">kb/s</string>
+  <string name="megabitspersecond_short">Mb/s</string>
+  <string name="kilobytespersecond_short">kB/s</string>
+  <string name="megabytespersecond_short">MB/s</string>
+  <!-- Accent colors -->
 </resources>

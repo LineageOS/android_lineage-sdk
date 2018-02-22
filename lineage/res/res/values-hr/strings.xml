@@ -18,19 +18,13 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Label for the LineageOS system components when they are shown to the user. -->
-  <string name="lineageos_system_label">LineageOS sustav</string>
   <!-- Labels for the MODIFY_PROFILES permission. -->
   <string name="permlab_modifyProfiles">izmijeni profile sustava</string>
   <string name="permdesc_modifyProfiles">Dopušta aplikaciji da izmijeni profile sustava.</string>
   <!-- Labels for the HARDWARE_ABSTRACTION_ACCESS permission. -->
   <string name="permlab_useHardwareFramework">koristi hardware framework</string>
-  <string name="permdesc_useHardwareFramework">Dopušta aplikaciji pristupiti Lineage hardware framework.</string>
   <!-- Labels for the WRITE_SETTINGS permission -->
-  <string name="permlab_writeSettings">izmijeni postavke sustava Lineage</string>
-  <string name="permdesc_writeSettings">Dopušta aplikaciji da izmijeni postavke sustava Lineage.</string>
   <!-- Labels for the WRITE_SECURE_SETTINGS permission -->
-  <string name="permlab_writeSecureSettings">promijeni Lineage postavke sigurnosti sustava</string>
-  <string name="permdesc_writeSecureSettings">Dopušta aplikaciji da promjeni Lineage postavke sigurnosti sustava. Nije za korištenje kod normalnih aplikacija.</string>
   <!-- Labels for the PROTECTED_APP permission. -->
   <string name="permlab_protectedApp">dodavanje ili uklanjanje aplikacije za zaštićene aplikacije</string>
   <string name="permdesc_protectedApp">Omogućuje aplikaciji da označi druge aplikacije kao zaštićene i zaključa ih.</string>
@@ -83,12 +77,6 @@
   <string name="accessibility_quick_settings_live_display_changed_day">LiveDisplay promijenjen u dnevni način.</string>
   <string name="accessibility_quick_settings_live_display_changed_night">LiveDisplay promijenjen u noćni način.</string>
   <string name="accessibility_quick_settings_live_display_changed_outdoor">LiveDisplay promijenjen u vanjski način.</string>
-  <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
   <!-- Performance manager permission title -->
   <string name="permlab_perfAccess">pristup upravitelju performansi</string>
   <!-- Performance manager permission description -->
@@ -116,12 +104,17 @@
   <!-- LineageAudioService - observe session changes permission -->
   <string name="permlab_observe_audio_sessions">promatraj promjene zvučnih sesija</string>
   <string name="permdesc_observe_audio_sessions">Dopušta aplikaciji promatrati tijek zvuka dok je kreiran i prekinut.</string>
-  <!-- LineageAudioService - observe session changes permission -->
-  <string name="permlab_manage_audio_sessions">upravljaj promjenama zvučnih sesija</string>
-  <string name="permdesc_manage_audio_sessions">Omogućuje aplikaciji slanje ažuriranja audio streama.</string>
   <!-- Privacy Guard -->
   <string name="privacy_guard_manager_title">Nadzor privatnosti</string>
   <!-- Permissions used by remote preferences -->
   <string name="permlab_manageRemotePrefs">upravljanje udaljenim postavkama</string>
   <string name="permdesc_manageRemotePrefs">Omogućuje aplikaciji upravljanje udaljenim postavkama</string>
+  <!-- About device screen, build date -->
+  <!-- About device screen, LineageOS API Level -->
+  <!-- About device screen, LineageOS updates -->
+  <!-- About device screen, LineageOS version -->
+  <!-- General purpose use "unknown" string -->
+  <!-- Long-press back kill application -->
+  <!-- Status bar network traffic monitor strings -->
+  <!-- Accent colors -->
 </resources>

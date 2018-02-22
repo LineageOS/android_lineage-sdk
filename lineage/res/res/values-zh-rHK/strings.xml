@@ -21,7 +21,6 @@
   <!-- Labels for the MODIFY_PROFILES permission. -->
   <!-- Labels for the HARDWARE_ABSTRACTION_ACCESS permission. -->
   <string name="permlab_useHardwareFramework">使用硬件框架</string>
-  <string name="permdesc_useHardwareFramework">允許應用程式存取 Lineage 硬件框架。</string>
   <!-- Labels for the WRITE_SETTINGS permission -->
   <!-- Labels for the WRITE_SECURE_SETTINGS permission -->
   <!-- Labels for the PROTECTED_APP permission. -->
@@ -33,12 +32,6 @@
   <!-- Performance profiles -->
   <!-- Performance profiles -->
   <!-- LiveDisplay strings -->
-  <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
   <!-- Performance manager permission title -->
   <!-- Performance manager permission description -->
   <!-- Weather Service strings -->
@@ -48,7 +41,14 @@
   <!-- DataUsageProvider read permission description -->
   <!-- LiveDisplay manager permission -->
   <!-- LineageAudioService - observe session changes permission -->
-  <!-- LineageAudioService - observe session changes permission -->
   <!-- Privacy Guard -->
   <!-- Permissions used by remote preferences -->
+  <!-- About device screen, build date -->
+  <!-- About device screen, LineageOS API Level -->
+  <!-- About device screen, LineageOS updates -->
+  <!-- About device screen, LineageOS version -->
+  <!-- General purpose use "unknown" string -->
+  <!-- Long-press back kill application -->
+  <!-- Status bar network traffic monitor strings -->
+  <!-- Accent colors -->
 </resources>

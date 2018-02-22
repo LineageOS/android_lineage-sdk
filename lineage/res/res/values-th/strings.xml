@@ -18,19 +18,13 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Label for the LineageOS system components when they are shown to the user. -->
-  <string name="lineageos_system_label">ระบบ LineageOS</string>
   <!-- Labels for the MODIFY_PROFILES permission. -->
   <string name="permlab_modifyProfiles">ปรับแต่งโปรไฟล์ระบบ</string>
   <string name="permdesc_modifyProfiles">อนุญาตให้แอปปรับแต่งโปรไฟล์ระบบ</string>
   <!-- Labels for the HARDWARE_ABSTRACTION_ACCESS permission. -->
   <string name="permlab_useHardwareFramework">ใช้ฮาร์ดแวร์เฟรมเวิร์ค</string>
-  <string name="permdesc_useHardwareFramework">อนุญาตให้แอพเข้าถึง Lineage ฮาร์ดแวร์เฟรมเวิร์ค</string>
   <!-- Labels for the WRITE_SETTINGS permission -->
-  <string name="permlab_writeSettings">ปรับแต่งการตั้งค่าระบบ Lineage</string>
-  <string name="permdesc_writeSettings">อนุญาตให้แอปปรับการตั้งค่าระบบ Lineage</string>
   <!-- Labels for the WRITE_SECURE_SETTINGS permission -->
-  <string name="permlab_writeSecureSettings">ปรับแต่งการตั้งค่าระบบความปลอดภัยของ Lineage</string>
-  <string name="permdesc_writeSecureSettings">อนุญาตให้แอปปรับแต่งการตั้งค่าระบบความปลอดภัยของ Lineage ไม่ใช่เพื่อให้แอปปกตินำไปใช้</string>
   <!-- Labels for the PROTECTED_APP permission. -->
   <string name="permlab_protectedApp">เพิ่มและลบแอปจากแอปที่ได้รับการป้องกัน</string>
   <string name="permdesc_protectedApp">อนุญาคให้แอปทำเครื่องหมายว่าแอปอื่นได้รับการป้องกันและล็อคมันไว้</string>
@@ -79,12 +73,6 @@
   <string name="accessibility_quick_settings_live_display_changed_day">LiveDisplay เปลี่ยนเป็นรูปแบบกลางวัน</string>
   <string name="accessibility_quick_settings_live_display_changed_night">LiveDisplay เปลี่ยนเป็นรูปแบบกลางคืน</string>
   <string name="accessibility_quick_settings_live_display_changed_outdoor">LiveDisplay เปลี่ยนเป็นรูปแบบกลางแจ้ง</string>
-  <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
   <!-- Performance manager permission title -->
   <string name="permlab_perfAccess">ตัวจัดการประสิทธิภาพการเข้าถึง</string>
   <!-- Performance manager permission description -->
@@ -112,7 +100,14 @@
   <!-- LineageAudioService - observe session changes permission -->
   <string name="permlab_observe_audio_sessions">สังเกตการเปลี่ยนแปลงเซสชันเสียง</string>
   <string name="permdesc_observe_audio_sessions">อนุญาตให้แอปสังเกตกระแสข้อมูลเสียงที่กำลังถูกสร้างและทำลาย</string>
-  <!-- LineageAudioService - observe session changes permission -->
   <!-- Privacy Guard -->
   <!-- Permissions used by remote preferences -->
+  <!-- About device screen, build date -->
+  <!-- About device screen, LineageOS API Level -->
+  <!-- About device screen, LineageOS updates -->
+  <!-- About device screen, LineageOS version -->
+  <!-- General purpose use "unknown" string -->
+  <!-- Long-press back kill application -->
+  <!-- Status bar network traffic monitor strings -->
+  <!-- Accent colors -->
 </resources>

@@ -18,19 +18,13 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Label for the LineageOS system components when they are shown to the user. -->
-  <string name="lineageos_system_label">Sistema LineageOS</string>
   <!-- Labels for the MODIFY_PROFILES permission. -->
   <string name="permlab_modifyProfiles">modificar os perfis de sistema</string>
   <string name="permdesc_modifyProfiles">Permite que um aplicativo modifique os perfis de sistema.</string>
   <!-- Labels for the HARDWARE_ABSTRACTION_ACCESS permission. -->
   <string name="permlab_useHardwareFramework">usar o framework do hardware</string>
-  <string name="permdesc_useHardwareFramework">Permite o acesso de um aplicativo ao framework de acesso ao hardware Lineage.</string>
   <!-- Labels for the WRITE_SETTINGS permission -->
-  <string name="permlab_writeSettings">modificar as configurações do sistema da Lineage</string>
-  <string name="permdesc_writeSettings">Permite que um aplicativo modifique as configurações do sistema da Lineage.</string>
   <!-- Labels for the WRITE_SECURE_SETTINGS permission -->
-  <string name="permlab_writeSecureSettings">modificar as configurações de segurança do sistema da Lineage</string>
-  <string name="permdesc_writeSecureSettings">Permite que um aplicativo modifique as configurações de segurança do sistema Lineage. Não deve ser usado por aplicativos normais.</string>
   <!-- Labels for the PROTECTED_APP permission. -->
   <string name="permlab_protectedApp">adicionar e remover aplicativos aos protegidos</string>
   <string name="permdesc_protectedApp">Permite que um aplicativo marque outros aplicativos como protegidos e os bloqueie.</string>
@@ -84,12 +78,6 @@
   <string name="accessibility_quick_settings_live_display_changed_day">LiveDisplay alterado para modo diurno.</string>
   <string name="accessibility_quick_settings_live_display_changed_night">LiveDisplay alterado para modo noturno.</string>
   <string name="accessibility_quick_settings_live_display_changed_outdoor">LiveDisplay alterado para modo ao ar livre.</string>
-  <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
   <!-- Performance manager permission title -->
   <string name="permlab_perfAccess">acessar o gerenciador de desempenho</string>
   <!-- Performance manager permission description -->
@@ -117,12 +105,17 @@
   <!-- LineageAudioService - observe session changes permission -->
   <string name="permlab_observe_audio_sessions">observar as alterações da sessão de áudio</string>
   <string name="permdesc_observe_audio_sessions">Permite que um app observe o fluxo de áudio sendo criado e destruído.</string>
-  <!-- LineageAudioService - observe session changes permission -->
-  <string name="permlab_manage_audio_sessions">gerenciar as alterações da sessão de áudio</string>
-  <string name="permdesc_manage_audio_sessions">Permite que um app envie atualizações de fluxo de áudio.</string>
   <!-- Privacy Guard -->
   <string name="privacy_guard_manager_title">Proteção à privacidade</string>
   <!-- Permissions used by remote preferences -->
   <string name="permlab_manageRemotePrefs">Administrar configurações remotas</string>
   <string name="permdesc_manageRemotePrefs">Permitir que um app possa administrar configurações remotas</string>
+  <!-- About device screen, build date -->
+  <!-- About device screen, LineageOS API Level -->
+  <!-- About device screen, LineageOS updates -->
+  <!-- About device screen, LineageOS version -->
+  <!-- General purpose use "unknown" string -->
+  <!-- Long-press back kill application -->
+  <!-- Status bar network traffic monitor strings -->
+  <!-- Accent colors -->
 </resources>

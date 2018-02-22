@@ -18,19 +18,13 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Label for the LineageOS system components when they are shown to the user. -->
-  <string name="lineageos_system_label">LineageOS システム</string>
   <!-- Labels for the MODIFY_PROFILES permission. -->
   <string name="permlab_modifyProfiles">システムプロファイルの変更</string>
   <string name="permdesc_modifyProfiles">システムプロファイルの変更をアプリに許可します。</string>
   <!-- Labels for the HARDWARE_ABSTRACTION_ACCESS permission. -->
   <string name="permlab_useHardwareFramework">ハードウェアフレームワークの使用</string>
-  <string name="permdesc_useHardwareFramework">LineageOS ハードウェアフレームワークへのアクセスをアプリに許可します。</string>
   <!-- Labels for the WRITE_SETTINGS permission -->
-  <string name="permlab_writeSettings">LineageOS システム設定の変更</string>
-  <string name="permdesc_writeSettings">LineageOS システム設定の変更をアプリに許可します。</string>
   <!-- Labels for the WRITE_SECURE_SETTINGS permission -->
-  <string name="permlab_writeSecureSettings">LineageOS セキュアシステム設定の変更</string>
-  <string name="permdesc_writeSecureSettings">LineageOS セキュアシステム設定の変更をアプリに許可します。通常のアプリ用ではありません。</string>
   <!-- Labels for the PROTECTED_APP permission. -->
   <string name="permlab_protectedApp">アプリの保護へのアプリの追加と削除</string>
   <string name="permdesc_protectedApp">他のアプリを保護に設定してロックすることをアプリに許可します。</string>
@@ -84,12 +78,6 @@
   <string name="accessibility_quick_settings_live_display_changed_day">LiveDisplayが昼モードに変更されました。</string>
   <string name="accessibility_quick_settings_live_display_changed_night">LiveDisplayが夜モードに変更されました。</string>
   <string name="accessibility_quick_settings_live_display_changed_outdoor">LiveDisplayが屋外モードに変更されました。</string>
-  <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
   <!-- Performance manager permission title -->
   <string name="permlab_perfAccess">パフォーマンスマネージャーへのアクセス</string>
   <!-- Performance manager permission description -->
@@ -117,12 +105,17 @@
   <!-- LineageAudioService - observe session changes permission -->
   <string name="permlab_observe_audio_sessions">オーディオセッションの変更の監視</string>
   <string name="permdesc_observe_audio_sessions">オーディオストリームの作成および破棄の監視をアプリに許可します。</string>
-  <!-- LineageAudioService - observe session changes permission -->
-  <string name="permlab_manage_audio_sessions">オーディオセッションの変更の管理</string>
-  <string name="permdesc_manage_audio_sessions">オーディオストリームの更新の送信をアプリに許可します。</string>
   <!-- Privacy Guard -->
   <string name="privacy_guard_manager_title">プライバシーガード</string>
   <!-- Permissions used by remote preferences -->
   <string name="permlab_manageRemotePrefs">リモートの設定の管理</string>
   <string name="permdesc_manageRemotePrefs">リモートの設定を管理することをアプリに許可します。</string>
+  <!-- About device screen, build date -->
+  <!-- About device screen, LineageOS API Level -->
+  <!-- About device screen, LineageOS updates -->
+  <!-- About device screen, LineageOS version -->
+  <!-- General purpose use "unknown" string -->
+  <!-- Long-press back kill application -->
+  <!-- Status bar network traffic monitor strings -->
+  <!-- Accent colors -->
 </resources>

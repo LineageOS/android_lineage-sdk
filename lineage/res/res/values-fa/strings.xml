@@ -18,19 +18,13 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Label for the LineageOS system components when they are shown to the user. -->
-  <string name="lineageos_system_label">سیستم سایانوژن‌مود</string>
   <!-- Labels for the MODIFY_PROFILES permission. -->
   <string name="permlab_modifyProfiles">تغییر پروفایل‌های سیستم</string>
   <string name="permdesc_modifyProfiles">به برنامه اجازه می‌دهد تا پروفایل‌های سیستم را تغییر دهد.</string>
   <!-- Labels for the HARDWARE_ABSTRACTION_ACCESS permission. -->
   <string name="permlab_useHardwareFramework">استفاده از چارچوب سخت‌افزار</string>
-  <string name="permdesc_useHardwareFramework">به برنامه اجازه می‌دهد به چارچوب سخت‌افزار Lineage دسترسی داشته باشد.</string>
   <!-- Labels for the WRITE_SETTINGS permission -->
-  <string name="permlab_writeSettings">تغییر تنظیمات سیستم Lineage</string>
-  <string name="permdesc_writeSettings">به برنامه اجازه می‌دهد که تنظیمات سیستم Lineage را تغییر دهد.</string>
   <!-- Labels for the WRITE_SECURE_SETTINGS permission -->
-  <string name="permlab_writeSecureSettings">تغییر تنظیمات امنیت سیستم Lineage</string>
-  <string name="permdesc_writeSecureSettings">به برنامه اجازه می‌دهد تا تنظیمات امنیت سیستم Lineage را تغییر دهد. برای استفاده برنامه‌های عادی پیشنهاد نمی‌شود.</string>
   <!-- Labels for the PROTECTED_APP permission. -->
   <!-- Profiles -->
   <!-- Names of default profiles. -->
@@ -52,12 +46,6 @@
   <!-- Performance profiles -->
   <!-- LiveDisplay strings -->
   <string name="live_display_night">شب</string>
-  <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
   <!-- Performance manager permission title -->
   <!-- Performance manager permission description -->
   <!-- Weather Service strings -->
@@ -67,7 +55,14 @@
   <!-- DataUsageProvider read permission description -->
   <!-- LiveDisplay manager permission -->
   <!-- LineageAudioService - observe session changes permission -->
-  <!-- LineageAudioService - observe session changes permission -->
   <!-- Privacy Guard -->
   <!-- Permissions used by remote preferences -->
+  <!-- About device screen, build date -->
+  <!-- About device screen, LineageOS API Level -->
+  <!-- About device screen, LineageOS updates -->
+  <!-- About device screen, LineageOS version -->
+  <!-- General purpose use "unknown" string -->
+  <!-- Long-press back kill application -->
+  <!-- Status bar network traffic monitor strings -->
+  <!-- Accent colors -->
 </resources>

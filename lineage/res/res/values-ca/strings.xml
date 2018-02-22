@@ -26,11 +26,11 @@
   <string name="permlab_useHardwareFramework">utilitza el marc de hardware</string>
   <string name="permdesc_useHardwareFramework">Permet a una aplicació accedir al marc de hardware de Lineage.</string>
   <!-- Labels for the WRITE_SETTINGS permission -->
-  <string name="permlab_writeSettings">modificar la configuració del sistema Lineage</string>
-  <string name="permdesc_writeSettings">Permet a una aplicació modificar la configuració del sistema Lineage.</string>
+  <string name="permlab_writeSettings">modificar la configuració del sistema de Lineage</string>
+  <string name="permdesc_writeSettings">Permet a una aplicació modificar la configuració del sistema de Lineage.</string>
   <!-- Labels for the WRITE_SECURE_SETTINGS permission -->
-  <string name="permlab_writeSecureSettings">modificar la configuració segura del sistema Lineage</string>
-  <string name="permdesc_writeSecureSettings">Permet a una aplicació modificar la configuració segura del sistema Lineage. No utilitzar en aplicacions normals.</string>
+  <string name="permlab_writeSecureSettings">modificar la configuració segura del sistema de Lineage</string>
+  <string name="permdesc_writeSecureSettings">Permet a una aplicació modificar la configuració segura del sistema de Lineage. No utilitzar en aplicacions normals.</string>
   <!-- Labels for the PROTECTED_APP permission. -->
   <string name="permlab_protectedApp">afegir i eliminar aplicacions a les aplicacions protegides</string>
   <string name="permdesc_protectedApp">Permet a una aplicació marcar a altres aplicacions com a protegides i bloquejar-les.</string>
@@ -84,12 +84,6 @@
   <string name="accessibility_quick_settings_live_display_changed_day">LiveDisplay canviat al mode diürn.</string>
   <string name="accessibility_quick_settings_live_display_changed_night">LiveDisplay canviat al mode nocturn.</string>
   <string name="accessibility_quick_settings_live_display_changed_outdoor">LiveDisplay canviat al mode exterior.</string>
-  <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
   <!-- Performance manager permission title -->
   <string name="permlab_perfAccess">accés a l\'administrador de rendiment</string>
   <!-- Performance manager permission description -->
@@ -117,12 +111,27 @@
   <!-- LineageAudioService - observe session changes permission -->
   <string name="permlab_observe_audio_sessions">observa els canvis en la sessió de so</string>
   <string name="permdesc_observe_audio_sessions">Permet a una aplicació observar els fluxos de so que són creats i destruïts.</string>
-  <!-- LineageAudioService - observe session changes permission -->
-  <string name="permlab_manage_audio_sessions">administra els canvis en la sessió de so</string>
-  <string name="permdesc_manage_audio_sessions">Permet a una aplicació enviar actualitzacions de transmissió d\'àudio.</string>
   <!-- Privacy Guard -->
   <string name="privacy_guard_manager_title">Guarda de privacitat</string>
   <!-- Permissions used by remote preferences -->
   <string name="permlab_manageRemotePrefs">gestiona la configuració remota</string>
   <string name="permdesc_manageRemotePrefs">Permet a una aplicació gestionar la configuració remota</string>
+  <!-- About device screen, build date -->
+  <string name="build_date">Data de compilació</string>
+  <!-- About device screen, LineageOS API Level -->
+  <string name="lineage_api_level">Nivell de l\'API de LineageOS</string>
+  <!-- About device screen, LineageOS updates -->
+  <string name="lineage_updates">Actualitzacions LineageOS</string>
+  <!-- About device screen, LineageOS version -->
+  <string name="lineage_version">Versió de LineageOS</string>
+  <!-- General purpose use "unknown" string -->
+  <string name="unknown">Desconegut</string>
+  <!-- Long-press back kill application -->
+  <string name="app_killed_message">S\'ha matat l\'aplicació</string>
+  <!-- Status bar network traffic monitor strings -->
+  <string name="kilobitspersecond_short">kb/s</string>
+  <string name="megabitspersecond_short">Mb/s</string>
+  <string name="kilobytespersecond_short">kB/s</string>
+  <string name="megabytespersecond_short">MB/s</string>
+  <!-- Accent colors -->
 </resources>

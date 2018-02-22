@@ -24,13 +24,13 @@
   <string name="permdesc_modifyProfiles">Позволява да модифицирате системни профили.</string>
   <!-- Labels for the HARDWARE_ABSTRACTION_ACCESS permission. -->
   <string name="permlab_useHardwareFramework">Използване на framework хардуер</string>
-  <string name="permdesc_useHardwareFramework">Разрешава на едно приложение да достъпва до framework хардуера на Lineage.</string>
+  <string name="permdesc_useHardwareFramework">Разрешава на едно приложение да достъпа до framework хардуера на Lineage.</string>
   <!-- Labels for the WRITE_SETTINGS permission -->
-  <string name="permlab_writeSettings">Модифициране на СМ системни настройки</string>
-  <string name="permdesc_writeSettings">Позволява на приложението да модифицира СМ системни настройки.</string>
+  <string name="permlab_writeSettings">промяна на системните настройки на Lineage</string>
+  <string name="permdesc_writeSettings">Позволява на приложението да модифицира Lineage системни настройки.</string>
   <!-- Labels for the WRITE_SECURE_SETTINGS permission -->
-  <string name="permlab_writeSecureSettings">Модифициране настройките на Lineage сигурността</string>
-  <string name="permdesc_writeSecureSettings">Разрешава на проложението да променя системните настройки на сигурността. Това разрешение не се използва от нормални приложения.</string>
+  <string name="permlab_writeSecureSettings">промяна на системните настройки за сигурност на Lineage</string>
+  <string name="permdesc_writeSecureSettings">Разрешава на приложението да променя системните настройки на сигурността на Lineage. Това разрешение не се използва от нормални приложения.</string>
   <!-- Labels for the PROTECTED_APP permission. -->
   <string name="permlab_protectedApp">Прибави/Премахни приложение към/от списъка със защитени приложения</string>
   <string name="permdesc_protectedApp">Позволява на приложението да маркира други приложения, като защитени и да ги заключва.</string>
@@ -84,12 +84,6 @@
   <string name="accessibility_quick_settings_live_display_changed_day">Адаптивен дисплей е променен на дневен режим.</string>
   <string name="accessibility_quick_settings_live_display_changed_night">Адаптивен дисплей е променен на нощен режим.</string>
   <string name="accessibility_quick_settings_live_display_changed_outdoor">Адаптивен дисплей е променен на външен режим.</string>
-  <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
   <!-- Performance manager permission title -->
   <string name="permlab_perfAccess">Достъп до диспечера за производителност</string>
   <!-- Performance manager permission description -->
@@ -117,12 +111,27 @@
   <!-- LineageAudioService - observe session changes permission -->
   <string name="permlab_observe_audio_sessions">преглед на промените в аудио сесии</string>
   <string name="permdesc_observe_audio_sessions">Позволява на приложение да наблюдава създаване и унищожаване на аудио потоци.</string>
-  <!-- LineageAudioService - observe session changes permission -->
-  <string name="permlab_manage_audio_sessions">управление на промените в аудио сесии</string>
-  <string name="permdesc_manage_audio_sessions">Разрешава на приложението да изпраща известия за аудио стрийминг актуализации.</string>
   <!-- Privacy Guard -->
   <string name="privacy_guard_manager_title">Защитен режим</string>
   <!-- Permissions used by remote preferences -->
   <string name="permlab_manageRemotePrefs">управление на отдалечени настройки</string>
   <string name="permdesc_manageRemotePrefs">Позволява на приложението да управлява отдалечени настройки</string>
+  <!-- About device screen, build date -->
+  <string name="build_date">Дата на изграждане</string>
+  <!-- About device screen, LineageOS API Level -->
+  <string name="lineage_api_level">LineageOS приложно-програмен интерфейс ниво</string>
+  <!-- About device screen, LineageOS updates -->
+  <string name="lineage_updates">LineageOS актуализации</string>
+  <!-- About device screen, LineageOS version -->
+  <string name="lineage_version">Версия на LineageOS</string>
+  <!-- General purpose use "unknown" string -->
+  <string name="unknown">Неизвестно</string>
+  <!-- Long-press back kill application -->
+  <string name="app_killed_message">Приложението е спряно</string>
+  <!-- Status bar network traffic monitor strings -->
+  <string name="kilobitspersecond_short">kб/с</string>
+  <string name="megabitspersecond_short">Mб/с</string>
+  <string name="kilobytespersecond_short">kБ/с</string>
+  <string name="megabytespersecond_short">MБ/с</string>
+  <!-- Accent colors -->
 </resources>

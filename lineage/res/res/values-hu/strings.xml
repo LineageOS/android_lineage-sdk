@@ -18,19 +18,13 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Label for the LineageOS system components when they are shown to the user. -->
-  <string name="lineageos_system_label">LineageOS rendszer</string>
   <!-- Labels for the MODIFY_PROFILES permission. -->
   <string name="permlab_modifyProfiles">rendszerprofilok módosítása</string>
   <string name="permdesc_modifyProfiles">Lehetővé teszi az alkalmazás számára a rendszerprofilok módosítását.</string>
   <!-- Labels for the HARDWARE_ABSTRACTION_ACCESS permission. -->
   <string name="permlab_useHardwareFramework">hardver keretrendszert használ</string>
-  <string name="permdesc_useHardwareFramework">Lehetővé teszi az alkalmazás számára, hogy a Lineage hardver hozzáférjen a keretrendszerhez.</string>
   <!-- Labels for the WRITE_SETTINGS permission -->
-  <string name="permlab_writeSettings">Lineage rendszer beállításainak módosítása</string>
-  <string name="permdesc_writeSettings">Lehetővé teszi egy alkalmazás számára a Lineage rendszer beállításainak módosítását.</string>
   <!-- Labels for the WRITE_SECURE_SETTINGS permission -->
-  <string name="permlab_writeSecureSettings">Lineage biztonsági rendszer beállításainak módosítása</string>
-  <string name="permdesc_writeSecureSettings">Lehetővé teszi egy alkalmazás számára a Lineage biztonsági rendszer beállításainak módosítását. Szokásos alkalmazások számára nem használható.</string>
   <!-- Labels for the PROTECTED_APP permission. -->
   <string name="permlab_protectedApp">alkalmazások hozzáadása vagy eltávolítása a védett alkalmazásokból</string>
   <string name="permdesc_protectedApp">Lehetővé teszi az alkalmazás számára más alkalmazások védetté nyilvánítását és azok zárolását.</string>
@@ -84,12 +78,6 @@
   <string name="accessibility_quick_settings_live_display_changed_day">LiveDisplay nappali módra változtatva.</string>
   <string name="accessibility_quick_settings_live_display_changed_night">LiveDisplay éjszakai módra változtatva.</string>
   <string name="accessibility_quick_settings_live_display_changed_outdoor">LiveDisplay szabadtéri módra változtatva.</string>
-  <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
   <!-- Performance manager permission title -->
   <string name="permlab_perfAccess">hozzáférés a teljesítmény kezelőhöz</string>
   <!-- Performance manager permission description -->
@@ -117,12 +105,17 @@
   <!-- LineageAudioService - observe session changes permission -->
   <string name="permlab_observe_audio_sessions">audió munkamenet változásainak megfigyelése</string>
   <string name="permdesc_observe_audio_sessions">Lehetővé teszi az alkalmazás számára, hogy megfigyelje ahogy az audió folyamok létrejönnek és elpusztulnak.</string>
-  <!-- LineageAudioService - observe session changes permission -->
-  <string name="permlab_manage_audio_sessions">audió munkamenet változások kezelése</string>
-  <string name="permdesc_manage_audio_sessions">Lehetővé teszi az alkalmazás számára, hogy audio stream frissítéseket küldjön.</string>
   <!-- Privacy Guard -->
   <string name="privacy_guard_manager_title">Adatvédelmi beállítások</string>
   <!-- Permissions used by remote preferences -->
   <string name="permlab_manageRemotePrefs">távoli beállítások kezelése</string>
   <string name="permdesc_manageRemotePrefs">Lehetővé teszi az alkalmazások számára a távoli beállítások kezelését</string>
+  <!-- About device screen, build date -->
+  <!-- About device screen, LineageOS API Level -->
+  <!-- About device screen, LineageOS updates -->
+  <!-- About device screen, LineageOS version -->
+  <!-- General purpose use "unknown" string -->
+  <!-- Long-press back kill application -->
+  <!-- Status bar network traffic monitor strings -->
+  <!-- Accent colors -->
 </resources>

@@ -18,19 +18,13 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Label for the LineageOS system components when they are shown to the user. -->
-  <string name="lineageos_system_label">LineageOS سىستېمىسى</string>
   <!-- Labels for the MODIFY_PROFILES permission. -->
   <string name="permlab_modifyProfiles">سىستېما سەپلەنمىسىنى ئۆزگەرتىش</string>
   <string name="permdesc_modifyProfiles">ئەپنىڭ سىستېما سەپلەنمىسىنى ئۆزگەرتىشىگە يول قويۇش.</string>
   <!-- Labels for the HARDWARE_ABSTRACTION_ACCESS permission. -->
   <string name="permlab_useHardwareFramework">قاتتىق دىتال جازىسىنى ئىشلىتىش</string>
-  <string name="permdesc_useHardwareFramework">ئەپنىڭ Lineage قاتتىق دىتال جازىسىنى زىيارەت قىلىشىغا يول قويۇش.</string>
   <!-- Labels for the WRITE_SETTINGS permission -->
-  <string name="permlab_writeSettings">سىستېما Lineageنىڭ تەڭشىكىنى ئۆزگەرتىش</string>
-  <string name="permdesc_writeSettings">سىستېما Lineageنىڭ تەڭشىكىنى ئۆزگەرتىشكە يول قويۇش.</string>
   <!-- Labels for the WRITE_SECURE_SETTINGS permission -->
-  <string name="permlab_writeSecureSettings">سىستېما Lineageنىڭ بىخەتەرلىك تەڭشىكىنى ئۆزگەرتىش</string>
-  <string name="permdesc_writeSecureSettings">ئەپنىڭ سىستېما Lineageنىڭ بىخەتەرلىك تەڭشىكىنى ئۆزگەرتىشگە يول قويۇش.</string>
   <!-- Labels for the PROTECTED_APP permission. -->
   <string name="permlab_protectedApp">قوغدالغان ئەپ تىزىمىگە ئەپ قوشۇش ياكى چىقىرۋېتىش</string>
   <string name="permdesc_protectedApp">ئەپنىڭ باشقا ئەپلەرنى قوغداش تىزىملىكىگە قوشۇشىغا ياكى تاقاپ قۇيىشىغا رۇخسەت قىلىش.</string>
@@ -69,12 +63,6 @@
   <string name="live_display_outdoor">تالا (قۇياش نۇرى)</string>
   <string name="live_display_outdoor_summary">تالا تەڭشەكلىرىنىلا ئىشلىتىدۇ</string>
   <string name="live_display_hint">LiveDisplay كۆز چارچىشىنى يېنىكلىتىشكە ياردەم بېرىدۇ، كېچىدە ئۇخلىشىڭىزغا ياردەم بېرىدۇ. سىناش ئۈچۈن بۇ جاينى چېكىڭ!</string>
-  <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
   <!-- Performance manager permission title -->
   <string name="permlab_perfAccess">ئىقتىدار باشقۇرغۇچنى زىيارەت قىلىش</string>
   <!-- Performance manager permission description -->
@@ -86,7 +74,14 @@
   <!-- DataUsageProvider read permission description -->
   <!-- LiveDisplay manager permission -->
   <!-- LineageAudioService - observe session changes permission -->
-  <!-- LineageAudioService - observe session changes permission -->
   <!-- Privacy Guard -->
   <!-- Permissions used by remote preferences -->
+  <!-- About device screen, build date -->
+  <!-- About device screen, LineageOS API Level -->
+  <!-- About device screen, LineageOS updates -->
+  <!-- About device screen, LineageOS version -->
+  <!-- General purpose use "unknown" string -->
+  <!-- Long-press back kill application -->
+  <!-- Status bar network traffic monitor strings -->
+  <!-- Accent colors -->
 </resources>

@@ -27,10 +27,10 @@
   <string name="permdesc_useHardwareFramework">允許應用程式存取 Lineage 硬體框架。</string>
   <!-- Labels for the WRITE_SETTINGS permission -->
   <string name="permlab_writeSettings">修改 Lineage 系統設定</string>
-  <string name="permdesc_writeSettings">允許應用程式更改 Lineage 系統設定</string>
+  <string name="permdesc_writeSettings">允許應用程式修改 Lineage 系統設定。</string>
   <!-- Labels for the WRITE_SECURE_SETTINGS permission -->
   <string name="permlab_writeSecureSettings">修改 Lineage 系統安全設定</string>
-  <string name="permdesc_writeSecureSettings">允許應用程式修改 Lineage 安全系統設定，非供一般應用程式使用。</string>
+  <string name="permdesc_writeSecureSettings">允許應用程式修改 Lineage 系統安全設定。僅供偵錯使用。</string>
   <!-- Labels for the PROTECTED_APP permission. -->
   <string name="permlab_protectedApp">新增或移除受保護的應用程式</string>
   <string name="permdesc_protectedApp">允許應用程式標示其他應用程式為受保護並將其鎖定。</string>
@@ -84,12 +84,6 @@
   <string name="accessibility_quick_settings_live_display_changed_day">LiveDisplay 已變更為日間模式</string>
   <string name="accessibility_quick_settings_live_display_changed_night">LiveDisplay 已變更為夜間模式</string>
   <string name="accessibility_quick_settings_live_display_changed_outdoor">LiveDisplay 已變更為戶外模式</string>
-  <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
   <!-- Performance manager permission title -->
   <string name="permlab_perfAccess">存取效能管理員</string>
   <!-- Performance manager permission description -->
@@ -100,7 +94,7 @@
   <string name="permlab_weather_write">更新天氣</string>
   <string name="permdesc_weather_write">允許應用程式更新天氣資訊提供者的內容。</string>
   <string name="permlab_weather_bind">綁定為天氣資訊供應商服務</string>
-  <string name="permdesc_weather_bind">允許應用程式識別為天氣供應商服務。</string>
+  <string name="permdesc_weather_bind">允許應用程式辨識為天氣供應商服務。</string>
   <string name="permlab_weather_access_mgr">存取氣象服務</string>
   <string name="permdesc_weather_access_mgr">允許應用程式存取氣象服務 。一般應用程式不需使用。</string>
   <!-- DataUsageProvider write permission title -->
@@ -117,12 +111,27 @@
   <!-- LineageAudioService - observe session changes permission -->
   <string name="permlab_observe_audio_sessions">觀察音訊會話變動</string>
   <string name="permdesc_observe_audio_sessions">允許應用程式觀察音訊串流的建立和銷毀。</string>
-  <!-- LineageAudioService - observe session changes permission -->
-  <string name="permlab_manage_audio_sessions">管理音訊會話變動</string>
-  <string name="permdesc_manage_audio_sessions">允許應用程式傳送音訊串流更新。</string>
   <!-- Privacy Guard -->
   <string name="privacy_guard_manager_title">隱私守衛</string>
   <!-- Permissions used by remote preferences -->
   <string name="permlab_manageRemotePrefs">管理遠端設定</string>
   <string name="permdesc_manageRemotePrefs">允許應用程式管理遠端設定</string>
+  <!-- About device screen, build date -->
+  <string name="build_date">編譯日期</string>
+  <!-- About device screen, LineageOS API Level -->
+  <string name="lineage_api_level">LineageOS API 等級</string>
+  <!-- About device screen, LineageOS updates -->
+  <string name="lineage_updates">LineageOS 更新</string>
+  <!-- About device screen, LineageOS version -->
+  <string name="lineage_version">LineageOS 版本</string>
+  <!-- General purpose use "unknown" string -->
+  <string name="unknown">未知</string>
+  <!-- Long-press back kill application -->
+  <string name="app_killed_message">已強制結束應用程式</string>
+  <!-- Status bar network traffic monitor strings -->
+  <string name="kilobitspersecond_short">kb/s</string>
+  <string name="megabitspersecond_short">Mb/s</string>
+  <string name="kilobytespersecond_short">kB/s</string>
+  <string name="megabytespersecond_short">MB/s</string>
+  <!-- Accent colors -->
 </resources>

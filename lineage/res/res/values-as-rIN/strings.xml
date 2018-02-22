@@ -18,19 +18,13 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Label for the LineageOS system components when they are shown to the user. -->
-  <string name="lineageos_system_label">LineageOS ছিষ্টেম</string>
   <!-- Labels for the MODIFY_PROFILES permission. -->
   <string name="permlab_modifyProfiles">ছিষ্টেম প্ৰ\'ফাইল সংশোধন কৰক</string>
   <string name="permdesc_modifyProfiles">এটা এপ্প্‌ক ছিষ্টেম প্ৰ\'ফাইল সংশোধন কৰিবলৈ অনুমতি দিয়ে</string>
   <!-- Labels for the HARDWARE_ABSTRACTION_ACCESS permission. -->
   <string name="permlab_useHardwareFramework">হাৰ্ডৱেৰ ফ্ৰেমৱৰ্ক ব্যৱহাৰ কৰক</string>
-  <string name="permdesc_useHardwareFramework">এটা এপ্প্‌ক Lineage হাৰ্ডৱেৰ ফ্ৰেমৱৰ্কত প্ৰৱেশ কৰিবলৈ অনুমতি দিয়ে।</string>
   <!-- Labels for the WRITE_SETTINGS permission -->
-  <string name="permlab_writeSettings">Lineage ছিষ্টেম ছেটিংচ সংশোধন কৰক</string>
-  <string name="permdesc_writeSettings">এটা এপ্প্‌ক Lineage ছিষ্টেম ছেটিং সংশোধন কৰিবলৈ অনুমতি দিয়ে</string>
   <!-- Labels for the WRITE_SECURE_SETTINGS permission -->
-  <string name="permlab_writeSecureSettings">Lineage চিকিওৰ ছিষ্টেম ছেটিংচ সংশোধন কৰক</string>
-  <string name="permdesc_writeSecureSettings">এটা এপ্প্‌ক Lineage চিকিওৰ ছিষ্টেম ছেটিং সংশোধন কৰিবলৈ অনুমতি দিয়ে সাধাৰণ এপ্প্‌সমূহৰ ব্যৱহাৰৰ কাৰণে নহয়৷</string>
   <!-- Labels for the PROTECTED_APP permission. -->
   <string name="permlab_protectedApp">প্ৰতিৰোধী এপ্প্‌ৰ পৰা এপ্প্‌ যোগ কৰক আৰু আঁতৰ কৰক</string>
   <string name="permdesc_protectedApp">এটা এপ্প্‌ক অন্যান্য এপ্প্‌বোৰ প্ৰতিৰোধী হিচাপে চিহ্নিত কৰিবলৈ আৰু লক কৰিবলৈ অনুমতি দিয়ে।</string>
@@ -69,12 +63,6 @@
   <string name="live_display_outdoor">আউটডোৰ (উজ্জ্বল ৰ\'দ)</string>
   <string name="live_display_outdoor_summary">কেৱল আউটডোৰ ছেটিংচ ব্যৱহাৰ কৰক</string>
   <string name="live_display_hint">লাইভপ্রদর্শন আপোনাৰ চকুৰ ওপৰত চাপ কমাব পাৰে আৰু ৰাতি শোৱাত সহায় কৰিব পাৰে। ইয়াক চেষ্টা কৰি চাবলৈ ইয়াত ক্লিক কৰক!</string>
-  <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
   <!-- Performance manager permission title -->
   <!-- Performance manager permission description -->
   <!-- Weather Service strings -->
@@ -84,7 +72,14 @@
   <!-- DataUsageProvider read permission description -->
   <!-- LiveDisplay manager permission -->
   <!-- LineageAudioService - observe session changes permission -->
-  <!-- LineageAudioService - observe session changes permission -->
   <!-- Privacy Guard -->
   <!-- Permissions used by remote preferences -->
+  <!-- About device screen, build date -->
+  <!-- About device screen, LineageOS API Level -->
+  <!-- About device screen, LineageOS updates -->
+  <!-- About device screen, LineageOS version -->
+  <!-- General purpose use "unknown" string -->
+  <!-- Long-press back kill application -->
+  <!-- Status bar network traffic monitor strings -->
+  <!-- Accent colors -->
 </resources>

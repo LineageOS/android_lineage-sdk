@@ -26,11 +26,11 @@
   <string name="permlab_useHardwareFramework">하드웨어 프레임워크 사용</string>
   <string name="permdesc_useHardwareFramework">앱이 Lineage 하드웨어 프레임워크에 접근할 수 있도록 허용합니다.</string>
   <!-- Labels for the WRITE_SETTINGS permission -->
-  <string name="permlab_writeSettings">Lineage 시스템 설정 수정</string>
-  <string name="permdesc_writeSettings">앱이 Lineage 시스템 설정을 수정할 수 있도록 허용합니다.</string>
+  <string name="permlab_writeSettings">Lineage 시스템 설정 변경</string>
+  <string name="permdesc_writeSettings">앱이 Lineage 시스템 설정을 변경할 수 있도록 허용합니다.</string>
   <!-- Labels for the WRITE_SECURE_SETTINGS permission -->
-  <string name="permlab_writeSecureSettings">Lineage 보안 시스템 설정 수정</string>
-  <string name="permdesc_writeSecureSettings">앱이 Lineage 보안 시스템 설정을 수정할 수 있도록 허용합니다. 일반 앱을 위한 것이 아닙니다.</string>
+  <string name="permlab_writeSecureSettings">Lineage 보안 시스템 설정 변경</string>
+  <string name="permdesc_writeSecureSettings">앱이 Lineage 보안 시스템 설정을 변경할 수 있도록 허용합니다. 일반 앱에서는 사용하지 않습니다.</string>
   <!-- Labels for the PROTECTED_APP permission. -->
   <string name="permlab_protectedApp">보호된 앱 추가/제거</string>
   <string name="permdesc_protectedApp">앱이 다른 앱을 보호됨으로 표시하고 잠글 수 있도록 허용합니다.</string>
@@ -84,12 +84,6 @@
   <string name="accessibility_quick_settings_live_display_changed_day">라이브 디스플레이가 낮 모드로 바뀜.</string>
   <string name="accessibility_quick_settings_live_display_changed_night">라이브 디스플레이가 밤 모드로 바뀜.</string>
   <string name="accessibility_quick_settings_live_display_changed_outdoor">라이브 디스플레이가 야외 모드로 바뀜.</string>
-  <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
   <!-- Performance manager permission title -->
   <string name="permlab_perfAccess">성능 관리자에 액세스</string>
   <!-- Performance manager permission description -->
@@ -117,12 +111,27 @@
   <!-- LineageAudioService - observe session changes permission -->
   <string name="permlab_observe_audio_sessions">오디오 세션 변화 관찰</string>
   <string name="permdesc_observe_audio_sessions">앱이 오디오 스트림이 생성되고 제거되는 것을 관찰할 수 있도록 허용합니다.</string>
-  <!-- LineageAudioService - observe session changes permission -->
-  <string name="permlab_manage_audio_sessions">오디오 세션 변경 관리</string>
-  <string name="permdesc_manage_audio_sessions">앱을 통해 오디오 스트림 업데이트를 보내도록 합니다.</string>
   <!-- Privacy Guard -->
   <string name="privacy_guard_manager_title">프라이버시 가드</string>
   <!-- Permissions used by remote preferences -->
   <string name="permlab_manageRemotePrefs">원격 설정 관리</string>
   <string name="permdesc_manageRemotePrefs">앱이 원격 설정을 관리할 수 있도록 허용합니다.</string>
+  <!-- About device screen, build date -->
+  <string name="build_date">빌드 날짜</string>
+  <!-- About device screen, LineageOS API Level -->
+  <string name="lineage_api_level">LineageOS API 수준</string>
+  <!-- About device screen, LineageOS updates -->
+  <string name="lineage_updates">LineageOS 업데이트</string>
+  <!-- About device screen, LineageOS version -->
+  <string name="lineage_version">LineageOS 버전</string>
+  <!-- General purpose use "unknown" string -->
+  <string name="unknown">알 수 없음</string>
+  <!-- Long-press back kill application -->
+  <string name="app_killed_message">애플리케이션 종료됨</string>
+  <!-- Status bar network traffic monitor strings -->
+  <string name="kilobitspersecond_short">kb/초</string>
+  <string name="megabitspersecond_short">Mb/초</string>
+  <string name="kilobytespersecond_short">kb/초</string>
+  <string name="megabytespersecond_short">MB/초</string>
+  <!-- Accent colors -->
 </resources>

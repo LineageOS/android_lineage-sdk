@@ -18,19 +18,13 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Label for the LineageOS system components when they are shown to the user. -->
-  <string name="lineageos_system_label">Sistema LineageOS</string>
   <!-- Labels for the MODIFY_PROFILES permission. -->
   <string name="permlab_modifyProfiles">modificar perfiles del sistema</string>
   <string name="permdesc_modifyProfiles">Permite qu\'una aplicación modifique los perfiles del sistema.</string>
   <!-- Labels for the HARDWARE_ABSTRACTION_ACCESS permission. -->
   <string name="permlab_useHardwareFramework">usar framework de hardware</string>
-  <string name="permdesc_useHardwareFramework">Permite qu\'una aplicación acceda al framework de hardware de Lineage.</string>
   <!-- Labels for the WRITE_SETTINGS permission -->
-  <string name="permlab_writeSettings">modificar axustes del sistema Lineage</string>
-  <string name="permdesc_writeSettings">Permite qu\'una aplicación modifique los axustes del sistema Lineage.</string>
   <!-- Labels for the WRITE_SECURE_SETTINGS permission -->
-  <string name="permlab_writeSecureSettings">modificar axustes del sistema de seguranza Lineage</string>
-  <string name="permdesc_writeSecureSettings">Permite qu\'una aplicación modifique los axustes del sistema de seguranza de Lineage. Nun s\'usa pa les aplicaciones normales.</string>
   <!-- Labels for the PROTECTED_APP permission. -->
   <string name="permdesc_protectedApp">Permite qu\'una aplicación conseñe a otres como protexíes y blóquiales.</string>
   <!-- Profiles -->
@@ -76,12 +70,6 @@
   <string name="accessibility_quick_settings_live_display_changed_day">LiveDisplay camudó al mou diurnu.</string>
   <string name="accessibility_quick_settings_live_display_changed_night">LiveDisplay camudó al mou nocherniegu.</string>
   <string name="accessibility_quick_settings_live_display_changed_outdoor">LiveDisplay camudó al mou esterior.</string>
-  <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
   <!-- Performance manager permission title -->
   <string name="permlab_perfAccess">acceder al xestor de rindimientu</string>
   <!-- Performance manager permission description -->
@@ -101,12 +89,17 @@
   <!-- LineageAudioService - observe session changes permission -->
   <string name="permlab_observe_audio_sessions">mirar camudancies de sesiones d\'audiu</string>
   <string name="permdesc_observe_audio_sessions">Permite qu\'una aplicación mire los fluxos d\'audiu que se creen y destrúin.</string>
-  <!-- LineageAudioService - observe session changes permission -->
-  <string name="permlab_manage_audio_sessions">xestionar camudancies de sesiones d\'audiu</string>
-  <string name="permdesc_manage_audio_sessions">Permite qu\'una aplicación unvie anovamientos de fluxos d\'audiu.</string>
   <!-- Privacy Guard -->
   <string name="privacy_guard_manager_title">Guardián de privacidá</string>
   <!-- Permissions used by remote preferences -->
   <string name="permlab_manageRemotePrefs">xestionar axustes remotos</string>
   <string name="permdesc_manageRemotePrefs">Permite qu\'una aplicación xestione axustes remotos</string>
+  <!-- About device screen, build date -->
+  <!-- About device screen, LineageOS API Level -->
+  <!-- About device screen, LineageOS updates -->
+  <!-- About device screen, LineageOS version -->
+  <!-- General purpose use "unknown" string -->
+  <!-- Long-press back kill application -->
+  <!-- Status bar network traffic monitor strings -->
+  <!-- Accent colors -->
 </resources>

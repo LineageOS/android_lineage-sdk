@@ -18,19 +18,13 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Label for the LineageOS system components when they are shown to the user. -->
-  <string name="lineageos_system_label">LineageOS System</string>
   <!-- Labels for the MODIFY_PROFILES permission. -->
   <string name="permlab_modifyProfiles">endre system profiler</string>
   <string name="permdesc_modifyProfiles">Tillat en app å endre systemprofiler.</string>
   <!-- Labels for the HARDWARE_ABSTRACTION_ACCESS permission. -->
   <string name="permlab_useHardwareFramework">bruk maskinvare framework</string>
-  <string name="permdesc_useHardwareFramework">Gir et program tilgang til LineageOS sitt maskinvare-rammeverk.</string>
   <!-- Labels for the WRITE_SETTINGS permission -->
-  <string name="permlab_writeSettings">endre Lineage systeminnstillinger</string>
-  <string name="permdesc_writeSettings">Gir en app tilgang til å endre Lineages systeminnstillinger.</string>
   <!-- Labels for the WRITE_SECURE_SETTINGS permission -->
-  <string name="permlab_writeSecureSettings">endre Lineage sikker systeminnstillinger</string>
-  <string name="permdesc_writeSecureSettings">Gir en app tilgang til å endre Lineage sikkerhets-systeminnstillinger. Tilgangen bør ikke gis til normale apper.</string>
   <!-- Labels for the PROTECTED_APP permission. -->
   <string name="permlab_protectedApp">gjør apper beskyttet/ubeskyttet</string>
   <string name="permdesc_protectedApp">Tillat en app å merke andre apper som beskyttet og låse dem.</string>
@@ -84,12 +78,6 @@
   <string name="accessibility_quick_settings_live_display_changed_day">LiveDisplay endret til dagsmodus.</string>
   <string name="accessibility_quick_settings_live_display_changed_night">LiveDisplay endret til nattmodus.</string>
   <string name="accessibility_quick_settings_live_display_changed_outdoor">LiveDisplay endret til utendørs modus.</string>
-  <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
   <!-- Performance manager permission title -->
   <string name="permlab_perfAccess">tilgang til ytelsesadministrereren</string>
   <!-- Performance manager permission description -->
@@ -117,12 +105,17 @@
   <!-- LineageAudioService - observe session changes permission -->
   <string name="permlab_observe_audio_sessions">observer lydøkt-endringer</string>
   <string name="permdesc_observe_audio_sessions">Tillater en app å observere om lyd-strømmer blir lagd eller ødelagt.</string>
-  <!-- LineageAudioService - observe session changes permission -->
-  <string name="permlab_manage_audio_sessions">administrer lyd økt endringer</string>
-  <string name="permdesc_manage_audio_sessions">Gir en app tillatelse til å sende lydstrømning oppdateringer.</string>
   <!-- Privacy Guard -->
   <string name="privacy_guard_manager_title">Personvernvakt</string>
   <!-- Permissions used by remote preferences -->
   <string name="permlab_manageRemotePrefs">administrer fjernkontroll innstillinger</string>
   <string name="permdesc_manageRemotePrefs">Gir en app tilgang til å endre fjernkontroll innstillingene</string>
+  <!-- About device screen, build date -->
+  <!-- About device screen, LineageOS API Level -->
+  <!-- About device screen, LineageOS updates -->
+  <!-- About device screen, LineageOS version -->
+  <!-- General purpose use "unknown" string -->
+  <!-- Long-press back kill application -->
+  <!-- Status bar network traffic monitor strings -->
+  <!-- Accent colors -->
 </resources>
