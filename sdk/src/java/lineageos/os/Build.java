@@ -178,6 +178,11 @@ public class Build {
 
         /**
          * Unreleased preliminary version starting from LineageOS 15.1
+         * <p>Applications targeting this or a later version will get access to these
+         * new features!</p>
+         * <ul>
+         * <li>Change system colors via {@link lineageos.app.StyleInterface}
+         * </ul>
          */
         public static final int HACKBERRY = 8;
     }
