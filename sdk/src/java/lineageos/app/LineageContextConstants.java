@@ -97,6 +97,17 @@ public final class LineageContextConstants {
     public static final String LINEAGE_AUDIO_SERVICE = "lineageaudio";
 
     /**
+     * Use with {@link android.content.Context#getSystemService} to retrieve a
+     * {@link lineageos.app.StyleInterface} interact with system style.
+     *
+     * @see android.content.Context#getSystemService
+     * @see lineageos.app.StyleInterface
+     *
+     * @hide
+     */
+    public static final String LINEAGE_STYLE_INTERFACE = "lineagestyle";
+
+    /**
      * Features supported by the Lineage SDK.
      */
     public static class Features {
@@ -147,5 +158,13 @@ public final class LineageContextConstants {
          */
         @SdkConstant(SdkConstant.SdkConstantType.FEATURE)
         public static final String AUDIO = "org.lineageos.audio";
+
+        /**
+         * Feature for {@link PackageManager#getSystemAvailableFeatures} and
+         * {@link PackageManager#hasSystemFeature}: The device includes the lineage style service
+         * utilized by the lineage sdk.
+         */
+        @SdkConstant(SdkConstant.SdkConstantType.FEATURE)
+        public static final String STYLES = "org.lineageos.style";
     }
 }
