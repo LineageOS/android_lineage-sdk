@@ -117,6 +117,13 @@
                 android:icon="@drawable/ic_launcher_lineageos"
                 android:protectionLevel="normal" />
 
+    <!-- Allows an application to change system style -->
+    <permission android:name="lineageos.permission.CHANGE_STYLE"
+                android:label="@string/permlab_changeStyle"
+                android:description="@string/permdesc_changeStyle"
+                android:icon="@drawable/ic_launcher_lineageos"
+                android:protectionLevel="dangerous" />
+
     <application android:process="system"
                  android:persistent="true"
                  android:hasCode="false"
