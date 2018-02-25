@@ -111,9 +111,13 @@
   <string name="permlab_manageRemotePrefs">gérer les paramètres distants</string>
   <string name="permdesc_manageRemotePrefs">Autoriser une application à gérer les paramètres distants</string>
   <!-- About device screen, build date -->
+  <string name="build_date">Date de compilation</string>
   <!-- About device screen, LineageOS API Level -->
+  <string name="lineage_api_level">Niveau de l\'API LineageOS</string>
   <!-- About device screen, LineageOS updates -->
+  <string name="lineage_updates">Mises à jour LineageOS</string>
   <!-- About device screen, LineageOS version -->
+  <string name="lineage_version">Version LineageOS</string>
   <!-- General purpose use "unknown" string -->
   <!-- Long-press back kill application -->
   <!-- Status bar network traffic monitor strings -->
@@ -122,4 +126,14 @@
   <string name="kilobytespersecond_short">ko/s</string>
   <string name="megabytespersecond_short">Mo/s</string>
   <!-- Accent colors -->
+  <string name="accent_black">Carbone</string>
+  <string name="accent_blue">Myrtille</string>
+  <string name="accent_brown">Cacao</string>
+  <string name="accent_cyan">Cyan</string>
+  <string name="accent_green">Forêt</string>
+  <string name="accent_orange">Citrouille</string>
+  <string name="accent_pink">Cerise</string>
+  <string name="accent_purple">Lavande</string>
+  <string name="accent_red">Tomate</string>
+  <string name="accent_yellow">Banane</string>
 </resources>

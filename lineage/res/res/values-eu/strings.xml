@@ -18,13 +18,19 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Label for the LineageOS system components when they are shown to the user. -->
+  <string name="lineageos_system_label">LineageOS sistema</string>
   <!-- Labels for the MODIFY_PROFILES permission. -->
   <string name="permlab_modifyProfiles">aldatu sistemaren profilak</string>
   <string name="permdesc_modifyProfiles">Sistemaren profilak aldatzea ahalbidetzen dio aplikazioari.</string>
   <!-- Labels for the HARDWARE_ABSTRACTION_ACCESS permission. -->
   <string name="permlab_useHardwareFramework">hardware markoa erabili</string>
+  <string name="permdesc_useHardwareFramework">Aplikazioari Lineage hardware markorako sarbidea gaitzen dio.</string>
   <!-- Labels for the WRITE_SETTINGS permission -->
+  <string name="permlab_writeSettings">aldatu Lineage sistemaren ezarpenak</string>
+  <string name="permdesc_writeSettings">Lineage sistemaren ezarpenak aldatzea ahalbidetzen dio aplikazioari.</string>
   <!-- Labels for the WRITE_SECURE_SETTINGS permission -->
+  <string name="permlab_writeSecureSettings">aldatu Lineage sistemaren ezarpen seguruak</string>
+  <string name="permdesc_writeSecureSettings">Lineage sistemaren ezarpen seguruak aldatzea ahalbidetzen dio aplikazioari. Aplikazio arruntek ez dute behar.</string>
   <!-- Labels for the PROTECTED_APP permission. -->
   <string name="permlab_protectedApp">gehitu edo kendu aplikazioak babestutako aplikazioen zerrendan</string>
   <string name="permdesc_protectedApp">Beste aplikazio batzuk babestuta gisa markatzea eta blokeatzea ahalbidetzen dio aplikazioari.</string>
@@ -111,11 +117,31 @@
   <string name="permlab_manageRemotePrefs">urruneko ezarpenak kudeatu</string>
   <string name="permdesc_manageRemotePrefs">Urruneko ezarpenak kudeatzea ahalbidetzen dio aplikazioari</string>
   <!-- About device screen, build date -->
+  <string name="build_date">Konpilatze data</string>
   <!-- About device screen, LineageOS API Level -->
+  <string name="lineage_api_level">LineageOS API maila</string>
   <!-- About device screen, LineageOS updates -->
+  <string name="lineage_updates">LineageOS eguneraketak</string>
   <!-- About device screen, LineageOS version -->
+  <string name="lineage_version">LineageOS bertsioa</string>
   <!-- General purpose use "unknown" string -->
+  <string name="unknown">Ezezaguna</string>
   <!-- Long-press back kill application -->
+  <string name="app_killed_message">Aplikazioa erail da</string>
   <!-- Status bar network traffic monitor strings -->
+  <string name="kilobitspersecond_short">kb/s</string>
+  <string name="megabitspersecond_short">Mb/s</string>
+  <string name="kilobytespersecond_short">kB/s</string>
+  <string name="megabytespersecond_short">MB/s</string>
   <!-- Accent colors -->
+  <string name="accent_black">Ikatza</string>
+  <string name="accent_blue">Basarana</string>
+  <string name="accent_brown">Kokoa</string>
+  <string name="accent_cyan">Ziana</string>
+  <string name="accent_green">Basoa</string>
+  <string name="accent_orange">Kalabaza</string>
+  <string name="accent_pink">Gerezia</string>
+  <string name="accent_purple">Izpilikua</string>
+  <string name="accent_red">Tomatea</string>
+  <string name="accent_yellow">Banana</string>
 </resources>
