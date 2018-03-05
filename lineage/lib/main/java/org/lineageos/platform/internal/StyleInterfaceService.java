@@ -161,7 +161,8 @@ public class StyleInterfaceService extends LineageSystemService {
 
         try {
             PackageInfo pi = mPackageManager.getPackageInfo(pkgName, 0);
-            return pi != null && !pi.isStaticOverlay && isValidAccent(pkgName);
+            return pi != null && (pi.overlayFlags & PackageInfo.FLAG_OVERLAY_STATIC) == 0 &&
+                    isValidAccent(pkgName);
         } catch (PackageManager.NameNotFoundException e) {
             return false;
         }
