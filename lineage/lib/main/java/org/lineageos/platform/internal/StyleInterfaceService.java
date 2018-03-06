@@ -39,6 +39,9 @@ import lineageos.style.StyleInterface;
 import lineageos.style.Suggestion;
 import lineageos.util.palette.Palette;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /** @hide */
 public class StyleInterfaceService extends LineageSystemService {
     private static final String TAG = "LineageStyleInterfaceService";
@@ -76,9 +79,23 @@ public class StyleInterfaceService extends LineageSystemService {
                 "You do not have permissions to change system style");
     }
 
-    private boolean setGlobalStyleInternal(int mode) {
-        return LineageSettings.System.putInt(mContext.getContentResolver(),
+    private boolean setGlobalStyleInternal(int mode, String packageName) {
+        // Check whether the packageName is valid
+        if (isAValidPackage(packageName)) {
+            throw new IllegalArgumentException(packageName + " is not a valid package name!");
+        }
+
+        boolean statusValue = LineageSettings.System.putInt(mContext.getContentResolver(),
                 LineageSettings.System.BERRY_GLOBAL_STYLE, mode);
+        boolean packageNameValue = LineageSettings.System.putString(mContext.getContentResolver(),
+                LineageSettings.System.BERRY_MANAGED_BY_APP, packageName);
+        return  statusValue && packageNameValue;
+    }
+
+    private int getGlobalStyleInternal() {
+        return LineageSettings.System.getInt(mContext.getContentResolver(),
+                LineageSettings.System.BERRY_GLOBAL_STYLE,
+                StyleInterface.STYLE_GLOBAL_AUTO_WALLPAPER);
     }
 
     private boolean setAccentInternal(String pkgName) {
@@ -90,8 +107,8 @@ public class StyleInterfaceService extends LineageSystemService {
         int userId = UserHandle.myUserId();
 
         // Disable current accent
-        String currentAccent = LineageSettings.System.getString(mContext.getContentResolver(),
-                LineageSettings.System.BERRY_CURRENT_ACCENT);
+        String currentAccent = getAccentInternal();
+
         try {
             mOverlayService.setEnabled(currentAccent, false, userId);
         } catch (RemoteException e) {
@@ -114,6 +131,11 @@ public class StyleInterfaceService extends LineageSystemService {
         return false;
     }
 
+    private String getAccentInternal() {
+        return LineageSettings.System.getString(mContext.getContentResolver(),
+                LineageSettings.System.BERRY_CURRENT_ACCENT);
+    }
+
     private Suggestion getSuggestionInternal(Bitmap source, int[] colors) {
         Palette palette = Palette.from(source).generate();
 
@@ -129,6 +151,21 @@ public class StyleInterfaceService extends LineageSystemService {
         int suggestedGlobalStyle = isLight ?
                 StyleInterface.STYLE_GLOBAL_LIGHT : StyleInterface.STYLE_GLOBAL_DARK;
         return new Suggestion(suggestedGlobalStyle, bestColorPosition);
+    }
+
+    private List<String> getTrustedAccentsInternal() {
+        List<String> results = new ArrayList<>();
+        String[] packages = mContext.getResources()
+                .getStringArray(R.array.trusted_accent_packages);
+
+        results.add(StyleInterface.ACCENT_DEFAULT);
+        for (String item : packages) {
+            if (isChangeableOverlay(item)) {
+                results.add(item);
+            }
+        }
+
+        return results;
     }
 
     private int getBestColor(int sourceColor, int[] colors) {
@@ -180,9 +217,17 @@ public class StyleInterfaceService extends LineageSystemService {
         }
     }
 
+    private boolean isAValidPackage(String packageName) {
+        try {
+            return packageName != null && mPackageManager.getPackageInfo(packageName, 0) == null;
+        } catch (PackageManager.NameNotFoundException e) {
+            return false;
+        }
+    }
+
     private final IBinder mService = new IStyleInterface.Stub() {
         @Override
-        public boolean setGlobalStyle(int style) {
+        public boolean setGlobalStyle(int style, String packageName) {
             enforceChangeStylePermission();
             /*
              * We need to clear the caller's identity in order to
@@ -190,9 +235,23 @@ public class StyleInterfaceService extends LineageSystemService {
              *   not allowed by the caller's permissions.
              */
             long token = clearCallingIdentity();
-            boolean success = setGlobalStyleInternal(style);
+            boolean success = setGlobalStyleInternal(style, packageName);
             restoreCallingIdentity(token);
             return success;
+        }
+
+        @Override
+        public int getGlobalStyle() {
+            enforceChangeStylePermission();
+            /*
+             * We need to clear the caller's identity in order to
+             *   allow this method call to modify settings
+             *   not allowed by the caller's permissions.
+             */
+            long token = clearCallingIdentity();
+            int result = getGlobalStyleInternal();
+            restoreCallingIdentity(token);
+            return result;
         }
 
         @Override
@@ -210,6 +269,20 @@ public class StyleInterfaceService extends LineageSystemService {
         }
 
         @Override
+        public String getAccent() {
+            enforceChangeStylePermission();
+            /*
+             * We need to clear the caller's identity in order to
+             *   allow this method call to modify settings
+             *   not allowed by the caller's permissions.
+             */
+            long token = clearCallingIdentity();
+            String result = getAccentInternal();
+            restoreCallingIdentity(token);
+            return result;
+        }
+
+        @Override
         public Suggestion getSuggestion(Bitmap source, int[] colors) {
             enforceChangeStylePermission();
             /*
@@ -219,6 +292,20 @@ public class StyleInterfaceService extends LineageSystemService {
              */
             long token = clearCallingIdentity();
             Suggestion result = getSuggestionInternal(source, colors);
+            restoreCallingIdentity(token);
+            return result;
+        }
+
+        @Override
+        public List<String> getTrustedAccents() {
+            enforceChangeStylePermission();
+            /*
+             * We need to clear the caller's identity in order to
+             *   allow this method call to modify settings
+             *   not allowed by the caller's permissions.
+             */
+            long token = clearCallingIdentity();
+            List<String> result = getTrustedAccentsInternal();
             restoreCallingIdentity(token);
             return result;
         }
