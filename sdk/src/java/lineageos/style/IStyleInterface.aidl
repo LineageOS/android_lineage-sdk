@@ -22,7 +22,7 @@ import lineageos.style.Suggestion;
 
 /** {@hide} */
 interface IStyleInterface {
-    boolean setGlobalStyle(int style);
+    boolean setGlobalStyle(int style, String pkgName);
     boolean setAccent(String pkgName);
     Suggestion getSuggestion(in Bitmap source, in int[] colors);
 }

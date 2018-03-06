@@ -76,9 +76,17 @@ public class StyleInterfaceService extends LineageSystemService {
                 "You do not have permissions to change system style");
     }
 
-    private boolean setGlobalStyleInternal(int mode) {
-        return LineageSettings.System.putInt(mContext.getContentResolver(),
+    private boolean setGlobalStyleInternal(int mode, String packageName) {
+        // Check whether the packageName is valid
+        if (isAValidPackage(packageName)) {
+            throw new IllegalArgumentException(packageName + " is not a valid package name!");
+        }
+
+        boolean statusValue = LineageSettings.System.putInt(mContext.getContentResolver(),
                 LineageSettings.System.BERRY_GLOBAL_STYLE, mode);
+        boolean packageNameValue = LineageSettings.System.putString(mContext.getContentResolver(),
+                LineageSettings.System.BERRY_MANAGED_BY_APP, packageName); 
+        return  statusValue && packageNameValue; 
     }
 
     private boolean setAccentInternal(String pkgName) {
@@ -180,9 +188,17 @@ public class StyleInterfaceService extends LineageSystemService {
         }
     }
 
+    private boolean isAValidPackage(String packageName) {
+        try {
+            return packageName != null && mPackageManager.getPackageInfo(packageName, 0) == null;
+        } catch (PackageManager.NameNotFoundException e) {
+            return false;
+        }
+    }
+
     private final IBinder mService = new IStyleInterface.Stub() {
         @Override
-        public boolean setGlobalStyle(int style) {
+        public boolean setGlobalStyle(int style, String packageName) {
             enforceChangeStylePermission();
             /*
              * We need to clear the caller's identity in order to
@@ -190,7 +206,7 @@ public class StyleInterfaceService extends LineageSystemService {
              *   not allowed by the caller's permissions.
              */
             long token = clearCallingIdentity();
-            boolean success = setGlobalStyleInternal(style);
+            boolean success = setGlobalStyleInternal(style, packageName);
             restoreCallingIdentity(token);
             return success;
         }
