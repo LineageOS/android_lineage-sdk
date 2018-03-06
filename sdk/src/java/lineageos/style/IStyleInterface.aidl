@@ -20,9 +20,14 @@ package lineageos.style;
 import android.graphics.Bitmap;
 import lineageos.style.Suggestion;
 
+import java.util.List;
+
 /** {@hide} */
 interface IStyleInterface {
-    boolean setGlobalStyle(int style);
+    boolean setGlobalStyle(int style, String pkgName);
+    int getGlobalStyle();
     boolean setAccent(String pkgName);
+    String getAccent();
     Suggestion getSuggestion(in Bitmap source, in int[] colors);
+    List<String> getTrustedAccents();
 }

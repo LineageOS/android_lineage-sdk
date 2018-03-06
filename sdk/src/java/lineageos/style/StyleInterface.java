@@ -25,6 +25,14 @@ import android.util.Log;
 
 import lineageos.app.LineageContextConstants;
 
+import java.util.ArrayList;
+import java.util.List;
+
+/**
+ * Interface used to customize the System colors. It's capable of setting a global
+ * light and dark mode and custom color accents.
+ */
+
 public class StyleInterface {
 
     /**
@@ -56,8 +64,8 @@ public class StyleInterface {
     public static final int STYLE_GLOBAL_DARK = 3;
 
     /**
-     * Default accent
-     * Used to remove any active accent and use default one
+     * Default accent name.
+     * It can also be used to remove any active accent
      *
      * @see #setAccent
      */
@@ -95,8 +103,9 @@ public class StyleInterface {
     }
 
     /**
-     * Get or create an instance of the {@link lineageos.app.StyleInterface}
-     * @param context
+     * Get or create an instance of the {@link lineageos.style.StyleInterface}
+     *
+     * @param context Used to get the service
      * @return {@link StyleInterface}
      */
     public static StyleInterface getInstance(Context context) {
@@ -138,17 +147,40 @@ public class StyleInterface {
      *             {@link #STYLE_GLOBAL_AUTO_DAYTIME},
      *             {@link #STYLE_GLOBAL_LIGHT} or
      *             {@link #STYLE_GLOBAL_DARK}
+     * @param pkgName The package name of the calling application
+     *
+     * @return Whether the process failed
      */
-    public boolean setGlobalStyle(int style) {
+    public boolean setGlobalStyle(int style, String pkgName) {
         if (sService == null) {
             return false;
         }
         try {
-            return sService.setGlobalStyle(style);
+            return sService.setGlobalStyle(style, pkgName);
         } catch (RemoteException e) {
             Log.e(TAG, e.getLocalizedMessage(), e);
         }
         return false;
+    }
+
+    /**
+     * Get the current global style.
+     *
+     * @return One of {@link #STYLE_GLOBAL_AUTO_WALLPAPER},
+     *        {@link #STYLE_GLOBAL_AUTO_DAYTIME},
+     *        {@link #STYLE_GLOBAL_LIGHT} or
+     *        {@link #STYLE_GLOBAL_DARK}
+     */
+    public int getGlobalStyle() {
+        if (sService == null) {
+            return STYLE_GLOBAL_AUTO_WALLPAPER;
+        }
+        try {
+            return sService.getGlobalStyle();
+        } catch (RemoteException e) {
+            Log.e(TAG, e.getLocalizedMessage(), e);
+        }
+        return STYLE_GLOBAL_AUTO_WALLPAPER;
     }
 
     /**
@@ -158,6 +190,8 @@ public class StyleInterface {
      * to utilize this functionality.
      *
      * @param pkgName The package name of the accent
+     *
+     * @return Whether the process failed
      */
     public boolean setAccent(String pkgName) {
         if (sService == null) {
@@ -172,12 +206,50 @@ public class StyleInterface {
     }
 
     /**
+     * Get the current accent package.
+     *
+     * @return The current accent package name. Defaults to {#ACCENT_DEFAULT}
+     */
+    public String getAccent() {
+        if (sService == null) {
+            return ACCENT_DEFAULT;
+        }
+        try {
+            return sService.getAccent();
+        } catch (RemoteException e) {
+            Log.e(TAG, e.getLocalizedMessage(), e);
+        }
+        return ACCENT_DEFAULT;
+    }
+
+    /**
+     *  Get a list of trusted accents that are included in the build.
+     *
+     * The first element (if any) is the default accent.
+     *
+     * @see #setAccent
+     *
+     * @return A list of accents package names that can be used with {#setAccent}.
+     */
+    public List<String> getTrustedAccents() {
+        if (sService == null) {
+            return new ArrayList<>();
+        }
+        try {
+            return sService.getTrustedAccents();
+        } catch (RemoteException e) {
+            Log.e(TAG, e.getLocalizedMessage(), e);
+        }
+        return new ArrayList<>();
+    }
+
+    /**
      * Get the best color that suites a bitmap object and the appropriate global style
      *
      * @param source The object you want the suggested color to be matched with
      * @param colors A list of colors that the selection will be made from
      *
-     * @return suggestion for global style + accent combination
+     * @return A {@link lineageos.style.Suggestion} which holds the best style + accent combination
      */
     public Suggestion getSuggestion(Bitmap source, int[] colors) {
         if (colors.length == 0) {
