@@ -1304,6 +1304,7 @@ public final class LineageSettings {
          * 1: time - based on LiveDisplay status
          * 2: force light
          * 3: force dark
+         * 4: managed by an app using the sdk
          */
         public static final String BERRY_GLOBAL_STYLE = "berry_global_style";
 
@@ -1318,6 +1319,15 @@ public final class LineageSettings {
 
         /** @hide */
         public static final Validator BERRY_CURRENT_ACCENT_VALIDATOR =
+                sNonNullStringValidator;
+
+        /**
+         * Current application managing the style
+         */
+        public static final String BERRY_MANAGED_BY_APP = "berry_managed_by_app";
+
+        /** @hide */
+        public static final Validator BERRY_MANAGED_BY_APP_VALIDATOR =
                 sNonNullStringValidator;
 
         /**
@@ -2179,6 +2189,7 @@ public final class LineageSettings {
             VALIDATORS.put(PROXIMITY_ON_WAKE, PROXIMITY_ON_WAKE_VALIDATOR);
             VALIDATORS.put(BERRY_GLOBAL_STYLE, BERRY_GLOBAL_STYLE_VALIDATOR);
             VALIDATORS.put(BERRY_CURRENT_ACCENT, BERRY_CURRENT_ACCENT_VALIDATOR);
+            VALIDATORS.put(BERRY_MANAGED_BY_APP, BERRY_MANAGED_BY_APP_VALIDATOR);
             VALIDATORS.put(ENABLE_FORWARD_LOOKUP, ENABLE_FORWARD_LOOKUP_VALIDATOR);
             VALIDATORS.put(ENABLE_PEOPLE_LOOKUP, ENABLE_PEOPLE_LOOKUP_VALIDATOR);
             VALIDATORS.put(ENABLE_REVERSE_LOOKUP, ENABLE_REVERSE_LOOKUP_VALIDATOR);

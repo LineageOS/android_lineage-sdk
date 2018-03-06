@@ -803,6 +803,7 @@ package lineageos.providers {
     field public static final java.lang.String BATTERY_LIGHT_PULSE = "battery_light_pulse";
     field public static final java.lang.String BERRY_CURRENT_ACCENT = "berry_current_accent";
     field public static final java.lang.String BERRY_GLOBAL_STYLE = "berry_global_style";
+    field public static final java.lang.String BERRY_MANAGED_BY_APP = "berry_managed_by_app";
     field public static final java.lang.String BLUETOOTH_ACCEPT_ALL_FILES = "bluetooth_accept_all_files";
     field public static final java.lang.String CALL_RECORDING_FORMAT = "call_recording_format";
     field public static final java.lang.String CAMERA_LAUNCH = "camera_launch";
@@ -992,7 +993,7 @@ package lineageos.style {
     method public static lineageos.style.StyleInterface getInstance(android.content.Context);
     method public lineageos.style.Suggestion getSuggestion(android.graphics.Bitmap, int[]);
     method public boolean setAccent(java.lang.String);
-    method public boolean setGlobalStyle(int);
+    method public boolean setGlobalStyle(int, java.lang.String);
     field public static final java.lang.String ACCENT_DEFAULT = "lineageos";
     field public static final java.lang.String CHANGE_STYLE_SETTINGS_PERMISSION = "lineageos.permission.CHANGE_STYLE";
     field public static final int STYLE_GLOBAL_AUTO_DAYTIME = 1; // 0x1
