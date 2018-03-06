@@ -149,6 +149,7 @@
     <java-symbol type="string" name="megabytespersecond_short" />
 
     <!-- Accent colors -->
+    <java-symbol type="array" name="trusted_accent_packages" />
     <java-symbol type="string" name="accent_black" />
     <java-symbol type="string" name="accent_blue" />
     <java-symbol type="string" name="accent_brown" />
