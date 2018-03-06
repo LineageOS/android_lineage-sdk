@@ -25,6 +25,11 @@ import android.util.Log;
 
 import lineageos.app.LineageContextConstants;
 
+/**
+ * Interface used to customize the System colors. It's capable of setting a global 
+ * light and dark mode and custom color accents.
+ */
+
 public class StyleInterface {
 
     /**
@@ -56,8 +61,8 @@ public class StyleInterface {
     public static final int STYLE_GLOBAL_DARK = 3;
 
     /**
-     * Default accent
-     * Used to remove any active accent and use default one
+     * Default accent name.
+     * It can also be used to remove any active accent
      *
      * @see #setAccent
      */
@@ -95,8 +100,9 @@ public class StyleInterface {
     }
 
     /**
-     * Get or create an instance of the {@link lineageos.app.StyleInterface}
-     * @param context
+     * Get or create an instance of the {@link lineageos.style.StyleInterface}
+     *
+     * @param context Used to get the service
      * @return {@link StyleInterface}
      */
     public static StyleInterface getInstance(Context context) {
@@ -138,13 +144,16 @@ public class StyleInterface {
      *             {@link #STYLE_GLOBAL_AUTO_DAYTIME},
      *             {@link #STYLE_GLOBAL_LIGHT} or
      *             {@link #STYLE_GLOBAL_DARK}
+     * @param pkgName The package name of the calling application
+     *
+     * @return Whether the process failed
      */
-    public boolean setGlobalStyle(int style) {
+    public boolean setGlobalStyle(int style, String pkgName) {
         if (sService == null) {
             return false;
         }
         try {
-            return sService.setGlobalStyle(style);
+            return sService.setGlobalStyle(style, pkgName);
         } catch (RemoteException e) {
             Log.e(TAG, e.getLocalizedMessage(), e);
         }
@@ -158,6 +167,8 @@ public class StyleInterface {
      * to utilize this functionality.
      *
      * @param pkgName The package name of the accent
+     * 
+     * @return Whether the process failed
      */
     public boolean setAccent(String pkgName) {
         if (sService == null) {
@@ -177,7 +188,7 @@ public class StyleInterface {
      * @param source The object you want the suggested color to be matched with
      * @param colors A list of colors that the selection will be made from
      *
-     * @return suggestion for global style + accent combination
+     * @return A {@link lineageos.style.Suggestion} which holds the best style + accent combination
      */
     public Suggestion getSuggestion(Bitmap source, int[] colors) {
         if (colors.length == 0) {
