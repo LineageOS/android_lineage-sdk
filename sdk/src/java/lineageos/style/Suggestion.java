@@ -24,6 +24,10 @@ import lineageos.os.Build;
 import lineageos.os.Concierge;
 import lineageos.os.Concierge.ParcelInfo;
 
+/**
+ * Style suggestion holder class.
+ * This is returned when calling {@link #lineageos.style.StyleInterface#getSuggestion}
+ */
 public class Suggestion implements Parcelable {
     public final int globalStyle;
     public final int selectedAccent;
@@ -31,10 +35,11 @@ public class Suggestion implements Parcelable {
     /**
      * Default constructor
      *
-     * @see lineageos.style.StyleInterface#getSuggestion
+     * @see {@link lineageos.style.StyleInterface#getSuggestion}
      *
-     * @param globalStyle one of {@link #STYLE_GLOBAL_LIGHT} or {@link #STYLE_GLOBAL_DARK}
-     * @param colorPosition position of selected color in the input array
+     * @param globalStyle One of {@link #lineageos.style.StyleInterface#STYLE_GLOBAL_LIGHT} or
+     *                           {@link #lineageos.style.StyleInterface#STYLE_GLOBAL_DARK}
+     * @param selectedAccent The position of the selected color in the input array
      */
     public Suggestion(int globalStyle, int selectedAccent) {
         this.globalStyle = globalStyle;

@@ -1332,6 +1332,15 @@ public final class LineageSettings {
                 sNonNullStringValidator;
 
         /**
+         * Current application managing the style
+         */
+        public static final String BERRY_MANAGED_BY_APP = "berry_managed_by_app";
+
+        /** @hide */
+        public static final Validator BERRY_MANAGED_BY_APP_VALIDATOR =
+                sNonNullStringValidator;
+
+        /**
          * Enable looking up of phone numbers of nearby places
          * 0 = 0ff, 1 = on
          */
@@ -2192,6 +2201,7 @@ public final class LineageSettings {
             VALIDATORS.put(PROXIMITY_ON_WAKE, PROXIMITY_ON_WAKE_VALIDATOR);
             VALIDATORS.put(BERRY_GLOBAL_STYLE, BERRY_GLOBAL_STYLE_VALIDATOR);
             VALIDATORS.put(BERRY_CURRENT_ACCENT, BERRY_CURRENT_ACCENT_VALIDATOR);
+            VALIDATORS.put(BERRY_MANAGED_BY_APP, BERRY_MANAGED_BY_APP_VALIDATOR);
             VALIDATORS.put(ENABLE_FORWARD_LOOKUP, ENABLE_FORWARD_LOOKUP_VALIDATOR);
             VALIDATORS.put(ENABLE_PEOPLE_LOOKUP, ENABLE_PEOPLE_LOOKUP_VALIDATOR);
             VALIDATORS.put(ENABLE_REVERSE_LOOKUP, ENABLE_REVERSE_LOOKUP_VALIDATOR);

@@ -116,4 +116,17 @@
         <item>com.google.android.gsf|com.google.android.talk</item>
     </string-array>
 
+    <!-- Trusted accents package names -->
+    <string-array name="trusted_accent_packages" translatable="false">
+        <item>org.lineageos.overlay.accent.red</item>
+        <item>org.lineageos.overlay.accent.pink</item>
+        <item>org.lineageos.overlay.accent.purple</item>
+        <item>org.lineageos.overlay.accent.blue</item>
+        <item>org.lineageos.overlay.accent.cyan</item>
+        <item>org.lineageos.overlay.accent.green</item>
+        <item>org.lineageos.overlay.accent.orange</item>
+        <item>org.lineageos.overlay.accent.yellow</item>
+        <item>org.lineageos.overlay.accent.brown</item>
+        <item>org.lineageos.overlay.accent.black</item>
+    </string-array>
 </resources>
