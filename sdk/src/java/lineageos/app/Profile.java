@@ -1308,7 +1308,7 @@ public final class Profile implements Parcelable, Comparable {
 
     /**
      * Get the {@link StreamSettings} for the {@link Profile}
-     * @return {@link Collection<StreamSettings>}
+     * @return {@link java.util.Collection<StreamSettings>}
      */
     public Collection<StreamSettings> getStreamSettings(){
         return streams.values();
@@ -1354,7 +1354,7 @@ public final class Profile implements Parcelable, Comparable {
 
     /**
      * Get the {@link ConnectionSettings} for the {@link Profile}
-     * @return {@link Collection<ConnectionSettings>}
+     * @return {@link java.util.Collection<ConnectionSettings>}
      */
     public Collection<ConnectionSettings> getConnectionSettings(){
         List<ConnectionSettings> combinedList = new ArrayList<>();
