@@ -36,7 +36,7 @@ import lineageos.providers.LineageSettings;
 
 /**
  * <p>
- * The ProfileManager allows you to create {@link Profile}s and {@link ProfileGroup}s to create
+ * The ProfileManager allows you to create {@link Profile}s and ProfileGroups to create
  * specific behavior states depending on triggers from hardware devices changing states, such as:
  *
  * <pre class="prettyprint">
@@ -58,7 +58,6 @@ import lineageos.providers.LineageSettings;
  * This manager requires the MODIFY_PROFILES permission.
  *
  * @see lineageos.app.Profile
- * @see lineageos.app.ProfileGroup
  */
 public class ProfileManager {
 
