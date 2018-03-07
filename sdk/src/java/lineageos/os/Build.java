@@ -95,13 +95,9 @@ public class Build {
          * new features:</p>
          * <ul>
          * <li>Profiles API via {@link lineageos.app.ProfileManager}
-         * <li>New Expanded Styles for Custom Tiles via
-         * {@link lineageos.app.CustomTile.RemoteExpandedStyle}
          * <li>Hardware Abstraction Framework Access via
          * {@link lineageos.hardware.LineageHardwareManager} (Not for use by 3rd parties)
-         * <li>MSIM API via {@link lineageos.app.LineageTelephonyManager}
          * <li>Introductory Settings Provider {@link lineageos.providers.LineageSettings}
-         * <li>AlarmClock API via {@link lineageos.alarmclock.LineageOSAlarmClock}
          * </ul>
          */
         public static final int BOYSENBERRY = 2;
@@ -118,8 +114,6 @@ public class Build {
          * <p>Applications targeting this or a later version will get access to these
          * new features:</p>
          * <ul>
-         * <li>External views api, and specifically Keyguard interfaces for making
-         * live lockscreens via {@link lineageos.externalviews.KeyguardExternalView}</li>
          * <li>Inclusion of the PerformanceManager interfaces, allowing an application to specify
          * the type of mode to have the device be placed in via
          * {@link lineageos.power.PerformanceManager}</li>
@@ -139,13 +133,6 @@ public class Build {
          * {@link lineageos.weather.LineageWeatherManager}</li>
          * <li>Weather provider api to provide weather data to any listener on the device
          * {@link lineageos.weatherservice.WeatherProviderService}</li>
-         * <li>Extended capabilities of the {@link lineageos.externalviews.KeyguardExternalView}
-         * interfaces to provide immersive and interactive experiences on the lockscreen.</li>
-         * <li>Themes interfaces have found a new home in the lineage sdk, thus we allow access
-         * to 3rd parties requesting theme changes on the platform via
-         * {@link lineageos.themes.ThemeManager} and
-         * {@link lineageos.themes.ThemeChangeRequest}</li>
-         * <li>Full access to the {@link lineageos.providers.ThemesContract} and provider</li>
          * <li>Parceling helper class {@link lineageos.os.Concierge} to help with parcel
          * headers and protocol revisions</li>
          * </ul>
@@ -172,17 +159,13 @@ public class Build {
         public static final int FIG = 6;
 
         /**
-         * Unreleased preliminary version starting from CM14
+         * January 2017: Unreleased preliminary version starting from CM14
          */
         public static final int GUAVA = 7;
 
         /**
-         * Unreleased preliminary version starting from LineageOS 15.1
-         * <p>Applications targeting this or a later version will get access to these
-         * new features!</p>
-         * <ul>
-         * <li>Change system colors via {@link lineageos.app.StyleInterface}
-         * </ul>
+         * February 2018: Unreleased preliminary version starting from LineageOS 15.1
+         * <p>Unused APIs have been removed.</p>
          */
         public static final int HACKBERRY = 8;
     }
