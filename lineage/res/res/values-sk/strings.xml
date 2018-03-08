@@ -34,6 +34,7 @@
   <!-- Labels for the PROTECTED_APP permission. -->
   <string name="permlab_protectedApp">pridať a odobrať aplikácie z chránených aplikácií</string>
   <string name="permdesc_protectedApp">Umožní aplikácii označiť iné aplikácie ako chránené a zamknúť ich.</string>
+  <!-- Labels for CHANGE_STYLE permission -->
   <!-- Profiles -->
   <!-- Names of default profiles. -->
   <string name="profileNameDefault">Predvolený</string>

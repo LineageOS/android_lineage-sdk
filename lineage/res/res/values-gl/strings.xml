@@ -28,6 +28,7 @@
   <!-- Labels for the PROTECTED_APP permission. -->
   <string name="permlab_protectedApp">engadir e eliminar apps das aplicacións protexidas</string>
   <string name="permdesc_protectedApp">Permitirlle a unha aplicación marcar outras como protexidas e bloquealas.</string>
+  <!-- Labels for CHANGE_STYLE permission -->
   <!-- Profiles -->
   <!-- Names of default profiles. -->
   <string name="profileNameDefault">Predeterminado</string>

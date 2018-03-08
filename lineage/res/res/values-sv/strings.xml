@@ -18,6 +18,7 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Label for the LineageOS system components when they are shown to the user. -->
+  <string name="lineageos_system_label">LineageOS-systemet</string>
   <!-- Labels for the MODIFY_PROFILES permission. -->
   <string name="permlab_modifyProfiles">ändra systemprofiler</string>
   <string name="permdesc_modifyProfiles">Tillåter att en app ändrar systemprofiler.</string>
@@ -28,6 +29,7 @@
   <!-- Labels for the PROTECTED_APP permission. -->
   <string name="permlab_protectedApp">lägg till och ta bort appar som skyddade appar</string>
   <string name="permdesc_protectedApp">Ger en app tillstånd att markera andra appar som skyddade och låsa dem.</string>
+  <!-- Labels for CHANGE_STYLE permission -->
   <!-- Profiles -->
   <!-- Names of default profiles. -->
   <string name="profileNameDefault">Standard</string>
@@ -83,12 +85,14 @@
   <string name="privacy_guard_manager_title">Integritetsskydd</string>
   <!-- Permissions used by remote preferences -->
   <!-- About device screen, build date -->
+  <string name="build_date">Kompileringsdatum</string>
   <!-- About device screen, LineageOS API Level -->
   <!-- About device screen, LineageOS updates -->
   <string name="lineage_updates">LineageOS-uppdateringar</string>
   <!-- About device screen, LineageOS version -->
   <string name="lineage_version">LineageOS-version</string>
   <!-- General purpose use "unknown" string -->
+  <string name="unknown">Okänt</string>
   <!-- Long-press back kill application -->
   <!-- Status bar network traffic monitor strings -->
   <string name="kilobitspersecond_short">kb/s</string>

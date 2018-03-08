@@ -34,6 +34,7 @@
   <!-- Labels for the PROTECTED_APP permission. -->
   <string name="permlab_protectedApp">gehitu edo kendu aplikazioak babestutako aplikazioen zerrendan</string>
   <string name="permdesc_protectedApp">Beste aplikazio batzuk babestuta gisa markatzea eta blokeatzea ahalbidetzen dio aplikazioari.</string>
+  <!-- Labels for CHANGE_STYLE permission -->
   <!-- Profiles -->
   <!-- Names of default profiles. -->
   <string name="profileNameDefault">Lehenetsia</string>

@@ -28,6 +28,7 @@
   <!-- Labels for the PROTECTED_APP permission. -->
   <string name="permlab_protectedApp">додавання і видалення записів переліку захищених додатків</string>
   <string name="permdesc_protectedApp">Додаток зможе відмічати інші додатки як захищені і блокувати їх.</string>
+  <!-- Labels for CHANGE_STYLE permission -->
   <!-- Profiles -->
   <!-- Names of default profiles. -->
   <string name="profileNameDefault">За замовчуванням</string>

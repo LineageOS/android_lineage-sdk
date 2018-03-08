@@ -34,6 +34,9 @@
   <!-- Labels for the PROTECTED_APP permission. -->
   <string name="permlab_protectedApp">προσθαφαίρεση εφαρμογών στις προστατευμένες εφαρμογές</string>
   <string name="permdesc_protectedApp">Επιτρέπει σε μια εφαρμογή την επισήμανση άλλων εφαρμογών ως προστατευμένων και κλείδωμα τους.</string>
+  <!-- Labels for CHANGE_STYLE permission -->
+  <string name="permlab_changeStyle">αλλαγή στυλ συστήματος</string>
+  <string name="permdesc_changeStyle">Επιτρέπει σε μια εφαρμογή να προσαρμόσει τα χρώματα του συστήματος.</string>
   <!-- Profiles -->
   <!-- Names of default profiles. -->
   <string name="profileNameDefault">Προεπιλογή</string>

@@ -34,6 +34,7 @@
   <!-- Labels for the PROTECTED_APP permission. -->
   <string name="permlab_protectedApp">dodavanje ili uklanjanje aplikacije za zaštićene aplikacije</string>
   <string name="permdesc_protectedApp">Omogućuje aplikaciji da označi druge aplikacije kao zaštićene i zaključa ih.</string>
+  <!-- Labels for CHANGE_STYLE permission -->
   <!-- Profiles -->
   <!-- Names of default profiles. -->
   <string name="profileNameDefault">Zadano</string>

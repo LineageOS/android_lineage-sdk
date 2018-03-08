@@ -28,6 +28,7 @@
   <!-- Labels for the PROTECTED_APP permission. -->
   <string name="permlab_protectedApp">പരിരക്ഷിത ആപ്ലിക്കേഷനുകളില്‍ ചേര്‍ക്കുകയും നീക്കം ചെയ്യുകയും ചെയ്യുക</string>
   <string name="permdesc_protectedApp">മറ്റ് ആപ്ലിക്കേഷനുകളെ പരിരക്ഷിതമായി അടയാളപ്പെടുത്തുന്നതിനും അവയെ ലോക്ക് ചെയ്യുന്നതിനും ഒരു ആപ്ലിക്കേഷനെ അനുവദിക്കുന്നു.</string>
+  <!-- Labels for CHANGE_STYLE permission -->
   <!-- Profiles -->
   <!-- Names of default profiles. -->
   <string name="profileNameDefault">സ്ഥിരമായത്</string>

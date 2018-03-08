@@ -28,6 +28,7 @@
   <!-- Labels for the PROTECTED_APP permission. -->
   <string name="permlab_protectedApp">قوغدالغان ئەپ تىزىمىگە ئەپ قوشۇش ياكى چىقىرۋېتىش</string>
   <string name="permdesc_protectedApp">ئەپنىڭ باشقا ئەپلەرنى قوغداش تىزىملىكىگە قوشۇشىغا ياكى تاقاپ قۇيىشىغا رۇخسەت قىلىش.</string>
+  <!-- Labels for CHANGE_STYLE permission -->
   <!-- Profiles -->
   <!-- Names of default profiles. -->
   <string name="profileNameDefault">كۆڭۈلدىكى</string>

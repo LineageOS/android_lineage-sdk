@@ -34,6 +34,7 @@
   <!-- Labels for the PROTECTED_APP permission. -->
   <string name="permlab_protectedApp">הוספה והסרה של יישומים מהיישומים המוגנים</string>
   <string name="permdesc_protectedApp">מאפשר ליישום לסמן יישומים אחרים כמוגנים ולנעול אותם.</string>
+  <!-- Labels for CHANGE_STYLE permission -->
   <!-- Profiles -->
   <!-- Names of default profiles. -->
   <string name="profileNameDefault">ברירת מחדל</string>

@@ -28,6 +28,7 @@
   <!-- Labels for the PROTECTED_APP permission. -->
   <string name="permlab_protectedApp">даданне і выдаленне запісаў пераліку абароненых дадаткаў</string>
   <string name="permdesc_protectedApp">Дадатак зможа адзначаць іншыя дадаткі як абароненыя і блакаваць іх.</string>
+  <!-- Labels for CHANGE_STYLE permission -->
   <!-- Profiles -->
   <!-- Names of default profiles. -->
   <string name="profileNameDefault">Па змаўчанні</string>

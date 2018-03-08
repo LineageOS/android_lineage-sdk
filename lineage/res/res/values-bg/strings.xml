@@ -34,6 +34,7 @@
   <!-- Labels for the PROTECTED_APP permission. -->
   <string name="permlab_protectedApp">Прибави/Премахни приложение към/от списъка със защитени приложения</string>
   <string name="permdesc_protectedApp">Позволява на приложението да маркира други приложения, като защитени и да ги заключва.</string>
+  <!-- Labels for CHANGE_STYLE permission -->
   <!-- Profiles -->
   <!-- Names of default profiles. -->
   <string name="profileNameDefault">По подразбиране</string>

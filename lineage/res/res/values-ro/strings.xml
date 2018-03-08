@@ -34,6 +34,7 @@
   <!-- Labels for the PROTECTED_APP permission. -->
   <string name="permlab_protectedApp">adăugați sau eliminați aplicații din aplicațiile protejate</string>
   <string name="permdesc_protectedApp">Permite unei aplicații să marcheze alte aplicații ca protejate și să le blocheze.</string>
+  <!-- Labels for CHANGE_STYLE permission -->
   <!-- Profiles -->
   <!-- Names of default profiles. -->
   <string name="profileNameDefault">Implicit</string>

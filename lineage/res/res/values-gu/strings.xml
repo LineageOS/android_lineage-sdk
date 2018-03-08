@@ -28,6 +28,7 @@
   <!-- Labels for the PROTECTED_APP permission. -->
   <string name="permlab_protectedApp">ઍડ અને કાઢી નાંખો એપ્લિકેશન્સ રક્ષણ કરો</string>
   <string name="permdesc_protectedApp">ઍપને અન્ય એપ્લિકેશન્સ પર સુરક્ષિત તરીકે અંકિત કરી તે લૉક કરવાની છૂટ આપે છે.</string>
+  <!-- Labels for CHANGE_STYLE permission -->
   <!-- Profiles -->
   <!-- Names of default profiles. -->
   <string name="profileNameDefault">ડિફોલ્ટ</string>

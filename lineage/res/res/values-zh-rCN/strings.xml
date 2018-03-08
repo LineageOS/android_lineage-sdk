@@ -34,6 +34,7 @@
   <!-- Labels for the PROTECTED_APP permission. -->
   <string name="permlab_protectedApp">从受保护的应用中添加或删除应用</string>
   <string name="permdesc_protectedApp">允许应用标记受保护的应用并将其锁定。</string>
+  <!-- Labels for CHANGE_STYLE permission -->
   <!-- Profiles -->
   <!-- Names of default profiles. -->
   <string name="profileNameDefault">默认</string>
