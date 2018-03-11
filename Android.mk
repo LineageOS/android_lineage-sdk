@@ -215,7 +215,7 @@ lineage_platform_docs_java_libraries := \
 lineage_platform_docs_SDK_VERSION := 15.1
 
 # release version
-lineage_platform_docs_SDK_REL_ID := 8
+lineage_platform_docs_SDK_REL_ID := 9
 
 lineage_platform_docs_LOCAL_MODULE_CLASS := JAVA_LIBRARIES
 
@@ -297,7 +297,8 @@ LOCAL_DROIDDOC_OPTIONS := \
         -since $(LINEAGE_SRC_API_DIR)/5.txt 5 \
         -since $(LINEAGE_SRC_API_DIR)/6.txt 6 \
         -since $(LINEAGE_SRC_API_DIR)/7.txt 7 \
-        -since $(LINEAGE_SRC_API_DIR)/8.txt 8
+        -since $(LINEAGE_SRC_API_DIR)/8.txt 8 \
+        -since $(LINEAGE_SRC_API_DIR)/9.txt 9
 
 $(full_target): $(lineage_framework_built) $(gen)
 include $(BUILD_DROIDDOC)

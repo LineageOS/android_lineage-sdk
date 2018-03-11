@@ -45,6 +45,7 @@ public class Build {
         sdkMap.put(LINEAGE_VERSION_CODES.FIG, "Fig");
         sdkMap.put(LINEAGE_VERSION_CODES.GUAVA, "Guava");
         sdkMap.put(LINEAGE_VERSION_CODES.HACKBERRY, "Hackberry");
+        sdkMap.put(LINEAGE_VERSION_CODES.ILAMA, "Ilama");
     }
 
     /** Various version strings. */
@@ -168,6 +169,16 @@ public class Build {
          * <p>Unused APIs have been removed.</p>
          */
         public static final int HACKBERRY = 8;
+
+        /**
+         * March 2018: The 1st iteration of the platform sdk for LineageOS
+         * <p>Applications targeting this or a later version will get access to these
+         * new features!</p>
+         * <ul>
+         * <li>Styles API to customize the system and get customized basing on the system style
+         * </ul>
+         */
+        public static final int ILAMA = 9;
     }
 
     /**
