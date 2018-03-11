@@ -1,0 +1,106 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1b99ce49_2168594b",
+        "filename": "lineage/lib/main/java/org/lineageos/platform/internal/StyleInterfaceService.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 88,
+      "author": {
+        "id": 11883
+      },
+      "writtenOn": "2018-03-11T10:42:54Z",
+      "side": 1,
+      "message": "derp",
+      "revId": "c0e2dfd0fc4f11ca73fa48cc8c4691c7f1ea7e69",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3b475043_97b408bc",
+        "filename": "lineage/lib/main/java/org/lineageos/platform/internal/StyleInterfaceService.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 89,
+      "author": {
+        "id": 11883
+      },
+      "writtenOn": "2018-03-11T10:42:54Z",
+      "side": 1,
+      "message": "ditto",
+      "revId": "c0e2dfd0fc4f11ca73fa48cc8c4691c7f1ea7e69",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a8cc063_20558503",
+        "filename": "sdk/src/java/lineageos/style/StyleInterface.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 11883
+      },
+      "writtenOn": "2018-03-11T10:42:54Z",
+      "side": 1,
+      "message": "derp",
+      "revId": "c0e2dfd0fc4f11ca73fa48cc8c4691c7f1ea7e69",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "edec0f66_fa8a0440",
+        "filename": "sdk/src/java/lineageos/style/StyleInterface.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 170,
+      "author": {
+        "id": 11883
+      },
+      "writtenOn": "2018-03-11T10:42:54Z",
+      "side": 1,
+      "message": "ditto",
+      "revId": "c0e2dfd0fc4f11ca73fa48cc8c4691c7f1ea7e69",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "50b58fa3_5d771f18",
+        "filename": "sdk/src/java/lineageos/style/Suggestion.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 11883
+      },
+      "writtenOn": "2018-03-11T10:42:54Z",
+      "side": 1,
+      "message": "derp",
+      "revId": "c0e2dfd0fc4f11ca73fa48cc8c4691c7f1ea7e69",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eea9bfeb_23ceb408",
+        "filename": "sdk/src/java/lineageos/style/Suggestion.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 11883
+      },
+      "writtenOn": "2018-03-11T10:42:54Z",
+      "side": 1,
+      "message": "new line?",
+      "revId": "c0e2dfd0fc4f11ca73fa48cc8c4691c7f1ea7e69",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
