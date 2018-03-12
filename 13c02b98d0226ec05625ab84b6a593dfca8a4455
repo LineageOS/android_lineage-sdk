@@ -22,6 +22,30 @@
       "revId": "13c02b98d0226ec05625ab84b6a593dfca8a4455",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "59cf1493_b8c30158",
+        "filename": "sdk/src/java/lineageos/os/Build.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 181,
+      "author": {
+        "id": 8461
+      },
+      "writtenOn": "2018-03-12T12:02:31Z",
+      "side": 1,
+      "message": ":fffffuuuuu:",
+      "parentUuid": "a17e10c2_0d559752",
+      "range": {
+        "startLine": 181,
+        "startChar": 8,
+        "endLine": 181,
+        "endChar": 9
+      },
+      "revId": "13c02b98d0226ec05625ab84b6a593dfca8a4455",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
