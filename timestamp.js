@@ -1,0 +1,1 @@
+var BUILD_TIMESTAMP = "12 mar 2018 14:40";
