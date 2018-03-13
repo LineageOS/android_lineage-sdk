@@ -162,4 +162,7 @@
     <java-symbol type="string" name="accent_yellow" />
 
     <java-symbol type="array" name="config_vendorPlatformSignatures" />
+
+    <!-- Button lights only when pressed default -->
+    <java-symbol type="bool" name="config_buttonLightOnKeypressOnlyByDefault" />
 </resources>

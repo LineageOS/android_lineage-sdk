@@ -208,4 +208,7 @@
           platform signatures, specifically for use on devices with a vendor partition. -->
       <string-array name="config_vendorPlatformSignatures">
       </string-array>
+
+    <!-- Button lights only when pressed default -->
+    <bool name="config_buttonLightOnKeypressOnlyByDefault">false</bool>
 </resources>
