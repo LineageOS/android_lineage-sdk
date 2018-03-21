@@ -37,6 +37,6 @@ dependencies {
 }
 ```
 
-### WIKI
+### Wiki
 
-For further inquiries regarding this project, please reference the [wiki](https://github.com/LineageOS/android_lineage-sdk/wiki).
+For further inquiries regarding this project, please reference the [wiki](https://wiki.lineageos.org/sdk).
