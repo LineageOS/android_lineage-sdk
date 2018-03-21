@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "b33408e2_3b62e395",
+        "filename": "README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 4550
+      },
+      "writtenOn": "2018-03-21T20:28:45Z",
+      "side": 1,
+      "message": "This is no longer valid",
+      "range": {
+        "startLine": 7,
+        "startChar": 137,
+        "endLine": 38,
+        "endChar": 3
+      },
+      "revId": "523448f4c6fbcad58c04e66f108a338cf00211c8",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
