@@ -66,6 +66,7 @@ public final class LineageNotificationLights {
     private boolean mNotificationLedEnabled;
     private int mNotificationLedBrightnessLevel;
     private int mNotificationLedBrightnessLevelZen;
+    private int mNotificationLedBrightnessLevelScreenOn;
     private int mDefaultNotificationColor;
     private int mDefaultNotificationLedOn;
     private int mDefaultNotificationLedOff;
@@ -261,6 +262,7 @@ public final class LineageNotificationLights {
                     + " mMultiColorNotificationLed=" + mMultiColorNotificationLed
                     + " mNotificationLedBrightnessLevel=" + mNotificationLedBrightnessLevel
                     + " mNotificationLedBrightnessLevelZen=" + mNotificationLedBrightnessLevelZen
+                    + " mNotificationLedBrightnessLevelScreenOn=" + mNotificationLedBrightnessLevelScreenOn
                     + " mScreenOnEnabled= " + mScreenOnEnabled
                     + " mZenAllowLights=" + mZenAllowLights
                     + " mZenMode=" + mZenMode
@@ -301,10 +303,12 @@ public final class LineageNotificationLights {
             brightness = LedValues.LIGHT_BRIGHTNESS_MAXIMUM;
         } else if (forcedBrightness > 0) {
             brightness = forcedBrightness;
-        } else if (mZenMode == Global.ZEN_MODE_OFF) {
-            brightness = mNotificationLedBrightnessLevel;
-        } else {
+        } else if (mZenMode != Global.ZEN_MODE_OFF) {
             brightness = mNotificationLedBrightnessLevelZen;
+        } else if (screenActive){
+            brightness = mNotificationLedBrightnessLevelScreenOn;
+        } else {
+            brightness = mNotificationLedBrightnessLevel;
         }
         ledValues.setBrightness(brightness);
 
@@ -373,6 +377,9 @@ public final class LineageNotificationLights {
                         false, this, UserHandle.USER_ALL);
                 resolver.registerContentObserver(LineageSettings.System.getUriFor(
                         LineageSettings.System.NOTIFICATION_LIGHT_BRIGHTNESS_LEVEL_ZEN),
+                        false, this, UserHandle.USER_ALL);
+                resolver.registerContentObserver(LineageSettings.System.getUriFor(
+                        LineageSettings.System.NOTIFICATION_LIGHT_BRIGHTNESS_LEVEL_SCREEN_ON),
                         false, this, UserHandle.USER_ALL);
             }
 
@@ -444,6 +451,10 @@ public final class LineageNotificationLights {
                 // Brightness in Do Not Disturb mode.
                 mNotificationLedBrightnessLevelZen = LineageSettings.System.getIntForUser(
                         resolver, LineageSettings.System.NOTIFICATION_LIGHT_BRIGHTNESS_LEVEL_ZEN,
+                        LedValues.LIGHT_BRIGHTNESS_MAXIMUM, UserHandle.USER_CURRENT);
+                // Brightness with screen on.
+                mNotificationLedBrightnessLevelScreenOn = LineageSettings.System.getIntForUser(
+                        resolver, LineageSettings.System.NOTIFICATION_LIGHT_BRIGHTNESS_LEVEL_SCREEN_ON,
                         LedValues.LIGHT_BRIGHTNESS_MAXIMUM, UserHandle.USER_CURRENT);
             }
 
