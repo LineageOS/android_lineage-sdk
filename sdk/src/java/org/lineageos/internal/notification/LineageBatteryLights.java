@@ -47,11 +47,14 @@ public final class LineageBatteryLights {
     // Battery light intended operational state.
     private boolean mLightEnabled = false; // Disable until observer is started
     private boolean mLedPulseEnabled;
+    private boolean mLightZen;
+    private boolean mLightScreenOn;
     private int mBatteryLowARGB;
     private int mBatteryMediumARGB;
     private int mBatteryFullARGB;
     private int mBatteryBrightness;
     private int mBatteryBrightnessZen;
+    private int mBatteryBrightnessScreenOn;
 
     private final Context mContext;
 
@@ -101,7 +104,8 @@ public final class LineageBatteryLights {
         return mHasBatteryLed;
     }
 
-    public void calcLights(LedValues ledValues, int level, int status, boolean low) {
+    public void calcLights(LedValues ledValues, int level, int status, boolean low,
+                           boolean screenActive) {
         if (DEBUG) {
             Slog.i(TAG, "calcLights input: ledValues={ " + ledValues + " } level="
                     + level + " status=" + status + " low=" + low);
@@ -112,7 +116,8 @@ public final class LineageBatteryLights {
         ledValues.setEnabled(false);
         ledValues.setColor(0);
 
-        if (!mLightEnabled) {
+        if (!mLightEnabled || (screenActive && !mLightScreenOn) ||
+            ((Global.ZEN_MODE_OFF == 1) && !mLightZen)) {
             return;
         }
 
@@ -121,10 +126,12 @@ public final class LineageBatteryLights {
             brightness = level;
         } else if (!mMultiColorLed) {
             brightness = LedValues.LIGHT_BRIGHTNESS_MAXIMUM;
-        } else if (mZenMode == Global.ZEN_MODE_OFF) {
-            brightness = mBatteryBrightness;
-        } else {
+        } else if (mZenMode != Global.ZEN_MODE_OFF) {
             brightness = mBatteryBrightnessZen;
+        } else if (screenActive) {
+            brightness = mBatteryBrightnessScreenOn;
+        } else {
+            brightness = mBatteryBrightness;
         }
         ledValues.setBrightness(brightness);
 
@@ -189,6 +196,16 @@ public final class LineageBatteryLights {
                     LineageSettings.System.BATTERY_LIGHT_PULSE), false, this,
                 UserHandle.USER_ALL);
 
+            // Battery light in Do Not Disturb
+            resolver.registerContentObserver(LineageSettings.System.getUriFor(
+                    LineageSettings.System.BATTERY_LIGHT_ZEN), false, this,
+                UserHandle.USER_ALL);
+
+            // Battery light with screen on
+            resolver.registerContentObserver(LineageSettings.System.getUriFor(
+                    LineageSettings.System.BATTERY_LIGHT_SCREEN_ON), false, this,
+                UserHandle.USER_ALL);
+
             if (mMultiColorLed) {
                 // Light colors
                 resolver.registerContentObserver(LineageSettings.System.getUriFor(
@@ -207,6 +224,10 @@ public final class LineageBatteryLights {
                 // Battery brightness level in Do Not Disturb mode
                 resolver.registerContentObserver(LineageSettings.System.getUriFor(
                         LineageSettings.System.BATTERY_LIGHT_BRIGHTNESS_LEVEL_ZEN), false, this,
+                        UserHandle.USER_ALL);
+                // Battery brightness level with screen on
+                resolver.registerContentObserver(LineageSettings.System.getUriFor(
+                        LineageSettings.System.BATTERY_LIGHT_BRIGHTNESS_LEVEL_SCREEN_ON), false, this,
                         UserHandle.USER_ALL);
             }
 
@@ -230,6 +251,14 @@ public final class LineageBatteryLights {
             mLedPulseEnabled = LineageSettings.System.getInt(resolver,
                         LineageSettings.System.BATTERY_LIGHT_PULSE, 1) != 0;
 
+            // Battery light enabled in Do Not Disturb
+            mLightZen = LineageSettings.System.getInt(resolver,
+                        LineageSettings.System.BATTERY_LIGHT_ZEN, 1) != 0;
+
+            // Battery light enabled with screen on
+            mLightScreenOn = LineageSettings.System.getInt(resolver,
+                        LineageSettings.System.BATTERY_LIGHT_SCREEN_ON, 1) != 0;
+
             // Light colors
             mBatteryLowARGB = LineageSettings.System.getInt(resolver,
                     LineageSettings.System.BATTERY_LIGHT_LOW_COLOR, res.getInteger(
@@ -249,6 +278,10 @@ public final class LineageBatteryLights {
                 // Battery brightness level in Do Not Disturb mode
                 mBatteryBrightnessZen = LineageSettings.System.getInt(resolver,
                         LineageSettings.System.BATTERY_LIGHT_BRIGHTNESS_LEVEL_ZEN,
+                        LedValues.LIGHT_BRIGHTNESS_MAXIMUM);
+                // Battery brightness level with screen on
+                mBatteryBrightnessScreenOn = LineageSettings.System.getInt(resolver,
+                        LineageSettings.System.BATTERY_LIGHT_BRIGHTNESS_LEVEL_SCREEN_ON,
                         LedValues.LIGHT_BRIGHTNESS_MAXIMUM);
             }
 

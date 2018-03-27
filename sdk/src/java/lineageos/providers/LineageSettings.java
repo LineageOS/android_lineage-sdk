@@ -1722,9 +1722,33 @@ public final class LineageSettings {
         public static final String BATTERY_LIGHT_BRIGHTNESS_LEVEL_ZEN =
                 "battery_light_brightness_level_zen";
 
+        /**
+         * Contains the battery light maximum brightness to use when screen
+         * is on.
+         * Values range from 1 to 255
+         */
+        public static final String BATTERY_LIGHT_BRIGHTNESS_LEVEL_SCREEN_ON =
+                "battery_light_brightness_level_screen_on";
+
         /** @hide */
         public static final Validator BATTERY_LIGHT_BRIGHTNESS_LEVEL_VALIDATOR =
                 new InclusiveIntegerRangeValidator(1, 255);
+
+        /**
+         * Contains whether to enable battery light in Do Not Disturb
+         */
+        public static final String BATTERY_LIGHT_ZEN =
+                "battery_light_zen_enable";
+
+        /**
+         * Contains whether to enable battery light with screen on
+         */
+        public static final String BATTERY_LIGHT_SCREEN_ON =
+                "battery_light_screen_on_enable";
+
+        /** @hide */
+        public static final Validator BATTERY_LIGHT_VALIDATOR =
+                sBooleanValidator;
 
         /**
          * Contains the notifications light maximum brightness to use.
@@ -1740,6 +1764,14 @@ public final class LineageSettings {
          */
         public static final String NOTIFICATION_LIGHT_BRIGHTNESS_LEVEL_ZEN =
                 "notification_light_brightness_level_zen";
+
+        /**
+         * Contains the notifications light maximum brightness to use when screen
+         * is on.
+         * Values range from 1 to 255
+         */
+        public static final String NOTIFICATION_LIGHT_BRIGHTNESS_LEVEL_SCREEN_ON =
+                "notification_light_brightness_level_screen_on";
 
         /** @hide */
         public static final Validator NOTIFICATION_LIGHT_BRIGHTNESS_LEVEL_VALIDATOR =
@@ -2246,9 +2278,15 @@ public final class LineageSettings {
                     BATTERY_LIGHT_BRIGHTNESS_LEVEL_VALIDATOR);
             VALIDATORS.put(BATTERY_LIGHT_BRIGHTNESS_LEVEL_ZEN,
                     BATTERY_LIGHT_BRIGHTNESS_LEVEL_VALIDATOR);
+            VALIDATORS.put(BATTERY_LIGHT_BRIGHTNESS_LEVEL_SCREEN_ON,
+                    BATTERY_LIGHT_BRIGHTNESS_LEVEL_VALIDATOR);
+            VALIDATORS.put(BATTERY_LIGHT_SCREEN_ON, BATTERY_LIGHT_VALIDATOR);
+            VALIDATORS.put(BATTERY_LIGHT_ZEN, BATTERY_LIGHT_VALIDATOR);
             VALIDATORS.put(NOTIFICATION_LIGHT_BRIGHTNESS_LEVEL,
                     NOTIFICATION_LIGHT_BRIGHTNESS_LEVEL_VALIDATOR);
             VALIDATORS.put(NOTIFICATION_LIGHT_BRIGHTNESS_LEVEL_ZEN,
+                    NOTIFICATION_LIGHT_BRIGHTNESS_LEVEL_VALIDATOR);
+            VALIDATORS.put(NOTIFICATION_LIGHT_BRIGHTNESS_LEVEL_SCREEN_ON,
                     NOTIFICATION_LIGHT_BRIGHTNESS_LEVEL_VALIDATOR);
             VALIDATORS.put(NOTIFICATION_LIGHT_SCREEN_ON,
                     NOTIFICATION_LIGHT_SCREEN_ON_VALIDATOR);
