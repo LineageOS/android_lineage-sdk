@@ -35,6 +35,10 @@
   <string name="permlab_protectedApp">Прибави/Премахни приложение към/от списъка със защитени приложения</string>
   <string name="permdesc_protectedApp">Позволява на приложението да маркира други приложения, като защитени и да ги заключва.</string>
   <!-- Labels for CHANGE_STYLE permission -->
+  <string name="permlab_changeStyle">промяна на системния стил</string>
+  <!-- this is wrong, but google's package manager uses the android:description
+         attribute as description for the runtime permission request dialog
+         with non-default dangerous permissions -->
   <!-- Profiles -->
   <!-- Names of default profiles. -->
   <string name="profileNameDefault">По подразбиране</string>

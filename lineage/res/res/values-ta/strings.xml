@@ -29,6 +29,9 @@
   <string name="permlab_protectedApp">பயன்பாடுகளை பாதுகாக்க பயன்பாடுகளை சேர்க்கவும் மற்றும் அகற்றவும்</string>
   <string name="permdesc_protectedApp">மற்ற பயன்பாடுகள் பாதுகாக்கப்பட்டவை என்று குறிப்பிட்டு அவற்றை பூட்டுவதற்கு ஒரு பயன்பாட்டை அனுமதிக்கிறது.</string>
   <!-- Labels for CHANGE_STYLE permission -->
+  <!-- this is wrong, but google's package manager uses the android:description
+         attribute as description for the runtime permission request dialog
+         with non-default dangerous permissions -->
   <!-- Profiles -->
   <!-- Names of default profiles. -->
   <string name="profileNameDefault">இயல்புநிலை</string>

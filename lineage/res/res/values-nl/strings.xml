@@ -29,6 +29,9 @@
   <string name="permlab_protectedApp">toevoegen en verwijderen van apps aan beschermde apps</string>
   <string name="permdesc_protectedApp">Hiermee kan de app andere apps als beschermd aanmerken en vergrendelen.</string>
   <!-- Labels for CHANGE_STYLE permission -->
+  <!-- this is wrong, but google's package manager uses the android:description
+         attribute as description for the runtime permission request dialog
+         with non-default dangerous permissions -->
   <!-- Profiles -->
   <!-- Names of default profiles. -->
   <string name="profileNameDefault">Standaard</string>
@@ -118,5 +121,19 @@
   <!-- General purpose use "unknown" string -->
   <!-- Long-press back kill application -->
   <!-- Status bar network traffic monitor strings -->
+  <string name="kilobitspersecond_short">kb/s</string>
+  <string name="megabitspersecond_short">Mb/s</string>
+  <string name="kilobytespersecond_short">kB/s</string>
+  <string name="megabytespersecond_short">MB/s</string>
   <!-- Accent colors -->
+  <string name="accent_black">Koolstof</string>
+  <string name="accent_blue">Bosbes</string>
+  <string name="accent_brown">Cacao</string>
+  <string name="accent_cyan">Cyaan</string>
+  <string name="accent_green">Bos</string>
+  <string name="accent_orange">Pompoen</string>
+  <string name="accent_pink">Kers</string>
+  <string name="accent_purple">Lavendel</string>
+  <string name="accent_red">Tomaat</string>
+  <string name="accent_yellow">Banaan</string>
 </resources>

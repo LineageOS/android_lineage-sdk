@@ -35,6 +35,10 @@
   <string name="permlab_protectedApp">lisätä ja poistaa suojattuja sovelluksia</string>
   <string name="permdesc_protectedApp">Antaa sovelluksen merkitä muita sovelluksia suojatuiksi ja lukita ne.</string>
   <!-- Labels for CHANGE_STYLE permission -->
+  <string name="permlab_changeStyle">muuta tyyliä</string>
+  <!-- this is wrong, but google's package manager uses the android:description
+         attribute as description for the runtime permission request dialog
+         with non-default dangerous permissions -->
   <!-- Profiles -->
   <!-- Names of default profiles. -->
   <string name="profileNameDefault">Oletus</string>

@@ -30,11 +30,15 @@
   <string name="permdesc_writeSettings">Ermöglicht der App, Lineage-Systemeinstellungen zu ändern.</string>
   <!-- Labels for the WRITE_SECURE_SETTINGS permission -->
   <string name="permlab_writeSecureSettings">Lineage-Sicherheitssystemeinstellungen ändern</string>
-  <string name="permdesc_writeSecureSettings">Erlaubt der App, Lineage-Sicherheitssystemeinstellungen zu ändern. Nicht für die Nutzung durch normale Apps bestimmt.</string>
+  <string name="permdesc_writeSecureSettings">Ermöglicht der App, Lineage-Sicherheitssystemeinstellungen zu ändern. Nicht für die Nutzung durch normale Apps bestimmt.</string>
   <!-- Labels for the PROTECTED_APP permission. -->
   <string name="permlab_protectedApp">geschützten Apps hinzufügen oder entfernen</string>
   <string name="permdesc_protectedApp">Ermöglicht der App, andere Apps als geschützt zu markieren und diese zu sperren.</string>
   <!-- Labels for CHANGE_STYLE permission -->
+  <string name="permlab_changeStyle">System-Design ändern</string>
+  <!-- this is wrong, but google's package manager uses the android:description
+         attribute as description for the runtime permission request dialog
+         with non-default dangerous permissions -->
   <!-- Profiles -->
   <!-- Names of default profiles. -->
   <string name="profileNameDefault">Standard</string>
@@ -88,12 +92,12 @@
   <!-- Performance manager permission title -->
   <string name="permlab_perfAccess">Zugriff auf Leistungsmanager</string>
   <!-- Performance manager permission description -->
-  <string name="permdesc_perfAccessDesc">Ermöglicht einer App den Zugriff auf den Leistungsdienst. Wird für normale Apps nicht benötigt.</string>
+  <string name="permdesc_perfAccessDesc">Ermöglicht der App, den Zugriff auf den Leistungsdienst. Wird für normale Apps nicht benötigt.</string>
   <!-- Weather Service strings -->
   <string name="permlab_weather_read">Wetter auslesen</string>
-  <string name="permdesc_weather_read">Ermöglicht einer App, Inhalte des Wetterdatenanbieters auszulesen.</string>
+  <string name="permdesc_weather_read">Ermöglicht der App, Inhalte des Wetterdatenanbieters auszulesen.</string>
   <string name="permlab_weather_write">Wetterdatenanbieter aktualisieren</string>
-  <string name="permdesc_weather_write">Ermöglicht einer App, Inhalte des Wetterdatenanbieters zu aktualisieren.</string>
+  <string name="permdesc_weather_write">Ermöglicht der App, Inhalte des Wetterdatenanbieters zu aktualisieren.</string>
   <string name="permlab_weather_bind">Anbindung als Service für Wetterdatenanbieter</string>
   <string name="permdesc_weather_bind">Ermöglicht der App, sich als Wetterdatenanbieter zu identifizieren.</string>
   <string name="permlab_weather_access_mgr">auf Wetterdienst zugreifen</string>
@@ -101,17 +105,17 @@
   <!-- DataUsageProvider write permission title -->
   <string name="permlab_dataUsageWrite">Datennutzung-Datenbank ändern</string>
   <!-- DataUsageProvider write permission description -->
-  <string name="permdesc_dataUsageWrite">Ermöglicht einer App, Inhalte der Datennutzungs-Datenbank zu aktualisieren.</string>
+  <string name="permdesc_dataUsageWrite">Ermöglicht der App, Inhalte der Datennutzungs-Datenbank zu aktualisieren.</string>
   <!-- DataUsageProvider read permission title -->
   <string name="permlab_dataUsageRead">Datennutzungs-Datenbank lesen</string>
   <!-- DataUsageProvider read permission description -->
-  <string name="permdesc_dataUsageRead">Ermöglicht einer App, Inhalte der Datennutzungs-Datenbank auszulesen.</string>
+  <string name="permdesc_dataUsageRead">Ermöglicht der App, Inhalte der Datennutzungs-Datenbank auszulesen.</string>
   <!-- LiveDisplay manager permission -->
   <string name="permlab_manageLiveDisplay">LiveDisplay-Einstellungen verwalten</string>
-  <string name="permdesc_manageLiveDisplay">Erlaubt der App, erweiterte Displayeinstellungen vorzunehmen.</string>
+  <string name="permdesc_manageLiveDisplay">Ermöglicht der App, erweiterte Displayeinstellungen vorzunehmen.</string>
   <!-- LineageAudioService - observe session changes permission -->
   <string name="permlab_observe_audio_sessions">Audiositzungsänderungen überwachen</string>
-  <string name="permdesc_observe_audio_sessions">Erlaubt einer App, die Erstellung und Löschung von Audio-Streams zu überwachen.</string>
+  <string name="permdesc_observe_audio_sessions">Ermöglicht der App, die Erstellung und Löschung von Audio-Streams zu überwachen.</string>
   <!-- Privacy Guard -->
   <string name="privacy_guard_manager_title">Datenschutz</string>
   <!-- Permissions used by remote preferences -->

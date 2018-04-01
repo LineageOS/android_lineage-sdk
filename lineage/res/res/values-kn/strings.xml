@@ -29,6 +29,9 @@
   <string name="permlab_protectedApp">ಸಂರಕ್ಷಿತ ಅಪ್ಲಿಕೇಶನ್‌ಗಳಿಗೆ ಅಪ್ಲಿಕೇಶನ್‌ಗಳನ್ನು ಸೇರಿಸಿ ಮತ್ತು ತೆಗೆಯಿರಿ</string>
   <string name="permdesc_protectedApp">ಇತರ ಅಪ್ಲಿಗಳನ್ನು ಸಂರಕ್ಷಿತಗೊಳಿಸಲು ಮತ್ತು ಅವುಗಳನ್ನು ಲಾಕ್‌ ಮಾಡಲು ಒಂದು ಅಪ್ಲಿಕೇಶನ್‌ ಅನುವು ಮಾಡಿ</string>
   <!-- Labels for CHANGE_STYLE permission -->
+  <!-- this is wrong, but google's package manager uses the android:description
+         attribute as description for the runtime permission request dialog
+         with non-default dangerous permissions -->
   <!-- Profiles -->
   <!-- Names of default profiles. -->
   <string name="profileNameDefault">ಡೀಫಾಲ್ಟ್</string>

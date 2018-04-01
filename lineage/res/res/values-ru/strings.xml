@@ -35,6 +35,10 @@
   <string name="permlab_protectedApp">добавление и удаление записей перечня защищенных приложений</string>
   <string name="permdesc_protectedApp">Приложение сможет помечать другие приложения как защищённые и блокировать их.</string>
   <!-- Labels for CHANGE_STYLE permission -->
+  <string name="permlab_changeStyle">изменение стиля системы</string>
+  <!-- this is wrong, but google's package manager uses the android:description
+         attribute as description for the runtime permission request dialog
+         with non-default dangerous permissions -->
   <!-- Profiles -->
   <!-- Names of default profiles. -->
   <string name="profileNameDefault">По умолчанию</string>
@@ -135,4 +139,14 @@
   <string name="kilobytespersecond_short">кБ/с</string>
   <string name="megabytespersecond_short">МБ/с</string>
   <!-- Accent colors -->
+  <string name="accent_black">Карбон</string>
+  <string name="accent_blue">Голубика</string>
+  <string name="accent_brown">Какао</string>
+  <string name="accent_cyan">Бирюза</string>
+  <string name="accent_green">Лес</string>
+  <string name="accent_orange">Тыква</string>
+  <string name="accent_pink">Вишня</string>
+  <string name="accent_purple">Лаванда</string>
+  <string name="accent_red">Помидор</string>
+  <string name="accent_yellow">Банан</string>
 </resources>

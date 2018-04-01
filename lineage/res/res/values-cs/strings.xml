@@ -35,6 +35,9 @@
   <string name="permlab_protectedApp">přidat nebo odstranit aplikace z chráněných aplikací</string>
   <string name="permdesc_protectedApp">Umožňuje označit aplikace jako chráněné a zamknout je.</string>
   <!-- Labels for CHANGE_STYLE permission -->
+  <!-- this is wrong, but google's package manager uses the android:description
+         attribute as description for the runtime permission request dialog
+         with non-default dangerous permissions -->
   <!-- Profiles -->
   <!-- Names of default profiles. -->
   <string name="profileNameDefault">Výchozí</string>

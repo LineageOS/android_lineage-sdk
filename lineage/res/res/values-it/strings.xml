@@ -21,20 +21,24 @@
   <string name="lineageos_system_label">Sistema LineageOS</string>
   <!-- Labels for the MODIFY_PROFILES permission. -->
   <string name="permlab_modifyProfiles">modifica profili sistema</string>
-  <string name="permdesc_modifyProfiles">Consenti ad un\'app di modificare i profili di sistema.</string>
+  <string name="permdesc_modifyProfiles">Consente all\'applicazione di modificare i profili di sistema.</string>
   <!-- Labels for the HARDWARE_ABSTRACTION_ACCESS permission. -->
   <string name="permlab_useHardwareFramework">utilizza framework hardware</string>
-  <string name="permdesc_useHardwareFramework">Consenti ad un\'app di accedere all\'hardware framework di Lineage.</string>
+  <string name="permdesc_useHardwareFramework">Consente all\'applicazione di accedere al framework hardware di Lineage.</string>
   <!-- Labels for the WRITE_SETTINGS permission -->
   <string name="permlab_writeSettings">modifica le impostazioni di sistema di Lineage</string>
-  <string name="permdesc_writeSettings">Consenti alle app di modificare le impostazioni di sistema di Lineage.</string>
+  <string name="permdesc_writeSettings">Consente all\'applicazione di modificare le impostazioni di sistema di Lineage.</string>
   <!-- Labels for the WRITE_SECURE_SETTINGS permission -->
   <string name="permlab_writeSecureSettings">modifica le impostazioni sicure di sistema di Lineage</string>
-  <string name="permdesc_writeSecureSettings">Consenti ad un\'app di modificare le impostazioni sicure di sistema di LineageOS. Non utilizzato dalle app normali.</string>
+  <string name="permdesc_writeSecureSettings">Consente all\'applicazione di modificare le impostazioni sicure di sistema di LineageOS. Non utilizzato dalle app normali.</string>
   <!-- Labels for the PROTECTED_APP permission. -->
   <string name="permlab_protectedApp">aggiungi o rimuovi app dalle app protette</string>
   <string name="permdesc_protectedApp">Consenti ad un\'app di segnalare altre app come protette e bloccarle.</string>
   <!-- Labels for CHANGE_STYLE permission -->
+  <string name="permlab_changeStyle">modifica stile del sistema</string>
+  <!-- this is wrong, but google's package manager uses the android:description
+         attribute as description for the runtime permission request dialog
+         with non-default dangerous permissions -->
   <!-- Profiles -->
   <!-- Names of default profiles. -->
   <string name="profileNameDefault">Predefinito</string>
@@ -91,32 +95,32 @@
   <string name="permdesc_perfAccessDesc">Consente ad un\'app di accedere alla gestione performances. Non dovrebbe essere mai richiesto per le normali app.</string>
   <!-- Weather Service strings -->
   <string name="permlab_weather_read">leggi meteo</string>
-  <string name="permdesc_weather_read">Consenti ad un\'app di leggere contenuti dal provider meteo.</string>
+  <string name="permdesc_weather_read">Consente all\'applicazione di leggere contenuti dal provider meteo.</string>
   <string name="permlab_weather_write">aggiorna provider meteo</string>
-  <string name="permdesc_weather_write">Consenti ad un\'app di aggiornare contenuti nel provider meteo.</string>
+  <string name="permdesc_weather_write">Consente all\'applicazione di aggiornare contenuti nel provider meteo.</string>
   <string name="permlab_weather_bind">identificazione come provider meteo</string>
-  <string name="permdesc_weather_bind">Consenti ad un\'app di identificarsi come provider meteo.</string>
+  <string name="permdesc_weather_bind">Consente all\'applicazione di identificarsi come provider meteo.</string>
   <string name="permlab_weather_access_mgr">accesso servizio meteo</string>
-  <string name="permdesc_weather_access_mgr">Consenti ad un\'app di accedere al servizio meteo nel sistema. Non dovrebbe mai essere necessario per le app normali.</string>
+  <string name="permdesc_weather_access_mgr">Consente all\'applicazione di accedere al servizio meteo nel sistema. Non dovrebbe mai essere necessario per le app normali.</string>
   <!-- DataUsageProvider write permission title -->
   <string name="permlab_dataUsageWrite">modifica database utilizzo dati</string>
   <!-- DataUsageProvider write permission description -->
-  <string name="permdesc_dataUsageWrite">Consenti ad un\'app di aggiornare i contenuti nel database dati utilizzati.</string>
+  <string name="permdesc_dataUsageWrite">Consente all\'applicazione di aggiornare i contenuti nel database dati utilizzati.</string>
   <!-- DataUsageProvider read permission title -->
   <string name="permlab_dataUsageRead">leggi database utilizzo dati</string>
   <!-- DataUsageProvider read permission description -->
-  <string name="permdesc_dataUsageRead">Consenti ad un\'app di leggere i contenuti nel database dati utilizzati.</string>
+  <string name="permdesc_dataUsageRead">Consente all\'applicazione di leggere i contenuti nel database dati utilizzati.</string>
   <!-- LiveDisplay manager permission -->
   <string name="permlab_manageLiveDisplay">gestisci le impostazioni LiveDisplay</string>
   <string name="permdesc_manageLiveDisplay">Consenti ad un\'app di configurare impostazioni avanzate del display.</string>
   <!-- LineageAudioService - observe session changes permission -->
   <string name="permlab_observe_audio_sessions">osserva cambiamenti di sessioni audio</string>
-  <string name="permdesc_observe_audio_sessions">Consenti ad un\'app di osservare la creazione e distruzione di flussi audio.</string>
+  <string name="permdesc_observe_audio_sessions">Consente all\'applicazione di osservare la creazione e distruzione di flussi audio.</string>
   <!-- Privacy Guard -->
   <string name="privacy_guard_manager_title">Privacy Guard</string>
   <!-- Permissions used by remote preferences -->
   <string name="permlab_manageRemotePrefs">gestisci impostazioni remote</string>
-  <string name="permdesc_manageRemotePrefs">Consenti ad un\'app di gestire le impostazioni remote</string>
+  <string name="permdesc_manageRemotePrefs">Consente all\'applicazione di gestire le impostazioni remote</string>
   <!-- About device screen, build date -->
   <string name="build_date">Data build</string>
   <!-- About device screen, LineageOS API Level -->

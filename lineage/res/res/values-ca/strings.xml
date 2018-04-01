@@ -35,6 +35,10 @@
   <string name="permlab_protectedApp">afegir i eliminar aplicacions a les aplicacions protegides</string>
   <string name="permdesc_protectedApp">Permet a una aplicació marcar a altres aplicacions com a protegides i bloquejar-les.</string>
   <!-- Labels for CHANGE_STYLE permission -->
+  <string name="permlab_changeStyle">canviar el sistema d\'estil</string>
+  <!-- this is wrong, but google's package manager uses the android:description
+         attribute as description for the runtime permission request dialog
+         with non-default dangerous permissions -->
   <!-- Profiles -->
   <!-- Names of default profiles. -->
   <string name="profileNameDefault">Predeterminat</string>

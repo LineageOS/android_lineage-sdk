@@ -29,6 +29,9 @@
   <string name="permlab_protectedApp">إضافة وإزالة تطبيقات إلى التطبيقات المحمية</string>
   <string name="permdesc_protectedApp">يسمح للتطبيق بوضع علامة على تطبيقات أخرى كمحمية مع قفلها.</string>
   <!-- Labels for CHANGE_STYLE permission -->
+  <!-- this is wrong, but google's package manager uses the android:description
+         attribute as description for the runtime permission request dialog
+         with non-default dangerous permissions -->
   <!-- Profiles -->
   <!-- Names of default profiles. -->
   <string name="profileNameDefault">افتراضي</string>

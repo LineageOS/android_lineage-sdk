@@ -35,6 +35,10 @@
   <string name="permlab_protectedApp">gehitu edo kendu aplikazioak babestutako aplikazioen zerrendan</string>
   <string name="permdesc_protectedApp">Beste aplikazio batzuk babestuta gisa markatzea eta blokeatzea ahalbidetzen dio aplikazioari.</string>
   <!-- Labels for CHANGE_STYLE permission -->
+  <string name="permlab_changeStyle">aldatu sistemaren estiloa</string>
+  <!-- this is wrong, but google's package manager uses the android:description
+         attribute as description for the runtime permission request dialog
+         with non-default dangerous permissions -->
   <!-- Profiles -->
   <!-- Names of default profiles. -->
   <string name="profileNameDefault">Lehenetsia</string>

@@ -29,6 +29,9 @@
   <string name="permlab_protectedApp">संरक्षित अनुप्रयोगांना अनुप्रयोग जोडा आणि काढा</string>
   <string name="permdesc_protectedApp">अनुप्रयोगाला इतर अनुप्रयोगांना संरक्षित म्हणून खूण करू देते आणि त्यांना लॉक करते.</string>
   <!-- Labels for CHANGE_STYLE permission -->
+  <!-- this is wrong, but google's package manager uses the android:description
+         attribute as description for the runtime permission request dialog
+         with non-default dangerous permissions -->
   <!-- Profiles -->
   <!-- Names of default profiles. -->
   <string name="profileNameDefault">डीफॉल्ट</string>
