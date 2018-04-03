@@ -124,6 +124,14 @@
                 android:icon="@drawable/ic_launcher_lineageos"
                 android:protectionLevel="dangerous" />
 
+ 
+    <!-- Allows an application to change system style -->
+    <permission android:name="lineageos.permission.TRUST_INTERFACE"
+                android:label="@string/permlab_trustInterface"
+                android:description="@string/permdesc_trustInterface"
+                android:icon="@drawable/ic_trust"
+                android:protectionLevel="signature|privileged" />
+
     <application android:process="system"
                  android:persistent="true"
                  android:hasCode="false"
