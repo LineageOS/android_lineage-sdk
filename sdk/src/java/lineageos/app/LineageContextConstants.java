@@ -108,6 +108,17 @@ public final class LineageContextConstants {
     public static final String LINEAGE_STYLE_INTERFACE = "lineagestyle";
 
     /**
+     * Use with {@link android.content.Context#getSystemService} to retrieve a
+     * {@link lineageos.trust.TrustInterface} to access the Trust interface.
+     *
+     * @see android.content.Context#getSystemService
+     * @see lineageos.trust.TrustInterface
+     *
+     * @hide
+     */
+    public static final String LINEAGE_TRUST_INTERFACE = "lineagetrust";
+
+    /**
      * Features supported by the Lineage SDK.
      */
     public static class Features {
@@ -166,5 +177,13 @@ public final class LineageContextConstants {
          */
         @SdkConstant(SdkConstant.SdkConstantType.FEATURE)
         public static final String STYLES = "org.lineageos.style";
+
+        /**
+         * Feature for {@link PackageManager#getSystemAvailableFeatures} and
+         * {@link PackageManager#hasSystemFeature}: The device includes the lineage trust service
+         * utilized by the lineage sdk.
+         */
+        @SdkConstant(SdkConstant.SdkConstantType.FEATURE)
+        public static final String TRUST = "org.lineageos.trust";
     }
 }
