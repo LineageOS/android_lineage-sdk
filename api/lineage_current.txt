@@ -335,6 +335,7 @@ package lineageos.os {
     field public static final int FIG = 6; // 0x6
     field public static final int GUAVA = 7; // 0x7
     field public static final int HACKBERRY = 8; // 0x8
+    field public static final int ILAMA = 9; // 0x9
   }
 
   public final class Concierge {
@@ -368,6 +369,7 @@ package lineageos.platform {
     field public static final java.lang.String PROTECTED_APP = "lineageos.permission.PROTECTED_APP";
     field public static final java.lang.String READ_DATAUSAGE = "lineageos.permission.READ_DATAUSAGE";
     field public static final java.lang.String READ_WEATHER = "lineageos.permission.READ_WEATHER";
+    field public static final java.lang.String TRUST_INTERFACE = "lineageos.permission.TRUST_INTERFACE";
     field public static final java.lang.String WRITE_DATAUSAGE = "lineageos.permission.WRITE_DATAUSAGE";
     field public static final java.lang.String WRITE_SECURE_SETTINGS = "lineageos.permission.WRITE_SECURE_SETTINGS";
     field public static final java.lang.String WRITE_SETTINGS = "lineageos.permission.WRITE_SETTINGS";
@@ -775,6 +777,7 @@ package lineageos.providers {
     method public static boolean putString(android.content.ContentResolver, java.lang.String, java.lang.String);
     field public static final android.net.Uri CONTENT_URI;
     field public static final java.lang.String SYS_PROP_LINEAGE_SETTING_VERSION = "sys.lineage_settings_secure_version";
+    field public static final java.lang.String TRUST_NOTIFICATIONS = "trust_notifications";
   }
 
   public static final class LineageSettings.System extends android.provider.Settings.NameValueTable {
@@ -1012,6 +1015,27 @@ package lineageos.style {
     method public void writeToParcel(android.os.Parcel, int);
     field public final int globalStyle;
     field public final int selectedAccent;
+  }
+
+}
+
+package lineageos.trust {
+
+  public class TrustInterface {
+    method public static lineageos.trust.TrustInterface getInstance(android.content.Context);
+    method public int getLevelForFeature(int);
+    method public boolean postNotificationForFeature(int);
+    method public boolean removeNotificationForFeature(int);
+    field public static final int ERROR_UNDEFINED = -1; // 0xffffffff
+    field public static final int TRUST_FEATURE_ENCRYPTION = 4; // 0x4
+    field public static final int TRUST_FEATURE_LEVEL_BAD = 2; // 0x2
+    field public static final int TRUST_FEATURE_LEVEL_GOOD = 0; // 0x0
+    field public static final int TRUST_FEATURE_LEVEL_POOR = 1; // 0x1
+    field public static final int TRUST_FEATURE_PLATFORM_SECURITY_PATCH = 2; // 0x2
+    field public static final int TRUST_FEATURE_ROOT = 1; // 0x1
+    field public static final int TRUST_FEATURE_SELINUX = 0; // 0x0
+    field public static final int TRUST_FEATURE_VENDOR_SECURITY_PATCH = 3; // 0x3
+    field public static final java.lang.String TRUST_INTERFACE_PERMISSION = "lineageos.permission.TRUST_INTERFACE";
   }
 
 }
