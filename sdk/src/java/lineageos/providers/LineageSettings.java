@@ -1315,12 +1315,13 @@ public final class LineageSettings {
          * 1: time - based on LiveDisplay status
          * 2: force light
          * 3: force dark
+         * 4: force black
          */
         public static final String BERRY_GLOBAL_STYLE = "berry_global_style";
 
         /** @hide */
         public static final Validator BERRY_GLOBAL_STYLE_VALIDATOR =
-                new InclusiveIntegerRangeValidator(0, 3);
+                new InclusiveIntegerRangeValidator(0, 4);
 
         /**
          * Current accent package name
