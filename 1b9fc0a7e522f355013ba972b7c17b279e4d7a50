@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "a18294bd_214a56d4",
+        "filename": "sdk/src/java/org/lineageos/internal/notification/LineageBatteryLights.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 119,
+      "author": {
+        "id": 3075
+      },
+      "writtenOn": "2018-04-07T21:20:05Z",
+      "side": 1,
+      "message": "May unroll this so it\u0027s easier to inspect for correctness (and easier to add more conditions in the future) ?  eg https://github.com/LineageOS/android_lineage-sdk/blob/a34e338626cbabefad1771bfbb14f53006cadd0f/sdk/src/java/org/lineageos/internal/notification/LineageNotificationLights.java#L270\n\nPresumably you mean mZenMode !\u003d Global.ZEN_MODE_OFF rather than Global.ZEN_MODE_OFF \u003d\u003d 1  (I realise maybe you\u0027re doing this for test purposes).\n\nPerhaps mLightScreenOn -\u003e mScreenOnEnabled and mLightZen -\u003e mZenAllowLights for consistency with LineageNotificationLights.java ?  (or also change LineageNotificationLights.java, not married to the names but would like them consistent)",
+      "revId": "1b9fc0a7e522f355013ba972b7c17b279e4d7a50",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
