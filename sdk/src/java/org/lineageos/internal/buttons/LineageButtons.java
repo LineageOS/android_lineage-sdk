@@ -21,7 +21,10 @@ import android.content.Context;
 import android.content.res.Resources;
 import android.database.ContentObserver;
 import android.media.AudioManager;
+import android.media.session.MediaController;
+import android.media.session.MediaSessionManager;
 import android.media.session.MediaSessionLegacyHelper;
+import android.media.session.PlaybackState;
 import android.os.Handler;
 import android.os.Message;
 import android.os.UserHandle;
@@ -31,6 +34,8 @@ import android.view.ViewConfiguration;
 
 import lineageos.providers.LineageSettings;
 
+import java.util.List;
+
 public final class LineageButtons {
     private final String TAG = "LineageButtons";
     private final boolean DEBUG = false;
@@ -38,6 +43,7 @@ public final class LineageButtons {
     private static final int MSG_DISPATCH_VOLKEY_WITH_WAKELOCK = 1;
 
     private final Context mContext;
+    private final MediaSessionManager mMediaSessionManager;
     private ButtonHandler mHandler;
 
     private boolean mIsLongPress = false;
@@ -63,6 +69,7 @@ public final class LineageButtons {
 
     public LineageButtons(Context context) {
         mContext = context;
+        mMediaSessionManager = mContext.getSystemService(MediaSessionManager.class);
         mHandler = new ButtonHandler();
 
         SettingsObserver observer = new SettingsObserver(new Handler());
@@ -133,7 +140,14 @@ public final class LineageButtons {
         if (DEBUG) {
             Slog.d(TAG, "Dispatching KeyEvent " + ev + " to audio service");
         }
-        MediaSessionLegacyHelper.getHelper(mContext).sendMediaButtonEvent(ev, true);
+        List<MediaController> sessions =
+                mMediaSessionManager.getActiveSessionsForUser(null, UserHandle.USER_ALL);
+        for (MediaController controller : sessions) {
+            PlaybackState playbackState = controller.getPlaybackState();
+            if (playbackState.getState() == PlaybackState.STATE_PLAYING) {
+                controller.dispatchMediaButtonEvent(ev);
+            }
+        }
     }
 
     class SettingsObserver extends ContentObserver {
