@@ -1,5 +1,5 @@
 /**
- * Copyright (C) 2017 The LineageOS Project
+ * Copyright (C) 2017-2019 The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -21,7 +21,10 @@ import android.content.Context;
 import android.content.res.Resources;
 import android.database.ContentObserver;
 import android.media.AudioManager;
+import android.media.session.MediaController;
 import android.media.session.MediaSessionLegacyHelper;
+import android.media.session.MediaSessionManager;
+import android.media.session.PlaybackState;
 import android.os.Handler;
 import android.os.Message;
 import android.os.UserHandle;
@@ -31,6 +34,8 @@ import android.view.ViewConfiguration;
 
 import lineageos.providers.LineageSettings;
 
+import java.util.List;
+
 public final class LineageButtons {
     private final String TAG = "LineageButtons";
     private final boolean DEBUG = false;
@@ -39,6 +44,7 @@ public final class LineageButtons {
 
     private final Context mContext;
     private ButtonHandler mHandler;
+    private MediaSessionManager mMediaSessionManager;
 
     private boolean mIsLongPress = false;
 
@@ -133,7 +139,19 @@ public final class LineageButtons {
         if (DEBUG) {
             Slog.d(TAG, "Dispatching KeyEvent " + ev + " to audio service");
         }
-        MediaSessionLegacyHelper.getHelper(mContext).sendMediaButtonEvent(ev, true);
+        if (mMediaSessionManager == null) {
+            mMediaSessionManager = mContext.getSystemService(MediaSessionManager.class);
+        }
+        if (mMediaSessionManager != null) {
+            List<MediaController> sessions =
+                    mMediaSessionManager.getActiveSessionsForUser(null, UserHandle.USER_ALL);
+            for (MediaController controller : sessions) {
+                PlaybackState playbackState = controller.getPlaybackState();
+                if (playbackState.getState() == PlaybackState.STATE_PLAYING) {
+                    controller.dispatchMediaButtonEvent(ev);
+                }
+            }
+        }
     }
 
     class SettingsObserver extends ContentObserver {
