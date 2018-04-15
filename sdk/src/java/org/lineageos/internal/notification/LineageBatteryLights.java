@@ -42,6 +42,11 @@ public final class LineageBatteryLights {
     // Battery light capabilities.
     private final boolean mHasBatteryLed;
     private final boolean mMultiColorLed;
+    // Whether the lights HAL supports changing brightness.
+    private final boolean mHALAdjustableBrightness;
+    // Whether the light should be considered brightness adjustable
+    // (via HAL or via modifying RGB values).
+    private final boolean mCanAdjustBrightness;
     private final boolean mUseSegmentedBatteryLed;
 
     // Battery light intended operational state.
@@ -74,6 +79,13 @@ public final class LineageBatteryLights {
         // Does the device support changing battery LED colors?
         mMultiColorLed = LightsCapabilities.supports(
                 mContext, LightsCapabilities.LIGHTS_RGB_BATTERY_LED);
+
+        mHALAdjustableBrightness = LightsCapabilities.supports(
+                mContext, LightsCapabilities.LIGHTS_ADJUSTABLE_NOTIFICATION_LED_BRIGHTNESS);
+
+        // We support brightness adjustment if either the HAL supports it
+        // or the light is RGB adjustable.
+        mCanAdjustBrightness = mHALAdjustableBrightness || mMultiColorLed;
 
         // Does the device have segmented battery LED support? In this case, we send the level
         // in the alpha channel of the color and let the HAL sort it out.
@@ -117,10 +129,11 @@ public final class LineageBatteryLights {
         }
 
         final int brightness;
-        if (mUseSegmentedBatteryLed) {
-            brightness = level;
-        } else if (!mMultiColorLed) {
+        if (!mCanAdjustBrightness) {
+            // No brightness support available
             brightness = LedValues.LIGHT_BRIGHTNESS_MAXIMUM;
+        } else if (mUseSegmentedBatteryLed) {
+            brightness = level;
         } else if (mZenMode == Global.ZEN_MODE_OFF) {
             brightness = mBatteryBrightness;
         } else {
@@ -155,15 +168,16 @@ public final class LineageBatteryLights {
         if (ledValues.getColor() != 0) {
             ledValues.setEnabled(true);
         }
-        // Apply brightness level to color value.
-        if (mMultiColorLed) {
+        // If lights HAL does not support adjustable brightness then
+        // scale color value here instead.
+        if (mCanAdjustBrightness && !mHALAdjustableBrightness) {
             ledValues.applyAlphaToBrightness();
             ledValues.applyBrightnessToColor();
-            // If LED is segmented, reset brightness field to battery level
-            // (applyBrightnessToColor() changes it to 255)
-            if (mUseSegmentedBatteryLed) {
-                ledValues.setBrightness(brightness);
-            }
+        }
+        // If LED is segmented, reset brightness field to battery level
+        // (applyBrightnessToColor() changes it to 255)
+        if (mUseSegmentedBatteryLed) {
+            ledValues.setBrightness(brightness);
         }
 
         if (DEBUG) {
@@ -200,6 +214,9 @@ public final class LineageBatteryLights {
                 resolver.registerContentObserver(LineageSettings.System.getUriFor(
                         LineageSettings.System.BATTERY_LIGHT_FULL_COLOR), false, this,
                         UserHandle.USER_ALL);
+            }
+
+            if (mCanAdjustBrightness) {
                 // Battery brightness level
                 resolver.registerContentObserver(LineageSettings.System.getUriFor(
                         LineageSettings.System.BATTERY_LIGHT_BRIGHTNESS_LEVEL), false, this,
@@ -241,7 +258,7 @@ public final class LineageBatteryLights {
                     LineageSettings.System.BATTERY_LIGHT_FULL_COLOR, res.getInteger(
                     com.android.internal.R.integer.config_notificationsBatteryFullARGB));
 
-            if (mMultiColorLed) {
+            if (mCanAdjustBrightness) {
                 // Battery brightness level
                 mBatteryBrightness = LineageSettings.System.getInt(resolver,
                         LineageSettings.System.BATTERY_LIGHT_BRIGHTNESS_LEVEL,
