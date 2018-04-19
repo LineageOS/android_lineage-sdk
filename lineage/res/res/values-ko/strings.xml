@@ -39,6 +39,7 @@
   <!-- this is wrong, but google's package manager uses the android:description
          attribute as description for the runtime permission request dialog
          with non-default dangerous permissions -->
+  <string name="permdesc_changeStyle">시스템 색상 사용자 지정</string>
   <!-- Profiles -->
   <!-- Names of default profiles. -->
   <string name="profileNameDefault">기본</string>

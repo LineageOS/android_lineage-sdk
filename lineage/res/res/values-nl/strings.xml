@@ -118,8 +118,11 @@
   <!-- About device screen, LineageOS API Level -->
   <!-- About device screen, LineageOS updates -->
   <!-- About device screen, LineageOS version -->
+  <string name="lineage_version">LineageOS-versie</string>
   <!-- General purpose use "unknown" string -->
+  <string name="unknown">Onbekend</string>
   <!-- Long-press back kill application -->
+  <string name="app_killed_message">App afgesloten</string>
   <!-- Status bar network traffic monitor strings -->
   <string name="kilobitspersecond_short">kb/s</string>
   <string name="megabitspersecond_short">Mb/s</string>

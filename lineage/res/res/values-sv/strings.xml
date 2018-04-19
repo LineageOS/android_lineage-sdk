@@ -103,4 +103,14 @@
   <string name="kilobytespersecond_short">kB/s</string>
   <string name="megabytespersecond_short">MB/s</string>
   <!-- Accent colors -->
+  <string name="accent_black">Kol</string>
+  <string name="accent_blue">Himmel</string>
+  <string name="accent_brown">Kaffe</string>
+  <string name="accent_cyan">Turkos</string>
+  <string name="accent_green">Skog</string>
+  <string name="accent_orange">Pumpa</string>
+  <string name="accent_pink">Körsbär</string>
+  <string name="accent_purple">Lavendel</string>
+  <string name="accent_red">Jordgubb</string>
+  <string name="accent_yellow">Höstlöv</string>
 </resources>
