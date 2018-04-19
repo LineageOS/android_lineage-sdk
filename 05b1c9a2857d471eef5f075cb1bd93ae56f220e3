@@ -105,6 +105,24 @@
     },
     {
       "key": {
+        "uuid": "a7cc87f3_7f919afb",
+        "filename": "sdk/src/java/lineageos/providers/LineageSettings.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 3032,
+      "author": {
+        "id": 8461
+      },
+      "writtenOn": "2018-04-19T18:14:46Z",
+      "side": 1,
+      "message": "0k br0",
+      "parentUuid": "39819faa_c3b0e0d5",
+      "revId": "05b1c9a2857d471eef5f075cb1bd93ae56f220e3",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "a5935d19_66bd973c",
         "filename": "sdk/src/java/lineageos/trust/TrustInterface.java",
         "patchSetId": 1
