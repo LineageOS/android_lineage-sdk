@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "58b1541b_34cf1c75",
+        "filename": "lineage/lib/main/java/org/lineageos/platform/internal/TrustInterfaceService.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 218,
+      "author": {
+        "id": 17257
+      },
+      "writtenOn": "2018-04-19T14:25:13Z",
+      "side": 1,
+      "message": "Extra space.",
+      "revId": "05b1c9a2857d471eef5f075cb1bd93ae56f220e3",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
