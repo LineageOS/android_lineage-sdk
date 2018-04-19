@@ -16,6 +16,127 @@
       "revId": "05b1c9a2857d471eef5f075cb1bd93ae56f220e3",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "888f7bf1_b6d9b849",
+        "filename": "lineage/res/AndroidManifest.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 127,
+      "author": {
+        "id": 16082
+      },
+      "writtenOn": "2018-04-19T16:30:33Z",
+      "side": 1,
+      "message": "space",
+      "revId": "05b1c9a2857d471eef5f075cb1bd93ae56f220e3",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7939d543_ce988623",
+        "filename": "lineage/res/res/values/config.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 215,
+      "author": {
+        "id": 16082
+      },
+      "writtenOn": "2018-04-19T16:30:33Z",
+      "side": 1,
+      "message": "Shouldn\u0027t this be camel case to line up with the other entries in here? and why doesn\u0027t this have a config_ prefix?",
+      "revId": "05b1c9a2857d471eef5f075cb1bd93ae56f220e3",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9bea53ff_4f76dcaa",
+        "filename": "sdk/src/java/lineageos/app/LineageContextConstants.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 112,
+      "author": {
+        "id": 16082
+      },
+      "writtenOn": "2018-04-19T16:30:33Z",
+      "side": 1,
+      "message": "this doesn\u0027t make sense",
+      "parentUuid": "",
+      "revId": "05b1c9a2857d471eef5f075cb1bd93ae56f220e3",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "19b6e2e3_4026f24b",
+        "filename": "sdk/src/java/lineageos/providers/LineageSettings.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 1532,
+      "author": {
+        "id": 16082
+      },
+      "writtenOn": "2018-04-19T16:30:33Z",
+      "side": 1,
+      "message": "did we tell the user",
+      "revId": "05b1c9a2857d471eef5f075cb1bd93ae56f220e3",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "39819faa_c3b0e0d5",
+        "filename": "sdk/src/java/lineageos/providers/LineageSettings.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 3032,
+      "author": {
+        "id": 16082
+      },
+      "writtenOn": "2018-04-19T16:30:33Z",
+      "side": 1,
+      "message": "o not 0 in off",
+      "revId": "05b1c9a2857d471eef5f075cb1bd93ae56f220e3",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a5935d19_66bd973c",
+        "filename": "sdk/src/java/lineageos/trust/TrustInterface.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 16082
+      },
+      "writtenOn": "2018-04-19T16:30:33Z",
+      "side": 1,
+      "message": "whitespace",
+      "revId": "05b1c9a2857d471eef5f075cb1bd93ae56f220e3",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "415902db_2888e0db",
+        "filename": "sdk/src/java/lineageos/trust/TrustInterface.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 176,
+      "author": {
+        "id": 16082
+      },
+      "writtenOn": "2018-04-19T16:30:33Z",
+      "side": 1,
+      "message": "since the if statement returns, couldn\u0027t the else be gotten rid of?",
+      "parentUuid": "",
+      "revId": "05b1c9a2857d471eef5f075cb1bd93ae56f220e3",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
