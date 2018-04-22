@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "15cf85ac_966a0253",
+        "filename": "sdk/src/java/org/lineageos/internal/statusbar/NetworkTraffic.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 121,
+      "author": {
+        "id": 3075
+      },
+      "writtenOn": "2018-04-22T09:53:53Z",
+      "side": 1,
+      "message": "Agreed but I like to be explicit about boolean initialization in the constructor.",
+      "parentUuid": "d9e2e79f_fbbeaaab",
+      "range": {
+        "startLine": 121,
+        "startChar": 8,
+        "endLine": 121,
+        "endChar": 24
+      },
+      "revId": "63b8b40b4694c6bf052a6d5d068de7eee63f44b2",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5340fb03_f1b58909",
         "filename": "sdk/src/java/org/lineageos/internal/statusbar/NetworkTraffic.java",
         "patchSetId": 1
@@ -36,6 +60,30 @@
       "writtenOn": "2018-04-22T09:24:16Z",
       "side": 1,
       "message": "can\u0027t be null\nfinal ArrayList\u003cString\u003e tetherList \u003d new ArrayList\u003c\u003e();\nbcast.putStringArrayListExtra(EXTRA_ACTIVE_TETHER, tetherList);",
+      "range": {
+        "startLine": 289,
+        "startChar": 36,
+        "endLine": 289,
+        "endChar": 56
+      },
+      "revId": "63b8b40b4694c6bf052a6d5d068de7eee63f44b2",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "783249ab_b7c81f91",
+        "filename": "sdk/src/java/org/lineageos/internal/statusbar/NetworkTraffic.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 289,
+      "author": {
+        "id": 3075
+      },
+      "writtenOn": "2018-04-22T09:53:53Z",
+      "side": 1,
+      "message": "Good point, will fix.",
+      "parentUuid": "5340fb03_f1b58909",
       "range": {
         "startLine": 289,
         "startChar": 36,
