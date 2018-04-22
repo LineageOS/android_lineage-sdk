@@ -93,6 +93,30 @@
       "revId": "63b8b40b4694c6bf052a6d5d068de7eee63f44b2",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "01f575aa_dd5499bd",
+        "filename": "sdk/src/java/org/lineageos/internal/statusbar/NetworkTraffic.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 289,
+      "author": {
+        "id": 3075
+      },
+      "writtenOn": "2018-04-22T10:11:53Z",
+      "side": 1,
+      "message": "Although, it\u0027s java - don\u0027t assume your upstream - always check for null ;-)",
+      "parentUuid": "783249ab_b7c81f91",
+      "range": {
+        "startLine": 289,
+        "startChar": 36,
+        "endLine": 289,
+        "endChar": 56
+      },
+      "revId": "63b8b40b4694c6bf052a6d5d068de7eee63f44b2",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
