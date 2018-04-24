@@ -208,12 +208,12 @@ public final class LineageBatteryLights {
             // Battery light enabled
             resolver.registerContentObserver(LineageSettings.System.getUriFor(
                     LineageSettings.System.BATTERY_LIGHT_ENABLED), false, this,
-                   UserHandle.USER_ALL);
+                    UserHandle.USER_ALL);
 
             // Low battery pulse
             resolver.registerContentObserver(LineageSettings.System.getUriFor(
                     LineageSettings.System.BATTERY_LIGHT_PULSE), false, this,
-                UserHandle.USER_ALL);
+                    UserHandle.USER_ALL);
 
             if (mMultiColorBatteryLed) {
                 // Light colors
@@ -252,34 +252,39 @@ public final class LineageBatteryLights {
             Resources res = mContext.getResources();
 
             // Battery light enabled
-            mLightEnabled = LineageSettings.System.getInt(resolver,
-                    LineageSettings.System.BATTERY_LIGHT_ENABLED, 1) != 0;
+            mLightEnabled = LineageSettings.System.getIntForUser(resolver,
+                    LineageSettings.System.BATTERY_LIGHT_ENABLED,
+                    1, UserHandle.USER_CURRENT) != 0;
 
             // Low battery pulse
-            mLedPulseEnabled = LineageSettings.System.getInt(resolver,
-                        LineageSettings.System.BATTERY_LIGHT_PULSE, 1) != 0;
+            mLedPulseEnabled = LineageSettings.System.getIntForUser(resolver,
+                    LineageSettings.System.BATTERY_LIGHT_PULSE,
+                    1, UserHandle.USER_CURRENT) != 0;
 
             // Light colors
-            mBatteryLowARGB = LineageSettings.System.getInt(resolver,
+            mBatteryLowARGB = LineageSettings.System.getIntForUser(resolver,
                     LineageSettings.System.BATTERY_LIGHT_LOW_COLOR, res.getInteger(
-                    com.android.internal.R.integer.config_notificationsBatteryLowARGB));
-            mBatteryMediumARGB = LineageSettings.System.getInt(resolver,
+                    com.android.internal.R.integer.config_notificationsBatteryLowARGB),
+                    UserHandle.USER_CURRENT);
+            mBatteryMediumARGB = LineageSettings.System.getIntForUser(resolver,
                     LineageSettings.System.BATTERY_LIGHT_MEDIUM_COLOR, res.getInteger(
-                    com.android.internal.R.integer.config_notificationsBatteryMediumARGB));
-            mBatteryFullARGB = LineageSettings.System.getInt(resolver,
+                    com.android.internal.R.integer.config_notificationsBatteryMediumARGB),
+                    UserHandle.USER_CURRENT);
+            mBatteryFullARGB = LineageSettings.System.getIntForUser(resolver,
                     LineageSettings.System.BATTERY_LIGHT_FULL_COLOR, res.getInteger(
-                    com.android.internal.R.integer.config_notificationsBatteryFullARGB));
+                    com.android.internal.R.integer.config_notificationsBatteryFullARGB),
+                    UserHandle.USER_CURRENT);
 
             // Adustable battery LED brightness.
             if (mCanAdjustBrightness) {
                 // Battery brightness level
-                mBatteryBrightnessLevel = LineageSettings.System.getInt(resolver,
+                mBatteryBrightnessLevel = LineageSettings.System.getIntForUser(resolver,
                         LineageSettings.System.BATTERY_LIGHT_BRIGHTNESS_LEVEL,
-                        LedValues.LIGHT_BRIGHTNESS_MAXIMUM);
+                        LedValues.LIGHT_BRIGHTNESS_MAXIMUM, UserHandle.USER_CURRENT);
                 // Battery brightness level in Do Not Disturb mode
-                mBatteryBrightnessZenLevel = LineageSettings.System.getInt(resolver,
+                mBatteryBrightnessZenLevel = LineageSettings.System.getIntForUser(resolver,
                         LineageSettings.System.BATTERY_LIGHT_BRIGHTNESS_LEVEL_ZEN,
-                        LedValues.LIGHT_BRIGHTNESS_MAXIMUM);
+                        LedValues.LIGHT_BRIGHTNESS_MAXIMUM, UserHandle.USER_CURRENT);
             }
 
             mLedUpdater.update();
