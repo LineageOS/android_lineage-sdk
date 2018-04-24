@@ -179,9 +179,7 @@ public final class LineageBatteryLights {
         if (ledValues.getColor() != 0) {
             ledValues.setEnabled(true);
         }
-        // If lights HAL does not support adjustable brightness then
-        // scale color value here instead.
-        if (mCanAdjustBrightness && !mHALAdjustableBrightness) {
+        if (mCanAdjustBrightness) {
             ledValues.applyAlphaToBrightness();
             ledValues.applyBrightnessToColor();
         }
