@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0632b22b_574ea780",
+        "filename": "sdk/src/java/org/lineageos/internal/notification/LineageBatteryLights.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 209,
+      "author": {
+        "id": 13589
+      },
+      "writtenOn": "2018-04-24T20:05:27Z",
+      "side": 1,
+      "message": "2+ lines of indents should be two indents like the 1st line break + one indent, hence three.\n\nBut since some of the code below uses two indents everywhere, you can decide what you prefer.",
+      "revId": "404a47cce42d58963e51b4b5516e68346048cbe1",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
