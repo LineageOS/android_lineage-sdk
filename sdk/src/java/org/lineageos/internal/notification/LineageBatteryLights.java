@@ -55,8 +55,8 @@ public final class LineageBatteryLights {
     private int mBatteryLowARGB;
     private int mBatteryMediumARGB;
     private int mBatteryFullARGB;
-    private int mBatteryBrightness;
-    private int mBatteryBrightnessZen;
+    private int mBatteryBrightnessLevel;
+    private int mBatteryBrightnessZenLevel;
 
     private final Context mContext;
 
@@ -115,9 +115,20 @@ public final class LineageBatteryLights {
 
     public void calcLights(LedValues ledValues, int level, int status, boolean low) {
         if (DEBUG) {
-            Slog.i(TAG, "calcLights input: ledValues={ " + ledValues + " } level="
-                    + level + " status=" + status + " low=" + low);
+            Slog.i(TAG, "calcLights input:"
+                    + " ledValues={ " + ledValues+ " }"
+                    + " level=" + level
+                    + " status=" + status
+                    + " low=" + low
+                    + " mCanAdjustBrightness=" + mCanAdjustBrightness
+                    + " mHALAdjustableBrightness=" + mHALAdjustableBrightness
+                    + " mUseSegmentedBatteryLed=" + mUseSegmentedBatteryLed
+                    + " mBatteryBrightnessLevel=" + mBatteryBrightnessLevel
+                    + " mBatteryBrightnessZenLevel=" + mBatteryBrightnessZenLevel
+                    + " mZenMode=" + mZenMode
+            );
         }
+
         // The only meaningful ledValues values received by frameworks BatteryService
         // are the pulse times (for low battery). Explicitly set enabled state and
         // color to ensure that we arrive at a deterministic outcome.
@@ -135,9 +146,9 @@ public final class LineageBatteryLights {
         } else if (mUseSegmentedBatteryLed) {
             brightness = level;
         } else if (mZenMode == Global.ZEN_MODE_OFF) {
-            brightness = mBatteryBrightness;
+            brightness = mBatteryBrightnessLevel;
         } else {
-            brightness = mBatteryBrightnessZen;
+            brightness = mBatteryBrightnessZenLevel;
         }
         ledValues.setBrightness(brightness);
 
@@ -258,13 +269,14 @@ public final class LineageBatteryLights {
                     LineageSettings.System.BATTERY_LIGHT_FULL_COLOR, res.getInteger(
                     com.android.internal.R.integer.config_notificationsBatteryFullARGB));
 
+            // Adustable battery LED brightness.
             if (mCanAdjustBrightness) {
                 // Battery brightness level
-                mBatteryBrightness = LineageSettings.System.getInt(resolver,
+                mBatteryBrightnessLevel = LineageSettings.System.getInt(resolver,
                         LineageSettings.System.BATTERY_LIGHT_BRIGHTNESS_LEVEL,
                         LedValues.LIGHT_BRIGHTNESS_MAXIMUM);
                 // Battery brightness level in Do Not Disturb mode
-                mBatteryBrightnessZen = LineageSettings.System.getInt(resolver,
+                mBatteryBrightnessZenLevel = LineageSettings.System.getInt(resolver,
                         LineageSettings.System.BATTERY_LIGHT_BRIGHTNESS_LEVEL_ZEN,
                         LedValues.LIGHT_BRIGHTNESS_MAXIMUM);
             }
