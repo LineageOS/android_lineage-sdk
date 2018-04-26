@@ -141,11 +141,11 @@ public final class LineageBatteryLights {
         }
 
         final int brightness;
-        if (!mCanAdjustBrightness) {
+        if (mUseSegmentedBatteryLed) {
+            brightness = level;
+        } else if (!mCanAdjustBrightness) {
             // No brightness support available
             brightness = LedValues.LIGHT_BRIGHTNESS_MAXIMUM;
-        } else if (mUseSegmentedBatteryLed) {
-            brightness = level;
         } else if (mZenMode == Global.ZEN_MODE_OFF) {
             brightness = mBatteryBrightnessLevel;
         } else {
