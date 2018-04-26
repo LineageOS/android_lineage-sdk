@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "47726eb1_3492e0dd",
+        "filename": "sdk/src/java/org/lineageos/internal/notification/LineageBatteryLights.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 182,
+      "author": {
+        "id": 3075
+      },
+      "writtenOn": "2018-04-26T04:04:54Z",
+      "side": 1,
+      "message": "It\u0027s not clear to me why this would fix anything.  If the HAL brightness capability is being advertised this shouldn\u0027t be needed.\n\nAlthough the brightness capability is about /notification/ brightness control, not battery.  But it would be weird if we had HALs that changed brightness according to alpha level for notification and not battery.\n\nDo you have a HAL that only supports alpha for notification led ?",
+      "revId": "af5f996d4bc9f93e8ef36cfdf335bdfda5a85b49",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
