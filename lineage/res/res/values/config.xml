@@ -65,7 +65,7 @@
          LIGHTS_MULTIPLE_NOTIFICATION_LED = 4 (deprecated)
          LIGHTS_PULSATING_LED = 8
          LIGHTS_SEGMENTED_BATTERY_LED = 16
-         LIGHTS_ADJUSTABLE_NOTIFICATION_LED_BRIGHTNESS = 32
+         LIGHTS_ADJUSTABLE_LED_BRIGHTNESS = 32
          LIGHTS_BATTERY_LED = 64
 
          For example, a device with notification and battery lights that supports

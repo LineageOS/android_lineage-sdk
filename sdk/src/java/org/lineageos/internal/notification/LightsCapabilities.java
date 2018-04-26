@@ -1,5 +1,5 @@
 /**
- * Copyright (C) 2017 The LineageOS Project
+ * Copyright (C) 2017-2018 The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -36,8 +36,8 @@ public final class LightsCapabilities {
     // segments to show (in order to represent battery level).
     public static final int LIGHTS_SEGMENTED_BATTERY_LED = 16;
 
-    // The notification light supports adjustable brightness.
-    public static final int LIGHTS_ADJUSTABLE_NOTIFICATION_LED_BRIGHTNESS = 32;
+    // Device's lights HAL handles brightness adjustment.
+    public static final int LIGHTS_ADJUSTABLE_LED_BRIGHTNESS = 32;
 
     // Device has a battery light.
     public static final int LIGHTS_BATTERY_LED = 64;
