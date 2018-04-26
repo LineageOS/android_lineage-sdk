@@ -72,7 +72,7 @@ public final class LineageBatteryLights {
         mContext = context;
         mLedUpdater = ledUpdater;
 
-        // Does the device have a battery LED ?
+        // Does the device have a battery LED?
         mHasBatteryLed = LightsCapabilities.supports(
                 mContext, LightsCapabilities.LIGHTS_BATTERY_LED);
 
@@ -80,10 +80,11 @@ public final class LineageBatteryLights {
         mMultiColorLed = LightsCapabilities.supports(
                 mContext, LightsCapabilities.LIGHTS_RGB_BATTERY_LED);
 
+        // Does the lights HAL handles brightness adjustment?
         mHALAdjustableBrightness = LightsCapabilities.supports(
-                mContext, LightsCapabilities.LIGHTS_ADJUSTABLE_NOTIFICATION_LED_BRIGHTNESS);
+                mContext, LightsCapabilities.LIGHTS_ADJUSTABLE_LED_BRIGHTNESS);
 
-        // We support brightness adjustment if either the HAL supports it
+        // Brightness adjustment is supported if either the lights HAL handles it
         // or the light is RGB adjustable.
         mCanAdjustBrightness = mHALAdjustableBrightness || mMultiColorLed;
 
