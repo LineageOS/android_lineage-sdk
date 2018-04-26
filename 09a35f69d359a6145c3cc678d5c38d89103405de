@@ -16,6 +16,24 @@
       "revId": "09a35f69d359a6145c3cc678d5c38d89103405de",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4f84c860_c4d0c76a",
+        "filename": "sdk/src/java/org/lineageos/internal/notification/LineageBatteryLights.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 146,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2018-04-26T13:10:37Z",
+      "side": 0,
+      "message": "I guess you\u0027re right. I\u0027ll upload a change to fix it, although I am not able to validate it.",
+      "parentUuid": "2047d539_0be00175",
+      "revId": "09a35f69d359a6145c3cc678d5c38d89103405de",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
