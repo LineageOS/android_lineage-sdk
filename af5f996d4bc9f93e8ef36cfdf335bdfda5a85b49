@@ -34,6 +34,24 @@
       "revId": "af5f996d4bc9f93e8ef36cfdf335bdfda5a85b49",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "b487ab3f_c56f190a",
+        "filename": "sdk/src/java/org/lineageos/internal/notification/LineageBatteryLights.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 182,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2018-04-26T10:52:34Z",
+      "side": 1,
+      "message": "This /should/ address the issue: https://review.lineageos.org/#/c/LineageOS/android_device_xiaomi_msm8996-common/+/213636/.\n\nNevertheless, I think that we need to clean up lights capabilities, since the brightness capability is about notification brightness control (LIGHTS_ADJUSTABLE_NOTIFICATION_LED_BRIGHTNESS) as you well pointed out. This just become too confusing after the last merged patch.",
+      "parentUuid": "6f1ff75f_0cedcb25",
+      "revId": "af5f996d4bc9f93e8ef36cfdf335bdfda5a85b49",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
