@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3e7f2d3b_e1f531c9",
+        "filename": "sdk/src/java/org/lineageos/internal/notification/LineageBatteryLights.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 83,
+      "author": {
+        "id": 4550
+      },
+      "writtenOn": "2018-04-26T17:12:58Z",
+      "side": 1,
+      "message": "handle",
+      "range": {
+        "startLine": 83,
+        "startChar": 31,
+        "endLine": 83,
+        "endChar": 38
+      },
+      "revId": "5250bcb568014b85533b107ed0932cfd734b357f",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "128b55f7_3d77b5d7",
+        "filename": "sdk/src/java/org/lineageos/internal/notification/LineageNotificationLights.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 98,
+      "author": {
+        "id": 4550
+      },
+      "writtenOn": "2018-04-26T17:12:58Z",
+      "side": 1,
+      "message": "handle",
+      "range": {
+        "startLine": 98,
+        "startChar": 31,
+        "endLine": 98,
+        "endChar": 38
+      },
+      "revId": "5250bcb568014b85533b107ed0932cfd734b357f",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
