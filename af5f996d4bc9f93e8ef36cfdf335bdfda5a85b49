@@ -52,6 +52,24 @@
       "revId": "af5f996d4bc9f93e8ef36cfdf335bdfda5a85b49",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "63ceb7cd_3583b2da",
+        "filename": "sdk/src/java/org/lineageos/internal/notification/LineageBatteryLights.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 182,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2018-04-26T21:30:05Z",
+      "side": 1,
+      "message": "Ohhh, by the way... there are much more HALs that need a fix. I counted at least oppo_msm8974-common, op2 and op3.",
+      "parentUuid": "b487ab3f_c56f190a",
+      "revId": "af5f996d4bc9f93e8ef36cfdf335bdfda5a85b49",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
