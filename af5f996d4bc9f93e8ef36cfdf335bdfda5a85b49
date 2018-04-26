@@ -16,6 +16,24 @@
       "revId": "af5f996d4bc9f93e8ef36cfdf335bdfda5a85b49",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6f1ff75f_0cedcb25",
+        "filename": "sdk/src/java/org/lineageos/internal/notification/LineageBatteryLights.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 182,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2018-04-26T10:37:59Z",
+      "side": 1,
+      "message": "That\u0027s exactly what we have on Xiaomi 8996 and OnePlus 8998, RGB brightness scaling only applies to notification lights.",
+      "parentUuid": "47726eb1_3492e0dd",
+      "revId": "af5f996d4bc9f93e8ef36cfdf335bdfda5a85b49",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
