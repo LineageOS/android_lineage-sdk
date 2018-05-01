@@ -240,4 +240,7 @@
     <!-- Indicate whether encryption causes significant performances loss.
          This MUST NOT be set to true on devices produced in 2016 or later -->
     <bool name="config_trustLegacyEncryption">false</bool>
+
+    <!-- Whether device has a screen with a higher aspect ratio -->
+    <bool name="config_haveHigherAspectRatioScreen">false</bool>
 </resources>
