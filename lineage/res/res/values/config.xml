@@ -235,4 +235,7 @@
           platform signatures, specifically for use on devices with a vendor partition. -->
       <string-array name="config_vendorPlatformSignatures">
       </string-array>
+
+    <!-- Whether device has screen with higher aspect ratio -->
+    <bool name="config_haveHigherAspectRatioScreen">false</bool>
 </resources>
