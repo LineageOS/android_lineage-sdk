@@ -179,4 +179,9 @@
     <java-symbol type="string" name="trust_notification_title_onboarding" />
     <java-symbol type="string" name="trust_notification_content_onboarding" />
     <java-symbol type="string" name="trust_notification_action_later" />
+
+    <!-- Full screen aspect ratio -->
+    <java-symbol type="bool" name="config_haveHigherAspectRatioScreen" />
+    <!-- Maximum permitted full screen aspect ratio -->
+    <java-symbol type="dimen" name="config_screenMaxAspectRatio" />
 </resources>

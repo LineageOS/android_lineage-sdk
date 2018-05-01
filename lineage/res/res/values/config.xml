@@ -240,4 +240,11 @@
     <!-- Indicate whether encryption causes significant performances loss.
          This MUST NOT be set to true on devices produced in 2016 or later -->
     <bool name="config_trustLegacyEncryption">false</bool>
+
+    <!-- Whether device has a screen with a higher aspect ratio -->
+    <bool name="config_haveHigherAspectRatioScreen">false</bool>
+    <!-- The maximum screen aspect ratio screen permitted for < O target sdk apps when
+         config_haveHigherAspectRatioScreen is enabled.  Since this only sets a maximum,
+         you do not need to override it if your device screen aspect ratio is <= 2.1 -->
+    <item name="config_screenMaxAspectRatio" format="float" type="dimen">2.1</item>
 </resources>
