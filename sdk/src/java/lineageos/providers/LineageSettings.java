@@ -833,6 +833,15 @@ public final class LineageSettings {
                 sBooleanValidator;
 
         /**
+         * Whether or not to force full screen aspect ratio
+         * 0 = off, 1 = on
+         */
+        public static final String FULL_SCREEN_ASPECT_RATIO = "full_screen_aspect_ratio";
+
+        /** @hide */
+        public static final Validator FULL_SCREEN_ASPECT_RATIO_VALIDATOR = sBooleanValidator;
+
+        /**
          * Whether to enable system profiles feature
          * 0 = off, 1 = on
          */
@@ -2145,6 +2154,7 @@ public final class LineageSettings {
             VALIDATORS.put(NOTIFICATION_PLAY_QUEUE, NOTIFICATION_PLAY_QUEUE_VALIDATOR);
             VALIDATORS.put(HIGH_TOUCH_SENSITIVITY_ENABLE,
                     HIGH_TOUCH_SENSITIVITY_ENABLE_VALIDATOR);
+            VALIDATORS.put(FULL_SCREEN_ASPECT_RATIO, FULL_SCREEN_ASPECT_RATIO_VALIDATOR);
             VALIDATORS.put(SYSTEM_PROFILES_ENABLED, SYSTEM_PROFILES_ENABLED_VALIDATOR);
             VALIDATORS.put(STATUS_BAR_CLOCK, STATUS_BAR_CLOCK_VALIDATOR);
             VALIDATORS.put(STATUS_BAR_AM_PM, STATUS_BAR_AM_PM_VALIDATOR);
