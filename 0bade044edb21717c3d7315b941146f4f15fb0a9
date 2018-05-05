@@ -70,6 +70,30 @@
       "revId": "0bade044edb21717c3d7315b941146f4f15fb0a9",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1203c2e1_556b4de9",
+        "filename": "lineage/res/res/values/config.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 216,
+      "author": {
+        "id": 14934
+      },
+      "writtenOn": "2018-05-05T21:10:34Z",
+      "side": 1,
+      "message": "It is used only when higher aspect ratio is toggled so yeah a sane aspect ratio suitable for most long screen device should default. 2.1 (or higher) is the value recommended by Google for new apps. (ref: https://android-developers.googleblog.com/2017/03/update-your-app-to-take-advantage-of.html)",
+      "parentUuid": "1c318228_65e073f5",
+      "range": {
+        "startLine": 216,
+        "startChar": 70,
+        "endLine": 216,
+        "endChar": 73
+      },
+      "revId": "0bade044edb21717c3d7315b941146f4f15fb0a9",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
