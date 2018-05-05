@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "e5e05cb1_f9d3f8cc",
+        "filename": "lineage/res/res/values/config.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 216,
+      "author": {
+        "id": 4550
+      },
+      "writtenOn": "2018-05-05T12:42:53Z",
+      "side": 1,
+      "message": "Shouldn\u0027t this default to old aspect ratio and devices overlay it as needed?",
+      "range": {
+        "startLine": 216,
+        "startChar": 70,
+        "endLine": 216,
+        "endChar": 73
+      },
+      "revId": "0bade044edb21717c3d7315b941146f4f15fb0a9",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
