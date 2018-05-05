@@ -46,6 +46,30 @@
       "revId": "0bade044edb21717c3d7315b941146f4f15fb0a9",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1c318228_65e073f5",
+        "filename": "lineage/res/res/values/config.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 216,
+      "author": {
+        "id": 11883
+      },
+      "writtenOn": "2018-05-05T15:01:16Z",
+      "side": 1,
+      "message": "Not really, it should default to a sane aspect ratio, because it\u0027s taken into account only when config_haveHigherAspectRatioScreen is enabled\n2.1 is sane I guess",
+      "parentUuid": "e5e05cb1_f9d3f8cc",
+      "range": {
+        "startLine": 216,
+        "startChar": 70,
+        "endLine": 216,
+        "endChar": 73
+      },
+      "revId": "0bade044edb21717c3d7315b941146f4f15fb0a9",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
