@@ -22,6 +22,30 @@
       "revId": "0bade044edb21717c3d7315b941146f4f15fb0a9",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "279c5818_abb4ec72",
+        "filename": "lineage/res/res/values/config.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 216,
+      "author": {
+        "id": 8328
+      },
+      "writtenOn": "2018-05-05T13:50:40Z",
+      "side": 1,
+      "message": "yes, should be 0 by default",
+      "parentUuid": "e5e05cb1_f9d3f8cc",
+      "range": {
+        "startLine": 216,
+        "startChar": 70,
+        "endLine": 216,
+        "endChar": 73
+      },
+      "revId": "0bade044edb21717c3d7315b941146f4f15fb0a9",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
