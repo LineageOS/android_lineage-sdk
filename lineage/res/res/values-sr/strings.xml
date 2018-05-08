@@ -35,9 +35,11 @@
   <string name="permlab_protectedApp">додавање и уклањање апликација са списка заштићених</string>
   <string name="permdesc_protectedApp">Апликација може да означава друге апликације као заштићене и закључа их.</string>
   <!-- Labels for CHANGE_STYLE permission -->
+  <string name="permlab_changeStyle">измени стил система</string>
   <!-- this is wrong, but google's package manager uses the android:description
          attribute as description for the runtime permission request dialog
          with non-default dangerous permissions -->
+  <string name="permdesc_changeStyle">прилагодите системске боје</string>
   <!-- Profiles -->
   <!-- Names of default profiles. -->
   <string name="profileNameDefault">Подразумевани</string>
