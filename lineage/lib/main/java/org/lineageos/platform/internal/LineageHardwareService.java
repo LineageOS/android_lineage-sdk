@@ -1,6 +1,6 @@
 /*
  * Copyright (C) 2015-2016 The CyanogenMod Project
- *               2017 The LineageOS Project
+ *               2017-2018 The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -51,6 +51,7 @@ import org.lineageos.hardware.HighTouchSensitivity;
 import org.lineageos.hardware.KeyDisabler;
 import org.lineageos.hardware.LongTermOrbits;
 import org.lineageos.hardware.PictureAdjustment;
+import org.lineageos.hardware.ReadingEnhancement;
 import org.lineageos.hardware.SerialNumber;
 import org.lineageos.hardware.SunlightEnhancement;
 import org.lineageos.hardware.TouchscreenGestures;
@@ -111,6 +112,8 @@ public class LineageHardwareService extends LineageSystemService {
 
         public TouchscreenGesture[] getTouchscreenGestures();
         public boolean setTouchscreenGestureEnabled(TouchscreenGesture gesture, boolean state);
+
+        public boolean setGrayscale(boolean state);
     }
 
     private class LegacyLineageHardware implements LineageHardwareInterface {
@@ -132,6 +135,8 @@ public class LineageHardwareService extends LineageSystemService {
                 mSupportedFeatures |= LineageHardwareManager.FEATURE_KEY_DISABLE;
             if (LongTermOrbits.isSupported())
                 mSupportedFeatures |= LineageHardwareManager.FEATURE_LONG_TERM_ORBITS;
+            if (ReadingEnhancement.isSupported())
+                mSupportedFeatures |= LineageHardwareManager.FEATURE_READING_ENHANCEMENT;
             if (SerialNumber.isSupported())
                 mSupportedFeatures |= LineageHardwareManager.FEATURE_SERIAL_NUMBER;
             if (SunlightEnhancement.isSupported())
@@ -367,6 +372,10 @@ public class LineageHardwareService extends LineageSystemService {
 
         public boolean setTouchscreenGestureEnabled(TouchscreenGesture gesture, boolean state) {
             return TouchscreenGestures.setGestureEnabled(gesture, state);
+        }
+
+        public boolean setGrayscale(boolean state) {
+            return ReadingEnhancement.setGrayscale(state);
         }
     }
 
@@ -769,6 +778,17 @@ public class LineageHardwareService extends LineageSystemService {
                 return false;
             }
             return mLineageHwImpl.setTouchscreenGestureEnabled(gesture, state);
+        }
+
+        @Override
+        public boolean setGrayscale(boolean state) {
+            mContext.enforceCallingOrSelfPermission(
+                    lineageos.platform.Manifest.permission.HARDWARE_ABSTRACTION_ACCESS, null);
+            if (!isSupported(LineageHardwareManager.FEATURE_READING_ENHANCEMENT)) {
+                Log.e(TAG, "Reading enhancement not supported");
+                return false;
+            }
+            return mLineageHwImpl.setGrayscale(state);
         }
     };
 }
