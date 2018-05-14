@@ -1,6 +1,6 @@
 /*
  * Copyright (C) 2015-2016 The CyanogenMod Project
- *               2017 The LineageOS Project
+ *               2017-2018 The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -133,6 +133,12 @@ public final class LineageHardwareManager {
      */
     @VisibleForTesting
     public static final int FEATURE_DISPLAY_MODES = 0x2000;
+
+    /**
+     * Reading mode
+     */
+    @VisibleForTesting
+    public static final int FEATURE_READING_ENHANCEMENT = 0x4000;
 
     /**
      * Color balance
@@ -863,6 +869,21 @@ public final class LineageHardwareManager {
         try {
             if (checkService()) {
                 return sService.setTouchscreenGestureEnabled(gesture, state);
+            }
+        } catch (RemoteException e) {
+        }
+        return false;
+    }
+
+    /**
+     * Enables or disables reading mode
+     *
+     * @return true if success
+     */
+    public boolean setGrayscale(boolean state) {
+        try {
+            if (checkService()) {
+                return sService.setGrayscale(state);
             }
         } catch (RemoteException e) {
         }

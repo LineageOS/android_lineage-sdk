@@ -1,5 +1,6 @@
 /*
  * Copyright (C) 2016 The CyanogenMod Project
+ *               2018 The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -119,6 +120,11 @@ public class LiveDisplayManager {
      * adjustment of display.
      */
     public static final int FEATURE_PICTURE_ADJUSTMENT = 17;
+
+    /**
+     * System supports grayscale matrix overlay
+     */
+    public static final int FEATURE_READING_ENHANCEMENT = 18;
 
     public static final int ADJUSTMENT_HUE = 0;
     public static final int ADJUSTMENT_SATURATION = 1;
