@@ -135,6 +135,12 @@ public final class LineageHardwareManager {
     public static final int FEATURE_DISPLAY_MODES = 0x2000;
 
     /**
+     * Reading mode
+     */
+    @VisibleForTesting
+    public static final int FEATURE_READING_ENHANCEMENT = 0x4000;
+
+    /**
      * Color balance
      */
     @VisibleForTesting
@@ -863,6 +869,21 @@ public final class LineageHardwareManager {
         try {
             if (checkService()) {
                 return sService.setTouchscreenGestureEnabled(gesture, state);
+            }
+        } catch (RemoteException e) {
+        }
+        return false;
+    }
+
+    /**
+     * Enables or disables reading mode
+     *
+     * @return true if success
+     */
+    public boolean setGrayscale(boolean state) {
+        try {
+            if (checkService()) {
+                return sService.setGrayscale(state);
             }
         } catch (RemoteException e) {
         }

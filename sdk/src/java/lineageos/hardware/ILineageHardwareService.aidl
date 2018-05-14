@@ -65,4 +65,6 @@ interface ILineageHardwareService {
 
     TouchscreenGesture[] getTouchscreenGestures();
     boolean setTouchscreenGestureEnabled(in TouchscreenGesture gesture, boolean state);
+
+    boolean setGrayscale(boolean state);
 }
