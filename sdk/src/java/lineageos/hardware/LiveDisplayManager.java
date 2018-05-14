@@ -120,6 +120,11 @@ public class LiveDisplayManager {
      */
     public static final int FEATURE_PICTURE_ADJUSTMENT = 17;
 
+    /**
+     * System supports grayscale matrix overlay
+     */
+    public static final int FEATURE_READING_ENHANCEMENT = 18;
+
     public static final int ADJUSTMENT_HUE = 0;
     public static final int ADJUSTMENT_SATURATION = 1;
     public static final int ADJUSTMENT_INTENSITY = 2;
