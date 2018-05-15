@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1e54410c_d57b35c6",
+        "filename": "lineage/lib/main/java/org/lineageos/platform/internal/LineageHardwareService.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 377,
+      "author": {
+        "id": 10067
+      },
+      "writtenOn": "2018-05-15T01:32:18Z",
+      "side": 1,
+      "message": "tab",
+      "revId": "cff4efe90dab2574d9127795c6e3d7eb701b22a4",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3a47fab2_9f879d5a",
+        "filename": "lineage/lib/main/java/org/lineageos/platform/internal/LineageHardwareService.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 783,
+      "author": {
+        "id": 10067
+      },
+      "writtenOn": "2018-05-15T01:32:18Z",
+      "side": 1,
+      "message": "tab",
+      "revId": "cff4efe90dab2574d9127795c6e3d7eb701b22a4",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6d87649e_1f0a8ff6",
+        "filename": "sdk/src/java/lineageos/hardware/LineageHardwareManager.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 888,
+      "author": {
+        "id": 10067
+      },
+      "writtenOn": "2018-05-15T01:32:18Z",
+      "side": 1,
+      "message": "tab",
+      "revId": "cff4efe90dab2574d9127795c6e3d7eb701b22a4",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "52d44db8_7c2b3885",
+        "filename": "sdk/src/java/lineageos/hardware/LineageHardwareManager.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 890,
+      "author": {
+        "id": 10067
+      },
+      "writtenOn": "2018-05-15T01:32:18Z",
+      "side": 1,
+      "message": "tab",
+      "revId": "cff4efe90dab2574d9127795c6e3d7eb701b22a4",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
