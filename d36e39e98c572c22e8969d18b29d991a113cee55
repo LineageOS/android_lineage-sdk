@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ed3cecec_30687b1e",
+        "filename": "lineage/lib/main/java/org/lineageos/platform/internal/display/DisplayHardwareController.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 158,
+      "author": {
+        "id": 11883
+      },
+      "writtenOn": "2018-05-16T19:02:45Z",
+      "side": 1,
+      "message": "tab",
+      "revId": "d36e39e98c572c22e8969d18b29d991a113cee55",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3bd4699d_3b6187cf",
+        "filename": "sdk/src/java/lineageos/hardware/LineageHardwareManager.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 888,
+      "author": {
+        "id": 11883
+      },
+      "writtenOn": "2018-05-16T19:02:45Z",
+      "side": 1,
+      "message": "tabs",
+      "revId": "d36e39e98c572c22e8969d18b29d991a113cee55",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
