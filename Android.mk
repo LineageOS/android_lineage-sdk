@@ -39,6 +39,7 @@ LOCAL_MODULE := org.lineageos.platform
 LOCAL_MODULE_TAGS := optional
 
 lineage_sdk_LOCAL_JAVA_LIBRARIES := \
+    android.hardware.light-V2.0-java \
     android-support-annotations \
     android-support-v7-preference \
     android-support-v7-recyclerview \
@@ -194,6 +195,7 @@ LOCAL_INTERMEDIATE_SOURCES := \
     $(lineage_sdk_LOCAL_INTERMEDIATE_SOURCES)
 
 LOCAL_JAVA_LIBRARIES := \
+    android.hardware.light-V2.0-java \
     $(lineage_sdk_LOCAL_JAVA_LIBRARIES)
 
 $(full_target): $(lineage_framework_built) $(gen)
