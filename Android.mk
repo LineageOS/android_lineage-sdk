@@ -45,6 +45,7 @@ lineage_sdk_LOCAL_JAVA_LIBRARIES := \
     android-support-v14-preference
 
 LOCAL_STATIC_JAVA_LIBRARIES := \
+    android.hardware.light-V2.0-java-static \
     telephony-ext
 
 LOCAL_JAVA_LIBRARIES := \
@@ -197,6 +198,7 @@ LOCAL_INTERMEDIATE_SOURCES := \
     $(lineage_sdk_LOCAL_INTERMEDIATE_SOURCES)
 
 LOCAL_STATIC_JAVA_LIBRARIES := \
+    android.hardware.light-V2.0-java-static \
     telephony-ext
 
 LOCAL_JAVA_LIBRARIES := \
