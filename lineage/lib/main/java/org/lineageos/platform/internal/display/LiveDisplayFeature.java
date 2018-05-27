@@ -22,10 +22,9 @@ import android.os.Handler;
 import android.os.UserHandle;
 import android.util.Log;
 
-import com.android.server.twilight.TwilightState;
-
 import org.lineageos.platform.internal.common.UserContentObserver;
 import org.lineageos.platform.internal.display.LiveDisplayService.State;
+import org.lineageos.platform.internal.display.TwilightTracker.TwilightState;
 
 import java.io.PrintWriter;
 import java.util.BitSet;
