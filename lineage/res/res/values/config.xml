@@ -67,6 +67,7 @@
          LIGHTS_SEGMENTED_BATTERY_LED = 16
          LIGHTS_ADJUSTABLE_NOTIFICATION_LED_BRIGHTNESS = 32
          LIGHTS_BATTERY_LED = 64
+         LIGHTS_ADJUSTABLE_BATTERY_LED_BRIGHTNESS = 128
 
          For example, a device with notification and battery lights that supports
          pulsating and RGB control would set this config to 75. -->

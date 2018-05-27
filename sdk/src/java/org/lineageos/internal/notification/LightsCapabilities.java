@@ -42,6 +42,9 @@ public final class LightsCapabilities {
     // Device has a battery light.
     public static final int LIGHTS_BATTERY_LED = 64;
 
+    // The battery light supports adjustable brightness.
+    public static final int LIGHTS_ADJUSTABLE_BATTERY_LED_BRIGHTNESS = 128;
+
     public static boolean supports(Context context, final int capability) {
         final int capabilities = context.getResources().getInteger(
                 org.lineageos.platform.internal.R.integer.config_deviceLightCapabilities);

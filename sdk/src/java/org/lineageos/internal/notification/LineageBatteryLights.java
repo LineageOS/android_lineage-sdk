@@ -81,7 +81,7 @@ public final class LineageBatteryLights {
                 mContext, LightsCapabilities.LIGHTS_RGB_BATTERY_LED);
 
         mHALAdjustableBrightness = LightsCapabilities.supports(
-                mContext, LightsCapabilities.LIGHTS_ADJUSTABLE_NOTIFICATION_LED_BRIGHTNESS);
+                mContext, LightsCapabilities.LIGHTS_ADJUSTABLE_BATTERY_LED_BRIGHTNESS);
 
         // We support brightness adjustment if either the HAL supports it
         // or the light is RGB adjustable.
