@@ -36,11 +36,24 @@ public final class LightsCapabilities {
     // segments to show (in order to represent battery level).
     public static final int LIGHTS_SEGMENTED_BATTERY_LED = 16;
 
-    // The notification light supports adjustable brightness.
+    // The notification light supports HAL adjustable brightness
+    // via the alpha channel.
+    // Note: if a device notification light supports LIGHTS_RGB_NOTIFICATION_LED
+    // then HAL support is not necessary for brightness control.  In this case,
+    // brightness support will be provided by lineage-sdk through the scaling of
+    // RGB color values.
     public static final int LIGHTS_ADJUSTABLE_NOTIFICATION_LED_BRIGHTNESS = 32;
 
     // Device has a battery light.
     public static final int LIGHTS_BATTERY_LED = 64;
+
+    // The battery light supports HAL adjustable brightness via
+    // the alpha channel.
+    // Note: if a device battery light supports LIGHTS_RGB_BATTERY_LED then HAL
+    // support is not necessary for brightness control.  In this case,
+    // brightness support will be provided by lineage-sdk through the scaling of
+    // RGB color values.
+    public static final int LIGHTS_ADJUSTABLE_BATTERY_LED_BRIGHTNESS = 128;
 
     public static boolean supports(Context context, final int capability) {
         final int capabilities = context.getResources().getInteger(
