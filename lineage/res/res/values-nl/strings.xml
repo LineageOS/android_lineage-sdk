@@ -115,8 +115,11 @@
   <string name="permlab_manageRemotePrefs">instellingen voor beheer op afstand</string>
   <string name="permdesc_manageRemotePrefs">Hiermee kan de app instellingen voor beheer op afstand beheren</string>
   <!-- About device screen, build date -->
+  <string name="build_date">Build-datum</string>
   <!-- About device screen, LineageOS API Level -->
+  <string name="lineage_api_level">Niveau van LineageOS-API</string>
   <!-- About device screen, LineageOS updates -->
+  <string name="lineage_updates">LineageOS updates</string>
   <!-- About device screen, LineageOS version -->
   <string name="lineage_version">LineageOS-versie</string>
   <!-- General purpose use "unknown" string -->

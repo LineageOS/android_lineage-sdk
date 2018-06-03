@@ -125,11 +125,11 @@
   <!-- About device screen, build date -->
   <string name="build_date">ビルド日時</string>
   <!-- About device screen, LineageOS API Level -->
-  <string name="lineage_api_level">LineageOS APIレベル</string>
+  <string name="lineage_api_level">LineageOS API レベル</string>
   <!-- About device screen, LineageOS updates -->
   <string name="lineage_updates">LineageOS アップデート</string>
   <!-- About device screen, LineageOS version -->
-  <string name="lineage_version">LineageOSバージョン</string>
+  <string name="lineage_version">LineageOS バージョン</string>
   <!-- General purpose use "unknown" string -->
   <string name="unknown">不明</string>
   <!-- Long-press back kill application -->
