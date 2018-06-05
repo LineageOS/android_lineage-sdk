@@ -46,6 +46,7 @@ lineage_sdk_LOCAL_JAVA_LIBRARIES := \
 
 LOCAL_JAVA_LIBRARIES := \
     services \
+    telephony-ext \
     org.lineageos.hardware \
     $(lineage_sdk_LOCAL_JAVA_LIBRARIES)
 
@@ -194,6 +195,7 @@ LOCAL_INTERMEDIATE_SOURCES := \
     $(lineage_sdk_LOCAL_INTERMEDIATE_SOURCES)
 
 LOCAL_JAVA_LIBRARIES := \
+    telephony-ext \
     $(lineage_sdk_LOCAL_JAVA_LIBRARIES)
 
 $(full_target): $(lineage_framework_built) $(gen)
