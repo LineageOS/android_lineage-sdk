@@ -118,6 +118,7 @@
 
     <!-- Trusted accents package names -->
     <string-array name="trusted_accent_packages" translatable="false">
+        <item>org.lineageos.overlay.accent.aqua</item>
         <item>org.lineageos.overlay.accent.red</item>
         <item>org.lineageos.overlay.accent.pink</item>
         <item>org.lineageos.overlay.accent.purple</item>
