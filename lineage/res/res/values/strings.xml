@@ -176,6 +176,7 @@
     <string name="accent_purple">Lavender</string>
     <string name="accent_red">Tomato</string>
     <string name="accent_yellow">Banana</string>
+    <string name="accent_torch">Torch</string>
 
     <!-- Trust interface -->
     <!-- This string will be referenced from other apps when they're referring to the Trust interface.
