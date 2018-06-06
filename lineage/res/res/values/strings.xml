@@ -167,6 +167,7 @@
 
     <!-- Accent colors -->
     <string name="accent_aqua">Aqua</string>
+    <string name="accent_aqua">Torch</string>
     <string name="accent_black">Carbon</string>
     <string name="accent_blue">Blueberry</string>
     <string name="accent_brown">Cocoa</string>
