@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "22340dea_bb002682",
+        "filename": "sdk/src/java/org/lineageos/internal/util/TelephonyExtUtils.java",
+        "patchSetId": 7
+      },
+      "lineNbr": 195,
+      "author": {
+        "id": 19476
+      },
+      "writtenOn": "2018-06-08T01:09:40Z",
+      "side": 1,
+      "message": "this will produce leaks, see method comment",
+      "range": {
+        "startLine": 195,
+        "startChar": 12,
+        "endLine": 195,
+        "endChar": 38
+      },
+      "revId": "8306b2f9af709fdeaf9ddc4ea288c660e3f33009",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "80802f08_4fc3cfd9",
+        "filename": "sdk/src/java/org/lineageos/internal/util/TelephonyExtUtils.java",
+        "patchSetId": 7
+      },
+      "lineNbr": 209,
+      "author": {
+        "id": 19476
+      },
+      "writtenOn": "2018-06-08T01:09:40Z",
+      "side": 1,
+      "message": "check for null before creating this",
+      "range": {
+        "startLine": 209,
+        "startChar": 8,
+        "endLine": 209,
+        "endChar": 17
+      },
+      "revId": "8306b2f9af709fdeaf9ddc4ea288c660e3f33009",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
