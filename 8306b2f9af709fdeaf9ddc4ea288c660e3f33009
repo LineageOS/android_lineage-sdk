@@ -2,6 +2,69 @@
   "comments": [
     {
       "key": {
+        "uuid": "0497e263_7e55c2f3",
+        "filename": "sdk/src/java/org/lineageos/internal/util/TelephonyExtUtils.java",
+        "patchSetId": 7
+      },
+      "lineNbr": 103,
+      "author": {
+        "id": 19476
+      },
+      "writtenOn": "2018-06-08T01:16:38Z",
+      "side": 1,
+      "message": "don\u0027t check if service is available before calling this. is it safe?",
+      "range": {
+        "startLine": 103,
+        "startChar": 33,
+        "endLine": 103,
+        "endChar": 46
+      },
+      "revId": "8306b2f9af709fdeaf9ddc4ea288c660e3f33009",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4ab46651_3a1dc7f5",
+        "filename": "sdk/src/java/org/lineageos/internal/util/TelephonyExtUtils.java",
+        "patchSetId": 7
+      },
+      "lineNbr": 122,
+      "author": {
+        "id": 19476
+      },
+      "writtenOn": "2018-06-08T01:16:38Z",
+      "side": 1,
+      "message": "also here, safe to use this if service isn\u0027t initialized?",
+      "range": {
+        "startLine": 122,
+        "startChar": 21,
+        "endLine": 122,
+        "endChar": 34
+      },
+      "revId": "8306b2f9af709fdeaf9ddc4ea288c660e3f33009",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "f8e41b92_ae9fa324",
+        "filename": "sdk/src/java/org/lineageos/internal/util/TelephonyExtUtils.java",
+        "patchSetId": 7
+      },
+      "lineNbr": 151,
+      "author": {
+        "id": 19476
+      },
+      "writtenOn": "2018-06-08T01:16:38Z",
+      "side": 1,
+      "message": "may not hurt to remove the listener before it\u0027s added. probably overkill, but it feels nicer to be more defensive in these classes.",
+      "revId": "8306b2f9af709fdeaf9ddc4ea288c660e3f33009",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "22340dea_bb002682",
         "filename": "sdk/src/java/org/lineageos/internal/util/TelephonyExtUtils.java",
         "patchSetId": 7
@@ -42,6 +105,29 @@
         "startChar": 12,
         "endLine": 195,
         "endChar": 38
+      },
+      "revId": "8306b2f9af709fdeaf9ddc4ea288c660e3f33009",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "dee1fc32_46c6184a",
+        "filename": "sdk/src/java/org/lineageos/internal/util/TelephonyExtUtils.java",
+        "patchSetId": 7
+      },
+      "lineNbr": 198,
+      "author": {
+        "id": 19476
+      },
+      "writtenOn": "2018-06-08T01:16:38Z",
+      "side": 1,
+      "message": "tiny nitpick: could make this a Log.v or Log.i, comment indicates it\u0027s not an error and it shouldn\u0027t show up as one in logcat if device doesn\u0027t ship with this",
+      "range": {
+        "startLine": 198,
+        "startChar": 16,
+        "endLine": 198,
+        "endChar": 17
       },
       "revId": "8306b2f9af709fdeaf9ddc4ea288c660e3f33009",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
