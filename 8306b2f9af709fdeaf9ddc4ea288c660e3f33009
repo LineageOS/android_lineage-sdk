@@ -112,6 +112,30 @@
     },
     {
       "key": {
+        "uuid": "515b895f_2306a0e9",
+        "filename": "sdk/src/java/org/lineageos/internal/util/TelephonyExtUtils.java",
+        "patchSetId": 7
+      },
+      "lineNbr": 195,
+      "author": {
+        "id": 2936
+      },
+      "writtenOn": "2018-06-08T04:36:54Z",
+      "side": 1,
+      "message": "The whole thing is a little weird since it\u0027s practically a static class. Maybe we should just be doing a singleton here?",
+      "parentUuid": "804d3c4a_18f85036",
+      "range": {
+        "startLine": 195,
+        "startChar": 12,
+        "endLine": 195,
+        "endChar": 38
+      },
+      "revId": "8306b2f9af709fdeaf9ddc4ea288c660e3f33009",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "dee1fc32_46c6184a",
         "filename": "sdk/src/java/org/lineageos/internal/util/TelephonyExtUtils.java",
         "patchSetId": 7
