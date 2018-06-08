@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "804d3c4a_18f85036",
+        "filename": "sdk/src/java/org/lineageos/internal/util/TelephonyExtUtils.java",
+        "patchSetId": 7
+      },
+      "lineNbr": 195,
+      "author": {
+        "id": 19476
+      },
+      "writtenOn": "2018-06-08T01:10:37Z",
+      "side": 1,
+      "message": "oh i guess not since it checks for null above, but still looks leaky",
+      "parentUuid": "22340dea_bb002682",
+      "range": {
+        "startLine": 195,
+        "startChar": 12,
+        "endLine": 195,
+        "endChar": 38
+      },
+      "revId": "8306b2f9af709fdeaf9ddc4ea288c660e3f33009",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "80802f08_4fc3cfd9",
         "filename": "sdk/src/java/org/lineageos/internal/util/TelephonyExtUtils.java",
         "patchSetId": 7
