@@ -1,0 +1,78 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "e6f26658_b008d9be",
+        "filename": "lineage/lib/main/java/org/lineageos/platform/internal/TrustInterfaceService.java",
+        "patchSetId": 9
+      },
+      "lineNbr": 286,
+      "author": {
+        "id": 4550
+      },
+      "writtenOn": "2018-06-09T21:53:34Z",
+      "side": 1,
+      "message": "100 chars",
+      "revId": "07e744aa39cec4bab5f0d20c6d7b156b45303be7",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9d521b0e_be111d74",
+        "filename": "lineage/lib/main/java/org/lineageos/platform/internal/TrustInterfaceService.java",
+        "patchSetId": 9
+      },
+      "lineNbr": 306,
+      "author": {
+        "id": 4550
+      },
+      "writtenOn": "2018-06-09T21:53:34Z",
+      "side": 1,
+      "message": "whitespace",
+      "revId": "07e744aa39cec4bab5f0d20c6d7b156b45303be7",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fc6f3212_0264f5a4",
+        "filename": "lineage/res/AndroidManifest.xml",
+        "patchSetId": 9
+      },
+      "lineNbr": 126,
+      "author": {
+        "id": 4550
+      },
+      "writtenOn": "2018-06-09T21:53:34Z",
+      "side": 1,
+      "message": "whitespace",
+      "revId": "07e744aa39cec4bab5f0d20c6d7b156b45303be7",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a410ddc0_4803633b",
+        "filename": "sdk/src/java/lineageos/app/LineageContextConstants.java",
+        "patchSetId": 9
+      },
+      "lineNbr": 119,
+      "author": {
+        "id": 4550
+      },
+      "writtenOn": "2018-06-09T21:53:34Z",
+      "side": 1,
+      "message": "LINEAGE",
+      "range": {
+        "startLine": 119,
+        "startChar": 31,
+        "endLine": 119,
+        "endChar": 39
+      },
+      "revId": "07e744aa39cec4bab5f0d20c6d7b156b45303be7",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
