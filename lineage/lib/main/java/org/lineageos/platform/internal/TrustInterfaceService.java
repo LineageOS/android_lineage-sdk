@@ -228,6 +228,7 @@ public class TrustInterfaceService extends LineageSystemService {
         String status = SystemProperties.get("persist.sys.root_access");
         switch (status) {
             case "0":
+            case "":
                 return TrustInterface.TRUST_FEATURE_LEVEL_GOOD;
             case "1":
             case "3":
