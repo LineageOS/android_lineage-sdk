@@ -134,10 +134,6 @@ public class TrustInterfaceService extends LineageSystemService {
     }
 
     private boolean postOnBoardingNotification() {
-        if (hasOnboardedUser()) {
-            return false;
-        }
-
         String title = mContext.getString(R.string.trust_notification_title_onboarding);
         String message = mContext.getString(R.string.trust_notification_content_onboarding);
         Intent intent = new Intent(INTENT_ONBOARDING);
