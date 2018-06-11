@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "757e9ba7_9ae9ea50",
+        "filename": "sdk/src/java/org/lineageos/internal/util/TelephonyExtUtils.java",
+        "patchSetId": 13
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 11883
+      },
+      "writtenOn": "2018-06-11T06:20:56Z",
+      "side": 1,
+      "message": "unused",
+      "revId": "c6883a6b05e15cf1d87549da220597d0f436175e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "478418c2_e8d6c2f8",
+        "filename": "sdk/src/java/org/lineageos/internal/util/TelephonyExtUtils.java",
+        "patchSetId": 13
+      },
+      "lineNbr": 216,
+      "author": {
+        "id": 11883
+      },
+      "writtenOn": "2018-06-11T06:20:56Z",
+      "side": 1,
+      "message": "sExtTelephony \u003d\n                        IExtTelephony.Stub.asInterface(ServiceManager.getService(\"extphone\"));\n\nLooks a bit better I guess",
+      "range": {
+        "startLine": 215,
+        "startChar": 0,
+        "endLine": 216,
+        "endChar": 63
+      },
+      "revId": "c6883a6b05e15cf1d87549da220597d0f436175e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    }
+  ]
+}
