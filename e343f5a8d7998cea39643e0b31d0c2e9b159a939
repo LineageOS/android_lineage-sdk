@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "f8a83e40_60a7748c",
+        "filename": "sdk/src/java/org/lineageos/internal/util/TelephonyExtUtils.java",
+        "patchSetId": 16
+      },
+      "lineNbr": 137,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2018-06-13T10:49:24Z",
+      "side": 1,
+      "message": "Shouldn\u0027t that \u003d\u003d be a !\u003d ?",
+      "revId": "e343f5a8d7998cea39643e0b31d0c2e9b159a939",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
