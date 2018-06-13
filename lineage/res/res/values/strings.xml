@@ -152,6 +152,8 @@
     <string name="lineage_updates">LineageOS updates</string>
     <!-- About device screen, LineageOS version -->
     <string name="lineage_version">LineageOS version</string>
+    <!-- About device screen, vendor security patch -->
+    <string name="lineage_vendor_security_patch">Vendor security patch level</string>
 
     <!-- General purpose use "unknown" string -->
     <string name="unknown">Unknown</string>
