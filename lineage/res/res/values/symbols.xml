@@ -169,6 +169,7 @@
     <!-- Trust interface -->
     <java-symbol type="bool" name="config_trustLegacyEncryption" />
     <java-symbol type="drawable" name="ic_trust" />
+    <java-symbol type="drawable" name="ic_trust_notification_manage" />
     <java-symbol type="drawable" name="ic_warning" />
     <java-symbol type="string" name="trust_feature_name" />
     <java-symbol type="string" name="trust_notification_channel" />
@@ -178,7 +179,7 @@
     <java-symbol type="string" name="trust_notification_content_root" />
     <java-symbol type="string" name="trust_notification_title_onboarding" />
     <java-symbol type="string" name="trust_notification_content_onboarding" />
-    <java-symbol type="string" name="trust_notification_action_later" />
+    <java-symbol type="string" name="trust_notification_action_manage" />
 
     <!-- Full screen aspect ratio -->
     <java-symbol type="bool" name="config_haveHigherAspectRatioScreen" />

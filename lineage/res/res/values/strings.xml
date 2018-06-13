@@ -191,5 +191,5 @@
     <string name="trust_notification_content_root">An app is using the root privileges right now</string>
     <string name="trust_notification_title_onboarding">Discover Trust</string>
     <string name="trust_notification_content_onboarding">Get to know how to assure your device is safe</string>
-    <string name="trust_notification_action_later">Not now</string>
+    <string name="trust_notification_action_manage">Manage alerts</string>
 </resources>

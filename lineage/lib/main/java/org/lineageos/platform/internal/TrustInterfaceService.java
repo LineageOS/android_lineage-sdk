@@ -106,16 +106,24 @@ public class TrustInterfaceService extends LineageSystemService {
 
         String title = mContext.getString(strings.first);
         String message = mContext.getString(strings.second);
-        Intent intent = new Intent(INTENT_PARTS);
-        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        PendingIntent pIntent = PendingIntent.getActivity(mContext, 0, intent, 0);
+        String action = mContext.getString(R.string.trust_notification_action_manage);
+
+        Intent mainIntent = new Intent(INTENT_PARTS);
+        mainIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        PendingIntent pMainIntent = PendingIntent.getActivity(mContext, 0, mainIntent, 0);
+
+        Intent actionIntent = new Intent(INTENT_PARTS);
+        actionIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        actionIntent.putExtra(":settings:fragment_args_key", "trust_category_alerts");
+        PendingIntent pActionIntent = PendingIntent.getActivity(mContext, 0, actionIntent, 0);
 
         Notification.Builder notification = new Notification.Builder(mContext, CHANNEL_NAME)
                 .setContentTitle(title)
                 .setContentText(message)
                 .setStyle(new Notification.BigTextStyle().bigText(message))
                 .setAutoCancel(true)
-                .setContentIntent(pIntent)
+                .setContentIntent(pMainIntent)
+                .addAction(R.drawable.ic_trust_notification_manage, action, pActionIntent)
                 .setColor(mContext.getColor(R.color.color_error))
                 .setSmallIcon(R.drawable.ic_warning);
 
