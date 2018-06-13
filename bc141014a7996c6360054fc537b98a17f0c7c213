@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7ab86fce_ac1cbc62",
+        "filename": "sdk/src/java/org/lineageos/internal/util/TelephonyExtUtils.java",
+        "patchSetId": 14
+      },
+      "lineNbr": 61,
+      "author": {
+        "id": 2936
+      },
+      "writtenOn": "2018-06-13T03:51:12Z",
+      "side": 1,
+      "message": "Umm, nothing seems to be using this? Normally you\u0027d have a getInstance function, and the rest of the functions associated with the class would be non-static.",
+      "range": {
+        "startLine": 61,
+        "startChar": 43,
+        "endLine": 61,
+        "endChar": 52
+      },
+      "revId": "bc141014a7996c6360054fc537b98a17f0c7c213",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
