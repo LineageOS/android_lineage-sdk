@@ -129,6 +129,17 @@ public class TrustInterface {
      */
     public static final int TRUST_FEATURE_ENCRYPTION = 4;
 
+    /**
+     * Trust feature indicator: Keys
+     *
+     * Possible status:
+     *    * {@link #TRUST_FEATURE_LEVEL_GOOD}: signed with private keys
+     *    * {@link #TRUST_FEATURE_LEVEL_BAD}: signed with public or inline keys
+     *
+     * @see #getLevelForFeature
+     */
+    public static final int TRUST_FEATURE_KEYS = 5;
+
     private static final String TAG = "TrustInterface";
 
     private static ITrustInterface sService;

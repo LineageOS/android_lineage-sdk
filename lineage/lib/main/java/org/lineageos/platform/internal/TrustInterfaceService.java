@@ -90,6 +90,11 @@ public class TrustInterfaceService extends LineageSystemService {
         if (selinuxStatus != TrustInterface.TRUST_FEATURE_LEVEL_GOOD) {
             postNotificationForFeatureInternal(TrustInterface.TRUST_FEATURE_SELINUX);
         }
+
+        int keysStatus = getKeysStatus();
+        if (keysStatus != TrustInterface.TRUST_FEATURE_LEVEL_GOOD) {
+            postNotificationForFeatureInternal(TrustInterface.TRUST_FEATURE_KEYS);
+        }
     }
 
     /* Public methods implementation */
@@ -173,6 +178,8 @@ public class TrustInterfaceService extends LineageSystemService {
                 return getSecurityPatchStatus(VENDOR_SECURITY_PATCHES);
             case TrustInterface.TRUST_FEATURE_ENCRYPTION:
                 return getEncryptionStatus();
+            case TrustInterface.TRUST_FEATURE_KEYS:
+                return getKeysStatus();
             default:
                 return TrustInterface.ERROR_UNDEFINED;
         }
@@ -196,12 +203,16 @@ public class TrustInterfaceService extends LineageSystemService {
 
         switch (feature) {
             case TrustInterface.TRUST_FEATURE_SELINUX:
-                title = R.string.trust_notification_title_selinux;
+                title = R.string.trust_notification_title_security;
                 message = R.string.trust_notification_content_selinux;
                 break;
             case TrustInterface.TRUST_FEATURE_ROOT:
                 title = R.string.trust_notification_title_root;
                 message = R.string.trust_notification_content_root;
+                break;
+            case TrustInterface.TRUST_FEATURE_KEYS:
+                title = R.string.trust_notification_title_security;
+                message = R.string.trust_notification_content_keys;
                 break;
         }
 
@@ -306,6 +317,17 @@ public class TrustInterfaceService extends LineageSystemService {
             default:
                 return TrustInterface.ERROR_UNDEFINED;
         }
+    }
+
+    private int getKeysStatus() {
+        String buildTags = SystemProperties.get("ro.build.tags");
+
+        if (buildTags.contains("test-keys")) {
+            return TrustInterface.TRUST_FEATURE_LEVEL_BAD;
+        } else if (buildTags.contains("release-keys") || buildTags.contains("dev-keys")) {
+            return TrustInterface.TRUST_FEATURE_LEVEL_GOOD;
+        }
+        return TrustInterface.ERROR_UNDEFINED;
     }
 
     private boolean hasOnboardedUser() {
