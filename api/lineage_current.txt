@@ -1028,6 +1028,7 @@ package lineageos.trust {
     method public boolean removeNotificationForFeature(int);
     field public static final int ERROR_UNDEFINED = -1; // 0xffffffff
     field public static final int TRUST_FEATURE_ENCRYPTION = 4; // 0x4
+    field public static final int TRUST_FEATURE_KEYS = 5; // 0x5
     field public static final int TRUST_FEATURE_LEVEL_BAD = 2; // 0x2
     field public static final int TRUST_FEATURE_LEVEL_GOOD = 0; // 0x0
     field public static final int TRUST_FEATURE_LEVEL_POOR = 1; // 0x1
