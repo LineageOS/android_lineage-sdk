@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "67576328_745fa35d",
+        "filename": "sdk/src/java/org/lineageos/internal/util/TelephonyExtUtils.java",
+        "patchSetId": 17
+      },
+      "lineNbr": 109,
+      "author": {
+        "id": 2936
+      },
+      "writtenOn": "2018-06-14T03:32:08Z",
+      "side": 1,
+      "message": "I think it\u0027s minor, but it\u0027s probably better to have this return !mNoServiceAvailable and attempt to fetch the service in the constructor as part of initialization, no? I think it\u0027s a little better than keeping the \"do I have a service or not\" logic separated.",
+      "range": {
+        "startLine": 109,
+        "startChar": 15,
+        "endLine": 109,
+        "endChar": 36
+      },
+      "revId": "489c16283c914bd97bd1141ee12ba2b73bbe3bd7",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a7f96816_77b8c7ab",
+        "filename": "sdk/src/java/org/lineageos/internal/util/TelephonyExtUtils.java",
+        "patchSetId": 17
+      },
+      "lineNbr": 206,
+      "author": {
+        "id": 2936
+      },
+      "writtenOn": "2018-06-14T03:32:08Z",
+      "side": 1,
+      "message": "I don\u0027t really get how you can have a null listener here",
+      "range": {
+        "startLine": 206,
+        "startChar": 16,
+        "endLine": 206,
+        "endChar": 32
+      },
+      "revId": "489c16283c914bd97bd1141ee12ba2b73bbe3bd7",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "f8b92b7b_cb66e88b",
+        "filename": "sdk/src/java/org/lineageos/internal/util/TelephonyExtUtils.java",
+        "patchSetId": 17
+      },
+      "lineNbr": 218,
+      "author": {
+        "id": 2936
+      },
+      "writtenOn": "2018-06-14T03:32:08Z",
+      "side": 1,
+      "message": "successful",
+      "range": {
+        "startLine": 218,
+        "startChar": 59,
+        "endLine": 218,
+        "endChar": 70
+      },
+      "revId": "489c16283c914bd97bd1141ee12ba2b73bbe3bd7",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
