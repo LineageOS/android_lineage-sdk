@@ -129,6 +129,29 @@ public class TrustInterface {
      */
     public static final int TRUST_FEATURE_ENCRYPTION = 4;
 
+    /**
+     * Trust feature indicator: Debugging
+     *
+     * Possible status:
+     *    * {@link #TRUST_FEATURE_LEVEL_GOOD}: no debugging or insecure features enabled
+     *    * {@link #TRUST_FEATURE_LEVEL_POOR}: only debugging features enabled
+     *    * {@link #TRUST_FEATURE_LEVEL_BAD}: debugging and insecure features enabled
+     *
+     * @see #getLevelForFeature
+     */
+    public static final int TRUST_FEATURE_DEBUGGING = 5;
+
+    /**
+     * Trust feature indicator: Keys
+     *
+     * Possible status:
+     *    * {@link #TRUST_FEATURE_LEVEL_GOOD}: signed with private keys
+     *    * {@link #TRUST_FEATURE_LEVEL_BAD}: signed with public keys
+     *
+     * @see #getLevelForFeature
+     */
+    public static final int TRUST_FEATURE_KEYS = 6;
+
     private static final String TAG = "TrustInterface";
 
     private static ITrustInterface sService;

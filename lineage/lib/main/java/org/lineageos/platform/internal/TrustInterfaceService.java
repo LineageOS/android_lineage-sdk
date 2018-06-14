@@ -57,6 +57,7 @@ public class TrustInterfaceService extends LineageSystemService {
     private static final String INTENT_ONBOARDING = "org.lineageos.lineageparts.TRUST_HINT";
     private static final String CHANNEL_NAME = "TrustInterface";
     private static final int ONBOARDING_NOTIFCATION_ID = 89;
+    private static final String mBuildTags = SystemProperties.get("ro.build.tags");
 
     private Context mContext;
     private NotificationManager mNotificationManager = null;
@@ -89,6 +90,16 @@ public class TrustInterfaceService extends LineageSystemService {
         int selinuxStatus = getSELinuxStatus();
         if (selinuxStatus != TrustInterface.TRUST_FEATURE_LEVEL_GOOD) {
             postNotificationForFeatureInternal(TrustInterface.TRUST_FEATURE_SELINUX);
+        }
+
+        int debuggingStatus = getDebuggingStatus();
+        if (debuggingStatus != TrustInterface.TRUST_FEATURE_LEVEL_GOOD) {
+            postNotificationForFeatureInternal(TrustInterface.TRUST_FEATURE_DEBUGGING);
+        }
+
+        int keysStatus = getKeysStatus();
+        if (keysStatus != TrustInterface.TRUST_FEATURE_LEVEL_GOOD) {
+            postNotificationForFeatureInternal(TrustInterface.TRUST_FEATURE_KEYS);
         }
     }
 
@@ -165,6 +176,10 @@ public class TrustInterfaceService extends LineageSystemService {
                 return getSecurityPatchStatus(VENDOR_SECURITY_PATCHES);
             case TrustInterface.TRUST_FEATURE_ENCRYPTION:
                 return getEncryptionStatus();
+            case TrustInterface.TRUST_FEATURE_DEBUGGING:
+                return getDebuggingStatus();
+            case TrustInterface.TRUST_FEATURE_KEYS:
+                return getKeysStatus();
             default:
                 return TrustInterface.ERROR_UNDEFINED;
         }
@@ -188,12 +203,20 @@ public class TrustInterfaceService extends LineageSystemService {
 
         switch (feature) {
             case TrustInterface.TRUST_FEATURE_SELINUX:
-                title = R.string.trust_notification_title_selinux;
+                title = R.string.trust_notification_title_security;
                 message = R.string.trust_notification_content_selinux;
                 break;
             case TrustInterface.TRUST_FEATURE_ROOT:
                 title = R.string.trust_notification_title_root;
                 message = R.string.trust_notification_content_root;
+                break;
+            case TrustInterface.TRUST_FEATURE_DEBUGGING:
+                title = R.string.trust_notification_title_security;
+                message = R.string.trust_notification_content_debugging;
+                break;
+            case TrustInterface.TRUST_FEATURE_KEYS:
+                title = R.string.trust_notification_title_security;
+                message = R.string.trust_notification_content_keys;
                 break;
         }
 
@@ -296,6 +319,35 @@ public class TrustInterfaceService extends LineageSystemService {
             default:
                 return TrustInterface.ERROR_UNDEFINED;
         }
+    }
+
+    private int getDebuggingStatus() {
+        String secureBuild = SystemProperties.get("ro.secure");
+        String debuggingBuild = SystemProperties.get("ro.debuggable");
+
+        if (secureBuild.isEmpty() || debuggingBuild.isEmpty()) {
+            return TrustInterface.ERROR_UNDEFINED;
+        }
+
+        if (!secureBuild.equals("1")) {
+            return TrustInterface.TRUST_FEATURE_LEVEL_BAD;
+        }
+
+        if (!debuggingBuild.equals("0")) {
+            return TrustInterface.TRUST_FEATURE_LEVEL_POOR;
+        }
+        return TrustInterface.TRUST_FEATURE_LEVEL_GOOD;
+    }
+
+    private int getKeysStatus() {
+        if (mBuildTags.contains("test-keys")) {
+            return TrustInterface.TRUST_FEATURE_LEVEL_BAD;
+        }
+
+        if (mBuildTags.contains("release-keys")) {
+            return TrustInterface.TRUST_FEATURE_LEVEL_GOOD;
+        }
+        return TrustInterface.ERROR_UNDEFINED;
     }
 
     private boolean hasOnboardedUser() {
