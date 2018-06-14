@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "aa87589e_073de7ab",
+        "filename": "sdk/src/java/org/lineageos/internal/util/TelephonyExtUtils.java",
+        "patchSetId": 17
+      },
+      "lineNbr": 109,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2018-06-14T06:05:32Z",
+      "side": 1,
+      "message": "Depends on whether we want this to return \u0027does this device ship with telephony-ext\u0027 or \u0027is telephony-ext available for being called to\u0027. After boot the result of both will be identical, but before boot completed the result for the latter will always be \u0027false\u0027, even if the former is \u0027true\u0027.",
+      "parentUuid": "67576328_745fa35d",
+      "range": {
+        "startLine": 109,
+        "startChar": 15,
+        "endLine": 109,
+        "endChar": 36
+      },
+      "revId": "489c16283c914bd97bd1141ee12ba2b73bbe3bd7",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "a7f96816_77b8c7ab",
         "filename": "sdk/src/java/org/lineageos/internal/util/TelephonyExtUtils.java",
         "patchSetId": 17
@@ -36,6 +60,30 @@
       "writtenOn": "2018-06-14T03:32:08Z",
       "side": 1,
       "message": "I don\u0027t really get how you can have a null listener here",
+      "range": {
+        "startLine": 206,
+        "startChar": 16,
+        "endLine": 206,
+        "endChar": 32
+      },
+      "revId": "489c16283c914bd97bd1141ee12ba2b73bbe3bd7",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "d7a8ed6e_12bff508",
+        "filename": "sdk/src/java/org/lineageos/internal/util/TelephonyExtUtils.java",
+        "patchSetId": 17
+      },
+      "lineNbr": 206,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2018-06-14T06:05:32Z",
+      "side": 1,
+      "message": "Yeah, me neither.",
+      "parentUuid": "a7f96816_77b8c7ab",
       "range": {
         "startLine": 206,
         "startChar": 16,
