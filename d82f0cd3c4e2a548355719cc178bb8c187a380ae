@@ -45,6 +45,29 @@
       "revId": "d82f0cd3c4e2a548355719cc178bb8c187a380ae",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "0c7bb409_f1570f1d",
+        "filename": "sdk/src/java/org/lineageos/internal/util/TelephonyExtUtils.java",
+        "patchSetId": 23
+      },
+      "lineNbr": 71,
+      "author": {
+        "id": 13028
+      },
+      "writtenOn": "2018-06-15T15:45:10Z",
+      "side": 1,
+      "message": "I could agree on\nIExtTelephony service \u003d getService();\nif (service \u003d\u003d null) {\n    mNoServiceAvailable \u003d true;\n}",
+      "range": {
+        "startLine": 71,
+        "startChar": 42,
+        "endLine": 71,
+        "endChar": 63
+      },
+      "revId": "d82f0cd3c4e2a548355719cc178bb8c187a380ae",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
