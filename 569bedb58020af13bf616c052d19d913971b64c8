@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8893616f_c51f0744",
+        "filename": "sdk/src/java/org/lineageos/internal/util/TelephonyExtUtils.java",
+        "patchSetId": 22
+      },
+      "lineNbr": 217,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2018-06-15T12:39:16Z",
+      "side": 1,
+      "message": "I think that we should add if (DEBUG) condition here.\n\nThis is spamming too much in case a device doesn\u0027t have the qti-telephony-common.jar.",
+      "range": {
+        "startLine": 217,
+        "startChar": 12,
+        "endLine": 217,
+        "endChar": 85
+      },
+      "revId": "569bedb58020af13bf616c052d19d913971b64c8",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
