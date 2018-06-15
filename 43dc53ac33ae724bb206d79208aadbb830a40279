@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6f1e081c_b45c160d",
+        "filename": "lineage/lib/main/java/org/lineageos/platform/internal/TrustInterfaceService.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 347,
+      "author": {
+        "id": 16082
+      },
+      "writtenOn": "2018-06-15T15:46:27Z",
+      "side": 1,
+      "message": "builds signed inline with non-test-keys evaluate to `dev-keys`, so that should be added to this check",
+      "range": {
+        "startLine": 347,
+        "startChar": 33,
+        "endLine": 347,
+        "endChar": 45
+      },
+      "revId": "43dc53ac33ae724bb206d79208aadbb830a40279",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
