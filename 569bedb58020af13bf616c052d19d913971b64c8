@@ -22,6 +22,29 @@
       "revId": "569bedb58020af13bf616c052d19d913971b64c8",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "c737ab64_9d647773",
+        "filename": "sdk/src/java/org/lineageos/internal/util/TelephonyExtUtils.java",
+        "patchSetId": 22
+      },
+      "lineNbr": 235,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2018-06-15T13:00:42Z",
+      "side": 1,
+      "message": "We could also literally ignore the exception. Not sure if it\u0027s worth to print it.",
+      "range": {
+        "startLine": 235,
+        "startChar": 73,
+        "endLine": 235,
+        "endChar": 75
+      },
+      "revId": "569bedb58020af13bf616c052d19d913971b64c8",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
