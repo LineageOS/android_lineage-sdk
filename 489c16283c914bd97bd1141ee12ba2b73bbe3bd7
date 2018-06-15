@@ -49,6 +49,30 @@
     },
     {
       "key": {
+        "uuid": "e16e6da2_bc2e7950",
+        "filename": "sdk/src/java/org/lineageos/internal/util/TelephonyExtUtils.java",
+        "patchSetId": 17
+      },
+      "lineNbr": 109,
+      "author": {
+        "id": 2936
+      },
+      "writtenOn": "2018-06-15T06:19:47Z",
+      "side": 1,
+      "message": "It just seemed overly complex to have the distinction (in code and by making the distinction)",
+      "parentUuid": "aa87589e_073de7ab",
+      "range": {
+        "startLine": 109,
+        "startChar": 15,
+        "endLine": 109,
+        "endChar": 36
+      },
+      "revId": "489c16283c914bd97bd1141ee12ba2b73bbe3bd7",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "a7f96816_77b8c7ab",
         "filename": "sdk/src/java/org/lineageos/internal/util/TelephonyExtUtils.java",
         "patchSetId": 17
