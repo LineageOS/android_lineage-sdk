@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "aa12c982_e3fa4cad",
+        "filename": "sdk/src/java/org/lineageos/internal/util/TelephonyExtUtils.java",
+        "patchSetId": 22
+      },
+      "lineNbr": 217,
+      "author": {
+        "id": 13028
+      },
+      "writtenOn": "2018-06-15T13:09:19Z",
+      "side": 1,
+      "message": "Fine with that",
+      "parentUuid": "8893616f_c51f0744",
+      "range": {
+        "startLine": 217,
+        "startChar": 12,
+        "endLine": 217,
+        "endChar": 85
+      },
+      "revId": "569bedb58020af13bf616c052d19d913971b64c8",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "c737ab64_9d647773",
         "filename": "sdk/src/java/org/lineageos/internal/util/TelephonyExtUtils.java",
         "patchSetId": 22
@@ -36,6 +60,30 @@
       "writtenOn": "2018-06-15T13:00:42Z",
       "side": 1,
       "message": "We could also literally ignore the exception. Not sure if it\u0027s worth to print it.",
+      "range": {
+        "startLine": 235,
+        "startChar": 73,
+        "endLine": 235,
+        "endChar": 75
+      },
+      "revId": "569bedb58020af13bf616c052d19d913971b64c8",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "32d90b1f_1501bab0",
+        "filename": "sdk/src/java/org/lineageos/internal/util/TelephonyExtUtils.java",
+        "patchSetId": 22
+      },
+      "lineNbr": 235,
+      "author": {
+        "id": 13028
+      },
+      "writtenOn": "2018-06-15T13:09:19Z",
+      "side": 1,
+      "message": "Me neither. I am ok with removing this",
+      "parentUuid": "c737ab64_9d647773",
       "range": {
         "startLine": 235,
         "startChar": 73,
