@@ -301,6 +301,8 @@ public class TrustInterfaceService extends LineageSystemService {
                 return isOldDevice ?
                         TrustInterface.TRUST_FEATURE_LEVEL_POOR :
                         TrustInterface.TRUST_FEATURE_LEVEL_BAD;
+            case DevicePolicyManager.ENCRYPTION_STATUS_UNSUPPORTED:
+                return TrustInterface.TRUST_FEATURE_LEVEL_BAD;
             default:
                 return TrustInterface.ERROR_UNDEFINED;
         }
