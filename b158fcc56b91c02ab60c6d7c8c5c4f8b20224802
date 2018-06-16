@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "98322d5b_6b5e0523",
+        "filename": "api/lineage_current.txt",
+        "patchSetId": 2
+      },
+      "lineNbr": 1030,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2018-06-16T08:56:00Z",
+      "side": 1,
+      "message": "Sort alphabetically",
+      "range": {
+        "startLine": 1030,
+        "startChar": 34,
+        "endLine": 1030,
+        "endChar": 52
+      },
+      "revId": "b158fcc56b91c02ab60c6d7c8c5c4f8b20224802",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "166fb29a_b783f3da",
+        "filename": "lineage/lib/main/java/org/lineageos/platform/internal/TrustInterfaceService.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 315,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2018-06-16T08:56:00Z",
+      "side": 1,
+      "message": "Bogus space",
+      "range": {
+        "startLine": 315,
+        "startChar": 44,
+        "endLine": 315,
+        "endChar": 45
+      },
+      "revId": "b158fcc56b91c02ab60c6d7c8c5c4f8b20224802",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6cb7f6f6_6adf3079",
+        "filename": "lineage/lib/main/java/org/lineageos/platform/internal/TrustInterfaceService.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 319,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2018-06-16T08:56:00Z",
+      "side": 1,
+      "message": "} else if",
+      "range": {
+        "startLine": 317,
+        "startChar": 8,
+        "endLine": 319,
+        "endChar": 10
+      },
+      "revId": "b158fcc56b91c02ab60c6d7c8c5c4f8b20224802",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
