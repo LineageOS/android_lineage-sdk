@@ -22,6 +22,30 @@
       "revId": "43dc53ac33ae724bb206d79208aadbb830a40279",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9faa076d_f9be52df",
+        "filename": "lineage/lib/main/java/org/lineageos/platform/internal/TrustInterfaceService.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 347,
+      "author": {
+        "id": 18154
+      },
+      "writtenOn": "2018-06-16T08:38:31Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6f1e081c_b45c160d",
+      "range": {
+        "startLine": 347,
+        "startChar": 33,
+        "endLine": 347,
+        "endChar": 45
+      },
+      "revId": "43dc53ac33ae724bb206d79208aadbb830a40279",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
