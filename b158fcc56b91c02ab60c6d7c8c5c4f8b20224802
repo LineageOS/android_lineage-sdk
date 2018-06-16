@@ -48,6 +48,23 @@
     },
     {
       "key": {
+        "uuid": "ceaf76db_73665feb",
+        "filename": "lineage/lib/main/java/org/lineageos/platform/internal/TrustInterfaceService.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 315,
+      "author": {
+        "id": 16082
+      },
+      "writtenOn": "2018-06-16T09:01:42Z",
+      "side": 1,
+      "message": "Uhhh... this is not what I meant. `dev-keys` should reside next to release-keys since they are equivalent",
+      "revId": "b158fcc56b91c02ab60c6d7c8c5c4f8b20224802",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6cb7f6f6_6adf3079",
         "filename": "lineage/lib/main/java/org/lineageos/platform/internal/TrustInterfaceService.java",
         "patchSetId": 2
