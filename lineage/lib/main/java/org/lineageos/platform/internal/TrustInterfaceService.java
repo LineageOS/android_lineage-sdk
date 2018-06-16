@@ -298,6 +298,7 @@ public class TrustInterfaceService extends LineageSystemService {
             case DevicePolicyManager.ENCRYPTION_STATUS_ACTIVE_DEFAULT_KEY:
                 return TrustInterface.TRUST_FEATURE_LEVEL_POOR;
             case DevicePolicyManager.ENCRYPTION_STATUS_INACTIVE:
+            case DevicePolicyManager.ENCRYPTION_STATUS_UNSUPPORTED:
                 return isOldDevice ?
                         TrustInterface.TRUST_FEATURE_LEVEL_POOR :
                         TrustInterface.TRUST_FEATURE_LEVEL_BAD;
