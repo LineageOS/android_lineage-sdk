@@ -22,6 +22,30 @@
       "revId": "203195a4449f06024d9e043e3c9dcf4055dda0c5",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ddf7440_2340bad5",
+        "filename": "lineage/res/res/values/strings.xml",
+        "patchSetId": 4
+      },
+      "lineNbr": 192,
+      "author": {
+        "id": 18154
+      },
+      "writtenOn": "2018-06-17T08:22:28Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "e759d88b_618865bc",
+      "range": {
+        "startLine": 192,
+        "startChar": 51,
+        "endLine": 192,
+        "endChar": 55
+      },
+      "revId": "203195a4449f06024d9e043e3c9dcf4055dda0c5",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
