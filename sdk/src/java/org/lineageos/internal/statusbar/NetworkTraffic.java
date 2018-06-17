@@ -110,8 +110,7 @@ public class NetworkTraffic extends TextView {
     private LineageStatusBarItem.DarkReceiver mDarkReceiver =
             new LineageStatusBarItem.DarkReceiver() {
         public void onDarkChanged(Rect area, float darkIntensity, int tint) {
-            mIconTint = (int) ArgbEvaluator.getInstance().evaluate(darkIntensity,
-                    mLightModeFillColor, mDarkModeFillColor);
+            mIconTint = tint;
             setTextColor(mIconTint);
             updateTrafficDrawableColor();
         }
@@ -365,7 +364,7 @@ public class NetworkTraffic extends TextView {
 
     private void updateTrafficDrawableColor() {
         if (mDrawable != null) {
-            mDrawable.setColorFilter(mIconTint, PorterDuff.Mode.SRC_ATOP);
+            mDrawable.setColorFilter(mIconTint, PorterDuff.Mode.MULTIPLY);
         }
     }
 }
