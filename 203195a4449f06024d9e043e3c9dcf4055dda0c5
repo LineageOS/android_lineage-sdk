@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "e759d88b_618865bc",
+        "filename": "lineage/res/res/values/strings.xml",
+        "patchSetId": 4
+      },
+      "lineNbr": 192,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2018-06-17T00:21:51Z",
+      "side": 1,
+      "message": "\"This\" would suit better imo. \"Your\" almost implies that it\u0027s a \"private\" build.",
+      "range": {
+        "startLine": 192,
+        "startChar": 51,
+        "endLine": 192,
+        "endChar": 55
+      },
+      "revId": "203195a4449f06024d9e043e3c9dcf4055dda0c5",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
