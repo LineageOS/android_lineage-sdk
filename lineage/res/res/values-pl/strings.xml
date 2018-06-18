@@ -150,4 +150,17 @@
   <string name="accent_purple">Lawendowy</string>
   <string name="accent_red">Pomidorowy</string>
   <string name="accent_yellow">Bananowy</string>
+  <!-- Trust interface -->
+  <!-- This string will be referenced from other apps when they're referring to the Trust interface.
+         Trust is a feature name, it's not suggested to translate this unless there are conflicts due
+         to a different meaning of the word "trust" in your language -->
+  <string name="trust_feature_name">Trust</string>
+  <string name="permlab_trustInterface">dostęp do interfejsu Trust</string>
+  <string name="permdesc_trustInterface">Zezwól aplikacji na wyświetlanie ostrzeżeń i sugestii Trust</string>
+  <string name="trust_notification_channel">Ostrzeżenia Trust</string>
+  <string name="trust_notification_title_selinux">Trust \u2022 Bezpieczeństwo systemu</string>
+  <string name="trust_notification_title_root">Trust \u2022 Dostęp do root</string>
+  <string name="trust_notification_content_root">Aplikacja używa teraz uprawnień root</string>
+  <string name="trust_notification_title_onboarding">Odkryj Trust</string>
+  <string name="trust_notification_content_onboarding">Dowiedz się jak zapewnić bezpieczeństwo twojemu urządzeniu</string>
 </resources>

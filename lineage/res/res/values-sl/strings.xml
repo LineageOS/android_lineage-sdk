@@ -150,4 +150,19 @@
   <string name="accent_purple">Sivka</string>
   <string name="accent_red">Paradižnik</string>
   <string name="accent_yellow">Banana</string>
+  <!-- Trust interface -->
+  <!-- This string will be referenced from other apps when they're referring to the Trust interface.
+         Trust is a feature name, it's not suggested to translate this unless there are conflicts due
+         to a different meaning of the word "trust" in your language -->
+  <string name="trust_feature_name">Trust</string>
+  <string name="permlab_trustInterface">dostop do Trust vmesnika</string>
+  <string name="permdesc_trustInterface">Dovoli aplikaciji prikazovanje Trust opozoril in predlogov</string>
+  <string name="trust_notification_channel">Trust opozorila</string>
+  <string name="trust_notification_title_selinux">Trust \u2022 Varnostni sistem</string>
+  <string name="trust_notification_content_selinux">SELinux se ne uveljavlja, vaša varnost je bila oslabljena</string>
+  <string name="trust_notification_title_root">Trust \u2022 Skrbniški dostop</string>
+  <string name="trust_notification_content_root">Aplikacija trenutno uporablja skrbniška dovoljenja</string>
+  <string name="trust_notification_title_onboarding">Odkrijte Trust</string>
+  <string name="trust_notification_content_onboarding">Spoznajte, kako zagotoviti varnost vaše naprave</string>
+  <string name="trust_notification_action_manage">Upravljaj z opozorili</string>
 </resources>

@@ -103,4 +103,8 @@
   <!-- Long-press back kill application -->
   <!-- Status bar network traffic monitor strings -->
   <!-- Accent colors -->
+  <!-- Trust interface -->
+  <!-- This string will be referenced from other apps when they're referring to the Trust interface.
+         Trust is a feature name, it's not suggested to translate this unless there are conflicts due
+         to a different meaning of the word "trust" in your language -->
 </resources>

@@ -30,6 +30,7 @@
   <string name="permlab_protectedApp">lägg till och ta bort appar som skyddade appar</string>
   <string name="permdesc_protectedApp">Ger en app tillstånd att markera andra appar som skyddade och låsa dem.</string>
   <!-- Labels for CHANGE_STYLE permission -->
+  <string name="permlab_changeStyle">ändra systemstil</string>
   <!-- this is wrong, but google's package manager uses the android:description
          attribute as description for the runtime permission request dialog
          with non-default dangerous permissions -->
@@ -77,6 +78,7 @@
   <!-- Performance manager permission description -->
   <string name="permdesc_perfAccessDesc">Ger en app åtkomst till prestandatjänsten. Ska aldrig behövas för vanliga appar.</string>
   <!-- Weather Service strings -->
+  <string name="permlab_weather_read">läsa väderinformation</string>
   <string name="permlab_weather_write">uppdatera väderleverantör</string>
   <!-- DataUsageProvider write permission title -->
   <!-- DataUsageProvider write permission description -->
@@ -97,6 +99,7 @@
   <!-- General purpose use "unknown" string -->
   <string name="unknown">Okänt</string>
   <!-- Long-press back kill application -->
+  <string name="app_killed_message">Applikationen har tvångsavslutats</string>
   <!-- Status bar network traffic monitor strings -->
   <string name="kilobitspersecond_short">kb/s</string>
   <string name="megabitspersecond_short">Mb/s</string>
@@ -113,4 +116,12 @@
   <string name="accent_purple">Lavendel</string>
   <string name="accent_red">Jordgubb</string>
   <string name="accent_yellow">Höstlöv</string>
+  <!-- Trust interface -->
+  <!-- This string will be referenced from other apps when they're referring to the Trust interface.
+         Trust is a feature name, it's not suggested to translate this unless there are conflicts due
+         to a different meaning of the word "trust" in your language -->
+  <string name="trust_feature_name">Trust</string>
+  <string name="trust_notification_channel">Trust larm</string>
+  <string name="trust_notification_title_root">Trust \u2022 Root-åtkomst</string>
+  <string name="trust_notification_title_onboarding">Utforska Trust</string>
 </resources>

@@ -137,7 +137,7 @@
   <!-- Status bar network traffic monitor strings -->
   <string name="kilobitspersecond_short">kb/초</string>
   <string name="megabitspersecond_short">Mb/초</string>
-  <string name="kilobytespersecond_short">kb/초</string>
+  <string name="kilobytespersecond_short">kB/초</string>
   <string name="megabytespersecond_short">MB/초</string>
   <!-- Accent colors -->
   <string name="accent_black">탄소강</string>
@@ -150,4 +150,19 @@
   <string name="accent_purple">라벤더</string>
   <string name="accent_red">토마토</string>
   <string name="accent_yellow">바나나</string>
+  <!-- Trust interface -->
+  <!-- This string will be referenced from other apps when they're referring to the Trust interface.
+         Trust is a feature name, it's not suggested to translate this unless there are conflicts due
+         to a different meaning of the word "trust" in your language -->
+  <string name="trust_feature_name">Trust</string>
+  <string name="permlab_trustInterface">Trust 인터페이스 접근</string>
+  <string name="permdesc_trustInterface">앱이 Trust 경고 및 제안을 띄울 수 있도록 허용합니다.</string>
+  <string name="trust_notification_channel">Trust 경보</string>
+  <string name="trust_notification_title_selinux">Trust \u2022 시스템 보안</string>
+  <string name="trust_notification_content_selinux">SELinux가 시행 모드가 아닙니다. 보안에 취약한 상태입니다.</string>
+  <string name="trust_notification_title_root">Trust \u2022 루트 권한</string>
+  <string name="trust_notification_content_root">앱이 지금 루트 권한을 사용하고 있습니다.</string>
+  <string name="trust_notification_title_onboarding">Trust 알아보기</string>
+  <string name="trust_notification_content_onboarding">기기를 안전하게 유지하는 방법 알아보기</string>
+  <string name="trust_notification_action_manage">경고 관리</string>
 </resources>
