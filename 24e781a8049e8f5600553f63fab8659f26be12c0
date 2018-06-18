@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "607d6ab3_f119076f",
+        "filename": "sdk/src/java/org/lineageos/internal/preference/deviceinfo/LineageVendorSecurityPatchPreference.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 18154
+      },
+      "writtenOn": "2018-06-18T08:57:28Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "c625804e_174e7535",
+      "range": {
+        "startLine": 35,
+        "startChar": 0,
+        "endLine": 39,
+        "endChar": 45
+      },
+      "revId": "24e781a8049e8f5600553f63fab8659f26be12c0",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "fbe225ed_efc73067",
         "filename": "sdk/src/java/org/lineageos/internal/preference/deviceinfo/LineageVendorSecurityPatchPreference.java",
         "patchSetId": 3
@@ -36,6 +60,30 @@
       "writtenOn": "2018-06-18T08:18:03Z",
       "side": 1,
       "message": "I believe that AOSP prop should be the main and we should fallback to Lineage one only if the former is not found. There are some few devices that already set the AOSP in vendor and this will certainly be the case in P.",
+      "range": {
+        "startLine": 63,
+        "startChar": 0,
+        "endLine": 68,
+        "endChar": 9
+      },
+      "revId": "24e781a8049e8f5600553f63fab8659f26be12c0",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da37b933_99ce0183",
+        "filename": "sdk/src/java/org/lineageos/internal/preference/deviceinfo/LineageVendorSecurityPatchPreference.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 18154
+      },
+      "writtenOn": "2018-06-18T08:57:28Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "fbe225ed_efc73067",
       "range": {
         "startLine": 63,
         "startChar": 0,
