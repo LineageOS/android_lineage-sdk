@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "428f7986_45717758",
+        "filename": "sdk/src/java/org/lineageos/internal/preference/deviceinfo/LineageVendorSecurityPatchPreference.java",
+        "patchSetId": 5
+      },
+      "lineNbr": 63,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2018-06-20T09:41:46Z",
+      "side": 1,
+      "message": "Remove",
+      "range": {
+        "startLine": 63,
+        "startChar": 74,
+        "endLine": 63,
+        "endChar": 78
+      },
+      "revId": "ae29305047bb301f915b75d752b9f9055b72cdbf",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "d0c6bf84_f25cc17e",
+        "filename": "sdk/src/java/org/lineageos/internal/preference/deviceinfo/LineageVendorSecurityPatchPreference.java",
+        "patchSetId": 5
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2018-06-20T09:41:46Z",
+      "side": 1,
+      "message": "patch.isEmpty()",
+      "range": {
+        "startLine": 65,
+        "startChar": 12,
+        "endLine": 65,
+        "endChar": 28
+      },
+      "revId": "ae29305047bb301f915b75d752b9f9055b72cdbf",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "cb143565_e31906b7",
+        "filename": "sdk/src/java/org/lineageos/internal/preference/deviceinfo/LineageVendorSecurityPatchPreference.java",
+        "patchSetId": 5
+      },
+      "lineNbr": 69,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2018-06-20T09:41:46Z",
+      "side": 1,
+      "message": "!patch.isEmpty()",
+      "range": {
+        "startLine": 69,
+        "startChar": 12,
+        "endLine": 69,
+        "endChar": 29
+      },
+      "revId": "ae29305047bb301f915b75d752b9f9055b72cdbf",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
