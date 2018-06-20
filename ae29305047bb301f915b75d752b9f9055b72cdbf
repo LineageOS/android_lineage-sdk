@@ -25,6 +25,29 @@
     },
     {
       "key": {
+        "uuid": "73bab56b_8b89f31a",
+        "filename": "sdk/src/java/org/lineageos/internal/preference/deviceinfo/LineageVendorSecurityPatchPreference.java",
+        "patchSetId": 5
+      },
+      "lineNbr": 63,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2018-06-20T09:50:53Z",
+      "side": 1,
+      "message": "Also rename it to \"patchLevel\"",
+      "range": {
+        "startLine": 63,
+        "startChar": 15,
+        "endLine": 63,
+        "endChar": 20
+      },
+      "revId": "ae29305047bb301f915b75d752b9f9055b72cdbf",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "d0c6bf84_f25cc17e",
         "filename": "sdk/src/java/org/lineageos/internal/preference/deviceinfo/LineageVendorSecurityPatchPreference.java",
         "patchSetId": 5
@@ -64,6 +87,29 @@
         "startChar": 12,
         "endLine": 69,
         "endChar": 29
+      },
+      "revId": "ae29305047bb301f915b75d752b9f9055b72cdbf",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "cbb5ce1f_34f0c7da",
+        "filename": "sdk/src/java/org/lineageos/internal/preference/deviceinfo/LineageVendorSecurityPatchPreference.java",
+        "patchSetId": 5
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2018-06-20T09:50:53Z",
+      "side": 1,
+      "message": "Fits into a single line.",
+      "range": {
+        "startLine": 73,
+        "startChar": 16,
+        "endLine": 74,
+        "endChar": 37
       },
       "revId": "ae29305047bb301f915b75d752b9f9055b72cdbf",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
