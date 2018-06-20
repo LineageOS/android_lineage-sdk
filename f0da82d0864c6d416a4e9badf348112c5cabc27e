@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0f234394_ac83880c",
+        "filename": "sdk/src/java/org/lineageos/internal/preference/deviceinfo/LineageVendorSecurityPatchPreference.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 69,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2018-06-20T21:12:44Z",
+      "side": 1,
+      "message": "!patchLevel.isEmpty()",
+      "range": {
+        "startLine": 69,
+        "startChar": 12,
+        "endLine": 69,
+        "endChar": 32
+      },
+      "revId": "f0da82d0864c6d416a4e9badf348112c5cabc27e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
