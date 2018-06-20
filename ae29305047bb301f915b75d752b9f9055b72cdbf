@@ -48,6 +48,54 @@
     },
     {
       "key": {
+        "uuid": "98b7f360_0d46fd27",
+        "filename": "sdk/src/java/org/lineageos/internal/preference/deviceinfo/LineageVendorSecurityPatchPreference.java",
+        "patchSetId": 5
+      },
+      "lineNbr": 63,
+      "author": {
+        "id": 18154
+      },
+      "writtenOn": "2018-06-20T11:36:18Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "428f7986_45717758",
+      "range": {
+        "startLine": 63,
+        "startChar": 74,
+        "endLine": 63,
+        "endChar": 78
+      },
+      "revId": "ae29305047bb301f915b75d752b9f9055b72cdbf",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "e0eeafe2_ebeaff56",
+        "filename": "sdk/src/java/org/lineageos/internal/preference/deviceinfo/LineageVendorSecurityPatchPreference.java",
+        "patchSetId": 5
+      },
+      "lineNbr": 63,
+      "author": {
+        "id": 18154
+      },
+      "writtenOn": "2018-06-20T11:36:18Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "73bab56b_8b89f31a",
+      "range": {
+        "startLine": 63,
+        "startChar": 15,
+        "endLine": 63,
+        "endChar": 20
+      },
+      "revId": "ae29305047bb301f915b75d752b9f9055b72cdbf",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "d0c6bf84_f25cc17e",
         "filename": "sdk/src/java/org/lineageos/internal/preference/deviceinfo/LineageVendorSecurityPatchPreference.java",
         "patchSetId": 5
@@ -59,6 +107,30 @@
       "writtenOn": "2018-06-20T09:41:46Z",
       "side": 1,
       "message": "patch.isEmpty()",
+      "range": {
+        "startLine": 65,
+        "startChar": 12,
+        "endLine": 65,
+        "endChar": 28
+      },
+      "revId": "ae29305047bb301f915b75d752b9f9055b72cdbf",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "52acebcf_dda876a8",
+        "filename": "sdk/src/java/org/lineageos/internal/preference/deviceinfo/LineageVendorSecurityPatchPreference.java",
+        "patchSetId": 5
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 18154
+      },
+      "writtenOn": "2018-06-20T11:36:18Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "d0c6bf84_f25cc17e",
       "range": {
         "startLine": 65,
         "startChar": 12,
@@ -94,6 +166,30 @@
     },
     {
       "key": {
+        "uuid": "a5b5b06b_f2e68351",
+        "filename": "sdk/src/java/org/lineageos/internal/preference/deviceinfo/LineageVendorSecurityPatchPreference.java",
+        "patchSetId": 5
+      },
+      "lineNbr": 69,
+      "author": {
+        "id": 18154
+      },
+      "writtenOn": "2018-06-20T11:36:18Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "cb143565_e31906b7",
+      "range": {
+        "startLine": 69,
+        "startChar": 12,
+        "endLine": 69,
+        "endChar": 29
+      },
+      "revId": "ae29305047bb301f915b75d752b9f9055b72cdbf",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "cbb5ce1f_34f0c7da",
         "filename": "sdk/src/java/org/lineageos/internal/preference/deviceinfo/LineageVendorSecurityPatchPreference.java",
         "patchSetId": 5
@@ -105,6 +201,30 @@
       "writtenOn": "2018-06-20T09:50:53Z",
       "side": 1,
       "message": "Fits into a single line.",
+      "range": {
+        "startLine": 73,
+        "startChar": 16,
+        "endLine": 74,
+        "endChar": 37
+      },
+      "revId": "ae29305047bb301f915b75d752b9f9055b72cdbf",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "71de56a1_e1e13318",
+        "filename": "sdk/src/java/org/lineageos/internal/preference/deviceinfo/LineageVendorSecurityPatchPreference.java",
+        "patchSetId": 5
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 18154
+      },
+      "writtenOn": "2018-06-20T11:36:18Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "cbb5ce1f_34f0c7da",
       "range": {
         "startLine": 73,
         "startChar": 16,
