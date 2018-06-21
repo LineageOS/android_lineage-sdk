@@ -22,6 +22,29 @@
       "revId": "f0da82d0864c6d416a4e9badf348112c5cabc27e",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ac8c0277_f9f43d62",
+        "filename": "sdk/src/java/org/lineageos/internal/preference/deviceinfo/LineageVendorSecurityPatchPreference.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 79,
+      "author": {
+        "id": 2936
+      },
+      "writtenOn": "2018-06-21T04:08:32Z",
+      "side": 1,
+      "message": "Shouldn\u0027t this be done in setSummary() if the return value of getVendorSecurityPatchLevel is empty? It\u0027s weird to mash this logic into this function.",
+      "range": {
+        "startLine": 79,
+        "startChar": 12,
+        "endLine": 79,
+        "endChar": 37
+      },
+      "revId": "f0da82d0864c6d416a4e9badf348112c5cabc27e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
