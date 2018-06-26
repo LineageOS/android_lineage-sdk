@@ -25,6 +25,23 @@
     },
     {
       "key": {
+        "uuid": "4c222484_ce43f59a",
+        "filename": "sdk/src/java/org/lineageos/internal/util/TelephonyExtUtils.java",
+        "patchSetId": 23
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2018-06-26T10:10:26Z",
+      "side": 1,
+      "message": "Nit: can move this up to line 54 and make mReceiver final:\n\nprivate final BroadcastReceiver mReceiver \u003d new BroadcastReceiver() {\n    [...]\n};",
+      "revId": "d82f0cd3c4e2a548355719cc178bb8c187a380ae",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "f46c158b_2c6e4738",
         "filename": "sdk/src/java/org/lineageos/internal/util/TelephonyExtUtils.java",
         "patchSetId": 23
@@ -65,6 +82,47 @@
         "endLine": 71,
         "endChar": 63
       },
+      "revId": "d82f0cd3c4e2a548355719cc178bb8c187a380ae",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "f59e2a5a_1ceb665a",
+        "filename": "sdk/src/java/org/lineageos/internal/util/TelephonyExtUtils.java",
+        "patchSetId": 23
+      },
+      "lineNbr": 71,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2018-06-26T10:10:26Z",
+      "side": 1,
+      "message": "The current version is definitely better than that.",
+      "parentUuid": "0c7bb409_f1570f1d",
+      "range": {
+        "startLine": 71,
+        "startChar": 42,
+        "endLine": 71,
+        "endChar": 63
+      },
+      "revId": "d82f0cd3c4e2a548355719cc178bb8c187a380ae",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "768fca00_2f26ba7b",
+        "filename": "sdk/src/java/org/lineageos/internal/util/TelephonyExtUtils.java",
+        "patchSetId": 23
+      },
+      "lineNbr": 235,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2018-06-26T10:10:26Z",
+      "side": 1,
+      "message": "Doesn\u0027t this deserve at least d or i level?",
       "revId": "d82f0cd3c4e2a548355719cc178bb8c187a380ae",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
