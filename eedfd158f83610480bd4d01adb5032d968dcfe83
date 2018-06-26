@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "c6d94416_8dbee2a4",
+        "filename": "Android.mk",
+        "patchSetId": 24
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2018-06-26T16:29:02Z",
+      "side": 1,
+      "message": "This is not needed here, then.",
+      "range": {
+        "startLine": 51,
+        "startChar": 4,
+        "endLine": 51,
+        "endChar": 19
+      },
+      "revId": "eedfd158f83610480bd4d01adb5032d968dcfe83",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "187b45b0_a52dfb3c",
+        "filename": "Android.mk",
+        "patchSetId": 24
+      },
+      "lineNbr": 202,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2018-06-26T16:29:02Z",
+      "side": 1,
+      "message": "Ditto.",
+      "range": {
+        "startLine": 202,
+        "startChar": 4,
+        "endLine": 202,
+        "endChar": 19
+      },
+      "revId": "eedfd158f83610480bd4d01adb5032d968dcfe83",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
