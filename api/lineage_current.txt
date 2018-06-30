@@ -785,7 +785,8 @@ package lineageos.providers {
     method public static boolean putString(android.content.ContentResolver, java.lang.String, java.lang.String);
     field public static final android.net.Uri CONTENT_URI;
     field public static final java.lang.String SYS_PROP_LINEAGE_SETTING_VERSION = "sys.lineage_settings_secure_version";
-    field public static final java.lang.String TRUST_NOTIFICATIONS = "trust_notifications";
+    field public static final deprecated java.lang.String TRUST_NOTIFICATIONS = "trust_notifications";
+    field public static final java.lang.String TRUST_WARNINGS = "trust_warnings";
   }
 
   public static final class LineageSettings.System extends android.provider.Settings.NameValueTable {
@@ -1047,6 +1048,9 @@ package lineageos.trust {
     field public static final int TRUST_FEATURE_SELINUX = 0; // 0x0
     field public static final int TRUST_FEATURE_VENDOR_SECURITY_PATCH = 3; // 0x3
     field public static final java.lang.String TRUST_INTERFACE_PERMISSION = "lineageos.permission.TRUST_INTERFACE";
+    field public static final int TRUST_WARN_PUBLIC_KEY = 4; // 0x4
+    field public static final int TRUST_WARN_ROOT = 2; // 0x2
+    field public static final int TRUST_WARN_SELINUX = 1; // 0x1
   }
 
 }
