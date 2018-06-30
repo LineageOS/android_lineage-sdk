@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2015, The LineageOS Project
+ * Copyright (c) 2018, The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -140,6 +140,49 @@ public class TrustInterface {
      */
     public static final int TRUST_FEATURE_KEYS = 5;
 
+    /**
+     * Trust warning: SELinux
+     *
+     * When {@link #TRUST_FEATURE_SELINUX} is not {@link #TRUST_FEATURE_LEVEL_GOOD}
+     * notify the user about the issue
+     *
+     * @see #postNotificationForFeature
+     */
+    public static final int TRUST_WARN_SELINUX = 1;
+
+    /**
+     * Trust warning: Root access
+     *
+     * When {@link #TRUST_FEATURE_ROOT} is not {@link #TRUST_FEATURE_LEVEL_GOOD}
+     * notify the user about the issue
+     *
+     * @see #postNotificationForFeature
+     */
+    public static final int TRUST_WARN_ROOT = 1 << 1;
+
+    /**
+     * Trust warning: Public Key build signature
+     *
+     * When {@link #TRUST_FEATURE_KEYS} is not {@link #TRUST_FEATURE_LEVEL_GOOD}
+     * notify the user about the issue
+     *
+     * @see #postNotificationForFeature
+     */
+    public static final int TRUST_WARN_PUBLIC_KEY = 1 << 2;
+
+    /**
+     * Max / default value for warnings status
+     *
+     * Includes all the TRUST_WARN_
+     *
+     * @see #postNotificationForFeature
+     * @hide
+     */
+    public static final int TRUST_WARN_MAX_VALUE =
+            TRUST_WARN_SELINUX |
+            TRUST_WARN_ROOT |
+            TRUST_WARN_PUBLIC_KEY;
+
     private static final String TAG = "TrustInterface";
 
     private static ITrustInterface sService;
@@ -223,6 +266,19 @@ public class TrustInterface {
             Log.e(TAG, e.getLocalizedMessage(), e);
         }
         return ERROR_UNDEFINED;
+    }
+
+    /** @hide */
+    public void runTest() {
+        if (sService == null) {
+            return;
+        }
+        try {
+            sService.runTest();
+        } catch (RemoteException e) {
+            Log.e(TAG, e.getLocalizedMessage(), e);
+        }
+        return;
     }
 }
 
