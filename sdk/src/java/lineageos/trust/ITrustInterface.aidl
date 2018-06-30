@@ -23,4 +23,5 @@ interface ITrustInterface {
     boolean postNotificationForFeature(int feature);
     boolean removeNotificationForFeature(int feature);
     int getLevelForFeature(int feature);
+    void runTest();
 }
