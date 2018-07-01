@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4fad909a_940e119a",
+        "filename": "lineage/lib/main/java/org/lineageos/platform/internal/TrustInterfaceService.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 97,
+      "author": {
+        "id": 13589
+      },
+      "writtenOn": "2018-07-01T21:03:21Z",
+      "side": 0,
+      "message": "Any reason to remove this ?\n\nThis prevents second boots (without boarding) from showing any warnings.\n\nrunTestInternal should be called here too.",
+      "revId": "fcf9ab546137f7d1a8c0149f06e699ccbbfd1578",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
