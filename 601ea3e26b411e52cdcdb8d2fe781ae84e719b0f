@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5c2eec41_d020a243",
+        "filename": "lineage/lib/main/java/org/lineageos/platform/internal/TrustInterfaceService.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 93,
+      "author": {
+        "id": 13589
+      },
+      "writtenOn": "2018-07-01T21:49:15Z",
+      "side": 1,
+      "message": "Resolves the issue from PS1.",
+      "revId": "601ea3e26b411e52cdcdb8d2fe781ae84e719b0f",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
