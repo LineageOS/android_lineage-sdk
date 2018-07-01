@@ -51,8 +51,6 @@ public class TrustInterfaceService extends LineageSystemService {
     private static final String TAG = "LineageTrustInterfaceService";
     private static final String PLATFORM_SECURITY_PATCHES = "ro.build.version.security_patch";
     private static final String VENDOR_SECURITY_PATCHES = "ro.vendor.build.security_patch";
-    private static final String LINEAGE_VENDOR_SECURITY_PATCHES =
-            "ro.lineage.build.vendor_security_patch";
     private static final String INTENT_PARTS = "org.lineageos.lineageparts.TRUST_INTERFACE";
     private static final String INTENT_ONBOARDING = "org.lineageos.lineageparts.TRUST_HINT";
     private static final String CHANNEL_NAME = "TrustInterface";
@@ -257,15 +255,7 @@ public class TrustInterfaceService extends LineageSystemService {
     private int getSecurityPatchStatus(String target) {
         String patchLevel = SystemProperties.get(target);
         if (TextUtils.isEmpty(patchLevel)) {
-            // Try to fallback to Lineage vendor prop
-            if (VENDOR_SECURITY_PATCHES.equals(target)) {
-                    patchLevel = SystemProperties.get(LINEAGE_VENDOR_SECURITY_PATCHES);
-                    if (TextUtils.isEmpty(patchLevel)) {
-                        return TrustInterface.ERROR_UNDEFINED;
-                    }
-            } else {
-                return TrustInterface.ERROR_UNDEFINED;
-            }
+            return TrustInterface.ERROR_UNDEFINED;
         }
 
         Calendar today = Calendar.getInstance();
