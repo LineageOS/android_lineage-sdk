@@ -755,6 +755,7 @@ package lineageos.providers {
     method public static long getLong(android.content.ContentResolver, java.lang.String, long);
     method public static long getLong(android.content.ContentResolver, java.lang.String) throws lineageos.providers.LineageSettings.LineageSettingNotFoundException;
     method public static java.lang.String getString(android.content.ContentResolver, java.lang.String);
+    method public static java.lang.String getString(android.content.ContentResolver, java.lang.String, java.lang.String);
     method public static android.net.Uri getUriFor(java.lang.String);
     method public static boolean putFloat(android.content.ContentResolver, java.lang.String, float);
     method public static boolean putInt(android.content.ContentResolver, java.lang.String, int);
@@ -778,6 +779,7 @@ package lineageos.providers {
     method public static long getLong(android.content.ContentResolver, java.lang.String, long);
     method public static long getLong(android.content.ContentResolver, java.lang.String) throws lineageos.providers.LineageSettings.LineageSettingNotFoundException;
     method public static java.lang.String getString(android.content.ContentResolver, java.lang.String);
+    method public static java.lang.String getString(android.content.ContentResolver, java.lang.String, java.lang.String);
     method public static android.net.Uri getUriFor(java.lang.String);
     method public static boolean putFloat(android.content.ContentResolver, java.lang.String, float);
     method public static boolean putInt(android.content.ContentResolver, java.lang.String, int);
@@ -798,6 +800,7 @@ package lineageos.providers {
     method public static long getLong(android.content.ContentResolver, java.lang.String, long);
     method public static long getLong(android.content.ContentResolver, java.lang.String) throws lineageos.providers.LineageSettings.LineageSettingNotFoundException;
     method public static java.lang.String getString(android.content.ContentResolver, java.lang.String);
+    method public static java.lang.String getString(android.content.ContentResolver, java.lang.String, java.lang.String);
     method public static android.net.Uri getUriFor(java.lang.String);
     method public static boolean putFloat(android.content.ContentResolver, java.lang.String, float);
     method public static boolean putInt(android.content.ContentResolver, java.lang.String, int);
@@ -814,6 +817,7 @@ package lineageos.providers {
     field public static final java.lang.String BATTERY_LIGHT_MEDIUM_COLOR = "battery_light_medium_color";
     field public static final java.lang.String BATTERY_LIGHT_PULSE = "battery_light_pulse";
     field public static final java.lang.String BERRY_CURRENT_ACCENT = "berry_current_accent";
+    field public static final java.lang.String BERRY_DARK_OVERLAY = "berry_dark_overlay";
     field public static final java.lang.String BERRY_GLOBAL_STYLE = "berry_global_style";
     field public static final java.lang.String BERRY_MANAGED_BY_APP = "berry_managed_by_app";
     field public static final java.lang.String BLUETOOTH_ACCEPT_ALL_FILES = "bluetooth_accept_all_files";
@@ -1010,6 +1014,7 @@ package lineageos.style {
     method public static lineageos.style.StyleInterface getInstance(android.content.Context);
     method public lineageos.style.Suggestion getSuggestion(android.graphics.Bitmap, int[]);
     method public java.util.List<java.lang.String> getTrustedAccents();
+    method public boolean isDarkNow();
     method public boolean setAccent(java.lang.String);
     method public boolean setGlobalStyle(int, java.lang.String);
     field public static final java.lang.String ACCENT_DEFAULT = "lineageos";

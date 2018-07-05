@@ -526,6 +526,18 @@ public final class LineageSettings {
             return getStringForUser(resolver, name, UserHandle.myUserId());
         }
 
+        /**
+         * Look up a name in the database.
+         * @param resolver to access the database with
+         * @param name to look up in the table
+         * @param def Value to return if the setting is not defined.
+         * @return the corresponding value, or null if not present
+         */
+        public static String getString(ContentResolver resolver, String name, String def) {
+            String str = getStringForUser(resolver, name, UserHandle.myUserId());
+            return str == null ? def : str;
+        }
+
         /** @hide */
         public static String getStringForUser(ContentResolver resolver, String name,
                 int userId) {
@@ -1341,6 +1353,15 @@ public final class LineageSettings {
 
         /** @hide */
         public static final Validator BERRY_CURRENT_ACCENT_VALIDATOR =
+                sNonNullStringValidator;
+
+        /**
+         * Current dark overlay package name
+         */
+        public static final String BERRY_DARK_OVERLAY = "berry_dark_overlay";
+
+        /** @hide */
+        public static final Validator BERRY_DARK_OVERLAY_VALIDATOR =
                 sNonNullStringValidator;
 
         /**
@@ -2242,6 +2263,7 @@ public final class LineageSettings {
             VALIDATORS.put(PROXIMITY_ON_WAKE, PROXIMITY_ON_WAKE_VALIDATOR);
             VALIDATORS.put(BERRY_GLOBAL_STYLE, BERRY_GLOBAL_STYLE_VALIDATOR);
             VALIDATORS.put(BERRY_CURRENT_ACCENT, BERRY_CURRENT_ACCENT_VALIDATOR);
+            VALIDATORS.put(BERRY_DARK_OVERLAY, BERRY_DARK_OVERLAY_VALIDATOR);
             VALIDATORS.put(BERRY_MANAGED_BY_APP, BERRY_MANAGED_BY_APP_VALIDATOR);
             VALIDATORS.put(ENABLE_FORWARD_LOOKUP, ENABLE_FORWARD_LOOKUP_VALIDATOR);
             VALIDATORS.put(ENABLE_PEOPLE_LOOKUP, ENABLE_PEOPLE_LOOKUP_VALIDATOR);
@@ -2418,6 +2440,18 @@ public final class LineageSettings {
          */
         public static String getString(ContentResolver resolver, String name) {
             return getStringForUser(resolver, name, UserHandle.myUserId());
+        }
+
+        /**
+         * Look up a name in the database.
+         * @param resolver to access the database with
+         * @param name to look up in the table
+         * @param def Value to return if the setting is not defined.
+         * @return the corresponding value, or null if not present
+         */
+        public static String getString(ContentResolver resolver, String name, String def) {
+            String str = getStringForUser(resolver, name, UserHandle.myUserId());
+            return str == null ? def : str;
         }
 
         /** @hide */
@@ -3282,6 +3316,18 @@ public final class LineageSettings {
          */
         public static String getString(ContentResolver resolver, String name) {
             return getStringForUser(resolver, name, UserHandle.myUserId());
+        }
+
+        /**
+         * Look up a name in the database.
+         * @param resolver to access the database with
+         * @param name to look up in the table
+         * @param def Value to return if the setting is not defined.
+         * @return the corresponding value, or null if not present
+         */
+        public static String getString(ContentResolver resolver, String name, String def) {
+            String str = getStringForUser(resolver, name, UserHandle.myUserId());
+            return str == null ? def : str;
         }
 
         /** @hide */

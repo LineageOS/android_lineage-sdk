@@ -79,6 +79,8 @@ public class StyleInterfaceService extends LineageSystemService {
                 "You do not have permissions to change system style");
     }
 
+    /* Public methods implementation */
+
     private boolean setGlobalStyleInternal(int mode, String packageName) {
         // Check whether the packageName is valid
         if (isAValidPackage(packageName)) {
@@ -168,6 +170,44 @@ public class StyleInterfaceService extends LineageSystemService {
         return results;
     }
 
+    private boolean isDarkNowInternal() {
+        String target = getDarkOverlayInternal();
+        return isEnabled(target);
+    }
+
+    private boolean setDarkOverlayInternal(String overlayName) {
+        boolean isDefault = StyleInterface.OVERLAY_DARK_DEFAULT.equals(overlayName);
+        boolean isBlack = StyleInterface.OVERLAY_DARK_BLACK.equals(overlayName);
+        int userId = UserHandle.myUserId();
+
+        if (!isDefault && !isBlack) {
+            Log.e(TAG, overlayName + " is not a valid dark overlay!");
+            return false;
+        }
+
+        try {
+            String currentDarkOverlay = LineageSettings.System.getString(
+                    mContext.getContentResolver(), LineageSettings.System.BERRY_DARK_OVERLAY,
+                    StyleInterface.OVERLAY_DARK_DEFAULT);
+            if (isEnabled(currentDarkOverlay)) {
+                // Swich dark overlays
+                mOverlayService.setEnabled(currentDarkOverlay, false, userId);
+                mOverlayService.setEnabled(overlayName, true, userId);
+            }
+            return true;
+        } catch (RemoteException e) {
+            Log.e(TAG, "Failed to change dark overlay");
+        }
+        return false;
+    }
+
+    private String getDarkOverlayInternal() {
+        return LineageSettings.System.getString(mContext.getContentResolver(),
+                LineageSettings.System.BERRY_DARK_OVERLAY, StyleInterface.OVERLAY_DARK_DEFAULT);
+    }
+
+    /* Utils */
+
     private int getBestColor(int sourceColor, int[] colors) {
         int best = 0;
         double minDiff = Double.MAX_VALUE;
@@ -205,6 +245,17 @@ public class StyleInterfaceService extends LineageSystemService {
         }
     }
 
+    private boolean isEnabled(String pkgName) {
+        int userId = UserHandle.myUserId();
+        try {
+            OverlayInfo info = mOverlayService.getOverlayInfo(pkgName, userId);
+            return info.isEnabled();
+        } catch (RemoteException e) {
+            Log.e(TAG, e.getLocalizedMessage());
+        }
+        return false;
+    }
+
     private boolean isValidAccent(String pkgName) {
         try {
             ApplicationInfo ai = mPackageManager.getApplicationInfo(pkgName,
@@ -224,6 +275,8 @@ public class StyleInterfaceService extends LineageSystemService {
             return false;
         }
     }
+
+    /* Binder */
 
     private final IBinder mService = new IStyleInterface.Stub() {
         @Override
@@ -306,6 +359,46 @@ public class StyleInterfaceService extends LineageSystemService {
              */
             long token = clearCallingIdentity();
             List<String> result = getTrustedAccentsInternal();
+            restoreCallingIdentity(token);
+            return result;
+        }
+
+        @Override
+        public boolean isDarkNow() {
+            /*
+             * We need to clear the caller's identity in order to
+             *   allow this method call to modify settings
+             *   not allowed by the caller's permissions.
+             */
+            long token = clearCallingIdentity();
+            boolean result = isDarkNowInternal();
+            restoreCallingIdentity(token);
+            return result;
+        }
+
+        @Override
+        public boolean setDarkOverlay(String overlayName) {
+            enforceChangeStylePermission();
+            /*
+             * We need to clear the caller's identity in order to
+             *   allow this method call to modify settings
+             *   not allowed by the caller's permissions.
+             */
+            long token = clearCallingIdentity();
+            boolean success = setDarkOverlayInternal(overlayName);
+            restoreCallingIdentity(token);
+            return success;
+        }
+
+        @Override
+        public String getDarkOverlay() {
+            /*
+             * We need to clear the caller's identity in order to
+             *   allow this method call to modify settings
+             *   not allowed by the caller's permissions.
+             */
+            long token = clearCallingIdentity();
+            String result = getDarkOverlayInternal();
             restoreCallingIdentity(token);
             return result;
         }
