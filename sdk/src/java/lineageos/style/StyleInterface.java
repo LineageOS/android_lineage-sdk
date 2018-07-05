@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2015, The CyanogenMod Project
+ * Copyright (c) 2018, The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -70,6 +70,22 @@ public class StyleInterface {
      * @see #setAccent
      */
     public static final String ACCENT_DEFAULT = "lineageos";
+
+    /**
+     * Dark style: default
+     *
+     * @see #setDarkOverlay
+     * @hide
+     */
+    public static final String OVERLAY_DARK_DEFAULT = "org.lineageos.overlay.dark";
+
+    /**
+     * Dark style: black
+     *
+     * @see #setDarkOverlay
+     * @hide
+     */
+    public static final String OVERLAY_DARK_BLACK = "org.lineageos.overlay.black";
 
     /**
      * Allows an application to change system style.
@@ -267,5 +283,70 @@ public class StyleInterface {
             Log.e(TAG, e.getLocalizedMessage(), e);
         }
         return fallback;
+    }
+
+    /**
+     * Determine whether the dark style is being used right now,
+     * regardless of the current global style mode.
+     *
+     * @return Returns true if dark style is enabled
+     */
+    public boolean isDarkNow() {
+        if (sService == null) {
+            return false;
+        }
+        try {
+            return sService.isDarkNow();
+        } catch (RemoteException e) {
+            Log.e(TAG, e.getLocalizedMessage(), e);
+        }
+        return false;
+    }
+
+    /**
+     * Set dark overlay package.
+     *
+     * You will need {@link #CHANGE_STYLE_SETTINGS_PERMISSION}
+     * to utilize this functionality.
+     *
+     * @see #OVERLAY_DARK_DEFAULT
+     * @see #OVERLAY_DARK_BLACK
+     * @param overlayName The package name of the overlay.
+     *             One of {@link #OVERLAY_DARK_DEFAULT} or
+     *             {@link #OVERLAY_DARK_BLACK},
+     *
+     * @return Whether the process failed
+     * @hide
+     */
+    public boolean setDarkOverlay(String overlayName) {
+        if (sService == null) {
+            return false;
+        }
+        try {
+            return sService.setDarkOverlay(overlayName);
+        } catch (RemoteException e) {
+            Log.e(TAG, e.getLocalizedMessage(), e);
+        }
+        return false;
+    }
+
+    /**
+     * Get current dark overlay package name.
+     *
+     * @see #OVERLAY_DARK_DEFAULT
+     * @see #OVERLAY_DARK_BLACK
+     * @@return {@link #OVERLAY_DARK_DEFAULT} or {@link #OVERLAY_DARK_BLACK}
+     * @hide
+     */
+    public String getDarkOverlay() {
+        if (sService == null) {
+            return OVERLAY_DARK_DEFAULT;
+        }
+        try {
+            return sService.getDarkOverlay();
+        } catch (RemoteException e) {
+            Log.e(TAG, e.getLocalizedMessage(), e);
+        }
+        return OVERLAY_DARK_DEFAULT;
     }
 }

@@ -30,4 +30,7 @@ interface IStyleInterface {
     String getAccent();
     Suggestion getSuggestion(in Bitmap source, in int[] colors);
     List<String> getTrustedAccents();
+    boolean isDarkNow();
+    boolean setDarkOverlay(String overlayName);
+    String getDarkOverlay();
 }
