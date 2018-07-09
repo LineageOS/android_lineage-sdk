@@ -158,10 +158,12 @@
   <string name="permlab_trustInterface">aceder à interface Trust</string>
   <string name="permdesc_trustInterface">Permite que uma aplicação mostre avisos e sugestões da interface Trust</string>
   <string name="trust_notification_channel">Alertas Trust</string>
-  <string name="trust_notification_title_selinux">Trust \u2022 Sistema de segurança</string>
+  <string name="trust_notification_title_security">Trust \u2022 Sistema de segurança</string>
   <string name="trust_notification_content_selinux">O SELinux não está no modo Forçador. A sua segurança torna-se mais fraca</string>
   <string name="trust_notification_title_root">Trust \u2022 Acesso root</string>
   <string name="trust_notification_content_root">Há uma aplicação a utilizar privilégios de Root neste momento</string>
+  <string name="trust_notification_content_keys">Esta compilação foi assinada com chaves públicas</string>
   <string name="trust_notification_title_onboarding">Descoberta Trust</string>
   <string name="trust_notification_content_onboarding">Fique a saber como garantir que o seu dispositivo é seguro</string>
+  <string name="trust_notification_action_manage">Gerir alertas</string>
 </resources>

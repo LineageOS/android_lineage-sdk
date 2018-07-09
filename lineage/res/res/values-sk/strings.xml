@@ -158,10 +158,11 @@
   <string name="permlab_trustInterface">prístup k rozhraniu Trust</string>
   <string name="permdesc_trustInterface">Umožňuje aplikácii zobrazovať upozornenia a návrhy Trust</string>
   <string name="trust_notification_channel">Upozornenia Trust</string>
-  <string name="trust_notification_title_selinux">Trust \u2022 Bezpečnostný systém</string>
+  <string name="trust_notification_title_security">Trust \u2022 Bezpečnostný systém</string>
   <string name="trust_notification_content_selinux">Ak SELinux nie je vynútený, vaša úroveň zabezpečenia je oslabená</string>
   <string name="trust_notification_title_root">Trust \u2022 Root prístup</string>
   <string name="trust_notification_content_root">Aplikácia práve používa práva root</string>
+  <string name="trust_notification_content_keys">Táto zostava je podpísaná s verejnými kľúčmi</string>
   <string name="trust_notification_title_onboarding">Objavte Trust</string>
   <string name="trust_notification_content_onboarding">Zistite, ako zabezpečiť bezpečnosť zariadenia</string>
   <string name="trust_notification_action_manage">Správa upozornení</string>

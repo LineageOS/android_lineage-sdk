@@ -158,10 +158,11 @@
   <string name="permlab_trustInterface">πρόσβαση στη διασύνδεση Εμπιστοσύνης</string>
   <string name="permdesc_trustInterface">Επιτρέπει σε μια εφαρμογή να εμφανίζει προειδοποιήσεις και προτάσεις Εμπιστοσύνης</string>
   <string name="trust_notification_channel">Ειδοποιήσεις Εμπιστοσύνης</string>
-  <string name="trust_notification_title_selinux">Εμπιστοσύνη \u2022 Ασφάλεια συστήματος</string>
+  <string name="trust_notification_title_security">Εμπιστοσύνη \u2022 Ασφάλεια συστήματος</string>
   <string name="trust_notification_content_selinux">Οι κανόνες SELinux δεν επιβάλλονται, η ασφάλειά σας έχει αποδυναμωθεί</string>
   <string name="trust_notification_title_root">Εμπιστοσύνη \u2022 Πρόσβαση root</string>
   <string name="trust_notification_content_root">Μια εφαρμογή χρησιμοποιεί τα προνόμια root αυτήν τη στιγμή</string>
+  <string name="trust_notification_content_keys">Αυτό το build υπογράφηκε με δημόσια κλειδιά</string>
   <string name="trust_notification_title_onboarding">Ανακαλύψτε την Εμπιστοσύνη</string>
   <string name="trust_notification_content_onboarding">Μάθετε πώς μπορείτε να βεβαιωθείτε ότι η συσκευή σας είναι ασφαλής</string>
   <string name="trust_notification_action_manage">Διαχείριση ειδοποιήσεων</string>

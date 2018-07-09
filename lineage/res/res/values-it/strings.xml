@@ -158,10 +158,10 @@
   <string name="permlab_trustInterface">accedi all\'interfaccia Trust</string>
   <string name="permdesc_trustInterface">Consente ad un\'app di mostrare suggerimenti e avvisi di Trust</string>
   <string name="trust_notification_channel">Avvisi Trust</string>
-  <string name="trust_notification_title_selinux">Trust \u2022 Sicurezza del sistema</string>
   <string name="trust_notification_content_selinux">SELinux non è attivo, la tua sicurezza è stata indebolita</string>
   <string name="trust_notification_title_root">Trust \u2022 Accesso root</string>
   <string name="trust_notification_content_root">Un\'app sta utilizzando i permessi root in questo momento</string>
   <string name="trust_notification_title_onboarding">Scopri Trust</string>
   <string name="trust_notification_content_onboarding">Vedi come assicurare la sicurezza del tuo dispositivo</string>
+  <string name="trust_notification_action_manage">Gestisci avvisi</string>
 </resources>

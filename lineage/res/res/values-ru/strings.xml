@@ -33,7 +33,7 @@
   <string name="permdesc_writeSecureSettings">Позволяет приложению изменять параметры безопасности системы Lineage. Не используется в обычных приложениях.</string>
   <!-- Labels for the PROTECTED_APP permission. -->
   <string name="permlab_protectedApp">добавление и удаление записей перечня защищенных приложений</string>
-  <string name="permdesc_protectedApp">Приложение сможет помечать другие приложения как защищённые и блокировать их.</string>
+  <string name="permdesc_protectedApp">Приложение сможет помечать другие приложения как защищенные и блокировать их.</string>
   <!-- Labels for CHANGE_STYLE permission -->
   <string name="permlab_changeStyle">изменение стиля системы</string>
   <!-- this is wrong, but google's package manager uses the android:description
@@ -67,7 +67,7 @@
   <string name="perf_profile_bal_summary">Баланс оптимальной производительности и энергопотребления</string>
   <string name="perf_profile_perf_summary">Режим высокой производительности. Полезно при работе с приложениями, требующими минимального времени отклика и высокой скорости обмена данными, и когда энергопотребление устройства неважно</string>
   <string name="perf_profile_bias_power_summary">Стараться экономить энергию. Ограничивается максимальная мощность процессора ценой увеличения времени отклика системы</string>
-  <string name="perf_profile_bias_perf_summary">Повышенная производительность. Уменьшает время отклика за счёт немного повышенного энергопотребления</string>
+  <string name="perf_profile_bias_perf_summary">Повышенная производительность. Уменьшает время отклика за счет немного повышенного энергопотребления</string>
   <!-- LiveDisplay strings -->
   <string name="live_display_auto">Автоматически</string>
   <string name="live_display_auto_summary">Автоматическая подстройка цветовой температуры экрана после заката и восхода солнца</string>
@@ -86,10 +86,10 @@
   <string name="accessibility_quick_settings_live_display_night">LiveDisplay работает в ночном режиме.</string>
   <string name="accessibility_quick_settings_live_display_outdoor">LiveDisplay работает в режиме «на улице».</string>
   <string name="accessibility_quick_settings_live_display_changed_off">LiveDisplay выключен.</string>
-  <string name="accessibility_quick_settings_live_display_changed_auto">LiveDisplay переключён в автоматический режим.</string>
-  <string name="accessibility_quick_settings_live_display_changed_day">LiveDisplay переключён в дневной режим.</string>
-  <string name="accessibility_quick_settings_live_display_changed_night">LiveDisplay переключён в ночной режим.</string>
-  <string name="accessibility_quick_settings_live_display_changed_outdoor">LiveDisplay переключён в режим «на улице».</string>
+  <string name="accessibility_quick_settings_live_display_changed_auto">LiveDisplay переключен в автоматический режим.</string>
+  <string name="accessibility_quick_settings_live_display_changed_day">LiveDisplay переключен в дневной режим.</string>
+  <string name="accessibility_quick_settings_live_display_changed_night">LiveDisplay переключен в ночной режим.</string>
+  <string name="accessibility_quick_settings_live_display_changed_outdoor">LiveDisplay переключен в режим «на улице».</string>
   <!-- Performance manager permission title -->
   <string name="permlab_perfAccess">доступ к менеджеру производительности</string>
   <!-- Performance manager permission description -->
@@ -158,9 +158,12 @@
   <string name="permlab_trustInterface">доступ к интерфейсу Trust</string>
   <string name="permdesc_trustInterface">Позволяет приложению отображать предупреждения и предложения Trust</string>
   <string name="trust_notification_channel">Предупреждения Trust</string>
-  <string name="trust_notification_title_selinux">Trust \u2022 Безопасность системы</string>
+  <string name="trust_notification_title_security">Trust \u2022 Безопасность системы</string>
+  <string name="trust_notification_content_selinux">SELinux не в принудительном режиме, ваша безопасность под угрозой</string>
   <string name="trust_notification_title_root">Trust \u2022 Режим суперпользователя</string>
   <string name="trust_notification_content_root">В настоящее время приложение использует режим суперпользователя</string>
+  <string name="trust_notification_content_keys">Эта сборка подписана открытыми ключами</string>
+  <string name="trust_notification_title_onboarding">Откройте для себя Trust</string>
   <string name="trust_notification_content_onboarding">Узнайте, как обеспечить безопасность вашего устройства</string>
   <string name="trust_notification_action_manage">Управление оповещениями</string>
 </resources>

@@ -158,10 +158,11 @@
   <string name="permlab_trustInterface">访问安全中心接口</string>
   <string name="permdesc_trustInterface">允许应用显示安全中心警告和建议</string>
   <string name="trust_notification_channel">安全中心警报</string>
-  <string name="trust_notification_title_selinux">安全中心 \u2022 系统安全性</string>
+  <string name="trust_notification_title_security">安全中心 \u2022 系统安全性</string>
   <string name="trust_notification_content_selinux">SELinux 未工作在强制模式，您的安全性被削弱了</string>
   <string name="trust_notification_title_root">安全中心 \u2022 Root 访问</string>
   <string name="trust_notification_content_root">有应用正在使用 Root 权限</string>
+  <string name="trust_notification_content_keys">此版本已使用公钥签名</string>
   <string name="trust_notification_title_onboarding">探索安全中心</string>
   <string name="trust_notification_content_onboarding">了解如何保证设备安全</string>
   <string name="trust_notification_action_manage">管理警报</string>

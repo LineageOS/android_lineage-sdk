@@ -158,9 +158,12 @@
   <string name="permlab_trustInterface">dostęp do interfejsu Trust</string>
   <string name="permdesc_trustInterface">Zezwól aplikacji na wyświetlanie ostrzeżeń i sugestii Trust</string>
   <string name="trust_notification_channel">Ostrzeżenia Trust</string>
-  <string name="trust_notification_title_selinux">Trust \u2022 Bezpieczeństwo systemu</string>
+  <string name="trust_notification_title_security">Trust \u2022 Bezpieczeństwo systemu</string>
+  <string name="trust_notification_content_selinux">SELinux nie jest w stanie restrykcyjnym, twoje bezpieczeństwo zostało zmniejszone</string>
   <string name="trust_notification_title_root">Trust \u2022 Dostęp do root</string>
   <string name="trust_notification_content_root">Aplikacja używa teraz uprawnień root</string>
+  <string name="trust_notification_content_keys">Ta kompilacja została podpisana kluczami publicznymi</string>
   <string name="trust_notification_title_onboarding">Odkryj Trust</string>
   <string name="trust_notification_content_onboarding">Dowiedz się jak zapewnić bezpieczeństwo twojemu urządzeniu</string>
+  <string name="trust_notification_action_manage">Zarządzaj ostrzeżeniami</string>
 </resources>

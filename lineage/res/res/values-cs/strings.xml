@@ -154,4 +154,16 @@
   <!-- This string will be referenced from other apps when they're referring to the Trust interface.
          Trust is a feature name, it's not suggested to translate this unless there are conflicts due
          to a different meaning of the word "trust" in your language -->
+  <string name="trust_feature_name">Trust</string>
+  <string name="permlab_trustInterface">přístup k rozhraní Trust</string>
+  <string name="permdesc_trustInterface">Umožňuje aplikaci zobrazovat upozornění a návrhy Trust</string>
+  <string name="trust_notification_channel">Upozornění Trust</string>
+  <string name="trust_notification_title_security">Trust \u2022 Bezpečnostní systém</string>
+  <string name="trust_notification_content_selinux">Pokud SELinux není vynucený, vaše úroveň zabezpečení je oslabena</string>
+  <string name="trust_notification_title_root">Trust \u2022 Root přístup</string>
+  <string name="trust_notification_content_root">Aplikace právě používá práva root</string>
+  <string name="trust_notification_content_keys">Toto sestavení je podepsáno veřejnými klíči</string>
+  <string name="trust_notification_title_onboarding">Objevte Trust</string>
+  <string name="trust_notification_content_onboarding">Zjistěte, jak zajistit bezpečnost zařízení</string>
+  <string name="trust_notification_action_manage">Spravovat výstrahy</string>
 </resources>

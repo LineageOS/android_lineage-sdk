@@ -158,10 +158,11 @@
   <string name="permlab_trustInterface">access Trust interface</string>
   <string name="permdesc_trustInterface">Allows an app to display Trust warnings and suggestions</string>
   <string name="trust_notification_channel">Trust alerts</string>
-  <string name="trust_notification_title_selinux">Trust \u2022 System security</string>
+  <string name="trust_notification_title_security">Trust \u2022 System security</string>
   <string name="trust_notification_content_selinux">SELinux is not enforcing, your security has been weakened</string>
   <string name="trust_notification_title_root">Trust \u2022 Root access</string>
   <string name="trust_notification_content_root">An app is using the root privileges right now</string>
+  <string name="trust_notification_content_keys">This build was signed with public keys</string>
   <string name="trust_notification_title_onboarding">Discover Trust</string>
   <string name="trust_notification_content_onboarding">Get to know how to assure your device is safe</string>
   <string name="trust_notification_action_manage">Manage alerts</string>

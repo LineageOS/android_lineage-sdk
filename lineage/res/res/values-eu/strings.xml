@@ -158,10 +158,11 @@
   <string name="permlab_trustInterface">atzitu Trust interfazea</string>
   <string name="permdesc_trustInterface">Baimendu aplikazio bati Trust abisuak eta proposamenak bistaratzea</string>
   <string name="trust_notification_channel">Trust alertak</string>
-  <string name="trust_notification_title_selinux">Trust \u2022 Sistemako segurtasuna</string>
+  <string name="trust_notification_title_security">Trust \u2022 Sistemako segurtasuna</string>
   <string name="trust_notification_content_selinux">SELinux ez dago betearazten, zure segurtasuna ahuldu da</string>
   <string name="trust_notification_title_root">Trust \u2022 Root sarbirea</string>
   <string name="trust_notification_content_root">Aplikazio batek root baimenak erabiltzen ditu orain</string>
+  <string name="trust_notification_content_keys">Konpilazio hau gako publikoekin sinatu da</string>
   <string name="trust_notification_title_onboarding">Ezagutu Trust</string>
   <string name="trust_notification_content_onboarding">Ikasi nola baieztatu zure gailua segurua dela</string>
   <string name="trust_notification_action_manage">Kudeatu alertak</string>

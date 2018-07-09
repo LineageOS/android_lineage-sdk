@@ -158,10 +158,12 @@
   <string name="permlab_trustInterface">Trust インターフェースへのアクセス</string>
   <string name="permdesc_trustInterface">アプリに Trust の警告と提案を表示することを許可する</string>
   <string name="trust_notification_channel">Trust アラート</string>
-  <string name="trust_notification_title_selinux">Trust \u2022 システムセキュリティ</string>
+  <string name="trust_notification_title_security">Trust \u2022 システムセキュリティ</string>
   <string name="trust_notification_content_selinux">SELinux が Enforcing ではありません。セキュリティが弱体化しています。</string>
   <string name="trust_notification_title_root">Trust \u2022 ルートアクセス</string>
   <string name="trust_notification_content_root">アプリは現在ルート権限を使用しています</string>
+  <string name="trust_notification_content_keys">このビルドは公開鍵で署名されています</string>
   <string name="trust_notification_title_onboarding">Trust を知る</string>
   <string name="trust_notification_content_onboarding">デバイスを安全に保つ方法を学ぶ</string>
+  <string name="trust_notification_action_manage">警告の管理</string>
 </resources>

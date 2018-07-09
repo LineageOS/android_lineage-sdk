@@ -158,10 +158,11 @@
   <string name="permlab_trustInterface">Trust 인터페이스 접근</string>
   <string name="permdesc_trustInterface">앱이 Trust 경고 및 제안을 띄울 수 있도록 허용합니다.</string>
   <string name="trust_notification_channel">Trust 경보</string>
-  <string name="trust_notification_title_selinux">Trust \u2022 시스템 보안</string>
+  <string name="trust_notification_title_security">Trust \u2022 시스템 보안</string>
   <string name="trust_notification_content_selinux">SELinux가 시행 모드가 아닙니다. 보안에 취약한 상태입니다.</string>
   <string name="trust_notification_title_root">Trust \u2022 루트 권한</string>
   <string name="trust_notification_content_root">앱이 지금 루트 권한을 사용하고 있습니다.</string>
+  <string name="trust_notification_content_keys">빌드가 공개 키로 서명되어 있습니다.</string>
   <string name="trust_notification_title_onboarding">Trust 알아보기</string>
   <string name="trust_notification_content_onboarding">기기를 안전하게 유지하는 방법 알아보기</string>
   <string name="trust_notification_action_manage">경고 관리</string>

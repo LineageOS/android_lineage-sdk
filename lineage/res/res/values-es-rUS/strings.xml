@@ -158,7 +158,6 @@
   <string name="permlab_trustInterface">acceso a interfaz «Trust»</string>
   <string name="permdesc_trustInterface">Permite que una aplicación muestre advertencias y sugerencias de confianza</string>
   <string name="trust_notification_channel">Alertas «Trust»</string>
-  <string name="trust_notification_title_selinux">Trust \u2022 Sistema de seguridad</string>
   <string name="trust_notification_content_selinux">SELinux no se está aplicando, su seguridad se ha reducido</string>
   <string name="trust_notification_title_root">Trust \u2022 Acceso de superusuario</string>
   <string name="trust_notification_content_root">Una aplicación utiliza en este momento los privilegios de superusuario</string>

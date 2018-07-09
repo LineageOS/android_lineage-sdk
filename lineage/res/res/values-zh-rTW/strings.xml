@@ -158,10 +158,12 @@
   <string name="permlab_trustInterface">存取信任介面</string>
   <string name="permdesc_trustInterface">允許應用程式顯示信任的警告與建議</string>
   <string name="trust_notification_channel">信任警告</string>
-  <string name="trust_notification_title_selinux">信任 \u2022 系統安全性</string>
+  <string name="trust_notification_title_security">信任 \u2022 系統安全性</string>
   <string name="trust_notification_content_selinux">SELinux 未在執行工作，您的安全性已被削弱</string>
   <string name="trust_notification_title_root">信任 \u2022 Root 存取</string>
   <string name="trust_notification_content_root">有應用程式正在使用 Root 權限</string>
+  <string name="trust_notification_content_keys">此版本使用公開金鑰簽名</string>
   <string name="trust_notification_title_onboarding">探索信任</string>
   <string name="trust_notification_content_onboarding">了解如何確保您的裝置安全</string>
+  <string name="trust_notification_action_manage">管理鬧鐘</string>
 </resources>
