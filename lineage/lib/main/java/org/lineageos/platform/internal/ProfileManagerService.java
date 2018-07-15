@@ -790,6 +790,7 @@ public class ProfileManagerService extends LineageSystemService {
                     lastProfile.getName());
             broadcast.putExtra(ProfileManager.EXTRA_LAST_PROFILE_UUID,
                     lastProfile.getUuid().toString());
+            broadcast.addFlags(Intent.FLAG_RECEIVER_INCLUDE_BACKGROUND);
 
             mContext.sendBroadcastAsUser(broadcast, UserHandle.ALL);
             persistIfDirty();
