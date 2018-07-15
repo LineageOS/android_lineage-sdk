@@ -867,9 +867,8 @@ public final class LineageSettings {
                 sBooleanValidator;
 
         /**
-         * Whether to show the clock in the right or left position or show it in the center
+         * Whether to show the clock in the right or left position.
          * 0: show the clock in the right position (LTR)
-         * 1: show the clock in the center
          * 2: show the clock in the left position (LTR)
          * default: 0
          */
@@ -877,7 +876,7 @@ public final class LineageSettings {
 
         /** @hide */
         public static final Validator STATUS_BAR_CLOCK_VALIDATOR =
-                new InclusiveIntegerRangeValidator(0, 2);
+                new DiscreteValueValidator(new String[] {"0", "2"});
 
         /**
          * Whether the notification light will be allowed when in zen mode during downtime
