@@ -243,4 +243,7 @@
 
     <!-- Whether device has a screen with a higher aspect ratio -->
     <bool name="config_haveHigherAspectRatioScreen">false</bool>
+
+    <!-- Whether device has a notch -->
+    <bool name="config_haveNotch">false</bool>
 </resources>
