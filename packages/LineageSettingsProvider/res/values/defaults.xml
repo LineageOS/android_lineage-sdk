@@ -113,4 +113,11 @@
     -->
     <string name="def_enabled_event_lls_components"></string>
 
+    <!-- Default clock position
+         * 0: show the clock in the right position (LTR)
+         * 1: show the clock in the center
+         * 2: show the clock in the left position (LTR)
+    -->
+    <integer name="def_clock_position">0</integer>
+
 </resources>
