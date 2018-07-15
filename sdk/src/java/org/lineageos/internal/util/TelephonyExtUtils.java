@@ -41,12 +41,17 @@ public final class TelephonyExtUtils {
 
     public static final String EXTRA_NEW_PROVISION_STATE = "newProvisionState";
 
-    // This is the list of possible values that
-    // IExtTelephony.getCurrentUiccCardProvisioningStatus() can return
+    // UICC provisioning status states
     public static final int CARD_NOT_PRESENT = -2;
     public static final int INVALID_STATE = -1;
     public static final int NOT_PROVISIONED = 0;
     public static final int PROVISIONED = 1;
+
+    // Error codes
+    public static final int SUCCESS = 0;
+    public static final int GENERIC_FAILURE = -1;
+    public static final int INVALID_INPUT = -2;
+    public static final int BUSY = -3;
 
     private boolean mNoServiceAvailable = false;
     private IExtTelephony mExtTelephony;
@@ -138,7 +143,7 @@ public final class TelephonyExtUtils {
                 Log.e(TAG, "Failed to get provisioning status for slotId: " + slotId, ex);
             }
         }
-        return INVALID_STATE;
+        return GENERIC_FAILURE;
     }
 
     /**
@@ -155,7 +160,7 @@ public final class TelephonyExtUtils {
                 Log.e(TAG, "Activating sub failed for slotId: " + slotId);
             }
         }
-        return -1;
+        return GENERIC_FAILURE;
     }
 
     /**
@@ -172,7 +177,7 @@ public final class TelephonyExtUtils {
                 Log.e(TAG, "Deactivating sub failed for slotId: " + slotId);
             }
         }
-        return -1;
+        return GENERIC_FAILURE;
     }
 
     /**
