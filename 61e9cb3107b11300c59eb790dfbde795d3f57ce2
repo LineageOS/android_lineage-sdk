@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "384d431b_b3a28f7b",
+        "filename": "packages/LineageSettingsProvider/res/values/defaults.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 117,
+      "author": {
+        "id": 11883
+      },
+      "writtenOn": "2018-07-15T17:26:24Z",
+      "side": 1,
+      "message": "add back center",
+      "revId": "61e9cb3107b11300c59eb790dfbde795d3f57ce2",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "73dd2795_dc122726",
+        "filename": "packages/LineageSettingsProvider/src/org/lineageos/lineagesettings/LineageDatabaseHelper.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 474,
+      "author": {
+        "id": 11883
+      },
+      "writtenOn": "2018-07-15T17:26:24Z",
+      "side": 1,
+      "message": "integer",
+      "revId": "61e9cb3107b11300c59eb790dfbde795d3f57ce2",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    }
+  ]
+}
