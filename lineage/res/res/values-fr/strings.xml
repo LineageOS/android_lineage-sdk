@@ -156,8 +156,14 @@
          to a different meaning of the word "trust" in your language -->
   <string name="trust_feature_name">Trust</string>
   <string name="permlab_trustInterface">accéder à l\'interface Trust</string>
+  <string name="permdesc_trustInterface">Autorise une application à afficher des avertissements et suggestions Trust</string>
   <string name="trust_notification_channel">Alertes Trust</string>
+  <string name="trust_notification_title_security">Trust \u2022 Sécurité du système</string>
+  <string name="trust_notification_content_selinux">SELinux n\'est pas appliqué : votre appareil est moins protégé</string>
+  <string name="trust_notification_title_root">Trust \u2022 Accès root</string>
   <string name="trust_notification_content_root">Une application utilise actuellement les privilèges root</string>
+  <string name="trust_notification_content_keys">Cette version a été signée avec des clés publiques</string>
   <string name="trust_notification_title_onboarding">Découvrez Trust</string>
   <string name="trust_notification_content_onboarding">Découvrez comment garantir la sécurité de votre appareil</string>
+  <string name="trust_notification_action_manage">Gérer les alertes</string>
 </resources>
