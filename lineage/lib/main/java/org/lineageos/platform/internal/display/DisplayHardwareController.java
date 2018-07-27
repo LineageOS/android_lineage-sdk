@@ -231,8 +231,7 @@ public class DisplayHardwareController extends LiveDisplayFeature {
         if (!mUseAutoContrast) {
             return;
         }
-        mHardware.set(LineageHardwareManager.FEATURE_AUTO_CONTRAST,
-                !isLowPowerMode() && isAutoContrastEnabled());
+        mHardware.set(LineageHardwareManager.FEATURE_AUTO_CONTRAST, isAutoContrastEnabled());
     }
 
     /**
@@ -243,7 +242,7 @@ public class DisplayHardwareController extends LiveDisplayFeature {
             return;
         }
         mHardware.set(LineageHardwareManager.FEATURE_COLOR_ENHANCEMENT,
-                !isLowPowerMode() && isColorEnhancementEnabled());
+                (!isLowPowerMode() || mDefaultColorEnhancement) && isColorEnhancementEnabled());
     }
 
     /**
@@ -253,8 +252,7 @@ public class DisplayHardwareController extends LiveDisplayFeature {
         if (!mUseCABC) {
             return;
         }
-        mHardware.set(LineageHardwareManager.FEATURE_ADAPTIVE_BACKLIGHT,
-                !isLowPowerMode() && isCABCEnabled());
+        mHardware.set(LineageHardwareManager.FEATURE_ADAPTIVE_BACKLIGHT, isCABCEnabled());
     }
 
     private synchronized void updateColorAdjustment() {
