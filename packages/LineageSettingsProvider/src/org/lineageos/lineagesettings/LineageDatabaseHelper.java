@@ -51,7 +51,7 @@ public class LineageDatabaseHelper extends SQLiteOpenHelper{
     private static final boolean LOCAL_LOGV = false;
 
     private static final String DATABASE_NAME = "lineagesettings.db";
-    private static final int DATABASE_VERSION = 8;
+    private static final int DATABASE_VERSION = 9;
 
     private static final String DATABASE_NAME_OLD = "cmsettings.db";
 
@@ -320,6 +320,44 @@ public class LineageDatabaseHelper extends SQLiteOpenHelper{
                 db.endTransaction();
             }
             upgradeVersion = 8;
+        }
+
+        if (upgradeVersion < 9) {
+            if (mUserHandle == UserHandle.USER_OWNER) {
+                String[] settings = {
+                    LineageSettings.System.KEY_HOME_LONG_PRESS_ACTION,
+                    LineageSettings.System.KEY_HOME_DOUBLE_TAP_ACTION,
+                    LineageSettings.System.KEY_MENU_ACTION,
+                    LineageSettings.System.KEY_MENU_LONG_PRESS_ACTION,
+                    LineageSettings.System.KEY_ASSIST_ACTION,
+                    LineageSettings.System.KEY_ASSIST_LONG_PRESS_ACTION,
+                    LineageSettings.System.KEY_APP_SWITCH_ACTION,
+                    LineageSettings.System.KEY_APP_SWITCH_LONG_PRESS_ACTION,
+                };
+                for (String setting : settings) {
+                    db.beginTransaction();
+                    SQLiteStatement stmt = null;
+                    try {
+                        stmt = db.compileStatement("SELECT value FROM system WHERE name=?");
+                        stmt.bindString(1, setting);
+                        long value = stmt.simpleQueryForLong();
+
+                        if (value > 9) {
+                            stmt = db.compileStatement("UPDATE system SET value=? WHERE name=?");
+                            stmt.bindLong(1, 0);
+                            stmt.bindString(2, setting);
+                            stmt.execute();
+                        }
+                        db.setTransactionSuccessful();
+                    } catch (SQLiteDoneException ex) {
+                        // setting is not set
+                    } finally {
+                        if (stmt != null) stmt.close();
+                        db.endTransaction();
+                    }
+                }
+            }
+            upgradeVersion = 9;
         }
         // *** Remember to update DATABASE_VERSION above!
 
