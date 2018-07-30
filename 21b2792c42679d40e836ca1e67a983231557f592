@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "c08b7941_a73f6f7c",
+        "filename": "sdk/src/java/org/lineageos/internal/util/TelephonyExtUtils.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 2936
+      },
+      "writtenOn": "2018-07-30T05:53:40Z",
+      "side": 1,
+      "message": "Is anything but GENERIC_FAILURE actually used? Also, is GENERIC_FAILURE meant to align with INVALID_STATE on purpose?",
+      "range": {
+        "startLine": 52,
+        "startChar": 28,
+        "endLine": 52,
+        "endChar": 43
+      },
+      "revId": "21b2792c42679d40e836ca1e67a983231557f592",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
