@@ -51,7 +51,7 @@ public class LineageDatabaseHelper extends SQLiteOpenHelper{
     private static final boolean LOCAL_LOGV = false;
 
     private static final String DATABASE_NAME = "lineagesettings.db";
-    private static final int DATABASE_VERSION = 8;
+    private static final int DATABASE_VERSION = 9;
 
     private static final String DATABASE_NAME_OLD = "cmsettings.db";
 
@@ -320,6 +320,21 @@ public class LineageDatabaseHelper extends SQLiteOpenHelper{
                 db.endTransaction();
             }
             upgradeVersion = 8;
+        }
+
+        if (upgradeVersion < 9) {
+            if (mUserHandle == UserHandle.USER_OWNER) {
+                db.execSQL("UPDATE system SET value = '0' WHERE value IN ('10', '11') AND name IN ("
+                        + "'" + LineageSettings.System.KEY_HOME_LONG_PRESS_ACTION + "',"
+                        + "'" + LineageSettings.System.KEY_HOME_DOUBLE_TAP_ACTION + "',"
+                        + "'" + LineageSettings.System.KEY_MENU_ACTION + "',"
+                        + "'" + LineageSettings.System.KEY_MENU_LONG_PRESS_ACTION + "',"
+                        + "'" + LineageSettings.System.KEY_ASSIST_ACTION + "',"
+                        + "'" + LineageSettings.System.KEY_ASSIST_LONG_PRESS_ACTION + "',"
+                        + "'" + LineageSettings.System.KEY_APP_SWITCH_ACTION + "',"
+                        + "'" + LineageSettings.System.KEY_APP_SWITCH_LONG_PRESS_ACTION + "')");
+            }
+            upgradeVersion = 9;
         }
         // *** Remember to update DATABASE_VERSION above!
 
