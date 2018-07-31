@@ -110,6 +110,7 @@
         <item>org.lineageos.platform.internal.LineageAudioService</item>
         <item>org.lineageos.platform.internal.StyleInterfaceService</item>
         <item>org.lineageos.platform.internal.TrustInterfaceService</item>
+        <item>org.lineageos.platform.internal.LineageSettingsService</item>
     </string-array>
 
     <!-- The LineageSystemServer class that is invoked from Android's SystemServer -->

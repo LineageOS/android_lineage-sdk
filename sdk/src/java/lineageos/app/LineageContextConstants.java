@@ -185,5 +185,13 @@ public final class LineageContextConstants {
          */
         @SdkConstant(SdkConstant.SdkConstantType.FEATURE)
         public static final String TRUST = "org.lineageos.trust";
+
+        /**
+         * Feature for {@link PackageManager#getSystemAvailableFeatures} and
+         * {@link PackageManager#hasSystemFeature}: The device includes the lineage settings service
+         * utilized by the lineage sdk.
+         */
+        @SdkConstant(SdkConstant.SdkConstantType.FEATURE)
+        public static final String SETTINGS = "org.lineageos.settings";
     }
 }
