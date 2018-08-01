@@ -1706,17 +1706,6 @@ public final class LineageSettings {
         public static final Validator STATUS_BAR_BRIGHTNESS_CONTROL_VALIDATOR =
                 sBooleanValidator;
 
-
-        /**
-         * Whether to enable burnin protection
-         0 = 0ff, 1 = on
-         */
-        public static final String SYSTEMUI_BURNIN_PROTECTION = "systemui_burnin_protection";
-
-        /** @hide */
-        public static final Validator SYSTEMUI_BURNIN_PROTECTION_VALIDATOR =
-                sBooleanValidator;
-
         /**
          * Whether or not volume button music controls should be enabled to seek media tracks
          * 0 = 0ff, 1 = on
@@ -2307,7 +2296,6 @@ public final class LineageSettings {
             VALIDATORS.put(QS_SHOW_BRIGHTNESS_SLIDER, QS_SHOW_BRIGHTNESS_SLIDER_VALIDATOR);
             VALIDATORS.put(STATUS_BAR_BRIGHTNESS_CONTROL,
                     STATUS_BAR_BRIGHTNESS_CONTROL_VALIDATOR);
-            VALIDATORS.put(SYSTEMUI_BURNIN_PROTECTION, SYSTEMUI_BURNIN_PROTECTION_VALIDATOR);
             VALIDATORS.put(VOLBTN_MUSIC_CONTROLS, VOLBTN_MUSIC_CONTROLS_VALIDATOR);
             VALIDATORS.put(USE_EDGE_SERVICE_FOR_GESTURES,
                     USE_EDGE_SERVICE_FOR_GESTURES_VALIDATOR);
