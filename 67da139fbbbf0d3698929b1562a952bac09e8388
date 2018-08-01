@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "68a88986_497f1489",
+        "filename": "sdk/src/java/lineageos/providers/LineageSettings.java",
+        "patchSetId": 7
+      },
+      "lineNbr": 1719,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2018-08-01T15:23:10Z",
+      "side": 0,
+      "message": "This can\u0027t be killed then.",
+      "range": {
+        "startLine": 1711,
+        "startChar": 8,
+        "endLine": 1719,
+        "endChar": 34
+      },
+      "revId": "67da139fbbbf0d3698929b1562a952bac09e8388",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
