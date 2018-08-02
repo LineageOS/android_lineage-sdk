@@ -180,11 +180,19 @@ public final class LineageBatteryLights {
         if (ledValues.getColor() != 0) {
             ledValues.setEnabled(true);
         }
-        // If lights HAL does not support adjustable brightness then
-        // scale color value here instead.
-        if (mCanAdjustBrightness && !mHALAdjustableBrightness) {
-            ledValues.applyAlphaToBrightness();
-            ledValues.applyBrightnessToColor();
+        if (mCanAdjustBrightness) {
+            if (!mHALAdjustableBrightness) {
+                // If lights HAL does not support adjustable brightness then
+                // scale color value here instead.
+                ledValues.applyAlphaToBrightness();
+                ledValues.applyBrightnessToColor();
+            } else if (mUseSegmentedBatteryLed && !mMultiColorBatteryLed) {
+                // For non-RGB segmented LEDs, we must set the brightness as the
+                // color, since the alpha channel contains the battery level
+                int segmentLevel = mZenMode == Global.ZEN_MODE_OFF
+                        ? mBatteryBrightnessLevel : mBatteryBrightnessZenLevel;
+                ledValues.setColor(segmentLevel | (segmentLevel << 8) | (segmentLevel << 16));
+            }
         }
         // If LED is segmented, reset brightness field to battery level
         // (applyBrightnessToColor() changes it to 255)
