@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "e8db45ef_40d88905",
+        "filename": "sdk/src/java/org/lineageos/internal/notification/LightsCapabilities.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 4550
+      },
+      "writtenOn": "2018-08-03T20:03:41Z",
+      "side": 1,
+      "message": "You should include only what you use",
+      "range": {
+        "startLine": 20,
+        "startChar": 35,
+        "endLine": 20,
+        "endChar": 36
+      },
+      "revId": "acd09467008d79a01f81514d02865695dd609be9",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2a91b658_6763d0c6",
+        "filename": "sdk/src/java/org/lineageos/internal/notification/LightsCapabilities.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 103,
+      "author": {
+        "id": 4550
+      },
+      "writtenOn": "2018-08-03T20:03:41Z",
+      "side": 1,
+      "message": "Tab",
+      "range": {
+        "startLine": 103,
+        "startChar": 0,
+        "endLine": 103,
+        "endChar": 1
+      },
+      "revId": "acd09467008d79a01f81514d02865695dd609be9",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
