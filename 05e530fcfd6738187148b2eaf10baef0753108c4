@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "afa98090_20d4e6a4",
+        "filename": "sdk/src/java/org/lineageos/internal/notification/LineageBatteryLights.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 193,
+      "author": {
+        "id": 3075
+      },
+      "writtenOn": "2018-08-03T15:34:12Z",
+      "side": 1,
+      "message": "could simplify this a little with something like:\n\nint brightness \u003d mZenMode \u003d\u003d GLOBAL.ZEN_MODE_OFF ? mBatteryBrightnessLevel ? mBatteryBrightnessZenLevel;\n// Apply brightness to all RGB channels\nledValues.setColor(brightness | (brightness \u003c\u003c 8) | (brightness \u003c\u003c 16));",
+      "revId": "05e530fcfd6738187148b2eaf10baef0753108c4",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
