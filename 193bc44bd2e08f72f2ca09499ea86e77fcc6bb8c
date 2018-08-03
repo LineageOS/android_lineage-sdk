@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "1d45fdf3_ffc8e967",
+        "filename": "sdk/src/java/org/lineageos/internal/notification/LineageBatteryLights.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 190,
+      "author": {
+        "id": 3075
+      },
+      "writtenOn": "2018-08-03T22:34:20Z",
+      "side": 1,
+      "message": "I see - you\u0027re depending on the definition of mCanAdjustBrightness elsewhere happening to reference mMultiColorBatteryLed.  That feels a bit fragile to future changes in / around this block of code.  mCanAdjustBrightness happens to reference rgb today but that\u0027s not intended to be directly conveyed through use of the variable.\n\nIt would be more robust if we did if (mUseSegmentedBatteryLed \u0026\u0026 !mMultiColorBatteryLed).  If we refactor code another time, we\u0027re less likely to break something.  It also more obviously matches the comment.",
+      "parentUuid": "d3c1bbf9_33a50a4d",
+      "revId": "193bc44bd2e08f72f2ca09499ea86e77fcc6bb8c",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7fef9099_07b085a2",
         "filename": "sdk/src/java/org/lineageos/internal/notification/LineageBatteryLights.java",
         "patchSetId": 3
