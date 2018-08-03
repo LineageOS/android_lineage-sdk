@@ -55,6 +55,24 @@
     },
     {
       "key": {
+        "uuid": "04a1d1ea_13e89959",
+        "filename": "sdk/src/java/org/lineageos/internal/notification/LineageBatteryLights.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 190,
+      "author": {
+        "id": 11801
+      },
+      "writtenOn": "2018-08-03T23:05:19Z",
+      "side": 1,
+      "message": "Sounds good. That should address my comment about RGB segmented battery LEDs not setting the adjustable brightness bit.",
+      "parentUuid": "1d45fdf3_ffc8e967",
+      "revId": "193bc44bd2e08f72f2ca09499ea86e77fcc6bb8c",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7fef9099_07b085a2",
         "filename": "sdk/src/java/org/lineageos/internal/notification/LineageBatteryLights.java",
         "patchSetId": 3
