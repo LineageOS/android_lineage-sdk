@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "d3c1bbf9_33a50a4d",
+        "filename": "sdk/src/java/org/lineageos/internal/notification/LineageBatteryLights.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 190,
+      "author": {
+        "id": 11801
+      },
+      "writtenOn": "2018-08-03T21:02:49Z",
+      "side": 1,
+      "message": "That would be covered by the previous check for !mHALAdjustableBrightness, wouldn\u0027t it?",
+      "parentUuid": "c2da3748_0d90edaa",
+      "revId": "193bc44bd2e08f72f2ca09499ea86e77fcc6bb8c",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7fef9099_07b085a2",
         "filename": "sdk/src/java/org/lineageos/internal/notification/LineageBatteryLights.java",
         "patchSetId": 3
@@ -30,6 +48,24 @@
       "writtenOn": "2018-08-03T21:01:24Z",
       "side": 1,
       "message": "I\u0027d perhaps clarify that you\u0027re referring to battery level in the alpha channel.",
+      "revId": "193bc44bd2e08f72f2ca09499ea86e77fcc6bb8c",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3edc235b_4de3f7a9",
+        "filename": "sdk/src/java/org/lineageos/internal/notification/LineageBatteryLights.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 191,
+      "author": {
+        "id": 11801
+      },
+      "writtenOn": "2018-08-03T21:02:49Z",
+      "side": 1,
+      "message": "sure",
+      "parentUuid": "7fef9099_07b085a2",
       "revId": "193bc44bd2e08f72f2ca09499ea86e77fcc6bb8c",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
