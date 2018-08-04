@@ -16,6 +16,24 @@
       "revId": "e03fab80d24708e099b9aef99396a45257d2b9f5",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0444d643_0a7ab770",
+        "filename": "lineage/res/res/values/config.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 113,
+      "author": {
+        "id": 10067
+      },
+      "writtenOn": "2018-08-04T22:13:30Z",
+      "side": 1,
+      "message": "Well, it doesn\u0027t really make a difference at the moment. We could move it later on when it\u0027s necessary or something.",
+      "parentUuid": "a80a296c_06157d83",
+      "revId": "e03fab80d24708e099b9aef99396a45257d2b9f5",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
