@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "a80a296c_06157d83",
+        "filename": "lineage/res/res/values/config.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 113,
+      "author": {
+        "id": 2936
+      },
+      "writtenOn": "2018-08-04T22:11:45Z",
+      "side": 1,
+      "message": "I think this is run in order, wouldn\u0027t it make more sense to run this earlier?",
+      "revId": "e03fab80d24708e099b9aef99396a45257d2b9f5",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
