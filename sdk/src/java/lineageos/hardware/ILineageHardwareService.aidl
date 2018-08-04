@@ -35,9 +35,6 @@ interface ILineageHardwareService {
     int[] getDisplayGammaCalibration(int idx);
     boolean setDisplayGammaCalibration(int idx, in int[] rgb);
 
-    int[] getVibratorIntensity();
-    boolean setVibratorIntensity(int intensity);
-
     String getLtoSource();
     String getLtoDestination();
     long getLtoDownloadInterval();

@@ -111,12 +111,6 @@ public final class LineageHardwareManager {
     public static final int FEATURE_SUNLIGHT_ENHANCEMENT = 0x100;
 
     /**
-     * Variable vibrator intensity
-     */
-    @VisibleForTesting
-    public static final int FEATURE_VIBRATOR = 0x400;
-
-    /**
      * Touchscreen hovering
      */
     @VisibleForTesting
@@ -312,90 +306,6 @@ public final class LineageHardwareManager {
         }
 
         return arr[idx];
-    }
-
-    /**
-     * {@hide}
-     */
-    public static final int VIBRATOR_INTENSITY_INDEX = 0;
-    /**
-     * {@hide}
-     */
-    public static final int VIBRATOR_DEFAULT_INDEX = 1;
-    /**
-     * {@hide}
-     */
-    public static final int VIBRATOR_MIN_INDEX = 2;
-    /**
-     * {@hide}
-     */
-    public static final int VIBRATOR_MAX_INDEX = 3;
-    /**
-     * {@hide}
-     */
-    public static final int VIBRATOR_WARNING_INDEX = 4;
-
-    private int[] getVibratorIntensityArray() {
-        try {
-            if (checkService()) {
-                return sService.getVibratorIntensity();
-            }
-        } catch (RemoteException e) {
-        }
-        return null;
-    }
-
-    /**
-     * @return The current vibrator intensity.
-     */
-    public int getVibratorIntensity() {
-        return getArrayValue(getVibratorIntensityArray(), VIBRATOR_INTENSITY_INDEX, 0);
-    }
-
-    /**
-     * @return The default vibrator intensity.
-     */
-    public int getVibratorDefaultIntensity() {
-        return getArrayValue(getVibratorIntensityArray(), VIBRATOR_DEFAULT_INDEX, 0);
-    }
-
-    /**
-     * @return The minimum vibrator intensity.
-     */
-    public int getVibratorMinIntensity() {
-        return getArrayValue(getVibratorIntensityArray(), VIBRATOR_MIN_INDEX, 0);
-    }
-
-    /**
-     * @return The maximum vibrator intensity.
-     */
-    public int getVibratorMaxIntensity() {
-        return getArrayValue(getVibratorIntensityArray(), VIBRATOR_MAX_INDEX, 0);
-    }
-
-    /**
-     * @return The warning threshold vibrator intensity.
-     */
-    public int getVibratorWarningIntensity() {
-        return getArrayValue(getVibratorIntensityArray(), VIBRATOR_WARNING_INDEX, 0);
-    }
-
-    /**
-     * Set the current vibrator intensity
-     *
-     * @param intensity the intensity to set, between {@link #getVibratorMinIntensity()} and
-     * {@link #getVibratorMaxIntensity()} inclusive.
-     *
-     * @return true on success, false otherwise.
-     */
-    public boolean setVibratorIntensity(int intensity) {
-        try {
-            if (checkService()) {
-                return sService.setVibratorIntensity(intensity);
-            }
-        } catch (RemoteException e) {
-        }
-        return false;
     }
 
     /**

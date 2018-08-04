@@ -199,11 +199,6 @@ package lineageos.hardware {
     method public java.lang.String getSerialNumber();
     method public int getSupportedFeatures();
     method public lineageos.hardware.TouchscreenGesture[] getTouchscreenGestures();
-    method public int getVibratorDefaultIntensity();
-    method public int getVibratorIntensity();
-    method public int getVibratorMaxIntensity();
-    method public int getVibratorMinIntensity();
-    method public int getVibratorWarningIntensity();
     method public boolean isSunlightEnhancementSelfManaged();
     method public boolean isSupported(int);
     method public boolean requireAdaptiveBacklightForSunlightEnhancement();
@@ -215,7 +210,6 @@ package lineageos.hardware {
     method public boolean setGrayscale(boolean);
     method public boolean setPictureAdjustment(lineageos.hardware.HSIC);
     method public boolean setTouchscreenGestureEnabled(lineageos.hardware.TouchscreenGesture, boolean);
-    method public boolean setVibratorIntensity(int);
     field public static final int FEATURE_ADAPTIVE_BACKLIGHT = 1; // 0x1
     field public static final int FEATURE_AUTO_CONTRAST = 4096; // 0x1000
     field public static final int FEATURE_COLOR_BALANCE = 131072; // 0x20000
@@ -232,7 +226,6 @@ package lineageos.hardware {
     field public static final int FEATURE_SUNLIGHT_ENHANCEMENT = 256; // 0x100
     field public static final int FEATURE_TOUCHSCREEN_GESTURES = 524288; // 0x80000
     field public static final int FEATURE_TOUCH_HOVERING = 2048; // 0x800
-    field public static final int FEATURE_VIBRATOR = 1024; // 0x400
   }
 
   public class LiveDisplayConfig implements android.os.Parcelable {

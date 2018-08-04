@@ -56,7 +56,6 @@ import org.lineageos.hardware.SerialNumber;
 import org.lineageos.hardware.SunlightEnhancement;
 import org.lineageos.hardware.TouchscreenGestures;
 import org.lineageos.hardware.TouchscreenHovering;
-import org.lineageos.hardware.VibratorHW;
 
 /** @hide */
 public class LineageHardwareService extends LineageSystemService {
@@ -82,9 +81,6 @@ public class LineageHardwareService extends LineageSystemService {
         public int getNumGammaControls();
         public int[] getDisplayGammaCalibration(int idx);
         public boolean setDisplayGammaCalibration(int idx, int[] rgb);
-
-        public int[] getVibratorIntensity();
-        public boolean setVibratorIntensity(int intensity);
 
         public String getLtoSource();
         public String getLtoDestination();
@@ -141,8 +137,6 @@ public class LineageHardwareService extends LineageSystemService {
                 mSupportedFeatures |= LineageHardwareManager.FEATURE_SERIAL_NUMBER;
             if (SunlightEnhancement.isSupported())
                 mSupportedFeatures |= LineageHardwareManager.FEATURE_SUNLIGHT_ENHANCEMENT;
-            if (VibratorHW.isSupported())
-                mSupportedFeatures |= LineageHardwareManager.FEATURE_VIBRATOR;
             if (TouchscreenHovering.isSupported())
                 mSupportedFeatures |= LineageHardwareManager.FEATURE_TOUCH_HOVERING;
             if (AutoContrast.isSupported())
@@ -278,20 +272,6 @@ public class LineageHardwareService extends LineageSystemService {
 
         public boolean setDisplayGammaCalibration(int idx, int[] rgb) {
             return DisplayGammaCalibration.setGamma(idx, rgbToString(rgb));
-        }
-
-        public int[] getVibratorIntensity() {
-            int[] vibrator = new int[5];
-            vibrator[LineageHardwareManager.VIBRATOR_INTENSITY_INDEX] = VibratorHW.getCurIntensity();
-            vibrator[LineageHardwareManager.VIBRATOR_DEFAULT_INDEX] = VibratorHW.getDefaultIntensity();
-            vibrator[LineageHardwareManager.VIBRATOR_MIN_INDEX] = VibratorHW.getMinIntensity();
-            vibrator[LineageHardwareManager.VIBRATOR_MAX_INDEX] = VibratorHW.getMaxIntensity();
-            vibrator[LineageHardwareManager.VIBRATOR_WARNING_INDEX] = VibratorHW.getWarningThreshold();
-            return vibrator;
-        }
-
-        public boolean setVibratorIntensity(int intensity) {
-            return VibratorHW.setIntensity(intensity);
         }
 
         public String getLtoSource() {
@@ -527,28 +507,6 @@ public class LineageHardwareService extends LineageSystemService {
                 return false;
             }
             return mLineageHwImpl.setDisplayGammaCalibration(idx, rgb);
-        }
-
-        @Override
-        public int[] getVibratorIntensity() {
-            mContext.enforceCallingOrSelfPermission(
-                    lineageos.platform.Manifest.permission.HARDWARE_ABSTRACTION_ACCESS, null);
-            if (!isSupported(LineageHardwareManager.FEATURE_VIBRATOR)) {
-                Log.e(TAG, "Vibrator is not supported");
-                return null;
-            }
-            return mLineageHwImpl.getVibratorIntensity();
-        }
-
-        @Override
-        public boolean setVibratorIntensity(int intensity) {
-            mContext.enforceCallingOrSelfPermission(
-                    lineageos.platform.Manifest.permission.HARDWARE_ABSTRACTION_ACCESS, null);
-            if (!isSupported(LineageHardwareManager.FEATURE_VIBRATOR)) {
-                Log.e(TAG, "Vibrator is not supported");
-                return false;
-            }
-            return mLineageHwImpl.setVibratorIntensity(intensity);
         }
 
         @Override
