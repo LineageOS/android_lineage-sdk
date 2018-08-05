@@ -130,6 +130,8 @@
   <string name="lineage_updates">Cập nhật LineageOS</string>
   <!-- About device screen, LineageOS version -->
   <string name="lineage_version">Phiên bản LineageOS</string>
+  <!-- About device screen, vendor security patch -->
+  <string name="lineage_vendor_security_patch">Nhà cung cấp mức bản vá bảo mật</string>
   <!-- General purpose use "unknown" string -->
   <string name="unknown">Không rõ</string>
   <!-- Long-press back kill application -->
@@ -154,4 +156,16 @@
   <!-- This string will be referenced from other apps when they're referring to the Trust interface.
          Trust is a feature name, it's not suggested to translate this unless there are conflicts due
          to a different meaning of the word "trust" in your language -->
+  <string name="trust_feature_name">Trust</string>
+  <string name="permlab_trustInterface">truy cập giao diện Trust</string>
+  <string name="permdesc_trustInterface">Cho phép ứng dụng hiển thị cảnh báo và đề xuất Trust</string>
+  <string name="trust_notification_channel">Cảnh báo Trust</string>
+  <string name="trust_notification_title_security">Trust \u2022 Bảo mật hệ thống</string>
+  <string name="trust_notification_content_selinux">SELinux không thực thi, bảo mật của bạn đã bị suy yếu</string>
+  <string name="trust_notification_title_root">Trust \u2022 Truy cập Root</string>
+  <string name="trust_notification_content_root">Ứng dụng đang sử dụng đặc quyền root ngay bây giờ</string>
+  <string name="trust_notification_content_keys">Bản dựng này đã được ký bằng khóa công khai</string>
+  <string name="trust_notification_title_onboarding">Khám phá Trust</string>
+  <string name="trust_notification_content_onboarding">Tìm hiểu cách đảm bảo thiết bị của bạn an toàn</string>
+  <string name="trust_notification_action_manage">Quản lý cảnh báo</string>
 </resources>

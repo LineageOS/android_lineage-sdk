@@ -122,6 +122,7 @@
   <string name="lineage_updates">LineageOS-updates</string>
   <!-- About device screen, LineageOS version -->
   <string name="lineage_version">LineageOS-versie</string>
+  <!-- About device screen, vendor security patch -->
   <!-- General purpose use "unknown" string -->
   <string name="unknown">Onbekend</string>
   <!-- Long-press back kill application -->

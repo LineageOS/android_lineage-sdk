@@ -130,6 +130,8 @@
   <string name="lineage_updates">LineageOS актуализации</string>
   <!-- About device screen, LineageOS version -->
   <string name="lineage_version">Версия на LineageOS</string>
+  <!-- About device screen, vendor security patch -->
+  <string name="lineage_vendor_security_patch">Ниво на сигурност на доставчик</string>
   <!-- General purpose use "unknown" string -->
   <string name="unknown">Неизвестно</string>
   <!-- Long-press back kill application -->

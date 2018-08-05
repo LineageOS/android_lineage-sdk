@@ -78,6 +78,7 @@
   <!-- About device screen, LineageOS API Level -->
   <!-- About device screen, LineageOS updates -->
   <!-- About device screen, LineageOS version -->
+  <!-- About device screen, vendor security patch -->
   <!-- General purpose use "unknown" string -->
   <string name="unknown">Disconnotu</string>
   <!-- Long-press back kill application -->

@@ -130,6 +130,8 @@
   <string name="lineage_updates">Ενημερώσεις LineageOS</string>
   <!-- About device screen, LineageOS version -->
   <string name="lineage_version">Έκδοση LineageOS</string>
+  <!-- About device screen, vendor security patch -->
+  <string name="lineage_vendor_security_patch">Επίπεδο ενημέρωσης κώδικα ασφαλείας κατασκευαστή</string>
   <!-- General purpose use "unknown" string -->
   <string name="unknown">Άγνωστο</string>
   <!-- Long-press back kill application -->

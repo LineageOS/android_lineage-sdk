@@ -130,6 +130,8 @@
   <string name="lineage_updates">Actualizări LineageOS</string>
   <!-- About device screen, LineageOS version -->
   <string name="lineage_version">Versiune LineageOS</string>
+  <!-- About device screen, vendor security patch -->
+  <string name="lineage_vendor_security_patch">Nivelul corecției de securitate a producătorului</string>
   <!-- General purpose use "unknown" string -->
   <string name="unknown">Necunoscut</string>
   <!-- Long-press back kill application -->

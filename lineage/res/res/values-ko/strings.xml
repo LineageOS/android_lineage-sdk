@@ -130,6 +130,8 @@
   <string name="lineage_updates">LineageOS 업데이트</string>
   <!-- About device screen, LineageOS version -->
   <string name="lineage_version">LineageOS 버전</string>
+  <!-- About device screen, vendor security patch -->
+  <string name="lineage_vendor_security_patch">공급업체 보안 패치 수준</string>
   <!-- General purpose use "unknown" string -->
   <string name="unknown">알 수 없음</string>
   <!-- Long-press back kill application -->

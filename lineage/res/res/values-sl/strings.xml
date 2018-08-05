@@ -130,6 +130,8 @@
   <string name="lineage_updates">Posodobitve LineageOS</string>
   <!-- About device screen, LineageOS version -->
   <string name="lineage_version">Različica LineageOS</string>
+  <!-- About device screen, vendor security patch -->
+  <string name="lineage_vendor_security_patch">Raven popravkov za varnost proizvajalca</string>
   <!-- General purpose use "unknown" string -->
   <string name="unknown">Neznano</string>
   <!-- Long-press back kill application -->

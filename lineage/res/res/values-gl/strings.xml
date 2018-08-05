@@ -130,6 +130,8 @@
   <string name="lineage_updates">Actualizacións de LineageOS</string>
   <!-- About device screen, LineageOS version -->
   <string name="lineage_version">Versión de LineageOS</string>
+  <!-- About device screen, vendor security patch -->
+  <string name="lineage_vendor_security_patch">Nivel do parche de seguridade do proveedor</string>
   <!-- General purpose use "unknown" string -->
   <string name="unknown">Descoñecido</string>
   <!-- Long-press back kill application -->
@@ -158,9 +160,11 @@
   <string name="permlab_trustInterface">acceder a interface Trust</string>
   <string name="permdesc_trustInterface">Permite que unha aplicación amose avisos e suxestións do Trust</string>
   <string name="trust_notification_channel">Alertas Trust</string>
+  <string name="trust_notification_title_security">Trust \u2022 Seguranza do sistema</string>
   <string name="trust_notification_content_selinux">SELinux non se está a aplicar, a seguranza é reducida</string>
   <string name="trust_notification_title_root">Trust \u2022 Acceso root</string>
   <string name="trust_notification_content_root">Unha aplicación está a empregar os privilexios do root neste intre</string>
+  <string name="trust_notification_content_keys">Esta compilación foi asinada con chaves públicas</string>
   <string name="trust_notification_title_onboarding">Descubrir Trust</string>
   <string name="trust_notification_content_onboarding">Coñece como manter seguro o dispositivo</string>
   <string name="trust_notification_action_manage">Xestionar alertas</string>

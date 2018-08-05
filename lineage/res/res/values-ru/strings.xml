@@ -118,7 +118,7 @@
   <string name="permlab_observe_audio_sessions">просмотр изменений аудиосеансов</string>
   <string name="permdesc_observe_audio_sessions">Приложение сможет просматривать аудиопотоки, которые создаются или уничтожаются.</string>
   <!-- Privacy Guard -->
-  <string name="privacy_guard_manager_title">Защищенный режим</string>
+  <string name="privacy_guard_manager_title">Защита конфиденциальности</string>
   <!-- Permissions used by remote preferences -->
   <string name="permlab_manageRemotePrefs">управление удаленными параметрами</string>
   <string name="permdesc_manageRemotePrefs">Приложение сможет управлять удаленными параметрами</string>
@@ -130,6 +130,8 @@
   <string name="lineage_updates">Обновления LineageOS</string>
   <!-- About device screen, LineageOS version -->
   <string name="lineage_version">Версия LineageOS</string>
+  <!-- About device screen, vendor security patch -->
+  <string name="lineage_vendor_security_patch">Уровень пакета безопасности производителя</string>
   <!-- General purpose use "unknown" string -->
   <string name="unknown">Неизвестно</string>
   <!-- Long-press back kill application -->
