@@ -22,6 +22,30 @@
       "revId": "21b2792c42679d40e836ca1e67a983231557f592",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a682076f_4f143bb9",
+        "filename": "sdk/src/java/org/lineageos/internal/util/TelephonyExtUtils.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 11801
+      },
+      "writtenOn": "2018-08-06T18:58:04Z",
+      "side": 1,
+      "message": "\u003e Is anything but GENERIC_FAILURE actually used? Also, is\n \u003e GENERIC_FAILURE meant to align with INVALID_STATE on purpose?\n\nThis is mainly so I can import these constants from my LineageExtTelephony class. I don\u0027t know why they align, these are not my creations.",
+      "parentUuid": "c08b7941_a73f6f7c",
+      "range": {
+        "startLine": 52,
+        "startChar": 28,
+        "endLine": 52,
+        "endChar": 43
+      },
+      "revId": "21b2792c42679d40e836ca1e67a983231557f592",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
