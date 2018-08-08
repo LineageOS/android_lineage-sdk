@@ -24,6 +24,8 @@ LOCAL_INSTRUMENTATION_FOR := LineageSettingsProvider
 
 LOCAL_SRC_FILES := $(call all-subdir-java-files)
 
+LOCAL_PRIVATE_PLATFORM_APIS := true
+
 LOCAL_CERTIFICATE := platform
 LOCAL_JAVA_LIBRARIES := android.test.runner
 LOCAL_PROGUARD_ENABLED := optimization shrinktests
