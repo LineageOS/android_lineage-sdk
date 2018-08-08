@@ -28,7 +28,7 @@ LOCAL_PRIVATE_PLATFORM_APIS := true
 
 LOCAL_CERTIFICATE := platform
 LOCAL_JAVA_LIBRARIES := android.test.runner
-LOCAL_PROGUARD_ENABLED := optimization shrinktests
+LOCAL_PROGUARD_ENABLED := optimization
 LOCAL_PROGUARD_FLAG_FILES := proguard.flags
 
 LOCAL_STATIC_JAVA_LIBRARIES := \
@@ -48,7 +48,7 @@ LOCAL_SRC_FILES := $(call all-subdir-java-files)
 
 LOCAL_CERTIFICATE := platform
 LOCAL_JAVA_LIBRARIES := android.test.runner
-LOCAL_PROGUARD_ENABLED := optimization shrinktests
+LOCAL_PROGUARD_ENABLED := optimization
 LOCAL_PROGUARD_FLAG_FILES := proguard.flags
 
 LOCAL_STATIC_JAVA_LIBRARIES := \
