@@ -874,19 +874,4 @@ public final class LineageHardwareManager {
         }
         return false;
     }
-
-    /**
-     * Enables or disables reading mode
-     *
-     * @return true if success
-     */
-    public boolean setGrayscale(boolean state) {
-        try {
-            if (checkService()) {
-                return sService.setGrayscale(state);
-            }
-        } catch (RemoteException e) {
-        }
-        return false;
-    }
 }
