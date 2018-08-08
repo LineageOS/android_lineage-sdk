@@ -112,8 +112,6 @@ public class LineageHardwareService extends LineageSystemService {
 
         public TouchscreenGesture[] getTouchscreenGestures();
         public boolean setTouchscreenGestureEnabled(TouchscreenGesture gesture, boolean state);
-
-        public boolean setGrayscale(boolean state);
     }
 
     private class LegacyLineageHardware implements LineageHardwareInterface {
@@ -165,18 +163,20 @@ public class LineageHardwareService extends LineageSystemService {
             switch(feature) {
                 case LineageHardwareManager.FEATURE_ADAPTIVE_BACKLIGHT:
                     return AdaptiveBacklight.isEnabled();
+                case LineageHardwareManager.FEATURE_AUTO_CONTRAST:
+                    return AutoContrast.isEnabled();
                 case LineageHardwareManager.FEATURE_COLOR_ENHANCEMENT:
                     return ColorEnhancement.isEnabled();
                 case LineageHardwareManager.FEATURE_HIGH_TOUCH_SENSITIVITY:
                     return HighTouchSensitivity.isEnabled();
                 case LineageHardwareManager.FEATURE_KEY_DISABLE:
                     return KeyDisabler.isActive();
+                case LineageHardwareManager.FEATURE_READING_ENHANCEMENT:
+                    return ReadingEnhancement.isEnabled();
                 case LineageHardwareManager.FEATURE_SUNLIGHT_ENHANCEMENT:
                     return SunlightEnhancement.isEnabled();
                 case LineageHardwareManager.FEATURE_TOUCH_HOVERING:
                     return TouchscreenHovering.isEnabled();
-                case LineageHardwareManager.FEATURE_AUTO_CONTRAST:
-                    return AutoContrast.isEnabled();
                 default:
                     Log.e(TAG, "feature " + feature + " is not a boolean feature");
                     return false;
@@ -187,18 +187,20 @@ public class LineageHardwareService extends LineageSystemService {
             switch(feature) {
                 case LineageHardwareManager.FEATURE_ADAPTIVE_BACKLIGHT:
                     return AdaptiveBacklight.setEnabled(enable);
+                case LineageHardwareManager.FEATURE_AUTO_CONTRAST:
+                    return AutoContrast.setEnabled(enable);
                 case LineageHardwareManager.FEATURE_COLOR_ENHANCEMENT:
                     return ColorEnhancement.setEnabled(enable);
                 case LineageHardwareManager.FEATURE_HIGH_TOUCH_SENSITIVITY:
                     return HighTouchSensitivity.setEnabled(enable);
                 case LineageHardwareManager.FEATURE_KEY_DISABLE:
                     return KeyDisabler.setActive(enable);
+                case LineageHardwareManager.FEATURE_READING_ENHANCEMENT:
+                    return ReadingEnhancement.setEnabled(enable);
                 case LineageHardwareManager.FEATURE_SUNLIGHT_ENHANCEMENT:
                     return SunlightEnhancement.setEnabled(enable);
                 case LineageHardwareManager.FEATURE_TOUCH_HOVERING:
                     return TouchscreenHovering.setEnabled(enable);
-                case LineageHardwareManager.FEATURE_AUTO_CONTRAST:
-                    return AutoContrast.setEnabled(enable);
                 default:
                     Log.e(TAG, "feature " + feature + " is not a boolean feature");
                     return false;
@@ -372,10 +374,6 @@ public class LineageHardwareService extends LineageSystemService {
 
         public boolean setTouchscreenGestureEnabled(TouchscreenGesture gesture, boolean state) {
             return TouchscreenGestures.setGestureEnabled(gesture, state);
-        }
-
-        public boolean setGrayscale(boolean state) {
-            return ReadingEnhancement.setGrayscale(state);
         }
     }
 
@@ -778,17 +776,6 @@ public class LineageHardwareService extends LineageSystemService {
                 return false;
             }
             return mLineageHwImpl.setTouchscreenGestureEnabled(gesture, state);
-        }
-
-        @Override
-        public boolean setGrayscale(boolean state) {
-            mContext.enforceCallingOrSelfPermission(
-                    lineageos.platform.Manifest.permission.HARDWARE_ABSTRACTION_ACCESS, null);
-            if (!isSupported(LineageHardwareManager.FEATURE_READING_ENHANCEMENT)) {
-                Log.e(TAG, "Reading enhancement not supported");
-                return false;
-            }
-            return mLineageHwImpl.setGrayscale(state);
         }
     };
 }
