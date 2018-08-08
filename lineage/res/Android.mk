@@ -24,6 +24,8 @@ LOCAL_AAPT_FLAGS += --private-symbols org.lineageos.platform.internal
 LOCAL_RESOURCE_DIR := $(addprefix $(LOCAL_PATH)/, res)
 LOCAL_RESOURCE_DIR += $(LOCAL_PATH)/../../sdk/res/res
 
+LOCAL_PRIVATE_PLATFORM_APIS := true
+
 # Tell aapt to create "extending (non-application)" resource IDs,
 # since these resources will be used by many apps.
 

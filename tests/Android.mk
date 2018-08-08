@@ -23,6 +23,8 @@ LOCAL_STATIC_JAVA_LIBRARIES := \
     android-support-test \
     mockito-target
 
+LOCAL_SDK_VERSION := current
+
 LOCAL_DEX_PREOPT := false
 
 LOCAL_SRC_FILES := $(call all-subdir-java-files, src/)

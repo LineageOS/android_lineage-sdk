@@ -8,4 +8,6 @@ LOCAL_SRC_FILES := $(call all-subdir-java-files)
 
 LOCAL_PACKAGE_NAME := LineageProfiles
 
+LOCAL_SDK_VERSION := current
+
 include $(BUILD_PACKAGE)
