@@ -113,6 +113,7 @@ public final class LockSettings implements Parcelable {
         boolean enable;
         final DevicePolicyManager devicePolicyManager =
                 (DevicePolicyManager) context.getSystemService(Context.DEVICE_POLICY_SERVICE);
+/*
         if (devicePolicyManager != null && devicePolicyManager.requireSecureKeyguard()) {
             enable = true;
         } else {
@@ -127,6 +128,8 @@ public final class LockSettings implements Parcelable {
                     break;
             }
         }
+*/
+        enable = true;
 
         try {
             keyguard.setKeyguardEnabled(enable);

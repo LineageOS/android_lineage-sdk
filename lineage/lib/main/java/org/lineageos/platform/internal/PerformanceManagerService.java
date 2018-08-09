@@ -188,7 +188,10 @@ public class PerformanceManagerService extends LineageSystemService {
         if (phase == PHASE_SYSTEM_SERVICES_READY && !mSystemReady) {
             synchronized (mLock) {
                 mPm = getLocalService(PowerManagerInternal.class);
+                /*
                 mNumProfiles = mPm.getFeature(POWER_FEATURE_SUPPORTED_PROFILES);
+                */
+                mNumProfiles = 0;
 
                 if (hasProfiles()) {
                     populateProfilesLocked();
@@ -242,7 +245,9 @@ public class PerformanceManagerService extends LineageSystemService {
         if (!isProfileSame && profile != PROFILE_POWER_SAVE &&
                 mActiveProfile == PROFILE_POWER_SAVE) {
             long token = Binder.clearCallingIdentity();
+            /*
             mPm.setPowerSaveMode(false);
+            */
             Binder.restoreCallingIdentity(token);
         }
 
