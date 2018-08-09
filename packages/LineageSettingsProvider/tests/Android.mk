@@ -15,27 +15,6 @@
 #
 LOCAL_PATH:= $(call my-dir)
 
-include $(CLEAR_VARS)
-
-LOCAL_MODULE_TAGS := tests
-
-LOCAL_PACKAGE_NAME := LineageSettingsProviderTests
-LOCAL_INSTRUMENTATION_FOR := LineageSettingsProvider
-
-LOCAL_SRC_FILES := $(call all-subdir-java-files)
-
-LOCAL_PRIVATE_PLATFORM_APIS := true
-
-LOCAL_CERTIFICATE := platform
-LOCAL_JAVA_LIBRARIES := android.test.runner
-LOCAL_PROGUARD_ENABLED := optimization
-LOCAL_PROGUARD_FLAG_FILES := proguard.flags
-
-LOCAL_STATIC_JAVA_LIBRARIES := \
-    org.lineageos.platform.internal
-
-include $(BUILD_PACKAGE)
-
 # Register as LineageTS
 include $(CLEAR_VARS)
 
