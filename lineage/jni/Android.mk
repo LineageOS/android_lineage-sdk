@@ -24,7 +24,8 @@ LOCAL_C_INCLUDES := \
     $(JNI_H_INCLUDE) \
     $(TOP)/frameworks/base/core/jni \
     $(TOP)/frameworks/av/include \
-    $(TOP)/hardware/libhardware/include
+    $(TOP)/hardware/libhardware/include \
+    $(TOP)/libnativehelper/include/nativehelper
 
 LOCAL_SHARED_LIBRARIES := \
     libandroid_runtime \
