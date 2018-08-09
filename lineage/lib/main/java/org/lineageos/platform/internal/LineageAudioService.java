@@ -71,7 +71,9 @@ public class LineageAudioService extends LineageSystemService {
     public void onBootPhase(int phase) {
         if (phase == PHASE_BOOT_COMPLETED) {
             if (NativeHelper.isNativeLibraryAvailable()) {
+                /*
                 native_registerAudioSessionCallback(true);
+                */
             }
         }
     }
