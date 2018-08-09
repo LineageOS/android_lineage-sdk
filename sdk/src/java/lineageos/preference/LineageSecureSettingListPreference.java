@@ -54,7 +54,7 @@ public class LineageSecureSettingListPreference extends SelfRemovingListPreferen
     }
 
     @Override
-    protected boolean isPersisted() {
+    public boolean isPersisted() {
         return LineageSettings.Secure.getString(getContext().getContentResolver(), getKey()) != null;
     }
 

@@ -57,7 +57,7 @@ public class SecureSettingSwitchPreference extends SelfRemovingSwitchPreference 
     }
 
     @Override
-    protected boolean isPersisted() {
+    public boolean isPersisted() {
         return Settings.Secure.getString(getContext().getContentResolver(), getKey()) != null;
     }
 }

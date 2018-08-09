@@ -57,7 +57,7 @@ public class GlobalSettingSwitchPreference extends SelfRemovingSwitchPreference 
     }
 
     @Override
-    protected boolean isPersisted() {
+    public boolean isPersisted() {
         return Settings.Global.getString(getContext().getContentResolver(), getKey()) != null;
     }
 }

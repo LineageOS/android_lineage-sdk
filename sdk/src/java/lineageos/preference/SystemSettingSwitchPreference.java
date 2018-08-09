@@ -57,7 +57,7 @@ public class SystemSettingSwitchPreference extends SelfRemovingSwitchPreference 
     }
 
     @Override
-    protected boolean isPersisted() {
+    public boolean isPersisted() {
         return Settings.System.getString(getContext().getContentResolver(), getKey()) != null;
     }
 }

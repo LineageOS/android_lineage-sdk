@@ -58,7 +58,7 @@ public class LineageSecureSettingSwitchPreference extends SelfRemovingSwitchPref
     }
 
     @Override
-    protected boolean isPersisted() {
+    public boolean isPersisted() {
         return LineageSettings.Secure.getString(getContext().getContentResolver(), getKey()) != null;
     }
 }
