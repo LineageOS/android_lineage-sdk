@@ -63,4 +63,10 @@ public class SelfRemovingListPreference extends ListPreference {
         return mConstraints.isAvailable();
     }
 
+    /**
+     * Returns whether the preference can be found in persistent storage
+     */
+    protected boolean isPersisted() {
+        return getSharedPreferences().contains(getKey());
+    }
 }
