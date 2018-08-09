@@ -27,7 +27,9 @@
 #include "android_media_AudioErrors.h"
 
 #include <media/AudioSystem.h>
+/*
 #include <media/AudioSession.h>
+*/
 
 #include <system/audio.h>
 #include <utils/misc.h>
@@ -37,6 +39,7 @@
 
 namespace android {
 
+/*
 static const char* const kClassPathName = "org/lineageos/platform/internal/LineageAudioService";
 
 static jclass gArrayListClass;
@@ -150,8 +153,12 @@ static JNINativeMethod gMethods[] = {
             (void *)org_lineageos_platform_internal_LineageAudioService_registerAudioSessionCallback},
 };
 
+*/
+
 int register_org_lineageos_platform_internal_LineageAudioService(JNIEnv *env)
 {
+    return 0;
+/*
     jclass arrayListClass = FindClassOrDie(env, "java/util/ArrayList");
     gArrayListClass = MakeGlobalRefOrDie(env, arrayListClass);
     gArrayListMethods.add = GetMethodIDOrDie(env, arrayListClass, "add", "(Ljava/lang/Object;)Z");
@@ -166,6 +173,7 @@ int register_org_lineageos_platform_internal_LineageAudioService(JNIEnv *env)
             "audioSessionCallbackFromNative", "(ILlineageos/media/AudioSessionInfo;Z)V");
 
     return RegisterMethodsOrDie(env, kClassPathName, gMethods, NELEM(gMethods));
+*/
 }
 
 } /* namespace android */
