@@ -38,8 +38,7 @@ import java.text.DateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.Iterator;
-
-import libcore.util.Objects;
+import java.util.Objects;
 
 /**
  * Figures out whether it's twilight time based on the user's location.
@@ -109,7 +108,7 @@ public final class TwilightTracker {
 
     private void setTwilightState(TwilightState state) {
         synchronized (mLock) {
-            if (!Objects.equal(mTwilightState, state)) {
+            if (!Objects.equals(mTwilightState, state)) {
                 if (DEBUG) {
                     Slog.d(TAG, "Twilight state changed: " + state);
                 }
