@@ -36,29 +36,18 @@ public class LineageSystemSettingSwitchPreference extends SelfRemovingSwitchPref
     }
 
     @Override
-    protected boolean persistBoolean(boolean value) {
-        if (shouldPersist()) {
-            if (value == getPersistedBoolean(!value)) {
-                // It's already there, so the same as persisting
-                return true;
-            }
-            LineageSettings.System.putInt(getContext().getContentResolver(), getKey(), value ? 1 : 0);
-            return true;
-        }
-        return false;
-    }
-
-    @Override
-    protected boolean getPersistedBoolean(boolean defaultReturnValue) {
-        if (!shouldPersist()) {
-            return defaultReturnValue;
-        }
-        return LineageSettings.System.getInt(getContext().getContentResolver(),
-                getKey(), defaultReturnValue ? 1 : 0) != 0;
-    }
-
-    @Override
     protected boolean isPersisted() {
         return LineageSettings.System.getString(getContext().getContentResolver(), getKey()) != null;
+    }
+
+    @Override
+    protected void putBoolean(String key, boolean value) {
+        LineageSettings.System.putInt(getContext().getContentResolver(), key, value ? 1 : 0);
+    }
+
+    @Override
+    protected boolean getBoolean(String key, boolean defaultValue) {
+        return LineageSettings.System.getInt(getContext().getContentResolver(),
+                key, defaultValue ? 1 : 0) != 0;
     }
 }
