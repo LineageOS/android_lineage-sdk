@@ -17,6 +17,7 @@ package lineageos.preference;
 
 import android.content.Context;
 import android.support.v7.preference.DropDownPreference;
+import android.support.v7.preference.PreferenceDataStore;
 import android.support.v7.preference.PreferenceViewHolder;
 import android.util.AttributeSet;
 
@@ -24,7 +25,7 @@ import android.util.AttributeSet;
  * A Preference which can automatically remove itself from the hierarchy
  * based on constraints set in XML.
  */
-public class SelfRemovingDropDownPreference extends DropDownPreference {
+public abstract class SelfRemovingDropDownPreference extends DropDownPreference {
 
     private final ConstraintsHelper mConstraints;
 
@@ -61,5 +62,32 @@ public class SelfRemovingDropDownPreference extends DropDownPreference {
 
     public boolean isAvailable() {
         return mConstraints.isAvailable();
+    }
+
+    protected abstract boolean isPersisted();
+    protected abstract void putString(String key, String value);
+    protected abstract String getString(String key, String defaultValue);
+
+    @Override
+    protected void onSetInitialValue(boolean restorePersistedValue, Object defaultValue) {
+        String value;
+        if (!restorePersistedValue || !isPersisted()) {
+            value = (String) defaultValue;
+        } else {
+            value = getString(getKey(), (String) defaultValue);
+        }
+        setValue(value);
+    }
+
+    private class DataStore extends PreferenceDataStore {
+        @Override
+        public void putString(String key, String value) {
+            SelfRemovingDropDownPreference.this.putString(key, value);
+        }
+
+        @Override
+        public String getString(String key, String defaultValue) {
+            return SelfRemovingDropDownPreference.this.getString(key, defaultValue);
+        }
     }
 }
