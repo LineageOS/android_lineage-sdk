@@ -30,26 +30,8 @@ public class LineageSystemSettingListPreference extends SelfRemovingListPreferen
         super(context, attrs);
     }
 
-    @Override
-    protected boolean persistString(String value) {
-        if (shouldPersist()) {
-            if (value == getPersistedString(null)) {
-                // It's already there, so the same as persisting
-                return true;
-            }
-            LineageSettings.System.putString(getContext().getContentResolver(), getKey(), value);
-            return true;
-        }
-        return false;
-    }
-
-    @Override
-    protected String getPersistedString(String defaultReturnValue) {
-        if (!shouldPersist()) {
-            return defaultReturnValue;
-        }
-        String value = LineageSettings.System.getString(getContext().getContentResolver(), getKey());
-        return value == null ? defaultReturnValue : value;
+    public int getIntValue(int defValue) {
+        return getValue() == null ? defValue : Integer.valueOf(getValue());
     }
 
     @Override
@@ -57,7 +39,14 @@ public class LineageSystemSettingListPreference extends SelfRemovingListPreferen
         return LineageSettings.System.getString(getContext().getContentResolver(), getKey()) != null;
     }
 
-    public int getIntValue(int defValue) {
-        return getValue() == null ? defValue : Integer.valueOf(getValue());
+    @Override
+    protected void putString(String key, String value) {
+        LineageSettings.System.putString(getContext().getContentResolver(), key, value);
+    }
+
+    @Override
+    protected String getString(String key, String defaultValue) {
+        return LineageSettings.System.getString(getContext().getContentResolver(),
+                key, defaultValue);
     }
 }
