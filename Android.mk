@@ -22,7 +22,7 @@ LOCAL_PATH := $(call my-dir)
 # did, the PRIVATE_* vars for R.java wouldn't be guaranteed to be correct.
 # Instead, it depends on the R.stamp file, which lists the corresponding
 # R.java file as a prerequisite.
-lineage_platform_res := APPS/org.lineageos.platform-res_intermediates/src
+lineage_platform_res := APPS/org.lineageos.platform-res_intermediates/aapt
 
 # List of packages used in lineage-api-stubs
 lineage_stub_packages := lineageos.app:lineageos.content:lineageos.hardware:lineageos.media:lineageos.os:lineageos.preference:lineageos.profiles:lineageos.providers:lineageos.platform:lineageos.power:lineageos.util:lineageos.weather:lineageos.weatherservice:lineageos.style:lineageos.trust
