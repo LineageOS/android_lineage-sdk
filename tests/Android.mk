@@ -23,8 +23,6 @@ LOCAL_STATIC_JAVA_LIBRARIES := \
     android-support-test \
     mockito-target
 
-LOCAL_SDK_VERSION := current
-
 LOCAL_DEX_PREOPT := false
 
 LOCAL_SRC_FILES := $(call all-subdir-java-files, src/)
@@ -34,6 +32,7 @@ LOCAL_CERTIFICATE := platform
 LOCAL_JAVA_LIBRARIES := android.test.runner
 LOCAL_PROGUARD_ENABLED := optimization
 LOCAL_PROGUARD_FLAG_FILES := proguard.flags
+LOCAL_PRIVATE_PLATFORM_APIS := true
 
 include $(BUILD_PACKAGE)
 
