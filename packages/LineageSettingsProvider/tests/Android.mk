@@ -13,26 +13,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-LOCAL_PATH:= $(call my-dir)
 
-include $(CLEAR_VARS)
-
-LOCAL_MODULE_TAGS := tests
-
-LOCAL_PACKAGE_NAME := LineageSettingsProviderTests
-LOCAL_INSTRUMENTATION_FOR := LineageSettingsProvider
-
-LOCAL_SRC_FILES := $(call all-subdir-java-files)
-
-LOCAL_CERTIFICATE := platform
-LOCAL_JAVA_LIBRARIES := android.test.runner
-LOCAL_PROGUARD_ENABLED := optimization shrinktests
-LOCAL_PROGUARD_FLAG_FILES := proguard.flags
-
-LOCAL_STATIC_JAVA_LIBRARIES := \
-    org.lineageos.platform.internal
-
-include $(BUILD_PACKAGE)
+LOCAL_PATH := $(call my-dir)
 
 # Register as LineageTS
 include $(CLEAR_VARS)

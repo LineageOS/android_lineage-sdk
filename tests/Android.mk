@@ -30,8 +30,9 @@ LOCAL_SRC_FILES := $(call all-subdir-java-files, src/)
 LOCAL_PACKAGE_NAME := LineagePlatformTests
 LOCAL_CERTIFICATE := platform
 LOCAL_JAVA_LIBRARIES := android.test.runner
-LOCAL_PROGUARD_ENABLED := optimization shrinktests
+#LOCAL_PROGUARD_ENABLED := optimization shrinktests
 LOCAL_PROGUARD_FLAG_FILES := proguard.flags
+LOCAL_PRIVATE_PLATFORM_APIS := true
 
 include $(BUILD_PACKAGE)
 
