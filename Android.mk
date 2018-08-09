@@ -27,63 +27,6 @@ lineage_platform_res := APPS/org.lineageos.platform-res_intermediates/aapt
 # List of packages used in lineage-api-stubs
 lineage_stub_packages := lineageos.app:lineageos.content:lineageos.hardware:lineageos.media:lineageos.os:lineageos.preference:lineageos.profiles:lineageos.providers:lineageos.platform:lineageos.power:lineageos.util:lineageos.weather:lineageos.weatherservice:lineageos.style:lineageos.trust
 
-# The LineageOS Platform Framework Library
-# ============================================================
-include $(CLEAR_VARS)
-
-lineage_sdk_src := sdk/src/java/lineageos
-lineage_sdk_internal_src := sdk/src/java/org/lineageos/internal
-library_src := lineage/lib/main/java
-
-LOCAL_MODULE := org.lineageos.platform
-LOCAL_MODULE_TAGS := optional
-
-lineage_sdk_LOCAL_JAVA_LIBRARIES := \
-    android-support-annotations \
-    android-support-v7-preference \
-    android-support-v7-recyclerview \
-    android-support-v14-preference
-
-LOCAL_STATIC_JAVA_LIBRARIES := \
-    telephony-ext
-
-LOCAL_JAVA_LIBRARIES := \
-    services \
-    org.lineageos.hardware \
-    $(lineage_sdk_LOCAL_JAVA_LIBRARIES)
-
-LOCAL_SRC_FILES := \
-    $(call all-java-files-under, $(lineage_sdk_src)) \
-    $(call all-java-files-under, $(lineage_sdk_internal_src)) \
-    $(call all-java-files-under, $(library_src))
-
-## READ ME: ########################################################
-##
-## When updating this list of aidl files, consider if that aidl is
-## part of the SDK API.  If it is, also add it to the list below that
-## is preprocessed and distributed with the SDK.  This list should
-## not contain any aidl files for parcelables, but the one below should
-## if you intend for 3rd parties to be able to send those objects
-## across process boundaries.
-##
-## READ ME: ########################################################
-LOCAL_SRC_FILES += \
-    $(call all-Iaidl-files-under, $(lineage_sdk_src)) \
-    $(call all-Iaidl-files-under, $(lineage_sdk_internal_src))
-
-lineage_platform_LOCAL_INTERMEDIATE_SOURCES := \
-    $(lineage_platform_res)/lineageos/platform/R.java \
-    $(lineage_platform_res)/lineageos/platform/Manifest.java \
-    $(lineage_platform_res)/org/lineageos/platform/internal/R.java
-
-LOCAL_INTERMEDIATE_SOURCES := \
-    $(lineage_platform_LOCAL_INTERMEDIATE_SOURCES)
-
-# Include aidl files from lineageos.app namespace as well as internal src aidl files
-LOCAL_AIDL_INCLUDES := $(LOCAL_PATH)/sdk/src/java
-LOCAL_AIDL_FLAGS := -n
-
-include $(BUILD_JAVA_LIBRARY)
 lineage_framework_module := $(LOCAL_INSTALLED_MODULE)
 
 # Make sure that R.java and Manifest.java are built before we build
@@ -95,53 +38,6 @@ LOCAL_ADDITIONAL_DEPENDENCIES := $(lineage_framework_res_R_stamp)
 $(lineage_framework_module): | $(dir $(lineage_framework_module))org.lineageos.platform-res.apk
 
 lineage_framework_built := $(call java-lib-deps, org.lineageos.platform)
-
-# ====  org.lineageos.platform.xml lib def  ========================
-include $(CLEAR_VARS)
-
-LOCAL_MODULE := org.lineageos.platform.xml
-LOCAL_MODULE_TAGS := optional
-
-LOCAL_MODULE_CLASS := ETC
-
-# This will install the file in /system/etc/permissions
-LOCAL_MODULE_PATH := $(TARGET_OUT_ETC)/permissions
-
-LOCAL_SRC_FILES := $(LOCAL_MODULE)
-
-include $(BUILD_PREBUILT)
-
-# the sdk
-# ============================================================
-include $(CLEAR_VARS)
-
-LOCAL_MODULE:= org.lineageos.platform.sdk
-LOCAL_MODULE_TAGS := optional
-LOCAL_REQUIRED_MODULES := services
-
-LOCAL_SRC_FILES := \
-    $(call all-java-files-under, $(lineage_sdk_src)) \
-    $(call all-Iaidl-files-under, $(lineage_sdk_src))
-
-# Included aidl files from lineageos.app namespace
-LOCAL_AIDL_INCLUDES := $(LOCAL_PATH)/sdk/src/java
-
-lineage_sdk_LOCAL_INTERMEDIATE_SOURCES := \
-    $(lineage_platform_res)/lineageos/platform/R.java \
-    $(lineage_platform_res)/lineageos/platform/Manifest.java
-
-LOCAL_INTERMEDIATE_SOURCES := \
-    $(lineage_sdk_LOCAL_INTERMEDIATE_SOURCES)
-
-LOCAL_JAVA_LIBRARIES := \
-    $(lineage_sdk_LOCAL_JAVA_LIBRARIES)
-
-# Make sure that R.java and Manifest.java are built before we build
-# the source for this library.
-lineage_framework_res_R_stamp := \
-    $(call intermediates-dir-for,APPS,org.lineageos.platform-res,,COMMON)/src/R.stamp
-LOCAL_ADDITIONAL_DEPENDENCIES := $(lineage_framework_res_R_stamp)
-include $(BUILD_STATIC_JAVA_LIBRARY)
 
 # the sdk as an aar for publish, not built as part of full target
 # DO NOT LINK AGAINST THIS IN BUILD
@@ -168,43 +64,6 @@ LOCAL_STATIC_JAVA_LIBRARIES := org.lineageos.platform.sdk
 
 include $(BUILD_STATIC_JAVA_LIBRARY)
 $(LOCAL_MODULE) : $(built_aar)
-
-# full target for use by platform apps
-#
-include $(CLEAR_VARS)
-
-LOCAL_MODULE:= org.lineageos.platform.internal
-LOCAL_MODULE_TAGS := optional
-LOCAL_REQUIRED_MODULES := services
-
-LOCAL_SRC_FILES := \
-    $(call all-java-files-under, $(lineage_sdk_src)) \
-    $(call all-java-files-under, $(lineage_sdk_internal_src)) \
-    $(call all-Iaidl-files-under, $(lineage_sdk_src)) \
-    $(call all-Iaidl-files-under, $(lineage_sdk_internal_src))
-
-# Included aidl files from lineageos.app namespace
-LOCAL_AIDL_INCLUDES := $(LOCAL_PATH)/sdk/src/java
-LOCAL_AIDL_FLAGS := -n
-
-lineage_sdk_LOCAL_INTERMEDIATE_SOURCES := \
-    $(lineage_platform_res)/lineageos/platform/R.java \
-    $(lineage_platform_res)/lineageos/platform/Manifest.java \
-    $(lineage_platform_res)/org/lineageos/platform/internal/R.java \
-    $(lineage_platform_res)/org/lineageos/platform/internal/Manifest.java
-
-LOCAL_INTERMEDIATE_SOURCES := \
-    $(lineage_sdk_LOCAL_INTERMEDIATE_SOURCES)
-
-LOCAL_STATIC_JAVA_LIBRARIES := \
-    telephony-ext
-
-LOCAL_JAVA_LIBRARIES := \
-    $(lineage_sdk_LOCAL_JAVA_LIBRARIES)
-
-$(full_target): $(lineage_framework_built) $(gen)
-include $(BUILD_STATIC_JAVA_LIBRARY)
-
 
 # ===========================================================
 # Common Droiddoc vars
