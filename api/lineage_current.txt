@@ -212,7 +212,6 @@ package lineageos.hardware {
     method public boolean setDisplayColorCalibration(int[]);
     method public deprecated boolean setDisplayGammaCalibration(int, int[]);
     method public boolean setDisplayMode(lineageos.hardware.DisplayMode, boolean);
-    method public boolean setGrayscale(boolean);
     method public boolean setPictureAdjustment(lineageos.hardware.HSIC);
     method public boolean setTouchscreenGestureEnabled(lineageos.hardware.TouchscreenGesture, boolean);
     method public boolean setVibratorIntensity(int);
