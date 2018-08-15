@@ -51,7 +51,7 @@ public class LineageDatabaseHelper extends SQLiteOpenHelper{
     private static final boolean LOCAL_LOGV = false;
 
     private static final String DATABASE_NAME = "lineagesettings.db";
-    private static final int DATABASE_VERSION = 8;
+    private static final int DATABASE_VERSION = 9;
 
     private static final String DATABASE_NAME_OLD = "cmsettings.db";
 
@@ -232,21 +232,9 @@ public class LineageDatabaseHelper extends SQLiteOpenHelper{
         }
 
         if (upgradeVersion < 4) {
-            if (mUserHandle == UserHandle.USER_OWNER) {
-                db.beginTransaction();
-                SQLiteStatement stmt = null;
-                try {
-                    stmt = db.compileStatement("INSERT INTO secure(name,value)"
-                            + " VALUES(?,?);");
-                    final String provisionedFlag = Settings.Global.getString(
-                            mContext.getContentResolver(), Settings.Global.DEVICE_PROVISIONED);
-                    loadSetting(stmt, LineageSettings.Secure.LINEAGE_SETUP_WIZARD_COMPLETED, provisionedFlag);
-                    db.setTransactionSuccessful();
-                } finally {
-                    if (stmt != null) stmt.close();
-                    db.endTransaction();
-                }
-            }
+            /* Was set LineageSettings.Secure.LINEAGE_SETUP_WIZARD_COMPLETE
+             * but this is no longer used
+             */
             upgradeVersion = 4;
         }
 
@@ -320,6 +308,23 @@ public class LineageDatabaseHelper extends SQLiteOpenHelper{
                 db.endTransaction();
             }
             upgradeVersion = 8;
+        }
+
+        if (upgradeVersion < 9) {
+            if (mUserHandle == UserHandle.USER_OWNER) {
+                db.beginTransaction();
+                SQLiteStatement stmt = null;
+                try {
+                    stmt = db.compileStatement("DELETE FROM secure WHERE name=?");
+                    stmt.bindString(1, LineageSettings.Secure.LINEAGE_SETUP_WIZARD_COMPLETED);
+                    stmt.execute();
+                    db.setTransactionSuccessful();
+                } finally {
+                    if (stmt != null) stmt.close();
+                    db.endTransaction();
+                }
+            }
+            upgradeVersion = 9;
         }
         // *** Remember to update DATABASE_VERSION above!
 
