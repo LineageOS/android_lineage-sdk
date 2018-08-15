@@ -232,21 +232,9 @@ public class LineageDatabaseHelper extends SQLiteOpenHelper{
         }
 
         if (upgradeVersion < 4) {
-            if (mUserHandle == UserHandle.USER_OWNER) {
-                db.beginTransaction();
-                SQLiteStatement stmt = null;
-                try {
-                    stmt = db.compileStatement("INSERT INTO secure(name,value)"
-                            + " VALUES(?,?);");
-                    final String provisionedFlag = Settings.Global.getString(
-                            mContext.getContentResolver(), Settings.Global.DEVICE_PROVISIONED);
-                    loadSetting(stmt, LineageSettings.Secure.LINEAGE_SETUP_WIZARD_COMPLETED, provisionedFlag);
-                    db.setTransactionSuccessful();
-                } finally {
-                    if (stmt != null) stmt.close();
-                    db.endTransaction();
-                }
-            }
+            /* Was set LineageSettings.Secure.LINEAGE_SETUP_WIZARD_COMPLETE
+             * but this is no longer used
+             */
             upgradeVersion = 4;
         }
 
@@ -339,6 +327,7 @@ public class LineageDatabaseHelper extends SQLiteOpenHelper{
 
         if (upgradeVersion < 10) {
             if (mUserHandle == UserHandle.USER_OWNER) {
+                // Update STATUS_BAR_CLOCK
                 db.beginTransaction();
                 SQLiteStatement stmt = null;
                 try {
@@ -355,6 +344,19 @@ public class LineageDatabaseHelper extends SQLiteOpenHelper{
                     db.setTransactionSuccessful();
                 } catch (SQLiteDoneException ex) {
                     // LineageSettings.System.STATUS_BAR_CLOCK is not set
+                } finally {
+                    if (stmt != null) stmt.close();
+                    db.endTransaction();
+                }
+
+                // Remove LINEAGE_SETUP_WIZARD_COMPLETED
+                db.beginTransaction();
+                stmt = null;
+                try {
+                    stmt = db.compileStatement("DELETE FROM secure WHERE name=?");
+                    stmt.bindString(1, LineageSettings.Secure.LINEAGE_SETUP_WIZARD_COMPLETED);
+                    stmt.execute();
+                    db.setTransactionSuccessful();
                 } finally {
                     if (stmt != null) stmt.close();
                     db.endTransaction();
