@@ -15,7 +15,7 @@
      limitations under the License.
 -->
 <resources xmlns:lineage="http://schemas.android.com/apk/res/lineageos.platform">
-    <declare-styleable name="lineage:SelfRemovingPreference">
+    <declare-styleable name="SelfRemovingPreference">
         <attr name="requiresPackage" format="string" />
         <attr name="requiresFeature" format="string" />
         <attr name="requiresConfig" format="string" />
@@ -28,7 +28,7 @@
     </declare-styleable>
 
     <!--Settings search providers-->
-    <declare-styleable name="lineage:Searchable">
+    <declare-styleable name="Searchable">
         <attr name="xmlRes" format="reference" />
     </declare-styleable>
 
