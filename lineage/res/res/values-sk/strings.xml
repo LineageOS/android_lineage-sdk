@@ -131,6 +131,7 @@
   <!-- About device screen, LineageOS version -->
   <string name="lineage_version">Verzia LineageOS</string>
   <!-- About device screen, vendor security patch -->
+  <string name="lineage_vendor_security_patch">Úroveň opravy zabezpečenia výrobcu</string>
   <!-- General purpose use "unknown" string -->
   <string name="unknown">Neznáma</string>
   <!-- Long-press back kill application -->
