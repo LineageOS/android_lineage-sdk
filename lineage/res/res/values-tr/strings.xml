@@ -131,7 +131,7 @@
   <!-- About device screen, LineageOS version -->
   <string name="lineage_version">LineageOS sürümü</string>
   <!-- About device screen, vendor security patch -->
-  <string name="lineage_vendor_security_patch">Android güvenlik yaması düzeyi</string>
+  <string name="lineage_vendor_security_patch">Üretici güvenlik yaması düzeyi</string>
   <!-- General purpose use "unknown" string -->
   <string name="unknown">Bilinmiyor</string>
   <!-- Long-press back kill application -->

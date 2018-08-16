@@ -161,7 +161,7 @@
   <string name="permdesc_trustInterface">Позволяет приложению отображать предупреждения и предложения Trust</string>
   <string name="trust_notification_channel">Предупреждения Trust</string>
   <string name="trust_notification_title_security">Trust \u2022 Безопасность системы</string>
-  <string name="trust_notification_content_selinux">SELinux не в принудительном режиме, ваша безопасность под угрозой</string>
+  <string name="trust_notification_content_selinux">SELinux не применяется, ваша безопасность под угрозой</string>
   <string name="trust_notification_title_root">Trust \u2022 Режим суперпользователя</string>
   <string name="trust_notification_content_root">В настоящее время приложение использует режим суперпользователя</string>
   <string name="trust_notification_content_keys">Эта сборка подписана открытыми ключами</string>
