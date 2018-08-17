@@ -116,12 +116,14 @@ public class ProfileTriggerHelper extends BroadcastReceiver {
                 mLastConnectedSSID = WifiSsid.NONE;
             } else if (NetworkInfo.DetailedState.CONNECTED.equals(state)) {
                 WifiInfo wifiInfo = intent.getParcelableExtra(WifiManager.EXTRA_WIFI_INFO);
+                /*
                 WifiSsid ssid = wifiInfo.getWifiSsid();
                 if (ssid != null) {
                     mLastConnectedSSID = ssid.toString();
                     checkTriggers(Profile.TriggerType.WIFI, mLastConnectedSSID,
                             Profile.TriggerState.ON_CONNECT);
                 }
+                */
             }
         } else if (action.equals(BluetoothDevice.ACTION_ACL_CONNECTED)
                 || action.equals(BluetoothDevice.ACTION_ACL_DISCONNECTED)) {
