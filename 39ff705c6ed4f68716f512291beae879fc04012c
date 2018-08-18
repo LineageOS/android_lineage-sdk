@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "dbc2d832_2d43b40b",
+        "filename": "tests/Android.mk",
+        "patchSetId": 9
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2018-08-18T10:28:58Z",
+      "side": 0,
+      "message": "Doesn\u0027t this belong to change https://review.lineageos.org/#/c/LineageOS/android_lineage-sdk/+/223134/3 ?",
+      "revId": "39ff705c6ed4f68716f512291beae879fc04012c",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
