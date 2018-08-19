@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5c4bdd67_d60a08d1",
+        "filename": "sdk/src/java/org/lineageos/internal/util/ActionUtils.java",
+        "patchSetId": 14
+      },
+      "lineNbr": 125,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2018-08-19T00:03:25Z",
+      "side": 1,
+      "message": "This got removed here: https://github.com/LineageOS/android_frameworks_base/commit/5fa397533fa29254e8a45a05675b2c03756a0ada. Not sure if the wise thing to do is to bring that method back.",
+      "range": {
+        "startLine": 125,
+        "startChar": 62,
+        "endLine": 125,
+        "endChar": 83
+      },
+      "revId": "102868df85b49a12c0a3561241ad90f81054b89e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
