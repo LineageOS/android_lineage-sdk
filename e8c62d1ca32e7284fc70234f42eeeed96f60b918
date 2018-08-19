@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "65c1b808_419fd4b6",
+        "filename": "lineage/lib/main/java/org/lineageos/platform/internal/ProfileTriggerHelper.java",
+        "patchSetId": 13
+      },
+      "lineNbr": 126,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2018-08-19T00:00:59Z",
+      "side": 1,
+      "message": "This seems to be buildable.",
+      "range": {
+        "startLine": 119,
+        "startChar": 16,
+        "endLine": 126,
+        "endChar": 18
+      },
+      "revId": "e8c62d1ca32e7284fc70234f42eeeed96f60b918",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
