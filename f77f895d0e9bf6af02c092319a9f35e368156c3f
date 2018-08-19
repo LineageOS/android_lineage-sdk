@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a19f9f0_c89246b6",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 8
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2018-08-19T00:49:49Z",
+      "side": 1,
+      "message": "Ported https://review.lineageos.org/#/c/LineageOS/android_frameworks_av/+/224863/",
+      "range": {
+        "startLine": 10,
+        "startChar": 0,
+        "endLine": 10,
+        "endChar": 98
+      },
+      "revId": "f77f895d0e9bf6af02c092319a9f35e368156c3f",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
