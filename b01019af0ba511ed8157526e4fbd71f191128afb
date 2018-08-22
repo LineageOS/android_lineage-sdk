@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "d6190af1_7625ad03",
+        "filename": "sdk/res/res/values/attrs.xml",
+        "patchSetId": 14
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2018-08-22T20:58:43Z",
+      "side": 1,
+      "message": "This is proper: https://github.com/LineageOS/android_lineage-sdk/blame/lineage-15.1/sdk/src/java/lineageos/preference/ConstraintsHelper.java#L77",
+      "range": {
+        "startLine": 18,
+        "startChar": 29,
+        "endLine": 18,
+        "endChar": 59
+      },
+      "revId": "b01019af0ba511ed8157526e4fbd71f191128afb",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
