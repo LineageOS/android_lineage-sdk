@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "d91f5c8a_38eda11e",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 11
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2018-08-22T21:12:57Z",
+      "side": 1,
+      "message": "I\u0027d put https://github.com/LineageOS/android_frameworks_support/commit/32e67e60201feee32b5af8ef4bb66c98292cd3b7 here instead. For whenever lineage-16.0 is removed from gerrit history.",
+      "range": {
+        "startLine": 10,
+        "startChar": 0,
+        "endLine": 10,
+        "endChar": 79
+      },
+      "revId": "fdcbdf179cfe03ac9c1fce7cae4098672baca747",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
