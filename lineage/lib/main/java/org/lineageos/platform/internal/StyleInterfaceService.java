@@ -32,6 +32,8 @@ import android.os.ServiceManager;
 import android.os.UserHandle;
 import android.util.Log;
 
+import com.android.server.SystemService;
+
 import lineageos.app.LineageContextConstants;
 import lineageos.providers.LineageSettings;
 import lineageos.style.IStyleInterface;
@@ -70,8 +72,15 @@ public class StyleInterfaceService extends LineageSystemService {
 
     @Override
     public void onStart() {
-        mPackageManager = mContext.getPackageManager();
-        mOverlayService = IOverlayManager.Stub.asInterface(ServiceManager.getService("overlay"));
+        /* No-op */
+    }
+
+    @Override
+    public void onBootPhase(int phase) {
+        if (phase == SystemService.PHASE_SYSTEM_SERVICES_READY) {
+            mPackageManager = mContext.getPackageManager();
+            mOverlayService = IOverlayManager.Stub.asInterface(ServiceManager.getService("overlay"));
+        }
     }
 
     private void enforceChangeStylePermission() {
