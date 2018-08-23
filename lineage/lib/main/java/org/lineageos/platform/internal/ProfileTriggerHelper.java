@@ -115,10 +115,9 @@ public class ProfileTriggerHelper extends BroadcastReceiver {
                         Profile.TriggerState.ON_DISCONNECT);
                 mLastConnectedSSID = WifiSsid.NONE;
             } else if (NetworkInfo.DetailedState.CONNECTED.equals(state)) {
-                WifiInfo wifiInfo = intent.getParcelableExtra(WifiManager.EXTRA_WIFI_INFO);
-                WifiSsid ssid = wifiInfo.getWifiSsid();
+                String ssid = getActiveSSID();
                 if (ssid != null) {
-                    mLastConnectedSSID = ssid.toString();
+                    mLastConnectedSSID = ssid;
                     checkTriggers(Profile.TriggerType.WIFI, mLastConnectedSSID,
                             Profile.TriggerState.ON_CONNECT);
                 }
