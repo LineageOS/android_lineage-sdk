@@ -22,6 +22,30 @@
       "revId": "83c730769602a9b256b0d0845bff5ff75a159012",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "99d21983_5b8c65ba",
+        "filename": "sdk/src/java/lineageos/preference/SelfRemovingSwitchPreference.java",
+        "patchSetId": 13
+      },
+      "lineNbr": 76,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2018-08-23T13:50:36Z",
+      "side": 1,
+      "message": "Here is my proposal: https://hastebin.com/opitucozom.java",
+      "parentUuid": "ab0e9e92_990970fa",
+      "range": {
+        "startLine": 76,
+        "startChar": 75,
+        "endLine": 76,
+        "endChar": 87
+      },
+      "revId": "83c730769602a9b256b0d0845bff5ff75a159012",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
