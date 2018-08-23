@@ -64,6 +64,24 @@
       "revId": "83c730769602a9b256b0d0845bff5ff75a159012",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "757b66e9_4df80050",
+        "filename": "sdk/src/java/lineageos/preference/SelfRemovingSwitchPreference.java",
+        "patchSetId": 13
+      },
+      "lineNbr": 76,
+      "author": {
+        "id": 3075
+      },
+      "writtenOn": "2018-08-23T17:03:59Z",
+      "side": 1,
+      "message": "Good catch.\n\nI think it would be better to do nothing if defaultValue is null.  That\u0027s more consistent with the original behaviour and, further, we\u0027re not introducing yet another place where a default is chosen in code.",
+      "parentUuid": "6b548a3b_585634b0",
+      "revId": "83c730769602a9b256b0d0845bff5ff75a159012",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
