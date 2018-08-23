@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ab0e9e92_990970fa",
+        "filename": "sdk/src/java/lineageos/preference/SelfRemovingSwitchPreference.java",
+        "patchSetId": 13
+      },
+      "lineNbr": 76,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2018-08-23T13:39:05Z",
+      "side": 1,
+      "message": "So, let\u0027s say we add a preference somewhere but we don\u0027t actually set defaultValue in the xml (like here: https://review.lineageos.org/#/c/LineageOS/android_packages_apps_Settings/+/225596/2/res/xml/display_settings.xml). While the best practice should be to set a defaultValue, we should address the case where it may be null in order to avoid a NPE:\n\n\u003e  08-23 01:17:16.613  2362  2362 E AndroidRuntime: Caused by: java.lang.NullPointerException: Attempt to invoke virtual method \u0027boolean java.lang.Boolean.booleanValue()\u0027 on a null object reference\n\u003e  08-23 01:17:16.613  2362  2362 E AndroidRuntime: \tat lineageos.preference.SelfRemovingSwitchPreference.onSetInitialValue(SelfRemovingSwitchPreference.java:79)\n\u003e  08-23 01:17:16.613  2362  2362 E AndroidRuntime: \tat android.support.v7.preference.Preference.dispatchSetInitialValue(Preference.java:1515)\n\nWhat do you think it is the best approach? Default to false if defaultValue \u003d\u003d null?",
+      "range": {
+        "startLine": 76,
+        "startChar": 75,
+        "endLine": 76,
+        "endChar": 87
+      },
+      "revId": "83c730769602a9b256b0d0845bff5ff75a159012",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
