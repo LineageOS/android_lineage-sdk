@@ -77,9 +77,6 @@ public final class LineageNotificationLights {
 
     private int mZenMode;
 
-    // For checking lockscreen status
-    private KeyguardManager mKeyguardManager;
-
     private final SettingsObserver mSettingsObserver;
 
     private final Context mContext;
@@ -122,9 +119,6 @@ public final class LineageNotificationLights {
             mPackageNameMappings.put(map[0], map[1]);
         }
 
-        mKeyguardManager =
-                (KeyguardManager) mContext.getSystemService(Context.KEYGUARD_SERVICE);
-
         mSettingsObserver = new SettingsObserver(new Handler());
         mSettingsObserver.observe();
     }
@@ -138,7 +132,8 @@ public final class LineageNotificationLights {
     // when lights should / should not be cleared.
     // TODO: put this somewhere else
     public boolean isKeyguardLocked() {
-        return mKeyguardManager != null && mKeyguardManager.isKeyguardLocked();
+        KeyguardManager keyguardManager = mContext.getSystemService(KeyguardManager.class);
+        return keyguardManager != null && keyguardManager.isKeyguardLocked();
     }
 
     private void parseNotificationPulseCustomValuesString(String customLedValuesString) {
