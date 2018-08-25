@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "54158b9e_f8e0a44d",
+        "filename": "sdk/src/java/lineageos/preference/SelfRemovingSwitchPreference.java",
+        "patchSetId": 15
+      },
+      "lineNbr": 81,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2018-08-25T19:22:55Z",
+      "side": 1,
+      "message": "Either we go for the fallback that I\u0027ve suggested or move this out of the main if statement.",
+      "range": {
+        "startLine": 79,
+        "startChar": 0,
+        "endLine": 81,
+        "endChar": 13
+      },
+      "revId": "6164aceb953433ca596fdbd520c3396e64479d70",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
