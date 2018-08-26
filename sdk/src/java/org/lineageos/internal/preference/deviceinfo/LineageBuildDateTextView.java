@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2017 The LineageOS Project
+ * Copyright (C) 2018 The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -19,34 +19,19 @@ package org.lineageos.internal.preference.deviceinfo;
 import android.content.Context;
 import android.os.SystemProperties;
 import android.util.AttributeSet;
-
-import lineageos.preference.SelfRemovingPreference;
+import android.widget.TextView;
 
 import org.lineageos.platform.internal.R;
 
-public class LineageBuildDatePreference extends SelfRemovingPreference {
-    private static final String TAG = "LineageBuildDatePreference";
+public class LineageBuildDateTextView extends TextView {
+    private static final String TAG = "LineageAPIVersionTextView";
 
     private static final String KEY_BUILD_DATE_PROP = "ro.build.date";
 
-    public LineageBuildDatePreference(Context context, AttributeSet attrs, int defStyle) {
-        super(context, attrs, defStyle);
-    }
-
-    public LineageBuildDatePreference(Context context, AttributeSet attrs) {
+    public LineageBuildDateTextView(Context context, AttributeSet attrs) {
         super(context, attrs);
-    }
-
-    public LineageBuildDatePreference(Context context) {
-        super(context);
-    }
-
-    @Override
-    public void onAttached() {
-        super.onAttached();
-
-        setTitle(R.string.build_date);
-        setSummary(SystemProperties.get(KEY_BUILD_DATE_PROP,
+        setText(SystemProperties.get(KEY_BUILD_DATE_PROP,
                 getContext().getResources().getString(R.string.unknown)));
     }
+
 }
