@@ -21,8 +21,7 @@ import android.content.Context;
 import android.os.SystemProperties;
 import android.text.format.DateFormat;
 import android.util.AttributeSet;
-
-import lineageos.preference.SelfRemovingPreference;
+import android.widget.TextView;
 
 import org.lineageos.platform.internal.R;
 
@@ -31,41 +30,18 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
 
-public class LineageVendorSecurityPatchPreference extends SelfRemovingPreference {
+public class LineageVendorSecurityPatchTextView extends TextView {
+    private static final String TAG = "LineageVendorSecurityPatchTextView";
+
     private static final String KEY_AOSP_VENDOR_SECURITY_PATCH =
             "ro.vendor.build.security_patch";
 
     private static final String KEY_LINEAGE_VENDOR_SECURITY_PATCH =
             "ro.lineage.build.vendor_security_patch";
 
-    public LineageVendorSecurityPatchPreference(Context context, AttributeSet attrs,
-            int defStyle) {
-        super(context, attrs, defStyle);
-    }
-
-    public LineageVendorSecurityPatchPreference(Context context, AttributeSet attrs) {
+    public LineageVendorSecurityPatchTextView(Context context, AttributeSet attrs) {
         super(context, attrs);
-    }
-
-    public LineageVendorSecurityPatchPreference(Context context) {
-        super(context);
-    }
-
-    @Override
-    public void onAttached() {
-        super.onAttached();
-
-        setTitle(R.string.lineage_vendor_security_patch);
-        setSummary(getVendorSecurityPatchLevel());
-    }
-
-    @Override
-    public void setSummary(CharSequence summary) {
-        if (summary.length() > 0) {
-            super.setSummary(summary);
-        } else {
-            setAvailable(false);
-        }
+        setText(getVendorSecurityPatchLevel());
     }
 
     private String getVendorSecurityPatchLevel() {
@@ -84,7 +60,11 @@ public class LineageVendorSecurityPatchPreference extends SelfRemovingPreference
             } catch (ParseException e) {
                 // parsing failed, use raw string
             }
+        } else {
+            patchLevel = getContext().getResources().getString(R.string.unknown);
         }
+
         return patchLevel;
     }
+
 }
