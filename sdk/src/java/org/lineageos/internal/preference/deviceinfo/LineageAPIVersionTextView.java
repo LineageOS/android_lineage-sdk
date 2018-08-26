@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2017 The LineageOS Project
+ * Copyright (C) 2018 The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -17,39 +17,22 @@
 package org.lineageos.internal.preference.deviceinfo;
 
 import android.content.Context;
-import android.os.SystemProperties;
 import android.util.AttributeSet;
-
-import lineageos.preference.SelfRemovingPreference;
+import android.widget.TextView;
 
 import org.lineageos.platform.internal.R;
 
-public class LineageAPIVersionPreference extends SelfRemovingPreference {
-    private static final String TAG = "LineageAPIVersionPreference";
+public class LineageAPIVersionTextView extends TextView {
+    private static final String TAG = "LineageAPIVersionTextView";
 
-    private static final String KEY_BUILD_DATE_PROP = "ro.build.date";
-
-    public LineageAPIVersionPreference(Context context, AttributeSet attrs, int defStyle) {
-        super(context, attrs, defStyle);
-    }
-
-    public LineageAPIVersionPreference(Context context, AttributeSet attrs) {
+    public LineageAPIVersionTextView(Context context, AttributeSet attrs) {
         super(context, attrs);
-    }
 
-    public LineageAPIVersionPreference(Context context) {
-        super(context);
-    }
-
-    @Override
-    public void onAttached() {
-        super.onAttached();
-
-        setTitle(R.string.lineage_api_level);
         final int sdk = lineageos.os.Build.LINEAGE_VERSION.SDK_INT;
         StringBuilder builder = new StringBuilder();
         builder.append(lineageos.os.Build.getNameForSDKInt(sdk))
                 .append(" (" + sdk + ")");
-        setSummary(builder.toString());
+        setText(builder.toString());
     }
+
 }

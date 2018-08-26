@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2017 The LineageOS Project
+ * Copyright (C) 2018 The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -20,18 +20,15 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.SystemClock;
 import android.os.SystemProperties;
-import android.support.v7.preference.Preference;
 import android.util.AttributeSet;
 import android.util.Log;
-
-import lineageos.preference.SelfRemovingPreference;
+import android.view.View;
+import android.widget.TextView;
 
 import org.lineageos.platform.internal.R;
 
-public class LineageVersionPreference extends SelfRemovingPreference
-        implements Preference.OnPreferenceClickListener {
-
-    private static final String TAG = "LineageVersionPreference";
+public class LineageVersionTextView extends TextView implements View.OnClickListener {
+    private static final String TAG = "LineageVersionTextView";
 
     private static final String KEY_LINEAGE_VERSION_PROP = "ro.lineage.version";
 
@@ -41,36 +38,20 @@ public class LineageVersionPreference extends SelfRemovingPreference
 
     private long[] mHits = new long[3];
 
-    public LineageVersionPreference(Context context, AttributeSet attrs, int defStyle) {
-        super(context, attrs, defStyle);
-    }
-
-    public LineageVersionPreference(Context context, AttributeSet attrs) {
+    public LineageVersionTextView(Context context, AttributeSet attrs) {
         super(context, attrs);
-    }
-
-    public LineageVersionPreference(Context context) {
-        super(context);
-    }
-
-    @Override
-    public void onAttached() {
-        super.onAttached();
-
-        setOnPreferenceClickListener(this);
-        setTitle(R.string.lineage_version);
-        setSummary(SystemProperties.get(KEY_LINEAGE_VERSION_PROP,
+        setText(SystemProperties.get(KEY_LINEAGE_VERSION_PROP,
                 getContext().getResources().getString(R.string.unknown)));
+        setOnClickListener(this);
     }
 
     @Override
-    public boolean onPreferenceClick(Preference preference) {
+    public void onClick(View v) {
         System.arraycopy(mHits, 1, mHits, 0, mHits.length - 1);
         mHits[mHits.length - 1] = SystemClock.uptimeMillis();
         if (mHits[0] >= (SystemClock.uptimeMillis() - 500)) {
             launchLogoActivity();
         }
-        return true; // handled
     }
 
     private void launchLogoActivity() {
@@ -82,4 +63,5 @@ public class LineageVersionPreference extends SelfRemovingPreference
             Log.e(TAG, "Unable to start activity " + intent.toString());
         }
     }
+
 }
