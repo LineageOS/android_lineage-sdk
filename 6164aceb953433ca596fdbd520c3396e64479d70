@@ -22,6 +22,23 @@
       "revId": "6164aceb953433ca596fdbd520c3396e64479d70",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4f767aba_595c2f37",
+        "filename": "sdk/src/java/lineageos/preference/SelfRemovingSwitchPreference.java",
+        "patchSetId": 15
+      },
+      "lineNbr": 87,
+      "author": {
+        "id": 3075
+      },
+      "writtenOn": "2018-08-28T01:20:00Z",
+      "side": 1,
+      "message": "Oh, I see why it still crashes - even though the defaultValue here is never used, it\u0027s still evaluated as part of the conditional in getBoolean (getString looks fine).\nie:\n         return LineageSettings.Secure.getInt(getContext().getContentResolver(), key, defaultValue ? 1 : 0) !\u003d 0;\n\nThat\u0027s annoying.  Let\u0027s just set dummy defaultValues in the call to getBoolean then.  It\u0027s less misleading than making it look like we\u0027re actually supplying a real default.",
+      "revId": "6164aceb953433ca596fdbd520c3396e64479d70",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
