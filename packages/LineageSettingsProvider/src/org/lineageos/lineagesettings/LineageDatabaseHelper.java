@@ -419,10 +419,6 @@ public class LineageDatabaseHelper extends SQLiteOpenHelper{
             loadStringSetting(stmt,
                     LineageSettings.Secure.PROTECTED_COMPONENT_MANAGERS,
                     R.string.def_protected_component_managers);
-
-            final String provisionedFlag = Settings.Global.getString(mContext.getContentResolver(),
-                    Settings.Global.DEVICE_PROVISIONED);
-            loadSetting(stmt, LineageSettings.Secure.LINEAGE_SETUP_WIZARD_COMPLETED, provisionedFlag);
         } finally {
             if (stmt != null) stmt.close();
         }
