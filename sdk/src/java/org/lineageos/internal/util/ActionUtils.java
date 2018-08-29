@@ -88,18 +88,18 @@ public class ActionUtils {
      * @param context
      * @return whether an activity was found to switch to
      */
-    public static boolean switchToLastApp(Context context, int userId) {
+    public static boolean switchToLastApp(Context context) {
         try {
-            return switchToLastAppInternal(context, userId);
+            return switchToLastAppInternal(context);
         } catch (RemoteException e) {
             Log.e(TAG, "Could not switch to last app");
         }
         return false;
     }
 
-    private static boolean switchToLastAppInternal(Context context, int userId)
+    private static boolean switchToLastAppInternal(Context context)
             throws RemoteException {
-        ActivityManager.RecentTaskInfo lastTask = getLastTask(context, userId);
+        ActivityManager.RecentTaskInfo lastTask = getLastTask(context);
 
         if (lastTask == null || lastTask.id < 0) {
             return false;
@@ -117,12 +117,12 @@ public class ActionUtils {
         return true;
     }
 
-    private static ActivityManager.RecentTaskInfo getLastTask(Context context, int userId)
+    private static ActivityManager.RecentTaskInfo getLastTask(Context context)
             throws RemoteException {
-        final String defaultHomePackage = resolveCurrentLauncherPackage(context, userId);
+        final String defaultHomePackage = resolveCurrentLauncherPackage(context);
         final ActivityManager am = (ActivityManager) context.getSystemService(Context.ACTIVITY_SERVICE);
-        final List<ActivityManager.RecentTaskInfo> tasks = am.getRecentTasksForUser(5,
-                ActivityManager.RECENT_IGNORE_UNAVAILABLE, userId);
+        final List<ActivityManager.RecentTaskInfo> tasks = am.getRecentTasks(5,
+                ActivityManager.RECENT_IGNORE_UNAVAILABLE);
 
         for (int i = 1; i < tasks.size(); i++) {
             ActivityManager.RecentTaskInfo task = tasks.get(i);
@@ -139,11 +139,11 @@ public class ActionUtils {
         return null;
     }
 
-    private static String resolveCurrentLauncherPackage(Context context, int userId) {
+    private static String resolveCurrentLauncherPackage(Context context) {
         final Intent launcherIntent = new Intent(Intent.ACTION_MAIN)
                 .addCategory(Intent.CATEGORY_HOME);
         final PackageManager pm = context.getPackageManager();
-        final ResolveInfo launcherInfo = pm.resolveActivityAsUser(launcherIntent, 0, userId);
+        final ResolveInfo launcherInfo = pm.resolveActivity(launcherIntent, 0);
         return launcherInfo.activityInfo.packageName;
     }
 }
