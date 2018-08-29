@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "041b435f_46594486",
+        "filename": "sdk/src/java/org/lineageos/internal/util/ActionUtils.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 146,
+      "author": {
+        "id": 11883
+      },
+      "writtenOn": "2018-08-29T10:59:38Z",
+      "side": 1,
+      "message": "this might be wrong on multi user cases\nCan a second user change the home app?",
+      "revId": "10e6e35d45a4ea354e96bf6dd7a6e2acf70a922c",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    }
+  ]
+}
