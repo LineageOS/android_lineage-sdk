@@ -97,6 +97,13 @@ public final class LineageContextConstants {
     public static final String LINEAGE_AUDIO_SERVICE = "lineageaudio";
 
     /**
+     * Manages Docker containers.
+     *
+     * @hide
+     */
+    public static final String LINEAGE_CONTAINER_MANAGER_SERVICE = "lineagecontainermanager";
+
+    /**
      * Use with {@link android.content.Context#getSystemService} to retrieve a
      * {@link lineageos.app.StyleInterface} interact with system style.
      *
@@ -170,6 +177,8 @@ public final class LineageContextConstants {
         @SdkConstant(SdkConstant.SdkConstantType.FEATURE)
         public static final String AUDIO = "org.lineageos.audio";
 
+
+
         /**
          * Feature for {@link PackageManager#getSystemAvailableFeatures} and
          * {@link PackageManager#hasSystemFeature}: The device includes the lineage style service
@@ -193,5 +202,13 @@ public final class LineageContextConstants {
          */
         @SdkConstant(SdkConstant.SdkConstantType.FEATURE)
         public static final String SETTINGS = "org.lineageos.settings";
+
+        /**
+         * Feature for {@link PackageManager#getSystemAvailableFeatures} and
+         * {@link PackageManager#hasSystemFeature}: The device includes the lineage container service
+         * utilized by the lineage sdk.
+         */
+        @SdkConstant(SdkConstant.SdkConstantType.FEATURE)
+        public static final String CONTAINERS = "org.lineageos.containers";
     }
 }
