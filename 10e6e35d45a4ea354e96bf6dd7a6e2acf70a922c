@@ -16,6 +16,24 @@
       "revId": "10e6e35d45a4ea354e96bf6dd7a6e2acf70a922c",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "4a98cab0_c366eda1",
+        "filename": "sdk/src/java/org/lineageos/internal/util/ActionUtils.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 146,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2018-08-29T11:03:28Z",
+      "side": 1,
+      "message": "\"Guest\" user can change home app.",
+      "parentUuid": "041b435f_46594486",
+      "revId": "10e6e35d45a4ea354e96bf6dd7a6e2acf70a922c",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
     }
   ]
 }
