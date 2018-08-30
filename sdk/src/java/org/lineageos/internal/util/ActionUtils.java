@@ -120,8 +120,8 @@ public class ActionUtils {
     private static ActivityManager.RecentTaskInfo getLastTask(Context context, int userId)
             throws RemoteException {
         final String defaultHomePackage = resolveCurrentLauncherPackage(context, userId);
-        final IActivityManager iam = ActivityManager.getService()
-        final List<ActivityManager.RecentTaskInfo> tasks = iam.getRecentTasksForUser(5,
+        final IActivityManager iam = ActivityManager.getService();
+        final List<ActivityManager.RecentTaskInfo> tasks = iam.getRecentTasks(5,
                 ActivityManager.RECENT_IGNORE_UNAVAILABLE, userId).getList();
 
         for (int i = 1; i < tasks.size(); i++) {
