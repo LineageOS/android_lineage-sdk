@@ -34,6 +34,24 @@
       "revId": "10e6e35d45a4ea354e96bf6dd7a6e2acf70a922c",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "06eac813_989a4c5f",
+        "filename": "sdk/src/java/org/lineageos/internal/util/ActionUtils.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 146,
+      "author": {
+        "id": 2936
+      },
+      "writtenOn": "2018-08-30T06:10:22Z",
+      "side": 1,
+      "message": "In practice it still won\u0027t be wrong, as the public entrypoint (switchToLastapp) is expecting to be called for the current user, correct?",
+      "parentUuid": "4a98cab0_c366eda1",
+      "revId": "10e6e35d45a4ea354e96bf6dd7a6e2acf70a922c",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
     }
   ]
 }
