@@ -1,5 +1,11 @@
 package lineageos.app {
 
+  public class ContainerManager {
+    method public static lineageos.app.ContainerManager getInstance(android.content.Context);
+    method public void sayHelloTo(java.lang.String);
+    field public static final int ASK_FOR_SUBSCRIPTION_ID = 0; // 0x0
+  }
+
   public final class Profile implements java.lang.Comparable android.os.Parcelable {
     ctor public Profile(java.lang.String);
     method public void addSecondaryUuid(java.util.UUID);
@@ -363,6 +369,7 @@ package lineageos.platform {
     field public static final java.lang.String ACCESS_WEATHER_MANAGER = "lineageos.permission.ACCESS_WEATHER_MANAGER";
     field public static final java.lang.String BIND_WEATHER_PROVIDER_SERVICE = "lineageos.permission.BIND_WEATHER_PROVIDER_SERVICE";
     field public static final java.lang.String CHANGE_STYLE = "lineageos.permission.CHANGE_STYLE";
+    field public static final java.lang.String CONTAINER_SAY_HELLO = "lineageos.permission.CONTAINER_SAY_HELLO";
     field public static final java.lang.String HARDWARE_ABSTRACTION_ACCESS = "lineageos.permission.HARDWARE_ABSTRACTION_ACCESS";
     field public static final java.lang.String MANAGE_LIVEDISPLAY = "lineageos.permission.MANAGE_LIVEDISPLAY";
     field public static final java.lang.String MANAGE_REMOTE_PREFERENCES = "lineageos.permission.MANAGE_REMOTE_PREFERENCES";
