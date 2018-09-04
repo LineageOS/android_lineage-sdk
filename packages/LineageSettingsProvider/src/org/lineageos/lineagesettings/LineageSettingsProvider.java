@@ -62,7 +62,7 @@ public class LineageSettingsProvider extends ContentProvider {
     private static final boolean USER_CHECK_THROWS = true;
 
     public static final String PREF_HAS_MIGRATED_LINEAGE_SETTINGS =
-            "migrated_settings_to_lineage_16_0";
+            "migrated_settings_to_lineage_17_0";
 
     private static final Bundle NULL_SETTING = Bundle.forPair("value", null);
 
