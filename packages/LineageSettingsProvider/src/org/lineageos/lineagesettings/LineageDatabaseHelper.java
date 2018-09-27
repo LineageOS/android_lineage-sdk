@@ -361,6 +361,19 @@ public class LineageDatabaseHelper extends SQLiteOpenHelper{
                     if (stmt != null) stmt.close();
                     db.endTransaction();
                 }
+
+                // Remove VOLUME_KEYS_CONTROL_RING_STREAM
+                db.beginTransaction();
+                stmt = null;
+                try {
+                    stmt = db.compileStatement("DELETE FROM system WHERE name=?");
+                    stmt.bindString(1, LineageSettings.System.VOLUME_KEYS_CONTROL_RING_STREAM);
+                    stmt.execute();
+                    db.setTransactionSuccessful();
+                } finally {
+                    if (stmt != null) stmt.close();
+                    db.endTransaction();
+                }
             }
             upgradeVersion = 10;
         }
