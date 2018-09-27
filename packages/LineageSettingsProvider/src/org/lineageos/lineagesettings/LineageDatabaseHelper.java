@@ -51,7 +51,7 @@ public class LineageDatabaseHelper extends SQLiteOpenHelper{
     private static final boolean LOCAL_LOGV = false;
 
     private static final String DATABASE_NAME = "lineagesettings.db";
-    private static final int DATABASE_VERSION = 9;
+    private static final int DATABASE_VERSION = 10;
 
     private static final String DATABASE_NAME_OLD = "cmsettings.db";
 
@@ -335,6 +335,32 @@ public class LineageDatabaseHelper extends SQLiteOpenHelper{
                         + "'" + LineageSettings.System.KEY_APP_SWITCH_LONG_PRESS_ACTION + "')");
             }
             upgradeVersion = 9;
+        }
+
+        if (upgradeVersion < 10) {
+            if (mUserHandle == UserHandle.USER_OWNER) {
+                db.beginTransaction();
+                SQLiteStatement stmt = null;
+                try {
+                    stmt = db.compileStatement("SELECT value FROM system WHERE name=?");
+                    stmt.bindString(1, LineageSettings.System.STATUS_BAR_CLOCK);
+                    long value = stmt.simpleQueryForLong();
+
+                    if (value == 0) {
+                        stmt = db.compileStatement("UPDATE system SET value=? WHERE name=?");
+                        stmt.bindLong(1, 2);
+                        stmt.bindString(2, LineageSettings.System.STATUS_BAR_CLOCK);
+                        stmt.execute();
+                    }
+                    db.setTransactionSuccessful();
+                } catch (SQLiteDoneException ex) {
+                    // LineageSettings.System.STATUS_BAR_CLOCK is not set
+                } finally {
+                    if (stmt != null) stmt.close();
+                    db.endTransaction();
+                }
+            }
+            upgradeVersion = 10;
         }
         // *** Remember to update DATABASE_VERSION above!
 
