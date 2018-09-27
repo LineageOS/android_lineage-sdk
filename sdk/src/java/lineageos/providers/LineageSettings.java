@@ -996,16 +996,6 @@ public final class LineageSettings {
                         "recent", "menu0", "menu1", "menu2", "dpad_left", "dpad_right"}, "|", true);
 
         /**
-         * Volume key controls ringtone or media sound stream
-         */
-        public static final String VOLUME_KEYS_CONTROL_RING_STREAM =
-                "volume_keys_control_ring_stream";
-
-        /** @hide */
-        public static final Validator VOLUME_KEYS_CONTROL_RING_STREAM_VALIDATOR =
-                sBooleanValidator;
-
-        /**
          * boolean value. toggles using arrow key locations on nav bar
          * as left and right dpad keys
          */
@@ -2143,7 +2133,6 @@ public final class LineageSettings {
                 LineageSettings.System.STATUS_BAR_AM_PM,
                 LineageSettings.System.STATUS_BAR_BATTERY_STYLE,
                 LineageSettings.System.STATUS_BAR_SHOW_BATTERY_PERCENT,
-                LineageSettings.System.VOLUME_KEYS_CONTROL_RING_STREAM,
                 LineageSettings.System.NAVIGATION_BAR_MENU_ARROW_KEYS,
                 LineageSettings.System.HEADSET_CONNECT_PLAYER,
                 LineageSettings.System.ZEN_ALLOW_LIGHTS,
@@ -2198,8 +2187,6 @@ public final class LineageSettings {
             VALIDATORS.put(VOLUME_ADJUST_SOUNDS_ENABLED,
                     VOLUME_ADJUST_SOUNDS_ENABLED_VALIDATOR);
             VALIDATORS.put(NAV_BUTTONS, NAV_BUTTONS_VALIDATOR);
-            VALIDATORS.put(VOLUME_KEYS_CONTROL_RING_STREAM,
-                    VOLUME_KEYS_CONTROL_RING_STREAM_VALIDATOR);
             VALIDATORS.put(NAVIGATION_BAR_MENU_ARROW_KEYS,
                     NAVIGATION_BAR_MENU_ARROW_KEYS_VALIDATOR);
             VALIDATORS.put(KEY_HOME_LONG_PRESS_ACTION, KEY_HOME_LONG_PRESS_ACTION_VALIDATOR);
