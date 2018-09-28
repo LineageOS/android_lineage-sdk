@@ -79,6 +79,9 @@ public class LineageSettingsProviderDefaultsTest extends AndroidTestCase {
         SYSTEM_SETTINGS_DEFAULTS.add(new Setting(
                 LineageSettings.System.STATUS_BAR_BATTERY_STYLE,
                 "R.integer.def_battery_style"));
+        SYSTEM_SETTINGS_DEFAULTS.add(new Setting(
+                LineageSettings.System.FORCE_SHOW_NAVBAR,
+                "R.integer.def_force_show_navbar"));
     }
 
     //SECURE
@@ -114,9 +117,6 @@ public class LineageSettingsProviderDefaultsTest extends AndroidTestCase {
         GLOBAL_SETTINGS_DEFAULTS.add(new Setting(
                 LineageSettings.Global.WEATHER_TEMPERATURE_UNIT,
                 "R.integer.def_temperature_unit"));
-        GLOBAL_SETTINGS_DEFAULTS.add(new Setting(
-                LineageSettings.Global.DEV_FORCE_SHOW_NAVBAR,
-                "R.integer.def_force_show_navbar"));
     }
 
     @Override

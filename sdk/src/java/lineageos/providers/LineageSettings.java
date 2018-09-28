@@ -463,7 +463,6 @@ public final class LineageSettings {
         protected static final ArraySet<String> MOVED_TO_SECURE;
         static {
             MOVED_TO_SECURE = new ArraySet<>(1);
-            MOVED_TO_SECURE.add(Secure.DEV_FORCE_SHOW_NAVBAR);
         }
 
         // region Methods
@@ -2062,6 +2061,16 @@ public final class LineageSettings {
                 sAlwaysTrueValidator;
 
         /**
+         * Force show navigation bar setting.
+         * @hide
+         */
+        public static final String FORCE_SHOW_NAVBAR = "force_show_navbar";
+
+        /** @hide */
+        public static final Validator FORCE_SHOW_NAVBAR_VALIDATOR =
+                sBooleanValidator;
+
+        /**
          * I can haz more bukkits
          * @hide
          */
@@ -2183,9 +2192,6 @@ public final class LineageSettings {
         public static boolean shouldInterceptSystemProvider(String key) {
             switch (key) {
                 case System.SYSTEM_PROFILES_ENABLED:
-                // some apps still query Settings.System.DEV_FORCE_SHOW_NAVBAR;
-                // we intercept the call, and return LineageSettings.Secure.DEV_FORCE_SHOW_NAVBAR's value
-                case Secure.DEV_FORCE_SHOW_NAVBAR:
                     return true;
                 default:
                     return false;
@@ -2353,6 +2359,8 @@ public final class LineageSettings {
                     ACCELEROMETER_ROTATION_ANGLES_VALIDATOR);
             VALIDATORS.put(LONG_SCREEN_APPS,
                     LONG_SCREEN_APPS_VALIDATOR);
+            VALIDATORS.put(FORCE_SHOW_NAVBAR,
+                    FORCE_SHOW_NAVBAR_VALIDATOR);
             VALIDATORS.put(__MAGICAL_TEST_PASSING_ENABLER,
                     __MAGICAL_TEST_PASSING_ENABLER_VALIDATOR);
         };
@@ -2379,7 +2387,6 @@ public final class LineageSettings {
         protected static final ArraySet<String> MOVED_TO_GLOBAL;
         static {
             MOVED_TO_GLOBAL = new ArraySet<>(1);
-            MOVED_TO_GLOBAL.add(Global.DEV_FORCE_SHOW_NAVBAR);
         }
 
         // region Methods
@@ -3230,11 +3237,6 @@ public final class LineageSettings {
          */
         public static boolean shouldInterceptSystemProvider(String key) {
             switch (key) {
-                // some apps still query Settings.System.DEV_FORCE_SHOW_NAVBAR, and it was moved to
-                // Settings.Secure, then LineageSettings.Secure. Forward queries from Settings.Secure
-                // to LineageSettings.Secure here just in case an app stuck with the Settings.Secure call
-                case DEV_FORCE_SHOW_NAVBAR:
-                    return true;
                 default:
                     return false;
             }
@@ -3669,6 +3671,7 @@ public final class LineageSettings {
 
         /**
          * Developer options - Navigation Bar show switch
+         * @deprecated
          * @hide
          */
         public static final String DEV_FORCE_SHOW_NAVBAR = "dev_force_show_navbar";
