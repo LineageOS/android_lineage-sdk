@@ -293,20 +293,23 @@ public class ColorTemperatureController extends LiveDisplayFeature {
      */
     private static float adj(long now, long sunset, long sunrise) {
         if (sunset < 0 || sunrise < 0
-                || now < sunset || now > (sunrise + TWILIGHT_ADJUSTMENT_TIME)) {
+                || now < (sunset - TWILIGHT_ADJUSTMENT_TIME)
+                || now > (sunrise + TWILIGHT_ADJUSTMENT_TIME)) {
+            // more than 1 hr before sunset or after sunrise
             return 1.0f;
         }
 
-        if (now <= (sunset + TWILIGHT_ADJUSTMENT_TIME)) {
-            return MathUtils.lerp(1.0f, 0.0f,
-                    (float) (now - sunset) / TWILIGHT_ADJUSTMENT_TIME);
+        // scale the transition into night mode
+        if (now <= sunset) {
+            return (float) (sunset - now) / TWILIGHT_ADJUSTMENT_TIME;
         }
 
+        // scale the transition into day mode
         if (now >= sunrise) {
-            return MathUtils.lerp(1.0f, 0.0f,
-                    (float) ((sunrise + TWILIGHT_ADJUSTMENT_TIME) - now) / TWILIGHT_ADJUSTMENT_TIME);
+            return (float) (now - sunrise) / TWILIGHT_ADJUSTMENT_TIME;
         }
 
+        // past sunset
         return 0.0f;
     }
 
