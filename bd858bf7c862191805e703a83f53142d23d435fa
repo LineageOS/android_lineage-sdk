@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2c9a493e_f0aa8f36",
+        "filename": "lineage/lib/main/java/org/lineageos/platform/internal/display/ColorTemperatureController.java",
+        "patchSetId": 5
+      },
+      "lineNbr": 297,
+      "author": {
+        "id": 11801
+      },
+      "writtenOn": "2018-10-02T20:03:37Z",
+      "side": 1,
+      "message": "I\u0027m a bit concerned that it sounds like it\u0027s 1hr after civil sunrise or 1hr before civil sunset.",
+      "range": {
+        "startLine": 297,
+        "startChar": 0,
+        "endLine": 297,
+        "endChar": 71
+      },
+      "revId": "bd858bf7c862191805e703a83f53142d23d435fa",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
