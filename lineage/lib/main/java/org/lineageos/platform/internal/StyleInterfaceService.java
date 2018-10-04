@@ -16,6 +16,8 @@
 
 package org.lineageos.platform.internal;
 
+import android.app.IUiModeManager;
+import android.app.UiModeManager;
 import android.content.ContentResolver;
 import android.content.Context;
 import android.content.Intent;
@@ -52,6 +54,7 @@ public class StyleInterfaceService extends LineageSystemService {
 
     private Context mContext;
     private IOverlayManager mOverlayService;
+    private IUiModeManager mUiModeService;
     private PackageManager mPackageManager;
 
     public StyleInterfaceService(Context context) {
@@ -80,6 +83,7 @@ public class StyleInterfaceService extends LineageSystemService {
         if (phase == SystemService.PHASE_SYSTEM_SERVICES_READY) {
             mPackageManager = mContext.getPackageManager();
             mOverlayService = IOverlayManager.Stub.asInterface(ServiceManager.getService("overlay"));
+            mUiModeService = IUiModeManager.Stub.asInterface(ServiceManager.getService("uimode"));
         }
     }
 
@@ -100,6 +104,22 @@ public class StyleInterfaceService extends LineageSystemService {
                 LineageSettings.System.BERRY_GLOBAL_STYLE, mode);
         boolean packageNameValue = LineageSettings.System.putString(mContext.getContentResolver(),
                 LineageSettings.System.BERRY_MANAGED_BY_APP, packageName);
+        try {
+            switch (mode) {
+                case 0:
+                case 1:
+                    mUiModeService.setNightMode(UiModeManager.MODE_NIGHT_AUTO);
+                    break;
+                case 2:
+                    mUiModeService.setNightMode(UiModeManager.MODE_NIGHT_NO);
+                    break;
+                case 3:
+                    mUiModeService.setNightMode(UiModeManager.MODE_NIGHT_YES);
+                    break;
+            }
+        } catch (RemoteException e) {
+            Log.e(TAG, "Failed to set night mode", e);
+        }
         return  statusValue && packageNameValue;
     }
 
