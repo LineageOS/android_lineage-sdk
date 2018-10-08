@@ -22,6 +22,30 @@
       "revId": "cd0ec5ba84075682a03fea68cfca6f2670c200ea",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "99e1bc97_26c86bf0",
+        "filename": "packages/LineageSettingsProvider/src/org/lineageos/lineagesettings/LineageDatabaseHelper.java",
+        "patchSetId": 5
+      },
+      "lineNbr": 360,
+      "author": {
+        "id": 3075
+      },
+      "writtenOn": "2018-10-08T17:31:06Z",
+      "side": 1,
+      "message": "I don\u0027t think so.  SQL delete statements that match no rows don\u0027t usually raise an error.   By comparison, for clock above, simpleQueryForLong is documented as capable of raising SQLiteDoneExeception if the query returns no rows https://developer.android.com/reference/android/database/sqlite/SQLiteStatement#simpleQueryForLong() .",
+      "parentUuid": "7b0ef9f0_0a903e24",
+      "range": {
+        "startLine": 360,
+        "startChar": 16,
+        "endLine": 360,
+        "endChar": 27
+      },
+      "revId": "cd0ec5ba84075682a03fea68cfca6f2670c200ea",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
