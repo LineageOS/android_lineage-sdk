@@ -131,6 +131,7 @@
   <!-- About device screen, LineageOS version -->
   <string name="lineage_version">Versi LineageOS</string>
   <!-- About device screen, vendor security patch -->
+  <string name="lineage_vendor_security_patch">Tingkat patch keamanan vendor</string>
   <!-- General purpose use "unknown" string -->
   <string name="unknown">Tidak dikenal</string>
   <!-- Long-press back kill application -->

@@ -167,5 +167,5 @@
   <string name="trust_notification_content_keys">此版本使用公開金鑰簽名</string>
   <string name="trust_notification_title_onboarding">探索信任</string>
   <string name="trust_notification_content_onboarding">了解如何確保您的裝置安全</string>
-  <string name="trust_notification_action_manage">管理鬧鐘</string>
+  <string name="trust_notification_action_manage">管理警告</string>
 </resources>

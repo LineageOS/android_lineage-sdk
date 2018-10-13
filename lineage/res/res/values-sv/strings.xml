@@ -89,6 +89,7 @@
   <!-- Privacy Guard -->
   <string name="privacy_guard_manager_title">Integritetsskydd</string>
   <!-- Permissions used by remote preferences -->
+  <string name="permlab_manageRemotePrefs">hantera fjärrinställningar</string>
   <!-- About device screen, build date -->
   <string name="build_date">Kompileringsdatum</string>
   <!-- About device screen, LineageOS API Level -->

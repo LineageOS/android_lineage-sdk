@@ -24,7 +24,7 @@
   <string name="permdesc_modifyProfiles">Приложение сможет изменять настройки системных профилей.</string>
   <!-- Labels for the HARDWARE_ABSTRACTION_ACCESS permission. -->
   <string name="permlab_useHardwareFramework">Взаимодействие с оборудованием</string>
-  <string name="permdesc_useHardwareFramework">Позволяет приложенияю использовать аппаратный фреймворк Lineage.</string>
+  <string name="permdesc_useHardwareFramework">Позволяет приложению использовать аппаратный фреймворк Lineage.</string>
   <!-- Labels for the WRITE_SETTINGS permission -->
   <string name="permlab_writeSettings">изменить настройки системы Lineage</string>
   <string name="permdesc_writeSettings">Приложение сможет изменять настройки системы Lineage.</string>
@@ -61,7 +61,7 @@
   <string name="perf_profile_bal">Сбалансированный</string>
   <string name="perf_profile_perf">Высокая производительность</string>
   <string name="perf_profile_bias_power">Энергоэффективный</string>
-  <string name="perf_profile_bias_perf">Оптимальная производитительность</string>
+  <string name="perf_profile_bias_perf">Оптимальная производительность</string>
   <!-- Performance profiles -->
   <string name="perf_profile_pwrsv_summary">Максимальное энергосбережение, снижает производительность устройства</string>
   <string name="perf_profile_bal_summary">Баланс оптимальной производительности и энергопотребления</string>
@@ -131,7 +131,7 @@
   <!-- About device screen, LineageOS version -->
   <string name="lineage_version">Версия LineageOS</string>
   <!-- About device screen, vendor security patch -->
-  <string name="lineage_vendor_security_patch">Уровень пакета безопасности производителя</string>
+  <string name="lineage_vendor_security_patch">Уровень исправлений системы безопасности от производителя</string>
   <!-- General purpose use "unknown" string -->
   <string name="unknown">Неизвестно</string>
   <!-- Long-press back kill application -->

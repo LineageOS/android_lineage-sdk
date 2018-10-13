@@ -54,6 +54,7 @@
   <string name="permlab_manageRemotePrefs">rheoli gosodiadau o bell</string>
   <string name="permdesc_manageRemotePrefs">Mae\'n caniatáu ap i reoli gosodiadau o bell.</string>
   <!-- About device screen, build date -->
+  <string name="build_date">Dyddiad adeiledd</string>
   <!-- About device screen, LineageOS API Level -->
   <!-- About device screen, LineageOS updates -->
   <!-- About device screen, LineageOS version -->
