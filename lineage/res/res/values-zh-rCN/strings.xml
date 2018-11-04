@@ -17,155 +17,155 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <!-- Label for the LineageOS system components when they are shown to the user. -->
-  <string name="lineageos_system_label">LineageOS 系统</string>
-  <!-- Labels for the MODIFY_PROFILES permission. -->
-  <string name="permlab_modifyProfiles">修改系统配置</string>
-  <string name="permdesc_modifyProfiles">允许应用修改系统配置文件。</string>
-  <!-- Labels for the HARDWARE_ABSTRACTION_ACCESS permission. -->
-  <string name="permlab_useHardwareFramework">使用硬件框架</string>
-  <string name="permdesc_useHardwareFramework">允许应用访问 Lineage 硬件框架。</string>
-  <!-- Labels for the WRITE_SETTINGS permission -->
-  <string name="permlab_writeSettings">修改 Lineage 系统设置</string>
-  <string name="permdesc_writeSettings">允许应用修改 Lineage 系统设置。</string>
-  <!-- Labels for the WRITE_SECURE_SETTINGS permission -->
-  <string name="permlab_writeSecureSettings">修改 Lineage 系统安全设置</string>
-  <string name="permdesc_writeSecureSettings">允许应用修改 Lineage 系统安全设置。不适用于一般的应用程序。</string>
-  <!-- Labels for the PROTECTED_APP permission. -->
-  <string name="permlab_protectedApp">从受保护的应用中添加或删除应用</string>
-  <string name="permdesc_protectedApp">允许应用标记受保护的应用并将其锁定。</string>
-  <!-- Labels for CHANGE_STYLE permission -->
-  <string name="permlab_changeStyle">更改系统样式</string>
-  <!-- this is wrong, but google's package manager uses the android:description
+    <!-- Label for the LineageOS system components when they are shown to the user. -->
+    <string name="lineageos_system_label">LineageOS 系统</string>
+    <!-- Labels for the MODIFY_PROFILES permission. -->
+    <string name="permlab_modifyProfiles">修改系统配置</string>
+    <string name="permdesc_modifyProfiles">允许应用修改系统配置文件。</string>
+    <!-- Labels for the HARDWARE_ABSTRACTION_ACCESS permission. -->
+    <string name="permlab_useHardwareFramework">使用硬件框架</string>
+    <string name="permdesc_useHardwareFramework">允许应用访问 Lineage 硬件框架。</string>
+    <!-- Labels for the WRITE_SETTINGS permission -->
+    <string name="permlab_writeSettings">修改 Lineage 系统设置</string>
+    <string name="permdesc_writeSettings">允许应用修改 Lineage 系统设置。</string>
+    <!-- Labels for the WRITE_SECURE_SETTINGS permission -->
+    <string name="permlab_writeSecureSettings">修改 Lineage 系统安全设置</string>
+    <string name="permdesc_writeSecureSettings">允许应用修改 Lineage 系统安全设置。不适用于一般的应用程序。</string>
+    <!-- Labels for the PROTECTED_APP permission. -->
+    <string name="permlab_protectedApp">从受保护的应用中添加或删除应用</string>
+    <string name="permdesc_protectedApp">允许应用标记受保护的应用并将其锁定。</string>
+    <!-- Labels for CHANGE_STYLE permission -->
+    <string name="permlab_changeStyle">更改系统样式</string>
+    <!-- this is wrong, but google's package manager uses the android:description
          attribute as description for the runtime permission request dialog
          with non-default dangerous permissions -->
-  <string name="permdesc_changeStyle">自定义系统颜色</string>
-  <!-- Profiles -->
-  <!-- Names of default profiles. -->
-  <string name="profileNameDefault">默认</string>
-  <string name="profileNameWork">工作</string>
-  <string name="profileNameHome">住宅</string>
-  <string name="profileNameSilent">静音</string>
-  <string name="profileNameNight">夜晚</string>
-  <string name="profileNameAutomobile">汽车</string>
-  <!-- Names of application groups. -->
-  <string name="profileGroupPhone">电话</string>
-  <string name="profileGroupCalendar">日历</string>
-  <string name="profileGroupGmail">Gmail</string>
-  <string name="profileGroupEmail">电子邮件</string>
-  <string name="profileGroupSMS">短信</string>
-  <!-- Name of wildcard profile. -->
-  <string name="wildcardProfile">其他</string>
-  <!-- Performance profiles -->
-  <string name="perf_profile_pwrsv">省电模式</string>
-  <string name="perf_profile_bal">平衡模式</string>
-  <string name="perf_profile_perf">性能模式</string>
-  <string name="perf_profile_bias_power">效率</string>
-  <string name="perf_profile_bias_perf">快速</string>
-  <!-- Performance profiles -->
-  <string name="perf_profile_pwrsv_summary">最大限度节约电池用量，降低设备性能。</string>
-  <string name="perf_profile_bal_summary">平衡最佳性能与功耗特性</string>
-  <string name="perf_profile_perf_summary">高性能模式。当能耗不是主要考量时，适用于需要低延迟和高吞吐量的应用</string>
-  <string name="perf_profile_bias_power_summary">节能优先。以更高延迟为代价，限制最大 CPU 功率和为节能优化</string>
-  <string name="perf_profile_bias_perf_summary">性能优先。以稍高的能耗来降低延迟</string>
-  <!-- LiveDisplay strings -->
-  <string name="live_display_auto">自动</string>
-  <string name="live_display_auto_summary">在日出和日落后自动调节屏幕色温</string>
-  <string name="live_display_off">关闭</string>
-  <string name="live_display_off_summary">禁用所有调整</string>
-  <string name="live_display_day">白天</string>
-  <string name="live_display_day_summary">仅使用白天设置</string>
-  <string name="live_display_night">夜晚</string>
-  <string name="live_display_night_summary">仅使用夜晚设置</string>
-  <string name="live_display_outdoor">户外（阳光）</string>
-  <string name="live_display_outdoor_summary">仅使用户外设置</string>
-  <string name="live_display_hint">LiveDisplay 可以帮助降低视疲劳，并有助于您的夜间睡眠。点击此处尝试它！</string>
-  <string name="accessibility_quick_settings_live_display_off">LiveDisplay 关闭。</string>
-  <string name="accessibility_quick_settings_live_display_auto">LiveDisplay：自动模式。</string>
-  <string name="accessibility_quick_settings_live_display_day">LiveDisplay：白天模式。</string>
-  <string name="accessibility_quick_settings_live_display_night">LiveDisplay：夜晚模式。</string>
-  <string name="accessibility_quick_settings_live_display_outdoor">LiveDisplay：户外模式。</string>
-  <string name="accessibility_quick_settings_live_display_changed_off">LiveDisplay 已关闭。</string>
-  <string name="accessibility_quick_settings_live_display_changed_auto">LiveDisplay 已修改为自动模式。</string>
-  <string name="accessibility_quick_settings_live_display_changed_day">LiveDisplay 已修改为白天模式。</string>
-  <string name="accessibility_quick_settings_live_display_changed_night">LiveDisplay 已修改为夜晚模式。</string>
-  <string name="accessibility_quick_settings_live_display_changed_outdoor">LiveDisplay 已修改为户外模式。</string>
-  <!-- Performance manager permission title -->
-  <string name="permlab_perfAccess">访问性能管理器</string>
-  <!-- Performance manager permission description -->
-  <string name="permdesc_perfAccessDesc">允许应用访问性能服务。普通应用不应需要此权限。</string>
-  <!-- Weather Service strings -->
-  <string name="permlab_weather_read">读取天气</string>
-  <string name="permdesc_weather_read">允许应用读取来自天气提供商的内容。</string>
-  <string name="permlab_weather_write">更新天气提供商</string>
-  <string name="permdesc_weather_write">允许应用更新来自天气提供商的内容。</string>
-  <string name="permlab_weather_bind">绑定为天气提供商服务</string>
-  <string name="permdesc_weather_bind">允许应用被认定为天气服务商服务。</string>
-  <string name="permlab_weather_access_mgr">访问天气服务</string>
-  <string name="permdesc_weather_access_mgr">允许应用在系统中访问天气服务。正常应用不应需要此权限。</string>
-  <!-- DataUsageProvider write permission title -->
-  <string name="permlab_dataUsageWrite">修改数据使用情况数据库</string>
-  <!-- DataUsageProvider write permission description -->
-  <string name="permdesc_dataUsageWrite">允许应用更新数据使用情况数据库。</string>
-  <!-- DataUsageProvider read permission title -->
-  <string name="permlab_dataUsageRead">读取数据使用情况数据库。</string>
-  <!-- DataUsageProvider read permission description -->
-  <string name="permdesc_dataUsageRead">允许应用从数据使用情况数据库中读取内容。</string>
-  <!-- LiveDisplay manager permission -->
-  <string name="permlab_manageLiveDisplay">管理 LiveDisplay 设置</string>
-  <string name="permdesc_manageLiveDisplay">允许应用配置高级显示设置。</string>
-  <!-- LineageAudioService - observe session changes permission -->
-  <string name="permlab_observe_audio_sessions">观察音频会话变动</string>
-  <string name="permdesc_observe_audio_sessions">允许应用观察音频流的创建和销毁。</string>
-  <!-- Privacy Guard -->
-  <string name="privacy_guard_manager_title">隐私防护</string>
-  <!-- Permissions used by remote preferences -->
-  <string name="permlab_manageRemotePrefs">管理远程设置</string>
-  <string name="permdesc_manageRemotePrefs">允许应用管理远程设置</string>
-  <!-- About device screen, build date -->
-  <string name="build_date">编译日期</string>
-  <!-- About device screen, LineageOS API Level -->
-  <string name="lineage_api_level">LineageOS API 级别</string>
-  <!-- About device screen, LineageOS updates -->
-  <string name="lineage_updates">LineageOS 更新</string>
-  <!-- About device screen, LineageOS version -->
-  <string name="lineage_version">LineageOS 版本</string>
-  <!-- About device screen, vendor security patch -->
-  <string name="lineage_vendor_security_patch">供应商安全补丁程序级别</string>
-  <!-- General purpose use "unknown" string -->
-  <string name="unknown">未知</string>
-  <!-- Long-press back kill application -->
-  <string name="app_killed_message">应用程序已终止</string>
-  <!-- Status bar network traffic monitor strings -->
-  <string name="kilobitspersecond_short">kb/s</string>
-  <string name="megabitspersecond_short">Mb/s</string>
-  <string name="kilobytespersecond_short">kB/s</string>
-  <string name="megabytespersecond_short">MB/s</string>
-  <!-- Accent colors -->
-  <string name="accent_black">黑色</string>
-  <string name="accent_blue">蓝色</string>
-  <string name="accent_brown">棕色</string>
-  <string name="accent_cyan">青色</string>
-  <string name="accent_green">绿色</string>
-  <string name="accent_orange">橘色</string>
-  <string name="accent_pink">樱红色</string>
-  <string name="accent_purple">淡紫色</string>
-  <string name="accent_red">红色</string>
-  <string name="accent_yellow">黄色</string>
-  <!-- Trust interface -->
-  <!-- This string will be referenced from other apps when they're referring to the Trust interface.
+    <string name="permdesc_changeStyle">自定义系统颜色</string>
+    <!-- Profiles -->
+    <!-- Names of default profiles. -->
+    <string name="profileNameDefault">默认</string>
+    <string name="profileNameWork">工作</string>
+    <string name="profileNameHome">住宅</string>
+    <string name="profileNameSilent">静音</string>
+    <string name="profileNameNight">夜晚</string>
+    <string name="profileNameAutomobile">汽车</string>
+    <!-- Names of application groups. -->
+    <string name="profileGroupPhone">电话</string>
+    <string name="profileGroupCalendar">日历</string>
+    <string name="profileGroupGmail">Gmail</string>
+    <string name="profileGroupEmail">电子邮件</string>
+    <string name="profileGroupSMS">短信</string>
+    <!-- Name of wildcard profile. -->
+    <string name="wildcardProfile">其他</string>
+    <!-- Performance profiles -->
+    <string name="perf_profile_pwrsv">省电模式</string>
+    <string name="perf_profile_bal">平衡模式</string>
+    <string name="perf_profile_perf">性能模式</string>
+    <string name="perf_profile_bias_power">效率</string>
+    <string name="perf_profile_bias_perf">快速</string>
+    <!-- Performance profiles -->
+    <string name="perf_profile_pwrsv_summary">最大限度节约电池用量，降低设备性能。</string>
+    <string name="perf_profile_bal_summary">平衡最佳性能与功耗特性</string>
+    <string name="perf_profile_perf_summary">高性能模式。当能耗不是主要考量时，适用于需要低延迟和高吞吐量的应用</string>
+    <string name="perf_profile_bias_power_summary">节能优先。以更高延迟为代价，限制最大 CPU 功率和为节能优化</string>
+    <string name="perf_profile_bias_perf_summary">性能优先。以稍高的能耗来降低延迟</string>
+    <!-- LiveDisplay strings -->
+    <string name="live_display_auto">自动</string>
+    <string name="live_display_auto_summary">在日出和日落后自动调节屏幕色温</string>
+    <string name="live_display_off">关闭</string>
+    <string name="live_display_off_summary">禁用所有调整</string>
+    <string name="live_display_day">白天</string>
+    <string name="live_display_day_summary">仅使用白天设置</string>
+    <string name="live_display_night">夜晚</string>
+    <string name="live_display_night_summary">仅使用夜晚设置</string>
+    <string name="live_display_outdoor">户外（阳光）</string>
+    <string name="live_display_outdoor_summary">仅使用户外设置</string>
+    <string name="live_display_hint">LiveDisplay 可以帮助降低视疲劳，并有助于您的夜间睡眠。点击此处尝试它！</string>
+    <string name="accessibility_quick_settings_live_display_off">LiveDisplay 关闭。</string>
+    <string name="accessibility_quick_settings_live_display_auto">LiveDisplay：自动模式。</string>
+    <string name="accessibility_quick_settings_live_display_day">LiveDisplay：白天模式。</string>
+    <string name="accessibility_quick_settings_live_display_night">LiveDisplay：夜晚模式。</string>
+    <string name="accessibility_quick_settings_live_display_outdoor">LiveDisplay：户外模式。</string>
+    <string name="accessibility_quick_settings_live_display_changed_off">LiveDisplay 已关闭。</string>
+    <string name="accessibility_quick_settings_live_display_changed_auto">LiveDisplay 已修改为自动模式。</string>
+    <string name="accessibility_quick_settings_live_display_changed_day">LiveDisplay 已修改为白天模式。</string>
+    <string name="accessibility_quick_settings_live_display_changed_night">LiveDisplay 已修改为夜晚模式。</string>
+    <string name="accessibility_quick_settings_live_display_changed_outdoor">LiveDisplay 已修改为户外模式。</string>
+    <!-- Performance manager permission title -->
+    <string name="permlab_perfAccess">访问性能管理器</string>
+    <!-- Performance manager permission description -->
+    <string name="permdesc_perfAccessDesc">允许应用访问性能服务。普通应用不应需要此权限。</string>
+    <!-- Weather Service strings -->
+    <string name="permlab_weather_read">读取天气</string>
+    <string name="permdesc_weather_read">允许应用读取来自天气提供商的内容。</string>
+    <string name="permlab_weather_write">更新天气提供商</string>
+    <string name="permdesc_weather_write">允许应用更新来自天气提供商的内容。</string>
+    <string name="permlab_weather_bind">绑定为天气提供商服务</string>
+    <string name="permdesc_weather_bind">允许应用被认定为天气服务商服务。</string>
+    <string name="permlab_weather_access_mgr">访问天气服务</string>
+    <string name="permdesc_weather_access_mgr">允许应用在系统中访问天气服务。正常应用不应需要此权限。</string>
+    <!-- DataUsageProvider write permission title -->
+    <string name="permlab_dataUsageWrite">修改数据使用情况数据库</string>
+    <!-- DataUsageProvider write permission description -->
+    <string name="permdesc_dataUsageWrite">允许应用更新数据使用情况数据库。</string>
+    <!-- DataUsageProvider read permission title -->
+    <string name="permlab_dataUsageRead">读取数据使用情况数据库。</string>
+    <!-- DataUsageProvider read permission description -->
+    <string name="permdesc_dataUsageRead">允许应用从数据使用情况数据库中读取内容。</string>
+    <!-- LiveDisplay manager permission -->
+    <string name="permlab_manageLiveDisplay">管理 LiveDisplay 设置</string>
+    <string name="permdesc_manageLiveDisplay">允许应用配置高级显示设置。</string>
+    <!-- LineageAudioService - observe session changes permission -->
+    <string name="permlab_observe_audio_sessions">观察音频会话变动</string>
+    <string name="permdesc_observe_audio_sessions">允许应用观察音频流的创建和销毁。</string>
+    <!-- Privacy Guard -->
+    <string name="privacy_guard_manager_title">隐私防护</string>
+    <!-- Permissions used by remote preferences -->
+    <string name="permlab_manageRemotePrefs">管理远程设置</string>
+    <string name="permdesc_manageRemotePrefs">允许应用管理远程设置</string>
+    <!-- About device screen, build date -->
+    <string name="build_date">编译日期</string>
+    <!-- About device screen, LineageOS API Level -->
+    <string name="lineage_api_level">LineageOS API 级别</string>
+    <!-- About device screen, LineageOS updates -->
+    <string name="lineage_updates">LineageOS 更新</string>
+    <!-- About device screen, LineageOS version -->
+    <string name="lineage_version">LineageOS 版本</string>
+    <!-- About device screen, vendor security patch -->
+    <string name="lineage_vendor_security_patch">供应商安全补丁程序级别</string>
+    <!-- General purpose use "unknown" string -->
+    <string name="unknown">未知</string>
+    <!-- Long-press back kill application -->
+    <string name="app_killed_message">应用程序已终止</string>
+    <!-- Status bar network traffic monitor strings -->
+    <string name="kilobitspersecond_short">kb/s</string>
+    <string name="megabitspersecond_short">Mb/s</string>
+    <string name="kilobytespersecond_short">kB/s</string>
+    <string name="megabytespersecond_short">MB/s</string>
+    <!-- Accent colors -->
+    <string name="accent_black">黑色</string>
+    <string name="accent_blue">蓝色</string>
+    <string name="accent_brown">棕色</string>
+    <string name="accent_cyan">青色</string>
+    <string name="accent_green">绿色</string>
+    <string name="accent_orange">橘色</string>
+    <string name="accent_pink">樱红色</string>
+    <string name="accent_purple">淡紫色</string>
+    <string name="accent_red">红色</string>
+    <string name="accent_yellow">黄色</string>
+    <!-- Trust interface -->
+    <!-- This string will be referenced from other apps when they're referring to the Trust interface.
          Trust is a feature name, it's not suggested to translate this unless there are conflicts due
          to a different meaning of the word "trust" in your language -->
-  <string name="trust_feature_name">安全中心</string>
-  <string name="permlab_trustInterface">访问安全中心接口</string>
-  <string name="permdesc_trustInterface">允许应用显示安全中心警告和建议</string>
-  <string name="trust_notification_channel">安全中心警报</string>
-  <string name="trust_notification_title_security">安全中心 \u2022 系统安全性</string>
-  <string name="trust_notification_content_selinux">SELinux 未工作在强制模式，您的安全性被削弱了</string>
-  <string name="trust_notification_title_root">安全中心 \u2022 Root 访问</string>
-  <string name="trust_notification_content_root">有应用正在使用 Root 权限</string>
-  <string name="trust_notification_content_keys">此版本已使用公钥签名</string>
-  <string name="trust_notification_title_onboarding">探索安全中心</string>
-  <string name="trust_notification_content_onboarding">了解如何保证设备安全</string>
-  <string name="trust_notification_action_manage">管理警报</string>
+    <string name="trust_feature_name">安全中心</string>
+    <string name="permlab_trustInterface">访问安全中心接口</string>
+    <string name="permdesc_trustInterface">允许应用显示安全中心警告和建议</string>
+    <string name="trust_notification_channel">安全中心警报</string>
+    <string name="trust_notification_title_security">安全中心 \u2022 系统安全性</string>
+    <string name="trust_notification_content_selinux">SELinux 未工作在强制模式，您的安全性被削弱了</string>
+    <string name="trust_notification_title_root">安全中心 \u2022 Root 访问</string>
+    <string name="trust_notification_content_root">有应用正在使用 Root 权限</string>
+    <string name="trust_notification_content_keys">此版本已使用公钥签名</string>
+    <string name="trust_notification_title_onboarding">探索安全中心</string>
+    <string name="trust_notification_content_onboarding">了解如何保证设备安全</string>
+    <string name="trust_notification_action_manage">管理警报</string>
 </resources>

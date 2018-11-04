@@ -17,54 +17,54 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <!-- Label for the LineageOS system components when they are shown to the user. -->
-  <!-- Labels for the MODIFY_PROFILES permission. -->
-  <!-- Labels for the HARDWARE_ABSTRACTION_ACCESS permission. -->
-  <!-- Labels for the WRITE_SETTINGS permission -->
-  <!-- Labels for the WRITE_SECURE_SETTINGS permission -->
-  <!-- Labels for the PROTECTED_APP permission. -->
-  <!-- Labels for CHANGE_STYLE permission -->
-  <!-- this is wrong, but google's package manager uses the android:description
+    <!-- Label for the LineageOS system components when they are shown to the user. -->
+    <!-- Labels for the MODIFY_PROFILES permission. -->
+    <!-- Labels for the HARDWARE_ABSTRACTION_ACCESS permission. -->
+    <!-- Labels for the WRITE_SETTINGS permission -->
+    <!-- Labels for the WRITE_SECURE_SETTINGS permission -->
+    <!-- Labels for the PROTECTED_APP permission. -->
+    <!-- Labels for CHANGE_STYLE permission -->
+    <!-- this is wrong, but google's package manager uses the android:description
          attribute as description for the runtime permission request dialog
          with non-default dangerous permissions -->
-  <!-- Profiles -->
-  <!-- Names of default profiles. -->
-  <!-- Names of application groups. -->
-  <!-- Name of wildcard profile. -->
-  <!-- Performance profiles -->
-  <!-- Performance profiles -->
-  <string name="perf_profile_pwrsv_summary">Arbedion pŵer gorau, gan leihau perfformiad y ddyfais.</string>
-  <string name="perf_profile_bal_summary">Cydbwysedd o berfformiad optimaidd a nodweddion pŵer.</string>
-  <string name="perf_profile_perf_summary">Modd perfformiad uchel. Mae hwn yn ddefnyddiol ar gyfer apiau sydd angen cuddni isel a thrwybwn uchel pan nad oes achos pryderu am ddefnyddio pŵer.</string>
-  <string name="perf_profile_bias_power_summary">Ffafrio arbedion pŵer. Mae hyn yn cyfyngu pŵer y prosesydd ac yn ei optimeiddio ar gyfer arbed defnydd pŵer ar draul cuddni uwch.</string>
-  <string name="perf_profile_bias_perf_summary">Ffafrio perfformiad da. Mae\'n lleihau cuddni gyda defnydd pŵer uwch.</string>
-  <!-- LiveDisplay strings -->
-  <!-- Performance manager permission title -->
-  <!-- Performance manager permission description -->
-  <!-- Weather Service strings -->
-  <!-- DataUsageProvider write permission title -->
-  <!-- DataUsageProvider write permission description -->
-  <!-- DataUsageProvider read permission title -->
-  <!-- DataUsageProvider read permission description -->
-  <!-- LiveDisplay manager permission -->
-  <!-- LineageAudioService - observe session changes permission -->
-  <!-- Privacy Guard -->
-  <string name="privacy_guard_manager_title">Gwarchodydd Preifatrwydd</string>
-  <!-- Permissions used by remote preferences -->
-  <string name="permlab_manageRemotePrefs">rheoli gosodiadau o bell</string>
-  <string name="permdesc_manageRemotePrefs">Mae\'n caniatáu ap i reoli gosodiadau o bell.</string>
-  <!-- About device screen, build date -->
-  <string name="build_date">Dyddiad adeiledd</string>
-  <!-- About device screen, LineageOS API Level -->
-  <!-- About device screen, LineageOS updates -->
-  <!-- About device screen, LineageOS version -->
-  <!-- About device screen, vendor security patch -->
-  <!-- General purpose use "unknown" string -->
-  <!-- Long-press back kill application -->
-  <!-- Status bar network traffic monitor strings -->
-  <!-- Accent colors -->
-  <!-- Trust interface -->
-  <!-- This string will be referenced from other apps when they're referring to the Trust interface.
+    <!-- Profiles -->
+    <!-- Names of default profiles. -->
+    <!-- Names of application groups. -->
+    <!-- Name of wildcard profile. -->
+    <!-- Performance profiles -->
+    <!-- Performance profiles -->
+    <string name="perf_profile_pwrsv_summary">Arbedion pŵer gorau, gan leihau perfformiad y ddyfais.</string>
+    <string name="perf_profile_bal_summary">Cydbwysedd o berfformiad optimaidd a nodweddion pŵer.</string>
+    <string name="perf_profile_perf_summary">Modd perfformiad uchel. Mae hwn yn ddefnyddiol ar gyfer apiau sydd angen cuddni isel a thrwybwn uchel pan nad oes achos pryderu am ddefnyddio pŵer.</string>
+    <string name="perf_profile_bias_power_summary">Ffafrio arbedion pŵer. Mae hyn yn cyfyngu pŵer y prosesydd ac yn ei optimeiddio ar gyfer arbed defnydd pŵer ar draul cuddni uwch.</string>
+    <string name="perf_profile_bias_perf_summary">Ffafrio perfformiad da. Mae\'n lleihau cuddni gyda defnydd pŵer uwch.</string>
+    <!-- LiveDisplay strings -->
+    <!-- Performance manager permission title -->
+    <!-- Performance manager permission description -->
+    <!-- Weather Service strings -->
+    <!-- DataUsageProvider write permission title -->
+    <!-- DataUsageProvider write permission description -->
+    <!-- DataUsageProvider read permission title -->
+    <!-- DataUsageProvider read permission description -->
+    <!-- LiveDisplay manager permission -->
+    <!-- LineageAudioService - observe session changes permission -->
+    <!-- Privacy Guard -->
+    <string name="privacy_guard_manager_title">Gwarchodydd Preifatrwydd</string>
+    <!-- Permissions used by remote preferences -->
+    <string name="permlab_manageRemotePrefs">rheoli gosodiadau o bell</string>
+    <string name="permdesc_manageRemotePrefs">Mae\'n caniatáu ap i reoli gosodiadau o bell.</string>
+    <!-- About device screen, build date -->
+    <string name="build_date">Dyddiad adeiledd</string>
+    <!-- About device screen, LineageOS API Level -->
+    <!-- About device screen, LineageOS updates -->
+    <!-- About device screen, LineageOS version -->
+    <!-- About device screen, vendor security patch -->
+    <!-- General purpose use "unknown" string -->
+    <!-- Long-press back kill application -->
+    <!-- Status bar network traffic monitor strings -->
+    <!-- Accent colors -->
+    <!-- Trust interface -->
+    <!-- This string will be referenced from other apps when they're referring to the Trust interface.
          Trust is a feature name, it's not suggested to translate this unless there are conflicts due
          to a different meaning of the word "trust" in your language -->
 </resources>

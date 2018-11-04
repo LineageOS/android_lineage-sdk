@@ -17,155 +17,155 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <!-- Label for the LineageOS system components when they are shown to the user. -->
-  <string name="lineageos_system_label">LineageOS Система</string>
-  <!-- Labels for the MODIFY_PROFILES permission. -->
-  <string name="permlab_modifyProfiles">Модифициране на системни профили</string>
-  <string name="permdesc_modifyProfiles">Позволява да модифицирате системни профили.</string>
-  <!-- Labels for the HARDWARE_ABSTRACTION_ACCESS permission. -->
-  <string name="permlab_useHardwareFramework">Използване на framework хардуер</string>
-  <string name="permdesc_useHardwareFramework">Разрешава на едно приложение да достъпа до framework хардуера на Lineage.</string>
-  <!-- Labels for the WRITE_SETTINGS permission -->
-  <string name="permlab_writeSettings">промяна на системните настройки на Lineage</string>
-  <string name="permdesc_writeSettings">Позволява на приложението да модифицира Lineage системни настройки.</string>
-  <!-- Labels for the WRITE_SECURE_SETTINGS permission -->
-  <string name="permlab_writeSecureSettings">промяна на системните настройки за сигурност на Lineage</string>
-  <string name="permdesc_writeSecureSettings">Разрешава на приложението да променя системните настройки на сигурността на Lineage. Това разрешение не се използва от нормални приложения.</string>
-  <!-- Labels for the PROTECTED_APP permission. -->
-  <string name="permlab_protectedApp">Прибави/Премахни приложение към/от списъка със защитени приложения</string>
-  <string name="permdesc_protectedApp">Позволява на приложението да маркира други приложения, като защитени и да ги заключва.</string>
-  <!-- Labels for CHANGE_STYLE permission -->
-  <string name="permlab_changeStyle">промяна на системния стил</string>
-  <!-- this is wrong, but google's package manager uses the android:description
+    <!-- Label for the LineageOS system components when they are shown to the user. -->
+    <string name="lineageos_system_label">LineageOS Система</string>
+    <!-- Labels for the MODIFY_PROFILES permission. -->
+    <string name="permlab_modifyProfiles">Модифициране на системни профили</string>
+    <string name="permdesc_modifyProfiles">Позволява да модифицирате системни профили.</string>
+    <!-- Labels for the HARDWARE_ABSTRACTION_ACCESS permission. -->
+    <string name="permlab_useHardwareFramework">Използване на framework хардуер</string>
+    <string name="permdesc_useHardwareFramework">Разрешава на едно приложение да достъпа до framework хардуера на Lineage.</string>
+    <!-- Labels for the WRITE_SETTINGS permission -->
+    <string name="permlab_writeSettings">промяна на системните настройки на Lineage</string>
+    <string name="permdesc_writeSettings">Позволява на приложението да модифицира Lineage системни настройки.</string>
+    <!-- Labels for the WRITE_SECURE_SETTINGS permission -->
+    <string name="permlab_writeSecureSettings">промяна на системните настройки за сигурност на Lineage</string>
+    <string name="permdesc_writeSecureSettings">Разрешава на приложението да променя системните настройки на сигурността на Lineage. Това разрешение не се използва от нормални приложения.</string>
+    <!-- Labels for the PROTECTED_APP permission. -->
+    <string name="permlab_protectedApp">Прибави/Премахни приложение към/от списъка със защитени приложения</string>
+    <string name="permdesc_protectedApp">Позволява на приложението да маркира други приложения, като защитени и да ги заключва.</string>
+    <!-- Labels for CHANGE_STYLE permission -->
+    <string name="permlab_changeStyle">промяна на системния стил</string>
+    <!-- this is wrong, but google's package manager uses the android:description
          attribute as description for the runtime permission request dialog
          with non-default dangerous permissions -->
-  <string name="permdesc_changeStyle">персонализиране на системните цветове</string>
-  <!-- Profiles -->
-  <!-- Names of default profiles. -->
-  <string name="profileNameDefault">По подразбиране</string>
-  <string name="profileNameWork">Работа</string>
-  <string name="profileNameHome">Вкъщи</string>
-  <string name="profileNameSilent">Тих режим</string>
-  <string name="profileNameNight">Нощен</string>
-  <string name="profileNameAutomobile">Автомобилен режим</string>
-  <!-- Names of application groups. -->
-  <string name="profileGroupPhone">Телефон</string>
-  <string name="profileGroupCalendar">Календар</string>
-  <string name="profileGroupGmail">Gmail</string>
-  <string name="profileGroupEmail">Имейл</string>
-  <string name="profileGroupSMS">SMS</string>
-  <!-- Name of wildcard profile. -->
-  <string name="wildcardProfile">Други</string>
-  <!-- Performance profiles -->
-  <string name="perf_profile_pwrsv">Енергоспестяващ</string>
-  <string name="perf_profile_bal">Балансиран</string>
-  <string name="perf_profile_perf">Високопроизводителен</string>
-  <string name="perf_profile_bias_power">Ефикасен</string>
-  <string name="perf_profile_bias_perf">Бърз</string>
-  <!-- Performance profiles -->
-  <string name="perf_profile_pwrsv_summary">Максимална енергийна ефективност, намалява ефективността на устройството</string>
-  <string name="perf_profile_bal_summary">Баланс между оптимална производителност и енергопотребление</string>
-  <string name="perf_profile_perf_summary">Режим на висока производителност. Подходящ за приложения, изискващи ниска латентност и най-високата производителност, когато консумацията на енергия не е проблем</string>
-  <string name="perf_profile_bias_power_summary">Предпочитане за спестяване на енергия. Ограничаване на максималната мощност на Процесора и оптимизиране за енергоспестяване с цената на по-висока латентност</string>
-  <string name="perf_profile_bias_perf_summary">Предпочитане за производителност. Намалява латентност с леко повишена консумация на енергия</string>
-  <!-- LiveDisplay strings -->
-  <string name="live_display_auto">Автоматичен</string>
-  <string name="live_display_auto_summary">Автоматично регулиране на цветовата температура след залез/изгрев</string>
-  <string name="live_display_off">Изключен</string>
-  <string name="live_display_off_summary">Няма зададен режим на екрана</string>
-  <string name="live_display_day">Дневен</string>
-  <string name="live_display_day_summary">Само настройки на дневен режим</string>
-  <string name="live_display_night">Нощен</string>
-  <string name="live_display_night_summary">Само настройки на нощен режим</string>
-  <string name="live_display_outdoor">На открито (ярко слънце)</string>
-  <string name="live_display_outdoor_summary">Само настройки на режим на открито</string>
-  <string name="live_display_hint">Използването на адаптивен дисплей може да помогне за намаляване умората в очите през нощта. Докоснете тук, за да го изпробвате!</string>
-  <string name="accessibility_quick_settings_live_display_off">Изключи адаптивен дисплей.</string>
-  <string name="accessibility_quick_settings_live_display_auto">Адаптивен дисплей: автоматичен режим.</string>
-  <string name="accessibility_quick_settings_live_display_day">Адаптивен дисплей: дневен режим.</string>
-  <string name="accessibility_quick_settings_live_display_night">Адаптивен дисплей: нощен режим.</string>
-  <string name="accessibility_quick_settings_live_display_outdoor">Адаптивен дисплей: външен режим.</string>
-  <string name="accessibility_quick_settings_live_display_changed_off">Адаптивен дисплей е изключен.</string>
-  <string name="accessibility_quick_settings_live_display_changed_auto">Адаптивен дисплей е променен на автоматичен режим.</string>
-  <string name="accessibility_quick_settings_live_display_changed_day">Адаптивен дисплей е променен на дневен режим.</string>
-  <string name="accessibility_quick_settings_live_display_changed_night">Адаптивен дисплей е променен на нощен режим.</string>
-  <string name="accessibility_quick_settings_live_display_changed_outdoor">Адаптивен дисплей е променен на външен режим.</string>
-  <!-- Performance manager permission title -->
-  <string name="permlab_perfAccess">Достъп до диспечера за производителност</string>
-  <!-- Performance manager permission description -->
-  <string name="permdesc_perfAccessDesc">Осигурява на приложението достъп до диспечера за производителност. Не е необходимо за нормални приложения.</string>
-  <!-- Weather Service strings -->
-  <string name="permlab_weather_read">прочети прогнозата</string>
-  <string name="permdesc_weather_read">Разрешава на приложението да чете данни от доставчика на време.</string>
-  <string name="permlab_weather_write">Актуализиране на доставчика на време</string>
-  <string name="permdesc_weather_write">Разрешава на приложението да актуализира съдържанието на доставчика на време.</string>
-  <string name="permlab_weather_bind">Задай като доставчик на време</string>
-  <string name="permdesc_weather_bind">Позволява на приложение да бъде идентифицирано като доставчик на време.</string>
-  <string name="permlab_weather_access_mgr">Достъп до метеорологична служба</string>
-  <string name="permdesc_weather_access_mgr">Позволява на приложението достъп до услугата за време. Не е необходимо за нормални приложения.</string>
-  <!-- DataUsageProvider write permission title -->
-  <string name="permlab_dataUsageWrite">Промени база данни</string>
-  <!-- DataUsageProvider write permission description -->
-  <string name="permdesc_dataUsageWrite">Разрешава на приложението да актуализира съдържанието на базата данни.</string>
-  <!-- DataUsageProvider read permission title -->
-  <string name="permlab_dataUsageRead">Прочети база данни</string>
-  <!-- DataUsageProvider read permission description -->
-  <string name="permdesc_dataUsageRead">Разрешава на приложението да чете съдържанието на базата данни.</string>
-  <!-- LiveDisplay manager permission -->
-  <string name="permlab_manageLiveDisplay">управление на настройките за Адаптивен дисплей</string>
-  <string name="permdesc_manageLiveDisplay">Позволява на приложението да променя разширените настройки на дисплея.</string>
-  <!-- LineageAudioService - observe session changes permission -->
-  <string name="permlab_observe_audio_sessions">преглед на промените в аудио сесии</string>
-  <string name="permdesc_observe_audio_sessions">Позволява на приложение да наблюдава създаване и унищожаване на аудио потоци.</string>
-  <!-- Privacy Guard -->
-  <string name="privacy_guard_manager_title">Защитен режим</string>
-  <!-- Permissions used by remote preferences -->
-  <string name="permlab_manageRemotePrefs">управление на отдалечени настройки</string>
-  <string name="permdesc_manageRemotePrefs">Позволява на приложението да управлява отдалечени настройки</string>
-  <!-- About device screen, build date -->
-  <string name="build_date">Дата на изграждане</string>
-  <!-- About device screen, LineageOS API Level -->
-  <string name="lineage_api_level">LineageOS приложно-програмен интерфейс ниво</string>
-  <!-- About device screen, LineageOS updates -->
-  <string name="lineage_updates">LineageOS актуализации</string>
-  <!-- About device screen, LineageOS version -->
-  <string name="lineage_version">Версия на LineageOS</string>
-  <!-- About device screen, vendor security patch -->
-  <string name="lineage_vendor_security_patch">Ниво на сигурност на доставчик</string>
-  <!-- General purpose use "unknown" string -->
-  <string name="unknown">Неизвестно</string>
-  <!-- Long-press back kill application -->
-  <string name="app_killed_message">Приложението е спряно</string>
-  <!-- Status bar network traffic monitor strings -->
-  <string name="kilobitspersecond_short">kб/с</string>
-  <string name="megabitspersecond_short">Mб/с</string>
-  <string name="kilobytespersecond_short">kБ/с</string>
-  <string name="megabytespersecond_short">MБ/с</string>
-  <!-- Accent colors -->
-  <string name="accent_black">Карбон</string>
-  <string name="accent_blue">Боровинка</string>
-  <string name="accent_brown">Какао</string>
-  <string name="accent_cyan">Циан</string>
-  <string name="accent_green">Гора</string>
-  <string name="accent_orange">Тиква</string>
-  <string name="accent_pink">Череша</string>
-  <string name="accent_purple">Лавандула</string>
-  <string name="accent_red">Домат</string>
-  <string name="accent_yellow">Банан</string>
-  <!-- Trust interface -->
-  <!-- This string will be referenced from other apps when they're referring to the Trust interface.
+    <string name="permdesc_changeStyle">персонализиране на системните цветове</string>
+    <!-- Profiles -->
+    <!-- Names of default profiles. -->
+    <string name="profileNameDefault">По подразбиране</string>
+    <string name="profileNameWork">Работа</string>
+    <string name="profileNameHome">Вкъщи</string>
+    <string name="profileNameSilent">Тих режим</string>
+    <string name="profileNameNight">Нощен</string>
+    <string name="profileNameAutomobile">Автомобилен режим</string>
+    <!-- Names of application groups. -->
+    <string name="profileGroupPhone">Телефон</string>
+    <string name="profileGroupCalendar">Календар</string>
+    <string name="profileGroupGmail">Gmail</string>
+    <string name="profileGroupEmail">Имейл</string>
+    <string name="profileGroupSMS">SMS</string>
+    <!-- Name of wildcard profile. -->
+    <string name="wildcardProfile">Други</string>
+    <!-- Performance profiles -->
+    <string name="perf_profile_pwrsv">Енергоспестяващ</string>
+    <string name="perf_profile_bal">Балансиран</string>
+    <string name="perf_profile_perf">Високопроизводителен</string>
+    <string name="perf_profile_bias_power">Ефикасен</string>
+    <string name="perf_profile_bias_perf">Бърз</string>
+    <!-- Performance profiles -->
+    <string name="perf_profile_pwrsv_summary">Максимална енергийна ефективност, намалява ефективността на устройството</string>
+    <string name="perf_profile_bal_summary">Баланс между оптимална производителност и енергопотребление</string>
+    <string name="perf_profile_perf_summary">Режим на висока производителност. Подходящ за приложения, изискващи ниска латентност и най-високата производителност, когато консумацията на енергия не е проблем</string>
+    <string name="perf_profile_bias_power_summary">Предпочитане за спестяване на енергия. Ограничаване на максималната мощност на Процесора и оптимизиране за енергоспестяване с цената на по-висока латентност</string>
+    <string name="perf_profile_bias_perf_summary">Предпочитане за производителност. Намалява латентност с леко повишена консумация на енергия</string>
+    <!-- LiveDisplay strings -->
+    <string name="live_display_auto">Автоматичен</string>
+    <string name="live_display_auto_summary">Автоматично регулиране на цветовата температура след залез/изгрев</string>
+    <string name="live_display_off">Изключен</string>
+    <string name="live_display_off_summary">Няма зададен режим на екрана</string>
+    <string name="live_display_day">Дневен</string>
+    <string name="live_display_day_summary">Само настройки на дневен режим</string>
+    <string name="live_display_night">Нощен</string>
+    <string name="live_display_night_summary">Само настройки на нощен режим</string>
+    <string name="live_display_outdoor">На открито (ярко слънце)</string>
+    <string name="live_display_outdoor_summary">Само настройки на режим на открито</string>
+    <string name="live_display_hint">Използването на адаптивен дисплей може да помогне за намаляване умората в очите през нощта. Докоснете тук, за да го изпробвате!</string>
+    <string name="accessibility_quick_settings_live_display_off">Изключи адаптивен дисплей.</string>
+    <string name="accessibility_quick_settings_live_display_auto">Адаптивен дисплей: автоматичен режим.</string>
+    <string name="accessibility_quick_settings_live_display_day">Адаптивен дисплей: дневен режим.</string>
+    <string name="accessibility_quick_settings_live_display_night">Адаптивен дисплей: нощен режим.</string>
+    <string name="accessibility_quick_settings_live_display_outdoor">Адаптивен дисплей: външен режим.</string>
+    <string name="accessibility_quick_settings_live_display_changed_off">Адаптивен дисплей е изключен.</string>
+    <string name="accessibility_quick_settings_live_display_changed_auto">Адаптивен дисплей е променен на автоматичен режим.</string>
+    <string name="accessibility_quick_settings_live_display_changed_day">Адаптивен дисплей е променен на дневен режим.</string>
+    <string name="accessibility_quick_settings_live_display_changed_night">Адаптивен дисплей е променен на нощен режим.</string>
+    <string name="accessibility_quick_settings_live_display_changed_outdoor">Адаптивен дисплей е променен на външен режим.</string>
+    <!-- Performance manager permission title -->
+    <string name="permlab_perfAccess">Достъп до диспечера за производителност</string>
+    <!-- Performance manager permission description -->
+    <string name="permdesc_perfAccessDesc">Осигурява на приложението достъп до диспечера за производителност. Не е необходимо за нормални приложения.</string>
+    <!-- Weather Service strings -->
+    <string name="permlab_weather_read">прочети прогнозата</string>
+    <string name="permdesc_weather_read">Разрешава на приложението да чете данни от доставчика на време.</string>
+    <string name="permlab_weather_write">Актуализиране на доставчика на време</string>
+    <string name="permdesc_weather_write">Разрешава на приложението да актуализира съдържанието на доставчика на време.</string>
+    <string name="permlab_weather_bind">Задай като доставчик на време</string>
+    <string name="permdesc_weather_bind">Позволява на приложение да бъде идентифицирано като доставчик на време.</string>
+    <string name="permlab_weather_access_mgr">Достъп до метеорологична служба</string>
+    <string name="permdesc_weather_access_mgr">Позволява на приложението достъп до услугата за време. Не е необходимо за нормални приложения.</string>
+    <!-- DataUsageProvider write permission title -->
+    <string name="permlab_dataUsageWrite">Промени база данни</string>
+    <!-- DataUsageProvider write permission description -->
+    <string name="permdesc_dataUsageWrite">Разрешава на приложението да актуализира съдържанието на базата данни.</string>
+    <!-- DataUsageProvider read permission title -->
+    <string name="permlab_dataUsageRead">Прочети база данни</string>
+    <!-- DataUsageProvider read permission description -->
+    <string name="permdesc_dataUsageRead">Разрешава на приложението да чете съдържанието на базата данни.</string>
+    <!-- LiveDisplay manager permission -->
+    <string name="permlab_manageLiveDisplay">управление на настройките за Адаптивен дисплей</string>
+    <string name="permdesc_manageLiveDisplay">Позволява на приложението да променя разширените настройки на дисплея.</string>
+    <!-- LineageAudioService - observe session changes permission -->
+    <string name="permlab_observe_audio_sessions">преглед на промените в аудио сесии</string>
+    <string name="permdesc_observe_audio_sessions">Позволява на приложение да наблюдава създаване и унищожаване на аудио потоци.</string>
+    <!-- Privacy Guard -->
+    <string name="privacy_guard_manager_title">Защитен режим</string>
+    <!-- Permissions used by remote preferences -->
+    <string name="permlab_manageRemotePrefs">управление на отдалечени настройки</string>
+    <string name="permdesc_manageRemotePrefs">Позволява на приложението да управлява отдалечени настройки</string>
+    <!-- About device screen, build date -->
+    <string name="build_date">Дата на изграждане</string>
+    <!-- About device screen, LineageOS API Level -->
+    <string name="lineage_api_level">LineageOS приложно-програмен интерфейс ниво</string>
+    <!-- About device screen, LineageOS updates -->
+    <string name="lineage_updates">LineageOS актуализации</string>
+    <!-- About device screen, LineageOS version -->
+    <string name="lineage_version">Версия на LineageOS</string>
+    <!-- About device screen, vendor security patch -->
+    <string name="lineage_vendor_security_patch">Ниво на сигурност на доставчик</string>
+    <!-- General purpose use "unknown" string -->
+    <string name="unknown">Неизвестно</string>
+    <!-- Long-press back kill application -->
+    <string name="app_killed_message">Приложението е спряно</string>
+    <!-- Status bar network traffic monitor strings -->
+    <string name="kilobitspersecond_short">kб/с</string>
+    <string name="megabitspersecond_short">Mб/с</string>
+    <string name="kilobytespersecond_short">kБ/с</string>
+    <string name="megabytespersecond_short">MБ/с</string>
+    <!-- Accent colors -->
+    <string name="accent_black">Карбон</string>
+    <string name="accent_blue">Боровинка</string>
+    <string name="accent_brown">Какао</string>
+    <string name="accent_cyan">Циан</string>
+    <string name="accent_green">Гора</string>
+    <string name="accent_orange">Тиква</string>
+    <string name="accent_pink">Череша</string>
+    <string name="accent_purple">Лавандула</string>
+    <string name="accent_red">Домат</string>
+    <string name="accent_yellow">Банан</string>
+    <!-- Trust interface -->
+    <!-- This string will be referenced from other apps when they're referring to the Trust interface.
          Trust is a feature name, it's not suggested to translate this unless there are conflicts due
          to a different meaning of the word "trust" in your language -->
-  <string name="trust_feature_name">Trust</string>
-  <string name="permlab_trustInterface">достъп до Trust интерфейс</string>
-  <string name="permdesc_trustInterface">Позволява на приложението да показка предложения и предупреждения</string>
-  <string name="trust_notification_channel">Trust предупреждения</string>
-  <string name="trust_notification_title_security">Trust \u2022 Система за сигурност</string>
-  <string name="trust_notification_content_selinux">SELinux не е приложена, вашата сигурност е отслабена</string>
-  <string name="trust_notification_title_root">Trust \u2022 Админстраторски достъп</string>
-  <string name="trust_notification_content_root">Проложението използва администраторски права</string>
-  <string name="trust_notification_content_keys">Тази компилация е подписана с публични ключове</string>
-  <string name="trust_notification_title_onboarding">Открийте Trust</string>
-  <string name="trust_notification_content_onboarding">Разберете как да направите вашето устройство е безопасно</string>
-  <string name="trust_notification_action_manage">Управление на предупрежденията</string>
+    <string name="trust_feature_name">Trust</string>
+    <string name="permlab_trustInterface">достъп до Trust интерфейс</string>
+    <string name="permdesc_trustInterface">Позволява на приложението да показка предложения и предупреждения</string>
+    <string name="trust_notification_channel">Trust предупреждения</string>
+    <string name="trust_notification_title_security">Trust \u2022 Система за сигурност</string>
+    <string name="trust_notification_content_selinux">SELinux не е приложена, вашата сигурност е отслабена</string>
+    <string name="trust_notification_title_root">Trust \u2022 Админстраторски достъп</string>
+    <string name="trust_notification_content_root">Проложението използва администраторски права</string>
+    <string name="trust_notification_content_keys">Тази компилация е подписана с публични ключове</string>
+    <string name="trust_notification_title_onboarding">Открийте Trust</string>
+    <string name="trust_notification_content_onboarding">Разберете как да направите вашето устройство е безопасно</string>
+    <string name="trust_notification_action_manage">Управление на предупрежденията</string>
 </resources>

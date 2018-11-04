@@ -17,64 +17,64 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <!-- Label for the LineageOS system components when they are shown to the user. -->
-  <!-- Labels for the MODIFY_PROFILES permission. -->
-  <!-- Labels for the HARDWARE_ABSTRACTION_ACCESS permission. -->
-  <!-- Labels for the WRITE_SETTINGS permission -->
-  <!-- Labels for the WRITE_SECURE_SETTINGS permission -->
-  <!-- Labels for the PROTECTED_APP permission. -->
-  <string name="permlab_protectedApp">añadir y quitar aplicaciones a aplicaciones protegidas</string>
-  <string name="permdesc_protectedApp">Permite que una aplicación marque a otras aplicaciones como protegidas y las bloquee.</string>
-  <!-- Labels for CHANGE_STYLE permission -->
-  <!-- this is wrong, but google's package manager uses the android:description
+    <!-- Label for the LineageOS system components when they are shown to the user. -->
+    <!-- Labels for the MODIFY_PROFILES permission. -->
+    <!-- Labels for the HARDWARE_ABSTRACTION_ACCESS permission. -->
+    <!-- Labels for the WRITE_SETTINGS permission -->
+    <!-- Labels for the WRITE_SECURE_SETTINGS permission -->
+    <!-- Labels for the PROTECTED_APP permission. -->
+    <string name="permlab_protectedApp">añadir y quitar aplicaciones a aplicaciones protegidas</string>
+    <string name="permdesc_protectedApp">Permite que una aplicación marque a otras aplicaciones como protegidas y las bloquee.</string>
+    <!-- Labels for CHANGE_STYLE permission -->
+    <!-- this is wrong, but google's package manager uses the android:description
          attribute as description for the runtime permission request dialog
          with non-default dangerous permissions -->
-  <!-- Profiles -->
-  <!-- Names of default profiles. -->
-  <!-- Names of application groups. -->
-  <!-- Name of wildcard profile. -->
-  <!-- Performance profiles -->
-  <string name="perf_profile_pwrsv">Ahorro de energía</string>
-  <string name="perf_profile_bal">Equilibrado</string>
-  <string name="perf_profile_perf">Rendimiento</string>
-  <string name="perf_profile_bias_power">Eficiencia</string>
-  <string name="perf_profile_bias_perf">Rápido</string>
-  <!-- Performance profiles -->
-  <!-- LiveDisplay strings -->
-  <string name="live_display_auto">Automático</string>
-  <string name="live_display_auto_summary">Ajustar automáticamente la temperatura del color de pantalla con el amanecer y el anochecer</string>
-  <string name="live_display_off">Apagar</string>
-  <string name="live_display_off_summary">Desactivar todos los ajustes</string>
-  <string name="live_display_day">Día</string>
-  <string name="live_display_day_summary">Utilizar solo los ajustes de día</string>
-  <string name="live_display_night_summary">Utilizar solo los ajustes de noche</string>
-  <string name="live_display_outdoor">Al aire libre (luz del sol)</string>
-  <string name="live_display_outdoor_summary">Utilizar solo los ajustes al aire libre</string>
-  <string name="live_display_hint">LiveDisplay puede ayudar a reducir la fatiga visual y ayudarte a dormir por la noche. ¡Haz clic aquí para probarlo!</string>
-  <!-- Performance manager permission title -->
-  <string name="permlab_perfAccess">acceder al supervisor de rendimiento</string>
-  <!-- Performance manager permission description -->
-  <string name="permdesc_perfAccessDesc">Permite que la aplicación acceda al servicio de rendimiento. No debería ser necesario para aplicaciones normales.</string>
-  <!-- Weather Service strings -->
-  <!-- DataUsageProvider write permission title -->
-  <!-- DataUsageProvider write permission description -->
-  <!-- DataUsageProvider read permission title -->
-  <!-- DataUsageProvider read permission description -->
-  <!-- LiveDisplay manager permission -->
-  <!-- LineageAudioService - observe session changes permission -->
-  <!-- Privacy Guard -->
-  <!-- Permissions used by remote preferences -->
-  <!-- About device screen, build date -->
-  <!-- About device screen, LineageOS API Level -->
-  <!-- About device screen, LineageOS updates -->
-  <!-- About device screen, LineageOS version -->
-  <!-- About device screen, vendor security patch -->
-  <!-- General purpose use "unknown" string -->
-  <!-- Long-press back kill application -->
-  <!-- Status bar network traffic monitor strings -->
-  <!-- Accent colors -->
-  <!-- Trust interface -->
-  <!-- This string will be referenced from other apps when they're referring to the Trust interface.
+    <!-- Profiles -->
+    <!-- Names of default profiles. -->
+    <!-- Names of application groups. -->
+    <!-- Name of wildcard profile. -->
+    <!-- Performance profiles -->
+    <string name="perf_profile_pwrsv">Ahorro de energía</string>
+    <string name="perf_profile_bal">Equilibrado</string>
+    <string name="perf_profile_perf">Rendimiento</string>
+    <string name="perf_profile_bias_power">Eficiencia</string>
+    <string name="perf_profile_bias_perf">Rápido</string>
+    <!-- Performance profiles -->
+    <!-- LiveDisplay strings -->
+    <string name="live_display_auto">Automático</string>
+    <string name="live_display_auto_summary">Ajustar automáticamente la temperatura del color de pantalla con el amanecer y el anochecer</string>
+    <string name="live_display_off">Apagar</string>
+    <string name="live_display_off_summary">Desactivar todos los ajustes</string>
+    <string name="live_display_day">Día</string>
+    <string name="live_display_day_summary">Utilizar solo los ajustes de día</string>
+    <string name="live_display_night_summary">Utilizar solo los ajustes de noche</string>
+    <string name="live_display_outdoor">Al aire libre (luz del sol)</string>
+    <string name="live_display_outdoor_summary">Utilizar solo los ajustes al aire libre</string>
+    <string name="live_display_hint">LiveDisplay puede ayudar a reducir la fatiga visual y ayudarte a dormir por la noche. ¡Haz clic aquí para probarlo!</string>
+    <!-- Performance manager permission title -->
+    <string name="permlab_perfAccess">acceder al supervisor de rendimiento</string>
+    <!-- Performance manager permission description -->
+    <string name="permdesc_perfAccessDesc">Permite que la aplicación acceda al servicio de rendimiento. No debería ser necesario para aplicaciones normales.</string>
+    <!-- Weather Service strings -->
+    <!-- DataUsageProvider write permission title -->
+    <!-- DataUsageProvider write permission description -->
+    <!-- DataUsageProvider read permission title -->
+    <!-- DataUsageProvider read permission description -->
+    <!-- LiveDisplay manager permission -->
+    <!-- LineageAudioService - observe session changes permission -->
+    <!-- Privacy Guard -->
+    <!-- Permissions used by remote preferences -->
+    <!-- About device screen, build date -->
+    <!-- About device screen, LineageOS API Level -->
+    <!-- About device screen, LineageOS updates -->
+    <!-- About device screen, LineageOS version -->
+    <!-- About device screen, vendor security patch -->
+    <!-- General purpose use "unknown" string -->
+    <!-- Long-press back kill application -->
+    <!-- Status bar network traffic monitor strings -->
+    <!-- Accent colors -->
+    <!-- Trust interface -->
+    <!-- This string will be referenced from other apps when they're referring to the Trust interface.
          Trust is a feature name, it's not suggested to translate this unless there are conflicts due
          to a different meaning of the word "trust" in your language -->
 </resources>

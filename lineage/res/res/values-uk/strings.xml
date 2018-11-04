@@ -17,114 +17,114 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <!-- Label for the LineageOS system components when they are shown to the user. -->
-  <!-- Labels for the MODIFY_PROFILES permission. -->
-  <string name="permlab_modifyProfiles">зміна системних профілів</string>
-  <string name="permdesc_modifyProfiles">Дозволяє додатку змінювати системні профілі.</string>
-  <!-- Labels for the HARDWARE_ABSTRACTION_ACCESS permission. -->
-  <string name="permlab_useHardwareFramework">Взаємодія із обладнанням</string>
-  <!-- Labels for the WRITE_SETTINGS permission -->
-  <!-- Labels for the WRITE_SECURE_SETTINGS permission -->
-  <!-- Labels for the PROTECTED_APP permission. -->
-  <string name="permlab_protectedApp">додавання і видалення записів переліку захищених додатків</string>
-  <string name="permdesc_protectedApp">Додаток зможе відмічати інші додатки як захищені і блокувати їх.</string>
-  <!-- Labels for CHANGE_STYLE permission -->
-  <!-- this is wrong, but google's package manager uses the android:description
+    <!-- Label for the LineageOS system components when they are shown to the user. -->
+    <!-- Labels for the MODIFY_PROFILES permission. -->
+    <string name="permlab_modifyProfiles">зміна системних профілів</string>
+    <string name="permdesc_modifyProfiles">Дозволяє додатку змінювати системні профілі.</string>
+    <!-- Labels for the HARDWARE_ABSTRACTION_ACCESS permission. -->
+    <string name="permlab_useHardwareFramework">Взаємодія із обладнанням</string>
+    <!-- Labels for the WRITE_SETTINGS permission -->
+    <!-- Labels for the WRITE_SECURE_SETTINGS permission -->
+    <!-- Labels for the PROTECTED_APP permission. -->
+    <string name="permlab_protectedApp">додавання і видалення записів переліку захищених додатків</string>
+    <string name="permdesc_protectedApp">Додаток зможе відмічати інші додатки як захищені і блокувати їх.</string>
+    <!-- Labels for CHANGE_STYLE permission -->
+    <!-- this is wrong, but google's package manager uses the android:description
          attribute as description for the runtime permission request dialog
          with non-default dangerous permissions -->
-  <!-- Profiles -->
-  <!-- Names of default profiles. -->
-  <string name="profileNameDefault">За замовчуванням</string>
-  <string name="profileNameWork">Робота</string>
-  <string name="profileNameHome">Дім</string>
-  <string name="profileNameSilent">Без звуку</string>
-  <string name="profileNameNight">Ніч</string>
-  <string name="profileNameAutomobile">Автомобіль</string>
-  <!-- Names of application groups. -->
-  <string name="profileGroupPhone">Телефон</string>
-  <string name="profileGroupCalendar">Календар</string>
-  <string name="profileGroupGmail">Gmail</string>
-  <string name="profileGroupEmail">Електронна пошта</string>
-  <string name="profileGroupSMS">SMS</string>
-  <!-- Name of wildcard profile. -->
-  <string name="wildcardProfile">Інший</string>
-  <!-- Performance profiles -->
-  <string name="perf_profile_pwrsv">Енергозбереження</string>
-  <string name="perf_profile_bal">Збалансований</string>
-  <string name="perf_profile_perf">Продуктивність</string>
-  <string name="perf_profile_bias_power">Ефективність</string>
-  <string name="perf_profile_bias_perf">Швидко</string>
-  <!-- Performance profiles -->
-  <string name="perf_profile_pwrsv_summary">Максимальне збереження енергії, знижує продуктивність пристрою</string>
-  <string name="perf_profile_bal_summary">Баланс між енергозбереженням та оптимальною продуктивністю</string>
-  <string name="perf_profile_perf_summary">Режим високої продуктивності. Корисно для застосунків, що вимагають низької затримки відгуку і найвищу пропускну здатність, коли енергоспоживання не має значення</string>
-  <string name="perf_profile_bias_power_summary">Економія понад усе. Обмеження максимальної потужності процесора і оптимізація для енергозбереження за рахунок вищої затримки</string>
-  <string name="perf_profile_bias_perf_summary">Продуктивність понад усе. Зменшує час затримки з трохи збільшеним енергоспоживанням</string>
-  <!-- LiveDisplay strings -->
-  <string name="live_display_auto">Автоматично</string>
-  <string name="live_display_auto_summary">Автоматичне підлаштування температури кольору екрана після сходу та заходу сонця</string>
-  <string name="live_display_off">Вимк</string>
-  <string name="live_display_off_summary">Вимкнути всі налаштування</string>
-  <string name="live_display_day">День</string>
-  <string name="live_display_day_summary">Використовувати параметри для денного освітлення</string>
-  <string name="live_display_night">Ніч</string>
-  <string name="live_display_night_summary">Використовувати параметри для нічного освітлення</string>
-  <string name="live_display_outdoor">Надворі (яскраве сонце)</string>
-  <string name="live_display_outdoor_summary">Використовувати параметри для яскравого освітлення надворі</string>
-  <string name="live_display_hint">LiveDisplay допоможе зменшити навантаження на зір та покращить Ваш сон. Натисніть тут, щоб спробувати його!</string>
-  <string name="accessibility_quick_settings_live_display_off">LiveDisplay вимкнений.</string>
-  <string name="accessibility_quick_settings_live_display_auto">LiveDisplay: автоматичний режим.</string>
-  <string name="accessibility_quick_settings_live_display_day">LiveDisplay: денний режим.</string>
-  <string name="accessibility_quick_settings_live_display_night">LiveDisplay: нічний режим.</string>
-  <string name="accessibility_quick_settings_live_display_outdoor">LiveDisplay: режим на вулиці.</string>
-  <string name="accessibility_quick_settings_live_display_changed_off">LiveDisplay вимкнено.</string>
-  <string name="accessibility_quick_settings_live_display_changed_auto">LiveDisplay змінено до автоматичного режиму.</string>
-  <string name="accessibility_quick_settings_live_display_changed_day">LiveDisplay змінено до денного режиму.</string>
-  <string name="accessibility_quick_settings_live_display_changed_night">LiveDisplay змінено до нічного режиму.</string>
-  <string name="accessibility_quick_settings_live_display_changed_outdoor">LiveDisplay змінено до режиму на вулиці.</string>
-  <!-- Performance manager permission title -->
-  <string name="permlab_perfAccess">доступ до менеджера продуктивності</string>
-  <!-- Performance manager permission description -->
-  <string name="permdesc_perfAccessDesc">Дозволяє додатку отримувати доступ до менеджера продуктивності. Цей дозвіл не потрібний звичайним додаткам.</string>
-  <!-- Weather Service strings -->
-  <string name="permlab_weather_read">читати погоду</string>
-  <string name="permdesc_weather_read">Дозволити додатку читати дані від провайдера погоди.</string>
-  <string name="permlab_weather_write">оновлення провайдера погоди</string>
-  <string name="permdesc_weather_write">Дозволяє додатку оновлювати дані провайдера погоди.</string>
-  <string name="permlab_weather_bind">прив\'язати як провайдера погоди</string>
-  <string name="permdesc_weather_bind">Дозволяє додатку бути службою провайдера погоди.</string>
-  <string name="permlab_weather_access_mgr">доступ до служби погоди</string>
-  <string name="permdesc_weather_access_mgr">Дозволити додатку доступ до служби погоди в системі. Це ніколи не потрібно для звичайних додатків.</string>
-  <!-- DataUsageProvider write permission title -->
-  <string name="permlab_dataUsageWrite">змінювати дані використання бази даних</string>
-  <!-- DataUsageProvider write permission description -->
-  <string name="permdesc_dataUsageWrite">Дозволяє додатку оновлювати вміст БД використання даних.</string>
-  <!-- DataUsageProvider read permission title -->
-  <string name="permlab_dataUsageRead">читати дані використання бази даних</string>
-  <!-- DataUsageProvider read permission description -->
-  <string name="permdesc_dataUsageRead">Дозволяє додатку читати вміст БД використання даних.</string>
-  <!-- LiveDisplay manager permission -->
-  <string name="permlab_manageLiveDisplay">керування налаштуваннями LiveDisplay</string>
-  <string name="permdesc_manageLiveDisplay">Дозволяє додатку керувати розширеними налаштуваннями дисплея.</string>
-  <!-- LineageAudioService - observe session changes permission -->
-  <string name="permlab_observe_audio_sessions">спостерігати за змінами аудіо сесії</string>
-  <string name="permdesc_observe_audio_sessions">Дозволяє додатку переглядати аудіопотоки, які створюються або знищуються.</string>
-  <!-- Privacy Guard -->
-  <string name="privacy_guard_manager_title">Вартовий Приватності</string>
-  <!-- Permissions used by remote preferences -->
-  <string name="permlab_manageRemotePrefs">керування віддаленими параметрами</string>
-  <string name="permdesc_manageRemotePrefs">Дозволяє застосункові керувати налаштуваннями віддаленого підключення</string>
-  <!-- About device screen, build date -->
-  <!-- About device screen, LineageOS API Level -->
-  <!-- About device screen, LineageOS updates -->
-  <!-- About device screen, LineageOS version -->
-  <!-- About device screen, vendor security patch -->
-  <!-- General purpose use "unknown" string -->
-  <!-- Long-press back kill application -->
-  <!-- Status bar network traffic monitor strings -->
-  <!-- Accent colors -->
-  <!-- Trust interface -->
-  <!-- This string will be referenced from other apps when they're referring to the Trust interface.
+    <!-- Profiles -->
+    <!-- Names of default profiles. -->
+    <string name="profileNameDefault">За замовчуванням</string>
+    <string name="profileNameWork">Робота</string>
+    <string name="profileNameHome">Дім</string>
+    <string name="profileNameSilent">Без звуку</string>
+    <string name="profileNameNight">Ніч</string>
+    <string name="profileNameAutomobile">Автомобіль</string>
+    <!-- Names of application groups. -->
+    <string name="profileGroupPhone">Телефон</string>
+    <string name="profileGroupCalendar">Календар</string>
+    <string name="profileGroupGmail">Gmail</string>
+    <string name="profileGroupEmail">Електронна пошта</string>
+    <string name="profileGroupSMS">SMS</string>
+    <!-- Name of wildcard profile. -->
+    <string name="wildcardProfile">Інший</string>
+    <!-- Performance profiles -->
+    <string name="perf_profile_pwrsv">Енергозбереження</string>
+    <string name="perf_profile_bal">Збалансований</string>
+    <string name="perf_profile_perf">Продуктивність</string>
+    <string name="perf_profile_bias_power">Ефективність</string>
+    <string name="perf_profile_bias_perf">Швидко</string>
+    <!-- Performance profiles -->
+    <string name="perf_profile_pwrsv_summary">Максимальне збереження енергії, знижує продуктивність пристрою</string>
+    <string name="perf_profile_bal_summary">Баланс між енергозбереженням та оптимальною продуктивністю</string>
+    <string name="perf_profile_perf_summary">Режим високої продуктивності. Корисно для застосунків, що вимагають низької затримки відгуку і найвищу пропускну здатність, коли енергоспоживання не має значення</string>
+    <string name="perf_profile_bias_power_summary">Економія понад усе. Обмеження максимальної потужності процесора і оптимізація для енергозбереження за рахунок вищої затримки</string>
+    <string name="perf_profile_bias_perf_summary">Продуктивність понад усе. Зменшує час затримки з трохи збільшеним енергоспоживанням</string>
+    <!-- LiveDisplay strings -->
+    <string name="live_display_auto">Автоматично</string>
+    <string name="live_display_auto_summary">Автоматичне підлаштування температури кольору екрана після сходу та заходу сонця</string>
+    <string name="live_display_off">Вимк</string>
+    <string name="live_display_off_summary">Вимкнути всі налаштування</string>
+    <string name="live_display_day">День</string>
+    <string name="live_display_day_summary">Використовувати параметри для денного освітлення</string>
+    <string name="live_display_night">Ніч</string>
+    <string name="live_display_night_summary">Використовувати параметри для нічного освітлення</string>
+    <string name="live_display_outdoor">Надворі (яскраве сонце)</string>
+    <string name="live_display_outdoor_summary">Використовувати параметри для яскравого освітлення надворі</string>
+    <string name="live_display_hint">LiveDisplay допоможе зменшити навантаження на зір та покращить Ваш сон. Натисніть тут, щоб спробувати його!</string>
+    <string name="accessibility_quick_settings_live_display_off">LiveDisplay вимкнений.</string>
+    <string name="accessibility_quick_settings_live_display_auto">LiveDisplay: автоматичний режим.</string>
+    <string name="accessibility_quick_settings_live_display_day">LiveDisplay: денний режим.</string>
+    <string name="accessibility_quick_settings_live_display_night">LiveDisplay: нічний режим.</string>
+    <string name="accessibility_quick_settings_live_display_outdoor">LiveDisplay: режим на вулиці.</string>
+    <string name="accessibility_quick_settings_live_display_changed_off">LiveDisplay вимкнено.</string>
+    <string name="accessibility_quick_settings_live_display_changed_auto">LiveDisplay змінено до автоматичного режиму.</string>
+    <string name="accessibility_quick_settings_live_display_changed_day">LiveDisplay змінено до денного режиму.</string>
+    <string name="accessibility_quick_settings_live_display_changed_night">LiveDisplay змінено до нічного режиму.</string>
+    <string name="accessibility_quick_settings_live_display_changed_outdoor">LiveDisplay змінено до режиму на вулиці.</string>
+    <!-- Performance manager permission title -->
+    <string name="permlab_perfAccess">доступ до менеджера продуктивності</string>
+    <!-- Performance manager permission description -->
+    <string name="permdesc_perfAccessDesc">Дозволяє додатку отримувати доступ до менеджера продуктивності. Цей дозвіл не потрібний звичайним додаткам.</string>
+    <!-- Weather Service strings -->
+    <string name="permlab_weather_read">читати погоду</string>
+    <string name="permdesc_weather_read">Дозволити додатку читати дані від провайдера погоди.</string>
+    <string name="permlab_weather_write">оновлення провайдера погоди</string>
+    <string name="permdesc_weather_write">Дозволяє додатку оновлювати дані провайдера погоди.</string>
+    <string name="permlab_weather_bind">прив\'язати як провайдера погоди</string>
+    <string name="permdesc_weather_bind">Дозволяє додатку бути службою провайдера погоди.</string>
+    <string name="permlab_weather_access_mgr">доступ до служби погоди</string>
+    <string name="permdesc_weather_access_mgr">Дозволити додатку доступ до служби погоди в системі. Це ніколи не потрібно для звичайних додатків.</string>
+    <!-- DataUsageProvider write permission title -->
+    <string name="permlab_dataUsageWrite">змінювати дані використання бази даних</string>
+    <!-- DataUsageProvider write permission description -->
+    <string name="permdesc_dataUsageWrite">Дозволяє додатку оновлювати вміст БД використання даних.</string>
+    <!-- DataUsageProvider read permission title -->
+    <string name="permlab_dataUsageRead">читати дані використання бази даних</string>
+    <!-- DataUsageProvider read permission description -->
+    <string name="permdesc_dataUsageRead">Дозволяє додатку читати вміст БД використання даних.</string>
+    <!-- LiveDisplay manager permission -->
+    <string name="permlab_manageLiveDisplay">керування налаштуваннями LiveDisplay</string>
+    <string name="permdesc_manageLiveDisplay">Дозволяє додатку керувати розширеними налаштуваннями дисплея.</string>
+    <!-- LineageAudioService - observe session changes permission -->
+    <string name="permlab_observe_audio_sessions">спостерігати за змінами аудіо сесії</string>
+    <string name="permdesc_observe_audio_sessions">Дозволяє додатку переглядати аудіопотоки, які створюються або знищуються.</string>
+    <!-- Privacy Guard -->
+    <string name="privacy_guard_manager_title">Вартовий Приватності</string>
+    <!-- Permissions used by remote preferences -->
+    <string name="permlab_manageRemotePrefs">керування віддаленими параметрами</string>
+    <string name="permdesc_manageRemotePrefs">Дозволяє застосункові керувати налаштуваннями віддаленого підключення</string>
+    <!-- About device screen, build date -->
+    <!-- About device screen, LineageOS API Level -->
+    <!-- About device screen, LineageOS updates -->
+    <!-- About device screen, LineageOS version -->
+    <!-- About device screen, vendor security patch -->
+    <!-- General purpose use "unknown" string -->
+    <!-- Long-press back kill application -->
+    <!-- Status bar network traffic monitor strings -->
+    <!-- Accent colors -->
+    <!-- Trust interface -->
+    <!-- This string will be referenced from other apps when they're referring to the Trust interface.
          Trust is a feature name, it's not suggested to translate this unless there are conflicts due
          to a different meaning of the word "trust" in your language -->
 </resources>

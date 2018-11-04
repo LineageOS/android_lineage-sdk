@@ -17,59 +17,59 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <!-- Label for the LineageOS system components when they are shown to the user. -->
-  <!-- Labels for the MODIFY_PROFILES permission. -->
-  <!-- Labels for the HARDWARE_ABSTRACTION_ACCESS permission. -->
-  <string name="permlab_useHardwareFramework">kasutada riistvara raamistikku</string>
-  <!-- Labels for the WRITE_SETTINGS permission -->
-  <!-- Labels for the WRITE_SECURE_SETTINGS permission -->
-  <!-- Labels for the PROTECTED_APP permission. -->
-  <!-- Labels for CHANGE_STYLE permission -->
-  <!-- this is wrong, but google's package manager uses the android:description
+    <!-- Label for the LineageOS system components when they are shown to the user. -->
+    <!-- Labels for the MODIFY_PROFILES permission. -->
+    <!-- Labels for the HARDWARE_ABSTRACTION_ACCESS permission. -->
+    <string name="permlab_useHardwareFramework">kasutada riistvara raamistikku</string>
+    <!-- Labels for the WRITE_SETTINGS permission -->
+    <!-- Labels for the WRITE_SECURE_SETTINGS permission -->
+    <!-- Labels for the PROTECTED_APP permission. -->
+    <!-- Labels for CHANGE_STYLE permission -->
+    <!-- this is wrong, but google's package manager uses the android:description
          attribute as description for the runtime permission request dialog
          with non-default dangerous permissions -->
-  <!-- Profiles -->
-  <!-- Names of default profiles. -->
-  <string name="profileNameDefault">Vaikimisi</string>
-  <string name="profileNameWork">Töö</string>
-  <string name="profileNameHome">Kodu</string>
-  <string name="profileNameSilent">Vaikne</string>
-  <string name="profileNameNight">Öö</string>
-  <string name="profileNameAutomobile">Sõiduk</string>
-  <!-- Names of application groups. -->
-  <string name="profileGroupPhone">Telefon</string>
-  <string name="profileGroupCalendar">Kalender</string>
-  <string name="profileGroupGmail">Gmail</string>
-  <string name="profileGroupEmail">E-mail</string>
-  <string name="profileGroupSMS">SMS</string>
-  <!-- Name of wildcard profile. -->
-  <string name="wildcardProfile">Muud</string>
-  <!-- Performance profiles -->
-  <!-- Performance profiles -->
-  <!-- LiveDisplay strings -->
-  <string name="live_display_night">Öö</string>
-  <!-- Performance manager permission title -->
-  <!-- Performance manager permission description -->
-  <!-- Weather Service strings -->
-  <!-- DataUsageProvider write permission title -->
-  <!-- DataUsageProvider write permission description -->
-  <!-- DataUsageProvider read permission title -->
-  <!-- DataUsageProvider read permission description -->
-  <!-- LiveDisplay manager permission -->
-  <!-- LineageAudioService - observe session changes permission -->
-  <!-- Privacy Guard -->
-  <!-- Permissions used by remote preferences -->
-  <!-- About device screen, build date -->
-  <!-- About device screen, LineageOS API Level -->
-  <!-- About device screen, LineageOS updates -->
-  <!-- About device screen, LineageOS version -->
-  <!-- About device screen, vendor security patch -->
-  <!-- General purpose use "unknown" string -->
-  <!-- Long-press back kill application -->
-  <!-- Status bar network traffic monitor strings -->
-  <!-- Accent colors -->
-  <!-- Trust interface -->
-  <!-- This string will be referenced from other apps when they're referring to the Trust interface.
+    <!-- Profiles -->
+    <!-- Names of default profiles. -->
+    <string name="profileNameDefault">Vaikimisi</string>
+    <string name="profileNameWork">Töö</string>
+    <string name="profileNameHome">Kodu</string>
+    <string name="profileNameSilent">Vaikne</string>
+    <string name="profileNameNight">Öö</string>
+    <string name="profileNameAutomobile">Sõiduk</string>
+    <!-- Names of application groups. -->
+    <string name="profileGroupPhone">Telefon</string>
+    <string name="profileGroupCalendar">Kalender</string>
+    <string name="profileGroupGmail">Gmail</string>
+    <string name="profileGroupEmail">E-mail</string>
+    <string name="profileGroupSMS">SMS</string>
+    <!-- Name of wildcard profile. -->
+    <string name="wildcardProfile">Muud</string>
+    <!-- Performance profiles -->
+    <!-- Performance profiles -->
+    <!-- LiveDisplay strings -->
+    <string name="live_display_night">Öö</string>
+    <!-- Performance manager permission title -->
+    <!-- Performance manager permission description -->
+    <!-- Weather Service strings -->
+    <!-- DataUsageProvider write permission title -->
+    <!-- DataUsageProvider write permission description -->
+    <!-- DataUsageProvider read permission title -->
+    <!-- DataUsageProvider read permission description -->
+    <!-- LiveDisplay manager permission -->
+    <!-- LineageAudioService - observe session changes permission -->
+    <!-- Privacy Guard -->
+    <!-- Permissions used by remote preferences -->
+    <!-- About device screen, build date -->
+    <!-- About device screen, LineageOS API Level -->
+    <!-- About device screen, LineageOS updates -->
+    <!-- About device screen, LineageOS version -->
+    <!-- About device screen, vendor security patch -->
+    <!-- General purpose use "unknown" string -->
+    <!-- Long-press back kill application -->
+    <!-- Status bar network traffic monitor strings -->
+    <!-- Accent colors -->
+    <!-- Trust interface -->
+    <!-- This string will be referenced from other apps when they're referring to the Trust interface.
          Trust is a feature name, it's not suggested to translate this unless there are conflicts due
          to a different meaning of the word "trust" in your language -->
 </resources>

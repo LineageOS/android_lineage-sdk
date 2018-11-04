@@ -17,155 +17,155 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <!-- Label for the LineageOS system components when they are shown to the user. -->
-  <string name="lineageos_system_label">Sistema de LineageOS</string>
-  <!-- Labels for the MODIFY_PROFILES permission. -->
-  <string name="permlab_modifyProfiles">modifica els perfils del sistema</string>
-  <string name="permdesc_modifyProfiles">Permet a una aplicació modificar els perfils del sistema.</string>
-  <!-- Labels for the HARDWARE_ABSTRACTION_ACCESS permission. -->
-  <string name="permlab_useHardwareFramework">utilitza el marc de hardware</string>
-  <string name="permdesc_useHardwareFramework">Permet a una aplicació accedir al marc de hardware de Lineage.</string>
-  <!-- Labels for the WRITE_SETTINGS permission -->
-  <string name="permlab_writeSettings">modificar la configuració del sistema de Lineage</string>
-  <string name="permdesc_writeSettings">Permet a una aplicació modificar la configuració del sistema de Lineage.</string>
-  <!-- Labels for the WRITE_SECURE_SETTINGS permission -->
-  <string name="permlab_writeSecureSettings">modificar la configuració segura del sistema de Lineage</string>
-  <string name="permdesc_writeSecureSettings">Permet a una aplicació modificar la configuració segura del sistema de Lineage. No utilitzar en aplicacions normals.</string>
-  <!-- Labels for the PROTECTED_APP permission. -->
-  <string name="permlab_protectedApp">afegir i eliminar aplicacions a les aplicacions protegides</string>
-  <string name="permdesc_protectedApp">Permet a una aplicació marcar a altres aplicacions com a protegides i bloquejar-les.</string>
-  <!-- Labels for CHANGE_STYLE permission -->
-  <string name="permlab_changeStyle">canviar el sistema d\'estil</string>
-  <!-- this is wrong, but google's package manager uses the android:description
+    <!-- Label for the LineageOS system components when they are shown to the user. -->
+    <string name="lineageos_system_label">Sistema de LineageOS</string>
+    <!-- Labels for the MODIFY_PROFILES permission. -->
+    <string name="permlab_modifyProfiles">modifica els perfils del sistema</string>
+    <string name="permdesc_modifyProfiles">Permet a una aplicació modificar els perfils del sistema.</string>
+    <!-- Labels for the HARDWARE_ABSTRACTION_ACCESS permission. -->
+    <string name="permlab_useHardwareFramework">utilitza el marc de hardware</string>
+    <string name="permdesc_useHardwareFramework">Permet a una aplicació accedir al marc de hardware de Lineage.</string>
+    <!-- Labels for the WRITE_SETTINGS permission -->
+    <string name="permlab_writeSettings">modificar la configuració del sistema de Lineage</string>
+    <string name="permdesc_writeSettings">Permet a una aplicació modificar la configuració del sistema de Lineage.</string>
+    <!-- Labels for the WRITE_SECURE_SETTINGS permission -->
+    <string name="permlab_writeSecureSettings">modificar la configuració segura del sistema de Lineage</string>
+    <string name="permdesc_writeSecureSettings">Permet a una aplicació modificar la configuració segura del sistema de Lineage. No utilitzar en aplicacions normals.</string>
+    <!-- Labels for the PROTECTED_APP permission. -->
+    <string name="permlab_protectedApp">afegir i eliminar aplicacions a les aplicacions protegides</string>
+    <string name="permdesc_protectedApp">Permet a una aplicació marcar a altres aplicacions com a protegides i bloquejar-les.</string>
+    <!-- Labels for CHANGE_STYLE permission -->
+    <string name="permlab_changeStyle">canviar el sistema d\'estil</string>
+    <!-- this is wrong, but google's package manager uses the android:description
          attribute as description for the runtime permission request dialog
          with non-default dangerous permissions -->
-  <string name="permdesc_changeStyle">personalitzar els colors del sistema</string>
-  <!-- Profiles -->
-  <!-- Names of default profiles. -->
-  <string name="profileNameDefault">Predeterminat</string>
-  <string name="profileNameWork">Feina</string>
-  <string name="profileNameHome">Casa</string>
-  <string name="profileNameSilent">Silenci</string>
-  <string name="profileNameNight">Nit</string>
-  <string name="profileNameAutomobile">Cotxe</string>
-  <!-- Names of application groups. -->
-  <string name="profileGroupPhone">Telèfon</string>
-  <string name="profileGroupCalendar">Calendari</string>
-  <string name="profileGroupGmail">Gmail</string>
-  <string name="profileGroupEmail">Correu electrònic</string>
-  <string name="profileGroupSMS">SMS</string>
-  <!-- Name of wildcard profile. -->
-  <string name="wildcardProfile">Altres</string>
-  <!-- Performance profiles -->
-  <string name="perf_profile_pwrsv">Estalvi d\'energia</string>
-  <string name="perf_profile_bal">Equilibrat</string>
-  <string name="perf_profile_perf">Rendiment</string>
-  <string name="perf_profile_bias_power">Eficiència</string>
-  <string name="perf_profile_bias_perf">Ràpid</string>
-  <!-- Performance profiles -->
-  <string name="perf_profile_pwrsv_summary">El màxim estalvi d\'energia, redueix el rendiment del dispositiu</string>
-  <string name="perf_profile_bal_summary">Equilibri entre rendiment òptim i característiques d\'estalvi d\'energia</string>
-  <string name="perf_profile_perf_summary">Mode d\'alt rendiment. Útil per a aplicacions que requereixen una latència baixa i el millor rendiment quan el consum d\'energia no és una preocupació</string>
-  <string name="perf_profile_bias_power_summary">Afavoreix l\'estalvi d\'energia. Limita el rendiment màxim de la CPU i optimitza\'l per a l\'estalvi d\'energia a costa d\'una latència més alta</string>
-  <string name="perf_profile_bias_perf_summary">Afavoreix el rendiment. Redueix la latència amb un consum lleugerament més alt</string>
-  <!-- LiveDisplay strings -->
-  <string name="live_display_auto">Automàtic</string>
-  <string name="live_display_auto_summary">Ajusta automàticament la temperatura de color de la pantalla després de la posta de sol i de l\'alba</string>
-  <string name="live_display_off">Desactivat</string>
-  <string name="live_display_off_summary">Deshabilita totes les configuracions</string>
-  <string name="live_display_day">Dia</string>
-  <string name="live_display_day_summary">Utilitza només la configuració de dia</string>
-  <string name="live_display_night">Nit</string>
-  <string name="live_display_night_summary">Utilitza només la configuració de nit</string>
-  <string name="live_display_outdoor">Exterior (sol intens)</string>
-  <string name="live_display_outdoor_summary">Utilitza només la configuració d\'exterior</string>
-  <string name="live_display_hint">LiveDisplay pot ajudar-te a reduir la fatiga visual i ajudar-te a dormir a la nit. Fes clic aquí per provar-ho!</string>
-  <string name="accessibility_quick_settings_live_display_off">LiveDisplay desactivat.</string>
-  <string name="accessibility_quick_settings_live_display_auto">LiveDisplay: mode automàtic.</string>
-  <string name="accessibility_quick_settings_live_display_day">LiveDisplay: mode diürn.</string>
-  <string name="accessibility_quick_settings_live_display_night">LiveDisplay: mode nocturn.</string>
-  <string name="accessibility_quick_settings_live_display_outdoor">LiveDisplay: mode exterior.</string>
-  <string name="accessibility_quick_settings_live_display_changed_off">S\'ha desactivat el LiveDisplay.</string>
-  <string name="accessibility_quick_settings_live_display_changed_auto">LiveDisplay canviat al mode automàtic.</string>
-  <string name="accessibility_quick_settings_live_display_changed_day">LiveDisplay canviat al mode diürn.</string>
-  <string name="accessibility_quick_settings_live_display_changed_night">LiveDisplay canviat al mode nocturn.</string>
-  <string name="accessibility_quick_settings_live_display_changed_outdoor">LiveDisplay canviat al mode exterior.</string>
-  <!-- Performance manager permission title -->
-  <string name="permlab_perfAccess">accés a l\'administrador de rendiment</string>
-  <!-- Performance manager permission description -->
-  <string name="permdesc_perfAccessDesc">Permet a una aplicació accedir al servei de rendiment. Normalment no hauria de ser necessari en les aplicacions normals.</string>
-  <!-- Weather Service strings -->
-  <string name="permlab_weather_read">llegir el temps</string>
-  <string name="permdesc_weather_read">Permet a una aplicació llegir els continguts del proveïdor meteorològic.</string>
-  <string name="permlab_weather_write">actualitzar el proveïdor meteorològic</string>
-  <string name="permdesc_weather_write">Permet a una aplicació actualitzar els continguts del proveïdor meteorològic.</string>
-  <string name="permlab_weather_bind">vincula com a un servei de proveïdor meteorològic</string>
-  <string name="permdesc_weather_bind">Permet a una aplicació ser identificada com un servei de proveïdor meteorològic.</string>
-  <string name="permlab_weather_access_mgr">accés al servei del temps</string>
-  <string name="permdesc_weather_access_mgr">Permet a una aplicació accedir al servei del temps del sistema. No s\'hauria de necessitar mai en les aplicacions normals.</string>
-  <!-- DataUsageProvider write permission title -->
-  <string name="permlab_dataUsageWrite">modificar la base de dades d\'ús de dades</string>
-  <!-- DataUsageProvider write permission description -->
-  <string name="permdesc_dataUsageWrite">Permet a una aplicació actualitzar el contingut de la base de dades d\'ús de dades.</string>
-  <!-- DataUsageProvider read permission title -->
-  <string name="permlab_dataUsageRead">llegi la base de dades d\'ús de dades</string>
-  <!-- DataUsageProvider read permission description -->
-  <string name="permdesc_dataUsageRead">Permet a una aplicació llegir el contingut de la base de dades d\'ús de dades.</string>
-  <!-- LiveDisplay manager permission -->
-  <string name="permlab_manageLiveDisplay">administra la configuració de LiveDisplay</string>
-  <string name="permdesc_manageLiveDisplay">Permet a una aplicació configurar les opcions de visualització avançades.</string>
-  <!-- LineageAudioService - observe session changes permission -->
-  <string name="permlab_observe_audio_sessions">observa els canvis en la sessió de so</string>
-  <string name="permdesc_observe_audio_sessions">Permet a una aplicació observar els fluxos de so que són creats i destruïts.</string>
-  <!-- Privacy Guard -->
-  <string name="privacy_guard_manager_title">Guarda de privacitat</string>
-  <!-- Permissions used by remote preferences -->
-  <string name="permlab_manageRemotePrefs">gestiona la configuració remota</string>
-  <string name="permdesc_manageRemotePrefs">Permet a una aplicació gestionar la configuració remota</string>
-  <!-- About device screen, build date -->
-  <string name="build_date">Data de compilació</string>
-  <!-- About device screen, LineageOS API Level -->
-  <string name="lineage_api_level">Nivell de l\'API de LineageOS</string>
-  <!-- About device screen, LineageOS updates -->
-  <string name="lineage_updates">Actualitzacions LineageOS</string>
-  <!-- About device screen, LineageOS version -->
-  <string name="lineage_version">Versió de LineageOS</string>
-  <!-- About device screen, vendor security patch -->
-  <string name="lineage_vendor_security_patch">Nivell de pedaç de seguretat del proveïdor</string>
-  <!-- General purpose use "unknown" string -->
-  <string name="unknown">Desconegut</string>
-  <!-- Long-press back kill application -->
-  <string name="app_killed_message">S\'ha matat l\'aplicació</string>
-  <!-- Status bar network traffic monitor strings -->
-  <string name="kilobitspersecond_short">kb/s</string>
-  <string name="megabitspersecond_short">Mb/s</string>
-  <string name="kilobytespersecond_short">kB/s</string>
-  <string name="megabytespersecond_short">MB/s</string>
-  <!-- Accent colors -->
-  <string name="accent_black">Carbó</string>
-  <string name="accent_blue">Nabius</string>
-  <string name="accent_brown">Cacau</string>
-  <string name="accent_cyan">Cian</string>
-  <string name="accent_green">Bosc</string>
-  <string name="accent_orange">Carbassa</string>
-  <string name="accent_pink">Cirera</string>
-  <string name="accent_purple">Lavandula</string>
-  <string name="accent_red">Tomàquet</string>
-  <string name="accent_yellow">Plàtan</string>
-  <!-- Trust interface -->
-  <!-- This string will be referenced from other apps when they're referring to the Trust interface.
+    <string name="permdesc_changeStyle">personalitzar els colors del sistema</string>
+    <!-- Profiles -->
+    <!-- Names of default profiles. -->
+    <string name="profileNameDefault">Predeterminat</string>
+    <string name="profileNameWork">Feina</string>
+    <string name="profileNameHome">Casa</string>
+    <string name="profileNameSilent">Silenci</string>
+    <string name="profileNameNight">Nit</string>
+    <string name="profileNameAutomobile">Cotxe</string>
+    <!-- Names of application groups. -->
+    <string name="profileGroupPhone">Telèfon</string>
+    <string name="profileGroupCalendar">Calendari</string>
+    <string name="profileGroupGmail">Gmail</string>
+    <string name="profileGroupEmail">Correu electrònic</string>
+    <string name="profileGroupSMS">SMS</string>
+    <!-- Name of wildcard profile. -->
+    <string name="wildcardProfile">Altres</string>
+    <!-- Performance profiles -->
+    <string name="perf_profile_pwrsv">Estalvi d\'energia</string>
+    <string name="perf_profile_bal">Equilibrat</string>
+    <string name="perf_profile_perf">Rendiment</string>
+    <string name="perf_profile_bias_power">Eficiència</string>
+    <string name="perf_profile_bias_perf">Ràpid</string>
+    <!-- Performance profiles -->
+    <string name="perf_profile_pwrsv_summary">El màxim estalvi d\'energia, redueix el rendiment del dispositiu</string>
+    <string name="perf_profile_bal_summary">Equilibri entre rendiment òptim i característiques d\'estalvi d\'energia</string>
+    <string name="perf_profile_perf_summary">Mode d\'alt rendiment. Útil per a aplicacions que requereixen una latència baixa i el millor rendiment quan el consum d\'energia no és una preocupació</string>
+    <string name="perf_profile_bias_power_summary">Afavoreix l\'estalvi d\'energia. Limita el rendiment màxim de la CPU i optimitza\'l per a l\'estalvi d\'energia a costa d\'una latència més alta</string>
+    <string name="perf_profile_bias_perf_summary">Afavoreix el rendiment. Redueix la latència amb un consum lleugerament més alt</string>
+    <!-- LiveDisplay strings -->
+    <string name="live_display_auto">Automàtic</string>
+    <string name="live_display_auto_summary">Ajusta automàticament la temperatura de color de la pantalla després de la posta de sol i de l\'alba</string>
+    <string name="live_display_off">Desactivat</string>
+    <string name="live_display_off_summary">Deshabilita totes les configuracions</string>
+    <string name="live_display_day">Dia</string>
+    <string name="live_display_day_summary">Utilitza només la configuració de dia</string>
+    <string name="live_display_night">Nit</string>
+    <string name="live_display_night_summary">Utilitza només la configuració de nit</string>
+    <string name="live_display_outdoor">Exterior (sol intens)</string>
+    <string name="live_display_outdoor_summary">Utilitza només la configuració d\'exterior</string>
+    <string name="live_display_hint">LiveDisplay pot ajudar-te a reduir la fatiga visual i ajudar-te a dormir a la nit. Fes clic aquí per provar-ho!</string>
+    <string name="accessibility_quick_settings_live_display_off">LiveDisplay desactivat.</string>
+    <string name="accessibility_quick_settings_live_display_auto">LiveDisplay: mode automàtic.</string>
+    <string name="accessibility_quick_settings_live_display_day">LiveDisplay: mode diürn.</string>
+    <string name="accessibility_quick_settings_live_display_night">LiveDisplay: mode nocturn.</string>
+    <string name="accessibility_quick_settings_live_display_outdoor">LiveDisplay: mode exterior.</string>
+    <string name="accessibility_quick_settings_live_display_changed_off">S\'ha desactivat el LiveDisplay.</string>
+    <string name="accessibility_quick_settings_live_display_changed_auto">LiveDisplay canviat al mode automàtic.</string>
+    <string name="accessibility_quick_settings_live_display_changed_day">LiveDisplay canviat al mode diürn.</string>
+    <string name="accessibility_quick_settings_live_display_changed_night">LiveDisplay canviat al mode nocturn.</string>
+    <string name="accessibility_quick_settings_live_display_changed_outdoor">LiveDisplay canviat al mode exterior.</string>
+    <!-- Performance manager permission title -->
+    <string name="permlab_perfAccess">accés a l\'administrador de rendiment</string>
+    <!-- Performance manager permission description -->
+    <string name="permdesc_perfAccessDesc">Permet a una aplicació accedir al servei de rendiment. Normalment no hauria de ser necessari en les aplicacions normals.</string>
+    <!-- Weather Service strings -->
+    <string name="permlab_weather_read">llegir el temps</string>
+    <string name="permdesc_weather_read">Permet a una aplicació llegir els continguts del proveïdor meteorològic.</string>
+    <string name="permlab_weather_write">actualitzar el proveïdor meteorològic</string>
+    <string name="permdesc_weather_write">Permet a una aplicació actualitzar els continguts del proveïdor meteorològic.</string>
+    <string name="permlab_weather_bind">vincula com a un servei de proveïdor meteorològic</string>
+    <string name="permdesc_weather_bind">Permet a una aplicació ser identificada com un servei de proveïdor meteorològic.</string>
+    <string name="permlab_weather_access_mgr">accés al servei del temps</string>
+    <string name="permdesc_weather_access_mgr">Permet a una aplicació accedir al servei del temps del sistema. No s\'hauria de necessitar mai en les aplicacions normals.</string>
+    <!-- DataUsageProvider write permission title -->
+    <string name="permlab_dataUsageWrite">modificar la base de dades d\'ús de dades</string>
+    <!-- DataUsageProvider write permission description -->
+    <string name="permdesc_dataUsageWrite">Permet a una aplicació actualitzar el contingut de la base de dades d\'ús de dades.</string>
+    <!-- DataUsageProvider read permission title -->
+    <string name="permlab_dataUsageRead">llegi la base de dades d\'ús de dades</string>
+    <!-- DataUsageProvider read permission description -->
+    <string name="permdesc_dataUsageRead">Permet a una aplicació llegir el contingut de la base de dades d\'ús de dades.</string>
+    <!-- LiveDisplay manager permission -->
+    <string name="permlab_manageLiveDisplay">administra la configuració de LiveDisplay</string>
+    <string name="permdesc_manageLiveDisplay">Permet a una aplicació configurar les opcions de visualització avançades.</string>
+    <!-- LineageAudioService - observe session changes permission -->
+    <string name="permlab_observe_audio_sessions">observa els canvis en la sessió de so</string>
+    <string name="permdesc_observe_audio_sessions">Permet a una aplicació observar els fluxos de so que són creats i destruïts.</string>
+    <!-- Privacy Guard -->
+    <string name="privacy_guard_manager_title">Guarda de privacitat</string>
+    <!-- Permissions used by remote preferences -->
+    <string name="permlab_manageRemotePrefs">gestiona la configuració remota</string>
+    <string name="permdesc_manageRemotePrefs">Permet a una aplicació gestionar la configuració remota</string>
+    <!-- About device screen, build date -->
+    <string name="build_date">Data de compilació</string>
+    <!-- About device screen, LineageOS API Level -->
+    <string name="lineage_api_level">Nivell de l\'API de LineageOS</string>
+    <!-- About device screen, LineageOS updates -->
+    <string name="lineage_updates">Actualitzacions LineageOS</string>
+    <!-- About device screen, LineageOS version -->
+    <string name="lineage_version">Versió de LineageOS</string>
+    <!-- About device screen, vendor security patch -->
+    <string name="lineage_vendor_security_patch">Nivell de pedaç de seguretat del proveïdor</string>
+    <!-- General purpose use "unknown" string -->
+    <string name="unknown">Desconegut</string>
+    <!-- Long-press back kill application -->
+    <string name="app_killed_message">S\'ha matat l\'aplicació</string>
+    <!-- Status bar network traffic monitor strings -->
+    <string name="kilobitspersecond_short">kb/s</string>
+    <string name="megabitspersecond_short">Mb/s</string>
+    <string name="kilobytespersecond_short">kB/s</string>
+    <string name="megabytespersecond_short">MB/s</string>
+    <!-- Accent colors -->
+    <string name="accent_black">Carbó</string>
+    <string name="accent_blue">Nabius</string>
+    <string name="accent_brown">Cacau</string>
+    <string name="accent_cyan">Cian</string>
+    <string name="accent_green">Bosc</string>
+    <string name="accent_orange">Carbassa</string>
+    <string name="accent_pink">Cirera</string>
+    <string name="accent_purple">Lavandula</string>
+    <string name="accent_red">Tomàquet</string>
+    <string name="accent_yellow">Plàtan</string>
+    <!-- Trust interface -->
+    <!-- This string will be referenced from other apps when they're referring to the Trust interface.
          Trust is a feature name, it's not suggested to translate this unless there are conflicts due
          to a different meaning of the word "trust" in your language -->
-  <string name="trust_feature_name">Trust</string>
-  <string name="permlab_trustInterface">accedir a la interfície Trust</string>
-  <string name="permdesc_trustInterface">Permet que una aplicació mostri avisos i suggeriments Trust</string>
-  <string name="trust_notification_channel">Alertes Trust</string>
-  <string name="trust_notification_title_security">Trust \u2022 Seguretat del sistema</string>
-  <string name="trust_notification_content_selinux">SELinux no s\'està aplicant, la vostra seguretat s\'ha debilitat</string>
-  <string name="trust_notification_title_root">Trust \u2022 Accés arrel</string>
-  <string name="trust_notification_content_root">Una aplicació utilitza els privilegis arrel en aquest moment</string>
-  <string name="trust_notification_content_keys">Aquesta compilació s\'ha signat amb claus públiques</string>
-  <string name="trust_notification_title_onboarding">Descobriu Trust</string>
-  <string name="trust_notification_content_onboarding">Conegueu com mantenir el dispositiu segur</string>
-  <string name="trust_notification_action_manage">Gestió de les alertes</string>
+    <string name="trust_feature_name">Trust</string>
+    <string name="permlab_trustInterface">accedir a la interfície Trust</string>
+    <string name="permdesc_trustInterface">Permet que una aplicació mostri avisos i suggeriments Trust</string>
+    <string name="trust_notification_channel">Alertes Trust</string>
+    <string name="trust_notification_title_security">Trust \u2022 Seguretat del sistema</string>
+    <string name="trust_notification_content_selinux">SELinux no s\'està aplicant, la vostra seguretat s\'ha debilitat</string>
+    <string name="trust_notification_title_root">Trust \u2022 Accés arrel</string>
+    <string name="trust_notification_content_root">Una aplicació utilitza els privilegis arrel en aquest moment</string>
+    <string name="trust_notification_content_keys">Aquesta compilació s\'ha signat amb claus públiques</string>
+    <string name="trust_notification_title_onboarding">Descobriu Trust</string>
+    <string name="trust_notification_content_onboarding">Conegueu com mantenir el dispositiu segur</string>
+    <string name="trust_notification_action_manage">Gestió de les alertes</string>
 </resources>

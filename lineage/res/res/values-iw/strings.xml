@@ -17,144 +17,144 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <!-- Label for the LineageOS system components when they are shown to the user. -->
-  <string name="lineageos_system_label">מערכת LineageOS</string>
-  <!-- Labels for the MODIFY_PROFILES permission. -->
-  <string name="permlab_modifyProfiles">שנה פרופילי מערכת</string>
-  <string name="permdesc_modifyProfiles">מאפשר ליישום לשנות פרופילי מערכת.</string>
-  <!-- Labels for the HARDWARE_ABSTRACTION_ACCESS permission. -->
-  <string name="permlab_useHardwareFramework">השתמש במסגרת חומרה</string>
-  <string name="permdesc_useHardwareFramework">אפשר ליישומים גישה לתשתית החומרה של LineageOS.</string>
-  <!-- Labels for the WRITE_SETTINGS permission -->
-  <string name="permlab_writeSettings">שינוי הגדרות המערכת</string>
-  <string name="permdesc_writeSettings">מאפשר ליישום לשנות את הגדרות מערכת LineageOS.</string>
-  <!-- Labels for the WRITE_SECURE_SETTINGS permission -->
-  <string name="permlab_writeSecureSettings">שינוי הגדרות אבטחה של המערכת</string>
-  <string name="permdesc_writeSecureSettings">מאפשר ליישום לשנות הגדרות אבטחה של המערכת, לא נועד לשימוש ע\"י יישומים רגילים.</string>
-  <!-- Labels for the PROTECTED_APP permission. -->
-  <string name="permlab_protectedApp">הוספה והסרה של יישומים מהיישומים המוגנים</string>
-  <string name="permdesc_protectedApp">מאפשר ליישום לסמן יישומים אחרים כמוגנים ולנעול אותם.</string>
-  <!-- Labels for CHANGE_STYLE permission -->
-  <string name="permlab_changeStyle">שינוי סגנון מערכת</string>
-  <!-- this is wrong, but google's package manager uses the android:description
+    <!-- Label for the LineageOS system components when they are shown to the user. -->
+    <string name="lineageos_system_label">מערכת LineageOS</string>
+    <!-- Labels for the MODIFY_PROFILES permission. -->
+    <string name="permlab_modifyProfiles">שנה פרופילי מערכת</string>
+    <string name="permdesc_modifyProfiles">מאפשר ליישום לשנות פרופילי מערכת.</string>
+    <!-- Labels for the HARDWARE_ABSTRACTION_ACCESS permission. -->
+    <string name="permlab_useHardwareFramework">השתמש במסגרת חומרה</string>
+    <string name="permdesc_useHardwareFramework">אפשר ליישומים גישה לתשתית החומרה של LineageOS.</string>
+    <!-- Labels for the WRITE_SETTINGS permission -->
+    <string name="permlab_writeSettings">שינוי הגדרות המערכת</string>
+    <string name="permdesc_writeSettings">מאפשר ליישום לשנות את הגדרות מערכת LineageOS.</string>
+    <!-- Labels for the WRITE_SECURE_SETTINGS permission -->
+    <string name="permlab_writeSecureSettings">שינוי הגדרות אבטחה של המערכת</string>
+    <string name="permdesc_writeSecureSettings">מאפשר ליישום לשנות הגדרות אבטחה של המערכת, לא נועד לשימוש ע\"י יישומים רגילים.</string>
+    <!-- Labels for the PROTECTED_APP permission. -->
+    <string name="permlab_protectedApp">הוספה והסרה של יישומים מהיישומים המוגנים</string>
+    <string name="permdesc_protectedApp">מאפשר ליישום לסמן יישומים אחרים כמוגנים ולנעול אותם.</string>
+    <!-- Labels for CHANGE_STYLE permission -->
+    <string name="permlab_changeStyle">שינוי סגנון מערכת</string>
+    <!-- this is wrong, but google's package manager uses the android:description
          attribute as description for the runtime permission request dialog
          with non-default dangerous permissions -->
-  <string name="permdesc_changeStyle">התאם אישית את צבעי המערכת</string>
-  <!-- Profiles -->
-  <!-- Names of default profiles. -->
-  <string name="profileNameDefault">ברירת מחדל</string>
-  <string name="profileNameWork">עבודה</string>
-  <string name="profileNameHome">בית</string>
-  <string name="profileNameSilent">שקט</string>
-  <string name="profileNameNight">לילה</string>
-  <string name="profileNameAutomobile">רכב</string>
-  <!-- Names of application groups. -->
-  <string name="profileGroupPhone">טלפון</string>
-  <string name="profileGroupCalendar">לוח שנה</string>
-  <string name="profileGroupGmail">Gmail</string>
-  <string name="profileGroupEmail">דוא\"ל</string>
-  <string name="profileGroupSMS">SMS</string>
-  <!-- Name of wildcard profile. -->
-  <string name="wildcardProfile">אחר</string>
-  <!-- Performance profiles -->
-  <string name="perf_profile_pwrsv">חיסכון בסוללה</string>
-  <string name="perf_profile_bal">מאוזן</string>
-  <string name="perf_profile_perf">ביצועים</string>
-  <string name="perf_profile_bias_power">יעילות</string>
-  <string name="perf_profile_bias_perf">מהיר</string>
-  <!-- Performance profiles -->
-  <string name="perf_profile_pwrsv_summary">חיסכון חשמל מירבי, מפחית את ביצועי המכשיר</string>
-  <string name="perf_profile_bal_summary">אזן בין ביצועים מיטביים לצריכת חשמל</string>
-  <string name="perf_profile_perf_summary">מצב ביצועים גבוהים. שימושי ליישומים שדורשים הרבה כוח עיבוד ותגובה מהירה, כאשר צריכת החשמל לא מהווה מדד</string>
-  <string name="perf_profile_bias_power_summary">חיסכון בצריכת החשמל. מגביל את עוצמת המעבד ומשפר את צריכת החשמל בתמורה למהירות תגובה נמוכה יותר</string>
-  <string name="perf_profile_bias_perf_summary">ביצועים טובים. משפר את זמן התגובה עם עליה קלה בצריכת החשמל</string>
-  <!-- LiveDisplay strings -->
-  <string name="live_display_auto">אוטומטי</string>
-  <string name="live_display_auto_summary">התאם אוטומטית את טמפרטורת הצבע של המסך לאחר הזריחה והשקיעה</string>
-  <string name="live_display_off">כבוי</string>
-  <string name="live_display_off_summary">השבת את כל ההתאמות</string>
-  <string name="live_display_day">יום</string>
-  <string name="live_display_day_summary">השתמש בהגדרות יום בלבד</string>
-  <string name="live_display_night">לילה</string>
-  <string name="live_display_night_summary">השתמש בהגדרות לילה בלבד</string>
-  <string name="live_display_outdoor">בחוץ (שמש בהירה)</string>
-  <string name="live_display_outdoor_summary">השתמש בהגדרות חוץ בלבד</string>
-  <string name="live_display_hint">LiveDisplay יכולה למזער את עייפות העין ולעזור לך לישון בלילה. לחץ כאן כדי לנסות!</string>
-  <string name="accessibility_quick_settings_live_display_off">LiveDisplay כבוי.</string>
-  <string name="accessibility_quick_settings_live_display_auto">LiveDisplay: מצב אוטומטי.</string>
-  <string name="accessibility_quick_settings_live_display_day">LiveDisplay: מצב יום.</string>
-  <string name="accessibility_quick_settings_live_display_night">LiveDisplay: מצב לילה.</string>
-  <string name="accessibility_quick_settings_live_display_outdoor">LiveDisplay: מצב חוץ.</string>
-  <string name="accessibility_quick_settings_live_display_changed_off">LiveDisplay כובה.</string>
-  <string name="accessibility_quick_settings_live_display_changed_auto">LiveDisplay שונה למצב אוטומטי.</string>
-  <string name="accessibility_quick_settings_live_display_changed_day">LiveDisplay שונה למצב יום.</string>
-  <string name="accessibility_quick_settings_live_display_changed_night">LiveDisplay שונה למצב לילה.</string>
-  <string name="accessibility_quick_settings_live_display_changed_outdoor">LiveDisplay שונה למצב חוץ.</string>
-  <!-- Performance manager permission title -->
-  <string name="permlab_perfAccess">גש למנהל הביצועים</string>
-  <!-- Performance manager permission description -->
-  <string name="permdesc_perfAccessDesc">מאפשר ליישום לגשת לשירות ניהול הביצועים. לא אמור להידרש ליישומים רגילים לעולם.</string>
-  <!-- Weather Service strings -->
-  <string name="permlab_weather_read">קרא את מזג האוויר</string>
-  <string name="permdesc_weather_read">מאפשר ליישום לקרוא תוכן של ספק מידע על מזג האוויר.</string>
-  <string name="permlab_weather_write">עדכן את ספק מזג האוויר</string>
-  <string name="permdesc_weather_write">מאפשר ליישום לעדכן את תוכן ספק מידע מזג האוויר.</string>
-  <string name="permlab_weather_bind">התקשרות לשירות ספק מזג האוויר</string>
-  <string name="permdesc_weather_bind">מאפשר ליישום להזדהות כספק מידע מזג אוויר.</string>
-  <string name="permlab_weather_access_mgr">גישה לשירות מידע מזג אוויר</string>
-  <string name="permdesc_weather_access_mgr">מאפשר ליישום לגשת לשירות מזג האוויר של המערכת. לא אמור להידרש ליישומים רגילים לעולם.</string>
-  <!-- DataUsageProvider write permission title -->
-  <string name="permlab_dataUsageWrite">שנה מסד נתונים של השימוש בנתונים</string>
-  <!-- DataUsageProvider write permission description -->
-  <string name="permdesc_dataUsageWrite">מאפשר ליישום לעדכן את תוכן מסד הנתונים של השימוש בנתונים.</string>
-  <!-- DataUsageProvider read permission title -->
-  <string name="permlab_dataUsageRead">קרא את מסד הנתונים של השימוש בנתונים</string>
-  <!-- DataUsageProvider read permission description -->
-  <string name="permdesc_dataUsageRead">מאפשר ליישום לקרוא תוכן ממסד הנתונים של השימוש בנתונים.</string>
-  <!-- LiveDisplay manager permission -->
-  <string name="permlab_manageLiveDisplay">נהל הגדרות livedisplay</string>
-  <string name="permdesc_manageLiveDisplay">מאפשר ליישום לקבוע הגדרות תצוגה מתקדמות.</string>
-  <!-- LineageAudioService - observe session changes permission -->
-  <string name="permlab_observe_audio_sessions">הרשאה לקבלת עדכוני פעולות במערכת השמע</string>
-  <string name="permdesc_observe_audio_sessions">מאפשר ליישום לקבל עדכוני יצירה וסגירה של זרמי שמע.</string>
-  <!-- Privacy Guard -->
-  <string name="privacy_guard_manager_title">שומר הפרטיות</string>
-  <!-- Permissions used by remote preferences -->
-  <string name="permlab_manageRemotePrefs">נהל הגדרות מרחוק</string>
-  <string name="permdesc_manageRemotePrefs">מאפשר ליישום לנהל הגדרות מרחוק</string>
-  <!-- About device screen, build date -->
-  <string name="build_date">תאריך בנייה</string>
-  <!-- About device screen, LineageOS API Level -->
-  <string name="lineage_api_level">רמת ה־API של LineageOS</string>
-  <!-- About device screen, LineageOS updates -->
-  <string name="lineage_updates">עדכוני LineageOS</string>
-  <!-- About device screen, LineageOS version -->
-  <string name="lineage_version">גרסת LineageOS</string>
-  <!-- About device screen, vendor security patch -->
-  <string name="lineage_vendor_security_patch">‏רמת עדכוני אבטחה</string>
-  <!-- General purpose use "unknown" string -->
-  <string name="unknown">לא ידוע</string>
-  <!-- Long-press back kill application -->
-  <string name="app_killed_message">היישום נסגר</string>
-  <!-- Status bar network traffic monitor strings -->
-  <string name="kilobitspersecond_short">kb/s</string>
-  <string name="megabitspersecond_short">Mb/s</string>
-  <string name="kilobytespersecond_short">kB/s</string>
-  <string name="megabytespersecond_short">MB/s</string>
-  <!-- Accent colors -->
-  <string name="accent_black">שחור פחם</string>
-  <string name="accent_blue">אוכמניות</string>
-  <string name="accent_brown">קקאו</string>
-  <string name="accent_cyan">טורקיז</string>
-  <string name="accent_green">יער</string>
-  <string name="accent_orange">דלעת</string>
-  <string name="accent_pink">דובדבן</string>
-  <string name="accent_purple">לבנדר</string>
-  <string name="accent_red">עגבנייה</string>
-  <string name="accent_yellow">בננה</string>
-  <!-- Trust interface -->
-  <!-- This string will be referenced from other apps when they're referring to the Trust interface.
+    <string name="permdesc_changeStyle">התאם אישית את צבעי המערכת</string>
+    <!-- Profiles -->
+    <!-- Names of default profiles. -->
+    <string name="profileNameDefault">ברירת מחדל</string>
+    <string name="profileNameWork">עבודה</string>
+    <string name="profileNameHome">בית</string>
+    <string name="profileNameSilent">שקט</string>
+    <string name="profileNameNight">לילה</string>
+    <string name="profileNameAutomobile">רכב</string>
+    <!-- Names of application groups. -->
+    <string name="profileGroupPhone">טלפון</string>
+    <string name="profileGroupCalendar">לוח שנה</string>
+    <string name="profileGroupGmail">Gmail</string>
+    <string name="profileGroupEmail">דוא\"ל</string>
+    <string name="profileGroupSMS">SMS</string>
+    <!-- Name of wildcard profile. -->
+    <string name="wildcardProfile">אחר</string>
+    <!-- Performance profiles -->
+    <string name="perf_profile_pwrsv">חיסכון בסוללה</string>
+    <string name="perf_profile_bal">מאוזן</string>
+    <string name="perf_profile_perf">ביצועים</string>
+    <string name="perf_profile_bias_power">יעילות</string>
+    <string name="perf_profile_bias_perf">מהיר</string>
+    <!-- Performance profiles -->
+    <string name="perf_profile_pwrsv_summary">חיסכון חשמל מירבי, מפחית את ביצועי המכשיר</string>
+    <string name="perf_profile_bal_summary">אזן בין ביצועים מיטביים לצריכת חשמל</string>
+    <string name="perf_profile_perf_summary">מצב ביצועים גבוהים. שימושי ליישומים שדורשים הרבה כוח עיבוד ותגובה מהירה, כאשר צריכת החשמל לא מהווה מדד</string>
+    <string name="perf_profile_bias_power_summary">חיסכון בצריכת החשמל. מגביל את עוצמת המעבד ומשפר את צריכת החשמל בתמורה למהירות תגובה נמוכה יותר</string>
+    <string name="perf_profile_bias_perf_summary">ביצועים טובים. משפר את זמן התגובה עם עליה קלה בצריכת החשמל</string>
+    <!-- LiveDisplay strings -->
+    <string name="live_display_auto">אוטומטי</string>
+    <string name="live_display_auto_summary">התאם אוטומטית את טמפרטורת הצבע של המסך לאחר הזריחה והשקיעה</string>
+    <string name="live_display_off">כבוי</string>
+    <string name="live_display_off_summary">השבת את כל ההתאמות</string>
+    <string name="live_display_day">יום</string>
+    <string name="live_display_day_summary">השתמש בהגדרות יום בלבד</string>
+    <string name="live_display_night">לילה</string>
+    <string name="live_display_night_summary">השתמש בהגדרות לילה בלבד</string>
+    <string name="live_display_outdoor">בחוץ (שמש בהירה)</string>
+    <string name="live_display_outdoor_summary">השתמש בהגדרות חוץ בלבד</string>
+    <string name="live_display_hint">LiveDisplay יכולה למזער את עייפות העין ולעזור לך לישון בלילה. לחץ כאן כדי לנסות!</string>
+    <string name="accessibility_quick_settings_live_display_off">LiveDisplay כבוי.</string>
+    <string name="accessibility_quick_settings_live_display_auto">LiveDisplay: מצב אוטומטי.</string>
+    <string name="accessibility_quick_settings_live_display_day">LiveDisplay: מצב יום.</string>
+    <string name="accessibility_quick_settings_live_display_night">LiveDisplay: מצב לילה.</string>
+    <string name="accessibility_quick_settings_live_display_outdoor">LiveDisplay: מצב חוץ.</string>
+    <string name="accessibility_quick_settings_live_display_changed_off">LiveDisplay כובה.</string>
+    <string name="accessibility_quick_settings_live_display_changed_auto">LiveDisplay שונה למצב אוטומטי.</string>
+    <string name="accessibility_quick_settings_live_display_changed_day">LiveDisplay שונה למצב יום.</string>
+    <string name="accessibility_quick_settings_live_display_changed_night">LiveDisplay שונה למצב לילה.</string>
+    <string name="accessibility_quick_settings_live_display_changed_outdoor">LiveDisplay שונה למצב חוץ.</string>
+    <!-- Performance manager permission title -->
+    <string name="permlab_perfAccess">גש למנהל הביצועים</string>
+    <!-- Performance manager permission description -->
+    <string name="permdesc_perfAccessDesc">מאפשר ליישום לגשת לשירות ניהול הביצועים. לא אמור להידרש ליישומים רגילים לעולם.</string>
+    <!-- Weather Service strings -->
+    <string name="permlab_weather_read">קרא את מזג האוויר</string>
+    <string name="permdesc_weather_read">מאפשר ליישום לקרוא תוכן של ספק מידע על מזג האוויר.</string>
+    <string name="permlab_weather_write">עדכן את ספק מזג האוויר</string>
+    <string name="permdesc_weather_write">מאפשר ליישום לעדכן את תוכן ספק מידע מזג האוויר.</string>
+    <string name="permlab_weather_bind">התקשרות לשירות ספק מזג האוויר</string>
+    <string name="permdesc_weather_bind">מאפשר ליישום להזדהות כספק מידע מזג אוויר.</string>
+    <string name="permlab_weather_access_mgr">גישה לשירות מידע מזג אוויר</string>
+    <string name="permdesc_weather_access_mgr">מאפשר ליישום לגשת לשירות מזג האוויר של המערכת. לא אמור להידרש ליישומים רגילים לעולם.</string>
+    <!-- DataUsageProvider write permission title -->
+    <string name="permlab_dataUsageWrite">שנה מסד נתונים של השימוש בנתונים</string>
+    <!-- DataUsageProvider write permission description -->
+    <string name="permdesc_dataUsageWrite">מאפשר ליישום לעדכן את תוכן מסד הנתונים של השימוש בנתונים.</string>
+    <!-- DataUsageProvider read permission title -->
+    <string name="permlab_dataUsageRead">קרא את מסד הנתונים של השימוש בנתונים</string>
+    <!-- DataUsageProvider read permission description -->
+    <string name="permdesc_dataUsageRead">מאפשר ליישום לקרוא תוכן ממסד הנתונים של השימוש בנתונים.</string>
+    <!-- LiveDisplay manager permission -->
+    <string name="permlab_manageLiveDisplay">נהל הגדרות livedisplay</string>
+    <string name="permdesc_manageLiveDisplay">מאפשר ליישום לקבוע הגדרות תצוגה מתקדמות.</string>
+    <!-- LineageAudioService - observe session changes permission -->
+    <string name="permlab_observe_audio_sessions">הרשאה לקבלת עדכוני פעולות במערכת השמע</string>
+    <string name="permdesc_observe_audio_sessions">מאפשר ליישום לקבל עדכוני יצירה וסגירה של זרמי שמע.</string>
+    <!-- Privacy Guard -->
+    <string name="privacy_guard_manager_title">שומר הפרטיות</string>
+    <!-- Permissions used by remote preferences -->
+    <string name="permlab_manageRemotePrefs">נהל הגדרות מרחוק</string>
+    <string name="permdesc_manageRemotePrefs">מאפשר ליישום לנהל הגדרות מרחוק</string>
+    <!-- About device screen, build date -->
+    <string name="build_date">תאריך בנייה</string>
+    <!-- About device screen, LineageOS API Level -->
+    <string name="lineage_api_level">רמת ה־API של LineageOS</string>
+    <!-- About device screen, LineageOS updates -->
+    <string name="lineage_updates">עדכוני LineageOS</string>
+    <!-- About device screen, LineageOS version -->
+    <string name="lineage_version">גרסת LineageOS</string>
+    <!-- About device screen, vendor security patch -->
+    <string name="lineage_vendor_security_patch">‏רמת עדכוני אבטחה</string>
+    <!-- General purpose use "unknown" string -->
+    <string name="unknown">לא ידוע</string>
+    <!-- Long-press back kill application -->
+    <string name="app_killed_message">היישום נסגר</string>
+    <!-- Status bar network traffic monitor strings -->
+    <string name="kilobitspersecond_short">kb/s</string>
+    <string name="megabitspersecond_short">Mb/s</string>
+    <string name="kilobytespersecond_short">kB/s</string>
+    <string name="megabytespersecond_short">MB/s</string>
+    <!-- Accent colors -->
+    <string name="accent_black">שחור פחם</string>
+    <string name="accent_blue">אוכמניות</string>
+    <string name="accent_brown">קקאו</string>
+    <string name="accent_cyan">טורקיז</string>
+    <string name="accent_green">יער</string>
+    <string name="accent_orange">דלעת</string>
+    <string name="accent_pink">דובדבן</string>
+    <string name="accent_purple">לבנדר</string>
+    <string name="accent_red">עגבנייה</string>
+    <string name="accent_yellow">בננה</string>
+    <!-- Trust interface -->
+    <!-- This string will be referenced from other apps when they're referring to the Trust interface.
          Trust is a feature name, it's not suggested to translate this unless there are conflicts due
          to a different meaning of the word "trust" in your language -->
-  <string name="trust_notification_action_manage">נהל התראות</string>
+    <string name="trust_notification_action_manage">נהל התראות</string>
 </resources>

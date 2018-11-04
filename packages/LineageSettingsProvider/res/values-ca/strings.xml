@@ -16,5 +16,5 @@
      limitations under the License.
 -->
 <resources>
-  <string name="app_name">Configuració d\'emmagatzematge de Lineage</string>
+    <string name="app_name">Configuració d\'emmagatzematge de Lineage</string>
 </resources>
