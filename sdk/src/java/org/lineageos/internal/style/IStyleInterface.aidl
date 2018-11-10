@@ -15,6 +15,22 @@
 ** limitations under the License.
 */
 
-package lineageos.style;
+package org.lineageos.internal.style;
 
-parcelable Suggestion;
+import android.graphics.Bitmap;
+import org.lineageos.internal.style.Suggestion;
+
+import java.util.List;
+
+/** {@hide} */
+interface IStyleInterface {
+    boolean setGlobalStyle(int style, String pkgName);
+    int getGlobalStyle();
+    boolean setAccent(String pkgName);
+    String getAccent();
+    Suggestion getSuggestion(in Bitmap source, in int[] colors);
+    List<String> getTrustedAccents();
+    boolean isDarkNow();
+    boolean setDarkOverlay(String overlayName);
+    String getDarkOverlay();
+}

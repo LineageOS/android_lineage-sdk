@@ -15,7 +15,7 @@
 ** limitations under the License.
 */
 
-package lineageos.style;
+package org.lineageos.internal.style;
 
 import android.os.Parcel;
 import android.os.Parcelable;

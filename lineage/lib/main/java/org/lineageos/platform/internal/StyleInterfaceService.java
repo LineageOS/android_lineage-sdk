@@ -36,10 +36,10 @@ import com.android.server.SystemService;
 
 import lineageos.app.LineageContextConstants;
 import lineageos.providers.LineageSettings;
-import lineageos.style.IStyleInterface;
-import lineageos.style.StyleInterface;
-import lineageos.style.Suggestion;
 import lineageos.util.palette.Palette;
+import org.lineageos.internal.style.IStyleInterface;
+import org.lineageos.internal.style.StyleInterface;
+import org.lineageos.internal.style.Suggestion;
 
 import java.util.ArrayList;
 import java.util.List;
