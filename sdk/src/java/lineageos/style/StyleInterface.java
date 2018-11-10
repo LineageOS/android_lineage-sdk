@@ -93,7 +93,7 @@ public class StyleInterface {
      * it at runtime as any other dangerous permission
      */
     public static final String CHANGE_STYLE_SETTINGS_PERMISSION =
-            "lineageos.permission.CHANGE_STYLE";
+            "android.permission.CHANGE_OVERLAY_PACKAGES";
 
     private static final String TAG = "StyleInterface";
 
