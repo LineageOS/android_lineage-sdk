@@ -248,6 +248,11 @@ public class ProfileManagerService extends LineageSystemService {
     }
 
     @Override
+    public boolean isCoreService() {
+        return false;
+    }
+
+    @Override
     public void onStart() {
         mBackupManager = new BackupManager(mContext);
 
