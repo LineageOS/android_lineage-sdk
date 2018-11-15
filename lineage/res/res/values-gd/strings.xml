@@ -18,44 +18,154 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- Label for the LineageOS system components when they are shown to the user. -->
+    <string name="lineageos_system_label">Siostam LineageOS</string>
     <!-- Labels for the MODIFY_PROFILES permission. -->
+    <string name="permlab_modifyProfiles">pròifilean an t-siostaim atharrachadh</string>
+    <string name="permdesc_modifyProfiles">Leigidh seo le aplacaid pròifilean an t-siostaim atharrachadh.</string>
     <!-- Labels for the HARDWARE_ABSTRACTION_ACCESS permission. -->
+    <string name="permlab_useHardwareFramework">frèam-obrach bathair-chruaidh a chleachdadh</string>
+    <string name="permdesc_useHardwareFramework">Leigidh seo le aplacaid frèam-obrach bathair-chruaidh Lineage a chleachdadh.</string>
     <!-- Labels for the WRITE_SETTINGS permission -->
+    <string name="permlab_writeSettings">roghainnean siostam Lineage atharrachadh</string>
+    <string name="permdesc_writeSettings">Leigidh seo le aplacaid roghainnean siostam Lineage atharrachadh.</string>
     <!-- Labels for the WRITE_SECURE_SETTINGS permission -->
+    <string name="permlab_writeSecureSettings">roghainnean siostam Lineage tèarainte atharrachadh</string>
+    <string name="permdesc_writeSecureSettings">Leigidh seo le aplacaid roghainnean siostam Lineage tèarainte atharrachadh. Na cleachd seo le aplacaidean àbhaisteach.</string>
     <!-- Labels for the PROTECTED_APP permission. -->
+    <string name="permlab_protectedApp">aplacaidean a chur ris na h-aplacaidean dìonta is an toirt air falbh uapa</string>
+    <string name="permdesc_protectedApp">Leigidh seo le aplacaid comharra a chur ri aplacaid eile gur e tè dhìonta a th’ innte is a glasadh.</string>
     <!-- Labels for CHANGE_STYLE permission -->
+    <string name="permlab_changeStyle">stoidhle an t-siostaim atharrachadh</string>
     <!-- this is wrong, but google's package manager uses the android:description
          attribute as description for the runtime permission request dialog
          with non-default dangerous permissions -->
+    <string name="permdesc_changeStyle">dathan an t-siostaim a ghnàthachadh</string>
     <!-- Profiles -->
     <!-- Names of default profiles. -->
+    <string name="profileNameDefault">Bun-roghainn</string>
+    <string name="profileNameWork">Obair</string>
+    <string name="profileNameHome">Dachaigh</string>
+    <string name="profileNameSilent">Sàmhach</string>
+    <string name="profileNameNight">Oidhche</string>
+    <string name="profileNameAutomobile">Càr</string>
     <!-- Names of application groups. -->
+    <string name="profileGroupPhone">Fòn</string>
+    <string name="profileGroupCalendar">Mìosachan</string>
+    <string name="profileGroupGmail">Gmail</string>
+    <string name="profileGroupEmail">Post-d</string>
+    <string name="profileGroupSMS">SMS</string>
     <!-- Name of wildcard profile. -->
+    <string name="wildcardProfile">Eile</string>
     <!-- Performance profiles -->
+    <string name="perf_profile_pwrsv">Caomhnadh cumhachd</string>
+    <string name="perf_profile_bal">Cothromach</string>
+    <string name="perf_profile_perf">Dèanadas</string>
+    <string name="perf_profile_bias_power">Èifeachdachd</string>
+    <string name="perf_profile_bias_perf">Luath</string>
     <!-- Performance profiles -->
+    <string name="perf_profile_pwrsv_summary">Caomhnadh as motha na cumhachd ach ìsleachadh air dèanadas an uidheim</string>
+    <string name="perf_profile_bal_summary">Meidh eadar an dèanadas as fhearr is caomhnadh na cumhachd</string>
+    <string name="perf_profile_perf_summary">Modh dèanadais àird. Tha seo feumail ma tha aplacaid feumach air foillidheachd ìosal is an tro-chur as àirde mur eil dragh mu chleachdadh na cumhachd ann</string>
+    <string name="perf_profile_bias_power_summary">Prìomhachas air caomhnadh na cumhachd. Cuingeachadh air cumhachd as motha a’ CPU is piseachadh air caomhnadh na cumhachd ach barrachd foillidheachd air</string>
+    <string name="perf_profile_bias_perf_summary">Prìomhachas air an dèanadas. Beagan as lugha a dh’fhoillidheachd le feum air beagan cumhachd a bharrachd</string>
     <!-- LiveDisplay strings -->
+    <string name="live_display_auto">Fèin-obrachail</string>
+    <string name="live_display_auto_summary">Cuir gleus air teothachd nan dath air an sgrìn gu fèin-obrachail às dèidh laighe is èirigh na grèine</string>
+    <string name="live_display_off">Dheth</string>
+    <string name="live_display_off_summary">Cuir à comas gach gleusadh</string>
+    <string name="live_display_day">Latha</string>
+    <string name="live_display_day_summary">Cleachd roghainnean an latha a-mhàin</string>
+    <string name="live_display_night">Oidhche</string>
+    <string name="live_display_night_summary">Cleachd roghainnean na h-oidhche a-mhàin</string>
+    <string name="live_display_outdoor">Taobh a-muigh (grian dheàrrsach)</string>
+    <string name="live_display_outdoor_summary">Cleachd roghainnean an taoibh a-muigh a-mhàin</string>
+    <string name="live_display_hint">Cuidichidh LiveDisplay thu ach an seachnaich thu sgithear sùla is airson cadal a dh’oidhche. Briog an-seo airson fheuchainn!</string>
+    <string name="accessibility_quick_settings_live_display_off">Tha LiveDisplay dheth.</string>
+    <string name="accessibility_quick_settings_live_display_auto">LiveDisplay: modh fèin-obrachail.</string>
+    <string name="accessibility_quick_settings_live_display_day">LiveDisplay: modh latha.</string>
+    <string name="accessibility_quick_settings_live_display_night">LiveDisplay: modh oidhche.</string>
+    <string name="accessibility_quick_settings_live_display_outdoor">LiveDisplay: modh taoibh a-muigh.</string>
+    <string name="accessibility_quick_settings_live_display_changed_off">Tha LiveDisplay dheth.</string>
+    <string name="accessibility_quick_settings_live_display_changed_auto">Chaidh LiveDisplay atharrachadh dhan mhodh fhèin-obrachail.</string>
+    <string name="accessibility_quick_settings_live_display_changed_day">Chaidh LiveDisplay atharrachadh gu modh an latha.</string>
+    <string name="accessibility_quick_settings_live_display_changed_night">Chaidh LiveDisplay atharrachadh gu modh na h-oidhche.</string>
+    <string name="accessibility_quick_settings_live_display_changed_outdoor">Chaidh LiveDisplay atharrachadh gu modh an taoibh a-muigh.</string>
     <!-- Performance manager permission title -->
+    <string name="permlab_perfAccess">manaidsear an dèanadais inntrigeadh</string>
     <!-- Performance manager permission description -->
+    <string name="permdesc_perfAccessDesc">Leigidh seo le aplacaid seirbheis an dèanadais inntrigeadh. Na cleachd seo le aplacaidean àbhaisteach.</string>
     <!-- Weather Service strings -->
+    <string name="permlab_weather_read">an aimsir a leughadh</string>
+    <string name="permdesc_weather_read">Leigidh seo le aplacaid susbaint o sholaraiche na h-aimsire a leughadh.</string>
+    <string name="permlab_weather_write">solaraiche aimsire ùrachadh</string>
+    <string name="permdesc_weather_write">Leigidh seo le aplacaid susbaint aig solaraiche na h-aimsire ùrachadh.</string>
+    <string name="permlab_weather_bind">aimsir a sholar ’na seirbheis</string>
+    <string name="permdesc_weather_bind">Leigidh seo le aplacaid gun dèid a h-aithneachadh mar seirbheis solaraiche aimsire.</string>
+    <string name="permlab_weather_access_mgr">seirbheis aimsire inntrigeadh</string>
+    <string name="permdesc_weather_access_mgr">Leigidh seo le aplacaid seirbheis na h-aimsire inntrigeadh san t-siostam. Na cleachd seo le aplacaidean àbhaisteach.</string>
     <!-- DataUsageProvider write permission title -->
+    <string name="permlab_dataUsageWrite">an stòr-dàta air cleachdadh dàta atharrachadh</string>
     <!-- DataUsageProvider write permission description -->
+    <string name="permdesc_dataUsageWrite">Leigidh seo le aplacaid an t-susbaint aig an stòr-dàta air cleachdadh dàta ùrachadh.</string>
     <!-- DataUsageProvider read permission title -->
+    <string name="permlab_dataUsageRead">an stòr-dàta air cleachdadh dàta a leughadh</string>
     <!-- DataUsageProvider read permission description -->
+    <string name="permdesc_dataUsageRead">Leigidh seo le aplacaid an t-susbaint aig an stòr-dàta air cleachdadh dàta a leughadh.</string>
     <!-- LiveDisplay manager permission -->
+    <string name="permlab_manageLiveDisplay">roghainnean LiveDisplay a stiùireadh</string>
+    <string name="permdesc_manageLiveDisplay">Leigidh seo le aplacaid roghainnean adhartach an taisbeanaidh a rèiteachadh.</string>
     <!-- LineageAudioService - observe session changes permission -->
+    <string name="permlab_observe_audio_sessions">sùil a chumail air atharrachaidhean air seisean fuaime</string>
+    <string name="permdesc_observe_audio_sessions">Leigidh seo le aplacaid sùil a chumail air cruthachadh is crìochnachadh sruthan fuaime.</string>
     <!-- Privacy Guard -->
+    <string name="privacy_guard_manager_title">Freiceadan na prìobhaideachd</string>
     <!-- Permissions used by remote preferences -->
+    <string name="permlab_manageRemotePrefs">roghainnean cèine a stiùireadh</string>
+    <string name="permdesc_manageRemotePrefs">Leigidh seo le aplacaid roghainnean cèine a stiùireadh</string>
     <!-- About device screen, build date -->
+    <string name="build_date">Ceann-là na togail</string>
     <!-- About device screen, LineageOS API Level -->
+    <string name="lineage_api_level">Leibheil API LineageOS</string>
     <!-- About device screen, LineageOS updates -->
+    <string name="lineage_updates">Ùrachaidhean air LineageOS</string>
     <!-- About device screen, LineageOS version -->
+    <string name="lineage_version">An tionndadh de LineageOS</string>
     <!-- About device screen, vendor security patch -->
+    <string name="lineage_vendor_security_patch">Leibheil brèide tèarainteachd an reiceadair</string>
     <!-- General purpose use "unknown" string -->
+    <string name="unknown">Chan eil fhios</string>
     <!-- Long-press back kill application -->
+    <string name="app_killed_message">Chaidh aplacaid a mharbhadh</string>
     <!-- Status bar network traffic monitor strings -->
+    <string name="kilobitspersecond_short">kb/s</string>
+    <string name="megabitspersecond_short">Mb/s</string>
+    <string name="kilobytespersecond_short">kB/s</string>
+    <string name="megabytespersecond_short">MB/s</string>
     <!-- Accent colors -->
+    <string name="accent_black">Gual</string>
+    <string name="accent_blue">Gorm</string>
+    <string name="accent_brown">Còco</string>
+    <string name="accent_cyan">Saidhean</string>
+    <string name="accent_green">Coille</string>
+    <string name="accent_orange">Peapag</string>
+    <string name="accent_pink">Sirist</string>
+    <string name="accent_purple">Lus na tùise</string>
+    <string name="accent_red">Tomàto</string>
+    <string name="accent_yellow">Banana</string>
     <!-- Trust interface -->
     <!-- This string will be referenced from other apps when they're referring to the Trust interface.
          Trust is a feature name, it's not suggested to translate this unless there are conflicts due
          to a different meaning of the word "trust" in your language -->
+    <string name="trust_feature_name">Earbsa</string>
+    <string name="permlab_trustInterface">eadar-aghaidh na h-earbsa inntrigeadh</string>
+    <string name="permdesc_trustInterface">Leigidh seo le aplacaid rabhaidhean is molaidhean na h-earbsa a shealltainn</string>
+    <string name="trust_notification_channel">Rabhaidhean na h-earbsa</string>
+    <string name="trust_notification_title_security">Earbsa \u2022 Tèarainteachd an t-siostaim</string>
+    <string name="trust_notification_content_selinux">Chan eil SELinux teann agus an tèarainteachd agad air a lagachadh</string>
+    <string name="trust_notification_title_root">Earbsa \u2022 Inntrigeadh root</string>
+    <string name="trust_notification_content_root">Tha aplacaid a’ cleachdadh pribhleidean root an-dràsta</string>
+    <string name="trust_notification_content_keys">Chaidh an togail seo a shoidhneadh le iuchraichean poblach</string>
+    <string name="trust_notification_title_onboarding">Fidir an earbsa</string>
+    <string name="trust_notification_content_onboarding">Faigh a-mach mar a nì thu cinnteach gum bi an t-uidheam agad sàbhailte</string>
+    <string name="trust_notification_action_manage">Stiùirich na rabhaidhean</string>
 </resources>
