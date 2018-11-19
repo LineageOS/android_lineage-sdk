@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "070e5553_db72e89b",
+        "filename": "sdk/src/java/lineageos/providers/LineageSettings.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 932,
+      "author": {
+        "id": 9760
+      },
+      "writtenOn": "2018-11-19T18:13:20Z",
+      "side": 1,
+      "message": "String",
+      "revId": "da543a4f12b15c1e4c878297a401e7d452de6d89",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "403297de_c34075bc",
+        "filename": "sdk/src/java/lineageos/providers/LineageSettings.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 936,
+      "author": {
+        "id": 9760
+      },
+      "writtenOn": "2018-11-19T18:13:20Z",
+      "side": 1,
+      "message": "Integer",
+      "revId": "da543a4f12b15c1e4c878297a401e7d452de6d89",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
