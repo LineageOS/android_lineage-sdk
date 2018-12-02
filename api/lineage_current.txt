@@ -886,6 +886,7 @@ package lineageos.providers {
     field public static final java.lang.String RECENTS_SHOW_SEARCH_BAR = "recents_show_search_bar";
     field public static final java.lang.String REVERSE_LOOKUP_PROVIDER = "reverse_lookup_provider";
     field public static final java.lang.String SHOW_ALARM_ICON = "show_alarm_icon";
+    field public static final java.lang.String SMART_CLOCK_ENABLE = "smart_clock_enable";
     field public static final java.lang.String STATUS_BAR_AM_PM = "status_bar_am_pm";
     field public static final java.lang.String STATUS_BAR_BATTERY_STYLE = "status_bar_battery_style";
     field public static final java.lang.String STATUS_BAR_BRIGHTNESS_CONTROL = "status_bar_brightness_control";

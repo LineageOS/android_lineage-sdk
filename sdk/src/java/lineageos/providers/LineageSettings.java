@@ -2071,6 +2071,16 @@ public final class LineageSettings {
                 sBooleanValidator;
 
         /**
+         * Enable Smart Clock in statusbar.
+         * @hide
+         */
+        public static final String SMART_CLOCK_ENABLE = "smart_clock_enable";
+
+        /** @hide */
+        public static final Validator SMART_CLOCK_ENABLE_VALIDATOR =
+                sBooleanValidator;
+
+        /**
          * I can haz more bukkits
          * @hide
          */
@@ -2361,6 +2371,8 @@ public final class LineageSettings {
                     LONG_SCREEN_APPS_VALIDATOR);
             VALIDATORS.put(FORCE_SHOW_NAVBAR,
                     FORCE_SHOW_NAVBAR_VALIDATOR);
+            VALIDATORS.put(SMART_CLOCK_ENABLE ,
+                    SMART_CLOCK_ENABLE_VALIDATOR);
             VALIDATORS.put(__MAGICAL_TEST_PASSING_ENABLER,
                     __MAGICAL_TEST_PASSING_ENABLER_VALIDATOR);
         };
