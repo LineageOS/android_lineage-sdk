@@ -235,9 +235,13 @@ public class LineageWeatherManagerService extends LineageSystemService {
 
     @Override
     public void onBootPhase(int phase) {
-        if (phase == PHASE_ACTIVITY_MANAGER_READY) {
-            bindActiveWeatherProviderService();
-        }
+        // Do nothing. We need userland apps to be fully up and running.
+        // We will connect in onUnlockUser instead.
+    }
+
+    @Override
+    public void onUnlockUser(int userHandle) {
+        bindActiveWeatherProviderService();
     }
 
     private void bindActiveWeatherProviderService() {
