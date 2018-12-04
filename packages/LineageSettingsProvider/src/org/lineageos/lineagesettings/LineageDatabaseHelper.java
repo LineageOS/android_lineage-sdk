@@ -459,6 +459,9 @@ public class LineageDatabaseHelper extends SQLiteOpenHelper{
             loadBooleanSetting(stmt, LineageSettings.Secure.LOCKSCREEN_VISUALIZER_ENABLED,
                     R.bool.def_lockscreen_visualizer);
 
+            loadIntegerSetting(stmt, LineageSettings.Secure.DEV_FORCE_SHOW_NAVBAR,
+                    R.integer.def_force_show_navbar);
+
             loadStringSetting(stmt,
                     LineageSettings.Secure.PROTECTED_COMPONENT_MANAGERS,
                     R.string.def_protected_component_managers);
@@ -527,10 +530,6 @@ public class LineageDatabaseHelper extends SQLiteOpenHelper{
             stmt = db.compileStatement("INSERT OR IGNORE INTO global(name,value)"
                     + " VALUES(?,?);");
             // Global
-            loadIntegerSetting(stmt,
-                    LineageSettings.Global.DEV_FORCE_SHOW_NAVBAR,
-                    R.integer.def_force_show_navbar);
-
             loadBooleanSetting(stmt,
                     LineageSettings.Global.POWER_NOTIFICATIONS_ENABLED,
                     R.bool.def_power_notifications_enabled);
