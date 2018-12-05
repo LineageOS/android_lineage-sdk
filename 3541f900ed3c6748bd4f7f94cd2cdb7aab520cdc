@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8352c059_dc1b5d82",
+        "filename": "sdk/src/java/org/lineageos/internal/util/DeviceKeysConstants.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2018-12-05T07:21:18Z",
+      "side": 1,
+      "message": "Should add this at the end to not change existing settings ... with the current solution, what was before SINGLE_HAND_LEFT would now suddenly become PULL_STATUS_BAR.",
+      "revId": "3541f900ed3c6748bd4f7f94cd2cdb7aab520cdc",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    }
+  ]
+}
