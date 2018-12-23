@@ -224,11 +224,11 @@ public class LineageDatabaseHelper extends SQLiteOpenHelper{
                 loadStringSetting(stmt, LineageSettings.Secure.PROTECTED_COMPONENT_MANAGERS,
                         R.string.def_protected_component_managers);
                 db.setTransactionSuccessful();
+                upgradeVersion = 3;
             } finally {
                 if (stmt != null) stmt.close();
                 db.endTransaction();
             }
-            upgradeVersion = 3;
         }
 
         if (upgradeVersion < 4) {
@@ -248,12 +248,12 @@ public class LineageDatabaseHelper extends SQLiteOpenHelper{
                     loadIntegerSetting(stmt, LineageSettings.Global.WEATHER_TEMPERATURE_UNIT,
                             R.integer.def_temperature_unit);
                     db.setTransactionSuccessful();
+                    upgradeVersion = 5;
                 } finally {
                     if (stmt != null) stmt.close();
                     db.endTransaction();
                 }
             }
-            upgradeVersion = 5;
         }
 
         if (upgradeVersion < 6) {
@@ -283,6 +283,7 @@ public class LineageDatabaseHelper extends SQLiteOpenHelper{
                         stmt.execute();
                     }
                     db.setTransactionSuccessful();
+                    upgradeVersion = 7;
                 } catch (SQLiteDoneException ex) {
                     // LineageSettings.System.STATUS_BAR_CLOCK is not set
                 } finally {
@@ -290,7 +291,6 @@ public class LineageDatabaseHelper extends SQLiteOpenHelper{
                     db.endTransaction();
                 }
             }
-            upgradeVersion = 7;
         }
 
         if (upgradeVersion < 8) {
@@ -303,11 +303,11 @@ public class LineageDatabaseHelper extends SQLiteOpenHelper{
                 stmt.bindString(2, LineageSettings.Secure.PROTECTED_COMPONENT_MANAGERS);
                 stmt.execute();
                 db.setTransactionSuccessful();
+                upgradeVersion = 8;
             } finally {
                 if (stmt != null) stmt.close();
                 db.endTransaction();
             }
-            upgradeVersion = 8;
         }
 
         if (upgradeVersion < 9) {
@@ -357,12 +357,12 @@ public class LineageDatabaseHelper extends SQLiteOpenHelper{
                     stmt.bindString(1, LineageSettings.Secure.LINEAGE_SETUP_WIZARD_COMPLETED);
                     stmt.execute();
                     db.setTransactionSuccessful();
+                    upgradeVersion = 10;
                 } finally {
                     if (stmt != null) stmt.close();
                     db.endTransaction();
                 }
             }
-            upgradeVersion = 10;
         }
         // *** Remember to update DATABASE_VERSION above!
 
