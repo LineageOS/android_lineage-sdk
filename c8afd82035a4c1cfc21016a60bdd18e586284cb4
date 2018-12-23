@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "49238f6b_35189273",
+        "filename": "packages/LineageSettingsProvider/src/org/lineageos/lineagesettings/LineageDatabaseHelper.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 398,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2018-12-23T18:24:31Z",
+      "side": 1,
+      "message": "Wrong indentation.",
+      "revId": "c8afd82035a4c1cfc21016a60bdd18e586284cb4",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    }
+  ]
+}
