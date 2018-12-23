@@ -382,6 +382,21 @@ public class LineageDatabaseHelper extends SQLiteOpenHelper{
         }
     }
 
+    @Override
+    public void onDowngrade(SQLiteDatabase db, int oldVersion, int newVersion) {
+        Log.w(TAG, "Cannot downgrade db. Old version: " + oldVersion + ", new version: "
+                + newVersion + ". Must wipe the lineage settings provider.");
+
+        dropDbTable(db, LineageTableNames.TABLE_SYSTEM);
+        dropDbTable(db, LineageTableNames.TABLE_SECURE);
+
+        if (mUserHandle == UserHandle.USER_OWNER) {
+            dropDbTable(db, LineageTableNames.TABLE_GLOBAL);
+        }
+
+        onCreate(db);
+    }
+
     private void moveSettingsToNewTable(SQLiteDatabase db,
                                         String sourceTable, String destTable,
                                         String[] settingsToMove, boolean doIgnore) {
