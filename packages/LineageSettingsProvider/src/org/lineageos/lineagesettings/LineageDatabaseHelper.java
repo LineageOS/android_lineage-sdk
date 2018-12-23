@@ -206,13 +206,11 @@ public class LineageDatabaseHelper extends SQLiteOpenHelper{
             db.beginTransaction();
             try {
                 loadSettings(db);
-
                 db.setTransactionSuccessful();
-
-                upgradeVersion = 2;
             } finally {
                 db.endTransaction();
             }
+            upgradeVersion = 2;
         }
 
         if (upgradeVersion < 3) {
@@ -365,21 +363,6 @@ public class LineageDatabaseHelper extends SQLiteOpenHelper{
             upgradeVersion = 10;
         }
         // *** Remember to update DATABASE_VERSION above!
-
-        if (upgradeVersion < newVersion) {
-            Log.w(TAG, "Got stuck trying to upgrade db. Old version: " + oldVersion
-                    + ", version stuck at: " +  upgradeVersion + ", new version: "
-                            + newVersion + ". Must wipe the lineage settings provider.");
-
-            dropDbTable(db, LineageTableNames.TABLE_SYSTEM);
-            dropDbTable(db, LineageTableNames.TABLE_SECURE);
-
-            if (mUserHandle == UserHandle.USER_OWNER) {
-                dropDbTable(db, LineageTableNames.TABLE_GLOBAL);
-            }
-
-            onCreate(db);
-        }
     }
 
     private void moveSettingsToNewTable(SQLiteDatabase db,
