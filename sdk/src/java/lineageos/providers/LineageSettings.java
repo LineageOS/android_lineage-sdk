@@ -1364,6 +1364,15 @@ public final class LineageSettings {
                 sNonNullStringValidator;
 
         /**
+         * Wheter to enable dark mode when battery saver is enabled
+         */
+        public static final String BERRY_DARK_ON_LOW_BATTERY = "berry_dark_on_low_battery";
+
+        /** @hide */
+        public static final Validator BERRY_DARK_ON_LOW_BATTERY_VALIDATOR =
+                sBooleanValidator;
+
+        /**
          * Current application managing the style
          */
         public static final String BERRY_MANAGED_BY_APP = "berry_managed_by_app";
@@ -2270,6 +2279,7 @@ public final class LineageSettings {
             VALIDATORS.put(BERRY_GLOBAL_STYLE, BERRY_GLOBAL_STYLE_VALIDATOR);
             VALIDATORS.put(BERRY_CURRENT_ACCENT, BERRY_CURRENT_ACCENT_VALIDATOR);
             VALIDATORS.put(BERRY_DARK_OVERLAY, BERRY_DARK_OVERLAY_VALIDATOR);
+            VALIDATORS.put(BERRY_DARK_ON_LOW_BATTERY, BERRY_DARK_ON_LOW_BATTERY_VALIDATOR);
             VALIDATORS.put(BERRY_MANAGED_BY_APP, BERRY_MANAGED_BY_APP_VALIDATOR);
             VALIDATORS.put(ENABLE_FORWARD_LOOKUP, ENABLE_FORWARD_LOOKUP_VALIDATOR);
             VALIDATORS.put(ENABLE_PEOPLE_LOOKUP, ENABLE_PEOPLE_LOOKUP_VALIDATOR);
