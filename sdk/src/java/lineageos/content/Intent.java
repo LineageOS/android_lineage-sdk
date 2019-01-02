@@ -113,4 +113,19 @@ public class Intent {
      */
     public static final String ACTION_UPDATE_POWER_MENU =
             "lineageos.intent.action.UPDATE_POWER_MENU";
+    /**
+     * Broadcast action: Active Package Changed
+     * @hide
+     */
+    public static final String ACTION_ACTIVE_PACKAGE_CHANGED =
+            "lineageos.intent.action.ACTIVE_PACKAGE_CHANGED";
+
+    /**
+     * This field is part of the intent {@link #ACTION_ACTIVE_PACKAGE_CHANGED}.
+     * Intent extra field for the state of changed active package
+     * @hide
+     */
+    public static final String EXTRA_ACTIVE_PACKAGE =
+            "lineageos.intent.extra.ACTIVE_PACKAGE";
+
 }
