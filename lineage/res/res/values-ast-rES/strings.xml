@@ -18,24 +18,34 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- Label for the LineageOS system components when they are shown to the user. -->
+    <string name="lineageos_system_label">Sistema LineageOS</string>
     <!-- Labels for the MODIFY_PROFILES permission. -->
     <string name="permlab_modifyProfiles">modificar perfiles del sistema</string>
     <string name="permdesc_modifyProfiles">Permite qu\'una aplicación modifique los perfiles del sistema.</string>
     <!-- Labels for the HARDWARE_ABSTRACTION_ACCESS permission. -->
     <string name="permlab_useHardwareFramework">usar framework de hardware</string>
+    <string name="permdesc_useHardwareFramework">Permite qu\'una aplicación acceda al framework de hardware de LineageOS.</string>
     <!-- Labels for the WRITE_SETTINGS permission -->
+    <string name="permlab_writeSettings">modificar la configuración del sistema de Lineage</string>
+    <string name="permdesc_writeSettings">Permite qu\'una aplicación modifique los axustes del sistema de Lineage.</string>
     <!-- Labels for the WRITE_SECURE_SETTINGS permission -->
+    <string name="permlab_writeSecureSettings">modificar la configuración segura del sistema de Lineage</string>
+    <string name="permdesc_writeSecureSettings">Permite qu\'una aplicación modifique la configuración segura del sistema de Lineage. Nun s\'usa pa les aplicaciones normales.</string>
     <!-- Labels for the PROTECTED_APP permission. -->
+    <string name="permlab_protectedApp">amestar y desaniciar aplicaciones p\'aplicaciones protexíes</string>
     <string name="permdesc_protectedApp">Permite qu\'una aplicación conseñe a otres como protexíes y blóquiales.</string>
     <!-- Labels for CHANGE_STYLE permission -->
+    <string name="permlab_changeStyle">camudar l\'estilu del sistema</string>
     <!-- this is wrong, but google's package manager uses the android:description
          attribute as description for the runtime permission request dialog
          with non-default dangerous permissions -->
+    <string name="permdesc_changeStyle">personalizar los colores del sistema</string>
     <!-- Profiles -->
     <!-- Names of default profiles. -->
     <string name="profileNameDefault">Por defeutu</string>
     <string name="profileNameWork">Trabayu</string>
     <string name="profileNameHome">Home</string>
+    <string name="profileNameSilent">Silenciu</string>
     <string name="profileNameNight">Nueche</string>
     <string name="profileNameAutomobile">Automóvil</string>
     <!-- Names of application groups. -->
@@ -45,11 +55,13 @@
     <string name="profileGroupEmail">Corréu</string>
     <string name="profileGroupSMS">SMS</string>
     <!-- Name of wildcard profile. -->
+    <string name="wildcardProfile">Otru</string>
     <!-- Performance profiles -->
     <string name="perf_profile_pwrsv">Aforru d\'enerxía</string>
     <string name="perf_profile_bal">Balanceáu</string>
     <string name="perf_profile_perf">Rindimientu</string>
     <string name="perf_profile_bias_power">Eficiencia</string>
+    <string name="perf_profile_bias_perf">Rápidu</string>
     <!-- Performance profiles -->
     <string name="perf_profile_pwrsv_summary">Aforros máximos d\'enerxía, amenorga\'l rindimientu del preséu</string>
     <string name="perf_profile_bal_summary">Equilibriu de rindimientu óptimu y carauterístiques d\'enerxía</string>
@@ -57,6 +69,7 @@
     <string name="perf_profile_bias_power_summary">Favorez los aforros d\'enerxía. Llenda la potencia máximo de la CPU y optimízala pa un aforru d\'enerxía empara d\'una llatencia mayor</string>
     <string name="perf_profile_bias_perf_summary">Favorez el rindimientu. Amenorga la llatencia con un consumu d\'enerxía llixeramente aumentáu</string>
     <!-- LiveDisplay strings -->
+    <string name="live_display_auto">Automáticu</string>
     <string name="live_display_auto_summary">Axusta automáticamente la temperatura de color de la pantalla dempués del tapecer y l\'aséu</string>
     <string name="live_display_off">Non</string>
     <string name="live_display_off_summary">Deshabilita tolos axustes</string>
@@ -64,12 +77,15 @@
     <string name="live_display_day_summary">Usa namái los axustes de día</string>
     <string name="live_display_night">Nueche</string>
     <string name="live_display_night_summary">Usa namái los axustes de nueche</string>
+    <string name="live_display_outdoor">Esterior (lluz solar)</string>
     <string name="live_display_outdoor_summary">Usa namái los axustes d\'esteriores</string>
     <string name="live_display_hint">LiveDisplay pue ayudar a amenorgar el cansanciu de güeyos y ayudate a dormir pela nueche. ¡Primi equí pa probalu!</string>
+    <string name="accessibility_quick_settings_live_display_off">LiveDisplay desactiváu.</string>
     <string name="accessibility_quick_settings_live_display_auto">LiveDisplay: mou auto.</string>
     <string name="accessibility_quick_settings_live_display_day">LiveDisplay: mou diurnu.</string>
     <string name="accessibility_quick_settings_live_display_night">LiveDisplay: mou nocherniegu.</string>
     <string name="accessibility_quick_settings_live_display_outdoor">LiveDisplay: mou esterior.</string>
+    <string name="accessibility_quick_settings_live_display_changed_off">LiveDisplay desactiváu.</string>
     <string name="accessibility_quick_settings_live_display_changed_auto">LiveDisplay camudó al mou auto.</string>
     <string name="accessibility_quick_settings_live_display_changed_day">LiveDisplay camudó al mou diurnu.</string>
     <string name="accessibility_quick_settings_live_display_changed_night">LiveDisplay camudó al mou nocherniegu.</string>
@@ -79,6 +95,14 @@
     <!-- Performance manager permission description -->
     <string name="permdesc_perfAccessDesc">Permite qu\'una aplicación acceda al serviciu de rindimientu. Enxamás debería precisase p\'aplicaciones normales.</string>
     <!-- Weather Service strings -->
+    <string name="permlab_weather_read">lleer la metereoloxía</string>
+    <string name="permdesc_weather_read">Permite qu\'una aplicación llea\'l conteníu del fornidor meteorolóxicu.</string>
+    <string name="permlab_weather_write">anovar el fornidor meteorolóxicu</string>
+    <string name="permdesc_weather_write">Permite qu\'una aplicación anueve\'l conteníu del fornidor meteorolóxicu.</string>
+    <string name="permlab_weather_bind">arreyar como serviciu fornidor de metereoloxía</string>
+    <string name="permdesc_weather_bind">Permite qu\'una aplicación s\'identifique como un serviciu fornidor de meteoroloxía.</string>
+    <string name="permlab_weather_access_mgr">acceder al serviciu de metereoloxía</string>
+    <string name="permdesc_weather_access_mgr">Permite qu\'una aplicación acceda al serviciu meteorolóxicu nel sistema. Enxamás debería precisase p\'aplicaciones normales.</string>
     <!-- DataUsageProvider write permission title -->
     <string name="permlab_dataUsageWrite">modificar base de datos d\'usu de datos</string>
     <!-- DataUsageProvider write permission description -->
@@ -99,16 +123,49 @@
     <string name="permlab_manageRemotePrefs">xestionar axustes remotos</string>
     <string name="permdesc_manageRemotePrefs">Permite qu\'una aplicación xestione axustes remotos</string>
     <!-- About device screen, build date -->
+    <string name="build_date">Data de la compilación</string>
     <!-- About device screen, LineageOS API Level -->
+    <string name="lineage_api_level">Nivel de l\'API de LineageOS</string>
     <!-- About device screen, LineageOS updates -->
+    <string name="lineage_updates">Anovamientos de LineageOS</string>
     <!-- About device screen, LineageOS version -->
+    <string name="lineage_version">Versión de LineageOS</string>
     <!-- About device screen, vendor security patch -->
+    <string name="lineage_vendor_security_patch">Nivel de parche de seguridá del fornidor</string>
     <!-- General purpose use "unknown" string -->
+    <string name="unknown">Desconozse</string>
     <!-- Long-press back kill application -->
+    <string name="app_killed_message">Aplicación matada</string>
     <!-- Status bar network traffic monitor strings -->
+    <string name="kilobitspersecond_short">kb/s</string>
+    <string name="megabitspersecond_short">Mb/s</string>
+    <string name="kilobytespersecond_short">kB/s</string>
+    <string name="megabytespersecond_short">MB/s</string>
     <!-- Accent colors -->
+    <string name="accent_black">Carbón</string>
+    <string name="accent_blue">Arándanu</string>
+    <string name="accent_brown">Cacáu</string>
+    <string name="accent_cyan">Cianu</string>
+    <string name="accent_green">Viesca</string>
+    <string name="accent_orange">Calabaza</string>
+    <string name="accent_pink">Zreza</string>
+    <string name="accent_purple">Llavanda</string>
+    <string name="accent_red">Tomate</string>
+    <string name="accent_yellow">Plátanu</string>
     <!-- Trust interface -->
     <!-- This string will be referenced from other apps when they're referring to the Trust interface.
          Trust is a feature name, it's not suggested to translate this unless there are conflicts due
          to a different meaning of the word "trust" in your language -->
+    <string name="trust_feature_name">Trust</string>
+    <string name="permlab_trustInterface">acceder a interface Trust</string>
+    <string name="permdesc_trustInterface">Permite qu\'una aplicación amuese avisos y suxerencies Trust</string>
+    <string name="trust_notification_channel">Alertes Trust</string>
+    <string name="trust_notification_title_security">Trust \u2022 Seguridá del sistema</string>
+    <string name="trust_notification_content_selinux">SELinux nun se ta aplicando, la seguranza ye reducida</string>
+    <string name="trust_notification_title_root">Trust \u2022 Accesu root</string>
+    <string name="trust_notification_content_root">Una aplicación ta usando los privilexos root nesti momentu</string>
+    <string name="trust_notification_content_keys">Esta compilación asignóse con claves públiques</string>
+    <string name="trust_notification_title_onboarding">Descubri Trust</string>
+    <string name="trust_notification_content_onboarding">Conoz como caltener seguru el dispositivu</string>
+    <string name="trust_notification_action_manage">Xestionar alertes</string>
 </resources>

@@ -18,20 +18,28 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- Label for the LineageOS system components when they are shown to the user. -->
+    <string name="lineageos_system_label">نظام LineageOS</string>
     <!-- Labels for the MODIFY_PROFILES permission. -->
     <string name="permlab_modifyProfiles">تعديل الملفات التعريفية للنظام</string>
     <string name="permdesc_modifyProfiles">السماح للتطبيق بتعديل الملفات التعريفية للنظام.</string>
     <!-- Labels for the HARDWARE_ABSTRACTION_ACCESS permission. -->
     <string name="permlab_useHardwareFramework">استخدام إطار عمل الجهاز</string>
+    <string name="permdesc_useHardwareFramework">السماح لأي تطبيق بالدخول إلى مكونات أجهزة النظام.</string>
     <!-- Labels for the WRITE_SETTINGS permission -->
+    <string name="permlab_writeSettings">تعديل اعدادات نظام Lineage</string>
+    <string name="permdesc_writeSettings">السماح لأي تطبيق بتعديل إعدادات نظام Lineage.</string>
     <!-- Labels for the WRITE_SECURE_SETTINGS permission -->
+    <string name="permlab_writeSecureSettings">تعديل تأمين اعدادات نظام Lineage</string>
+    <string name="permdesc_writeSecureSettings">للسماح لأي تطبيق بتعديل إعدادات أمان نظام Lineage. لا تستخدم التطبيقات العادية.</string>
     <!-- Labels for the PROTECTED_APP permission. -->
     <string name="permlab_protectedApp">إضافة وإزالة تطبيقات إلى التطبيقات المحمية</string>
     <string name="permdesc_protectedApp">يسمح للتطبيق بوضع علامة على تطبيقات أخرى كمحمية مع قفلها.</string>
     <!-- Labels for CHANGE_STYLE permission -->
+    <string name="permlab_changeStyle">تغيير شكل النظام</string>
     <!-- this is wrong, but google's package manager uses the android:description
          attribute as description for the runtime permission request dialog
          with non-default dangerous permissions -->
+    <string name="permdesc_changeStyle">تخصيص الوان النظام</string>
     <!-- Profiles -->
     <!-- Names of default profiles. -->
     <string name="profileNameDefault">افتراضي</string>
@@ -55,6 +63,11 @@
     <string name="perf_profile_bias_power">الكفاءة</string>
     <string name="perf_profile_bias_perf">سريع</string>
     <!-- Performance profiles -->
+    <string name="perf_profile_pwrsv_summary">الحد الأقصى لتوفير الطاقة، يقلل من أداء الجهاز</string>
+    <string name="perf_profile_bal_summary">التوازن بين الأداء الأمثل وخصائص الطاقة</string>
+    <string name="perf_profile_perf_summary">وضع الأداء العالي. مفيد للتطبيقات التي تتطلب زمن تأخير منخفض وإنتاجية أعلى وذلك عندما يكون استهلاك الطاقة ليس بمصدر قلق</string>
+    <string name="perf_profile_bias_power_summary">تفضيل حفظ الطاقة. يحدد الحد الأقصى من الطاقة لوحدة المعالجة المركزية و تحسين التوفير على حساب زمن التأخير العالي</string>
+    <string name="perf_profile_bias_perf_summary">تفضيل الأداء. تقليل زمن التأخير وزيادة استهلاك الطاقة بشكل طفيف</string>
     <!-- LiveDisplay strings -->
     <string name="live_display_auto">تلقائي</string>
     <string name="live_display_auto_summary">ضبط درجة الحرارة اللونية للشاشة تلقائياً بعد غروب الشمس وشروق الشمس</string>
@@ -105,18 +118,54 @@
     <string name="permlab_observe_audio_sessions">ملاحظة تغييرات جلسة عمل الصوت</string>
     <string name="permdesc_observe_audio_sessions">يسمح لتطبيق معين لملاحظة تدفقات الصوت الجاري إنشاؤها وتدميرها.</string>
     <!-- Privacy Guard -->
+    <string name="privacy_guard_manager_title">حارس الخصوصية</string>
     <!-- Permissions used by remote preferences -->
+    <string name="permlab_manageRemotePrefs">إعدادات التحكم عن بعد</string>
+    <string name="permdesc_manageRemotePrefs">السماح للتطبيق بإدارة الإعدادات عن بعد</string>
     <!-- About device screen, build date -->
+    <string name="build_date">تاريخ الإنشاء</string>
     <!-- About device screen, LineageOS API Level -->
+    <string name="lineage_api_level">مستوى LineageOS API</string>
     <!-- About device screen, LineageOS updates -->
+    <string name="lineage_updates">تحديثات LineageOS</string>
     <!-- About device screen, LineageOS version -->
+    <string name="lineage_version">إصدار LineageOS</string>
     <!-- About device screen, vendor security patch -->
+    <string name="lineage_vendor_security_patch">‏مستوى رمز تصحيح أمان المورد</string>
     <!-- General purpose use "unknown" string -->
+    <string name="unknown">غير معروف</string>
     <!-- Long-press back kill application -->
+    <string name="app_killed_message">تم إنهاء التطبيق</string>
     <!-- Status bar network traffic monitor strings -->
+    <string name="kilobitspersecond_short">kb/s</string>
+    <string name="megabitspersecond_short">Mb/s</string>
+    <string name="kilobytespersecond_short">kB/s</string>
+    <string name="megabytespersecond_short">MB/s</string>
     <!-- Accent colors -->
+    <string name="accent_black">الكربون</string>
+    <string name="accent_blue">توت ازرق</string>
+    <string name="accent_brown">الكاكاو</string>
+    <string name="accent_cyan">سماوي</string>
+    <string name="accent_green">الغابة</string>
+    <string name="accent_orange">يقطين</string>
+    <string name="accent_pink">كرز</string>
+    <string name="accent_purple">خزامي</string>
+    <string name="accent_red">طماطم</string>
+    <string name="accent_yellow">الموز</string>
     <!-- Trust interface -->
     <!-- This string will be referenced from other apps when they're referring to the Trust interface.
          Trust is a feature name, it's not suggested to translate this unless there are conflicts due
          to a different meaning of the word "trust" in your language -->
+    <string name="trust_feature_name">الائتمان</string>
+    <string name="permlab_trustInterface">الوصول إلى واجهة الائتمان</string>
+    <string name="permdesc_trustInterface">السماح لأحد التطبيقات بعرض تحذيرات واقتراحات الائتمان</string>
+    <string name="trust_notification_channel">تحذيرات الائتمان</string>
+    <string name="trust_notification_title_security">ائتمان حماية النظام</string>
+    <string name="trust_notification_content_selinux">SELinux ليس فرض، تم إضعاف الأمان الخاص بك</string>
+    <string name="trust_notification_title_root">ائتمان الوصول الى الروت</string>
+    <string name="trust_notification_content_root">يستخدم أحد التطبيقات امتيازات الجذر في الوقت الحالي</string>
+    <string name="trust_notification_content_keys">تم توقيع هذا الإصدار باستخدام مفاتيح عامة</string>
+    <string name="trust_notification_title_onboarding">اكتشف الائتمان</string>
+    <string name="trust_notification_content_onboarding">تعرف على كيفية التأكد من سلامة جهازك</string>
+    <string name="trust_notification_action_manage">إدارة التنبيهات</string>
 </resources>
