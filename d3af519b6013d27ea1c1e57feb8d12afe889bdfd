@@ -22,6 +22,30 @@
       "revId": "d3af519b6013d27ea1c1e57feb8d12afe889bdfd",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "20b6c657_00722090",
+        "filename": "sdk/src/java/org/lineageos/internal/util/TelephonyExtUtils.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 20357
+      },
+      "writtenOn": "2019-01-05T03:21:31Z",
+      "side": 1,
+      "message": "This is to notify init rc to restart ril-daemon when activating reaches timeout. More like a device-specific workaround. I am open to remove this if someone would suggest other solution.\n\nI added this in init.target.rc\non property:sys.uicc.activate.timeout\u003d1\n    restart ril-daemon\n    setprop sys.uicc.activate.timeout\u003d0\n\non property:sys.uicc.activate.timeout\u003d2\n    restart ril-daemon2\n    setprop sys.uicc.activate.timeout\u003d0",
+      "parentUuid": "88bfb64b_ec611493",
+      "range": {
+        "startLine": 49,
+        "startChar": 32,
+        "endLine": 49,
+        "endChar": 45
+      },
+      "revId": "d3af519b6013d27ea1c1e57feb8d12afe889bdfd",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
     }
   ]
 }
