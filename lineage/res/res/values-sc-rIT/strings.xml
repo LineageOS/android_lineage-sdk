@@ -18,9 +18,14 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- Label for the LineageOS system components when they are shown to the user. -->
+    <string name="lineageos_system_label">Sistema LineageOS</string>
     <!-- Labels for the MODIFY_PROFILES permission. -->
+    <string name="permlab_modifyProfiles">modìfica sos profilos de sistema</string>
+    <string name="permdesc_modifyProfiles">Permitit a un\'aplicatzione de modificare sos profilos de sistema.</string>
     <!-- Labels for the HARDWARE_ABSTRACTION_ACCESS permission. -->
     <!-- Labels for the WRITE_SETTINGS permission -->
+    <string name="permlab_writeSettings">modìfica sas impostatziones de sistema de Lineage</string>
+    <string name="permdesc_writeSettings">Permitit a un\'aplicatzione de modificare sas impostatziones de sistema de Lineage.</string>
     <!-- Labels for the WRITE_SECURE_SETTINGS permission -->
     <!-- Labels for the PROTECTED_APP permission. -->
     <!-- Labels for CHANGE_STYLE permission -->
@@ -38,6 +43,8 @@
     <!-- Names of application groups. -->
     <string name="profileGroupPhone">Telèfonu</string>
     <string name="profileGroupCalendar">Calendàriu</string>
+    <string name="profileGroupGmail">Gmail</string>
+    <string name="profileGroupSMS">SMS</string>
     <!-- Name of wildcard profile. -->
     <string name="wildcardProfile">Àteru</string>
     <!-- Performance profiles -->
@@ -76,6 +83,7 @@
     <!-- Permissions used by remote preferences -->
     <!-- About device screen, build date -->
     <!-- About device screen, LineageOS API Level -->
+    <string name="lineage_api_level">Livellu de s\'API de LineageOS</string>
     <!-- About device screen, LineageOS updates -->
     <!-- About device screen, LineageOS version -->
     <!-- About device screen, vendor security patch -->
@@ -85,6 +93,7 @@
     <!-- Status bar network traffic monitor strings -->
     <!-- Accent colors -->
     <string name="accent_cyan">Asulu</string>
+    <string name="accent_yellow">Banana</string>
     <!-- Trust interface -->
     <!-- This string will be referenced from other apps when they're referring to the Trust interface.
          Trust is a feature name, it's not suggested to translate this unless there are conflicts due
