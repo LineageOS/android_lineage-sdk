@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "ad033fef_98c386b8",
+        "filename": "sdk/src/java/org/lineageos/internal/util/TelephonyExtUtils.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 169,
+      "author": {
+        "id": 20357
+      },
+      "writtenOn": "2019-01-06T16:01:50Z",
+      "side": 1,
+      "message": "How about setCurrentUiccCardProvisioningStatus? As we have getCurrentUiccCardProvisioningStatus already.\nsetCurrentUiccCardProvisioningStatus(int provStatus, int slotId)",
+      "parentUuid": "a586f9c1_d9e35dbf",
+      "revId": "576786b5495d7e693ca6bb7f018bfe42a787ae84",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "9a3f6c44_dd2bd175",
         "filename": "sdk/src/java/org/lineageos/internal/util/TelephonyExtUtils.java",
         "patchSetId": 3

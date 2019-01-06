@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "49714a79_8837d1a9",
+        "filename": "sdk/src/java/org/lineageos/internal/util/TelephonyExtUtils.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 175,
+      "author": {
+        "id": 20357
+      },
+      "writtenOn": "2019-01-06T16:01:50Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "5f472ab0_cf4407b7",
+      "revId": "1e42a4b69c5e2f899ad780870b8bd76bd5f9fe35",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "25bad6c1_03c30264",
         "filename": "sdk/src/java/org/lineageos/internal/util/TelephonyExtUtils.java",
         "patchSetId": 2
@@ -33,6 +51,24 @@
       "revId": "1e42a4b69c5e2f899ad780870b8bd76bd5f9fe35",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "d5d04ad6_5a08d7f7",
+        "filename": "sdk/src/java/org/lineageos/internal/util/TelephonyExtUtils.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 192,
+      "author": {
+        "id": 20357
+      },
+      "writtenOn": "2019-01-06T16:01:50Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "25bad6c1_03c30264",
+      "revId": "1e42a4b69c5e2f899ad780870b8bd76bd5f9fe35",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
