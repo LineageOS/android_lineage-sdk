@@ -20,10 +20,8 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
-import android.os.AsyncTask;
 import android.os.RemoteException;
 import android.os.ServiceManager;
-import android.os.SystemProperties;
 import android.telephony.SubscriptionManager;
 import android.util.Log;
 
@@ -33,8 +31,6 @@ import org.codeaurora.internal.IExtTelephony;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.concurrent.TimeoutException;
-import java.util.concurrent.TimeUnit;
 
 public final class TelephonyExtUtils {
     private static final boolean DEBUG = false;
@@ -44,9 +40,6 @@ public final class TelephonyExtUtils {
             "org.codeaurora.intent.action.ACTION_UICC_MANUAL_PROVISION_STATUS_CHANGED";
 
     public static final String EXTRA_NEW_PROVISION_STATE = "newProvisionState";
-
-    private static final int ACTIVATE_TIME_OUT = 30000;
-    private static final String PROP_TIME_OUT = "sys.uicc.activate.timeout";
 
     // This is the list of possible values that
     // IExtTelephony.getCurrentUiccCardProvisioningStatus() can return
@@ -154,7 +147,15 @@ public final class TelephonyExtUtils {
      * @return The result of the activation or -1
      */
     public int activateUiccCard(int slotId) {
-        return activateDeactivateUiccCard(true, slotId);
+        IExtTelephony service = getService();
+        if (service != null) {
+            try {
+                return mExtTelephony.activateUiccCard(slotId);
+            } catch (RemoteException ex) {
+                Log.e(TAG, "Activating sub failed for slotId: " + slotId);
+            }
+        }
+        return -1;
     }
 
     /**
@@ -163,38 +164,14 @@ public final class TelephonyExtUtils {
      * @return The result of the deactivation or -1
      */
     public int deactivateUiccCard(int slotId) {
-        return activateDeactivateUiccCard(false, slotId);
-    }
-
-    private int activateDeactivateUiccCard(boolean activate, int slotId) {
         IExtTelephony service = getService();
-        if (service == null) {
-            return -1;
+        if (service != null) {
+            try {
+                return mExtTelephony.deactivateUiccCard(slotId);
+            } catch (RemoteException ex) {
+                Log.e(TAG, "Deactivating sub failed for slotId: " + slotId);
+            }
         }
-
-        try {
-            AsyncTask<Integer, Void, Integer> task = new AsyncTask<Integer, Void, Integer>() {
-                @Override
-                protected Integer doInBackground(Integer... params) {
-                    try {
-                        return params[0] == 1
-                            ? mExtTelephony.activateUiccCard(params[1])
-                            : mExtTelephony.deactivateUiccCard(params[1]);
-                    } catch (RemoteException ex) {
-                        Log.e(TAG, "Changing activation for sub failed for slotId: " + params[1]);
-                    }
-                    return -1;
-                }
-            };
-            task.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, activate ? 1 : 0, slotId)
-                .get(ACTIVATE_TIME_OUT, TimeUnit.MILLISECONDS);
-        } catch (TimeoutException ex) {
-            Log.e(TAG, "Changing activation for sub timed out for slotId: " + slotId);
-            SystemProperties.set(PROP_TIME_OUT , Integer.toString(slotId + 1));
-        } catch (Exception ex) {
-            Log.e(TAG, "Changing activation for sub task failed for slotId: " + slotId);
-        }
-
         return -1;
     }
 
