@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "d7a02269_68a0039f",
+        "filename": "sdk/src/java/org/lineageos/internal/util/TelephonyExtUtils.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 169,
+      "author": {
+        "id": 11801
+      },
+      "writtenOn": "2019-01-06T20:05:23Z",
+      "side": 1,
+      "message": "Maybe remove current (that\u0027s a bit redundant), but sure",
+      "parentUuid": "ad033fef_98c386b8",
+      "revId": "576786b5495d7e693ca6bb7f018bfe42a787ae84",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "9a3f6c44_dd2bd175",
         "filename": "sdk/src/java/org/lineageos/internal/util/TelephonyExtUtils.java",
         "patchSetId": 3
