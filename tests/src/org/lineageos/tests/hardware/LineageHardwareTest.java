@@ -39,12 +39,9 @@ public class LineageHardwareTest extends TestActivity {
             LineageHardwareManager.FEATURE_COLOR_ENHANCEMENT,
             LineageHardwareManager.FEATURE_DISPLAY_COLOR_CALIBRATION,
             LineageHardwareManager.FEATURE_DISPLAY_GAMMA_CALIBRATION,
-            LineageHardwareManager.FEATURE_HIGH_TOUCH_SENSITIVITY,
-            LineageHardwareManager.FEATURE_KEY_DISABLE,
             LineageHardwareManager.FEATURE_LONG_TERM_ORBITS,
             LineageHardwareManager.FEATURE_SERIAL_NUMBER,
             LineageHardwareManager.FEATURE_SUNLIGHT_ENHANCEMENT,
-            LineageHardwareManager.FEATURE_TOUCH_HOVERING,
             LineageHardwareManager.FEATURE_AUTO_CONTRAST,
             LineageHardwareManager.FEATURE_DISPLAY_MODES,
             LineageHardwareManager.FEATURE_PERSISTENT_STORAGE
@@ -55,12 +52,9 @@ public class LineageHardwareTest extends TestActivity {
             "FEATURE_COLOR_ENHANCEMENT",
             "FEATURE_DISPLAY_COLOR_CALIBRATION",
             "FEATURE_DISPLAY_GAMMA_CALIBRATION",
-            "FEATURE_HIGH_TOUCH_SENSITIVITY",
-            "FEATURE_KEY_DISABLE",
             "FEATURE_LONG_TERM_ORBITS",
             "FEATURE_SERIAL_NUMBER",
             "FEATURE_SUNLIGHT_ENHANCEMENT",
-            "FEATURE_TOUCH_HOVERING",
             "FEATURE_AUTO_CONTRAST",
             "FEATURE_DISPLAY_MODES",
             "FEATURE_PERSISTENT_STORAGE"
@@ -69,10 +63,7 @@ public class LineageHardwareTest extends TestActivity {
     private static final List<Integer> BOOLEAN_FEATURES = Arrays.asList(
             LineageHardwareManager.FEATURE_ADAPTIVE_BACKLIGHT,
             LineageHardwareManager.FEATURE_COLOR_ENHANCEMENT,
-            LineageHardwareManager.FEATURE_HIGH_TOUCH_SENSITIVITY,
-            LineageHardwareManager.FEATURE_KEY_DISABLE,
             LineageHardwareManager.FEATURE_SUNLIGHT_ENHANCEMENT,
-            LineageHardwareManager.FEATURE_TOUCH_HOVERING,
             LineageHardwareManager.FEATURE_AUTO_CONTRAST
     );
 

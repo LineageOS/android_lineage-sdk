@@ -59,6 +59,7 @@ lineage_sdk_LOCAL_JAVA_LIBRARIES = [
     "android-support-v7-preference",
     "android-support-v7-recyclerview",
     "android-support-v14-preference",
+    "vendor.lineage.touch-V1.0-java",
 ]
 
 // READ ME: ########################################################
