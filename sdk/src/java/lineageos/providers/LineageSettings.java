@@ -3003,12 +3003,6 @@ public final class LineageSettings {
         public static final String LOCK_PASS_TO_SECURITY_VIEW = "lock_screen_pass_to_security_view";
 
         /**
-         * Whether touch hovering is enabled on supported hardware
-         * @hide
-         */
-        public static final String FEATURE_TOUCH_HOVERING = "feature_touch_hovering";
-
-        /**
          * Vibrator intensity setting for supported devices
          * @hide
          */
