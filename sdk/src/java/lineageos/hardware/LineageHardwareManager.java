@@ -28,12 +28,15 @@ import com.android.internal.annotations.VisibleForTesting;
 import lineageos.app.LineageContextConstants;
 import lineageos.hardware.HSIC;
 
+import vendor.lineage.touch.V1_0.*;
+
 import java.io.UnsupportedEncodingException;
 import java.lang.IllegalArgumentException;
 import java.lang.reflect.Field;
 import java.nio.ByteBuffer;
 import java.util.Arrays;
 import java.util.List;
+import java.util.NoSuchElementException;
 
 /**
  * Manages access to LineageOS hardware extensions
@@ -162,11 +165,15 @@ public final class LineageHardwareManager {
         FEATURE_ADAPTIVE_BACKLIGHT,
         FEATURE_AUTO_CONTRAST,
         FEATURE_COLOR_ENHANCEMENT,
+        FEATURE_SUNLIGHT_ENHANCEMENT,
+        FEATURE_READING_ENHANCEMENT
+    );
+
+    private static final List<Integer> HIDL_FEATURES = Arrays.asList(
         FEATURE_HIGH_TOUCH_SENSITIVITY,
         FEATURE_KEY_DISABLE,
-        FEATURE_SUNLIGHT_ENHANCEMENT,
         FEATURE_TOUCH_HOVERING,
-        FEATURE_READING_ENHANCEMENT
+        FEATURE_TOUCHSCREEN_GESTURES
     );
 
     private static LineageHardwareManager sLineageHardwareManagerInstance;
@@ -237,6 +244,39 @@ public final class LineageHardwareManager {
      * @return true if the feature is supported, false otherwise.
      */
     public boolean isSupported(int feature) {
+        if (HIDL_FEATURES.contains(feature)) {
+            switch(feature) {
+                case FEATURE_HIGH_TOUCH_SENSITIVITY:
+                    try {
+                        IGloveMode gloveMode = IGloveMode.getService(true);
+                        return true;
+                    } catch (NoSuchElementException | RemoteException e) {
+                        return false;
+                    }
+                case FEATURE_KEY_DISABLE:
+                    try {
+                        IKeyDisabler keyDisabler = IKeyDisabler.getService(true);
+                        return true;
+                    } catch (NoSuchElementException | RemoteException e) {
+                        return false;
+                    }
+                case FEATURE_TOUCH_HOVERING:
+                    try {
+                        IStylusMode stylusMode = IStylusMode.getService(true);
+                        return true;
+                    } catch (NoSuchElementException | RemoteException e) {
+                        return false;
+                    }
+                case FEATURE_TOUCHSCREEN_GESTURES:
+                    try {
+                        ITouchscreenGesture gesture = ITouchscreenGesture.getService(true);
+                        return true;
+                    } catch (NoSuchElementException | RemoteException e) {
+                        return false;
+                    }
+            }
+        }
+
         return feature == (getSupportedFeatures() & feature);
     }
 
@@ -847,32 +887,5 @@ public final class LineageHardwareManager {
             return false;
         }
         return true;
-    }
-
-    /**
-     * @return a list of available touchscreen gestures on the devices
-     */
-    public TouchscreenGesture[] getTouchscreenGestures() {
-        try {
-            if (checkService()) {
-                return sService.getTouchscreenGestures();
-            }
-        } catch (RemoteException e) {
-        }
-        return null;
-    }
-
-    /**
-     * @return true if setting the activation status was successful
-     */
-    public boolean setTouchscreenGestureEnabled(
-            TouchscreenGesture gesture, boolean state) {
-        try {
-            if (checkService()) {
-                return sService.setTouchscreenGestureEnabled(gesture, state);
-            }
-        } catch (RemoteException e) {
-        }
-        return false;
     }
 }
