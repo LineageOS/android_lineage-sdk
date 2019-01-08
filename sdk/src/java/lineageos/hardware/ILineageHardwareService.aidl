@@ -19,7 +19,6 @@ package lineageos.hardware;
 
 import lineageos.hardware.DisplayMode;
 import lineageos.hardware.HSIC;
-import lineageos.hardware.TouchscreenGesture;
 
 /** @hide */
 interface ILineageHardwareService {
@@ -62,7 +61,4 @@ interface ILineageHardwareService {
     HSIC getDefaultPictureAdjustment();
     boolean setPictureAdjustment(in HSIC hsic);
     float[] getPictureAdjustmentRanges();
-
-    TouchscreenGesture[] getTouchscreenGestures();
-    boolean setTouchscreenGestureEnabled(in TouchscreenGesture gesture, boolean state);
 }

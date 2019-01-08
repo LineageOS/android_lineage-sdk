@@ -33,7 +33,6 @@ import lineageos.hardware.ILineageHardwareService;
 import lineageos.hardware.LineageHardwareManager;
 import lineageos.hardware.DisplayMode;
 import lineageos.hardware.HSIC;
-import lineageos.hardware.TouchscreenGesture;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -47,15 +46,11 @@ import org.lineageos.hardware.ColorEnhancement;
 import org.lineageos.hardware.DisplayColorCalibration;
 import org.lineageos.hardware.DisplayGammaCalibration;
 import org.lineageos.hardware.DisplayModeControl;
-import org.lineageos.hardware.HighTouchSensitivity;
-import org.lineageos.hardware.KeyDisabler;
 import org.lineageos.hardware.LongTermOrbits;
 import org.lineageos.hardware.PictureAdjustment;
 import org.lineageos.hardware.ReadingEnhancement;
 import org.lineageos.hardware.SerialNumber;
 import org.lineageos.hardware.SunlightEnhancement;
-import org.lineageos.hardware.TouchscreenGestures;
-import org.lineageos.hardware.TouchscreenHovering;
 import org.lineageos.hardware.VibratorHW;
 
 /** @hide */
@@ -109,9 +104,6 @@ public class LineageHardwareService extends LineageSystemService {
         public HSIC getDefaultPictureAdjustment();
         public boolean setPictureAdjustment(HSIC hsic);
         public List<Range<Float>> getPictureAdjustmentRanges();
-
-        public TouchscreenGesture[] getTouchscreenGestures();
-        public boolean setTouchscreenGestureEnabled(TouchscreenGesture gesture, boolean state);
     }
 
     private class LegacyLineageHardware implements LineageHardwareInterface {
@@ -127,10 +119,6 @@ public class LineageHardwareService extends LineageSystemService {
                 mSupportedFeatures |= LineageHardwareManager.FEATURE_DISPLAY_COLOR_CALIBRATION;
             if (DisplayGammaCalibration.isSupported())
                 mSupportedFeatures |= LineageHardwareManager.FEATURE_DISPLAY_GAMMA_CALIBRATION;
-            if (HighTouchSensitivity.isSupported())
-                mSupportedFeatures |= LineageHardwareManager.FEATURE_HIGH_TOUCH_SENSITIVITY;
-            if (KeyDisabler.isSupported())
-                mSupportedFeatures |= LineageHardwareManager.FEATURE_KEY_DISABLE;
             if (LongTermOrbits.isSupported())
                 mSupportedFeatures |= LineageHardwareManager.FEATURE_LONG_TERM_ORBITS;
             if (ReadingEnhancement.isSupported())
@@ -141,8 +129,6 @@ public class LineageHardwareService extends LineageSystemService {
                 mSupportedFeatures |= LineageHardwareManager.FEATURE_SUNLIGHT_ENHANCEMENT;
             if (VibratorHW.isSupported())
                 mSupportedFeatures |= LineageHardwareManager.FEATURE_VIBRATOR;
-            if (TouchscreenHovering.isSupported())
-                mSupportedFeatures |= LineageHardwareManager.FEATURE_TOUCH_HOVERING;
             if (AutoContrast.isSupported())
                 mSupportedFeatures |= LineageHardwareManager.FEATURE_AUTO_CONTRAST;
             if (DisplayModeControl.isSupported())
@@ -151,8 +137,6 @@ public class LineageHardwareService extends LineageSystemService {
                 mSupportedFeatures |= LineageHardwareManager.FEATURE_COLOR_BALANCE;
             if (PictureAdjustment.isSupported())
                 mSupportedFeatures |= LineageHardwareManager.FEATURE_PICTURE_ADJUSTMENT;
-            if (TouchscreenGestures.isSupported())
-                mSupportedFeatures |= LineageHardwareManager.FEATURE_TOUCHSCREEN_GESTURES;
         }
 
         public int getSupportedFeatures() {
@@ -167,16 +151,10 @@ public class LineageHardwareService extends LineageSystemService {
                     return AutoContrast.isEnabled();
                 case LineageHardwareManager.FEATURE_COLOR_ENHANCEMENT:
                     return ColorEnhancement.isEnabled();
-                case LineageHardwareManager.FEATURE_HIGH_TOUCH_SENSITIVITY:
-                    return HighTouchSensitivity.isEnabled();
-                case LineageHardwareManager.FEATURE_KEY_DISABLE:
-                    return KeyDisabler.isActive();
                 case LineageHardwareManager.FEATURE_READING_ENHANCEMENT:
                     return ReadingEnhancement.isEnabled();
                 case LineageHardwareManager.FEATURE_SUNLIGHT_ENHANCEMENT:
                     return SunlightEnhancement.isEnabled();
-                case LineageHardwareManager.FEATURE_TOUCH_HOVERING:
-                    return TouchscreenHovering.isEnabled();
                 default:
                     Log.e(TAG, "feature " + feature + " is not a boolean feature");
                     return false;
@@ -191,16 +169,10 @@ public class LineageHardwareService extends LineageSystemService {
                     return AutoContrast.setEnabled(enable);
                 case LineageHardwareManager.FEATURE_COLOR_ENHANCEMENT:
                     return ColorEnhancement.setEnabled(enable);
-                case LineageHardwareManager.FEATURE_HIGH_TOUCH_SENSITIVITY:
-                    return HighTouchSensitivity.setEnabled(enable);
-                case LineageHardwareManager.FEATURE_KEY_DISABLE:
-                    return KeyDisabler.setActive(enable);
                 case LineageHardwareManager.FEATURE_READING_ENHANCEMENT:
                     return ReadingEnhancement.setEnabled(enable);
                 case LineageHardwareManager.FEATURE_SUNLIGHT_ENHANCEMENT:
                     return SunlightEnhancement.setEnabled(enable);
-                case LineageHardwareManager.FEATURE_TOUCH_HOVERING:
-                    return TouchscreenHovering.setEnabled(enable);
                 default:
                     Log.e(TAG, "feature " + feature + " is not a boolean feature");
                     return false;
@@ -366,14 +338,6 @@ public class LineageHardwareService extends LineageSystemService {
                     PictureAdjustment.getIntensityRange(),
                     PictureAdjustment.getContrastRange(),
                     PictureAdjustment.getSaturationThresholdRange());
-        }
-
-        public TouchscreenGesture[] getTouchscreenGestures() {
-            return TouchscreenGestures.getAvailableGestures();
-        }
-
-        public boolean setTouchscreenGestureEnabled(TouchscreenGesture gesture, boolean state) {
-            return TouchscreenGestures.setGestureEnabled(gesture, state);
         }
     }
 
@@ -754,28 +718,6 @@ public class LineageHardwareService extends LineageSystemService {
                         r.get(4).getUpper(), r.get(4).getUpper() };
             }
             return new float[10];
-        }
-
-        @Override
-        public TouchscreenGesture[] getTouchscreenGestures() {
-            mContext.enforceCallingOrSelfPermission(
-                    lineageos.platform.Manifest.permission.HARDWARE_ABSTRACTION_ACCESS, null);
-            if (!isSupported(LineageHardwareManager.FEATURE_TOUCHSCREEN_GESTURES)) {
-                Log.e(TAG, "Touchscreen gestures are not supported");
-                return null;
-            }
-            return mLineageHwImpl.getTouchscreenGestures();
-        }
-
-        @Override
-        public boolean setTouchscreenGestureEnabled(TouchscreenGesture gesture, boolean state) {
-            mContext.enforceCallingOrSelfPermission(
-                    lineageos.platform.Manifest.permission.HARDWARE_ABSTRACTION_ACCESS, null);
-            if (!isSupported(LineageHardwareManager.FEATURE_TOUCHSCREEN_GESTURES)) {
-                Log.e(TAG, "Touchscreen gestures are not supported");
-                return false;
-            }
-            return mLineageHwImpl.setTouchscreenGestureEnabled(gesture, state);
         }
     };
 }
