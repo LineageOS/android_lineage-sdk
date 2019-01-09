@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2018 The LineageOS Project
+ * Copyright (C) 2018-2019 The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -41,10 +41,13 @@ import lineageos.providers.LineageSettings;
 import lineageos.trust.ITrustInterface;
 import lineageos.trust.TrustInterface;
 
+import vendor.lineage.trust.V1_0.IUsbRestrict;
+
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.NoSuchElementException;
 
 /** @hide **/
 public class TrustInterfaceService extends LineageSystemService {
@@ -63,6 +66,8 @@ public class TrustInterfaceService extends LineageSystemService {
 
     private Context mContext;
     private NotificationManager mNotificationManager = null;
+
+    private IUsbRestrict mUsbRestrictor = null;
 
     public TrustInterfaceService(Context context) {
         super(context);
@@ -83,6 +88,12 @@ public class TrustInterfaceService extends LineageSystemService {
     @Override
     public void onStart() {
         mNotificationManager = mContext.getSystemService(NotificationManager.class);
+
+        try {
+            mUsbRestrictor = IUsbRestrict.getService();
+        } catch (NoSuchElementException | RemoteException e) {
+            // ignore, the hal is not available
+        }
 
         // Onboard
         if (!hasOnboardedUser()) {
@@ -140,6 +151,10 @@ public class TrustInterfaceService extends LineageSystemService {
 
         mNotificationManager.cancel(feature);
         return true;
+    }
+
+    private boolean hasUsbRestrictorInternal() {
+        return mUsbRestrictor != null;
     }
 
     private boolean postOnBoardingNotification() {
@@ -368,6 +383,14 @@ public class TrustInterfaceService extends LineageSystemService {
             boolean success = removeNotificationForFeatureInternal(feature);
             restoreCallingIdentity(token);
             return success;
+        }
+
+        @Override
+        public boolean hasUsbRestrictor() {
+            /*
+             * No need to require permission for this one because it's harmless
+             */
+             return hasUsbRestrictorInternal();
         }
 
         @Override

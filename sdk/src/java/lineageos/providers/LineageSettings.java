@@ -1,6 +1,6 @@
 /**
  * Copyright (C) 2015-2016 The CyanogenMod Project
- * Copyright (C) 2017-2018 The LineageOS Project
+ * Copyright (C) 2017-2019 The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -3088,6 +3088,18 @@ public final class LineageSettings {
                 sBooleanValidator;
 
         /**
+         * Restrict USB when the screen is locked
+         * 0 = Off, 1 = On
+         *
+         * @hide
+         */
+        public static final String TRUST_RESTRICT_USB_KEYGUARD = "trust_restrict_usb";
+
+        /** @hide */
+        public static final Validator TRUST_RESTRICT_USB_KEYGUARD_VALIDATOR =
+                sBooleanValidator;
+
+        /**
          * Trust warnings status
          *
          * Stores flags for each feature
@@ -3210,6 +3222,7 @@ public final class LineageSettings {
             VALIDATORS.put(NETWORK_TRAFFIC_UNITS, NETWORK_TRAFFIC_UNITS_VALIDATOR);
             VALIDATORS.put(NETWORK_TRAFFIC_SHOW_UNITS, NETWORK_TRAFFIC_SHOW_UNITS_VALIDATOR);
             VALIDATORS.put(TRUST_NOTIFICATIONS, TRUST_NOTIFICATIONS_VALIDATOR);
+            VALIDATORS.put(TRUST_RESTRICT_USB_KEYGUARD, TRUST_RESTRICT_USB_KEYGUARD_VALIDATOR);
             VALIDATORS.put(TRUST_WARNINGS, TRUST_WARNINGS_VALIDATOR);
         }
 
