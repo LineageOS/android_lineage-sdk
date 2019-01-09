@@ -22,6 +22,7 @@ interface ITrustInterface {
 
     boolean postNotificationForFeature(int feature);
     boolean removeNotificationForFeature(int feature);
+    boolean hasUsbRestrictor();
     int getLevelForFeature(int feature);
     void runTest();
 }
