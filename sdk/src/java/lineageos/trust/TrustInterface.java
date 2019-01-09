@@ -232,6 +232,7 @@ public class TrustInterface {
         return sService;
     }
 
+    /** @hide **/
     public boolean postNotificationForFeature(int feature) {
         if (sService == null) {
             return false;
@@ -250,6 +251,18 @@ public class TrustInterface {
         }
         try {
             return sService.removeNotificationForFeature(feature);
+        } catch (RemoteException e) {
+            Log.e(TAG, e.getLocalizedMessage(), e);
+        }
+        return false;
+    }
+
+    public boolean hasUsbRestrictor() {
+        if (sService == null) {
+            return false;
+        }
+        try {
+            return sService.hasUsbRestrictor();
         } catch (RemoteException e) {
             Log.e(TAG, e.getLocalizedMessage(), e);
         }
@@ -281,4 +294,3 @@ public class TrustInterface {
         return;
     }
 }
-
