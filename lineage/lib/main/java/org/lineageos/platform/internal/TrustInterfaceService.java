@@ -307,8 +307,6 @@ public class TrustInterfaceService extends LineageSystemService {
             return TrustInterface.ERROR_UNDEFINED;
         }
 
-        boolean isOldDevice =
-                mContext.getResources().getBoolean(R.bool.config_trustLegacyEncryption);
         int status = policyManager.getStorageEncryptionStatus();
 
         switch (status) {
@@ -318,9 +316,6 @@ public class TrustInterfaceService extends LineageSystemService {
             case DevicePolicyManager.ENCRYPTION_STATUS_ACTIVE_DEFAULT_KEY:
                 return TrustInterface.TRUST_FEATURE_LEVEL_POOR;
             case DevicePolicyManager.ENCRYPTION_STATUS_INACTIVE:
-                return isOldDevice ?
-                        TrustInterface.TRUST_FEATURE_LEVEL_POOR :
-                        TrustInterface.TRUST_FEATURE_LEVEL_BAD;
             case DevicePolicyManager.ENCRYPTION_STATUS_UNSUPPORTED:
                 return TrustInterface.TRUST_FEATURE_LEVEL_BAD;
             default:
