@@ -16,5 +16,5 @@
      limitations under the License.
 -->
 <resources>
-  <string name="app_name">Lineage 設定儲存空間</string>
+    <string name="app_name">Lineage 設定儲存空間</string>
 </resources>

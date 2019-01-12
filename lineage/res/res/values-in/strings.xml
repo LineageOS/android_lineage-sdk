@@ -17,153 +17,155 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <!-- Label for the LineageOS system components when they are shown to the user. -->
-  <string name="lineageos_system_label">Sistem LineageOS</string>
-  <!-- Labels for the MODIFY_PROFILES permission. -->
-  <string name="permlab_modifyProfiles">memodifikasi profil sistem</string>
-  <string name="permdesc_modifyProfiles">Mengizinkan aplikasi untuk mengubah profil sistem.</string>
-  <!-- Labels for the HARDWARE_ABSTRACTION_ACCESS permission. -->
-  <string name="permlab_useHardwareFramework">gunakan hardware framework</string>
-  <string name="permdesc_useHardwareFramework">Izinkan aplikasi untuk mengakses susunan perangkat keras Lineage.</string>
-  <!-- Labels for the WRITE_SETTINGS permission -->
-  <string name="permlab_writeSettings">mengubah setelah sistem Lineage</string>
-  <string name="permdesc_writeSettings">Izinkan aplikasi untuk memodifikasi setelan sistem Lineage.</string>
-  <!-- Labels for the WRITE_SECURE_SETTINGS permission -->
-  <string name="permlab_writeSecureSettings">memodifikasi setelan sistem keamanan Lineage</string>
-  <string name="permdesc_writeSecureSettings">Izinkan aplikasi untuk memodifikasi setelan sistem keamanan Lineage. Tidak untuk digunakan oleh aplikasi yang normal.</string>
-  <!-- Labels for the PROTECTED_APP permission. -->
-  <string name="permlab_protectedApp">tambahkan dan hapus aplikasi untuk aplikasi yang dilindungi</string>
-  <string name="permdesc_protectedApp">Mengizinkan aplikasi untuk menandai aplikasi lain sebagai aplikasi yang dilindungi dan menguncinya.</string>
-  <!-- Labels for CHANGE_STYLE permission -->
-  <string name="permlab_changeStyle">mengubah gaya sistem</string>
-  <!-- this is wrong, but google's package manager uses the android:description
+    <!-- Label for the LineageOS system components when they are shown to the user. -->
+    <string name="lineageos_system_label">Sistem LineageOS</string>
+    <!-- Labels for the MODIFY_PROFILES permission. -->
+    <string name="permlab_modifyProfiles">memodifikasi profil sistem</string>
+    <string name="permdesc_modifyProfiles">Mengizinkan aplikasi untuk mengubah profil sistem.</string>
+    <!-- Labels for the HARDWARE_ABSTRACTION_ACCESS permission. -->
+    <string name="permlab_useHardwareFramework">gunakan hardware framework</string>
+    <string name="permdesc_useHardwareFramework">Izinkan aplikasi untuk mengakses susunan perangkat keras Lineage.</string>
+    <!-- Labels for the WRITE_SETTINGS permission -->
+    <string name="permlab_writeSettings">mengubah setelah sistem Lineage</string>
+    <string name="permdesc_writeSettings">Izinkan aplikasi untuk memodifikasi setelan sistem Lineage.</string>
+    <!-- Labels for the WRITE_SECURE_SETTINGS permission -->
+    <string name="permlab_writeSecureSettings">memodifikasi setelan sistem keamanan Lineage</string>
+    <string name="permdesc_writeSecureSettings">Izinkan aplikasi untuk memodifikasi setelan sistem keamanan Lineage. Tidak untuk digunakan oleh aplikasi yang normal.</string>
+    <!-- Labels for the PROTECTED_APP permission. -->
+    <string name="permlab_protectedApp">tambahkan dan hapus aplikasi untuk aplikasi yang dilindungi</string>
+    <string name="permdesc_protectedApp">Mengizinkan aplikasi untuk menandai aplikasi lain sebagai aplikasi yang dilindungi dan menguncinya.</string>
+    <!-- Labels for CHANGE_STYLE permission -->
+    <string name="permlab_changeStyle">mengubah gaya sistem</string>
+    <!-- this is wrong, but google's package manager uses the android:description
          attribute as description for the runtime permission request dialog
          with non-default dangerous permissions -->
-  <string name="permdesc_changeStyle">menyesuaikan warna sistem</string>
-  <!-- Profiles -->
-  <!-- Names of default profiles. -->
-  <string name="profileNameDefault">Standar</string>
-  <string name="profileNameWork">Kerja</string>
-  <string name="profileNameHome">Beranda</string>
-  <string name="profileNameSilent">Senyap</string>
-  <string name="profileNameNight">Malam</string>
-  <string name="profileNameAutomobile">Mobil</string>
-  <!-- Names of application groups. -->
-  <string name="profileGroupPhone">Telepon</string>
-  <string name="profileGroupCalendar">Kalender</string>
-  <string name="profileGroupGmail">Gmail</string>
-  <string name="profileGroupEmail">Surel</string>
-  <string name="profileGroupSMS">SMS</string>
-  <!-- Name of wildcard profile. -->
-  <string name="wildcardProfile">Lainnya</string>
-  <!-- Performance profiles -->
-  <string name="perf_profile_pwrsv">Hemat daya</string>
-  <string name="perf_profile_bal">Seimbang</string>
-  <string name="perf_profile_perf">Kinerja</string>
-  <string name="perf_profile_bias_power">Efisiensi</string>
-  <string name="perf_profile_bias_perf">Cepat</string>
-  <!-- Performance profiles -->
-  <string name="perf_profile_pwrsv_summary">Hemat daya maksimal, kurangi kinerja perangkat</string>
-  <string name="perf_profile_bal_summary">Seimbang antara kinerja yang optimal dan karakteristik kekuatan</string>
-  <string name="perf_profile_perf_summary">Mode kinerja tinggi. Berguna untuk aplikasi yang memerlukan latency rendah dan tertinggi throughput ketika konsumsi daya tidak perhatian</string>
-  <string name="perf_profile_bias_power_summary">Mendukung penghematan daya. Batas maksimum power CPU dan mengoptimalkan untuk penghematan biaya latensi lebih tinggi daya</string>
-  <string name="perf_profile_bias_perf_summary">Mendukung kinerja. Mengurangi latensi dengan konsumsi daya yang sedikit meningkat</string>
-  <!-- LiveDisplay strings -->
-  <string name="live_display_auto">Otomatis</string>
-  <string name="live_display_auto_summary">Menyesuaikan suhu warna layar secara otomatis setelah matahari terbenam dan terbit</string>
-  <string name="live_display_off">Mati</string>
-  <string name="live_display_off_summary">Menonaktifkan semua pengaturan</string>
-  <string name="live_display_day">Siang</string>
-  <string name="live_display_day_summary">Hanya menggunakan setelan siang hari</string>
-  <string name="live_display_night">Malam</string>
-  <string name="live_display_night_summary">Hanya menggunakan setelan malam hari</string>
-  <string name="live_display_outdoor">Luar ruangan (matahari cerah)</string>
-  <string name="live_display_outdoor_summary">Hanya menggunakan setelan luar ruangan</string>
-  <string name="live_display_hint">LiveDisplay dapat membantu mengurangi kelelahan mata dan membantu Anda tidur di malam hari. Klik di sini untuk mencobanya!</string>
-  <string name="accessibility_quick_settings_live_display_off">LiveDisplay nonaktif.</string>
-  <string name="accessibility_quick_settings_live_display_auto">LiveDisplay: modus otomatis.</string>
-  <string name="accessibility_quick_settings_live_display_day">LiveDisplay: modus siang.</string>
-  <string name="accessibility_quick_settings_live_display_night">LiveDisplay: modus malam.</string>
-  <string name="accessibility_quick_settings_live_display_outdoor">LiveDisplay: modus luar ruangan.</string>
-  <string name="accessibility_quick_settings_live_display_changed_off">LiveDisplay dinonaktifkan.</string>
-  <string name="accessibility_quick_settings_live_display_changed_auto">LiveDisplay diubah menjadi modus otomatis.</string>
-  <string name="accessibility_quick_settings_live_display_changed_day">LiveDisplay diubah menjadi modus siang.</string>
-  <string name="accessibility_quick_settings_live_display_changed_night">LiveDisplay diubah menjadi modus malam.</string>
-  <string name="accessibility_quick_settings_live_display_changed_outdoor">LiveDisplay diubah menjadi modus luar ruangan.</string>
-  <!-- Performance manager permission title -->
-  <string name="permlab_perfAccess">akses pengelola kinerja</string>
-  <!-- Performance manager permission description -->
-  <string name="permdesc_perfAccessDesc">Izinkan aplikasi untuk mengakses layanan kinerja. Tidak dibutuhkan untuk aplikasi biasa.</string>
-  <!-- Weather Service strings -->
-  <string name="permlab_weather_read">baca cuaca</string>
-  <string name="permdesc_weather_read">Izinkan aplikasi untuk membaca konten dari penyedia cuaca.</string>
-  <string name="permlab_weather_write">perbarui penyedia cuaca</string>
-  <string name="permdesc_weather_write">Izinkan aplikasi untuk memperbarui konten dari penyedia cuaca.</string>
-  <string name="permlab_weather_bind">ikat sebagai layanan penyedia cuaca</string>
-  <string name="permdesc_weather_bind">Izinkan aplikasi untuk diidentifikasi sebagai layanan penyedia cuaca.</string>
-  <string name="permlab_weather_access_mgr">akses layanan cuaca</string>
-  <string name="permdesc_weather_access_mgr">Izinkan aplikasi untuk mengakses layanan cuaca dalam sistem. Tidak dibutuhkan untuk aplikasi biasa.</string>
-  <!-- DataUsageProvider write permission title -->
-  <string name="permlab_dataUsageWrite">ubah basis data penggunaan data</string>
-  <!-- DataUsageProvider write permission description -->
-  <string name="permdesc_dataUsageWrite">Izinkan aplikasi untuk memperbarui konten dari basis data penggunaan data.</string>
-  <!-- DataUsageProvider read permission title -->
-  <string name="permlab_dataUsageRead">baca basis data penggunaan data</string>
-  <!-- DataUsageProvider read permission description -->
-  <string name="permdesc_dataUsageRead">Izinkan aplikasi untuk membaca konten dari basis data penggunaan data.</string>
-  <!-- LiveDisplay manager permission -->
-  <string name="permlab_manageLiveDisplay">kelola pengaturan LiveDisplay</string>
-  <string name="permdesc_manageLiveDisplay">Izinkan aplikasi untuk mengonfigurasi pengaturan tampilan lanjutan.</string>
-  <!-- LineageAudioService - observe session changes permission -->
-  <string name="permlab_observe_audio_sessions">pantau perubahan sesi audio</string>
-  <string name="permdesc_observe_audio_sessions">Izinkan aplikasi untuk memantau pengaliran audio yang dibuat dan dihilangkan.</string>
-  <!-- Privacy Guard -->
-  <string name="privacy_guard_manager_title">Penjaga Privasi</string>
-  <!-- Permissions used by remote preferences -->
-  <string name="permlab_manageRemotePrefs">mengelola pengaturan jarak jauh</string>
-  <string name="permdesc_manageRemotePrefs">Memungkinkan aplikasi untuk mengelola pengaturan jarak jauh</string>
-  <!-- About device screen, build date -->
-  <string name="build_date">Tanggal pembuatan</string>
-  <!-- About device screen, LineageOS API Level -->
-  <string name="lineage_api_level">Tingkat API LineageOS</string>
-  <!-- About device screen, LineageOS updates -->
-  <string name="lineage_updates">Pembaruan LineageOS</string>
-  <!-- About device screen, LineageOS version -->
-  <string name="lineage_version">Versi LineageOS</string>
-  <!-- About device screen, vendor security patch -->
-  <!-- General purpose use "unknown" string -->
-  <string name="unknown">Tidak dikenal</string>
-  <!-- Long-press back kill application -->
-  <string name="app_killed_message">Aplikasi dimatikan</string>
-  <!-- Status bar network traffic monitor strings -->
-  <string name="kilobitspersecond_short">kb/d</string>
-  <string name="megabitspersecond_short">Mb/d</string>
-  <string name="kilobytespersecond_short">kB/d</string>
-  <string name="megabytespersecond_short">MB/d</string>
-  <!-- Accent colors -->
-  <string name="accent_black">Karbon</string>
-  <string name="accent_blue">Blueberry</string>
-  <string name="accent_brown">Cokelat</string>
-  <string name="accent_cyan">Biru</string>
-  <string name="accent_green">Hutan</string>
-  <string name="accent_orange">Labu</string>
-  <string name="accent_pink">Ceri</string>
-  <string name="accent_purple">Lavender</string>
-  <string name="accent_red">Tomat</string>
-  <string name="accent_yellow">Pisang</string>
-  <!-- Trust interface -->
-  <!-- This string will be referenced from other apps when they're referring to the Trust interface.
+    <string name="permdesc_changeStyle">menyesuaikan warna sistem</string>
+    <!-- Profiles -->
+    <!-- Names of default profiles. -->
+    <string name="profileNameDefault">Standar</string>
+    <string name="profileNameWork">Kerja</string>
+    <string name="profileNameHome">Beranda</string>
+    <string name="profileNameSilent">Senyap</string>
+    <string name="profileNameNight">Malam</string>
+    <string name="profileNameAutomobile">Mobil</string>
+    <!-- Names of application groups. -->
+    <string name="profileGroupPhone">Telepon</string>
+    <string name="profileGroupCalendar">Kalender</string>
+    <string name="profileGroupGmail">Gmail</string>
+    <string name="profileGroupEmail">Surel</string>
+    <string name="profileGroupSMS">SMS</string>
+    <!-- Name of wildcard profile. -->
+    <string name="wildcardProfile">Lainnya</string>
+    <!-- Performance profiles -->
+    <string name="perf_profile_pwrsv">Hemat daya</string>
+    <string name="perf_profile_bal">Seimbang</string>
+    <string name="perf_profile_perf">Kinerja</string>
+    <string name="perf_profile_bias_power">Efisiensi</string>
+    <string name="perf_profile_bias_perf">Cepat</string>
+    <!-- Performance profiles -->
+    <string name="perf_profile_pwrsv_summary">Hemat daya maksimal, kurangi kinerja perangkat</string>
+    <string name="perf_profile_bal_summary">Seimbang antara kinerja yang optimal dan karakteristik kekuatan</string>
+    <string name="perf_profile_perf_summary">Mode kinerja tinggi. Berguna untuk aplikasi yang memerlukan latency rendah dan tertinggi throughput ketika konsumsi daya tidak perhatian</string>
+    <string name="perf_profile_bias_power_summary">Mendukung penghematan daya. Batas maksimum power CPU dan mengoptimalkan untuk penghematan biaya latensi lebih tinggi daya</string>
+    <string name="perf_profile_bias_perf_summary">Mendukung kinerja. Mengurangi latensi dengan konsumsi daya yang sedikit meningkat</string>
+    <!-- LiveDisplay strings -->
+    <string name="live_display_auto">Otomatis</string>
+    <string name="live_display_auto_summary">Menyesuaikan suhu warna layar secara otomatis setelah matahari terbenam dan terbit</string>
+    <string name="live_display_off">Mati</string>
+    <string name="live_display_off_summary">Menonaktifkan semua pengaturan</string>
+    <string name="live_display_day">Siang</string>
+    <string name="live_display_day_summary">Hanya menggunakan setelan siang hari</string>
+    <string name="live_display_night">Malam</string>
+    <string name="live_display_night_summary">Hanya menggunakan setelan malam hari</string>
+    <string name="live_display_outdoor">Luar ruangan (matahari cerah)</string>
+    <string name="live_display_outdoor_summary">Hanya menggunakan setelan luar ruangan</string>
+    <string name="live_display_hint">LiveDisplay dapat membantu mengurangi kelelahan mata dan membantu Anda tidur di malam hari. Klik di sini untuk mencobanya!</string>
+    <string name="accessibility_quick_settings_live_display_off">LiveDisplay nonaktif.</string>
+    <string name="accessibility_quick_settings_live_display_auto">LiveDisplay: modus otomatis.</string>
+    <string name="accessibility_quick_settings_live_display_day">LiveDisplay: modus siang.</string>
+    <string name="accessibility_quick_settings_live_display_night">LiveDisplay: modus malam.</string>
+    <string name="accessibility_quick_settings_live_display_outdoor">LiveDisplay: modus luar ruangan.</string>
+    <string name="accessibility_quick_settings_live_display_changed_off">LiveDisplay dinonaktifkan.</string>
+    <string name="accessibility_quick_settings_live_display_changed_auto">LiveDisplay diubah menjadi modus otomatis.</string>
+    <string name="accessibility_quick_settings_live_display_changed_day">LiveDisplay diubah menjadi modus siang.</string>
+    <string name="accessibility_quick_settings_live_display_changed_night">LiveDisplay diubah menjadi modus malam.</string>
+    <string name="accessibility_quick_settings_live_display_changed_outdoor">LiveDisplay diubah menjadi modus luar ruangan.</string>
+    <!-- Performance manager permission title -->
+    <string name="permlab_perfAccess">akses pengelola kinerja</string>
+    <!-- Performance manager permission description -->
+    <string name="permdesc_perfAccessDesc">Izinkan aplikasi untuk mengakses layanan kinerja. Tidak dibutuhkan untuk aplikasi biasa.</string>
+    <!-- Weather Service strings -->
+    <string name="permlab_weather_read">baca cuaca</string>
+    <string name="permdesc_weather_read">Izinkan aplikasi untuk membaca konten dari penyedia cuaca.</string>
+    <string name="permlab_weather_write">perbarui penyedia cuaca</string>
+    <string name="permdesc_weather_write">Izinkan aplikasi untuk memperbarui konten dari penyedia cuaca.</string>
+    <string name="permlab_weather_bind">ikat sebagai layanan penyedia cuaca</string>
+    <string name="permdesc_weather_bind">Izinkan aplikasi untuk diidentifikasi sebagai layanan penyedia cuaca.</string>
+    <string name="permlab_weather_access_mgr">akses layanan cuaca</string>
+    <string name="permdesc_weather_access_mgr">Izinkan aplikasi untuk mengakses layanan cuaca dalam sistem. Tidak dibutuhkan untuk aplikasi biasa.</string>
+    <!-- DataUsageProvider write permission title -->
+    <string name="permlab_dataUsageWrite">ubah basis data penggunaan data</string>
+    <!-- DataUsageProvider write permission description -->
+    <string name="permdesc_dataUsageWrite">Izinkan aplikasi untuk memperbarui konten dari basis data penggunaan data.</string>
+    <!-- DataUsageProvider read permission title -->
+    <string name="permlab_dataUsageRead">baca basis data penggunaan data</string>
+    <!-- DataUsageProvider read permission description -->
+    <string name="permdesc_dataUsageRead">Izinkan aplikasi untuk membaca konten dari basis data penggunaan data.</string>
+    <!-- LiveDisplay manager permission -->
+    <string name="permlab_manageLiveDisplay">kelola pengaturan LiveDisplay</string>
+    <string name="permdesc_manageLiveDisplay">Izinkan aplikasi untuk mengonfigurasi pengaturan tampilan lanjutan.</string>
+    <!-- LineageAudioService - observe session changes permission -->
+    <string name="permlab_observe_audio_sessions">pantau perubahan sesi audio</string>
+    <string name="permdesc_observe_audio_sessions">Izinkan aplikasi untuk memantau pengaliran audio yang dibuat dan dihilangkan.</string>
+    <!-- Privacy Guard -->
+    <string name="privacy_guard_manager_title">Penjaga Privasi</string>
+    <!-- Permissions used by remote preferences -->
+    <string name="permlab_manageRemotePrefs">mengelola pengaturan jarak jauh</string>
+    <string name="permdesc_manageRemotePrefs">Memungkinkan aplikasi untuk mengelola pengaturan jarak jauh</string>
+    <!-- About device screen, build date -->
+    <string name="build_date">Tanggal pembuatan</string>
+    <!-- About device screen, LineageOS API Level -->
+    <string name="lineage_api_level">Tingkat API LineageOS</string>
+    <!-- About device screen, LineageOS updates -->
+    <string name="lineage_updates">Pembaruan LineageOS</string>
+    <!-- About device screen, LineageOS version -->
+    <string name="lineage_version">Versi LineageOS</string>
+    <!-- About device screen, vendor security patch -->
+    <string name="lineage_vendor_security_patch">Tingkat patch keamanan vendor</string>
+    <!-- General purpose use "unknown" string -->
+    <string name="unknown">Tidak dikenal</string>
+    <!-- Long-press back kill application -->
+    <string name="app_killed_message">Aplikasi dimatikan</string>
+    <!-- Status bar network traffic monitor strings -->
+    <string name="kilobitspersecond_short">kb/d</string>
+    <string name="megabitspersecond_short">Mb/d</string>
+    <string name="kilobytespersecond_short">kB/d</string>
+    <string name="megabytespersecond_short">MB/d</string>
+    <!-- Accent colors -->
+    <string name="accent_black">Karbon</string>
+    <string name="accent_blue">Blueberry</string>
+    <string name="accent_brown">Cokelat</string>
+    <string name="accent_cyan">Biru</string>
+    <string name="accent_green">Hutan</string>
+    <string name="accent_orange">Labu</string>
+    <string name="accent_pink">Ceri</string>
+    <string name="accent_purple">Lavender</string>
+    <string name="accent_red">Tomat</string>
+    <string name="accent_yellow">Pisang</string>
+    <!-- Trust interface -->
+    <!-- This string will be referenced from other apps when they're referring to the Trust interface.
          Trust is a feature name, it's not suggested to translate this unless there are conflicts due
          to a different meaning of the word "trust" in your language -->
-  <string name="trust_feature_name">Trust</string>
-  <string name="permlab_trustInterface">akses antarmuka Trust</string>
-  <string name="permdesc_trustInterface">Mengizinkan aplikasi menampilkan peringatan dan saran Trust</string>
-  <string name="trust_notification_channel">Lansiran Trust</string>
-  <string name="trust_notification_title_security">Trust \u2022 Keamanan sistem</string>
-  <string name="trust_notification_content_selinux">SELinux tidak wajib, keamanan Anda telah melemah</string>
-  <string name="trust_notification_title_root">Trust \u2022 Akses root</string>
-  <string name="trust_notification_content_root">Aplikasi menggunakan hak akses root sekarang</string>
-  <string name="trust_notification_title_onboarding">Mengetahui Trust</string>
-  <string name="trust_notification_content_onboarding">Kenali cara memastikan perangkat Anda aman</string>
-  <string name="trust_notification_action_manage">Kelola lansiran</string>
+    <string name="trust_feature_name">Trust</string>
+    <string name="permlab_trustInterface">akses antarmuka Trust</string>
+    <string name="permdesc_trustInterface">Mengizinkan aplikasi menampilkan peringatan dan saran Trust</string>
+    <string name="trust_notification_channel">Lansiran Trust</string>
+    <string name="trust_notification_title_security">Trust \u2022 Keamanan sistem</string>
+    <string name="trust_notification_content_selinux">SELinux tidak wajib, keamanan Anda telah melemah</string>
+    <string name="trust_notification_title_root">Trust \u2022 Akses root</string>
+    <string name="trust_notification_content_root">Aplikasi menggunakan hak akses root sekarang</string>
+    <string name="trust_notification_content_keys">Bentukan ini ditandatangani dengan kunci publik</string>
+    <string name="trust_notification_title_onboarding">Mengetahui Trust</string>
+    <string name="trust_notification_content_onboarding">Kenali cara memastikan perangkat Anda aman</string>
+    <string name="trust_notification_action_manage">Kelola lansiran</string>
 </resources>
