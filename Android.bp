@@ -1,5 +1,5 @@
 //
-// Copyright (C) 2018 The LineageOS Project
+// Copyright (C) 2018-2019 The LineageOS Project
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -61,6 +61,10 @@ lineage_sdk_LOCAL_JAVA_LIBRARIES = [
     "android-support-v14-preference",
 ]
 
+lineage_sdk_LOCAL_STATIC_JAVA_LIBRARIES = [
+    "vendor.lineage.touch-V1.0-java",
+]
+
 // READ ME: ########################################################
 //
 // When updating this list of aidl files, consider if that aidl is
@@ -101,7 +105,7 @@ java_library {
 java_library_static {
     name: "org.lineageos.platform.internal",
     required: ["services"],
-    static_libs: ["telephony-ext"],
+    static_libs: ["telephony-ext"] + lineage_sdk_LOCAL_STATIC_JAVA_LIBRARIES,
     libs: lineage_sdk_LOCAL_JAVA_LIBRARIES,
 
     srcs: [
