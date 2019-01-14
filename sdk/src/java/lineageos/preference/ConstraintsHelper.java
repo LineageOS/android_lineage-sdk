@@ -22,6 +22,7 @@ import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.content.res.TypedArray;
+import android.os.RemoteException;
 import android.os.SystemProperties;
 import android.os.UserHandle;
 import android.support.v7.preference.Preference;
@@ -35,13 +36,18 @@ import android.util.Log;
 import android.util.TypedValue;
 import android.widget.TextView;
 
-import java.util.List;
-import java.util.Objects;
-import java.util.Set;
-
 import lineageos.hardware.LineageHardwareManager;
 import lineageos.platform.R;
 
+import vendor.lineage.touch.V1_0.IGloveMode;
+import vendor.lineage.touch.V1_0.IKeyDisabler;
+import vendor.lineage.touch.V1_0.IStylusMode;
+import vendor.lineage.touch.V1_0.ITouchscreenGesture;
+
+import java.util.List;
+import java.util.NoSuchElementException;
+import java.util.Objects;
+import java.util.Set;
 
 /**
  * Helpers for checking if a device supports various features.
@@ -178,10 +184,48 @@ public class ConstraintsHelper {
                 if (negated) {
                     rFeature = rFeature.substring(1);
                 }
-                boolean available = rFeature.startsWith("lineagehardware:") ?
-                        LineageHardwareManager.getInstance(mContext).isSupported(
-                                rFeature.substring("lineagehardware:".length())) :
-                        hasSystemFeature(mContext, rFeature);
+                boolean available;
+                if (rFeature.startsWith("lineagehardware:")) {
+                    switch(rFeature.substring("lineagehardware:".length())) {
+                        case "FEATURE_HIGH_TOUCH_SENSITIVITY":
+                            try {
+                                IGloveMode gloveMode = IGloveMode.getService(true);
+                                available = true;
+                            } catch (NoSuchElementException | RemoteException e) {
+                                available = false;
+                            }
+                            break;
+                        case "FEATURE_KEY_DISABLE":
+                            try {
+                                IKeyDisabler keyDisabler = IKeyDisabler.getService(true);
+                                available = true;
+                            } catch (NoSuchElementException | RemoteException e) {
+                                available = false;
+                            }
+                            break;
+                        case "FEATURE_TOUCH_HOVERING":
+                            try {
+                                IStylusMode stylusMode = IStylusMode.getService(true);
+                                available = true;
+                            } catch (NoSuchElementException | RemoteException e) {
+                                available = false;
+                            }
+                            break;
+                        case "FEATURE_TOUCHSCREEN_GESTURES":
+                            try {
+                                ITouchscreenGesture gesture = ITouchscreenGesture.getService(true);
+                                available = true;
+                            } catch (NoSuchElementException | RemoteException e) {
+                                available = false;
+                            }
+                            break;
+                        default:
+                            available = LineageHardwareManager.getInstance(mContext).isSupported(
+                                    rFeature.substring("lineagehardware:".length()));
+                    }
+                } else {
+                    available = hasSystemFeature(mContext, rFeature);
+                }
                 if (available == negated) {
                     return false;
                 }
