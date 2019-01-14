@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0a1b7488_5b2b1f0d",
+        "filename": "sdk/src/java/lineageos/preference/ConstraintsHelper.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 224,
+      "author": {
+        "id": 4550
+      },
+      "writtenOn": "2019-01-14T22:39:12Z",
+      "side": 1,
+      "message": "Double space",
+      "range": {
+        "startLine": 224,
+        "startChar": 31,
+        "endLine": 224,
+        "endChar": 33
+      },
+      "revId": "5e1adf299182cfc23fab85b69d0e713399d3f0bb",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    }
+  ]
+}
