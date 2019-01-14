@@ -192,7 +192,7 @@ public class ConstraintsHelper {
             if (rProperty != null) {
                 boolean negated = isNegated(rProperty);
                 if (negated) {
-                    rProperty = rFeature.substring(1);
+                    rProperty = rProperty.substring(1);
                 }
                 String value = SystemProperties.get(rProperty);
                 boolean available = value != null && Boolean.parseBoolean(value);
