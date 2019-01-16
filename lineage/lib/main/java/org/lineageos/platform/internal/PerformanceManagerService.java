@@ -35,6 +35,7 @@ import android.os.PowerManagerInternal;
 import android.os.PowerSaveState;
 import android.os.Process;
 import android.os.RemoteException;
+import android.os.SystemProperties;
 import android.util.ArrayMap;
 import android.util.Slog;
 
@@ -42,6 +43,7 @@ import com.android.server.ServiceThread;
 
 import java.io.FileDescriptor;
 import java.io.PrintWriter;
+import java.lang.Thread;
 import java.util.ArrayDeque;
 import java.util.Date;
 import java.util.Locale;
@@ -76,6 +78,7 @@ public class PerformanceManagerService extends LineageSystemService {
 
     private final ServiceThread mHandlerThread;
     private final HintHandler mHandler;
+    private final Thread mWaitMpctlThread;
 
     // keep in sync with hardware/libhardware/include/hardware/power.h
     private final int POWER_HINT_SET_PROFILE  = 0x00000111;
@@ -92,6 +95,7 @@ public class PerformanceManagerService extends LineageSystemService {
 
     // Manipulate state variables under lock
     private boolean mLowPowerModeEnabled = false;
+    private boolean mMpctlReady          = true;
     private boolean mSystemReady         = false;
     private int     mUserProfile         = -1;
     private int     mActiveProfile       = -1;
@@ -118,6 +122,47 @@ public class PerformanceManagerService extends LineageSystemService {
         mHandlerThread.start();
 
         mHandler = new HintHandler(mHandlerThread.getLooper());
+
+        if (mContext.getResources().getBoolean(R.bool.config_waitForMpctlOnBoot)) {
+            mMpctlReady = false;
+            mWaitMpctlThread = new Thread(() -> {
+                int retries = 20;
+                while (retries-- > 0) {
+                    if (!SystemProperties.getBoolean("sys.post_boot.parsed", false) &&
+                            !SystemProperties.getBoolean("vendor.post_boot.parsed", false)) {
+                        continue;
+                    }
+
+                    if (SystemProperties.get("init.svc.perfd").equals("running") ||
+                            SystemProperties.get("init.svc.vendor.perfd").equals("running") ||
+                            SystemProperties.get("init.svc.perf-hal-1-0").equals("running") ||
+                            SystemProperties.get("init.svc.mpdecision").equals("running")) {
+                        break;
+                    }
+
+                    try {
+                        Thread.sleep(100);
+                    } catch (InterruptedException e) {
+                        Slog.w(TAG, "Interrupted:", e);
+                    }
+                }
+
+                // Give mp-ctl enough time to initialize
+                try {
+                    Thread.sleep(1000);
+                } catch (InterruptedException e) {
+                    Slog.w(TAG, "Interrupted:", e);
+                }
+
+                synchronized (mLock) {
+                    mMpctlReady = true;
+                    setPowerProfileLocked(mUserProfile, false);
+                }
+            });
+            mWaitMpctlThread.setDaemon(true);
+        } else {
+            mWaitMpctlThread = null;
+        }
     }
 
     private class PerformanceSettingsObserver extends ContentObserver {
@@ -206,6 +251,8 @@ public class PerformanceManagerService extends LineageSystemService {
                             new IntentFilter(Intent.ACTION_LOCALE_CHANGED));
                 }
             }
+        } else if (phase == PHASE_BOOT_COMPLETED && !mMpctlReady) {
+            mWaitMpctlThread.start();
         }
     }
 
@@ -227,7 +274,7 @@ public class PerformanceManagerService extends LineageSystemService {
             Slog.v(TAG, String.format(Locale.US,"setPowerProfileL(%d, fromUser=%b)", profile, fromUser));
         }
 
-        if (!mSystemReady) {
+        if (!mSystemReady || !mMpctlReady) {
             Slog.e(TAG, "System is not ready, dropping profile request");
             return false;
         }
