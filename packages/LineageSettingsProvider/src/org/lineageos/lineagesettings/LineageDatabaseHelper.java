@@ -51,7 +51,7 @@ public class LineageDatabaseHelper extends SQLiteOpenHelper{
     private static final boolean LOCAL_LOGV = false;
 
     private static final String DATABASE_NAME = "lineagesettings.db";
-    private static final int DATABASE_VERSION = 10;
+    private static final int DATABASE_VERSION = 11;
 
     private static final String DATABASE_NAME_OLD = "cmsettings.db";
 
@@ -363,6 +363,15 @@ public class LineageDatabaseHelper extends SQLiteOpenHelper{
                 }
             }
             upgradeVersion = 10;
+        }
+
+        if (upgradeVersion < 11) {
+            // Move force_show_navbar to system
+            moveSettingsToNewTable(db, LineageTableNames.TABLE_GLOBAL,
+                    LineageTableNames.TABLE_SYSTEM, new String[] {
+                    LineageSettings.System.FORCE_SHOW_NAVBAR
+            }, true);
+            upgradeVersion = 11;
         }
         // *** Remember to update DATABASE_VERSION above!
 
