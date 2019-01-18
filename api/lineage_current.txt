@@ -185,18 +185,10 @@ package lineageos.hardware {
     method public int getDisplayColorCalibrationDefault();
     method public int getDisplayColorCalibrationMax();
     method public int getDisplayColorCalibrationMin();
-    method public deprecated int[] getDisplayGammaCalibration(int);
-    method public deprecated int getDisplayGammaCalibrationMax();
-    method public deprecated int getDisplayGammaCalibrationMin();
     method public lineageos.hardware.DisplayMode[] getDisplayModes();
     method public static lineageos.hardware.LineageHardwareManager getInstance(android.content.Context);
-    method public java.lang.String getLtoDestination();
-    method public long getLtoDownloadInterval();
-    method public java.lang.String getLtoSource();
-    method public deprecated int getNumGammaControls();
     method public lineageos.hardware.HSIC getPictureAdjustment();
     method public java.util.List<android.util.Range<java.lang.Float>> getPictureAdjustmentRanges();
-    method public java.lang.String getSerialNumber();
     method public int getSupportedFeatures();
     method public lineageos.hardware.TouchscreenGesture[] getTouchscreenGestures();
     method public int getVibratorDefaultIntensity();
@@ -210,7 +202,6 @@ package lineageos.hardware {
     method public boolean set(int, boolean);
     method public boolean setColorBalance(int);
     method public boolean setDisplayColorCalibration(int[]);
-    method public deprecated boolean setDisplayGammaCalibration(int, int[]);
     method public boolean setDisplayMode(lineageos.hardware.DisplayMode, boolean);
     method public boolean setPictureAdjustment(lineageos.hardware.HSIC);
     method public boolean setTouchscreenGestureEnabled(lineageos.hardware.TouchscreenGesture, boolean);
@@ -220,14 +211,11 @@ package lineageos.hardware {
     field public static final int FEATURE_COLOR_BALANCE = 131072; // 0x20000
     field public static final int FEATURE_COLOR_ENHANCEMENT = 2; // 0x2
     field public static final int FEATURE_DISPLAY_COLOR_CALIBRATION = 4; // 0x4
-    field public static final int FEATURE_DISPLAY_GAMMA_CALIBRATION = 8; // 0x8
     field public static final int FEATURE_DISPLAY_MODES = 8192; // 0x2000
     field public static final int FEATURE_HIGH_TOUCH_SENSITIVITY = 16; // 0x10
     field public static final int FEATURE_KEY_DISABLE = 32; // 0x20
-    field public static final int FEATURE_LONG_TERM_ORBITS = 64; // 0x40
     field public static final int FEATURE_PICTURE_ADJUSTMENT = 262144; // 0x40000
     field public static final int FEATURE_READING_ENHANCEMENT = 16384; // 0x4000
-    field public static final int FEATURE_SERIAL_NUMBER = 128; // 0x80
     field public static final int FEATURE_SUNLIGHT_ENHANCEMENT = 256; // 0x100
     field public static final int FEATURE_TOUCHSCREEN_GESTURES = 524288; // 0x80000
     field public static final int FEATURE_TOUCH_HOVERING = 2048; // 0x800
