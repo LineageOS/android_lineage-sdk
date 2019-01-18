@@ -225,8 +225,6 @@ public class LineageHardwareService extends LineageSystemService {
             currentCalibration[LineageHardwareManager.COLOR_CALIBRATION_RED_INDEX] = rgb[0];
             currentCalibration[LineageHardwareManager.COLOR_CALIBRATION_GREEN_INDEX] = rgb[1];
             currentCalibration[LineageHardwareManager.COLOR_CALIBRATION_BLUE_INDEX] = rgb[2];
-            currentCalibration[LineageHardwareManager.COLOR_CALIBRATION_DEFAULT_INDEX] =
-                DisplayColorCalibration.getDefValue();
             currentCalibration[LineageHardwareManager.COLOR_CALIBRATION_MIN_INDEX] =
                 DisplayColorCalibration.getMinValue();
             currentCalibration[LineageHardwareManager.COLOR_CALIBRATION_MAX_INDEX] =
