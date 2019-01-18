@@ -49,10 +49,8 @@ import org.lineageos.hardware.DisplayGammaCalibration;
 import org.lineageos.hardware.DisplayModeControl;
 import org.lineageos.hardware.HighTouchSensitivity;
 import org.lineageos.hardware.KeyDisabler;
-import org.lineageos.hardware.LongTermOrbits;
 import org.lineageos.hardware.PictureAdjustment;
 import org.lineageos.hardware.ReadingEnhancement;
-import org.lineageos.hardware.SerialNumber;
 import org.lineageos.hardware.SunlightEnhancement;
 import org.lineageos.hardware.TouchscreenGestures;
 import org.lineageos.hardware.TouchscreenHovering;
@@ -85,12 +83,6 @@ public class LineageHardwareService extends LineageSystemService {
 
         public int[] getVibratorIntensity();
         public boolean setVibratorIntensity(int intensity);
-
-        public String getLtoSource();
-        public String getLtoDestination();
-        public long getLtoDownloadInterval();
-
-        public String getSerialNumber();
 
         public boolean requireAdaptiveBacklightForSunlightEnhancement();
         public boolean isSunlightEnhancementSelfManaged();
@@ -131,12 +123,8 @@ public class LineageHardwareService extends LineageSystemService {
                 mSupportedFeatures |= LineageHardwareManager.FEATURE_HIGH_TOUCH_SENSITIVITY;
             if (KeyDisabler.isSupported())
                 mSupportedFeatures |= LineageHardwareManager.FEATURE_KEY_DISABLE;
-            if (LongTermOrbits.isSupported())
-                mSupportedFeatures |= LineageHardwareManager.FEATURE_LONG_TERM_ORBITS;
             if (ReadingEnhancement.isSupported())
                 mSupportedFeatures |= LineageHardwareManager.FEATURE_READING_ENHANCEMENT;
-            if (SerialNumber.isSupported())
-                mSupportedFeatures |= LineageHardwareManager.FEATURE_SERIAL_NUMBER;
             if (SunlightEnhancement.isSupported())
                 mSupportedFeatures |= LineageHardwareManager.FEATURE_SUNLIGHT_ENHANCEMENT;
             if (VibratorHW.isSupported())
@@ -294,23 +282,6 @@ public class LineageHardwareService extends LineageSystemService {
 
         public boolean setVibratorIntensity(int intensity) {
             return VibratorHW.setIntensity(intensity);
-        }
-
-        public String getLtoSource() {
-            return LongTermOrbits.getSourceLocation();
-        }
-
-        public String getLtoDestination() {
-            File file = LongTermOrbits.getDestinationLocation();
-            return file.getAbsolutePath();
-        }
-
-        public long getLtoDownloadInterval() {
-            return LongTermOrbits.getDownloadInterval();
-        }
-
-        public String getSerialNumber() {
-            return SerialNumber.getSerialNumber();
         }
 
         public boolean requireAdaptiveBacklightForSunlightEnhancement() {
@@ -547,50 +518,6 @@ public class LineageHardwareService extends LineageSystemService {
                 return false;
             }
             return mLineageHwImpl.setVibratorIntensity(intensity);
-        }
-
-        @Override
-        public String getLtoSource() {
-            mContext.enforceCallingOrSelfPermission(
-                    lineageos.platform.Manifest.permission.HARDWARE_ABSTRACTION_ACCESS, null);
-            if (!isSupported(LineageHardwareManager.FEATURE_LONG_TERM_ORBITS)) {
-                Log.e(TAG, "Long term orbits is not supported");
-                return null;
-            }
-            return mLineageHwImpl.getLtoSource();
-        }
-
-        @Override
-        public String getLtoDestination() {
-            mContext.enforceCallingOrSelfPermission(
-                    lineageos.platform.Manifest.permission.HARDWARE_ABSTRACTION_ACCESS, null);
-            if (!isSupported(LineageHardwareManager.FEATURE_LONG_TERM_ORBITS)) {
-                Log.e(TAG, "Long term orbits is not supported");
-                return null;
-            }
-            return mLineageHwImpl.getLtoDestination();
-        }
-
-        @Override
-        public long getLtoDownloadInterval() {
-            mContext.enforceCallingOrSelfPermission(
-                    lineageos.platform.Manifest.permission.HARDWARE_ABSTRACTION_ACCESS, null);
-            if (!isSupported(LineageHardwareManager.FEATURE_LONG_TERM_ORBITS)) {
-                Log.e(TAG, "Long term orbits is not supported");
-                return 0;
-            }
-            return mLineageHwImpl.getLtoDownloadInterval();
-        }
-
-        @Override
-        public String getSerialNumber() {
-            mContext.enforceCallingOrSelfPermission(
-                    lineageos.platform.Manifest.permission.HARDWARE_ABSTRACTION_ACCESS, null);
-            if (!isSupported(LineageHardwareManager.FEATURE_SERIAL_NUMBER)) {
-                Log.e(TAG, "Serial number is not supported");
-                return null;
-            }
-            return mLineageHwImpl.getSerialNumber();
         }
 
         @Override
