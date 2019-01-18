@@ -1,6 +1,6 @@
 /*
  * Copyright (C) 2015-2016 The CyanogenMod Project
- *               2017-2018 The LineageOS Project
+ *               2017-2019 The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -22,7 +22,6 @@ import android.os.IBinder;
 import android.os.RemoteCallbackList;
 import android.os.RemoteException;
 import android.os.UserHandle;
-import android.util.ArrayMap;
 import android.util.Log;
 import android.util.Range;
 
@@ -63,10 +62,6 @@ public class LineageHardwareService extends LineageSystemService {
 
     private final Context mContext;
     private final LineageHardwareInterface mLineageHwImpl;
-
-    private final ArrayMap<String, String> mDisplayModeMappings =
-            new ArrayMap<String, String>();
-    private final boolean mFilterDisplayModes;
 
     private interface LineageHardwareInterface {
         public int getSupportedFeatures();
@@ -225,8 +220,6 @@ public class LineageHardwareService extends LineageSystemService {
             currentCalibration[LineageHardwareManager.COLOR_CALIBRATION_RED_INDEX] = rgb[0];
             currentCalibration[LineageHardwareManager.COLOR_CALIBRATION_GREEN_INDEX] = rgb[1];
             currentCalibration[LineageHardwareManager.COLOR_CALIBRATION_BLUE_INDEX] = rgb[2];
-            currentCalibration[LineageHardwareManager.COLOR_CALIBRATION_DEFAULT_INDEX] =
-                DisplayColorCalibration.getDefValue();
             currentCalibration[LineageHardwareManager.COLOR_CALIBRATION_MIN_INDEX] =
                 DisplayColorCalibration.getMinValue();
             currentCalibration[LineageHardwareManager.COLOR_CALIBRATION_MAX_INDEX] =
@@ -325,19 +318,6 @@ public class LineageHardwareService extends LineageSystemService {
         mContext = context;
         mLineageHwImpl = getImpl(context);
         publishBinderService(LineageContextConstants.LINEAGE_HARDWARE_SERVICE, mService);
-
-        final String[] mappings = mContext.getResources().getStringArray(
-                org.lineageos.platform.internal.R.array.config_displayModeMappings);
-        if (mappings != null && mappings.length > 0) {
-            for (String mapping : mappings) {
-                String[] split = mapping.split(":");
-                if (split.length == 2) {
-                    mDisplayModeMappings.put(split[0], split[1]);
-                }
-            }
-        }
-        mFilterDisplayModes = mContext.getResources().getBoolean(
-                org.lineageos.platform.internal.R.bool.config_filterDisplayModes);
     }
 
     @Override
@@ -357,19 +337,6 @@ public class LineageHardwareService extends LineageSystemService {
 
     @Override
     public void onStart() {
-    }
-
-    private DisplayMode remapDisplayMode(DisplayMode in) {
-        if (in == null) {
-            return null;
-        }
-        if (mDisplayModeMappings.containsKey(in.name)) {
-            return new DisplayMode(in.id, mDisplayModeMappings.get(in.name));
-        }
-        if (!mFilterDisplayModes) {
-            return in;
-        }
-        return null;
     }
 
     private final IBinder mService = new ILineageHardwareService.Stub() {
@@ -485,18 +452,7 @@ public class LineageHardwareService extends LineageSystemService {
                 Log.e(TAG, "Display modes are not supported");
                 return null;
             }
-            final DisplayMode[] modes = mLineageHwImpl.getDisplayModes();
-            if (modes == null) {
-                return null;
-            }
-            final ArrayList<DisplayMode> remapped = new ArrayList<DisplayMode>();
-            for (DisplayMode mode : modes) {
-                DisplayMode r = remapDisplayMode(mode);
-                if (r != null) {
-                    remapped.add(r);
-                }
-            }
-            return remapped.toArray(new DisplayMode[remapped.size()]);
+            return mLineageHwImpl.getDisplayModes();
         }
 
         @Override
@@ -507,7 +463,7 @@ public class LineageHardwareService extends LineageSystemService {
                 Log.e(TAG, "Display modes are not supported");
                 return null;
             }
-            return remapDisplayMode(mLineageHwImpl.getCurrentDisplayMode());
+            return mLineageHwImpl.getCurrentDisplayMode();
         }
 
         @Override
@@ -518,7 +474,7 @@ public class LineageHardwareService extends LineageSystemService {
                 Log.e(TAG, "Display modes are not supported");
                 return null;
             }
-            return remapDisplayMode(mLineageHwImpl.getDefaultDisplayMode());
+            return mLineageHwImpl.getDefaultDisplayMode();
         }
 
         @Override
