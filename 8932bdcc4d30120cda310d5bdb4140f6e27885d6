@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "506b0da8_0c4c3253",
+        "filename": "sdk/src/java/lineageos/hardware/LineageHardwareManager.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 11801
+      },
+      "writtenOn": "2019-01-18T17:21:43Z",
+      "side": 1,
+      "message": "Don\u0027t care, was bothering me",
+      "parentUuid": "2d195640_667d6366",
+      "range": {
+        "startLine": 66,
+        "startChar": 3,
+        "endLine": 68,
+        "endChar": 14
+      },
+      "revId": "8932bdcc4d30120cda310d5bdb4140f6e27885d6",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "8e4cf9f8_ab0c85a3",
         "filename": "sdk/src/java/lineageos/hardware/LineageHardwareManager.java",
         "patchSetId": 2
@@ -48,6 +72,30 @@
     },
     {
       "key": {
+        "uuid": "5f007984_6f96f2bc",
+        "filename": "sdk/src/java/lineageos/hardware/LineageHardwareManager.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 169,
+      "author": {
+        "id": 11801
+      },
+      "writtenOn": "2019-01-18T17:21:43Z",
+      "side": 1,
+      "message": "Don\u0027t care, was bothering me (and static stuff should always come before normal instance variables)",
+      "parentUuid": "8e4cf9f8_ab0c85a3",
+      "range": {
+        "startLine": 166,
+        "startChar": 4,
+        "endLine": 169,
+        "endChar": 29
+      },
+      "revId": "8932bdcc4d30120cda310d5bdb4140f6e27885d6",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "08f93472_c1f07b89",
         "filename": "sdk/src/java/lineageos/hardware/LineageHardwareManager.java",
         "patchSetId": 2
@@ -59,6 +107,30 @@
       "writtenOn": "2019-01-18T17:14:41Z",
       "side": 1,
       "message": "line length",
+      "range": {
+        "startLine": 216,
+        "startChar": 89,
+        "endLine": 216,
+        "endChar": 105
+      },
+      "revId": "8932bdcc4d30120cda310d5bdb4140f6e27885d6",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "1a2169fa_f04550e8",
+        "filename": "sdk/src/java/lineageos/hardware/LineageHardwareManager.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 216,
+      "author": {
+        "id": 11801
+      },
+      "writtenOn": "2019-01-18T17:21:43Z",
+      "side": 1,
+      "message": "Don\u0027t care.",
+      "parentUuid": "08f93472_c1f07b89",
       "range": {
         "startLine": 216,
         "startChar": 89,
