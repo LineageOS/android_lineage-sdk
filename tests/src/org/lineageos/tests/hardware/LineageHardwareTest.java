@@ -38,32 +38,24 @@ public class LineageHardwareTest extends TestActivity {
             LineageHardwareManager.FEATURE_ADAPTIVE_BACKLIGHT,
             LineageHardwareManager.FEATURE_COLOR_ENHANCEMENT,
             LineageHardwareManager.FEATURE_DISPLAY_COLOR_CALIBRATION,
-            LineageHardwareManager.FEATURE_DISPLAY_GAMMA_CALIBRATION,
             LineageHardwareManager.FEATURE_HIGH_TOUCH_SENSITIVITY,
             LineageHardwareManager.FEATURE_KEY_DISABLE,
-            LineageHardwareManager.FEATURE_LONG_TERM_ORBITS,
-            LineageHardwareManager.FEATURE_SERIAL_NUMBER,
             LineageHardwareManager.FEATURE_SUNLIGHT_ENHANCEMENT,
             LineageHardwareManager.FEATURE_TOUCH_HOVERING,
             LineageHardwareManager.FEATURE_AUTO_CONTRAST,
             LineageHardwareManager.FEATURE_DISPLAY_MODES,
-            LineageHardwareManager.FEATURE_PERSISTENT_STORAGE
     );
 
     private static final List<String> FEATURE_STRINGS = Arrays.asList(
             "FEATURE_ADAPTIVE_BACKLIGHT",
             "FEATURE_COLOR_ENHANCEMENT",
             "FEATURE_DISPLAY_COLOR_CALIBRATION",
-            "FEATURE_DISPLAY_GAMMA_CALIBRATION",
             "FEATURE_HIGH_TOUCH_SENSITIVITY",
             "FEATURE_KEY_DISABLE",
-            "FEATURE_LONG_TERM_ORBITS",
-            "FEATURE_SERIAL_NUMBER",
             "FEATURE_SUNLIGHT_ENHANCEMENT",
             "FEATURE_TOUCH_HOVERING",
             "FEATURE_AUTO_CONTRAST",
             "FEATURE_DISPLAY_MODES",
-            "FEATURE_PERSISTENT_STORAGE"
     );
 
     private static final List<Integer> BOOLEAN_FEATURES = Arrays.asList(
@@ -112,51 +104,11 @@ public class LineageHardwareTest extends TestActivity {
         }
     }
 
-    private boolean ltoSupported() {
-        if (mHardwareManager.isSupported(LineageHardwareManager.FEATURE_LONG_TERM_ORBITS)) {
-            return true;
-        } else {
-            Toast.makeText(LineageHardwareTest.this, "Long Term Orbits not supported",
-                    Toast.LENGTH_SHORT).show();
-            return false;
-        }
-    }
-
-    private boolean serialSupported() {
-        if (mHardwareManager.isSupported(LineageHardwareManager.FEATURE_SERIAL_NUMBER)) {
-            return true;
-        } else {
-            Toast.makeText(LineageHardwareTest.this, "Serial number not supported",
-                    Toast.LENGTH_SHORT).show();
-            return false;
-        }
-    }
-
-    private boolean uniqueDeviceIdSupported() {
-        if (mHardwareManager.isSupported(LineageHardwareManager.FEATURE_UNIQUE_DEVICE_ID)) {
-            return true;
-        } else {
-            Toast.makeText(LineageHardwareTest.this, "Unique device ID not supported",
-                    Toast.LENGTH_SHORT).show();
-            return false;
-        }
-    }
-
     private boolean displayModesSupported() {
         if (mHardwareManager.isSupported(LineageHardwareManager.FEATURE_DISPLAY_MODES)) {
             return true;
         } else {
             Toast.makeText(LineageHardwareTest.this, "Display modes not supported",
-                    Toast.LENGTH_SHORT).show();
-            return false;
-        }
-    }
-
-    private boolean persistentStorageSupported() {
-        if (mHardwareManager.isSupported(LineageHardwareManager.FEATURE_PERSISTENT_STORAGE)) {
-            return true;
-        } else {
-            Toast.makeText(LineageHardwareTest.this, "Persistent storage not supported",
                     Toast.LENGTH_SHORT).show();
             return false;
         }
@@ -298,56 +250,6 @@ public class LineageHardwareTest extends TestActivity {
                 protected void run() {
                     if (displayColorCalibrationSupported()) {
                         mHardwareManager.setDisplayColorCalibration(new int[] {0,0,0});
-                    }
-                }
-            },
-            new Test("Test Get Long Term Orbits Source") {
-                @Override
-                protected void run() {
-                    if (ltoSupported()) {
-                        Toast.makeText(LineageHardwareTest.this, "Long Term Orbit Source " +
-                                        mHardwareManager.getLtoSource(),
-                                Toast.LENGTH_SHORT).show();
-                    }
-                }
-            },
-            new Test("Test Get Long Term Orbits Destination") {
-                @Override
-                protected void run() {
-                    if (ltoSupported()) {
-                        Toast.makeText(LineageHardwareTest.this, "Long Term Orbit Destination " +
-                                        mHardwareManager.getLtoDestination(),
-                                Toast.LENGTH_SHORT).show();
-                    }
-                }
-            },
-            new Test("Test Get Long Term Orbits Interval") {
-                @Override
-                protected void run() {
-                    if (ltoSupported()) {
-                        Toast.makeText(LineageHardwareTest.this, "Long Term Orbit Download Interval " +
-                                        mHardwareManager.getLtoDownloadInterval(),
-                                Toast.LENGTH_SHORT).show();
-                    }
-                }
-            },
-            new Test("Test Get Serial Number") {
-                @Override
-                protected void run() {
-                    if (serialSupported()) {
-                        Toast.makeText(LineageHardwareTest.this, "Serial number " +
-                                        mHardwareManager.getSerialNumber(),
-                                Toast.LENGTH_SHORT).show();
-                    }
-                }
-            },
-            new Test("Test Get Unique Device ID") {
-                @Override
-                protected void run() {
-                    if (uniqueDeviceIdSupported()) {
-                        Toast.makeText(LineageHardwareTest.this, "Unique Device ID " +
-                                        mHardwareManager.getUniqueDeviceId(),
-                                Toast.LENGTH_SHORT).show();
                     }
                 }
             },

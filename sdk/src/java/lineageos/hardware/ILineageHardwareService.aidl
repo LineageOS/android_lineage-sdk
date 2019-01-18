@@ -38,12 +38,6 @@ interface ILineageHardwareService {
     int[] getVibratorIntensity();
     boolean setVibratorIntensity(int intensity);
 
-    String getLtoSource();
-    String getLtoDestination();
-    long getLtoDownloadInterval();
-
-    String getSerialNumber();
-
     boolean requireAdaptiveBacklightForSunlightEnhancement();
 
     DisplayMode[] getDisplayModes();
