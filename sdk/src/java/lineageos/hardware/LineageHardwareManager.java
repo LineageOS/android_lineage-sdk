@@ -17,6 +17,7 @@
 package lineageos.hardware;
 
 import android.content.Context;
+import android.hidl.base.1.0.IBase;
 import android.os.IBinder;
 import android.os.RemoteException;
 import android.os.ServiceManager;
@@ -28,12 +29,28 @@ import com.android.internal.annotations.VisibleForTesting;
 import lineageos.app.LineageContextConstants;
 import lineageos.hardware.HSIC;
 
+import vendor.lineage.livedisplay.V2_0.IAdaptiveBacklight;
+import vendor.lineage.livedisplay.V2_0.IAutoContrast;
+import vendor.lineage.livedisplay.V2_0.IColorBalance;
+import vendor.lineage.livedisplay.V2_0.IColorEnhancement;
+import vendor.lineage.livedisplay.V2_0.IDisplayColorCalibration;
+import vendor.lineage.livedisplay.V2_0.IDisplayModes;
+import vendor.lineage.livedisplay.V2_0.IPictureAdjustment;
+import vendor.lineage.livedisplay.V2_0.IReadingEnhancement;
+import vendor.lineage.livedisplay.V2_0.ISunlightEnhancement;
+import vendor.lineage.touch.V1_0.IGloveMode;
+import vendor.lineage.touch.V1_0.IKeyDisabler;
+import vendor.lineage.touch.V1_0.IStylusMode;
+import vendor.lineage.touch.V1_0.ITouchscreenGesture;
+
 import java.io.UnsupportedEncodingException;
 import java.lang.IllegalArgumentException;
 import java.lang.reflect.Field;
 import java.nio.ByteBuffer;
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
+import java.util.NoSuchElementException;
 
 /**
  * Manages access to LineageOS hardware extensions
@@ -46,14 +63,9 @@ import java.util.List;
 public final class LineageHardwareManager {
     private static final String TAG = "LineageHardwareManager";
 
-    private static ILineageHardwareService sService;
-
-    private Context mContext;
-
-    /* The VisibleForTesting annotation is to ensure Proguard doesn't remove these
-     * fields, as they might be used via reflection. When the @Keep annotation in
-     * the support library is properly handled in the platform, we should change this.
-     */
+    // The VisibleForTesting annotation is to ensure Proguard doesn't remove these
+    // fields, as they might be used via reflection. When the @Keep annotation in
+    // the support library is properly handled in the platform, we should change this.
 
     /**
      * Adaptive backlight support (this refers to technologies like NVIDIA SmartDimmer,
@@ -151,7 +163,13 @@ public final class LineageHardwareManager {
         FEATURE_READING_ENHANCEMENT
     );
 
+    private static ILineageHardwareService sService;
     private static LineageHardwareManager sLineageHardwareManagerInstance;
+
+    private Context mContext;
+
+    // HIDL hals
+    private HashMap<int, IBase> mHidlMap;
 
     /**
      * @hide to prevent subclassing from outside of the framework
@@ -171,6 +189,74 @@ public final class LineageHardwareManager {
                     " crashed, was not started, or the interface has been called to early in" +
                     " SystemServer init");
         }
+
+        mHidlMap = new HashMap<int, IBase>();
+
+        try {
+            IAdaptiveBacklight adaptiveBacklight = IAdaptiveBacklight.getService(true);
+            mHidlMap.put(FEATURE_ADAPTIVE_BACKLIGHT, adaptiveBacklight);
+        } catch (NoSuchElementException | RemoteException e) {
+        }
+        try {
+            IAutoContrast autoContrast = IAutoContrast.getService(true);
+            mHidlMap.put(FEATURE_AUTO_CONTRAST, autoContrast);
+        } catch (NoSuchElementException | RemoteException e) {
+        }
+        try {
+            IColorBalance colorBalance = IColorBalance.getService(true);
+            mHidlMap.put(FEATURE_COLOR_BALANCE, colorBalance);
+        } catch (NoSuchElementException | RemoteException e) {
+        }
+        try {
+            IColorEnhancement colorEnhancement = IColorEnhancement.getService(true);
+            mHidlMap.put(FEATURE_COLOR_ENHANCEMENT, colorEnhancement);
+        } catch (NoSuchElementException | RemoteException e) {
+        }
+        try {
+            IDisplayColorCalibration displayColorCalibration = IDisplayColorCalibration.getService(true);
+            mHidlMap.put(FEATURE_DISPLAY_COLOR_CALIBRATION, displayColorCalibration);
+        } catch (NoSuchElementException | RemoteException e) {
+        }
+        try {
+            IDisplayModes displayModes = IDisplayModes.getService(true);
+            mHidlMap.put(FEATURE_DISPLAY_MODES, displayModes);
+        } catch (NoSuchElementException | RemoteException e) {
+        }
+        try {
+            IPictureAdjustment pictureAdjustment = IPictureAdjustment.getService(true);
+            mHidlMap.put(FEATURE_DISPLAY_MODES, pictureAdjustment);
+        } catch (NoSuchElementException | RemoteException e) {
+        }
+        try {
+            IReadingEnhancement readingEnhancement = IReadingEnhancement.getService(true);
+            mHidlMap.put(FEATURE_READING_ENHANCEMENT, readingEnhancement);
+        } catch (NoSuchElementException | RemoteException e) {
+        }
+        try {
+            ISunlightEnhancement sunlightEnhancement = ISunlightEnhancement.getService(true);
+            mHidlMap.put(FEATURE_SUNLIGHT_ENHANCEMENT, sunlightEnhancement);
+        } catch (NoSuchElementException | RemoteException e) {
+        }
+        try {
+            IGloveMode gloveMode = IGloveMode.getService(true);
+            mHidlMap.put(FEATURE_HIGH_TOUCH_SENSITIVITY, gloveMode);
+        } catch (NoSuchElementException | RemoteException e) {
+        }
+        try {
+            IKeyDisabler keyDisabler = IKeyDisabler.getService(true);
+            mHidlMap.put(FEATURE_KEY_DISABLE, keyDisabler);
+        } catch (NoSuchElementException | RemoteException e) {
+        }
+        try {
+            IStylusMode stylusMode = IStylusMode.getService(true);
+            mHidlMap.put(FEATURE_TOUCH_HOVERING, stylusMode);
+        } catch (NoSuchElementException | RemoteException e) {
+        }
+        try {
+            ITouchscreenGesture touchscreenGesture = ITouchscreenGesture.getService(true);
+            mHidlMap.put(FEATURE_TOUCHSCREEN_GESTURES, touchscreenGesture);
+        } catch (NoSuchElementException | RemoteException e) {
+        }
     }
 
     /**
@@ -179,6 +265,8 @@ public final class LineageHardwareManager {
      * @return {@link LineageHardwareManager}
      */
     public static LineageHardwareManager getInstance(Context context) {
+        context.enforceCallingOrSelfPermission(
+                lineageos.platform.Manifest.permission.HARDWARE_ABSTRACTION_ACCESS, null);
         if (sLineageHardwareManagerInstance == null) {
             sLineageHardwareManagerInstance = new LineageHardwareManager(context);
         }
@@ -200,6 +288,7 @@ public final class LineageHardwareManager {
 
     /**
      * @return the supported features bitmask
+     * @hide
      */
     public int getSupportedFeatures() {
         try {
@@ -219,6 +308,14 @@ public final class LineageHardwareManager {
      * @return true if the feature is supported, false otherwise.
      */
     public boolean isSupported(int feature) {
+        return isSupportedHidl(feature) || isSupportedLegacy(feature);
+    }
+
+    private boolean isSupportedHidl(int feature) {
+        return mHidlMap.containsKey(feature);
+    }
+
+    private boolean isSupportedLegacy(int feature) {
         return feature == (getSupportedFeatures() & feature);
     }
 
@@ -256,6 +353,68 @@ public final class LineageHardwareManager {
             throw new IllegalArgumentException(feature + " is not a boolean");
         }
 
+        if (isSupportedHidl(feature)) {
+            IBase obj = mHidlMap.get(feature);
+            switch (feature) {
+                case FEATURE_ADAPTIVE_BACKLIGHT:
+                    IAdaptiveBacklight adaptiveBacklight = (IAdaptiveBacklight) obj;
+                    try {
+                        return adaptiveBacklight.isEnabled();
+                    } catch (RemoteException e) {
+                        return false;
+                    }
+                case FEATURE_AUTO_CONTRAST:
+                    IAutoContrast autoContrast = (IAutoContrast) obj;
+                    try {
+                        return autoContrast.isEnabled();
+                    } catch (RemoteException e) {
+                        return false;
+                    }
+               case FEATURE_COLOR_ENHANCEMENT:
+                    IColorEnhancement colorEnhancement = (IColorEnhancement) obj;
+                    try {
+                        return colorEnhancement.isEnabled();
+                    } catch (RemoteException e) {
+                        return false;
+                    }
+               case FEATURE_HIGH_TOUCH_SENSITIVITY:
+                    IGloveMode gloveMode = (IGloveMode) obj;
+                    try {
+                        return gloveMode.isEnabled();
+                    } catch (RemoteException e) {
+                        return false;
+                    }
+               case FEATURE_KEY_DISABLE:
+                    IKeyDisabler keyDisabler = (IKeyDisabler) obj;
+                    try {
+                        return keyDisabler.isEnabled();
+                    } catch (RemoteException e) {
+                        return false;
+                    }
+               case FEATURE_SUNLIGHT_ENHANCEMENT:
+                    ISunlightEnhancement sunlightEnhancement = (ISunlightEnhancement) obj;
+                    try {
+                        return sunlightEnhancement.isEnabled();
+                    } catch (RemoteException e) {
+                        return false;
+                    }
+               case FEATURE_TOUCH_HOVERING:
+                    IStylusMode stylusMode = (IStylusMode) obj;
+                    try {
+                        return stylusMode.isEnabled();
+                    } catch (RemoteException e) {
+                        retun false;
+                    }
+               case FEATURE_READING_ENHANCEMENT:
+                    IReadingEnhancement readingEnhancement = (IReadingEnhancement) obj;
+                    try {
+                        return readingEnhancement.isEnabled();
+                    } catch (RemoteException e) {
+                        return false;
+                    }
+            }
+        }
+
         try {
             if (checkService()) {
                 return sService.get(feature);
@@ -278,6 +437,68 @@ public final class LineageHardwareManager {
     public boolean set(int feature, boolean enable) {
         if (!BOOLEAN_FEATURES.contains(feature)) {
             throw new IllegalArgumentException(feature + " is not a boolean");
+        }
+
+        if (isSupportedHidl(feature)) {
+            IBase obj = mHidlMap.get(feature);
+            switch (feature) {
+                case FEATURE_ADAPTIVE_BACKLIGHT:
+                    IAdaptiveBacklight adaptiveBacklight = (IAdaptiveBacklight) obj;
+                    try {
+                        return adaptiveBacklight.setEnabled(enable);
+                    } catch (RemoteException e) {
+                        return false;
+                    }
+                case FEATURE_AUTO_CONTRAST:
+                    IAutoContrast autoContrast = (IAutoContrast) obj;
+                    try {
+                        return autoContrast.setEnabled(enable);
+                    } catch (RemoteException e) {
+                        return false;
+                    }
+               case FEATURE_COLOR_ENHANCEMENT:
+                    IColorEnhancement colorEnhancement = (IColorEnhancement) obj;
+                    try {
+                        return colorEnhancement.setEnabled(enable);
+                    } catch (RemoteException e) {
+                        return false;
+                    }
+               case FEATURE_HIGH_TOUCH_SENSITIVITY:
+                    IGloveMode gloveMode = (IGloveMode) obj;
+                    try {
+                        return gloveMode.setEnabled(enable);
+                    } catch (RemoteException e) {
+                        return false;
+                    }
+               case FEATURE_KEY_DISABLE:
+                    IKeyDisabler keyDisabler = (IKeyDisabler) obj;
+                    try {
+                        return keyDisabler.setEnabled(enable);
+                    } catch (RemoteException e) {
+                        return false;
+                    }
+               case FEATURE_SUNLIGHT_ENHANCEMENT:
+                    ISunlightEnhancement sunlightEnhancement = (ISunlightEnhancement) obj;
+                    try {
+                        return sunlightEnhancement.setEnabled(enable);
+                    } catch (RemoteException e) {
+                        return false;
+                    }
+               case FEATURE_TOUCH_HOVERING:
+                    IStylusMode stylusMode = (IStylusMode) obj;
+                    try {
+                        return stylusMode.setEnabled(enable);
+                    } catch (RemoteException e) {
+                        retun false;
+                    }
+               case FEATURE_READING_ENHANCEMENT:
+                    IReadingEnhancement readingEnhancement = (IReadingEnhancement) obj;
+                    try {
+                        return readingEnhancement.setEnabled(enable);
+                    } catch (RemoteException e) {
+                        return false;
+                    }
+            }
         }
 
         try {
