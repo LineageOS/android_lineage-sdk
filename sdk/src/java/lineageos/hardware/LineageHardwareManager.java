@@ -75,12 +75,6 @@ public final class LineageHardwareManager {
     public static final int FEATURE_DISPLAY_COLOR_CALIBRATION = 0x4;
 
     /**
-     * Display gamma calibration
-     */
-    @VisibleForTesting
-    public static final int FEATURE_DISPLAY_GAMMA_CALIBRATION = 0x8;
-
-    /**
      * High touch sensitivity for touch panels
      */
     @VisibleForTesting
@@ -91,18 +85,6 @@ public final class LineageHardwareManager {
      */
     @VisibleForTesting
     public static final int FEATURE_KEY_DISABLE = 0x20;
-
-    /**
-     * Long term orbits (LTO)
-     */
-    @VisibleForTesting
-    public static final int FEATURE_LONG_TERM_ORBITS = 0x40;
-
-    /**
-     * Serial number other than ro.serialno
-     */
-    @VisibleForTesting
-    public static final int FEATURE_SERIAL_NUMBER = 0x80;
 
     /**
      * Increased display readability in bright light
@@ -483,164 +465,6 @@ public final class LineageHardwareManager {
         } catch (RemoteException e) {
         }
         return false;
-    }
-
-    /**
-     * {@hide}
-     */
-    public static final int GAMMA_CALIBRATION_RED_INDEX = 0;
-    /**
-     * {@hide}
-     */
-    public static final int GAMMA_CALIBRATION_GREEN_INDEX = 1;
-    /**
-     * {@hide}
-     */
-    public static final int GAMMA_CALIBRATION_BLUE_INDEX = 2;
-    /**
-     * {@hide}
-     */
-    public static final int GAMMA_CALIBRATION_MIN_INDEX = 3;
-    /**
-     * {@hide}
-     */
-    public static final int GAMMA_CALIBRATION_MAX_INDEX = 4;
-
-    private int[] getDisplayGammaCalibrationArray(int idx) {
-        try {
-            if (checkService()) {
-                return sService.getDisplayGammaCalibration(idx);
-            }
-        } catch (RemoteException e) {
-        }
-        return null;
-    }
-
-    /**
-     * @return the number of RGB controls the device supports
-     *
-     * @deprecated
-     */
-    @Deprecated
-    public int getNumGammaControls() {
-        try {
-            if (checkService()) {
-                return sService.getNumGammaControls();
-            }
-        } catch (RemoteException e) {
-        }
-        return 0;
-    }
-
-    /**
-     * @param idx the control to query
-     *
-     * @return the current RGB gamma calibration for the given control
-     *
-     * @deprecated
-     */
-    @Deprecated
-    public int[] getDisplayGammaCalibration(int idx) {
-        int[] arr = getDisplayGammaCalibrationArray(idx);
-        if (arr == null || arr.length < 3) {
-            return null;
-        }
-        return Arrays.copyOf(arr, 3);
-    }
-
-    /**
-     * @return the minimum value for all colors
-     *
-     * @deprecated
-     */
-    @Deprecated
-    public int getDisplayGammaCalibrationMin() {
-        return getArrayValue(getDisplayGammaCalibrationArray(0), GAMMA_CALIBRATION_MIN_INDEX, 0);
-    }
-
-    /**
-     * @return the maximum value for all colors
-     *
-     * @deprecated
-     */
-    @Deprecated
-    public int getDisplayGammaCalibrationMax() {
-        return getArrayValue(getDisplayGammaCalibrationArray(0), GAMMA_CALIBRATION_MAX_INDEX, 0);
-    }
-
-    /**
-     * Set the display gamma calibration for a specific control
-     *
-     * @param idx the control to set
-     * @param rgb RGB color calibration.  Each value must be between
-     * {@link #getDisplayGammaCalibrationMin()} and {@link #getDisplayGammaCalibrationMax()},
-     * inclusive.
-     *
-     * @return true on success, false otherwise.
-     *
-     * @deprecated
-     */
-    @Deprecated
-    public boolean setDisplayGammaCalibration(int idx, int[] rgb) {
-        try {
-            if (checkService()) {
-                return sService.setDisplayGammaCalibration(idx, rgb);
-            }
-        } catch (RemoteException e) {
-        }
-        return false;
-    }
-
-    /**
-     * @return the source location of LTO data, or null on failure
-     */
-    public String getLtoSource() {
-        try {
-            if (checkService()) {
-                return sService.getLtoSource();
-            }
-        } catch (RemoteException e) {
-        }
-        return null;
-    }
-
-    /**
-     * @return the destination location of LTO data, or null on failure
-     */
-    public String getLtoDestination() {
-        try {
-            if (checkService()) {
-                return sService.getLtoDestination();
-            }
-        } catch (RemoteException e) {
-        }
-        return null;
-    }
-
-    /**
-     * @return the interval, in milliseconds, to trigger LTO data download
-     */
-    public long getLtoDownloadInterval() {
-        try {
-            if (checkService()) {
-                return sService.getLtoDownloadInterval();
-            }
-        } catch (RemoteException e) {
-        }
-        return 0;
-    }
-
-    /**
-     * @return the serial number to display instead of ro.serialno, or null on failure
-     */
-    public String getSerialNumber() {
-        try {
-            if (checkService()) {
-                return sService.getSerialNumber();
-            }
-        } catch (RemoteException e) {
-        }
-        return null;
     }
 
     /**
