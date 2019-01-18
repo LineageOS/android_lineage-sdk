@@ -75,12 +75,6 @@ public final class LineageHardwareManager {
     public static final int FEATURE_DISPLAY_COLOR_CALIBRATION = 0x4;
 
     /**
-     * Display gamma calibration
-     */
-    @VisibleForTesting
-    public static final int FEATURE_DISPLAY_GAMMA_CALIBRATION = 0x8;
-
-    /**
      * High touch sensitivity for touch panels
      */
     @VisibleForTesting
@@ -91,18 +85,6 @@ public final class LineageHardwareManager {
      */
     @VisibleForTesting
     public static final int FEATURE_KEY_DISABLE = 0x20;
-
-    /**
-     * Long term orbits (LTO)
-     */
-    @VisibleForTesting
-    public static final int FEATURE_LONG_TERM_ORBITS = 0x40;
-
-    /**
-     * Serial number other than ro.serialno
-     */
-    @VisibleForTesting
-    public static final int FEATURE_SERIAL_NUMBER = 0x80;
 
     /**
      * Increased display readability in bright light
@@ -589,58 +571,6 @@ public final class LineageHardwareManager {
         } catch (RemoteException e) {
         }
         return false;
-    }
-
-    /**
-     * @return the source location of LTO data, or null on failure
-     */
-    public String getLtoSource() {
-        try {
-            if (checkService()) {
-                return sService.getLtoSource();
-            }
-        } catch (RemoteException e) {
-        }
-        return null;
-    }
-
-    /**
-     * @return the destination location of LTO data, or null on failure
-     */
-    public String getLtoDestination() {
-        try {
-            if (checkService()) {
-                return sService.getLtoDestination();
-            }
-        } catch (RemoteException e) {
-        }
-        return null;
-    }
-
-    /**
-     * @return the interval, in milliseconds, to trigger LTO data download
-     */
-    public long getLtoDownloadInterval() {
-        try {
-            if (checkService()) {
-                return sService.getLtoDownloadInterval();
-            }
-        } catch (RemoteException e) {
-        }
-        return 0;
-    }
-
-    /**
-     * @return the serial number to display instead of ro.serialno, or null on failure
-     */
-    public String getSerialNumber() {
-        try {
-            if (checkService()) {
-                return sService.getSerialNumber();
-            }
-        } catch (RemoteException e) {
-        }
-        return null;
     }
 
     /**
