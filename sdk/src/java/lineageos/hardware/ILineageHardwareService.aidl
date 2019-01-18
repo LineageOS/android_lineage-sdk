@@ -31,18 +31,8 @@ interface ILineageHardwareService {
     int[] getDisplayColorCalibration();
     boolean setDisplayColorCalibration(in int[] rgb);
 
-    int getNumGammaControls();
-    int[] getDisplayGammaCalibration(int idx);
-    boolean setDisplayGammaCalibration(int idx, in int[] rgb);
-
     int[] getVibratorIntensity();
     boolean setVibratorIntensity(int intensity);
-
-    String getLtoSource();
-    String getLtoDestination();
-    long getLtoDownloadInterval();
-
-    String getSerialNumber();
 
     boolean requireAdaptiveBacklightForSunlightEnhancement();
 
