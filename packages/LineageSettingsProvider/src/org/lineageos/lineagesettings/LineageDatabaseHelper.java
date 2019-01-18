@@ -51,7 +51,7 @@ public class LineageDatabaseHelper extends SQLiteOpenHelper{
     private static final boolean LOCAL_LOGV = false;
 
     private static final String DATABASE_NAME = "lineagesettings.db";
-    private static final int DATABASE_VERSION = 10;
+    private static final int DATABASE_VERSION = 11;
 
     private static final String DATABASE_NAME_OLD = "cmsettings.db";
 
@@ -361,6 +361,32 @@ public class LineageDatabaseHelper extends SQLiteOpenHelper{
                 }
             }
             upgradeVersion = 10;
+        }
+
+        if (upgradeVersion < 11) {
+            // Move force_show_navbar to system
+            if (mUserHandle == UserHandle.USER_OWNER) {
+                db.beginTransaction();
+                SQLiteStatement stmt = null;
+                try {
+                    stmt = db.compileStatement("SELECT value FROM system WHERE name=?");
+                    stmt.bindString(1, LineageSettings.Global.DEV_FORCE_SHOW_NAVBAR);
+                    long value = stmt.simpleQueryForLong();
+
+                    stmt = db.compileStatement("UPDATE system SET value=? WHERE name=?");
+                    stmt.bindLong(1, value);
+                    stmt.bindString(2, LineageSettings.System.FORCE_SHOW_NAVBAR);
+                    stmt.execute();
+
+                    db.setTransactionSuccessful();
+                } catch (SQLiteDoneException ex) {
+                    // LineageSettings.Global.DEV_FORCE_SHOW_NAVBAR is not set
+                } finally {
+                    if (stmt != null) stmt.close();
+                    db.endTransaction();
+                }
+            }
+            upgradeVersion = 11;
         }
         // *** Remember to update DATABASE_VERSION above!
     }
