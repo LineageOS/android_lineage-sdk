@@ -1,6 +1,6 @@
 /*
  * Copyright (C) 2015-2016 The CyanogenMod Project
- *               2017-2018 The LineageOS Project
+ *               2017-2019 The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -225,8 +225,6 @@ public class LineageHardwareService extends LineageSystemService {
             currentCalibration[LineageHardwareManager.COLOR_CALIBRATION_RED_INDEX] = rgb[0];
             currentCalibration[LineageHardwareManager.COLOR_CALIBRATION_GREEN_INDEX] = rgb[1];
             currentCalibration[LineageHardwareManager.COLOR_CALIBRATION_BLUE_INDEX] = rgb[2];
-            currentCalibration[LineageHardwareManager.COLOR_CALIBRATION_DEFAULT_INDEX] =
-                DisplayColorCalibration.getDefValue();
             currentCalibration[LineageHardwareManager.COLOR_CALIBRATION_MIN_INDEX] =
                 DisplayColorCalibration.getMinValue();
             currentCalibration[LineageHardwareManager.COLOR_CALIBRATION_MAX_INDEX] =
