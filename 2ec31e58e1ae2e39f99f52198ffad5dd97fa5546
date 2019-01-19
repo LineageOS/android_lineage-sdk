@@ -1,0 +1,96 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3790ac2b_99a2710c",
+        "filename": "Android.bp",
+        "patchSetId": 10
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 15173
+      },
+      "writtenOn": "2019-01-19T04:49:36Z",
+      "side": 1,
+      "message": "-2019",
+      "range": {
+        "startLine": 2,
+        "startChar": 17,
+        "endLine": 2,
+        "endChar": 22
+      },
+      "revId": "2ec31e58e1ae2e39f99f52198ffad5dd97fa5546",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "24267cd8_2e56e6ba",
+        "filename": "lineage/lib/main/java/org/lineageos/platform/internal/LineageHardwareService.java",
+        "patchSetId": 10
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 15173
+      },
+      "writtenOn": "2019-01-19T04:49:36Z",
+      "side": 1,
+      "message": "2019",
+      "range": {
+        "startLine": 3,
+        "startChar": 22,
+        "endLine": 3,
+        "endChar": 27
+      },
+      "revId": "2ec31e58e1ae2e39f99f52198ffad5dd97fa5546",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "73aeaed3_3a9dbd52",
+        "filename": "sdk/src/java/lineageos/hardware/HIDLHelper.java",
+        "patchSetId": 10
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 15173
+      },
+      "writtenOn": "2019-01-19T04:49:36Z",
+      "side": 1,
+      "message": "This change shows all authorship in 2019, 2018 would not be appropriate.",
+      "range": {
+        "startLine": 2,
+        "startChar": 17,
+        "endLine": 2,
+        "endChar": 22
+      },
+      "revId": "2ec31e58e1ae2e39f99f52198ffad5dd97fa5546",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "8380ecd0_38d3c801",
+        "filename": "sdk/src/java/lineageos/hardware/LineageHardwareManager.java",
+        "patchSetId": 10
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 15173
+      },
+      "writtenOn": "2019-01-19T04:49:36Z",
+      "side": 1,
+      "message": "2019",
+      "range": {
+        "startLine": 3,
+        "startChar": 22,
+        "endLine": 3,
+        "endChar": 27
+      },
+      "revId": "2ec31e58e1ae2e39f99f52198ffad5dd97fa5546",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    }
+  ]
+}
