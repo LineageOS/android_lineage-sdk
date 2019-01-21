@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3f555aad_62a004d7",
+        "filename": "lineage/lib/main/java/org/lineageos/platform/internal/PerformanceManagerService.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 129,
+      "author": {
+        "id": 10258
+      },
+      "writtenOn": "2019-01-21T09:25:06Z",
+      "side": 1,
+      "message": "On op3 it succeed at the first time, so retry for 20 times should be sufficient.",
+      "range": {
+        "startLine": 129,
+        "startChar": 16,
+        "endLine": 129,
+        "endChar": 33
+      },
+      "revId": "a98c8f6cfae674698ef40158740f86e67fb84535",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    }
+  ]
+}
