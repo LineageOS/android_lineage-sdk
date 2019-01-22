@@ -16,6 +16,42 @@
       "revId": "22fc2d4675517ef16ba93c30b1dac86bd80c1a77",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "957482b7_09e9d21b",
+        "filename": "Android.bp",
+        "patchSetId": 14
+      },
+      "lineNbr": 133,
+      "author": {
+        "id": 11801
+      },
+      "writtenOn": "2019-01-22T17:55:28Z",
+      "side": 1,
+      "message": "I guarantee you it doesn\u0027t compile without it here.",
+      "parentUuid": "f2147c9e_767b0f0e",
+      "revId": "22fc2d4675517ef16ba93c30b1dac86bd80c1a77",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "4e0e2540_410fde98",
+        "filename": "Android.bp",
+        "patchSetId": 14
+      },
+      "lineNbr": 133,
+      "author": {
+        "id": 11801
+      },
+      "writtenOn": "2019-01-22T17:55:28Z",
+      "side": 1,
+      "message": "I guarantee you it doesn\u0027t compile without it here.",
+      "parentUuid": "f2147c9e_767b0f0e",
+      "revId": "22fc2d4675517ef16ba93c30b1dac86bd80c1a77",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
     }
   ]
 }
