@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "f2147c9e_767b0f0e",
+        "filename": "Android.bp",
+        "patchSetId": 14
+      },
+      "lineNbr": 133,
+      "author": {
+        "id": 11883
+      },
+      "writtenOn": "2019-01-22T17:40:51Z",
+      "side": 1,
+      "message": "not really related.\nWhy is hw manager part of the sdk?\nsdk should be used for styles and weather alone atm",
+      "revId": "22fc2d4675517ef16ba93c30b1dac86bd80c1a77",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    }
+  ]
+}
