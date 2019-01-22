@@ -70,6 +70,24 @@
       "revId": "22fc2d4675517ef16ba93c30b1dac86bd80c1a77",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "b786204b_1eb79c72",
+        "filename": "Android.bp",
+        "patchSetId": 14
+      },
+      "lineNbr": 133,
+      "author": {
+        "id": 11801
+      },
+      "writtenOn": "2019-01-22T22:09:54Z",
+      "side": 1,
+      "message": "That\u0027s out of scope for this change, imo.",
+      "parentUuid": "2fa579ac_4b3abf09",
+      "revId": "22fc2d4675517ef16ba93c30b1dac86bd80c1a77",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
