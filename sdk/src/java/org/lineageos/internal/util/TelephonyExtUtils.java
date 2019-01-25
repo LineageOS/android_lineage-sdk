@@ -21,6 +21,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.AsyncTask;
+import android.os.IBinder.DeathRecipient;
 import android.os.RemoteException;
 import android.os.ServiceManager;
 import android.os.SystemProperties;
@@ -77,6 +78,17 @@ public final class TelephonyExtUtils {
                 if (DEBUG) Log.d(TAG, "Received ACTION_UICC_MANUAL_PROVISION_STATUS_CHANGED"
                         + " on slotId: " + slotId + ", sub provisioned: " + provisioned);
                 notifyListeners(slotId, provisioned);
+            }
+        }
+    };
+
+    private final DeathRecipient mDeathRecipient = new DeathRecipient() {
+        @Override
+        public void binderDied() {
+            if (DEBUG) Log.d(TAG, "Binder died");
+            synchronized(TelephonyExtUtils.class) {
+                mExtTelephony.asBinder().unlinkToDeath(mDeathRecipient, 0);
+                mExtTelephony = null;
             }
         }
     };
@@ -265,10 +277,15 @@ public final class TelephonyExtUtils {
             try {
                 mExtTelephony =
                         IExtTelephony.Stub.asInterface(ServiceManager.getService("extphone"));
+                if (mExtTelephony != null) {
+                    mExtTelephony.asBinder().linkToDeath(mDeathRecipient, 0);
+                }
             } catch (NoClassDefFoundError ex) {
                 // Ignore, device does not ship with telephony-ext
                 Log.d(TAG, "Failed to get telephony extension service!");
                 mNoServiceAvailable = true;
+            } catch (RemoteException ex) {
+                Log.d(TAG, "linkToDeath failed!");
             }
         }
 
