@@ -1,5 +1,6 @@
 /*
  * Copyright (C) 2016 The CyanogenMod Project
+ *               2019 The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -239,7 +240,7 @@ public class LiveDisplayService extends LineageSystemService {
 
         @Override
         public int getMode() {
-            if (mConfig.hasModeSupport()) {
+            if (mConfig != null && mConfig.hasModeSupport()) {
                 return mModeObserver.getMode();
             } else {
                 return MODE_OFF;
