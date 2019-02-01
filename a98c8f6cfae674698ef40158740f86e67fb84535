@@ -69,6 +69,30 @@
       "revId": "a98c8f6cfae674698ef40158740f86e67fb84535",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "e6209bc4_7f028e45",
+        "filename": "lineage/lib/main/java/org/lineageos/platform/internal/PerformanceManagerService.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 165,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2019-02-01T11:04:19Z",
+      "side": 1,
+      "message": "You\u0027re right, I missed that.",
+      "parentUuid": "3b03dfb8_6494808e",
+      "range": {
+        "startLine": 163,
+        "startChar": 9,
+        "endLine": 165,
+        "endChar": 9
+      },
+      "revId": "a98c8f6cfae674698ef40158740f86e67fb84535",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
     }
   ]
 }
