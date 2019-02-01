@@ -45,6 +45,30 @@
       "revId": "a98c8f6cfae674698ef40158740f86e67fb84535",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "3b03dfb8_6494808e",
+        "filename": "lineage/lib/main/java/org/lineageos/platform/internal/PerformanceManagerService.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 165,
+      "author": {
+        "id": 10258
+      },
+      "writtenOn": "2019-02-01T11:02:29Z",
+      "side": 1,
+      "message": "Can\u0027t initialize with null because it\u0027s a final variable",
+      "parentUuid": "51c295b0_6cffc119",
+      "range": {
+        "startLine": 163,
+        "startChar": 9,
+        "endLine": 165,
+        "endChar": 9
+      },
+      "revId": "a98c8f6cfae674698ef40158740f86e67fb84535",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
     }
   ]
 }
