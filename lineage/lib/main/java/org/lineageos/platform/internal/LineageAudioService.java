@@ -122,6 +122,7 @@ public class LineageAudioService extends LineageSystemService {
         Intent i = new Intent(LineageAudioManager.ACTION_AUDIO_SESSIONS_CHANGED);
         i.putExtra(LineageAudioManager.EXTRA_SESSION_INFO, sessionInfo);
         i.putExtra(LineageAudioManager.EXTRA_SESSION_ADDED, added);
+        i.addFlags(Intent.FLAG_RECEIVER_INCLUDE_BACKGROUND);
 
         sendBroadcastToAll(i, Manifest.permission.OBSERVE_AUDIO_SESSIONS);
     }
