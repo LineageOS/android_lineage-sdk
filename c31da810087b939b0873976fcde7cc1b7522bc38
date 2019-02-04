@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "d39ae256_52513e76",
+        "filename": "packages/LineageSettingsProvider/src/org/lineageos/lineagesettings/LineageDatabaseHelper.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 382,
+      "author": {
+        "id": 4550
+      },
+      "writtenOn": "2019-02-04T18:59:13Z",
+      "side": 1,
+      "message": "LineageSettings.Global.DEV_FORCE_SHOW_NAVBAR",
+      "range": {
+        "startLine": 382,
+        "startChar": 39,
+        "endLine": 382,
+        "endChar": 79
+      },
+      "revId": "c31da810087b939b0873976fcde7cc1b7522bc38",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    }
+  ]
+}
