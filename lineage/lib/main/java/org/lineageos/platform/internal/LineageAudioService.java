@@ -128,6 +128,7 @@ public class LineageAudioService extends LineageSystemService {
 
     private void sendBroadcastToAll(Intent intent, String receiverPermission) {
         intent.addFlags(Intent.FLAG_RECEIVER_FOREGROUND);
+        intent.addFlags(Intent.FLAG_RECEIVER_INCLUDE_BACKGROUND);
 
         final long ident = Binder.clearCallingIdentity();
         try {
