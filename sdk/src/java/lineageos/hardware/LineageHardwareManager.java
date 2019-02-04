@@ -179,6 +179,7 @@ public final class LineageHardwareManager {
 
     // HIDL hals
     private HashMap<Integer, IBase> mHIDLMap = new HashMap<Integer, IBase>();
+    private HashMap<Integer, String> mHIDLNameMap = new HashMap<Integer, String>();
 
     /**
      * @hide to prevent subclassing from outside of the framework
@@ -199,10 +200,10 @@ public final class LineageHardwareManager {
                     " SystemServer init");
         }
 
-        final String[] mappings = mContext.getResources().getStringArray(
+        final String[] modeMappings = mContext.getResources().getStringArray(
                 org.lineageos.platform.internal.R.array.config_displayModeMappings);
-        if (mappings != null && mappings.length > 0) {
-            for (String mapping : mappings) {
+        if (modeMappings != null && modeMappings.length > 0) {
+            for (String mapping : modeMappings) {
                 String[] split = mapping.split(":");
                 if (split.length == 2) {
                     mDisplayModeMappings.put(split[0], split[1]);
@@ -211,6 +212,26 @@ public final class LineageHardwareManager {
         }
         mFilterDisplayModes = mContext.getResources().getBoolean(
                 org.lineageos.platform.internal.R.bool.config_filterDisplayModes);
+
+        final String[] serviceMappings = mContext.getResources().getStringArray(
+                org.lineageos.platform.internal.R.array.config_serviceNameMappings);
+        if (serviceMappings != null && serviceMappings.length > 0) {
+            for (String mapping : serviceMappings) {
+                String[] split = mapping.split(":");
+                if (split.length == 2) {
+                    int feature = 0;
+                    try {
+                        Field f = getClass().getField(split[0]);
+                        if (f != null) {
+                            feature = (int) f.get(null);
+                        }
+                    } catch (NoSuchFieldException | IllegalAccessException e) {
+                        continue;
+                    }
+                    mHIDLNameMap.put(feature, split[1]);
+                }
+            }
+        }
     }
 
     /**
@@ -267,34 +288,35 @@ public final class LineageHardwareManager {
     }
 
     private IBase getHIDLService(int feature) {
+        String name = mHIDLNameMap.containsKey(feature) ? mHIDLNameMap.get(feature) : "default";
         try {
             switch (feature) {
                 case FEATURE_ADAPTIVE_BACKLIGHT:
-                    return IAdaptiveBacklight.getService(true);
+                    return IAdaptiveBacklight.getService(name, true);
                 case FEATURE_AUTO_CONTRAST:
-                    return IAutoContrast.getService(true);
+                    return IAutoContrast.getService(name, true);
                 case FEATURE_COLOR_BALANCE:
-                    return IColorBalance.getService(true);
+                    return IColorBalance.getService(name, true);
                 case FEATURE_COLOR_ENHANCEMENT:
-                    return IColorEnhancement.getService(true);
+                    return IColorEnhancement.getService(name, true);
                 case FEATURE_DISPLAY_COLOR_CALIBRATION:
-                    return IDisplayColorCalibration.getService(true);
+                    return IDisplayColorCalibration.getService(name, true);
                 case FEATURE_DISPLAY_MODES:
-                    return IDisplayModes.getService(true);
+                    return IDisplayModes.getService(name, true);
                 case FEATURE_PICTURE_ADJUSTMENT:
-                    return IPictureAdjustment.getService(true);
+                    return IPictureAdjustment.getService(name, true);
                 case FEATURE_READING_ENHANCEMENT:
-                    return IReadingEnhancement.getService(true);
+                    return IReadingEnhancement.getService(name, true);
                 case FEATURE_SUNLIGHT_ENHANCEMENT:
-                    return ISunlightEnhancement.getService(true);
+                    return ISunlightEnhancement.getService(name, true);
                 case FEATURE_HIGH_TOUCH_SENSITIVITY:
-                    return IGloveMode.getService(true);
+                    return IGloveMode.getService(name, true);
                 case FEATURE_KEY_DISABLE:
-                    return IKeyDisabler.getService(true);
+                    return IKeyDisabler.getService(name, true);
                 case FEATURE_TOUCH_HOVERING:
-                    return IStylusMode.getService(true);
+                    return IStylusMode.getService(name, true);
                 case FEATURE_TOUCHSCREEN_GESTURES:
-                    return ITouchscreenGesture.getService(true);
+                    return ITouchscreenGesture.getService(name, true);
             }
         } catch (NoSuchElementException | RemoteException e) {
         }

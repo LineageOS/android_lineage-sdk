@@ -248,4 +248,12 @@
     <!-- Whether device needs to wait for Qualcomm MPCTL service to start
          before setting power profiles on boot. -->
     <bool name="config_waitForMpctlOnBoot">false</bool>
+
+    <!-- HIDL Service Names.
+         If the device registers a service with a name rather than using
+         default, for whatever reason, this can be used to select it.
+         Format is $feature:name, where $feature is a feature constant in
+         LineageHardwareManager. If unmapped, the default service is used -->
+    <string-array name="config_serviceNameMappings" translatable="false">
+    </string-array>
 </resources>
