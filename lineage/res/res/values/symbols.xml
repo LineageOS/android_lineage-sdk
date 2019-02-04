@@ -185,4 +185,7 @@
 
     <!-- Notch -->
     <java-symbol type="bool" name="config_haveNotch" />
+
+    <!-- HIDL -->
+    <java-symbol type="array" name="config_serviceNameMappings" />
 </resources>
