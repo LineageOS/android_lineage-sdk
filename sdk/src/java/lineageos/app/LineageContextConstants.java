@@ -119,6 +119,18 @@ public final class LineageContextConstants {
     public static final String LINEAGE_TRUST_INTERFACE = "lineagetrust";
 
     /**
+     * Use with {@link android.content.Context#getSystemService} to retrieve a
+     * {@link lineageos.hardware.LineageHardwareManager} to manage the extended
+     * hardware features of the device.
+     *
+     * @see android.content.Context#getSystemService
+     * @see lineageos.hardware.LineageHardwareManager
+     *
+     * @hide
+     */
+    public static final String LINEAGE_HWC2_SERVICE = "lineagehwc2";
+
+    /**
      * Features supported by the Lineage SDK.
      */
     public static class Features {
@@ -193,5 +205,13 @@ public final class LineageContextConstants {
          */
         @SdkConstant(SdkConstant.SdkConstantType.FEATURE)
         public static final String SETTINGS = "org.lineageos.settings";
+
+        /**
+         * Feature for {@link PackageManager#getSystemAvailableFeatures} and
+         * {@link PackageManager#hasSystemFeature}: The device includes the hardware abstraction
+         * framework service utilized by the lineage sdk.
+         */
+        @SdkConstant(SdkConstant.SdkConstantType.FEATURE)
+        public static final String HWC2_HELPER = "org.lineageos.hwc2";
     }
 }
