@@ -31,6 +31,7 @@ import com.android.internal.util.ArrayUtils;
 import lineageos.app.LineageContextConstants;
 import lineageos.hardware.DisplayMode;
 import lineageos.hardware.HIDLHelper;
+import lineageos.hardware.HWC2Helper;
 import lineageos.hardware.HSIC;
 import lineageos.hardware.TouchscreenGesture;
 
@@ -246,7 +247,7 @@ public final class LineageHardwareManager {
      * @return true if the feature is supported, false otherwise.
      */
     public boolean isSupported(int feature) {
-        return isSupportedHIDL(feature) || isSupportedLegacy(feature);
+        return isSupportedHIDL(feature) || isSupportedHWC2(feature) || isSupportedLegacy(feature);
     }
 
     private boolean isSupportedHIDL(int feature) {
@@ -254,6 +255,17 @@ public final class LineageHardwareManager {
             mHIDLMap.put(feature, getHIDLService(feature));
         }
         return mHIDLMap.get(feature) != null;
+    }
+
+    private boolean isSupportedHWC2(int feature) {
+        boolean supportsHWC2 = mContext.getResources().getBoolean(
+                com.android.internal.R.bool.config_setColorTransformAccelerated);
+
+        if (supportsHWC2) {
+            return HWC2Helper.getSupportedFeatures() & feature;
+        }
+
+        return false;
     }
 
     private boolean isSupportedLegacy(int feature) {
@@ -364,6 +376,8 @@ public final class LineageHardwareManager {
                         IReadingEnhancement readingEnhancement = (IReadingEnhancement) obj;
                         return readingEnhancement.isEnabled();
                 }
+            } else if (isSupportedHWC2(feature)) {
+                return HWC2Helper.get(feature);
             } else if (checkService()) {
                 return sService.get(feature);
             }
@@ -416,6 +430,8 @@ public final class LineageHardwareManager {
                         IReadingEnhancement readingEnhancement = (IReadingEnhancement) obj;
                         return readingEnhancement.setEnabled(enable);
                 }
+            } else if (isSupportedHWC2(feature)) {
+                return HWC2Helper.set(feature, enable);
             } else if (checkService()) {
                 return sService.set(feature, enable);
             }
@@ -543,6 +559,8 @@ public final class LineageHardwareManager {
                 IDisplayColorCalibration displayColorCalibration = (IDisplayColorCalibration)
                         mHIDLMap.get(FEATURE_DISPLAY_COLOR_CALIBRATION);
                 return ArrayUtils.convertToIntArray(displayColorCalibration.getCalibration());
+            } else if (isSupportedHWC2(FEATURE_DISPLAY_COLOR_CALIBRATION)) {
+                return HWC2Helper.getDisplayColorCalibration();
             } else if (checkService()) {
                 return sService.getDisplayColorCalibration();
             }
@@ -574,6 +592,8 @@ public final class LineageHardwareManager {
             } catch (RemoteException e) {
                 return 0;
             }
+        } else if (isSupportedHWC2(FEATURE_DISPLAY_COLOR_CALIBRATION)) {
+            return HWC2Helper.getDisplayColorCalibrationMin();
         }
 
         return getArrayValue(getDisplayColorCalibrationArray(), COLOR_CALIBRATION_MIN_INDEX, 0);
@@ -591,6 +611,8 @@ public final class LineageHardwareManager {
             } catch (RemoteException e) {
                 return 0;
             }
+        } else if (isSupportedHWC2(FEATURE_DISPLAY_COLOR_CALIBRATION)) {
+            return HWC2Helper.getDisplayColorCalibrationMax();
         }
 
         return getArrayValue(getDisplayColorCalibrationArray(), COLOR_CALIBRATION_MAX_INDEX, 0);
@@ -612,6 +634,8 @@ public final class LineageHardwareManager {
                         mHIDLMap.get(FEATURE_DISPLAY_COLOR_CALIBRATION);
                 return displayColorCalibration.setCalibration(
                        new ArrayList<Integer>(Arrays.asList(rgb[0], rgb[1], rgb[2])));
+            } else if (isSupportedHWC2(FEATURE_DISPLAY_COLOR_CALIBRATION)) {
+                return HWC2Helper.setDisplayColorCalibration(rgb);
             } else if (checkService()) {
                 return sService.setDisplayColorCalibration(rgb);
             }
