@@ -26,7 +26,7 @@ import java.util.ArrayList;
 
 class HIDLHelper {
 
-    public static DisplayMode[] fromHIDLModes(
+    static DisplayMode[] fromHIDLModes(
             ArrayList<vendor.lineage.livedisplay.V2_0.DisplayMode> modes) {
         int size = modes.size();
         DisplayMode[] r = new DisplayMode[size];
@@ -37,17 +37,17 @@ class HIDLHelper {
         return r;
     }
 
-    public static DisplayMode fromHIDLMode(
+    static DisplayMode fromHIDLMode(
             vendor.lineage.livedisplay.V2_0.DisplayMode mode) {
         return new DisplayMode(mode.id, mode.name);
     }
 
-    public static HSIC fromHIDLHSIC(vendor.lineage.livedisplay.V2_0.HSIC hsic) {
+    static HSIC fromHIDLHSIC(vendor.lineage.livedisplay.V2_0.HSIC hsic) {
         return new HSIC(hsic.hue, hsic.saturation, hsic.intensity,
                 hsic.contrast, hsic.saturationThreshold);
     }
 
-    public static vendor.lineage.livedisplay.V2_0.HSIC toHIDLHSIC(HSIC hsic) {
+    static vendor.lineage.livedisplay.V2_0.HSIC toHIDLHSIC(HSIC hsic) {
         vendor.lineage.livedisplay.V2_0.HSIC h = new vendor.lineage.livedisplay.V2_0.HSIC();
         h.hue = hsic.getHue();
         h.saturation = hsic.getSaturation();
@@ -57,15 +57,15 @@ class HIDLHelper {
         return h;
     }
 
-    public static Range<Integer> fromHIDLRange(vendor.lineage.livedisplay.V2_0.Range range) {
+    static Range<Integer> fromHIDLRange(vendor.lineage.livedisplay.V2_0.Range range) {
         return new Range(range.min, range.max);
     }
 
-    public static Range<Float> fromHIDLRange(vendor.lineage.livedisplay.V2_0.FloatRange range) {
+    static Range<Float> fromHIDLRange(vendor.lineage.livedisplay.V2_0.FloatRange range) {
         return new Range(range.min, range.max);
     }
 
-    public static TouchscreenGesture[] fromHIDLGestures(
+    static TouchscreenGesture[] fromHIDLGestures(
             ArrayList<vendor.lineage.touch.V1_0.Gesture> gestures) {
         int size = gestures.size();
         TouchscreenGesture[] r = new TouchscreenGesture[size];
@@ -76,7 +76,7 @@ class HIDLHelper {
         return r;
     }
 
-    public static vendor.lineage.touch.V1_0.Gesture toHIDLGesture(TouchscreenGesture gesture) {
+    static vendor.lineage.touch.V1_0.Gesture toHIDLGesture(TouchscreenGesture gesture) {
         vendor.lineage.touch.V1_0.Gesture g = new vendor.lineage.touch.V1_0.Gesture();
         g.id = gesture.id;
         g.name = gesture.name;
