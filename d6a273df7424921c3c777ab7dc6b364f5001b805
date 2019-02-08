@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ba33cc90_a0b84eff",
+        "filename": "lineage/lib/main/java/org/lineageos/platform/internal/LineageHardwareService.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2019-02-08T21:06:31Z",
+      "side": 1,
+      "message": "Static imports come always on top. At least that\u0027s what I\u0027ve been seeing Google doing lately.",
+      "revId": "d6a273df7424921c3c777ab7dc6b364f5001b805",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "31018308_983be201",
+        "filename": "lineage/lib/main/java/org/lineageos/platform/internal/LineageHardwareService.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 269,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2019-02-08T21:06:31Z",
+      "side": 1,
+      "message": "Missing { }",
+      "revId": "d6a273df7424921c3c777ab7dc6b364f5001b805",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    }
+  ]
+}
