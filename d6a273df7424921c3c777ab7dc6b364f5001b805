@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "d3445b28_458b10dd",
+        "filename": "lineage/lib/main/java/org/lineageos/platform/internal/LineageHardwareService.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 11801
+      },
+      "writtenOn": "2019-02-08T21:11:50Z",
+      "side": 1,
+      "message": "Dunno, most places we have still do static imports last + I\u0027m used to that, so I don\u0027t really want to change it.",
+      "parentUuid": "ba33cc90_a0b84eff",
+      "revId": "d6a273df7424921c3c777ab7dc6b364f5001b805",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "31018308_983be201",
         "filename": "lineage/lib/main/java/org/lineageos/platform/internal/LineageHardwareService.java",
         "patchSetId": 3
@@ -30,6 +48,24 @@
       "writtenOn": "2019-02-08T21:06:31Z",
       "side": 1,
       "message": "Missing { }",
+      "revId": "d6a273df7424921c3c777ab7dc6b364f5001b805",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "703a7261_48c6ab65",
+        "filename": "lineage/lib/main/java/org/lineageos/platform/internal/LineageHardwareService.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 269,
+      "author": {
+        "id": 11801
+      },
+      "writtenOn": "2019-02-08T21:11:50Z",
+      "side": 1,
+      "message": "No, intentionally not there. You don\u0027t need them here, and the rest of this file (see LegacyLineageHardware) uses no braces for 1-line if blocks, so I just continued that style here.",
+      "parentUuid": "31018308_983be201",
       "revId": "d6a273df7424921c3c777ab7dc6b364f5001b805",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": true
