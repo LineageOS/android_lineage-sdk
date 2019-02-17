@@ -1,5 +1,6 @@
 /*
  * Copyright (C) 2016 The CyanogenMod Project
+ *               2018-2019 The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -68,6 +69,17 @@ public class ColorTemperatureController extends LiveDisplayFeature {
             LineageSettings.System.getUriFor(LineageSettings.System.DISPLAY_TEMPERATURE_DAY);
     private static final Uri DISPLAY_TEMPERATURE_NIGHT =
             LineageSettings.System.getUriFor(LineageSettings.System.DISPLAY_TEMPERATURE_NIGHT);
+
+    private static final float[] ADJ_LUT = {
+            0.006693, 0.007897, 0.009316, 0.010987, 0.012954, 0.015267, 0.017986, 0.021179,
+            0.024924, 0.029312, 0.034445, 0.040440, 0.047426, 0.055549, 0.064969, 0.075858,
+            0.088400, 0.102784, 0.119203, 0.137842, 0.158869, 0.182426, 0.208609, 0.237458,
+            0.268942, 0.302941, 0.339244, 0.377541, 0.417430, 0.458430, 0.500000, 0.541571,
+            0.582570, 0.622460, 0.660757, 0.697060, 0.731059, 0.762542, 0.791392, 0.817575,
+            0.841131, 0.862158, 0.880797, 0.897216, 0.911600, 0.924142, 0.935031, 0.944451,
+            0.952574, 0.959560, 0.965555, 0.970688, 0.975076, 0.978821, 0.982014, 0.984733,
+            0.987046, 0.989013, 0.990684, 0.992103, 0.993307
+    };
 
     public ColorTemperatureController(Context context,
             Handler handler, DisplayHardwareController displayHardware) {
@@ -202,8 +214,8 @@ public class ColorTemperatureController extends LiveDisplayFeature {
         setDisplayTemperature(temperature);
 
         if (isTransitioning()) {
-            // fire again in a minute
-            mHandler.postDelayed(mTransitionRunnable, DateUtils.MINUTE_IN_MILLIS);
+            // fire again in 30 seconds
+            mHandler.postDelayed(mTransitionRunnable, DateUtils.MINUTE_IN_MILLIS / 2);
         }
     }
 
@@ -301,12 +313,14 @@ public class ColorTemperatureController extends LiveDisplayFeature {
 
         // Scale the transition into night mode in 0.5hr before civil sunset
         if (now <= sunset) {
-            return (float) (sunset - now) / TWILIGHT_ADJUSTMENT_TIME;
+            return ADJ_LUT[Math.round((ADJ_LUT.length - 1) *
+                    ((float) (sunset - now) / TWILIGHT_ADJUSTMENT_TIME))];
         }
 
         // Scale the transition into day mode in 0.5hr after civil sunrise
         if (now >= sunrise) {
-            return (float) (now - sunrise) / TWILIGHT_ADJUSTMENT_TIME;
+            return ADJ_LUT[Math.round((ADJ_LUT.length - 1) *
+                    ((float) (now - sunrise) / TWILIGHT_ADJUSTMENT_TIME))];
         }
 
         // More than 0.5hr past civil sunset
