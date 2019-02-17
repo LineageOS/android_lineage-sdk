@@ -301,12 +301,12 @@ public class ColorTemperatureController extends LiveDisplayFeature {
 
         // Scale the transition into night mode in 0.5hr before civil sunset
         if (now <= sunset) {
-            return (float) (sunset - now) / TWILIGHT_ADJUSTMENT_TIME;
+            return (float) Math.pow((sunset - now) / TWILIGHT_ADJUSTMENT_TIME, 2);
         }
 
         // Scale the transition into day mode in 0.5hr after civil sunrise
         if (now >= sunrise) {
-            return (float) (now - sunrise) / TWILIGHT_ADJUSTMENT_TIME;
+            return (float) Math.sqrt((now - sunrise) / TWILIGHT_ADJUSTMENT_TIME);
         }
 
         // More than 0.5hr past civil sunset
