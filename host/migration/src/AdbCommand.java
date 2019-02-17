@@ -54,7 +54,7 @@ public class AdbCommand extends Command {
         List<String> commandList = new ArrayList<String>(
                 baseCommand.length + 1);
         commandList.addAll(Arrays.asList(baseCommand));
-        String[] commands = commandList.toArray(new String[commandList.size()]);
+        String[] commands = commandList.toArray(new String[0]);
 
         if (MigrationTest.DEBUG) {
             System.out.println("Using commands: " + Arrays.toString(commands));

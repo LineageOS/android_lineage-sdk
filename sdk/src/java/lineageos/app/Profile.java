@@ -507,7 +507,7 @@ public final class Profile implements Parcelable, Comparable {
      * @hide
      */
     public ProfileGroup[] getProfileGroups() {
-        return profileGroups.values().toArray(new ProfileGroup[profileGroups.size()]);
+        return profileGroups.values().toArray(new ProfileGroup[0]);
     }
 
     /**
@@ -566,7 +566,7 @@ public final class Profile implements Parcelable, Comparable {
                 uuids.add(new ParcelUuid(u));
             }
             dest.writeInt(1);
-            dest.writeParcelableArray(uuids.toArray(new Parcelable[uuids.size()]), flags);
+            dest.writeParcelableArray(uuids.toArray(new Parcelable[0]), flags);
         } else {
             dest.writeInt(0);
         }
@@ -766,7 +766,7 @@ public final class Profile implements Parcelable, Comparable {
      * @return the secondary uuids for the Profile
      */
     public UUID[] getSecondaryUuids() {
-        return mSecondaryUuids.toArray(new UUID[mSecondaryUuids.size()]);
+        return mSecondaryUuids.toArray(new UUID[0]);
     }
 
     /**
