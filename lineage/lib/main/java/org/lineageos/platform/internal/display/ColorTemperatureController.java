@@ -1,5 +1,6 @@
 /*
  * Copyright (C) 2016 The CyanogenMod Project
+ *               2018-2019 The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -68,6 +69,17 @@ public class ColorTemperatureController extends LiveDisplayFeature {
             LineageSettings.System.getUriFor(LineageSettings.System.DISPLAY_TEMPERATURE_DAY);
     private static final Uri DISPLAY_TEMPERATURE_NIGHT =
             LineageSettings.System.getUriFor(LineageSettings.System.DISPLAY_TEMPERATURE_NIGHT);
+
+    private static final float[] ADJ_LUT = {
+            0.006693f, 0.007897f, 0.009316f, 0.010987f, 0.012954f, 0.015267f, 0.017986f, 0.021179f,
+            0.024924f, 0.029312f, 0.034445f, 0.040440f, 0.047426f, 0.055549f, 0.064969f, 0.075858f,
+            0.088400f, 0.102784f, 0.119203f, 0.137842f, 0.158869f, 0.182426f, 0.208609f, 0.237458f,
+            0.268942f, 0.302941f, 0.339244f, 0.377541f, 0.417430f, 0.458430f, 0.500000f, 0.541571f,
+            0.582570f, 0.622460f, 0.660757f, 0.697060f, 0.731059f, 0.762542f, 0.791392f, 0.817575f,
+            0.841131f, 0.862158f, 0.880797f, 0.897216f, 0.911600f, 0.924142f, 0.935031f, 0.944451f,
+            0.952574f, 0.959560f, 0.965555f, 0.970688f, 0.975076f, 0.978821f, 0.982014f, 0.984733f,
+            0.987046f, 0.989013f, 0.990684f, 0.992103f, 0.993307f
+    };
 
     public ColorTemperatureController(Context context,
             Handler handler, DisplayHardwareController displayHardware) {
@@ -202,8 +214,8 @@ public class ColorTemperatureController extends LiveDisplayFeature {
         setDisplayTemperature(temperature);
 
         if (isTransitioning()) {
-            // fire again in a minute
-            mHandler.postDelayed(mTransitionRunnable, DateUtils.MINUTE_IN_MILLIS);
+            // fire again in 30 seconds
+            mHandler.postDelayed(mTransitionRunnable, DateUtils.MINUTE_IN_MILLIS / 2);
         }
     }
 
@@ -301,12 +313,14 @@ public class ColorTemperatureController extends LiveDisplayFeature {
 
         // Scale the transition into night mode in 0.5hr before civil sunset
         if (now <= sunset) {
-            return (float) (sunset - now) / TWILIGHT_ADJUSTMENT_TIME;
+            return ADJ_LUT[Math.round((ADJ_LUT.length - 1) *
+                    ((float) (sunset - now) / TWILIGHT_ADJUSTMENT_TIME))];
         }
 
         // Scale the transition into day mode in 0.5hr after civil sunrise
         if (now >= sunrise) {
-            return (float) (now - sunrise) / TWILIGHT_ADJUSTMENT_TIME;
+            return ADJ_LUT[Math.round((ADJ_LUT.length - 1) *
+                    ((float) (now - sunrise) / TWILIGHT_ADJUSTMENT_TIME))];
         }
 
         // More than 0.5hr past civil sunset
