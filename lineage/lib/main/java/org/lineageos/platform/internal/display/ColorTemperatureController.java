@@ -325,8 +325,8 @@ public class ColorTemperatureController extends LiveDisplayFeature {
 
         if (twilight != null) {
             final long now = System.currentTimeMillis();
-            adjustment = adj(now, twilight.getYesterdaySunset(), twilight.getTodaySunrise()) *
-                    adj(now, twilight.getTodaySunset(), twilight.getTomorrowSunrise());
+            adjustment = (adj(now, twilight.getYesterdaySunset(), twilight.getTodaySunrise()) +
+                    adj(now, twilight.getTodaySunset(), twilight.getTomorrowSunrise())) / 2;
         }
 
         return (int)MathUtils.lerp(mNightTemperature, mDayTemperature, adjustment);
