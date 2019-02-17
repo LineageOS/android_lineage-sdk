@@ -375,10 +375,9 @@ public class LineageWeatherManagerService extends LineageSystemService {
             contentValuesList.add(contentValues);
         }
 
-        ContentValues[] updateValues = new ContentValues[contentValuesList.size()];
         if (size != getContext().getContentResolver().bulkInsert(
                 WeatherColumns.CURRENT_AND_FORECAST_WEATHER_URI,
-                contentValuesList.toArray(updateValues))) {
+                contentValuesList.toArray(new ContentValues[0]))) {
             Slog.w(TAG, "Failed to update the weather content provider");
             return false;
         }

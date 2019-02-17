@@ -136,7 +136,7 @@ public class DisplayHardwareController extends LiveDisplayFeature {
             return;
         }
 
-        registerSettings(settings.toArray(new Uri[settings.size()]));
+        registerSettings(settings.toArray(new Uri[0]));
     }
 
     @Override

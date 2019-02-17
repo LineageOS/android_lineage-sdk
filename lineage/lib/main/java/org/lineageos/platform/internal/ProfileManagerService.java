@@ -410,7 +410,7 @@ public class ProfileManagerService extends LineageSystemService {
 
         @Override
         public Profile[] getProfiles() {
-            Profile[] profiles = getProfileList().toArray(new Profile[mProfiles.size()]);
+            Profile[] profiles = getProfileList().toArray(new Profile[0]);
             Arrays.sort(profiles);
             return profiles;
         }
@@ -492,7 +492,7 @@ public class ProfileManagerService extends LineageSystemService {
 
         @Override
         public NotificationGroup[] getNotificationGroups() {
-            return mGroups.values().toArray(new NotificationGroup[mGroups.size()]);
+            return mGroups.values().toArray(new NotificationGroup[0]);
         }
 
         @Override
