@@ -59,7 +59,7 @@ public class InsertCommand extends Command {
         commandList.add("--bind name:" + setting.getKeyType() + ":" + setting.getKey());
         commandList.add("--bind value:" + setting.getValueType() + ":"
                 + "\"" + setting.getValue() + "\"");
-        commands = commandList.toArray(new String[commandList.size()]);
+        commands = commandList.toArray(new String[0]);
         if (MigrationTest.DEBUG) {
             System.out.println("Using commands: " + Arrays.toString(commands));
         }
