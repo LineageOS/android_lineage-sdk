@@ -63,7 +63,7 @@ public class QueryCommand extends Command {
         commandList.add(PROJECTION);
         commandList.add("--show-type"); //this is totally awesomely lineage specific
         commandList.add("true");
-        commands = commandList.toArray(new String[commandList.size()]);
+        commands = commandList.toArray(new String[0]);
         if (MigrationTest.DEBUG) {
             System.out.println("Using commands: " + Arrays.toString(commands));
         }

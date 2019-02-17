@@ -567,7 +567,7 @@ public final class Palette {
                 scaledBitmap.getPixels(pixels, 0, width, 0, 0, width, height);
 
                 final ColorCutQuantizer quantizer = new ColorCutQuantizer(pixels, mMaxColors,
-                        mFilters.isEmpty() ? null : mFilters.toArray(new Filter[mFilters.size()]));
+                        mFilters.isEmpty() ? null : mFilters.toArray(new Filter[0]));
 
                 // If created a new bitmap, recycle it
                 if (scaledBitmap != mBitmap) {
