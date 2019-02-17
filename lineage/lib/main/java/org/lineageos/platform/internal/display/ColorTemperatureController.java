@@ -1,5 +1,6 @@
 /*
  * Copyright (C) 2016 The CyanogenMod Project
+ *               2018-2019 The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -202,8 +203,8 @@ public class ColorTemperatureController extends LiveDisplayFeature {
         setDisplayTemperature(temperature);
 
         if (isTransitioning()) {
-            // fire again in a minute
-            mHandler.postDelayed(mTransitionRunnable, DateUtils.MINUTE_IN_MILLIS);
+            // fire again in 30 seconds
+            mHandler.postDelayed(mTransitionRunnable, DateUtils.MINUTE_IN_MILLIS / 2);
         }
     }
 
@@ -301,12 +302,12 @@ public class ColorTemperatureController extends LiveDisplayFeature {
 
         // Scale the transition into night mode in 0.5hr before civil sunset
         if (now <= sunset) {
-            return (float) (sunset - now) / TWILIGHT_ADJUSTMENT_TIME;
+            return (float) Math.sqrt((sunset - now) / TWILIGHT_ADJUSTMENT_TIME);
         }
 
         // Scale the transition into day mode in 0.5hr after civil sunrise
         if (now >= sunrise) {
-            return (float) (now - sunrise) / TWILIGHT_ADJUSTMENT_TIME;
+            return (float) Math.pow((now - sunrise) / TWILIGHT_ADJUSTMENT_TIME, 2);
         }
 
         // More than 0.5hr past civil sunset
