@@ -1,6 +1,6 @@
 /*
  * Copyright (C) 2016 The CyanogenMod Project
- * Copyright (C) 2018 The LineageOS Project
+ * Copyright (C) 2018-2019 The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -25,7 +25,7 @@ import android.text.format.DateUtils;
 import android.util.MathUtils;
 import android.util.Range;
 import android.util.Slog;
-import android.view.animation.LinearInterpolator;
+import android.view.animation.AccelerateDecelerateInterpolator;
 
 import com.android.server.twilight.TwilightState;
 
@@ -62,8 +62,6 @@ public class ColorTemperatureController extends LiveDisplayFeature {
     private ValueAnimator mAnimator;
 
     private final LineageHardwareManager mHardware;
-
-    private static final long TWILIGHT_ADJUSTMENT_TIME = DateUtils.HOUR_IN_MILLIS / 2;
 
     private static final Uri DISPLAY_TEMPERATURE_DAY =
             LineageSettings.System.getUriFor(LineageSettings.System.DISPLAY_TEMPERATURE_DAY);
@@ -164,20 +162,6 @@ public class ColorTemperatureController extends LiveDisplayFeature {
         pw.println();
         pw.println("  ColorTemperatureController State:");
         pw.println("    mColorTemperature=" + mColorTemperature);
-        pw.println("    isTransitioning=" + isTransitioning());
-    }
-
-    private final Runnable mTransitionRunnable = new Runnable() {
-        @Override
-        public void run() {
-            updateColorTemperature();
-        }
-    };
-
-    private boolean isTransitioning() {
-        return getMode() == MODE_AUTO &&
-                mColorTemperature != mDayTemperature &&
-                mColorTemperature != mNightTemperature;
     }
 
     private synchronized void updateColorTemperature() {
@@ -192,14 +176,9 @@ public class ColorTemperatureController extends LiveDisplayFeature {
         } else if (mode == MODE_NIGHT) {
             temperature = mNightTemperature;
         } else if (mode == MODE_AUTO) {
-            final int twilightTemp = getTwilightK();
-            if (twilightTemp >= 0) {
-                temperature = twilightTemp;
-            } else {
-                if (DEBUG) {
-                    Slog.d(TAG, "updateColorTemperature: getTwilightK returned < 0; "
-                            + "maintaining existing temperature");
-                }
+            TwilightState state = getTwilight();
+            if (state != null && state.isNight()) {
+                temperature = mNightTemperature;
             }
         }
 
@@ -209,28 +188,20 @@ public class ColorTemperatureController extends LiveDisplayFeature {
         }
 
         setDisplayTemperature(temperature);
-
-        if (isTransitioning()) {
-            // fire again in a minute
-            mHandler.removeCallbacks(mTransitionRunnable);
-            mHandler.postDelayed(mTransitionRunnable, DateUtils.MINUTE_IN_MILLIS);
-        }
     }
 
     /**
-     * Smoothly animate the current display color balance
+     * Smoothly animate the transition to color balance balance
      */
     private synchronized void animateColorBalance(int balance) {
-
-        // always start with the current values in the hardware
+        // Always start with the current values in the hardware
         int current = mHardware.getColorBalance();
 
         if (current == balance) {
             return;
         }
 
-        long duration = (long)(5 * Math.abs(current - balance));
-
+        long duration = (long) (5 * Math.abs(current - end));
 
         if (DEBUG) {
             Slog.d(TAG, "animateDisplayColor current=" + current +
@@ -244,7 +215,7 @@ public class ColorTemperatureController extends LiveDisplayFeature {
 
         mAnimator = ValueAnimator.ofInt(current, balance);
         mAnimator.setDuration(duration);
-        mAnimator.setInterpolator(new LinearInterpolator());
+        mAnimator.setInterpolator(new AccelerateDecelerateInterpolator());
         mAnimator.addUpdateListener(new AnimatorUpdateListener() {
             @Override
             public void onAnimationUpdate(final ValueAnimator animation) {
@@ -259,12 +230,51 @@ public class ColorTemperatureController extends LiveDisplayFeature {
         mAnimator.start();
     }
 
-    /*
+    /**
+     * Smoothly animate the transition to color temperature temperature
+     */
+    private synchronized void animateColorTemperature(int temperature) {
+        if (mColorTemperature == temperature) {
+            return;
+        }
+
+        long duration = (long) (Math.abs(mColorTemperature - temperature));
+
+        if (DEBUG) {
+            Slog.d(TAG, "animateDisplayColor current=" + mColorTemperature +
+                    " target=" + temperature + " duration=" + duration);
+        }
+
+        if (mAnimator != null) {
+            mAnimator.cancel();
+            mAnimator.removeAllUpdateListeners();
+        }
+
+        mAnimator = ValueAnimator.ofInt(mColorTemperature, temperature);
+        mAnimator.setDuration(duration);
+        mAnimator.setInterpolator(new AccelerateDecelerateInterpolator());
+        mAnimator.addUpdateListener(new AnimatorUpdateListener() {
+            @Override
+            public void onAnimationUpdate(final ValueAnimator animation) {
+                synchronized (ColorTemperatureController.this) {
+                    if (isScreenOn()) {
+                        int value = (int) animation.getAnimatedValue();
+                        mDisplayHardware.setAdditionalAdjustment(
+                                ColorUtils.temperatureToRGB(temperature));
+                    }
+                }
+            }
+        });
+        mAnimator.start();
+    }
+
+    /**
      * Map the color temperature to a color balance value using a power curve. This assumes the
      * correct configuration at the device level!
      */
     private int mapColorTemperatureToBalance(int temperature) {
-        double z = org.lineageos.internal.util.MathUtils.powerCurveToLinear(mColorBalanceCurve, temperature);
+        double z = org.lineageos.internal.util.MathUtils.powerCurveToLinear(
+                mColorBalanceCurve, temperature);
         return Math.round(MathUtils.lerp((float)mColorBalanceRange.getLower(),
                 (float)mColorBalanceRange.getUpper(), (float)z));
     }
@@ -279,65 +289,13 @@ public class ColorTemperatureController extends LiveDisplayFeature {
             return;
         }
 
-        mColorTemperature = temperature;
-
         if (mUseColorBalance) {
-            int balance = mapColorTemperatureToBalance(temperature);
-            Slog.d(TAG, "Set color balance = " + balance + " (temperature=" + temperature + ")");
-            animateColorBalance(balance);
-            return;
-        }
-
-        final float[] rgb = ColorUtils.temperatureToRGB(temperature);
-        if (mDisplayHardware.setAdditionalAdjustment(rgb)) {
-            if (DEBUG) {
-                Slog.d(TAG, "Adjust display temperature to " + temperature + "K");
-            }
-        }
-    }
-
-    /**
-     * Determine the color temperature we should use for the display based on
-     * the position of the sun.
-     *
-     * @return color temperature in Kelvin or -1 if current state can't be determined.
-     */
-    private int getTwilightK() {
-        final TwilightState twilight = getTwilight();
-        if (twilight == null) {
-            return -1;
-        }
-
-        final long now = System.currentTimeMillis();
-        final long sunrise = twilight.sunriseTimeMillis();
-        final long sunset = twilight.sunsetTimeMillis();
-        final float adjustment;
-
-        // Sanity checks
-        if (sunrise <= 0 || sunset <= 0) {
-            return -1;
-        }
-
-        if (now >= sunrise && now < sunset) {
-            // It's daytime
-            if (now < sunrise + TWILIGHT_ADJUSTMENT_TIME) {
-                adjustment = MathUtils.lerp(0.0f, 1.0f, (float) (now - sunrise) /
-                        TWILIGHT_ADJUSTMENT_TIME);
-            } else {
-                adjustment = 1.0f;
-            }
-        } else if (now >= sunset && now < sunrise) {
-            // It's nighttime
-            if (now < sunset + TWILIGHT_ADJUSTMENT_TIME) {
-                adjustment = MathUtils.lerp(1.0f, 0.0f, (float) (now - sunset) /
-                        TWILIGHT_ADJUSTMENT_TIME);
-            } else {
-                adjustment = 0.0f;
-            }
+            animateColorBalance(mapColorTemperatureToBalance(temperature));
         } else {
-            return -1;
+            animateColorTemperature(temperature);
         }
-        return (int)MathUtils.lerp(mNightTemperature, mDayTemperature, adjustment);
+
+        mColorTemperature = temperature;
     }
 
     int getDefaultDayTemperature() {
