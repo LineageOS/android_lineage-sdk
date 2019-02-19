@@ -141,8 +141,7 @@ LOCAL_ADDITONAL_JAVA_DIR := $(lineage_platform_docs_LOCAL_ADDITIONAL_JAVA_DIR)
 LOCAL_IS_HOST_MODULE := false
 LOCAL_DROIDDOC_CUSTOM_TEMPLATE_DIR := vendor/lineage/build/tools/droiddoc/templates-lineage-sdk
 LOCAL_ADDITIONAL_DEPENDENCIES := \
-    services \
-    org.lineageos.hardware
+    services
 
 LOCAL_JAVA_LIBRARIES := $(lineage_platform_docs_java_libraries)
 
