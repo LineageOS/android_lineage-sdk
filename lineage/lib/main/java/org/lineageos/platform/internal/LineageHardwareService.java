@@ -19,42 +19,15 @@ package org.lineageos.platform.internal;
 import android.content.Context;
 import android.content.Intent;
 import android.os.IBinder;
-import android.os.RemoteCallbackList;
-import android.os.RemoteException;
 import android.os.UserHandle;
 import android.util.Log;
-import android.util.Range;
 
 import com.android.server.display.DisplayTransformManager;
 import com.android.server.LocalServices;
-import com.android.server.SystemService;
 
 import lineageos.app.LineageContextConstants;
 import lineageos.hardware.ILineageHardwareService;
 import lineageos.hardware.LineageHardwareManager;
-import lineageos.hardware.DisplayMode;
-import lineageos.hardware.HSIC;
-import lineageos.hardware.TouchscreenGesture;
-
-import java.io.File;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-
-import org.lineageos.hardware.AdaptiveBacklight;
-import org.lineageos.hardware.AutoContrast;
-import org.lineageos.hardware.ColorBalance;
-import org.lineageos.hardware.ColorEnhancement;
-import org.lineageos.hardware.DisplayColorCalibration;
-import org.lineageos.hardware.DisplayModeControl;
-import org.lineageos.hardware.HighTouchSensitivity;
-import org.lineageos.hardware.KeyDisabler;
-import org.lineageos.hardware.PictureAdjustment;
-import org.lineageos.hardware.ReadingEnhancement;
-import org.lineageos.hardware.SunlightEnhancement;
-import org.lineageos.hardware.TouchscreenGestures;
-import org.lineageos.hardware.TouchscreenHovering;
-import org.lineageos.hardware.VibratorHW;
 
 import static com.android.server.display.DisplayTransformManager.LEVEL_COLOR_MATRIX_NIGHT_DISPLAY;
 import static com.android.server.display.DisplayTransformManager.LEVEL_COLOR_MATRIX_GRAYSCALE;
@@ -75,30 +48,6 @@ public class LineageHardwareService extends LineageSystemService {
 
         public int[] getDisplayColorCalibration();
         public boolean setDisplayColorCalibration(int[] rgb);
-
-        public int[] getVibratorIntensity();
-        public boolean setVibratorIntensity(int intensity);
-
-        public boolean requireAdaptiveBacklightForSunlightEnhancement();
-        public boolean isSunlightEnhancementSelfManaged();
-
-        public DisplayMode[] getDisplayModes();
-        public DisplayMode getCurrentDisplayMode();
-        public DisplayMode getDefaultDisplayMode();
-        public boolean setDisplayMode(DisplayMode mode, boolean makeDefault);
-
-        public int getColorBalanceMin();
-        public int getColorBalanceMax();
-        public int getColorBalance();
-        public boolean setColorBalance(int value);
-
-        public HSIC getPictureAdjustment();
-        public HSIC getDefaultPictureAdjustment();
-        public boolean setPictureAdjustment(HSIC hsic);
-        public List<Range<Float>> getPictureAdjustmentRanges();
-
-        public TouchscreenGesture[] getTouchscreenGestures();
-        public boolean setTouchscreenGestureEnabled(TouchscreenGesture gesture, boolean state);
     }
 
     private class LegacyLineageHardware implements LineageHardwareInterface {
@@ -139,34 +88,6 @@ public class LineageHardwareService extends LineageSystemService {
         public LegacyLineageHardware() {
             mAcceleratedTransform = mContext.getResources().getBoolean(
                     com.android.internal.R.bool.config_setColorTransformAccelerated);
-            if (AdaptiveBacklight.isSupported())
-                mSupportedFeatures |= LineageHardwareManager.FEATURE_ADAPTIVE_BACKLIGHT;
-            if (ColorEnhancement.isSupported())
-                mSupportedFeatures |= LineageHardwareManager.FEATURE_COLOR_ENHANCEMENT;
-            if (DisplayColorCalibration.isSupported())
-                mSupportedFeatures |= LineageHardwareManager.FEATURE_DISPLAY_COLOR_CALIBRATION;
-            if (HighTouchSensitivity.isSupported())
-                mSupportedFeatures |= LineageHardwareManager.FEATURE_HIGH_TOUCH_SENSITIVITY;
-            if (KeyDisabler.isSupported())
-                mSupportedFeatures |= LineageHardwareManager.FEATURE_KEY_DISABLE;
-            if (ReadingEnhancement.isSupported())
-                mSupportedFeatures |= LineageHardwareManager.FEATURE_READING_ENHANCEMENT;
-            if (SunlightEnhancement.isSupported())
-                mSupportedFeatures |= LineageHardwareManager.FEATURE_SUNLIGHT_ENHANCEMENT;
-            if (VibratorHW.isSupported())
-                mSupportedFeatures |= LineageHardwareManager.FEATURE_VIBRATOR;
-            if (TouchscreenHovering.isSupported())
-                mSupportedFeatures |= LineageHardwareManager.FEATURE_TOUCH_HOVERING;
-            if (AutoContrast.isSupported())
-                mSupportedFeatures |= LineageHardwareManager.FEATURE_AUTO_CONTRAST;
-            if (DisplayModeControl.isSupported())
-                mSupportedFeatures |= LineageHardwareManager.FEATURE_DISPLAY_MODES;
-            if (ColorBalance.isSupported())
-                mSupportedFeatures |= LineageHardwareManager.FEATURE_COLOR_BALANCE;
-            if (PictureAdjustment.isSupported())
-                mSupportedFeatures |= LineageHardwareManager.FEATURE_PICTURE_ADJUSTMENT;
-            if (TouchscreenGestures.isSupported())
-                mSupportedFeatures |= LineageHardwareManager.FEATURE_TOUCHSCREEN_GESTURES;
             if (mAcceleratedTransform) {
                 mDTMService = LocalServices.getService(DisplayTransformManager.class);
                 mSupportedFeatures |= LineageHardwareManager.FEATURE_DISPLAY_COLOR_CALIBRATION;
@@ -180,24 +101,9 @@ public class LineageHardwareService extends LineageSystemService {
 
         public boolean get(int feature) {
             switch(feature) {
-                case LineageHardwareManager.FEATURE_ADAPTIVE_BACKLIGHT:
-                    return AdaptiveBacklight.isEnabled();
-                case LineageHardwareManager.FEATURE_AUTO_CONTRAST:
-                    return AutoContrast.isEnabled();
-                case LineageHardwareManager.FEATURE_COLOR_ENHANCEMENT:
-                    return ColorEnhancement.isEnabled();
-                case LineageHardwareManager.FEATURE_HIGH_TOUCH_SENSITIVITY:
-                    return HighTouchSensitivity.isEnabled();
-                case LineageHardwareManager.FEATURE_KEY_DISABLE:
-                    return KeyDisabler.isActive();
                 case LineageHardwareManager.FEATURE_READING_ENHANCEMENT:
                     if (mAcceleratedTransform)
                         return mReadingEnhancementEnabled;
-                    return ReadingEnhancement.isEnabled();
-                case LineageHardwareManager.FEATURE_SUNLIGHT_ENHANCEMENT:
-                    return SunlightEnhancement.isEnabled();
-                case LineageHardwareManager.FEATURE_TOUCH_HOVERING:
-                    return TouchscreenHovering.isEnabled();
                 default:
                     Log.e(TAG, "feature " + feature + " is not a boolean feature");
                     return false;
@@ -206,16 +112,6 @@ public class LineageHardwareService extends LineageSystemService {
 
         public boolean set(int feature, boolean enable) {
             switch(feature) {
-                case LineageHardwareManager.FEATURE_ADAPTIVE_BACKLIGHT:
-                    return AdaptiveBacklight.setEnabled(enable);
-                case LineageHardwareManager.FEATURE_AUTO_CONTRAST:
-                    return AutoContrast.setEnabled(enable);
-                case LineageHardwareManager.FEATURE_COLOR_ENHANCEMENT:
-                    return ColorEnhancement.setEnabled(enable);
-                case LineageHardwareManager.FEATURE_HIGH_TOUCH_SENSITIVITY:
-                    return HighTouchSensitivity.setEnabled(enable);
-                case LineageHardwareManager.FEATURE_KEY_DISABLE:
-                    return KeyDisabler.setActive(enable);
                 case LineageHardwareManager.FEATURE_READING_ENHANCEMENT:
                     if (mAcceleratedTransform) {
                         mReadingEnhancementEnabled = enable;
@@ -223,42 +119,10 @@ public class LineageHardwareService extends LineageSystemService {
                                 enable ? MATRIX_GRAYSCALE : MATRIX_NORMAL);
                         return true;
                     }
-                    return ReadingEnhancement.setEnabled(enable);
-                case LineageHardwareManager.FEATURE_SUNLIGHT_ENHANCEMENT:
-                    return SunlightEnhancement.setEnabled(enable);
-                case LineageHardwareManager.FEATURE_TOUCH_HOVERING:
-                    return TouchscreenHovering.setEnabled(enable);
                 default:
                     Log.e(TAG, "feature " + feature + " is not a boolean feature");
                     return false;
             }
-        }
-
-        private int[] splitStringToInt(String input, String delimiter) {
-            if (input == null || delimiter == null) {
-                return null;
-            }
-            String strArray[] = input.split(delimiter);
-            try {
-                int intArray[] = new int[strArray.length];
-                for(int i = 0; i < strArray.length; i++) {
-                    intArray[i] = Integer.parseInt(strArray[i]);
-                }
-                return intArray;
-            } catch (NumberFormatException e) {
-                /* ignore */
-            }
-            return null;
-        }
-
-        private String rgbToString(int[] rgb) {
-            StringBuilder builder = new StringBuilder();
-            builder.append(rgb[LineageHardwareManager.COLOR_CALIBRATION_RED_INDEX]);
-            builder.append(" ");
-            builder.append(rgb[LineageHardwareManager.COLOR_CALIBRATION_GREEN_INDEX]);
-            builder.append(" ");
-            builder.append(rgb[LineageHardwareManager.COLOR_CALIBRATION_BLUE_INDEX]);
-            return builder.toString();
         }
 
         private float[] rgbToMatrix(int[] rgb) {
@@ -279,8 +143,7 @@ public class LineageHardwareService extends LineageSystemService {
         }
 
         public int[] getDisplayColorCalibration() {
-            int[] rgb = mAcceleratedTransform ? mCurColors :
-                    splitStringToInt(DisplayColorCalibration.getCurColors(), " ");
+            int[] rgb = mAcceleratedTransform ? mCurColors : null;
             if (rgb == null || rgb.length != 3) {
                 Log.e(TAG, "Invalid color calibration string");
                 return null;
@@ -289,10 +152,8 @@ public class LineageHardwareService extends LineageSystemService {
             currentCalibration[LineageHardwareManager.COLOR_CALIBRATION_RED_INDEX] = rgb[0];
             currentCalibration[LineageHardwareManager.COLOR_CALIBRATION_GREEN_INDEX] = rgb[1];
             currentCalibration[LineageHardwareManager.COLOR_CALIBRATION_BLUE_INDEX] = rgb[2];
-            currentCalibration[LineageHardwareManager.COLOR_CALIBRATION_MIN_INDEX] =
-                mAcceleratedTransform ? MIN : DisplayColorCalibration.getMinValue();
-            currentCalibration[LineageHardwareManager.COLOR_CALIBRATION_MAX_INDEX] =
-                mAcceleratedTransform ? MAX : DisplayColorCalibration.getMaxValue();
+            currentCalibration[LineageHardwareManager.COLOR_CALIBRATION_MIN_INDEX] = MIN;
+            currentCalibration[LineageHardwareManager.COLOR_CALIBRATION_MAX_INDEX] = MAX;
             return currentCalibration;
         }
 
@@ -302,85 +163,9 @@ public class LineageHardwareService extends LineageSystemService {
                 mDTMService.setColorMatrix(LEVEL_COLOR_MATRIX_CALIB, rgbToMatrix(rgb));
                 return true;
             }
-            return DisplayColorCalibration.setColors(rgbToString(rgb));
+            return false;
         }
 
-        public int[] getVibratorIntensity() {
-            int[] vibrator = new int[5];
-            vibrator[LineageHardwareManager.VIBRATOR_INTENSITY_INDEX] = VibratorHW.getCurIntensity();
-            vibrator[LineageHardwareManager.VIBRATOR_DEFAULT_INDEX] = VibratorHW.getDefaultIntensity();
-            vibrator[LineageHardwareManager.VIBRATOR_MIN_INDEX] = VibratorHW.getMinIntensity();
-            vibrator[LineageHardwareManager.VIBRATOR_MAX_INDEX] = VibratorHW.getMaxIntensity();
-            vibrator[LineageHardwareManager.VIBRATOR_WARNING_INDEX] = VibratorHW.getWarningThreshold();
-            return vibrator;
-        }
-
-        public boolean setVibratorIntensity(int intensity) {
-            return VibratorHW.setIntensity(intensity);
-        }
-
-        public boolean requireAdaptiveBacklightForSunlightEnhancement() {
-            return SunlightEnhancement.isAdaptiveBacklightRequired();
-        }
-
-        public boolean isSunlightEnhancementSelfManaged() {
-            return SunlightEnhancement.isSelfManaged();
-        }
-
-        public DisplayMode[] getDisplayModes() {
-            return DisplayModeControl.getAvailableModes();
-        }
-
-        public DisplayMode getCurrentDisplayMode() {
-            return DisplayModeControl.getCurrentMode();
-        }
-
-        public DisplayMode getDefaultDisplayMode() {
-            return DisplayModeControl.getDefaultMode();
-        }
-
-        public boolean setDisplayMode(DisplayMode mode, boolean makeDefault) {
-            return DisplayModeControl.setMode(mode, makeDefault);
-        }
-
-        public int getColorBalanceMin() {
-            return ColorBalance.getMinValue();
-        }
-
-        public int getColorBalanceMax() {
-            return ColorBalance.getMaxValue();
-        }
-
-        public int getColorBalance() {
-            return ColorBalance.getValue();
-        }
-
-        public boolean setColorBalance(int value) {
-            return ColorBalance.setValue(value);
-        }
-
-        public HSIC getPictureAdjustment() { return PictureAdjustment.getHSIC(); }
-
-        public HSIC getDefaultPictureAdjustment() { return PictureAdjustment.getDefaultHSIC(); }
-
-        public boolean setPictureAdjustment(HSIC hsic) { return PictureAdjustment.setHSIC(hsic); }
-
-        public List<Range<Float>> getPictureAdjustmentRanges() {
-            return Arrays.asList(
-                    PictureAdjustment.getHueRange(),
-                    PictureAdjustment.getSaturationRange(),
-                    PictureAdjustment.getIntensityRange(),
-                    PictureAdjustment.getContrastRange(),
-                    PictureAdjustment.getSaturationThresholdRange());
-        }
-
-        public TouchscreenGesture[] getTouchscreenGestures() {
-            return TouchscreenGestures.getAvailableGestures();
-        }
-
-        public boolean setTouchscreenGestureEnabled(TouchscreenGesture gesture, boolean state) {
-            return TouchscreenGestures.setGestureEnabled(gesture, state);
-        }
     }
 
     private LineageHardwareInterface getImpl(Context context) {
@@ -473,201 +258,6 @@ public class LineageHardwareService extends LineageSystemService {
             }
             return mLineageHwImpl.setDisplayColorCalibration(rgb);
         }
-
-        @Override
-        public int[] getVibratorIntensity() {
-            mContext.enforceCallingOrSelfPermission(
-                    lineageos.platform.Manifest.permission.HARDWARE_ABSTRACTION_ACCESS, null);
-            if (!isSupported(LineageHardwareManager.FEATURE_VIBRATOR)) {
-                Log.e(TAG, "Vibrator is not supported");
-                return null;
-            }
-            return mLineageHwImpl.getVibratorIntensity();
-        }
-
-        @Override
-        public boolean setVibratorIntensity(int intensity) {
-            mContext.enforceCallingOrSelfPermission(
-                    lineageos.platform.Manifest.permission.HARDWARE_ABSTRACTION_ACCESS, null);
-            if (!isSupported(LineageHardwareManager.FEATURE_VIBRATOR)) {
-                Log.e(TAG, "Vibrator is not supported");
-                return false;
-            }
-            return mLineageHwImpl.setVibratorIntensity(intensity);
-        }
-
-        @Override
-        public boolean requireAdaptiveBacklightForSunlightEnhancement() {
-            mContext.enforceCallingOrSelfPermission(
-                    lineageos.platform.Manifest.permission.HARDWARE_ABSTRACTION_ACCESS, null);
-            if (!isSupported(LineageHardwareManager.FEATURE_SUNLIGHT_ENHANCEMENT)) {
-                Log.e(TAG, "Sunlight enhancement is not supported");
-                return false;
-            }
-            return mLineageHwImpl.requireAdaptiveBacklightForSunlightEnhancement();
-        }
-
-        @Override
-        public boolean isSunlightEnhancementSelfManaged() {
-            mContext.enforceCallingOrSelfPermission(
-                    lineageos.platform.Manifest.permission.HARDWARE_ABSTRACTION_ACCESS, null);
-            if (!isSupported(LineageHardwareManager.FEATURE_SUNLIGHT_ENHANCEMENT)) {
-                Log.e(TAG, "Sunlight enhancement is not supported");
-                return false;
-            }
-            return mLineageHwImpl.isSunlightEnhancementSelfManaged();
-        }
-
-        @Override
-        public DisplayMode[] getDisplayModes() {
-            mContext.enforceCallingOrSelfPermission(
-                    lineageos.platform.Manifest.permission.HARDWARE_ABSTRACTION_ACCESS, null);
-            if (!isSupported(LineageHardwareManager.FEATURE_DISPLAY_MODES)) {
-                Log.e(TAG, "Display modes are not supported");
-                return null;
-            }
-            return mLineageHwImpl.getDisplayModes();
-        }
-
-        @Override
-        public DisplayMode getCurrentDisplayMode() {
-            mContext.enforceCallingOrSelfPermission(
-                    lineageos.platform.Manifest.permission.HARDWARE_ABSTRACTION_ACCESS, null);
-            if (!isSupported(LineageHardwareManager.FEATURE_DISPLAY_MODES)) {
-                Log.e(TAG, "Display modes are not supported");
-                return null;
-            }
-            return mLineageHwImpl.getCurrentDisplayMode();
-        }
-
-        @Override
-        public DisplayMode getDefaultDisplayMode() {
-            mContext.enforceCallingOrSelfPermission(
-                    lineageos.platform.Manifest.permission.HARDWARE_ABSTRACTION_ACCESS, null);
-            if (!isSupported(LineageHardwareManager.FEATURE_DISPLAY_MODES)) {
-                Log.e(TAG, "Display modes are not supported");
-                return null;
-            }
-            return mLineageHwImpl.getDefaultDisplayMode();
-        }
-
-        @Override
-        public boolean setDisplayMode(DisplayMode mode, boolean makeDefault) {
-            mContext.enforceCallingOrSelfPermission(
-                    lineageos.platform.Manifest.permission.HARDWARE_ABSTRACTION_ACCESS, null);
-            if (!isSupported(LineageHardwareManager.FEATURE_DISPLAY_MODES)) {
-                Log.e(TAG, "Display modes are not supported");
-                return false;
-            }
-            return mLineageHwImpl.setDisplayMode(mode, makeDefault);
-        }
-
-        @Override
-        public int getColorBalanceMin() {
-            mContext.enforceCallingOrSelfPermission(
-                    lineageos.platform.Manifest.permission.HARDWARE_ABSTRACTION_ACCESS, null);
-            if (isSupported(LineageHardwareManager.FEATURE_COLOR_BALANCE)) {
-                return mLineageHwImpl.getColorBalanceMin();
-            }
-            return 0;
-        }
-
-        @Override
-        public int getColorBalanceMax() {
-            mContext.enforceCallingOrSelfPermission(
-                    lineageos.platform.Manifest.permission.HARDWARE_ABSTRACTION_ACCESS, null);
-            if (isSupported(LineageHardwareManager.FEATURE_COLOR_BALANCE)) {
-                return mLineageHwImpl.getColorBalanceMax();
-            }
-            return 0;
-        }
-
-        @Override
-        public int getColorBalance() {
-            mContext.enforceCallingOrSelfPermission(
-                    lineageos.platform.Manifest.permission.HARDWARE_ABSTRACTION_ACCESS, null);
-            if (isSupported(LineageHardwareManager.FEATURE_COLOR_BALANCE)) {
-                return mLineageHwImpl.getColorBalance();
-            }
-            return 0;
-        }
-
-        @Override
-        public boolean setColorBalance(int value) {
-            mContext.enforceCallingOrSelfPermission(
-                    lineageos.platform.Manifest.permission.HARDWARE_ABSTRACTION_ACCESS, null);
-            if (isSupported(LineageHardwareManager.FEATURE_COLOR_BALANCE)) {
-                return mLineageHwImpl.setColorBalance(value);
-            }
-            return false;
-        }
-
-        @Override
-        public HSIC getPictureAdjustment() {
-            mContext.enforceCallingOrSelfPermission(
-                    lineageos.platform.Manifest.permission.HARDWARE_ABSTRACTION_ACCESS, null);
-            if (isSupported(LineageHardwareManager.FEATURE_PICTURE_ADJUSTMENT)) {
-                return mLineageHwImpl.getPictureAdjustment();
-            }
-            return new HSIC(0.0f, 0.0f, 0.0f, 0.0f, 0.0f);
-        }
-
-        @Override
-        public HSIC getDefaultPictureAdjustment() {
-            mContext.enforceCallingOrSelfPermission(
-                    lineageos.platform.Manifest.permission.HARDWARE_ABSTRACTION_ACCESS, null);
-            if (isSupported(LineageHardwareManager.FEATURE_PICTURE_ADJUSTMENT)) {
-                return mLineageHwImpl.getDefaultPictureAdjustment();
-            }
-            return new HSIC(0.0f, 0.0f, 0.0f, 0.0f, 0.0f);
-        }
-
-        @Override
-        public boolean setPictureAdjustment(HSIC hsic) {
-            mContext.enforceCallingOrSelfPermission(
-                    lineageos.platform.Manifest.permission.HARDWARE_ABSTRACTION_ACCESS, null);
-            if (isSupported(LineageHardwareManager.FEATURE_PICTURE_ADJUSTMENT) && hsic != null) {
-                return mLineageHwImpl.setPictureAdjustment(hsic);
-            }
-            return false;
-        }
-
-        @Override
-        public float[] getPictureAdjustmentRanges() {
-            mContext.enforceCallingOrSelfPermission(
-                    lineageos.platform.Manifest.permission.HARDWARE_ABSTRACTION_ACCESS, null);
-            if (isSupported(LineageHardwareManager.FEATURE_PICTURE_ADJUSTMENT)) {
-                final List<Range<Float>> r = mLineageHwImpl.getPictureAdjustmentRanges();
-                return new float[] {
-                        r.get(0).getLower(), r.get(0).getUpper(),
-                        r.get(1).getLower(), r.get(1).getUpper(),
-                        r.get(2).getLower(), r.get(2).getUpper(),
-                        r.get(3).getLower(), r.get(3).getUpper(),
-                        r.get(4).getUpper(), r.get(4).getUpper() };
-            }
-            return new float[10];
-        }
-
-        @Override
-        public TouchscreenGesture[] getTouchscreenGestures() {
-            mContext.enforceCallingOrSelfPermission(
-                    lineageos.platform.Manifest.permission.HARDWARE_ABSTRACTION_ACCESS, null);
-            if (!isSupported(LineageHardwareManager.FEATURE_TOUCHSCREEN_GESTURES)) {
-                Log.e(TAG, "Touchscreen gestures are not supported");
-                return null;
-            }
-            return mLineageHwImpl.getTouchscreenGestures();
-        }
-
-        @Override
-        public boolean setTouchscreenGestureEnabled(TouchscreenGesture gesture, boolean state) {
-            mContext.enforceCallingOrSelfPermission(
-                    lineageos.platform.Manifest.permission.HARDWARE_ABSTRACTION_ACCESS, null);
-            if (!isSupported(LineageHardwareManager.FEATURE_TOUCHSCREEN_GESTURES)) {
-                Log.e(TAG, "Touchscreen gestures are not supported");
-                return false;
-            }
-            return mLineageHwImpl.setTouchscreenGestureEnabled(gesture, state);
-        }
     };
+
 }
