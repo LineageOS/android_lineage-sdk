@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "e6dde7e8_93fc167b",
+        "filename": "lineage/lib/main/java/org/lineageos/platform/internal/PerformanceManagerService.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 134,
+      "author": {
+        "id": 4550
+      },
+      "writtenOn": "2019-02-21T23:48:07Z",
+      "side": 1,
+      "message": "This property is not set on pre-UM",
+      "revId": "d853f892aa85741040b1a868e3761343e62d4587",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    }
+  ]
+}
