@@ -34,6 +34,23 @@
       "revId": "d853f892aa85741040b1a868e3761343e62d4587",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "5611dc75_85ff8f6e",
+        "filename": "lineage/lib/main/java/org/lineageos/platform/internal/PerformanceManagerService.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 143,
+      "author": {
+        "id": 16208
+      },
+      "writtenOn": "2019-02-22T03:50:50Z",
+      "side": 1,
+      "message": "Why is this duplicated?",
+      "revId": "d853f892aa85741040b1a868e3761343e62d4587",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
     }
   ]
 }
