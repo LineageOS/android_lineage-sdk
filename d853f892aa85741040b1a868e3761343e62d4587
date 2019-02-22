@@ -16,6 +16,24 @@
       "revId": "d853f892aa85741040b1a868e3761343e62d4587",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "24806147_620a7e79",
+        "filename": "lineage/lib/main/java/org/lineageos/platform/internal/PerformanceManagerService.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 134,
+      "author": {
+        "id": 10258
+      },
+      "writtenOn": "2019-02-22T01:55:34Z",
+      "side": 1,
+      "message": "You need to set it on boot completed in init.*.rc. I\u0027m not sure if it\u0027s prerequisite with old perf stack, but it\u0027s always better to set it: https://source.codeaurora.org/quic/la/device/qcom/common/tree/rootdir/etc/init.qcom.post_boot.sh?h\u003dLA.BR.1.2.9.1-02310-8x16.0#n3143",
+      "parentUuid": "e6dde7e8_93fc167b",
+      "revId": "d853f892aa85741040b1a868e3761343e62d4587",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
     }
   ]
 }
