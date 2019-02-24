@@ -21,9 +21,11 @@ import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.app.admin.DevicePolicyManager;
+import android.content.BroadcastReceiver;
 import android.content.ContentResolver;
 import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.net.Uri;
 import android.os.Build;
 import android.os.IBinder;
@@ -61,6 +63,8 @@ public class TrustInterfaceService extends LineageSystemService {
     private static final String CHANNEL_NAME = "TrustInterface";
     private static final int ONBOARDING_NOTIFCATION_ID = 89;
 
+    private static final String SETTINGS_SECURE_USER_SETUP_COMPLETE = "user_setup_complete";
+
     private Context mContext;
     private NotificationManager mNotificationManager = null;
 
@@ -87,6 +91,7 @@ public class TrustInterfaceService extends LineageSystemService {
         // Onboard
         if (!hasOnboardedUser()) {
             postOnBoardingNotification();
+            registerLocaleChangedReceiver();
             return;
         }
 
@@ -343,6 +348,20 @@ public class TrustInterfaceService extends LineageSystemService {
         return LineageSettings.System.getInt(mContext.getContentResolver(),
                 LineageSettings.System.TRUST_INTERFACE_HINTED, 0) == 1;
     }
+
+    private void registerLocaleChangedReceiver() {
+        IntentFilter filter = new IntentFilter(Intent.ACTION_LOCALE_CHANGED);
+        mContext.registerReceiver(mReceiver, filter);
+    }
+
+    private final BroadcastReceiver mReceiver = new BroadcastReceiver() {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            if (intent.getAction() == Intent.ACTION_LOCALE_CHANGED) {
+                postOnBoardingNotification();
+            }
+        }
+    };
 
     /* Service */
 
