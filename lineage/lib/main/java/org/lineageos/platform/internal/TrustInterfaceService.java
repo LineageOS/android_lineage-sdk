@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2018 The LineageOS Project
+ * Copyright (c) 2018-2019 The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -21,9 +21,11 @@ import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.app.admin.DevicePolicyManager;
+import android.content.BroadcastReceiver;
 import android.content.ContentResolver;
 import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.net.Uri;
 import android.os.Build;
 import android.os.IBinder;
@@ -87,6 +89,7 @@ public class TrustInterfaceService extends LineageSystemService {
         // Onboard
         if (!hasOnboardedUser()) {
             postOnBoardingNotification();
+            registerLocaleChangedReceiver();
             return;
         }
 
@@ -343,6 +346,26 @@ public class TrustInterfaceService extends LineageSystemService {
         return LineageSettings.System.getInt(mContext.getContentResolver(),
                 LineageSettings.System.TRUST_INTERFACE_HINTED, 0) == 1;
     }
+
+    private void registerLocaleChangedReceiver() {
+        IntentFilter filter = new IntentFilter(Intent.ACTION_LOCALE_CHANGED);
+        mContext.registerReceiver(mReceiver, filter);
+    }
+
+    private final BroadcastReceiver mReceiver = new BroadcastReceiver() {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            if (intent.getAction() == Intent.ACTION_LOCALE_CHANGED) {
+                if (!hasOnboardedUser()) {
+                    // When are not onboarded, we want to change the language of the notification
+                    postOnBoardingNotification();
+                } else {
+                    // We don't care anymore about language changes
+                    context.unregisterReceiver(this);
+                }
+            }
+        }
+    };
 
     /* Service */
 
