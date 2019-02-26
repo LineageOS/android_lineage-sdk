@@ -24,6 +24,7 @@
     <string name="permdesc_modifyProfiles">Lubab rakendusel süsteemiprofiile muuta.</string>
     <!-- Labels for the HARDWARE_ABSTRACTION_ACCESS permission. -->
     <string name="permlab_useHardwareFramework">kasutada riistvara raamistikku</string>
+    <string name="permdesc_useHardwareFramework">Annab rakendusele ligipääsu Lineage riistvara raamistikule.</string>
     <!-- Labels for the WRITE_SETTINGS permission -->
     <string name="permlab_writeSettings">Lineage\'i süsteemiseadete muutmine</string>
     <string name="permdesc_writeSettings">Lubab rakendusel muuta Lineage\'i süsteemiseadeid.</string>
@@ -78,12 +79,17 @@
     <string name="live_display_night_summary">Kasuta ainult ööseadeid</string>
     <string name="live_display_outdoor">Õues (ere päike)</string>
     <string name="live_display_outdoor_summary">Kasuta ainult õuerežiimi seadeid</string>
+    <string name="live_display_hint">LiveDisplay aitab vähendada silmade väsimust ning aitab öösel paremini magada. Koputa proovimiseks siia!</string>
     <string name="accessibility_quick_settings_live_display_off">LiveDisplay väljas.</string>
     <string name="accessibility_quick_settings_live_display_auto">LiveDisplay: automaatrežiim.</string>
     <string name="accessibility_quick_settings_live_display_day">LiveDisplay: päevarežiim.</string>
     <string name="accessibility_quick_settings_live_display_night">LiveDisplay: öörežiim.</string>
     <string name="accessibility_quick_settings_live_display_outdoor">LiveDisplay: õuerežiim.</string>
     <string name="accessibility_quick_settings_live_display_changed_off">LiveDisplay välja lülitatud.</string>
+    <string name="accessibility_quick_settings_live_display_changed_auto">LiveDisplay muudetud automaatrežiimi.</string>
+    <string name="accessibility_quick_settings_live_display_changed_day">LiveDisplay muudetud päevarežiimi.</string>
+    <string name="accessibility_quick_settings_live_display_changed_night">LiveDisplay muudetud öörežiimi.</string>
+    <string name="accessibility_quick_settings_live_display_changed_outdoor">LiveDisplay muudetud õuerežiimi.</string>
     <!-- Performance manager permission title -->
     <string name="permlab_perfAccess">ligipääs jõudlusehaldurisse</string>
     <!-- Performance manager permission description -->
@@ -100,6 +106,7 @@
     <!-- DataUsageProvider write permission title -->
     <string name="permlab_dataUsageWrite">andmekasutuse andmebaasi muutmine</string>
     <!-- DataUsageProvider write permission description -->
+    <string name="permdesc_dataUsageWrite">Lubab rakendusel värskendada andmekasutuse andmebaasi sisu.</string>
     <!-- DataUsageProvider read permission title -->
     <string name="permlab_dataUsageRead">andmekasutuse andmebaasi lugemine</string>
     <!-- DataUsageProvider read permission description -->
