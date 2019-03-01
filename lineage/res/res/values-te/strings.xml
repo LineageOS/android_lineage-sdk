@@ -17,45 +17,28 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- Label for the LineageOS system components when they are shown to the user. -->
-    <!-- Labels for the MODIFY_PROFILES permission. -->
     <string name="permlab_modifyProfiles">సిస్టమ్ ప్రొఫైళ్ళను సవరించుము</string>
     <string name="permdesc_modifyProfiles">సిస్టమ్ ప్రొఫైళ్ళను సవరించేందుకు ప్రోగ్రాంకి అనుమతినిస్తుంది.</string>
-    <!-- Labels for the HARDWARE_ABSTRACTION_ACCESS permission. -->
     <string name="permlab_useHardwareFramework">వినియోగదారు హార్డ్‌వేర్‌ ఫ్రేమ్‌వర్క్</string>
-    <!-- Labels for the WRITE_SETTINGS permission -->
-    <!-- Labels for the WRITE_SECURE_SETTINGS permission -->
-    <!-- Labels for the PROTECTED_APP permission. -->
     <string name="permlab_protectedApp">సంరక్షిత ప్రోగ్రాంలకు జోడించు మరియు తొలగించు ప్రోగ్రాంలు</string>
     <string name="permdesc_protectedApp">ఇతర ప్రోగ్రాంలను సంరక్షించబడినవి అని గుర్తించుటకు మరియు వాటిని లాక్ చేయుటకు ఒక ప్రోగ్రాంను అనుమతిస్తుంది</string>
-    <!-- Labels for CHANGE_STYLE permission -->
-    <!-- this is wrong, but google's package manager uses the android:description
-         attribute as description for the runtime permission request dialog
-         with non-default dangerous permissions -->
-    <!-- Profiles -->
-    <!-- Names of default profiles. -->
     <string name="profileNameDefault">డిఫాల్ట్</string>
     <string name="profileNameWork">కార్యాలయం</string>
     <string name="profileNameHome">హోమ్</string>
     <string name="profileNameSilent">నిశ్శబ్దం</string>
     <string name="profileNameNight">రాత్రి</string>
     <string name="profileNameAutomobile">ఆటోమొబైల్</string>
-    <!-- Names of application groups. -->
     <string name="profileGroupPhone">ఫోన్</string>
     <string name="profileGroupCalendar">క్యాలెండర్</string>
     <string name="profileGroupGmail">Gmail</string>
     <string name="profileGroupEmail">ఈమెయిల్‌</string>
     <string name="profileGroupSMS">SMS</string>
-    <!-- Name of wildcard profile. -->
     <string name="wildcardProfile">ఇతరం</string>
-    <!-- Performance profiles -->
     <string name="perf_profile_pwrsv">పవర్ సేవ్</string>
     <string name="perf_profile_bal">సమతుల్య</string>
     <string name="perf_profile_perf">పనితీరు</string>
     <string name="perf_profile_bias_power">సమర్థత</string>
     <string name="perf_profile_bias_perf">త్వరగా</string>
-    <!-- Performance profiles -->
-    <!-- LiveDisplay strings -->
     <string name="live_display_auto">స్వయంచాలకం</string>
     <string name="live_display_auto_summary">సూర్యాస్తమయం మరియు సూర్యోదయం తరువాత స్వయంచాలకంగా స్క్రీన్ యొక్క వర్ణ ఉష్ణోగ్రతను సవరించుము.</string>
     <string name="live_display_off">ఆఫ్‌లో ఉంది</string>
@@ -67,28 +50,4 @@
     <string name="live_display_outdoor">ఆరుబయట (ప్రకాశవంతమైన సూర్యుడు)</string>
     <string name="live_display_outdoor_summary">ఆరుబయటి సెట్టింగులను మాత్రమే ఉపయోగించుము</string>
     <string name="live_display_hint">ప్రత్యక్ష ప్రదర్శన మీ కంటిపై ఒత్తిడిని తగ్గించడానికి సహాయపడుతుంది మరియు రాత్రి సమయంలో నిద్రపోవడానికి సహకరిస్తుంది. దానిని ప్రయత్నించి చూడడానికి ఇక్కడ క్లిక్ చేయండి!</string>
-    <!-- Performance manager permission title -->
-    <!-- Performance manager permission description -->
-    <!-- Weather Service strings -->
-    <!-- DataUsageProvider write permission title -->
-    <!-- DataUsageProvider write permission description -->
-    <!-- DataUsageProvider read permission title -->
-    <!-- DataUsageProvider read permission description -->
-    <!-- LiveDisplay manager permission -->
-    <!-- LineageAudioService - observe session changes permission -->
-    <!-- Privacy Guard -->
-    <!-- Permissions used by remote preferences -->
-    <!-- About device screen, build date -->
-    <!-- About device screen, LineageOS API Level -->
-    <!-- About device screen, LineageOS updates -->
-    <!-- About device screen, LineageOS version -->
-    <!-- About device screen, vendor security patch -->
-    <!-- General purpose use "unknown" string -->
-    <!-- Long-press back kill application -->
-    <!-- Status bar network traffic monitor strings -->
-    <!-- Accent colors -->
-    <!-- Trust interface -->
-    <!-- This string will be referenced from other apps when they're referring to the Trust interface.
-         Trust is a feature name, it's not suggested to translate this unless there are conflicts due
-         to a different meaning of the word "trust" in your language -->
 </resources>
