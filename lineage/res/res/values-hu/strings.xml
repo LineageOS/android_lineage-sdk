@@ -17,50 +17,33 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- Label for the LineageOS system components when they are shown to the user. -->
-    <!-- Labels for the MODIFY_PROFILES permission. -->
     <string name="permlab_modifyProfiles">rendszerprofilok módosítása</string>
     <string name="permdesc_modifyProfiles">Lehetővé teszi az alkalmazás számára a rendszerprofilok módosítását.</string>
-    <!-- Labels for the HARDWARE_ABSTRACTION_ACCESS permission. -->
     <string name="permlab_useHardwareFramework">hardver keretrendszert használ</string>
-    <!-- Labels for the WRITE_SETTINGS permission -->
-    <!-- Labels for the WRITE_SECURE_SETTINGS permission -->
-    <!-- Labels for the PROTECTED_APP permission. -->
     <string name="permlab_protectedApp">alkalmazások hozzáadása vagy eltávolítása a védett alkalmazásokból</string>
     <string name="permdesc_protectedApp">Lehetővé teszi az alkalmazás számára más alkalmazások védetté nyilvánítását és azok zárolását.</string>
-    <!-- Labels for CHANGE_STYLE permission -->
-    <!-- this is wrong, but google's package manager uses the android:description
-         attribute as description for the runtime permission request dialog
-         with non-default dangerous permissions -->
-    <!-- Profiles -->
-    <!-- Names of default profiles. -->
     <string name="profileNameDefault">Alapértelmezett</string>
     <string name="profileNameWork">Munka</string>
     <string name="profileNameHome">Otthon</string>
     <string name="profileNameSilent">Néma</string>
     <string name="profileNameNight">Éjszaka</string>
     <string name="profileNameAutomobile">Autóban</string>
-    <!-- Names of application groups. -->
     <string name="profileGroupPhone">Telefon</string>
     <string name="profileGroupCalendar">Naptár</string>
     <string name="profileGroupGmail">Gmail</string>
     <string name="profileGroupEmail">E-mail</string>
     <string name="profileGroupSMS">SMS</string>
-    <!-- Name of wildcard profile. -->
     <string name="wildcardProfile">Egyéb</string>
-    <!-- Performance profiles -->
     <string name="perf_profile_pwrsv">Energiatakarékos</string>
     <string name="perf_profile_bal">Kiegyensúlyozott</string>
     <string name="perf_profile_perf">Teljesítmény</string>
     <string name="perf_profile_bias_power">Hatékonyság</string>
     <string name="perf_profile_bias_perf">Gyors</string>
-    <!-- Performance profiles -->
     <string name="perf_profile_pwrsv_summary">Maximális energiatakarékosság. Csökkenti a készülék teljesítményét</string>
     <string name="perf_profile_bal_summary">Egyensúly az optimális teljesítmény és az energiafogyasztás között</string>
     <string name="perf_profile_perf_summary">Nagy teljesítményű üzemmód. Hasznos az alacsony késleltetést és nagy teljesítményt igénylő alkalmazásokhoz, amikor a fogyasztás nem számít</string>
     <string name="perf_profile_bias_power_summary">Energiatakarékosság előnyben részesítése. Korlátozza a maximális CPU teljesítményt és optimalizálja az energiatakarékosságot a nagyobb késleltetés árán</string>
     <string name="perf_profile_bias_perf_summary">Teljesítmény előnyben részesítése. Enyhén megnövekedett energiafogyatással csökkenti a késleltetést</string>
-    <!-- LiveDisplay strings -->
     <string name="live_display_auto">Automatikus</string>
     <string name="live_display_auto_summary">Automatikusan beállítja a képernyő színhőmérsékletét napnyugta és napkelte után</string>
     <string name="live_display_off">Ki</string>
@@ -82,11 +65,8 @@
     <string name="accessibility_quick_settings_live_display_changed_day">LiveDisplay nappali módra változtatva.</string>
     <string name="accessibility_quick_settings_live_display_changed_night">LiveDisplay éjszakai módra változtatva.</string>
     <string name="accessibility_quick_settings_live_display_changed_outdoor">LiveDisplay szabadtéri módra változtatva.</string>
-    <!-- Performance manager permission title -->
     <string name="permlab_perfAccess">hozzáférés a teljesítmény kezelőhöz</string>
-    <!-- Performance manager permission description -->
     <string name="permdesc_perfAccessDesc">Lehetővé teszi az alkalmazás számára, hogy hozzáférjen a teljesítmény szolgáltatáshoz. Általános alkalmazásoknak soha nem kell ilyen engedély.</string>
-    <!-- Weather Service strings -->
     <string name="permlab_weather_read">időjárás olvasása</string>
     <string name="permdesc_weather_read">Lehetővé teszi az alkalmazás számára az időjárás szolgáltatói tartalom olvasását.</string>
     <string name="permlab_weather_write">időjárás szolgáltató frissítése</string>
@@ -95,36 +75,15 @@
     <string name="permdesc_weather_bind">Lehetővé teszi az alkalmazás számára, hogy mint időjárás szolgáltató kerüljön azonosításra.</string>
     <string name="permlab_weather_access_mgr">hozzáférés időjárás szolgáltatáshoz</string>
     <string name="permdesc_weather_access_mgr">Lehetővé teszi az alkalmazás számára a rendszer időjárás szolgáltatásának elérését. Általános alkalmazásoknak soha nem kell ilyen engedély.</string>
-    <!-- DataUsageProvider write permission title -->
     <string name="permlab_dataUsageWrite">adathasználati adatbázis módosítása</string>
-    <!-- DataUsageProvider write permission description -->
     <string name="permdesc_dataUsageWrite">Lehetővé teszi az alkalmazás számára az adathasználati adatbázis tartalmának frissítését.</string>
-    <!-- DataUsageProvider read permission title -->
     <string name="permlab_dataUsageRead">adathasználati adatbázis olvasása</string>
-    <!-- DataUsageProvider read permission description -->
     <string name="permdesc_dataUsageRead">Lehetővé teszi az alkalmazás számára az adathasználati adatbázis tartalmának olvasását.</string>
-    <!-- LiveDisplay manager permission -->
     <string name="permlab_manageLiveDisplay">LiveDisplay beállítások kezelése</string>
     <string name="permdesc_manageLiveDisplay">Lehetővé teszi az alkalmazás számára a speciális megjelenítési beállítások konfigurálását.</string>
-    <!-- LineageAudioService - observe session changes permission -->
     <string name="permlab_observe_audio_sessions">audió munkamenet változásainak megfigyelése</string>
     <string name="permdesc_observe_audio_sessions">Lehetővé teszi az alkalmazás számára, hogy megfigyelje ahogy az audió folyamok létrejönnek és elpusztulnak.</string>
-    <!-- Privacy Guard -->
     <string name="privacy_guard_manager_title">Adatvédelmi beállítások</string>
-    <!-- Permissions used by remote preferences -->
     <string name="permlab_manageRemotePrefs">távoli beállítások kezelése</string>
     <string name="permdesc_manageRemotePrefs">Lehetővé teszi az alkalmazások számára a távoli beállítások kezelését</string>
-    <!-- About device screen, build date -->
-    <!-- About device screen, LineageOS API Level -->
-    <!-- About device screen, LineageOS updates -->
-    <!-- About device screen, LineageOS version -->
-    <!-- About device screen, vendor security patch -->
-    <!-- General purpose use "unknown" string -->
-    <!-- Long-press back kill application -->
-    <!-- Status bar network traffic monitor strings -->
-    <!-- Accent colors -->
-    <!-- Trust interface -->
-    <!-- This string will be referenced from other apps when they're referring to the Trust interface.
-         Trust is a feature name, it's not suggested to translate this unless there are conflicts due
-         to a different meaning of the word "trust" in your language -->
 </resources>

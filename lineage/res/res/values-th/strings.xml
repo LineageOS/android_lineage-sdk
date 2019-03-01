@@ -17,45 +17,28 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- Label for the LineageOS system components when they are shown to the user. -->
-    <!-- Labels for the MODIFY_PROFILES permission. -->
     <string name="permlab_modifyProfiles">ปรับแต่งโปรไฟล์ระบบ</string>
     <string name="permdesc_modifyProfiles">อนุญาตให้แอปปรับแต่งโปรไฟล์ระบบ</string>
-    <!-- Labels for the HARDWARE_ABSTRACTION_ACCESS permission. -->
     <string name="permlab_useHardwareFramework">ใช้ฮาร์ดแวร์เฟรมเวิร์ค</string>
-    <!-- Labels for the WRITE_SETTINGS permission -->
-    <!-- Labels for the WRITE_SECURE_SETTINGS permission -->
-    <!-- Labels for the PROTECTED_APP permission. -->
     <string name="permlab_protectedApp">เพิ่มและลบแอปจากแอปที่ได้รับการป้องกัน</string>
     <string name="permdesc_protectedApp">อนุญาคให้แอปทำเครื่องหมายว่าแอปอื่นได้รับการป้องกันและล็อคมันไว้</string>
-    <!-- Labels for CHANGE_STYLE permission -->
-    <!-- this is wrong, but google's package manager uses the android:description
-         attribute as description for the runtime permission request dialog
-         with non-default dangerous permissions -->
-    <!-- Profiles -->
-    <!-- Names of default profiles. -->
     <string name="profileNameDefault">ค่าเริ่มต้น</string>
     <string name="profileNameWork">งาน</string>
     <string name="profileNameHome">บ้าน</string>
     <string name="profileNameSilent">แบบเงียบ</string>
     <string name="profileNameNight">กลางคืน</string>
     <string name="profileNameAutomobile">รถยนต์</string>
-    <!-- Names of application groups. -->
     <string name="profileGroupPhone">โทรศัพท์</string>
     <string name="profileGroupCalendar">ปฏิทิน</string>
     <string name="profileGroupGmail">Gmail</string>
     <string name="profileGroupEmail">อีเมล</string>
     <string name="profileGroupSMS">SMS</string>
-    <!-- Name of wildcard profile. -->
     <string name="wildcardProfile">อื่น ๆ</string>
-    <!-- Performance profiles -->
     <string name="perf_profile_pwrsv">ประหยัดพลังงาน</string>
     <string name="perf_profile_bal">สมดุล</string>
     <string name="perf_profile_perf">ประสิทธิภาพ</string>
     <string name="perf_profile_bias_power">พลังงานต่ำ</string>
     <string name="perf_profile_bias_perf">รวดเร็ว</string>
-    <!-- Performance profiles -->
-    <!-- LiveDisplay strings -->
     <string name="live_display_auto">อัตโนมัติ</string>
     <string name="live_display_auto_summary">ตั้งอุณหภูมิสีอัตโนมัติเมื่อดวงอาทิตย์ขึ้นหรือตก</string>
     <string name="live_display_off">ปิด</string>
@@ -77,11 +60,8 @@
     <string name="accessibility_quick_settings_live_display_changed_day">LiveDisplay เปลี่ยนเป็นรูปแบบกลางวัน</string>
     <string name="accessibility_quick_settings_live_display_changed_night">LiveDisplay เปลี่ยนเป็นรูปแบบกลางคืน</string>
     <string name="accessibility_quick_settings_live_display_changed_outdoor">LiveDisplay เปลี่ยนเป็นรูปแบบกลางแจ้ง</string>
-    <!-- Performance manager permission title -->
     <string name="permlab_perfAccess">ตัวจัดการประสิทธิภาพการเข้าถึง</string>
-    <!-- Performance manager permission description -->
     <string name="permdesc_perfAccessDesc">อนุญาตให้แอปเข้าถึงบริการด้านประสิทธิภาพ ซึ่งไม่จำเป็นสำหรับแอปปกติ</string>
-    <!-- Weather Service strings -->
     <string name="permlab_weather_read">อ่านสภาพอากาศ</string>
     <string name="permdesc_weather_read">อนุญาตให้แอปอ่านเนื้อหาจากบริการรายงานสภาพอากาศ</string>
     <string name="permlab_weather_write">ปรับปรุงบริการรายงานสภาพอากาศ</string>
@@ -90,33 +70,12 @@
     <string name="permdesc_weather_bind">อนุญาตให้แอปยืนยันตัวตนเป็นบริการรายงานสภาพอากาศ</string>
     <string name="permlab_weather_access_mgr">เข้าถึงบริการรายงานสภาพอากาศ</string>
     <string name="permdesc_weather_access_mgr">อนุญาตให้แอปสามารถจัดการบริการรายงานสภาพอากาศในระบบ ปกติแล้วไม่ต้องการใช้งานในแอปทั่วไป</string>
-    <!-- DataUsageProvider write permission title -->
     <string name="permlab_dataUsageWrite">แก้ไขฐานข้อมูลการใช้งาน</string>
-    <!-- DataUsageProvider write permission description -->
     <string name="permdesc_dataUsageWrite">อนุญาตให้แอปสามารถปรับปรุงเนื้อหาของฐานข้อมูลการใช้งาน</string>
-    <!-- DataUsageProvider read permission title -->
     <string name="permlab_dataUsageRead">อ่านฐานข้อมูลการใช้งาน</string>
-    <!-- DataUsageProvider read permission description -->
     <string name="permdesc_dataUsageRead">อนุญาตให้แอปสามารถอ่านเนื้อหาจากฐานข้อมูลการใช้งาน</string>
-    <!-- LiveDisplay manager permission -->
     <string name="permlab_manageLiveDisplay">จัดการตั้งค่า LiveDisplay</string>
     <string name="permdesc_manageLiveDisplay">อนุญาตให้แอปตั้งค่าการแสดงผลขั้นสูง</string>
-    <!-- LineageAudioService - observe session changes permission -->
     <string name="permlab_observe_audio_sessions">สังเกตการเปลี่ยนแปลงเซสชันเสียง</string>
     <string name="permdesc_observe_audio_sessions">อนุญาตให้แอปสังเกตกระแสข้อมูลเสียงที่กำลังถูกสร้างและทำลาย</string>
-    <!-- Privacy Guard -->
-    <!-- Permissions used by remote preferences -->
-    <!-- About device screen, build date -->
-    <!-- About device screen, LineageOS API Level -->
-    <!-- About device screen, LineageOS updates -->
-    <!-- About device screen, LineageOS version -->
-    <!-- About device screen, vendor security patch -->
-    <!-- General purpose use "unknown" string -->
-    <!-- Long-press back kill application -->
-    <!-- Status bar network traffic monitor strings -->
-    <!-- Accent colors -->
-    <!-- Trust interface -->
-    <!-- This string will be referenced from other apps when they're referring to the Trust interface.
-         Trust is a feature name, it's not suggested to translate this unless there are conflicts due
-         to a different meaning of the word "trust" in your language -->
 </resources>
