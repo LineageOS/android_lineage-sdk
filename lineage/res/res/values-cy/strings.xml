@@ -26,8 +26,8 @@
     <string name="permdesc_writeSettings">Mae\'n caniatáu i ap addasu gosodiadau system LineageOS.</string>
     <string name="permlab_writeSecureSettings">addasu gosodiadau system ddiogel Lineage</string>
     <string name="permdesc_writeSecureSettings">Mae\'n caniatáu i ap addasu gosodiadau system ddiogel LineageOS. Dim i\'w ddefnyddio gan apiau arferol.</string>
-    <string name="permlab_protectedApp">ychwanegu a thynnu apiau i warchod apiau</string>
-    <string name="permdesc_protectedApp">Mae\'n caniatáu i ap nodi apiau eraill fel wedi eu diogelu ac i\'w cloi nhw.</string>
+    <string name="permlab_protectedApp">ychwanegu a thynnu apiau i\'r apiau wedi\'u gwarchod</string>
+    <string name="permdesc_protectedApp">Mae\'n caniatáu i ap nodi apiau eraill fel wedi eu gwarchod ac i\'w cloi nhw.</string>
     <string name="permlab_changeStyle">newid arddull system</string>
     <string name="permdesc_changeStyle">addasu lliwiau\'r system</string>
     <string name="profileNameDefault">Rhagosodiad</string>
@@ -122,6 +122,7 @@
     <string name="trust_notification_title_security">Trust \u2022 Diogelwch system</string>
     <string name="trust_notification_content_selinux">Dyw SELinux ddim yn gorfodi. Mae dy ddiogelwch wedi\'i wanhau.</string>
     <string name="trust_notification_title_root">Trust \u2022 Mynediad craidd</string>
+    <string name="trust_notification_content_root">Mae ap yn defnyddio breintiau craidd ar y foment hon</string>
     <string name="trust_notification_content_keys">Cafodd yr adeiledd hwn ei lofnodi gydag allweddau cyhoeddus</string>
     <string name="trust_notification_title_onboarding">Darganfydda Trust</string>
     <string name="trust_notification_content_onboarding">Dysga sut i sicrhau bod dy ddyfais yn ddiogel</string>
