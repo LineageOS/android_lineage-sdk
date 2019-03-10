@@ -17,50 +17,33 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- Label for the LineageOS system components when they are shown to the user. -->
-    <!-- Labels for the MODIFY_PROFILES permission. -->
     <string name="permlab_modifyProfiles">endre system profiler</string>
     <string name="permdesc_modifyProfiles">Tillat en app å endre systemprofiler.</string>
-    <!-- Labels for the HARDWARE_ABSTRACTION_ACCESS permission. -->
     <string name="permlab_useHardwareFramework">bruk maskinvare framework</string>
-    <!-- Labels for the WRITE_SETTINGS permission -->
-    <!-- Labels for the WRITE_SECURE_SETTINGS permission -->
-    <!-- Labels for the PROTECTED_APP permission. -->
     <string name="permlab_protectedApp">gjør apper beskyttet/ubeskyttet</string>
     <string name="permdesc_protectedApp">Tillat en app å merke andre apper som beskyttet og låse dem.</string>
-    <!-- Labels for CHANGE_STYLE permission -->
-    <!-- this is wrong, but google's package manager uses the android:description
-         attribute as description for the runtime permission request dialog
-         with non-default dangerous permissions -->
-    <!-- Profiles -->
-    <!-- Names of default profiles. -->
     <string name="profileNameDefault">Standard</string>
     <string name="profileNameWork">Arbeid</string>
     <string name="profileNameHome">Hjemme</string>
     <string name="profileNameSilent">Lydløs</string>
     <string name="profileNameNight">Natt</string>
     <string name="profileNameAutomobile">Bil</string>
-    <!-- Names of application groups. -->
     <string name="profileGroupPhone">Telefon</string>
     <string name="profileGroupCalendar">Kalender</string>
     <string name="profileGroupGmail">Gmail</string>
     <string name="profileGroupEmail">E-post</string>
     <string name="profileGroupSMS">SMS</string>
-    <!-- Name of wildcard profile. -->
     <string name="wildcardProfile">Annet</string>
-    <!-- Performance profiles -->
     <string name="perf_profile_pwrsv">Strømsparing</string>
     <string name="perf_profile_bal">Balansert</string>
     <string name="perf_profile_perf">Ytelse</string>
     <string name="perf_profile_bias_power">Effektivitet</string>
     <string name="perf_profile_bias_perf">Rask</string>
-    <!-- Performance profiles -->
     <string name="perf_profile_pwrsv_summary">Maksimal batterisparing, reduserer enhetens ytelse</string>
     <string name="perf_profile_bal_summary">Balanse av best ytelse og strømegenskaper</string>
     <string name="perf_profile_perf_summary">Høy ytelse modus. Nyttig for programmer som krever lav latens og høyeste gjennomstrømningen når strømforbruket ikke er en bekymring</string>
     <string name="perf_profile_bias_power_summary">Favoriserer strømsparing. Begrenser prossesor-kraft og optimaliserer for strømsparing på bekostning av høyere latens</string>
     <string name="perf_profile_bias_perf_summary">Favoriserer ytelse. Reduserer latens med litt mer strømbruk</string>
-    <!-- LiveDisplay strings -->
     <string name="live_display_auto">Automatisk</string>
     <string name="live_display_auto_summary">Juster fargetemperatur på skjermen etter solnedgang og soloppgang</string>
     <string name="live_display_off">Av</string>
@@ -82,11 +65,8 @@
     <string name="accessibility_quick_settings_live_display_changed_day">LiveDisplay endret til dagsmodus.</string>
     <string name="accessibility_quick_settings_live_display_changed_night">LiveDisplay endret til nattmodus.</string>
     <string name="accessibility_quick_settings_live_display_changed_outdoor">LiveDisplay endret til utendørs modus.</string>
-    <!-- Performance manager permission title -->
     <string name="permlab_perfAccess">tilgang til ytelsesadministrereren</string>
-    <!-- Performance manager permission description -->
     <string name="permdesc_perfAccessDesc">Tillater en app å få tilgang til ytelses-tjenesten. Dette skulle aldri vært nødvendig for normale apper.</string>
-    <!-- Weather Service strings -->
     <string name="permlab_weather_read">lese vær</string>
     <string name="permdesc_weather_read">Tillater en app å lese av innholdet fra værleverandøren.</string>
     <string name="permlab_weather_write">oppdatere værleverandør</string>
@@ -95,36 +75,15 @@
     <string name="permdesc_weather_bind">Tillater en app å bli identifisert som en værleverandør tjeneste.</string>
     <string name="permlab_weather_access_mgr">få tilgang til værtjeneste</string>
     <string name="permdesc_weather_access_mgr">Tillater en app å få tilgang til værtjenesten i systemet. Skal aldri være nødvendig for normale apper.</string>
-    <!-- DataUsageProvider write permission title -->
     <string name="permlab_dataUsageWrite">endre databruk databasen</string>
-    <!-- DataUsageProvider write permission description -->
     <string name="permdesc_dataUsageWrite">Tillater en app å oppdatere innholdet til databruk databasen.</string>
-    <!-- DataUsageProvider read permission title -->
     <string name="permlab_dataUsageRead">lese av databruk databasen</string>
-    <!-- DataUsageProvider read permission description -->
     <string name="permdesc_dataUsageRead">Tillater en app å lese av innholdet i databruk databasen.</string>
-    <!-- LiveDisplay manager permission -->
     <string name="permlab_manageLiveDisplay">behandle LiveDisplay innstillinger</string>
     <string name="permdesc_manageLiveDisplay">Tillater en app å konfigurere avanserte skjerminnstillinger.</string>
-    <!-- LineageAudioService - observe session changes permission -->
     <string name="permlab_observe_audio_sessions">observer lydøkt-endringer</string>
     <string name="permdesc_observe_audio_sessions">Tillater en app å observere om lyd-strømmer blir lagd eller ødelagt.</string>
-    <!-- Privacy Guard -->
     <string name="privacy_guard_manager_title">Personvernvakt</string>
-    <!-- Permissions used by remote preferences -->
     <string name="permlab_manageRemotePrefs">administrer fjernkontroll innstillinger</string>
     <string name="permdesc_manageRemotePrefs">Gir en app tilgang til å endre fjernkontroll innstillingene</string>
-    <!-- About device screen, build date -->
-    <!-- About device screen, LineageOS API Level -->
-    <!-- About device screen, LineageOS updates -->
-    <!-- About device screen, LineageOS version -->
-    <!-- About device screen, vendor security patch -->
-    <!-- General purpose use "unknown" string -->
-    <!-- Long-press back kill application -->
-    <!-- Status bar network traffic monitor strings -->
-    <!-- Accent colors -->
-    <!-- Trust interface -->
-    <!-- This string will be referenced from other apps when they're referring to the Trust interface.
-         Trust is a feature name, it's not suggested to translate this unless there are conflicts due
-         to a different meaning of the word "trust" in your language -->
 </resources>
