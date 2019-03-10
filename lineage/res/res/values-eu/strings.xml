@@ -17,58 +17,41 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- Label for the LineageOS system components when they are shown to the user. -->
     <string name="lineageos_system_label">LineageOS sistema</string>
-    <!-- Labels for the MODIFY_PROFILES permission. -->
     <string name="permlab_modifyProfiles">aldatu sistemaren profilak</string>
     <string name="permdesc_modifyProfiles">Sistemaren profilak aldatzea ahalbidetzen dio aplikazioari.</string>
-    <!-- Labels for the HARDWARE_ABSTRACTION_ACCESS permission. -->
     <string name="permlab_useHardwareFramework">hardware markoa erabili</string>
     <string name="permdesc_useHardwareFramework">Aplikazioari Lineage hardware markorako sarbidea gaitzen dio.</string>
-    <!-- Labels for the WRITE_SETTINGS permission -->
     <string name="permlab_writeSettings">aldatu Lineage sistemaren ezarpenak</string>
     <string name="permdesc_writeSettings">Lineage sistemaren ezarpenak aldatzea ahalbidetzen dio aplikazioari.</string>
-    <!-- Labels for the WRITE_SECURE_SETTINGS permission -->
     <string name="permlab_writeSecureSettings">aldatu Lineage sistemaren ezarpen seguruak</string>
     <string name="permdesc_writeSecureSettings">Lineage sistemaren ezarpen seguruak aldatzea ahalbidetzen dio aplikazioari. Aplikazio arruntek ez dute behar.</string>
-    <!-- Labels for the PROTECTED_APP permission. -->
     <string name="permlab_protectedApp">gehitu edo kendu aplikazioak babestutako aplikazioen zerrendan</string>
     <string name="permdesc_protectedApp">Beste aplikazio batzuk babestuta gisa markatzea eta blokeatzea ahalbidetzen dio aplikazioari.</string>
-    <!-- Labels for CHANGE_STYLE permission -->
     <string name="permlab_changeStyle">aldatu sistemaren estiloa</string>
-    <!-- this is wrong, but google's package manager uses the android:description
-         attribute as description for the runtime permission request dialog
-         with non-default dangerous permissions -->
     <string name="permdesc_changeStyle">pertsonalizatu sistemako koloreak</string>
-    <!-- Profiles -->
-    <!-- Names of default profiles. -->
     <string name="profileNameDefault">Lehenetsia</string>
     <string name="profileNameWork">Lanean</string>
     <string name="profileNameHome">Etxean</string>
     <string name="profileNameSilent">Isilik</string>
     <string name="profileNameNight">Gaua</string>
     <string name="profileNameAutomobile">Kotxean</string>
-    <!-- Names of application groups. -->
     <string name="profileGroupPhone">Telefonoa</string>
     <string name="profileGroupCalendar">Egutegia</string>
     <string name="profileGroupGmail">Gmail</string>
     <string name="profileGroupEmail">E-posta</string>
     <string name="profileGroupSMS">SMS</string>
-    <!-- Name of wildcard profile. -->
     <string name="wildcardProfile">Beste bat</string>
-    <!-- Performance profiles -->
     <string name="perf_profile_pwrsv">Energia aurreztea</string>
     <string name="perf_profile_bal">Orekatua</string>
     <string name="perf_profile_perf">Errendimendua</string>
     <string name="perf_profile_bias_power">Eraginkortasuna</string>
     <string name="perf_profile_bias_perf">Azkarra</string>
-    <!-- Performance profiles -->
     <string name="perf_profile_pwrsv_summary">Bateria aurrezte maximoa, gailuaren errendimendua gutxiagotzen du</string>
     <string name="perf_profile_bal_summary">Errendimendu optimoa eta energia ezaugarrien arteko oreka</string>
     <string name="perf_profile_perf_summary">Errendimendu altuko modua. Latentzia baxua eta emari altuena behar duten aplikazioetarako erabilgarria energia kontsumoak ardura ez duenean</string>
     <string name="perf_profile_bias_power_summary">Hobetsi energia aurreztea. Mugatu gehieneko PUZ energia eta optimizatu energia aurrezteko latentzia altuago baten truke</string>
     <string name="perf_profile_bias_perf_summary">Hobetsi errendimendua. latentzia gutxitzen du energia kontsumo apur bat gehiagorekin</string>
-    <!-- LiveDisplay strings -->
     <string name="live_display_auto">Automatikoa</string>
     <string name="live_display_auto_summary">Doitu automatikoki pantailaren kolore tenperatura ilunabarra eta egunsentiaren ostean</string>
     <string name="live_display_off">Ez</string>
@@ -90,11 +73,8 @@
     <string name="accessibility_quick_settings_live_display_changed_day">LiveDisplay eguna modura aldatu da.</string>
     <string name="accessibility_quick_settings_live_display_changed_night">LiveDisplay gaua modura aldatu da.</string>
     <string name="accessibility_quick_settings_live_display_changed_outdoor">LiveDisplay kaleko modura aldatu da.</string>
-    <!-- Performance manager permission title -->
     <string name="permlab_perfAccess">errendimendu kudeatzailea atzitu</string>
-    <!-- Performance manager permission description -->
     <string name="permdesc_perfAccessDesc">Errendimendu kudeatzailea atzitzea ahalbidetzen dio aplikazioari. Aplikazio arruntek ez dute hau behar.</string>
-    <!-- Weather Service strings -->
     <string name="permlab_weather_read">eguraldia irakurri</string>
     <string name="permdesc_weather_read">Eguraldi hornitzailetik edukia irakurtzea ahalbidetzen dio aplikazioari.</string>
     <string name="permlab_weather_write">eguraldi hornitzailea eguneratu</string>
@@ -103,45 +83,28 @@
     <string name="permdesc_weather_bind">Eguraldi hornitzaile zerbitzu gisa identifikatzea ahalbidetzen dio aplikazioari.</string>
     <string name="permlab_weather_access_mgr">eguraldi zerbitzua atzitzea</string>
     <string name="permdesc_weather_access_mgr">Sistemako eguraldi zerbitzura sartzea ahalbidetzen dio aplikazioari. Aplikazio arruntek ez dute hau behar.</string>
-    <!-- DataUsageProvider write permission title -->
     <string name="permlab_dataUsageWrite">datu erabileraren datu-basea aldatu</string>
-    <!-- DataUsageProvider write permission description -->
     <string name="permdesc_dataUsageWrite">Datu erabileraren datu-baseko edukiak eguneratzea ahalbidetzen dio aplikazioari.</string>
-    <!-- DataUsageProvider read permission title -->
     <string name="permlab_dataUsageRead">datu erabilera errealaren datu-basea</string>
-    <!-- DataUsageProvider read permission description -->
     <string name="permdesc_dataUsageRead">Datu erabileraren datu-baseko edukiak irakurtzea ahalbidetzen dio aplikazioari.</string>
-    <!-- LiveDisplay manager permission -->
     <string name="permlab_manageLiveDisplay">LiveDisplay ezarpenak kudeatu</string>
     <string name="permdesc_manageLiveDisplay">Pantailaren ezarpen aurreratuak ezartzea ahalbidetzen dio aplikazioari.</string>
-    <!-- LineageAudioService - observe session changes permission -->
     <string name="permlab_observe_audio_sessions">audio saio aldaketak aztertu</string>
     <string name="permdesc_observe_audio_sessions">Audio jarioen sorrerak eta suntsiketak aztertzea ahalbidetzen dio aplikazioari.</string>
-    <!-- Privacy Guard -->
     <string name="privacy_guard_manager_title">Privacy Guard</string>
-    <!-- Permissions used by remote preferences -->
     <string name="permlab_manageRemotePrefs">urruneko ezarpenak kudeatu</string>
     <string name="permdesc_manageRemotePrefs">Urruneko ezarpenak kudeatzea ahalbidetzen dio aplikazioari</string>
-    <!-- About device screen, build date -->
     <string name="build_date">Konpilatze data</string>
-    <!-- About device screen, LineageOS API Level -->
     <string name="lineage_api_level">LineageOS API maila</string>
-    <!-- About device screen, LineageOS updates -->
     <string name="lineage_updates">LineageOS eguneraketak</string>
-    <!-- About device screen, LineageOS version -->
     <string name="lineage_version">LineageOS bertsioa</string>
-    <!-- About device screen, vendor security patch -->
     <string name="lineage_vendor_security_patch">Saltzailearen segurtasun partxe maila</string>
-    <!-- General purpose use "unknown" string -->
     <string name="unknown">Ezezaguna</string>
-    <!-- Long-press back kill application -->
     <string name="app_killed_message">Aplikazioa erail da</string>
-    <!-- Status bar network traffic monitor strings -->
     <string name="kilobitspersecond_short">kb/s</string>
     <string name="megabitspersecond_short">Mb/s</string>
     <string name="kilobytespersecond_short">kB/s</string>
     <string name="megabytespersecond_short">MB/s</string>
-    <!-- Accent colors -->
     <string name="accent_black">Ikatza</string>
     <string name="accent_blue">Basarana</string>
     <string name="accent_brown">Kokoa</string>
@@ -152,10 +115,6 @@
     <string name="accent_purple">Izpilikua</string>
     <string name="accent_red">Tomatea</string>
     <string name="accent_yellow">Banana</string>
-    <!-- Trust interface -->
-    <!-- This string will be referenced from other apps when they're referring to the Trust interface.
-         Trust is a feature name, it's not suggested to translate this unless there are conflicts due
-         to a different meaning of the word "trust" in your language -->
     <string name="trust_feature_name">Trust</string>
     <string name="permlab_trustInterface">atzitu Trust interfazea</string>
     <string name="permdesc_trustInterface">Baimendu aplikazio bati Trust abisuak eta proposamenak bistaratzea</string>
