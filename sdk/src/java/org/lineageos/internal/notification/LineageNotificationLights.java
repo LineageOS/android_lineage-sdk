@@ -227,6 +227,27 @@ public final class LineageNotificationLights {
         return 0;
     }
 
+    public int getForcedPreviewColor(Notification n) {
+        if (n.extras != null) {
+            return n.extras.getInt(LineageNotification.EXTRA_FORCE_PREVIEW_COLOR, 0);
+        }
+        return 0;
+    }
+
+    public int getForcedPreviewLightOnMs(Notification n) {
+        if (n.extras != null) {
+            return n.extras.getInt(LineageNotification.EXTRA_FORCE_PREVIEW_LIGHT_ON_MS, -1);
+        }
+        return -1;
+    }
+
+    public int getForcedPreviewLightOffMs(Notification n) {
+        if (n.extras != null) {
+            return n.extras.getInt(LineageNotification.EXTRA_FORCE_PREVIEW_LIGHT_OFF_MS, -1);
+        }
+        return -1;
+    }
+
     public void setZenMode(int zenMode) {
         mZenMode = zenMode;
         mLedUpdater.update();
@@ -239,6 +260,9 @@ public final class LineageNotificationLights {
             boolean screenActive, int suppressedEffects) {
         final boolean forcedOn = isForcedOn(n);
         final int forcedBrightness = getForcedBrightness(n);
+        final int forcedPreviewColor = getForcedPreviewColor(n);
+        final int forcedPreviewLightOnMs = getForcedPreviewLightOnMs(n);
+        final int forcedPreviewLightOffMs = getForcedPreviewLightOffMs(n);
         final boolean suppressScreenOff =
                 (suppressedEffects & SUPPRESSED_EFFECT_SCREEN_OFF) != 0;
         final boolean suppressScreenOn =
@@ -253,6 +277,9 @@ public final class LineageNotificationLights {
                     + " suppressedEffects=" + suppressedEffects
                     + " forcedOn=" + forcedOn
                     + " forcedBrightness=" + forcedBrightness
+                    + " forcedPreviewColor=" + forcedPreviewColor
+                    + " forcedPreviewLightOnMs=" + forcedPreviewLightOnMs
+                    + " forcedPreviewLightOffMs=" + forcedPreviewLightOffMs
                     + " suppressScreenOff=" + suppressScreenOff
                     + " suppressScreenOn=" + suppressScreenOn
                     + " mCanAdjustBrightness=" + mCanAdjustBrightness
@@ -323,6 +350,18 @@ public final class LineageNotificationLights {
             ledValues.setOnMs(mDefaultNotificationLedOn);
             ledValues.setOffMs(mDefaultNotificationLedOff);
         }
+
+        // Use forced preview color and durations, if specified
+        if (forcedPreviewColor != 0) {
+            ledValues.setColor(forcedPreviewColor);
+        }
+        if (forcedPreviewLightOnMs >= 0) {
+            ledValues.setOnMs(forcedPreviewLightOnMs);
+        }
+        if (forcedPreviewLightOffMs >= 0) {
+            ledValues.setOffMs(forcedPreviewLightOffMs);
+        }
+
         // If lights HAL does not support adjustable notification brightness then
         // scale color value here instead.
         if (mCanAdjustBrightness && !mHALAdjustableBrightness) {
