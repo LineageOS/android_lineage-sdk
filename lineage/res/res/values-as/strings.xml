@@ -32,6 +32,7 @@
     <string name="profileGroupCalendar">কেলেণ্ডাৰ</string>
     <string name="profileGroupGmail">জিমেইল</string>
     <string name="profileGroupEmail">ইমেইল</string>
+    <string name="profileGroupSMS">SMS</string>
     <string name="wildcardProfile">অন্যান্য</string>
     <string name="perf_profile_pwrsv">পাৱাৰ সংৰক্ষণ কৰক</string>
     <string name="perf_profile_bal">সন্তুলিত</string>
