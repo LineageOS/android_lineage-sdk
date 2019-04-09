@@ -70,6 +70,24 @@
       "revId": "c92f19fc32394f095344ef6f232820dbaa86776e",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "4b3ab1ea_83422899",
+        "filename": "sdk/src/java/org/lineageos/internal/notification/LineageNotification.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 3075
+      },
+      "writtenOn": "2019-04-09T21:35:04Z",
+      "side": 1,
+      "message": "yeah, I think we should.  The implementation here doesn\u0027t need to care about the use case.",
+      "parentUuid": "40c96c27_b8f7a04b",
+      "revId": "c92f19fc32394f095344ef6f232820dbaa86776e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
     }
   ]
 }
