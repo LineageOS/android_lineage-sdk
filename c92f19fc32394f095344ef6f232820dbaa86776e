@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "d1e8f393_e3a2e78f",
+        "filename": "sdk/src/java/org/lineageos/internal/notification/LineageNotification.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 3075
+      },
+      "writtenOn": "2019-04-09T20:01:13Z",
+      "side": 1,
+      "message": "Any reason we need the \"PREVIEW\" prefix here (and everywhere else) ?  It seems tied to the use case rather then relevant to the implementation (which could be used for other things).",
+      "revId": "c92f19fc32394f095344ef6f232820dbaa86776e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    }
+  ]
+}
