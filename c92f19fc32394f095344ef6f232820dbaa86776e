@@ -88,6 +88,24 @@
       "revId": "c92f19fc32394f095344ef6f232820dbaa86776e",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "8f5fb343_e20b01bc",
+        "filename": "sdk/src/java/org/lineageos/internal/notification/LineageNotification.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 3075
+      },
+      "writtenOn": "2019-04-09T21:35:39Z",
+      "side": 1,
+      "message": "And I think it\u0027s more consistent with forcing brightness and showing lights.",
+      "parentUuid": "4b3ab1ea_83422899",
+      "revId": "c92f19fc32394f095344ef6f232820dbaa86776e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
     }
   ]
 }
