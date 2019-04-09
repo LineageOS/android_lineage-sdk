@@ -34,6 +34,24 @@
       "revId": "c92f19fc32394f095344ef6f232820dbaa86776e",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "b736451e_de09488e",
+        "filename": "sdk/src/java/org/lineageos/internal/notification/LineageNotification.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 3075
+      },
+      "writtenOn": "2019-04-09T20:32:51Z",
+      "side": 1,
+      "message": "I don\u0027t see any other preview references here in the sdk ?  Forcing show of lights and brightness don\u0027t have the preview prefix and are also used by the lineagepart light picker.  Use for led preview purposes is a lineageparts local thing.",
+      "parentUuid": "192edb1d_ff70bb64",
+      "revId": "c92f19fc32394f095344ef6f232820dbaa86776e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
     }
   ]
 }
