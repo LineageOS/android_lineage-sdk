@@ -529,7 +529,7 @@ package lineageos.preference {
     ctor public SecureSettingSwitchPreference(android.content.Context);
   }
 
-  public class SelfRemovingDropDownPreference extends android.support.v7.preference.DropDownPreference {
+  public class SelfRemovingDropDownPreference extends androidx.preference.DropDownPreference {
     ctor public SelfRemovingDropDownPreference(android.content.Context, android.util.AttributeSet, int);
     ctor public SelfRemovingDropDownPreference(android.content.Context, android.util.AttributeSet);
     ctor public SelfRemovingDropDownPreference(android.content.Context);
@@ -537,7 +537,7 @@ package lineageos.preference {
     method public void setAvailable(boolean);
   }
 
-  public class SelfRemovingListPreference extends android.support.v7.preference.ListPreference {
+  public class SelfRemovingListPreference extends androidx.preference.ListPreference {
     ctor public SelfRemovingListPreference(android.content.Context, android.util.AttributeSet, int);
     ctor public SelfRemovingListPreference(android.content.Context, android.util.AttributeSet);
     ctor public SelfRemovingListPreference(android.content.Context);
@@ -545,7 +545,7 @@ package lineageos.preference {
     method public void setAvailable(boolean);
   }
 
-  public class SelfRemovingPreference extends android.support.v7.preference.Preference {
+  public class SelfRemovingPreference extends androidx.preference.Preference {
     ctor public SelfRemovingPreference(android.content.Context, android.util.AttributeSet, int, int);
     ctor public SelfRemovingPreference(android.content.Context, android.util.AttributeSet, int);
     ctor public SelfRemovingPreference(android.content.Context, android.util.AttributeSet);
@@ -554,7 +554,7 @@ package lineageos.preference {
     method public void setAvailable(boolean);
   }
 
-  public class SelfRemovingSwitchPreference extends android.support.v14.preference.SwitchPreference {
+  public class SelfRemovingSwitchPreference extends androidx.preference.SwitchPreference {
     ctor public SelfRemovingSwitchPreference(android.content.Context, android.util.AttributeSet, int);
     ctor public SelfRemovingSwitchPreference(android.content.Context, android.util.AttributeSet);
     ctor public SelfRemovingSwitchPreference(android.content.Context);
