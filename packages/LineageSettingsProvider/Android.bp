@@ -23,11 +23,11 @@ android_app {
     privileged: true,
 
     static_libs: [
-        "android-support-v4",
-        "android-support-v7-appcompat",
-        "android-support-v7-preference",
-        "android-support-v7-recyclerview",
-        "android-support-v14-preference",
+        "androidx.legacy_legacy-support-v4",
+        "androidx.appcompat_appcompat",
+        "androidx.preference_preference",
+        "androidx.recyclerview_recyclerview",
+        "androidx.legacy_legacy-preference-v14",
         "org.lineageos.platform.internal",
     ],
 }
