@@ -19,11 +19,11 @@
 -dontskipnonpubliclibraryclassmembers
 
 # Keep test packages
--keep class android.support.** { *; }
+-keep class androidx.** { *; }
 -keep class android.test.** { *; }
--keep public class * extends android.support.** { *; }
+-keep public class * extends androidx.** { *; }
 -keep public class * extends android.test.** { *; }
--keep interface android.support.** { *; }
+-keep interface androidx.** { *; }
 -keep interface android.test.** { *; }
 
 # Keep all junit classes
@@ -36,7 +36,7 @@
 -keep public class * extends android.os.IInterface { *; }
 
 # Don't warn about the Android Support Test JUnit Runner
--dontwarn android.support.**
+-dontwarn androidx.**
 -dontwarn android.test.**
 
 # Don't warn about junit
