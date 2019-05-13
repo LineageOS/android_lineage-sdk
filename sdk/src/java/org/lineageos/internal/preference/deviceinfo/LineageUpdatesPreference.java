@@ -18,7 +18,7 @@ package org.lineageos.internal.preference.deviceinfo;
 
 import android.content.Context;
 import android.content.Intent;
-import android.support.v7.preference.Preference;
+import androidx.preference.Preference;
 import android.util.AttributeSet;
 import android.util.Log;
 
