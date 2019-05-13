@@ -54,11 +54,8 @@ lineage_sdk_src = "sdk/src/java/lineageos"
 lineage_sdk_internal_src = "sdk/src/java/org/lineageos/internal"
 library_src = "lineage/lib/main/java"
 
-lineage_sdk_LOCAL_JAVA_LIBRARIES = [
-    "android-support-annotations",
-    "android-support-v7-preference",
-    "android-support-v7-recyclerview",
-    "android-support-v14-preference",
+lineage_sdk_LOCAL_STATIC_ANDROID_LIBRARIES = [
+    "androidx.preference_preference",
 ]
 
 lineage_sdk_LOCAL_STATIC_JAVA_LIBRARIES = [
@@ -79,11 +76,13 @@ lineage_sdk_LOCAL_STATIC_JAVA_LIBRARIES = [
 
 java_library {
     name: "org.lineageos.platform",
-    static_libs: ["telephony-ext"] + lineage_sdk_LOCAL_STATIC_JAVA_LIBRARIES,
+    static_libs: [
+        "telephony-ext"
+    ] + lineage_sdk_LOCAL_STATIC_ANDROID_LIBRARIES + lineage_sdk_LOCAL_STATIC_JAVA_LIBRARIES,
 
     libs: [
         "services",
-    ] + lineage_sdk_LOCAL_JAVA_LIBRARIES,
+    ],
 
     srcs: [
         lineage_sdk_src + "/**/*.java",
@@ -105,8 +104,9 @@ java_library {
 java_library_static {
     name: "org.lineageos.platform.internal",
     required: ["services"],
-    static_libs: ["telephony-ext"] + lineage_sdk_LOCAL_STATIC_JAVA_LIBRARIES,
-    libs: lineage_sdk_LOCAL_JAVA_LIBRARIES,
+    static_libs: [
+        "telephony-ext"
+    ] + lineage_sdk_LOCAL_STATIC_ANDROID_LIBRARIES + lineage_sdk_LOCAL_STATIC_JAVA_LIBRARIES,
 
     srcs: [
         lineage_sdk_src + "/**/*.java",
@@ -128,8 +128,7 @@ java_library_static {
 java_library_static {
     name: "org.lineageos.platform.sdk",
     required: ["services"],
-    libs: lineage_sdk_LOCAL_JAVA_LIBRARIES,
-    static_libs: lineage_sdk_LOCAL_STATIC_JAVA_LIBRARIES,
+    static_libs: lineage_sdk_LOCAL_STATIC_ANDROID_LIBRARIES + lineage_sdk_LOCAL_STATIC_JAVA_LIBRARIES,
 
     srcs: [
         lineage_sdk_src + "/**/*.java",

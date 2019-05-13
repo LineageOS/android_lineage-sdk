@@ -23,7 +23,6 @@ import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.os.Bundle;
 import android.os.UserHandle;
-import android.support.v7.preference.R;
 import android.util.AttributeSet;
 import android.util.Log;
 
@@ -94,8 +93,9 @@ public class RemotePreference extends SelfRemovingPreference
     }
 
     public RemotePreference(Context context, AttributeSet attrs) {
-        this(context, attrs, ConstraintsHelper.getAttr(
-                context, R.attr.preferenceScreenStyle, android.R.attr.preferenceScreenStyle));
+        this(context, attrs, ConstraintsHelper.getAttr(context,
+                androidx.preference.R.attr.preferenceScreenStyle,
+                android.R.attr.preferenceScreenStyle));
     }
 
     @Override

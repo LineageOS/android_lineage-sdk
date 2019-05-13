@@ -16,10 +16,10 @@
 package lineageos.preference;
 
 import android.content.Context;
-import android.support.v7.preference.Preference;
-import android.support.v7.preference.PreferenceViewHolder;
-import android.support.v7.preference.R;
 import android.util.AttributeSet;
+
+import androidx.preference.Preference;
+import androidx.preference.PreferenceViewHolder;
 
 /**
  * A Preference which can automatically remove itself from the hierarchy
@@ -40,8 +40,9 @@ public class SelfRemovingPreference extends Preference {
     }
 
     public SelfRemovingPreference(Context context, AttributeSet attrs) {
-        this(context, attrs, ConstraintsHelper.getAttr(
-                context, R.attr.preferenceStyle, android.R.attr.preferenceStyle));
+        this(context, attrs, ConstraintsHelper.getAttr(context,
+                androidx.preference.R.attr.preferenceStyle,
+                android.R.attr.preferenceStyle));
     }
 
     public SelfRemovingPreference(Context context) {
