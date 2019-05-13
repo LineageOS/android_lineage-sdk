@@ -57,9 +57,6 @@ lineage_sdk_exclude_files := 'lineageos/library'
 LOCAL_JAR_EXCLUDE_PACKAGES := $(lineage_sdk_exclude_files)
 LOCAL_JAR_EXCLUDE_FILES := none
 
-LOCAL_JAVA_LIBRARIES := \
-    $(lineage_sdk_LOCAL_JAVA_LIBRARIES)
-
 LOCAL_STATIC_JAVA_LIBRARIES := org.lineageos.platform.sdk
 
 include $(BUILD_STATIC_JAVA_LIBRARY)
@@ -72,9 +69,7 @@ lineage_platform_docs_src_files := \
     $(call all-html-files-under, $(lineage_sdk_src))
 
 lineage_platform_docs_java_libraries := \
-    android-support-v4 \
-    org.lineageos.platform.sdk \
-    $(lineage_sdk_LOCAL_JAVA_LIBRARIES)
+    org.lineageos.platform.sdk
 
 # SDK version as defined
 lineage_platform_docs_SDK_VERSION := 15.1
