@@ -17,10 +17,11 @@
 package lineageos.preference;
 
 import android.content.Context;
-import android.support.v14.preference.SwitchPreference;
-import android.support.v7.preference.PreferenceDataStore;
-import android.support.v7.preference.PreferenceViewHolder;
 import android.util.AttributeSet;
+
+import androidx.preference.PreferenceDataStore;
+import androidx.preference.PreferenceViewHolder;
+import androidx.preference.SwitchPreference;
 
 /**
  * A SwitchPreference which can automatically remove itself from the hierarchy

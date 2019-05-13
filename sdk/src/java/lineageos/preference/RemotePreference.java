@@ -23,9 +23,10 @@ import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.os.Bundle;
 import android.os.UserHandle;
-import android.support.v7.preference.R;
 import android.util.AttributeSet;
 import android.util.Log;
+
+import androidx.preference.R;
 
 import java.util.List;
 import java.util.Objects;
