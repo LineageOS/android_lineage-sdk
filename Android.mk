@@ -72,7 +72,7 @@ lineage_platform_docs_src_files := \
     $(call all-html-files-under, $(lineage_sdk_src))
 
 lineage_platform_docs_java_libraries := \
-    android-support-v4 \
+    androidx.legacy_legacy-support-v4 \
     org.lineageos.platform.sdk \
     $(lineage_sdk_LOCAL_JAVA_LIBRARIES)
 

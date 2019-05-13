@@ -17,9 +17,9 @@
 package lineageos.preference;
 
 import android.content.Context;
-import android.support.v7.preference.DropDownPreference;
-import android.support.v7.preference.PreferenceDataStore;
-import android.support.v7.preference.PreferenceViewHolder;
+import androidx.preference.DropDownPreference;
+import androidx.preference.PreferenceDataStore;
+import androidx.preference.PreferenceViewHolder;
 import android.util.AttributeSet;
 
 /**
