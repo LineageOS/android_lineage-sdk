@@ -19,10 +19,11 @@ package org.lineageos.internal.preference;
 
 import android.content.Context;
 import android.os.SystemProperties;
-import android.support.v7.preference.EditTextPreference;
 import android.text.TextUtils;
 import android.util.AttributeSet;
 import android.util.Log;
+
+import androidx.preference.EditTextPreference;
 
 import lineageos.providers.LineageSettings;
 
