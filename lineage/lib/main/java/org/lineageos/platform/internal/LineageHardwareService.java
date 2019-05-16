@@ -57,6 +57,7 @@ import org.lineageos.hardware.TouchscreenHovering;
 import org.lineageos.hardware.VibratorHW;
 
 import static com.android.server.display.DisplayTransformManager.LEVEL_COLOR_MATRIX_NIGHT_DISPLAY;
+import static com.android.server.display.DisplayTransformManager.LEVEL_COLOR_MATRIX_SATURATION;
 import static com.android.server.display.DisplayTransformManager.LEVEL_COLOR_MATRIX_GRAYSCALE;
 
 /** @hide */
@@ -125,7 +126,8 @@ public class LineageHardwareService extends LineageSystemService {
             0, 0, 0, 1
         };
 
-        private final int LEVEL_COLOR_MATRIX_CALIB = LEVEL_COLOR_MATRIX_NIGHT_DISPLAY + 1;
+        private final int LEVEL_COLOR_MATRIX_NIGHT = LEVEL_COLOR_MATRIX_NIGHT_DISPLAY + 1;
+        private final int LEVEL_COLOR_MATRIX_USER = LEVEL_COLOR_MATRIX_SATURATION + 1;
         private final int LEVEL_COLOR_MATRIX_READING = LEVEL_COLOR_MATRIX_GRAYSCALE + 1;
 
         private boolean mAcceleratedTransform;
@@ -133,6 +135,8 @@ public class LineageHardwareService extends LineageSystemService {
 
         private int[] mCurColors = { MAX, MAX, MAX };
         private boolean mReadingEnhancementEnabled;
+        private float[] mCoefficients;
+        private int mTemperature;
 
         private int mSupportedFeatures = 0;
 
@@ -171,6 +175,15 @@ public class LineageHardwareService extends LineageSystemService {
                 mDTMService = LocalServices.getService(DisplayTransformManager.class);
                 mSupportedFeatures |= LineageHardwareManager.FEATURE_DISPLAY_COLOR_CALIBRATION;
                 mSupportedFeatures |= LineageHardwareManager.FEATURE_READING_ENHANCEMENT;
+                mSupportedFeatures |= LineageHardwareManager.FEATURE_COLOR_BALANCE;
+                final String[] coefficients = context.getResources().getStringArray(
+                        R.array.config_nightDisplayColorTemperatureCoefficientsNative);
+                mCoefficients = new float[coefficients.length];
+                for (int i = 0; i < 9 && i < coefficients.length; i++) {
+                    mCoefficients[i] = Float.valueOf(coefficients[i]);
+                }
+                mTemperature = mContext.getResources().getInteger(
+                        org.lineageos.platform.internal.R.integer.config_dayColorTemperature);
             }
         }
 
@@ -299,7 +312,7 @@ public class LineageHardwareService extends LineageSystemService {
         public boolean setDisplayColorCalibration(int[] rgb) {
             if (mAcceleratedTransform) {
                 mCurColors = rgb;
-                mDTMService.setColorMatrix(LEVEL_COLOR_MATRIX_CALIB, rgbToMatrix(rgb));
+                mDTMService.setColorMatrix(LEVEL_COLOR_MATRIX_USER, rgbToMatrix(rgb));
                 return true;
             }
             return DisplayColorCalibration.setColors(rgbToString(rgb));
@@ -344,26 +357,64 @@ public class LineageHardwareService extends LineageSystemService {
         }
 
         public int getColorBalanceMin() {
+            if (mAcceleratedTransform) {
+                return mContext.getResources().getInteger(
+                        org.lineageos.platform.internal.R.integer.config_minColorTemperature);
+            }
             return ColorBalance.getMinValue();
         }
 
         public int getColorBalanceMax() {
+            if (mAcceleratedTransform) {
+                return mContext.getResources().getInteger(
+                        org.lineageos.platform.internal.R.integer.config_maxColorTemperature);
+            }
             return ColorBalance.getMaxValue();
         }
 
+        private float[] temperatureToMatrix(int temperature) {
+            float[] mat = new float[16];
+
+            // Transform color temp into matrix
+            final float square = temperature * temperature;
+            for (int i = 0; i < 3; i++) {
+                mat[i * 5] = square * mCoefficients[i * 3]
+                        + temperature * mCoefficients[i * 3 + 1] + mCoefficients[i * 3 + 2];
+            }
+
+            // Set alpha level to 1.0f always
+            mat[15] = 1.0f
+
+            return mat;
+        }
+
         public int getColorBalance() {
+            if (mAcceleratedTransform) {
+                return mTemperature;
+            }
             return ColorBalance.getValue();
         }
 
         public boolean setColorBalance(int value) {
+            if (mAcceleratedTransform) {
+                value = mTemperature;
+                mDTMService.setColorMatrix(LEVEL_COLOR_MATRIX_NIGHT, temperatureToMatrix(value));
+                return true;
+            }
             return ColorBalance.setValue(value);
         }
 
-        public HSIC getPictureAdjustment() { return PictureAdjustment.getHSIC(); }
+        public HSIC getPictureAdjustment() {
+            return PictureAdjustment.getHSIC();
+        }
 
-        public HSIC getDefaultPictureAdjustment() { return PictureAdjustment.getDefaultHSIC(); }
+        public HSIC getDefaultPictureAdjustment() {
+            return PictureAdjustment.getDefaultHSIC();
+        }
 
-        public boolean setPictureAdjustment(HSIC hsic) { return PictureAdjustment.setHSIC(hsic); }
+        public boolean setPictureAdjustment(HSIC hsic) {
+            return PictureAdjustment.setHSIC(hsic);
+        }
 
         public List<Range<Float>> getPictureAdjustmentRanges() {
             return Arrays.asList(
