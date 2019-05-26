@@ -40,7 +40,7 @@
     <string name="perf_profile_bias_power">Эфектыўны</string>
     <string name="perf_profile_bias_perf">Хуткі</string>
     <string name="perf_profile_bal_summary">Пэўная раўнавага паміж працаздольнасьцьцю і энэргазахаваньнем</string>
-    <string name="perf_profile_perf_summary">Высокая працаздольнасьць. Карысна падчас працы з дадаткамі, для якіх неабходны найменьшы час адказу й найвышэйша хуткасьць дадзеных, а таксама, калі энэргазахаваньне не вельмі неаходнае</string>
+    <string name="perf_profile_perf_summary">Высокая працаздольнасьць. Карысна падчас працы з праграмамі, для якіх неабходны найменьшы час адказу і найвышэйшая хуткасць дадзеных, а таксама, калі энэргазахаванне не з\'яўляецца праблемай</string>
     <string name="perf_profile_bias_power_summary">Намагацца заховаць энэргію. Абмяжоўваньне найбольшае магутнасьці коштам найбольшага часу адказваньня сістэмы</string>
     <string name="perf_profile_bias_perf_summary">Падвышаная працаздольнасьць. Зьменшаны час адказу коштам падвышаным энэргаспажываньнем</string>
     <string name="live_display_auto">Аўтаматычна</string>

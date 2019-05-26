@@ -98,6 +98,7 @@
     <string name="lineage_api_level">Poziom API LineageOS</string>
     <string name="lineage_updates">Aktualizacje LineageOS</string>
     <string name="lineage_version">Wersja LineageOS</string>
+    <string name="lineage_vendor_security_patch">Poziom poprawek zabezpieczeń producenta</string>
     <string name="unknown">Nieznane</string>
     <string name="app_killed_message">Aplikacja zabita</string>
     <string name="kilobitspersecond_short">kb/s</string>

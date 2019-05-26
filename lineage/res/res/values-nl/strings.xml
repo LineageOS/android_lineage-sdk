@@ -17,6 +17,7 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="lineageos_system_label">LineageOS-systeem</string>
     <string name="permlab_modifyProfiles">systeemprofielen wijzigen</string>
     <string name="permdesc_modifyProfiles">Hiermee kan de app systeemprofielen wijzigen.</string>
     <string name="permlab_useHardwareFramework">hardware-framework gebruiken</string>
