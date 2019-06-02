@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "d0b2350d_4b02f2d5",
+        "filename": "packages/LineageSettingsProvider/res/values/defaults.xml",
+        "patchSetId": 12
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2019-06-02T21:41:28Z",
+      "side": 1,
+      "message": "This important part was missing and causing default style to be plain text on clean installs.",
+      "range": {
+        "startLine": 43,
+        "startChar": 38,
+        "endLine": 43,
+        "endChar": 39
+      },
+      "revId": "5ded0fcf6c14caab00f00f62e50ac4acd028802a",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    }
+  ]
+}
