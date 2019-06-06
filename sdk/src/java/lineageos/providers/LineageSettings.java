@@ -3077,6 +3077,16 @@ public final class LineageSettings {
         public static final Validator TRUST_WARNINGS_VALIDATOR =
                 new InclusiveIntegerRangeValidator(0, TrustInterface.TRUST_WARN_MAX_VALUE);
 
+        /**
+         * Whether volume panel should appear on the left (or right).
+         * 0 = false (on the right)
+         * 1 = true (on the left)
+         */
+        public static final String VOLUME_PANEL_ON_LEFT = "volume_panel_on_left";
+
+        public static final Validator VOLUME_PANEL_ON_LEFT_VALIDATOR =
+                sBooleanValidator;
+
         // endregion
 
         /**
@@ -3189,6 +3199,7 @@ public final class LineageSettings {
             VALIDATORS.put(TRUST_NOTIFICATIONS, TRUST_NOTIFICATIONS_VALIDATOR);
             VALIDATORS.put(TRUST_RESTRICT_USB_KEYGUARD, TRUST_RESTRICT_USB_KEYGUARD_VALIDATOR);
             VALIDATORS.put(TRUST_WARNINGS, TRUST_WARNINGS_VALIDATOR);
+            VALIDATORS.put(VOLUME_PANEL_ON_LEFT, VOLUME_PANEL_ON_LEFT_VALIDATOR);
         }
 
         /**
