@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8d4652d0_01cc22aa",
+        "filename": "lineage/lib/main/java/org/lineageos/platform/internal/TrustInterfaceService.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 359,
+      "author": {
+        "id": 13589
+      },
+      "writtenOn": "2019-06-22T10:49:54Z",
+      "side": 1,
+      "message": "Don\u0027t you need to check for \"if (!hasOnboardedUser()) {\" again ?\nOr we\u0027re sure this never comes \"too late\" ?\n\nWhat about unregistering the intent ?",
+      "revId": "025bcec1937202121cba59f92f135c4288b265cd",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    }
+  ]
+}
