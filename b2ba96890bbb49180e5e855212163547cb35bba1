@@ -16,6 +16,24 @@
       "revId": "b2ba96890bbb49180e5e855212163547cb35bba1",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "ebc8a576_60de319f",
+        "filename": "lineage/lib/main/java/org/lineageos/platform/internal/TrustInterfaceService.java",
+        "patchSetId": 5
+      },
+      "lineNbr": 103,
+      "author": {
+        "id": 13028
+      },
+      "writtenOn": "2019-06-22T11:22:01Z",
+      "side": 1,
+      "message": "adding the listener for SUW-Complete \u003d\u003d 1 would not work because the language change during SuW happens AFTER the notification is already posted in the background\nAdding it for SuW-Complete \u003d\u003d 0 would not change language if you change language trhough settings and the notification is already there",
+      "parentUuid": "fd34d7b5_51be26e7",
+      "revId": "b2ba96890bbb49180e5e855212163547cb35bba1",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
     }
   ]
 }
