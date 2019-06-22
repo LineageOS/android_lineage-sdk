@@ -16,6 +16,24 @@
       "revId": "025bcec1937202121cba59f92f135c4288b265cd",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "28828955_c54dc4aa",
+        "filename": "lineage/lib/main/java/org/lineageos/platform/internal/TrustInterfaceService.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 359,
+      "author": {
+        "id": 13028
+      },
+      "writtenOn": "2019-06-22T11:12:12Z",
+      "side": 1,
+      "message": "proper unregistering: would require adding another listener just to see if the setup has completed. not worth the effort imo, as this listener is only added as long onboarding hasn\u0027t happened. but can unregister on language change when we are already onboarded\n\nFor the additional check: you are right, if after first boot you change language again, the current code would post the notification again even if you already went through the onboarding. will upload in a moment",
+      "parentUuid": "8d4652d0_01cc22aa",
+      "revId": "025bcec1937202121cba59f92f135c4288b265cd",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
     }
   ]
 }
