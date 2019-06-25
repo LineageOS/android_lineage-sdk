@@ -34,6 +34,47 @@
       "revId": "b2ba96890bbb49180e5e855212163547cb35bba1",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "f66b8779_708e3d6a",
+        "filename": "lineage/lib/main/java/org/lineageos/platform/internal/TrustInterfaceService.java",
+        "patchSetId": 5
+      },
+      "lineNbr": 103,
+      "author": {
+        "id": 8461
+      },
+      "writtenOn": "2019-06-25T19:16:25Z",
+      "side": 1,
+      "message": "This is ok, once we have hasOnboardedUser true we won\u0027t register care anymore, we can let it just listen to locale changes on setup, it won\u0027t hurt anyone",
+      "parentUuid": "ebc8a576_60de319f",
+      "revId": "b2ba96890bbb49180e5e855212163547cb35bba1",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "932443e7_7eb1c636",
+        "filename": "lineage/lib/main/java/org/lineageos/platform/internal/TrustInterfaceService.java",
+        "patchSetId": 5
+      },
+      "lineNbr": 374,
+      "author": {
+        "id": 8461
+      },
+      "writtenOn": "2019-06-25T19:16:25Z",
+      "side": 1,
+      "message": "s/mReceiver/this/",
+      "range": {
+        "startLine": 374,
+        "startChar": 47,
+        "endLine": 374,
+        "endChar": 56
+      },
+      "revId": "b2ba96890bbb49180e5e855212163547cb35bba1",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
     }
   ]
 }
