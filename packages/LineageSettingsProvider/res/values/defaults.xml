@@ -74,7 +74,7 @@
     <bool name="def_power_notifications_vibrate">false</bool>
 
     <!-- Default for LineageSettings.Global.POWER_NOTIFICATIONS_RINGTONE -->
-    <string name="def_power_notifications_ringtone" translatable="false">content://settings/system/notification_sound</string>
+    <string name="def_power_notifications_ringtone" translatable="false">/system/media/audio/ui/ChargingStarted.ogg</string>
 
     <!-- Default value for the battery LEDs brightness -->
     <integer name="def_battery_brightness_level">255</integer>
