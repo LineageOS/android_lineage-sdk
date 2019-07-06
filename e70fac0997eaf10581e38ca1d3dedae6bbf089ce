@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "e7f0d1ba_8270f4ec",
+        "filename": "sdk/src/java/org/lineageos/internal/buttons/LineageButtons.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 3075
+      },
+      "writtenOn": "2019-07-06T22:06:31Z",
+      "side": 1,
+      "message": "in before Bruno - copyright year update",
+      "revId": "e70fac0997eaf10581e38ca1d3dedae6bbf089ce",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "6d8f17c4_a64e1ef3",
+        "filename": "sdk/src/java/org/lineageos/internal/buttons/LineageButtons.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 3075
+      },
+      "writtenOn": "2019-07-06T22:06:31Z",
+      "side": 1,
+      "message": "lines 25 \u0026 26 should be swapped",
+      "revId": "e70fac0997eaf10581e38ca1d3dedae6bbf089ce",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "905eb466_aa80d92c",
+        "filename": "sdk/src/java/org/lineageos/internal/buttons/LineageButtons.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 72,
+      "author": {
+        "id": 3075
+      },
+      "writtenOn": "2019-07-06T22:06:31Z",
+      "side": 1,
+      "message": "I\u0027ve been trying to determine if it\u0027s always safe to try getting MediaSessionManager this early.\n\nLineageButtons() is instantiated from PhoneWindowManager.systemReady() which has a comment at the top which reads:\n        // In normal flow, systemReady is called before other system services are ready.\n        // So it is better not to bind keyguard here.\n        [cut]\n\nUnless we can be sure there\u0027s no race (on even the slowest device), I suppose a safe option would be to lazy initialize when it\u0027s first needed.",
+      "revId": "e70fac0997eaf10581e38ca1d3dedae6bbf089ce",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    }
+  ]
+}
