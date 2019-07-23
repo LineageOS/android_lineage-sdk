@@ -193,5 +193,13 @@ public final class LineageContextConstants {
          */
         @SdkConstant(SdkConstant.SdkConstantType.FEATURE)
         public static final String SETTINGS = "org.lineageos.settings";
+
+        /**
+         * Feature for {@link PackageManager#getSystemAvailableFeatures} and
+         * {@link PackageManager#hasSystemFeature}: The device includes the Lineage
+         * fingerprint in screen utilized by the lineage sdk.
+         */
+        @SdkConstant(SdkConstant.SdkConstantType.FEATURE)
+        public static final String FOD = "vendor.lineage.biometrics.fingerprint.inscreen";
     }
 }
