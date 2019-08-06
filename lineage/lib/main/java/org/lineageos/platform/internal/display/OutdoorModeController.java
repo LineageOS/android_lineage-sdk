@@ -1,5 +1,6 @@
 /*
  * Copyright (C) 2016 The CyanogenMod Project
+ *               2019 The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -23,6 +24,8 @@ import android.content.Context;
 import android.net.Uri;
 import android.os.Handler;
 
+import com.android.internal.app.ColorDisplayController;
+
 import java.io.PrintWriter;
 import java.util.BitSet;
 
@@ -37,6 +40,7 @@ public class OutdoorModeController extends LiveDisplayFeature {
 
     // hardware capabilities
     private final boolean mUseOutdoorMode;
+    private final boolean mNightDisplayAvailable;
 
     // default values
     private final int mDefaultOutdoorLux;
@@ -57,6 +61,7 @@ public class OutdoorModeController extends LiveDisplayFeature {
         mHardware = LineageHardwareManager.getInstance(mContext);
         mUseOutdoorMode = mHardware.isSupported(LineageHardwareManager.FEATURE_SUNLIGHT_ENHANCEMENT);
         mSelfManaged = mUseOutdoorMode && mHardware.isSunlightEnhancementSelfManaged();
+        mNightDisplayAvailable = ColorDisplayController.isAvailable(mContext);
 
         mDefaultOutdoorLux = mContext.getResources().getInteger(
                 org.lineageos.platform.internal.R.integer.config_outdoorAmbientLux);
@@ -87,6 +92,9 @@ public class OutdoorModeController extends LiveDisplayFeature {
             caps.set(LiveDisplayManager.MODE_OUTDOOR);
             if (mSelfManaged) {
                 caps.set(LiveDisplayManager.FEATURE_MANAGED_OUTDOOR_MODE);
+            }
+            if (mNightDisplayAvailable) {
+                caps.set(LiveDisplayManager.MODE_AUTO);
             }
         }
         return mUseOutdoorMode;
