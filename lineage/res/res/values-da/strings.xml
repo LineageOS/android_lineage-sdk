@@ -17,11 +17,18 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="lineageos_system_label">LineageOS System</string>
     <string name="permlab_modifyProfiles">ændre systemprofiler</string>
     <string name="permdesc_modifyProfiles">Tillader en app at ændre systemprofiler.</string>
-    <string name="permlab_useHardwareFramework">anvend hardware framework</string>
-    <string name="permlab_protectedApp">tilføj og fjern apps til beskyttet apps</string>
+    <string name="permlab_useHardwareFramework">brug udstyrs-programmingsplatform</string>
+    <string name="permdesc_useHardwareFramework">Tillader en app adgang til Lineage udstyrs-programmingsplatformen.</string>
+    <string name="permlab_writeSettings">modificere Lineage system-indstillinger</string>
+    <string name="permdesc_writeSettings">Tillader en app at modificere Lineage system-indstillinger.</string>
+    <string name="permlab_writeSecureSettings">modificere Lineage sikre system-indstillinger</string>
+    <string name="permdesc_writeSecureSettings">Tillader en app at modificere Lineage sikre system-indstillinger. Ikke til brug af normale apps.</string>
+    <string name="permlab_protectedApp">tilføj og fjern apps, til beskyttede apps</string>
     <string name="permdesc_protectedApp">Tillader en app at markere andre apps som beskyttet samt låse dem.</string>
+    <string name="permdesc_changeStyle">tilpas system-farverne</string>
     <string name="profileNameDefault">Standard</string>
     <string name="profileNameWork">Arbejde</string>
     <string name="profileNameHome">Hjem</string>
@@ -45,7 +52,7 @@
     <string name="perf_profile_bias_power_summary">Prioritér strømbesparelser. Begræns maksimal CPU-kraft og optimér til strømbesparelse på bekostning af højere latenstid</string>
     <string name="perf_profile_bias_perf_summary">Prioritér ydeevne. Reducerer latenstid på bekostning af en smule øget strømforbrug</string>
     <string name="live_display_auto">Automatisk</string>
-    <string name="live_display_auto_summary">Justerer automatisk farvetemperaturen på skærmen efter solnedgang og solopgang</string>
+    <string name="live_display_auto_summary">Justér automatisk skærms farvetemperatur, efter solnedgang og solopgang</string>
     <string name="live_display_off">Fra</string>
     <string name="live_display_off_summary">Deaktivér alle justeringer</string>
     <string name="live_display_day">Dag</string>
@@ -65,8 +72,8 @@
     <string name="accessibility_quick_settings_live_display_changed_day">LiveDisplay ændret til dag tilstand.</string>
     <string name="accessibility_quick_settings_live_display_changed_night">LiveDisplay ændret til nat tilstand.</string>
     <string name="accessibility_quick_settings_live_display_changed_outdoor">LiveDisplay ændret til udendørstilstand.</string>
-    <string name="permlab_perfAccess">tilgå ydelsesmanager</string>
-    <string name="permdesc_perfAccessDesc">Tillader en app at tilgå ydelsestjenesten. Bør aldrig være nødvendigt for alm. apps.</string>
+    <string name="permlab_perfAccess">tilgå ydelseshåndtering</string>
+    <string name="permdesc_perfAccessDesc">Tillader en app at tilgå ydelsestjenesten. Bør aldrig være nødvendigt for normale apps.</string>
     <string name="permlab_weather_read">læs vejret</string>
     <string name="permdesc_weather_read">Tillader en app at læse indholdet fra en vejr-udbyder.</string>
     <string name="permlab_weather_write">opdater vejr-udbyder</string>
@@ -79,11 +86,17 @@
     <string name="permdesc_dataUsageWrite">Tillader en app at opdatere indholdet af databasen for dataforbrug.</string>
     <string name="permlab_dataUsageRead">læs database for dataforbrug</string>
     <string name="permdesc_dataUsageRead">Tillader en app at læse indholdet af databasen for dataforbrug.</string>
-    <string name="permlab_manageLiveDisplay">administrer indstillinger for LiveDisplay</string>
+    <string name="permlab_manageLiveDisplay">håndtér LevendeDisplay-indstillinger</string>
     <string name="permdesc_manageLiveDisplay">Tillader en app at konfigurere avancerede skærmindstillinger.</string>
-    <string name="permlab_observe_audio_sessions">observér ændringer for lydsession</string>
+    <string name="permlab_observe_audio_sessions">observér lyd-sessionsændringer</string>
     <string name="permdesc_observe_audio_sessions">Tillader en app at observere når lyd streams bliver oprettet eller ødelagt.</string>
     <string name="privacy_guard_manager_title">Privatlivsvagt</string>
-    <string name="permlab_manageRemotePrefs">administrere indstillinger for fjernbetjening</string>
-    <string name="permdesc_manageRemotePrefs">Gør det muligt for en app til at administrere indstillinger for fjernbetjening</string>
+    <string name="permlab_manageRemotePrefs">håndtere fjernbetjeningsindstillinger</string>
+    <string name="permdesc_manageRemotePrefs">Tillader en app at håndtere fjernbetjeningsindstillinger</string>
+    <string name="lineage_api_level">LineageOS API-niveau</string>
+    <string name="lineage_updates">LineageOS-opdateringer</string>
+    <string name="lineage_version">LineageOS-version</string>
+    <string name="lineage_vendor_security_patch">Producent-sikkerhedsrettelsesniveau</string>
+    <string name="kilobitspersecond_short">kb/s</string>
+    <string name="trust_notification_action_manage">Håndtér advarsler</string>
 </resources>
