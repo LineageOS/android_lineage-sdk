@@ -183,8 +183,7 @@ public class LiveDisplayService extends LineageSystemService {
             int defaultMode = mContext.getResources().getInteger(
                     org.lineageos.platform.internal.R.integer.config_defaultLiveDisplayMode);
 
-            mConfig = new LiveDisplayConfig(capabilities,
-                    isNightDisplayAvailable ? MODE_OFF : defaultMode,
+            mConfig = new LiveDisplayConfig(capabilities, defaultMode,
                     mCTC.getDefaultDayTemperature(), mCTC.getDefaultNightTemperature(),
                     mOMC.getDefaultAutoOutdoorMode(), mDHC.getDefaultAutoContrast(),
                     mDHC.getDefaultCABC(), mDHC.getDefaultColorEnhancement(),
