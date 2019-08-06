@@ -162,9 +162,7 @@ public class LiveDisplayService extends LineageSystemService {
             mFeatures.add(mDHC);
 
             mCTC = new ColorTemperatureController(mContext, mHandler, mDHC);
-            if (!isNightDisplayAvailable) {
-                mFeatures.add(mCTC);
-            }
+            mFeatures.add(mCTC);
 
             mOMC = new OutdoorModeController(mContext, mHandler);
             mFeatures.add(mOMC);

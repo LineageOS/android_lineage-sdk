@@ -27,6 +27,8 @@ import android.util.Range;
 import android.util.Slog;
 import android.view.animation.AccelerateDecelerateInterpolator;
 
+import com.android.internal.app.ColorDisplayController;
+
 import org.lineageos.platform.internal.display.TwilightTracker.TwilightState;
 
 import java.io.PrintWriter;
@@ -81,8 +83,8 @@ public class ColorTemperatureController extends LiveDisplayFeature {
                 .isSupported(LineageHardwareManager.FEATURE_COLOR_BALANCE);
         mColorBalanceRange = mHardware.getColorBalanceRange();
 
-        mUseTemperatureAdjustment = mUseColorBalance ||
-                mDisplayHardware.hasColorAdjustment();
+        mUseTemperatureAdjustment = !ColorDisplayController.isAvailable(mContext) &&
+                (mUseColorBalance || mDisplayHardware.hasColorAdjustment());
 
         mDefaultDayTemperature = mContext.getResources().getInteger(
                 org.lineageos.platform.internal.R.integer.config_dayColorTemperature);
