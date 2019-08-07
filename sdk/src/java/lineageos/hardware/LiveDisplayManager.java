@@ -162,15 +162,6 @@ public class LiveDisplayManager {
                     " crashed, was not started, or the interface has been called to early in" +
                     " SystemServer init");
         }
-
-        try {
-            mConfig = sService.getConfig();
-            if (mConfig == null) {
-                Log.w(TAG, "Unable to get LiveDisplay configuration!");
-            }
-        } catch (RemoteException e) {
-            throw new RuntimeException("Unable to fetch LiveDisplay configuration!", e);
-        }
     }
 
     /**
@@ -215,7 +206,14 @@ public class LiveDisplayManager {
      * @return the configuration
      */
     public LiveDisplayConfig getConfig() {
-        return mConfig;
+        try {
+            if (mConfig == null) {
+                mConfig = checkService() ? sService.getConfig() : null;
+            }
+            return mConfig;
+        } catch (RemoteException e) {
+            return null;
+        }
     }
 
     /**
