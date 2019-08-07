@@ -81,8 +81,8 @@ public class ColorTemperatureController extends LiveDisplayFeature {
                 .isSupported(LineageHardwareManager.FEATURE_COLOR_BALANCE);
         mColorBalanceRange = mHardware.getColorBalanceRange();
 
-        mUseTemperatureAdjustment = mUseColorBalance ||
-                mDisplayHardware.hasColorAdjustment();
+        mUseTemperatureAdjustment = !mNightDisplayAvailable &&
+                (mUseColorBalance || mDisplayHardware.hasColorAdjustment());
 
         mDefaultDayTemperature = mContext.getResources().getInteger(
                 org.lineageos.platform.internal.R.integer.config_dayColorTemperature);

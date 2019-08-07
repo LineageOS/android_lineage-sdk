@@ -22,6 +22,8 @@ import android.os.Handler;
 import android.os.UserHandle;
 import android.util.Log;
 
+import com.android.internal.app.ColorDisplayController;
+
 import org.lineageos.platform.internal.common.UserContentObserver;
 import org.lineageos.platform.internal.display.LiveDisplayService.State;
 import org.lineageos.platform.internal.display.TwilightTracker.TwilightState;
@@ -43,6 +45,7 @@ public abstract class LiveDisplayFeature {
 
     protected final Context mContext;
     protected final Handler mHandler;
+    protected final boolean mNightDisplayAvailable;
 
     private SettingsObserver mSettingsObserver;
     private State mState;
@@ -50,6 +53,7 @@ public abstract class LiveDisplayFeature {
     public LiveDisplayFeature(Context context, Handler handler) {
         mContext = context;
         mHandler = handler;
+        mNightDisplayAvailable = ColorDisplayController.isAvailable(mContext);
     }
 
     public abstract void onStart();
