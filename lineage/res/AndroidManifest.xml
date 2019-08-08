@@ -24,6 +24,7 @@
 
     <protected-broadcast android:name="lineageos.intent.action.SCREEN_CAMERA_GESTURE" />
     <protected-broadcast android:name="lineageos.intent.action.INITIALIZE_LINEAGE_HARDWARE" />
+    <protected-broadcast android:name="lineageos.intent.action.INITIALIZE_LIVEDISPLAY" />
     <protected-broadcast android:name="lineageos.intent.action.ACTION_AUDIO_SESSIONS_CHANGED" />
     <protected-broadcast android:name="lineageos.platform.intent.action.PROFILE_SELECTED" />
 

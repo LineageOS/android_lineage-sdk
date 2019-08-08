@@ -113,4 +113,11 @@ public class Intent {
      */
     public static final String ACTION_UPDATE_POWER_MENU =
             "lineageos.intent.action.UPDATE_POWER_MENU";
+
+    /**
+     * Broadcast action: notify SystemUI that LiveDisplay service has finished initialization.
+     * @hide
+     */
+    public static final String ACTION_INITIALIZE_LIVEDISPLAY =
+            "lineageos.intent.action.INITIALIZE_LIVEDISPLAY";
 }
