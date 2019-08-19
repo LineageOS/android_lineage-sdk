@@ -99,6 +99,7 @@
     <!-- Defines external services to be started by the LineageSystemServer at boot. The service itself
          should publish as a binder services in its onStart -->
     <string-array name="config_externalLineageServices">
+        <item>org.lineageos.platform.internal.HealthStoreService</item>
         <item>org.lineageos.platform.internal.ProfileManagerService</item>
         <item>org.lineageos.platform.internal.LineageHardwareService</item>
         <item>org.lineageos.platform.internal.PerformanceManagerService</item>
