@@ -195,4 +195,13 @@
     <string name="trust_notification_title_onboarding">Discover Trust</string>
     <string name="trust_notification_content_onboarding">Get to know how to assure your device is safe</string>
     <string name="trust_notification_action_manage">Manage alerts</string>
+
+    <!-- Health store -->
+    <string name="permlab_healthStore_read">access health data</string>
+    <string name="permdesc_healthStore_read">Allows an app to access health data</string>
+    <string name="permlab_healthStore_write">edit health data</string>
+    <string name="permdesc_healthStore_write">Allows an app to write and edit health data</string>
+    <string name="permlab_healthStore_manage">manage core health data</string>
+    <string name="permdesc_healthStore_manage">Allows an app to manage core health data</string>
+
 </resources>
