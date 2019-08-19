@@ -125,6 +125,27 @@
                 android:icon="@drawable/ic_trust"
                 android:protectionLevel="signature|privileged" />
 
+    <!-- Allows an application to read the HealthStore data -->
+    <permission android:name="lineageos.permission.READ_HEALTH_STORE"
+            android:label="@string/permlab_healthStore_read"
+            android:description="@string/permdesc_healthStore_read"
+            android:icon="@drawable/ic_health_store"
+            android:protectionLevel="dangerous" />
+
+    <!-- Allows an application to write HealthStore data -->
+    <permission android:name="lineageos.permission.WRITE_HEALTH_STORE"
+            android:label="@string/permlab_healthStore_write"
+            android:description="@string/permdesc_healthStore_write"
+            android:icon="@drawable/ic_health_store"
+            android:protectionLevel="dangerous" />
+
+
+    <!-- Allows an application to manage the HealthStore -->
+    <permission android:name="lineageos.permission.MANAGE_HEALTH_STORE"
+            android:label="@string/permlab_healthStore_manage"
+            android:description="@string/permdesc_healthStore_manage"
+            android:protectionLevel="signature|privileged" />
+
     <application android:process="system"
                  android:persistent="true"
                  android:hasCode="false"
