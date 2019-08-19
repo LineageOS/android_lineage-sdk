@@ -46,6 +46,7 @@ public class Build {
         sdkMap.put(LINEAGE_VERSION_CODES.GUAVA, "Guava");
         sdkMap.put(LINEAGE_VERSION_CODES.HACKBERRY, "Hackberry");
         sdkMap.put(LINEAGE_VERSION_CODES.ILAMA, "Ilama");
+        sdkMap.put(LINEAGE_VERSION_CODES.ILAMA, "Jackfruit");
     }
 
     /** Various version strings. */
@@ -179,6 +180,16 @@ public class Build {
          * </ul>
          */
         public static final int ILAMA = 9;
+
+        /**
+         * October 2019: The 2nd iteration of the  platform sdk for LineageOS
+         * <p>Applications targeting this or a later version will get access to these
+         * new features!</p>
+         * <ul>
+         * <li>Health Store: safely store and manage user's health data</li>
+         * </ul>
+         */
+        public static final int JACKFRUIT = 10;
     }
 
     /**
