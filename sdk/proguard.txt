@@ -1,3 +1,9 @@
 # Ignore LineageOS SDK access to private resources
 -dontwarn lineageos.**
 -dontnote lineageos.**
+
+# Don't obfuscate interfaces used by apps
+-keep class lineageos.app.** { *; }
+-keep class lineageos.health.** { *; }
+-keep class lineageos.profiles.** { *; }
+-keep class lineageos.weather.** { *; }

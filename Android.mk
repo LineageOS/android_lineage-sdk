@@ -25,7 +25,7 @@ LOCAL_PATH := $(call my-dir)
 lineage_platform_res := APPS/org.lineageos.platform-res_intermediates/aapt
 
 # List of packages used in lineage-api-stubs
-lineage_stub_packages := lineageos.app:lineageos.content:lineageos.hardware:lineageos.media:lineageos.os:lineageos.preference:lineageos.profiles:lineageos.providers:lineageos.platform:lineageos.power:lineageos.util:lineageos.weather:lineageos.weatherservice:lineageos.style:lineageos.trust
+lineage_stub_packages := lineageos.app:lineageos.content:lineageos.hardware:lineageos.health:lineageos.media:lineageos.os:lineageos.preference:lineageos.profiles:lineageos.providers:lineageos.platform:lineageos.power:lineageos.util:lineageos.weather:lineageos.weatherservice:lineageos.style:lineageos.trust
 
 lineage_framework_module := $(LOCAL_INSTALLED_MODULE)
 
@@ -72,10 +72,10 @@ lineage_platform_docs_java_libraries := \
     org.lineageos.platform.sdk
 
 # SDK version as defined
-lineage_platform_docs_SDK_VERSION := 15.1
+lineage_platform_docs_SDK_VERSION := 16.0
 
 # release version
-lineage_platform_docs_SDK_REL_ID := 9
+lineage_platform_docs_SDK_REL_ID := 10
 
 lineage_platform_docs_LOCAL_MODULE_CLASS := JAVA_LIBRARIES
 
@@ -157,7 +157,9 @@ LOCAL_DROIDDOC_OPTIONS := \
         -since $(LINEAGE_SRC_API_DIR)/6.txt 6 \
         -since $(LINEAGE_SRC_API_DIR)/7.txt 7 \
         -since $(LINEAGE_SRC_API_DIR)/8.txt 8 \
-        -since $(LINEAGE_SRC_API_DIR)/9.txt 9
+        -since $(LINEAGE_SRC_API_DIR)/9.txt 9 \
+        -since $(LINEAGE_SRC_API_DIR)/10.txt 10
+
 
 $(full_target): $(lineage_framework_built) $(gen)
 #include $(BUILD_DROIDDOC)

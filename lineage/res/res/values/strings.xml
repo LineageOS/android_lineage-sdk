@@ -192,4 +192,13 @@
     <string name="trust_notification_title_onboarding">Discover Trust</string>
     <string name="trust_notification_content_onboarding">Get to know how to assure your device is safe</string>
     <string name="trust_notification_action_manage">Manage alerts</string>
+
+    <!-- Health store -->
+    <string name="permlab_healthStore_read">Read health data</string>
+    <string name="permdesc_healthStore_read">read health data</string>
+    <string name="permlab_healthStore_write">Edit health data</string>
+    <string name="permdesc_healthStore_write">edit health data</string>
+    <string name="permlab_healthStore_manage">Manage core health data</string>
+    <string name="permdesc_healthStore_manage">manage core health data</string>
+
 </resources>
