@@ -98,6 +98,18 @@ public final class LineageContextConstants {
 
     /**
      * Use with {@link android.content.Context#getSystemService} to retrieve a
+     * {@link lineageos.health.HealthStoreInterface} interact with
+     * the Health Store.
+     *
+     * @see android.content.Context#getSystemService
+     * @see lineageos.health.HealthStoreInterface
+     *
+     * @hide
+     */
+    public static final String LINEAGE_HEALTH_STORE = "lineagehealth";
+
+    /**
+     * Use with {@link android.content.Context#getSystemService} to retrieve a
      * {@link lineageos.app.StyleInterface} interact with system style.
      *
      * @see android.content.Context#getSystemService
@@ -169,6 +181,14 @@ public final class LineageContextConstants {
          */
         @SdkConstant(SdkConstant.SdkConstantType.FEATURE)
         public static final String AUDIO = "org.lineageos.audio";
+
+        /**
+         * Feature for {@link PackageManager#getSystemAvailableFeatures} and
+         * {@link PackageManager#hasSystemFeature}: The device includes the lineage style service
+         * utilized by the lineage sdk.
+         */
+        @SdkConstant(SdkConstant.SdkConstantType.FEATURE)
+        public static final String HEALTH = "org.lineageos.health";
 
         /**
          * Feature for {@link PackageManager#getSystemAvailableFeatures} and
