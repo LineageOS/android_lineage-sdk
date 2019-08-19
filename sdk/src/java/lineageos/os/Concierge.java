@@ -64,7 +64,7 @@ public final class Concierge {
      * {@link LINEAGE_VERSION_CODES}
      * @hide
      */
-    public static final int PARCELABLE_VERSION = LINEAGE_VERSION_CODES.ILAMA;
+    public static final int PARCELABLE_VERSION = LINEAGE_VERSION_CODES.JACKFRUIT;
 
     /**
      * Tell the concierge to receive our parcel, so we can get information from it.
