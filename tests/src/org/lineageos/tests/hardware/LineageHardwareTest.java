@@ -43,7 +43,7 @@ public class LineageHardwareTest extends TestActivity {
             LineageHardwareManager.FEATURE_SUNLIGHT_ENHANCEMENT,
             LineageHardwareManager.FEATURE_TOUCH_HOVERING,
             LineageHardwareManager.FEATURE_AUTO_CONTRAST,
-            LineageHardwareManager.FEATURE_DISPLAY_MODES,
+            LineageHardwareManager.FEATURE_DISPLAY_MODES
     );
 
     private static final List<String> FEATURE_STRINGS = Arrays.asList(
@@ -55,7 +55,7 @@ public class LineageHardwareTest extends TestActivity {
             "FEATURE_SUNLIGHT_ENHANCEMENT",
             "FEATURE_TOUCH_HOVERING",
             "FEATURE_AUTO_CONTRAST",
-            "FEATURE_DISPLAY_MODES",
+            "FEATURE_DISPLAY_MODES"
     );
 
     private static final List<Integer> BOOLEAN_FEATURES = Arrays.asList(
