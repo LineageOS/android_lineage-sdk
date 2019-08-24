@@ -16,6 +16,24 @@
       "revId": "43a5a2c6bc95b97de2add3cc09678d15732c6543",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "29c278fe_f3d07188",
+        "filename": "sdk/src/java/org/lineageos/internal/statusbar/NetworkTraffic.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 198,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2019-08-24T12:32:31Z",
+      "side": 1,
+      "message": "Don\u0027t forget to remove this before submitting.",
+      "parentUuid": "603ae5b1_a060bcda",
+      "revId": "43a5a2c6bc95b97de2add3cc09678d15732c6543",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
     }
   ]
 }
