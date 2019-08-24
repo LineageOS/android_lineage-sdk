@@ -52,6 +52,23 @@
       "revId": "43a5a2c6bc95b97de2add3cc09678d15732c6543",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "90650d1b_b8a39a20",
+        "filename": "sdk/src/java/org/lineageos/internal/statusbar/NetworkTraffic.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 218,
+      "author": {
+        "id": 13589
+      },
+      "writtenOn": "2019-08-24T22:15:34Z",
+      "side": 1,
+      "message": "You could have kept these in if (DEBUG) for future debugging purposes",
+      "revId": "43a5a2c6bc95b97de2add3cc09678d15732c6543",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
     }
   ]
 }
