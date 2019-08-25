@@ -92,6 +92,8 @@
     <string name="permlab_observe_audio_sessions">heliseansi muutuste jälgimine</string>
     <string name="permdesc_observe_audio_sessions">Lubab rakendusel jälgida helivoogude alustamist ja lõpetamist.</string>
     <string name="privacy_guard_manager_title">Privaatsuskaitse</string>
+    <string name="permlab_manageRemotePrefs">kaugtöölaua sätete haldamine</string>
+    <string name="permdesc_manageRemotePrefs">Võimaldab rakendusel hallata kaugtöölaua sätteid</string>
     <string name="build_date">Järgu kuupäev</string>
     <string name="lineage_api_level">LineageOS\'i API tase</string>
     <string name="lineage_updates">LineageOS\'i uuendused</string>
