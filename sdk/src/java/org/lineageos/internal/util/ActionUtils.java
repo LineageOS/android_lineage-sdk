@@ -43,43 +43,16 @@ public class ActionUtils {
 
     private static boolean killForegroundAppInternal(Context context, int userId)
             throws RemoteException {
-        try {
-            final Intent intent = new Intent(Intent.ACTION_MAIN);
-            String defaultHomePackage = "com.android.launcher";
-            intent.addCategory(Intent.CATEGORY_HOME);
-            final ResolveInfo res = context.getPackageManager().resolveActivity(intent, 0);
+        ActivityManager.RecentTaskInfo foregroundTask = getForegroundTask(context, userId);
 
-            if (res.activityInfo != null && !res.activityInfo.packageName.equals("android")) {
-                defaultHomePackage = res.activityInfo.packageName;
-            }
-
-            IActivityManager am = ActivityManagerNative.getDefault();
-            List<ActivityManager.RunningAppProcessInfo> apps = am.getRunningAppProcesses();
-            for (ActivityManager.RunningAppProcessInfo appInfo : apps) {
-                int uid = appInfo.uid;
-                // Make sure it's a foreground user application (not system,
-                // root, phone, etc.)
-                if (uid >= Process.FIRST_APPLICATION_UID && uid <= Process.LAST_APPLICATION_UID
-                        && appInfo.importance ==
-                        ActivityManager.RunningAppProcessInfo.IMPORTANCE_FOREGROUND) {
-                    if (appInfo.pkgList != null && (appInfo.pkgList.length > 0)) {
-                        for (String pkg : appInfo.pkgList) {
-                            if (!pkg.equals(SYSTEMUI_PACKAGE)
-                                    && !pkg.equals(defaultHomePackage)) {
-                                am.forceStopPackage(pkg, UserHandle.USER_CURRENT);
-                                return true;
-                            }
-                        }
-                    } else {
-                        Process.killProcess(appInfo.pid);
-                        return true;
-                    }
-                }
-            }
-        } catch (RemoteException remoteException) {
-            // Do nothing; just let it go.
+        if (foregroundTask == null || foregroundTask.id < 0) {
+            return false;
         }
-        return false;
+
+        final String packageName = foregroundTask.baseIntent.getComponent().getPackageName();
+        am.forceStopPackage(packageName, UserHandle.USER_CURRENT);
+
+        return true;
     }
 
     /**
@@ -132,8 +105,28 @@ public class ActionUtils {
             String packageName = task.baseIntent.getComponent().getPackageName();
             if (!packageName.equals(defaultHomePackage)
                     && !packageName.equals(SYSTEMUI_PACKAGE)) {
-                return tasks.get(i);
+                return task;
             }
+        }
+
+        return null;
+    }
+
+    private static ActivityManager.RecentTaskInfo getForegroundTask(Context context, int userId)
+            throws RemoteException {
+        final String defaultHomePackage = resolveCurrentLauncherPackage(context, userId);
+        final IActivityManager iam = ActivityManager.getService();
+        final ActivityManager.RecentTaskInfo task = iam.getRecentTasks(1,
+                ActivityManager.RECENT_IGNORE_UNAVAILABLE | ActivityManager.RECENT_WITH_EXCLUDED,
+                userId).getList().get(0);
+
+        if (task.origActivity != null) {
+            task.baseIntent.setComponent(task.origActivity);
+        }
+        final String packageName = task.baseIntent.getComponent().getPackageName();
+        if (!packageName.equals(defaultHomePackage)
+                && !packageName.equals(SYSTEMUI_PACKAGE)) {
+            return task;
         }
 
         return null;
@@ -144,6 +137,12 @@ public class ActionUtils {
                 .addCategory(Intent.CATEGORY_HOME);
         final PackageManager pm = context.getPackageManager();
         final ResolveInfo launcherInfo = pm.resolveActivityAsUser(launcherIntent, 0, userId);
-        return launcherInfo.activityInfo.packageName;
+
+        if (launcherInfo.activityInfo != null &&
+                !launcherInfo.activityInfo.packageName.equals("android")) {
+            return launcherInfo.activityInfo.packageName;
+        }
+
+        return null;
     }
 }
