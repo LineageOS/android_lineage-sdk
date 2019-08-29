@@ -45,13 +45,8 @@ public class ActionUtils {
             throws RemoteException {
         try {
             final Intent intent = new Intent(Intent.ACTION_MAIN);
-            String defaultHomePackage = "com.android.launcher";
+            final String defaultHomePackage = resolveCurrentLauncherPackage(context, userId);
             intent.addCategory(Intent.CATEGORY_HOME);
-            final ResolveInfo res = context.getPackageManager().resolveActivity(intent, 0);
-
-            if (res.activityInfo != null && !res.activityInfo.packageName.equals("android")) {
-                defaultHomePackage = res.activityInfo.packageName;
-            }
 
             IActivityManager am = ActivityManagerNative.getDefault();
             List<ActivityManager.RunningAppProcessInfo> apps = am.getRunningAppProcesses();
@@ -144,6 +139,13 @@ public class ActionUtils {
                 .addCategory(Intent.CATEGORY_HOME);
         final PackageManager pm = context.getPackageManager();
         final ResolveInfo launcherInfo = pm.resolveActivityAsUser(launcherIntent, 0, userId);
-        return launcherInfo.activityInfo.packageName;
+
+        if (launcherInfo.activityInfo != null &&
+                !launcherInfo.activityInfo.packageName.equals("android")) {
+            return launcherInfo.activityInfo.packageName;
+        }
+
+        // just return default launcher
+        return "com.android.launcher3";
     }
 }
