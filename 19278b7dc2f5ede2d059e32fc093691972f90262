@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "589d9014_015243b8",
+        "filename": "sdk/src/java/org/lineageos/internal/util/ActionUtils.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 149,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2019-08-29T16:44:31Z",
+      "side": 1,
+      "message": "Create a String variable for this.",
+      "revId": "19278b7dc2f5ede2d059e32fc093691972f90262",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    }
+  ]
+}
