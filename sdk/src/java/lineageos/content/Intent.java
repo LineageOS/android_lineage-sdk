@@ -120,4 +120,20 @@ public class Intent {
      */
     public static final String ACTION_INITIALIZE_LIVEDISPLAY =
             "lineageos.intent.action.INITIALIZE_LIVEDISPLAY";
+
+    /**
+     * Broadcast action: Camera satus Changed
+     * @hide
+     */
+    public static final String ACTION_CAMERA_STATUS_CHANGED =
+            "lineageos.intent.action.CAMERA_STATUS_CHANGED";
+
+    /**
+     * This field is part of the intent {@link #ACTION_CAMERA_STATUS_CHANGED}.
+     * Intent extra field for the state of changed camera state
+     * @hide
+     */
+    public static final String EXTRA_CAMERA_STATE =
+            "lineageos.intent.extra.CAMERA_STATE";
+
 }
