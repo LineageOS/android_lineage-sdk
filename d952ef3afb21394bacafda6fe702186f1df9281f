@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "070afa35_13f78fd3",
+        "filename": "sdk/src/java/org/lineageos/internal/util/ActionUtils.java",
+        "patchSetId": 15
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 3075
+      },
+      "writtenOn": "2019-08-30T20:07:34Z",
+      "side": 1,
+      "message": "Since we were cleaning whilst we\u0027re at it - still not sure why we\u0027re propagating RemoteExceptions when they\u0027re just dumped on the floor here anyway.  I would catch them as earlier as possible and just return true/false or null/non-null as appropriate to indicate status.\n\nPerhaps for next time.",
+      "revId": "d952ef3afb21394bacafda6fe702186f1df9281f",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    }
+  ]
+}
