@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "e7dd3eee_c5c1baa5",
+        "filename": "Android.bp",
+        "patchSetId": 3
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 8461
+      },
+      "writtenOn": "2019-09-03T22:49:04Z",
+      "side": 1,
+      "message": "I think we can drop this one",
+      "range": {
+        "startLine": 64,
+        "startChar": 0,
+        "endLine": 64,
+        "endChar": 44
+      },
+      "revId": "2e8ce631a8f27004caf833465621f23849988b04",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "58829e68_ee6ea38f",
+        "filename": "packages/LineageSettingsProvider/Android.bp",
+        "patchSetId": 3
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 8461
+      },
+      "writtenOn": "2019-09-03T22:49:04Z",
+      "side": 1,
+      "message": "Here too",
+      "range": {
+        "startLine": 30,
+        "startChar": 0,
+        "endLine": 30,
+        "endChar": 48
+      },
+      "revId": "2e8ce631a8f27004caf833465621f23849988b04",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    }
+  ]
+}
