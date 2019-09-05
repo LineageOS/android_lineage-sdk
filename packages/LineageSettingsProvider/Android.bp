@@ -15,10 +15,10 @@
 //
 
 android_app {
+    name: "LineageSettingsProvider",
     srcs: ["src/**/*.java"],
     resource_dirs: ["res"],
 
-    name: "LineageSettingsProvider",
     certificate: "platform",
     privileged: true,
 

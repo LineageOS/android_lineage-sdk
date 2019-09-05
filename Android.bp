@@ -38,14 +38,13 @@ android_app {
 
     resource_dirs: [
         "lineage/res/res",
-        "sdk/res/res"
+        "sdk/res/res",
     ],
 
     // Create package-export.apk, which other packages can use to get
     // PRODUCT-agnostic resource data like IDs and type definitions.
     export_package_resources: true,
 }
-
 
 // The LineageOS Platform Framework Library
 // ============================================================
@@ -102,7 +101,7 @@ java_library {
 // Full target for use by platform apps
 // ============================================================
 
-java_library_static {
+java_library {
     name: "org.lineageos.platform.internal",
     required: ["services"],
     static_libs: ["telephony-ext"] + lineage_sdk_LOCAL_STATIC_JAVA_LIBRARIES,
@@ -125,7 +124,7 @@ java_library_static {
 
 // Included aidl files from lineageos.app namespace
 
-java_library_static {
+java_library {
     name: "org.lineageos.platform.sdk",
     required: ["services"],
     libs: lineage_sdk_LOCAL_JAVA_LIBRARIES,
