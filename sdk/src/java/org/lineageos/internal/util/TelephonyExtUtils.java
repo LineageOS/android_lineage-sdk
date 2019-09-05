@@ -30,6 +30,7 @@ import android.util.Log;
 
 import com.android.internal.telephony.PhoneConstants;
 
+/*
 import org.codeaurora.internal.IExtTelephony;
 
 import java.util.ArrayList;
@@ -103,11 +104,13 @@ public final class TelephonyExtUtils {
         context.registerReceiver(mReceiver, intentFilter);
     }
 
+*/
     /**
      * Get an existing instance of the utils or create a new one if not existant
      *
      * @return An instance of this class
      */
+/*
     public static TelephonyExtUtils getInstance(Context context) {
         if (sInstance == null) {
             sInstance = new TelephonyExtUtils(context.getApplicationContext());
@@ -115,39 +118,47 @@ public final class TelephonyExtUtils {
         return sInstance;
     }
 
+*/
     /**
      * Determines whether the ITelephonyExt service is available on the device
      * Any result of the methods in this class are only valid if this method returns true
      *
      * @return true on success
      */
+/*
     public boolean hasService() {
         return getService() != null;
     }
+*/
 
     /**
      * Determines whether the SIM associated with the given SubscriptionId is provisioned
      *
      * @return true if the SIM associated with the given subId is provisioned
      */
+/*
     public boolean isSubProvisioned(int subId) {
         return isSlotProvisioned(SubscriptionManager.getSlotIndex(subId));
     }
+*/
 
     /**
      * Determines whether the given SIM is provisioned
      *
      * @return true if the SIM is provisioned
      */
+/*
     public boolean isSlotProvisioned(int slotId) {
         return getCurrentUiccCardProvisioningStatus(slotId) == PROVISIONED;
     }
+*/
 
     /**
      * Get the current provisioning status for a given SIM slot
      *
      * @return The provisioning status from the extension or INVALID_STATE if not possible
      */
+/*
     public int getCurrentUiccCardProvisioningStatus(int slotId) {
         IExtTelephony service = getService();
         if (service != null && slotId != SubscriptionManager.INVALID_SIM_SLOT_INDEX) {
@@ -159,21 +170,25 @@ public final class TelephonyExtUtils {
         }
         return INVALID_STATE;
     }
+*/
 
     /**
      * Activate the SIM card with the given slotId
      *
      * @return The result of the activation or -1
      */
+/*
     public int activateUiccCard(int slotId) {
         return setUiccCardProvisioningStatus(PROVISIONED, slotId);
     }
+*/
 
     /**
      * Deactivate the SIM card with the given slotId
      *
      * @return The result of the deactivation or -1
      */
+/*
     public int deactivateUiccCard(int slotId) {
         return setUiccCardProvisioningStatus(NOT_PROVISIONED, slotId);
     }
@@ -225,39 +240,47 @@ public final class TelephonyExtUtils {
         return -1;
     }
 
+*/
     /**
      * Add a ProvisioningChangedListener to get notified in case of provisioning changes
      */
+/*
     public void addListener(ProvisioningChangedListener listener) {
         if (listener != null) {
             mListeners.remove(listener);
             mListeners.add(listener);
         }
     }
+*/
 
     /**
      * Remove a ProvisioningChangedListener to not get notified of provisioning changes anymore
      */
+/*
     public void removeListener(ProvisioningChangedListener listener) {
         if (listener != null) {
             mListeners.remove(listener);
         }
     }
+*/
 
     /**
      * Notify all registered listeners about provisioning changes
      */
+/*
     private void notifyListeners(int slotId, boolean provisioned) {
         for (ProvisioningChangedListener listener : mListeners) {
             listener.onProvisioningChanged(slotId, provisioned);
         }
     }
+*/
 
     /**
      * Helper method to get an already instantiated service or instantiate it
      *
      * @return a valid service instance or null
      */
+/*
     private IExtTelephony getService() {
         // We already tried to get the service but weren't successful, so just return null here
         if (mNoServiceAvailable) {
@@ -291,12 +314,15 @@ public final class TelephonyExtUtils {
 
         return mExtTelephony;
     }
+*/
 
     /**
      * Interface definition so we can register callbacks to get the provisioning status
      *  whenever it changes
      */
+/*
     public interface ProvisioningChangedListener {
         public void onProvisioningChanged(int slotId, boolean isProvisioned);
     }
 }
+*/
