@@ -15,6 +15,6 @@
 //
 
 java_library_host {
-    srcs: ["**/*.java"],
     name: "migration-interface",
+    srcs: ["**/*.java"],
 }
