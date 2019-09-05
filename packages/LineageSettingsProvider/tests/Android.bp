@@ -14,10 +14,9 @@
 // limitations under the License.
 //
 
-android_app {
-    tags: ["tests"],
-
+android_test {
     name: "LineageSettingsProviderTests",
+
     instrumentation_for: "LineageSettingsProvider",
 
     srcs: ["**/*.java"],

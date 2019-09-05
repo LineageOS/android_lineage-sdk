@@ -15,6 +15,7 @@
 //
 
 cc_library_shared {
+    name: "liblineage-sdk_platform_jni",
     srcs: [
         "src/org_lineageos_platform_internal_LineageAudioService.cpp",
         "src/onload.cpp",
@@ -36,8 +37,6 @@ cc_library_shared {
         "libmedia",
         "libutils",
     ],
-
-    name: "liblineage-sdk_platform_jni",
 
     cflags: [
         "-Wall",
