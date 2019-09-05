@@ -83,7 +83,10 @@ public class ActionUtils {
                 org.lineageos.platform.internal.R.anim.last_app_out);
 
         if (DEBUG) Log.d(TAG, "switching to " + packageName);
+/*
+lineage-sdk/sdk/src/java/org/lineageos/internal/util/ActionUtils.java:86: error: method moveTaskToFront in interface IActivityManager cannot be applied to given types;
         am.moveTaskToFront(lastTask.id, ActivityManager.MOVE_TASK_NO_USER_ACTION, opts.toBundle());
+*/
 
         return true;
     }
