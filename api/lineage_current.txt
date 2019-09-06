@@ -194,9 +194,7 @@ package lineageos.hardware {
     method public int getVibratorMaxIntensity();
     method public int getVibratorMinIntensity();
     method public int getVibratorWarningIntensity();
-    method public boolean isSunlightEnhancementSelfManaged();
     method public boolean isSupported(int);
-    method public boolean requireAdaptiveBacklightForSunlightEnhancement();
     method public boolean set(int, boolean);
     method public boolean setColorBalance(int);
     method public boolean setDisplayColorCalibration(int[]);
