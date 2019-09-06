@@ -103,7 +103,7 @@ public class LiveDisplayService extends LineageSystemService {
 
     // PowerManager ServiceType to use when we're only
     // interested in gleaning global battery saver state.
-    private static final int SERVICE_TYPE_DUMMY = ServiceType.GPS;
+    private static final int SERVICE_TYPE_DUMMY = ServiceType.LOCATION;
 
     static class State {
         public boolean mLowPowerMode = false;
