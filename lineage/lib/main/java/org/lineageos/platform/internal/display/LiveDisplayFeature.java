@@ -1,5 +1,6 @@
 /*
  * Copyright (C) 2016 The CyanogenMod Project
+ *               2017-2019 The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -17,12 +18,11 @@ package org.lineageos.platform.internal.display;
 
 import android.content.ContentResolver;
 import android.content.Context;
+import android.hardware.display.ColorDisplayManager;
 import android.net.Uri;
 import android.os.Handler;
 import android.os.UserHandle;
 import android.util.Log;
-
-import com.android.internal.app.ColorDisplayController;
 
 import org.lineageos.platform.internal.common.UserContentObserver;
 import org.lineageos.platform.internal.display.LiveDisplayService.State;
@@ -53,7 +53,7 @@ public abstract class LiveDisplayFeature {
     public LiveDisplayFeature(Context context, Handler handler) {
         mContext = context;
         mHandler = handler;
-        mNightDisplayAvailable = ColorDisplayController.isAvailable(mContext);
+        mNightDisplayAvailable = ColorDisplayManager.isNightDisplayAvailable(mContext);
     }
 
     public abstract void onStart();
