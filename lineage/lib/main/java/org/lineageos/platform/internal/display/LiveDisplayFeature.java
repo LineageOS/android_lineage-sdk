@@ -17,12 +17,11 @@ package org.lineageos.platform.internal.display;
 
 import android.content.ContentResolver;
 import android.content.Context;
+import android.hardware.display.ColorDisplayManager;
 import android.net.Uri;
 import android.os.Handler;
 import android.os.UserHandle;
 import android.util.Log;
-
-import com.android.internal.app.ColorDisplayController;
 
 import org.lineageos.platform.internal.common.UserContentObserver;
 import org.lineageos.platform.internal.display.LiveDisplayService.State;
@@ -53,7 +52,7 @@ public abstract class LiveDisplayFeature {
     public LiveDisplayFeature(Context context, Handler handler) {
         mContext = context;
         mHandler = handler;
-        mNightDisplayAvailable = ColorDisplayController.isAvailable(mContext);
+        mNightDisplayAvailable = ColorDisplayManager.isNightDisplayAvailable(mContext);
     }
 
     public abstract void onStart();
