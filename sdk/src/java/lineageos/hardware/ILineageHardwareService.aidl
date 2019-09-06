@@ -1,6 +1,6 @@
 /**
  * Copyright (c) 2015-2016 The CyanogenMod Project
- *               2017-2018 The LineageOS Project
+ *               2017-2019 The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -17,10 +17,6 @@
 
 package lineageos.hardware;
 
-import lineageos.hardware.DisplayMode;
-import lineageos.hardware.HSIC;
-import lineageos.hardware.TouchscreenGesture;
-
 /** @hide */
 interface ILineageHardwareService {
 
@@ -30,29 +26,4 @@ interface ILineageHardwareService {
 
     int[] getDisplayColorCalibration();
     boolean setDisplayColorCalibration(in int[] rgb);
-
-    int[] getVibratorIntensity();
-    boolean setVibratorIntensity(int intensity);
-
-    boolean requireAdaptiveBacklightForSunlightEnhancement();
-
-    DisplayMode[] getDisplayModes();
-    DisplayMode getCurrentDisplayMode();
-    DisplayMode getDefaultDisplayMode();
-    boolean setDisplayMode(in DisplayMode mode, boolean makeDefault);
-
-    boolean isSunlightEnhancementSelfManaged();
-
-    int getColorBalanceMin();
-    int getColorBalanceMax();
-    int getColorBalance();
-    boolean setColorBalance(int value);
-
-    HSIC getPictureAdjustment();
-    HSIC getDefaultPictureAdjustment();
-    boolean setPictureAdjustment(in HSIC hsic);
-    float[] getPictureAdjustmentRanges();
-
-    TouchscreenGesture[] getTouchscreenGestures();
-    boolean setTouchscreenGestureEnabled(in TouchscreenGesture gesture, boolean state);
 }
