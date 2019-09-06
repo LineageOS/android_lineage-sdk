@@ -83,7 +83,8 @@ public class ActionUtils {
                 org.lineageos.platform.internal.R.anim.last_app_out);
 
         if (DEBUG) Log.d(TAG, "switching to " + packageName);
-        am.moveTaskToFront(lastTask.id, ActivityManager.MOVE_TASK_NO_USER_ACTION, opts.toBundle());
+        am.moveTaskToFront(null, null, lastTask.id,
+                ActivityManager.MOVE_TASK_NO_USER_ACTION, opts.toBundle());
 
         return true;
     }
