@@ -22,15 +22,15 @@ import android.os.IBinder;
 import android.os.UserHandle;
 import android.util.Log;
 
-import com.android.server.display.DisplayTransformManager;
+import com.android.server.display.color.DisplayTransformManager;
 import com.android.server.LocalServices;
 
 import lineageos.app.LineageContextConstants;
 import lineageos.hardware.ILineageHardwareService;
 import lineageos.hardware.LineageHardwareManager;
 
-import static com.android.server.display.DisplayTransformManager.LEVEL_COLOR_MATRIX_NIGHT_DISPLAY;
-import static com.android.server.display.DisplayTransformManager.LEVEL_COLOR_MATRIX_GRAYSCALE;
+import static com.android.server.display.color.DisplayTransformManager.LEVEL_COLOR_MATRIX_NIGHT_DISPLAY;
+import static com.android.server.display.color.DisplayTransformManager.LEVEL_COLOR_MATRIX_GRAYSCALE;
 
 /** @hide */
 public class LineageHardwareService extends LineageSystemService {
