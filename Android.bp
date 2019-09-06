@@ -78,6 +78,7 @@ lineage_sdk_LOCAL_STATIC_JAVA_LIBRARIES = [
 
 java_library {
     name: "org.lineageos.platform",
+    installable: true,
     static_libs: [
         "telephony-ext"
     ] + lineage_sdk_LOCAL_STATIC_ANDROID_LIBRARIES + lineage_sdk_LOCAL_STATIC_JAVA_LIBRARIES,
