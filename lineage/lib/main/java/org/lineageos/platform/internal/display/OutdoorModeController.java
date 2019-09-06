@@ -43,7 +43,6 @@ public class OutdoorModeController extends LiveDisplayFeature {
     private final int mDefaultOutdoorLux;
     private final int mOutdoorLuxHysteresis;
     private final boolean mDefaultAutoOutdoorMode;
-    private final boolean mSelfManaged;
 
     // internal state
     private boolean mIsOutdoor;
@@ -57,7 +56,6 @@ public class OutdoorModeController extends LiveDisplayFeature {
 
         mHardware = LineageHardwareManager.getInstance(mContext);
         mUseOutdoorMode = mHardware.isSupported(LineageHardwareManager.FEATURE_SUNLIGHT_ENHANCEMENT);
-        mSelfManaged = mUseOutdoorMode && mHardware.isSunlightEnhancementSelfManaged();
 
         mDefaultOutdoorLux = mContext.getResources().getInteger(
                 org.lineageos.platform.internal.R.integer.config_outdoorAmbientLux);
@@ -73,10 +71,8 @@ public class OutdoorModeController extends LiveDisplayFeature {
             return;
         }
 
-        if (!mSelfManaged) {
-            mLuxObserver = new AmbientLuxObserver(mContext, mHandler.getLooper(),
-                    mDefaultOutdoorLux, mOutdoorLuxHysteresis, SENSOR_WINDOW_MS);
-        }
+        mLuxObserver = new AmbientLuxObserver(mContext, mHandler.getLooper(),
+                mDefaultOutdoorLux, mOutdoorLuxHysteresis, SENSOR_WINDOW_MS);
 
         registerSettings(
                 LineageSettings.System.getUriFor(LineageSettings.System.DISPLAY_AUTO_OUTDOOR_MODE));
@@ -87,9 +83,6 @@ public class OutdoorModeController extends LiveDisplayFeature {
         if (mUseOutdoorMode) {
             caps.set(LiveDisplayManager.MODE_AUTO);
             caps.set(LiveDisplayManager.MODE_OUTDOOR);
-            if (mSelfManaged) {
-                caps.set(LiveDisplayManager.FEATURE_MANAGED_OUTDOOR_MODE);
-            }
         }
         return mUseOutdoorMode;
     }
@@ -115,7 +108,7 @@ public class OutdoorModeController extends LiveDisplayFeature {
 
         // Disable outdoor mode on screen off so that we don't melt the users
         // face if they turn it back on in normal conditions
-        if (!isScreenOn() && !mSelfManaged && getMode() != MODE_OUTDOOR) {
+        if (!isScreenOn() && getMode() != MODE_OUTDOOR) {
             mIsOutdoor = false;
             mHardware.set(LineageHardwareManager.FEATURE_SUNLIGHT_ENHANCEMENT, false);
         }
@@ -130,23 +123,20 @@ public class OutdoorModeController extends LiveDisplayFeature {
     public void dump(PrintWriter pw) {
         pw.println();
         pw.println("OutdoorModeController Configuration:");
-        pw.println("  mSelfManaged=" + mSelfManaged);
-        if (!mSelfManaged) {
-            pw.println("  mDefaultOutdoorLux=" + mDefaultOutdoorLux);
-            pw.println("  mOutdoorLuxHysteresis=" + mOutdoorLuxHysteresis);
-            pw.println();
-            pw.println("  OutdoorModeController State:");
-            pw.println("    mAutoOutdoorMode=" + isAutomaticOutdoorModeEnabled());
-            pw.println("    mIsOutdoor=" + mIsOutdoor);
-            pw.println("    mIsNight=" + isNight());
-            pw.println("    hardware state=" +
-                    mHardware.get(LineageHardwareManager.FEATURE_SUNLIGHT_ENHANCEMENT));
-        }
+        pw.println("  mDefaultOutdoorLux=" + mDefaultOutdoorLux);
+        pw.println("  mOutdoorLuxHysteresis=" + mOutdoorLuxHysteresis);
+        pw.println();
+        pw.println("  OutdoorModeController State:");
+        pw.println("    mAutoOutdoorMode=" + isAutomaticOutdoorModeEnabled());
+        pw.println("    mIsOutdoor=" + mIsOutdoor);
+        pw.println("    mIsNight=" + isNight());
+        pw.println("    hardware state=" +
+                mHardware.get(LineageHardwareManager.FEATURE_SUNLIGHT_ENHANCEMENT));
         mLuxObserver.dump(pw);
     }
 
     private synchronized void updateSensorState() {
-        if (!mUseOutdoorMode || mLuxObserver == null || mSelfManaged) {
+        if (!mUseOutdoorMode || mLuxObserver == null) {
             return;
         }
 
@@ -203,9 +193,7 @@ public class OutdoorModeController extends LiveDisplayFeature {
                     // self-managed mode means we just flip a switch and an external
                     // implementation does all the sensing. this allows the user
                     // to turn on/off the feature.
-                    if (mSelfManaged) {
-                        enabled = true;
-                    } else if (mIsOutdoor) {
+                    if (mIsOutdoor) {
                         // if we're here, the sensor detects extremely bright light.
                         if (mode == MODE_DAY) {
                             // if the user manually selected day mode, go ahead and
