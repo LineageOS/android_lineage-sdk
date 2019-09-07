@@ -1,0 +1,96 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "272e54d7_22b74483",
+        "filename": "Android.bp",
+        "patchSetId": 5
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 11883
+      },
+      "writtenOn": "2019-09-07T23:08:10Z",
+      "side": 1,
+      "message": "Can be removed",
+      "range": {
+        "startLine": 64,
+        "startChar": 5,
+        "endLine": 64,
+        "endChar": 42
+      },
+      "revId": "48d1d6b5e8eb4f1980e0e7c30fe304b220396c76",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "79954a69_fc9046b0",
+        "filename": "Android.mk",
+        "patchSetId": 5
+      },
+      "lineNbr": 75,
+      "author": {
+        "id": 11883
+      },
+      "writtenOn": "2019-09-07T23:08:10Z",
+      "side": 1,
+      "message": "Try androidx.core_core",
+      "range": {
+        "startLine": 75,
+        "startChar": 4,
+        "endLine": 75,
+        "endChar": 37
+      },
+      "revId": "48d1d6b5e8eb4f1980e0e7c30fe304b220396c76",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "76f92d40_ad23d740",
+        "filename": "packages/LineageSettingsProvider/Android.bp",
+        "patchSetId": 5
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 11883
+      },
+      "writtenOn": "2019-09-07T23:08:10Z",
+      "side": 1,
+      "message": "Try androidx.core_core",
+      "range": {
+        "startLine": 26,
+        "startChar": 9,
+        "endLine": 26,
+        "endChar": 42
+      },
+      "revId": "48d1d6b5e8eb4f1980e0e7c30fe304b220396c76",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "f8d3b696_54122151",
+        "filename": "packages/LineageSettingsProvider/Android.bp",
+        "patchSetId": 5
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 11883
+      },
+      "writtenOn": "2019-09-07T23:08:10Z",
+      "side": 1,
+      "message": "Can be removed",
+      "range": {
+        "startLine": 30,
+        "startChar": 9,
+        "endLine": 30,
+        "endChar": 46
+      },
+      "revId": "48d1d6b5e8eb4f1980e0e7c30fe304b220396c76",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    }
+  ]
+}
