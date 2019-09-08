@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e1e832e_cdcda134",
+        "filename": "Android.bp",
+        "patchSetId": 6
+      },
+      "lineNbr": 63,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2019-09-08T18:08:19Z",
+      "side": 1,
+      "message": "These should be more proper in a \"lineage_sdk_LOCAL_STATIC_ANDROID_LIBRARIES\" group. I\u0027ll check and upload new patchset after testing.",
+      "range": {
+        "startLine": 61,
+        "startChar": 0,
+        "endLine": 63,
+        "endChar": 41
+      },
+      "revId": "ae3c5c0da79d525791156ffb82b71cb653a6bb41",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    }
+  ]
+}
