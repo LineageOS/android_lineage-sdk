@@ -27,12 +27,10 @@ import android.test.suitebuilder.annotation.SmallTest;
 import java.util.ArrayList;
 
 import android.text.TextUtils;
-import android.util.Log;
 import android.util.TypedValue;
 import lineageos.providers.LineageSettings;
 import org.lineageos.lineagesettings.LineageDatabaseHelper;
 import org.lineageos.lineagesettings.LineageSettingsProvider;
-import org.lineageos.lineagesettings.R;
 
 /**
  * Created by adnan on 1/25/16.
