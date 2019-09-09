@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "19f80ae9_f7972dd6",
+        "filename": "sdk/src/java/lineageos/hardware/ILineageHardwareService.aidl",
+        "patchSetId": 10
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2019-09-09T09:06:57Z",
+      "side": 1,
+      "message": "Can be removed, right?",
+      "range": {
+        "startLine": 21,
+        "startChar": 0,
+        "endLine": 21,
+        "endChar": 31
+      },
+      "revId": "a225a1a98d95a35f918c48784f75792e3f8d3ed7",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    }
+  ]
+}
