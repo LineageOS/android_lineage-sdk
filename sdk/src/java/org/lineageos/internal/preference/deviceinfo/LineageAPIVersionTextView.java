@@ -20,7 +20,6 @@ import android.content.Context;
 import android.util.AttributeSet;
 import android.widget.TextView;
 
-import org.lineageos.platform.internal.R;
 
 public class LineageAPIVersionTextView extends TextView {
     private static final String TAG = "LineageAPIVersionTextView";

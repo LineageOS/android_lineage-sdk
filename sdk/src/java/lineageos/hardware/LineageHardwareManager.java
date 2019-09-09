@@ -29,10 +29,6 @@ import com.android.internal.annotations.VisibleForTesting;
 import com.android.internal.util.ArrayUtils;
 
 import lineageos.app.LineageContextConstants;
-import lineageos.hardware.DisplayMode;
-import lineageos.hardware.HIDLHelper;
-import lineageos.hardware.HSIC;
-import lineageos.hardware.TouchscreenGesture;
 
 import vendor.lineage.livedisplay.V2_0.IAdaptiveBacklight;
 import vendor.lineage.livedisplay.V2_0.IAutoContrast;
@@ -48,10 +44,7 @@ import vendor.lineage.touch.V1_0.IKeyDisabler;
 import vendor.lineage.touch.V1_0.IStylusMode;
 import vendor.lineage.touch.V1_0.ITouchscreenGesture;
 
-import java.io.UnsupportedEncodingException;
-import java.lang.IllegalArgumentException;
 import java.lang.reflect.Field;
-import java.nio.ByteBuffer;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;

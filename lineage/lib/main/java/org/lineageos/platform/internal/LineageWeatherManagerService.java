@@ -36,7 +36,6 @@ import android.text.TextUtils;
 import android.util.Slog;
 import com.android.internal.content.PackageMonitor;
 import com.android.internal.os.BackgroundThread;
-import com.android.server.SystemService;
 import lineageos.app.LineageContextConstants;
 import lineageos.platform.Manifest;
 import lineageos.providers.LineageSettings;
