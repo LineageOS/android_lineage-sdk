@@ -22,7 +22,6 @@ import android.text.TextUtils;
 import android.util.Range;
 import android.util.Slog;
 import android.util.SparseArray;
-import android.view.Display;
 
 import java.io.PrintWriter;
 import java.util.ArrayList;

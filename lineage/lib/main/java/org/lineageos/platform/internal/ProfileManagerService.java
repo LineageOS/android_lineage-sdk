@@ -49,8 +49,6 @@ import android.text.TextUtils;
 import android.util.Log;
 import android.os.ParcelUuid;
 
-import com.android.server.SystemService;
-
 import lineageos.app.LineageContextConstants;
 import lineageos.app.Profile;
 import lineageos.app.ProfileGroup;

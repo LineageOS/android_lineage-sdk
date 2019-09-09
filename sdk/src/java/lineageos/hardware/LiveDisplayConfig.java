@@ -15,7 +15,6 @@
  */
 package lineageos.hardware;
 
-import static lineageos.hardware.LiveDisplayManager.FEATURE_COLOR_BALANCE;
 import static lineageos.hardware.LiveDisplayManager.FEATURE_FIRST;
 import static lineageos.hardware.LiveDisplayManager.FEATURE_LAST;
 import static lineageos.hardware.LiveDisplayManager.MODE_FIRST;

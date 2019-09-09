@@ -17,7 +17,6 @@
 package lineageos.weather;
 
 import android.annotation.NonNull;
-import android.content.ComponentName;
 import android.content.Context;
 import android.location.Location;
 import android.os.Handler;

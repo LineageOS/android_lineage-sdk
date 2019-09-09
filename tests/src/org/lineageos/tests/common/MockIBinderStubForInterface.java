@@ -18,7 +18,6 @@ package org.lineageos.tests.common;
 
 import android.os.IBinder;
 import android.os.IInterface;
-import android.os.RemoteCallbackList;
 import org.junit.Assert;
 import org.mockito.Mockito;
 

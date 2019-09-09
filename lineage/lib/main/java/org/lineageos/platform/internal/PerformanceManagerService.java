@@ -43,7 +43,6 @@ import com.android.server.ServiceThread;
 
 import java.io.FileDescriptor;
 import java.io.PrintWriter;
-import java.lang.Thread;
 import java.util.ArrayDeque;
 import java.util.Date;
 import java.util.Locale;
