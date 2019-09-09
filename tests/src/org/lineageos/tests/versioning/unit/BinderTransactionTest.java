@@ -17,15 +17,10 @@
 package org.lineageos.tests.versioning.unit;
 
 import android.content.Context;
-import android.os.Binder;
 import android.test.AndroidTestCase;
 import android.test.suitebuilder.annotation.LargeTest;
-import android.test.suitebuilder.annotation.SmallTest;
 import android.util.Log;
 import android.util.Pair;
-
-import androidx.test.runner.AndroidJUnit4;
-import androidx.test.runner.AndroidJUnitRunner;
 
 import org.lineageos.tests.LineageOSTestApplication;
 import org.lineageos.tests.versioning.unit.apiv2.ApiV2PriorReleaseInterfaces;

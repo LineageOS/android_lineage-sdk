@@ -16,22 +16,13 @@
 
 package org.lineageos.internal.util;
 
-import android.app.WallpaperManager;
-import android.content.Context;
-import android.content.res.AssetManager;
-import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Point;
-import android.net.Uri;
-import android.text.TextUtils;
 import android.util.Log;
-import android.webkit.URLUtil;
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.InputStream;
-
-import libcore.io.IoUtils;
 
 public class ImageUtils {
     private static final String TAG = ImageUtils.class.getSimpleName();
