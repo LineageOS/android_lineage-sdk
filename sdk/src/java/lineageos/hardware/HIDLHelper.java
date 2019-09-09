@@ -18,10 +18,6 @@ package lineageos.hardware;
 
 import android.util.Range;
 
-import lineageos.hardware.DisplayMode;
-import lineageos.hardware.HSIC;
-import lineageos.hardware.TouchscreenGesture;
-
 import java.util.ArrayList;
 
 class HIDLHelper {

@@ -14,7 +14,6 @@
  * limitations under the License.
  */
 
-import java.io.File;
 import java.io.IOException;
 import java.io.BufferedWriter;
 import java.io.FileOutputStream;

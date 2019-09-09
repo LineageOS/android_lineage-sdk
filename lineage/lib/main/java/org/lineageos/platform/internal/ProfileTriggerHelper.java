@@ -16,7 +16,6 @@
 
 package org.lineageos.platform.internal;
 
-import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -27,18 +26,14 @@ import android.net.NetworkInfo;
 import android.net.wifi.WifiInfo;
 import android.net.wifi.WifiManager;
 import android.net.wifi.WifiSsid;
-import android.os.Bundle;
 import android.os.Handler;
 import android.os.UserHandle;
-import android.text.TextUtils;
-import android.util.ArraySet;
 import android.util.Log;
 import lineageos.app.Profile;
 import lineageos.app.Profile.ProfileTrigger;
 import lineageos.app.ProfileManager;
 import lineageos.providers.LineageSettings;
 
-import java.util.Set;
 import java.util.UUID;
 
 /**
