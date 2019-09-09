@@ -16,9 +16,7 @@
 
 package org.lineageos.platform.internal;
 
-import android.content.ContentResolver;
 import android.content.Context;
-import android.content.Intent;
 import android.content.om.IOverlayManager;
 import android.content.om.OverlayInfo;
 import android.content.pm.ApplicationInfo;
