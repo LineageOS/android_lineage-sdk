@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "02727e6b_a2d935eb",
+        "filename": "sdk/src/java/org/lineageos/internal/telephony/SensitivePhoneNumber.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 8461
+      },
+      "writtenOn": "2019-09-11T18:15:17Z",
+      "side": 1,
+      "message": "@hide",
+      "revId": "bc23ce19781517b8d6be356051bfff75f3698237",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "8f29181d_638ddc12",
+        "filename": "sdk/src/java/org/lineageos/internal/telephony/SensitivePhoneNumbers.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 8461
+      },
+      "writtenOn": "2019-09-11T18:15:17Z",
+      "side": 1,
+      "message": "@hide",
+      "revId": "bc23ce19781517b8d6be356051bfff75f3698237",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    }
+  ]
+}
