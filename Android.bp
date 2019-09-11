@@ -79,7 +79,10 @@ lineage_sdk_LOCAL_STATIC_JAVA_LIBRARIES = [
 
 java_library {
     name: "org.lineageos.platform",
-    static_libs: ["telephony-ext"] + lineage_sdk_LOCAL_STATIC_JAVA_LIBRARIES,
+    static_libs: [
+        "telephony-ext",
+        "libphonenumber",
+    ] + lineage_sdk_LOCAL_STATIC_JAVA_LIBRARIES,
 
     libs: [
         "services",
