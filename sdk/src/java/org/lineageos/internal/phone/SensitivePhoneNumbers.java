@@ -53,7 +53,8 @@ public class SensitivePhoneNumbers {
     private static SensitivePhoneNumbers sInstance = null;
     private static boolean sNumbersLoaded;
 
-    private HashMap<String, ArrayList<String>> mSensitiveNumbersMap = new HashMap<>();
+    private HashMap<String, ArrayList<SensitivePhoneNumberInfo>> mSensitiveNumbersMap =
+            new HashMap<>();
 
     private SensitivePhoneNumbers() { }
 
@@ -110,11 +111,15 @@ public class SensitivePhoneNumbers {
             SensitivePhoneNumber sensitivePN = SensitivePhoneNumber
                     .readSensitivePhoneNumbers(parser);
             String[] mccs = sensitivePN.getNetworkNumeric().split(",");
-            ArrayList<String> sensitive_nums = sensitivePN.getPhoneNumbers();
+            ArrayList<SensitivePhoneNumberInfo> sensitive_nums = sensitivePN.getPhoneNumberInfos();
             for (String mcc : mccs) {
                 mSensitiveNumbersMap.put(mcc, sensitive_nums);
             }
         }
+    }
+
+    public ArrayList<SensitivePhoneNumberInfo> getSensitivePnInfosForMcc(String mcc) {
+        return mSensitiveNumbersMap.getOrDefault(mcc, new ArrayList<SensitivePhoneNumberInfo>());
     }
 
     public boolean isSensitiveNumber(Context context, String numberToCheck, int subId) {
@@ -150,8 +155,8 @@ public class SensitivePhoneNumbers {
     private boolean isSensitiveNumber(String numberToCheck, String mcc) {
         if (!TextUtils.isEmpty(numberToCheck)) {
             if (mSensitiveNumbersMap.containsKey(mcc)) {
-                for (String num : mSensitiveNumbersMap.get(mcc)) {
-                    if (PhoneNumberUtils.compare(numberToCheck, num)) {
+                for (SensitivePhoneNumberInfo info : mSensitiveNumbersMap.get(mcc)) {
+                    if (PhoneNumberUtils.compare(numberToCheck, info.get("number"))) {
                         return true;
                     }
                 }
