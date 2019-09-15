@@ -50,10 +50,19 @@ public class SensitivePhoneNumbers {
     public static final String SENSIBLE_PHONENUMBERS_FILE_PATH = "etc/sensitive_pn.xml";
     private static final String ns = null;
 
+    private static SensitivePhoneNumbers sInstance = null;
+
     private HashMap<String, ArrayList<String>> mSensitiveNumbersMap = new HashMap<>();
 
-    public SensitivePhoneNumbers() {
+    private SensitivePhoneNumbers() {
         loadSensiblePhoneNumbers();
+    }
+
+    public static SensitivePhoneNumbers getInstance() {
+        if (sInstance == null) {
+            sInstance = new SensitivePhoneNumbers();
+        }
+        return sInstance;
     }
 
     private void loadSensiblePhoneNumbers() {
