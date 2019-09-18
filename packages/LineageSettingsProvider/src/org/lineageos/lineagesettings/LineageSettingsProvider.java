@@ -359,6 +359,24 @@ public class LineageSettingsProvider extends ContentProvider {
             insertForUser(callingUserId, LineageSettings.Global.CONTENT_URI, values);
         }
 
+        // List methods
+        // TODO
+        if (LineageSettings.CALL_METHOD_LIST_SYSTEM.equals(method)) {
+            /*Bundle result = new Bundle();
+            result.putStringArrayList(RESULT_SETTINGS_LIST,
+                    buildSettingsList(getAllSystemSettings(callingUserId, null)));
+            return result;*/
+        } else if (LineageSettings.CALL_METHOD_LIST_SECURE.equals(method)) {
+        } else if (LineageSettings.CALL_METHOD_LIST_GLOBAL.equals(method)) {
+        }
+
+        // Delete methods
+        // TODO
+        if (LineageSettings.CALL_METHOD_DELETE_SYSTEM.equals(method)) {
+        } else if (LineageSettings.CALL_METHOD_DELETE_SECURE.equals(method)) {
+        } else if (LineageSettings.CALL_METHOD_DELETE_GLOBAL.equals(method)) {
+        }
+
         return null;
     }
 

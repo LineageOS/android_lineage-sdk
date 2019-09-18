@@ -138,6 +138,36 @@ public final class LineageSettings {
      */
     public static final String CALL_METHOD_MIGRATE_SETTINGS_FOR_USER = "migrate_settings_for_user";
 
+    /**
+     * @hide - Private call() method to list the entire system table
+     */
+    public static final String CALL_METHOD_LIST_SYSTEM = "LIST_system";
+
+    /**
+     * @hide - Private call() method to list the entire secure table
+     */
+    public static final String CALL_METHOD_LIST_SECURE = "LIST_secure";
+
+    /**
+     * @hide - Private call() method to list the entire global table
+     */
+    public static final String CALL_METHOD_LIST_GLOBAL = "LIST_global";
+
+    /**
+     * @hide - Private call() method to delete an entry from the system table
+     */
+    public static final String CALL_METHOD_DELETE_SYSTEM = "DELETE_system";
+
+    /**
+     * @hide - Private call() method to delete an entry from the secure table
+     */
+    public static final String CALL_METHOD_DELETE_SECURE = "DELETE_secure";
+
+    /**
+     * @hide - Private call() method to delete an entry from the global table
+     */
+    public static final String CALL_METHOD_DELETE_GLOBAL = "DELETE_global";
+
     // endregion
 
     // Thread-safe.
