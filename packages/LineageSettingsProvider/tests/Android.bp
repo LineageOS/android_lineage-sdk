@@ -22,10 +22,17 @@ android_test {
     srcs: ["**/*.java"],
 
     certificate: "platform",
-    libs: ["android.test.runner"],
+    libs: [
+        "android.test.base",
+        "android.test.runner",
+    ],
     optimize: {
         optimize: true,
+        proguard_flags_files: ["proguard.flags"],
     },
 
-    static_libs: ["org.lineageos.platform.internal"],
+    static_libs: [
+        "androidx.test.rules",
+        "org.lineageos.platform.internal",
+    ],
 }
