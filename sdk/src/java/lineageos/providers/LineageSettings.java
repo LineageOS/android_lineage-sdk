@@ -2175,18 +2175,6 @@ public final class LineageSettings {
         }
 
         /**
-         * @hide
-         */
-        public static boolean shouldInterceptSystemProvider(String key) {
-            switch (key) {
-                case System.SYSTEM_PROFILES_ENABLED:
-                    return true;
-                default:
-                    return false;
-            }
-        }
-
-        /**
          * Mapping of validators for all system settings.  This map is used to validate both valid
          * keys as well as validating the values for those keys.
          *
@@ -3240,16 +3228,6 @@ public final class LineageSettings {
             VALIDATORS.put(TRUST_WARNINGS, TRUST_WARNINGS_VALIDATOR);
             VALIDATORS.put(VOLUME_PANEL_ON_LEFT, VOLUME_PANEL_ON_LEFT_VALIDATOR);
         }
-
-        /**
-         * @hide
-         */
-        public static boolean shouldInterceptSystemProvider(String key) {
-            switch (key) {
-                default:
-                    return false;
-            }
-        }
     }
 
     /**
@@ -3709,13 +3687,6 @@ public final class LineageSettings {
          */
         public static boolean isLegacySetting(String key) {
             return ArrayUtils.contains(LEGACY_GLOBAL_SETTINGS, key);
-        }
-
-        /**
-         * @hide
-         */
-        public static boolean shouldInterceptSystemProvider(String key) {
-            return false;
         }
     }
 }

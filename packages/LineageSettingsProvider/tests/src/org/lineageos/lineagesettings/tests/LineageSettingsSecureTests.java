@@ -20,6 +20,7 @@ import android.content.ContentResolver;
 import android.net.Uri;
 import android.test.AndroidTestCase;
 import android.test.suitebuilder.annotation.SmallTest;
+
 import lineageos.providers.LineageSettings;
 
 public class LineageSettingsSecureTests extends AndroidTestCase {
