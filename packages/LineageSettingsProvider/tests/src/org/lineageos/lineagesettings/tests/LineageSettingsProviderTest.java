@@ -29,6 +29,7 @@ import android.test.AndroidTestCase;
 import android.test.suitebuilder.annotation.MediumTest;
 import android.test.suitebuilder.annotation.SmallTest;
 import android.text.TextUtils;
+
 import lineageos.providers.LineageSettings;
 
 import java.util.LinkedHashMap;
@@ -74,45 +75,6 @@ import java.util.Map;
          assertNotNull(mGuest);
 
          testMigrateSettingsForUser(mGuest.id);
-     }
-
-     /**
-      * make sure that queries to SettingsProvider are forwarded to LineageSettingsProvider as needed
-      * See {@link lineageos.providers.LineageSettings.System#shouldInterceptSystemProvider(String)}
-      *
-      * Currently this test only checks that
-      * {@link lineageos.providers.LineageSettings.System#SYSTEM_PROFILES_ENABLED} is expected to
-      * be forwarded, and is forwarded.
-      */
-     @SmallTest
-     public void testSettingsProviderKeyForwarding() {
-         String forwardedKey = LineageSettings.System.SYSTEM_PROFILES_ENABLED;
-
-         // make sure the key should be forwarded
-         assertTrue(LineageSettings.System.shouldInterceptSystemProvider(forwardedKey));
-
-         // put value 1 into Settings provider:
-         // let's try to disable the profiles via the Settings provider
-         Settings.System.putStringForUser(mContentResolver,
-                 forwardedKey, "0", UserHandle.USER_CURRENT);
-
-         // assert this is what we just put in there
-         assertEquals("0", Settings.System.getStringForUser(getContext().getContentResolver(),
-                 forwardedKey, UserHandle.USER_CURRENT));
-
-         // put value 2 into LineageSettings provider
-         LineageSettings.System.putStringForUser(mContentResolver,
-                 forwardedKey, "1", UserHandle.USER_CURRENT);
-
-         assertEquals("1", LineageSettings.System.getStringForUser(getContext().getContentResolver(),
-                 forwardedKey, UserHandle.USER_CURRENT));
-
-         // assert reading from both returns value 2
-         final String lineageProviderValue = LineageSettings.System.getStringForUser(
-                 getContext().getContentResolver(), forwardedKey, UserHandle.USER_CURRENT);
-         final String settingsProviderValue = Settings.System.getStringForUser(
-                 getContext().getContentResolver(), forwardedKey, UserHandle.USER_CURRENT);
-         assertEquals(lineageProviderValue, settingsProviderValue);
      }
 
      private void testMigrateSettingsForUser(int userId) {

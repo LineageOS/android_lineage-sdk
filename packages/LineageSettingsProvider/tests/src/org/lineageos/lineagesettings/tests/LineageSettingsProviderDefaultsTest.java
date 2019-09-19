@@ -23,14 +23,14 @@ import android.content.res.Resources;
 import android.os.UserHandle;
 import android.test.AndroidTestCase;
 import android.test.suitebuilder.annotation.SmallTest;
-
-import java.util.ArrayList;
-
 import android.text.TextUtils;
 import android.util.TypedValue;
+
 import lineageos.providers.LineageSettings;
 import org.lineageos.lineagesettings.LineageDatabaseHelper;
 import org.lineageos.lineagesettings.LineageSettingsProvider;
+
+import java.util.ArrayList;
 
 /**
  * Created by adnan on 1/25/16.
@@ -87,9 +87,6 @@ public class LineageSettingsProviderDefaultsTest extends AndroidTestCase {
         SECURE_SETTINGS_DEFAULTS.add(new Setting(
                 LineageSettings.Secure.ADVANCED_MODE,
                 "R.bool.def_advanced_mode"));
-        SECURE_SETTINGS_DEFAULTS.add(new Setting(
-                LineageSettings.Secure.QS_USE_MAIN_TILES,
-                "R.bool.def_sysui_qs_main_tiles"));
         SECURE_SETTINGS_DEFAULTS.add(new Setting(
                 LineageSettings.Secure.STATS_COLLECTION,
                 "R.bool.def_stats_collection"));

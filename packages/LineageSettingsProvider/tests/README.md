@@ -4,4 +4,4 @@ its public interfaces.
 
 To run the tests (on a live device):
 
-  ```adb shell am instrument -w org.lineageos.lineagesettings.tests/android.test.InstrumentationTestRunner```
+  ```adb shell am instrument -w org.lineageos.lineagesettings.tests/androidx.test.runner.AndroidJUnitRunner```
