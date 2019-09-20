@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1620785e_252e05cf",
+        "filename": "packages/LineageSettingsProvider/tests/README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 3075
+      },
+      "writtenOn": "2019-09-20T06:40:38Z",
+      "side": 1,
+      "message": "Should remove the -w here and mention that adb connection resets are expected.",
+      "revId": "86d5508d2e23c0b457fcbe2fd6ad3a94ebffc286",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    }
+  ]
+}
