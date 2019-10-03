@@ -48,7 +48,7 @@ public class LineageDatabaseHelper extends SQLiteOpenHelper{
     private static final boolean LOCAL_LOGV = false;
 
     private static final String DATABASE_NAME = "lineagesettings.db";
-    private static final int DATABASE_VERSION = 12;
+    private static final int DATABASE_VERSION = 13;
 
     private static final String DATABASE_NAME_OLD = "cmsettings.db";
 
@@ -425,6 +425,24 @@ public class LineageDatabaseHelper extends SQLiteOpenHelper{
                 }
             }
             upgradeVersion = 12;
+        }
+
+        if (upgradeVersion < 13) {
+            // Update custom charging sound setting
+            if (mUserHandle == UserHandle.USER_OWNER) {
+                db.beginTransaction();
+                SQLiteStatement stmt = null;
+                try {
+                    stmt = db.compileStatement("UPDATE global SET value=? WHERE name=?");
+                    loadStringSetting(stmt, LineageSettings.Global.POWER_NOTIFICATIONS_RINGTONE,
+                            R.string.def_power_notifications_ringtone);
+                    db.setTransactionSuccessful();
+                } finally {
+                    if (stmt != null) stmt.close();
+                    db.endTransaction();
+                }
+            }
+            upgradeVersion = 13;
         }
         // *** Remember to update DATABASE_VERSION above!
     }
