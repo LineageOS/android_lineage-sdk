@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "38c13aa5_b487916b",
+        "filename": "packages/LineageSettingsProvider/res/values/defaults.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 76,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2019-10-03T16:56:10Z",
+      "side": 1,
+      "message": "RINGTONE? Cringe.",
+      "range": {
+        "startLine": 76,
+        "startChar": 44,
+        "endLine": 76,
+        "endChar": 73
+      },
+      "revId": "515afc8d87b6c71352ac1f0dcd9d740ee0312ba7",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    }
+  ]
+}
