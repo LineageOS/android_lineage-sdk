@@ -22,6 +22,30 @@
       "revId": "515afc8d87b6c71352ac1f0dcd9d740ee0312ba7",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "40adfcae_0abfbbb7",
+        "filename": "packages/LineageSettingsProvider/res/values/defaults.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 76,
+      "author": {
+        "id": 3075
+      },
+      "writtenOn": "2019-10-05T05:36:57Z",
+      "side": 1,
+      "message": "My bad a long time ago in cm-10.1 ;-)\n\nhttps://github.com/LineageOS/android_packages_apps_Settings/commit/b608d71ea4d0e65d32bf1ce6fd5e34dc37040b51",
+      "parentUuid": "38c13aa5_b487916b",
+      "range": {
+        "startLine": 76,
+        "startChar": 44,
+        "endLine": 76,
+        "endChar": 73
+      },
+      "revId": "515afc8d87b6c71352ac1f0dcd9d740ee0312ba7",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
     }
   ]
 }
