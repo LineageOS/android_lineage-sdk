@@ -91,7 +91,6 @@
     <string name="permdesc_manageLiveDisplay">Επιτρέπει σε μια εφαρμογή να τροποποιεί τις ρυθμίσεις οθόνης για προχωρημένους.</string>
     <string name="permlab_observe_audio_sessions">παρατήρηση αλλαγών στις συνεδρίες ήχου</string>
     <string name="permdesc_observe_audio_sessions">Επιτρέπει σε μια εφαρμογή να παρατηρεί τις ροές ήχου να δημιουργούνται και να καταστρέφονται.</string>
-    <string name="privacy_guard_manager_title">Προστασία Απορρήτου</string>
     <string name="permlab_manageRemotePrefs">διαχείριση απομακρυσμένων ρυθμίσεων</string>
     <string name="permdesc_manageRemotePrefs">Επιτρέπει σε μια εφαρμογή να διαχειριστεί απομακρυσμένες ρυθμίσεις</string>
     <string name="build_date">Ημερομηνία έκδοσης</string>

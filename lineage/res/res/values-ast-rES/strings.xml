@@ -91,7 +91,6 @@
     <string name="permdesc_manageLiveDisplay">Permite qu\'una aplicación configure los axustes avanzaos de pantalla.</string>
     <string name="permlab_observe_audio_sessions">mirar camudancies de sesiones d\'audiu</string>
     <string name="permdesc_observe_audio_sessions">Permite qu\'una aplicación mire los fluxos d\'audiu que se creen y destrúin.</string>
-    <string name="privacy_guard_manager_title">Guardián de privacidá</string>
     <string name="permlab_manageRemotePrefs">xestionar axustes remotos</string>
     <string name="permdesc_manageRemotePrefs">Permite qu\'una aplicación xestione axustes remotos</string>
     <string name="build_date">Data de la compilación</string>

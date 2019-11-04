@@ -91,7 +91,6 @@
     <string name="permdesc_manageLiveDisplay">Permite que uma aplicação configure definições avançadas do ecrã.</string>
     <string name="permlab_observe_audio_sessions">observar as alterações da sessão de som</string>
     <string name="permdesc_observe_audio_sessions">Permite que uma aplicação observe a criação e destruição de fluxos de som.</string>
-    <string name="privacy_guard_manager_title">Proteção da Privacidade</string>
     <string name="permlab_manageRemotePrefs">gerir definições remotas</string>
     <string name="permdesc_manageRemotePrefs">Permite que uma aplicação possa gerir definições remotas</string>
     <string name="build_date">Data de compilação</string>

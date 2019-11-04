@@ -83,7 +83,6 @@
     <string name="permdesc_manageLiveDisplay">Laat \'n toep toe om gevorderde skerm instellings te konfigureer.</string>
     <string name="permlab_observe_audio_sessions">neem oudio-sessie verandering waar</string>
     <string name="permdesc_observe_audio_sessions">Laat \'n toep toe, om oudio-strome wat geskep en vernietig word, waar te neem.</string>
-    <string name="privacy_guard_manager_title">Privaatheidswag</string>
     <string name="permlab_manageRemotePrefs">bestuur afgeleë opsies</string>
     <string name="permdesc_manageRemotePrefs">Laat \'n toepassing toe om afgeleë opsies te bestuur</string>
 </resources>

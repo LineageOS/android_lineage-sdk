@@ -83,7 +83,6 @@
     <string name="permdesc_manageLiveDisplay">Дозволяє додатку керувати розширеними налаштуваннями дисплея.</string>
     <string name="permlab_observe_audio_sessions">спостерігати за змінами аудіо сесії</string>
     <string name="permdesc_observe_audio_sessions">Дозволяє додатку переглядати аудіопотоки, які створюються або знищуються.</string>
-    <string name="privacy_guard_manager_title">Вартовий Приватності</string>
     <string name="permlab_manageRemotePrefs">керування віддаленими параметрами</string>
     <string name="permdesc_manageRemotePrefs">Дозволяє застосункові керувати налаштуваннями віддаленого підключення</string>
 </resources>

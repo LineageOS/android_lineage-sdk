@@ -91,7 +91,6 @@
     <string name="permdesc_manageLiveDisplay">Umožní aplikácii nastavovať pokročilé nastavenia obrazovky.</string>
     <string name="permlab_observe_audio_sessions">pozorovať zmeny audio sedenia</string>
     <string name="permdesc_observe_audio_sessions">Umožní aplikácii sledovať vytváranie a rušenie zvukových zdrojov.</string>
-    <string name="privacy_guard_manager_title">Ochrana súkromia</string>
     <string name="permlab_manageRemotePrefs">správa vzdialených nastavení</string>
     <string name="permdesc_manageRemotePrefs">Umožňuje spravovať vzdialené nastavenia</string>
     <string name="build_date">Dátum zostavenia</string>

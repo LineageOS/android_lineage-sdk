@@ -91,7 +91,6 @@
     <string name="permdesc_manageLiveDisplay">ಸುಧಾರಿತ ಪ್ರದರ್ಶನ ಅಳವಡಿಕೆಗಳನ್ನು ಸಂರಚಿಸಲು ಆಪ್ಗೆ ಅನುಮತಿಸುತ್ತದೆ.</string>
     <string name="permlab_observe_audio_sessions">ಶೃತಿ ಅಧಿವೇಶನದ ಬದಲಾವಣೆಗಳನ್ನು ಗಮನಿಸು</string>
     <string name="permdesc_observe_audio_sessions">ಶ್ರಾವ್ಯ ತೊರೆಗಳ ಸೃಷ್ಟಿ ಮತ್ತು ನಾಶನ ವೀಕ್ಷಿಸಲು ಆಪ್ಗೆ ಅನುಮತಿಸುತ್ತದೆ.</string>
-    <string name="privacy_guard_manager_title">ಗೌಪ್ಯತೆ ರಕ್ಷಕ</string>
     <string name="permlab_manageRemotePrefs">ಗೆಂಟಂಕೆಯ ಅಳವಡಿಕೆಗಳನ್ನು ನಿರ್ವಹಿಸು</string>
     <string name="permdesc_manageRemotePrefs">ಗೆಂಟಂಕೆ ಅಳವಡಿಕೆಗಳನ್ನು ನಿರ್ವಹಿಸಲು ಅಪ್ಗೆ ಅನುಮತಿಸುತ್ತದೆ</string>
     <string name="build_date">ನಿರ್ಮಾಣ ದಿನಾಂಕ</string>
