@@ -91,7 +91,6 @@
     <string name="permdesc_manageLiveDisplay">Leigidh seo le aplacaid roghainnean adhartach an taisbeanaidh a rèiteachadh.</string>
     <string name="permlab_observe_audio_sessions">sùil a chumail air atharrachaidhean air seisean fuaime</string>
     <string name="permdesc_observe_audio_sessions">Leigidh seo le aplacaid sùil a chumail air cruthachadh is crìochnachadh sruthan fuaime.</string>
-    <string name="privacy_guard_manager_title">Freiceadan na prìobhaideachd</string>
     <string name="permlab_manageRemotePrefs">roghainnean cèine a stiùireadh</string>
     <string name="permdesc_manageRemotePrefs">Leigidh seo le aplacaid roghainnean cèine a stiùireadh</string>
     <string name="build_date">Ceann-là na togail</string>

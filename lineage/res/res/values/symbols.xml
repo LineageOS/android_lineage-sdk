@@ -93,9 +93,6 @@
     <!-- Lineage system server -->
     <java-symbol type="string" name="config_externalSystemServer" />
 
-    <!-- Settings -->
-    <java-symbol type="string" name="privacy_guard_manager_title" />
-
     <!-- Device keyhandlers -->
     <java-symbol type="array" name="config_deviceKeyHandlerLibs" />
     <java-symbol type="array" name="config_deviceKeyHandlerClasses" />

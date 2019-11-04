@@ -91,7 +91,6 @@
     <string name="permdesc_manageLiveDisplay">Pozwala aplikacji na konfigurację zaawansowanych ustawień wyświetlacza.</string>
     <string name="permlab_observe_audio_sessions">obserwuj zmiany sesji audio</string>
     <string name="permdesc_observe_audio_sessions">Zezwalaj aplikacji na obserwowanie utworzenia lub zamknięcia strumienia dźwięku.</string>
-    <string name="privacy_guard_manager_title">Ochrona prywatności</string>
     <string name="permlab_manageRemotePrefs">zarządza zdalnymi ustawieniami</string>
     <string name="permdesc_manageRemotePrefs">Zezwala aplikacji na zarządzanie zdalnymi ustawieniami</string>
     <string name="build_date">Data kompilacji</string>

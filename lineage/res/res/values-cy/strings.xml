@@ -91,7 +91,6 @@
     <string name="permdesc_manageLiveDisplay">Mae\'n caniatáu i ap ffurfweddu gosodiadau dangosydd uwch.</string>
     <string name="permlab_observe_audio_sessions">gwylio newidiadau sesiynau sain</string>
     <string name="permdesc_observe_audio_sessions">Mae\'n caniatáu i ap wylio ffrydiau sain yn cael eu creu a\'u dinistrio.</string>
-    <string name="privacy_guard_manager_title">Gwarchodydd Preifatrwydd</string>
     <string name="permlab_manageRemotePrefs">rheoli gosodiadau o bell</string>
     <string name="permdesc_manageRemotePrefs">Mae\'n caniatáu ap i reoli gosodiadau o bell.</string>
     <string name="build_date">Dyddiad adeiledd</string>

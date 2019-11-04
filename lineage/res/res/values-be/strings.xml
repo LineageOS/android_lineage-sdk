@@ -64,7 +64,6 @@
     <string name="permdesc_perfAccessDesc">Дадатак зможа атрымваць доступ да службы прадукцыйнасці. Гэты дазвол не выкарыстоўваецца звычайнымі дадаткамі.</string>
     <string name="permlab_weather_write">Абнавіць звесткі аб надвор’і</string>
     <string name="permlab_manageLiveDisplay">кіраванне наладамі LiveDisplay</string>
-    <string name="privacy_guard_manager_title">Ахова</string>
     <string name="permlab_manageRemotePrefs">кіраваньне аддаленнымі наладамі</string>
     <string name="permdesc_manageRemotePrefs">Дадатак зможа кіраваць аддаленымі наладамі</string>
 </resources>

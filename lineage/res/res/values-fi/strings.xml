@@ -91,7 +91,6 @@
     <string name="permdesc_manageLiveDisplay">Sallii sovelluksen määrittää kehittyneitä näytön asetuksia.</string>
     <string name="permlab_observe_audio_sessions">tutki ääni-istunnon muutoksia</string>
     <string name="permdesc_observe_audio_sessions">Sallii sovelluksen tarkastella milloin ääntä luodaan ja tuhotaan.</string>
-    <string name="privacy_guard_manager_title">Yksityisyyden suojaus</string>
     <string name="permlab_manageRemotePrefs">hallitse etäkäytön asetuksia</string>
     <string name="permdesc_manageRemotePrefs">Sallii sovellluksen hallita etäasetuksia</string>
     <string name="build_date">Luontipäivä</string>

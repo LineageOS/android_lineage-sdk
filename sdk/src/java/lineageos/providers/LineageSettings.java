@@ -2810,14 +2810,18 @@ public final class LineageSettings {
 
         /**
          * Whether newly installed apps should run with privacy guard by default
+         * @deprecated
          * @hide
          */
+        @Deprecated
         public static final String PRIVACY_GUARD_DEFAULT = "privacy_guard_default";
 
         /**
          * Whether a notification should be shown if privacy guard is enabled
+         * @deprecated
          * @hide
          */
+        @Deprecated
         public static final String PRIVACY_GUARD_NOTIFICATION = "privacy_guard_notification";
 
         /**

@@ -91,7 +91,6 @@
     <string name="permdesc_manageLiveDisplay">Lehetővé teszi az alkalmazás számára a speciális megjelenítési beállítások konfigurálását.</string>
     <string name="permlab_observe_audio_sessions">audió munkamenet változásainak megfigyelése</string>
     <string name="permdesc_observe_audio_sessions">Lehetővé teszi az alkalmazás számára, hogy megfigyelje ahogy az audió folyamok létrejönnek és elpusztulnak.</string>
-    <string name="privacy_guard_manager_title">Adatvédelmi beállítások</string>
     <string name="permlab_manageRemotePrefs">távoli beállítások kezelése</string>
     <string name="permdesc_manageRemotePrefs">Lehetővé teszi az alkalmazások számára a távoli beállítások kezelését</string>
     <string name="build_date">A kiadás dátuma</string>

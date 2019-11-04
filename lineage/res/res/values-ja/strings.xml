@@ -91,7 +91,6 @@
     <string name="permdesc_manageLiveDisplay">ディスプレイの詳細設定をアプリに許可します。</string>
     <string name="permlab_observe_audio_sessions">オーディオセッションの変更の監視</string>
     <string name="permdesc_observe_audio_sessions">オーディオストリームの作成および破棄の監視をアプリに許可します。</string>
-    <string name="privacy_guard_manager_title">プライバシーガード</string>
     <string name="permlab_manageRemotePrefs">リモートの設定の管理</string>
     <string name="permdesc_manageRemotePrefs">リモートの設定を管理することをアプリに許可します。</string>
     <string name="build_date">ビルド日時</string>

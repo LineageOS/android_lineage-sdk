@@ -84,7 +84,6 @@
     <string name="permdesc_manageLiveDisplay">Hiermee kan de app geavanceerde beeldscherminstellingen wijzigen.</string>
     <string name="permlab_observe_audio_sessions">wijzigingen in audiosessie observeren</string>
     <string name="permdesc_observe_audio_sessions">Hiermee kan de app de aanmaak en vernietiging van audiostreams observeren.</string>
-    <string name="privacy_guard_manager_title">Privacybescherming</string>
     <string name="permlab_manageRemotePrefs">instellingen voor beheer op afstand</string>
     <string name="permdesc_manageRemotePrefs">Hiermee kan de app instellingen voor beheer op afstand beheren</string>
     <string name="build_date">Build-datum</string>

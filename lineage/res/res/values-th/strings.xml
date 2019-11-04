@@ -91,7 +91,6 @@
     <string name="permdesc_manageLiveDisplay">อนุญาตให้แอปตั้งค่าการแสดงผลขั้นสูง</string>
     <string name="permlab_observe_audio_sessions">สังเกตการเปลี่ยนแปลงเซสชันเสียง</string>
     <string name="permdesc_observe_audio_sessions">อนุญาตให้แอปสังเกตกระแสข้อมูลเสียงที่กำลังถูกสร้างและทำลาย</string>
-    <string name="privacy_guard_manager_title">ปกป้องความเป็นส่วนตัว</string>
     <string name="permlab_manageRemotePrefs">จัดการการตั้งค่าระยะไกล</string>
     <string name="permdesc_manageRemotePrefs">อนุญาตให้แอปจัดการการตั้งค่าระยะไกล</string>
     <string name="build_date">วันที่สร้าง</string>

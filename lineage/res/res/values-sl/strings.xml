@@ -91,7 +91,6 @@
     <string name="permdesc_manageLiveDisplay">Dovoli aplikaciji nastavljanje naprednih nastavitev zaslona.</string>
     <string name="permlab_observe_audio_sessions">opazovanje sprememb zvočne seje</string>
     <string name="permdesc_observe_audio_sessions">Dovoli aplikaciji, da opazuje ustvarjanje in uničevanje zvočnih pretokov.</string>
-    <string name="privacy_guard_manager_title">Zaščita zasebnosti</string>
     <string name="permlab_manageRemotePrefs">upravljanje oddaljenih nastavitev</string>
     <string name="permdesc_manageRemotePrefs">Dovoli aplikaciji upravljanje oddaljenih nastavitev</string>
     <string name="build_date">Datum izgradnje</string>

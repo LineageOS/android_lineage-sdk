@@ -91,7 +91,6 @@
     <string name="permdesc_manageLiveDisplay">允許應用程式設定進階顯示配置</string>
     <string name="permlab_observe_audio_sessions">觀察音訊會話變動</string>
     <string name="permdesc_observe_audio_sessions">允許應用程式觀察音訊串流的建立和銷毀。</string>
-    <string name="privacy_guard_manager_title">隱私守衛</string>
     <string name="permlab_manageRemotePrefs">管理遠端設定</string>
     <string name="permdesc_manageRemotePrefs">允許應用程式管理遠端設定</string>
     <string name="build_date">編譯日期</string>

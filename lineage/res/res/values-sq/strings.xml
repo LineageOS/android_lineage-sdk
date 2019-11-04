@@ -91,7 +91,6 @@
     <string name="permdesc_manageLiveDisplay">Lejon një aplikacion të konfigurojë parametra të përparuar të ekranit.</string>
     <string name="permlab_observe_audio_sessions">vëre ndryshimet e sesioneve të audios</string>
     <string name="permdesc_observe_audio_sessions">Lejon një app të vëzhgojë kanalet audio që krijohen ose mbyllen.</string>
-    <string name="privacy_guard_manager_title">Mbrojtësi i të Dhënave</string>
     <string name="permlab_manageRemotePrefs">menaxho parametrat në distancë</string>
     <string name="permdesc_manageRemotePrefs">Lejon një aplikacion që të menaxhojë parametrat në distancë</string>
     <string name="build_date">Data e ndërtimit</string>

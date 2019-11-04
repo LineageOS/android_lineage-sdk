@@ -1,5 +1,6 @@
 /**
  * Copyright (c) 2015, The CyanogenMod Project
+ * Copyright (C) 2019 The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -819,8 +820,10 @@ public final class LineageSettings {
 
         /**
          * Whether newly installed apps should run with privacy guard by default
+         * @deprecated
          * @hide
          */
+        @Deprecated
         public static final String PRIVACY_GUARD_DEFAULT = "privacy_guard_default";
 
         /**

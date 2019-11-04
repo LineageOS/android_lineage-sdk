@@ -91,7 +91,6 @@
     <string name="permdesc_manageLiveDisplay">Izinkan aplikasi untuk mengonfigurasi pengaturan tampilan lanjutan.</string>
     <string name="permlab_observe_audio_sessions">pantau perubahan sesi audio</string>
     <string name="permdesc_observe_audio_sessions">Izinkan aplikasi untuk memantau pengaliran audio yang dibuat dan dihilangkan.</string>
-    <string name="privacy_guard_manager_title">Penjaga Privasi</string>
     <string name="permlab_manageRemotePrefs">mengelola pengaturan jarak jauh</string>
     <string name="permdesc_manageRemotePrefs">Memungkinkan aplikasi untuk mengelola pengaturan jarak jauh</string>
     <string name="build_date">Tanggal pembuatan</string>

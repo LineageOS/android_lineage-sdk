@@ -91,7 +91,6 @@
     <string name="permdesc_manageLiveDisplay">Uygulamalara gelişmiş ekran ayarlarını düzenleme izni verir.</string>
     <string name="permlab_observe_audio_sessions">ses oturum değişikliklerini gözlemle</string>
     <string name="permdesc_observe_audio_sessions">Bir uygulamanın, ses akışlarınının oluşturulma ve yok edilmesinde gözlem yapmasına izin verir.</string>
-    <string name="privacy_guard_manager_title">Gizlilik Koruması</string>
     <string name="permlab_manageRemotePrefs">uzak bağlantı ayarları</string>
     <string name="permdesc_manageRemotePrefs">Bir uygulamaya uzak bağlantı ayarlarını yönetme izni verir</string>
     <string name="build_date">İnşa tarihi</string>

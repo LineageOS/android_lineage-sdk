@@ -91,7 +91,6 @@
     <string name="permdesc_manageLiveDisplay">Cho phép ứng dụng thiết lập cấu hình cài đặt hiển thị nâng cao.</string>
     <string name="permlab_observe_audio_sessions">quan sát các thay đổi về phiên âm thanh</string>
     <string name="permdesc_observe_audio_sessions">Cho phép ứng dụng quan sát dòng âm thanh được tạo và bị hủy.</string>
-    <string name="privacy_guard_manager_title">Bảo vệ quyền riêng tư</string>
     <string name="permlab_manageRemotePrefs">quản lý cài đặt từ xa</string>
     <string name="permdesc_manageRemotePrefs">Cho phép một ứng dụng quản lý cài đặt từ xa</string>
     <string name="build_date">Ngày dựng</string>

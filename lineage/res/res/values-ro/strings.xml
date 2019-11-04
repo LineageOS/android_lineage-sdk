@@ -91,7 +91,6 @@
     <string name="permdesc_manageLiveDisplay">Permite unei aplicații să configureze setările de afișare avansate.</string>
     <string name="permlab_observe_audio_sessions">observă schimbări sesiune audio</string>
     <string name="permdesc_observe_audio_sessions">Permite unei aplicații să observe dacă fluxurile audio sunt create şi distruse.</string>
-    <string name="privacy_guard_manager_title">Gardian Intimitate</string>
     <string name="permlab_manageRemotePrefs">gestionare setări la distanţă</string>
     <string name="permdesc_manageRemotePrefs">Permite unei aplicații să gestioneze setările de la distanţă</string>
     <string name="build_date">Dată de compilare</string>

@@ -91,7 +91,6 @@
     <string name="permdesc_manageLiveDisplay">Приложение сможет изменять расширенные настройки экрана.</string>
     <string name="permlab_observe_audio_sessions">просмотр изменений аудиосеансов</string>
     <string name="permdesc_observe_audio_sessions">Приложение сможет просматривать аудиопотоки, которые создаются или уничтожаются.</string>
-    <string name="privacy_guard_manager_title">Защита конфиденциальности</string>
     <string name="permlab_manageRemotePrefs">управление удаленными параметрами</string>
     <string name="permdesc_manageRemotePrefs">Приложение сможет управлять удаленными параметрами</string>
     <string name="build_date">Дата сборки</string>

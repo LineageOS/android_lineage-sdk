@@ -91,7 +91,6 @@
     <string name="permdesc_manageLiveDisplay">Tətbiqetməyə qabaqcıl ekran tənzimləmələrini konfiqurasiya etməyə icazə verər.</string>
     <string name="permlab_observe_audio_sessions">səs seans dəyişikliklərini müşahidə et</string>
     <string name="permdesc_observe_audio_sessions">Tətbiqetmənin, səs axınının yaradılmasını və məhv edilməsini müşahidə etməsinə icazə verər.</string>
-    <string name="privacy_guard_manager_title">Gizlilik Qoruması</string>
     <string name="permlab_manageRemotePrefs">uzaqdan bağlantı tənzimləmələri</string>
     <string name="permdesc_manageRemotePrefs">Tətbiqetməyə uzaqdan bağlantı tənzimləmələrini dəyişdirmək icazəsi verər</string>
     <string name="build_date">Quruluş tarixi</string>

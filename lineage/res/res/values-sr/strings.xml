@@ -91,7 +91,6 @@
     <string name="permdesc_manageLiveDisplay">Апликација може да мења подешавања напредног приказа.</string>
     <string name="permlab_observe_audio_sessions">преглед измена звучних сесија</string>
     <string name="permdesc_observe_audio_sessions">Апликација може да прегледа звучне токове који се стварају и нестају.</string>
-    <string name="privacy_guard_manager_title">Заштита приватности</string>
     <string name="permlab_manageRemotePrefs">управљање подешавањима даљинског приступа</string>
     <string name="permdesc_manageRemotePrefs">Апликација може да управља подешавањима даљинског приступа.</string>
     <string name="build_date">Датум израде</string>

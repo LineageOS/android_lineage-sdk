@@ -60,7 +60,6 @@
     <string name="permdesc_perfAccessDesc">Ger en app åtkomst till prestandatjänsten. Ska aldrig behövas för vanliga appar.</string>
     <string name="permlab_weather_read">läsa väderinformation</string>
     <string name="permlab_weather_write">uppdatera väderleverantör</string>
-    <string name="privacy_guard_manager_title">Integritetsskydd</string>
     <string name="permlab_manageRemotePrefs">hantera fjärrinställningar</string>
     <string name="build_date">Kompileringsdatum</string>
     <string name="lineage_updates">LineageOS-uppdateringar</string>
