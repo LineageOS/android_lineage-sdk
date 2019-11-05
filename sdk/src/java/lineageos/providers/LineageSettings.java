@@ -1705,6 +1705,15 @@ public final class LineageSettings {
                 new InclusiveIntegerRangeValidator(0, 2);
 
         /**
+         * Number of quick settings tile columns to display per row
+         */
+        public static final String STATUS_BAR_QS_TILE_COLUMNS = "status_bar_qs_tile_columns";
+
+        /** @hide */
+        public static final Validator STATUS_BAR_QS_TILE_COLUMNS_VALIDATOR =
+                new InclusiveIntegerRangeValidator(3, 6);
+
+        /**
          * Whether to show the brightness slider in quick settings panel.
          * 0 = 0ff, 1 = on
          */
@@ -2152,6 +2161,7 @@ public final class LineageSettings {
                 LineageSettings.System.NOTIFICATION_LIGHT_PULSE_CUSTOM_ENABLE,
                 LineageSettings.System.NOTIFICATION_LIGHT_PULSE_CUSTOM_VALUES,
                 LineageSettings.System.STATUS_BAR_QUICK_QS_PULLDOWN,
+                LineageSettings.System.STATUS_BAR_QS_TILE_COLUMNS,
                 LineageSettings.System.VOLUME_ADJUST_SOUNDS_ENABLED,
                 LineageSettings.System.SYSTEM_PROFILES_ENABLED,
                 LineageSettings.System.INCREASING_RING,
@@ -2278,6 +2288,8 @@ public final class LineageSettings {
             VALIDATORS.put(STATUS_BAR_IME_SWITCHER, STATUS_BAR_IME_SWITCHER_VALIDATOR);
             VALIDATORS.put(STATUS_BAR_QUICK_QS_PULLDOWN,
                     STATUS_BAR_QUICK_QS_PULLDOWN_VALIDATOR);
+            VALIDATORS.put(STATUS_BAR_QS_TILE_COLUMNS,
+                    STATUS_BAR_QS_TILE_COLUMNS_VALIDATOR);
             VALIDATORS.put(QS_SHOW_BRIGHTNESS_SLIDER, QS_SHOW_BRIGHTNESS_SLIDER_VALIDATOR);
             VALIDATORS.put(STATUS_BAR_BRIGHTNESS_CONTROL,
                     STATUS_BAR_BRIGHTNESS_CONTROL_VALIDATOR);
