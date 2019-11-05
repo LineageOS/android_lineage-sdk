@@ -120,4 +120,11 @@ public class Intent {
      */
     public static final String ACTION_INITIALIZE_LIVEDISPLAY =
             "lineageos.intent.action.INITIALIZE_LIVEDISPLAY";
+
+    /**
+     * Broadcast action: notify SystemUI that Quick Settings tile layout should be refreshed.
+     * @hide
+     */
+    public static final String ACTION_UPDATE_QUICKSETTINGS =
+            "lineageos.intent.action.UPDATE_QUICKSETTINGS";
 }
