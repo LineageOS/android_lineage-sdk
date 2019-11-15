@@ -27,11 +27,6 @@ import android.text.TextUtils;
 import android.util.Log;
 import android.util.Xml;
 
-import com.google.i18n.phonenumbers.NumberParseException;
-import com.google.i18n.phonenumbers.Phonenumber;
-import com.google.i18n.phonenumbers.PhoneNumberUtil;
-import com.google.i18n.phonenumbers.PhoneNumberUtil.PhoneNumberFormat;
-
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
 
@@ -42,7 +37,6 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
-import java.util.Locale;
 
 public class SensitivePhoneNumbers {
     private final String LOG_TAG = this.getClass().getSimpleName();
@@ -118,16 +112,14 @@ public class SensitivePhoneNumbers {
     }
 
     public boolean isSensitiveNumber(Context context, String numberToCheck, int subId) {
-        loadSensiblePhoneNumbers();
-        String nationalNumber = formatNumberToNational(context, numberToCheck);
-
         SubscriptionManager subManager = context.getSystemService(SubscriptionManager.class);
+
         List<SubscriptionInfo> list = subManager.getActiveSubscriptionInfoList();
         if (list != null) {
             // Test all subscriptions so an accidential use of a wrong sim also hides the number
             for (SubscriptionInfo subInfo : list) {
                 String mcc = String.valueOf(subInfo.getMcc());
-                if (isSensitiveNumber(nationalNumber, mcc)) {
+                if (isSensitiveNumber(numberToCheck, mcc)) {
                     return true;
                 }
             }
@@ -140,7 +132,7 @@ public class SensitivePhoneNumbers {
             String networkUsed = telephonyManager.getNetworkOperator(subId);
             if (!TextUtils.isEmpty(networkUsed)) {
                 String networkMCC = networkUsed.substring(0, 3);
-                return isSensitiveNumber(nationalNumber, networkMCC);
+                return isSensitiveNumber(numberToCheck, networkMCC);
             }
         }
 
@@ -158,22 +150,5 @@ public class SensitivePhoneNumbers {
             }
         }
         return false;
-    }
-
-    private String formatNumberToNational(Context context, String number) {
-        PhoneNumberUtil util = PhoneNumberUtil.getInstance();
-        String countryIso = context.getResources().getConfiguration().locale.getCountry();
-
-        Phonenumber.PhoneNumber pn = null;
-        try {
-            pn = util.parse(number, countryIso);
-        } catch (NumberParseException e) {
-        }
-
-        if (pn != null) {
-            return util.format(pn, PhoneNumberFormat.NATIONAL);
-        } else {
-            return number;
-        }
     }
 }
