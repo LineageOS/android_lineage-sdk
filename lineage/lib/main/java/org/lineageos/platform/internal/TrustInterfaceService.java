@@ -51,6 +51,7 @@ public class TrustInterfaceService extends LineageSystemService {
     private static final String TAG = "LineageTrustInterfaceService";
 
     private static final String PLATFORM_SECURITY_PATCHES = "ro.build.version.security_patch";
+    private static final String LINEAGE_PLATFORM_SECURITY_PATCHES = "ro.lineage.build.version.security_patch";
     private static final String VENDOR_SECURITY_PATCHES = "ro.vendor.build.security_patch";
     private static final String LINEAGE_VENDOR_SECURITY_PATCHES =
             "ro.lineage.build.vendor_security_patch";
@@ -287,6 +288,14 @@ public class TrustInterfaceService extends LineageSystemService {
                     }
             } else {
                 return TrustInterface.ERROR_UNDEFINED;
+            }
+        }
+
+        // Try to pick Lineage platform prop
+        if (PLATFORM_SECURITY_PATCHES.equals(target)) {
+            String lineagePatchLevel = SystemProperties.get(LINEAGE_PLATFORM_SECURITY_PATCHES);
+            if (!TextUtils.isEmpty(lineagePatchLevel)) {
+                patchLevel = lineagePatchLevel;
             }
         }
 
