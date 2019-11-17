@@ -131,16 +131,30 @@ public class SensitivePhoneNumbers {
                     return true;
                 }
             }
-        } else {
-            // Fall back to check with the passed subId
-            TelephonyManager telephonyManager = context.getSystemService(TelephonyManager.class);
-            if (subId == SubscriptionManager.INVALID_SUBSCRIPTION_ID) {
-                subId = SubscriptionManager.getDefaultSubscriptionId();
+        }
+
+        // Fall back to check with the passed subId
+        TelephonyManager telephonyManager = context.getSystemService(TelephonyManager.class);
+        if (subId == SubscriptionManager.INVALID_SUBSCRIPTION_ID) {
+            subId = SubscriptionManager.getDefaultSubscriptionId();
+        }
+        telephonyManager = telephonyManager.createForSubscriptionId(subId);
+        String networkUsed = telephonyManager.getNetworkOperator();
+        if (!TextUtils.isEmpty(networkUsed)) {
+            String networkMCC = networkUsed.substring(0, 3);
+            if (isSensitiveNumber(nationalNumber, networkMCC)) {
+                return true;
             }
-            String networkUsed = telephonyManager.getNetworkOperator(subId);
-            if (!TextUtils.isEmpty(networkUsed)) {
-                String networkMCC = networkUsed.substring(0, 3);
-                return isSensitiveNumber(nationalNumber, networkMCC);
+        }
+
+        // Also try the sim's operator
+        if (telephonyManager.getSimState() == TelephonyManager.SIM_STATE_READY) {
+            String simOperator = telephonyManager.getSimOperator();
+            if (!TextUtils.isEmpty(simOperator)) {
+                String networkMCC = simOperator.substring(0, 3);
+                if (isSensitiveNumber(nationalNumber, networkMCC)) {
+                    return true;
+                }
             }
         }
 
