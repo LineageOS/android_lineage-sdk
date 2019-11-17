@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package org.lineageos.internal.phone;
+package org.lineageos.lib.phone;
 
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
