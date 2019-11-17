@@ -51,6 +51,7 @@ android_app {
 
 lineage_sdk_src = "sdk/src/java/lineageos"
 lineage_sdk_internal_src = "sdk/src/java/org/lineageos/internal"
+lineage_sdk_internal_phone_src = lineage_sdk_internal_src + "/phone"
 library_src = "lineage/lib/main/java"
 
 lineage_sdk_LOCAL_STATIC_ANDROID_LIBRARIES = [
@@ -78,7 +79,6 @@ java_library {
     name: "org.lineageos.platform",
     installable: true,
     static_libs: [
-        "libphonenumber",
         "telephony-ext",
     ] + lineage_sdk_LOCAL_STATIC_ANDROID_LIBRARIES + lineage_sdk_LOCAL_STATIC_JAVA_LIBRARIES,
 
@@ -94,6 +94,10 @@ java_library {
         lineage_sdk_internal_src + "/**/I*.aidl",
     ],
 
+    exclude_srcs: [
+        lineage_sdk_internal_phone_src + "/*.java"
+    ],
+
     // Include aidl files from lineageos.app namespace as well as internal src aidl files
     aidl: {
         local_include_dirs: ["sdk/src/java"],
@@ -107,7 +111,6 @@ java_library {
     name: "org.lineageos.platform.internal",
     required: ["services"],
     static_libs: [
-        "libphonenumber",
         "telephony-ext",
     ] + lineage_sdk_LOCAL_STATIC_ANDROID_LIBRARIES + lineage_sdk_LOCAL_STATIC_JAVA_LIBRARIES,
 
@@ -118,9 +121,24 @@ java_library {
         lineage_sdk_internal_src + "/**/I*.aidl",
     ],
 
+    exclude_srcs: [
+        lineage_sdk_internal_phone_src + "/*.java"
+    ],
+
     aidl: {
         local_include_dirs: ["sdk/src/java"],
     },
+}
+
+java_library_static {
+    name: "org.lineageos.platform.internal.phone",
+    static_libs: [
+        "libphonenumber"
+    ],
+
+    srcs: [
+        lineage_sdk_internal_phone_src + "/*.java"
+    ],
 }
 
 // The SDK
