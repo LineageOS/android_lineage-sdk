@@ -1356,37 +1356,47 @@ public final class LineageSettings {
          * 1: time - based on LiveDisplay status
          * 2: force light
          * 3: force dark
+         *
+         * @deprecated
          */
+        @Deprecated
         public static final String BERRY_GLOBAL_STYLE = "berry_global_style";
 
         /** @hide */
+        @Deprecated
         public static final Validator BERRY_GLOBAL_STYLE_VALIDATOR =
                 new InclusiveIntegerRangeValidator(0, 3);
 
         /**
          * Current accent package name
          */
+        @Deprecated
         public static final String BERRY_CURRENT_ACCENT = "berry_current_accent";
 
         /** @hide */
+        @Deprecated
         public static final Validator BERRY_CURRENT_ACCENT_VALIDATOR =
                 sNonNullStringValidator;
 
         /**
          * Current dark overlay package name
          */
+        @Deprecated
         public static final String BERRY_DARK_OVERLAY = "berry_dark_overlay";
 
         /** @hide */
+        @Deprecated
         public static final Validator BERRY_DARK_OVERLAY_VALIDATOR =
                 sNonNullStringValidator;
 
         /**
          * Current application managing the style
          */
+        @Deprecated
         public static final String BERRY_MANAGED_BY_APP = "berry_managed_by_app";
 
         /** @hide */
+        @Deprecated
         public static final Validator BERRY_MANAGED_BY_APP_VALIDATOR =
                 sNonNullStringValidator;
 
