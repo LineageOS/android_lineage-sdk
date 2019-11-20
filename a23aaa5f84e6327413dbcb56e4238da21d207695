@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "b2f11271_ffdad1c1",
+        "filename": "Android.bp",
+        "patchSetId": 2
+      },
+      "lineNbr": 98,
+      "author": {
+        "id": 7118
+      },
+      "writtenOn": "2019-11-20T20:21:15Z",
+      "side": 1,
+      "message": "To match aosp coding style and the style in this file, i think trailing comma should be added here.\nSame with value lines added below.",
+      "revId": "a23aaa5f84e6327413dbcb56e4238da21d207695",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    }
+  ]
+}
