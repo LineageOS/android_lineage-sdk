@@ -123,6 +123,19 @@ java_library {
     },
 }
 
+aidl_interface {
+    name: "adbroot_aidl_interface",
+    srcs: [
+        lineage_sdk_src + "/system/IAdbRootService.aidl",
+    ],
+    local_include_dir: "sdk/src/java",
+    backend: {
+        ndk: {
+            enabled: false,
+        },
+    },
+}
+
 // The SDK
 // ============================================================
 

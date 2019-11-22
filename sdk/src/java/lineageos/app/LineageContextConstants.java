@@ -119,6 +119,13 @@ public final class LineageContextConstants {
     public static final String LINEAGE_TRUST_INTERFACE = "lineagetrust";
 
     /**
+     * Manages adb root functionality
+     *
+     * @hide
+     */
+    public static final String LINEAGE_ADBROOT_SERVICE = "lineageadbroot";
+
+    /**
      * Features supported by the Lineage SDK.
      */
     public static class Features {
