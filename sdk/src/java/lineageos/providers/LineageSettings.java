@@ -2731,6 +2731,13 @@ public final class LineageSettings {
         // region Secure Settings
 
         /**
+         * Whether to enable adb root.
+         * Boolean setting. 0 = no, 1 = yes.
+         * @hide
+         */
+        public static final String ADB_ROOT_ENABLED = "adb_root_enabled";
+
+        /**
          * Whether to enable "advanced mode" for the current user.
          * Boolean setting. 0 = no, 1 = yes.
          * @hide
