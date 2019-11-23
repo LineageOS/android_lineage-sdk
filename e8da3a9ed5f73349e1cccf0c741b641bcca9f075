@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "22734724_9a94d18e",
+        "filename": "lineage/lib/main/java/org/lineageos/platform/internal/LineageSettingsService.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 96,
+      "author": {
+        "id": 11883
+      },
+      "writtenOn": "2019-11-23T08:54:53Z",
+      "side": 1,
+      "message": "this is exactly what I didn\u0027t want to use\na setting and restarting adb manually",
+      "revId": "e8da3a9ed5f73349e1cccf0c741b641bcca9f075",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    }
+  ]
+}
