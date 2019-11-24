@@ -39,6 +39,7 @@ public class PowerMenuConstants {
     public static final String GLOBAL_ACTION_KEY_RESTART_RECOVERY = "restart_recovery";
     public static final String GLOBAL_ACTION_KEY_RESTART_BOOTLOADER = "restart_bootloader";
     public static final String GLOBAL_ACTION_KEY_RESTART_DOWNLOAD = "restart_download";
+    public static final String GLOBAL_ACTION_KEY_RESTART_FASTBOOT = "restart_fastboot";
 
     private static String[] ALL_ACTIONS = {
         GLOBAL_ACTION_KEY_POWER,
