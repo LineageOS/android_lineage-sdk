@@ -378,14 +378,6 @@ public class ProfileTest extends AndroidTestCase {
     }
 
     @SmallTest
-    public void testProfileGetExpandedDesktopMode() {
-        int expectedExpandedDesktopMode = Profile.ExpandedDesktopMode.ENABLE;
-        Profile profile = new Profile("Desktop Mode Profile");
-        profile.setExpandedDesktopMode(expectedExpandedDesktopMode);
-        assertEquals(expectedExpandedDesktopMode, profile.getExpandedDesktopMode());
-    }
-
-    @SmallTest
     public void testProfileGetNotificationLightMode() {
         int expectedNotificationLightMode = Profile.NotificationLightMode.ENABLE;
         Profile profile = new Profile("Notification Light Mode Profile");
