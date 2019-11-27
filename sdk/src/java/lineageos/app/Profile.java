@@ -95,8 +95,6 @@ public final class Profile implements Parcelable, Comparable {
 
     private LockSettings mScreenLockMode = new LockSettings();
 
-    private int mExpandedDesktopMode = ExpandedDesktopMode.DEFAULT;
-
     private int mDozeMode = DozeMode.DEFAULT;
 
     private int mNotificationLightMode = NotificationLightMode.DEFAULT;
@@ -110,18 +108,6 @@ public final class Profile implements Parcelable, Comparable {
         /** Represents an insecure state lock mode, where the device has no security screen */
         public static final int INSECURE = 1;
         /** Represents a disabled state lock mode, where the devices lock screen can be removed */
-        public static final int DISABLE = 2;
-    }
-
-    /**
-     * Expanded desktop modes available on a device
-     */
-    public static class ExpandedDesktopMode {
-        /** Represents a default state expanded desktop mode (user choice) */
-        public static final int DEFAULT = 0;
-        /** Represents an enabled expanded desktop mode */
-        public static final int ENABLE = 1;
-        /** Represents a disabled expanded desktop mode */
         public static final int DISABLE = 2;
     }
 
@@ -619,7 +605,6 @@ public final class Profile implements Parcelable, Comparable {
             dest.writeInt(0);
         }
         dest.writeTypedArray(mTriggers.values().toArray(new ProfileTrigger[0]), flags);
-        dest.writeInt(mExpandedDesktopMode);
         dest.writeInt(mDozeMode);
 
         // === ELDERBERRY ===
@@ -699,7 +684,6 @@ public final class Profile implements Parcelable, Comparable {
             for (ProfileTrigger trigger : in.createTypedArray(ProfileTrigger.CREATOR)) {
                 mTriggers.put(trigger.mId, trigger);
             }
-            mExpandedDesktopMode = in.readInt();
             mDozeMode = in.readInt();
         }
         if (parcelableVersion >= Build.LINEAGE_VERSION_CODES.ELDERBERRY) {
@@ -858,28 +842,6 @@ public final class Profile implements Parcelable, Comparable {
     }
 
     /**
-     * Get the {@link ExpandedDesktopMode} for the {@link Profile}
-     * @return
-     */
-    public int getExpandedDesktopMode() {
-        return mExpandedDesktopMode;
-    }
-
-    /**
-     * Set the {@link ExpandedDesktopMode} for the {@link Profile}
-     * @return
-     */
-    public void setExpandedDesktopMode(int expandedDesktopMode) {
-        if (expandedDesktopMode < ExpandedDesktopMode.DEFAULT
-                || expandedDesktopMode > ExpandedDesktopMode.DISABLE) {
-            mExpandedDesktopMode = ExpandedDesktopMode.DEFAULT;
-        } else {
-            mExpandedDesktopMode = expandedDesktopMode;
-        }
-        mDirty = true;
-    }
-
-    /**
      * Get the {@link DozeMode} associated with the {@link Profile}
      * @return
      */
@@ -1029,10 +991,6 @@ public final class Profile implements Parcelable, Comparable {
             mScreenLockMode.writeXmlString(builder, context);
             builder.append("</screen-lock-mode>\n");
         }
-
-        builder.append("<expanded-desktop-mode>");
-        builder.append(mExpandedDesktopMode);
-        builder.append("</expanded-desktop-mode>\n");
 
         builder.append("<doze-mode>");
         builder.append(mDozeMode);
@@ -1187,9 +1145,6 @@ public final class Profile implements Parcelable, Comparable {
                     LockSettings lockMode = new LockSettings(Integer.valueOf(xpp.nextText()));
                     profile.setScreenLockMode(lockMode);
                 }
-                if (name.equals("expanded-desktop-mode")) {
-                    profile.setExpandedDesktopMode(Integer.valueOf(xpp.nextText()));
-                }
                 if (name.equals("doze-mode")) {
                     profile.setDozeMode(Integer.valueOf(xpp.nextText()));
                 }
@@ -1263,14 +1218,6 @@ public final class Profile implements Parcelable, Comparable {
         } else {
             Log.e(TAG, "cannot process screen lock override without a keyguard service.");
         }
-
-        // Set expanded desktop
-        // if (mExpandedDesktopMode != ExpandedDesktopMode.DEFAULT) {
-        //     Settings.System.putIntForUser(context.getContentResolver(),
-        //             Settings.System.EXPANDED_DESKTOP_STATE,
-        //             mExpandedDesktopMode == ExpandedDesktopMode.ENABLE ? 1 : 0,
-        //             UserHandle.USER_CURRENT);
-        // }
 
         // Set doze mode
         if (mDozeMode != DozeMode.DEFAULT) {
