@@ -10,7 +10,6 @@ package lineageos.app {
     method public lineageos.profiles.ConnectionSettings getConnectionSettingWithSubId(int);
     method public java.util.Collection<lineageos.profiles.ConnectionSettings> getConnectionSettings();
     method public int getDozeMode();
-    method public int getExpandedDesktopMode();
     method public java.lang.String getName();
     method public int getNotificationLightMode();
     method public int getProfileType();
@@ -28,7 +27,6 @@ package lineageos.app {
     method public void setBrightness(lineageos.profiles.BrightnessSettings);
     method public void setConnectionSettings(lineageos.profiles.ConnectionSettings);
     method public void setDozeMode(int);
-    method public void setExpandedDesktopMode(int);
     method public void setName(java.lang.String);
     method public void setNotificationLightMode(int);
     method public void setProfileType(int);
@@ -42,13 +40,6 @@ package lineageos.app {
 
   public static class Profile.DozeMode {
     ctor public Profile.DozeMode();
-    field public static final int DEFAULT = 0; // 0x0
-    field public static final int DISABLE = 2; // 0x2
-    field public static final int ENABLE = 1; // 0x1
-  }
-
-  public static class Profile.ExpandedDesktopMode {
-    ctor public Profile.ExpandedDesktopMode();
     field public static final int DEFAULT = 0; // 0x0
     field public static final int DISABLE = 2; // 0x2
     field public static final int ENABLE = 1; // 0x1
