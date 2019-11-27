@@ -63,7 +63,6 @@ public class ProfileTest extends TestActivity {
                 public void run() {
                     Profile profile = new Profile("Test Profile");
                     profile.setProfileType(Type.TOGGLE);
-                    profile.setExpandedDesktopMode(Profile.ExpandedDesktopMode.ENABLE);
                     profile.setDozeMode(Profile.DozeMode.DEFAULT);
                     profile.setScreenLockMode(new LockSettings(Profile.LockMode.DISABLE));
                     mProfileUuidList.add(profile.getUuid());
@@ -75,7 +74,6 @@ public class ProfileTest extends TestActivity {
                     Profile profile = new Profile("Test Profile-Active",
                             0, UUID.fromString("65cd0d0c-1c42-11e5-9a21-1697f925ec7b"));
                     profile.setProfileType(Type.TOGGLE);
-                    profile.setExpandedDesktopMode(Profile.ExpandedDesktopMode.ENABLE);
                     profile.setDozeMode(Profile.DozeMode.DEFAULT);
                     profile.setScreenLockMode(new LockSettings(Profile.LockMode.DISABLE));
                     mProfileUuidList.add(profile.getUuid());
@@ -93,7 +91,6 @@ public class ProfileTest extends TestActivity {
                 public void run() {
                     Profile profile = new Profile("Test Profile-Active");
                     profile.setProfileType(Type.TOGGLE);
-                    profile.setExpandedDesktopMode(Profile.ExpandedDesktopMode.ENABLE);
                     profile.setDozeMode(Profile.DozeMode.DEFAULT);
                     profile.setScreenLockMode(new LockSettings(Profile.LockMode.DISABLE));
                     mProfileUuidList.add(profile.getUuid());
