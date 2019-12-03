@@ -75,18 +75,6 @@ public class TrustInterface {
     public static final int TRUST_FEATURE_SELINUX = 0;
 
     /**
-     * Trust feature indicator: Root access
-     *
-     * Possible status:
-     *    * {@link #TRUST_FEATURE_LEVEL_GOOD}: disabled
-     *    * {@link #TRUST_FEATURE_LEVEL_POOR}: ADB only
-     *    * {@link #TRUST_FEATURE_LEVEL_BAD}: apps and ADB
-     *
-     * @see #getLevelForFeature
-     */
-    public static final int TRUST_FEATURE_ROOT = 1;
-
-    /**
      * Trust feature indicator: Platform Security patches
      *
      * Possible status:
@@ -149,16 +137,6 @@ public class TrustInterface {
      * @see #postNotificationForFeature
      */
     public static final int TRUST_WARN_SELINUX = 1;
-
-    /**
-     * Trust warning: Root access
-     *
-     * When {@link #TRUST_FEATURE_ROOT} is not {@link #TRUST_FEATURE_LEVEL_GOOD}
-     * notify the user about the issue
-     *
-     * @see #postNotificationForFeature
-     */
-    public static final int TRUST_WARN_ROOT = 1 << 1;
 
     /**
      * Trust warning: Public Key build signature

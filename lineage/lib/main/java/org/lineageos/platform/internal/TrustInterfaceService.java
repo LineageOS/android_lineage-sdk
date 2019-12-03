@@ -179,8 +179,6 @@ public class TrustInterfaceService extends LineageSystemService {
         switch (feature) {
             case TrustInterface.TRUST_FEATURE_SELINUX:
                 return getSELinuxStatus();
-            case TrustInterface.TRUST_FEATURE_ROOT:
-                return getRootStatus();
             case TrustInterface.TRUST_FEATURE_PLATFORM_SECURITY_PATCH:
                 return getSecurityPatchStatus(PLATFORM_SECURITY_PATCHES);
             case TrustInterface.TRUST_FEATURE_VENDOR_SECURITY_PATCH:
@@ -228,10 +226,6 @@ public class TrustInterfaceService extends LineageSystemService {
                 title = R.string.trust_notification_title_security;
                 message = R.string.trust_notification_content_selinux;
                 break;
-            case TrustInterface.TRUST_WARN_ROOT:
-                title = R.string.trust_notification_title_root;
-                message = R.string.trust_notification_content_root;
-                break;
             case TrustInterface.TRUST_WARN_PUBLIC_KEY:
                 title = R.string.trust_notification_title_security;
                 message = R.string.trust_notification_content_keys;
@@ -259,21 +253,6 @@ public class TrustInterfaceService extends LineageSystemService {
         return SELinux.isSELinuxEnforced() ?
                 TrustInterface.TRUST_FEATURE_LEVEL_GOOD :
                 TrustInterface.TRUST_FEATURE_LEVEL_BAD;
-    }
-
-    private int getRootStatus() {
-        String status = SystemProperties.get("persist.sys.root_access", "0");
-        switch (status) {
-            case "0":
-                return TrustInterface.TRUST_FEATURE_LEVEL_GOOD;
-            case "1":
-            case "3":
-                return TrustInterface.TRUST_FEATURE_LEVEL_BAD;
-            case "2":
-                return TrustInterface.TRUST_FEATURE_LEVEL_POOR;
-            default:
-                return TrustInterface.ERROR_UNDEFINED;
-        }
     }
 
     private int getSecurityPatchStatus(String target) {
