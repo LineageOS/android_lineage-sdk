@@ -38,7 +38,11 @@
     <java-symbol type="string" name="perf_profile_bias_power_summary" />
     <java-symbol type="string" name="perf_profile_bias_perf_summary" />
 
+<<<<<<< HEAD   (bcbefb Automatic translation import)
     <java-symbol type="bool" name="config_waitForMpctlOnBoot" />
+=======
+    <java-symbol type="bool" name="config_enableLiveDisplay" />
+>>>>>>> CHANGE (6907fc sdk: Add overlay for disabling livedisplay)
 
     <!-- Proximity check on screen on -->
     <java-symbol type="bool" name="config_proximityCheckOnWake" />
