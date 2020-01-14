@@ -98,7 +98,7 @@
     <string name="lineage_api_level">LineageOS API maila</string>
     <string name="lineage_updates">LineageOS eguneraketak</string>
     <string name="lineage_version">LineageOS bertsioa</string>
-    <string name="lineage_vendor_security_patch">Saltzailearen segurtasun partxe maila</string>
+    <string name="lineage_vendor_security_patch">Ekoizlearen segurtasun partxe maila</string>
     <string name="unknown">Ezezaguna</string>
     <string name="app_killed_message">Aplikazioa erail da</string>
     <string name="kilobitspersecond_short">kb/s</string>
