@@ -264,4 +264,70 @@ public class PerformanceManager {
         }
         return Collections.unmodifiableSortedSet(profiles);
     }
+
+    /**
+     * Checks power profile for specific application
+     *
+     * Returns false if app profile is invalid
+     */
+    public boolean hasAppProfile(String packageName) {
+        boolean flag = false;
+        if (mNumberOfProfiles > 0) {
+            try {
+                if (checkService()) {
+                    flag = sService.hasAppProfile(packageName);
+                }
+            } catch (RemoteException e) {
+                // nothing
+            }
+        }
+        return flag;
+    }
+
+    /**
+     * Sets power profile for specific application
+     */
+    public void addAppProfile(String packageName, PerformanceProfile profile) {
+        if (mNumberOfProfiles > 0) {
+            try {
+                if (checkService()) {
+                    sService.addAppProfile(packageName, profile.getId());
+                }
+            } catch (RemoteException e) {
+                // nothing
+            }
+        }
+    }
+
+    /**
+     * Remove power profile for specific application
+     */
+    public void removeAppProfile(String packageName) {
+        if (mNumberOfProfiles > 0) {
+            try {
+                if (checkService()) {
+                    sService.removeAppProfile(packageName);
+                }
+            } catch (RemoteException e) {
+                // nothing
+            }
+        }
+    }
+
+    /**
+     * Gets power profile for specific application
+     */
+    public PerformanceProfile getAppProfile(String packageName) {
+        PerformanceProfile ret = null;
+        if (mNumberOfProfiles > 0) {
+            try {
+                if (checkService()) {
+                    ret = getPowerProfile(sService.getAppProfile(packageName));
+                }
+            } catch (RemoteException e) {
+                // nothing
+            }
+        }
+        return ret;
+    }
 }
