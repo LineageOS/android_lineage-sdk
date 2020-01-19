@@ -18,6 +18,7 @@
 package org.lineageos.platform.internal;
 
 import android.content.BroadcastReceiver;
+import android.content.ComponentName;
 import android.content.ContentResolver;
 import android.content.Context;
 import android.content.Intent;
@@ -26,6 +27,7 @@ import android.content.res.Resources;
 import android.database.ContentObserver;
 import android.net.Uri;
 import android.os.Binder;
+import android.os.Environment;
 import android.os.Handler;
 import android.os.IBinder;
 import android.os.Looper;
@@ -37,25 +39,38 @@ import android.os.Process;
 import android.os.RemoteException;
 import android.os.SystemProperties;
 import android.util.ArrayMap;
+import android.util.Log;
 import android.util.Slog;
 
 import com.android.server.ServiceThread;
 
+import org.xmlpull.v1.XmlPullParser;
+import org.xmlpull.v1.XmlPullParserException;
+import org.xmlpull.v1.XmlPullParserFactory;
+
+import java.io.File;
 import java.io.FileDescriptor;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.io.PrintWriter;
 import java.lang.Thread;
 import java.util.ArrayDeque;
 import java.util.Date;
+import java.util.LinkedHashMap;
 import java.util.Locale;
 import java.util.Map;
 import java.util.Objects;
+import java.util.regex.Pattern;
 
 import lineageos.app.LineageContextConstants;
 import lineageos.power.IPerformanceManager;
+import lineageos.power.PerformanceManagerInternal;
 import lineageos.power.PerformanceProfile;
 
 import static lineageos.power.PerformanceManager.PROFILE_BALANCED;
 import static lineageos.power.PerformanceManager.PROFILE_POWER_SAVE;
+import static lineageos.providers.LineageSettings.Secure.APP_PERFORMANCE_PROFILES_ENABLED;
 import static lineageos.providers.LineageSettings.Secure.PERFORMANCE_PROFILE;
 import static lineageos.providers.LineageSettings.Secure.getInt;
 import static lineageos.providers.LineageSettings.Secure.getUriFor;
@@ -70,8 +85,12 @@ public class PerformanceManagerService extends LineageSystemService {
 
     private static final boolean DEBUG = false;
 
+    private static final File APP_PERF_PROFILE_FILE =
+            new File(Environment.getDataSystemDirectory(), "app_perf_profiles.xml");
+
     private final Context mContext;
 
+    private final LinkedHashMap<Pattern, Integer>    mAppProfiles = new LinkedHashMap<>();
     private final ArrayMap<Integer, PerformanceProfile> mProfiles = new ArrayMap<>();
 
     private int mNumProfiles = 0;
@@ -97,8 +116,10 @@ public class PerformanceManagerService extends LineageSystemService {
     private boolean mLowPowerModeEnabled = false;
     private boolean mMpctlReady          = true;
     private boolean mSystemReady         = false;
+    private boolean mBoostEnabled        = true;
     private int     mUserProfile         = -1;
     private int     mActiveProfile       = -1;
+    private String  mCurrentActivityName = null;
 
     // Dumpable circular buffer for boost logging
     private final PerformanceLog mPerformanceLog = new PerformanceLog();
@@ -167,6 +188,9 @@ public class PerformanceManagerService extends LineageSystemService {
 
     private class PerformanceSettingsObserver extends ContentObserver {
 
+        private final Uri APP_PERFORMANCE_PROFILES_ENABLED_URI =
+                getUriFor(APP_PERFORMANCE_PROFILES_ENABLED);
+
         private final Uri PERFORMANCE_PROFILE_URI =
                 getUriFor(PERFORMANCE_PROFILE);
 
@@ -179,6 +203,7 @@ public class PerformanceManagerService extends LineageSystemService {
 
         public void observe(boolean enabled) {
             if (enabled) {
+                mCR.registerContentObserver(APP_PERFORMANCE_PROFILES_ENABLED_URI, false, this);
                 mCR.registerContentObserver(PERFORMANCE_PROFILE_URI, false, this);
                 onChange(false);
             } else {
@@ -189,8 +214,10 @@ public class PerformanceManagerService extends LineageSystemService {
         @Override
         public void onChange(boolean selfChange) {
             int profile = getInt(mCR, PERFORMANCE_PROFILE, PROFILE_BALANCED);
+            boolean boost = getInt(mCR, APP_PERFORMANCE_PROFILES_ENABLED, 1) == 1;
 
             synchronized (mLock) {
+                mBoostEnabled = boost;
                 if (mUserProfile < 0) {
                     mUserProfile = profile;
                     setPowerProfileLocked(mUserProfile, false);
@@ -206,7 +233,17 @@ public class PerformanceManagerService extends LineageSystemService {
 
     @Override
     public void onStart() {
+        // load app profiles from file
+        try {
+            loadAppProfilesFromFile();
+        } catch (XmlPullParserException e) {
+            // nothing
+        } catch (IOException e) {
+            // nothing
+        }
+
         publishBinderService(LineageContextConstants.LINEAGE_PERFORMANCE_SERVICE, mBinder);
+        publishLocalService(PerformanceManagerInternal.class, new LocalService());
     }
 
     private void populateProfilesLocked() {
@@ -226,6 +263,85 @@ public class PerformanceManagerService extends LineageSystemService {
             mProfiles.put(profileIds[i], new PerformanceProfile(profileIds[i],
                     weight, profileNames[i], profileDescs[i]));
         }
+    }
+
+    private String getXmlString() {
+        StringBuilder builder = new StringBuilder();
+        // TODO: Parsing xml tags
+        return builder.toString();
+    }
+
+    private synchronized void saveAppProfilesToFile() {
+        try {
+            Log.d(TAG, "Saving app profiles...");
+            FileWriter fw = new FileWriter(APP_PERF_PROFILE_FILE);
+            fw.write(getXmlString());
+            fw.close();
+            Log.d(TAG, "Save completed.");
+        } catch (Throwable e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void loadAppProfilesFromFile() throws XmlPullParserException, IOException {
+        XmlPullParserFactory xppf = XmlPullParserFactory.newInstance();
+        XmlPullParser xpp = xppf.newPullParser();
+        FileReader fr = new FileReader(APP_PERF_PROFILE_FILE);
+        xpp.setInput(fr);
+        loadXml(xpp, mContext);
+        fr.close();
+    }
+
+    private void loadXml(XmlPullParser xpp, Context context) throws
+            XmlPullParserException, IOException {
+        // TODO: Parsing xml tags
+    }
+
+    private boolean hasAppProfileLocked(String componentName) {
+        boolean found = false;
+        if (componentName != null) {
+            for (Map.Entry<Pattern, Integer> entry : mAppProfiles.entrySet()) {
+                if (entry.getKey().matcher(componentName).matches()) {
+                    found = true;
+                    break;
+                }
+            }
+        }
+        return found;
+    }
+
+    private boolean addAppProfileLocked(String packageName, int profile) {
+        // The application has already been added. Exclude duplicates.
+        if(hasAppProfileLocked(packageName)) {
+            return false;
+        }
+
+        mAppProfiles.put(Pattern.compile(packageName), profile);
+
+        if (DEBUG) {
+            Slog.d(TAG, String.format(Locale.US,"Added app profile: %s => %s",
+                    packageName, profile));
+        }
+
+        saveAppProfilesToFile();
+        return true;
+    }
+
+    private boolean removeAppProfileLocked(String packageName) {
+        // The application is not exists.
+        if(!hasAppProfileLocked(packageName)) {
+            return true;
+        }
+
+        mAppProfiles.remove(Pattern.compile(packageName));
+
+        if (DEBUG) {
+            Slog.d(TAG, String.format(Locale.US,"Removed app profile: %s",
+                    packageName));
+        }
+
+        saveAppProfilesToFile();
+        return !hasAppProfileLocked(packageName);
     }
 
     @Override
@@ -258,6 +374,10 @@ public class PerformanceManagerService extends LineageSystemService {
 
     private boolean hasProfiles() {
         return mNumProfiles > 0;
+    }
+
+    private boolean hasAppProfiles() {
+        return hasProfiles() && mBoostEnabled && mAppProfiles.size() > 0;
     }
 
     /**
@@ -323,6 +443,22 @@ public class PerformanceManagerService extends LineageSystemService {
         return true;
     }
 
+    private int getProfileForActivity(String componentName) {
+        int profile = -1;
+        if (componentName != null) {
+            for (Map.Entry<Pattern, Integer> entry : mAppProfiles.entrySet()) {
+                if (entry.getKey().matcher(componentName).matches()) {
+                    profile = entry.getValue();
+                    break;
+                }
+            }
+        }
+        if (DEBUG) {
+            Slog.d(TAG, "getProfileForActivity: activity=" + componentName + " profile=" + profile);
+        }
+        return profile < 0 ? mUserProfile : profile;
+    }
+
     private void applyProfileLocked() {
         if (!hasProfiles()) {
             // don't have profiles, bail.
@@ -333,6 +469,8 @@ public class PerformanceManagerService extends LineageSystemService {
         if (mLowPowerModeEnabled) {
             // LPM always wins
             profile = PROFILE_POWER_SAVE;
+        } else if (hasAppProfiles()) {
+            profile = getProfileForActivity(mCurrentActivityName);
         } else {
             profile = mUserProfile;
         }
@@ -383,6 +521,34 @@ public class PerformanceManagerService extends LineageSystemService {
         }
 
         @Override
+        public boolean hasAppProfile(String packageName) {
+            synchronized (mLock) {
+                return hasAppProfileLocked(packageName);
+            }
+        }
+
+        @Override
+        public boolean addAppProfile(String packageName, int profile) {
+            synchronized (mLock) {
+                return addAppProfileLocked(packageName, profile);
+            }
+        }
+
+        @Override
+        public boolean removeAppProfile(String packageName) {
+            synchronized (mLock) {
+                return removeAppProfileLocked(packageName);
+            }
+        }
+
+        @Override
+        public int getAppProfile(String packageName) {
+            synchronized (mLock) {
+                return getProfileForActivity(packageName);
+            }
+        }
+
+        @Override
         public void dump(FileDescriptor fd, PrintWriter pw, String[] args) {
             mContext.enforceCallingOrSelfPermission(android.Manifest.permission.DUMP, TAG);
 
@@ -390,6 +556,7 @@ public class PerformanceManagerService extends LineageSystemService {
                 pw.println();
                 pw.println("PerformanceManager Service State:");
                 pw.println();
+                pw.println(" Boost enabled: " + mBoostEnabled);
 
                 if (!hasProfiles()) {
                     pw.println(" No profiles available.");
@@ -405,12 +572,35 @@ public class PerformanceManagerService extends LineageSystemService {
                     for (Map.Entry<Integer, PerformanceProfile> profile : mProfiles.entrySet()) {
                         pw.println("  " + profile.getKey() + ": " + profile.getValue().toString());
                     }
+                    if (hasAppProfiles()) {
+                        pw.println();
+                        pw.println(" App trigger count: " + mAppProfiles.size());
+                    }
                     pw.println();
                     mPerformanceLog.dump(pw);
                 }
             }
         }
     };
+
+    private final class LocalService implements PerformanceManagerInternal {
+
+        @Override
+        public void activityResumed(Intent intent) {
+            String activityName = null;
+            if (intent != null) {
+                final ComponentName cn = intent.getComponent();
+                if (cn != null) {
+                    activityName = cn.flattenToString();
+                }
+            }
+
+            synchronized (mLock) {
+                mCurrentActivityName = activityName;
+                applyProfileLocked();
+            }
+        }
+    }
 
     private static class PerformanceLog {
         static final int USER_PROFILE = 2;

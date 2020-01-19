@@ -32,4 +32,12 @@ interface IPerformanceManager {
     PerformanceProfile getPowerProfileById(int profile);
 
     PerformanceProfile getActivePowerProfile();
+
+    boolean hasAppProfile(String packageName);
+
+    boolean addAppProfile(String packageName, int profile);
+
+    boolean removeAppProfile(String packageName);
+
+    int getAppProfile(String packageName);
 }

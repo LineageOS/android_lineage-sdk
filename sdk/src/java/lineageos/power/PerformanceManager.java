@@ -264,4 +264,82 @@ public class PerformanceManager {
         }
         return Collections.unmodifiableSortedSet(profiles);
     }
+
+    /**
+     * Checks power profile for specific application
+     *
+     * Returns false if app profile is invalid
+     *
+     * @throws IllegalArgumentException if invalid
+     */
+    public boolean hasAppProfile(String packageName) {
+        boolean flag = false;
+        if (mNumberOfProfiles > 0) {
+            try {
+                if (checkService()) {
+                    flag = sService.hasAppProfile(packageName + ".*");
+                }
+            } catch (RemoteException e) {
+                // nothing
+            }
+        }
+        return flag;
+    }
+
+    /**
+     * Sets power profile for specific application
+     *
+     * @throws IllegalArgumentException if invalid
+     */
+    public boolean addAppProfile(String packageName, PerformanceProfile profile) {
+        boolean added = false;
+        if (mNumberOfProfiles > 0) {
+            try {
+                if (checkService()) {
+                    added = sService.addAppProfile(packageName + ".*", profile.getId());
+                }
+            } catch (RemoteException e) {
+                // nothing
+            }
+        }
+        return added;
+    }
+
+    /**
+     * Remove power profile for specific application
+     *
+     * @throws IllegalArgumentException if invalid
+     */
+    public boolean removeAppProfile(String packageName) {
+        boolean flag = false;
+        if (mNumberOfProfiles > 0) {
+            try {
+                if (checkService()) {
+                    flag = sService.removeAppProfile(packageName + ".*");
+                }
+            } catch (RemoteException e) {
+                // nothing
+            }
+        }
+        return flag;
+    }
+
+    /**
+     * Gets power profile for specific application
+     *
+     * Returns false if app profile is invalid
+     */
+    public PerformanceProfile getAppProfile(String packageName) {
+        PerformanceProfile ret = null;
+        if (mNumberOfProfiles > 0) {
+            try {
+                if (checkService()) {
+                    ret = getPowerProfile(sService.getAppProfile(packageName + ".*"));
+                }
+            } catch (RemoteException e) {
+                // nothing
+            }
+        }
+        return ret;
+    }
 }
