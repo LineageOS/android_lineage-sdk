@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5bf904df_67825e14",
+        "filename": "packages/LineageSettingsProvider/src/org/lineageos/lineagesettings/LineageDatabaseHelper.java",
+        "patchSetId": 9
+      },
+      "lineNbr": 436,
+      "author": {
+        "id": 10067
+      },
+      "writtenOn": "2020-01-20T18:56:26Z",
+      "side": 1,
+      "message": "UPDATE global SET value\u003d? WHERE name\u003d?",
+      "range": {
+        "startLine": 436,
+        "startChar": 48,
+        "endLine": 436,
+        "endChar": 89
+      },
+      "revId": "7bc1387804d7ab75c316c31b15a2c0f682c53dee",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    }
+  ]
+}
