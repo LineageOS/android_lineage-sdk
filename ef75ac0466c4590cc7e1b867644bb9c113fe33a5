@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5baab43b_8c123dc5",
+        "filename": "packages/LineageSettingsProvider/src/org/lineageos/lineagesettings/LineageDatabaseHelper.java",
+        "patchSetId": 10
+      },
+      "lineNbr": 437,
+      "author": {
+        "id": 10067
+      },
+      "writtenOn": "2020-01-20T20:20:55Z",
+      "side": 1,
+      "message": "loadStringSetting isn\u0027t going to work here.\n\n```\nstmt.bindString(1, mContext.getResources().getString(R.string.def_power_notifications_ringtone));\nstmt.bindString(2, LineageSettings.System.STATUS_BAR_BATTERY_STYLE);\n```",
+      "range": {
+        "startLine": 437,
+        "startChar": 20,
+        "endLine": 437,
+        "endChar": 37
+      },
+      "revId": "ef75ac0466c4590cc7e1b867644bb9c113fe33a5",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    }
+  ]
+}
