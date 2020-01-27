@@ -28,8 +28,6 @@
     <string name="permdesc_writeSecureSettings">מאפשר ליישום לשנות הגדרות אבטחה של המערכת, לא נועד לשימוש ע\"י יישומים רגילים.</string>
     <string name="permlab_protectedApp">הוספה והסרה של יישומים מהיישומים המוגנים</string>
     <string name="permdesc_protectedApp">מאפשר ליישום לסמן יישומים אחרים כמוגנים ולנעול אותם.</string>
-    <string name="permlab_changeStyle">שינוי סגנון מערכת</string>
-    <string name="permdesc_changeStyle">התאם אישית את צבעי המערכת</string>
     <string name="profileNameDefault">ברירת מחדל</string>
     <string name="profileNameWork">עבודה</string>
     <string name="profileNameHome">בית</string>
@@ -104,15 +102,5 @@
     <string name="megabitspersecond_short">Mb/s</string>
     <string name="kilobytespersecond_short">kB/s</string>
     <string name="megabytespersecond_short">MB/s</string>
-    <string name="accent_black">שחור פחם</string>
-    <string name="accent_blue">אוכמניות</string>
-    <string name="accent_brown">קקאו</string>
-    <string name="accent_cyan">טורקיז</string>
-    <string name="accent_green">יער</string>
-    <string name="accent_orange">דלעת</string>
-    <string name="accent_pink">דובדבן</string>
-    <string name="accent_purple">לבנדר</string>
-    <string name="accent_red">עגבנייה</string>
-    <string name="accent_yellow">בננה</string>
     <string name="trust_notification_action_manage">נהל התראות</string>
 </resources>

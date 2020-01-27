@@ -28,7 +28,6 @@
     <string name="permdesc_writeSecureSettings">Tillader en app at modificere Lineage sikre system-indstillinger. Ikke til brug af normale apps.</string>
     <string name="permlab_protectedApp">tilføj og fjern apps, til beskyttede apps</string>
     <string name="permdesc_protectedApp">Tillader en app at markere andre apps som beskyttet samt låse dem.</string>
-    <string name="permdesc_changeStyle">tilpas system-farverne</string>
     <string name="profileNameDefault">Standard</string>
     <string name="profileNameWork">Arbejde</string>
     <string name="profileNameHome">Hjem</string>

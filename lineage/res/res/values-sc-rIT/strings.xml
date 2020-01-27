@@ -22,7 +22,6 @@
     <string name="permdesc_modifyProfiles">Permitit a un\'aplicatzione de modificare sos profilos de sistema.</string>
     <string name="permlab_writeSettings">modìfica sas impostatziones de sistema de Lineage</string>
     <string name="permdesc_writeSettings">Permitit a un\'aplicatzione de modificare sas impostatziones de sistema de Lineage.</string>
-    <string name="permdesc_changeStyle">personaliza sos colores de sistema</string>
     <string name="profileNameDefault">Predefinidu</string>
     <string name="profileNameWork">Traballu</string>
     <string name="profileNameHome">Domo</string>
@@ -55,6 +54,4 @@
     <string name="accessibility_quick_settings_live_display_changed_outdoor">LiveDisplay: cambiadu in modalidade a s\'àera aberta.</string>
     <string name="lineage_api_level">Livellu de s\'API de LineageOS</string>
     <string name="unknown">Disconnotu</string>
-    <string name="accent_cyan">Asulu</string>
-    <string name="accent_yellow">Banana</string>
 </resources>
