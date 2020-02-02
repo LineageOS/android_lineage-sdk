@@ -964,19 +964,6 @@ public final class LineageSettings {
                 new InclusiveIntegerRangeValidator(0, 2);
 
         /**
-         * Status bar battery %
-         * 0: Hide the battery percentage
-         * 1: Display the battery percentage inside the icon
-         * 2: Display the battery percentage next to the icon
-         */
-        public static final String STATUS_BAR_SHOW_BATTERY_PERCENT =
-                "status_bar_show_battery_percent";
-
-        /** @hide */
-        public static final Validator STATUS_BAR_SHOW_BATTERY_PERCENT_VALIDATOR =
-                new InclusiveIntegerRangeValidator(0, 2);
-
-        /**
          * Whether the phone ringtone should be played in an increasing manner
          * 0 = 0ff, 1 = on
          */
@@ -2208,7 +2195,6 @@ public final class LineageSettings {
                 LineageSettings.System.STATUS_BAR_CLOCK,
                 LineageSettings.System.STATUS_BAR_AM_PM,
                 LineageSettings.System.STATUS_BAR_BATTERY_STYLE,
-                LineageSettings.System.STATUS_BAR_SHOW_BATTERY_PERCENT,
                 LineageSettings.System.NAVIGATION_BAR_MENU_ARROW_KEYS,
                 LineageSettings.System.HEADSET_CONNECT_PLAYER,
                 LineageSettings.System.ZEN_ALLOW_LIGHTS,
@@ -2241,8 +2227,6 @@ public final class LineageSettings {
             VALIDATORS.put(STATUS_BAR_CLOCK, STATUS_BAR_CLOCK_VALIDATOR);
             VALIDATORS.put(STATUS_BAR_AM_PM, STATUS_BAR_AM_PM_VALIDATOR);
             VALIDATORS.put(STATUS_BAR_BATTERY_STYLE, STATUS_BAR_BATTERY_STYLE_VALIDATOR);
-            VALIDATORS.put(STATUS_BAR_SHOW_BATTERY_PERCENT,
-                    STATUS_BAR_SHOW_BATTERY_PERCENT_VALIDATOR);
             VALIDATORS.put(INCREASING_RING, INCREASING_RING_VALIDATOR);
             VALIDATORS.put(INCREASING_RING_START_VOLUME,
                     INCREASING_RING_START_VOLUME_VALIDATOR);
