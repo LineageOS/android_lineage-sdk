@@ -2933,6 +2933,15 @@ public final class LineageSettings {
          */
         public static final String KILL_APP_LONGPRESS_BACK = "kill_app_longpress_back";
 
+        /**
+         * Whether to exclude the top area of the screen from back gesture
+         * @hide
+         */
+        public static final String GESTURE_BACK_EXCLUDE_TOP = "gesture_back_exclude_top";
+
+        /** @hide */
+        public static final Validator GESTURE_BACK_EXCLUDE_TOP_VALIDATOR = sBooleanValidator;
+
         /** Protected Components
          * @hide
          */
@@ -3252,6 +3261,7 @@ public final class LineageSettings {
             VALIDATORS.put(TRUST_RESTRICT_USB_KEYGUARD, TRUST_RESTRICT_USB_KEYGUARD_VALIDATOR);
             VALIDATORS.put(TRUST_WARNINGS, TRUST_WARNINGS_VALIDATOR);
             VALIDATORS.put(VOLUME_PANEL_ON_LEFT, VOLUME_PANEL_ON_LEFT_VALIDATOR);
+            VALIDATORS.put(GESTURE_BACK_EXCLUDE_TOP, GESTURE_BACK_EXCLUDE_TOP_VALIDATOR);
         }
     }
 
