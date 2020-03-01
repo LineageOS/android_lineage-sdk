@@ -2956,6 +2956,19 @@ public final class LineageSettings {
          */
         public static final String KILL_APP_LONGPRESS_BACK = "kill_app_longpress_back";
 
+        /**
+         * Whether to exclude the top area of the screen from back gesture
+         * @hide
+         */
+        public static final String GESTURE_BACK_EXCLUDE_TOP = "gesture_back_exclude_top";
+
+        /**
+         * Top to half of the screen height are the valid values
+         * @gide
+         */
+        public static final Validator GESTURE_BACK_EXCLUDE_TOP_VALIDATOR =
+                new InclusiveIntegerRangeValidator(0, 50);
+
         /** Protected Components
          * @hide
          */
@@ -3271,6 +3284,7 @@ public final class LineageSettings {
         public static final Map<String, Validator> VALIDATORS =
                 new ArrayMap<String, Validator>();
         static {
+            VALIDATORS.put(GESTURE_BACK_EXCLUDE_TOP, GESTURE_BACK_EXCLUDE_TOP_VALIDATOR);
             VALIDATORS.put(PROTECTED_COMPONENTS, PROTECTED_COMPONENTS_VALIDATOR);
             VALIDATORS.put(PROTECTED_COMPONENT_MANAGERS, PROTECTED_COMPONENTS_MANAGER_VALIDATOR);
             VALIDATORS.put(NETWORK_TRAFFIC_MODE, NETWORK_TRAFFIC_MODE_VALIDATOR);
