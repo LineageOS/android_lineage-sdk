@@ -830,6 +830,7 @@ package lineageos.providers {
     field public static final java.lang.String KEY_APP_SWITCH_LONG_PRESS_ACTION = "key_app_switch_long_press_action";
     field public static final java.lang.String KEY_ASSIST_ACTION = "key_assist_action";
     field public static final java.lang.String KEY_ASSIST_LONG_PRESS_ACTION = "key_assist_long_press_action";
+    field public static final java.lang.String KEY_EDGE_LONG_SWIPE_ACTION = "key_edge_long_swipe_action";
     field public static final java.lang.String KEY_HOME_DOUBLE_TAP_ACTION = "key_home_double_tap_action";
     field public static final java.lang.String KEY_HOME_LONG_PRESS_ACTION = "key_home_long_press_action";
     field public static final java.lang.String KEY_MENU_ACTION = "key_menu_action";
