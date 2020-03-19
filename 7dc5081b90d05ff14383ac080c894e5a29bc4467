@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "af46103e_82241f87",
+        "filename": "sdk/src/java/lineageos/providers/LineageSettings.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 3264,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2020-03-19T10:06:41Z",
+      "side": 1,
+      "message": "Move to top, so to sort alphabetically.",
+      "range": {
+        "startLine": 3264,
+        "startChar": 12,
+        "endLine": 3264,
+        "endChar": 89
+      },
+      "revId": "7dc5081b90d05ff14383ac080c894e5a29bc4467",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    }
+  ]
+}
