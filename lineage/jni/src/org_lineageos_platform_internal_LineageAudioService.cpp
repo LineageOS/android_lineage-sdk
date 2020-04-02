@@ -69,7 +69,7 @@ org_lineageos_platform_internal_LineageAudioService_session_info_callback(int ev
     }
 
     jobject jSession = env->NewObject(gAudioSessionInfoClass, gAudioSessionInfoCstor,
-            info->mSessionId, info->mStream, info->mFlags, info->mChannelMask, info->mUid);
+            info->mSessionId, info->mStream, info->mUid);
 
     env->CallVoidMethod(gThiz,
             gAudioSessionEventHandlerMethods.postAudioSessionEventFromNative,
@@ -124,7 +124,7 @@ org_lineageos_platform_internal_LineageAudioService_listAudioSessions(JNIEnv *en
         const sp<AudioSessionInfo>& s = sessions.itemAt(i);
 
         jobject jSession = env->NewObject(gAudioSessionInfoClass, gAudioSessionInfoCstor,
-                s->mSessionId, s->mStream, s->mFlags, s->mChannelMask, s->mUid);
+                s->mSessionId, s->mStream, s->mUid);
 
         if (jSession == NULL) {
             jStatus = (jint)AUDIO_JAVA_ERROR;

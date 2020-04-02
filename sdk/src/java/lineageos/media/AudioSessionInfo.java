@@ -1,5 +1,6 @@
 /*
  * Copyright (C) 2016 The CyanogenMod Project
+ *                    The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -49,23 +50,13 @@ public final class AudioSessionInfo implements Parcelable {
      */
     private  final int mStream;
     /**
-     * Output flags - see audio_output_flags_t
-     */
-    private final int mFlags;
-    /**
-     * Channel mask - see audio_channel_mask_t
-     */
-    private final int mChannelMask;
-    /**
      * UID of the source application
      */
     private final int mUid;
 
-    public AudioSessionInfo(int sessionId, int stream, int flags, int channelMask, int uid) {
+    public AudioSessionInfo(int sessionId, int stream, int uid) {
         mSessionId = sessionId;
         mStream = stream;
-        mFlags = flags;
-        mChannelMask = channelMask;
         mUid = uid;
     }
 
@@ -77,8 +68,6 @@ public final class AudioSessionInfo implements Parcelable {
         /* -- FIG -- */
         mSessionId = in.readInt();
         mStream = in.readInt();
-        mFlags = in.readInt();
-        mChannelMask = in.readInt();
         mUid = in.readInt();
 
         if (parcelableVersion > Build.LINEAGE_VERSION_CODES.FIG) {
@@ -97,14 +86,6 @@ public final class AudioSessionInfo implements Parcelable {
         return mStream;
     }
 
-    public int getFlags() {
-        return mFlags;
-    }
-
-    public int getChannelMask() {
-        return mChannelMask;
-    }
-
     public int getUid() {
         return mUid;
     }
@@ -112,13 +93,13 @@ public final class AudioSessionInfo implements Parcelable {
     @Override
     public String toString() {
         return String.format(
-                "audioSessionInfo[sessionId=%d, stream=%d, flags=%d, channelMask=%d, uid=%d",
-                mSessionId, mStream, mFlags, mChannelMask, mUid);
+                "audioSessionInfo[sessionId=%d, stream=%d, uid=%d",
+                mSessionId, mStream, mUid);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(mSessionId, mStream, mFlags, mChannelMask, mUid);
+        return Objects.hash(mSessionId, mStream, mUid);
     }
 
     @Override
@@ -131,8 +112,6 @@ public final class AudioSessionInfo implements Parcelable {
         return this == other ||
                 (mSessionId == other.mSessionId &&
                  mStream == other.mStream &&
-                 mFlags == other.mFlags &&
-                 mChannelMask == other.mChannelMask &&
                  mUid == other.mUid);
     }
 
@@ -151,8 +130,6 @@ public final class AudioSessionInfo implements Parcelable {
         /* -- FIG -- */
         dest.writeInt(mSessionId);
         dest.writeInt(mStream);
-        dest.writeInt(mFlags);
-        dest.writeInt(mChannelMask);
         dest.writeInt(mUid);
 
         parcelInfo.complete();
@@ -172,5 +149,3 @@ public final class AudioSessionInfo implements Parcelable {
         }
     };
 }
-
-
