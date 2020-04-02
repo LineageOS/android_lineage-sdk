@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "bdebfc14_87b3d357",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2020-04-02T16:53:29Z",
+      "side": 1,
+      "message": "Reason?",
+      "revId": "225f58cc99b61c288286823cebf6483afe378752",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "5c4b5d92_e32aacd2",
         "filename": "lineage/jni/src/org_lineageos_platform_internal_LineageAudioService.cpp",
         "patchSetId": 1
