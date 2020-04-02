@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5c4b5d92_e32aacd2",
+        "filename": "lineage/jni/src/org_lineageos_platform_internal_LineageAudioService.cpp",
+        "patchSetId": 1
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2020-04-02T16:53:02Z",
+      "side": 1,
+      "message": "Update copyrights too.",
+      "revId": "225f58cc99b61c288286823cebf6483afe378752",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "b49db1f3_734564d6",
+        "filename": "sdk/src/java/lineageos/media/AudioSessionInfo.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2020-04-02T16:53:02Z",
+      "side": 1,
+      "message": "Missing year?",
+      "range": {
+        "startLine": 3,
+        "startChar": 17,
+        "endLine": 3,
+        "endChar": 21
+      },
+      "revId": "225f58cc99b61c288286823cebf6483afe378752",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    }
+  ]
+}
