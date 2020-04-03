@@ -26,7 +26,6 @@
     <uses-permission android:name="lineageos.permission.MANAGE_PERSISTENT_STORAGE" />
     <uses-permission android:name="lineageos.permission.PERFORMANCE_ACCESS" />
     <uses-permission android:name="lineageos.permission.MANAGE_LIVEDISPLAY" />
-    <uses-permission android:name="lineageos.permission.OBSERVE_AUDIO_SESSIONS" />
     <uses-permission android:name="android.permission.STATUS_BAR_SERVICE" />
 
     <application android:name=".LineageOSTestApplication"

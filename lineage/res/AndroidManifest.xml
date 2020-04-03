@@ -27,7 +27,6 @@
     <protected-broadcast android:name="lineageos.intent.action.SCREEN_CAMERA_GESTURE" />
     <protected-broadcast android:name="lineageos.intent.action.INITIALIZE_LINEAGE_HARDWARE" />
     <protected-broadcast android:name="lineageos.intent.action.INITIALIZE_LIVEDISPLAY" />
-    <protected-broadcast android:name="lineageos.intent.action.ACTION_AUDIO_SESSIONS_CHANGED" />
     <protected-broadcast android:name="lineageos.platform.intent.action.PROFILE_SELECTED" />
 
     <protected-broadcast android:name="lineageos.intent.action.UPDATE_PREFERENCE" />
@@ -63,13 +62,6 @@
                 android:label="@string/permlab_writeSecureSettings"
                 android:description="@string/permdesc_writeSecureSettings"
                 android:protectionLevel="signature|privileged|development" />
-
-    <!-- Allows an application to observe system-wide changes to audio sessions
-         @hide -->
-    <permission android:name="lineageos.permission.OBSERVE_AUDIO_SESSIONS"
-                android:label="@string/permlab_observe_audio_sessions"
-                android:description="@string/permdesc_observe_audio_sessions"
-                android:protectionLevel="normal"/>
 
     <!-- Allows an application to manage LiveDisplay -->
     <permission android:name="lineageos.permission.MANAGE_LIVEDISPLAY"

@@ -70,14 +70,6 @@ public final class LineageContextConstants {
      */
     public static final String LINEAGE_LIVEDISPLAY_SERVICE = "lineagelivedisplay";
 
-
-    /**
-     * Manages enhanced audio functionality
-     *
-     * @hide
-     */
-    public static final String LINEAGE_AUDIO_SERVICE = "lineageaudio";
-
     /**
      * Use with {@link android.content.Context#getSystemService} to retrieve a
      * {@link lineageos.trust.TrustInterface} to access the Trust interface.
