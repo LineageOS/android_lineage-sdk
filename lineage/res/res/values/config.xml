@@ -104,7 +104,6 @@
         <item>org.lineageos.platform.internal.PerformanceManagerService</item>
         <item>org.lineageos.platform.internal.LineageWeatherManagerService</item>
         <item>org.lineageos.platform.internal.display.LiveDisplayService</item>
-        <item>org.lineageos.platform.internal.LineageAudioService</item>
         <item>org.lineageos.platform.internal.TrustInterfaceService</item>
         <item>org.lineageos.platform.internal.LineageSettingsService</item>
     </string-array>
