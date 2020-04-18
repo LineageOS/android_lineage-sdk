@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "70d33fd2_0a2a2e07",
+        "filename": "sdk/src/java/lineageos/providers/LineageSettings.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 3047,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2020-04-18T21:40:11Z",
+      "side": 1,
+      "message": "I\u0027d rather follow the naming of other variables and make it LOCK_SCREEN_TRANSPARENT_NOTIFICATIONS_ENABLED",
+      "range": {
+        "startLine": 3047,
+        "startChar": 35,
+        "endLine": 3047,
+        "endChar": 70
+      },
+      "revId": "6bf875bf7fc3d671a5d8ed5b9b3aab48da1f6d31",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    }
+  ]
+}
