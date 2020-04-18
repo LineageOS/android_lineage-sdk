@@ -3041,6 +3041,13 @@ public final class LineageSettings {
         public static final String LOCK_SCREEN_WEATHER_ENABLED = "lock_screen_weather_enabled";
 
         /**
+         * Wheter to have transparent background on lockscreen notifications
+         * @hide
+         */
+        public static final String TRANSPARENT_NOTIFICATION_LOCKSCREEN
+                = "transparent_notification_lockscreen";
+
+        /**
          * Network traffic indicator mode
          * 0 = Don't show network traffic indicator
          * 1 = Display up-stream traffic only
