@@ -1,5 +1,6 @@
 /*
  * Copyright (C) 2015 The CyanogenMod Project
+ *               2020 The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -26,9 +27,11 @@ import android.net.wifi.WifiManager;
 import android.nfc.NfcAdapter;
 import android.os.Parcel;
 import android.os.Parcelable;
+import android.os.UserHandle;
 import android.provider.Settings;
 import android.telephony.SubscriptionManager;
 import android.telephony.TelephonyManager;
+
 import com.android.internal.telephony.RILConstants;
 
 import lineageos.os.Build;
@@ -96,7 +99,10 @@ public final class ConnectionSettings implements Parcelable {
     /**
      * The {@link #PROFILE_CONNECTION_GPS} allows for enabling and disabling the GPS radio (if exists)
      * on the device. Boolean connection settings {@link BooleanState}
+     *
+     * @deprecated Replaced by PROFILE_CONNECTION_LOCATION
      */
+    @Deprecated
     public static final int PROFILE_CONNECTION_GPS = 4;
 
     /**
@@ -104,6 +110,12 @@ public final class ConnectionSettings implements Parcelable {
      * on the device. Boolean connection settings {@link BooleanState}
      */
     public static final int PROFILE_CONNECTION_SYNC = 5;
+
+    /**
+     * The {@link #PROFILE_CONNECTION_LOCATION} allows for enabling and disabling location services
+     * on the device. Boolean connection settings {@link BooleanState}
+     */
+    public static final int PROFILE_CONNECTION_LOCATION = 6;
 
     /**
      * The {@link #PROFILE_CONNECTION_BLUETOOTH} allows for enabling and disabling the Bluetooth device
@@ -321,11 +333,11 @@ public final class ConnectionSettings implements Parcelable {
                     bta.disable();
                 }
                 break;
-            case PROFILE_CONNECTION_GPS:
-                currentState = lm.isProviderEnabled(LocationManager.GPS_PROVIDER);
+            case PROFILE_CONNECTION_LOCATION:
+                currentState = lm.isLocationEnabled();
                 if (currentState != forcedState) {
-                    Settings.Secure.setLocationProviderEnabled(context.getContentResolver(),
-                            LocationManager.GPS_PROVIDER, forcedState);
+                    lm.setLocationEnabledForUser(forcedState,
+                            new UserHandle(UserHandle.USER_CURRENT));
                 }
                 break;
             case PROFILE_CONNECTION_SYNC:

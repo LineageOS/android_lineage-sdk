@@ -1,5 +1,6 @@
 /**
- * Copyright (c) 2016, The CyanogenMod Project
+ * Copyright (C) 2016 The CyanogenMod Project
+ *               2020 The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -24,8 +25,8 @@ public class ConnectionSettingsTest extends AndroidTestCase {
     @SmallTest
     public void testConstructManually() {
         ConnectionSettings connectionSettings = new ConnectionSettings(
-                ConnectionSettings.PROFILE_CONNECTION_GPS);
-        assertEquals(ConnectionSettings.PROFILE_CONNECTION_GPS,
+                ConnectionSettings.PROFILE_CONNECTION_LOCATION);
+        assertEquals(ConnectionSettings.PROFILE_CONNECTION_LOCATION,
                 connectionSettings.getConnectionId());
         assertNotNull(connectionSettings);
     }
@@ -33,12 +34,12 @@ public class ConnectionSettingsTest extends AndroidTestCase {
     @SmallTest
     public void testConstructWholly() {
         ConnectionSettings connectionSettings =
-                new ConnectionSettings(ConnectionSettings.PROFILE_CONNECTION_GPS,
+                new ConnectionSettings(ConnectionSettings.PROFILE_CONNECTION_LOCATION,
                         ConnectionSettings.BooleanState.STATE_DISALED, true);
         assertEquals(true, connectionSettings.isOverride());
         assertEquals(ConnectionSettings.BooleanState.STATE_DISALED,
                 connectionSettings.getValue());
-        assertEquals(ConnectionSettings.PROFILE_CONNECTION_GPS,
+        assertEquals(ConnectionSettings.PROFILE_CONNECTION_LOCATION,
                 connectionSettings.getConnectionId());
         assertNotNull(connectionSettings);
     }
@@ -46,7 +47,7 @@ public class ConnectionSettingsTest extends AndroidTestCase {
     @SmallTest
     public void testVerifyOverride() {
         ConnectionSettings connectionSettings = new ConnectionSettings(
-                ConnectionSettings.PROFILE_CONNECTION_GPS);
+                ConnectionSettings.PROFILE_CONNECTION_LOCATION);
         connectionSettings.setOverride(true);
         assertEquals(true, connectionSettings.isOverride());
     }
