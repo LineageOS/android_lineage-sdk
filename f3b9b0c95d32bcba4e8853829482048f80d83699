@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2bd09af2_3fa23977",
+        "filename": "api/lineage_current.txt",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2020-04-20T23:59:01Z",
+      "side": 0,
+      "message": "I guess that this is the proper way to update this file.",
+      "revId": "f3b9b0c95d32bcba4e8853829482048f80d83699",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    }
+  ]
+}
