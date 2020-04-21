@@ -27,6 +27,7 @@ import android.nfc.NfcAdapter;
 import android.os.Parcel;
 import android.os.Parcelable;
 import android.provider.Settings;
+import android.telephony.SubscriptionInfo;
 import android.telephony.SubscriptionManager;
 import android.telephony.TelephonyManager;
 import com.android.internal.telephony.RILConstants;
@@ -39,6 +40,7 @@ import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
 
 import java.io.IOException;
+import java.util.List;
 
 /**
  * The {@link ConnectionSettings} class allows for creating Network/Hardware overrides
@@ -257,6 +259,7 @@ public final class ConnectionSettings implements Parcelable {
                 (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
         TelephonyManager tm = (TelephonyManager)
                 context.getSystemService(Context.TELEPHONY_SERVICE);
+        SubscriptionManager sm = context.getSystemService(SubscriptionManager.class);
         NfcAdapter nfcAdapter = null;
         try {
             nfcAdapter = NfcAdapter.getNfcAdapter(context);
@@ -269,14 +272,17 @@ public final class ConnectionSettings implements Parcelable {
 
         switch (getConnectionId()) {
             case PROFILE_CONNECTION_MOBILEDATA:
-                currentState = tm.getDataEnabled();
-                if (forcedState != currentState) {
-                    int phoneCount = tm.getPhoneCount();
-                    for (int i = 0; i < phoneCount; i++) {
-                        Settings.Global.putInt(context.getContentResolver(),
-                                Settings.Global.MOBILE_DATA + i, (forcedState) ? 1 : 0);
-                        int[] subId = SubscriptionManager.getSubId(i);
-                        tm.setDataEnabled(subId[0], forcedState);
+                List<SubscriptionInfo> list = sm.getActiveSubscriptionInfoList();
+                if (list != null) {
+                    for (int i = 0; i < list.size(); i++) {
+                        int subId = list.get(i).getSubscriptionId();
+                        int slotIndex = list.get(i).getSimSlotIndex();
+                        currentState = tm.getDataEnabled(subId);
+                        if (forcedState != currentState) {
+                            Settings.Global.putInt(context.getContentResolver(),
+                                    Settings.Global.MOBILE_DATA + i, (forcedState) ? 1 : 0);
+                            tm.setDataEnabled(subId, forcedState);
+                        }
                     }
                 }
                 break;
