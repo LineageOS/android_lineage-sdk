@@ -1,5 +1,6 @@
 /*
  * Copyright (C) 2015 The CyanogenMod Project
+ *               2020 The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -65,7 +66,7 @@ public final class AirplaneModeSettings implements Parcelable {
      */
     public static class BooleanState {
         /** Disabled state */
-        public static final int STATE_DISALED = 0;
+        public static final int STATE_DISABLED = 0;
         /** Enabled state */
         public static final int STATE_ENABLED = 1;
     }
@@ -80,16 +81,16 @@ public final class AirplaneModeSettings implements Parcelable {
 
     /**
      * Construct a {@link AirplaneModeSettings} with a default value of
-     * {@link BooleanState#STATE_DISALED}.
+     * {@link BooleanState#STATE_DISABLED}.
      */
     public AirplaneModeSettings() {
-        this(BooleanState.STATE_DISALED, false);
+        this(BooleanState.STATE_DISABLED, false);
     }
 
     /**
      * Construct a {@link AirplaneModeSettings} with a default value and whether or not it should
      * override user settings.
-     * @param value ex: {@link BooleanState#STATE_DISALED}
+     * @param value ex: {@link BooleanState#STATE_DISABLED}
      * @param override whether or not the setting should override user settings
      */
     public AirplaneModeSettings(int value, boolean override) {
@@ -108,7 +109,7 @@ public final class AirplaneModeSettings implements Parcelable {
 
     /**
      * Set the default value for the {@link AirplaneModeSettings}
-     * @param value {@link BooleanState#STATE_DISALED}
+     * @param value {@link BooleanState#STATE_DISABLED}
      */
     public void setValue(int value) {
         mValue = value;

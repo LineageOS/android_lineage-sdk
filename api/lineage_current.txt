@@ -592,7 +592,7 @@ package lineageos.profiles {
 
   public static class AirplaneModeSettings.BooleanState {
     ctor public AirplaneModeSettings.BooleanState();
-    field public static final int STATE_DISALED = 0; // 0x0
+    field public static final int STATE_DISABLED = 0; // 0x0
     field public static final int STATE_ENABLED = 1; // 0x1
   }
 
@@ -635,7 +635,7 @@ package lineageos.profiles {
 
   public static class ConnectionSettings.BooleanState {
     ctor public ConnectionSettings.BooleanState();
-    field public static final int STATE_DISALED = 0; // 0x0
+    field public static final int STATE_DISABLED = 0; // 0x0
     field public static final int STATE_ENABLED = 1; // 0x1
   }
 

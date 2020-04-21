@@ -35,9 +35,9 @@ public class ConnectionSettingsTest extends AndroidTestCase {
     public void testConstructWholly() {
         ConnectionSettings connectionSettings =
                 new ConnectionSettings(ConnectionSettings.PROFILE_CONNECTION_LOCATION,
-                        ConnectionSettings.BooleanState.STATE_DISALED, true);
+                        ConnectionSettings.BooleanState.STATE_DISABLED, true);
         assertEquals(true, connectionSettings.isOverride());
-        assertEquals(ConnectionSettings.BooleanState.STATE_DISALED,
+        assertEquals(ConnectionSettings.BooleanState.STATE_DISABLED,
                 connectionSettings.getValue());
         assertEquals(ConnectionSettings.PROFILE_CONNECTION_LOCATION,
                 connectionSettings.getConnectionId());
@@ -63,7 +63,7 @@ public class ConnectionSettingsTest extends AndroidTestCase {
 
     @SmallTest
     public void testVerifyValue() {
-        int expectedValue = ConnectionSettings.BooleanState.STATE_DISALED;
+        int expectedValue = ConnectionSettings.BooleanState.STATE_DISABLED;
         ConnectionSettings connectionSettings = new ConnectionSettings(
                 ConnectionSettings.PROFILE_CONNECTION_2G3G4G);
         connectionSettings.setValue(expectedValue);
