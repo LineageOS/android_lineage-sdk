@@ -53,7 +53,7 @@ public class ProfileTest extends AndroidTestCase {
         Profile profile = new Profile("Connection Profile");
         ConnectionSettings expectedConnectionSettings =
                 new ConnectionSettings(ConnectionSettings.PROFILE_CONNECTION_LOCATION,
-                        ConnectionSettings.BooleanState.STATE_DISALED, true);
+                        ConnectionSettings.BooleanState.STATE_DISABLED, true);
         profile.setConnectionSettings(expectedConnectionSettings);
 
         // Write to parcel
@@ -349,7 +349,7 @@ public class ProfileTest extends AndroidTestCase {
         profile.setConnectionSettings(expectedConnectionSettings1);
         ConnectionSettings expectedConnectionSettings2 = new ConnectionSettings(
                 ConnectionSettings.PROFILE_CONNECTION_BLUETOOTH,
-                ConnectionSettings.BooleanState.STATE_DISALED, false);
+                ConnectionSettings.BooleanState.STATE_DISABLED, false);
         profile.setConnectionSettings(expectedConnectionSettings2);
 
         List<ConnectionSettings> expectedConnectionSettings = new ArrayList<>();

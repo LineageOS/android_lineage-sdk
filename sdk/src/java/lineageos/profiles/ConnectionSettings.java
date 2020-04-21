@@ -52,7 +52,7 @@ import java.io.IOException;
  * ConnectionSettings connectionSettings =
  *         new ConnectionSettings(ConnectionSettings.PROFILE_CONNECTION_SYNC,
  *         shouldBeEnabled() ?
- *         {@link BooleanState#STATE_ENABLED} : {@link BooleanState#STATE_DISALED},
+ *         {@link BooleanState#STATE_ENABLED} : {@link BooleanState#STATE_DISABLED},
  *         true)
  * profile.setConnectionSettings(connectionSettings);
  * </pre>
@@ -146,7 +146,7 @@ public final class ConnectionSettings implements Parcelable {
      */
     public static class BooleanState {
         /** Disabled state */
-        public static final int STATE_DISALED = 0;
+        public static final int STATE_DISABLED = 0;
         /** Enabled state */
         public static final int STATE_ENABLED = 1;
     }
