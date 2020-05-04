@@ -143,7 +143,7 @@ public class TrustInterfaceService extends LineageSystemService {
     }
 
     private boolean removeNotificationForFeatureInternal(int feature) {
-        if (!isWarningAllowed(feature)) {
+        if (isWarningAllowed(feature)) {
             return false;
         }
 
