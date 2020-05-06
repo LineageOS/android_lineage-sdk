@@ -102,7 +102,6 @@
         <item>org.lineageos.platform.internal.ProfileManagerService</item>
         <item>org.lineageos.platform.internal.LineageHardwareService</item>
         <item>org.lineageos.platform.internal.PerformanceManagerService</item>
-        <item>org.lineageos.platform.internal.LineageWeatherManagerService</item>
         <item>org.lineageos.platform.internal.display.LiveDisplayService</item>
         <item>org.lineageos.platform.internal.LineageAudioService</item>
         <item>org.lineageos.platform.internal.TrustInterfaceService</item>
