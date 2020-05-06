@@ -1,5 +1,5 @@
 //
-// Copyright (C) 2018 The LineageOS Project
+// Copyright (C) 2018-2020 The LineageOS Project
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -25,4 +25,15 @@ android_app {
     static_libs: [
         "org.lineageos.platform.internal",
     ],
+
+    required: [
+        "privapp_whitelist_org.lineageos.lineagesettings"
+    ],
+}
+
+prebuilt_etc {
+    name: "privapp_whitelist_org.lineageos.lineagesettings",
+    sub_dir: "permissions",
+    src: "privapp_whitelist_org.lineageos.lineagesettings.xml",
+    filename_from_src: true,
 }
