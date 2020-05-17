@@ -2102,6 +2102,15 @@ public final class LineageSettings {
                 sBooleanValidator;
 
         /**
+         * Whether to take partial screenshot with volume down + power click.
+         */
+        public static final String CLICK_PARTIAL_SCREENSHOT = "click_partial_screenshot";
+
+        /** @hide */
+        public static final Validator CLICK_PARTIAL_SCREENSHOT_VALIDATOR =
+                sBooleanValidator;
+
+        /**
          * I can haz more bukkits
          * @hide
          */
@@ -2376,6 +2385,8 @@ public final class LineageSettings {
                     LONG_SCREEN_APPS_VALIDATOR);
             VALIDATORS.put(FORCE_SHOW_NAVBAR,
                     FORCE_SHOW_NAVBAR_VALIDATOR);
+            VALIDATORS.put(CLICK_PARTIAL_SCREENSHOT,
+                    CLICK_PARTIAL_SCREENSHOT_VALIDATOR);
             VALIDATORS.put(__MAGICAL_TEST_PASSING_ENABLER,
                     __MAGICAL_TEST_PASSING_ENABLER_VALIDATOR);
         };
