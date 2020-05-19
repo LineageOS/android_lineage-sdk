@@ -1034,6 +1034,15 @@ public final class LineageSettings {
                 sBooleanValidator;
 
         /**
+         * boolean value. toggles swipe up hint in gestural nav mode
+         */
+        public static final String NAVIGATION_BAR_HINT = "navigation_bar_hint";
+
+        /** @hide */
+        public static final Validator NAVIGATION_BAR_HINT_VALIDATOR =
+                sBooleanValidator;
+
+        /**
          * Action to perform when the home key is long-pressed.
          * (Default can be configured via config_longPressOnHomeBehavior)
          * 0 - Nothing
@@ -2234,6 +2243,7 @@ public final class LineageSettings {
             VALIDATORS.put(NAV_BUTTONS, NAV_BUTTONS_VALIDATOR);
             VALIDATORS.put(NAVIGATION_BAR_MENU_ARROW_KEYS,
                     NAVIGATION_BAR_MENU_ARROW_KEYS_VALIDATOR);
+            VALIDATORS.put(NAVIGATION_BAR_HINT, NAVIGATION_BAR_HINT_VALIDATOR);
             VALIDATORS.put(KEY_HOME_LONG_PRESS_ACTION, KEY_HOME_LONG_PRESS_ACTION_VALIDATOR);
             VALIDATORS.put(KEY_HOME_DOUBLE_TAP_ACTION, KEY_HOME_DOUBLE_TAP_ACTION_VALIDATOR);
             VALIDATORS.put(BACK_WAKE_SCREEN, BACK_WAKE_SCREEN_VALIDATOR);

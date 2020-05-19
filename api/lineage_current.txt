@@ -842,6 +842,7 @@ package lineageos.providers {
     field public static final java.lang.String MENU_WAKE_SCREEN = "menu_wake_screen";
     field public static final java.lang.String NAVBAR_LEFT_IN_LANDSCAPE = "navigation_bar_left";
     field public static final java.lang.String NAVIGATION_BAR_MENU_ARROW_KEYS = "navigation_bar_menu_arrow_keys";
+    field public static final java.lang.String NAVIGATION_BAR_HINT = "navigation_bar_hint";
     field public static final java.lang.String NAV_BUTTONS = "nav_buttons";
     field public static final java.lang.String NOTIFICATION_LIGHT_BRIGHTNESS_LEVEL = "notification_light_brightness_level";
     field public static final java.lang.String NOTIFICATION_LIGHT_BRIGHTNESS_LEVEL_ZEN = "notification_light_brightness_level_zen";
