@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3e335417_cf4c1800",
+        "filename": "sdk/src/java/lineageos/providers/LineageSettings.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 1037,
+      "author": {
+        "id": 11883
+      },
+      "writtenOn": "2020-05-26T16:56:26Z",
+      "side": 1,
+      "message": "remove",
+      "range": {
+        "startLine": 1037,
+        "startChar": 34,
+        "endLine": 1037,
+        "endChar": 40
+      },
+      "revId": "6abe280f2096ace249f50c2f1b8f835ee0359cd7",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "15505e1e_838d1758",
+        "filename": "sdk/src/java/lineageos/providers/LineageSettings.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 1039,
+      "author": {
+        "id": 11883
+      },
+      "writtenOn": "2020-05-26T16:56:26Z",
+      "side": 1,
+      "message": "NAVIGATION_BAR_HINT maybe?\nAnd invert all the code",
+      "range": {
+        "startLine": 1039,
+        "startChar": 35,
+        "endLine": 1039,
+        "endChar": 59
+      },
+      "revId": "6abe280f2096ace249f50c2f1b8f835ee0359cd7",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    }
+  ]
+}
