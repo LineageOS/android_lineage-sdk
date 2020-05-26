@@ -1735,6 +1735,16 @@ public final class LineageSettings {
                 sBooleanValidator;
 
         /**
+         * Whether to show the brightness slider in quick settings panel.
+         * 0 = 0ff, 1 = on
+         */
+        public static final String QUICK_QS_BRIGHTNESS = "quick_qs_show_brightness_slider";
+
+        /** @hide */
+        public static final Validator QUICK_QS_BRIGHTNESS_VALIDATOR =
+                sBooleanValidator;
+
+        /**
          * Whether to control brightness from status bar
          * 0 = 0ff, 1 = on
          */
@@ -2300,6 +2310,7 @@ public final class LineageSettings {
             VALIDATORS.put(STATUS_BAR_QUICK_QS_PULLDOWN,
                     STATUS_BAR_QUICK_QS_PULLDOWN_VALIDATOR);
             VALIDATORS.put(QS_SHOW_BRIGHTNESS_SLIDER, QS_SHOW_BRIGHTNESS_SLIDER_VALIDATOR);
+            VALIDATORS.put(QUICK_QS_BRIGHTNESS, QUICK_QS_BRIGHTNESS_VALIDATOR);
             VALIDATORS.put(STATUS_BAR_BRIGHTNESS_CONTROL,
                     STATUS_BAR_BRIGHTNESS_CONTROL_VALIDATOR);
             VALIDATORS.put(VOLBTN_MUSIC_CONTROLS, VOLBTN_MUSIC_CONTROLS_VALIDATOR);
