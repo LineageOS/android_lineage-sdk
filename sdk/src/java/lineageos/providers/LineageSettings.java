@@ -1411,6 +1411,15 @@ public final class LineageSettings {
                 sNonNullStringValidator;
 
         /**
+         * Whether to use black theme for dark mode
+         */
+        public static final String BERRY_BLACK_THEME = "berry_black_theme";
+
+        /** @hide */
+        public static final Validator BERRY_BLACK_THEME_VALIDATOR =
+                sBooleanValidator;
+
+        /**
          * Enable looking up of phone numbers of nearby places
          * 0 = 0ff, 1 = on
          */
@@ -2266,6 +2275,7 @@ public final class LineageSettings {
             VALIDATORS.put(BERRY_CURRENT_ACCENT, BERRY_CURRENT_ACCENT_VALIDATOR);
             VALIDATORS.put(BERRY_DARK_OVERLAY, BERRY_DARK_OVERLAY_VALIDATOR);
             VALIDATORS.put(BERRY_MANAGED_BY_APP, BERRY_MANAGED_BY_APP_VALIDATOR);
+            VALIDATORS.put(BERRY_BLACK_THEME, BERRY_BLACK_THEME_VALIDATOR);
             VALIDATORS.put(ENABLE_FORWARD_LOOKUP, ENABLE_FORWARD_LOOKUP_VALIDATOR);
             VALIDATORS.put(ENABLE_PEOPLE_LOOKUP, ENABLE_PEOPLE_LOOKUP_VALIDATOR);
             VALIDATORS.put(ENABLE_REVERSE_LOOKUP, ENABLE_REVERSE_LOOKUP_VALIDATOR);
