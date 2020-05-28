@@ -338,11 +338,17 @@ public class LineageSettingsProvider extends ContentProvider {
             // Put methods
             case LineageSettings.CALL_METHOD_PUT_SYSTEM:
                 enforceWritePermission(lineageos.platform.Manifest.permission.WRITE_SETTINGS);
+                validateSystemSettingNameValue(request, args == null
+                        ? null
+                        : args.getString(Settings.NameValueTable.VALUE));
                 callHelperPut(callingUserId, LineageSettings.System.CONTENT_URI, request, args);
                 return null;
             case LineageSettings.CALL_METHOD_PUT_SECURE:
                 enforceWritePermission(
                         lineageos.platform.Manifest.permission.WRITE_SECURE_SETTINGS);
+                validateSecureSettingValue(request, args == null
+                        ? null
+                        : args.getString(Settings.NameValueTable.VALUE));
                 callHelperPut(callingUserId, LineageSettings.Secure.CONTENT_URI, request, args);
                 return null;
             case LineageSettings.CALL_METHOD_PUT_GLOBAL:
