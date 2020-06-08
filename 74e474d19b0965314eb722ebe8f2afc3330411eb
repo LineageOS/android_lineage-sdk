@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee05fe5b_60b380e1",
+        "filename": "packages/LineageSettingsProvider/src/org/lineageos/lineagesettings/LineageSettingsProvider.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 344,
+      "author": {
+        "id": 3075
+      },
+      "writtenOn": "2020-06-08T08:19:08Z",
+      "side": 1,
+      "message": "AFAICS, callHelperPut() calls insertForUser() which calls validateSystemSettingNameValue()/validateSecureSettingValue().\n\nAny idea why this is not being caught already in the validate call in insertForUser() ?",
+      "revId": "74e474d19b0965314eb722ebe8f2afc3330411eb",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    }
+  ]
+}
