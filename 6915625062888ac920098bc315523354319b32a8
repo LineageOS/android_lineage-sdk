@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6dbf4df2_f63d91d4",
+        "filename": "sdk/src/java/org/lineageos/internal/applications/ForceDark.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 2681
+      },
+      "writtenOn": "2020-06-16T21:46:16Z",
+      "side": 1,
+      "message": "Update",
+      "revId": "6915625062888ac920098bc315523354319b32a8",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "22700998_f72a7486",
+        "filename": "sdk/src/java/org/lineageos/internal/applications/ForceDark.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 97,
+      "author": {
+        "id": 2681
+      },
+      "writtenOn": "2020-06-16T21:46:16Z",
+      "side": 1,
+      "message": "This always includes an empty string as the first element - will update to remove it",
+      "revId": "6915625062888ac920098bc315523354319b32a8",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    }
+  ]
+}
