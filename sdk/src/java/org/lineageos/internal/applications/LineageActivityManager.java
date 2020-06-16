@@ -24,13 +24,20 @@ public class LineageActivityManager {
     // Long screen related activity settings
     private LongScreen mLongScreen;
 
+    private ForceDark mForceDark;
+
     public LineageActivityManager(Context context) {
         mContext = context;
 
         mLongScreen = new LongScreen(context);
+        mForceDark = new ForceDark(context);
     }
 
     public boolean shouldForceLongScreen(String packageName) {
         return mLongScreen.shouldForceLongScreen(packageName);
+    }
+
+    public boolean shouldForceDarkTheme(String packageName) {
+        return mForceDark.shouldForceDarkTheme(packageName);
     }
 }
