@@ -42,10 +42,12 @@ public class LineageSettingsService extends LineageSystemService {
     @Override
     public void onBootPhase(int phase) {
         if (phase == PHASE_BOOT_COMPLETED) {
-            // Load custom hostname
+            // Load custom hostname if set
             String hostname = LineageSettings.Secure.getString(mContext.getContentResolver(),
                     LineageSettings.Secure.DEVICE_HOSTNAME);
-            SystemProperties.set("net.hostname", hostname);
+            if (hostname != null) {
+                SystemProperties.set("net.hostname", hostname);
+            }
         }
     }
 
