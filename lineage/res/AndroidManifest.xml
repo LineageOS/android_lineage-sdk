@@ -22,6 +22,9 @@
     coreApp="true" android:sharedUserId="android.uid.system"
     android:sharedUserLabel="@string/lineageos_system_label">
 
+    <uses-sdk android:minSdkVersion="29"
+              android:targetSdkVersion="29" />
+
     <protected-broadcast android:name="lineageos.intent.action.SCREEN_CAMERA_GESTURE" />
     <protected-broadcast android:name="lineageos.intent.action.INITIALIZE_LINEAGE_HARDWARE" />
     <protected-broadcast android:name="lineageos.intent.action.INITIALIZE_LIVEDISPLAY" />

@@ -17,6 +17,10 @@
           package="org.lineageos.lineagesettings"
           coreApp="true"
           android:sharedUserId="android.uid.system">
+
+    <uses-sdk android:minSdkVersion="29"
+              android:targetSdkVersion="29" />
+
     <!-- It is necessary to be a system app in order to update table versions in SystemProperties for
          LineageSettings to know whether or not the client side cache is up to date. It is also necessary
          to run in the system process in order to start the content provider prior to running migration
