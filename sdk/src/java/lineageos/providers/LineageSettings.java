@@ -2099,6 +2099,15 @@ public final class LineageSettings {
                 sBooleanValidator;
 
         /**
+         * Screen off fod
+         * @hide
+         */
+        public static final String FOD_GESTURE = "fod_gesture";
+
+        /** @hide */
+        public static final Validator FOD_GESTURE_VALIDATOR = sBooleanValidator;
+
+        /**
          * I can haz more bukkits
          * @hide
          */
@@ -2373,6 +2382,7 @@ public final class LineageSettings {
                     LONG_SCREEN_APPS_VALIDATOR);
             VALIDATORS.put(FORCE_SHOW_NAVBAR,
                     FORCE_SHOW_NAVBAR_VALIDATOR);
+            VALIDATORS.put(FOD_GESTURE, FOD_GESTURE_VALIDATOR);
             VALIDATORS.put(__MAGICAL_TEST_PASSING_ENABLER,
                     __MAGICAL_TEST_PASSING_ENABLER_VALIDATOR);
         };
