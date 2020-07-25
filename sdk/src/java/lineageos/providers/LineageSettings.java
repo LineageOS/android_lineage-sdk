@@ -1743,6 +1743,15 @@ public final class LineageSettings {
                 new InclusiveIntegerRangeValidator(0, 2);
 
         /**
+         * boolean value. toggle statusbar privacy indicators in statusbar
+         */
+        public static final String STATUS_BAR_SHOW_PRIVACY_INDICATORS = "STATUS_BAR_SHOW_PRIVACY_indicators";
+
+        /** @hide */
+        public static final Validator STATUS_BAR_SHOW_PRIVACY_INDICATORS_VALIDATOR =
+                sBooleanValidator;
+
+        /**
          * Whether to show the brightness slider in quick settings panel.
          * 0 = Never, 1 = show when expanded, 2 = show always
          */
@@ -2317,6 +2326,8 @@ public final class LineageSettings {
             VALIDATORS.put(LOCKSCREEN_ROTATION, LOCKSCREEN_ROTATION_VALIDATOR);
             VALIDATORS.put(SHOW_ALARM_ICON, SHOW_ALARM_ICON_VALIDATOR);
             VALIDATORS.put(STATUS_BAR_IME_SWITCHER, STATUS_BAR_IME_SWITCHER_VALIDATOR);
+            VALIDATORS.put(STATUS_BAR_SHOW_PRIVACY_INDICATORS,
+                    STATUS_BAR_SHOW_PRIVACY_INDICATORS_VALIDATOR);
             VALIDATORS.put(STATUS_BAR_QUICK_QS_PULLDOWN,
                     STATUS_BAR_QUICK_QS_PULLDOWN_VALIDATOR);
             VALIDATORS.put(QS_SHOW_BRIGHTNESS_SLIDER, QS_SHOW_BRIGHTNESS_SLIDER_VALIDATOR);
