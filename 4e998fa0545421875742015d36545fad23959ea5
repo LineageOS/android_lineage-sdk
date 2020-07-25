@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fb0ffd67_98bae576",
+        "filename": "api/lineage_current.txt",
+        "patchSetId": 2
+      },
+      "lineNbr": 875,
+      "author": {
+        "id": 19936
+      },
+      "writtenOn": "2020-07-25T10:08:27Z",
+      "side": 1,
+      "message": "Shouldn\u0027t this be alphabetised?",
+      "range": {
+        "startLine": 875,
+        "startChar": 47,
+        "endLine": 875,
+        "endChar": 81
+      },
+      "revId": "4e998fa0545421875742015d36545fad23959ea5",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    }
+  ]
+}
