@@ -1,6 +1,6 @@
 /*
  * Copyright (C) 2015-2016 The CyanogenMod Project
- *               2017-2019 The LineageOS Project
+ *               2017-2020 The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -31,6 +31,7 @@ import com.android.internal.util.ArrayUtils;
 import lineageos.app.LineageContextConstants;
 
 import vendor.lineage.livedisplay.V2_0.IAdaptiveBacklight;
+import vendor.lineage.livedisplay.V2_0.IAntiFlicker;
 import vendor.lineage.livedisplay.V2_0.IAutoContrast;
 import vendor.lineage.livedisplay.V2_0.IColorBalance;
 import vendor.lineage.livedisplay.V2_0.IColorEnhancement;
@@ -151,8 +152,15 @@ public final class LineageHardwareManager {
     @VisibleForTesting
     public static final int FEATURE_TOUCHSCREEN_GESTURES = 0x80000;
 
+    /**
+     * Reduce flicker in low light conditions
+     */
+    @VisibleForTesting
+    public static final int FEATURE_ANTI_FLICKER = 0x200000;
+
     private static final List<Integer> BOOLEAN_FEATURES = Arrays.asList(
         FEATURE_ADAPTIVE_BACKLIGHT,
+        FEATURE_ANTI_FLICKER,
         FEATURE_AUTO_CONTRAST,
         FEATURE_COLOR_ENHANCEMENT,
         FEATURE_HIGH_TOUCH_SENSITIVITY,
@@ -264,6 +272,8 @@ public final class LineageHardwareManager {
             switch (feature) {
                 case FEATURE_ADAPTIVE_BACKLIGHT:
                     return IAdaptiveBacklight.getService(true);
+                case FEATURE_ANTI_FLICKER:
+                    return IAntiFlicker.getService(true);
                 case FEATURE_AUTO_CONTRAST:
                     return IAutoContrast.getService(true);
                 case FEATURE_COLOR_BALANCE:
@@ -335,6 +345,9 @@ public final class LineageHardwareManager {
                     case FEATURE_ADAPTIVE_BACKLIGHT:
                         IAdaptiveBacklight adaptiveBacklight = (IAdaptiveBacklight) obj;
                         return adaptiveBacklight.isEnabled();
+                    case FEATURE_ANTI_FLICKER:
+                        IAntiFlicker antiFlicker = (IAntiFlicker) obj;
+                        return antiFlicker.isEnabled();
                     case FEATURE_AUTO_CONTRAST:
                         IAutoContrast autoContrast = (IAutoContrast) obj;
                         return autoContrast.isEnabled();
@@ -387,6 +400,9 @@ public final class LineageHardwareManager {
                     case FEATURE_ADAPTIVE_BACKLIGHT:
                         IAdaptiveBacklight adaptiveBacklight = (IAdaptiveBacklight) obj;
                         return adaptiveBacklight.setEnabled(enable);
+                    case FEATURE_ANTI_FLICKER:
+                        IAntiFlicker antiFlicker = (IAntiFlicker) obj;
+                        return antiFlicker.setEnabled(enable);
                     case FEATURE_AUTO_CONTRAST:
                         IAutoContrast autoContrast = (IAutoContrast) obj;
                         return autoContrast.setEnabled(enable);
@@ -775,6 +791,25 @@ public final class LineageHardwareManager {
             return false;
         }
         return true;
+    }
+
+    /**
+     * Determine if the anti flicker warning should be shown.
+     *
+     * Only used for devices that use DC dimming for anti flicker mode.
+     *
+     * @return true if the warning should be shown, false otherwise.
+     */
+    public boolean showAntiFlickerWarning() {
+        try {
+            if (isSupportedHIDL(FEATURE_ANTI_FLICKER)) {
+                IBase obj = mHIDLMap.get(FEATURE_ANTI_FLICKER);
+                    IAntiFlicker antiFlicker = (IAntiFlicker) obj;
+                    return antiFlicker.showWarning();
+            }
+        } catch (RemoteException e) {
+        }
+        return false;
     }
 
 }
