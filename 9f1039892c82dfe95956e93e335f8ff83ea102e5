@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "01be26b9_f3e80d39",
+        "filename": "lineage/lib/main/java/org/lineageos/platform/internal/display/DisplayHardwareController.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2020-07-29T15:26:48Z",
+      "side": 1,
+      "message": "It\u0027s 2018-2020. It was also touched in 2019, but apparently not updated back then.",
+      "range": {
+        "startLine": 3,
+        "startChar": 17,
+        "endLine": 3,
+        "endChar": 26
+      },
+      "revId": "9f1039892c82dfe95956e93e335f8ff83ea102e5",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    }
+  ]
+}
