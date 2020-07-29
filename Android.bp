@@ -1,5 +1,5 @@
 //
-// Copyright (C) 2018-2020 The LineageOS Project
+// Copyright (C) 2018-2021 The LineageOS Project
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -59,6 +59,7 @@ lineage_sdk_LOCAL_STATIC_ANDROID_LIBRARIES = [
 
 lineage_sdk_LOCAL_STATIC_JAVA_LIBRARIES = [
     "vendor.lineage.livedisplay-V2.0-java",
+    "vendor.lineage.livedisplay-V2.1-java",
     "vendor.lineage.touch-V1.0-java",
     "vendor.lineage.trust-V1.0-java",
 ]

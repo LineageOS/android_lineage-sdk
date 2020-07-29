@@ -39,6 +39,7 @@ import vendor.lineage.livedisplay.V2_0.IDisplayModes;
 import vendor.lineage.livedisplay.V2_0.IPictureAdjustment;
 import vendor.lineage.livedisplay.V2_0.IReadingEnhancement;
 import vendor.lineage.livedisplay.V2_0.ISunlightEnhancement;
+import vendor.lineage.livedisplay.V2_1.IAntiFlicker;
 import vendor.lineage.touch.V1_0.IGloveMode;
 import vendor.lineage.touch.V1_0.IKeyDisabler;
 import vendor.lineage.touch.V1_0.IKeySwapper;
@@ -158,8 +159,15 @@ public final class LineageHardwareManager {
     @VisibleForTesting
     public static final int FEATURE_TOUCHSCREEN_GESTURES = 0x80000;
 
+    /**
+     * Anti flicker mode
+     */
+    @VisibleForTesting
+    public static final int FEATURE_ANTI_FLICKER = 0x200000;
+
     private static final List<Integer> BOOLEAN_FEATURES = Arrays.asList(
         FEATURE_ADAPTIVE_BACKLIGHT,
+        FEATURE_ANTI_FLICKER,
         FEATURE_AUTO_CONTRAST,
         FEATURE_COLOR_ENHANCEMENT,
         FEATURE_HIGH_TOUCH_SENSITIVITY,
@@ -272,6 +280,8 @@ public final class LineageHardwareManager {
             switch (feature) {
                 case FEATURE_ADAPTIVE_BACKLIGHT:
                     return IAdaptiveBacklight.getService(true);
+                case FEATURE_ANTI_FLICKER:
+                    return IAntiFlicker.getService(true);
                 case FEATURE_AUTO_CONTRAST:
                     return IAutoContrast.getService(true);
                 case FEATURE_COLOR_BALANCE:
@@ -345,6 +355,9 @@ public final class LineageHardwareManager {
                     case FEATURE_ADAPTIVE_BACKLIGHT:
                         IAdaptiveBacklight adaptiveBacklight = (IAdaptiveBacklight) obj;
                         return adaptiveBacklight.isEnabled();
+                    case FEATURE_ANTI_FLICKER:
+                        IAntiFlicker antiFlicker = (IAntiFlicker) obj;
+                        return antiFlicker.isEnabled();
                     case FEATURE_AUTO_CONTRAST:
                         IAutoContrast autoContrast = (IAutoContrast) obj;
                         return autoContrast.isEnabled();
@@ -400,6 +413,9 @@ public final class LineageHardwareManager {
                     case FEATURE_ADAPTIVE_BACKLIGHT:
                         IAdaptiveBacklight adaptiveBacklight = (IAdaptiveBacklight) obj;
                         return adaptiveBacklight.setEnabled(enable);
+                    case FEATURE_ANTI_FLICKER:
+                        IAntiFlicker antiFlicker = (IAntiFlicker) obj;
+                        return antiFlicker.setEnabled(enable);
                     case FEATURE_AUTO_CONTRAST:
                         IAutoContrast autoContrast = (IAutoContrast) obj;
                         return autoContrast.setEnabled(enable);
