@@ -59,6 +59,7 @@ lineage_sdk_LOCAL_STATIC_ANDROID_LIBRARIES = [
 
 lineage_sdk_LOCAL_STATIC_JAVA_LIBRARIES = [
     "vendor.lineage.livedisplay-V2.0-java",
+    "vendor.lineage.livedisplay-V2.1-java",
     "vendor.lineage.touch-V1.0-java",
     "vendor.lineage.trust-V1.0-java",
 ]

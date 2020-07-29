@@ -1,6 +1,6 @@
 /*
  * Copyright (C) 2016 The CyanogenMod Project
- *               2019 The LineageOS Project
+ *               2019-2021 The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -376,6 +376,18 @@ public class LiveDisplayService extends LineageSystemService {
         public boolean isNight() {
             final TwilightState twilight = mTwilightTracker.getCurrentState();
             return twilight != null && twilight.isNight();
+        }
+
+        @Override
+        public boolean isAntiFlickerEnabled() {
+            return mDHC.isAntiFlickerEnabled();
+        }
+
+        @Override
+        public boolean setAntiFlickerEnabled(boolean enabled) {
+            mContext.enforceCallingOrSelfPermission(
+                    lineageos.platform.Manifest.permission.MANAGE_LIVEDISPLAY, null);
+            return mDHC.setAntiFlickerEnabled(enabled);
         }
     };
 
