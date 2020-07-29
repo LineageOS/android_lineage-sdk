@@ -1,6 +1,6 @@
 /*
  * Copyright (C) 2016 The CyanogenMod Project
- *               2018 The LineageOS Project
+ *               2018-2020 The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -49,6 +49,7 @@ public class DisplayHardwareController extends LiveDisplayFeature {
     private final boolean mUseColorEnhancement;
     private final boolean mUseCABC;
     private final boolean mUseReaderMode;
+    private final boolean mUseAntiFlicker;
     private final boolean mUseDisplayModes;
 
     // default values
@@ -75,6 +76,8 @@ public class DisplayHardwareController extends LiveDisplayFeature {
             LineageSettings.System.getUriFor(LineageSettings.System.DISPLAY_CABC);
     private static final Uri DISPLAY_READING_MODE =
             LineageSettings.System.getUriFor(LineageSettings.System.DISPLAY_READING_MODE);
+    private static final Uri DISPLAY_ANTI_FLICKER =
+            LineageSettings.System.getUriFor(LineageSettings.System.DISPLAY_ANTI_FLICKER);
 
     public DisplayHardwareController(Context context, Handler handler) {
         super(context, handler);
@@ -104,6 +107,9 @@ public class DisplayHardwareController extends LiveDisplayFeature {
         mUseReaderMode = mHardware
                 .isSupported(LineageHardwareManager.FEATURE_READING_ENHANCEMENT);
 
+        mUseAntiFlicker = mHardware
+                .isSupported(LineageHardwareManager.FEATURE_ANTI_FLICKER);
+
         if (mUseColorAdjustment) {
             mMaxColor = mHardware.getDisplayColorCalibrationMax();
             copyColors(getColorAdjustment(), mColorAdjustment);
@@ -130,6 +136,9 @@ public class DisplayHardwareController extends LiveDisplayFeature {
         }
         if (mUseReaderMode) {
             settings.add(DISPLAY_READING_MODE);
+        }
+        if (mUseAntiFlicker) {
+            settings.add(DISPLAY_ANTI_FLICKER);
         }
 
         if (settings.size() == 0) {
@@ -159,8 +168,11 @@ public class DisplayHardwareController extends LiveDisplayFeature {
         if (mUseReaderMode) {
             caps.set(LiveDisplayManager.FEATURE_READING_ENHANCEMENT);
         }
+        if (mUseAntiFlicker) {
+            caps.set(LiveDisplayManager.FEATURE_ANTI_FLICKER);
+        }
         return mUseAutoContrast || mUseColorEnhancement || mUseCABC || mUseColorAdjustment ||
-            mUseDisplayModes || mUseReaderMode;
+            mUseDisplayModes || mUseReaderMode || mUseAntiFlicker;
     }
 
     @Override
@@ -214,6 +226,7 @@ public class DisplayHardwareController extends LiveDisplayFeature {
         pw.println("  mUseCABC=" + mUseCABC);
         pw.println("  mUseDisplayModes=" + mUseDisplayModes);
         pw.println("  mUseReaderMode=" + mUseReaderMode);
+        pw.println("  mUseAntiFlicker=" + mUseAntiFlicker);
         pw.println();
         pw.println("  DisplayHardwareController State:");
         pw.println("    mAutoContrast=" + isAutoContrastEnabled());

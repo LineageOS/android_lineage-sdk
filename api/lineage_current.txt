@@ -195,7 +195,9 @@ package lineageos.hardware {
     method public boolean setPictureAdjustment(lineageos.hardware.HSIC);
     method public boolean setTouchscreenGestureEnabled(lineageos.hardware.TouchscreenGesture, boolean);
     method public boolean setVibratorIntensity(int);
+    method public boolean showAntiFlickerWarning();
     field public static final int FEATURE_ADAPTIVE_BACKLIGHT = 1; // 0x1
+    field public static final int FEATURE_ANTI_FLICKER = 2097152; // 0x200000
     field public static final int FEATURE_AUTO_CONTRAST = 4096; // 0x1000
     field public static final int FEATURE_COLOR_BALANCE = 131072; // 0x20000
     field public static final int FEATURE_COLOR_ENHANCEMENT = 2; // 0x2
@@ -244,6 +246,7 @@ package lineageos.hardware {
     method public int getMode();
     method public int getNightColorTemperature();
     method public lineageos.hardware.HSIC getPictureAdjustment();
+    method public boolean isAntiFlickerEnabled();
     method public boolean isAutoContrastEnabled();
     method public boolean isAutomaticOutdoorModeEnabled();
     method public boolean isCABCEnabled();
@@ -263,6 +266,7 @@ package lineageos.hardware {
     field public static final int ADJUSTMENT_INTENSITY = 2; // 0x2
     field public static final int ADJUSTMENT_SATURATION = 1; // 0x1
     field public static final int FEATURE_AUTO_CONTRAST = 11; // 0xb
+    field public static final int FEATURE_ANTI_FLICKER = 19; // 0x13
     field public static final int FEATURE_CABC = 10; // 0xa
     field public static final int FEATURE_COLOR_ADJUSTMENT = 13; // 0xd
     field public static final int FEATURE_COLOR_BALANCE = 16; // 0x10
@@ -812,6 +816,7 @@ package lineageos.providers {
     field public static final java.lang.String DISPLAY_COLOR_ENHANCE = "display_color_enhance";
     field public static final deprecated java.lang.String DISPLAY_LOW_POWER = "display_low_power";
     field public static final java.lang.String DISPLAY_PICTURE_ADJUSTMENT = "display_picture_adjustment";
+    field public static final java.lang.String DISPLAY_ANTI_FLICKER = "display_anti_flicker";
     field public static final java.lang.String DISPLAY_READING_MODE = "display_reading_mode";
     field public static final java.lang.String DISPLAY_TEMPERATURE_DAY = "display_temperature_day";
     field public static final java.lang.String DISPLAY_TEMPERATURE_MODE = "display_temperature_mode";
@@ -1175,4 +1180,3 @@ package lineageos.weatherservice {
   }
 
 }
-
