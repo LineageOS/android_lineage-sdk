@@ -121,6 +121,11 @@ public class LiveDisplayManager {
      */
     public static final int FEATURE_READING_ENHANCEMENT = 18;
 
+    /**
+     * System supports anti flicker mode / DC dimming
+     */
+    public static final int FEATURE_ANTI_FLICKER = 19;
+
     public static final int ADJUSTMENT_HUE = 0;
     public static final int ADJUSTMENT_SATURATION = 1;
     public static final int ADJUSTMENT_INTENSITY = 2;
