@@ -1,6 +1,6 @@
 /*
  * Copyright (C) 2016 The CyanogenMod Project
- *               2018-2019 The LineageOS Project
+ *               2018-2020 The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -120,6 +120,11 @@ public class LiveDisplayManager {
      * System supports grayscale matrix overlay
      */
     public static final int FEATURE_READING_ENHANCEMENT = 18;
+
+    /**
+     * System supports anti flicker mode / DC dimming
+     */
+    public static final int FEATURE_ANTI_FLICKER = 19;
 
     public static final int ADJUSTMENT_HUE = 0;
     public static final int ADJUSTMENT_SATURATION = 1;
