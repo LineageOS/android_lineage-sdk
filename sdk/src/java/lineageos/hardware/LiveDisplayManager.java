@@ -1,6 +1,6 @@
 /*
  * Copyright (C) 2016 The CyanogenMod Project
- *               2018-2019 The LineageOS Project
+ *               2018-2021 The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -121,6 +121,11 @@ public class LiveDisplayManager {
      */
     public static final int FEATURE_READING_ENHANCEMENT = 18;
 
+    /**
+     * System supports anti flicker mode
+     */
+    public static final int FEATURE_ANTI_FLICKER = 19;
+
     public static final int ADJUSTMENT_HUE = 0;
     public static final int ADJUSTMENT_SATURATION = 1;
     public static final int ADJUSTMENT_INTENSITY = 2;
@@ -129,7 +134,7 @@ public class LiveDisplayManager {
     /** @hide */
     public static final int FEATURE_FIRST = FEATURE_CABC;
     /** @hide */
-    public static final int FEATURE_LAST = FEATURE_PICTURE_ADJUSTMENT;
+    public static final int FEATURE_LAST = FEATURE_ANTI_FLICKER;
 
     private static final String TAG = "LiveDisplay";
 
@@ -495,5 +500,32 @@ public class LiveDisplayManager {
         } catch (RemoteException ignored) {
         }
         return false;
+    }
+
+    /**
+     * Checks if the anti flicker feature is enabled
+     *
+     * @return true if enabled
+     */
+    public boolean isAntiFlickerEnabled() {
+        try {
+            return checkService() && sService.isAntiFlickerEnabled();
+        } catch (RemoteException e) {
+            return false;
+        }
+    }
+
+    /**
+     * Sets the state of anti flicker
+     *
+     * @param enabled
+     * @return true if state was changed
+     */
+    public boolean setAntiFlickerEnabled(boolean enabled) {
+        try {
+            return checkService() && sService.setAntiFlickerEnabled(enabled);
+        } catch (RemoteException e) {
+            return false;
+        }
     }
 }
