@@ -1,5 +1,6 @@
 /**
  * Copyright (c) 2016, The CyanogenMod Project
+ *               2021 The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -53,4 +54,7 @@ interface ILiveDisplayService {
     HSIC getDefaultPictureAdjustment();
     boolean setPictureAdjustment(in HSIC adj);
     boolean isNight();
+
+    boolean isAntiFlickerEnabled();
+    boolean setAntiFlickerEnabled(boolean enabled);
 }
