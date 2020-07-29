@@ -1541,6 +1541,16 @@ public final class LineageSettings {
                 sBooleanValidator;
 
         /**
+         * Anti flicker
+         * 0 = 0ff, 1 = on
+         */
+        public static final String DISPLAY_ANTI_FLICKER = "display_anti_flicker";
+
+        /** @hide */
+        public static final Validator DISPLAY_ANTI_FLICKER_VALIDATOR =
+                sBooleanValidator;
+
+        /**
          * Reader mode
          * 0 = 0ff, 1 = on
          */
@@ -2168,6 +2178,7 @@ public final class LineageSettings {
                 LineageSettings.System.DISPLAY_TEMPERATURE_NIGHT,
                 LineageSettings.System.DISPLAY_TEMPERATURE_MODE,
                 LineageSettings.System.DISPLAY_AUTO_OUTDOOR_MODE,
+                LineageSettings.System.DISPLAY_ANTI_FLICKER,
                 LineageSettings.System.DISPLAY_READING_MODE,
                 LineageSettings.System.DISPLAY_CABC,
                 LineageSettings.System.DISPLAY_COLOR_ENHANCE,
@@ -2312,6 +2323,7 @@ public final class LineageSettings {
             VALIDATORS.put(DISPLAY_TEMPERATURE_MODE, DISPLAY_TEMPERATURE_MODE_VALIDATOR);
             VALIDATORS.put(DISPLAY_AUTO_CONTRAST, DISPLAY_AUTO_CONTRAST_VALIDATOR);
             VALIDATORS.put(DISPLAY_AUTO_OUTDOOR_MODE, DISPLAY_AUTO_OUTDOOR_MODE_VALIDATOR);
+            VALIDATORS.put(DISPLAY_ANTI_FLICKER, DISPLAY_ANTI_FLICKER_VALIDATOR);
             VALIDATORS.put(DISPLAY_READING_MODE, DISPLAY_READING_MODE_VALIDATOR);
             VALIDATORS.put(DISPLAY_CABC, DISPLAY_CABC_VALIDATOR);
             VALIDATORS.put(DISPLAY_COLOR_ENHANCE, DISPLAY_COLOR_ENHANCE_VALIDATOR);
