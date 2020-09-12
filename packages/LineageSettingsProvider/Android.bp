@@ -27,7 +27,7 @@ android_app {
     ],
 
     required: [
-        "privapp_whitelist_org.lineageos.lineagesettings"
+        "privapp_whitelist_org.lineageos.lineagesettings",
     ],
 }
 
