@@ -21,7 +21,7 @@
 
 #include <utils/Log.h>
 
-#include <JNIHelp.h>
+#include <nativehelper/JNIHelp.h>
 #include <jni.h>
 #include "core_jni_helpers.h"
 #include "android_media_AudioErrors.h"
