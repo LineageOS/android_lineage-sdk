@@ -50,7 +50,7 @@
     <string-array name="config_displayModeMappings" translatable="false">
     </string-array>
 
-    <!-- Should we filter any display modes which are unampped? -->
+    <!-- Should we filter any display modes which are unmapped? -->
     <bool name="config_filterDisplayModes">false</bool>
 
     <!-- All the capabilities of the LEDs on this device, stored as a bit field.
