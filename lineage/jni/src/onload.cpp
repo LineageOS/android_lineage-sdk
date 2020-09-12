@@ -1,5 +1,6 @@
 /*
  * Copyright (C) 2016 The CyanogenMod Project
+ *               2017,2020 The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,7 +15,8 @@
  * limitations under the License.
  */
 
-#include "JNIHelp.h"
+#include <nativehelper/JNIHelp.h>
+
 #include "jni.h"
 #include "utils/Log.h"
 #include "utils/misc.h"

@@ -1,6 +1,7 @@
 /*
 **
 ** Copyright 2016, The CyanogenMod Project
+**           2017,2020 The LineageOS Project
 **
 ** Licensed under the Apache License, Version 2.0 (the "License");
 ** you may not use this file except in compliance with the License.
@@ -19,9 +20,9 @@
 
 #define LOG_TAG "LineageAudioService-JNI"
 
+#include <nativehelper/JNIHelp.h>
 #include <utils/Log.h>
 
-#include <JNIHelp.h>
 #include <jni.h>
 #include "core_jni_helpers.h"
 #include "android_media_AudioErrors.h"
