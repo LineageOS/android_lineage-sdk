@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2015 The CyanogenMod Project
+               (C) 2017 The LineageOS Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="lineageos_system_label">LineageOS-systeem</string>
+    <string name="permlab_modifyProfiles">systeemprofilen wizigje</string>
+    <string name="permdesc_modifyProfiles">Hjirmei kin de app systeemprofilen wizigje.</string>
+    <string name="permlab_useHardwareFramework">hardware-framework brûke</string>
+    <string name="permdesc_useHardwareFramework">Hjirmei kin de app tagong krije ta it hardware-framework fan Lineage.</string>
+    <string name="permlab_writeSettings">Lineage-systeemynstellingen wizigje</string>
+    <string name="permdesc_writeSettings">Hjirmei kin de app de systeemynstellingen fan Lineage wizigje.</string>
+    <string name="permlab_writeSecureSettings">befeiligege Lineage-systeemynstellingen wizigje</string>
+    <string name="permdesc_writeSecureSettings">Hjirmei kin de app de befeilige systeemynstellingen fan Lineage wizigje. Net foar gebrûk troch normale apps.</string>
+    <string name="permlab_protectedApp">tafoegje en fuortsmiten fan apps oan beskerme apps</string>
+    <string name="permdesc_protectedApp">Hjirmei kin de app oare apps as beskerme oanmerke en beskoattelje.</string>
+    <string name="permlab_changeStyle">systeemstyl wizigje</string>
+    <string name="permdesc_changeStyle">oanpassen fan de systeemkleuren</string>
+    <string name="profileNameDefault">Standert</string>
+    <string name="profileNameWork">Wurk</string>
+    <string name="profileNameHome">Thús</string>
+    <string name="profileNameSilent">Stil</string>
+    <string name="profileNameNight">Nacht</string>
+    <string name="profileNameAutomobile">Underweis</string>
+    <string name="profileGroupPhone">Telefoan</string>
+    <string name="profileGroupCalendar">Aginda</string>
+    <string name="profileGroupGmail">Gmail</string>
+    <string name="profileGroupEmail">E-mail</string>
+    <string name="profileGroupSMS">SMS</string>
+    <string name="wildcardProfile">Oare</string>
+    <string name="perf_profile_pwrsv">Enerzjybesparring</string>
+    <string name="perf_profile_bal">Balansearre</string>
+    <string name="perf_profile_perf">Prestaasjes</string>
+    <string name="perf_profile_bias_power">Effisjinsje</string>
+    <string name="perf_profile_bias_perf">Fluch</string>
+    <string name="perf_profile_pwrsv_summary">Maksimale enerzjybesparring, ferminderet apparaatprestaaasjes</string>
+    <string name="perf_profile_bal_summary">Balâns tusken optimale prestaasjes en enerzjyferbrûk</string>
+    <string name="perf_profile_perf_summary">Hege prestaasjes. Te brûken yn situaasjes dy\'t de heechste prestaasjes fereaskje en wêrby stroomferbrûk net fan belang is</string>
+    <string name="perf_profile_bias_power_summary">Jout de foarkar oan enerzjybesparring. Maksimaal CPU-fermogen wurdt beheint en optimalisearre foar enerzjybesparring, ten koste fan in mindere prestaasje</string>
+    <string name="perf_profile_bias_perf_summary">Jout de foarkar oan prestaasjes. Goede prestaasjes ten koste fan in wat heger stroomferbrûk</string>
+    <string name="live_display_auto">Automatysk</string>
+    <string name="live_display_auto_summary">Automatysk kleurtemperatuer fan skerm oanpasse nei sinne-opkomst en -ûndergong</string>
+    <string name="live_display_off">Ut</string>
+    <string name="live_display_off_summary">Alle oanpassingen útskeakelje</string>
+    <string name="live_display_day">Oerdei</string>
+    <string name="live_display_day_summary">Allinnich ynstellingen foar oerdei brûke</string>
+    <string name="live_display_night">Nacht</string>
+    <string name="live_display_night_summary">Allinnich ynstellingen foar nachts brûke</string>
+    <string name="live_display_outdoor">Bûten (fûle sinne)</string>
+    <string name="live_display_outdoor_summary">Allinnich ynstellingen foar bûten brûke</string>
+    <string name="live_display_hint">LiveDisplay kin eachmoedichheid ferminderje en helpt jo om nachts te sliepen. Tik hjir om it út te probearjen!</string>
+    <string name="accessibility_quick_settings_live_display_off">LiveDisplay út.</string>
+    <string name="accessibility_quick_settings_live_display_auto">LiveDisplay: automatysk.</string>
+    <string name="accessibility_quick_settings_live_display_day">LiveDisplay: deistân.</string>
+    <string name="accessibility_quick_settings_live_display_night">LiveDisplay: nachtstân.</string>
+    <string name="accessibility_quick_settings_live_display_outdoor">LiveDisplay: bûtenstân.</string>
+    <string name="accessibility_quick_settings_live_display_changed_off">LiveDisplay útskeakele.</string>
+    <string name="accessibility_quick_settings_live_display_changed_auto">LiveDisplay wizige nei automatysk.</string>
+    <string name="accessibility_quick_settings_live_display_changed_day">LiveDisplay wizige nei deistân.</string>
+    <string name="accessibility_quick_settings_live_display_changed_night">LiveDisplay wizige nei nachtstân.</string>
+    <string name="accessibility_quick_settings_live_display_changed_outdoor">LiveDisplay wizige nei bûtenstân.</string>
+    <string name="permlab_perfAccess">tagong ta prestaasjebehear</string>
+    <string name="permdesc_perfAccessDesc">Hjirmei kin de app tagong krije ta de prestaasjetsjinst. Nea fereaske foar normale apps.</string>
+    <string name="permlab_weather_read">it waar lêze</string>
+    <string name="permdesc_weather_read">Hjirmei kin de app de ynhâld fan de waaroanbieder lêze.</string>
+    <string name="permlab_weather_write">Waaroanbieder fernije</string>
+    <string name="permdesc_weather_write">Hjirmei kin de app de ynhâld fan de waaroanbieder fernije.</string>
+    <string name="permlab_weather_bind">keppelje as waaroanbiedertsjinst</string>
+    <string name="permdesc_weather_bind">Hjirmei kin de app harren identifisearje as waaroanbiedertsjinst.</string>
+    <string name="permlab_weather_access_mgr">tagong ta waartsjinst</string>
+    <string name="permdesc_weather_access_mgr">Hjirmei kin de app tagong krije ta de waartsjinst. Nea fereaske foar normale apps.</string>
+    <string name="permlab_dataUsageWrite">database gegevensgebrûk oanpasse</string>
+    <string name="permdesc_dataUsageWrite">Hjirmei kin de app de ynhâld fan de database mei gegevensgebrûk bywurkje.</string>
+    <string name="permlab_dataUsageRead">database gegevensgebrûk lêze</string>
+    <string name="permdesc_dataUsageRead">Hjirmei kin de app de ynhâld fan de database mei gegevensgebrûk lêzee.</string>
+    <string name="permlab_manageLiveDisplay">LiveDisplay-ynstellingen beheare</string>
+    <string name="permdesc_manageLiveDisplay">Hjirmei kin de app avansearre byldskermynstellingen wizigje.</string>
+    <string name="permlab_observe_audio_sessions">wizigingen yn audiosesje observearje</string>
+    <string name="permdesc_observe_audio_sessions">Hjirmei kin de app de oanmaak en ferneatiging fan audiostreams observearje.</string>
+    <string name="privacy_guard_manager_title">Privacybeskerming</string>
+    <string name="permlab_manageRemotePrefs">ynstellingen foar behear op ôfstân</string>
+    <string name="permdesc_manageRemotePrefs">Hjirmei kin de app ynstellingen foar behear op ôfstân beheare</string>
+    <string name="build_date">Build-datum</string>
+    <string name="lineage_api_level">LineageOS-API-Nivo</string>
+    <string name="lineage_updates">LineageOS-fernijingen</string>
+    <string name="lineage_version">LineageOS-ferzje</string>
+    <string name="lineage_vendor_security_patch">Leveransiers-befeiligingspatch-nivo</string>
+    <string name="unknown">Unbekend</string>
+    <string name="app_killed_message">App ôfsluten</string>
+    <string name="kilobitspersecond_short">kb/s</string>
+    <string name="megabitspersecond_short">Mb/s</string>
+    <string name="kilobytespersecond_short">kB/s</string>
+    <string name="megabytespersecond_short">MB/s</string>
+    <string name="accent_black">Koalstof</string>
+    <string name="accent_blue">Boskbei</string>
+    <string name="accent_brown">Kakao</string>
+    <string name="accent_cyan">Cyaan</string>
+    <string name="accent_green">Bosk</string>
+    <string name="accent_orange">Pompoen</string>
+    <string name="accent_pink">Kers</string>
+    <string name="accent_purple">Lavindel</string>
+    <string name="accent_red">Tomaat</string>
+    <string name="accent_yellow">Banaan</string>
+    <string name="trust_feature_name">Trust</string>
+    <string name="permlab_trustInterface">tagong ta Trust-ynterface</string>
+    <string name="permdesc_trustInterface">Hjirmei kin in app warskôgingen en suggestjes fan Trust toane</string>
+    <string name="trust_notification_channel">Trust-warskôgingen</string>
+    <string name="trust_notification_title_security">Trust \u2022 Systeembefeiliging</string>
+    <string name="trust_notification_content_selinux">SELinux is net ‘strang’, de befeiliging is ferswakke</string>
+    <string name="trust_notification_title_root">Trust \u2022 Root-tagong</string>
+    <string name="trust_notification_content_root">In app brûkt op dit stuit root-rjochten</string>
+    <string name="trust_notification_content_keys">Dizze build is ûndertekene mei in iepenbiere kaai</string>
+    <string name="trust_notification_title_onboarding">Untdek Trust</string>
+    <string name="trust_notification_content_onboarding">Lear hoe\'t jo de feilichheid fan jo apparaat garandearje kinne</string>
+    <string name="trust_notification_action_manage">Warskôgingen beheare</string>
+</resources>
