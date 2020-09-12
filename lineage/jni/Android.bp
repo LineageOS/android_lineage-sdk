@@ -25,7 +25,6 @@ cc_library_shared {
         "frameworks/base/core/jni",
         "frameworks/av/include",
         "hardware/libhardware/include",
-        "libnativehelper/include/nativehelper",
     ],
 
     shared_libs: [
@@ -35,6 +34,7 @@ cc_library_shared {
         "libhardware",
         "liblog",
         "libmedia",
+        "libnativehelper",
         "libutils",
     ],
 
