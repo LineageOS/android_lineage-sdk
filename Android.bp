@@ -41,6 +41,11 @@ android_app {
         "sdk/res/res",
     ],
 
+    // Makes soong pass -I {path to framework-res apk} in aapt flags
+    libs: [
+        "framework-res",
+    ],
+
     // Create package-export.apk, which other packages can use to get
     // PRODUCT-agnostic resource data like IDs and type definitions.
     export_package_resources: true,
