@@ -225,7 +225,8 @@ public final class LineageSettings {
                 arg.putString(Settings.NameValueTable.VALUE, value);
                 arg.putInt(CALL_METHOD_USER_KEY, userId);
                 IContentProvider cp = lazyGetProvider(cr);
-                cp.call(cr.getPackageName(), AUTHORITY, mCallSetCommand, name, arg);
+                cp.call(cr.getPackageName(), cr.getAttributionTag(),
+                        AUTHORITY, mCallSetCommand, name, arg);
             } catch (RemoteException e) {
                 Log.w(TAG, "Can't set key " + name + " in " + mUri, e);
                 return false;
@@ -282,7 +283,8 @@ public final class LineageSettings {
                         args = new Bundle();
                         args.putInt(CALL_METHOD_USER_KEY, userId);
                     }
-                    Bundle b = cp.call(cr.getPackageName(), AUTHORITY, mCallGetCommand, name, args);
+                    Bundle b = cp.call(cr.getPackageName(), cr.getAttributionTag(),
+                            AUTHORITY, mCallGetCommand, name, args);
                     if (b != null) {
                         String value = b.getPairValue();
                         // Don't update our cache for reads of other users' data
@@ -309,7 +311,8 @@ public final class LineageSettings {
             try {
                 Bundle queryArgs = ContentResolver.createSqlQueryBundle(
                         NAME_EQ_PLACEHOLDER, new String[]{name}, null);
-                c = cp.query(cr.getPackageName(), mUri, SELECT_VALUE_PROJECTION, queryArgs, null);
+                c = cp.query(cr.getPackageName(), cr.getAttributionTag(), mUri,
+                        SELECT_VALUE_PROJECTION, queryArgs, null);
                 if (c == null) {
                     Log.w(TAG, "Can't get key " + name + " from " + mUri);
                     return null;
