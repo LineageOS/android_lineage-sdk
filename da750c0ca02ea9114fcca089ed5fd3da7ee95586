@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e84af21_a691e137",
+        "filename": "lineage/jni/Android.bp",
+        "patchSetId": 1
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 11883
+      },
+      "writtenOn": "2020-09-13T09:51:40Z",
+      "side": 1,
+      "message": "header_libs: [\n        \"jni_headers\",\n    ],\n\nIs the replacement, you shouldn\u0027t link the library",
+      "range": {
+        "startLine": 37,
+        "startChar": 0,
+        "endLine": 37,
+        "endChar": 26
+      },
+      "revId": "da750c0ca02ea9114fcca089ed5fd3da7ee95586",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    }
+  ]
+}
