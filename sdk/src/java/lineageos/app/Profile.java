@@ -29,6 +29,7 @@ import android.util.Log;
 import com.android.internal.policy.IKeyguardService;
 import lineageos.os.Build;
 import lineageos.profiles.AirplaneModeSettings;
+import lineageos.profiles.RotationSettings;
 import lineageos.profiles.BrightnessSettings;
 import lineageos.profiles.ConnectionSettings;
 import lineageos.profiles.LockSettings;
@@ -90,6 +91,8 @@ public final class Profile implements Parcelable, Comparable {
     private RingModeSettings mRingMode = new RingModeSettings();
 
     private AirplaneModeSettings mAirplaneMode = new AirplaneModeSettings();
+    
+    private RotationSettings mRotationMode = new RotationSettings();
 
     private BrightnessSettings mBrightness = new BrightnessSettings();
 
@@ -592,6 +595,12 @@ public final class Profile implements Parcelable, Comparable {
         } else {
             dest.writeInt(0);
         }
+        if (mRotationMode != null) {
+            dest.writeInt(1);
+            mRotationMode.writeToParcel(dest, 0);
+        } else {
+            dest.writeInt(0);
+        }
         if (mBrightness != null) {
             dest.writeInt(1);
             mBrightness.writeToParcel(dest, 0);
@@ -674,6 +683,9 @@ public final class Profile implements Parcelable, Comparable {
             }
             if (in.readInt() != 0) {
                 mAirplaneMode = AirplaneModeSettings.CREATOR.createFromParcel(in);
+            }
+            if (in.readInt() != 0) {
+                mRotationMode = RotationSettings.CREATOR.createFromParcel(in);
             }
             if (in.readInt() != 0) {
                 mBrightness = BrightnessSettings.CREATOR.createFromParcel(in);
@@ -892,13 +904,30 @@ public final class Profile implements Parcelable, Comparable {
     public AirplaneModeSettings getAirplaneMode() {
         return mAirplaneMode;
     }
-
+    
     /**
-     * Set the {@link AirplaneModeSettings} associated with the {@link Profile}
+     * Set the {@link AirplaneModeSettings} associated with the {@link Profile}   
      * @param descriptor
      */
     public void setAirplaneMode(AirplaneModeSettings descriptor) {
         mAirplaneMode = descriptor;
+        mDirty = true;
+    }
+
+    /**
+     * Get the {@link RotationSettings} associated with the {@link Profile}
+     * @return
+     */
+    public RotationSettings getRotationMode() {
+        return mRotationMode;
+    }
+
+    /**
+     * Set the {@link RotationSettings} associated with the {@link Profile}
+     * @param descriptor
+     */
+    public void setRotationMode(RotationSettings descriptor) {
+        mRotationMode = descriptor;
         mDirty = true;
     }
 
@@ -950,7 +979,10 @@ public final class Profile implements Parcelable, Comparable {
         if (mAirplaneMode.isDirty()) {
             return true;
         }
-        if (mBrightness.isDirty()) {
+        if(mRotationMode.isDirty()){
+            return true;
+        }
+        if (mBrightness.isDirty()){
             return true;
         }
         return false;
@@ -1001,6 +1033,8 @@ public final class Profile implements Parcelable, Comparable {
         builder.append("</notification-light-mode>\n");
 
         mAirplaneMode.getXmlString(builder, context);
+
+        mRotationMode.getXmlString(builder, context);  
 
         mBrightness.getXmlString(builder, context);
 
@@ -1137,6 +1171,11 @@ public final class Profile implements Parcelable, Comparable {
                     AirplaneModeSettings amd = AirplaneModeSettings.fromXml(xpp, context);
                     profile.setAirplaneMode(amd);
                 }
+                if (name.equals("rotationModeDescriptor")) {
+                    RotationSettings rmd = RotationSettings.fromXml(xpp, context);
+                    profile.setRotationMode(rmd);
+                }
+
                 if (name.equals("brightnessDescriptor")) {
                     BrightnessSettings bd = BrightnessSettings.fromXml(xpp, context);
                     profile.setBrightness(bd);
@@ -1208,7 +1247,8 @@ public final class Profile implements Parcelable, Comparable {
         mRingMode.processOverride(context);
         // Set airplane mode
         mAirplaneMode.processOverride(context);
-
+        // Set rotation mode
+        mRotationMode.processOverride(context);
         // Set brightness
         mBrightness.processOverride(context);
 
