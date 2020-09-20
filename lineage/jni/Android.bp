@@ -34,8 +34,11 @@ cc_library_shared {
         "libhardware",
         "liblog",
         "libmedia",
-        "libnativehelper",
         "libutils",
+    ],
+
+    header_libs: [
+        "jni_headers",
     ],
 
     cflags: [
