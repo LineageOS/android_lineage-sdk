@@ -20,7 +20,6 @@
 
 #define LOG_TAG "LineageAudioService-JNI"
 
-#include <nativehelper/JNIHelp.h>
 #include <utils/Log.h>
 
 #include <jni.h>
@@ -31,6 +30,7 @@
 #include <media/AudioSession.h>
 
 #include <system/audio.h>
+#include <utils/misc.h>
 #include <utils/threads.h>
 
 // ----------------------------------------------------------------------------
