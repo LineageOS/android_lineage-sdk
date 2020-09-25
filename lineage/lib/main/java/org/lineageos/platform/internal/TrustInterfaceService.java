@@ -69,6 +69,7 @@ public class TrustInterfaceService extends LineageSystemService {
     public TrustInterfaceService(Context context) {
         super(context);
         mContext = context;
+        mNotificationManager = context.getSystemService(NotificationManager.class);
         if (context.getPackageManager().hasSystemFeature(LineageContextConstants.Features.TRUST)) {
             publishBinderService(LineageContextConstants.LINEAGE_TRUST_INTERFACE, mService);
         } else {
@@ -84,8 +85,6 @@ public class TrustInterfaceService extends LineageSystemService {
 
     @Override
     public void onStart() {
-        mNotificationManager = mContext.getSystemService(NotificationManager.class);
-
         try {
             mUsbRestrictor = IUsbRestrict.getService();
         } catch (NoSuchElementException | RemoteException e) {
