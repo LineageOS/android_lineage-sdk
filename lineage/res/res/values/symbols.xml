@@ -173,8 +173,8 @@
 
     <!-- Button and keyboard backlight -->
     <java-symbol type="bool" name="config_deviceHasVariableButtonBrightness" />
-    <java-symbol type="integer" name="config_buttonBrightnessSettingDefault" />
-    <java-symbol type="integer" name="config_keyboardBrightnessSettingDefault" />
+    <java-symbol type="dimen" name="config_buttonBrightnessSettingDefaultFloat" />
+    <java-symbol type="dimen" name="config_keyboardBrightnessSettingDefaultFloat" />
 
     <!-- Whether to cleanup fingerprints upon connection to the daemon and when
          user switches -->

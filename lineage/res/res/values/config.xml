@@ -250,8 +250,8 @@
 
     <!-- Button and keyboard backlight -->
     <bool name="config_deviceHasVariableButtonBrightness">false</bool>
-    <integer name="config_buttonBrightnessSettingDefault">255</dimen>
-    <integer name="config_keyboardBrightnessSettingDefault">255</dimen>
+    <dimen name="config_buttonBrightnessSettingDefaultFloat">1.0</dimen>
+    <dimen name="config_keyboardBrightnessSettingDefaultFloat">1.0</dimen>
 
     <!-- Whether to cleanup fingerprints upon connection to the daemon and when
          user switches -->
