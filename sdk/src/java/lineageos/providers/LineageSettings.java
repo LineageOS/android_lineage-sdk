@@ -3002,13 +3002,6 @@ public final class LineageSettings {
         public static final String LOCKSCREEN_VISUALIZER_ENABLED = "lockscreen_visualizer";
 
         /**
-         * Whether to show media art on lockscreen
-         * Boolean setting. 0 = off, 1 = on.
-         * @hide
-         */
-        public static final String LOCKSCREEN_MEDIA_METADATA = "lockscreen_media_metadata";
-
-        /**
          * Whether to have translucent background on lockscreen notifications
          * @hide
          */
