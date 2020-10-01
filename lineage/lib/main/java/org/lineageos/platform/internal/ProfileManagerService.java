@@ -1,5 +1,6 @@
 /*
- * Copyright (c) 2011-2015 CyanogenMod Project
+ * Copyright (C) 2011-2015 CyanogenMod Project
+ *               2020 LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -231,13 +232,6 @@ public class ProfileManagerService extends LineageSystemService {
         super(context);
         mContext = context;
         mHandler = new Handler(mHandlerCallback);
-        if (context.getPackageManager().hasSystemFeature(
-                LineageContextConstants.Features.PROFILES)) {
-            publishBinderService(LineageContextConstants.LINEAGE_PROFILE_SERVICE, mService);
-        } else {
-            Log.wtf(TAG, "Lineage profile service started by system server but feature xml not" +
-                    " declared. Not publishing binder service!");
-        }
     }
 
     @Override
@@ -259,12 +253,18 @@ public class ProfileManagerService extends LineageSystemService {
                 org.lineageos.platform.internal.R.string.wildcardProfile,
                 mWildcardUUID);
 
-        initialize();
-
         IntentFilter filter = new IntentFilter();
         filter.addAction(Intent.ACTION_LOCALE_CHANGED);
         filter.addAction(Intent.ACTION_SHUTDOWN);
         mContext.registerReceiver(mIntentReceiver, filter);
+
+        if (mContext.getPackageManager().hasSystemFeature(
+                LineageContextConstants.Features.PROFILES)) {
+            publishBinderService(LineageContextConstants.LINEAGE_PROFILE_SERVICE, mService);
+        } else {
+            Log.wtf(TAG, "Lineage profile service started by system server but feature xml not" +
+                    " declared. Not publishing binder service!");
+        }
     }
 
     private void bindKeyguard() {
@@ -281,6 +281,7 @@ public class ProfileManagerService extends LineageSystemService {
     @Override
     public void onBootPhase(int phase) {
         if (phase == PHASE_ACTIVITY_MANAGER_READY) {
+            initialize();
             bindKeyguard();
         } else if (phase == PHASE_BOOT_COMPLETED) {
             mContext.getContentResolver().registerContentObserver(
