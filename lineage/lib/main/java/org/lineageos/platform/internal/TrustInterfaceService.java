@@ -69,13 +69,6 @@ public class TrustInterfaceService extends LineageSystemService {
     public TrustInterfaceService(Context context) {
         super(context);
         mContext = context;
-        mNotificationManager = context.getSystemService(NotificationManager.class);
-        if (context.getPackageManager().hasSystemFeature(LineageContextConstants.Features.TRUST)) {
-            publishBinderService(LineageContextConstants.LINEAGE_TRUST_INTERFACE, mService);
-        } else {
-            Log.wtf(TAG, "Lineage Trust service started by system server but feature xml not" +
-                    " declared. Not publishing binder service!");
-        }
     }
 
     @Override
@@ -85,20 +78,34 @@ public class TrustInterfaceService extends LineageSystemService {
 
     @Override
     public void onStart() {
-        try {
-            mUsbRestrictor = IUsbRestrict.getService();
-        } catch (NoSuchElementException | RemoteException e) {
-            // ignore, the hal is not available
+        if (context.getPackageManager().hasSystemFeature(LineageContextConstants.Features.TRUST)) {
+            publishBinderService(LineageContextConstants.LINEAGE_TRUST_INTERFACE, mService);
+        } else {
+            Log.wtf(TAG, "Lineage Trust service started by system server but feature xml not" +
+                    " declared. Not publishing binder service!");
         }
+    }
 
-        // Onboard
-        if (!hasOnboardedUser()) {
-            postOnBoardingNotification();
-            registerLocaleChangedReceiver();
-            return;
+    @Override
+    public void onBootPhase(int phase) {
+        if (phase == PHASE_BOOT_COMPLETED) {
+            mNotificationManager = context.getSystemService(NotificationManager.class);
+
+            try {
+                mUsbRestrictor = IUsbRestrict.getService();
+            } catch (NoSuchElementException | RemoteException e) {
+                // ignore, the hal is not available
+            }
+
+            // Onboard
+            if (!hasOnboardedUser()) {
+                postOnBoardingNotification();
+                registerLocaleChangedReceiver();
+                return;
+            }
+
+            runTestInternal();
         }
-
-        runTestInternal();
     }
 
     /* Public methods implementation */
