@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
      Copyright (C) 2015 The CyanogenMod Project
-                   2017-2018 The LineageOS Project
+                   2017-2020 The LineageOS Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -247,4 +247,10 @@
     <!-- Whether device needs to wait for Qualcomm MPCTL service to start
          before setting power profiles on boot. -->
     <bool name="config_waitForMpctlOnBoot">false</bool>
+
+    <!-- Button and keyboard backlight -->
+    <bool name="config_deviceHasVariableButtonBrightness">false</bool>
+    <dimen name="config_buttonBrightnessSettingDefaultFloat">1.0</dimen>
+    <dimen name="config_keyboardBrightnessSettingDefaultFloat">1.0</dimen>
+    config_keyboardBrightnessSettingDefaultFloat
 </resources>

@@ -170,4 +170,9 @@
 
     <!-- Notch -->
     <java-symbol type="bool" name="config_haveNotch" />
+
+    <!-- Button and keyboard backlight -->
+    <java-symbol type="bool" name="config_deviceHasVariableButtonBrightness" />
+    <java-symbol type="dimen" name="config_buttonBrightnessSettingDefaultFloat" />
+    <java-symbol type="dimen" name="config_keyboardBrightnessSettingDefaultFloat" />
 </resources>
