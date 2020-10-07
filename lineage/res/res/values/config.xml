@@ -248,9 +248,19 @@
          before setting power profiles on boot. -->
     <bool name="config_waitForMpctlOnBoot">false</bool>
 
-    <!-- Button and keyboard backlight -->
-    <bool name="config_deviceHasVariableButtonBrightness">false</bool>
+    <!-- Button backlight control. Possible values are:
+            0 - Not supported
+            1 - Supported, but only on/off mode
+            2 - Supported with variable brightness control
+    -->
+    <integer name="config_deviceSupportsButtonBrightnessControl">0</integer>
     <dimen name="config_buttonBrightnessSettingDefaultFloat">1.0</dimen>
+
+    <!-- Keyboard backlight control. Possible values are:
+            0 - Not supported
+            1 - Supported with variable brightness control
+    -->
+    <integer name="config_deviceSupportsKeyboardBrightnessControl">0</integer>
     <dimen name="config_keyboardBrightnessSettingDefaultFloat">1.0</dimen>
 
     <!-- Whether to cleanup fingerprints upon connection to the daemon and when
