@@ -250,6 +250,7 @@
 
     <!-- Button and keyboard backlight -->
     <bool name="config_deviceHasVariableButtonBrightness">false</bool>
+    <bool name="config_deviceHasVariableKeyboardBrightness">false</bool>
     <dimen name="config_buttonBrightnessSettingDefaultFloat">1.0</dimen>
     <dimen name="config_keyboardBrightnessSettingDefaultFloat">1.0</dimen>
 
