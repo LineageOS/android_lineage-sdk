@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5afc98e9_bd3e4f30",
+        "filename": "sdk/src/java/lineageos/providers/LineageSettings.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 3182,
+      "author": {
+        "id": 10067
+      },
+      "writtenOn": "2020-10-08T14:59:30Z",
+      "side": 1,
+      "message": "we don\u0027t do @hide for validators here.",
+      "range": {
+        "startLine": 3182,
+        "startChar": 8,
+        "endLine": 3182,
+        "endChar": 20
+      },
+      "revId": "86a198491f6ffff945cca4fb1b8266dab31d9fad",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    }
+  ]
+}
