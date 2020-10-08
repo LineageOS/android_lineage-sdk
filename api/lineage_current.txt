@@ -887,6 +887,7 @@ package lineageos.providers {
     field public static final java.lang.String VOLUME_ADJUST_SOUNDS_ENABLED = "volume_adjust_sounds_enabled";
     field public static final java.lang.String VOLUME_ANSWER_CALL = "volume_answer_call";
     field public static final java.lang.String VOLUME_WAKE_SCREEN = "volume_wake_screen";
+    field public static final java.lang.String VOLUME_LINK_NOTIFICATION = "volume_link_notification";
     field public static final java.lang.String ZEN_ALLOW_LIGHTS = "allow_lights";
     field public static final java.lang.String ZEN_PRIORITY_ALLOW_LIGHTS = "zen_priority_allow_lights";
   }

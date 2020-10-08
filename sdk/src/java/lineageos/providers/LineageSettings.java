@@ -3174,6 +3174,16 @@ public final class LineageSettings {
                 sBooleanValidator;
 
         /**
+         * Boolean value whether to link ringtone and notification volume
+         * @hide
+         */
+        public static final String VOLUME_LINK_NOTIFICATION = "volume_link_notification";
+
+        /** @hide */
+        public static final Validator VOLUME_LINK_NOTIFICATION_VALIDATOR =
+                sBooleanValidator;
+
+        /**
          * Whether tethering is allowed to use VPN upstreams
          * 0 = false, 1 = true
          */
@@ -3296,6 +3306,7 @@ public final class LineageSettings {
             VALIDATORS.put(TRUST_RESTRICT_USB_KEYGUARD, TRUST_RESTRICT_USB_KEYGUARD_VALIDATOR);
             VALIDATORS.put(TRUST_WARNINGS, TRUST_WARNINGS_VALIDATOR);
             VALIDATORS.put(VOLUME_PANEL_ON_LEFT, VOLUME_PANEL_ON_LEFT_VALIDATOR);
+            VALIDATORS.put(VOLUME_LINK_NOTIFICATION, VOLUME_LINK_NOTIFICATION_VALIDATOR);
         }
     }
 
