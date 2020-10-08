@@ -2934,14 +2934,18 @@ public final class LineageSettings {
 
         /**
          * Whether to display the ADB notification.
+         * @deprecated
          * @hide
          */
+        @Deprecated
         public static final String ADB_NOTIFY = "adb_notify";
 
         /**
          * The TCP/IP port to run ADB on, or -1 for USB
+         * @deprecated
          * @hide
          */
+        @Deprecated
         public static final String ADB_PORT = "adb_port";
 
         /**
