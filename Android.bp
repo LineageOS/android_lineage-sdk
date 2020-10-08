@@ -83,11 +83,7 @@ java_library {
     ] + lineage_sdk_LOCAL_STATIC_ANDROID_LIBRARIES + lineage_sdk_LOCAL_STATIC_JAVA_LIBRARIES,
 
     libs: [
-        // order matters: classes in framework-wifi are resolved before framework, meaning
-        // @hide APIs in framework-wifi are resolved before @SystemApi stubs in framework
-        "framework-wifi.impl",
         "framework",
-
         "services",
     ],
 
