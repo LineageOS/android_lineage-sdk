@@ -25,7 +25,6 @@ import android.database.ContentObserver;
 import android.net.Uri;
 import android.net.wifi.WifiInfo;
 import android.net.wifi.WifiManager;
-import android.net.wifi.WifiSsid;
 import android.os.Message;
 import android.util.ArraySet;
 import com.android.internal.policy.IKeyguardService;
@@ -207,11 +206,7 @@ public class ProfileManagerService extends LineageSystemService {
         if (wifiinfo == null) {
             return null;
         }
-        final WifiSsid ssid = wifiinfo.getWifiSsid();
-        if (ssid == null) {
-            return null;
-        }
-        return ssid.toString();
+        return wifiinfo.getSSID();
     }
 
     private class ProfilesObserver extends ContentObserver {
