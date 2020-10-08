@@ -25,7 +25,6 @@ import android.database.ContentObserver;
 import android.net.Uri;
 import android.net.wifi.WifiInfo;
 import android.net.wifi.WifiManager;
-import android.net.wifi.WifiSsid;
 import android.os.Message;
 import android.util.ArraySet;
 import com.android.internal.policy.IKeyguardService;
@@ -200,6 +199,16 @@ public class ProfileManagerService extends LineageSystemService {
         if (selectProfile) mActiveProfile.doSelect(mContext, mKeyguardService);
     }
 
+    public String removeDoubleQuotes(String string) {
+        final int length = string.length();
+        if (length >= 2) {
+            if (string.startsWith("\"") && string.endsWith("\"")) {
+                return string.substring(1, length - 1);
+            }
+        }
+        return string;
+    }
+
     private String getActiveSSID() {
         final WifiManager wifiManager
                 = (WifiManager) mContext.getSystemService(Context.WIFI_SERVICE);
@@ -207,11 +216,7 @@ public class ProfileManagerService extends LineageSystemService {
         if (wifiinfo == null) {
             return null;
         }
-        final WifiSsid ssid = wifiinfo.getWifiSsid();
-        if (ssid == null) {
-            return null;
-        }
-        return ssid.toString();
+        return removeDoubleQuotes(wifiinfo.getSSID());
     }
 
     private class ProfilesObserver extends ContentObserver {

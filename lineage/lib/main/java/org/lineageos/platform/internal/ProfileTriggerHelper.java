@@ -25,7 +25,6 @@ import android.database.ContentObserver;
 import android.net.NetworkInfo;
 import android.net.wifi.WifiInfo;
 import android.net.wifi.WifiManager;
-import android.net.wifi.WifiSsid;
 import android.os.Handler;
 import android.os.UserHandle;
 import android.util.Log;
@@ -108,7 +107,7 @@ public class ProfileTriggerHelper extends BroadcastReceiver {
             if (NetworkInfo.DetailedState.DISCONNECTED.equals(state)) {
                 checkTriggers(Profile.TriggerType.WIFI, mLastConnectedSSID,
                         Profile.TriggerState.ON_DISCONNECT);
-                mLastConnectedSSID = WifiSsid.NONE;
+                mLastConnectedSSID = WifiManager.UNKNOWN_SSID;
             } else if (NetworkInfo.DetailedState.CONNECTED.equals(state)) {
                 String ssid = getActiveSSID();
                 if (ssid != null) {
@@ -179,15 +178,21 @@ public class ProfileTriggerHelper extends BroadcastReceiver {
         }
     }
 
+    public String removeDoubleQuotes(String string) {
+        final int length = string.length();
+        if (length >= 2) {
+            if (string.startsWith("\"") && string.endsWith("\"")) {
+                return string.substring(1, length - 1);
+            }
+        }
+        return string;
+    }
+
     private String getActiveSSID() {
         WifiInfo wifiinfo = mWifiManager.getConnectionInfo();
         if (wifiinfo == null) {
             return null;
         }
-        WifiSsid ssid = wifiinfo.getWifiSsid();
-        if (ssid == null) {
-            return null;
-        }
-        return ssid.toString();
+        return removeDoubleQuotes(wifiinfo.getSSID());
     }
 }
