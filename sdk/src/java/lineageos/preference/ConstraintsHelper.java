@@ -1,5 +1,6 @@
 /*
  * Copyright (C) 2016 The CyanogenMod Project
+ *               2017,2019-2020 The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -67,7 +68,7 @@ public class ConstraintsHelper {
 
     private int mSummaryMinLines = -1;
 
-    private String mReplacesKey = null;
+    private String[] mReplacesKey = null;
 
     public ConstraintsHelper(Context context, AttributeSet attrs, Preference pref) {
         mContext = context;
@@ -77,7 +78,8 @@ public class ConstraintsHelper {
         TypedArray a = context.getResources().obtainAttributes(attrs,
                 R.styleable.lineage_SelfRemovingPreference);
         mSummaryMinLines = a.getInteger(R.styleable.lineage_SelfRemovingPreference_minSummaryLines, -1);
-        mReplacesKey = a.getString(R.styleable.lineage_SelfRemovingPreference_replacesKey);
+        mReplacesKey = a.getString(R.styleable.lineage_SelfRemovingPreference_replacesKey)
+                .split("|");
         setAvailable(checkConstraints());
 
         Log.d(TAG, "construct key=" + mPref.getKey() + " available=" + mAvailable);
@@ -305,7 +307,9 @@ public class ConstraintsHelper {
         checkIntent();
 
         if (isAvailable() && mReplacesKey != null) {
-            Graveyard.get(mContext).addTombstone(mReplacesKey);
+            for (int i = 0; i < mReplacesKey.length; i++){
+                Graveyard.get(mContext).addTombstone(mReplacesKey[i]);
+            }
         }
 
         Graveyard.get(mContext).summonReaper(mPref.getPreferenceManager());
