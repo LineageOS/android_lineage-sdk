@@ -1,5 +1,6 @@
 /*
  * Copyright (C) 2016 The CyanogenMod Project
+ *               2017,2019-2020 The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -36,6 +37,7 @@ import androidx.preference.PreferenceGroup;
 import androidx.preference.PreferenceManager;
 import androidx.preference.PreferenceViewHolder;
 
+import java.util.Arrays;
 import java.util.List;
 import java.util.Objects;
 import java.util.Set;
@@ -67,7 +69,7 @@ public class ConstraintsHelper {
 
     private int mSummaryMinLines = -1;
 
-    private String mReplacesKey = null;
+    private String[] mReplacesKey = null;
 
     public ConstraintsHelper(Context context, AttributeSet attrs, Preference pref) {
         mContext = context;
@@ -77,7 +79,10 @@ public class ConstraintsHelper {
         TypedArray a = context.getResources().obtainAttributes(attrs,
                 R.styleable.lineage_SelfRemovingPreference);
         mSummaryMinLines = a.getInteger(R.styleable.lineage_SelfRemovingPreference_minSummaryLines, -1);
-        mReplacesKey = a.getString(R.styleable.lineage_SelfRemovingPreference_replacesKey);
+        String replacesKey = a.getString(R.styleable.lineage_SelfRemovingPreference_replacesKey);
+        if (replacesKey != null) {
+            mReplacesKey = replacesKey.split("|");
+        }
         setAvailable(checkConstraints());
 
         Log.d(TAG, "construct key=" + mPref.getKey() + " available=" + mAvailable);
@@ -305,7 +310,7 @@ public class ConstraintsHelper {
         checkIntent();
 
         if (isAvailable() && mReplacesKey != null) {
-            Graveyard.get(mContext).addTombstone(mReplacesKey);
+            Graveyard.get(mContext).addTombstones(mReplacesKey);
         }
 
         Graveyard.get(mContext).summonReaper(mPref.getPreferenceManager());
@@ -352,6 +357,12 @@ public class ConstraintsHelper {
         public void addTombstone(String pref) {
             synchronized (mDeathRow) {
                 mDeathRow.add(pref);
+            }
+        }
+
+        public void addTombstones(String[] prefs) {
+            synchronized (mDeathRow) {
+                mDeathRow.addAll(Arrays.asList(prefs));
             }
         }
 
