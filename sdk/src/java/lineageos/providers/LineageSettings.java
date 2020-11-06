@@ -2822,8 +2822,10 @@ public final class LineageSettings {
 
         /**
          * String to contain power menu actions
+         * @deprecated
          * @hide
          */
+        @Deprecated
         public static final String POWER_MENU_ACTIONS = "power_menu_actions";
 
         /**
