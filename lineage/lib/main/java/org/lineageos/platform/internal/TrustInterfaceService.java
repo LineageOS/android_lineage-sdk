@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2018-2019 The LineageOS Project
+ * Copyright (C) 2018-2020 The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -143,7 +143,7 @@ public class TrustInterfaceService extends LineageSystemService {
     }
 
     private boolean removeNotificationForFeatureInternal(int feature) {
-        if (!isWarningAllowed(feature)) {
+        if (isWarningAllowed(feature)) {
             return false;
         }
 
