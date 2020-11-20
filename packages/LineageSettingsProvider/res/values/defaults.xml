@@ -43,7 +43,7 @@
     <integer name="def_battery_style">0</integer>
 
     <!-- Default for LineageSettings.Secure.LOCKSCREEN_VISUALIZER_ENABLED -->
-    <bool name="def_lockscreen_visualizer">true</bool>
+    <bool name="def_lockscreen_visualizer">false</bool>
 
     <!-- Default value of LineageSettings.System.ENABLE_FORWARD_LOOKUP -->
     <integer name="def_forward_lookup">1</integer>
