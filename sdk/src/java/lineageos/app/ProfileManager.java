@@ -236,7 +236,12 @@ public class ProfileManager {
         } else {
             mContext = context;
         }
-        sService = getService();
+
+        try {
+            sService = getService();
+        } catch (RemoteException e) {
+            sService = null;
+        }
 
         if (context.getPackageManager().hasSystemFeature(
                 lineageos.app.LineageContextConstants.Features.PROFILES) && sService == null) {
@@ -259,12 +264,18 @@ public class ProfileManager {
     }
 
     /** @hide */
-    static public IProfileManager getService() {
+    static public IProfileManager getService() throws RemoteException {
         if (sService != null) {
             return sService;
         }
         IBinder b = ServiceManager.getService(LineageContextConstants.LINEAGE_PROFILE_SERVICE);
         sService = IProfileManager.Stub.asInterface(b);
+
+        if (sService == null) {
+            throw new RemoteException("Couldn't get " +
+                                      LineageContextConstants.LINEAGE_PROFILE_SERVICE +
+                                      " on binder");
+        }
         return sService;
     }
 
