@@ -110,5 +110,5 @@
     <string name="trust_notification_content_keys">Chaidh am build seo a shoidhneadh le iuchraichean poblach</string>
     <string name="trust_notification_title_onboarding">Fidir an earbsa</string>
     <string name="trust_notification_content_onboarding">Faigh a-mach mar a nì thu cinnteach gum bi an t-uidheam agad sàbhailte</string>
-    <string name="trust_notification_action_manage">Stiùirich na rabhaidhean</string>
+    <string name="trust_notification_action_manage">Stiùir na rabhaidhean</string>
 </resources>
