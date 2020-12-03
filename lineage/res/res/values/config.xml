@@ -212,7 +212,7 @@
          This needs to match the enums in
          sdk/src/java/org/lineageos/internal/util/DeviceKeysConstants.java.
     -->
-    <integer name="config_longPressOnAppSwitchBehavior">9</integer>
+    <integer name="config_longPressOnAppSwitchBehavior">0</integer>
 
     <!-- Indicates that the device has Single-stage Camera key
          (without "Focus" state) instead of Dual-stage. -->
