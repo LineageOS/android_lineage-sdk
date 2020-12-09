@@ -3195,9 +3195,12 @@ public final class LineageSettings {
         /**
          * Whether tethering is allowed to use VPN upstreams
          * 0 = false, 1 = true
+         * @deprecated
          */
         public static final String TETHERING_ALLOW_VPN_UPSTREAMS = "tethering_allow_vpn_upstreams";
 
+        /** @hide */
+        @Deprecated
         public static final Validator TETHERING_ALLOW_VPN_UPSTREAMS_VALIDATOR = sBooleanValidator;
 
         // endregion
