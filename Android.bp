@@ -138,3 +138,23 @@ java_library {
         local_include_dirs: ["sdk/src/java"],
     },
 }
+
+// Minimal LineageSettings lib for apex use.
+// ============================================================
+
+java_library {
+    name: "org.lineageos.platform.lineagesettings",
+
+    // LineageSettings is our main target, the rest are deps.
+    srcs: [
+        "sdk/src/java/lineageos/app/LineageContextConstants.java",
+        "sdk/src/java/lineageos/providers/LineageSettings.java",
+        "sdk/src/java/lineageos/trust/ITrustInterface.aidl",
+        "sdk/src/java/lineageos/trust/TrustInterface.java",
+    ],
+
+    // List of apex modules that can link against this lib
+    apex_available: [
+        "com.android.tethering",
+    ],
+}
