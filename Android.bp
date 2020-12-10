@@ -174,9 +174,12 @@ java_library {
         lineage_sdk_src + "/providers/LineageSettings.java",
         lineage_sdk_src + "/trust/ITrustInterface.aidl",
         lineage_sdk_src + "/trust/TrustInterface.java",
+<<<<<<< HEAD   (520186 lineage-sdk: Bring back Lineage resources to system)
 
         // For the generated R.java and Manifest.java
         ":org.lineageos.platform-res{.aapt.srcjar}",
+=======
+>>>>>>> CHANGE (89f203 lineage-sdk: Create minimal lineagesettings library for apex)
     ],
 
     // List of apex modules that can link against this lib
