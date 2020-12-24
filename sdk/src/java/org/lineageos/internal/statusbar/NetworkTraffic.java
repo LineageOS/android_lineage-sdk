@@ -107,6 +107,8 @@ public class NetworkTraffic extends TextView {
 
     private INetworkManagementService mNetworkManagementService;
 
+    private final Object mLock = new Object();
+
     public NetworkTraffic(Context context) {
         this(context, null);
     }
@@ -193,19 +195,21 @@ public class NetworkTraffic extends TextView {
                 long txBytes = 0;
                 long rxBytes = 0;
                 // Add interface stats
-                for (LinkProperties linkProperties : mLinkPropertiesMap.values()) {
-                    final String iface = linkProperties.getInterfaceName();
-                    if (iface == null) {
-                        continue;
+                synchronized(mLock) {
+                    for (LinkProperties linkProperties : mLinkPropertiesMap.values()) {
+                        final String iface = linkProperties.getInterfaceName();
+                        if (iface == null) {
+                            continue;
+                        }
+                        final long ifaceTxBytes = TrafficStats.getTxBytes(iface);
+                        final long ifaceRxBytes = TrafficStats.getRxBytes(iface);
+                        if (DEBUG) {
+                            Log.d(TAG, "adding stats from interface " + iface
+                                    + " txbytes " + ifaceTxBytes + " rxbytes " + ifaceRxBytes);
+                        }
+                        txBytes += ifaceTxBytes;
+                        rxBytes += ifaceRxBytes;
                     }
-                    final long ifaceTxBytes = TrafficStats.getTxBytes(iface);
-                    final long ifaceRxBytes = TrafficStats.getRxBytes(iface);
-                    if (DEBUG) {
-                        Log.d(TAG, "adding stats from interface " + iface
-                                + " txbytes " + ifaceTxBytes + " rxbytes " + ifaceRxBytes);
-                    }
-                    txBytes += ifaceTxBytes;
-                    rxBytes += ifaceRxBytes;
                 }
 
                 // Add tether hw offload counters since these are
@@ -478,14 +482,18 @@ public class NetworkTraffic extends TextView {
             new ConnectivityManager.NetworkCallback() {
         @Override
         public void onLinkPropertiesChanged(Network network, LinkProperties linkProperties) {
-            mLinkPropertiesMap.put(network, linkProperties);
-            mNetworksChanged = true;
+            synchronized(mLock) {
+                mLinkPropertiesMap.put(network, linkProperties);
+                mNetworksChanged = true;
+            }
         }
 
         @Override
         public void onLost(Network network) {
-            mLinkPropertiesMap.remove(network);
-            mNetworksChanged = true;
+            synchronized(mLock) {
+                mLinkPropertiesMap.remove(network);
+                mNetworksChanged = true;
+            }
         }
     };
 }
