@@ -65,6 +65,8 @@ public class NetworkTraffic extends TextView {
 
     private static final int MESSAGE_TYPE_PERIODIC_REFRESH = 0;
     private static final int MESSAGE_TYPE_UPDATE_VIEW = 1;
+    private static final int MESSAGE_TYPE_ADD_NETWORK = 2;
+    private static final int MESSAGE_TYPE_REMOVE_NETWORK = 3;
 
     private static final int REFRESH_INTERVAL = 2000;
 
@@ -185,57 +187,83 @@ public class NetworkTraffic extends TextView {
     private Handler mTrafficHandler = new Handler() {
         @Override
         public void handleMessage(Message msg) {
+            switch (msg.what) {
+                case MESSAGE_TYPE_PERIODIC_REFRESH:
+                    recalculateStats();
+                    displayStatsAndReschedule();
+                    break;
+
+                case MESSAGE_TYPE_UPDATE_VIEW:
+                    displayStatsAndReschedule();
+                    break;
+
+                case MESSAGE_TYPE_ADD_NETWORK:
+                    final LinkPropertiesHolder lph = (LinkPropertiesHolder) msg.obj;
+                    mLinkPropertiesMap.put(lph.getNetwork(), lph.getLinkProperties());
+                    mNetworksChanged = true;
+                    break;
+
+                case MESSAGE_TYPE_REMOVE_NETWORK:
+                    mLinkPropertiesMap.remove((Network) msg.obj);
+                    mNetworksChanged = true;
+                    break;
+            }
+        }
+
+        private void recalculateStats() {
             final long now = SystemClock.elapsedRealtime();
             final long timeDelta = now - mLastUpdateTime; /* ms */
-            if (msg.what == MESSAGE_TYPE_PERIODIC_REFRESH
-                    && timeDelta >= REFRESH_INTERVAL * 0.95f) {
-                // Sum tx and rx bytes from all sources of interest
-                long txBytes = 0;
-                long rxBytes = 0;
-                // Add interface stats
-                for (LinkProperties linkProperties : mLinkPropertiesMap.values()) {
-                    final String iface = linkProperties.getInterfaceName();
-                    if (iface == null) {
-                        continue;
-                    }
-                    final long ifaceTxBytes = TrafficStats.getTxBytes(iface);
-                    final long ifaceRxBytes = TrafficStats.getRxBytes(iface);
-                    if (DEBUG) {
-                        Log.d(TAG, "adding stats from interface " + iface
-                                + " txbytes " + ifaceTxBytes + " rxbytes " + ifaceRxBytes);
-                    }
-                    txBytes += ifaceTxBytes;
-                    rxBytes += ifaceRxBytes;
+            if (timeDelta < REFRESH_INTERVAL * 0.95f) {
+                return;
+            }
+            // Sum tx and rx bytes from all sources of interest
+            long txBytes = 0;
+            long rxBytes = 0;
+            // Add interface stats
+            for (LinkProperties linkProperties : mLinkPropertiesMap.values()) {
+                final String iface = linkProperties.getInterfaceName();
+                if (iface == null) {
+                    continue;
                 }
-
-                // Add tether hw offload counters since these are
-                // not included in netd interface stats.
-                final TetheringStats tetheringStats = getOffloadTetheringStats();
-                txBytes += tetheringStats.txBytes;
-                rxBytes += tetheringStats.rxBytes;
-
+                final long ifaceTxBytes = TrafficStats.getTxBytes(iface);
+                final long ifaceRxBytes = TrafficStats.getRxBytes(iface);
                 if (DEBUG) {
-                    Log.d(TAG, "mNetworksChanged = " + mNetworksChanged);
-                    Log.d(TAG, "tether hw offload txBytes: " + tetheringStats.txBytes
-                            + " rxBytes: " + tetheringStats.rxBytes);
+                    Log.d(TAG, "adding stats from interface " + iface
+                            + " txbytes " + ifaceTxBytes + " rxbytes " + ifaceRxBytes);
                 }
-
-                final long txBytesDelta = txBytes - mLastTxBytes;
-                final long rxBytesDelta = rxBytes - mLastRxBytes;
-
-                if (!mNetworksChanged && timeDelta > 0 && txBytesDelta >= 0 && rxBytesDelta >= 0) {
-                    mTxKbps = (long) (txBytesDelta * 8f / 1000f / (timeDelta / 1000f));
-                    mRxKbps = (long) (rxBytesDelta * 8f / 1000f / (timeDelta / 1000f));
-                } else if (mNetworksChanged) {
-                    mTxKbps = 0;
-                    mRxKbps = 0;
-                    mNetworksChanged = false;
-                }
-                mLastTxBytes = txBytes;
-                mLastRxBytes = rxBytes;
-                mLastUpdateTime = now;
+                txBytes += ifaceTxBytes;
+                rxBytes += ifaceRxBytes;
             }
 
+            // Add tether hw offload counters since these are
+            // not included in netd interface stats.
+            final TetheringStats tetheringStats = getOffloadTetheringStats();
+            txBytes += tetheringStats.txBytes;
+            rxBytes += tetheringStats.rxBytes;
+
+            if (DEBUG) {
+                Log.d(TAG, "mNetworksChanged = " + mNetworksChanged);
+                Log.d(TAG, "tether hw offload txBytes: " + tetheringStats.txBytes
+                        + " rxBytes: " + tetheringStats.rxBytes);
+            }
+
+            final long txBytesDelta = txBytes - mLastTxBytes;
+            final long rxBytesDelta = rxBytes - mLastRxBytes;
+
+            if (!mNetworksChanged && timeDelta > 0 && txBytesDelta >= 0 && rxBytesDelta >= 0) {
+                mTxKbps = (long) (txBytesDelta * 8f / 1000f / (timeDelta / 1000f));
+                mRxKbps = (long) (rxBytesDelta * 8f / 1000f / (timeDelta / 1000f));
+            } else if (mNetworksChanged) {
+                mTxKbps = 0;
+                mRxKbps = 0;
+                mNetworksChanged = false;
+            }
+            mLastTxBytes = txBytes;
+            mLastRxBytes = rxBytes;
+            mLastUpdateTime = now;
+        }
+
+        private void displayStatsAndReschedule() {
             final boolean enabled = mMode != MODE_DISABLED && isConnectionAvailable();
             final boolean showUpstream =
                     mMode == MODE_UPSTREAM_ONLY || mMode == MODE_UPSTREAM_AND_DOWNSTREAM;
@@ -478,14 +506,40 @@ public class NetworkTraffic extends TextView {
             new ConnectivityManager.NetworkCallback() {
         @Override
         public void onLinkPropertiesChanged(Network network, LinkProperties linkProperties) {
-            mLinkPropertiesMap.put(network, linkProperties);
-            mNetworksChanged = true;
+            Message msg = new Message();
+            msg.what = MESSAGE_TYPE_ADD_NETWORK;
+            msg.obj = new LinkPropertiesHolder(network, linkProperties);
+            mTrafficHandler.sendMessage(msg);
         }
 
         @Override
         public void onLost(Network network) {
-            mLinkPropertiesMap.remove(network);
-            mNetworksChanged = true;
+            Message msg = new Message();
+            msg.what = MESSAGE_TYPE_REMOVE_NETWORK;
+            msg.obj = network;
+            mTrafficHandler.sendMessage(msg);
         }
     };
+
+    private class LinkPropertiesHolder {
+        private Network mNetwork;
+        private LinkProperties mLinkProperties;
+
+        public LinkPropertiesHolder(Network network, LinkProperties linkProperties) {
+            mNetwork = network;
+            mLinkProperties = linkProperties;
+        }
+
+        public LinkPropertiesHolder(Network network) {
+            mNetwork = network;
+        }
+
+        public Network getNetwork() {
+            return mNetwork;
+        }
+
+        public LinkProperties getLinkProperties() {
+            return mLinkProperties;
+        }
+    }
 }
