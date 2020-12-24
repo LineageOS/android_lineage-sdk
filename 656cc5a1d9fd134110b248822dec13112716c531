@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "a267629b_817d2f05",
+        "filename": "sdk/src/java/org/lineageos/internal/statusbar/NetworkTraffic.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 103,
+      "author": {
+        "id": 11883
+      },
+      "writtenOn": "2020-12-24T11:41:10Z",
+      "side": 1,
+      "message": "Add\n@GuardedBy(\"mLock\")\nannotation",
+      "revId": "656cc5a1d9fd134110b248822dec13112716c531",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "b2f37b1a_4b1478a9",
+        "filename": "sdk/src/java/org/lineageos/internal/statusbar/NetworkTraffic.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 110,
+      "author": {
+        "id": 11883
+      },
+      "writtenOn": "2020-12-24T11:41:10Z",
+      "side": 1,
+      "message": "Move it after the map?",
+      "revId": "656cc5a1d9fd134110b248822dec13112716c531",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    }
+  ]
+}
