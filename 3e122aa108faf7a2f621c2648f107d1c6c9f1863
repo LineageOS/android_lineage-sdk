@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fae7d39b_05bab4f3",
+        "filename": "sdk/src/java/org/lineageos/internal/statusbar/NetworkTraffic.java",
+        "patchSetId": 5
+      },
+      "lineNbr": 207,
+      "author": {
+        "id": 3075
+      },
+      "writtenOn": "2020-12-29T04:20:21Z",
+      "side": 1,
+      "message": "Shouldn\u0027t this be in case MESSAGE_TYPE_PERIODIC_REFRESH ?  Otherwise, the visible update cadence will be impacted by network callback events.",
+      "revId": "3e122aa108faf7a2f621c2648f107d1c6c9f1863",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "b2f355a5_53adb691",
+        "filename": "sdk/src/java/org/lineageos/internal/statusbar/NetworkTraffic.java",
+        "patchSetId": 5
+      },
+      "lineNbr": 260,
+      "author": {
+        "id": 3075
+      },
+      "writtenOn": "2020-12-29T04:20:21Z",
+      "side": 1,
+      "message": "I think this should continue to be the variable now.  Otherwise, stats will be slightly higher than reality (the longer the TrafficStats and getOffloadTetheringStats() calls take to complete, the less accurate the next stats calculation will be).  With respect to the traffic rate calculations I think of it this way: with now - we always count all elapsed time and we always count all bytes, with a newer last update time - we wouldn\u0027t count all elapsed time but we do count all bytes.",
+      "revId": "3e122aa108faf7a2f621c2648f107d1c6c9f1863",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    }
+  ]
+}
