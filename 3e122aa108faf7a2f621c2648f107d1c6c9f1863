@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "fc543eff_93fda319",
+        "filename": "sdk/src/java/org/lineageos/internal/statusbar/NetworkTraffic.java",
+        "patchSetId": 5
+      },
+      "lineNbr": 207,
+      "author": {
+        "id": 13028
+      },
+      "writtenOn": "2020-12-29T11:33:44Z",
+      "side": 1,
+      "message": "It used to be handled no matter the message type so I thought I\u0027d keep it like that.\nNew PS added handling for the remaining MESSAGE_TYPE_UPDATE_VIEW and I moved it accordingly",
+      "parentUuid": "fae7d39b_05bab4f3",
+      "revId": "3e122aa108faf7a2f621c2648f107d1c6c9f1863",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "b2f355a5_53adb691",
         "filename": "sdk/src/java/org/lineageos/internal/statusbar/NetworkTraffic.java",
         "patchSetId": 5
@@ -33,6 +51,24 @@
       "revId": "3e122aa108faf7a2f621c2648f107d1c6c9f1863",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "2413de51_0f70412c",
+        "filename": "sdk/src/java/org/lineageos/internal/statusbar/NetworkTraffic.java",
+        "patchSetId": 5
+      },
+      "lineNbr": 260,
+      "author": {
+        "id": 13028
+      },
+      "writtenOn": "2020-12-29T11:33:44Z",
+      "side": 1,
+      "message": "Actually this was unintentionally changed while I was refactoring this and trying to figure out what\u0027s the best way of doing so. Changed back to using the variable.\nThanks for the explanation, though. Was aware of that :)",
+      "parentUuid": "b2f355a5_53adb691",
+      "revId": "3e122aa108faf7a2f621c2648f107d1c6c9f1863",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
