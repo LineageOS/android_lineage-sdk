@@ -103,6 +103,13 @@
                 android:description="@string/permdesc_observe_audio_sessions"
                 android:protectionLevel="normal"/>
 
+    <!-- Allows an application to list audio sessions
+         @hide -->
+    <permission android:name="lineageos.permission.LIST_AUDIO_SESSIONS"
+                android:label="@string/permlab_list_audio_sessions"
+                android:description="@string/permdesc_list_audio_sessions"
+                android:protectionLevel="system"/>
+
     <!-- Allows an application to access the weather service.
         <p>Although the protection is normal, this permission should be required ONLY by those apps
         meant to do something meaningful with the data provided by the service (LockClock, SysUI)-->
