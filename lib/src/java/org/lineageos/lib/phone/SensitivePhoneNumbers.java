@@ -1,6 +1,6 @@
 /*
  * Copyright (C) 2017 The Android Open Source Project
- * Copyright (C) 2017-2019 The LineageOS Project
+ * Copyright (C) 2017-2021 The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -53,7 +53,8 @@ public class SensitivePhoneNumbers {
     private static SensitivePhoneNumbers sInstance = null;
     private static boolean sNumbersLoaded;
 
-    private HashMap<String, ArrayList<String>> mSensitiveNumbersMap = new HashMap<>();
+    private HashMap<String, ArrayList<SensitivePhoneNumberInfo>> mSensitiveNumbersMap =
+            new HashMap<>();
 
     private SensitivePhoneNumbers() { }
 
@@ -110,16 +111,24 @@ public class SensitivePhoneNumbers {
             SensitivePhoneNumber sensitivePN = SensitivePhoneNumber
                     .readSensitivePhoneNumbers(parser);
             String[] mccs = sensitivePN.getNetworkNumeric().split(",");
-            ArrayList<String> sensitive_nums = sensitivePN.getPhoneNumbers();
+            ArrayList<SensitivePhoneNumberInfo> sensitive_nums = sensitivePN.getPhoneNumberInfos();
             for (String mcc : mccs) {
                 mSensitiveNumbersMap.put(mcc, sensitive_nums);
             }
         }
     }
 
-    public boolean isSensitiveNumber(Context context, String numberToCheck, int subId) {
+    public ArrayList<SensitivePhoneNumberInfo> getSensitivePnInfosForMcc(String mcc) {
         loadSensiblePhoneNumbers();
+        return mSensitiveNumbersMap.getOrDefault(mcc, new ArrayList<SensitivePhoneNumberInfo>());
+    }
+
+    public boolean isSensitiveNumber(Context context, String numberToCheck, int subId) {
         String nationalNumber = formatNumberToNational(context, numberToCheck);
+        if (TextUtils.isEmpty(nationalNumber)) {
+            return false;
+        }
+        loadSensiblePhoneNumbers();
 
         SubscriptionManager subManager = context.getSystemService(SubscriptionManager.class);
         List<SubscriptionInfo> list = subManager.getActiveSubscriptionInfoList();
@@ -162,12 +171,10 @@ public class SensitivePhoneNumbers {
     }
 
     private boolean isSensitiveNumber(String numberToCheck, String mcc) {
-        if (!TextUtils.isEmpty(numberToCheck)) {
-            if (mSensitiveNumbersMap.containsKey(mcc)) {
-                for (String num : mSensitiveNumbersMap.get(mcc)) {
-                    if (PhoneNumberUtils.compare(numberToCheck, num)) {
-                        return true;
-                    }
+        if (mSensitiveNumbersMap.containsKey(mcc)) {
+            for (SensitivePhoneNumberInfo info : mSensitiveNumbersMap.get(mcc)) {
+                if (PhoneNumberUtils.compare(numberToCheck, info.get("number"))) {
+                    return true;
                 }
             }
         }
