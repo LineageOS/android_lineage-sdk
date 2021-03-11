@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1fe182b8_25e0ddae",
+        "filename": "lib/src/java/org/lineageos/lib/phone/SensitivePhoneNumbers.java",
+        "patchSetId": 5
+      },
+      "lineNbr": 116,
+      "author": {
+        "id": 11883
+      },
+      "writtenOn": "2021-03-11T21:50:06Z",
+      "side": 1,
+      "message": "MICHAEL",
+      "revId": "fc5c69f479767633bca4c420712d1294fa67e833",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    }
+  ]
+}
