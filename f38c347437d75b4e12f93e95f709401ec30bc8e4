@@ -1,0 +1,113 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ce609b42_1ce189c7",
+        "filename": "lib/src/java/org/lineageos/lib/phone/SensitivePhoneNumber.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 11883
+      },
+      "writtenOn": "2021-03-11T20:53:31Z",
+      "side": 1,
+      "message": "space",
+      "range": {
+        "startLine": 60,
+        "startChar": 64,
+        "endLine": 60,
+        "endChar": 65
+      },
+      "revId": "f38c347437d75b4e12f93e95f709401ec30bc8e4",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "c4197798_2e7a5aec",
+        "filename": "lib/src/java/org/lineageos/lib/phone/SensitivePhoneNumber.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 67,
+      "author": {
+        "id": 11883
+      },
+      "writtenOn": "2021-03-11T20:53:31Z",
+      "side": 1,
+      "message": "ArrayList\u003cSensitivePhoneNumberInfo\u003e infos \u003d readPhoneNumberInfo(parser);",
+      "range": {
+        "startLine": 66,
+        "startChar": 0,
+        "endLine": 67,
+        "endChar": 44
+      },
+      "revId": "f38c347437d75b4e12f93e95f709401ec30bc8e4",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "86119bb9_53803aa7",
+        "filename": "lib/src/java/org/lineageos/lib/phone/SensitivePhoneNumber.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 72,
+      "author": {
+        "id": 11883
+      },
+      "writtenOn": "2021-03-11T20:53:31Z",
+      "side": 1,
+      "message": "space",
+      "range": {
+        "startLine": 72,
+        "startChar": 74,
+        "endLine": 72,
+        "endChar": 75
+      },
+      "revId": "f38c347437d75b4e12f93e95f709401ec30bc8e4",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "b30dd7db_95ca8e13",
+        "filename": "lib/src/java/org/lineageos/lib/phone/SensitivePhoneNumberInfo.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 11883
+      },
+      "writtenOn": "2021-03-11T20:53:31Z",
+      "side": 1,
+      "message": "remove",
+      "range": {
+        "startLine": 25,
+        "startChar": 0,
+        "endLine": 25,
+        "endChar": 41
+      },
+      "revId": "f38c347437d75b4e12f93e95f709401ec30bc8e4",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "175cde0e_4d97ab05",
+        "filename": "lib/src/java/org/lineageos/lib/phone/SensitivePhoneNumbers.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 116,
+      "author": {
+        "id": 11883
+      },
+      "writtenOn": "2021-03-11T20:53:31Z",
+      "side": 1,
+      "message": ".",
+      "revId": "f38c347437d75b4e12f93e95f709401ec30bc8e4",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    }
+  ]
+}
