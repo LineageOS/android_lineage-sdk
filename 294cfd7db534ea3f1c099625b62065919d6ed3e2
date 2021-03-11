@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "13115e08_f57322e8",
+        "filename": "lib/src/java/org/lineageos/lib/phone/SensitivePhoneNumbers.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 127,
+      "author": {
+        "id": 11883
+      },
+      "writtenOn": "2021-03-11T21:33:30Z",
+      "side": 1,
+      "message": "make it look like that\nformatNumber\nempty check\nload numbers",
+      "revId": "294cfd7db534ea3f1c099625b62065919d6ed3e2",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "a505c7ec_50e20d6f",
+        "filename": "lib/src/java/org/lineageos/lib/phone/SensitivePhoneNumbers.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 161,
+      "author": {
+        "id": 11883
+      },
+      "writtenOn": "2021-03-11T21:33:30Z",
+      "side": 1,
+      "message": "can now be removed",
+      "revId": "294cfd7db534ea3f1c099625b62065919d6ed3e2",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    }
+  ]
+}
