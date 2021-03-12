@@ -25,6 +25,7 @@ java_library {
 
     srcs: [
         lineage_sdk_lib_src + "/phone/*.java",
+        ":spn-info",
     ],
 }
 
