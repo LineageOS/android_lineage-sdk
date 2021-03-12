@@ -158,3 +158,17 @@ java_library {
         "com.android.tethering",
     ],
 }
+
+// Sensitive Phone Numbers schema
+// =============================================================
+filegroup {
+    name: "spn-schema",
+    srcs: ["SpnInfo.xsd"],
+}
+
+xsd_config {
+    name: "spn-info",
+    srcs: [":spn-schema"],
+    api_dir: "schema",
+    package_name: "org.lineageos.platform.xml.spn",
+}
