@@ -18,6 +18,7 @@ lineage_sdk_lib_src = "src/java/org/lineageos/lib/"
 
 java_library {
     name: "org.lineageos.lib.phone",
+    sdk_version: "current",
     static_libs: [
         "libphonenumber",
     ],
