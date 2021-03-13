@@ -32,17 +32,23 @@ import com.google.i18n.phonenumbers.Phonenumber;
 import com.google.i18n.phonenumbers.PhoneNumberUtil;
 import com.google.i18n.phonenumbers.PhoneNumberUtil.PhoneNumberFormat;
 
-import org.xmlpull.v1.XmlPullParser;
+import org.lineageos.lib.phone.spn.Item;
+import org.lineageos.lib.phone.spn.SensitivePN;
+import org.lineageos.lib.phone.spn.SensitivePNS;
+import org.lineageos.lib.phone.spn.XmlParser;
+
 import org.xmlpull.v1.XmlPullParserException;
 
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
-import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
+
+import javax.xml.datatype.DatatypeConfigurationException;
 
 public class SensitivePhoneNumbers {
     private final String LOG_TAG = this.getClass().getSimpleName();
@@ -53,8 +59,7 @@ public class SensitivePhoneNumbers {
     private static SensitivePhoneNumbers sInstance = null;
     private static boolean sNumbersLoaded;
 
-    private HashMap<String, ArrayList<SensitivePhoneNumberInfo>> mSensitiveNumbersMap =
-            new HashMap<>();
+    private HashMap<String, ArrayList<Item>> mSensitiveNumbersMap = new HashMap<>();
 
     private SensitivePhoneNumbers() { }
 
@@ -70,57 +75,34 @@ public class SensitivePhoneNumbers {
             return;
         }
 
-        FileReader sensiblePNReader;
-
         File sensiblePNFile = new File(Environment.getRootDirectory(),
                 SENSIBLE_PHONENUMBERS_FILE_PATH);
+        FileInputStream sensiblePNInputStream;
 
         try {
-            sensiblePNReader = new FileReader(sensiblePNFile);
+            sensiblePNInputStream = new FileInputStream(sensiblePNFile);
         } catch (FileNotFoundException e) {
             Log.w(LOG_TAG, "Can not open " + sensiblePNFile.getAbsolutePath());
             return;
         }
 
         try {
-            XmlPullParser parser = Xml.newPullParser();
-            parser.setInput(sensiblePNReader);
-            parser.nextTag();
-
-            readSensitivePNS(parser);
-
-            sensiblePNReader.close();
-        } catch (IOException | XmlPullParserException e) {
+            for (SensitivePN sensitivePN : new XmlParser().read(sensiblePNInputStream).getSensitivePN()) {
+                String[] mccs = sensitivePN.getNetwork().split(",");
+                for (String mcc : mccs) {
+                    mSensitiveNumbersMap.put(mcc, new ArrayList(sensitivePN.getItem()));
+                }
+            }
+        } catch (DatatypeConfigurationException | IOException | XmlPullParserException e) {
             Log.w(LOG_TAG, "Exception in spn-conf parser", e);
         }
 
         sNumbersLoaded = true;
     }
 
-    private void readSensitivePNS(XmlPullParser parser)
-                throws XmlPullParserException, IOException {
-        parser.require(XmlPullParser.START_TAG, ns, "sensitivePNS");
-        while (parser.next() != XmlPullParser.END_TAG) {
-            if (parser.getEventType() != XmlPullParser.START_TAG) {
-                continue;
-            }
-            String name = parser.getName();
-            if (!"sensitivePN".equals(name)) {
-                break;
-            }
-            SensitivePhoneNumber sensitivePN = SensitivePhoneNumber
-                    .readSensitivePhoneNumbers(parser);
-            String[] mccs = sensitivePN.getNetworkNumeric().split(",");
-            ArrayList<SensitivePhoneNumberInfo> sensitive_nums = sensitivePN.getPhoneNumberInfos();
-            for (String mcc : mccs) {
-                mSensitiveNumbersMap.put(mcc, sensitive_nums);
-            }
-        }
-    }
-
-    public ArrayList<SensitivePhoneNumberInfo> getSensitivePnInfosForMcc(String mcc) {
+    public ArrayList<Item> getSensitivePnInfosForMcc(String mcc) {
         loadSensiblePhoneNumbers();
-        return mSensitiveNumbersMap.getOrDefault(mcc, new ArrayList<SensitivePhoneNumberInfo>());
+        return mSensitiveNumbersMap.getOrDefault(mcc, new ArrayList<Item>());
     }
 
     public boolean isSensitiveNumber(Context context, String numberToCheck, int subId) {
@@ -172,8 +154,8 @@ public class SensitivePhoneNumbers {
 
     private boolean isSensitiveNumber(String numberToCheck, String mcc) {
         if (mSensitiveNumbersMap.containsKey(mcc)) {
-            for (SensitivePhoneNumberInfo info : mSensitiveNumbersMap.get(mcc)) {
-                if (PhoneNumberUtils.compare(numberToCheck, info.get("number"))) {
+            for (Item item : mSensitiveNumbersMap.get(mcc)) {
+                if (PhoneNumberUtils.compare(numberToCheck, item.getNumber())) {
                     return true;
                 }
             }
