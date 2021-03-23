@@ -115,6 +115,28 @@ public class Intent {
             "lineageos.intent.action.UPDATE_POWER_MENU";
 
     /**
+     * Broadcast Action: Update bug report preference in LineageParts. This is to provide a
+     * way for the preference that need to be enabled/disabled to update because they were
+     * toggled elsewhere in the settings (System>Developer options) so we don't have
+     * to do constant lookups while we wait for the menu to be created. Getting the values once
+     * when necessary is enough.
+     *@hide
+     */
+    public static final String ACTION_UPDATE_POWER_MENU_BUGREPORT =
+            "lineageos.intent.action.UPDATE_POWER_MENU_BUGREPORT";
+
+    /**
+     * Broadcast Action: Update lockdown preference in LineageParts. This is to provide a
+     * way for the preference that need to be enabled/disabled to update because they were
+     * toggled elsewhere in the settings (Display>Lock screen content) so we don't have
+     * to do constant lookups while we wait for the menu to be created. Getting the values once
+     * when necessary is enough.
+     *@hide
+     */
+    public static final String ACTION_UPDATE_POWER_MENU_LOCKDOWN =
+            "lineageos.intent.action.UPDATE_POWER_MENU_LOCKDOWN";
+
+    /**
      * Broadcast action: notify SystemUI that LiveDisplay service has finished initialization.
      * @hide
      */
