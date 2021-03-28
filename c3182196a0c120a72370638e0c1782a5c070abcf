@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "53ec6f31_b924c7fe",
+        "filename": "sdk/src/java/lineageos/hardware/LineageHardwareManager.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 10258
+      },
+      "writtenOn": "2021-03-28T06:35:47Z",
+      "side": 1,
+      "message": "won\u0027t these break 2.0 devices? I guess they should remain 2.0",
+      "range": {
+        "startLine": 35,
+        "startChar": 0,
+        "endLine": 42,
+        "endChar": 60
+      },
+      "revId": "c3182196a0c120a72370638e0c1782a5c070abcf",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    }
+  ]
+}
