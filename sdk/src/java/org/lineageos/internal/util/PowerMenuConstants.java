@@ -1,6 +1,6 @@
 /*
  * Copyright (C) 2015 The CyanogenMod Project
- * Copyright (C) 2017-2018 The LineageOS Project
+ * Copyright (C) 2017-2021 The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -42,19 +42,19 @@ public class PowerMenuConstants {
     public static final String GLOBAL_ACTION_KEY_RESTART_FASTBOOT = "restart_fastboot";
 
     private static String[] ALL_ACTIONS = {
+        GLOBAL_ACTION_KEY_EMERGENCY,
+        GLOBAL_ACTION_KEY_LOCKDOWN,
         GLOBAL_ACTION_KEY_POWER,
         GLOBAL_ACTION_KEY_RESTART,
         GLOBAL_ACTION_KEY_SCREENSHOT,
         GLOBAL_ACTION_KEY_AIRPLANE,
         GLOBAL_ACTION_KEY_USERS,
         GLOBAL_ACTION_KEY_SETTINGS,
-        GLOBAL_ACTION_KEY_LOCKDOWN,
         GLOBAL_ACTION_KEY_BUGREPORT,
         GLOBAL_ACTION_KEY_SILENT,
         GLOBAL_ACTION_KEY_VOICEASSIST,
         GLOBAL_ACTION_KEY_ASSIST,
         GLOBAL_ACTION_KEY_LOGOUT,
-        GLOBAL_ACTION_KEY_EMERGENCY,
     };
 
     public static String[] getAllActions() {
