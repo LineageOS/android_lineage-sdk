@@ -108,6 +108,13 @@ public final class LineageContextConstants {
     public static final String LINEAGE_TRUST_INTERFACE = "lineagetrust";
 
     /**
+     * Update power menu (GlobalActions)
+     *
+     * @hide
+     */
+    public static final String LINEAGE_GLOBALACTIONS_SERVICE = "lineageglobalactions";
+
+    /**
      * Features supported by the Lineage SDK.
      */
     public static class Features {
@@ -182,5 +189,13 @@ public final class LineageContextConstants {
          */
         @SdkConstant(SdkConstant.SdkConstantType.FEATURE)
         public static final String FOD = "vendor.lineage.biometrics.fingerprint.inscreen";
+
+        /**
+         * Feature for {@link PackageManager#getSystemAvailableFeatures} and
+         * {@link PackageManager#hasSystemFeature}: The device includes the lineage globalactions service
+         * utilized by the lineage sdk and LineageParts.
+         */
+        @SdkConstant(SdkConstant.SdkConstantType.FEATURE)
+        public static final String GLOBALACTIONS = "org.lineageos.globalactions";
     }
 }
