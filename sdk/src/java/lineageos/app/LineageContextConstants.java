@@ -1,5 +1,6 @@
 /**
- * Copyright (c) 2015, The CyanogenMod Project
+ * Copyright (C) 2015, The CyanogenMod Project
+ * Copyright (C) 2017-2021 The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -108,6 +109,13 @@ public final class LineageContextConstants {
     public static final String LINEAGE_TRUST_INTERFACE = "lineagetrust";
 
     /**
+     * Update power menu (GlobalActions)
+     *
+     * @hide
+     */
+    public static final String LINEAGE_GLOBAL_ACTIONS_SERVICE = "lineageglobalactions";
+
+    /**
      * Features supported by the Lineage SDK.
      */
     public static class Features {
@@ -182,5 +190,13 @@ public final class LineageContextConstants {
          */
         @SdkConstant(SdkConstant.SdkConstantType.FEATURE)
         public static final String FOD = "vendor.lineage.biometrics.fingerprint.inscreen";
+
+        /**
+         * Feature for {@link PackageManager#getSystemAvailableFeatures} and
+         * {@link PackageManager#hasSystemFeature}: The device includes the lineage globalactions
+         * service utilized by the lineage sdk and LineageParts.
+         */
+        @SdkConstant(SdkConstant.SdkConstantType.FEATURE)
+        public static final String GLOBAL_ACTIONS = "org.lineageos.globalactions";
     }
 }
