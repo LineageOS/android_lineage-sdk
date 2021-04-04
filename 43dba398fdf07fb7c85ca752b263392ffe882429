@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "25657651_ea8cefe7",
+        "filename": "sdk/src/java/lineageos/app/IGlobalActionsManager.aidl",
+        "patchSetId": 6
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 11883
+      },
+      "writtenOn": "2021-04-04T14:47:16Z",
+      "side": 1,
+      "message": "Once we move back to List, the import isn\u0027t needed",
+      "range": {
+        "startLine": 19,
+        "startChar": 0,
+        "endLine": 19,
+        "endChar": 21
+      },
+      "revId": "43dba398fdf07fb7c85ca752b263392ffe882429",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    }
+  ]
+}
