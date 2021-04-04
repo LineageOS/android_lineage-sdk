@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ef7f407_c5d509a8",
+        "filename": "lineage/lib/main/java/org/lineageos/platform/internal/GlobalActionsManagerService.java",
+        "patchSetId": 16
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2021-04-04T18:31:21Z",
+      "side": 1,
+      "message": "These 3 imports are unused.",
+      "range": {
+        "startLine": 34,
+        "startChar": 0,
+        "endLine": 36,
+        "endChar": 34
+      },
+      "revId": "1b28c1d868e091f73c75d5925a5028fb5ecc5bae",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    }
+  ]
+}
