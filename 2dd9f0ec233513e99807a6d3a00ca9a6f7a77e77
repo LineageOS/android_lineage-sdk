@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "542697da_81b44c5f",
+        "filename": "Android.bp",
+        "patchSetId": 5
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2021-04-06T09:29:37Z",
+      "side": 1,
+      "message": "2021",
+      "range": {
+        "startLine": 2,
+        "startChar": 22,
+        "endLine": 2,
+        "endChar": 27
+      },
+      "revId": "2dd9f0ec233513e99807a6d3a00ca9a6f7a77e77",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "d81f60c4_a411dee6",
+        "filename": "lineage/lib/main/java/org/lineageos/platform/internal/display/DisplayHardwareController.java",
+        "patchSetId": 5
+      },
+      "lineNbr": 545,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2021-04-06T09:29:37Z",
+      "side": 1,
+      "message": "This variable is used only here. Doesn\u0027t necessarily need to be a class member.",
+      "range": {
+        "startLine": 545,
+        "startChar": 72,
+        "endLine": 545,
+        "endChar": 91
+      },
+      "revId": "2dd9f0ec233513e99807a6d3a00ca9a6f7a77e77",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    }
+  ]
+}
