@@ -45,6 +45,30 @@
       "revId": "2dd9f0ec233513e99807a6d3a00ca9a6f7a77e77",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "da91ac6f_9909f54b",
+        "filename": "lineage/lib/main/java/org/lineageos/platform/internal/display/DisplayHardwareController.java",
+        "patchSetId": 5
+      },
+      "lineNbr": 545,
+      "author": {
+        "id": 10067
+      },
+      "writtenOn": "2021-04-06T09:31:03Z",
+      "side": 1,
+      "message": "but it nicely matches other code.",
+      "parentUuid": "d81f60c4_a411dee6",
+      "range": {
+        "startLine": 545,
+        "startChar": 72,
+        "endLine": 545,
+        "endChar": 91
+      },
+      "revId": "2dd9f0ec233513e99807a6d3a00ca9a6f7a77e77",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
     }
   ]
 }
