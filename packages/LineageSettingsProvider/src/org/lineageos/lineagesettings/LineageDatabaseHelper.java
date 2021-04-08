@@ -587,15 +587,6 @@ public class LineageDatabaseHelper extends SQLiteOpenHelper{
             loadBooleanSetting(stmt, LineageSettings.System.SYSTEM_PROFILES_ENABLED,
                     R.bool.def_profiles_enabled);
 
-            loadIntegerSetting(stmt, LineageSettings.System.ENABLE_FORWARD_LOOKUP,
-                    R.integer.def_forward_lookup);
-
-            loadIntegerSetting(stmt, LineageSettings.System.ENABLE_PEOPLE_LOOKUP,
-                    R.integer.def_people_lookup);
-
-            loadIntegerSetting(stmt, LineageSettings.System.ENABLE_REVERSE_LOOKUP,
-                    R.integer.def_reverse_lookup);
-
             loadBooleanSetting(stmt, LineageSettings.System.NOTIFICATION_LIGHT_PULSE_CUSTOM_ENABLE,
                     R.bool.def_notification_pulse_custom_enable);
 
