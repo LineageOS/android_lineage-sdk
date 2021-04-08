@@ -1456,9 +1456,11 @@ public final class LineageSettings {
          * Enable looking up of phone numbers of nearby places
          * 0 = 0ff, 1 = on
          */
+        @Deprecated
         public static final String ENABLE_FORWARD_LOOKUP = "enable_forward_lookup";
 
         /** @hide */
+        @Deprecated
         public static final Validator ENABLE_FORWARD_LOOKUP_VALIDATOR =
                 sBooleanValidator;
 
@@ -1466,9 +1468,11 @@ public final class LineageSettings {
          * Enable looking up of phone numbers of people
          * 0 = 0ff, 1 = on
          */
+        @Deprecated
         public static final String ENABLE_PEOPLE_LOOKUP = "enable_people_lookup";
 
         /** @hide */
+        @Deprecated
         public static final Validator ENABLE_PEOPLE_LOOKUP_VALIDATOR =
                 sBooleanValidator;
 
@@ -1476,34 +1480,42 @@ public final class LineageSettings {
          * Enable looking up of information of phone numbers not in the contacts
          * 0 = 0ff, 1 = on
          */
+        @Deprecated
         public static final String ENABLE_REVERSE_LOOKUP = "enable_reverse_lookup";
 
         /** @hide */
+        @Deprecated
         public static final Validator ENABLE_REVERSE_LOOKUP_VALIDATOR =
                 sBooleanValidator;
 
         /**
          * The forward lookup provider to be utilized by the Dialer
          */
+        @Deprecated
         public static final String FORWARD_LOOKUP_PROVIDER = "forward_lookup_provider";
 
         /** @hide */
+        @Deprecated
         public static final Validator FORWARD_LOOKUP_PROVIDER_VALIDATOR = sAlwaysTrueValidator;
 
         /**
          * The people lookup provider to be utilized by the Dialer
          */
+        @Deprecated
         public static final String PEOPLE_LOOKUP_PROVIDER = "people_lookup_provider";
 
         /** @hide */
+        @Deprecated
         public static final Validator PEOPLE_LOOKUP_PROVIDER_VALIDATOR = sAlwaysTrueValidator;
 
         /**
          * The reverse lookup provider to be utilized by the Dialer
          */
+        @Deprecated
         public static final String REVERSE_LOOKUP_PROVIDER = "reverse_lookup_provider";
 
         /** @hide */
+        @Deprecated
         public static final Validator REVERSE_LOOKUP_PROVIDER_VALIDATOR = sAlwaysTrueValidator;
 
         /**

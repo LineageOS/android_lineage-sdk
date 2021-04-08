@@ -1,5 +1,6 @@
 /**
- * Copyright (c) 2016, The CyanogenMod Project
+ * Copyright (C) 2016 The CyanogenMod Project
+ *               2021 The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -53,15 +54,6 @@ public class LineageSettingsProviderDefaultsTest extends AndroidTestCase {
         SYSTEM_SETTINGS_DEFAULTS.add(new Setting(
                 LineageSettings.System.NOTIFICATION_LIGHT_BRIGHTNESS_LEVEL,
                 "R.integer.def_notification_brightness_level"));
-        SYSTEM_SETTINGS_DEFAULTS.add(new Setting(
-                LineageSettings.System.ENABLE_FORWARD_LOOKUP,
-                "R.integer.def_forward_lookup"));
-        SYSTEM_SETTINGS_DEFAULTS.add(new Setting(
-                LineageSettings.System.ENABLE_PEOPLE_LOOKUP,
-                "R.integer.def_people_lookup"));
-        SYSTEM_SETTINGS_DEFAULTS.add(new Setting(
-                LineageSettings.System.ENABLE_REVERSE_LOOKUP,
-                "R.integer.def_reverse_lookup"));
         SYSTEM_SETTINGS_DEFAULTS.add(new Setting(
                 LineageSettings.System.SYSTEM_PROFILES_ENABLED,
                 "R.bool.def_profiles_enabled"));
