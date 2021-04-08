@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
      Copyright (C) 2014-2015 The CyanogenMod Project
-                   2019 The LineageOS Project
+                   2019-2021 The LineageOS Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -46,13 +46,13 @@
     <bool name="def_lockscreen_visualizer">false</bool>
 
     <!-- Default value of LineageSettings.System.ENABLE_FORWARD_LOOKUP -->
-    <integer name="def_forward_lookup">1</integer>
+    <integer name="def_forward_lookup">0</integer>
 
     <!-- Default value of LineageSettings.System.ENABLE_PEOPLE_LOOKUP -->
-    <integer name="def_people_lookup">1</integer>
+    <integer name="def_people_lookup">0</integer>
 
     <!-- Default value of LineageSettings.System.ENABLE_REVERSE_LOOKUP -->
-    <integer name="def_reverse_lookup">1</integer>
+    <integer name="def_reverse_lookup">0</integer>
 
     <!-- Defaults for Global -->
 
