@@ -1,5 +1,5 @@
 /**
- * Copyright (C) 2017-2018 The LineageOS Project
+ * Copyright (C) 2017-2019,2021 The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -48,6 +48,7 @@ public final class LineageBatteryLights {
 
     // Battery light intended operational state.
     private boolean mLightEnabled = false; // Disable until observer is started
+    private boolean mLightFullChargeDisabled;
     private boolean mLedPulseEnabled;
     private int mBatteryLowARGB;
     private int mBatteryMediumARGB;
@@ -133,7 +134,7 @@ public final class LineageBatteryLights {
         ledValues.setEnabled(false);
         ledValues.setColor(0);
 
-        if (!mLightEnabled) {
+        if (!mLightEnabled || mLightFullChargeDisabled) {
             return;
         }
 
@@ -215,6 +216,11 @@ public final class LineageBatteryLights {
                     LineageSettings.System.BATTERY_LIGHT_ENABLED), false, this,
                     UserHandle.USER_ALL);
 
+            // Battery light disabled if fully charged
+            resolver.registerContentObserver(LineageSettings.System.getUriFor(
+                    LineageSettings.System.BATTERY_LIGHT_FULL_CHARGE_DISABLED), false, this,
+                    UserHandle.USER_ALL);
+
             // Low battery pulse
             resolver.registerContentObserver(LineageSettings.System.getUriFor(
                     LineageSettings.System.BATTERY_LIGHT_PULSE), false, this,
@@ -259,6 +265,11 @@ public final class LineageBatteryLights {
             // Battery light enabled
             mLightEnabled = LineageSettings.System.getIntForUser(resolver,
                     LineageSettings.System.BATTERY_LIGHT_ENABLED,
+                    1, UserHandle.USER_CURRENT) != 0;
+
+            // Battery light disabled if fully charged
+            mLightFullChargeDisabled = LineageSettings.System.getIntForUser(resolver,
+                    LineageSettings.System.BATTERY_LIGHT_FULL_CHARGE_DISABLED,
                     1, UserHandle.USER_CURRENT) != 0;
 
             // Low battery pulse
