@@ -125,6 +125,7 @@ public final class LineageBatteryLights {
                     + " mBatteryBrightnessLevel=" + mBatteryBrightnessLevel
                     + " mBatteryBrightnessZenLevel=" + mBatteryBrightnessZenLevel
                     + " mZenMode=" + mZenMode
+                    + " mLightFullChargeDisabled=" + mLightFullChargeDisabled
             );
         }
 
@@ -134,7 +135,8 @@ public final class LineageBatteryLights {
         ledValues.setEnabled(false);
         ledValues.setColor(0);
 
-        if (!mLightEnabled || mLightFullChargeDisabled) {
+        if (!mLightEnabled || (mLightFullChargeDisabled &&
+                status == BatteryManager.BATTERY_STATUS_CHARGING && level == 100)) {
             return;
         }
 
