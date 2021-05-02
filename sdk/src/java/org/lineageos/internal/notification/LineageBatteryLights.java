@@ -134,7 +134,8 @@ public final class LineageBatteryLights {
         ledValues.setEnabled(false);
         ledValues.setColor(0);
 
-        if (!mLightEnabled || mLightFullChargeDisabled) {
+        if (!mLightEnabled ||
+                (mLightFullChargeDisabled && status == BatteryManager.BATTERY_STATUS_FULL)) {
             return;
         }
 
