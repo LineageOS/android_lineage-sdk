@@ -16,6 +16,24 @@
       "revId": "6798b75dffac2c29cc130be53d48c7af6eb4eaee",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "016a611d_76bdcb73",
+        "filename": "sdk/src/java/org/lineageos/internal/notification/LineageBatteryLights.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 139,
+      "author": {
+        "id": 3075
+      },
+      "writtenOn": "2021-05-03T01:59:52Z",
+      "side": 1,
+      "message": "FWIW - settingslib isCharged() does FULL || level \u003e\u003d 100\nhttps://github.com/LineageOS/android_frameworks_base/blob/b6f3f9833f563fb9c4f5a1813104bd7d10462435/packages/SettingsLib/src/com/android/settingslib/fuelgauge/BatteryStatus.java#L115",
+      "parentUuid": "973faee5_dd08d6d6",
+      "revId": "6798b75dffac2c29cc130be53d48c7af6eb4eaee",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
     }
   ]
 }
