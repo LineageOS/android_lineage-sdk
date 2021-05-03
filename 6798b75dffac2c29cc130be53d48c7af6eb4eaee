@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "973faee5_dd08d6d6",
+        "filename": "sdk/src/java/org/lineageos/internal/notification/LineageBatteryLights.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 139,
+      "author": {
+        "id": 3075
+      },
+      "writtenOn": "2021-05-03T01:55:41Z",
+      "side": 1,
+      "message": "I take it we don\u0027t need to check BATTERY_STATUS_FULL too ?\nie ((status \u003d\u003d BatteryManager.BATTERY_STATUS_CHARGING \u0026\u0026 level \u003d\u003d 100) || status \u003d\u003d BatteryManager.BATTERY_STATUS_FULL)",
+      "revId": "6798b75dffac2c29cc130be53d48c7af6eb4eaee",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    }
+  ]
+}
