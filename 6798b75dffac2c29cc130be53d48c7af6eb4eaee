@@ -34,6 +34,24 @@
       "revId": "6798b75dffac2c29cc130be53d48c7af6eb4eaee",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "10111a7d_e4fc1e98",
+        "filename": "sdk/src/java/org/lineageos/internal/notification/LineageBatteryLights.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 139,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2021-05-03T08:11:31Z",
+      "side": 1,
+      "message": "In the previous patchset the check was for BATTERY_STATUS_FULL alone and it did nothing.",
+      "parentUuid": "016a611d_76bdcb73",
+      "revId": "6798b75dffac2c29cc130be53d48c7af6eb4eaee",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
     }
   ]
 }
