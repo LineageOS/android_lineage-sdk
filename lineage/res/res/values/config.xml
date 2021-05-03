@@ -162,6 +162,7 @@
             7 - Sleep
             8 - Last app
             9 - Toggle split screen
+            10 - Kill foreground app
          This needs to match the enums in
          sdk/src/java/org/lineageos/internal/util/DeviceKeysConstants.java.
     -->
@@ -178,6 +179,7 @@
             7 - Sleep
             8 - Last app
             9 - Toggle split screen
+            10 - Kill foreground app
          This needs to match the enums in
          sdk/src/java/org/lineageos/internal/util/DeviceKeysConstants.java.
     -->
@@ -194,6 +196,7 @@
             7 - Sleep
             8 - Last app
             9 - Toggle split screen
+            10 - Kill foreground app
          This needs to match the enums in
          sdk/src/java/org/lineageos/internal/util/DeviceKeysConstants.java.
     -->
@@ -210,6 +213,7 @@
             7 - Sleep
             8 - Last app
             9 - Toggle split screen
+            10 - Kill foreground app
          This needs to match the enums in
          sdk/src/java/org/lineageos/internal/util/DeviceKeysConstants.java.
     -->
@@ -226,6 +230,7 @@
             7 - Sleep
             8 - Last app
             9 - Toggle split screen
+            10 - Kill foreground app
          This needs to match the enums in
          sdk/src/java/org/lineageos/internal/util/DeviceKeysConstants.java.
     -->
