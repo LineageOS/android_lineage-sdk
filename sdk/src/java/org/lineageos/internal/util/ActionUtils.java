@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2018-2020 The LineageOS Project
+ * Copyright (C) 2018-2021 The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -17,6 +17,7 @@
 package org.lineageos.internal.util;
 
 import android.app.ActivityManager;
+import android.app.ActivityManager.StackInfo;
 import android.app.ActivityManagerNative;
 import android.app.ActivityOptions;
 import android.app.IActivityManager;
@@ -25,7 +26,11 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.os.RemoteException;
+import android.os.UserHandle;
 import android.util.Log;
+import android.widget.Toast;
+
+import org.lineageos.platform.internal.R;
 
 import java.util.List;
 
@@ -33,6 +38,38 @@ public class ActionUtils {
     private static final boolean DEBUG = false;
     private static final String TAG = ActionUtils.class.getSimpleName();
     private static final String SYSTEMUI_PACKAGE = "com.android.systemui";
+
+    /**
+     * Kills the top most / most recent user application, but leaves out the launcher.
+     *
+     * @param context the current context, used to retrieve the package manager.
+     * @param userId the ID of the currently active user
+     * @return {@code true} when a user application was found and closed.
+     */
+    public static boolean killForegroundApp(Context context, int userId) {
+        try {
+            return killForegroundAppInternal(context, userId);
+        } catch (RemoteException e) {
+            Log.e(TAG, "Could not kill foreground app");
+        }
+        return false;
+    }
+
+    private static boolean killForegroundAppInternal(Context context, int userId)
+            throws RemoteException {
+        final String packageName = getForegroundTaskPackageName(context, userId);
+
+        if (packageName == null) {
+            return false;
+        }
+
+        final IActivityManager am = ActivityManagerNative.getDefault();
+        am.forceStopPackage(packageName, UserHandle.USER_CURRENT);
+
+        Toast.makeText(context, R.string.app_killed_message, Toast.LENGTH_SHORT).show();
+
+        return true;
+    }
 
     /**
      * Attempt to bring up the last activity in the stack before the current active one.
@@ -87,6 +124,25 @@ public class ActionUtils {
                     && !packageName.equals(SYSTEMUI_PACKAGE)) {
                 return task;
             }
+        }
+
+        return null;
+    }
+
+    private static String getForegroundTaskPackageName(Context context, int userId)
+            throws RemoteException {
+        final String defaultHomePackage = resolveCurrentLauncherPackage(context, userId);
+        final IActivityManager am = ActivityManager.getService();
+        final StackInfo focusedStack = am.getFocusedStackInfo();
+
+        if (focusedStack == null || focusedStack.topActivity == null) {
+            return null;
+        }
+
+        final String packageName = focusedStack.topActivity.getPackageName();
+        if (!packageName.equals(defaultHomePackage)
+                && !packageName.equals(SYSTEMUI_PACKAGE)) {
+            return packageName;
         }
 
         return null;
