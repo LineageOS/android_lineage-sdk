@@ -35,9 +35,7 @@ public class DeviceKeysConstants {
         LAUNCH_CAMERA,
         SLEEP,
         LAST_APP,
-        SPLIT_SCREEN,
-        SINGLE_HAND_LEFT,
-        SINGLE_HAND_RIGHT;
+        SPLIT_SCREEN;
 
         public static Action fromIntSafe(int id) {
             if (id < NOTHING.ordinal() || id > Action.values().length) {
