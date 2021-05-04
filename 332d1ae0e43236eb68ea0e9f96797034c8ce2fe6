@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0a9aa0c8_80c4c48b",
+        "filename": "lineage/res/res/values/config.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2021-05-04T09:12:45Z",
+      "side": 1,
+      "message": "2021",
+      "range": {
+        "startLine": 4,
+        "startChar": 24,
+        "endLine": 4,
+        "endChar": 28
+      },
+      "revId": "332d1ae0e43236eb68ea0e9f96797034c8ce2fe6",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "d61b6783_6b97d7e6",
+        "filename": "lineage/res/res/values/config.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 154,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2021-05-04T09:12:45Z",
+      "side": 1,
+      "message": "back",
+      "range": {
+        "startLine": 154,
+        "startChar": 61,
+        "endLine": 154,
+        "endChar": 65
+      },
+      "revId": "332d1ae0e43236eb68ea0e9f96797034c8ce2fe6",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    }
+  ]
+}
