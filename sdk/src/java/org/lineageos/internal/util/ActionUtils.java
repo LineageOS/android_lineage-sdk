@@ -20,7 +20,9 @@ import android.app.ActivityManager;
 import android.app.ActivityManager.StackInfo;
 import android.app.ActivityManagerNative;
 import android.app.ActivityOptions;
+import android.app.ActivityTaskManager;
 import android.app.IActivityManager;
+import android.app.IActivityTaskManager;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -57,6 +59,12 @@ public class ActionUtils {
 
     private static boolean killForegroundAppInternal(Context context, int userId)
             throws RemoteException {
+        final IActivityTaskManager atm = ActivityTaskManager.getService();
+
+        if (atm.getLockTaskModeState() == ActivityManager.LOCK_TASK_MODE_PINNED) {
+            return false;
+        }
+
         final String packageName = getForegroundTaskPackageName(context, userId);
 
         if (packageName == null) {
