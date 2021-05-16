@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "51bcce74_d952aa1b",
+        "filename": "lineage/lib/main/java/org/lineageos/platform/internal/LineageGlobalActionsService.java",
+        "patchSetId": 30
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 23715
+      },
+      "writtenOn": "2021-05-16T10:35:20Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "26e5d9cf_28611a81",
+      "range": {
+        "startLine": 53,
+        "startChar": 0,
+        "endLine": 53,
+        "endChar": 47
+      },
+      "revId": "0cdb56cde2afad9315db3d6f17d739881d0d7efb",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "2d209ab4_12ab8f22",
         "filename": "lineage/lib/main/java/org/lineageos/platform/internal/LineageGlobalActionsService.java",
         "patchSetId": 30
@@ -45,6 +69,30 @@
       "revId": "0cdb56cde2afad9315db3d6f17d739881d0d7efb",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "3d45c176_1f4c4035",
+        "filename": "lineage/lib/main/java/org/lineageos/platform/internal/LineageGlobalActionsService.java",
+        "patchSetId": 30
+      },
+      "lineNbr": 93,
+      "author": {
+        "id": 23715
+      },
+      "writtenOn": "2021-05-16T10:35:20Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "2d209ab4_12ab8f22",
+      "range": {
+        "startLine": 93,
+        "startChar": 69,
+        "endLine": 93,
+        "endChar": 70
+      },
+      "revId": "0cdb56cde2afad9315db3d6f17d739881d0d7efb",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
