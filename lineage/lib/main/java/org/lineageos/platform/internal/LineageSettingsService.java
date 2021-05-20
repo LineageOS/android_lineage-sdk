@@ -17,10 +17,8 @@
 package org.lineageos.platform.internal;
 
 import android.content.Context;
-import android.os.SystemProperties;
 
 import lineageos.app.LineageContextConstants;
-import lineageos.providers.LineageSettings;
 
 /** @hide */
 public class LineageSettingsService extends LineageSystemService {
@@ -41,14 +39,6 @@ public class LineageSettingsService extends LineageSystemService {
 
     @Override
     public void onBootPhase(int phase) {
-        if (phase == PHASE_BOOT_COMPLETED) {
-            // Load custom hostname
-            String hostname = LineageSettings.Secure.getString(mContext.getContentResolver(),
-                    LineageSettings.Secure.DEVICE_HOSTNAME);
-            if (hostname != null) {
-                SystemProperties.set("net.hostname", hostname);
-            }
-        }
     }
 
     @Override

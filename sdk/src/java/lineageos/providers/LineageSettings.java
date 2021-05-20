@@ -3001,8 +3001,10 @@ public final class LineageSettings {
 
         /**
          * The hostname for this device
+         * @deprecated
          * @hide
          */
+        @Deprecated
         public static final String DEVICE_HOSTNAME = "device_hostname";
 
         /**
