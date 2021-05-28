@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
      Copyright (C) 2014-2015 The CyanogenMod Project
-                   2019 The LineageOS Project
+                   2019-2021 The LineageOS Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -34,6 +34,9 @@
 
     <!-- Default for LineageSettings.Secure.STATS_COLLECTION -->
     <bool name="def_stats_collection">false</bool>
+
+    <!-- Default for LineageSettings.Secure.VOLUME_PANEL_ON_LEFT -->
+    <bool name="def_volume_panel_on_left">false</bool>
 
     <!-- Default for LineageSettings.System.STATUS_BAR_BATTERY_STYLE
          * 0: Display the battery as icon in portrait mode
