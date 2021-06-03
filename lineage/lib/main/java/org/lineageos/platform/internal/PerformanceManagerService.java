@@ -1,6 +1,6 @@
 /*
  * Copyright (C) 2014 The CyanogenMod Project
- *               2018-2020 The LineageOS Project
+ *               2018-2021 The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -136,6 +136,8 @@ public class PerformanceManagerService extends LineageSystemService {
                             SystemProperties.get("init.svc.vendor.perfd").equals("running") ||
                             SystemProperties.get("init.svc.perf-hal-1-0").equals("running") ||
                             SystemProperties.get("init.svc.perf-hal-2-0").equals("running") ||
+                            SystemProperties.get("init.svc.perf-hal-2-1").equals("running") ||
+                            SystemProperties.get("init.svc.perf-hal-2-2").equals("running") ||
                             SystemProperties.get("init.svc.mpdecision").equals("running")) {
                         break;
                     }
