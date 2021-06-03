@@ -136,6 +136,8 @@ public class PerformanceManagerService extends LineageSystemService {
                             SystemProperties.get("init.svc.vendor.perfd").equals("running") ||
                             SystemProperties.get("init.svc.perf-hal-1-0").equals("running") ||
                             SystemProperties.get("init.svc.perf-hal-2-0").equals("running") ||
+                            SystemProperties.get("init.svc.perf-hal-2-1").equals("running") ||
+                            SystemProperties.get("init.svc.perf-hal-2-2").equals("running") ||
                             SystemProperties.get("init.svc.mpdecision").equals("running")) {
                         break;
                     }
