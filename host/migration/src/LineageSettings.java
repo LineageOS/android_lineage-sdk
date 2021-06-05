@@ -890,18 +890,6 @@ public final class LineageSettings {
                 BLUETOOTH_A2DP_SRC_PRIORITY_PREFIX = "bluetooth_a2dp_src_priority_";
 
         /**
-         * Whether to vibrate when charger power is connected/disconnected
-         * @hide
-         */
-        public static final String POWER_NOTIFICATIONS_VIBRATE = "power_notifications_vibrate";
-
-        /**
-         * URI for power notification sounds
-         * @hide
-         */
-        public static final String POWER_NOTIFICATIONS_RINGTONE = "power_notifications_ringtone";
-
-        /**
          * @hide
          */
         public static final String ZEN_DISABLE_DUCKING_DURING_MEDIA_PLAYBACK =
@@ -921,8 +909,6 @@ public final class LineageSettings {
          */
         public static final String[] LEGACY_GLOBAL_SETTINGS = new String[]{
                 LineageSettings.Global.WAKE_WHEN_PLUGGED_OR_UNPLUGGED,
-                LineageSettings.Global.POWER_NOTIFICATIONS_VIBRATE,
-                LineageSettings.Global.POWER_NOTIFICATIONS_RINGTONE,
                 LineageSettings.Global.ZEN_DISABLE_DUCKING_DURING_MEDIA_PLAYBACK,
                 LineageSettings.Global.WIFI_AUTO_PRIORITIES_CONFIGURATION};
 
