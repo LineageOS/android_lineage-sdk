@@ -61,15 +61,6 @@
          1==on -->
     <integer name="def_heads_up_enabled">1</integer>
 
-    <!-- Default for LineageSettings.Global.POWER_NOTIFICATIONS_ENABLED -->
-    <bool name="def_power_notifications_enabled">true</bool>
-
-    <!-- Default for LineageSettings.Global.POWER_NOTIFICATIONS_VIBRATE -->
-    <bool name="def_power_notifications_vibrate">false</bool>
-
-    <!-- Default for LineageSettings.Global.POWER_NOTIFICATIONS_RINGTONE -->
-    <string name="def_power_notifications_ringtone" translatable="false">/system/product/media/audio/ui/WirelessChargingStarted.ogg</string>
-
     <!-- Default value for the battery LEDs brightness -->
     <integer name="def_battery_brightness_level">255</integer>
 
