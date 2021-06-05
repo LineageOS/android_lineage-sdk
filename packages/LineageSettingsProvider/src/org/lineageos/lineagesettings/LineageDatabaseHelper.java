@@ -427,26 +427,6 @@ public class LineageDatabaseHelper extends SQLiteOpenHelper{
             upgradeVersion = 12;
         }
 
-        if (upgradeVersion < 13) {
-            // Update custom charging sound setting
-            if (mUserHandle == UserHandle.USER_OWNER) {
-                db.beginTransaction();
-                SQLiteStatement stmt = null;
-                try {
-                    stmt = db.compileStatement("UPDATE global SET value=? WHERE name=?");
-                    stmt.bindString(1, mContext.getResources()
-                            .getString(R.string.def_power_notifications_ringtone));
-                    stmt.bindString(2, LineageSettings.Global.POWER_NOTIFICATIONS_RINGTONE);
-                    stmt.execute();
-                    db.setTransactionSuccessful();
-                } finally {
-                    if (stmt != null) stmt.close();
-                    db.endTransaction();
-                }
-            }
-            upgradeVersion = 13;
-        }
-
         if (upgradeVersion < 14) {
             // Update button/keyboard brightness range
             if (mUserHandle == UserHandle.USER_OWNER) {
@@ -626,18 +606,6 @@ public class LineageDatabaseHelper extends SQLiteOpenHelper{
             stmt = db.compileStatement("INSERT OR IGNORE INTO global(name,value)"
                     + " VALUES(?,?);");
             // Global
-            loadBooleanSetting(stmt,
-                    LineageSettings.Global.POWER_NOTIFICATIONS_ENABLED,
-                    R.bool.def_power_notifications_enabled);
-
-            loadBooleanSetting(stmt,
-                    LineageSettings.Global.POWER_NOTIFICATIONS_VIBRATE,
-                    R.bool.def_power_notifications_vibrate);
-
-            loadStringSetting(stmt,
-                    LineageSettings.Global.POWER_NOTIFICATIONS_RINGTONE,
-                    R.string.def_power_notifications_ringtone);
-
             loadIntegerSetting(stmt, LineageSettings.Global.WEATHER_TEMPERATURE_UNIT,
                     R.integer.def_temperature_unit);
         } finally {
