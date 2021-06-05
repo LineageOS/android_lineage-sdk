@@ -3773,13 +3773,17 @@ public final class LineageSettings {
         /**
          * Whether to vibrate when charger power is connected/disconnected
          * @hide
+         * @deprecated Use {@link android.provider.Settings.Secure#CHARGING_VIBRATION_ENABLED} instead
          */
+        @Deprecated
         public static final String POWER_NOTIFICATIONS_VIBRATE = "power_notifications_vibrate";
 
         /**
          * URI for power notification sounds
          * @hide
+         * @deprecated Use {@link android.provider.Settings.Global#CHARGING_STARTED_SOUND} instead
          */
+        @Deprecated
         public static final String POWER_NOTIFICATIONS_RINGTONE = "power_notifications_ringtone";
 
         /**
