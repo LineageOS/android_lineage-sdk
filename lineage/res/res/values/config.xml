@@ -287,6 +287,9 @@
     <integer name="config_deviceSupportsKeyboardBrightnessControl">0</integer>
     <dimen name="config_keyboardBrightnessSettingDefaultFloat">1.0</dimen>
 
+    <!-- Whether the device supports wireless charging or not -->
+    <bool name="config_deviceSupportsWirelessCharging">false</bool>
+
     <!-- Whether to cleanup fingerprints upon connection to the daemon and when
          user switches -->
     <bool name="config_cleanupUnusedFingerprints">true</bool>
