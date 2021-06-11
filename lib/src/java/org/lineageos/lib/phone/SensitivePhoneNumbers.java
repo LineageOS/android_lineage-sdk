@@ -53,7 +53,7 @@ import javax.xml.datatype.DatatypeConfigurationException;
 public class SensitivePhoneNumbers {
     private final String LOG_TAG = this.getClass().getSimpleName();
 
-    public static final String SENSIBLE_PHONENUMBERS_FILE_PATH = "/product/etc/sensitive_pn.xml";
+    public static final String SENSIBLE_PHONENUMBERS_FILE_PATH = "etc/sensitive_pn.xml";
     private static final String ns = null;
 
     private static SensitivePhoneNumbers sInstance = null;
@@ -75,7 +75,8 @@ public class SensitivePhoneNumbers {
             return;
         }
 
-        File sensiblePNFile = new File(SENSIBLE_PHONENUMBERS_FILE_PATH);
+        File sensiblePNFile = new File(Environment.getProductDirectory(),
+                SENSIBLE_PHONENUMBERS_FILE_PATH);
         FileInputStream sensiblePNInputStream;
 
         try {
