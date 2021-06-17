@@ -1,5 +1,6 @@
 /*
  * Copyright (C) 2012 The Android Open Source Project
+ *               2017-2018,2021 The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -395,7 +396,7 @@ public final class TwilightTracker {
 
             Intent updateIntent = new Intent(ACTION_UPDATE_TWILIGHT_STATE);
             PendingIntent pendingIntent = PendingIntent.getBroadcast(
-                    mContext, 0, updateIntent, 0);
+                    mContext, 0, updateIntent, PendingIntent.FLAG_IMMUTABLE);
             mAlarmManager.cancel(pendingIntent);
             mAlarmManager.setExact(AlarmManager.RTC, nextUpdate, pendingIntent);
         }

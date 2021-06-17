@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2018-2020 The LineageOS Project
+ * Copyright (C) 2018-2021 The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -126,7 +126,8 @@ public class TrustInterfaceService extends LineageSystemService {
 
         Intent mainIntent = new Intent(INTENT_PARTS);
         mainIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        PendingIntent pMainIntent = PendingIntent.getActivity(mContext, 0, mainIntent, 0);
+        PendingIntent pMainIntent = PendingIntent.getActivity(mContext, 0, mainIntent,
+                PendingIntent.FLAG_IMMUTABLE);
 
         Intent actionIntent = new Intent(INTENT_PARTS);
         actionIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
