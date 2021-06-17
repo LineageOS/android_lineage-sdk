@@ -546,7 +546,8 @@ public class LiveDisplayService extends LineageSystemService {
             //show the notification and don't come back here
             final Intent intent = new Intent(LineageSettings.ACTION_LIVEDISPLAY_SETTINGS);
             PendingIntent result = PendingIntent.getActivity(
-                    mContext, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT);
+                    mContext, 0, intent,
+                            PendingIntent.FLAG_IMMUTABLE | PendingIntent.FLAG_UPDATE_CURRENT);
             Notification.Builder builder = new Notification.Builder(mContext)
                     .setContentTitle(mContext.getResources().getString(
                             org.lineageos.platform.internal.R.string.live_display_title))

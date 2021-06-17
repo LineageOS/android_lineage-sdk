@@ -395,7 +395,7 @@ public final class TwilightTracker {
 
             Intent updateIntent = new Intent(ACTION_UPDATE_TWILIGHT_STATE);
             PendingIntent pendingIntent = PendingIntent.getBroadcast(
-                    mContext, 0, updateIntent, 0);
+                    mContext, 0, updateIntent, PendingIntent.FLAG_IMMUTABLE);
             mAlarmManager.cancel(pendingIntent);
             mAlarmManager.setExact(AlarmManager.RTC, nextUpdate, pendingIntent);
         }
