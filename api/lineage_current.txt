@@ -202,6 +202,7 @@ package lineageos.hardware {
     field public static final int FEATURE_COLOR_ENHANCEMENT = 2; // 0x2
     field public static final int FEATURE_DISPLAY_COLOR_CALIBRATION = 4; // 0x4
     field public static final int FEATURE_DISPLAY_MODES = 8192; // 0x2000
+    field public static final int FEATURE_HIGH_TOUCH_POLLING_RATE = 8; // 0x8
     field public static final int FEATURE_HIGH_TOUCH_SENSITIVITY = 16; // 0x10
     field public static final int FEATURE_KEY_DISABLE = 32; // 0x20
     field public static final int FEATURE_KEY_SWAP = 64; // 0x40
@@ -827,6 +828,7 @@ package lineageos.providers {
     field public static final java.lang.String ENABLE_REVERSE_LOOKUP = "enable_reverse_lookup";
     field public static final java.lang.String FORWARD_LOOKUP_PROVIDER = "forward_lookup_provider";
     field public static final java.lang.String HEADSET_CONNECT_PLAYER = "headset_connect_player";
+    field public static final java.lang.String HIGH_TOUCH_POLLING_RATE_ENABLE = "high_touch_polling_rate_enable";
     field public static final java.lang.String HIGH_TOUCH_SENSITIVITY_ENABLE = "high_touch_sensitivity_enable";
     field public static final java.lang.String HOME_WAKE_SCREEN = "home_wake_screen";
     field public static final java.lang.String INCREASING_RING = "increasing_ring";
