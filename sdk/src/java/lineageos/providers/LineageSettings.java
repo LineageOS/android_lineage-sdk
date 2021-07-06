@@ -889,6 +889,17 @@ public final class LineageSettings {
                 sBooleanValidator;
 
         /**
+         * Whether the HighTouchSensitivity is activated or not.
+         * 0 = off, 1 = on
+         */
+        public static final String HIGH_TOUCH_POLLING_RATE_ENABLE =
+                "high_touch_polling_rate_enable";
+
+        /** @hide */
+        public static final Validator HIGH_TOUCH_POLLING_RATE_ENABLE_VALIDATOR =
+                sBooleanValidator;
+
+        /**
          * Whether to enable system profiles feature
          * 0 = off, 1 = on
          */
@@ -2285,6 +2296,8 @@ public final class LineageSettings {
             VALIDATORS.put(NOTIFICATION_PLAY_QUEUE, NOTIFICATION_PLAY_QUEUE_VALIDATOR);
             VALIDATORS.put(HIGH_TOUCH_SENSITIVITY_ENABLE,
                     HIGH_TOUCH_SENSITIVITY_ENABLE_VALIDATOR);
+            VALIDATORS.put(HIGH_TOUCH_POLLING_RATE_ENABLE,
+                    HIGH_TOUCH_POLLING_RATE_ENABLE_VALIDATOR);
             VALIDATORS.put(SYSTEM_PROFILES_ENABLED, SYSTEM_PROFILES_ENABLED_VALIDATOR);
             VALIDATORS.put(STATUS_BAR_CLOCK, STATUS_BAR_CLOCK_VALIDATOR);
             VALIDATORS.put(STATUS_BAR_AM_PM, STATUS_BAR_AM_PM_VALIDATOR);
