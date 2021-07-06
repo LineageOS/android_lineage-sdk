@@ -45,6 +45,7 @@ import vendor.lineage.touch.V1_0.IKeyDisabler;
 import vendor.lineage.touch.V1_0.IKeySwapper;
 import vendor.lineage.touch.V1_0.IStylusMode;
 import vendor.lineage.touch.V1_0.ITouchscreenGesture;
+import vendor.lineage.touch.V1_0.ITouchSampling;
 
 import java.lang.reflect.Field;
 import java.util.ArrayList;
@@ -92,6 +93,12 @@ public final class LineageHardwareManager {
      */
     @VisibleForTesting
     public static final int FEATURE_HIGH_TOUCH_SENSITIVITY = 0x10;
+
+    /**
+     * High Touch Sampling Rate
+     */
+    @VisibleForTesting
+    public static final int FEATURE_HIGH_TOUCH_POLLING_RATE = 0x8;
 
     /**
      * Hardware navigation key disablement
@@ -171,6 +178,7 @@ public final class LineageHardwareManager {
         FEATURE_AUTO_CONTRAST,
         FEATURE_COLOR_ENHANCEMENT,
         FEATURE_HIGH_TOUCH_SENSITIVITY,
+        FEATURE_HIGH_TOUCH_POLLING_RATE,
         FEATURE_KEY_DISABLE,
         FEATURE_KEY_SWAP,
         FEATURE_SUNLIGHT_ENHANCEMENT,
@@ -300,6 +308,8 @@ public final class LineageHardwareManager {
                     return ISunlightEnhancement.getService(true);
                 case FEATURE_HIGH_TOUCH_SENSITIVITY:
                     return IGloveMode.getService(true);
+                case FEATURE_HIGH_TOUCH_POLLING_RATE:
+                    return IHighTouchPollingRate.getService(true);
                 case FEATURE_KEY_DISABLE:
                     return IKeyDisabler.getService(true);
                 case FEATURE_KEY_SWAP:
@@ -367,6 +377,9 @@ public final class LineageHardwareManager {
                     case FEATURE_HIGH_TOUCH_SENSITIVITY:
                         IGloveMode gloveMode = (IGloveMode) obj;
                         return gloveMode.isEnabled();
+                    case FEATURE_HIGH_TOUCH_POLLING_RATE:
+                        IHighTouchPollingRate hightouchpollingRate = (IHighTouchPollingRate) obj;
+                        return hightouchpollingRate.isEnabled();
                     case FEATURE_KEY_DISABLE:
                         IKeyDisabler keyDisabler = (IKeyDisabler) obj;
                         return keyDisabler.isEnabled();
@@ -425,6 +438,9 @@ public final class LineageHardwareManager {
                     case FEATURE_HIGH_TOUCH_SENSITIVITY:
                         IGloveMode gloveMode = (IGloveMode) obj;
                         return gloveMode.setEnabled(enable);
+                    case FEATURE_HIGH_TOUCH_POLLING_RATE:
+                        IHighTouchPollingRate hightouchpollingRate = (IHighTouchPollingRate) obj;
+                        return hightouchpollingRate.setEnabled(enable);
                     case FEATURE_KEY_DISABLE:
                         IKeyDisabler keyDisabler = (IKeyDisabler) obj;
                         return keyDisabler.setEnabled(enable);
