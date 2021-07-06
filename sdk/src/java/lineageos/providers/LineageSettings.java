@@ -878,6 +878,17 @@ public final class LineageSettings {
         public static final Validator NOTIFICATION_PLAY_QUEUE_VALIDATOR = sBooleanValidator;
 
         /**
+         * Whether the HighTouchPollingRate is activated or not.
+         * 0 = off, 1 = on
+         */
+        public static final String HIGH_TOUCH_POLLING_RATE_ENABLE =
+                "high_touch_polling_rate_enable";
+
+        /** @hide */
+        public static final Validator HIGH_TOUCH_POLLING_RATE_ENABLE_VALIDATOR =
+                sBooleanValidator;
+
+        /**
          * Whether the HighTouchSensitivity is activated or not.
          * 0 = off, 1 = on
          */
@@ -2283,6 +2294,8 @@ public final class LineageSettings {
                 new ArrayMap<String, Validator>();
         static {
             VALIDATORS.put(NOTIFICATION_PLAY_QUEUE, NOTIFICATION_PLAY_QUEUE_VALIDATOR);
+            VALIDATORS.put(HIGH_TOUCH_POLLING_RATE_ENABLE,
+                    HIGH_TOUCH_POLLING_RATE_ENABLE_VALIDATOR);
             VALIDATORS.put(HIGH_TOUCH_SENSITIVITY_ENABLE,
                     HIGH_TOUCH_SENSITIVITY_ENABLE_VALIDATOR);
             VALIDATORS.put(SYSTEM_PROFILES_ENABLED, SYSTEM_PROFILES_ENABLED_VALIDATOR);
