@@ -1,0 +1,211 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "f7be4d3c_428feeb4",
+        "filename": "api/lineage_current.txt",
+        "patchSetId": 3
+      },
+      "lineNbr": 206,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2021-07-07T07:43:16Z",
+      "side": 1,
+      "message": "Did you mean FEATURE_HIGH_TOUCH_POLLING_RATE? Also, place it before FEATURE_HIGH_TOUCH_SENSITIVITY",
+      "range": {
+        "startLine": 206,
+        "startChar": 34,
+        "endLine": 206,
+        "endChar": 65
+      },
+      "revId": "b20c4e39f902456c1f6370c3fabe3330b8477f91",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "9579673e_40d90c70",
+        "filename": "api/lineage_current.txt",
+        "patchSetId": 3
+      },
+      "lineNbr": 832,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2021-07-07T07:43:16Z",
+      "side": 1,
+      "message": "Same here.",
+      "range": {
+        "startLine": 832,
+        "startChar": 47,
+        "endLine": 832,
+        "endChar": 77
+      },
+      "revId": "b20c4e39f902456c1f6370c3fabe3330b8477f91",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "13084278_d159a729",
+        "filename": "sdk/src/java/lineageos/hardware/LineageHardwareManager.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 48,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2021-07-07T07:43:16Z",
+      "side": 1,
+      "message": "Sort it.",
+      "range": {
+        "startLine": 48,
+        "startChar": 33,
+        "endLine": 48,
+        "endChar": 54
+      },
+      "revId": "b20c4e39f902456c1f6370c3fabe3330b8477f91",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "6e7b5c51_4b79d39c",
+        "filename": "sdk/src/java/lineageos/hardware/LineageHardwareManager.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 101,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2021-07-07T07:43:16Z",
+      "side": 1,
+      "message": "Place it before FEATURE_HIGH_TOUCH_SENSITIVITY",
+      "range": {
+        "startLine": 101,
+        "startChar": 28,
+        "endLine": 101,
+        "endChar": 60
+      },
+      "revId": "b20c4e39f902456c1f6370c3fabe3330b8477f91",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "fe0a44d6_f3deff61",
+        "filename": "sdk/src/java/lineageos/hardware/LineageHardwareManager.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 181,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2021-07-07T07:43:16Z",
+      "side": 1,
+      "message": "Same here.",
+      "range": {
+        "startLine": 181,
+        "startChar": 8,
+        "endLine": 181,
+        "endChar": 39
+      },
+      "revId": "b20c4e39f902456c1f6370c3fabe3330b8477f91",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "1af1a8a1_718c212d",
+        "filename": "sdk/src/java/lineageos/hardware/LineageHardwareManager.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 312,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2021-07-07T07:43:16Z",
+      "side": 1,
+      "message": "Same here.",
+      "range": {
+        "startLine": 311,
+        "startChar": 15,
+        "endLine": 312,
+        "endChar": 66
+      },
+      "revId": "b20c4e39f902456c1f6370c3fabe3330b8477f91",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "e2f2cd40_baf2d25d",
+        "filename": "sdk/src/java/lineageos/hardware/LineageHardwareManager.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 382,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2021-07-07T07:43:16Z",
+      "side": 1,
+      "message": "Same here.",
+      "range": {
+        "startLine": 380,
+        "startChar": 0,
+        "endLine": 382,
+        "endChar": 64
+      },
+      "revId": "b20c4e39f902456c1f6370c3fabe3330b8477f91",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "96e6c61c_015f6853",
+        "filename": "sdk/src/java/lineageos/hardware/LineageHardwareManager.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 443,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2021-07-07T07:43:16Z",
+      "side": 1,
+      "message": "Same here.",
+      "range": {
+        "startLine": 441,
+        "startChar": 0,
+        "endLine": 443,
+        "endChar": 71
+      },
+      "revId": "b20c4e39f902456c1f6370c3fabe3330b8477f91",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "c1f2f141_db32b973",
+        "filename": "sdk/src/java/lineageos/providers/LineageSettings.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 900,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2021-07-07T07:43:16Z",
+      "side": 1,
+      "message": "Place before HIGH_TOUCH_SENSITIVITY_ENABLE block.",
+      "range": {
+        "startLine": 891,
+        "startChar": 0,
+        "endLine": 900,
+        "endChar": 34
+      },
+      "revId": "b20c4e39f902456c1f6370c3fabe3330b8477f91",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    }
+  ]
+}
