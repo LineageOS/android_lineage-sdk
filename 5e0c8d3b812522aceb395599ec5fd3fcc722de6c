@@ -22,6 +22,30 @@
       "revId": "5e0c8d3b812522aceb395599ec5fd3fcc722de6c",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "b6805f36_97d6ebe1",
+        "filename": "sdk/src/java/lineageos/providers/LineageSettings.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 2297,
+      "author": {
+        "id": 28423
+      },
+      "writtenOn": "2021-07-07T18:04:08Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "3deb9050_0d417f70",
+      "range": {
+        "startLine": 2297,
+        "startChar": 27,
+        "endLine": 2297,
+        "endChar": 56
+      },
+      "revId": "5e0c8d3b812522aceb395599ec5fd3fcc722de6c",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
