@@ -1374,6 +1374,15 @@ public final class LineageSettings {
                 sColorValidator;
 
         /**
+         * Stop charging for extending battery life
+         */
+        public static final String BATTERY_LIFE_SAVER ="battery_life_saver";
+
+        /** @hide */
+        public static final Validator BATTERY_LIFE_SAVER_VALIDATOR =
+                sNonNegativeIntegerValidator;
+
+        /**
          * Sprint MWI Quirk: Show message wait indicator notifications
          * @hide
          */
@@ -2340,6 +2349,7 @@ public final class LineageSettings {
             VALIDATORS.put(BATTERY_LIGHT_LOW_COLOR, BATTERY_LIGHT_LOW_COLOR_VALIDATOR);
             VALIDATORS.put(BATTERY_LIGHT_MEDIUM_COLOR, BATTERY_LIGHT_MEDIUM_COLOR_VALIDATOR);
             VALIDATORS.put(BATTERY_LIGHT_FULL_COLOR, BATTERY_LIGHT_FULL_COLOR_VALIDATOR);
+            VALIDATORS.put(BATTERY_LIFE_SAVER, BATTERY_LIFE_SAVER_VALIDATOR);
             VALIDATORS.put(ENABLE_MWI_NOTIFICATION, ENABLE_MWI_NOTIFICATION_VALIDATOR);
             VALIDATORS.put(PROXIMITY_ON_WAKE, PROXIMITY_ON_WAKE_VALIDATOR);
             VALIDATORS.put(BERRY_GLOBAL_STYLE, BERRY_GLOBAL_STYLE_VALIDATOR);
