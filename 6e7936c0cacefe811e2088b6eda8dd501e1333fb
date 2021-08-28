@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "11a541df_03512a7b",
+        "filename": "sdk/src/java/lineageos/providers/LineageSettings.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 2086,
+      "author": {
+        "id": 3075
+      },
+      "writtenOn": "2021-08-28T20:04:49Z",
+      "side": 1,
+      "message": "Whether",
+      "revId": "6e7936c0cacefe811e2088b6eda8dd501e1333fb",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    }
+  ]
+}
