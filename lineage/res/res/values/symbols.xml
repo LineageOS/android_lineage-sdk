@@ -91,6 +91,8 @@
     <java-symbol type="integer" name="config_doubleTapOnHomeBehavior" />
     <java-symbol type="integer" name="config_longPressOnMenuBehavior" />
     <java-symbol type="integer" name="config_longPressOnAppSwitchBehavior" />
+    <java-symbol type="array" name="keyhandler_keycodes" />
+    <java-symbol type="array" name="keyhandler_packages" />
 
     <!-- Camera key type -->
     <java-symbol type="bool" name="config_singleStageCameraKey" />
