@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
      Copyright (C) 2015 The CyanogenMod Project
+                   2021 The LineageOS Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -128,5 +129,33 @@
         <item>org.lineageos.overlay.accent.yellow</item>
         <item>org.lineageos.overlay.accent.brown</item>
         <item>org.lineageos.overlay.accent.black</item>
+    </string-array>
+
+    <!-- Array of keycodes for special keys on device.
+         Order & size must match with keyhandler_packages -->
+    <integer-array name="keyhandler_keycodes">
+        <item>170</item> <!-- KEYCODE_TV -->
+        <item>176</item> <!-- KEYCODE_SETTINGS -->
+        <item>190</item> <!-- KEYCODE_BUTTON_3 -->
+        <item>191</item> <!-- KEYCODE_BUTTON_4 -->
+        <item>193</item> <!-- KEYCODE_BUTTON_6 -->
+        <item>194</item> <!-- KEYCODE_BUTTON_7 -->
+        <item>195</item> <!-- KEYCODE_BUTTON_8 -->
+        <item>219</item> <!-- KEYCODE_ASSIST -->
+        <item>231</item> <!-- KEYCODE_VOICE_ASSIST -->
+    </integer-array>
+
+    <!-- Array of packages for special keys on device.
+         Order & size must match with keyhandler_keycodes -->
+    <string-array name="keyhandler_packages">
+        <item>com.google.android.tv</item>
+        <item>com.android.tv.settings</item>
+        <item>com.google.android.youtube.tv</item>
+        <item>com.netflix.ninja</item>
+        <item>com.disney.disneyplus</item>
+        <item>com.hbo.hbonow</item>
+        <item>com.android.vending</item>
+        <item>com.google.android.katniss</item>
+        <item>com.google.android.katniss</item>
     </string-array>
 </resources>
