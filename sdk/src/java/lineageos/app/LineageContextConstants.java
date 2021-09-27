@@ -169,6 +169,14 @@ public final class LineageContextConstants {
 
         /**
          * Feature for {@link PackageManager#getSystemAvailableFeatures} and
+         * {@link PackageManager#hasSystemFeature}: The device includes the lineage pocketmode service
+         * utilized by the lineage sdk.
+         */
+        @SdkConstant(SdkConstant.SdkConstantType.FEATURE)
+        public static final String POCKETMODE = "org.lineageos.pocketmode";
+
+        /**
+         * Feature for {@link PackageManager#getSystemAvailableFeatures} and
          * {@link PackageManager#hasSystemFeature}: The device includes the lineage trust service
          * utilized by the lineage sdk.
          */
