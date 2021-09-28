@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "d93243fe_146737fd",
+        "filename": "lineage/lib/main/java/org/lineageos/platform/internal/LineagePocketModeService.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 107,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2021-09-28T13:48:12Z",
+      "side": 1,
+      "message": "Null check the daemon instance here? I guess you don\u0027t want to crash system server in case of broken fingerprint disabler daemon.",
+      "revId": "288a053ae6a922d5e37d0828e79be810f5e8e6b3",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "0db31fb7_57a46487",
+        "filename": "lineage/lib/main/java/org/lineageos/platform/internal/LineagePocketModeService.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 163,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2021-09-28T13:48:12Z",
+      "side": 1,
+      "message": "Comment and code contradict themselves?",
+      "revId": "288a053ae6a922d5e37d0828e79be810f5e8e6b3",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    }
+  ]
+}
