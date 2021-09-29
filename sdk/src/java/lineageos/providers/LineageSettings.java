@@ -1316,6 +1316,28 @@ public final class LineageSettings {
                 sBooleanValidator;
 
         /**
+         * Ringer mode to set when mode slider is on top position. (Default is 0, normal)
+         * 0: 1: 2:
+         */
+        public static final String KEY_NOTIF_SLIDER_TOP_POS_MODE = "key_notif_slider_top_pos_mode";
+
+        /**
+         * Ringer mode to set when mode slider is on top position. (Default is 0, normal)
+         * 0: 1: 2:
+         */
+        public static final String KEY_NOTIF_SLIDER_MIDDLE_POS_MODE = "key_notif_slider_middle_pos_mode";
+
+        /**
+         * Ringer mode to set when mode slider is on top position. (Default is 0, normal)
+         * 0: 1: 2:
+         */
+        public static final String KEY_NOTIF_SLIDER_BOTTOM_POS_MODE = "key_notif_slider_bottom_pos_mode";
+
+        /** @hide */
+        public static final Validator KEY_NOTIF_SLIDER_VALIDATOR =
+                new InclusiveIntegerRangeValidator(0, 3);
+
+        /**
          * Whether the battery light should be enabled (if hardware supports it)
          * The value is boolean (1 or 0).
          */
@@ -2342,6 +2364,9 @@ public final class LineageSettings {
                     TORCH_LONG_PRESS_POWER_TIMEOUT_VALIDATOR);
             VALIDATORS.put(BUTTON_BACKLIGHT_ONLY_WHEN_PRESSED,
                     BUTTON_BACKLIGHT_ONLY_WHEN_PRESSED_VALIDATOR);
+            VALIDATORS.put(KEY_NOTIF_SLIDER_TOP_POS_MODE, KEY_NOTIF_SLIDER_VALIDATOR);
+            VALIDATORS.put(KEY_NOTIF_SLIDER_MIDDLE_POS_MODE, KEY_NOTIF_SLIDER_VALIDATOR);
+            VALIDATORS.put(KEY_NOTIF_SLIDER_BOTTOM_POS_MODE, KEY_NOTIF_SLIDER_VALIDATOR);
             VALIDATORS.put(BATTERY_LIGHT_ENABLED, BATTERY_LIGHT_ENABLED_VALIDATOR);
             VALIDATORS.put(BATTERY_LIGHT_FULL_CHARGE_DISABLED,
                     BATTERY_LIGHT_FULL_CHARGE_DISABLED_VALIDATOR);

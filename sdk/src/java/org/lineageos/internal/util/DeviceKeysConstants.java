@@ -61,5 +61,6 @@ public class DeviceKeysConstants {
     public static final int KEY_MASK_APP_SWITCH = 0x10;
     public static final int KEY_MASK_CAMERA = 0x20;
     public static final int KEY_MASK_VOLUME = 0x40;
+    public static final int KEY_MASK_NOTIF_SLIDER = 0x80;
 }
 

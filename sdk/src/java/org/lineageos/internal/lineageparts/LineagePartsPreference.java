@@ -51,7 +51,7 @@ public class LineagePartsPreference extends RemotePreference {
     }
 
     public LineagePartsPreference(Context context, AttributeSet attrs) {
-        this(context, attrs, androidx.preference.R.attr.preferenceScreenStyle);
+        this(context, attrs, androidx.leanback.R.attr.preferenceScreenStyle);
     }
 
     @Override
