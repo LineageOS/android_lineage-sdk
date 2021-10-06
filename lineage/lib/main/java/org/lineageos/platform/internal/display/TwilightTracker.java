@@ -38,7 +38,7 @@ import android.util.Slog;
 import java.text.DateFormat;
 import java.util.ArrayList;
 import java.util.Date;
-import java.util.Iterator;
+import java.util.List;
 import java.util.Objects;
 
 /**
@@ -69,7 +69,8 @@ public final class TwilightTracker {
     public TwilightTracker(Context context) {
         mContext = context;
         mAlarmManager = (AlarmManager) mContext.getSystemService(Context.ALARM_SERVICE);
-        mLocationManager = (LocationManager) mContext.getSystemService(
+        final Context contextTag = mContext.createAttributionContext("twilight");
+        mLocationManager = (LocationManager) contextTag.getSystemService(
                 Context.LOCATION_SERVICE);
         mLocationHandler = new LocationHandler();
 
@@ -296,20 +297,25 @@ public final class TwilightTracker {
             }
         }
 
-        private void retrieveLocation() {
-            Location location = null;
-            final Iterator<String> providers =
-                    mLocationManager.getProviders(new Criteria(), true).iterator();
-            while (providers.hasNext()) {
-                final Location lastKnownLocation =
-                        mLocationManager.getLastKnownLocation(providers.next());
-                // pick the most recent location
-                if (location == null || (lastKnownLocation != null &&
-                        location.getElapsedRealtimeNanos() <
-                                lastKnownLocation.getElapsedRealtimeNanos())) {
-                    location = lastKnownLocation;
+        private Location getLastKnownLocation() {
+            List<String> providers = mLocationManager.getAllProviders();
+            Location bestLocation = null;
+            for (String provider : providers) {
+                Location lastKnownLocation = mLocationManager.getLastKnownLocation(provider);
+                if (lastKnownLocation != null) {
+                    if (bestLocation == null ||
+                            bestLocation.getElapsedRealtimeNanos() <
+                            lastKnownLocation.getElapsedRealtimeNanos()) {
+                        bestLocation = lastKnownLocation;
+                    }
                 }
             }
+            return bestLocation;
+        }
+
+
+        private void retrieveLocation() {
+            Location location = getLastKnownLocation();
 
             // In the case there is no location available (e.g. GPS fix or network location
             // is not available yet), the longitude of the location is estimated using the timezone,
