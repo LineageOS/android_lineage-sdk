@@ -17,6 +17,7 @@
 package org.lineageos.platform.internal;
 
 import android.app.AppGlobals;
+import android.annotation.NonNull;
 import android.content.ComponentName;
 import android.content.ContentValues;
 import android.content.Context;
@@ -239,7 +240,7 @@ public class LineageWeatherManagerService extends LineageSystemService {
     }
 
     @Override
-    public void onUnlockUser(int userHandle) {
+    public void onUserUnlocking(@NonNull TargetUser user) {
         bindActiveWeatherProviderService();
     }
 
