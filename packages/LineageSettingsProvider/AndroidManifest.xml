@@ -43,7 +43,7 @@
                   android:singleUser="true"
                   android:initOrder="100" />
 
-        <receiver android:name="PreBootReceiver" android:enabled="true">
+        <receiver android:name="PreBootReceiver" android:enabled="true" android:exported="true">
             <!-- This broadcast is sent after the core system has finished
                  booting, before the home app is launched or BOOT_COMPLETED
                  is sent. -->
