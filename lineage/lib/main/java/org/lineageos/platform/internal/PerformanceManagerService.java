@@ -469,7 +469,7 @@ public class PerformanceManagerService extends LineageSystemService {
         public void handleMessage(Message msg) {
             switch (msg.what) {
                 case MSG_SET_PROFILE:
-                    mPm.powerHint(POWER_HINT_SET_PROFILE, msg.arg1);
+                    mPm.setPowerMode(POWER_HINT_SET_PROFILE, msg.arg1 != 1);
                     mPerformanceLog.log(PerformanceLog.USER_PROFILE, "profile=" + msg.arg1);
                     break;
             }

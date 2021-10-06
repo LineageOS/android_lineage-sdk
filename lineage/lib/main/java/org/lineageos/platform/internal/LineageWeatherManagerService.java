@@ -238,11 +238,6 @@ public class LineageWeatherManagerService extends LineageSystemService {
         // We will connect in onUnlockUser instead.
     }
 
-    @Override
-    public void onUnlockUser(int userHandle) {
-        bindActiveWeatherProviderService();
-    }
-
     private void bindActiveWeatherProviderService() {
         String activeProviderService = LineageSettings.Secure.getString(mContext.getContentResolver(),
                 LineageSettings.Secure.WEATHER_PROVIDER_SERVICE);
