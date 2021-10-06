@@ -69,8 +69,6 @@ public class LineageGlobalActionsService extends LineageSystemService {
 
         private final Uri BUGREPORT_URI =
                 Settings.Global.getUriFor(Settings.Global.BUGREPORT_IN_POWER_MENU);
-        private final Uri LOCKDOWN_URI =
-                Settings.Secure.getUriFor(Settings.Secure.LOCKDOWN_IN_POWER_MENU);
 
         public GlobalActionsSettingsObserver(Context context, Handler handler) {
             super(handler);
@@ -79,7 +77,6 @@ public class LineageGlobalActionsService extends LineageSystemService {
         public void observe(boolean enabled) {
             if (enabled) {
                 mContentResolver.registerContentObserver(BUGREPORT_URI, false, this);
-                mContentResolver.registerContentObserver(LOCKDOWN_URI, false, this);
             } else {
                 mContentResolver.unregisterContentObserver(this);
             }
@@ -90,10 +87,6 @@ public class LineageGlobalActionsService extends LineageSystemService {
             updateUserConfigInternal(Settings.Global.getInt(mContentResolver,
                     Settings.Global.BUGREPORT_IN_POWER_MENU, 0) == 1,
                     GLOBAL_ACTION_KEY_BUGREPORT);
-
-            updateUserConfigInternal(Settings.Secure.getIntForUser(mContentResolver,
-                    Settings.Secure.LOCKDOWN_IN_POWER_MENU, 0, UserHandle.USER_CURRENT) == 1,
-                    GLOBAL_ACTION_KEY_LOCKDOWN);
         }
     };
 

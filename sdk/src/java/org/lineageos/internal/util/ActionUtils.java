@@ -17,10 +17,10 @@
 package org.lineageos.internal.util;
 
 import android.app.ActivityManager;
-import android.app.ActivityManager.StackInfo;
 import android.app.ActivityManagerNative;
 import android.app.ActivityOptions;
 import android.app.ActivityTaskManager;
+import android.app.ActivityTaskManager.RootTaskInfo;
 import android.app.IActivityManager;
 import android.app.IActivityTaskManager;
 import android.content.Context;
@@ -141,7 +141,7 @@ public class ActionUtils {
             throws RemoteException {
         final String defaultHomePackage = resolveCurrentLauncherPackage(context, userId);
         final IActivityManager am = ActivityManager.getService();
-        final StackInfo focusedStack = am.getFocusedStackInfo();
+        final RootTaskInfo focusedStack = am.getFocusedRootTaskInfo();
 
         if (focusedStack == null || focusedStack.topActivity == null) {
             return null;
