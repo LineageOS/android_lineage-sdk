@@ -27,11 +27,12 @@
 #include "android_media_AudioErrors.h"
 
 #include <media/AudioSystem.h>
-#include <media/AudioSession.h>
 
 #include <system/audio.h>
 #include <utils/misc.h>
 #include <utils/threads.h>
+
+using android::media::AudioSessionInfo;
 
 // ----------------------------------------------------------------------------
 
@@ -59,7 +60,7 @@ static Mutex gCallbackLock;
 // ----------------------------------------------------------------------------
 
 static void
-org_lineageos_platform_internal_LineageAudioService_session_info_callback(int event,
+org_lineageos_platform_internal_LineageAudioService_session_info_callback(
         sp<AudioSessionInfo>& info, bool added)
 {
     AutoMutex _l(gCallbackLock);
@@ -70,11 +71,11 @@ org_lineageos_platform_internal_LineageAudioService_session_info_callback(int ev
     }
 
     jobject jSession = env->NewObject(gAudioSessionInfoClass, gAudioSessionInfoCstor,
-            info->mSessionId, info->mStream, info->mFlags, info->mChannelMask, info->mUid);
+            info->session, info->stream, info->flags, info->channelMask, info->uid);
 
     env->CallVoidMethod(gThiz,
             gAudioSessionEventHandlerMethods.postAudioSessionEventFromNative,
-            event, jSession, added);
+            jSession, added);
 
     env->DeleteLocalRef(jSession);
 }
@@ -107,9 +108,9 @@ org_lineageos_platform_internal_LineageAudioService_listAudioSessions(JNIEnv *en
     }
 
     status_t status;
-    Vector< sp<AudioSessionInfo>> sessions;
+    std::vector<AudioSessionInfo> sessions;
 
-    status = AudioSystem::listAudioSessions((audio_stream_type_t)streams, sessions);
+    status = AudioSystem::listAudioSessions((audio_stream_type_t)streams, &sessions);
     if (status != NO_ERROR) {
         ALOGE("AudioSystem::listAudioSessions error %d", status);
     } else {
@@ -122,10 +123,10 @@ org_lineageos_platform_internal_LineageAudioService_listAudioSessions(JNIEnv *en
     }
 
     for (size_t i = 0; i < sessions.size(); i++) {
-        const sp<AudioSessionInfo>& s = sessions.itemAt(i);
+        AudioSessionInfo s = sessions.at(i);
 
         jobject jSession = env->NewObject(gAudioSessionInfoClass, gAudioSessionInfoCstor,
-                s->mSessionId, s->mStream, s->mFlags, s->mChannelMask, s->mUid);
+                s.session, s.stream, s.flags, s.channelMask, s.uid);
 
         if (jSession == NULL) {
             jStatus = (jint)AUDIO_JAVA_ERROR;
@@ -163,7 +164,7 @@ int register_org_lineageos_platform_internal_LineageAudioService(JNIEnv *env)
 
     gAudioSessionEventHandlerMethods.postAudioSessionEventFromNative =
             GetMethodIDOrDie(env, env->FindClass(kClassPathName),
-            "audioSessionCallbackFromNative", "(ILlineageos/media/AudioSessionInfo;Z)V");
+            "audioSessionCallbackFromNative", "(Llineageos/media/AudioSessionInfo;Z)V");
 
     return RegisterMethodsOrDie(env, kClassPathName, gMethods, NELEM(gMethods));
 }
