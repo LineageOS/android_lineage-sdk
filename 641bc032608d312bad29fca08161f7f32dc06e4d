@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "f12cc499_fe3a8f7d",
+        "filename": "lineage/lib/main/java/org/lineageos/platform/internal/LineageGlobalActionsService.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 62,
+      "author": {
+        "id": 11883
+      },
+      "writtenOn": "2021-10-07T10:01:44Z",
+      "side": 0,
+      "message": "eb151ee8d0ffaca0acbc68e3ac2548efaa3acc32 fw/base\nTODO: add it back? always show?",
+      "revId": "641bc032608d312bad29fca08161f7f32dc06e4d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    }
+  ]
+}
