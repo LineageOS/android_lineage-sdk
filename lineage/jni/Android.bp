@@ -28,6 +28,7 @@ cc_library_shared {
     ],
 
     shared_libs: [
+        "audioclient-sessioninfo-aidl-cpp",
         "libandroid_runtime",
         "libaudioclient",
         "libcutils",

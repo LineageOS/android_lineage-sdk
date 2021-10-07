@@ -43,9 +43,6 @@ public class LineageAudioService extends LineageSystemService {
 
     private static final int AUDIO_STATUS_OK = 0;
 
-    //keep in sync with include/media/AudioPolicy.h
-    private final static int AUDIO_OUTPUT_SESSION_EFFECTS_UPDATE = 10;
-
     public LineageAudioService(Context context) {
         super(context);
 
@@ -141,16 +138,9 @@ public class LineageAudioService extends LineageSystemService {
     /*
      * Handles events from JNI
      */
-    private synchronized void audioSessionCallbackFromNative(int event,
+    private synchronized void audioSessionCallbackFromNative(
             AudioSessionInfo sessionInfo, boolean added) {
-
-        switch (event) {
-            case AUDIO_OUTPUT_SESSION_EFFECTS_UPDATE:
-                broadcastSessionChanged(added, sessionInfo);
-                break;
-            default:
-                Log.e(TAG, "Unknown event " + event);
-        }
+        broadcastSessionChanged(added, sessionInfo);
     }
 
     private native final void native_registerAudioSessionCallback(boolean enabled);
