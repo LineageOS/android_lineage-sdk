@@ -19,6 +19,7 @@ android_app {
     certificate: "platform",
     sdk_version: "core_platform",
     manifest: "lineage/res/AndroidManifest.xml",
+    system_ext_specific: true,
 
     aaptflags: [
         "--auto-add-overlay",
