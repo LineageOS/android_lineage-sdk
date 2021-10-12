@@ -16,18 +16,31 @@
 
 android_app {
     name: "org.lineageos.platform-res",
-    certificate: "platform",
     sdk_version: "core_platform",
-    manifest: "lineage/res/AndroidManifest.xml",
+    certificate: "platform",
     system_ext_specific: true,
 
+    manifest: "lineage/res/AndroidManifest.xml",
+
+    // Disable dexpreopt and verify_uses_libraries check as the app
+    // contains no Java code to be dexpreopted.
+    enforce_uses_libs: false,
+    dex_preopt: {
+        enabled: false,
+    },
+
+    // Soong special-cases org.lineageos.platform-res to install this alongside
+    // the libraries at /system_ext/framework/org.lineageos.platform-res.apk.
+
     aaptflags: [
-        "--auto-add-overlay",
         "--private-symbols",
         "org.lineageos.platform.internal",
 
         // Framework doesn't need versioning since it IS the platform.
         "--no-auto-version",
+
+        // Allow overlay to add resource
+        "--auto-add-overlay",
 
         // Tell aapt to create "extending (non-application)" resource IDs,
         // since these resources will be used by many apps.
