@@ -186,4 +186,7 @@
     <!-- Whether to notify fingerprint client of successful cancelled authentication
          (needed for some older vendor fingerprint HAL implementations) -->
     <java-symbol type="bool" name="config_fingerprintPostResetRunnableForAllClients" />
+
+    <!-- Refresh rate controller -->
+    <java-symbol type="integer" name="config_defaultMinRefreshRate" />
 </resources>
