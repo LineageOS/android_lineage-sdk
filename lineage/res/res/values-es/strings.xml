@@ -70,10 +70,6 @@
     <string name="accessibility_quick_settings_live_display_changed_outdoor">LiveDisplay cambiado a modo exterior.</string>
     <string name="permlab_perfAccess">acceder al supervisor de rendimiento</string>
     <string name="permdesc_perfAccessDesc">Permite que la aplicación acceda al servicio de rendimiento. Nunca debería ser necesario para aplicaciones normales.</string>
-    <string name="permlab_dataUsageWrite">modificar datos de uso de la base de datos</string>
-    <string name="permdesc_dataUsageWrite">Permite que una aplicación actualice los datos del contenido de la base de datos.</string>
-    <string name="permlab_dataUsageRead">leer datos de uso de la base de datos</string>
-    <string name="permdesc_dataUsageRead">Permite que una aplicación lea el contenido desde la base de datos.</string>
     <string name="permlab_manageLiveDisplay">administrar la configuración de LiveDisplay</string>
     <string name="permdesc_manageLiveDisplay">Permite que una aplicación modifique la configuración de pantalla avanzada.</string>
     <string name="permlab_observe_audio_sessions">observa los cambios en la sesión de sonido</string>

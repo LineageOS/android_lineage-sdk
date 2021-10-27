@@ -70,10 +70,6 @@
     <string name="accessibility_quick_settings_live_display_changed_outdoor">LiveDisplay sa zmenil na režim vonku.</string>
     <string name="permlab_perfAccess">prístup k správe výkonu</string>
     <string name="permdesc_perfAccessDesc">Umožňuje aplikácii prístup k správe výkonu. Toto povolenie nie je bežné pre štandardné aplikácie.</string>
-    <string name="permlab_dataUsageWrite">meniť databázu využitia dát</string>
-    <string name="permdesc_dataUsageWrite">Umožní aplikácii aktualizovať obsah databázy využitia dát.</string>
-    <string name="permlab_dataUsageRead">čítať databázu využitia dát</string>
-    <string name="permdesc_dataUsageRead">Umožní aplikácii čítať obsah z databázy použitia dát.</string>
     <string name="permlab_manageLiveDisplay">spravovať nastavenia LiveDisplay</string>
     <string name="permdesc_manageLiveDisplay">Umožní aplikácii nastavovať pokročilé nastavenia obrazovky.</string>
     <string name="permlab_observe_audio_sessions">pozorovať zmeny audio sedenia</string>

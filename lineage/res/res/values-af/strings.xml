@@ -64,10 +64,6 @@
     <string name="accessibility_quick_settings_live_display_changed_outdoor">LiveDisplay verander na buitelug modus.</string>
     <string name="permlab_perfAccess">toegang na prestasie bestuurder</string>
     <string name="permdesc_perfAccessDesc">Laat \'n toep toe om toegang na die prestasie diens te verkry. Moet nooit nodig wees vir normale programme nie.</string>
-    <string name="permlab_dataUsageWrite">modifiseer data gebruik databasis</string>
-    <string name="permdesc_dataUsageWrite">Laat \'n toep toe om die inhoud opdateer van die data gebruik databasis.</string>
-    <string name="permlab_dataUsageRead">lees data gebruik databasis</string>
-    <string name="permdesc_dataUsageRead">Laat \'n toep toe om inhoud te lees van die data gebruik databasis.</string>
     <string name="permlab_manageLiveDisplay">bestuur LiveDisplay instellings</string>
     <string name="permdesc_manageLiveDisplay">Laat \'n toep toe om gevorderde skerm instellings te konfigureer.</string>
     <string name="permlab_observe_audio_sessions">neem oudio-sessie verandering waar</string>

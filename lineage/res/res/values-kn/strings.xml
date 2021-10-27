@@ -70,10 +70,6 @@
     <string name="accessibility_quick_settings_live_display_changed_outdoor">LiveDisplay ಹೊರಾಂಗಣ ರೀತಿಗೆ ಬದಲಾಗಿದೆ.</string>
     <string name="permlab_perfAccess">ಕಾರ್ಯಕ್ಷಮತೆ ನಿರ್ವಾಹಕ ಪ್ರವೇಶ</string>
     <string name="permdesc_perfAccessDesc">ಕಾರ್ಯಕ್ಷಮತೆ ಸೇವೆಯನ್ನು ಬಳಸಲು ಆಪ್ಗೆ ಅನುಮತಿಸುತ್ತದೆ. ಸಾಮಾನ್ಯ ಆಪ್ಗಳಿಗೆ ಇದರ ಅಗತ್ಯವೇ ಇರುವುದಿಲ್ಲ.</string>
-    <string name="permlab_dataUsageWrite">ದತ್ತಾಂಶ ಬಳಕೆಯ ದತ್ತಸಂಚಯವನ್ನು ಬದಲಿಸು</string>
-    <string name="permdesc_dataUsageWrite">ದತ್ತಾಂಶ ಬಳಕೆಯ ದತ್ತಸಂಚಯ ಘಟಕಗಳನ್ನು ನವೀಕರಿಸಲು ಆಪ್ಗೆ ಅನುಮತಿಸುತ್ತದೆ.</string>
-    <string name="permlab_dataUsageRead">ದತ್ತಾಂಶ ಬಳಕೆಯ ದತ್ತಸಂಚಯವನ್ನು ಓದು</string>
-    <string name="permdesc_dataUsageRead">ದತ್ತಾಂಶ ಬಳಕೆಯ ದತ್ತಸಂಚಯ ಘಟಕಗಳನ್ನು ಓದಲು ಆಪ್ಗೆ ಅನುಮತಿಸುತ್ತದೆ.</string>
     <string name="permlab_manageLiveDisplay">LiveDisplay ಅಳವಡಿಕೆಗಳನ್ನು ನಿರ್ವಹಿಸು</string>
     <string name="permdesc_manageLiveDisplay">ಸುಧಾರಿತ ಪ್ರದರ್ಶನ ಅಳವಡಿಕೆಗಳನ್ನು ಸಂರಚಿಸಲು ಆಪ್ಗೆ ಅನುಮತಿಸುತ್ತದೆ.</string>
     <string name="permlab_observe_audio_sessions">ಶೃತಿ ಅಧಿವೇಶನದ ಬದಲಾವಣೆಗಳನ್ನು ಗಮನಿಸು</string>

@@ -70,10 +70,6 @@
     <string name="accessibility_quick_settings_live_display_changed_outdoor">LiveDisplay muudetud õuerežiimi.</string>
     <string name="permlab_perfAccess">ligipääs jõudlusehaldurisse</string>
     <string name="permdesc_perfAccessDesc">Lubab rakendusel pääseda juurde jõudluse teenusele. Tavarakenduste puhul ei peaks kunagi vaja minema.</string>
-    <string name="permlab_dataUsageWrite">andmekasutuse andmebaasi muutmine</string>
-    <string name="permdesc_dataUsageWrite">Lubab rakendusel värskendada andmekasutuse andmebaasi sisu.</string>
-    <string name="permlab_dataUsageRead">andmekasutuse andmebaasi lugemine</string>
-    <string name="permdesc_dataUsageRead">Lubab rakendusel lugeda andmekasutuse andmebaasi.</string>
     <string name="permlab_manageLiveDisplay">LiveDisplay seadete haldamine</string>
     <string name="permdesc_manageLiveDisplay">Lubab rakendusel muuta täpsemaid ekraaniseadeid.</string>
     <string name="permlab_observe_audio_sessions">heliseansi muutuste jälgimine</string>

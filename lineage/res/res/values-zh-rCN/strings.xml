@@ -70,10 +70,6 @@
     <string name="accessibility_quick_settings_live_display_changed_outdoor">LiveDisplay 已修改为户外模式。</string>
     <string name="permlab_perfAccess">访问性能管理器</string>
     <string name="permdesc_perfAccessDesc">允许应用访问性能服务。普通应用不应需要此权限。</string>
-    <string name="permlab_dataUsageWrite">修改数据使用情况数据库</string>
-    <string name="permdesc_dataUsageWrite">允许应用更新数据使用情况数据库。</string>
-    <string name="permlab_dataUsageRead">读取数据使用情况数据库。</string>
-    <string name="permdesc_dataUsageRead">允许应用从数据使用情况数据库中读取内容。</string>
     <string name="permlab_manageLiveDisplay">管理 LiveDisplay 设置</string>
     <string name="permdesc_manageLiveDisplay">允许应用配置高级显示设置。</string>
     <string name="permlab_observe_audio_sessions">观察音频会话变动</string>

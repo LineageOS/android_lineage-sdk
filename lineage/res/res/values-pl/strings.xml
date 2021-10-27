@@ -70,10 +70,6 @@
     <string name="accessibility_quick_settings_live_display_changed_outdoor">LiveDisplay zmieniony na tryb zewnętrzny.</string>
     <string name="permlab_perfAccess">dostęp do menedżera wydajności</string>
     <string name="permdesc_perfAccessDesc">Umożliwia aplikacji dostęp do usługi wydajności (nie powinno być wymagane przez standardowe aplikacje).</string>
-    <string name="permlab_dataUsageWrite">modyfikowanie zawartości licznika danych</string>
-    <string name="permdesc_dataUsageWrite">Umożliwia aplikacji aktualizowanie zawartości licznika danych.</string>
-    <string name="permlab_dataUsageRead">odczyt zawartości licznika danych</string>
-    <string name="permdesc_dataUsageRead">Umożliwia aplikacji odczyt zawartości licznika danych.</string>
     <string name="permlab_manageLiveDisplay">zarządzanie ustawieniami LiveDisplay</string>
     <string name="permdesc_manageLiveDisplay">Pozwala aplikacji na konfigurację zaawansowanych ustawień wyświetlacza.</string>
     <string name="permlab_observe_audio_sessions">obserwuj zmiany sesji audio</string>

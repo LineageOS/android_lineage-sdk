@@ -70,10 +70,6 @@
     <string name="accessibility_quick_settings_live_display_changed_outdoor">تم تغيير LiveDisplay إلى وضع الأماكن المفتوحة.</string>
     <string name="permlab_perfAccess">الوصول إلى مدير الأداء</string>
     <string name="permdesc_perfAccessDesc">السماح للتطبيق بالوصول إلى خدمة الأداء. ينبغي ألا يكون ضرورياً للتطبيقات العادية.</string>
-    <string name="permlab_dataUsageWrite">تعديل قاعدة بيانات استخدام البيانات</string>
-    <string name="permdesc_dataUsageWrite">يسمح لتطبيق معين بتحديث المحتوى من قاعدة بيانات استخدام البيانات.</string>
-    <string name="permlab_dataUsageRead">قراءة قاعدة بيانات استخدام البيانات</string>
-    <string name="permdesc_dataUsageRead">يسمح لتطبيق معين بقراءة المحتوى من قاعدة بيانات استخدام البيانات.</string>
     <string name="permlab_manageLiveDisplay">إدارة إعدادات LiveDisplay</string>
     <string name="permdesc_manageLiveDisplay">يسمح لتطبيق معين بتكوين إعدادات العرض المتقدمة.</string>
     <string name="permlab_observe_audio_sessions">ملاحظة تغييرات جلسة عمل الصوت</string>

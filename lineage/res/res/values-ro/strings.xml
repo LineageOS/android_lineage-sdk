@@ -70,10 +70,6 @@
     <string name="accessibility_quick_settings_live_display_changed_outdoor">LiveDisplay s-a schimbat la modul afară.</string>
     <string name="permlab_perfAccess">acces la managerul de performanță</string>
     <string name="permdesc_perfAccessDesc">Permite unei aplicații să acceseze serviciul de performanță. Aplicațiile normale nu au nevoie de aceasta.</string>
-    <string name="permlab_dataUsageWrite">modifică baza de date a utilizării datelor</string>
-    <string name="permdesc_dataUsageWrite">Permite unei aplicații să actualizeze conținutul bazei de date despre utilizarea datelor.</string>
-    <string name="permlab_dataUsageRead">citește baza de date a utilizării datelor</string>
-    <string name="permdesc_dataUsageRead">Permite unei aplicații să citească conținutul bazei de date despre utilizarea datelor.</string>
     <string name="permlab_manageLiveDisplay">gestionează setările LiveDisplay</string>
     <string name="permdesc_manageLiveDisplay">Permite unei aplicații să configureze setările de afișare avansate.</string>
     <string name="permlab_observe_audio_sessions">observă schimbări sesiune audio</string>

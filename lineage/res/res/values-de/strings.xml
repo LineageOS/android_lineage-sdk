@@ -70,10 +70,6 @@
     <string name="accessibility_quick_settings_live_display_changed_outdoor">LiveDisplay auf Außen-Modus geändert.</string>
     <string name="permlab_perfAccess">Zugriff auf Leistungsmanager</string>
     <string name="permdesc_perfAccessDesc">Ermöglicht der App, den Zugriff auf den Leistungsdienst. Wird für normale Apps nicht benötigt.</string>
-    <string name="permlab_dataUsageWrite">Datennutzung-Datenbank ändern</string>
-    <string name="permdesc_dataUsageWrite">Ermöglicht der App, Inhalte der Datennutzungs-Datenbank zu aktualisieren.</string>
-    <string name="permlab_dataUsageRead">Datennutzungs-Datenbank lesen</string>
-    <string name="permdesc_dataUsageRead">Ermöglicht der App, Inhalte der Datennutzungs-Datenbank auszulesen.</string>
     <string name="permlab_manageLiveDisplay">LiveDisplay-Einstellungen verwalten</string>
     <string name="permdesc_manageLiveDisplay">Ermöglicht der App, erweiterte Displayeinstellungen vorzunehmen.</string>
     <string name="permlab_observe_audio_sessions">Audiositzungsänderungen überwachen</string>

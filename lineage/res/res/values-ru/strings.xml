@@ -70,10 +70,6 @@
     <string name="accessibility_quick_settings_live_display_changed_outdoor">LiveDisplay переключен в режим «на улице».</string>
     <string name="permlab_perfAccess">доступ к менеджеру производительности</string>
     <string name="permdesc_perfAccessDesc">Приложение сможет получать доступ к службе производительности. Это разрешение не используется обычными приложениями.</string>
-    <string name="permlab_dataUsageWrite">изменить данные об использовании БД</string>
-    <string name="permdesc_dataUsageWrite">Приложение сможет обновлять содержимое БД использования данных.</string>
-    <string name="permlab_dataUsageRead">чтение данных об использовании БД</string>
-    <string name="permdesc_dataUsageRead">Приложение сможет считывать содержимое БД использования данных.</string>
     <string name="permlab_manageLiveDisplay">управление настройками LiveDisplay</string>
     <string name="permdesc_manageLiveDisplay">Приложение сможет изменять расширенные настройки экрана.</string>
     <string name="permlab_observe_audio_sessions">просмотр изменений аудиосеансов</string>

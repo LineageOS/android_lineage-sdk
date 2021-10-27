@@ -70,10 +70,6 @@
     <string name="accessibility_quick_settings_live_display_changed_outdoor">LiveDisplay u kthye në profilin jashtë shtëpisë.</string>
     <string name="permlab_perfAccess">hyrja tek menaxhuesi i performancës</string>
     <string name="permdesc_perfAccessDesc">Lejon një app të hyjë tek shërbimi i performancës. App normale se kanë të nevojshme.</string>
-    <string name="permlab_dataUsageWrite">modifiko databazën e përdorimit të internetit</string>
-    <string name="permdesc_dataUsageWrite">Lejon një app të azhornojë përmbajtjen e databazës së përdorimit të internetit.</string>
-    <string name="permlab_dataUsageRead">lexo databazën e përdorimit të internetit</string>
-    <string name="permdesc_dataUsageRead">Lejon një app të lexojë përmbajtjen nga databaza e përdorimit të internetit.</string>
     <string name="permlab_manageLiveDisplay">menaxho parametrat e LiveDisplay</string>
     <string name="permdesc_manageLiveDisplay">Lejon një aplikacion të konfigurojë parametra të përparuar të ekranit.</string>
     <string name="permlab_observe_audio_sessions">vëre ndryshimet e sesioneve të audios</string>

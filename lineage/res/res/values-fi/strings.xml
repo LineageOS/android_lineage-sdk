@@ -70,10 +70,6 @@
     <string name="accessibility_quick_settings_live_display_changed_outdoor">LiveDisplay asetettu ulkoilmatilaan.</string>
     <string name="permlab_perfAccess">pääse suorituskyvyn hallintaan</string>
     <string name="permdesc_perfAccessDesc">Sallii sovelluksen pääsyn suorityskyvyn hallinnan palveluun. Tavalliset sovellukset eivät koskaan tarvitse tätä.</string>
-    <string name="permlab_dataUsageWrite">muokkaa datan käytön tietokantaa</string>
-    <string name="permdesc_dataUsageWrite">Sallii sovelluksen päivittää datan käytön tietokantaa.</string>
-    <string name="permlab_dataUsageRead">lue datan käytön tietokantaa</string>
-    <string name="permdesc_dataUsageRead">Sallii sovelluksen lukea datan käytön tietokantaa.</string>
     <string name="permlab_manageLiveDisplay">hallitse LiveDisplay-asetuksia</string>
     <string name="permdesc_manageLiveDisplay">Sallii sovelluksen määrittää kehittyneitä näytön asetuksia.</string>
     <string name="permlab_observe_audio_sessions">tutki ääni-istunnon muutoksia</string>

@@ -70,10 +70,6 @@
     <string name="accessibility_quick_settings_live_display_changed_outdoor">라이브 디스플레이가 야외 모드로 바뀜.</string>
     <string name="permlab_perfAccess">성능 관리자에 액세스</string>
     <string name="permdesc_perfAccessDesc">앱이 성능 서비스에 접근할 수 있도록 허용합니다. 일반 앱에서는 필요 없는 권한입니다.</string>
-    <string name="permlab_dataUsageWrite">데이터 사용량 데이터베이스 수정</string>
-    <string name="permdesc_dataUsageWrite">앱이 데이터 사용량 데이터베이스를 수정할 수 있도록 허용합니다.</string>
-    <string name="permlab_dataUsageRead">데이터 사용량 데이터베이스 읽기</string>
-    <string name="permdesc_dataUsageRead">앱이 데이터 사용량 데이터베이스를 읽을 수 있도록 허용합니다.</string>
     <string name="permlab_manageLiveDisplay">LiveDisplay 설정 관리</string>
     <string name="permdesc_manageLiveDisplay">앱이 고급 디스플레이 설정을 변경할 수 있도록 허용합니다.</string>
     <string name="permlab_observe_audio_sessions">오디오 세션 변화 관찰</string>

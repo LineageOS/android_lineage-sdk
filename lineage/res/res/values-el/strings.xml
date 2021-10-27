@@ -70,10 +70,6 @@
     <string name="accessibility_quick_settings_live_display_changed_outdoor">Το LiveDisplay άλλαξε σε λειτουργία εξωτερικού χώρου.</string>
     <string name="permlab_perfAccess">πρόσβαση στην υπηρεσία επιδόσεων</string>
     <string name="permdesc_perfAccessDesc">Επιτρέπει σε μια εφαρμογή την πρόσβαση στην υπηρεσία επιδόσεων. Δεν πρέπει να απαιτείται από κανονικές εφαρμογές.</string>
-    <string name="permlab_dataUsageWrite">τροποποίηση βάσης δεδομένων χρήσης δεδομένων</string>
-    <string name="permdesc_dataUsageWrite">Επιτρέπει σε μια εφαρμογή να ενημερώσει το περιεχόμενο της βάσης δεδομένων χρήσης δεδομένων.</string>
-    <string name="permlab_dataUsageRead">ανάγνωση βάσης δεδομένων χρήσης δεδομένων</string>
-    <string name="permdesc_dataUsageRead">Επιτρέπει σε μια εφαρμογή να διαβάσει περιεχόμενο από την βάση δεδομένων χρήσης δεδομένων.</string>
     <string name="permlab_manageLiveDisplay">διαχείριση ρυθμίσεων LiveDisplay</string>
     <string name="permdesc_manageLiveDisplay">Επιτρέπει σε μια εφαρμογή να τροποποιεί τις ρυθμίσεις οθόνης για προχωρημένους.</string>
     <string name="permlab_observe_audio_sessions">παρατήρηση αλλαγών στις συνεδρίες ήχου</string>

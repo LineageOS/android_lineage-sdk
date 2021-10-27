@@ -70,10 +70,6 @@
     <string name="accessibility_quick_settings_live_display_changed_outdoor">LiveDisplay gewijzigd naar buitenstand.</string>
     <string name="permlab_perfAccess">toegang tot prestatiebeheer</string>
     <string name="permdesc_perfAccessDesc">Hiermee kan de app toegang krijgen tot de prestatieservice. Nooit vereist voor normale apps.</string>
-    <string name="permlab_dataUsageWrite">gegevensgebruik-database aanpassen</string>
-    <string name="permdesc_dataUsageWrite">Hiermee kan de app de inhoud van de database met gegevensgebruik bijwerken.</string>
-    <string name="permlab_dataUsageRead">gegevensgebruik-database lezen</string>
-    <string name="permdesc_dataUsageRead">Hiermee kan de app de inhoud van de database met gegevensgebruik lezen.</string>
     <string name="permlab_manageLiveDisplay">LiveDisplay-instellingen beheren</string>
     <string name="permdesc_manageLiveDisplay">Hiermee kan de app geavanceerde beeldscherminstellingen wijzigen.</string>
     <string name="permlab_observe_audio_sessions">wijzigingen in audiosessie observeren</string>

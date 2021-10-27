@@ -70,10 +70,6 @@
     <string name="accessibility_quick_settings_live_display_changed_outdoor">LiveDisplay diubah menjadi modus luar ruangan.</string>
     <string name="permlab_perfAccess">akses pengelola kinerja</string>
     <string name="permdesc_perfAccessDesc">Izinkan aplikasi untuk mengakses layanan kinerja. Tidak dibutuhkan untuk aplikasi biasa.</string>
-    <string name="permlab_dataUsageWrite">ubah basis data penggunaan data</string>
-    <string name="permdesc_dataUsageWrite">Izinkan aplikasi untuk memperbarui konten dari basis data penggunaan data.</string>
-    <string name="permlab_dataUsageRead">baca basis data penggunaan data</string>
-    <string name="permdesc_dataUsageRead">Izinkan aplikasi untuk membaca konten dari basis data penggunaan data.</string>
     <string name="permlab_manageLiveDisplay">kelola pengaturan LiveDisplay</string>
     <string name="permdesc_manageLiveDisplay">Izinkan aplikasi untuk mengonfigurasi pengaturan tampilan lanjutan.</string>
     <string name="permlab_observe_audio_sessions">pantau perubahan sesi audio</string>

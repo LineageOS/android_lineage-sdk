@@ -340,9 +340,7 @@ package lineageos.platform {
     field public static final java.lang.String MANAGE_REMOTE_PREFERENCES = "lineageos.permission.MANAGE_REMOTE_PREFERENCES";
     field public static final java.lang.String MODIFY_PROFILES = "lineageos.permission.MODIFY_PROFILES";
     field public static final java.lang.String PERFORMANCE_ACCESS = "lineageos.permission.PERFORMANCE_ACCESS";
-    field public static final java.lang.String READ_DATAUSAGE = "lineageos.permission.READ_DATAUSAGE";
     field public static final java.lang.String TRUST_INTERFACE = "lineageos.permission.TRUST_INTERFACE";
-    field public static final java.lang.String WRITE_DATAUSAGE = "lineageos.permission.WRITE_DATAUSAGE";
     field public static final java.lang.String WRITE_SECURE_SETTINGS = "lineageos.permission.WRITE_SECURE_SETTINGS";
     field public static final java.lang.String WRITE_SETTINGS = "lineageos.permission.WRITE_SETTINGS";
   }
@@ -671,39 +669,6 @@ package lineageos.profiles {
 }
 
 package lineageos.providers {
-
-  public final class DataUsageContract {
-    ctor public DataUsageContract();
-    field public static final java.lang.String ACTIVE = "active";
-    field public static final android.net.Uri BASE_CONTENT_URI;
-    field public static final java.lang.String BYTES = "bytes";
-    field public static final int COLUMN_OF_ACTIVE = 3; // 0x3
-    field public static final int COLUMN_OF_BYTES = 5; // 0x5
-    field public static final int COLUMN_OF_ENABLE = 2; // 0x2
-    field public static final int COLUMN_OF_EXTRA = 10; // 0xa
-    field public static final int COLUMN_OF_FAST_AVG = 8; // 0x8
-    field public static final int COLUMN_OF_FAST_SAMPLES = 9; // 0x9
-    field public static final int COLUMN_OF_ID = 0; // 0x0
-    field public static final int COLUMN_OF_LABEL = 4; // 0x4
-    field public static final int COLUMN_OF_SLOW_AVG = 6; // 0x6
-    field public static final int COLUMN_OF_SLOW_SAMPLES = 7; // 0x7
-    field public static final int COLUMN_OF_UID = 1; // 0x1
-    field public static final java.lang.String CONTENT_ITEM_TYPE = "vnd.android.cursor.itemdatausage_item";
-    field public static final java.lang.String CONTENT_TYPE = "vnd.android.cursor.dirdatausage_item";
-    field public static final android.net.Uri CONTENT_URI;
-    field public static final java.lang.String DATAUSAGE_AUTHORITY = "org.lineageos.providers.datausage";
-    field public static final java.lang.String DATAUSAGE_TABLE = "datausage";
-    field public static final java.lang.String ENABLE = "enable";
-    field public static final java.lang.String EXTRA = "extra";
-    field public static final java.lang.String FAST_AVG = "fast_avg";
-    field public static final java.lang.String FAST_SAMPLES = "fast_samples";
-    field public static final java.lang.String LABEL = "label";
-    field public static final java.lang.String[] PROJECTION_ALL;
-    field public static final java.lang.String SLOW_AVG = "slow_avg";
-    field public static final java.lang.String SLOW_SAMPLES = "slow_samples";
-    field public static final java.lang.String UID = "uid";
-    field public static final java.lang.String _ID = "_id";
-  }
 
   public final class LineageSettings {
     ctor public LineageSettings();

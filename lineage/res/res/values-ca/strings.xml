@@ -70,10 +70,6 @@
     <string name="accessibility_quick_settings_live_display_changed_outdoor">LiveDisplay canviat al mode exterior.</string>
     <string name="permlab_perfAccess">accés a l\'administrador de rendiment</string>
     <string name="permdesc_perfAccessDesc">Permet a una aplicació accedir al servei de rendiment. Normalment no hauria de ser necessari en les aplicacions normals.</string>
-    <string name="permlab_dataUsageWrite">modificar la base de dades d\'ús de dades</string>
-    <string name="permdesc_dataUsageWrite">Permet a una aplicació actualitzar el contingut de la base de dades d\'ús de dades.</string>
-    <string name="permlab_dataUsageRead">llegi la base de dades d\'ús de dades</string>
-    <string name="permdesc_dataUsageRead">Permet a una aplicació llegir el contingut de la base de dades d\'ús de dades.</string>
     <string name="permlab_manageLiveDisplay">administra la configuració de LiveDisplay</string>
     <string name="permdesc_manageLiveDisplay">Permet a una aplicació configurar les opcions de visualització avançades.</string>
     <string name="permlab_observe_audio_sessions">observa els canvis en la sessió de so</string>

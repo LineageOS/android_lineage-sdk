@@ -70,10 +70,6 @@
     <string name="accessibility_quick_settings_live_display_changed_outdoor">LiveDisplay wedi\'i newid i fodd awyr agored.</string>
     <string name="permlab_perfAccess">mynediad at reolwr perfformiad</string>
     <string name="permdesc_perfAccessDesc">Mae\'n caniatáu i ap gyrchu\'r gwasanaeth perfformiad. Ni ddylai apiau arferol byth fod ei angen.</string>
-    <string name="permlab_dataUsageWrite">addasu\'r gronfa ddata defnydd data</string>
-    <string name="permdesc_dataUsageWrite">Mae\'n caniatáu i ap ddiweddaru cynnwys y gronfa ddata defnydd data.</string>
-    <string name="permlab_dataUsageRead">darllen cronfa ddata defnydd data</string>
-    <string name="permdesc_dataUsageRead">Mae\'n caniatáu i ap ddarllen cynnwys y gronfa ddata defnydd data.</string>
     <string name="permlab_manageLiveDisplay">rheoli gosodiadau LiveDisplay</string>
     <string name="permdesc_manageLiveDisplay">Mae\'n caniatáu i ap ffurfweddu gosodiadau dangosydd uwch.</string>
     <string name="permlab_observe_audio_sessions">gwylio newidiadau sesiynau sain</string>

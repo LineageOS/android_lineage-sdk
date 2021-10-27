@@ -70,10 +70,6 @@
     <string name="accessibility_quick_settings_live_display_changed_outdoor">LiveDisplay szabadtéri módra változtatva.</string>
     <string name="permlab_perfAccess">hozzáférés a teljesítmény kezelőhöz</string>
     <string name="permdesc_perfAccessDesc">Lehetővé teszi az alkalmazás számára, hogy hozzáférjen a teljesítmény szolgáltatáshoz. Általános alkalmazásoknak soha nem kell ilyen engedély.</string>
-    <string name="permlab_dataUsageWrite">adathasználati adatbázis módosítása</string>
-    <string name="permdesc_dataUsageWrite">Lehetővé teszi az alkalmazás számára az adathasználati adatbázis tartalmának frissítését.</string>
-    <string name="permlab_dataUsageRead">adathasználati adatbázis olvasása</string>
-    <string name="permdesc_dataUsageRead">Lehetővé teszi az alkalmazás számára az adathasználati adatbázis tartalmának olvasását.</string>
     <string name="permlab_manageLiveDisplay">LiveDisplay beállítások kezelése</string>
     <string name="permdesc_manageLiveDisplay">Lehetővé teszi az alkalmazás számára a speciális megjelenítési beállítások konfigurálását.</string>
     <string name="permlab_observe_audio_sessions">audió munkamenet változásainak megfigyelése</string>

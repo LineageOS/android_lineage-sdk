@@ -98,18 +98,6 @@
                  android:killAfterRestore="false"
                  android:supportsRtl="true"/>
 
-    <!-- Permission for reading the DataUsage database -->
-    <permission android:name="lineageos.permission.READ_DATAUSAGE"
-                android:label="@string/permlab_dataUsageRead"
-                android:description="@string/permdesc_dataUsageRead"
-                android:protectionLevel="signature|privileged" />
-
-    <!-- Permission for writing the DataUsage database -->
-    <permission android:name="lineageos.permission.WRITE_DATAUSAGE"
-                android:label="@string/permlab_dataUsageWrite"
-                android:description="@string/permdesc_dataUsageWrite"
-                android:protectionLevel="signature|privileged" />
-
     <!-- Permission for managing remote preferences -->
     <permission android:name="lineageos.permission.MANAGE_REMOTE_PREFERENCES"
                 android:label="@string/permlab_manageRemotePrefs"

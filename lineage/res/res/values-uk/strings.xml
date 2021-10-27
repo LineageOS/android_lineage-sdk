@@ -64,10 +64,6 @@
     <string name="accessibility_quick_settings_live_display_changed_outdoor">LiveDisplay змінено до режиму на вулиці.</string>
     <string name="permlab_perfAccess">доступ до менеджера продуктивності</string>
     <string name="permdesc_perfAccessDesc">Дозволяє додатку отримувати доступ до менеджера продуктивності. Цей дозвіл не потрібний звичайним додаткам.</string>
-    <string name="permlab_dataUsageWrite">змінювати дані використання бази даних</string>
-    <string name="permdesc_dataUsageWrite">Дозволяє додатку оновлювати вміст БД використання даних.</string>
-    <string name="permlab_dataUsageRead">читати дані використання бази даних</string>
-    <string name="permdesc_dataUsageRead">Дозволяє додатку читати вміст БД використання даних.</string>
     <string name="permlab_manageLiveDisplay">керування налаштуваннями LiveDisplay</string>
     <string name="permdesc_manageLiveDisplay">Дозволяє додатку керувати розширеними налаштуваннями дисплея.</string>
     <string name="permlab_observe_audio_sessions">спостерігати за змінами аудіо сесії</string>

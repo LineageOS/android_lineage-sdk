@@ -64,10 +64,6 @@
     <string name="accessibility_quick_settings_live_display_changed_outdoor">LiveDisplay endret til utendørs modus.</string>
     <string name="permlab_perfAccess">tilgang til ytelsesadministrereren</string>
     <string name="permdesc_perfAccessDesc">Tillater en app å få tilgang til ytelses-tjenesten. Dette skulle aldri vært nødvendig for normale apper.</string>
-    <string name="permlab_dataUsageWrite">endre databruk databasen</string>
-    <string name="permdesc_dataUsageWrite">Tillater en app å oppdatere innholdet til databruk databasen.</string>
-    <string name="permlab_dataUsageRead">lese av databruk databasen</string>
-    <string name="permdesc_dataUsageRead">Tillater en app å lese av innholdet i databruk databasen.</string>
     <string name="permlab_manageLiveDisplay">behandle LiveDisplay innstillinger</string>
     <string name="permdesc_manageLiveDisplay">Tillater en app å konfigurere avanserte skjerminnstillinger.</string>
     <string name="permlab_observe_audio_sessions">observer lydøkt-endringer</string>

@@ -70,10 +70,6 @@
     <string name="accessibility_quick_settings_live_display_changed_outdoor">LiveDisplay açıq hava rejiminə keçdi.</string>
     <string name="permlab_perfAccess">performans idarəçisinə müraciət</string>
     <string name="permdesc_perfAccessDesc">Tətbiqetmənin performans xidmətinə müraciətinə icazə verər. Normal tətbiqlər üçün lazım deyil.</string>
-    <string name="permlab_dataUsageWrite">verilənlər istifadəsi verilənlər bazasını dəyişdir</string>
-    <string name="permdesc_dataUsageWrite">Tətbiqetməyə verilənlər istifadəsi verilənlər bazasının məzmununu yeniləməyə icazə verər.</string>
-    <string name="permlab_dataUsageRead">verilənlər istifadəsi verilənlər bazasını oxu</string>
-    <string name="permdesc_dataUsageRead">Tətbiqetməyə verilənlər istifadəsi verilənlər bazasından məzmunları oxumağa icazə verər.</string>
     <string name="permlab_manageLiveDisplay">LiveDisplay tənzimləmələrini idarə et</string>
     <string name="permdesc_manageLiveDisplay">Tətbiqetməyə qabaqcıl ekran tənzimləmələrini konfiqurasiya etməyə icazə verər.</string>
     <string name="permlab_observe_audio_sessions">səs seans dəyişikliklərini müşahidə et</string>

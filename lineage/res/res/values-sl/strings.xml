@@ -70,10 +70,6 @@
     <string name="accessibility_quick_settings_live_display_changed_outdoor">LiveDisplay spremenjen v način na prostem.</string>
     <string name="permlab_perfAccess">dostop do upravljalnika zmogljivosti</string>
     <string name="permdesc_perfAccessDesc">Dovoli aplikaciji dostop do storitve zmogljivosti. Navadno ni potrebno za običajne aplikacije.</string>
-    <string name="permlab_dataUsageWrite">spreminjanje podatkovne zbirke uporabe podatkov</string>
-    <string name="permdesc_dataUsageWrite">Dovoli aplikaciji posodobitev vsebine iz podatkovne zbirke uporabe podatkov.</string>
-    <string name="permlab_dataUsageRead">branje podatkovne zbirke uporabe podatkov</string>
-    <string name="permdesc_dataUsageRead">Dovoli aplikaciji branje vsebine iz podatkovne zbirke uporabe podatkov.</string>
     <string name="permlab_manageLiveDisplay">upravljanje z nastavitvami LiveDisplay</string>
     <string name="permdesc_manageLiveDisplay">Dovoli aplikaciji nastavljanje naprednih nastavitev zaslona.</string>
     <string name="permlab_observe_audio_sessions">opazovanje sprememb zvočne seje</string>

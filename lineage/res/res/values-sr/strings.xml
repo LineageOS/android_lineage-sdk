@@ -70,10 +70,6 @@
     <string name="accessibility_quick_settings_live_display_changed_outdoor">LiveDisplay је пребачен у режим „на отвореном“.</string>
     <string name="permlab_perfAccess">приступ менаџеру перформанси</string>
     <string name="permdesc_perfAccessDesc">Апликација може да приступа услузи перформанси. Ова дозвола није потребна нормалним апликацијама.</string>
-    <string name="permlab_dataUsageWrite">измена базе о коришћењу података</string>
-    <string name="permdesc_dataUsageWrite">Апликација може да ажурира садржај базе о коришћењу података.</string>
-    <string name="permlab_dataUsageRead">читање базе о коришћењу података</string>
-    <string name="permdesc_dataUsageRead">Апликација може да чита садржај базе о коришћењу података.</string>
     <string name="permlab_manageLiveDisplay">управљање подешавањима LiveDisplay-а</string>
     <string name="permdesc_manageLiveDisplay">Апликација може да мења подешавања напредног приказа.</string>
     <string name="permlab_observe_audio_sessions">преглед измена звучних сесија</string>

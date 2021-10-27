@@ -70,10 +70,6 @@
     <string name="accessibility_quick_settings_live_display_changed_outdoor">LiveDisplay đã đổi sang chế độ ngoài trời.</string>
     <string name="permlab_perfAccess">truy cập trình quản lý hiệu quả hoạt động</string>
     <string name="permdesc_perfAccessDesc">Cho phép một ứng dụng truy cập dịch vụ hiệu quả hoạt động. Ứng dụng bình thường không bao giờ cần quyền này.</string>
-    <string name="permlab_dataUsageWrite">sửa đổi cơ sở dữ liệu sử dụng dữ liệu</string>
-    <string name="permdesc_dataUsageWrite">Cho phép ứng dụng cập nhật nội dung của cơ sở dữ liệu sử dụng dữ liệu.</string>
-    <string name="permlab_dataUsageRead">đọc cơ sở dữ liệu sử dụng dữ liệu</string>
-    <string name="permdesc_dataUsageRead">Cho phép ứng dụng đọc nội dung từ cơ sở dữ liệu sử dụng dữ liệu.</string>
     <string name="permlab_manageLiveDisplay">quản lý cài đặt LiveDisplay</string>
     <string name="permdesc_manageLiveDisplay">Cho phép ứng dụng thiết lập cấu hình cài đặt hiển thị nâng cao.</string>
     <string name="permlab_observe_audio_sessions">quan sát các thay đổi về phiên âm thanh</string>

@@ -70,10 +70,6 @@
     <string name="accessibility_quick_settings_live_display_changed_outdoor">Chaidh LiveDisplay atharrachadh gu modh an taoibh a-muigh.</string>
     <string name="permlab_perfAccess">manaidsear an dèanadais inntrigeadh</string>
     <string name="permdesc_perfAccessDesc">Leigidh seo le aplacaid seirbheis an dèanadais inntrigeadh. Chan eil seo gu feum do dh’aplacaidean àbhaisteach idir.</string>
-    <string name="permlab_dataUsageWrite">an stòr-dàta air caitheamh dàta atharrachadh</string>
-    <string name="permdesc_dataUsageWrite">Leigidh seo le aplacaid susbaint an stòir-dhàta air caitheamh dàta atharrachadh.</string>
-    <string name="permlab_dataUsageRead">an stòr-dàta air caitheamh dàta a leughadh</string>
-    <string name="permdesc_dataUsageRead">Leigidh seo le aplacaid susbaint a leughadh on stòr-dàta air caitheamh dàta.</string>
     <string name="permlab_manageLiveDisplay">roghainnean LiveDisplay a stiùireadh</string>
     <string name="permdesc_manageLiveDisplay">Leigidh seo le aplacaid roghainnean adhartach an taisbeanaidh a rèiteachadh.</string>
     <string name="permlab_observe_audio_sessions">sùil a chumail air atharrachaidhean air seisean fuaime</string>

@@ -70,10 +70,6 @@
     <string name="accessibility_quick_settings_live_display_changed_outdoor">Адаптивен дисплей е променен на външен режим.</string>
     <string name="permlab_perfAccess">Достъп до диспечера за производителност</string>
     <string name="permdesc_perfAccessDesc">Осигурява на приложението достъп до диспечера за производителност. Не е необходимо за нормални приложения.</string>
-    <string name="permlab_dataUsageWrite">Промени база данни</string>
-    <string name="permdesc_dataUsageWrite">Разрешава на приложението да актуализира съдържанието на базата данни.</string>
-    <string name="permlab_dataUsageRead">Прочети база данни</string>
-    <string name="permdesc_dataUsageRead">Разрешава на приложението да чете съдържанието на базата данни.</string>
     <string name="permlab_manageLiveDisplay">управление на настройките за Адаптивен дисплей</string>
     <string name="permdesc_manageLiveDisplay">Позволява на приложението да променя разширените настройки на дисплея.</string>
     <string name="permlab_observe_audio_sessions">преглед на промените в аудио сесии</string>

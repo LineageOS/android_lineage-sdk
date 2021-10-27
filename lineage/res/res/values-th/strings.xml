@@ -70,10 +70,6 @@
     <string name="accessibility_quick_settings_live_display_changed_outdoor">LiveDisplay เปลี่ยนเป็นรูปแบบกลางแจ้ง</string>
     <string name="permlab_perfAccess">ตัวจัดการประสิทธิภาพการเข้าถึง</string>
     <string name="permdesc_perfAccessDesc">อนุญาตให้แอปเข้าถึงบริการด้านประสิทธิภาพ ซึ่งไม่จำเป็นสำหรับแอปปกติ</string>
-    <string name="permlab_dataUsageWrite">แก้ไขฐานข้อมูลการใช้งาน</string>
-    <string name="permdesc_dataUsageWrite">อนุญาตให้แอปสามารถปรับปรุงเนื้อหาของฐานข้อมูลการใช้งาน</string>
-    <string name="permlab_dataUsageRead">อ่านฐานข้อมูลการใช้งาน</string>
-    <string name="permdesc_dataUsageRead">อนุญาตให้แอปสามารถอ่านเนื้อหาจากฐานข้อมูลการใช้งาน</string>
     <string name="permlab_manageLiveDisplay">จัดการตั้งค่า LiveDisplay</string>
     <string name="permdesc_manageLiveDisplay">อนุญาตให้แอปตั้งค่าการแสดงผลขั้นสูง</string>
     <string name="permlab_observe_audio_sessions">สังเกตการเปลี่ยนแปลงเซสชันเสียง</string>
