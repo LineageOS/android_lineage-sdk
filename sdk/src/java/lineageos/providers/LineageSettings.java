@@ -1417,24 +1417,6 @@ public final class LineageSettings {
                 sBooleanValidator;
 
         /**
-         * The OpenCNAM paid account ID to be utilized by the Dialer
-         */
-        public static final String DIALER_OPENCNAM_ACCOUNT_SID = "dialer_opencnam_account_sid";
-
-        /** @hide */
-        public static final Validator DIALER_OPENCNAM_ACCOUNT_SID_VALIDATOR =
-                sAlwaysTrueValidator;
-
-        /**
-         * The OpenCNAM authentication token to be utilized by the Dialer
-         */
-        public static final String DIALER_OPENCNAM_AUTH_TOKEN = "dialer_opencnam_auth_token";
-
-        /** @hide */
-        public static final Validator DIALER_OPENCNAM_AUTH_TOKEN_VALIDATOR =
-                sAlwaysTrueValidator;
-
-        /**
          * Color temperature of the display during the day
          */
         public static final String DISPLAY_TEMPERATURE_DAY = "display_temperature_day";
@@ -2102,8 +2084,6 @@ public final class LineageSettings {
                 LineageSettings.System.BATTERY_LIGHT_FULL_COLOR,
                 LineageSettings.System.ENABLE_MWI_NOTIFICATION,
                 LineageSettings.System.PROXIMITY_ON_WAKE,
-                LineageSettings.System.DIALER_OPENCNAM_ACCOUNT_SID,
-                LineageSettings.System.DIALER_OPENCNAM_AUTH_TOKEN,
                 LineageSettings.System.DISPLAY_TEMPERATURE_DAY,
                 LineageSettings.System.DISPLAY_TEMPERATURE_NIGHT,
                 LineageSettings.System.DISPLAY_TEMPERATURE_MODE,
@@ -2238,9 +2218,6 @@ public final class LineageSettings {
             VALIDATORS.put(ENABLE_MWI_NOTIFICATION, ENABLE_MWI_NOTIFICATION_VALIDATOR);
             VALIDATORS.put(PROXIMITY_ON_WAKE, PROXIMITY_ON_WAKE_VALIDATOR);
             VALIDATORS.put(BERRY_BLACK_THEME, BERRY_BLACK_THEME_VALIDATOR);
-            VALIDATORS.put(DIALER_OPENCNAM_ACCOUNT_SID,
-                    DIALER_OPENCNAM_ACCOUNT_SID_VALIDATOR);
-            VALIDATORS.put(DIALER_OPENCNAM_AUTH_TOKEN, DIALER_OPENCNAM_AUTH_TOKEN_VALIDATOR);
             VALIDATORS.put(DISPLAY_TEMPERATURE_DAY, DISPLAY_TEMPERATURE_DAY_VALIDATOR);
             VALIDATORS.put(DISPLAY_TEMPERATURE_NIGHT, DISPLAY_TEMPERATURE_NIGHT_VALIDATOR);
             VALIDATORS.put(DISPLAY_TEMPERATURE_MODE, DISPLAY_TEMPERATURE_MODE_VALIDATOR);

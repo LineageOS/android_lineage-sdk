@@ -318,20 +318,6 @@ public final class LineageSettings {
         public static final String PROXIMITY_ON_WAKE = "proximity_on_wake";
 
         /**
-         * The OpenCNAM paid account ID
-         *
-         * @hide
-         */
-        public static final String DIALER_OPENCNAM_ACCOUNT_SID = "dialer_opencnam_account_sid";
-
-        /**
-         * The OpenCNAM authentication token
-         *
-         * @hide
-         */
-        public static final String DIALER_OPENCNAM_AUTH_TOKEN = "dialer_opencnam_auth_token";
-
-        /**
          * Whether wifi settings will connect to access point automatically
          * 0 = automatically
          * 1 = manually
@@ -611,8 +597,6 @@ public final class LineageSettings {
                 LineageSettings.System.BATTERY_LIGHT_FULL_COLOR,
                 LineageSettings.System.ENABLE_MWI_NOTIFICATION,
                 LineageSettings.System.PROXIMITY_ON_WAKE,
-                LineageSettings.System.DIALER_OPENCNAM_ACCOUNT_SID,
-                LineageSettings.System.DIALER_OPENCNAM_AUTH_TOKEN,
                 LineageSettings.System.DISPLAY_TEMPERATURE_DAY,
                 LineageSettings.System.DISPLAY_TEMPERATURE_NIGHT,
                 LineageSettings.System.DISPLAY_TEMPERATURE_MODE,
