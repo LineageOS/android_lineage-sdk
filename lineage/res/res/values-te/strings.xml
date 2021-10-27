@@ -19,8 +19,6 @@
     <string name="permlab_modifyProfiles">సిస్టమ్ ప్రొఫైళ్ళను సవరించుము</string>
     <string name="permdesc_modifyProfiles">సిస్టమ్ ప్రొఫైళ్ళను సవరించేందుకు ప్రోగ్రాంకి అనుమతినిస్తుంది.</string>
     <string name="permlab_useHardwareFramework">వినియోగదారు హార్డ్‌వేర్‌ ఫ్రేమ్‌వర్క్</string>
-    <string name="permlab_protectedApp">సంరక్షిత ప్రోగ్రాంలకు జోడించు మరియు తొలగించు ప్రోగ్రాంలు</string>
-    <string name="permdesc_protectedApp">ఇతర ప్రోగ్రాంలను సంరక్షించబడినవి అని గుర్తించుటకు మరియు వాటిని లాక్ చేయుటకు ఒక ప్రోగ్రాంను అనుమతిస్తుంది</string>
     <string name="profileNameDefault">డిఫాల్ట్</string>
     <string name="profileNameWork">కార్యాలయం</string>
     <string name="profileNameHome">హోమ్</string>

@@ -25,8 +25,6 @@
     <string name="permdesc_writeSettings">Permite qu\'una aplicación modifique los axustes del sistema de Lineage.</string>
     <string name="permlab_writeSecureSettings">modificar la configuración segura del sistema de Lineage</string>
     <string name="permdesc_writeSecureSettings">Permite qu\'una aplicación modifique la configuración segura del sistema de Lineage. Nun s\'usa pa les aplicaciones normales.</string>
-    <string name="permlab_protectedApp">amestar y desaniciar aplicaciones p\'aplicaciones protexíes</string>
-    <string name="permdesc_protectedApp">Permite qu\'una aplicación conseñe a otres como protexíes y blóquiales.</string>
     <string name="profileNameDefault">Por defeutu</string>
     <string name="profileNameWork">Trabayu</string>
     <string name="profileNameHome">Home</string>

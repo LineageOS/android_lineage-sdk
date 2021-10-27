@@ -19,8 +19,6 @@
     <string name="permlab_modifyProfiles">સિસ્ટમ પ્રોફાઇલ્સમાં ફેરફાર કરો</string>
     <string name="permdesc_modifyProfiles">ઍપને સિસ્ટમ પ્રોફાઇલ્સમાં ફેરફાર કરવાની પરવાનગી આપે છે.</string>
     <string name="permlab_useHardwareFramework">હાર્ડવેર ફ્રેમવર્કનો ઉપયોગ કરો</string>
-    <string name="permlab_protectedApp">ઍડ અને કાઢી નાંખો એપ્લિકેશન્સ રક્ષણ કરો</string>
-    <string name="permdesc_protectedApp">ઍપને અન્ય એપ્લિકેશન્સ પર સુરક્ષિત તરીકે અંકિત કરી તે લૉક કરવાની છૂટ આપે છે.</string>
     <string name="profileNameDefault">ડિફોલ્ટ</string>
     <string name="profileNameWork">કાર્યાલય</string>
     <string name="profileNameHome">ઘર</string>

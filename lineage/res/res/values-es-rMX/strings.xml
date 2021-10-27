@@ -16,8 +16,6 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="permlab_protectedApp">añadir y quitar aplicaciones a aplicaciones protegidas</string>
-    <string name="permdesc_protectedApp">Permite que una aplicación marque a otras aplicaciones como protegidas y las bloquee.</string>
     <string name="perf_profile_pwrsv">Ahorro de energía</string>
     <string name="perf_profile_bal">Equilibrado</string>
     <string name="perf_profile_perf">Rendimiento</string>

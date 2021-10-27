@@ -90,9 +90,6 @@
     <!-- Default value for swapping volume keys on rotation -->
     <bool name="def_swap_volume_keys_on_rotation">false</bool>
 
-    <!-- Default values for protected component managers -->
-    <string name="def_protected_component_managers" translatable="false">com.android.settings|com.android.launcher3|org.lineageos.trebuchet|org.lineageos.lineageparts</string>
-
     <!-- Default enabled event based LLS components
          Contains a list of component names for enabled components, separated by '|'
          ex. com.example.mylls/com.example.mylls.LiveLockScreen|com.example.anotherLls/com.example.anotherLls.MyLls

@@ -211,18 +211,9 @@ public class LineageDatabaseHelper extends SQLiteOpenHelper{
         }
 
         if (upgradeVersion < 3) {
-            db.beginTransaction();
-            SQLiteStatement stmt = null;
-            try {
-                stmt = db.compileStatement("INSERT INTO secure(name,value)"
-                        + " VALUES(?,?);");
-                loadStringSetting(stmt, LineageSettings.Secure.PROTECTED_COMPONENT_MANAGERS,
-                        R.string.def_protected_component_managers);
-                db.setTransactionSuccessful();
-            } finally {
-                if (stmt != null) stmt.close();
-                db.endTransaction();
-            }
+            /* Was set LineageSettings.Secure.PROTECTED_COMPONENT_MANAGERS
+             * but this is no longer used
+             */
             upgradeVersion = 3;
         }
 
@@ -274,19 +265,9 @@ public class LineageDatabaseHelper extends SQLiteOpenHelper{
         }
 
         if (upgradeVersion < 8) {
-            db.beginTransaction();
-            SQLiteStatement stmt = null;
-            try {
-                stmt = db.compileStatement("UPDATE secure SET value=? WHERE name=?");
-                stmt.bindString(1, mContext.getResources()
-                        .getString(R.string.def_protected_component_managers));
-                stmt.bindString(2, LineageSettings.Secure.PROTECTED_COMPONENT_MANAGERS);
-                stmt.execute();
-                db.setTransactionSuccessful();
-            } finally {
-                if (stmt != null) stmt.close();
-                db.endTransaction();
-            }
+            /* Was set LineageSettings.Secure.PROTECTED_COMPONENT_MANAGERS
+             * but this is no longer used
+             */
             upgradeVersion = 8;
         }
 
@@ -503,10 +484,6 @@ public class LineageDatabaseHelper extends SQLiteOpenHelper{
 
             loadBooleanSetting(stmt, LineageSettings.Secure.VOLUME_PANEL_ON_LEFT,
                     R.bool.def_volume_panel_on_left);
-
-            loadStringSetting(stmt,
-                    LineageSettings.Secure.PROTECTED_COMPONENT_MANAGERS,
-                    R.string.def_protected_component_managers);
         } finally {
             if (stmt != null) stmt.close();
         }

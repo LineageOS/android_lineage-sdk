@@ -25,8 +25,6 @@
     <string name="permdesc_writeSettings">LineageOS システム設定の変更をアプリに許可します。</string>
     <string name="permlab_writeSecureSettings">lineageOS セキュアシステム設定の変更</string>
     <string name="permdesc_writeSecureSettings">LineageOS セキュアシステム設定の変更をアプリに許可します。通常のアプリ用ではありません。</string>
-    <string name="permlab_protectedApp">アプリの保護へのアプリの追加と削除</string>
-    <string name="permdesc_protectedApp">他のアプリを保護に設定してロックすることをアプリに許可します。</string>
     <string name="profileNameDefault">デフォルト</string>
     <string name="profileNameWork">仕事</string>
     <string name="profileNameHome">自宅</string>

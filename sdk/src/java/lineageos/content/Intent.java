@@ -44,31 +44,6 @@ public class Intent {
             "lineageos.intent.extra.RECENTS_LONG_PRESS_RELEASE";
 
     /**
-     * Intent filter to update protected app component's settings
-     */
-    public static final String ACTION_PROTECTED = "lineageos.intent.action.PACKAGE_PROTECTED";
-
-    /**
-     * Intent filter to notify change in state of protected application.
-     */
-    public static final String ACTION_PROTECTED_CHANGED =
-            "lineageos.intent.action.PROTECTED_COMPONENT_UPDATE";
-
-    /**
-     * This field is part of the intent {@link #ACTION_PROTECTED_CHANGED}.
-     * Intent extra field for the state of protected application
-     */
-    public static final String EXTRA_PROTECTED_STATE =
-            "lineageos.intent.extra.PACKAGE_PROTECTED_STATE";
-
-    /**
-     * This field is part of the intent {@link #ACTION_PROTECTED_CHANGED}.
-     * Intent extra field to indicate protected component value
-     */
-    public static final String EXTRA_PROTECTED_COMPONENTS =
-            "lineageos.intent.extra.PACKAGE_PROTECTED_COMPONENTS";
-
-    /**
      * Broadcast action: notify the system that the user has performed a gesture on the screen
      * to launch the camera. Broadcast should be protected to receivers holding the
      * {@link Manifest.permission#STATUS_BAR_SERVICE} permission.

@@ -25,8 +25,6 @@
     <string name="permdesc_writeSettings">Izinkan aplikasi untuk memodifikasi setelan sistem Lineage.</string>
     <string name="permlab_writeSecureSettings">memodifikasi setelan sistem keamanan Lineage</string>
     <string name="permdesc_writeSecureSettings">Izinkan aplikasi untuk memodifikasi setelan sistem keamanan Lineage. Tidak untuk digunakan oleh aplikasi yang normal.</string>
-    <string name="permlab_protectedApp">tambahkan dan hapus aplikasi untuk aplikasi yang dilindungi</string>
-    <string name="permdesc_protectedApp">Mengizinkan aplikasi untuk menandai aplikasi lain sebagai aplikasi yang dilindungi dan menguncinya.</string>
     <string name="profileNameDefault">Standar</string>
     <string name="profileNameWork">Kerja</string>
     <string name="profileNameHome">Beranda</string>

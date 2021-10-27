@@ -25,8 +25,6 @@
     <string name="permdesc_writeSettings">Lineage ವ್ಯವಸ್ಥೆಯ ಅಳವಡಿಕೆಗಳನ್ನು ಮಾರ್ಪಡಿಸಲು ಆಪ್ಗೆ ಅನುಮತಿಸುತ್ತದೆ.</string>
     <string name="permlab_writeSecureSettings">Lineage ವ್ಯವಸ್ಥೆಯ ಸುರಕ್ಷಿತ ಅಳವಡಿಕೆಗಳನ್ನು ಮಾರ್ಪಡಿಸು</string>
     <string name="permdesc_writeSecureSettings">Lineage ವ್ಯವಸ್ಥೆಯ ಸುರಕ್ಷಿತ ಅಳವಡಿಕೆಗಳನ್ನು ಮಾರ್ಪಡಿಸಲು ಆಪ್ಗೆ ಅನುಮತಿಸುತ್ತದೆ. ಸಾಮಾನ್ಯ ಆಪ್ಗಳ ಬಳಕೆಗೆ ಅಲ್ಲ.</string>
-    <string name="permlab_protectedApp">ಸಂರಕ್ಷಿತ ಪಟ್ಟಿಗೆ ಆಪ್ಗಳನ್ನು ಸೇರಿಸು ಮತ್ತು ಅಳಿಸು</string>
-    <string name="permdesc_protectedApp">ಇತರ ಆಪ್ಗಳನ್ನು ರಕ್ಷಿಸಲು ಮತ್ತು ಅವುಗಳನ್ನು ಲಾಕ್‌ ಮಾಡಲು ಒಂದು ಆಪ್ಗೆ ಅನುಮತಿಸುತ್ತದೆ.</string>
     <string name="profileNameDefault">ಇದ್ದಾಯ್ಕೆ</string>
     <string name="profileNameWork">ಉದ್ಯೋಗ</string>
     <string name="profileNameHome">ತವರು</string>

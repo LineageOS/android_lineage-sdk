@@ -25,8 +25,6 @@
     <string name="permdesc_writeSettings">Lubab rakendusel muuta Lineage\'i süsteemiseadeid.</string>
     <string name="permlab_writeSecureSettings">Lineage\'i turvaliste süsteemiseadete muutmine</string>
     <string name="permdesc_writeSecureSettings">Lubab rakendusel muuta Lineage\'i turvalisi süsteemiseadeid. Ei ole mõeldud kasutamiseks tavarakendusetel.</string>
-    <string name="permlab_protectedApp">kaitstud rakenduste hulka rakenduste lisamine ja eemaldamine</string>
-    <string name="permdesc_protectedApp">Lubab rakendusel märkida teisi rakendusi kaitstuks ning neid lukustada.</string>
     <string name="profileNameDefault">Vaikimisi</string>
     <string name="profileNameWork">Töö</string>
     <string name="profileNameHome">Kodu</string>

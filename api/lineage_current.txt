@@ -129,10 +129,6 @@ package lineageos.content {
 
   public class Intent {
     ctor public Intent();
-    field public static final java.lang.String ACTION_PROTECTED = "lineageos.intent.action.PACKAGE_PROTECTED";
-    field public static final java.lang.String ACTION_PROTECTED_CHANGED = "lineageos.intent.action.PROTECTED_COMPONENT_UPDATE";
-    field public static final java.lang.String EXTRA_PROTECTED_COMPONENTS = "lineageos.intent.extra.PACKAGE_PROTECTED_COMPONENTS";
-    field public static final java.lang.String EXTRA_PROTECTED_STATE = "lineageos.intent.extra.PACKAGE_PROTECTED_STATE";
   }
 
 }
@@ -344,7 +340,6 @@ package lineageos.platform {
     field public static final java.lang.String MANAGE_REMOTE_PREFERENCES = "lineageos.permission.MANAGE_REMOTE_PREFERENCES";
     field public static final java.lang.String MODIFY_PROFILES = "lineageos.permission.MODIFY_PROFILES";
     field public static final java.lang.String PERFORMANCE_ACCESS = "lineageos.permission.PERFORMANCE_ACCESS";
-    field public static final java.lang.String PROTECTED_APP = "lineageos.permission.PROTECTED_APP";
     field public static final java.lang.String READ_DATAUSAGE = "lineageos.permission.READ_DATAUSAGE";
     field public static final java.lang.String TRUST_INTERFACE = "lineageos.permission.TRUST_INTERFACE";
     field public static final java.lang.String WRITE_DATAUSAGE = "lineageos.permission.WRITE_DATAUSAGE";

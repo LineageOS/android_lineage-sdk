@@ -25,8 +25,6 @@
     <string name="permdesc_writeSettings">Cho phép một ứng dụng chỉnh sửa cài đặt hệ thống Lineage.</string>
     <string name="permlab_writeSecureSettings">sửa đổi cài đặt hệ thống bảo mật Lineage</string>
     <string name="permdesc_writeSecureSettings">Cho phép một ứng dụng sửa đổi cài đặt hệ thống bảo mật của Lineage. Không cho các ứng dụng thông thường sử dụng.</string>
-    <string name="permlab_protectedApp">thêm và xoá ứng dụng trong danh sách ứng dụng được bảo vệ</string>
-    <string name="permdesc_protectedApp">Cho phép ứng dụng đánh dấu ứng dụng khác là được bảo vệ và khoá chúng.</string>
     <string name="profileNameDefault">Mặc định</string>
     <string name="profileNameWork">Văn phòng</string>
     <string name="profileNameHome">Ở nhà</string>

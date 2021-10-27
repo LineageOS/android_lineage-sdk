@@ -25,8 +25,6 @@
     <string name="permdesc_writeSettings">Ermöglicht der App, Lineage-Systemeinstellungen zu ändern.</string>
     <string name="permlab_writeSecureSettings">Lineage-Sicherheitssystemeinstellungen ändern</string>
     <string name="permdesc_writeSecureSettings">Ermöglicht der App, Lineage-Sicherheitssystemeinstellungen zu ändern. Nicht für die Nutzung durch normale Apps bestimmt.</string>
-    <string name="permlab_protectedApp">Apps zu geschützten Apps hinzufügen und entfernen</string>
-    <string name="permdesc_protectedApp">Ermöglicht der App, andere Apps als geschützt zu markieren und diese zu sperren.</string>
     <string name="profileNameDefault">Standard</string>
     <string name="profileNameWork">Arbeit</string>
     <string name="profileNameHome">Zu Hause</string>

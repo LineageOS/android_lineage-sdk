@@ -19,8 +19,6 @@
     <string name="permlab_modifyProfiles">verander stelsel profiele</string>
     <string name="permdesc_modifyProfiles">Laat \'n toep toe om stelsel profiele te verander.</string>
     <string name="permlab_useHardwareFramework">gebruik hardeware raamwerk</string>
-    <string name="permlab_protectedApp">voegby of verwyder toeps na beskermde toeps</string>
-    <string name="permdesc_protectedApp">Laat \'n toep toe om ander toeps as beskermde toep te merk en hulle toe te sluit.</string>
     <string name="profileNameDefault">Normaal</string>
     <string name="profileNameWork">Werk</string>
     <string name="profileNameHome">Tuis</string>

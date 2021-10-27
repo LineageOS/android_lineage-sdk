@@ -25,8 +25,6 @@
     <string name="permdesc_writeSettings">앱이 Lineage 시스템 설정을 변경할 수 있도록 허용합니다.</string>
     <string name="permlab_writeSecureSettings">Lineage 보안 시스템 설정 변경</string>
     <string name="permdesc_writeSecureSettings">앱이 Lineage 보안 시스템 설정을 변경할 수 있도록 허용합니다. 일반 앱에서는 사용하지 않습니다.</string>
-    <string name="permlab_protectedApp">보호된 앱 추가/제거</string>
-    <string name="permdesc_protectedApp">앱이 다른 앱을 보호됨으로 표시하고 잠글 수 있도록 허용합니다.</string>
     <string name="profileNameDefault">기본</string>
     <string name="profileNameWork">직장</string>
     <string name="profileNameHome">집</string>

@@ -25,8 +25,6 @@
     <string name="permdesc_writeSettings">Dopušta aplikaciji da izmijeni postavke sustava Lineage.</string>
     <string name="permlab_writeSecureSettings">promijeni Lineage postavke sigurnosti sustava</string>
     <string name="permdesc_writeSecureSettings">Dopušta aplikaciji da promjeni Lineage postavke sigurnosti sustava. Nije za korištenje kod normalnih aplikacija.</string>
-    <string name="permlab_protectedApp">dodavanje ili uklanjanje aplikacije za zaštićene aplikacije</string>
-    <string name="permdesc_protectedApp">Omogućuje aplikaciji da označi druge aplikacije kao zaštićene i zaključa ih.</string>
     <string name="profileNameDefault">Zadano</string>
     <string name="profileNameWork">Posao</string>
     <string name="profileNameHome">Kuća</string>

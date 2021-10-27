@@ -25,8 +25,6 @@
     <string name="permdesc_writeSettings">Umožňuje aplikácii meniť nastavenia systému Lineage.</string>
     <string name="permlab_writeSecureSettings">zmeniť nastavenia zabezpečenia systému Lineage</string>
     <string name="permdesc_writeSecureSettings">Umožňuje aplikácii zmeniť nastavenia zabezpečenia systému Lienage. Nie je určené pre bežné aplikácie.</string>
-    <string name="permlab_protectedApp">pridať a odobrať aplikácie z chránených aplikácií</string>
-    <string name="permdesc_protectedApp">Umožní aplikácii označiť iné aplikácie ako chránené a zamknúť ich.</string>
     <string name="profileNameDefault">Predvolený</string>
     <string name="profileNameWork">Práca</string>
     <string name="profileNameHome">Domov</string>

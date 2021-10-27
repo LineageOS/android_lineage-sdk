@@ -19,8 +19,6 @@
     <string name="permlab_modifyProfiles">सिस्टिम प्रोफाइल्स सुधारित करा</string>
     <string name="permdesc_modifyProfiles">अॅपला सिस्टिम प्रोफाइल्स सुधारित करण्याची परवानगी देते.</string>
     <string name="permlab_useHardwareFramework">हार्डवेअर फ्रेमवर्क वापरा</string>
-    <string name="permlab_protectedApp">संरक्षित अनुप्रयोगांना अनुप्रयोग जोडा आणि काढा</string>
-    <string name="permdesc_protectedApp">अनुप्रयोगाला इतर अनुप्रयोगांना संरक्षित म्हणून खूण करू देते आणि त्यांना लॉक करते.</string>
     <string name="profileNameDefault">डीफॉल्ट</string>
     <string name="profileNameWork">कार्य</string>
     <string name="profileNameHome">मुखपृष्ठ</string>

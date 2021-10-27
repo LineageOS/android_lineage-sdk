@@ -2830,11 +2830,6 @@ public final class LineageSettings {
         public static final Validator GESTURE_BACK_EXCLUDE_TOP_VALIDATOR =
                 new InclusiveIntegerRangeValidator(0, 50);
 
-        /** Protected Components
-         * @hide
-         */
-        public static final String PROTECTED_COMPONENTS = "protected_components";
-
         /**
          * Stored color matrix for LiveDisplay. This is used to allow co-existence with
          * display tuning done by DisplayAdjustmentUtils when hardware support isn't
@@ -2889,12 +2884,6 @@ public final class LineageSettings {
          * @hide
          */
         public static final String LOCKSCREEN_INTERNALLY_ENABLED = "lockscreen_internally_enabled";
-
-        /**
-         * Delimited list of packages allowed to manage/launch protected apps (used for filtering)
-         * @hide
-         */
-        public static final String PROTECTED_COMPONENT_MANAGERS = "protected_component_managers";
 
         /**
          * Whether keyguard will direct show security view (0 = false, 1 = true)
@@ -3029,7 +3018,6 @@ public final class LineageSettings {
                 LineageSettings.Secure.NAVIGATION_RING_TARGETS[1],
                 LineageSettings.Secure.NAVIGATION_RING_TARGETS[2],
                 LineageSettings.Secure.RECENTS_LONG_PRESS_ACTIVITY,
-                LineageSettings.Secure.PROTECTED_COMPONENTS,
                 LineageSettings.Secure.LIVE_DISPLAY_COLOR_MATRIX,
                 LineageSettings.Secure.ADVANCED_REBOOT,
                 LineageSettings.Secure.LOCKSCREEN_TARGETS,
@@ -3050,46 +3038,6 @@ public final class LineageSettings {
         }
 
         /**
-         * @hide
-         */
-        public static final Validator PROTECTED_COMPONENTS_VALIDATOR = new Validator() {
-            private final String mDelimiter = "|";
-
-            @Override
-            public boolean validate(String value) {
-                if (!TextUtils.isEmpty(value)) {
-                    final String[] array = TextUtils.split(value, Pattern.quote(mDelimiter));
-                    for (String item : array) {
-                        if (TextUtils.isEmpty(item)) {
-                            return false; // Empty components not allowed
-                        }
-                    }
-                }
-                return true;  // Empty list is allowed though.
-            }
-        };
-
-        /**
-         * @hide
-         */
-        public static final Validator PROTECTED_COMPONENTS_MANAGER_VALIDATOR = new Validator() {
-            private final String mDelimiter = "|";
-
-            @Override
-            public boolean validate(String value) {
-                if (!TextUtils.isEmpty(value)) {
-                    final String[] array = TextUtils.split(value, Pattern.quote(mDelimiter));
-                    for (String item : array) {
-                        if (TextUtils.isEmpty(item)) {
-                            return false; // Empty components not allowed
-                        }
-                    }
-                }
-                return true;  // Empty list is allowed though.
-            }
-        };
-
-        /**
          * Mapping of validators for all secure settings.  This map is used to validate both valid
          * keys as well as validating the values for those keys.
          *
@@ -3102,8 +3050,6 @@ public final class LineageSettings {
                 new ArrayMap<String, Validator>();
         static {
             VALIDATORS.put(GESTURE_BACK_EXCLUDE_TOP, GESTURE_BACK_EXCLUDE_TOP_VALIDATOR);
-            VALIDATORS.put(PROTECTED_COMPONENTS, PROTECTED_COMPONENTS_VALIDATOR);
-            VALIDATORS.put(PROTECTED_COMPONENT_MANAGERS, PROTECTED_COMPONENTS_MANAGER_VALIDATOR);
             VALIDATORS.put(NETWORK_TRAFFIC_MODE, NETWORK_TRAFFIC_MODE_VALIDATOR);
             VALIDATORS.put(NETWORK_TRAFFIC_AUTOHIDE, NETWORK_TRAFFIC_AUTOHIDE_VALIDATOR);
             VALIDATORS.put(NETWORK_TRAFFIC_UNITS, NETWORK_TRAFFIC_UNITS_VALIDATOR);

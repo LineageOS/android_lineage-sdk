@@ -85,9 +85,6 @@ public class LineageSettingsProviderDefaultsTest extends AndroidTestCase {
         SECURE_SETTINGS_DEFAULTS.add(new Setting(
                 LineageSettings.Secure.LOCKSCREEN_VISUALIZER_ENABLED,
                 "R.bool.def_lockscreen_visualizer"));
-        SECURE_SETTINGS_DEFAULTS.add(new Setting(
-                LineageSettings.Secure.PROTECTED_COMPONENT_MANAGERS,
-                "R.string.def_protected_component_managers"));
     }
 
     //GLOBAL

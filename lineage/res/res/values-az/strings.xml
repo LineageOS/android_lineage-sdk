@@ -25,8 +25,6 @@
     <string name="permdesc_writeSettings">Tətbiqetməyə Lineage sistem tənzimləmələrini dəyişdirməyə icazə verər.</string>
     <string name="permlab_writeSecureSettings">Lineage təhlükəsiz sistem tənzimləmələrini dəyişdir</string>
     <string name="permdesc_writeSecureSettings">Tətbiqetməyə Lineage təhlükəsiz sistem tənzimləmələrini dəyişdirməyə icazə verər. Normal tətbiqlər tərəfindən istifadə edilmir.</string>
-    <string name="permlab_protectedApp">qorunan tətbiqetmələrə tətbiq əlavə et və ya çıxart</string>
-    <string name="permdesc_protectedApp">Tətbiqetməyə digər tətbiqetmələri qorunan tətbiq olaraq işarələmə və kilidləmə icazəsi verər.</string>
     <string name="profileNameDefault">İlkin</string>
     <string name="profileNameWork">İş</string>
     <string name="profileNameHome">Ev</string>

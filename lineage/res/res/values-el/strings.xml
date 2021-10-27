@@ -25,8 +25,6 @@
     <string name="permdesc_writeSettings">Επιτρέπει σε μια εφαρμογή να τροποποιεί τις ρυθμίσεις συστήματος Lineage.</string>
     <string name="permlab_writeSecureSettings">τροποποίηση ασφαλών ρυθμίσεων συστήματος Lineage</string>
     <string name="permdesc_writeSecureSettings">Επιτρέπει σε μια εφαρμογή να τροποποιεί τις ασφαλείς ρυθμίσεις συστήματος Lineage. Δεν χρησιμοποιείται από κανονικές εφαρμογές.</string>
-    <string name="permlab_protectedApp">προσθαφαίρεση εφαρμογών στις προστατευμένες εφαρμογές</string>
-    <string name="permdesc_protectedApp">Επιτρέπει σε μια εφαρμογή την επισήμανση άλλων εφαρμογών ως προστατευμένων και κλείδωμα τους.</string>
     <string name="profileNameDefault">Προεπιλογή</string>
     <string name="profileNameWork">Εργασία</string>
     <string name="profileNameHome">Σπίτι</string>

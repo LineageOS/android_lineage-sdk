@@ -19,8 +19,6 @@
     <string name="permlab_modifyProfiles">സിസ്റ്റം പ്രൊഫൈലുകൾ പരിഷ്ക്കരിക്കുക</string>
     <string name="permdesc_modifyProfiles">സിസ്റ്റം പ്രൊഫൈലുകൾ പരിഷ്കരിക്കുന്നതിന് ഒരു ആപ്ലിക്കേഷനെ അനുവദിക്കുന്നു.</string>
     <string name="permlab_useHardwareFramework">ഹാര്‍ഡ്‌വെയര്‍ ഫ്രെയിംവര്‍ക്ക് ഉപയോഗിക്കുക</string>
-    <string name="permlab_protectedApp">പരിരക്ഷിത ആപ്ലിക്കേഷനുകളില്‍ ചേര്‍ക്കുകയും നീക്കം ചെയ്യുകയും ചെയ്യുക</string>
-    <string name="permdesc_protectedApp">മറ്റ് ആപ്ലിക്കേഷനുകളെ പരിരക്ഷിതമായി അടയാളപ്പെടുത്തുന്നതിനും അവയെ ലോക്ക് ചെയ്യുന്നതിനും ഒരു ആപ്ലിക്കേഷനെ അനുവദിക്കുന്നു.</string>
     <string name="profileNameDefault">സ്ഥിരമായത്</string>
     <string name="profileNameWork">ഔദ്യോഗികവിലാസം</string>
     <string name="profileNameHome">ഹോം</string>

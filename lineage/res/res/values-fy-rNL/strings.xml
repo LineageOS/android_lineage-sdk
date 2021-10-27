@@ -25,8 +25,6 @@
     <string name="permdesc_writeSettings">Hjirmei kin de app de systeemynstellingen fan Lineage wizigje.</string>
     <string name="permlab_writeSecureSettings">befeiligege Lineage-systeemynstellingen wizigje</string>
     <string name="permdesc_writeSecureSettings">Hjirmei kin de app de befeilige systeemynstellingen fan Lineage wizigje. Net foar gebrûk troch normale apps.</string>
-    <string name="permlab_protectedApp">tafoegje en fuortsmiten fan apps oan beskerme apps</string>
-    <string name="permdesc_protectedApp">Hjirmei kin de app oare apps as beskerme oanmerke en beskoattelje.</string>
     <string name="profileNameDefault">Standert</string>
     <string name="profileNameWork">Wurk</string>
     <string name="profileNameHome">Thús</string>

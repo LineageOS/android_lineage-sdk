@@ -25,8 +25,6 @@
     <string name="permdesc_writeSettings">Sallii sovelluksen muokata Lineage-järjestelmän asetuksia.</string>
     <string name="permlab_writeSecureSettings">muokkaa Lineage-turvallisuusjärjestelmän asetuksia</string>
     <string name="permdesc_writeSecureSettings">Sallii sovelluksen muokata Lineage turvallisuusjärjestelmäasetuksia. Ei käytössä tavallisille sovelluksille.</string>
-    <string name="permlab_protectedApp">lisätä ja poistaa suojattuja sovelluksia</string>
-    <string name="permdesc_protectedApp">Antaa sovelluksen merkitä muita sovelluksia suojatuiksi ja lukita ne.</string>
     <string name="profileNameDefault">Oletus</string>
     <string name="profileNameWork">Työ</string>
     <string name="profileNameHome">Koti</string>

@@ -19,8 +19,6 @@
     <string name="permlab_modifyProfiles">зміна системних профілів</string>
     <string name="permdesc_modifyProfiles">Дозволяє додатку змінювати системні профілі.</string>
     <string name="permlab_useHardwareFramework">Взаємодія із обладнанням</string>
-    <string name="permlab_protectedApp">додавання і видалення записів переліку захищених додатків</string>
-    <string name="permdesc_protectedApp">Додаток зможе відмічати інші додатки як захищені і блокувати їх.</string>
     <string name="profileNameDefault">За замовчуванням</string>
     <string name="profileNameWork">Робота</string>
     <string name="profileNameHome">Дім</string>

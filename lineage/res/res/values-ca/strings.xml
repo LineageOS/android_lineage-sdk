@@ -25,8 +25,6 @@
     <string name="permdesc_writeSettings">Permet a una aplicació modificar la configuració del sistema de Lineage.</string>
     <string name="permlab_writeSecureSettings">modificar la configuració segura del sistema de Lineage</string>
     <string name="permdesc_writeSecureSettings">Permet a una aplicació modificar la configuració segura del sistema de Lineage. No utilitzar en aplicacions normals.</string>
-    <string name="permlab_protectedApp">afegir i eliminar aplicacions a les aplicacions protegides</string>
-    <string name="permdesc_protectedApp">Permet a una aplicació marcar a altres aplicacions com a protegides i bloquejar-les.</string>
     <string name="profileNameDefault">Predeterminat</string>
     <string name="profileNameWork">Feina</string>
     <string name="profileNameHome">Casa</string>

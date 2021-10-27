@@ -828,11 +828,6 @@ public final class LineageSettings {
         public static final int INCALL_POWER_BUTTON_BEHAVIOR_DEFAULT =
                 INCALL_POWER_BUTTON_BEHAVIOR_SCREEN_OFF;
 
-        /** Protected Components
-         * @hide
-         */
-        public static final String PROTECTED_COMPONENTS = "protected_components";
-
         /**
          * Stored color matrix for LiveDisplay. This is used to allow co-existence with
          * display tuning done by DisplayAdjustmentUtils when hardware support isn't
@@ -867,7 +862,6 @@ public final class LineageSettings {
                 LineageSettings.Secure.NAVIGATION_RING_TARGETS[1],
                 LineageSettings.Secure.NAVIGATION_RING_TARGETS[2],
                 LineageSettings.Secure.RECENTS_LONG_PRESS_ACTIVITY,
-                LineageSettings.Secure.PROTECTED_COMPONENTS,
                 LineageSettings.Secure.LIVE_DISPLAY_COLOR_MATRIX,
                 LineageSettings.Secure.ADVANCED_REBOOT,
                 LineageSettings.Secure.LOCKSCREEN_TARGETS,

@@ -19,8 +19,6 @@
     <string name="permlab_modifyProfiles">endre system profiler</string>
     <string name="permdesc_modifyProfiles">Tillat en app å endre systemprofiler.</string>
     <string name="permlab_useHardwareFramework">bruk maskinvare framework</string>
-    <string name="permlab_protectedApp">gjør apper beskyttet/ubeskyttet</string>
-    <string name="permdesc_protectedApp">Tillat en app å merke andre apper som beskyttet og låse dem.</string>
     <string name="profileNameDefault">Standard</string>
     <string name="profileNameWork">Arbeid</string>
     <string name="profileNameHome">Hjemme</string>

@@ -25,8 +25,6 @@
     <string name="permdesc_writeSettings">מאפשר ליישום לשנות את הגדרות מערכת LineageOS.</string>
     <string name="permlab_writeSecureSettings">שינוי הגדרות אבטחה של המערכת</string>
     <string name="permdesc_writeSecureSettings">מאפשר ליישום לשנות הגדרות אבטחה של המערכת, לא נועד לשימוש ע\"י יישומים רגילים.</string>
-    <string name="permlab_protectedApp">הוספה והסרה של יישומים מהיישומים המוגנים</string>
-    <string name="permdesc_protectedApp">מאפשר ליישום לסמן יישומים אחרים כמוגנים ולנעול אותם.</string>
     <string name="profileNameDefault">ברירת מחדל</string>
     <string name="profileNameWork">עבודה</string>
     <string name="profileNameHome">בית</string>
