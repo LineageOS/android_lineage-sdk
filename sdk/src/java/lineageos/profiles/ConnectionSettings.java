@@ -89,23 +89,11 @@ public final class ConnectionSettings implements Parcelable {
      */
     public static final int PROFILE_CONNECTION_WIFIAP = 2;
 
-    /**
-     * The {@link #PROFILE_CONNECTION_WIMAX} allows for enabling and disabling the WIMAX radio (if exists)
-     * on the device. Boolean connection settings {@link BooleanState}
-     *
-     * @deprecated
-     */
-    @Deprecated
-    public static final int PROFILE_CONNECTION_WIMAX = 3;
+    // Deprecated
+    // public static final int PROFILE_CONNECTION_WIMAX = 3;
 
-    /**
-     * The {@link #PROFILE_CONNECTION_GPS} allows for enabling and disabling the GPS radio (if exists)
-     * on the device. Boolean connection settings {@link BooleanState}
-     *
-     * @deprecated Replaced by PROFILE_CONNECTION_LOCATION
-     */
-    @Deprecated
-    public static final int PROFILE_CONNECTION_GPS = 4;
+    // Deprecated
+    // public static final int PROFILE_CONNECTION_GPS = 4;
 
     /**
      * The {@link #PROFILE_CONNECTION_SYNC} allows for enabling and disabling the global sync state

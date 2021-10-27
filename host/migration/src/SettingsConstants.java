@@ -26,12 +26,4 @@ public class SettingsConstants {
     public static final String SYSTEM = "/system";
     public static final String SECURE = "/secure";
     public static final String GLOBAL = "/global";
-
-    public static class Ignorables {
-        public static ArrayList<String> SECURE_SETTINGS = new ArrayList<String>();
-
-        static {
-            SECURE_SETTINGS.add(LineageSettings.Secure.ADB_PORT);
-        }
-    }
 }

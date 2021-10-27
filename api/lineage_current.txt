@@ -94,7 +94,6 @@ package lineageos.app {
     method public void addProfile(lineageos.app.Profile);
     method public lineageos.app.Profile getActiveProfile();
     method public static lineageos.app.ProfileManager getInstance(android.content.Context);
-    method public deprecated lineageos.app.Profile getProfile(java.lang.String);
     method public lineageos.app.Profile getProfile(java.util.UUID);
     method public java.lang.String[] getProfileNames();
     method public lineageos.app.Profile[] getProfiles();
@@ -103,7 +102,6 @@ package lineageos.app {
     method public boolean profileExists(java.util.UUID);
     method public void removeProfile(lineageos.app.Profile);
     method public void resetAll();
-    method public deprecated void setActiveProfile(java.lang.String);
     method public void setActiveProfile(java.util.UUID);
     method public void updateProfile(lineageos.app.Profile);
     field public static final java.lang.String ACTION_PROFILE_PICKER = "lineageos.platform.intent.action.PROFILE_PICKER";
@@ -633,8 +631,6 @@ package lineageos.profiles {
     field public static final int PROFILE_CONNECTION_SYNC = 5; // 0x5
     field public static final int PROFILE_CONNECTION_WIFI = 1; // 0x1
     field public static final int PROFILE_CONNECTION_WIFIAP = 2; // 0x2
-    field public static final deprecated int PROFILE_CONNECTION_GPS = 4; // 0x4
-    field public static final deprecated int PROFILE_CONNECTION_WIMAX = 3; // 0x3
   }
 
   public static class ConnectionSettings.BooleanState {
@@ -767,7 +763,6 @@ package lineageos.providers {
     method public static boolean putString(android.content.ContentResolver, java.lang.String, java.lang.String);
     field public static final android.net.Uri CONTENT_URI;
     field public static final java.lang.String SYS_PROP_LINEAGE_SETTING_VERSION = "sys.lineage_settings_secure_version";
-    field public static final deprecated java.lang.String TRUST_NOTIFICATIONS = "trust_notifications";
     field public static final java.lang.String TRUST_WARNINGS = "trust_warnings";
   }
 
@@ -796,10 +791,6 @@ package lineageos.providers {
     field public static final java.lang.String BATTERY_LIGHT_LOW_COLOR = "battery_light_low_color";
     field public static final java.lang.String BATTERY_LIGHT_MEDIUM_COLOR = "battery_light_medium_color";
     field public static final java.lang.String BATTERY_LIGHT_PULSE = "battery_light_pulse";
-    field public static final java.lang.String BERRY_CURRENT_ACCENT = "berry_current_accent";
-    field public static final java.lang.String BERRY_DARK_OVERLAY = "berry_dark_overlay";
-    field public static final java.lang.String BERRY_GLOBAL_STYLE = "berry_global_style";
-    field public static final java.lang.String BERRY_MANAGED_BY_APP = "berry_managed_by_app";
     field public static final java.lang.String BLUETOOTH_ACCEPT_ALL_FILES = "bluetooth_accept_all_files";
     field public static final java.lang.String BUTTON_BACKLIGHT_ONLY_WHEN_PRESSED = "button_backlight_only_when_pressed";
     field public static final java.lang.String CALL_RECORDING_FORMAT = "call_recording_format";
@@ -815,17 +806,12 @@ package lineageos.providers {
     field public static final java.lang.String DISPLAY_CABC = "display_low_power";
     field public static final java.lang.String DISPLAY_COLOR_ADJUSTMENT = "display_color_adjustment";
     field public static final java.lang.String DISPLAY_COLOR_ENHANCE = "display_color_enhance";
-    field public static final deprecated java.lang.String DISPLAY_LOW_POWER = "display_low_power";
     field public static final java.lang.String DISPLAY_PICTURE_ADJUSTMENT = "display_picture_adjustment";
     field public static final java.lang.String DISPLAY_READING_MODE = "display_reading_mode";
     field public static final java.lang.String DISPLAY_TEMPERATURE_DAY = "display_temperature_day";
     field public static final java.lang.String DISPLAY_TEMPERATURE_MODE = "display_temperature_mode";
     field public static final java.lang.String DISPLAY_TEMPERATURE_NIGHT = "display_temperature_night";
     field public static final java.lang.String DOUBLE_TAP_SLEEP_GESTURE = "double_tap_sleep_gesture";
-    field public static final java.lang.String ENABLE_FORWARD_LOOKUP = "enable_forward_lookup";
-    field public static final java.lang.String ENABLE_PEOPLE_LOOKUP = "enable_people_lookup";
-    field public static final java.lang.String ENABLE_REVERSE_LOOKUP = "enable_reverse_lookup";
-    field public static final java.lang.String FORWARD_LOOKUP_PROVIDER = "forward_lookup_provider";
     field public static final java.lang.String HEADSET_CONNECT_PLAYER = "headset_connect_player";
     field public static final java.lang.String HIGH_TOUCH_SENSITIVITY_ENABLE = "high_touch_sensitivity_enable";
     field public static final java.lang.String HOME_WAKE_SCREEN = "home_wake_screen";
@@ -864,11 +850,9 @@ package lineageos.providers {
     field public static final java.lang.String NOTIFICATION_LIGHT_PULSE_VMAIL_LED_ON = "notification_light_pulse_vmail_led_on";
     field public static final java.lang.String NOTIFICATION_LIGHT_SCREEN_ON = "notification_light_screen_on_enable";
     field public static final java.lang.String NOTIFICATION_PLAY_QUEUE = "notification_play_queue";
-    field public static final java.lang.String PEOPLE_LOOKUP_PROVIDER = "people_lookup_provider";
     field public static final java.lang.String PROXIMITY_ON_WAKE = "proximity_on_wake";
     field public static final java.lang.String QS_SHOW_BRIGHTNESS_SLIDER = "qs_show_brightness_slider";
     field public static final java.lang.String RECENTS_SHOW_SEARCH_BAR = "recents_show_search_bar";
-    field public static final java.lang.String REVERSE_LOOKUP_PROVIDER = "reverse_lookup_provider";
     field public static final java.lang.String SHOW_ALARM_ICON = "show_alarm_icon";
     field public static final java.lang.String STATUS_BAR_AM_PM = "status_bar_am_pm";
     field public static final java.lang.String STATUS_BAR_BATTERY_STYLE = "status_bar_battery_style";

@@ -93,9 +93,6 @@ public class LineageSettingsProviderDefaultsTest extends AndroidTestCase {
     //GLOBAL
     static {
         GLOBAL_SETTINGS_DEFAULTS.add(new Setting(
-                LineageSettings.Global.POWER_NOTIFICATIONS_ENABLED,
-                "R.bool.def_power_notifications_enabled"));
-        GLOBAL_SETTINGS_DEFAULTS.add(new Setting(
                 LineageSettings.Global.POWER_NOTIFICATIONS_VIBRATE,
                 "R.bool.def_power_notifications_vibrate"));
         GLOBAL_SETTINGS_DEFAULTS.add(new Setting(

@@ -1408,56 +1408,6 @@ public final class LineageSettings {
                 sBooleanValidator;
 
         /**
-         * Whether to use dark theme
-         * 0: automatic - based on wallpaper
-         * 1: time - based on LiveDisplay status
-         * 2: force light
-         * 3: force dark
-         *
-         * @deprecated
-         */
-        @Deprecated
-        public static final String BERRY_GLOBAL_STYLE = "berry_global_style";
-
-        /** @hide */
-        @Deprecated
-        public static final Validator BERRY_GLOBAL_STYLE_VALIDATOR =
-                new InclusiveIntegerRangeValidator(0, 3);
-
-        /**
-         * Current accent package name
-         */
-        @Deprecated
-        public static final String BERRY_CURRENT_ACCENT = "berry_current_accent";
-
-        /** @hide */
-        @Deprecated
-        public static final Validator BERRY_CURRENT_ACCENT_VALIDATOR =
-                sNonNullStringValidator;
-
-        /**
-         * Current dark overlay package name
-         */
-        @Deprecated
-        public static final String BERRY_DARK_OVERLAY = "berry_dark_overlay";
-
-        /** @hide */
-        @Deprecated
-        public static final Validator BERRY_DARK_OVERLAY_VALIDATOR =
-                sNonNullStringValidator;
-
-        /**
-         * Current application managing the style
-         */
-        @Deprecated
-        public static final String BERRY_MANAGED_BY_APP = "berry_managed_by_app";
-
-        /** @hide */
-        @Deprecated
-        public static final Validator BERRY_MANAGED_BY_APP_VALIDATOR =
-                sNonNullStringValidator;
-
-        /**
          * Whether to use black theme for dark mode
          */
         public static final String BERRY_BLACK_THEME = "berry_black_theme";
@@ -1465,72 +1415,6 @@ public final class LineageSettings {
         /** @hide */
         public static final Validator BERRY_BLACK_THEME_VALIDATOR =
                 sBooleanValidator;
-
-        /**
-         * Enable looking up of phone numbers of nearby places
-         * 0 = 0ff, 1 = on
-         */
-        @Deprecated
-        public static final String ENABLE_FORWARD_LOOKUP = "enable_forward_lookup";
-
-        /** @hide */
-        @Deprecated
-        public static final Validator ENABLE_FORWARD_LOOKUP_VALIDATOR =
-                sBooleanValidator;
-
-        /**
-         * Enable looking up of phone numbers of people
-         * 0 = 0ff, 1 = on
-         */
-        @Deprecated
-        public static final String ENABLE_PEOPLE_LOOKUP = "enable_people_lookup";
-
-        /** @hide */
-        @Deprecated
-        public static final Validator ENABLE_PEOPLE_LOOKUP_VALIDATOR =
-                sBooleanValidator;
-
-        /**
-         * Enable looking up of information of phone numbers not in the contacts
-         * 0 = 0ff, 1 = on
-         */
-        @Deprecated
-        public static final String ENABLE_REVERSE_LOOKUP = "enable_reverse_lookup";
-
-        /** @hide */
-        @Deprecated
-        public static final Validator ENABLE_REVERSE_LOOKUP_VALIDATOR =
-                sBooleanValidator;
-
-        /**
-         * The forward lookup provider to be utilized by the Dialer
-         */
-        @Deprecated
-        public static final String FORWARD_LOOKUP_PROVIDER = "forward_lookup_provider";
-
-        /** @hide */
-        @Deprecated
-        public static final Validator FORWARD_LOOKUP_PROVIDER_VALIDATOR = sAlwaysTrueValidator;
-
-        /**
-         * The people lookup provider to be utilized by the Dialer
-         */
-        @Deprecated
-        public static final String PEOPLE_LOOKUP_PROVIDER = "people_lookup_provider";
-
-        /** @hide */
-        @Deprecated
-        public static final Validator PEOPLE_LOOKUP_PROVIDER_VALIDATOR = sAlwaysTrueValidator;
-
-        /**
-         * The reverse lookup provider to be utilized by the Dialer
-         */
-        @Deprecated
-        public static final String REVERSE_LOOKUP_PROVIDER = "reverse_lookup_provider";
-
-        /** @hide */
-        @Deprecated
-        public static final Validator REVERSE_LOOKUP_PROVIDER_VALIDATOR = sAlwaysTrueValidator;
 
         /**
          * The OpenCNAM paid account ID to be utilized by the Dialer
@@ -1612,12 +1496,6 @@ public final class LineageSettings {
          * 0 = 0ff, 1 = on
          */
         public static final String DISPLAY_CABC = "display_low_power";
-
-        /**
-         * @deprecated Use {@link lineageos.providers.LineageSettings.System#DISPLAY_CABC} instead
-         */
-        @Deprecated
-        public static final String DISPLAY_LOW_POWER = DISPLAY_CABC;
 
         /** @hide */
         public static final Validator DISPLAY_CABC_VALIDATOR =
@@ -2224,12 +2102,6 @@ public final class LineageSettings {
                 LineageSettings.System.BATTERY_LIGHT_FULL_COLOR,
                 LineageSettings.System.ENABLE_MWI_NOTIFICATION,
                 LineageSettings.System.PROXIMITY_ON_WAKE,
-                LineageSettings.System.ENABLE_FORWARD_LOOKUP,
-                LineageSettings.System.ENABLE_PEOPLE_LOOKUP,
-                LineageSettings.System.ENABLE_REVERSE_LOOKUP,
-                LineageSettings.System.FORWARD_LOOKUP_PROVIDER,
-                LineageSettings.System.PEOPLE_LOOKUP_PROVIDER,
-                LineageSettings.System.REVERSE_LOOKUP_PROVIDER,
                 LineageSettings.System.DIALER_OPENCNAM_ACCOUNT_SID,
                 LineageSettings.System.DIALER_OPENCNAM_AUTH_TOKEN,
                 LineageSettings.System.DISPLAY_TEMPERATURE_DAY,
@@ -2365,17 +2237,7 @@ public final class LineageSettings {
             VALIDATORS.put(BATTERY_LIGHT_FULL_COLOR, BATTERY_LIGHT_FULL_COLOR_VALIDATOR);
             VALIDATORS.put(ENABLE_MWI_NOTIFICATION, ENABLE_MWI_NOTIFICATION_VALIDATOR);
             VALIDATORS.put(PROXIMITY_ON_WAKE, PROXIMITY_ON_WAKE_VALIDATOR);
-            VALIDATORS.put(BERRY_GLOBAL_STYLE, BERRY_GLOBAL_STYLE_VALIDATOR);
-            VALIDATORS.put(BERRY_CURRENT_ACCENT, BERRY_CURRENT_ACCENT_VALIDATOR);
-            VALIDATORS.put(BERRY_DARK_OVERLAY, BERRY_DARK_OVERLAY_VALIDATOR);
-            VALIDATORS.put(BERRY_MANAGED_BY_APP, BERRY_MANAGED_BY_APP_VALIDATOR);
             VALIDATORS.put(BERRY_BLACK_THEME, BERRY_BLACK_THEME_VALIDATOR);
-            VALIDATORS.put(ENABLE_FORWARD_LOOKUP, ENABLE_FORWARD_LOOKUP_VALIDATOR);
-            VALIDATORS.put(ENABLE_PEOPLE_LOOKUP, ENABLE_PEOPLE_LOOKUP_VALIDATOR);
-            VALIDATORS.put(ENABLE_REVERSE_LOOKUP, ENABLE_REVERSE_LOOKUP_VALIDATOR);
-            VALIDATORS.put(FORWARD_LOOKUP_PROVIDER, FORWARD_LOOKUP_PROVIDER_VALIDATOR);
-            VALIDATORS.put(PEOPLE_LOOKUP_PROVIDER, PEOPLE_LOOKUP_PROVIDER_VALIDATOR);
-            VALIDATORS.put(REVERSE_LOOKUP_PROVIDER, REVERSE_LOOKUP_PROVIDER_VALIDATOR);
             VALIDATORS.put(DIALER_OPENCNAM_ACCOUNT_SID,
                     DIALER_OPENCNAM_ACCOUNT_SID_VALIDATOR);
             VALIDATORS.put(DIALER_OPENCNAM_AUTH_TOKEN, DIALER_OPENCNAM_AUTH_TOKEN_VALIDATOR);
@@ -2886,13 +2748,6 @@ public final class LineageSettings {
         public static final String BUTTON_BRIGHTNESS = "button_brightness";
 
         /**
-         * Developer options - Navigation Bar show switch
-         * @deprecated
-         * @hide
-         */
-        public static final String DEV_FORCE_SHOW_NAVBAR = "dev_force_show_navbar";
-
-        /**
          * The keyboard brightness to be used while the screen is on.
          * Valid value range is between 0 and {@link PowerManager#getMaximumKeyboardBrightness()}
          * @hide
@@ -2932,30 +2787,6 @@ public final class LineageSettings {
          * @hide
          */
         public static final String STATS_COLLECTION = "stats_collection";
-
-        /**
-         * Whether the global stats collection setting has been successfully reported to server
-         * @hide
-         * @deprecated {@link org.lineageos.lineageparts.lineagestats.AnonymousStats} no longer uses this
-         */
-        @Deprecated
-        public static final String STATS_COLLECTION_REPORTED = "stats_collection_reported";
-
-        /**
-         * Whether newly installed apps should run with privacy guard by default
-         * @deprecated
-         * @hide
-         */
-        @Deprecated
-        public static final String PRIVACY_GUARD_DEFAULT = "privacy_guard_default";
-
-        /**
-         * Whether a notification should be shown if privacy guard is enabled
-         * @deprecated
-         * @hide
-         */
-        @Deprecated
-        public static final String PRIVACY_GUARD_NOTIFICATION = "privacy_guard_notification";
 
         /**
          * The global recents long press activity chosen by the user.
@@ -3020,38 +2851,6 @@ public final class LineageSettings {
          * @hide
          */
         public static final String DEVELOPMENT_SHORTCUT = "development_shortcut";
-
-        /**
-         * Whether to display the ADB notification.
-         * @deprecated
-         * @hide
-         */
-        @Deprecated
-        public static final String ADB_NOTIFY = "adb_notify";
-
-        /**
-         * The TCP/IP port to run ADB on, or -1 for USB
-         * @deprecated
-         * @hide
-         */
-        @Deprecated
-        public static final String ADB_PORT = "adb_port";
-
-        /**
-         * The hostname for this device
-         * @deprecated
-         * @hide
-         */
-        @Deprecated
-        public static final String DEVICE_HOSTNAME = "device_hostname";
-
-        /**
-         * Whether to allow killing of the foreground app by long-pressing the Back button
-         * @deprecated
-         * @hide
-         */
-        @Deprecated
-        public static final String KILL_APP_LONGPRESS_BACK = "kill_app_longpress_back";
 
         /**
          * Whether to exclude the top area of the screen from back gesture
@@ -3158,17 +2957,6 @@ public final class LineageSettings {
         public static final String WEATHER_PROVIDER_SERVICE = "weather_provider_service";
 
         /**
-         * Set to 0 when we enter the Lineage Setup Wizard.
-         * Set to 1 when we exit the Lineage Setup Wizard.
-         *
-         * @deprecated Use {@link Secure#USER_SETUP_COMPLETE} or
-         *             {@link Settings.Global#DEVICE_PROVISIONED} instead
-         * @hide
-         */
-        @Deprecated
-        public static final String LINEAGE_SETUP_WIZARD_COMPLETED = "lineage_setup_wizard_completed";
-
-        /**
          * Whether lock screen bluring is enabled on devices that support this feature
          * @hide
          */
@@ -3221,19 +3009,6 @@ public final class LineageSettings {
 
         /** @hide */
         public static final Validator NETWORK_TRAFFIC_SHOW_UNITS_VALIDATOR = sBooleanValidator;
-
-        /**
-         * Enable displaying the Trust service's notifications
-         * 0 = 0ff, 1 = on
-         * @deprecated Rely on {@link lineageos.providers.TRUST_WARNINGS} instead
-         */
-         @Deprecated
-        public static final String TRUST_NOTIFICATIONS = "trust_notifications";
-
-        /** @hide */
-        @Deprecated
-        public static final Validator TRUST_NOTIFICATIONS_VALIDATOR =
-                sBooleanValidator;
 
         /**
          * Restrict USB when the screen is locked
@@ -3294,7 +3069,6 @@ public final class LineageSettings {
                 LineageSettings.Secure.ADVANCED_MODE,
                 LineageSettings.Secure.BUTTON_BACKLIGHT_TIMEOUT,
                 LineageSettings.Secure.BUTTON_BRIGHTNESS,
-                LineageSettings.Secure.DEV_FORCE_SHOW_NAVBAR,
                 LineageSettings.Secure.KEYBOARD_BRIGHTNESS,
                 LineageSettings.Secure.POWER_MENU_ACTIONS,
                 LineageSettings.Secure.STATS_COLLECTION,
@@ -3303,17 +3077,11 @@ public final class LineageSettings {
                 LineageSettings.Secure.NAVIGATION_RING_TARGETS[1],
                 LineageSettings.Secure.NAVIGATION_RING_TARGETS[2],
                 LineageSettings.Secure.RECENTS_LONG_PRESS_ACTIVITY,
-                LineageSettings.Secure.ADB_NOTIFY,
-                LineageSettings.Secure.ADB_PORT,
-                LineageSettings.Secure.DEVICE_HOSTNAME,
-                LineageSettings.Secure.KILL_APP_LONGPRESS_BACK,
                 LineageSettings.Secure.PROTECTED_COMPONENTS,
                 LineageSettings.Secure.LIVE_DISPLAY_COLOR_MATRIX,
                 LineageSettings.Secure.ADVANCED_REBOOT,
                 LineageSettings.Secure.LOCKSCREEN_TARGETS,
                 LineageSettings.Secure.RING_HOME_BUTTON_BEHAVIOR,
-                LineageSettings.Secure.PRIVACY_GUARD_DEFAULT,
-                LineageSettings.Secure.PRIVACY_GUARD_NOTIFICATION,
                 LineageSettings.Secure.DEVELOPMENT_SHORTCUT,
                 LineageSettings.Secure.PERFORMANCE_PROFILE,
                 LineageSettings.Secure.APP_PERFORMANCE_PROFILES_ENABLED,
@@ -3389,7 +3157,6 @@ public final class LineageSettings {
             VALIDATORS.put(NETWORK_TRAFFIC_UNITS, NETWORK_TRAFFIC_UNITS_VALIDATOR);
             VALIDATORS.put(NETWORK_TRAFFIC_SHOW_UNITS, NETWORK_TRAFFIC_SHOW_UNITS_VALIDATOR);
             VALIDATORS.put(TETHERING_ALLOW_VPN_UPSTREAMS, TETHERING_ALLOW_VPN_UPSTREAMS_VALIDATOR);
-            VALIDATORS.put(TRUST_NOTIFICATIONS, TRUST_NOTIFICATIONS_VALIDATOR);
             VALIDATORS.put(TRUST_RESTRICT_USB_KEYGUARD, TRUST_RESTRICT_USB_KEYGUARD_VALIDATOR);
             VALIDATORS.put(TRUST_WARNINGS, TRUST_WARNINGS_VALIDATOR);
             VALIDATORS.put(VOLUME_PANEL_ON_LEFT, VOLUME_PANEL_ON_LEFT_VALIDATOR);
@@ -3785,14 +3552,6 @@ public final class LineageSettings {
                 "wake_when_plugged_or_unplugged";
 
         /**
-         * Whether to sound when charger power is connected/disconnected
-         * @hide
-         * @deprecated Use {@link android.provider.Settings.Global#CHARGING_SOUNDS_ENABLED} instead
-         */
-        @Deprecated
-        public static final String POWER_NOTIFICATIONS_ENABLED = "power_notifications_enabled";
-
-        /**
          * Whether to vibrate when charger power is connected/disconnected
          * @hide
          */
@@ -3825,13 +3584,6 @@ public final class LineageSettings {
          * <p>{@link lineageos.providers.WeatherContract.WeatherColumns.TempUnit#FAHRENHEIT}</p>
          */
         public static final String WEATHER_TEMPERATURE_UNIT = "weather_temperature_unit";
-
-        /**
-         * Developer options - Navigation Bar show switch
-         * @deprecated
-         * @hide
-         */
-        public static final String DEV_FORCE_SHOW_NAVBAR = "dev_force_show_navbar";
         // endregion
 
         /**

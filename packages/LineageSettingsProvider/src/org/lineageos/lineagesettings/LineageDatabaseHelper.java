@@ -252,13 +252,9 @@ public class LineageDatabaseHelper extends SQLiteOpenHelper{
         }
 
         if (upgradeVersion < 6) {
-            // Move force_show_navbar to global
-            if (mUserHandle == UserHandle.USER_OWNER) {
-                moveSettingsToNewTable(db, LineageTableNames.TABLE_SECURE,
-                        LineageTableNames.TABLE_GLOBAL, new String[] {
-                        LineageSettings.Secure.DEV_FORCE_SHOW_NAVBAR
-                }, true);
-            }
+            /* Was move LineageSettings.Secure.DEV_FORCE_SHOW_NAVBAR to global
+             * but this is no longer used
+             */
             upgradeVersion = 6;
         }
 
@@ -343,50 +339,14 @@ public class LineageDatabaseHelper extends SQLiteOpenHelper{
                     if (stmt != null) stmt.close();
                     db.endTransaction();
                 }
-
-                // Remove LINEAGE_SETUP_WIZARD_COMPLETED
-                db.beginTransaction();
-                stmt = null;
-                try {
-                    stmt = db.compileStatement("DELETE FROM secure WHERE name=?");
-                    stmt.bindString(1, LineageSettings.Secure.LINEAGE_SETUP_WIZARD_COMPLETED);
-                    stmt.execute();
-                    db.setTransactionSuccessful();
-                } finally {
-                    if (stmt != null) stmt.close();
-                    db.endTransaction();
-                }
             }
             upgradeVersion = 10;
         }
 
         if (upgradeVersion < 11) {
-            // Move force_show_navbar to system
-            if (mUserHandle == UserHandle.USER_OWNER) {
-                db.beginTransaction();
-                SQLiteStatement stmt = null;
-                try {
-                    stmt = db.compileStatement("SELECT value FROM global WHERE name=?");
-                    stmt.bindString(1, LineageSettings.Global.DEV_FORCE_SHOW_NAVBAR);
-                    long value = stmt.simpleQueryForLong();
-
-                    stmt = db.compileStatement("INSERT INTO system (name, value) VALUES (?, ?)");
-                    stmt.bindString(1, LineageSettings.System.FORCE_SHOW_NAVBAR);
-                    stmt.bindLong(2, value);
-                    stmt.execute();
-
-                    stmt = db.compileStatement("DELETE FROM global WHERE name=?");
-                    stmt.bindString(1, LineageSettings.Global.DEV_FORCE_SHOW_NAVBAR);
-                    stmt.execute();
-
-                    db.setTransactionSuccessful();
-                } catch (SQLiteDoneException ex) {
-                    // LineageSettings.Global.DEV_FORCE_SHOW_NAVBAR is not set
-                } finally {
-                    if (stmt != null) stmt.close();
-                    db.endTransaction();
-                }
-            }
+            /* Was move LineageSettings.Global.DEV_FORCE_SHOW_NAVBAR to system
+             * but this is no longer used
+             */
             upgradeVersion = 11;
         }
 
@@ -617,10 +577,6 @@ public class LineageDatabaseHelper extends SQLiteOpenHelper{
             stmt = db.compileStatement("INSERT OR IGNORE INTO global(name,value)"
                     + " VALUES(?,?);");
             // Global
-            loadBooleanSetting(stmt,
-                    LineageSettings.Global.POWER_NOTIFICATIONS_ENABLED,
-                    R.bool.def_power_notifications_enabled);
-
             loadBooleanSetting(stmt,
                     LineageSettings.Global.POWER_NOTIFICATIONS_VIBRATE,
                     R.bool.def_power_notifications_vibrate);

@@ -280,18 +280,6 @@ public class ProfileManager {
     }
 
     /**
-     * @deprecated
-     */
-    @Deprecated
-    public void setActiveProfile(String profileName) {
-        try {
-            getService().setActiveProfileByName(profileName);
-        } catch (RemoteException e) {
-            Log.e(TAG, e.getLocalizedMessage(), e);
-        }
-    }
-
-    /**
      * Set the active {@link Profile} by {@link UUID}
      * @param profileUuid the {@link UUID} associated with the profile
      */
@@ -350,23 +338,6 @@ public class ProfileManager {
         } catch (RemoteException e) {
             Log.e(TAG, e.getLocalizedMessage(), e);
         }
-    }
-
-    /**
-     * Get the {@link Profile} object by its literal name
-     * @param profileName name associated with the profile
-     * @return profile a {@link Profile} object
-     *
-     * @deprecated
-     */
-    @Deprecated
-    public Profile getProfile(String profileName) {
-        try {
-            return getService().getProfileByName(profileName);
-        } catch (RemoteException e) {
-            Log.e(TAG, e.getLocalizedMessage(), e);
-        }
-        return null;
     }
 
     /**
