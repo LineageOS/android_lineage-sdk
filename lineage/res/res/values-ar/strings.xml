@@ -72,14 +72,6 @@
     <string name="accessibility_quick_settings_live_display_changed_outdoor">تم تغيير LiveDisplay إلى وضع الأماكن المفتوحة.</string>
     <string name="permlab_perfAccess">الوصول إلى مدير الأداء</string>
     <string name="permdesc_perfAccessDesc">السماح للتطبيق بالوصول إلى خدمة الأداء. ينبغي ألا يكون ضرورياً للتطبيقات العادية.</string>
-    <string name="permlab_weather_read">قراءة الطقس</string>
-    <string name="permdesc_weather_read">يسمح لتطبيق معين بقراءة المحتوى من موفر الطقس.</string>
-    <string name="permlab_weather_write">تحديث موفر الطقس</string>
-    <string name="permdesc_weather_write">يسمح لتطبيق معين بتحديث المحتوى من موفر الطقس.</string>
-    <string name="permlab_weather_bind">ربط كخدمة موفر الطقس</string>
-    <string name="permdesc_weather_bind">يسمح بتعريف تطبيق كخدمة موفر طقس.</string>
-    <string name="permlab_weather_access_mgr">الوصول إلى خدمة الطقس</string>
-    <string name="permdesc_weather_access_mgr">يسمح لتطبيق معين بالوصول إلى خدمة الطقس في النظام. لا يتعين الاحتياج إليه كليةً للتطبيقات العادية.</string>
     <string name="permlab_dataUsageWrite">تعديل قاعدة بيانات استخدام البيانات</string>
     <string name="permdesc_dataUsageWrite">يسمح لتطبيق معين بتحديث المحتوى من قاعدة بيانات استخدام البيانات.</string>
     <string name="permlab_dataUsageRead">قراءة قاعدة بيانات استخدام البيانات</string>

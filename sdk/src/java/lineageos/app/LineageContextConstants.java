@@ -71,18 +71,6 @@ public final class LineageContextConstants {
     public static final String LINEAGE_ICON_CACHE_SERVICE = "lineageiconcache";
 
     /**
-     * Use with {@link android.content.Context#getSystemService} to retrieve a
-     * {@link lineageos.weather.LineageWeatherManager} to manage the weather service
-     * settings and request weather updates
-     *
-     * @see android.content.Context#getSystemService
-     * @see lineageos.weather.LineageWeatherManager
-     *
-     * @hide
-     */
-    public static final String LINEAGE_WEATHER_SERVICE = "lineageweather";
-
-    /**
      * Manages display color adjustments
      *
      * @hide
@@ -142,14 +130,6 @@ public final class LineageContextConstants {
          */
         @SdkConstant(SdkConstant.SdkConstantType.FEATURE)
         public static final String PERFORMANCE = "org.lineageos.performance";
-
-        /**
-         * Feature for {@link PackageManager#getSystemAvailableFeatures} and
-         * {@link PackageManager#hasSystemFeature}: The device includes the lineage weather weather
-         * service utilized by the lineage sdk.
-         */
-        @SdkConstant(SdkConstant.SdkConstantType.FEATURE)
-        public static final String WEATHER_SERVICES = "org.lineageos.weather";
 
         /**
          * Feature for {@link PackageManager#getSystemAvailableFeatures} and

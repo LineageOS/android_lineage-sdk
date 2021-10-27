@@ -72,14 +72,6 @@
     <string name="accessibility_quick_settings_live_display_changed_outdoor">LiveDisplay cambiado a modo exterior.</string>
     <string name="permlab_perfAccess">acceder al supervisor de rendimiento</string>
     <string name="permdesc_perfAccessDesc">Permite que la aplicación acceda al servicio de rendimiento. Nunca debería ser necesario para aplicaciones normales.</string>
-    <string name="permlab_weather_read">leer el tiempo</string>
-    <string name="permdesc_weather_read">Permite una aplicación leer contenido desde el proveedor de clima.</string>
-    <string name="permlab_weather_write">actualizar proveedor de clima</string>
-    <string name="permdesc_weather_write">Permite una aplicación actualizar el contenido del proveedor de clima.</string>
-    <string name="permlab_weather_bind">establecer como un servicio de proveedor de clima</string>
-    <string name="permdesc_weather_bind">Permite que una aplicación sea identificada como un servicio de proveedor de clima.</string>
-    <string name="permlab_weather_access_mgr">acceder al servicio de clima</string>
-    <string name="permdesc_weather_access_mgr">Permite a una aplicación acceder al servicio de clima en el sistema. Nunca debe ser necesario para aplicaciones normales.</string>
     <string name="permlab_dataUsageWrite">modificar datos de uso de la base de datos</string>
     <string name="permdesc_dataUsageWrite">Permite que una aplicación actualice los datos del contenido de la base de datos.</string>
     <string name="permlab_dataUsageRead">leer datos de uso de la base de datos</string>

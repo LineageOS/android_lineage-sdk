@@ -72,14 +72,6 @@
     <string name="accessibility_quick_settings_live_display_changed_outdoor">LiveDisplay alterado para modo ao ar livre.</string>
     <string name="permlab_perfAccess">acessar o gerenciador de desempenho</string>
     <string name="permdesc_perfAccessDesc">Permite que um aplicativo acesse o serviço de desempenho. Nunca deve ser necessário para aplicativos normais.</string>
-    <string name="permlab_weather_read">ler previsão do tempo</string>
-    <string name="permdesc_weather_read">Permite que um aplicativo leia o conteúdo do provedor da previsão do tempo.</string>
-    <string name="permlab_weather_write">atualizar provedor de provisão do tempo</string>
-    <string name="permdesc_weather_write">Permite que um aplicativo atualize o conteúdo do provedor da previsão do tempo.</string>
-    <string name="permlab_weather_bind">vincular-se como um provedor de previsão do tempo</string>
-    <string name="permdesc_weather_bind">Permite que um aplicativo seja identificado como um provedor de previsão de tempo.</string>
-    <string name="permlab_weather_access_mgr">acesso ao serviço de previsão do tempo</string>
-    <string name="permdesc_weather_access_mgr">Permite que um aplicativo acesse a previsão do tempo no sistema. Nunca deverá ser necessário para aplicativos normais.</string>
     <string name="permlab_dataUsageWrite">modificar o banco de dados de uso de dados</string>
     <string name="permdesc_dataUsageWrite">Permite um aplicativo a atualizar o conteúdo da base de dados de uso de dados.</string>
     <string name="permlab_dataUsageRead">ler banco de dados de uso de dados</string>

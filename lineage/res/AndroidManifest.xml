@@ -77,38 +77,11 @@
                 android:description="@string/permdesc_perfAccessDesc"
                 android:protectionLevel="signature|privileged" />
 
-    <!-- Allows an application to read the weather content from the provider-->
-    <permission android:name="lineageos.permission.READ_WEATHER"
-                android:label="@string/permlab_weather_read"
-                android:description="@string/permdesc_weather_read"
-                android:protectionLevel="normal"/>
-
-    <!-- Allows an application to update the content of the weather provider
-        <p>Not for use by third-party applications. -->
-    <permission android:name="lineageos.permission.WRITE_WEATHER"
-                android:label="@string/permlab_weather_write"
-                android:description="@string/permdesc_weather_write"
-                android:protectionLevel="signature|privileged" />
-
-    <!-- Allows an application to be identified as a weather provider service -->
-    <permission android:name="lineageos.permission.BIND_WEATHER_PROVIDER_SERVICE"
-                android:label="@string/permlab_weather_bind"
-                android:description="@string/permdesc_weather_bind"
-                android:protectionLevel="signature"/>
-
     <!-- Allows an application to observe system-wide changes to audio sessions
          @hide -->
     <permission android:name="lineageos.permission.OBSERVE_AUDIO_SESSIONS"
                 android:label="@string/permlab_observe_audio_sessions"
                 android:description="@string/permdesc_observe_audio_sessions"
-                android:protectionLevel="normal"/>
-
-    <!-- Allows an application to access the weather service.
-        <p>Although the protection is normal, this permission should be required ONLY by those apps
-        meant to do something meaningful with the data provided by the service (LockClock, SysUI)-->
-    <permission android:name="lineageos.permission.ACCESS_WEATHER_MANAGER"
-                android:label="@string/permlab_weather_access_mgr"
-                android:description="@string/permdesc_weather_access_mgr"
                 android:protectionLevel="normal"/>
 
     <!-- Allows an application to manage LiveDisplay -->

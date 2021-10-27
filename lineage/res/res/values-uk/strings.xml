@@ -66,14 +66,6 @@
     <string name="accessibility_quick_settings_live_display_changed_outdoor">LiveDisplay змінено до режиму на вулиці.</string>
     <string name="permlab_perfAccess">доступ до менеджера продуктивності</string>
     <string name="permdesc_perfAccessDesc">Дозволяє додатку отримувати доступ до менеджера продуктивності. Цей дозвіл не потрібний звичайним додаткам.</string>
-    <string name="permlab_weather_read">читати погоду</string>
-    <string name="permdesc_weather_read">Дозволити додатку читати дані від провайдера погоди.</string>
-    <string name="permlab_weather_write">оновлення провайдера погоди</string>
-    <string name="permdesc_weather_write">Дозволяє додатку оновлювати дані провайдера погоди.</string>
-    <string name="permlab_weather_bind">прив\'язати як провайдера погоди</string>
-    <string name="permdesc_weather_bind">Дозволяє додатку бути службою провайдера погоди.</string>
-    <string name="permlab_weather_access_mgr">доступ до служби погоди</string>
-    <string name="permdesc_weather_access_mgr">Дозволити додатку доступ до служби погоди в системі. Це ніколи не потрібно для звичайних додатків.</string>
     <string name="permlab_dataUsageWrite">змінювати дані використання бази даних</string>
     <string name="permdesc_dataUsageWrite">Дозволяє додатку оновлювати вміст БД використання даних.</string>
     <string name="permlab_dataUsageRead">читати дані використання бази даних</string>

@@ -72,14 +72,6 @@
     <string name="accessibility_quick_settings_live_display_changed_outdoor">LiveDisplay camudó al mou esterior.</string>
     <string name="permlab_perfAccess">acceder al xestor de rindimientu</string>
     <string name="permdesc_perfAccessDesc">Permite qu\'una aplicación acceda al serviciu de rindimientu. Enxamás debería precisase p\'aplicaciones normales.</string>
-    <string name="permlab_weather_read">lleer la metereoloxía</string>
-    <string name="permdesc_weather_read">Permite qu\'una aplicación llea\'l conteníu del fornidor meteorolóxicu.</string>
-    <string name="permlab_weather_write">anovar el fornidor meteorolóxicu</string>
-    <string name="permdesc_weather_write">Permite qu\'una aplicación anueve\'l conteníu del fornidor meteorolóxicu.</string>
-    <string name="permlab_weather_bind">arreyar como serviciu fornidor de metereoloxía</string>
-    <string name="permdesc_weather_bind">Permite qu\'una aplicación s\'identifique como un serviciu fornidor de meteoroloxía.</string>
-    <string name="permlab_weather_access_mgr">acceder al serviciu de metereoloxía</string>
-    <string name="permdesc_weather_access_mgr">Permite qu\'una aplicación acceda al serviciu meteorolóxicu nel sistema. Enxamás debería precisase p\'aplicaciones normales.</string>
     <string name="permlab_dataUsageWrite">modificar base de datos d\'usu de datos</string>
     <string name="permdesc_dataUsageWrite">Permite qu\'una aplicación anueve\'l conteníu de la base de datos d\'usu de datos.</string>
     <string name="permlab_dataUsageRead">lleer base de datos d\'usu de datos</string>

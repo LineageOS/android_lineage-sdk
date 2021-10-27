@@ -98,9 +98,6 @@ public class LineageSettingsProviderDefaultsTest extends AndroidTestCase {
         GLOBAL_SETTINGS_DEFAULTS.add(new Setting(
                 LineageSettings.Global.POWER_NOTIFICATIONS_RINGTONE,
                 "R.string.def_power_notifications_ringtone"));
-        GLOBAL_SETTINGS_DEFAULTS.add(new Setting(
-                LineageSettings.Global.WEATHER_TEMPERATURE_UNIT,
-                "R.integer.def_temperature_unit"));
     }
 
     @Override

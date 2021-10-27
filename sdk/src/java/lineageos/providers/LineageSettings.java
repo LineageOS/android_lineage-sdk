@@ -1556,16 +1556,6 @@ public final class LineageSettings {
                 sBooleanValidator;
 
         /**
-         * Boolean value on whether to show weather in the statusbar
-         * 0 = 0ff, 1 = on
-         */
-        public static final String STATUS_BAR_SHOW_WEATHER = "status_bar_show_weather";
-
-        /** @hide */
-        public static final Validator STATUS_BAR_SHOW_WEATHER_VALIDATOR =
-                sBooleanValidator;
-
-        /**
          * Show search bar in recents
          * 0 = Off, 1 = on
          */
@@ -2095,7 +2085,6 @@ public final class LineageSettings {
                 LineageSettings.System.DISPLAY_COLOR_ADJUSTMENT,
                 LineageSettings.System.LIVE_DISPLAY_HINTED,
                 LineageSettings.System.DOUBLE_TAP_SLEEP_GESTURE,
-                LineageSettings.System.STATUS_BAR_SHOW_WEATHER,
                 LineageSettings.System.RECENTS_SHOW_SEARCH_BAR,
                 LineageSettings.System.NAVBAR_LEFT_IN_LANDSCAPE,
                 LineageSettings.System.T9_SEARCH_INPUT_LOCALE,
@@ -2231,7 +2220,6 @@ public final class LineageSettings {
             VALIDATORS.put(LIVE_DISPLAY_HINTED, LIVE_DISPLAY_HINTED_VALIDATOR);
             VALIDATORS.put(TRUST_INTERFACE_HINTED, TRUST_INTERFACE_HINTED_VALIDATOR);
             VALIDATORS.put(DOUBLE_TAP_SLEEP_GESTURE, DOUBLE_TAP_SLEEP_GESTURE_VALIDATOR);
-            VALIDATORS.put(STATUS_BAR_SHOW_WEATHER, STATUS_BAR_SHOW_WEATHER_VALIDATOR);
             VALIDATORS.put(RECENTS_SHOW_SEARCH_BAR, RECENTS_SHOW_SEARCH_BAR_VALIDATOR);
             VALIDATORS.put(NAVBAR_LEFT_IN_LANDSCAPE, NAVBAR_LEFT_IN_LANDSCAPE_VALIDATOR);
             VALIDATORS.put(T9_SEARCH_INPUT_LOCALE, T9_SEARCH_INPUT_LOCALE_VALIDATOR);
@@ -2927,23 +2915,10 @@ public final class LineageSettings {
         public static final String VIBRATOR_INTENSITY = "vibrator_intensity";
 
         /**
-         * Current active & enabled Weather Provider Service
-         *
-         * @hide
-         */
-        public static final String WEATHER_PROVIDER_SERVICE = "weather_provider_service";
-
-        /**
          * Whether lock screen bluring is enabled on devices that support this feature
          * @hide
          */
         public static final String LOCK_SCREEN_BLUR_ENABLED = "lock_screen_blur_enabled";
-
-        /**
-         * Whether to display weather information on the lock screen
-         * @hide
-         */
-        public static final String LOCK_SCREEN_WEATHER_ENABLED = "lock_screen_weather_enabled";
 
         /**
          * Network traffic indicator mode
@@ -3553,14 +3528,6 @@ public final class LineageSettings {
          * @hide
          */
         public static final String WIFI_AUTO_PRIORITIES_CONFIGURATION = "wifi_auto_priority";
-
-        /**
-         * Global temperature unit in which the weather data will be reported
-         * Valid values are:
-         * <p>{@link lineageos.providers.WeatherContract.WeatherColumns.TempUnit#CELSIUS}</p>
-         * <p>{@link lineageos.providers.WeatherContract.WeatherColumns.TempUnit#FAHRENHEIT}</p>
-         */
-        public static final String WEATHER_TEMPERATURE_UNIT = "weather_temperature_unit";
         // endregion
 
         /**

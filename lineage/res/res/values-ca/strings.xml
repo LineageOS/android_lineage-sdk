@@ -72,14 +72,6 @@
     <string name="accessibility_quick_settings_live_display_changed_outdoor">LiveDisplay canviat al mode exterior.</string>
     <string name="permlab_perfAccess">accés a l\'administrador de rendiment</string>
     <string name="permdesc_perfAccessDesc">Permet a una aplicació accedir al servei de rendiment. Normalment no hauria de ser necessari en les aplicacions normals.</string>
-    <string name="permlab_weather_read">llegir el temps</string>
-    <string name="permdesc_weather_read">Permet a una aplicació llegir els continguts del proveïdor meteorològic.</string>
-    <string name="permlab_weather_write">actualitzar el proveïdor meteorològic</string>
-    <string name="permdesc_weather_write">Permet a una aplicació actualitzar els continguts del proveïdor meteorològic.</string>
-    <string name="permlab_weather_bind">vincula com a un servei de proveïdor meteorològic</string>
-    <string name="permdesc_weather_bind">Permet a una aplicació ser identificada com un servei de proveïdor meteorològic.</string>
-    <string name="permlab_weather_access_mgr">accés al servei del temps</string>
-    <string name="permdesc_weather_access_mgr">Permet a una aplicació accedir al servei del temps del sistema. No s\'hauria de necessitar mai en les aplicacions normals.</string>
     <string name="permlab_dataUsageWrite">modificar la base de dades d\'ús de dades</string>
     <string name="permdesc_dataUsageWrite">Permet a una aplicació actualitzar el contingut de la base de dades d\'ús de dades.</string>
     <string name="permlab_dataUsageRead">llegi la base de dades d\'ús de dades</string>

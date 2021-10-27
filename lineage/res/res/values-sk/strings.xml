@@ -72,14 +72,6 @@
     <string name="accessibility_quick_settings_live_display_changed_outdoor">LiveDisplay sa zmenil na režim vonku.</string>
     <string name="permlab_perfAccess">prístup k správe výkonu</string>
     <string name="permdesc_perfAccessDesc">Umožňuje aplikácii prístup k správe výkonu. Toto povolenie nie je bežné pre štandardné aplikácie.</string>
-    <string name="permlab_weather_read">čítať počasie</string>
-    <string name="permdesc_weather_read">Umožní aplikácii čítať obsah z poskytovateľa počasia.</string>
-    <string name="permlab_weather_write">aktualizovať poskytovateľa počasia</string>
-    <string name="permdesc_weather_write">Umožní aplikácii aktualizovať obsah poskytovateľa počasia.</string>
-    <string name="permlab_weather_bind">viazať sa ako služba poskytovateľa počasia</string>
-    <string name="permdesc_weather_bind">Umožní aplikácii identifikovať sa ako služba poskytovateľa počasia.</string>
-    <string name="permlab_weather_access_mgr">prístup k meteorologickej službe</string>
-    <string name="permdesc_weather_access_mgr">Povoliť aplikácií prístup k meteorologickej službe v systéme. Bežné aplikácie by to nemali nikdy vyžadovať.</string>
     <string name="permlab_dataUsageWrite">meniť databázu využitia dát</string>
     <string name="permdesc_dataUsageWrite">Umožní aplikácii aktualizovať obsah databázy využitia dát.</string>
     <string name="permlab_dataUsageRead">čítať databázu využitia dát</string>

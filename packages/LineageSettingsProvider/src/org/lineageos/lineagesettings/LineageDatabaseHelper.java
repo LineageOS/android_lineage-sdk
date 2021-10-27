@@ -234,20 +234,9 @@ public class LineageDatabaseHelper extends SQLiteOpenHelper{
         }
 
         if (upgradeVersion < 5) {
-            if (mUserHandle == UserHandle.USER_OWNER) {
-                db.beginTransaction();
-                SQLiteStatement stmt = null;
-                try {
-                    stmt = db.compileStatement("INSERT INTO global(name,value)"
-                            + " VALUES(?,?);");
-                    loadIntegerSetting(stmt, LineageSettings.Global.WEATHER_TEMPERATURE_UNIT,
-                            R.integer.def_temperature_unit);
-                    db.setTransactionSuccessful();
-                } finally {
-                    if (stmt != null) stmt.close();
-                    db.endTransaction();
-                }
-            }
+            /* Was set LineageSettings.Global.WEATHER_TEMPERATURE_UNIT
+             * but this is no longer used
+             */
             upgradeVersion = 5;
         }
 
@@ -584,9 +573,6 @@ public class LineageDatabaseHelper extends SQLiteOpenHelper{
             loadStringSetting(stmt,
                     LineageSettings.Global.POWER_NOTIFICATIONS_RINGTONE,
                     R.string.def_power_notifications_ringtone);
-
-            loadIntegerSetting(stmt, LineageSettings.Global.WEATHER_TEMPERATURE_UNIT,
-                    R.integer.def_temperature_unit);
         } finally {
             if (stmt != null) stmt.close();
         }

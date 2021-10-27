@@ -72,14 +72,6 @@
     <string name="accessibility_quick_settings_live_display_changed_outdoor">LiveDisplay wizige nei bûtenstân.</string>
     <string name="permlab_perfAccess">tagong ta prestaasjebehear</string>
     <string name="permdesc_perfAccessDesc">Hjirmei kin de app tagong krije ta de prestaasjetsjinst. Nea fereaske foar normale apps.</string>
-    <string name="permlab_weather_read">it waar lêze</string>
-    <string name="permdesc_weather_read">Hjirmei kin de app de ynhâld fan de waaroanbieder lêze.</string>
-    <string name="permlab_weather_write">Waaroanbieder fernije</string>
-    <string name="permdesc_weather_write">Hjirmei kin de app de ynhâld fan de waaroanbieder fernije.</string>
-    <string name="permlab_weather_bind">keppelje as waaroanbiedertsjinst</string>
-    <string name="permdesc_weather_bind">Hjirmei kin de app harren identifisearje as waaroanbiedertsjinst.</string>
-    <string name="permlab_weather_access_mgr">tagong ta waartsjinst</string>
-    <string name="permdesc_weather_access_mgr">Hjirmei kin de app tagong krije ta de waartsjinst. Nea fereaske foar normale apps.</string>
     <string name="permlab_dataUsageWrite">database gegevensgebrûk oanpasse</string>
     <string name="permdesc_dataUsageWrite">Hjirmei kin de app de ynhâld fan de database mei gegevensgebrûk bywurkje.</string>
     <string name="permlab_dataUsageRead">database gegevensgebrûk lêze</string>

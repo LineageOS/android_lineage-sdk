@@ -72,14 +72,6 @@
     <string name="accessibility_quick_settings_live_display_changed_outdoor">LiveDisplay 已變更為戶外模式</string>
     <string name="permlab_perfAccess">存取效能管理員</string>
     <string name="permdesc_perfAccessDesc">允許應用程式存取效能服務 。一般應用程式不需使用。</string>
-    <string name="permlab_weather_read">讀取天氣資料</string>
-    <string name="permdesc_weather_read">允許應用程式從天氣資訊供應商讀取資料內容</string>
-    <string name="permlab_weather_write">更新天氣</string>
-    <string name="permdesc_weather_write">允許應用程式更新天氣資訊提供者的內容。</string>
-    <string name="permlab_weather_bind">綁定為天氣資訊供應商服務</string>
-    <string name="permdesc_weather_bind">允許應用程式辨識為天氣供應商服務。</string>
-    <string name="permlab_weather_access_mgr">存取氣象服務</string>
-    <string name="permdesc_weather_access_mgr">允許應用程式存取氣象服務 。一般應用程式不需使用。</string>
     <string name="permlab_dataUsageWrite">修改數據使用量資料庫</string>
     <string name="permdesc_dataUsageWrite">允許應用程式更新數據使用量資料庫內容。</string>
     <string name="permlab_dataUsageRead">讀取數據使用量資料庫</string>

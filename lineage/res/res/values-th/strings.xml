@@ -72,14 +72,6 @@
     <string name="accessibility_quick_settings_live_display_changed_outdoor">LiveDisplay เปลี่ยนเป็นรูปแบบกลางแจ้ง</string>
     <string name="permlab_perfAccess">ตัวจัดการประสิทธิภาพการเข้าถึง</string>
     <string name="permdesc_perfAccessDesc">อนุญาตให้แอปเข้าถึงบริการด้านประสิทธิภาพ ซึ่งไม่จำเป็นสำหรับแอปปกติ</string>
-    <string name="permlab_weather_read">อ่านสภาพอากาศ</string>
-    <string name="permdesc_weather_read">อนุญาตให้แอปอ่านเนื้อหาจากบริการรายงานสภาพอากาศ</string>
-    <string name="permlab_weather_write">ปรับปรุงบริการรายงานสภาพอากาศ</string>
-    <string name="permdesc_weather_write">อนุญาตให้แอปสามารถอัพเดทเนื้อหาของบริการรายงานสภาพอากาศ</string>
-    <string name="permlab_weather_bind">ผูกมัดเป็นบริการรายงานสภาพอากาศ</string>
-    <string name="permdesc_weather_bind">อนุญาตให้แอปยืนยันตัวตนเป็นบริการรายงานสภาพอากาศ</string>
-    <string name="permlab_weather_access_mgr">เข้าถึงบริการรายงานสภาพอากาศ</string>
-    <string name="permdesc_weather_access_mgr">อนุญาตให้แอปสามารถจัดการบริการรายงานสภาพอากาศในระบบ ปกติแล้วไม่ต้องการใช้งานในแอปทั่วไป</string>
     <string name="permlab_dataUsageWrite">แก้ไขฐานข้อมูลการใช้งาน</string>
     <string name="permdesc_dataUsageWrite">อนุญาตให้แอปสามารถปรับปรุงเนื้อหาของฐานข้อมูลการใช้งาน</string>
     <string name="permlab_dataUsageRead">อ่านฐานข้อมูลการใช้งาน</string>

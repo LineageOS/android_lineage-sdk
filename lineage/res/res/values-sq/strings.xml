@@ -72,14 +72,6 @@
     <string name="accessibility_quick_settings_live_display_changed_outdoor">LiveDisplay u kthye në profilin jashtë shtëpisë.</string>
     <string name="permlab_perfAccess">hyrja tek menaxhuesi i performancës</string>
     <string name="permdesc_perfAccessDesc">Lejon një app të hyjë tek shërbimi i performancës. App normale se kanë të nevojshme.</string>
-    <string name="permlab_weather_read">lexo motin</string>
-    <string name="permdesc_weather_read">Lejon një app të lexojë përmbajtjen nga parashkuesi i motit.</string>
-    <string name="permlab_weather_write">përditëso ofruesin e të dhënave të motit</string>
-    <string name="permdesc_weather_write">Lejon një app të përditësojë përmbajtjen e një parashkuesi moti.</string>
-    <string name="permlab_weather_bind">bashkoi si shërbim parashikimi moti</string>
-    <string name="permdesc_weather_bind">Lejon një app të identifikohet si shërbim për parashikuesin e motit.</string>
-    <string name="permlab_weather_access_mgr">akseso shërbimin e motit</string>
-    <string name="permdesc_weather_access_mgr">Lejon një app të hyjë tek shërbimi i parashikimit të motit. App normale se kanë të nevojshme.</string>
     <string name="permlab_dataUsageWrite">modifiko databazën e përdorimit të internetit</string>
     <string name="permdesc_dataUsageWrite">Lejon një app të azhornojë përmbajtjen e databazës së përdorimit të internetit.</string>
     <string name="permlab_dataUsageRead">lexo databazën e përdorimit të internetit</string>

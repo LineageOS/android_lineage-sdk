@@ -374,12 +374,6 @@ public final class LineageSettings {
         public static final String DOUBLE_TAP_SLEEP_GESTURE = "double_tap_sleep_gesture";
 
         /**
-         * Boolean value on whether to show weather in the statusbar
-         * @hide
-         */
-        public static final String STATUS_BAR_SHOW_WEATHER = "status_bar_show_weather";
-
-        /**
          * Show search bar in recents
          * @hide
          */
@@ -605,7 +599,6 @@ public final class LineageSettings {
                 LineageSettings.System.DISPLAY_COLOR_ADJUSTMENT,
                 LineageSettings.System.LIVE_DISPLAY_HINTED,
                 LineageSettings.System.DOUBLE_TAP_SLEEP_GESTURE,
-                LineageSettings.System.STATUS_BAR_SHOW_WEATHER,
                 LineageSettings.System.RECENTS_SHOW_SEARCH_BAR,
                 LineageSettings.System.NAVBAR_LEFT_IN_LANDSCAPE,
                 LineageSettings.System.T9_SEARCH_INPUT_LOCALE,

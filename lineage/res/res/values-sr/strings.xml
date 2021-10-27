@@ -72,14 +72,6 @@
     <string name="accessibility_quick_settings_live_display_changed_outdoor">LiveDisplay је пребачен у режим „на отвореном“.</string>
     <string name="permlab_perfAccess">приступ менаџеру перформанси</string>
     <string name="permdesc_perfAccessDesc">Апликација може да приступа услузи перформанси. Ова дозвола није потребна нормалним апликацијама.</string>
-    <string name="permlab_weather_read">читање временске прогнозе</string>
-    <string name="permdesc_weather_read">Апликација може да чита садржај временске прогнозе.</string>
-    <string name="permlab_weather_write">ажурирање временске прогнозе</string>
-    <string name="permdesc_weather_write">Апликација може да ажурира садржај временске прогнозе.</string>
-    <string name="permlab_weather_bind">повезан као добављач временске прогнозе</string>
-    <string name="permdesc_weather_bind">Апликација може да буде добављач временске прогнозе.</string>
-    <string name="permlab_weather_access_mgr">приступ услузи временске прогнозе</string>
-    <string name="permdesc_weather_access_mgr">Апликација може да приступа системској услузи временске прогнозе. Ова дозвола није потребна нормалним апликацијама.</string>
     <string name="permlab_dataUsageWrite">измена базе о коришћењу података</string>
     <string name="permdesc_dataUsageWrite">Апликација може да ажурира садржај базе о коришћењу података.</string>
     <string name="permlab_dataUsageRead">читање базе о коришћењу података</string>

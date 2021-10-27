@@ -72,14 +72,6 @@
     <string name="accessibility_quick_settings_live_display_changed_outdoor">Το LiveDisplay άλλαξε σε λειτουργία εξωτερικού χώρου.</string>
     <string name="permlab_perfAccess">πρόσβαση στην υπηρεσία επιδόσεων</string>
     <string name="permdesc_perfAccessDesc">Επιτρέπει σε μια εφαρμογή την πρόσβαση στην υπηρεσία επιδόσεων. Δεν πρέπει να απαιτείται από κανονικές εφαρμογές.</string>
-    <string name="permlab_weather_read">ανάγνωση καιρού</string>
-    <string name="permdesc_weather_read">Επιτρέπει σε μια εφαρμογή να διαβάσει περιεχόμενο από την υπηρεσία παροχής καιρού.</string>
-    <string name="permlab_weather_write">ενημέρωση παρόχου καιρού</string>
-    <string name="permdesc_weather_write">Επιτρέπει σε μια εφαρμογή να ενημερώσει το περιεχόμενο της υπηρεσίας παροχής καιρού.</string>
-    <string name="permlab_weather_bind">σύνδεση ως υπηρεσία παροχής καιρού</string>
-    <string name="permdesc_weather_bind">Επιτρέπει σε μια εφαρμογή να προσδιοριστεί ως μια υπηρεσία παροχής καιρού.</string>
-    <string name="permlab_weather_access_mgr">πρόσβαση στην υπηρεσία καιρού</string>
-    <string name="permdesc_weather_access_mgr">Επιτρέπει σε μια εφαρμογή την πρόσβαση στην υπηρεσία καιρού στο σύστημα. Δεν πρέπει να απαιτείται από κανονικές εφαρμογές.</string>
     <string name="permlab_dataUsageWrite">τροποποίηση βάσης δεδομένων χρήσης δεδομένων</string>
     <string name="permdesc_dataUsageWrite">Επιτρέπει σε μια εφαρμογή να ενημερώσει το περιεχόμενο της βάσης δεδομένων χρήσης δεδομένων.</string>
     <string name="permlab_dataUsageRead">ανάγνωση βάσης δεδομένων χρήσης δεδομένων</string>

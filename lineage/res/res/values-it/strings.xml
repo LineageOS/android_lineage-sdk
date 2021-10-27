@@ -72,14 +72,6 @@
     <string name="accessibility_quick_settings_live_display_changed_outdoor">LiveDisplay cambiato in modalità all\'aperto.</string>
     <string name="permlab_perfAccess">accesso gestione performance</string>
     <string name="permdesc_perfAccessDesc">Consente ad un\'app di accedere alla gestione performances. Non dovrebbe essere mai richiesto per le normali app.</string>
-    <string name="permlab_weather_read">leggi meteo</string>
-    <string name="permdesc_weather_read">Consente all\'applicazione di leggere contenuti dal provider meteo.</string>
-    <string name="permlab_weather_write">aggiorna provider meteo</string>
-    <string name="permdesc_weather_write">Consente all\'applicazione di aggiornare contenuti nel provider meteo.</string>
-    <string name="permlab_weather_bind">identificazione come provider meteo</string>
-    <string name="permdesc_weather_bind">Consente all\'applicazione di identificarsi come provider meteo.</string>
-    <string name="permlab_weather_access_mgr">accesso servizio meteo</string>
-    <string name="permdesc_weather_access_mgr">Consente all\'applicazione di accedere al servizio meteo nel sistema. Non dovrebbe mai essere necessario per le app normali.</string>
     <string name="permlab_dataUsageWrite">modifica database utilizzo dati</string>
     <string name="permdesc_dataUsageWrite">Consente all\'applicazione di aggiornare i contenuti nel database dati utilizzati.</string>
     <string name="permlab_dataUsageRead">leggi database utilizzo dati</string>

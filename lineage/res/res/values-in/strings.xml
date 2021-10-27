@@ -72,14 +72,6 @@
     <string name="accessibility_quick_settings_live_display_changed_outdoor">LiveDisplay diubah menjadi modus luar ruangan.</string>
     <string name="permlab_perfAccess">akses pengelola kinerja</string>
     <string name="permdesc_perfAccessDesc">Izinkan aplikasi untuk mengakses layanan kinerja. Tidak dibutuhkan untuk aplikasi biasa.</string>
-    <string name="permlab_weather_read">baca cuaca</string>
-    <string name="permdesc_weather_read">Izinkan aplikasi untuk membaca konten dari penyedia cuaca.</string>
-    <string name="permlab_weather_write">perbarui penyedia cuaca</string>
-    <string name="permdesc_weather_write">Izinkan aplikasi untuk memperbarui konten dari penyedia cuaca.</string>
-    <string name="permlab_weather_bind">ikat sebagai layanan penyedia cuaca</string>
-    <string name="permdesc_weather_bind">Izinkan aplikasi untuk diidentifikasi sebagai layanan penyedia cuaca.</string>
-    <string name="permlab_weather_access_mgr">akses layanan cuaca</string>
-    <string name="permdesc_weather_access_mgr">Izinkan aplikasi untuk mengakses layanan cuaca dalam sistem. Tidak dibutuhkan untuk aplikasi biasa.</string>
     <string name="permlab_dataUsageWrite">ubah basis data penggunaan data</string>
     <string name="permdesc_dataUsageWrite">Izinkan aplikasi untuk memperbarui konten dari basis data penggunaan data.</string>
     <string name="permlab_dataUsageRead">baca basis data penggunaan data</string>

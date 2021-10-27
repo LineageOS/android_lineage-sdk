@@ -72,14 +72,6 @@
     <string name="accessibility_quick_settings_live_display_changed_outdoor">LiveDisplay שונה למצב חוץ.</string>
     <string name="permlab_perfAccess">גש למנהל הביצועים</string>
     <string name="permdesc_perfAccessDesc">מאפשר ליישום לגשת לשירות ניהול הביצועים. לא אמור להידרש ליישומים רגילים לעולם.</string>
-    <string name="permlab_weather_read">קרא את מזג האוויר</string>
-    <string name="permdesc_weather_read">מאפשר ליישום לקרוא תוכן של ספק מידע על מזג האוויר.</string>
-    <string name="permlab_weather_write">עדכן את ספק מזג האוויר</string>
-    <string name="permdesc_weather_write">מאפשר ליישום לעדכן את תוכן ספק מידע מזג האוויר.</string>
-    <string name="permlab_weather_bind">התקשרות לשירות ספק מזג האוויר</string>
-    <string name="permdesc_weather_bind">מאפשר ליישום להזדהות כספק מידע מזג אוויר.</string>
-    <string name="permlab_weather_access_mgr">גישה לשירות מידע מזג אוויר</string>
-    <string name="permdesc_weather_access_mgr">מאפשר ליישום לגשת לשירות מזג האוויר של המערכת. לא אמור להידרש ליישומים רגילים לעולם.</string>
     <string name="permlab_dataUsageWrite">שנה מסד נתונים של השימוש בנתונים</string>
     <string name="permdesc_dataUsageWrite">מאפשר ליישום לעדכן את תוכן מסד הנתונים של השימוש בנתונים.</string>
     <string name="permlab_dataUsageRead">קרא את מסד הנתונים של השימוש בנתונים</string>

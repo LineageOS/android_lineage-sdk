@@ -56,8 +56,6 @@
     <string name="accessibility_quick_settings_live_display_night">LiveDisplay: nattläge.</string>
     <string name="permlab_perfAccess">komma åt prestandahanteraren</string>
     <string name="permdesc_perfAccessDesc">Ger en app åtkomst till prestandatjänsten. Ska aldrig behövas för vanliga appar.</string>
-    <string name="permlab_weather_read">läsa väderinformation</string>
-    <string name="permlab_weather_write">uppdatera väderleverantör</string>
     <string name="permlab_manageRemotePrefs">hantera fjärrinställningar</string>
     <string name="build_date">Kompileringsdatum</string>
     <string name="lineage_updates">LineageOS-uppdateringar</string>

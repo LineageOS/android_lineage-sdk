@@ -61,7 +61,6 @@
     <string name="accessibility_quick_settings_live_display_changed_auto">LiveDisplay зменены на аўтаматычны рэжым.</string>
     <string name="permlab_perfAccess">доступ да менеджара прадукцыйнасці</string>
     <string name="permdesc_perfAccessDesc">Дадатак зможа атрымваць доступ да службы прадукцыйнасці. Гэты дазвол не выкарыстоўваецца звычайнымі дадаткамі.</string>
-    <string name="permlab_weather_write">Абнавіць звесткі аб надвор’і</string>
     <string name="permlab_manageLiveDisplay">кіраванне наладамі LiveDisplay</string>
     <string name="permlab_manageRemotePrefs">кіраваньне аддаленнымі наладамі</string>
     <string name="permdesc_manageRemotePrefs">Дадатак зможа кіраваць аддаленымі наладамі</string>

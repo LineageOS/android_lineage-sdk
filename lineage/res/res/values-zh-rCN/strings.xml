@@ -72,14 +72,6 @@
     <string name="accessibility_quick_settings_live_display_changed_outdoor">LiveDisplay 已修改为户外模式。</string>
     <string name="permlab_perfAccess">访问性能管理器</string>
     <string name="permdesc_perfAccessDesc">允许应用访问性能服务。普通应用不应需要此权限。</string>
-    <string name="permlab_weather_read">读取天气</string>
-    <string name="permdesc_weather_read">允许应用读取来自天气提供商的内容。</string>
-    <string name="permlab_weather_write">更新天气提供商</string>
-    <string name="permdesc_weather_write">允许应用更新来自天气提供商的内容。</string>
-    <string name="permlab_weather_bind">绑定为天气提供商服务</string>
-    <string name="permdesc_weather_bind">允许应用被认定为天气服务商服务。</string>
-    <string name="permlab_weather_access_mgr">访问天气服务</string>
-    <string name="permdesc_weather_access_mgr">允许应用在系统中访问天气服务。正常应用不应需要此权限。</string>
     <string name="permlab_dataUsageWrite">修改数据使用情况数据库</string>
     <string name="permdesc_dataUsageWrite">允许应用更新数据使用情况数据库。</string>
     <string name="permlab_dataUsageRead">读取数据使用情况数据库。</string>

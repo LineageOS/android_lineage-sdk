@@ -72,14 +72,6 @@
     <string name="accessibility_quick_settings_live_display_changed_outdoor">LiveDisplay zmieniony na tryb zewnętrzny.</string>
     <string name="permlab_perfAccess">dostęp do menedżera wydajności</string>
     <string name="permdesc_perfAccessDesc">Umożliwia aplikacji dostęp do usługi wydajności (nie powinno być wymagane przez standardowe aplikacje).</string>
-    <string name="permlab_weather_read">odczyt pogody</string>
-    <string name="permdesc_weather_read">Umożliwia aplikacji odczyt danych od dostawcy pogody.</string>
-    <string name="permlab_weather_write">aktualizacja dostawcy pogody</string>
-    <string name="permdesc_weather_write">Umożliwia aplikacji na aktualizację danych dostawcy pogody.</string>
-    <string name="permlab_weather_bind">powiąż jako usługa dostawcy pogody</string>
-    <string name="permdesc_weather_bind">Zezwala aplikacji na dostarczanie usługi prognozy pogody.</string>
-    <string name="permlab_weather_access_mgr">dostęp do usługi prognozy pogody</string>
-    <string name="permdesc_weather_access_mgr">Zezwala aplikacji na dostęp do usługi prognozy pogody w systemie. Nie powinno być wymagane przez zwykłe aplikacje.</string>
     <string name="permlab_dataUsageWrite">modyfikowanie zawartości licznika danych</string>
     <string name="permdesc_dataUsageWrite">Umożliwia aplikacji aktualizowanie zawartości licznika danych.</string>
     <string name="permlab_dataUsageRead">odczyt zawartości licznika danych</string>

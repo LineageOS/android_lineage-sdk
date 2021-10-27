@@ -72,14 +72,6 @@
     <string name="accessibility_quick_settings_live_display_changed_outdoor">LiveDisplay auf Außen-Modus geändert.</string>
     <string name="permlab_perfAccess">Zugriff auf Leistungsmanager</string>
     <string name="permdesc_perfAccessDesc">Ermöglicht der App, den Zugriff auf den Leistungsdienst. Wird für normale Apps nicht benötigt.</string>
-    <string name="permlab_weather_read">Wetter auslesen</string>
-    <string name="permdesc_weather_read">Ermöglicht der App, Inhalte des Wetterdatenanbieters auszulesen.</string>
-    <string name="permlab_weather_write">Wetterdatenanbieter aktualisieren</string>
-    <string name="permdesc_weather_write">Ermöglicht der App, Inhalte des Wetterdatenanbieters zu aktualisieren.</string>
-    <string name="permlab_weather_bind">Anbindung als Service für Wetterdatenanbieter</string>
-    <string name="permdesc_weather_bind">Ermöglicht der App, sich als Wetterdatenanbieter zu identifizieren.</string>
-    <string name="permlab_weather_access_mgr">auf Wetterdienst zugreifen</string>
-    <string name="permdesc_weather_access_mgr">Ermöglicht der App, auf den Wetterdienst des Systems zuzugreifen. Wird für normale Apps nicht benötigt.</string>
     <string name="permlab_dataUsageWrite">Datennutzung-Datenbank ändern</string>
     <string name="permdesc_dataUsageWrite">Ermöglicht der App, Inhalte der Datennutzungs-Datenbank zu aktualisieren.</string>
     <string name="permlab_dataUsageRead">Datennutzungs-Datenbank lesen</string>

@@ -72,14 +72,6 @@
     <string name="accessibility_quick_settings_live_display_changed_outdoor">LiveDisplay muudetud õuerežiimi.</string>
     <string name="permlab_perfAccess">ligipääs jõudlusehaldurisse</string>
     <string name="permdesc_perfAccessDesc">Lubab rakendusel pääseda juurde jõudluse teenusele. Tavarakenduste puhul ei peaks kunagi vaja minema.</string>
-    <string name="permlab_weather_read">ilma lugemine</string>
-    <string name="permdesc_weather_read">Lubab rakendusel lugeda ilmateenuse pakkuja sisu.</string>
-    <string name="permlab_weather_write">ilmateenuse pakkuja uuendamine</string>
-    <string name="permdesc_weather_write">Lubab rakendusel uuendada ilmateenuse pakkuja sisu.</string>
-    <string name="permlab_weather_bind">sidumine ilmateenuse pakkuja teenusena</string>
-    <string name="permdesc_weather_bind">Lubab rakendust end tuvastada ilmateenuse pakkuja teenusena.</string>
-    <string name="permlab_weather_access_mgr">ligipääs ilmateenuse pakkuja teenusesse</string>
-    <string name="permdesc_weather_access_mgr">Annab rakendusele ligipääsu ilmateenusele. Tavarakenduste puhul ei peaks kunagi vaja minema.</string>
     <string name="permlab_dataUsageWrite">andmekasutuse andmebaasi muutmine</string>
     <string name="permdesc_dataUsageWrite">Lubab rakendusel värskendada andmekasutuse andmebaasi sisu.</string>
     <string name="permlab_dataUsageRead">andmekasutuse andmebaasi lugemine</string>

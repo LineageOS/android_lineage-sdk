@@ -72,14 +72,6 @@
     <string name="accessibility_quick_settings_live_display_changed_outdoor">LiveDisplayが屋外モードに変更されました。</string>
     <string name="permlab_perfAccess">パフォーマンスマネージャーへのアクセス</string>
     <string name="permdesc_perfAccessDesc">パフォーマンスサービスへのアクセスをアプリに許可します。通常のアプリで必要とされることはありません。</string>
-    <string name="permlab_weather_read">天気の読み取り</string>
-    <string name="permdesc_weather_read">天気プロバイダからのコンテンツの読み取りをアプリに許可します。</string>
-    <string name="permlab_weather_write">天気プロバイダの更新</string>
-    <string name="permdesc_weather_write">天気プロバイダのコンテンツの更新をアプリに許可します。</string>
-    <string name="permlab_weather_bind">天気プロバイダサービスとしてのバインド</string>
-    <string name="permdesc_weather_bind">天気プロバイダサービスとして識別されることをアプリに許可します。</string>
-    <string name="permlab_weather_access_mgr">天気サービスへのアクセス</string>
-    <string name="permdesc_weather_access_mgr">システムの天気サービスへのアクセスをアプリに許可します。通常のアプリで必要とされることはありません。</string>
     <string name="permlab_dataUsageWrite">データ使用量データベースの変更</string>
     <string name="permdesc_dataUsageWrite">データ使用量データベースのコンテンツの更新をアプリに許可します。</string>
     <string name="permlab_dataUsageRead">データ使用量データベースの読み取り</string>

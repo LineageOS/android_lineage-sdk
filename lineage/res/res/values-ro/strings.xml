@@ -72,14 +72,6 @@
     <string name="accessibility_quick_settings_live_display_changed_outdoor">LiveDisplay s-a schimbat la modul afară.</string>
     <string name="permlab_perfAccess">acces la managerul de performanță</string>
     <string name="permdesc_perfAccessDesc">Permite unei aplicații să acceseze serviciul de performanță. Aplicațiile normale nu au nevoie de aceasta.</string>
-    <string name="permlab_weather_read">citește vremea</string>
-    <string name="permdesc_weather_read">Permite unei aplicații să citească conținutul furnizorului de vreme.</string>
-    <string name="permlab_weather_write">actualizare furnizor meteo</string>
-    <string name="permdesc_weather_write">Permite unei aplicații să actualizeze conținutul furnizorului de vreme.</string>
-    <string name="permlab_weather_bind">fixează ca serviciu furnizor de vreme</string>
-    <string name="permdesc_weather_bind">Permite unei aplicații să fie identificată ca un serviciu furnizor de vreme.</string>
-    <string name="permlab_weather_access_mgr">accesează serviciul pentru vreme</string>
-    <string name="permdesc_weather_access_mgr">Permite unei aplicații să acceseze serviciul pentru vreme în sistem. Aplicațiile normale nu ar trebui să aibă nevoie de aceasta.</string>
     <string name="permlab_dataUsageWrite">modifică baza de date a utilizării datelor</string>
     <string name="permdesc_dataUsageWrite">Permite unei aplicații să actualizeze conținutul bazei de date despre utilizarea datelor.</string>
     <string name="permlab_dataUsageRead">citește baza de date a utilizării datelor</string>

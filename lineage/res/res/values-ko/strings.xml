@@ -72,14 +72,6 @@
     <string name="accessibility_quick_settings_live_display_changed_outdoor">라이브 디스플레이가 야외 모드로 바뀜.</string>
     <string name="permlab_perfAccess">성능 관리자에 액세스</string>
     <string name="permdesc_perfAccessDesc">앱이 성능 서비스에 접근할 수 있도록 허용합니다. 일반 앱에서는 필요 없는 권한입니다.</string>
-    <string name="permlab_weather_read">날씨 확인</string>
-    <string name="permdesc_weather_read">앱이 날씨 제공자로부터 날씨를 확인할 수 있도록 허용합니다.</string>
-    <string name="permlab_weather_write">날씨 제공자 업데이트</string>
-    <string name="permdesc_weather_write">앱이 날씨 제공자를 업데이트할 수 있도록 허용합니다.</string>
-    <string name="permlab_weather_bind">날씨 제공자 서비스로 연결</string>
-    <string name="permdesc_weather_bind">앱이 날씨 제공자 서비스로 인식되는 것을 허용합니다.</string>
-    <string name="permlab_weather_access_mgr">날씨 서비스에 접근</string>
-    <string name="permdesc_weather_access_mgr">앱이 시스템의 날씨 서비스에 접근할 수 있도록 허용합니다. 일반 앱에서는 필요 없는 권한입니다.</string>
     <string name="permlab_dataUsageWrite">데이터 사용량 데이터베이스 수정</string>
     <string name="permdesc_dataUsageWrite">앱이 데이터 사용량 데이터베이스를 수정할 수 있도록 허용합니다.</string>
     <string name="permlab_dataUsageRead">데이터 사용량 데이터베이스 읽기</string>

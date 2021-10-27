@@ -72,14 +72,6 @@
     <string name="accessibility_quick_settings_live_display_changed_outdoor">LiveDisplay szabadtéri módra változtatva.</string>
     <string name="permlab_perfAccess">hozzáférés a teljesítmény kezelőhöz</string>
     <string name="permdesc_perfAccessDesc">Lehetővé teszi az alkalmazás számára, hogy hozzáférjen a teljesítmény szolgáltatáshoz. Általános alkalmazásoknak soha nem kell ilyen engedély.</string>
-    <string name="permlab_weather_read">időjárás olvasása</string>
-    <string name="permdesc_weather_read">Lehetővé teszi az alkalmazás számára az időjárás szolgáltatói tartalom olvasását.</string>
-    <string name="permlab_weather_write">időjárás szolgáltató frissítése</string>
-    <string name="permdesc_weather_write">Lehetővé teszi az alkalmazás számár, hogy frissítse az időjárás szolgáltató tartalmát.</string>
-    <string name="permlab_weather_bind">időjárás szolgáltatóként kötés</string>
-    <string name="permdesc_weather_bind">Lehetővé teszi az alkalmazás számára, hogy mint időjárás szolgáltató kerüljön azonosításra.</string>
-    <string name="permlab_weather_access_mgr">hozzáférés időjárás szolgáltatáshoz</string>
-    <string name="permdesc_weather_access_mgr">Lehetővé teszi az alkalmazás számára a rendszer időjárás szolgáltatásának elérését. Általános alkalmazásoknak soha nem kell ilyen engedély.</string>
     <string name="permlab_dataUsageWrite">adathasználati adatbázis módosítása</string>
     <string name="permdesc_dataUsageWrite">Lehetővé teszi az alkalmazás számára az adathasználati adatbázis tartalmának frissítését.</string>
     <string name="permlab_dataUsageRead">adathasználati adatbázis olvasása</string>

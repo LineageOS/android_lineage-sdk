@@ -47,54 +47,12 @@ public class ApiV5PriorReleaseInterfaces {
         lineageAudioService.put("listAudioSessions", 1);
     }
 
-    //LineageWeatherManager Aidl (ILineageWeatherManager)
-    static {
-        Map<String, Integer> ilineageWeatherManager =
-                getInternalInterfaceMap("ILineageWeatherManager");
-        //ELDERBERRY BEGIN
-        ilineageWeatherManager.put("updateWeather", 1);
-        ilineageWeatherManager.put("lookupCity ", 2);
-        ilineageWeatherManager.put("registerWeatherServiceProviderChangeListener", 3);
-        ilineageWeatherManager.put("unregisterWeatherServiceProviderChangeListener", 4);
-        ilineageWeatherManager.put("getActiveWeatherServiceProviderLabel", 5);
-        ilineageWeatherManager.put("cancelRequest", 6);
-    }
-
     //RequestInfoListener Aidl (IRequestInfoListener)
     static {
         Map<String, Integer> requestInfoListener =
                 getInternalInterfaceMap("IRequestInfoListener");
         //ELDERBERRY BEGIN
-        requestInfoListener.put("onWeatherRequestCompleted", 1);
-        requestInfoListener.put("onLookupCityRequestCompleted ", 2);
-    }
-
-    //WeatherServiceProviderChangeListener Aidl (IWeatherServiceProviderChangeListener)
-    static {
-        Map<String, Integer> weatherServiceProviderChangeListener =
-                getInternalInterfaceMap("IWeatherServiceProviderChangeListener");
-        //ELDERBERRY BEGIN
-        weatherServiceProviderChangeListener.put("onWeatherServiceProviderChanged", 1);
-    }
-
-    //WeatherProviderService Aidl (IWeatherProviderService)
-    static {
-        Map<String, Integer> weatherProviderService =
-                getInternalInterfaceMap("IWeatherProviderService");
-        //ELDERBERRY BEGIN
-        weatherProviderService.put("processWeatherUpdateRequest", 1);
-        weatherProviderService.put("processCityNameLookupRequest ", 2);
-        weatherProviderService.put("setServiceClient", 3);
-        weatherProviderService.put("cancelOngoingRequests", 4);
-        weatherProviderService.put("cancelRequest", 5);
-    }
-
-    //WeatherProviderServiceClient Aidl (IWeatherProviderServiceClient)
-    static {
-        Map<String, Integer> weatherProviderServiceClient =
-                getInternalInterfaceMap("IWeatherProviderServiceClient");
-        //ELDERBERRY BEGIN
-        weatherProviderServiceClient.put("setServiceRequestState", 1);
+        requestInfoListener.put("onLookupCityRequestCompleted ", 1);
     }
 
     protected static Map<String, Integer> getInternalInterfaceMap(String targetInterface) {

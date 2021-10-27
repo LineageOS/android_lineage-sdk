@@ -66,14 +66,6 @@
     <string name="accessibility_quick_settings_live_display_changed_outdoor">LiveDisplay verander na buitelug modus.</string>
     <string name="permlab_perfAccess">toegang na prestasie bestuurder</string>
     <string name="permdesc_perfAccessDesc">Laat \'n toep toe om toegang na die prestasie diens te verkry. Moet nooit nodig wees vir normale programme nie.</string>
-    <string name="permlab_weather_read">lees weer</string>
-    <string name="permdesc_weather_read">Laat \'n toep toe om inhoud te lees vanaf die weer verskaffer.</string>
-    <string name="permlab_weather_write">opdateer weer verskaffer</string>
-    <string name="permdesc_weather_write">Laat \'n toep toe om inhoud van die weer verskaffer by te werk.</string>
-    <string name="permlab_weather_bind">bind as \'n weer verskaffer diens</string>
-    <string name="permdesc_weather_bind">Laat \'n toep toe om as \'n weer diens verskaffer geïdentifiseer te word.</string>
-    <string name="permlab_weather_access_mgr">toegang na weer diens</string>
-    <string name="permdesc_weather_access_mgr">Laat \'n toep om toegang te verkry tot die weer diens in die stelsel. Moet nooit nodig wees vir die normale toepassings.</string>
     <string name="permlab_dataUsageWrite">modifiseer data gebruik databasis</string>
     <string name="permdesc_dataUsageWrite">Laat \'n toep toe om die inhoud opdateer van die data gebruik databasis.</string>
     <string name="permlab_dataUsageRead">lees data gebruik databasis</string>

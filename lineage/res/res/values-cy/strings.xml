@@ -72,14 +72,6 @@
     <string name="accessibility_quick_settings_live_display_changed_outdoor">LiveDisplay wedi\'i newid i fodd awyr agored.</string>
     <string name="permlab_perfAccess">mynediad at reolwr perfformiad</string>
     <string name="permdesc_perfAccessDesc">Mae\'n caniatáu i ap gyrchu\'r gwasanaeth perfformiad. Ni ddylai apiau arferol byth fod ei angen.</string>
-    <string name="permlab_weather_read">darllen y tywydd</string>
-    <string name="permdesc_weather_read">Mae\'n caniatáu i ap ddarllen cynnwys gan y darparydd tywydd.</string>
-    <string name="permlab_weather_write">diweddaru darparwr tywydd</string>
-    <string name="permdesc_weather_write">Mae\'n caniatáu i ap ddiweddaru cynnwys y darparydd tywydd.</string>
-    <string name="permlab_weather_bind">clymu fel gwasanaeth darparu tywydd</string>
-    <string name="permdesc_weather_bind">Mae\'n galluogi ap i gael ei adnabod fel gwasanaeth darparu tywydd.</string>
-    <string name="permlab_weather_access_mgr">mynediad at wasanaeth tywydd</string>
-    <string name="permdesc_weather_access_mgr">Mae\'n caniatáu i ap gyrchu\'r gwasanaeth tywydd yn y system. Ni ddylai apiau arferol byth fod ei angen.</string>
     <string name="permlab_dataUsageWrite">addasu\'r gronfa ddata defnydd data</string>
     <string name="permdesc_dataUsageWrite">Mae\'n caniatáu i ap ddiweddaru cynnwys y gronfa ddata defnydd data.</string>
     <string name="permlab_dataUsageRead">darllen cronfa ddata defnydd data</string>

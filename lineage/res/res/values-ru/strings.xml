@@ -72,14 +72,6 @@
     <string name="accessibility_quick_settings_live_display_changed_outdoor">LiveDisplay переключен в режим «на улице».</string>
     <string name="permlab_perfAccess">доступ к менеджеру производительности</string>
     <string name="permdesc_perfAccessDesc">Приложение сможет получать доступ к службе производительности. Это разрешение не используется обычными приложениями.</string>
-    <string name="permlab_weather_read">чтение данных о погоде</string>
-    <string name="permdesc_weather_read">Приложение сможет считывать данные от поставщика погоды.</string>
-    <string name="permlab_weather_write">обновление поставщика погоды</string>
-    <string name="permdesc_weather_write">Приложение сможет обновлять данные поставщика погоды.</string>
-    <string name="permlab_weather_bind">привязать как службу поставщика погоды</string>
-    <string name="permdesc_weather_bind">Приложение сможет выступать в качестве службы поставщика погоды.</string>
-    <string name="permlab_weather_access_mgr">доступ к службе погоды</string>
-    <string name="permdesc_weather_access_mgr">Приложение сможет получать доступ к службе погоды в системе. Это разрешение не используется обычными приложениями.</string>
     <string name="permlab_dataUsageWrite">изменить данные об использовании БД</string>
     <string name="permdesc_dataUsageWrite">Приложение сможет обновлять содержимое БД использования данных.</string>
     <string name="permlab_dataUsageRead">чтение данных об использовании БД</string>
