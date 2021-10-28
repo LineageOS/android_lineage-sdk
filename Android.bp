@@ -18,7 +18,6 @@ android_app {
     name: "org.lineageos.platform-res",
     sdk_version: "core_platform",
     certificate: "platform",
-    system_ext_specific: true,
 
     manifest: "lineage/res/AndroidManifest.xml",
 
