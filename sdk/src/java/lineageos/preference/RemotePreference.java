@@ -94,8 +94,8 @@ public class RemotePreference extends SelfRemovingPreference
 
     public RemotePreference(Context context, AttributeSet attrs) {
         this(context, attrs, ConstraintsHelper.getAttr(context,
-                androidx.preference.R.attr.preferenceScreenStyle,
-                android.R.attr.preferenceScreenStyle));
+                androidx.preference.R.attr.preferenceStyle,
+                android.R.attr.preferenceStyle));
     }
 
     @Override
