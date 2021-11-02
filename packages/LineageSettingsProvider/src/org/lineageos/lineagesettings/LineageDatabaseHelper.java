@@ -17,8 +17,12 @@
 
 package org.lineageos.lineagesettings;
 
+import android.Manifest;
+import android.app.AppGlobals;
 import android.content.Context;
+import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
+import android.content.pm.UserInfo;
 import android.content.res.AssetManager;
 import android.content.res.Configuration;
 import android.content.res.Resources;
@@ -26,9 +30,13 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteDoneException;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.database.sqlite.SQLiteStatement;
+import android.net.NetworkPolicyManager;
 import android.os.Environment;
+import android.os.RemoteException;
 import android.os.SystemProperties;
 import android.os.UserHandle;
+import android.os.UserManager;
+import android.provider.Settings;
 import android.text.TextUtils;
 import android.util.DisplayMetrics;
 import android.util.Log;
@@ -38,6 +46,10 @@ import lineageos.providers.LineageSettings;
 import org.lineageos.internal.util.FileUtils;
 
 import java.io.File;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Set;
+import java.util.stream.Collectors;
 
 /**
  * The LineageDatabaseHelper allows creation of a database to store Lineage specific settings for a user
@@ -48,7 +60,7 @@ public class LineageDatabaseHelper extends SQLiteOpenHelper{
     private static final boolean LOCAL_LOGV = false;
 
     private static final String DATABASE_NAME = "lineagesettings.db";
-    private static final int DATABASE_VERSION = 14;
+    private static final int DATABASE_VERSION = 15;
 
     private static final String DATABASE_NAME_OLD = "cmsettings.db";
 
@@ -401,6 +413,47 @@ public class LineageDatabaseHelper extends SQLiteOpenHelper{
                 }
             }
             upgradeVersion = 14;
+        }
+
+        if (upgradeVersion < 15) {
+            if (mUserHandle == UserHandle.USER_OWNER) {
+                final int restrictedNetworkingMode = Settings.Global.getInt(
+                        mContext.getContentResolver(),
+                        Settings.Global.RESTRICTED_NETWORKING_MODE, -1);
+                if (restrictedNetworkingMode == -1) {
+                    Settings.Global.putInt(mContext.getContentResolver(),
+                        Settings.Global.RESTRICTED_NETWORKING_MODE, 1);
+                }
+                final String UIDS_ALLOWED_ON_RESTRICTED_NETWORKS =
+                        "uids_allowed_on_restricted_networks";
+                final String uidsAllowedOnRestrictedNetworks = Settings.Global.getString(
+                        mContext.getContentResolver(), UIDS_ALLOWED_ON_RESTRICTED_NETWORKS);
+                if (uidsAllowedOnRestrictedNetworks == null) {
+                    try {
+                        List<PackageInfo> packages = new ArrayList<>();
+                        for (UserInfo userInfo : mContext.getSystemService(UserManager.class)
+                                .getAliveUsers()) {
+                            packages.addAll(
+                                AppGlobals.getPackageManager().getPackagesHoldingPermissions(
+                                    new String[]{Manifest.permission.INTERNET},
+                                    PackageManager.MATCH_UNINSTALLED_PACKAGES,
+                                    userInfo.id
+                                ).getList());
+                        }
+                        Set<Integer> uids = packages.stream().map(
+                                packageInfo -> packageInfo.applicationInfo.uid)
+                                .collect(Collectors.toSet());
+                        final int POLICY_REJECT_ALL = 0x40000;
+                        uids.removeAll(Set.of(NetworkPolicyManager.from(mContext)
+                                .getUidsWithPolicy(POLICY_REJECT_ALL)));
+                        Settings.Global.putString(mContext.getContentResolver(),
+                                UIDS_ALLOWED_ON_RESTRICTED_NETWORKS, TextUtils.join(";", uids));
+                    } catch (RemoteException e) {
+                        Log.e(TAG, "Failed to set uids allowed on restricted networks");
+                    }
+                }
+            }
+            upgradeVersion = 15;
         }
         // *** Remember to update DATABASE_VERSION above!
     }
