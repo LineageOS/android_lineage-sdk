@@ -47,16 +47,8 @@
 
     <!-- Defaults for Global -->
 
-    <!-- Default for LineageSettings.Global.DEVICE_NAME
-         $1=MODEL -->
-    <string name="def_device_name">%1$s</string>
-
     <!-- Defaults for LineageSettings.System.FORCE_SHOW_NAVBAR -->
     <integer name="def_force_show_navbar">0</integer>
-
-    <!-- Default for LineageSettings.Global.HEADS_UP_NOTIFICATIONS_ENABLED
-         1==on -->
-    <integer name="def_heads_up_enabled">1</integer>
 
     <!-- Default for LineageSettings.Global.POWER_NOTIFICATIONS_VIBRATE -->
     <bool name="def_power_notifications_vibrate">false</bool>
@@ -86,12 +78,6 @@
 
     <!-- Default value for swapping volume keys on rotation -->
     <bool name="def_swap_volume_keys_on_rotation">false</bool>
-
-    <!-- Default enabled event based LLS components
-         Contains a list of component names for enabled components, separated by '|'
-         ex. com.example.mylls/com.example.mylls.LiveLockScreen|com.example.anotherLls/com.example.anotherLls.MyLls
-    -->
-    <string name="def_enabled_event_lls_components"></string>
 
     <!-- Default clock position
          * 0: show the clock in the right position (LTR)
