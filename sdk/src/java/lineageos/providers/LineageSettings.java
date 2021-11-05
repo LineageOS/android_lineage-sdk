@@ -926,6 +926,16 @@ public final class LineageSettings {
                 new InclusiveIntegerRangeValidator(0, 2);
 
         /**
+         * Whether to hide clock when launcher is visible
+         * default: false
+         */
+        public static final String STATUS_BAR_CLOCK_AUTO_HIDE = "status_bar_clock_auto_hide";
+
+        /** @hide */
+        public static final Validator STATUS_BAR_CLOCK_AUTO_HIDE_VALIDATOR =
+                sBooleanValidator;
+
+        /**
          * Whether the notification light will be allowed when in zen mode during downtime
          */
         public static final String ZEN_ALLOW_LIGHTS = "allow_lights";
@@ -2141,6 +2151,7 @@ public final class LineageSettings {
                     HIGH_TOUCH_SENSITIVITY_ENABLE_VALIDATOR);
             VALIDATORS.put(SYSTEM_PROFILES_ENABLED, SYSTEM_PROFILES_ENABLED_VALIDATOR);
             VALIDATORS.put(STATUS_BAR_CLOCK, STATUS_BAR_CLOCK_VALIDATOR);
+            VALIDATORS.put(STATUS_BAR_CLOCK_AUTO_HIDE, STATUS_BAR_CLOCK_AUTO_HIDE_VALIDATOR);
             VALIDATORS.put(STATUS_BAR_AM_PM, STATUS_BAR_AM_PM_VALIDATOR);
             VALIDATORS.put(STATUS_BAR_BATTERY_STYLE, STATUS_BAR_BATTERY_STYLE_VALIDATOR);
             VALIDATORS.put(STATUS_BAR_SHOW_BATTERY_PERCENT,
