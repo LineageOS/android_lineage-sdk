@@ -473,9 +473,6 @@ public class LineageDatabaseHelper extends SQLiteOpenHelper{
             stmt = db.compileStatement("INSERT OR IGNORE INTO secure(name,value)"
                     + " VALUES(?,?);");
             // Secure
-            loadBooleanSetting(stmt, LineageSettings.Secure.ADVANCED_MODE,
-                    R.bool.def_advanced_mode);
-
             loadBooleanSetting(stmt, LineageSettings.Secure.STATS_COLLECTION,
                     R.bool.def_stats_collection);
 

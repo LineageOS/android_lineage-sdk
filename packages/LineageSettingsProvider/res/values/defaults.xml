@@ -29,9 +29,6 @@
 
     <!-- Defaults for Secure -->
 
-    <!-- Default for LineageSettings.Secure.ADVANCED_MODE -->
-    <bool name="def_advanced_mode">true</bool>
-
     <!-- Default for LineageSettings.Secure.STATS_COLLECTION -->
     <bool name="def_stats_collection">false</bool>
 

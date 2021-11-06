@@ -658,13 +658,6 @@ public final class LineageSettings {
         // region Secure Settings
 
         /**
-         * Whether to enable "advanced mode" for the current user.
-         * Boolean setting. 0 = no, 1 = yes.
-         * @hide
-         */
-        public static final String ADVANCED_MODE = "advanced_mode";
-
-        /**
          * The time in ms to keep the button backlight on after pressing a button.
          * A value of 0 will keep the buttons on for as long as the screen is on.
          * @hide
@@ -847,7 +840,6 @@ public final class LineageSettings {
          * @hide
          */
         public static final String[] LEGACY_SECURE_SETTINGS = new String[]{
-                LineageSettings.Secure.ADVANCED_MODE,
                 LineageSettings.Secure.BUTTON_BACKLIGHT_TIMEOUT,
                 LineageSettings.Secure.BUTTON_BRIGHTNESS,
                 LineageSettings.Secure.DEV_FORCE_SHOW_NAVBAR,
