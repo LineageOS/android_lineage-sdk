@@ -16,45 +16,27 @@
      limitations under the License.
 -->
 <resources>
+    <!-- Defaults for Secure -->
+
+    <!-- Default for LineageSettings.Secure.STATS_COLLECTION -->
+    <bool name="def_stats_collection">false</bool>
+
+    <!-- Default for LineageSettings.Secure.LOCKSCREEN_VISUALIZER_ENABLED -->
+    <bool name="def_lockscreen_visualizer">false</bool>
+
+    <!-- Default for LineageSettings.Secure.VOLUME_PANEL_ON_LEFT -->
+    <bool name="def_volume_panel_on_left">false</bool>
+
     <!-- Defaults for System -->
+
+    <!-- Default for LineageSettings.System.FORCE_SHOW_NAVBAR -->
+    <integer name="def_force_show_navbar">0</integer>
 
     <!-- Default for LineageSettings.System.QS_QUICK_PULLDOWN
          0. Off
          1. Right
          2. Left -->
     <integer name="def_qs_quick_pulldown">0</integer>
-
-    <!-- Default for LineageSettings.System.SYSTEM_PROFILES_ENABLED -->
-    <bool name="def_profiles_enabled">true</bool>
-
-    <!-- Defaults for Secure -->
-
-    <!-- Default for LineageSettings.Secure.STATS_COLLECTION -->
-    <bool name="def_stats_collection">false</bool>
-
-    <!-- Default for LineageSettings.Secure.VOLUME_PANEL_ON_LEFT -->
-    <bool name="def_volume_panel_on_left">false</bool>
-
-    <!-- Default for LineageSettings.System.STATUS_BAR_BATTERY_STYLE
-         * 0: Display the battery as icon in portrait mode
-         * 1: Display the battery as a circle
-         * 2: Display the battery as plain text
-    -->
-    <integer name="def_battery_style">0</integer>
-
-    <!-- Default for LineageSettings.Secure.LOCKSCREEN_VISUALIZER_ENABLED -->
-    <bool name="def_lockscreen_visualizer">false</bool>
-
-    <!-- Defaults for Global -->
-
-    <!-- Defaults for LineageSettings.System.FORCE_SHOW_NAVBAR -->
-    <integer name="def_force_show_navbar">0</integer>
-
-    <!-- Default for LineageSettings.Global.POWER_NOTIFICATIONS_VIBRATE -->
-    <bool name="def_power_notifications_vibrate">false</bool>
-
-    <!-- Default for LineageSettings.Global.POWER_NOTIFICATIONS_RINGTONE -->
-    <string name="def_power_notifications_ringtone" translatable="false">/system/product/media/audio/ui/WirelessChargingStarted.ogg</string>
 
     <!-- Default value for the battery LEDs brightness -->
     <integer name="def_battery_brightness_level">255</integer>
@@ -72,6 +54,9 @@
          when Do Not Disturb is active -->
     <integer name="def_notification_brightness_level_zen">255</integer>
 
+    <!-- Default for LineageSettings.System.SYSTEM_PROFILES_ENABLED -->
+    <bool name="def_profiles_enabled">true</bool>
+
     <!-- Default value for notification LED customization -->
     <bool name="def_notification_pulse_custom_enable">false</bool>
     <string name="def_notification_pulse_custom_value"></string>
@@ -79,11 +64,26 @@
     <!-- Default value for swapping volume keys on rotation -->
     <bool name="def_swap_volume_keys_on_rotation">false</bool>
 
+    <!-- Default for LineageSettings.System.STATUS_BAR_BATTERY_STYLE
+         * 0: Display the battery as icon in portrait mode
+         * 1: Display the battery as a circle
+         * 2: Display the battery as plain text
+    -->
+    <integer name="def_battery_style">0</integer>
+
     <!-- Default clock position
          * 0: show the clock in the right position (LTR)
          * 1: show the clock in the center
          * 2: show the clock in the left position (LTR)
     -->
     <integer name="def_clock_position">2</integer>
+
+    <!-- Defaults for Global -->
+
+    <!-- Default for LineageSettings.Global.POWER_NOTIFICATIONS_VIBRATE -->
+    <bool name="def_power_notifications_vibrate">false</bool>
+
+    <!-- Default for LineageSettings.Global.POWER_NOTIFICATIONS_RINGTONE -->
+    <string name="def_power_notifications_ringtone" translatable="false">/system/product/media/audio/ui/WirelessChargingStarted.ogg</string>
 
 </resources>
