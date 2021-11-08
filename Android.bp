@@ -167,6 +167,7 @@ java_library {
 
 java_library {
     name: "org.lineageos.platform.lineagesettings",
+    min_sdk_version: "30",
 
     // LineageSettings is our main target, the rest are deps.
     srcs: [
