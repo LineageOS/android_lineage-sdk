@@ -57,8 +57,6 @@ public class LineageSettingsProvider extends ContentProvider {
     public static final String TAG = "LineageSettingsProvider";
     private static final boolean LOCAL_LOGV = false;
 
-    private static final String SHARED_PREF_NAME_OLD = "CMSettingsProvider";
-
     private static final boolean USER_CHECK_THROWS = true;
 
     public static final String PREF_HAS_MIGRATED_LINEAGE_SETTINGS =
@@ -152,9 +150,6 @@ public class LineageSettingsProvider extends ContentProvider {
         if (!hasMigratedLineageSettings) {
             long startTime = System.currentTimeMillis();
 
-            // Remove any lingering old shared_prefs file
-            getContext().deleteSharedPreferences(SHARED_PREF_NAME_OLD);
-
             for (UserInfo user : mUserManager.getUsers()) {
                 migrateLineageSettingsForUser(user.id);
             }
@@ -174,18 +169,6 @@ public class LineageSettingsProvider extends ContentProvider {
     private void migrateLineageSettingsForUser(int userId) {
         synchronized (this) {
             if (LOCAL_LOGV) Log.d(TAG, "Lineage settings will be migrated for user id: " + userId);
-
-            // Rename database files (if needed)
-            LineageDatabaseHelper dbHelper = mDbHelpers.get(userId);
-            if (dbHelper != null) {
-                dbHelper.close();
-                mDbHelpers.delete(userId);
-            }
-            LineageDatabaseHelper.migrateDbFiles(getContext(), userId);
-            if (dbHelper != null) {
-                establishDbTracking(userId);
-                dbHelper = null;
-            }
 
             // Migrate system settings
             int rowsMigrated = migrateLineageSettingsForTable(userId,

@@ -43,8 +43,6 @@ import android.util.Log;
 
 import lineageos.providers.LineageSettings;
 
-import org.lineageos.internal.util.FileUtils;
-
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
@@ -62,8 +60,6 @@ public class LineageDatabaseHelper extends SQLiteOpenHelper{
 
     private static final String DATABASE_NAME = "lineagesettings.db";
     private static final int DATABASE_VERSION = 19;
-
-    private static final String DATABASE_NAME_OLD = "cmsettings.db";
 
     public static class LineageTableNames {
         public static final String TABLE_SYSTEM = "system";
@@ -94,55 +90,16 @@ public class LineageDatabaseHelper extends SQLiteOpenHelper{
      * @param userId The database path for this user
      * @return The database path string
      */
-    private static String dbNameForUser(Context context, int userId, String baseName) {
+    static String dbNameForUser(final int userId) {
+        // The owner gets the unadorned db name;
         if (userId == UserHandle.USER_SYSTEM) {
-            return context.getDatabasePath(baseName).getPath();
+            return DATABASE_NAME;
         } else {
             // Place the database in the user-specific data tree so that it's
             // cleaned up automatically when the user is deleted.
             File databaseFile = new File(
-                    Environment.getUserSystemDirectory(userId), baseName);
+                    Environment.getUserSystemDirectory(userId), DATABASE_NAME);
             return databaseFile.getPath();
-        }
-    }
-
-    /**
-     * Migrate db files (if needed).
-     */
-    public static void migrateDbFiles(Context context, int userId) {
-        final String dbPath = dbNameForUser(context, userId, DATABASE_NAME);
-        final String dbPathOld = dbNameForUser(context, userId, DATABASE_NAME_OLD);
-
-        // Only rename databases that we know we can write to later.
-        if (!FileUtils.isFileWritable(dbPathOld)) {
-            return;
-        }
-        if (FileUtils.fileExists(dbPath) && !FileUtils.delete(dbPath)) {
-            Log.e(TAG, "Unable to delete existing settings db file " + dbPath);
-            return;
-        }
-        if (!FileUtils.rename(dbPathOld, dbPath)) {
-            Log.e(TAG, "Found old settings db " + dbPathOld + " but could not rename it to "
-                    + dbPath);
-            return;
-        }
-        // Move any additional sqlite files that might exist.
-        // The list of suffixes is taken from fw/b SQLiteDatabase.java deleteDatabase().
-        final String[] suffixes = { "-journal", "-shm", "-wal" };
-        for (String s: suffixes) {
-            final String oldFile = dbPathOld + s;
-            final String newFile = dbPath + s;
-            if (!FileUtils.fileExists(oldFile)) {
-                continue;
-            }
-            if (FileUtils.fileExists(newFile) && !FileUtils.delete(newFile)) {
-                Log.e(TAG, "Unable to delete existing settings db file " + newFile);
-                continue;
-            }
-            if (!FileUtils.rename(oldFile, newFile)) {
-                Log.e(TAG, "Unable to rename existing settings db file " + oldFile + " to "
-                        + newFile);
-            }
         }
     }
 
@@ -152,7 +109,7 @@ public class LineageDatabaseHelper extends SQLiteOpenHelper{
      * @param userId
      */
     public LineageDatabaseHelper(Context context, int userId) {
-        super(context, dbNameForUser(context, userId, DATABASE_NAME), null, DATABASE_VERSION);
+        super(context, dbNameForUser(userId), null, DATABASE_VERSION);
         mContext = context;
         mUserHandle = userId;
 
