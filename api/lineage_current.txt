@@ -340,7 +340,6 @@ package lineageos.platform {
     field public static final java.lang.String MANAGE_LIVEDISPLAY = "lineageos.permission.MANAGE_LIVEDISPLAY";
     field public static final java.lang.String MANAGE_REMOTE_PREFERENCES = "lineageos.permission.MANAGE_REMOTE_PREFERENCES";
     field public static final java.lang.String MODIFY_PROFILES = "lineageos.permission.MODIFY_PROFILES";
-    field public static final java.lang.String PERFORMANCE_ACCESS = "lineageos.permission.PERFORMANCE_ACCESS";
     field public static final java.lang.String TRUST_INTERFACE = "lineageos.permission.TRUST_INTERFACE";
     field public static final java.lang.String WRITE_SECURE_SETTINGS = "lineageos.permission.WRITE_SECURE_SETTINGS";
     field public static final java.lang.String WRITE_SETTINGS = "lineageos.permission.WRITE_SETTINGS";
