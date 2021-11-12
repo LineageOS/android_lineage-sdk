@@ -64,13 +64,6 @@ public final class LineageContextConstants {
     public static final String LINEAGE_PERFORMANCE_SERVICE = "lineageperformance";
 
     /**
-     * Manages composed icons
-     *
-     * @hide
-     */
-    public static final String LINEAGE_ICON_CACHE_SERVICE = "lineageiconcache";
-
-    /**
      * Manages display color adjustments
      *
      * @hide
