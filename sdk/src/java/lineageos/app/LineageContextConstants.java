@@ -122,14 +122,6 @@ public final class LineageContextConstants {
 
         /**
          * Feature for {@link PackageManager#getSystemAvailableFeatures} and
-         * {@link PackageManager#hasSystemFeature}: The device includes the Lineage audio extensions
-         * utilized by the lineage sdk.
-         */
-        @SdkConstant(SdkConstant.SdkConstantType.FEATURE)
-        public static final String AUDIO = "org.lineageos.audio";
-
-        /**
-         * Feature for {@link PackageManager#getSystemAvailableFeatures} and
          * {@link PackageManager#hasSystemFeature}: The device includes the lineage trust service
          * utilized by the lineage sdk.
          */

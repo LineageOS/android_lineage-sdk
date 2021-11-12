@@ -39,14 +39,6 @@ public class ApiV5PriorReleaseInterfaces {
         // ELDERBERRY BEGIN
     }
 
-    //LineageAudioManager Aidl (ILineageAudioService)
-    static {
-        Map<String, Integer> lineageAudioService =
-                getInternalInterfaceMap("ILineageAudioService");
-        //ELDERBERRY BEGIN
-        lineageAudioService.put("listAudioSessions", 1);
-    }
-
     //RequestInfoListener Aidl (IRequestInfoListener)
     static {
         Map<String, Integer> requestInfoListener =
