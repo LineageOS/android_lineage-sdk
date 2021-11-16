@@ -38,6 +38,7 @@ import lineageos.providers.LineageSettings;
 import lineageos.trust.ITrustInterface;
 import lineageos.trust.TrustInterface;
 
+import android.hardware.usb.V1_3.IUsb;
 import vendor.lineage.trust.V1_0.IUsbRestrict;
 
 import java.text.ParseException;
@@ -65,6 +66,7 @@ public class TrustInterfaceService extends LineageSystemService {
     private NotificationManager mNotificationManager = null;
 
     private IUsbRestrict mUsbRestrictor = null;
+    private IUsb mUsb = null;
 
     public TrustInterfaceService(Context context) {
         super(context);
@@ -92,6 +94,7 @@ public class TrustInterfaceService extends LineageSystemService {
             mNotificationManager = mContext.getSystemService(NotificationManager.class);
 
             try {
+                mUsb = IUsb.getService();
                 mUsbRestrictor = IUsbRestrict.getService();
             } catch (NoSuchElementException | RemoteException e) {
                 // ignore, the hal is not available
@@ -160,7 +163,7 @@ public class TrustInterfaceService extends LineageSystemService {
     }
 
     private boolean hasUsbRestrictorInternal() {
-        return mUsbRestrictor != null;
+        return mUsb != null || mUsbRestrictor != null;
     }
 
     private boolean postOnBoardingNotification() {
