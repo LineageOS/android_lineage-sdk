@@ -142,6 +142,7 @@
         <item>194</item> <!-- KEYCODE_BUTTON_7 -->
         <item>195</item> <!-- KEYCODE_BUTTON_8 -->
         <item>219</item> <!-- KEYCODE_ASSIST -->
+        <item>225</item> <!-- KEYCODE_PAIRING -->
         <item>231</item> <!-- KEYCODE_VOICE_ASSIST -->
     </integer-array>
 
@@ -156,6 +157,7 @@
         <item>com.hbo.hbonow</item>
         <item>com.android.vending</item>
         <item>com.google.android.katniss</item>
+        <item>com.google.android.intent.action.CONNECT_INPUT</item>
         <item>com.google.android.katniss</item>
     </string-array>
 </resources>
