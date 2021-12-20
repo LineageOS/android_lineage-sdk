@@ -773,15 +773,23 @@ public class LineageSettingsProvider extends ContentProvider {
      * @throws SecurityException if the caller is forbidden to write.
      */
     private void checkWritePermissions(String tableName) {
-        if ((LineageDatabaseHelper.LineageTableNames.TABLE_SECURE.equals(tableName) ||
-                LineageDatabaseHelper.LineageTableNames.TABLE_GLOBAL.equals(tableName)) &&
-                getContext().checkCallingOrSelfPermission(
-                        lineageos.platform.Manifest.permission.WRITE_SECURE_SETTINGS) !=
-                        PackageManager.PERMISSION_GRANTED) {
-            throw new SecurityException(
-                    String.format("Permission denial: writing to lineage secure settings requires %1$s",
-                            lineageos.platform.Manifest.permission.WRITE_SECURE_SETTINGS));
+        final boolean granted = getContext().checkCallingOrSelfPermission(
+                lineageos.platform.Manifest.permission.WRITE_SECURE_SETTINGS) !=
+                PackageManager.PERMISSION_GRANTED;
+        if (!granted) {
+            // If the caller doesn't hold WRITE_SECURE_SETTINGS, we verify whether this
+            // operation is allowed for the calling package through appops.
+            if (Settings.checkAndNoteWriteSettingsOperation(getContext(),
+                    Binder.getCallingUid(), callingPackage, getCallingAttributionTag(),
+                    true)) {
+                return;
+            }
+        } else {
+            return;
         }
+        throw new SecurityException(
+                String.format("Permission denial: writing to lineage settings requires %1$s",
+                        lineageos.platform.Manifest.permission.WRITE_SECURE_SETTINGS));
     }
 
     /**
