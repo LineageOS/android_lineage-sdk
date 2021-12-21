@@ -96,6 +96,30 @@
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "139857e2_5ceb486c",
+        "filename": "packages/LineageSettingsProvider/src/org/lineageos/lineagesettings/LineageDatabaseHelper.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 506,
+      "author": {
+        "id": 15060
+      },
+      "writtenOn": "2021-12-21T11:38:37Z",
+      "side": 1,
+      "message": "Right, I forgot in the moment. So we\u0027re good on that front too.\n\nAgree about separate patch",
+      "parentUuid": "26962712_98338de0",
+      "range": {
+        "startLine": 505,
+        "startChar": 32,
+        "endLine": 506,
+        "endChar": 79
+      },
+      "revId": "3b987a64f8bc89660da2941b462df6eedfba38c5",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "86ca2692_cbcdd3c1",
