@@ -50,6 +50,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "6d4def69_1fbb13ee",
+        "filename": "packages/LineageSettingsProvider/src/org/lineageos/lineagesettings/LineageDatabaseHelper.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 506,
+      "author": {
+        "id": 15060
+      },
+      "writtenOn": "2021-12-21T06:59:29Z",
+      "side": 1,
+      "message": "In this case I think it makes sense for the apps without INTERNET permission to not be on the restricted networking mode allowlist but, if a patch like not allowed to create AF_INET sockets if UID not present in the allowlist is merged I wonder if that would have undesirable side-effects?\nUI-wise I understand that they would be off by default. I think it doesn\u0027t make sense for those to be able to be toggled on (unless sockets, but users wouldn\u0027t generally know that). So maybe need to do some more changes before merging.\nThoughts?",
+      "parentUuid": "b5a526e0_7dc4edc1",
+      "range": {
+        "startLine": 505,
+        "startChar": 32,
+        "endLine": 506,
+        "endChar": 79
+      },
+      "revId": "3b987a64f8bc89660da2941b462df6eedfba38c5",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "86ca2692_cbcdd3c1",
         "filename": "packages/LineageSettingsProvider/src/org/lineageos/lineagesettings/LineageDatabaseHelper.java",
         "patchSetId": 3
@@ -85,6 +109,30 @@
       "side": 1,
       "message": "Yes, definitely. Don\u0027t think we need any others.",
       "parentUuid": "86ca2692_cbcdd3c1",
+      "range": {
+        "startLine": 507,
+        "startChar": 36,
+        "endLine": 507,
+        "endChar": 78
+      },
+      "revId": "3b987a64f8bc89660da2941b462df6eedfba38c5",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7dbae2b8_b443e63c",
+        "filename": "packages/LineageSettingsProvider/src/org/lineageos/lineagesettings/LineageDatabaseHelper.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 507,
+      "author": {
+        "id": 15060
+      },
+      "writtenOn": "2021-12-21T06:59:29Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "ef996ba9_f686cb6c",
       "range": {
         "startLine": 507,
         "startChar": 36,
