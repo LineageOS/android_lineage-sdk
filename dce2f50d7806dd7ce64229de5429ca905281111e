@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "04292f6a_a2c670e4",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 15060
+      },
+      "writtenOn": "2021-12-21T06:37:54Z",
+      "side": 1,
+      "message": "Alternatively make all tables check WRITE_SECURE_SETTINGS alone and ignore appops",
+      "revId": "dce2f50d7806dd7ce64229de5429ca905281111e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
