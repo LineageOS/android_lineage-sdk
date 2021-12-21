@@ -72,6 +72,30 @@
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "26962712_98338de0",
+        "filename": "packages/LineageSettingsProvider/src/org/lineageos/lineagesettings/LineageDatabaseHelper.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 506,
+      "author": {
+        "id": 2195
+      },
+      "writtenOn": "2021-12-21T11:05:35Z",
+      "side": 1,
+      "message": "Apps without INTERNET wouldn\u0027t be allowed to create sockets by AOSP netd.\n\nThis won\u0027t change a thing.\n\nAnd yes, doesn\u0027t make sense for those to be toggled on, we can do a separate settings patch to grey things out.",
+      "parentUuid": "6d4def69_1fbb13ee",
+      "range": {
+        "startLine": 505,
+        "startChar": 32,
+        "endLine": 506,
+        "endChar": 79
+      },
+      "revId": "3b987a64f8bc89660da2941b462df6eedfba38c5",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "86ca2692_cbcdd3c1",
