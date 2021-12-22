@@ -606,7 +606,9 @@ public class LineageSettingsProvider extends ContentProvider {
         // Validate value if inserting int System table
         final String name = values.getAsString(Settings.NameValueTable.NAME);
         final String value = values.getAsString(Settings.NameValueTable.VALUE);
-        if (LineageDatabaseHelper.LineageTableNames.TABLE_SYSTEM.equals(tableName)) {
+        if (LineageDatabaseHelper.LineageTableNames.TABLE_GLOBAL.equals(tableName)) {
+            validateGlobalSettingNameValue(name, value);
+        } else if (LineageDatabaseHelper.LineageTableNames.TABLE_SYSTEM.equals(tableName)) {
             validateSystemSettingNameValue(name, value);
         } else if (LineageDatabaseHelper.LineageTableNames.TABLE_SECURE.equals(tableName)) {
             validateSecureSettingValue(name, value);
@@ -681,7 +683,9 @@ public class LineageSettingsProvider extends ContentProvider {
         // Validate value if updating System table
         final String name = values.getAsString(Settings.NameValueTable.NAME);
         final String value = values.getAsString(Settings.NameValueTable.VALUE);
-        if (LineageDatabaseHelper.LineageTableNames.TABLE_SYSTEM.equals(tableName)) {
+        if (LineageDatabaseHelper.LineageTableNames.TABLE_GLOBAL.equals(tableName)) {
+            validateGlobalSettingNameValue(name, value);
+        } else if (LineageDatabaseHelper.LineageTableNames.TABLE_SYSTEM.equals(tableName)) {
             validateSystemSettingNameValue(name, value);
         } else if (LineageDatabaseHelper.LineageTableNames.TABLE_SECURE.equals(tableName)) {
             validateSecureSettingValue(name, value);
@@ -888,6 +892,17 @@ public class LineageSettingsProvider extends ContentProvider {
             Binder.restoreCallingIdentity(oldId);
         }
         if (LOCAL_LOGV) Log.v(TAG, "notifying for " + notifyTarget + ": " + uri);
+    }
+
+    private void validateGlobalSettingNameValue(String name, String value) {
+        LineageSettings.Validator validator = LineageSettings.Global.VALIDATORS.get(name);
+
+        // Not all global settings have validators, but if a validator exists, the validate method
+        // should return true
+        if (validator != null && !validator.validate(value)) {
+            throw new IllegalArgumentException("Invalid value: " + value
+                    + " for setting: " + name);
+        }
     }
 
     private void validateSystemSettingNameValue(String name, String value) {
