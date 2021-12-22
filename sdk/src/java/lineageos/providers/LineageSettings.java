@@ -3492,5 +3492,21 @@ public final class LineageSettings {
         public static boolean isLegacySetting(String key) {
             return ArrayUtils.contains(LEGACY_GLOBAL_SETTINGS, key);
         }
+
+        /**
+         * Mapping of validators for all global settings.  This map is used to validate both valid
+         * keys as well as validating the values for those keys.
+         *
+         * Note: Make sure if you add a new Global setting you create a Validator for it and add
+         *       it to this map.
+         *
+         * @hide
+         */
+        public static final Map<String, Validator> VALIDATORS =
+                new ArrayMap<String, Validator>();
+        static {
+            VALIDATORS.put(__MAGICAL_TEST_PASSING_ENABLER,
+                    __MAGICAL_TEST_PASSING_ENABLER_VALIDATOR);
+        };
     }
 }
