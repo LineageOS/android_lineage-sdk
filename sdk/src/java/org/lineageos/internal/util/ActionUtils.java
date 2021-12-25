@@ -27,6 +27,8 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
+import android.os.Handler;
+import android.os.Looper;
 import android.os.RemoteException;
 import android.os.UserHandle;
 import android.util.Log;
@@ -74,7 +76,9 @@ public class ActionUtils {
         final IActivityManager am = ActivityManagerNative.getDefault();
         am.forceStopPackage(packageName, UserHandle.USER_CURRENT);
 
-        Toast.makeText(context, R.string.app_killed_message, Toast.LENGTH_SHORT).show();
+        new Handler(Looper.getMainLooper()).post(() -> {
+            Toast.makeText(context, R.string.app_killed_message, Toast.LENGTH_SHORT).show();
+        });
 
         return true;
     }
