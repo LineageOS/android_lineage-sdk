@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ad5c3b84_9be9dccd",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 2195
+      },
+      "writtenOn": "2021-12-25T23:36:10Z",
+      "side": 1,
+      "message": "320858: Shell: Allow writing to lineage settings | https://review.lineageos.org/c/LineageOS/android_frameworks_base/+/320858",
+      "revId": "9ca1852af1926ec857428f10c19a90963f6b5007",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
