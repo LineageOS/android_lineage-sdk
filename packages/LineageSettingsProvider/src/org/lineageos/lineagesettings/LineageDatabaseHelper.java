@@ -1,6 +1,6 @@
 /**
  * Copyright (C) 2015-2016 The CyanogenMod Project
- *               2017-2021 The LineageOS Project
+ *               2017-2022 The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -60,7 +60,7 @@ public class LineageDatabaseHelper extends SQLiteOpenHelper{
     private static final boolean LOCAL_LOGV = false;
 
     private static final String DATABASE_NAME = "lineagesettings.db";
-    private static final int DATABASE_VERSION = 15;
+    private static final int DATABASE_VERSION = 16;
 
     private static final String DATABASE_NAME_OLD = "cmsettings.db";
 
@@ -407,6 +407,17 @@ public class LineageDatabaseHelper extends SQLiteOpenHelper{
                 loadRestrictedNetworkingModeSetting();
             }
             upgradeVersion = 15;
+        }
+
+        if (upgradeVersion < 16) {
+            // Move trust_restrict_usb to global
+            if (mUserHandle == UserHandle.USER_OWNER) {
+                moveSettingsToNewTable(db, LineageTableNames.TABLE_SECURE,
+                        LineageTableNames.TABLE_GLOBAL, new String[] {
+                        LineageSettings.Global.TRUST_RESTRICT_USB
+                }, true);
+            }
+            upgradeVersion = 16;
         }
         // *** Remember to update DATABASE_VERSION above!
         if (upgradeVersion != newVersion) {
