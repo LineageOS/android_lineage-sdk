@@ -2931,18 +2931,6 @@ public final class LineageSettings {
         public static final Validator NETWORK_TRAFFIC_SHOW_UNITS_VALIDATOR = sBooleanValidator;
 
         /**
-         * Restrict USB when the screen is locked
-         * 0 = Off, 1 = On
-         *
-         * @hide
-         */
-        public static final String TRUST_RESTRICT_USB_KEYGUARD = "trust_restrict_usb";
-
-        /** @hide */
-        public static final Validator TRUST_RESTRICT_USB_KEYGUARD_VALIDATOR =
-                sBooleanValidator;
-
-        /**
          * Trust warnings status
          *
          * Stores flags for each feature
@@ -3031,7 +3019,6 @@ public final class LineageSettings {
             VALIDATORS.put(NETWORK_TRAFFIC_UNITS, NETWORK_TRAFFIC_UNITS_VALIDATOR);
             VALIDATORS.put(NETWORK_TRAFFIC_SHOW_UNITS, NETWORK_TRAFFIC_SHOW_UNITS_VALIDATOR);
             VALIDATORS.put(TETHERING_ALLOW_VPN_UPSTREAMS, TETHERING_ALLOW_VPN_UPSTREAMS_VALIDATOR);
-            VALIDATORS.put(TRUST_RESTRICT_USB_KEYGUARD, TRUST_RESTRICT_USB_KEYGUARD_VALIDATOR);
             VALIDATORS.put(TRUST_WARNINGS, TRUST_WARNINGS_VALIDATOR);
             VALIDATORS.put(VOLUME_PANEL_ON_LEFT, VOLUME_PANEL_ON_LEFT_VALIDATOR);
         }
@@ -3438,6 +3425,20 @@ public final class LineageSettings {
          * @hide
          */
         public static final String WIFI_AUTO_PRIORITIES_CONFIGURATION = "wifi_auto_priority";
+
+        /**
+         * Restrict USB
+         * 0 = Off, never
+         * 1 = Only when the screen is locked
+         * 2 = On, always
+         *
+         * @hide
+         */
+        public static final String TRUST_RESTRICT_USB = "trust_restrict_usb";
+
+        /** @hide */
+        public static final Validator TRUST_RESTRICT_USB_VALIDATOR =
+                new InclusiveIntegerRangeValidator(0, 2);
         // endregion
 
         /**
@@ -3483,6 +3484,7 @@ public final class LineageSettings {
         public static final Map<String, Validator> VALIDATORS =
                 new ArrayMap<String, Validator>();
         static {
+            VALIDATORS.put(TRUST_RESTRICT_USB, TRUST_RESTRICT_USB_VALIDATOR);
             VALIDATORS.put(__MAGICAL_TEST_PASSING_ENABLER,
                     __MAGICAL_TEST_PASSING_ENABLER_VALIDATOR);
         };
