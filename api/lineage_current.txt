@@ -415,6 +415,12 @@ package lineageos.preference {
     ctor public LineageGlobalSettingSwitchPreference(android.content.Context);
   }
 
+    public class LineageGlobalSettingListPreference extends lineageos.preference.SelfRemovingListPreference {
+      ctor public LineageGlobalSettingListPreference(android.content.Context, android.util.AttributeSet, int);
+      ctor public LineageGlobalSettingListPreference(android.content.Context, android.util.AttributeSet);
+      method public int getIntValue(int);
+    }
+
   public class LineageSecureSettingListPreference extends lineageos.preference.SelfRemovingListPreference {
     ctor public LineageSecureSettingListPreference(android.content.Context, android.util.AttributeSet, int);
     ctor public LineageSecureSettingListPreference(android.content.Context, android.util.AttributeSet);
