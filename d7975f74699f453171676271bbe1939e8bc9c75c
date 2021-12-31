@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6a1d0bca_5bb32354",
+        "filename": "sdk/src/java/lineageos/providers/LineageSettings.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 3458,
+      "author": {
+        "id": 4550
+      },
+      "writtenOn": "2021-12-31T14:11:03Z",
+      "side": 1,
+      "message": "Delete these completely.",
+      "range": {
+        "startLine": 3444,
+        "startChar": 0,
+        "endLine": 3458,
+        "endChar": 97
+      },
+      "revId": "d7975f74699f453171676271bbe1939e8bc9c75c",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
