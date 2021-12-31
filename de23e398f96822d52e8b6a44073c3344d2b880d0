@@ -22,6 +22,30 @@
       },
       "revId": "de23e398f96822d52e8b6a44073c3344d2b880d0",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "942fa685_091b9ca4",
+        "filename": "packages/LineageSettingsProvider/src/org/lineageos/lineagesettings/LineageDatabaseHelper.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 448,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2021-12-31T14:10:11Z",
+      "side": 0,
+      "message": "Alright, will do.",
+      "parentUuid": "40e08162_13811394",
+      "range": {
+        "startLine": 429,
+        "startChar": 0,
+        "endLine": 448,
+        "endChar": 9
+      },
+      "revId": "de23e398f96822d52e8b6a44073c3344d2b880d0",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
