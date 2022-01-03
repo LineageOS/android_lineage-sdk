@@ -94,7 +94,7 @@ public class LineageDatabaseHelper extends SQLiteOpenHelper{
      * @return The database path string
      */
     private static String dbNameForUser(Context context, int userId, String baseName) {
-        if (userId == UserHandle.USER_OWNER) {
+        if (userId == UserHandle.USER_SYSTEM) {
             return context.getDatabasePath(baseName).getPath();
         } else {
             // Place the database in the user-specific data tree so that it's
@@ -177,7 +177,7 @@ public class LineageDatabaseHelper extends SQLiteOpenHelper{
             createDbTable(db, LineageTableNames.TABLE_SYSTEM);
             createDbTable(db, LineageTableNames.TABLE_SECURE);
 
-            if (mUserHandle == UserHandle.USER_OWNER) {
+            if (mUserHandle == UserHandle.USER_SYSTEM) {
                 createDbTable(db, LineageTableNames.TABLE_GLOBAL);
             }
 
@@ -468,7 +468,7 @@ public class LineageDatabaseHelper extends SQLiteOpenHelper{
         loadSystemSettings(db);
         loadSecureSettings(db);
         // The global table only exists for the 'owner' user
-        if (mUserHandle == UserHandle.USER_OWNER) {
+        if (mUserHandle == UserHandle.USER_SYSTEM) {
             loadGlobalSettings(db);
         }
     }
