@@ -82,7 +82,7 @@ public class LineageDatabaseHelper extends SQLiteOpenHelper{
      * @return The database path string
      */
     private static String dbNameForUser(Context context, int userId, String baseName) {
-        if (userId == UserHandle.USER_OWNER) {
+        if (userId == UserHandle.USER_SYSTEM) {
             return context.getDatabasePath(baseName).getPath();
         } else {
             // Place the database in the user-specific data tree so that it's
@@ -165,7 +165,7 @@ public class LineageDatabaseHelper extends SQLiteOpenHelper{
             createDbTable(db, LineageTableNames.TABLE_SYSTEM);
             createDbTable(db, LineageTableNames.TABLE_SECURE);
 
-            if (mUserHandle == UserHandle.USER_OWNER) {
+            if (mUserHandle == UserHandle.USER_SYSTEM) {
                 createDbTable(db, LineageTableNames.TABLE_GLOBAL);
             }
 
@@ -239,7 +239,7 @@ public class LineageDatabaseHelper extends SQLiteOpenHelper{
         }
 
         if (upgradeVersion < 7) {
-            if (mUserHandle == UserHandle.USER_OWNER) {
+            if (mUserHandle == UserHandle.USER_SYSTEM) {
                 db.beginTransaction();
                 SQLiteStatement stmt = null;
                 try {
@@ -272,7 +272,7 @@ public class LineageDatabaseHelper extends SQLiteOpenHelper{
         }
 
         if (upgradeVersion < 9) {
-            if (mUserHandle == UserHandle.USER_OWNER) {
+            if (mUserHandle == UserHandle.USER_SYSTEM) {
                 db.execSQL("UPDATE system SET value = '0' WHERE value IN ('10', '11') AND name IN ("
                         + "'" + LineageSettings.System.KEY_HOME_LONG_PRESS_ACTION + "',"
                         + "'" + LineageSettings.System.KEY_HOME_DOUBLE_TAP_ACTION + "',"
@@ -287,7 +287,7 @@ public class LineageDatabaseHelper extends SQLiteOpenHelper{
         }
 
         if (upgradeVersion < 10) {
-            if (mUserHandle == UserHandle.USER_OWNER) {
+            if (mUserHandle == UserHandle.USER_SYSTEM) {
                 // Update STATUS_BAR_CLOCK
                 db.beginTransaction();
                 SQLiteStatement stmt = null;
@@ -321,7 +321,7 @@ public class LineageDatabaseHelper extends SQLiteOpenHelper{
         }
 
         if (upgradeVersion < 12) {
-            if (mUserHandle == UserHandle.USER_OWNER) {
+            if (mUserHandle == UserHandle.USER_SYSTEM) {
                 db.beginTransaction();
                 SQLiteStatement stmt = null;
                 try {
@@ -366,7 +366,7 @@ public class LineageDatabaseHelper extends SQLiteOpenHelper{
 
         if (upgradeVersion < 14) {
             // Update button/keyboard brightness range
-            if (mUserHandle == UserHandle.USER_OWNER) {
+            if (mUserHandle == UserHandle.USER_SYSTEM) {
                 for (String key : new String[] {
                     LineageSettings.Secure.BUTTON_BRIGHTNESS,
                     LineageSettings.Secure.KEYBOARD_BRIGHTNESS,
@@ -449,7 +449,7 @@ public class LineageDatabaseHelper extends SQLiteOpenHelper{
         loadSystemSettings(db);
         loadSecureSettings(db);
         // The global table only exists for the 'owner' user
-        if (mUserHandle == UserHandle.USER_OWNER) {
+        if (mUserHandle == UserHandle.USER_SYSTEM) {
             loadGlobalSettings(db);
         }
     }

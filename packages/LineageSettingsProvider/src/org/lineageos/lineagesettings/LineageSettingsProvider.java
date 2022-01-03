@@ -112,7 +112,7 @@ public class LineageSettingsProvider extends ContentProvider {
 
         mUserManager = UserManager.get(getContext());
 
-        establishDbTracking(UserHandle.USER_OWNER);
+        establishDbTracking(UserHandle.USER_SYSTEM);
 
         mUriBuilder = new Uri.Builder();
         mUriBuilder.scheme(ContentResolver.SCHEME_CONTENT);
@@ -126,7 +126,7 @@ public class LineageSettingsProvider extends ContentProvider {
             @Override
             public void onReceive(Context context, Intent intent) {
                 final int userId = intent.getIntExtra(Intent.EXTRA_USER_HANDLE,
-                        UserHandle.USER_OWNER);
+                        UserHandle.USER_SYSTEM);
                 String action = intent.getAction();
 
                 if (LOCAL_LOGV) Log.d(TAG, "Received intent: " + action + " for user: " + userId);
@@ -861,7 +861,7 @@ public class LineageSettingsProvider extends ContentProvider {
      */
     private int getUserIdForTable(String tableName, int userId) {
         return LineageDatabaseHelper.LineageTableNames.TABLE_GLOBAL.equals(tableName) ?
-                UserHandle.USER_OWNER : userId;
+                UserHandle.USER_SYSTEM : userId;
     }
 
     /**
