@@ -196,13 +196,13 @@ public class LineageSettingsProviderDefaultsTest extends AndroidTestCase {
         switch (table) {
             case LineageDatabaseHelper.LineageTableNames.TABLE_SYSTEM:
                 return LineageSettings.System.getIntForUser(mContentResolver, setting.mKey,
-                        UserHandle.USER_OWNER);
+                        UserHandle.USER_SYSTEM);
             case LineageDatabaseHelper.LineageTableNames.TABLE_SECURE:
                 return LineageSettings.Secure.getIntForUser(mContentResolver, setting.mKey,
-                        UserHandle.USER_OWNER);
+                        UserHandle.USER_SYSTEM);
             case LineageDatabaseHelper.LineageTableNames.TABLE_GLOBAL:
                 return LineageSettings.Global.getIntForUser(mContentResolver, setting.mKey,
-                        UserHandle.USER_OWNER);
+                        UserHandle.USER_SYSTEM);
             default:
                 throw new AssertionError("Invalid or empty table!");
         }
@@ -213,13 +213,13 @@ public class LineageSettingsProviderDefaultsTest extends AndroidTestCase {
         switch (table) {
             case LineageDatabaseHelper.LineageTableNames.TABLE_SYSTEM:
                 return LineageSettings.System.getStringForUser(mContentResolver, setting.mKey,
-                        UserHandle.USER_OWNER);
+                        UserHandle.USER_SYSTEM);
             case LineageDatabaseHelper.LineageTableNames.TABLE_SECURE:
                 return LineageSettings.Secure.getStringForUser(mContentResolver, setting.mKey,
-                        UserHandle.USER_OWNER);
+                        UserHandle.USER_SYSTEM);
             case LineageDatabaseHelper.LineageTableNames.TABLE_GLOBAL:
                 return LineageSettings.Global.getStringForUser(mContentResolver, setting.mKey,
-                        UserHandle.USER_OWNER);
+                        UserHandle.USER_SYSTEM);
             default:
                 throw new AssertionError("Invalid or empty table!");
         }
