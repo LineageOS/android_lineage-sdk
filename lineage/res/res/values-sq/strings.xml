@@ -15,6 +15,22 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
+<!--
+     Copyright (C) 2015 The CyanogenMod Project
+               (C) 2017 The LineageOS Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="lineageos_system_label">Sistemi LineageOS</string>
     <string name="permlab_modifyProfiles">modifiko profilet e sistemit</string>
@@ -49,7 +65,7 @@
     <string name="perf_profile_bias_perf_summary">Favorizim i përformancës. Redukton latencën duke rritur pak konsumimin e energjisë</string>
     <string name="live_display_auto">Automatike</string>
     <string name="live_display_auto_summary">Rregullo automatikisht temperaturën e ngjyrave të ekranit pas lindjes dhe perëndimit të diellit</string>
-    <string name="live_display_off">Inaktiv</string>
+    <string name="live_display_off">Fikur</string>
     <string name="live_display_off_summary">Çaktivizo të gjitha rregullimet</string>
     <string name="live_display_day">Ditë</string>
     <string name="live_display_day_summary">Përdor vetëm parametrat për ditën</string>
@@ -58,12 +74,12 @@
     <string name="live_display_outdoor">Jashtë shtëpie (diell i fortë)</string>
     <string name="live_display_outdoor_summary">Përdor vetëm parametrat për jashtë shtëpie</string>
     <string name="live_display_hint">LiveDisplay do t\'ju reduktojë lodhjen e syve dhe do t\'ju ndihmojë të flini natën. Shtyp këtu për ta provuar!</string>
-    <string name="accessibility_quick_settings_live_display_off">LiveDisplay inaktiv.</string>
+    <string name="accessibility_quick_settings_live_display_off">LiveDisplay fikur.</string>
     <string name="accessibility_quick_settings_live_display_auto">LiveDisplay: automatike.</string>
     <string name="accessibility_quick_settings_live_display_day">LiveDisplay: profili i ditës.</string>
     <string name="accessibility_quick_settings_live_display_night">LiveDisplay: profili i natës.</string>
     <string name="accessibility_quick_settings_live_display_outdoor">LiveDisplay: profili jashtë shtëpisë.</string>
-    <string name="accessibility_quick_settings_live_display_changed_off">LiveDisplay u çaktivizua.</string>
+    <string name="accessibility_quick_settings_live_display_changed_off">LiveDisplay u fik.</string>
     <string name="accessibility_quick_settings_live_display_changed_auto">LiveDisplay u kthye në profilin automatik.</string>
     <string name="accessibility_quick_settings_live_display_changed_day">LiveDisplay u kthye në profilin e ditës.</string>
     <string name="accessibility_quick_settings_live_display_changed_night">LiveDisplay u kthye në profilin e natës.</string>
@@ -80,7 +96,7 @@
     <string name="lineage_api_level">Niveli API i LineageOS</string>
     <string name="lineage_updates">Përditësimet e LineageOS</string>
     <string name="lineage_version">Versioni i LineageOS</string>
-    <string name="lineage_vendor_security_patch">Niveli i arnimeve të sigurië nga prodhuesi</string>
+    <string name="lineage_vendor_security_patch">Niveli i korrigjimit të sigurisë së Vendor</string>
     <string name="unknown">E panjohur</string>
     <string name="app_killed_message">Aplikacioni u mbyll</string>
     <string name="kilobitspersecond_short">kb/s</string>
@@ -91,7 +107,7 @@
     <string name="permlab_trustInterface">hyr në ndërfaqen e Trust</string>
     <string name="permdesc_trustInterface">Lejon një app të shfaqë paralajmërime dhe sygjerime të Trust</string>
     <string name="trust_notification_channel">Paralajmërime Trust</string>
-    <string name="trust_notification_title_security">Besoji \u2022 sigurinë e Sistemit</string>
+    <string name="trust_notification_title_security">Trust \u2022 sigurinë e Sistemit</string>
     <string name="trust_notification_content_selinux">SELinux nuk është e zbatuar, siguria juaj është dobësuar</string>
     <string name="trust_notification_content_keys">Ky zhvillim është nënshkruar me çelsa publik</string>
     <string name="trust_notification_title_onboarding">Zbulo Trust</string>

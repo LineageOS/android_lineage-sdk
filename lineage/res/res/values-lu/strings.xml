@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-     Copyright (C) 2014-2015 The CyanogenMod Project
+     Copyright (C) 2015 The CyanogenMod Project
+               (C) 2017 The LineageOS Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -15,7 +16,8 @@
      limitations under the License.
 -->
 <!--
-     Copyright (C) 2014-2015 The CyanogenMod Project
+     Copyright (C) 2015 The CyanogenMod Project
+               (C) 2017 The LineageOS Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -29,6 +31,21 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-<resources>
-    <string name="app_name">Lineage 设置储存</string>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="permlab_useHardwareFramework">Hardware-Framework benotzen</string>
+    <string name="profileNameDefault">Standard</string>
+    <string name="profileNameWork">Aarbecht</string>
+    <string name="profileNameHome">Doheem</string>
+    <string name="profileNameSilent">Roueg</string>
+    <string name="profileNameNight">Nuecht</string>
+    <string name="profileNameAutomobile">Auto</string>
+    <string name="profileGroupPhone">Telefon</string>
+    <string name="profileGroupCalendar">Kalenner</string>
+    <string name="profileGroupGmail">Gmail</string>
+    <string name="profileGroupEmail">E-Mail</string>
+    <string name="profileGroupSMS">SMS</string>
+    <string name="wildcardProfile">Aner</string>
+    <string name="live_display_off">Aus</string>
+    <string name="live_display_day">Dag</string>
+    <string name="live_display_night">Nuecht</string>
 </resources>
