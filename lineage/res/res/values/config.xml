@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
      Copyright (C) 2015 The CyanogenMod Project
-                   2017-2021 The LineageOS Project
+                   2017-2022 The LineageOS Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -103,7 +103,6 @@
     <string-array name="config_externalLineageServices">
         <item>org.lineageos.platform.internal.ProfileManagerService</item>
         <item>org.lineageos.platform.internal.LineageHardwareService</item>
-        <item>org.lineageos.platform.internal.PerformanceManagerService</item>
         <item>org.lineageos.platform.internal.display.LiveDisplayService</item>
         <item>org.lineageos.platform.internal.TrustInterfaceService</item>
         <item>org.lineageos.platform.internal.LineageSettingsService</item>
@@ -265,10 +264,6 @@
 
     <!-- Whether device has a notch -->
     <bool name="config_haveNotch">false</bool>
-
-    <!-- Whether device needs to wait for Qualcomm MPCTL service to start
-         before setting power profiles on boot. -->
-    <bool name="config_waitForMpctlOnBoot">false</bool>
 
     <!-- Button backlight control. Possible values are:
             0 - Not supported
