@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
      Copyright (C) 2015 The CyanogenMod Project
-                   2017-2021 The LineageOS Project
+                   2017-2022 The LineageOS Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -21,24 +21,6 @@
     <!-- Profiles -->
     <java-symbol type="xml" name="profile_default" />
     <java-symbol type="string" name="wildcardProfile" />
-
-    <!-- Performance Profiles -->
-    <java-symbol type="array" name="perf_profile_entries" />
-    <java-symbol type="array" name="perf_profile_values" />
-    <java-symbol type="array" name="perf_profile_weights" />
-    <java-symbol type="array" name="perf_profile_summaries" />
-    <java-symbol type="string" name="perf_profile_pwrsv" />
-    <java-symbol type="string" name="perf_profile_bal" />
-    <java-symbol type="string" name="perf_profile_perf" />
-    <java-symbol type="string" name="perf_profile_bias_power" />
-    <java-symbol type="string" name="perf_profile_bias_perf" />
-    <java-symbol type="string" name="perf_profile_pwrsv_summary" />
-    <java-symbol type="string" name="perf_profile_bal_summary" />
-    <java-symbol type="string" name="perf_profile_perf_summary" />
-    <java-symbol type="string" name="perf_profile_bias_power_summary" />
-    <java-symbol type="string" name="perf_profile_bias_perf_summary" />
-
-    <java-symbol type="bool" name="config_waitForMpctlOnBoot" />
 
     <!-- Proximity check on screen on -->
     <java-symbol type="bool" name="config_proximityCheckOnWake" />
