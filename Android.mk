@@ -1,5 +1,6 @@
+#
 # Copyright (C) 2015 The CyanogenMod Project
-# Copyright (C) 2017-2020 The LineageOS Project
+#               2017-2022 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -12,6 +13,7 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
+#
 LOCAL_PATH := $(call my-dir)
 
 include $(CLEAR_VARS)
@@ -27,7 +29,7 @@ include $(CLEAR_VARS)
 lineage_platform_res := APPS/org.lineageos.platform-res_intermediates/aapt
 
 # List of packages used in lineage-api-stubs
-lineage_stub_packages := lineageos.app:lineageos.content:lineageos.hardware:lineageos.media:lineageos.os:lineageos.preference:lineageos.profiles:lineageos.providers:lineageos.platform:lineageos.power:lineageos.util:lineageos.style:lineageos.trust
+lineage_stub_packages := lineageos.app:lineageos.content:lineageos.hardware:lineageos.media:lineageos.os:lineageos.preference:lineageos.profiles:lineageos.providers:lineageos.platform:lineageos.util:lineageos.style:lineageos.trust
 
 lineage_framework_module := $(LOCAL_INSTALLED_MODULE)
 
