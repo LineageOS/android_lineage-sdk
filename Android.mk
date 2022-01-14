@@ -27,7 +27,7 @@ include $(CLEAR_VARS)
 lineage_platform_res := APPS/org.lineageos.platform-res_intermediates/aapt
 
 # List of packages used in lineage-api-stubs
-lineage_stub_packages := lineageos.app:lineageos.content:lineageos.hardware:lineageos.media:lineageos.os:lineageos.preference:lineageos.profiles:lineageos.providers:lineageos.platform:lineageos.util:lineageos.style:lineageos.trust
+lineage_stub_packages := lineageos.app:lineageos.content:lineageos.hardware:lineageos.media:lineageos.os:lineageos.preference:lineageos.profiles:lineageos.providers:lineageos.platform:lineageos.util:lineageos.trust
 
 lineage_framework_module := $(LOCAL_INSTALLED_MODULE)
 
