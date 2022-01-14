@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
 /**
- * Copyright 2015, CyanogenMod Project
+ * Copyright (C) 2015 The CyanogenMod Project
+ *               2017-2022 The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,7 +17,8 @@
  * limitations under the License.
  */
 -->
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+<manifest
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:androidprv="http://schemas.android.com/apk/prv/res/android"
     package="lineageos.platform"
     coreApp="true" android:sharedUserId="android.uid.system"
@@ -61,13 +63,6 @@
                 android:label="@string/permlab_writeSecureSettings"
                 android:description="@string/permdesc_writeSecureSettings"
                 android:protectionLevel="signature|privileged|development" />
-
-    <!-- Allows low-level access to performance management.
-         <p>Not for use by third-party applications. -->
-    <permission android:name="lineageos.permission.PERFORMANCE_ACCESS"
-                android:label="@string/permlab_perfAccess"
-                android:description="@string/permdesc_perfAccessDesc"
-                android:protectionLevel="signature|privileged" />
 
     <!-- Allows an application to observe system-wide changes to audio sessions
          @hide -->
