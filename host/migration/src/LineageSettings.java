@@ -760,18 +760,6 @@ public final class LineageSettings {
                 RING_HOME_BUTTON_BEHAVIOR_DO_NOTHING;
 
         /**
-         * Performance profile
-         * @hide
-         */
-        public static final String PERFORMANCE_PROFILE = "performance_profile";
-
-        /**
-         * App-based performance profile selection
-         * @hide
-         */
-        public static final String APP_PERFORMANCE_PROFILES_ENABLED = "app_perf_profiles_enabled";
-
-        /**
          * Launch actions for left/right lockscreen targets
          * @hide
          */
@@ -851,9 +839,7 @@ public final class LineageSettings {
                 LineageSettings.Secure.ADVANCED_REBOOT,
                 LineageSettings.Secure.LOCKSCREEN_TARGETS,
                 LineageSettings.Secure.RING_HOME_BUTTON_BEHAVIOR,
-                LineageSettings.Secure.DEVELOPMENT_SHORTCUT,
-                LineageSettings.Secure.PERFORMANCE_PROFILE,
-                LineageSettings.Secure.APP_PERFORMANCE_PROFILES_ENABLED};
+                LineageSettings.Secure.DEVELOPMENT_SHORTCUT};
 
         /**
          * @hide

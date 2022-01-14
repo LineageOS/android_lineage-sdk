@@ -58,17 +58,6 @@ public class ApiV4PriorReleaseInterfaces {
         // DRAGONFRUIT BEGIN
     }
 
-    //PerformanceManager Aidl (IPerformanceManager)
-    static {
-        Map<String, Integer> perfMap = getInternalInterfaceMap("IPerformanceManager");
-        // DRAGONFRUIT BEGIN
-        perfMap.put("cpuBoost", 1);
-        perfMap.put("setPowerProfile", 2);
-        perfMap.put("getPowerProfile", 3);
-        perfMap.put("getNumberOfProfiles", 4);
-        perfMap.put("getProfileHasAppProfiles", 5);
-    }
-
     //ExternalViewProviderFactory Aidl (IExternalViewProviderFactory)
     static {
         Map<String, Integer> extProviderMap =
