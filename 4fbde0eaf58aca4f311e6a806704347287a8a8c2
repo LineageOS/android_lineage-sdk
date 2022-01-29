@@ -39,6 +39,30 @@
       },
       "revId": "4fbde0eaf58aca4f311e6a806704347287a8a8c2",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a6a780d3_ca31f7d5",
+        "filename": "lineage/lib/main/java/org/lineageos/platform/internal/ProfileTriggerHelper.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 199,
+      "author": {
+        "id": 25732
+      },
+      "writtenOn": "2022-01-29T23:33:57Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "3277bf7b_843209ae",
+      "range": {
+        "startLine": 192,
+        "startChar": 0,
+        "endLine": 199,
+        "endChar": 54
+      },
+      "revId": "4fbde0eaf58aca4f311e6a806704347287a8a8c2",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
