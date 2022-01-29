@@ -189,10 +189,10 @@ public class ProfileTriggerHelper extends BroadcastReceiver {
     }
 
     private String getActiveSSID() {
-        WifiInfo wifiinfo = mWifiManager.getConnectionInfo();
-        if (wifiinfo == null) {
-            return null;
+        if (mWifiManager != null) {
+            WifiInfo wifiinfo = mWifiManager.getConnectionInfo();
+            return wifiinfo != null ? removeDoubleQuotes(wifiinfo.getSSID()) : null;
         }
-        return removeDoubleQuotes(wifiinfo.getSSID());
+        return null;
     }
 }
