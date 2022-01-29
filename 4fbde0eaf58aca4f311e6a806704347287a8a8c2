@@ -16,6 +16,29 @@
       "message": "Fixes boot when wifi HAL fails to start",
       "revId": "4fbde0eaf58aca4f311e6a806704347287a8a8c2",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3277bf7b_843209ae",
+        "filename": "lineage/lib/main/java/org/lineageos/platform/internal/ProfileTriggerHelper.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 199,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2022-01-29T22:26:00Z",
+      "side": 1,
+      "message": "What about redoing the whole code like this:\n\n        if (mWifiManager !\u003d null) {\n            WifiInfo wifiinfo \u003d mWifiManager.getConnectionInfo();\n            return wifiinfo !\u003d null ? removeDoubleQuotes(wifiinfo.getSSID()) : null;\n        }\n        return null;",
+      "range": {
+        "startLine": 192,
+        "startChar": 0,
+        "endLine": 199,
+        "endChar": 54
+      },
+      "revId": "4fbde0eaf58aca4f311e6a806704347287a8a8c2",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
