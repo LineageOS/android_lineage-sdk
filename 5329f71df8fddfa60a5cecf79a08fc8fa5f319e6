@@ -33,6 +33,29 @@
       "message": "all good on my end",
       "revId": "5329f71df8fddfa60a5cecf79a08fc8fa5f319e6",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "483c1938_b7cc064e",
+        "filename": "lineage/res/res/values/symbols.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 113,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2022-02-03T18:02:43Z",
+      "side": 1,
+      "message": "This should have been placed under a different title. Certainly not related with \"Device keys user-customisable behavior\".",
+      "range": {
+        "startLine": 112,
+        "startChar": 0,
+        "endLine": 113,
+        "endChar": 59
+      },
+      "revId": "5329f71df8fddfa60a5cecf79a08fc8fa5f319e6",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
