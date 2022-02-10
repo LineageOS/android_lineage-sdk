@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c9fda30b_5ddf2d40",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 17793
+      },
+      "writtenOn": "2022-02-10T02:55:39Z",
+      "side": 1,
+      "message": "Also needs to suppress this check: https://github.com/LineageOS/android_frameworks_base/blob/lineage-18.1/tools/aapt2/cmd/Link.cpp#L1902",
+      "revId": "f6ae6e662d62743531fb79cd69a60aee57e19b81",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
