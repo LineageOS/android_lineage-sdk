@@ -48,8 +48,6 @@ include $(CLEAR_VARS)
 
 LOCAL_MODULE := org.lineageos.platform.sdk.aar
 
-LOCAL_JACK_ENABLED := disabled
-
 LOCAL_CONSUMER_PROGUARD_FILE := $(LOCAL_PATH)/sdk/proguard.txt
 
 LOCAL_RESOURCE_DIR := $(addprefix $(LOCAL_PATH)/, sdk/res/res)
@@ -62,7 +60,21 @@ LOCAL_JAR_EXCLUDE_FILES := none
 LOCAL_STATIC_JAVA_LIBRARIES := org.lineageos.platform.sdk
 
 include $(BUILD_STATIC_JAVA_LIBRARY)
+
+PRIVATE_MODULE_INTERMEDIATES := $(TARGET_OUT_COMMON_INTERMEDIATES)/JAVA_LIBRARIES/$(LOCAL_MODULE)_intermediates
 $(LOCAL_MODULE) : $(built_aar)
+	@echo "Patching ($@): $(PRIVATE_MODULE_INTERMEDIATES)/$@"
+	$(hide) unzip -q $(PRIVATE_MODULE_INTERMEDIATES)/javalib.aar -d $(PRIVATE_MODULE_INTERMEDIATES)/javalib_aar_out
+	$(hide) rm -rf $(PRIVATE_MODULE_INTERMEDIATES)/javalib.aar
+	$(hide) unzip -q $(PRIVATE_MODULE_INTERMEDIATES)/javalib_aar_out/classes.jar -d $(PRIVATE_MODULE_INTERMEDIATES)/javalib_aar_out/classes
+	$(hide) rm -rf $(PRIVATE_MODULE_INTERMEDIATES)/javalib_aar_out/classes.jar
+	$(hide) rm -rf $(PRIVATE_MODULE_INTERMEDIATES)/javalib_aar_out/classes/androidx $(PRIVATE_MODULE_INTERMEDIATES)/javalib_aar_out/classes/android/support
+	$(hide) $(JAR) cf $(PRIVATE_MODULE_INTERMEDIATES)/javalib_aar_out/classes.jar -C $(PRIVATE_MODULE_INTERMEDIATES)/javalib_aar_out/classes /.
+	$(hide) rm -rf $(PRIVATE_MODULE_INTERMEDIATES)/javalib_aar_out/classes
+	$(hide) cp $(LOCAL_CONSUMER_PROGUARD_FILE) $(PRIVATE_MODULE_INTERMEDIATES)/javalib_aar_out/
+	$(hide) rm -rf $(PRIVATE_MODULE_INTERMEDIATES)/javalib_aar_out/res/values/symbols.xml
+	$(hide) $(JAR) cf $(PRIVATE_MODULE_INTERMEDIATES)/$@ -C $(PRIVATE_MODULE_INTERMEDIATES)/javalib_aar_out /.
+	$(hide) rm -rf $(PRIVATE_MODULE_INTERMEDIATES)/javalib_aar_out
 
 # ===========================================================
 # Common Droiddoc vars
