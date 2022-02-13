@@ -97,6 +97,7 @@
     <string name="lineage_api_level">Nivel de la API de LineageOS</string>
     <string name="lineage_updates">Actualizaciones de LineageOS</string>
     <string name="lineage_version">Versión de LineageOS</string>
+    <string name="lineage_vendor_security_patch">Nivel del parche de seguridad del proveedor</string>
     <string name="unknown">Desconocido</string>
     <string name="app_killed_message">Aplicación finalizada</string>
     <string name="kilobitspersecond_short">kb/s</string>
@@ -113,4 +114,10 @@
     <string name="accent_purple">Lavanda</string>
     <string name="accent_red">Tomate</string>
     <string name="accent_yellow">Plátano</string>
+    <string name="trust_feature_name">Trust</string>
+    <string name="permlab_trustInterface">acceder a la interfaz Trust</string>
+    <string name="trust_notification_channel">Alertas de Trust</string>
+    <string name="trust_notification_title_security">Trust \u2022 Seguridad del sistema</string>
+    <string name="trust_notification_title_onboarding">Descubre Trust</string>
+    <string name="trust_notification_action_manage">Gestionar alertas</string>
 </resources>

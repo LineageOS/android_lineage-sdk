@@ -93,7 +93,7 @@
     <string name="privacy_guard_manager_title">Freiceadan na prìobhaideachd</string>
     <string name="permlab_manageRemotePrefs">roghainnean cèine a stiùireadh</string>
     <string name="permdesc_manageRemotePrefs">Leigidh seo le aplacaid roghainnean cèine a stiùireadh</string>
-    <string name="build_date">Ceann-là a’ build</string>
+    <string name="build_date">Ceann-là na togail</string>
     <string name="lineage_api_level">Leibheil API LineageOS</string>
     <string name="lineage_updates">Ùrachaidhean air LineageOS</string>
     <string name="lineage_version">An tionndadh de LineageOS</string>
@@ -122,7 +122,7 @@
     <string name="trust_notification_content_selinux">Chan eil SELinux teann agus an tèarainteachd agad air a lagachadh</string>
     <string name="trust_notification_title_root">Earbsa ⁊ inntrigeadh root</string>
     <string name="trust_notification_content_root">Tha aplacaid a’ cleachdadh pribhleidean root an-dràsta</string>
-    <string name="trust_notification_content_keys">Chaidh am build seo a shoidhneadh le iuchraichean poblach</string>
+    <string name="trust_notification_content_keys">Chaidh an togail a shoidhneadh le iuchair phoblach</string>
     <string name="trust_notification_title_onboarding">Fidir an earbsa</string>
     <string name="trust_notification_content_onboarding">Faigh a-mach mar a nì thu cinnteach gum bi an t-uidheam agad sàbhailte</string>
     <string name="trust_notification_action_manage">Stiùir na rabhaidhean</string>

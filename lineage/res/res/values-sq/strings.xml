@@ -97,7 +97,7 @@
     <string name="lineage_api_level">Niveli API i LineageOS</string>
     <string name="lineage_updates">Përditësimet e LineageOS</string>
     <string name="lineage_version">Versioni i LineageOS</string>
-    <string name="lineage_vendor_security_patch">Niveli i arnimeve të sigurië nga prodhuesi</string>
+    <string name="lineage_vendor_security_patch">Niveli i korrigjimit të sigurisë së Vendor</string>
     <string name="unknown">E panjohur</string>
     <string name="app_killed_message">Aplikacioni u mbyll</string>
     <string name="kilobitspersecond_short">kb/s</string>
@@ -118,9 +118,9 @@
     <string name="permlab_trustInterface">hyr në ndërfaqen e Trust</string>
     <string name="permdesc_trustInterface">Lejon një app të shfaqë paralajmërime dhe sygjerime të Trust</string>
     <string name="trust_notification_channel">Paralajmërime Trust</string>
-    <string name="trust_notification_title_security">Besoji \u2022 sigurinë e Sistemit</string>
+    <string name="trust_notification_title_security">Trust \u2022 sigurinë e Sistemit</string>
     <string name="trust_notification_content_selinux">SELinux nuk është e zbatuar, siguria juaj është dobësuar</string>
-    <string name="trust_notification_title_root">Besoji \u2022 të drejta Root</string>
+    <string name="trust_notification_title_root">Trust \u2022 të drejta Root</string>
     <string name="trust_notification_content_root">Një app po përdor aktualisht të drejta Root</string>
     <string name="trust_notification_content_keys">Ky zhvillim është nënshkruar me çelsa publik</string>
     <string name="trust_notification_title_onboarding">Zbulo Trust</string>

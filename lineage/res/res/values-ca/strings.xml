@@ -99,7 +99,7 @@
     <string name="lineage_version">Versió de LineageOS</string>
     <string name="lineage_vendor_security_patch">Nivell de pedaç de seguretat del proveïdor</string>
     <string name="unknown">Desconegut</string>
-    <string name="app_killed_message">S\'ha matat l\'aplicació</string>
+    <string name="app_killed_message">S\'ha finalitzat l\'aplicació</string>
     <string name="kilobitspersecond_short">kb/s</string>
     <string name="megabitspersecond_short">Mb/s</string>
     <string name="kilobytespersecond_short">kB/s</string>

@@ -22,11 +22,13 @@
     <string name="permlab_useHardwareFramework">hardware-framework gebruiken</string>
     <string name="permdesc_useHardwareFramework">Hiermee kan de app toegang krijgen tot het hardware-framework van Lineage.</string>
     <string name="permlab_writeSettings">Lineage-systeeminstellingen wijzigen</string>
+    <string name="permdesc_writeSettings">Staat een app toe de systeeminstellingen van Lineage te wijzigen.</string>
     <string name="permlab_writeSecureSettings">beveiligde Lineage-systeeminstellingen wijzigen</string>
     <string name="permdesc_writeSecureSettings">Hiermee kan de app de beveiligde systeeminstellingen van Lineage wijzigen. Niet voor gebruik door normale apps.</string>
     <string name="permlab_protectedApp">toevoegen en verwijderen van apps aan beschermde apps</string>
     <string name="permdesc_protectedApp">Hiermee kan de app andere apps als beschermd aanmerken en vergrendelen.</string>
     <string name="permlab_changeStyle">systeemstijl wijzigen</string>
+    <string name="permdesc_changeStyle">pas de systeemkleuren aan</string>
     <string name="profileNameDefault">Standaard</string>
     <string name="profileNameWork">Werk</string>
     <string name="profileNameHome">Thuis</string>
@@ -112,7 +114,16 @@
     <string name="accent_purple">Lavendel</string>
     <string name="accent_red">Tomaat</string>
     <string name="accent_yellow">Banaan</string>
+    <string name="trust_feature_name">Trust</string>
     <string name="permlab_trustInterface">toegang tot Trust-interface</string>
+    <string name="permdesc_trustInterface">Staat een app toe waarschuwingen en suggesties van Trust weer te geven</string>
     <string name="trust_notification_channel">Trust-waarschuwingen</string>
+    <string name="trust_notification_title_security">Trust \u2022 Systeembeveiliging</string>
+    <string name="trust_notification_content_selinux">SELinux staat niet in \"enforcing\", je beveiliging is verzwakt</string>
+    <string name="trust_notification_title_root">Trust \u2022 Root toegang</string>
+    <string name="trust_notification_content_root">Een app gebruikt momenteel root-rechten</string>
+    <string name="trust_notification_content_keys">Deze build is ondertekend met openbare sleutels</string>
     <string name="trust_notification_title_onboarding">Ontdek Trust</string>
+    <string name="trust_notification_content_onboarding">Leer hoe u de veiligheid van uw apparaat kunt garanderen</string>
+    <string name="trust_notification_action_manage">Beheer waarschuwingen</string>
 </resources>
