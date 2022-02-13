@@ -107,7 +107,7 @@
     <string name="trust_notification_channel">Rabhaidhean na h-earbsa</string>
     <string name="trust_notification_title_security">Earbsa ⁊ tèarainteachd an t-siostaim</string>
     <string name="trust_notification_content_selinux">Chan eil SELinux teann agus an tèarainteachd agad air a lagachadh</string>
-    <string name="trust_notification_content_keys">Chaidh an togail seo a shoidhneadh le iuchraichean poblach</string>
+    <string name="trust_notification_content_keys">Chaidh an togail a shoidhneadh le iuchair phoblach</string>
     <string name="trust_notification_title_onboarding">Fidir an earbsa</string>
     <string name="trust_notification_content_onboarding">Faigh a-mach mar a nì thu cinnteach gum bi an t-uidheam agad sàbhailte</string>
     <string name="trust_notification_action_manage">Stiùir na rabhaidhean</string>
