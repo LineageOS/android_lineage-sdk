@@ -409,6 +409,13 @@ public class LineageDatabaseHelper extends SQLiteOpenHelper{
             upgradeVersion = 15;
         }
         // *** Remember to update DATABASE_VERSION above!
+        if (upgradeVersion != newVersion) {
+            Log.wtf(TAG, "warning: upgrading settings database to version "
+                            + newVersion + " left it at "
+                            + upgradeVersion +
+                            " instead; this is probably a bug. Did you update DATABASE_VERSION?",
+                    new RuntimeException("db upgrade error"));
+        }
     }
 
     private void moveSettingsToNewTable(SQLiteDatabase db,
