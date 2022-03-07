@@ -16,6 +16,23 @@
       "message": "Whole chain ( + fw/base friend ) fine on my side",
       "revId": "1d020d43f189a75a600accbafb2d10eb37d59f23",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5200a67b_8daa6999",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2022-03-07T21:17:24Z",
+      "side": 1,
+      "message": "Why is this a fixup commit?",
+      "revId": "1d020d43f189a75a600accbafb2d10eb37d59f23",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
