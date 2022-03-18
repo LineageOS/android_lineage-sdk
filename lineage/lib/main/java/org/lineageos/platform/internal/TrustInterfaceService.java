@@ -95,6 +95,11 @@ public class TrustInterfaceService extends LineageSystemService {
 
             try {
                 mUsb = IUsb.getService();
+            } catch (NoSuchElementException | RemoteException e) {
+                // ignore, the hal is not available
+            }
+
+            try {
                 mUsbRestrictor = IUsbRestrict.getService();
             } catch (NoSuchElementException | RemoteException e) {
                 // ignore, the hal is not available
