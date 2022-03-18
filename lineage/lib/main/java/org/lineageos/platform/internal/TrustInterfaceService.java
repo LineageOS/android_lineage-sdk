@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2018-2021 The LineageOS Project
+ * Copyright (C) 2018-2022 The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -95,6 +95,11 @@ public class TrustInterfaceService extends LineageSystemService {
 
             try {
                 mUsb = IUsb.getService();
+            } catch (NoSuchElementException | RemoteException e) {
+                // ignore, the hal is not available
+            }
+
+            try {
                 mUsbRestrictor = IUsbRestrict.getService();
             } catch (NoSuchElementException | RemoteException e) {
                 // ignore, the hal is not available
