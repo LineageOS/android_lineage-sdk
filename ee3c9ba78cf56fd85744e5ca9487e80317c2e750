@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e507c968_14890d05",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 10258
+      },
+      "writtenOn": "2022-03-19T12:15:19Z",
+      "side": 1,
+      "message": "This is a fixup for https://review.lineageos.org/c/LineageOS/android_lineage-sdk/+/318992 that already got merged.",
+      "revId": "ee3c9ba78cf56fd85744e5ca9487e80317c2e750",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
