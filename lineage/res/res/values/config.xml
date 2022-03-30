@@ -292,6 +292,9 @@
          (needed for some older vendor fingerprint HAL implementations) -->
     <bool name="config_fingerprintPostResetRunnableForAllClients">false</bool>
 
+    <!-- Whether to vibrate on successful authentication with biometrics -->
+    <bool name="config_biometricsVibrateOnSuccess">true</bool>
+
     <!-- The list of components which should be automatically disabled for a specific device.
          Note: this MUST not be used to randomly disable components, ask for approval first! -->
     <string-array name="config_deviceDisabledComponents" translatable="false">
