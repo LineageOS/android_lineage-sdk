@@ -719,6 +719,7 @@ package lineageos.providers {
     field public static final java.lang.String BATTERY_LIGHT_LOW_COLOR = "battery_light_low_color";
     field public static final java.lang.String BATTERY_LIGHT_MEDIUM_COLOR = "battery_light_medium_color";
     field public static final java.lang.String BATTERY_LIGHT_PULSE = "battery_light_pulse";
+    field public static final java.lang.String BIOMETRICS_SUCCESS_HAPTIC_FEEDBACK = "biometrics_success_haptic_feedback";
     field public static final java.lang.String BLUETOOTH_ACCEPT_ALL_FILES = "bluetooth_accept_all_files";
     field public static final java.lang.String BUTTON_BACKLIGHT_ONLY_WHEN_PRESSED = "button_backlight_only_when_pressed";
     field public static final java.lang.String CALL_RECORDING_FORMAT = "call_recording_format";

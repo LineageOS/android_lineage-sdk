@@ -1984,6 +1984,16 @@ public final class LineageSettings {
                 sBooleanValidator;
 
         /**
+         * Whether or not to vibrate on successful authentication with biometrics
+         */
+        public static final String BIOMETRICS_SUCCESS_HAPTIC_FEEDBACK =
+                "biometrics_success_haptic_feedback";
+
+        /** @hide */
+        public static final Validator BIOMETRICS_SUCCESS_HAPTIC_FEEDBACK_VALIDATOR =
+                sBooleanValidator;
+
+        /**
          * The current custom picture adjustment values as a delimited string
          */
         public static final String DISPLAY_PICTURE_ADJUSTMENT =
@@ -2134,6 +2144,7 @@ public final class LineageSettings {
                 LineageSettings.System.HEADSET_CONNECT_PLAYER,
                 LineageSettings.System.ZEN_ALLOW_LIGHTS,
                 LineageSettings.System.TOUCHSCREEN_GESTURE_HAPTIC_FEEDBACK,
+                LineageSettings.System.BIOMETRICS_SUCCESS_HAPTIC_FEEDBACK,
         };
 
         /**
@@ -2291,6 +2302,8 @@ public final class LineageSettings {
             VALIDATORS.put(ZEN_PRIORITY_VIBRATION_MODE, ZEN_PRIORITY_VIBRATION_VALIDATOR);
             VALIDATORS.put(TOUCHSCREEN_GESTURE_HAPTIC_FEEDBACK,
                     TOUCHSCREEN_GESTURE_HAPTIC_FEEDBACK_VALIDATOR);
+            VALIDATORS.put(BIOMETRICS_SUCCESS_HAPTIC_FEEDBACK,
+                    BIOMETRICS_SUCCESS_HAPTIC_FEEDBACK_VALIDATOR);
             VALIDATORS.put(DISPLAY_PICTURE_ADJUSTMENT,
                     DISPLAY_PICTURE_ADJUSTMENT_VALIDATOR);
             VALIDATORS.put(LONG_SCREEN_APPS,
