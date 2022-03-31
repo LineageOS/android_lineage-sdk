@@ -25,6 +25,7 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.content.pm.PackageManager;
 import android.os.IBinder;
 import android.os.RemoteException;
 import android.os.SELinux;
@@ -58,7 +59,9 @@ public class TrustInterfaceService extends LineageSystemService {
     private static final String INTENT_PARTS = "org.lineageos.lineageparts.TRUST_INTERFACE";
     private static final String INTENT_ONBOARDING = "org.lineageos.lineageparts.TRUST_HINT";
 
-    private static final String CHANNEL_NAME = "TrustInterface";
+    private static final String TRUST_CHANNEL_ID = "TrustInterface";
+    private static final String TRUST_CHANNEL_ID_TV = "TrustInterface.tv";
+
     private static final int ONBOARDING_NOTIFCATION_ID = 89;
 
     private Context mContext;
@@ -134,7 +137,7 @@ public class TrustInterfaceService extends LineageSystemService {
         actionIntent.putExtra(":settings:fragment_args_key", "trust_category_alerts");
         PendingIntent pActionIntent = PendingIntent.getActivity(mContext, 0, actionIntent, 0);
 
-        Notification.Builder notification = new Notification.Builder(mContext, CHANNEL_NAME)
+        Notification.Builder notification = new Notification.Builder(mContext, TRUST_CHANNEL_ID)
                 .setContentTitle(title)
                 .setContentText(message)
                 .setStyle(new Notification.BigTextStyle().bigText(message))
@@ -142,7 +145,8 @@ public class TrustInterfaceService extends LineageSystemService {
                 .setContentIntent(pMainIntent)
                 .addAction(R.drawable.ic_trust_notification_manage, action, pActionIntent)
                 .setColor(mContext.getColor(R.color.color_error))
-                .setSmallIcon(R.drawable.ic_warning);
+                .setSmallIcon(R.drawable.ic_warning)
+                .extend(new Notification.TvExtender().setChannelId(TRUST_CHANNEL_ID_TV));
 
         createNotificationChannelIfNeeded();
         mNotificationManager.notify(feature, notification.build());
@@ -169,13 +173,14 @@ public class TrustInterfaceService extends LineageSystemService {
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         PendingIntent pIntent = PendingIntent.getActivity(mContext, 0, intent, 0);
 
-        Notification.Builder notification = new Notification.Builder(mContext, CHANNEL_NAME)
+        Notification.Builder notification = new Notification.Builder(mContext, TRUST_CHANNEL_ID)
                 .setContentTitle(title)
                 .setContentText(message)
                 .setStyle(new Notification.BigTextStyle().bigText(message))
                 .setAutoCancel(true)
                 .setContentIntent(pIntent)
-                .setSmallIcon(R.drawable.ic_trust);
+                .setSmallIcon(R.drawable.ic_trust)
+                .extend(new Notification.TvExtender().setChannelId(TRUST_CHANNEL_ID_TV));
 
         createNotificationChannelIfNeeded();
         mNotificationManager.notify(ONBOARDING_NOTIFCATION_ID, notification.build());
@@ -218,6 +223,10 @@ public class TrustInterfaceService extends LineageSystemService {
                 "You do not have permissions to use the Trust interface");
     }
 
+    private boolean isTv() {
+        return mContext.getPackageManager().hasSystemFeature(PackageManager.FEATURE_LEANBACK);
+    }
+
     private boolean isWarningAllowed(int warning) {
         return (LineageSettings.Secure.getInt(mContext.getContentResolver(),
                 LineageSettings.Secure.TRUST_WARNINGS,
@@ -243,15 +252,15 @@ public class TrustInterfaceService extends LineageSystemService {
     }
 
     private void createNotificationChannelIfNeeded() {
-        NotificationChannel channel = mNotificationManager.getNotificationChannel(CHANNEL_NAME);
+        String id = !isTv() ? TRUST_CHANNEL_ID : TRUST_CHANNEL_ID_TV;
+        NotificationChannel channel = mNotificationManager.getNotificationChannel(id);
         if (channel != null) {
             return;
         }
 
         String name = mContext.getString(R.string.trust_notification_channel);
         int importance = NotificationManager.IMPORTANCE_HIGH;
-        NotificationChannel trustChannel = new NotificationChannel(CHANNEL_NAME,
-                name, importance);
+        NotificationChannel trustChannel = new NotificationChannel(id, name, importance);
         trustChannel.setBlockable(true);
         mNotificationManager.createNotificationChannel(trustChannel);
     }
