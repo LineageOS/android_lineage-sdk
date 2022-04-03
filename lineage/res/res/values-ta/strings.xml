@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
      Copyright (C) 2015 The CyanogenMod Project
-               (C) 2017 The LineageOS Project
+                   2017-2022 The LineageOS Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -31,11 +31,6 @@
     <string name="profileGroupEmail">மின்னஞ்சல்</string>
     <string name="profileGroupSMS">SMS</string>
     <string name="wildcardProfile">பிற</string>
-    <string name="perf_profile_pwrsv">சக்தி சேமி</string>
-    <string name="perf_profile_bal">சமன்பாடான</string>
-    <string name="perf_profile_perf">செயல்திறன்</string>
-    <string name="perf_profile_bias_power">செயல்திறன்</string>
-    <string name="perf_profile_bias_perf">விரைவு</string>
     <string name="live_display_auto">தானியங்கு</string>
     <string name="live_display_auto_summary">சூரிய மறைவு மற்றும் சூரிய உதயத்திற்கு பிறகு தானாகவே திரையின் வண்ன தட்பவெப்பங்களை சரிசெய்</string>
     <string name="live_display_off">முடக்கத்தில்</string>

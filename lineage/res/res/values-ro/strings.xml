@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
      Copyright (C) 2015 The CyanogenMod Project
-               (C) 2017 The LineageOS Project
+                   2017-2022 The LineageOS Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -37,16 +37,6 @@
     <string name="profileGroupEmail">Email</string>
     <string name="profileGroupSMS">SMS</string>
     <string name="wildcardProfile">Altele</string>
-    <string name="perf_profile_pwrsv">Economisire baterie</string>
-    <string name="perf_profile_bal">Echilibrat</string>
-    <string name="perf_profile_perf">Performanță</string>
-    <string name="perf_profile_bias_power">Eficiență</string>
-    <string name="perf_profile_bias_perf">Rapid</string>
-    <string name="perf_profile_pwrsv_summary">Economie maximă a energiei, reduce performanța dispozitivului</string>
-    <string name="perf_profile_bal_summary">Echilibrul de performanţă optimă și caracteristicile energiei</string>
-    <string name="perf_profile_perf_summary">Modul de performanţă înaltă. Util pentru aplicaţii care necesită latenţă scăzută şi un debit mai mare atunci când consumul de energie nu este un motiv de îngrijorare</string>
-    <string name="perf_profile_bias_power_summary">Favorizează economisirea energiei. Limitează puterea maximă a procesorului şi optimizează pentru economisirea energiei la costul de latenţă mai mare</string>
-    <string name="perf_profile_bias_perf_summary">Favorizează performanţa. Reduce latența cu un consum ușor crescut</string>
     <string name="live_display_auto">Automat</string>
     <string name="live_display_auto_summary">Reglează automat temperatura culorii ecranului în funcție de apus şi răsărit</string>
     <string name="live_display_off">Oprit</string>
@@ -68,12 +58,8 @@
     <string name="accessibility_quick_settings_live_display_changed_day">LiveDisplay s-a schimbat la modul zi.</string>
     <string name="accessibility_quick_settings_live_display_changed_night">LiveDisplay s-a schimbat la modul noapte.</string>
     <string name="accessibility_quick_settings_live_display_changed_outdoor">LiveDisplay s-a schimbat la modul afară.</string>
-    <string name="permlab_perfAccess">acces la managerul de performanță</string>
-    <string name="permdesc_perfAccessDesc">Permite unei aplicații să acceseze serviciul de performanță. Aplicațiile normale nu au nevoie de aceasta.</string>
     <string name="permlab_manageLiveDisplay">gestionează setările LiveDisplay</string>
     <string name="permdesc_manageLiveDisplay">Permite unei aplicații să configureze setările de afișare avansate.</string>
-    <string name="permlab_observe_audio_sessions">observă schimbări sesiune audio</string>
-    <string name="permdesc_observe_audio_sessions">Permite unei aplicații să observe dacă fluxurile audio sunt create şi distruse.</string>
     <string name="permlab_manageRemotePrefs">gestionare setări la distanţă</string>
     <string name="permdesc_manageRemotePrefs">Permite unei aplicații să gestioneze setările de la distanţă</string>
     <string name="build_date">Dată de compilare</string>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
      Copyright (C) 2015 The CyanogenMod Project
-               (C) 2017 The LineageOS Project
+                   2017-2022 The LineageOS Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -37,16 +37,6 @@
     <string name="profileGroupEmail">Surel</string>
     <string name="profileGroupSMS">SMS</string>
     <string name="wildcardProfile">Lainnya</string>
-    <string name="perf_profile_pwrsv">Hemat daya</string>
-    <string name="perf_profile_bal">Seimbang</string>
-    <string name="perf_profile_perf">Kinerja</string>
-    <string name="perf_profile_bias_power">Efisiensi</string>
-    <string name="perf_profile_bias_perf">Cepat</string>
-    <string name="perf_profile_pwrsv_summary">Hemat daya maksimal, kurangi kinerja perangkat</string>
-    <string name="perf_profile_bal_summary">Seimbang antara kinerja yang optimal dan karakteristik kekuatan</string>
-    <string name="perf_profile_perf_summary">Mode kinerja tinggi. Berguna untuk aplikasi yang memerlukan latency rendah dan tertinggi throughput ketika konsumsi daya tidak perhatian</string>
-    <string name="perf_profile_bias_power_summary">Mendukung penghematan daya. Batas maksimum power CPU dan mengoptimalkan untuk penghematan biaya latensi lebih tinggi daya</string>
-    <string name="perf_profile_bias_perf_summary">Mendukung kinerja. Mengurangi latensi dengan konsumsi daya yang sedikit meningkat</string>
     <string name="live_display_auto">Otomatis</string>
     <string name="live_display_auto_summary">Menyesuaikan suhu warna layar secara otomatis setelah matahari terbenam dan terbit</string>
     <string name="live_display_off">Mati</string>
@@ -68,12 +58,8 @@
     <string name="accessibility_quick_settings_live_display_changed_day">LiveDisplay diubah menjadi modus siang.</string>
     <string name="accessibility_quick_settings_live_display_changed_night">LiveDisplay diubah menjadi modus malam.</string>
     <string name="accessibility_quick_settings_live_display_changed_outdoor">LiveDisplay diubah menjadi modus luar ruangan.</string>
-    <string name="permlab_perfAccess">akses pengelola kinerja</string>
-    <string name="permdesc_perfAccessDesc">Izinkan aplikasi untuk mengakses layanan kinerja. Tidak dibutuhkan untuk aplikasi biasa.</string>
     <string name="permlab_manageLiveDisplay">kelola pengaturan LiveDisplay</string>
     <string name="permdesc_manageLiveDisplay">Izinkan aplikasi untuk mengonfigurasi pengaturan tampilan lanjutan.</string>
-    <string name="permlab_observe_audio_sessions">pantau perubahan sesi audio</string>
-    <string name="permdesc_observe_audio_sessions">Izinkan aplikasi untuk memantau pengaliran audio yang dibuat dan dihilangkan.</string>
     <string name="permlab_manageRemotePrefs">mengelola pengaturan jarak jauh</string>
     <string name="permdesc_manageRemotePrefs">Memungkinkan aplikasi untuk mengelola pengaturan jarak jauh</string>
     <string name="build_date">Tanggal pembuatan</string>

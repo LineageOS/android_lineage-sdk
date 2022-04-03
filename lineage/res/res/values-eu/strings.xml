@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
      Copyright (C) 2015 The CyanogenMod Project
-               (C) 2017 The LineageOS Project
+                   2017-2022 The LineageOS Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -37,16 +37,6 @@
     <string name="profileGroupEmail">E-posta</string>
     <string name="profileGroupSMS">SMS</string>
     <string name="wildcardProfile">Beste bat</string>
-    <string name="perf_profile_pwrsv">Energia aurreztea</string>
-    <string name="perf_profile_bal">Orekatua</string>
-    <string name="perf_profile_perf">Errendimendua</string>
-    <string name="perf_profile_bias_power">Eraginkortasuna</string>
-    <string name="perf_profile_bias_perf">Azkarra</string>
-    <string name="perf_profile_pwrsv_summary">Bateria aurrezte maximoa, gailuaren errendimendua gutxiagotzen du</string>
-    <string name="perf_profile_bal_summary">Errendimendu optimoa eta energia ezaugarrien arteko oreka</string>
-    <string name="perf_profile_perf_summary">Errendimendu altuko modua. Latentzia baxua eta emari altuena behar duten aplikazioetarako erabilgarria energia kontsumoak ardura ez duenean</string>
-    <string name="perf_profile_bias_power_summary">Hobetsi energia aurreztea. Mugatu gehieneko PUZ energia eta optimizatu energia aurrezteko latentzia altuago baten truke</string>
-    <string name="perf_profile_bias_perf_summary">Hobetsi errendimendua. latentzia gutxitzen du energia kontsumo apur bat gehiagorekin</string>
     <string name="live_display_auto">Automatikoa</string>
     <string name="live_display_auto_summary">Doitu automatikoki pantailaren kolore tenperatura ilunabarra eta egunsentiaren ostean</string>
     <string name="live_display_off">Ez</string>
@@ -68,12 +58,8 @@
     <string name="accessibility_quick_settings_live_display_changed_day">LiveDisplay eguna modura aldatu da.</string>
     <string name="accessibility_quick_settings_live_display_changed_night">LiveDisplay gaua modura aldatu da.</string>
     <string name="accessibility_quick_settings_live_display_changed_outdoor">LiveDisplay kaleko modura aldatu da.</string>
-    <string name="permlab_perfAccess">errendimendu kudeatzailea atzitu</string>
-    <string name="permdesc_perfAccessDesc">Errendimendu kudeatzailea atzitzea ahalbidetzen dio aplikazioari. Aplikazio arruntek ez dute hau behar.</string>
     <string name="permlab_manageLiveDisplay">LiveDisplay ezarpenak kudeatu</string>
     <string name="permdesc_manageLiveDisplay">Pantailaren ezarpen aurreratuak ezartzea ahalbidetzen dio aplikazioari.</string>
-    <string name="permlab_observe_audio_sessions">audio saio aldaketak aztertu</string>
-    <string name="permdesc_observe_audio_sessions">Audio jarioen sorrerak eta suntsiketak aztertzea ahalbidetzen dio aplikazioari.</string>
     <string name="permlab_manageRemotePrefs">urruneko ezarpenak kudeatu</string>
     <string name="permdesc_manageRemotePrefs">Urruneko ezarpenak kudeatzea ahalbidetzen dio aplikazioari</string>
     <string name="build_date">Konpilatze data</string>

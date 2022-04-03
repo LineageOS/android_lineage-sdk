@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
      Copyright (C) 2015 The CyanogenMod Project
-               (C) 2017 The LineageOS Project
+                   2017-2022 The LineageOS Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -31,11 +31,6 @@
     <string name="profileGroupEmail">ئېلخەت</string>
     <string name="profileGroupSMS">قىسقا ئۇچۇر</string>
     <string name="wildcardProfile">باشقا</string>
-    <string name="perf_profile_pwrsv">توك تىجەش</string>
-    <string name="perf_profile_bal">تەڭپۇڭ</string>
-    <string name="perf_profile_perf">ئىقتىدار</string>
-    <string name="perf_profile_bias_power">ئۈنۈمى</string>
-    <string name="perf_profile_bias_perf">تىز</string>
     <string name="live_display_auto">ئاپتوماتېك</string>
     <string name="live_display_auto_summary">كۈن چىققان ۋە كۈن پاتقاندىن كېيىن ئېكران رەڭ تېمپېراتورىسىنى ئۆزلۈكىدىن تەڭشەيدۇ</string>
     <string name="live_display_off">تاقاق</string>
@@ -47,6 +42,4 @@
     <string name="live_display_outdoor">تالا (قۇياش نۇرى)</string>
     <string name="live_display_outdoor_summary">تالا تەڭشەكلىرىنىلا ئىشلىتىدۇ</string>
     <string name="live_display_hint">LiveDisplay كۆز چارچىشىنى يېنىكلىتىشكە ياردەم بېرىدۇ، كېچىدە ئۇخلىشىڭىزغا ياردەم بېرىدۇ. سىناش ئۈچۈن بۇ جاينى چېكىڭ!</string>
-    <string name="permlab_perfAccess">ئىقتىدار باشقۇرغۇچنى زىيارەت قىلىش</string>
-    <string name="permdesc_perfAccessDesc">بىر ئەپنىڭ ئىقتىدار مۇلازىمىتىگە كىرىشىگە رۇخسەت قىلىش. نورمال ئەپ بۇنداق ھوقۇققا ھەرگىز ئېھتىياجلىق ئەمەس.</string>
 </resources>

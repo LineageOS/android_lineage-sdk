@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
      Copyright (C) 2015 The CyanogenMod Project
-               (C) 2017 The LineageOS Project
+                   2017-2022 The LineageOS Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -37,16 +37,6 @@
     <string name="profileGroupEmail">البريد الإلكتروني</string>
     <string name="profileGroupSMS">الرسائل القصيرة</string>
     <string name="wildcardProfile">غير ذلك</string>
-    <string name="perf_profile_pwrsv">توفير الطاقة</string>
-    <string name="perf_profile_bal">متوازن</string>
-    <string name="perf_profile_perf">تحسين</string>
-    <string name="perf_profile_bias_power">الكفاءة</string>
-    <string name="perf_profile_bias_perf">سريع</string>
-    <string name="perf_profile_pwrsv_summary">الحد الأقصى لتوفير الطاقة، يقلل من أداء الجهاز</string>
-    <string name="perf_profile_bal_summary">التوازن بين الأداء الأمثل وخصائص الطاقة</string>
-    <string name="perf_profile_perf_summary">وضع الأداء العالي. مفيد للتطبيقات التي تتطلب زمن تأخير منخفض وإنتاجية أعلى وذلك عندما يكون استهلاك الطاقة ليس بمصدر قلق</string>
-    <string name="perf_profile_bias_power_summary">تفضيل حفظ الطاقة. يحدد الحد الأقصى من الطاقة لوحدة المعالجة المركزية و تحسين التوفير على حساب زمن التأخير العالي</string>
-    <string name="perf_profile_bias_perf_summary">تفضيل الأداء. تقليل زمن التأخير وزيادة استهلاك الطاقة بشكل طفيف</string>
     <string name="live_display_auto">تلقائي</string>
     <string name="live_display_auto_summary">ضبط درجة الحرارة اللونية للشاشة تلقائياً بعد غروب الشمس وشروق الشمس</string>
     <string name="live_display_off">إيقاف تشغيل</string>
@@ -68,12 +58,8 @@
     <string name="accessibility_quick_settings_live_display_changed_day">تم تغيير LiveDisplay إلى الوضع النهاري.</string>
     <string name="accessibility_quick_settings_live_display_changed_night">تم تغيير LiveDisplay إلى الوضع الليلي.</string>
     <string name="accessibility_quick_settings_live_display_changed_outdoor">تم تغيير LiveDisplay إلى وضع الأماكن المفتوحة.</string>
-    <string name="permlab_perfAccess">الوصول إلى مدير الأداء</string>
-    <string name="permdesc_perfAccessDesc">السماح للتطبيق بالوصول إلى خدمة الأداء. ينبغي ألا يكون ضرورياً للتطبيقات العادية.</string>
     <string name="permlab_manageLiveDisplay">إدارة إعدادات LiveDisplay</string>
     <string name="permdesc_manageLiveDisplay">يسمح لتطبيق معين بتكوين إعدادات العرض المتقدمة.</string>
-    <string name="permlab_observe_audio_sessions">ملاحظة تغييرات جلسة عمل الصوت</string>
-    <string name="permdesc_observe_audio_sessions">يسمح لتطبيق معين لملاحظة تدفقات الصوت الجاري إنشاؤها وتدميرها.</string>
     <string name="permlab_manageRemotePrefs">إعدادات التحكم عن بعد</string>
     <string name="permdesc_manageRemotePrefs">السماح للتطبيق بإدارة الإعدادات عن بعد</string>
     <string name="build_date">تاريخ الإنشاء</string>

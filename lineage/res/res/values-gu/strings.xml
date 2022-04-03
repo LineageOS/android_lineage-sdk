@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
      Copyright (C) 2015 The CyanogenMod Project
-               (C) 2017 The LineageOS Project
+                   2017-2022 The LineageOS Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -31,11 +31,6 @@
     <string name="profileGroupEmail">ઇમેઇલ</string>
     <string name="profileGroupSMS">SMS</string>
     <string name="wildcardProfile">અન્ય</string>
-    <string name="perf_profile_pwrsv">પાવર બચાવો</string>
-    <string name="perf_profile_bal">સંતુલિત</string>
-    <string name="perf_profile_perf">પ્રદર્શન</string>
-    <string name="perf_profile_bias_power">કાર્યક્ષમતા</string>
-    <string name="perf_profile_bias_perf">ઝડપી</string>
     <string name="live_display_auto">સ્વચલિત</string>
     <string name="live_display_auto_summary">સૂર્યોદય અને સૂર્યાસ્ત પછી સ્ક્રીનના રંગ તાપમાનને સ્વયંચાલિત રીતે સમાયોજિત કરો</string>
     <string name="live_display_off">બંધ</string>
@@ -47,6 +42,4 @@
     <string name="live_display_outdoor">આઉટડોર (તેજ તડકો)</string>
     <string name="live_display_outdoor_summary">ફકત આઉટડોર સેટિંગ્સનો ઉપયોગ કરો</string>
     <string name="live_display_hint">લાઇવડિસ્પ્લેથી આંખો પરની તાણ ઘટાડી શકાય છે અને તમને રાતે સૂવામાં મદદરૂપ થઈ શકે. અજમાવવા અહીં ક્લિક કરો!</string>
-    <string name="permlab_perfAccess">ઍક્સેસ કામગીરી મેનેજર</string>
-    <string name="permdesc_perfAccessDesc">ઍપ ને કામગીરી સેવા ઍક્સેસ કરવાની છૂટ આપે છે. સામાન્ય એપ્સ માટે ક્યારેય જરૂર પડવી જોઈએ નહી.</string>
 </resources>

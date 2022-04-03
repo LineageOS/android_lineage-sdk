@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
      Copyright (C) 2015 The CyanogenMod Project
-               (C) 2017 The LineageOS Project
+                   2017-2022 The LineageOS Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -37,16 +37,6 @@
     <string name="profileGroupEmail">Email</string>
     <string name="profileGroupSMS">SMS</string>
     <string name="wildcardProfile">Khác</string>
-    <string name="perf_profile_pwrsv">Tiết kiệm pin</string>
-    <string name="perf_profile_bal">Cân đối</string>
-    <string name="perf_profile_perf">Hiệu suất cao</string>
-    <string name="perf_profile_bias_power">Hiệu quả</string>
-    <string name="perf_profile_bias_perf">Nhanh</string>
-    <string name="perf_profile_pwrsv_summary">Tiết kiệm năng lượng tối đa, giảm hiệu suất thiết bị</string>
-    <string name="perf_profile_bal_summary">Cân bằng của tối ưu hiệu suất và điện năng</string>
-    <string name="perf_profile_perf_summary">Chế độ hiệu suất cao. Hữu ích cho các ứng dụng đòi hỏi độ trễ thấp và băng thông cao nhất khi tiêu thụ điện năng không phải là một mối quan tâm</string>
-    <string name="perf_profile_bias_power_summary">Ưu tiên tiết kiệm pin. Hạn chế tối đa điện năng CPU và tối ưu hóa điện năng để tiết kiệm hao phí do độ trễ cao hơn</string>
-    <string name="perf_profile_bias_perf_summary">Ưu tiên hiệu suất. Làm giảm độ trễ với điện năng tiêu thụ gia tăng không đáng kể</string>
     <string name="live_display_auto">Tự động</string>
     <string name="live_display_auto_summary">Tự động chỉnh nhiệt độ màu của màn hình theo ngày và đêm</string>
     <string name="live_display_off">Tắt</string>
@@ -68,12 +58,8 @@
     <string name="accessibility_quick_settings_live_display_changed_day">LiveDisplay đã đổi sang chế độ ban ngày.</string>
     <string name="accessibility_quick_settings_live_display_changed_night">LiveDisplay đã đổi sang chế độ ban đêm.</string>
     <string name="accessibility_quick_settings_live_display_changed_outdoor">LiveDisplay đã đổi sang chế độ ngoài trời.</string>
-    <string name="permlab_perfAccess">truy cập trình quản lý hiệu quả hoạt động</string>
-    <string name="permdesc_perfAccessDesc">Cho phép một ứng dụng truy cập dịch vụ hiệu quả hoạt động. Ứng dụng bình thường không bao giờ cần quyền này.</string>
     <string name="permlab_manageLiveDisplay">quản lý cài đặt LiveDisplay</string>
     <string name="permdesc_manageLiveDisplay">Cho phép ứng dụng thiết lập cấu hình cài đặt hiển thị nâng cao.</string>
-    <string name="permlab_observe_audio_sessions">quan sát các thay đổi về phiên âm thanh</string>
-    <string name="permdesc_observe_audio_sessions">Cho phép ứng dụng quan sát dòng âm thanh được tạo và bị hủy.</string>
     <string name="permlab_manageRemotePrefs">quản lý cài đặt từ xa</string>
     <string name="permdesc_manageRemotePrefs">Cho phép một ứng dụng quản lý cài đặt từ xa</string>
     <string name="build_date">Ngày dựng</string>

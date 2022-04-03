@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
      Copyright (C) 2015 The CyanogenMod Project
-               (C) 2017 The LineageOS Project
+                   2017-2022 The LineageOS Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -37,16 +37,6 @@
     <string name="profileGroupEmail">อีเมล</string>
     <string name="profileGroupSMS">SMS</string>
     <string name="wildcardProfile">อื่น ๆ</string>
-    <string name="perf_profile_pwrsv">ประหยัดพลังงาน</string>
-    <string name="perf_profile_bal">สมดุล</string>
-    <string name="perf_profile_perf">ประสิทธิภาพ</string>
-    <string name="perf_profile_bias_power">พลังงานต่ำ</string>
-    <string name="perf_profile_bias_perf">รวดเร็ว</string>
-    <string name="perf_profile_pwrsv_summary">ประหยัดพลังงานสูงสุด ลดประสิทธิภาพของอุปกรณ์</string>
-    <string name="perf_profile_bal_summary">ความสมดุลของสมรรถนะและสมรรถนะที่ดีที่สุด</string>
-    <string name="perf_profile_perf_summary">โหมดประสิทธิภาพสูง เป็นประโยชน์สำหรับงานที่ต้องการเวลาไม่มากและมีปริมาณการใช้งานสูงเมื่อการใช้พลังงานที่ไม่น่าเป็นกังวล</string>
-    <string name="perf_profile_bias_power_summary">ประหยัดพลังงานมากขึ้น จำกัดการใช้พลังงานสูงสุดของ CPU และเพิ่มประสิทธิภาพในการประหยัดพลังงานที่สูงขึ้น</string>
-    <string name="perf_profile_bias_perf_summary">ประสิทธิภาพมากขึ้น ลดเวลางานที่ทำ ใช้พลังงานที่เพิ่มขึ้นเล็กน้อย</string>
     <string name="live_display_auto">อัตโนมัติ</string>
     <string name="live_display_auto_summary">ตั้งอุณหภูมิสีอัตโนมัติเมื่อดวงอาทิตย์ขึ้นหรือตก</string>
     <string name="live_display_off">ปิด</string>
@@ -68,12 +58,8 @@
     <string name="accessibility_quick_settings_live_display_changed_day">LiveDisplay เปลี่ยนเป็นรูปแบบกลางวัน</string>
     <string name="accessibility_quick_settings_live_display_changed_night">LiveDisplay เปลี่ยนเป็นรูปแบบกลางคืน</string>
     <string name="accessibility_quick_settings_live_display_changed_outdoor">LiveDisplay เปลี่ยนเป็นรูปแบบกลางแจ้ง</string>
-    <string name="permlab_perfAccess">ตัวจัดการประสิทธิภาพการเข้าถึง</string>
-    <string name="permdesc_perfAccessDesc">อนุญาตให้แอปเข้าถึงบริการด้านประสิทธิภาพ ซึ่งไม่จำเป็นสำหรับแอปปกติ</string>
     <string name="permlab_manageLiveDisplay">จัดการตั้งค่า LiveDisplay</string>
     <string name="permdesc_manageLiveDisplay">อนุญาตให้แอปตั้งค่าการแสดงผลขั้นสูง</string>
-    <string name="permlab_observe_audio_sessions">สังเกตการเปลี่ยนแปลงเซสชันเสียง</string>
-    <string name="permdesc_observe_audio_sessions">อนุญาตให้แอปสังเกตกระแสข้อมูลเสียงที่กำลังถูกสร้างและทำลาย</string>
     <string name="permlab_manageRemotePrefs">จัดการการตั้งค่าระยะไกล</string>
     <string name="permdesc_manageRemotePrefs">อนุญาตให้แอปจัดการการตั้งค่าระยะไกล</string>
     <string name="build_date">วันที่สร้าง</string>

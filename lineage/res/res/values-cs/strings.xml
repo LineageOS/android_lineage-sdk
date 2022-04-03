@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
      Copyright (C) 2015 The CyanogenMod Project
-               (C) 2017 The LineageOS Project
+                   2017-2022 The LineageOS Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -37,16 +37,6 @@
     <string name="profileGroupEmail">E-mail</string>
     <string name="profileGroupSMS">SMS</string>
     <string name="wildcardProfile">Ostatní</string>
-    <string name="perf_profile_pwrsv">Úsporný</string>
-    <string name="perf_profile_bal">Vyvážený</string>
-    <string name="perf_profile_perf">Výkon</string>
-    <string name="perf_profile_bias_power">Efektivita</string>
-    <string name="perf_profile_bias_perf">Rychlý</string>
-    <string name="perf_profile_pwrsv_summary">Maximální úspora energie, snižuje výkon zařízení</string>
-    <string name="perf_profile_bal_summary">Optimální výkon a výkonové charakteristiky</string>
-    <string name="perf_profile_perf_summary">Režim Vysoký výkon. Vhodné pro aplikace vyžadující nízkou latenci a vysoký výkon. Zvyšuje se spotřeba energie</string>
-    <string name="perf_profile_bias_power_summary">Preferování úspory energie. Omezení maximálního výkonu procesoru, optimalizace úspory energie za cenu vyšší latence</string>
-    <string name="perf_profile_bias_perf_summary">Preferování výkonu. Snižuje latenci a zvyšuje spotřebu energie</string>
     <string name="live_display_auto">Automatické</string>
     <string name="live_display_auto_summary">Automaticky upravit teplotu barev obrazovky po západu a východu slunce</string>
     <string name="live_display_off">Vypnuto</string>
@@ -68,12 +58,8 @@
     <string name="accessibility_quick_settings_live_display_changed_day">LiveDisplay změněn na režim ve dne.</string>
     <string name="accessibility_quick_settings_live_display_changed_night">LiveDisplay změněn na režim v noci.</string>
     <string name="accessibility_quick_settings_live_display_changed_outdoor">LiveDisplay změněn na režim venku.</string>
-    <string name="permlab_perfAccess">přístup ke správci výkonu</string>
-    <string name="permdesc_perfAccessDesc">Umožňuje přistupovat ke službě výkonu. Toto oprávnění by neměla vyžadovat žádná normální aplikace.</string>
     <string name="permlab_manageLiveDisplay">spravovat nastavení LiveDisplay</string>
     <string name="permdesc_manageLiveDisplay">Umožní nastavovat rozšířené nastavení obrazovky.</string>
-    <string name="permlab_observe_audio_sessions">sledovat změny audio relace</string>
-    <string name="permdesc_observe_audio_sessions">Umožní sledovat vytváření a rušení zvukových zdrojů.</string>
     <string name="permlab_manageRemotePrefs">správa vzdálených nastavení</string>
     <string name="permdesc_manageRemotePrefs">Umožňuje spravovat vzdálené nastavení</string>
     <string name="build_date">Datum sestavení</string>

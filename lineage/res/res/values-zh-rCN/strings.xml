@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
      Copyright (C) 2015 The CyanogenMod Project
-               (C) 2017 The LineageOS Project
+                   2017-2022 The LineageOS Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -37,16 +37,6 @@
     <string name="profileGroupEmail">电子邮件</string>
     <string name="profileGroupSMS">短信</string>
     <string name="wildcardProfile">其他</string>
-    <string name="perf_profile_pwrsv">省电模式</string>
-    <string name="perf_profile_bal">平衡模式</string>
-    <string name="perf_profile_perf">性能模式</string>
-    <string name="perf_profile_bias_power">效率</string>
-    <string name="perf_profile_bias_perf">快速</string>
-    <string name="perf_profile_pwrsv_summary">最大限度节约电池用量，降低设备性能。</string>
-    <string name="perf_profile_bal_summary">平衡最佳性能与功耗特性</string>
-    <string name="perf_profile_perf_summary">高性能模式。当能耗不是主要考量时，适用于需要低延迟和高吞吐量的应用</string>
-    <string name="perf_profile_bias_power_summary">节能优先。以更高延迟为代价，限制最大 CPU 功率和为节能优化</string>
-    <string name="perf_profile_bias_perf_summary">性能优先。以稍高的能耗来降低延迟</string>
     <string name="live_display_auto">自动</string>
     <string name="live_display_auto_summary">在日出和日落后自动调节屏幕色温</string>
     <string name="live_display_off">关闭</string>
@@ -68,12 +58,8 @@
     <string name="accessibility_quick_settings_live_display_changed_day">LiveDisplay 已修改为白天模式。</string>
     <string name="accessibility_quick_settings_live_display_changed_night">LiveDisplay 已修改为夜晚模式。</string>
     <string name="accessibility_quick_settings_live_display_changed_outdoor">LiveDisplay 已修改为户外模式。</string>
-    <string name="permlab_perfAccess">访问性能管理器</string>
-    <string name="permdesc_perfAccessDesc">允许应用访问性能服务。普通应用不应需要此权限。</string>
     <string name="permlab_manageLiveDisplay">管理 LiveDisplay 设置</string>
     <string name="permdesc_manageLiveDisplay">允许应用配置高级显示设置。</string>
-    <string name="permlab_observe_audio_sessions">观察音频会话变动</string>
-    <string name="permdesc_observe_audio_sessions">允许应用观察音频流的创建和销毁。</string>
     <string name="permlab_manageRemotePrefs">管理远程设置</string>
     <string name="permdesc_manageRemotePrefs">允许应用管理远程设置</string>
     <string name="build_date">编译日期</string>

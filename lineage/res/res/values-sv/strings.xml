@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
      Copyright (C) 2015 The CyanogenMod Project
-               (C) 2017 The LineageOS Project
+                   2017-2022 The LineageOS Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -32,11 +32,6 @@
     <string name="profileGroupEmail">E-post</string>
     <string name="profileGroupSMS">SMS</string>
     <string name="wildcardProfile">Annan</string>
-    <string name="perf_profile_pwrsv">Energisparläge</string>
-    <string name="perf_profile_bal">Balanserad</string>
-    <string name="perf_profile_perf">Prestanda</string>
-    <string name="perf_profile_bias_power">Effektivitet</string>
-    <string name="perf_profile_bias_perf">Snabb</string>
     <string name="live_display_auto">Automatisk</string>
     <string name="live_display_auto_summary">Justera automatiskt skärmens färgtemperatur efter solnedgång och soluppgång</string>
     <string name="live_display_off">Av</string>
@@ -52,8 +47,6 @@
     <string name="accessibility_quick_settings_live_display_auto">LiveDisplay: automatiskt läge.</string>
     <string name="accessibility_quick_settings_live_display_day">LiveDisplay: dagläge.</string>
     <string name="accessibility_quick_settings_live_display_night">LiveDisplay: nattläge.</string>
-    <string name="permlab_perfAccess">komma åt prestandahanteraren</string>
-    <string name="permdesc_perfAccessDesc">Ger en app åtkomst till prestandatjänsten. Ska aldrig behövas för vanliga appar.</string>
     <string name="permlab_manageRemotePrefs">hantera fjärrinställningar</string>
     <string name="build_date">Kompileringsdatum</string>
     <string name="lineage_updates">LineageOS-uppdateringar</string>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
      Copyright (C) 2015 The CyanogenMod Project
-               (C) 2017 The LineageOS Project
+                   2017-2022 The LineageOS Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -37,16 +37,6 @@
     <string name="profileGroupEmail">Sähköposti</string>
     <string name="profileGroupSMS">Tekstiviesti</string>
     <string name="wildcardProfile">Muu</string>
-    <string name="perf_profile_pwrsv">Virransäästö</string>
-    <string name="perf_profile_bal">Tasapainotettu</string>
-    <string name="perf_profile_perf">Suorituskyky</string>
-    <string name="perf_profile_bias_power">Tehokkuus</string>
-    <string name="perf_profile_bias_perf">Nopea</string>
-    <string name="perf_profile_pwrsv_summary">Pidentää akun kestoa, vähentää laitteen suorituskykyä</string>
-    <string name="perf_profile_bal_summary">Tasapainottaa suorituskyvyn ja virrankulutuksen</string>
-    <string name="perf_profile_perf_summary">Korken suorituskyvyn tila. Hyödyllinen sovelluksiin, jotka vaativat alhaisen latenssin ja nopeimman ulostulon kun virrankulutuksella ei ole väliä</string>
-    <string name="perf_profile_bias_power_summary">Suosii virransäästöä. Rajoittaa prosessorin tehoa ja optimoi virran säästämiseksi hieman pidemmällä latenssilla</string>
-    <string name="perf_profile_bias_perf_summary">Suosii suorituskykyä. Vähentää latenssia ja lisää hieman virrankulutusta</string>
     <string name="live_display_auto">Automaattinen</string>
     <string name="live_display_auto_summary">Säädä näytön värilämpötilaa automaattisesti auringonlaskun ja -nousun jälkeen</string>
     <string name="live_display_off">Ei käytössä</string>
@@ -68,12 +58,8 @@
     <string name="accessibility_quick_settings_live_display_changed_day">LiveDisplay asetettu päivätilaan.</string>
     <string name="accessibility_quick_settings_live_display_changed_night">LiveDisplay asetettu yötilaan.</string>
     <string name="accessibility_quick_settings_live_display_changed_outdoor">LiveDisplay asetettu ulkoilmatilaan.</string>
-    <string name="permlab_perfAccess">pääse suorituskyvyn hallintaan</string>
-    <string name="permdesc_perfAccessDesc">Sallii sovelluksen pääsyn suorityskyvyn hallinnan palveluun. Tavalliset sovellukset eivät koskaan tarvitse tätä.</string>
     <string name="permlab_manageLiveDisplay">hallitse LiveDisplay-asetuksia</string>
     <string name="permdesc_manageLiveDisplay">Sallii sovelluksen määrittää kehittyneitä näytön asetuksia.</string>
-    <string name="permlab_observe_audio_sessions">tutki ääni-istunnon muutoksia</string>
-    <string name="permdesc_observe_audio_sessions">Sallii sovelluksen tarkastella milloin ääntä luodaan ja tuhotaan.</string>
     <string name="permlab_manageRemotePrefs">hallitse etäkäytön asetuksia</string>
     <string name="permdesc_manageRemotePrefs">Sallii sovellluksen hallita etäasetuksia</string>
     <string name="build_date">Luontipäivä</string>

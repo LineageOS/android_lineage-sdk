@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
      Copyright (C) 2015 The CyanogenMod Project
-               (C) 2017 The LineageOS Project
+                   2017-2022 The LineageOS Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -37,16 +37,6 @@
     <string name="profileGroupEmail">e-ಅಂಚೆ</string>
     <string name="profileGroupSMS">SMS</string>
     <string name="wildcardProfile">ಇತರೆ</string>
-    <string name="perf_profile_pwrsv">ಶಕ್ತಿ ಉಳಿಸು</string>
-    <string name="perf_profile_bal">ಸಮತೋಲಿತ</string>
-    <string name="perf_profile_perf">ಕಾರ್ಯಕ್ಷಮತೆ</string>
-    <string name="perf_profile_bias_power">ದಕ್ಷತೆ</string>
-    <string name="perf_profile_bias_perf">ಕ್ಷಿಪ್ರ</string>
-    <string name="perf_profile_pwrsv_summary">ಹೆಚ್ಚಿನ ಶಕ್ತಿ ಉಳಿತಾಯ ಸಾಧನದ ಕಾರ್ಯಕ್ಷಮತೆಯನ್ನು ಕುಗ್ಗಿಸುತ್ತದೆ</string>
-    <string name="perf_profile_bal_summary">ಅತ್ಯುತ್ತಮ ಕಾರ್ಯಕ್ಷಮತೆ ಮತ್ತು ಶಕ್ತಿ ಗುಣಲಕ್ಷಣಗಳ ಸಮತೋಲನ</string>
-    <string name="perf_profile_perf_summary">ಹೆಚ್ಚಿನ ಕಾರ್ಯಕ್ಷಮತೆ ರೀತಿ. ಕಡಿಮೆ ಸುಪ್ತತೆ ಮತ್ತು ಹೆಚ್ಚಿನ ಸಂಸ್ಕರಣಾ-ಗತಿ ಅಗತ್ಯವಿರುವ ಆಪ್ಗಳಿಗೆ, ಶಕ್ತಿ ಬಳಕೆಯ ಚಿಂತೆಯಿಲ್ಲದಿದ್ದಾಗ ಸೂಕ್ತವಾಗಿದೆ.</string>
-    <string name="perf_profile_bias_power_summary">ಶಕ್ತಿ ಉಳಿತಾಯಕ್ಕೆ ಒಲವು. ಅತ್ಯುತ್ತಮ ಶಕ್ತಿ ಉಳಿತಾಯಕ್ಕೆ CPUನ ಗರಿಷ್ಠ ಶಕ್ತಿ ಬಳಕೆ ಮಿತಿಯಲ್ಲಿಟ್ಟು ಮತ್ತು ಅಧಿಕ ಸುಪ್ತತೆ ನೀಡು.</string>
-    <string name="perf_profile_bias_perf_summary">ಕಾರ್ಯಕ್ಷಮತೆಗೆ ಒಲವು. ಸ್ವಲ್ಪ ಶಕ್ತಿ ಬಳಕೆ ಹೆಚ್ಚಿಸಿ ಸುಪ್ತತೆಯನ್ನು ಕಡಿಮೆಗೊಳಿಸುತ್ತದೆ.</string>
     <string name="live_display_auto">ಸ್ವಯಂಚಾಲಿತ</string>
     <string name="live_display_auto_summary">ಸೂರ್ಯೋದಯ ಮತ್ತು ಸೂರ್ಯಾಸ್ತದ ಬಳಿಕ ಪರದೆ‌ಯ ಬಣ್ಣ-ತಾಪವನ್ನು ಸ್ವಯಂ ಸರಿಹೊಂದಿಸು</string>
     <string name="live_display_off">ಆಫ್</string>
@@ -68,12 +58,8 @@
     <string name="accessibility_quick_settings_live_display_changed_day">LiveDisplay ಹಗಲು ರೀತಿಗೆ ಬದಲಾಗಿದೆ.</string>
     <string name="accessibility_quick_settings_live_display_changed_night">LiveDisplay ರಾತ್ರಿ ರೀತಿಗೆ ಬದಲಾಗಿದೆ.</string>
     <string name="accessibility_quick_settings_live_display_changed_outdoor">LiveDisplay ಹೊರಾಂಗಣ ರೀತಿಗೆ ಬದಲಾಗಿದೆ.</string>
-    <string name="permlab_perfAccess">ಕಾರ್ಯಕ್ಷಮತೆ ನಿರ್ವಾಹಕ ಪ್ರವೇಶ</string>
-    <string name="permdesc_perfAccessDesc">ಕಾರ್ಯಕ್ಷಮತೆ ಸೇವೆಯನ್ನು ಬಳಸಲು ಆಪ್ಗೆ ಅನುಮತಿಸುತ್ತದೆ. ಸಾಮಾನ್ಯ ಆಪ್ಗಳಿಗೆ ಇದರ ಅಗತ್ಯವೇ ಇರುವುದಿಲ್ಲ.</string>
     <string name="permlab_manageLiveDisplay">LiveDisplay ಅಳವಡಿಕೆಗಳನ್ನು ನಿರ್ವಹಿಸು</string>
     <string name="permdesc_manageLiveDisplay">ಸುಧಾರಿತ ಪ್ರದರ್ಶನ ಅಳವಡಿಕೆಗಳನ್ನು ಸಂರಚಿಸಲು ಆಪ್ಗೆ ಅನುಮತಿಸುತ್ತದೆ.</string>
-    <string name="permlab_observe_audio_sessions">ಶೃತಿ ಅಧಿವೇಶನದ ಬದಲಾವಣೆಗಳನ್ನು ಗಮನಿಸು</string>
-    <string name="permdesc_observe_audio_sessions">ಶ್ರಾವ್ಯ ತೊರೆಗಳ ಸೃಷ್ಟಿ ಮತ್ತು ನಾಶನ ವೀಕ್ಷಿಸಲು ಆಪ್ಗೆ ಅನುಮತಿಸುತ್ತದೆ.</string>
     <string name="permlab_manageRemotePrefs">ಗೆಂಟಂಕೆಯ ಅಳವಡಿಕೆಗಳನ್ನು ನಿರ್ವಹಿಸು</string>
     <string name="permdesc_manageRemotePrefs">ಗೆಂಟಂಕೆ ಅಳವಡಿಕೆಗಳನ್ನು ನಿರ್ವಹಿಸಲು ಅಪ್ಗೆ ಅನುಮತಿಸುತ್ತದೆ</string>
     <string name="build_date">ನಿರ್ಮಾಣ ದಿನಾಂಕ</string>

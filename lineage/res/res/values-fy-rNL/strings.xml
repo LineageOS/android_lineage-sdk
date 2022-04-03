@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
      Copyright (C) 2015 The CyanogenMod Project
-               (C) 2017 The LineageOS Project
+                   2017-2022 The LineageOS Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -37,16 +37,6 @@
     <string name="profileGroupEmail">E-mail</string>
     <string name="profileGroupSMS">SMS</string>
     <string name="wildcardProfile">Oare</string>
-    <string name="perf_profile_pwrsv">Enerzjybesparring</string>
-    <string name="perf_profile_bal">Balansearre</string>
-    <string name="perf_profile_perf">Prestaasjes</string>
-    <string name="perf_profile_bias_power">Effisjinsje</string>
-    <string name="perf_profile_bias_perf">Fluch</string>
-    <string name="perf_profile_pwrsv_summary">Maksimale enerzjybesparring, ferminderet apparaatprestaaasjes</string>
-    <string name="perf_profile_bal_summary">Balâns tusken optimale prestaasjes en enerzjyferbrûk</string>
-    <string name="perf_profile_perf_summary">Hege prestaasjes. Te brûken yn situaasjes dy\'t de heechste prestaasjes fereaskje en wêrby stroomferbrûk net fan belang is</string>
-    <string name="perf_profile_bias_power_summary">Jout de foarkar oan enerzjybesparring. Maksimaal CPU-fermogen wurdt beheint en optimalisearre foar enerzjybesparring, ten koste fan in mindere prestaasje</string>
-    <string name="perf_profile_bias_perf_summary">Jout de foarkar oan prestaasjes. Goede prestaasjes ten koste fan in wat heger stroomferbrûk</string>
     <string name="live_display_auto">Automatysk</string>
     <string name="live_display_auto_summary">Automatysk kleurtemperatuer fan skerm oanpasse nei sinne-opkomst en -ûndergong</string>
     <string name="live_display_off">Ut</string>
@@ -68,12 +58,8 @@
     <string name="accessibility_quick_settings_live_display_changed_day">LiveDisplay wizige nei deistân.</string>
     <string name="accessibility_quick_settings_live_display_changed_night">LiveDisplay wizige nei nachtstân.</string>
     <string name="accessibility_quick_settings_live_display_changed_outdoor">LiveDisplay wizige nei bûtenstân.</string>
-    <string name="permlab_perfAccess">tagong ta prestaasjebehear</string>
-    <string name="permdesc_perfAccessDesc">Hjirmei kin de app tagong krije ta de prestaasjetsjinst. Nea fereaske foar normale apps.</string>
     <string name="permlab_manageLiveDisplay">LiveDisplay-ynstellingen beheare</string>
     <string name="permdesc_manageLiveDisplay">Hjirmei kin de app avansearre byldskermynstellingen wizigje.</string>
-    <string name="permlab_observe_audio_sessions">wizigingen yn audiosesje observearje</string>
-    <string name="permdesc_observe_audio_sessions">Hjirmei kin de app de oanmaak en ferneatiging fan audiostreams observearje.</string>
     <string name="permlab_manageRemotePrefs">ynstellingen foar behear op ôfstân</string>
     <string name="permdesc_manageRemotePrefs">Hjirmei kin de app ynstellingen foar behear op ôfstân beheare</string>
     <string name="build_date">Build-datum</string>

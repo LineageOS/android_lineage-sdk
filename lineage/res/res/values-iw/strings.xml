@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
      Copyright (C) 2015 The CyanogenMod Project
-               (C) 2017 The LineageOS Project
+                   2017-2022 The LineageOS Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -37,16 +37,6 @@
     <string name="profileGroupEmail">דוא\"ל</string>
     <string name="profileGroupSMS">SMS</string>
     <string name="wildcardProfile">אחר</string>
-    <string name="perf_profile_pwrsv">חיסכון בסוללה</string>
-    <string name="perf_profile_bal">מאוזן</string>
-    <string name="perf_profile_perf">ביצועים</string>
-    <string name="perf_profile_bias_power">יעילות</string>
-    <string name="perf_profile_bias_perf">מהיר</string>
-    <string name="perf_profile_pwrsv_summary">חיסכון חשמל מירבי, מפחית את ביצועי המכשיר</string>
-    <string name="perf_profile_bal_summary">אזן בין ביצועים מיטביים לצריכת חשמל</string>
-    <string name="perf_profile_perf_summary">מצב ביצועים גבוהים. שימושי ליישומים שדורשים הרבה כוח עיבוד ותגובה מהירה, כאשר צריכת החשמל לא מהווה מדד</string>
-    <string name="perf_profile_bias_power_summary">חיסכון בצריכת החשמל. מגביל את עוצמת המעבד ומשפר את צריכת החשמל בתמורה למהירות תגובה נמוכה יותר</string>
-    <string name="perf_profile_bias_perf_summary">ביצועים טובים. משפר את זמן התגובה עם עליה קלה בצריכת החשמל</string>
     <string name="live_display_auto">אוטומטי</string>
     <string name="live_display_auto_summary">התאם אוטומטית את טמפרטורת הצבע של המסך לאחר הזריחה והשקיעה</string>
     <string name="live_display_off">כבוי</string>
@@ -68,12 +58,8 @@
     <string name="accessibility_quick_settings_live_display_changed_day">LiveDisplay שונה למצב יום.</string>
     <string name="accessibility_quick_settings_live_display_changed_night">LiveDisplay שונה למצב לילה.</string>
     <string name="accessibility_quick_settings_live_display_changed_outdoor">LiveDisplay שונה למצב חוץ.</string>
-    <string name="permlab_perfAccess">גש למנהל הביצועים</string>
-    <string name="permdesc_perfAccessDesc">מאפשר ליישום לגשת לשירות ניהול הביצועים. לא אמור להידרש ליישומים רגילים לעולם.</string>
     <string name="permlab_manageLiveDisplay">נהל הגדרות livedisplay</string>
     <string name="permdesc_manageLiveDisplay">מאפשר ליישום לקבוע הגדרות תצוגה מתקדמות.</string>
-    <string name="permlab_observe_audio_sessions">הרשאה לקבלת עדכוני פעולות במערכת השמע</string>
-    <string name="permdesc_observe_audio_sessions">מאפשר ליישום לקבל עדכוני יצירה וסגירה של זרמי שמע.</string>
     <string name="permlab_manageRemotePrefs">נהל הגדרות מרחוק</string>
     <string name="permdesc_manageRemotePrefs">מאפשר ליישום לנהל הגדרות מרחוק</string>
     <string name="build_date">תאריך בנייה</string>

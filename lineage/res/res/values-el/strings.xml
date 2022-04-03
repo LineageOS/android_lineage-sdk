@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
      Copyright (C) 2015 The CyanogenMod Project
-               (C) 2017 The LineageOS Project
+                   2017-2022 The LineageOS Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -37,16 +37,6 @@
     <string name="profileGroupEmail">Ηλεκτρονικό ταχυδρομείο</string>
     <string name="profileGroupSMS">SMS</string>
     <string name="wildcardProfile">Άλλο</string>
-    <string name="perf_profile_pwrsv">Εξοικονόμηση ενέργειας</string>
-    <string name="perf_profile_bal">Ισορροπημένο</string>
-    <string name="perf_profile_perf">Επιδόσεις</string>
-    <string name="perf_profile_bias_power">Αποδοτικό</string>
-    <string name="perf_profile_bias_perf">Γρήγορο</string>
-    <string name="perf_profile_pwrsv_summary">Μέγιστη εξοικονόμηση ενέργειας, μειώνει την απόδοση της συσκευής</string>
-    <string name="perf_profile_bal_summary">Ισορροπία βέλτιστης απόδοσης και χαρακτηριστικά εξοικονόμησης</string>
-    <string name="perf_profile_perf_summary">Λειτουργία υψηλής απόδοσης. Χρήσιμο για εφαρμογές που απαιτούν χαμηλή καθυστέρηση και υψηλότερη απόδοση όταν η κατανάλωση ενέργειας δεν έχει καμία σημασία</string>
-    <string name="perf_profile_bias_power_summary">Υψηλή εξοικονόμηση. Περιορίζει την μέγιστη απόδοση του επεξεργαστή και βελτιστοποίηση για εξοικονόμηση με κόστος υψηλής καθυστέρησης</string>
-    <string name="perf_profile_bias_perf_summary">Υψηλή απόδοση. Μείωση καθυστέρησης με ελαφρώς αυξημένη κατανάλωση</string>
     <string name="live_display_auto">Αυτόματο</string>
     <string name="live_display_auto_summary">Αυτόματη ρύθμιση της θερμοκρασίας χρώματος της οθόνης μετά το ηλιοβασίλεμα και την ανατολή του ηλίου</string>
     <string name="live_display_off">Ανενεργό</string>
@@ -68,12 +58,8 @@
     <string name="accessibility_quick_settings_live_display_changed_day">Το LiveDisplay άλλαξε σε λειτουργία ημέρας.</string>
     <string name="accessibility_quick_settings_live_display_changed_night">Το LiveDisplay άλλαξε σε λειτουργία νύχτας.</string>
     <string name="accessibility_quick_settings_live_display_changed_outdoor">Το LiveDisplay άλλαξε σε λειτουργία εξωτερικού χώρου.</string>
-    <string name="permlab_perfAccess">πρόσβαση στην υπηρεσία επιδόσεων</string>
-    <string name="permdesc_perfAccessDesc">Επιτρέπει σε μια εφαρμογή την πρόσβαση στην υπηρεσία επιδόσεων. Δεν πρέπει να απαιτείται από κανονικές εφαρμογές.</string>
     <string name="permlab_manageLiveDisplay">διαχείριση ρυθμίσεων LiveDisplay</string>
     <string name="permdesc_manageLiveDisplay">Επιτρέπει σε μια εφαρμογή να τροποποιεί τις ρυθμίσεις οθόνης για προχωρημένους.</string>
-    <string name="permlab_observe_audio_sessions">παρατήρηση αλλαγών στις συνεδρίες ήχου</string>
-    <string name="permdesc_observe_audio_sessions">Επιτρέπει σε μια εφαρμογή να παρατηρεί τις ροές ήχου να δημιουργούνται και να καταστρέφονται.</string>
     <string name="permlab_manageRemotePrefs">διαχείριση απομακρυσμένων ρυθμίσεων</string>
     <string name="permdesc_manageRemotePrefs">Επιτρέπει σε μια εφαρμογή να διαχειριστεί απομακρυσμένες ρυθμίσεις</string>
     <string name="build_date">Ημερομηνία έκδοσης</string>

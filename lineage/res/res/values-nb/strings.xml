@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
      Copyright (C) 2015 The CyanogenMod Project
-               (C) 2017 The LineageOS Project
+                   2017-2022 The LineageOS Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -31,16 +31,6 @@
     <string name="profileGroupEmail">E-post</string>
     <string name="profileGroupSMS">SMS</string>
     <string name="wildcardProfile">Annet</string>
-    <string name="perf_profile_pwrsv">Strømsparing</string>
-    <string name="perf_profile_bal">Balansert</string>
-    <string name="perf_profile_perf">Ytelse</string>
-    <string name="perf_profile_bias_power">Effektivitet</string>
-    <string name="perf_profile_bias_perf">Rask</string>
-    <string name="perf_profile_pwrsv_summary">Maksimal batterisparing, reduserer enhetens ytelse</string>
-    <string name="perf_profile_bal_summary">Balanse av best ytelse og strømegenskaper</string>
-    <string name="perf_profile_perf_summary">Høy ytelse modus. Nyttig for programmer som krever lav latens og høyeste gjennomstrømningen når strømforbruket ikke er en bekymring</string>
-    <string name="perf_profile_bias_power_summary">Favoriserer strømsparing. Begrenser prossesor-kraft og optimaliserer for strømsparing på bekostning av høyere latens</string>
-    <string name="perf_profile_bias_perf_summary">Favoriserer ytelse. Reduserer latens med litt mer strømbruk</string>
     <string name="live_display_auto">Automatisk</string>
     <string name="live_display_auto_summary">Juster fargetemperatur på skjermen etter solnedgang og soloppgang</string>
     <string name="live_display_off">Av</string>
@@ -62,12 +52,8 @@
     <string name="accessibility_quick_settings_live_display_changed_day">LiveDisplay endret til dagsmodus.</string>
     <string name="accessibility_quick_settings_live_display_changed_night">LiveDisplay endret til nattmodus.</string>
     <string name="accessibility_quick_settings_live_display_changed_outdoor">LiveDisplay endret til utendørs modus.</string>
-    <string name="permlab_perfAccess">tilgang til ytelsesadministrereren</string>
-    <string name="permdesc_perfAccessDesc">Tillater en app å få tilgang til ytelses-tjenesten. Dette skulle aldri vært nødvendig for normale apper.</string>
     <string name="permlab_manageLiveDisplay">behandle LiveDisplay innstillinger</string>
     <string name="permdesc_manageLiveDisplay">Tillater en app å konfigurere avanserte skjerminnstillinger.</string>
-    <string name="permlab_observe_audio_sessions">observer lydøkt-endringer</string>
-    <string name="permdesc_observe_audio_sessions">Tillater en app å observere om lyd-strømmer blir lagd eller ødelagt.</string>
     <string name="permlab_manageRemotePrefs">administrer fjernkontroll innstillinger</string>
     <string name="permdesc_manageRemotePrefs">Gir en app tilgang til å endre fjernkontroll innstillingene</string>
 </resources>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
      Copyright (C) 2015 The CyanogenMod Project
-               (C) 2017 The LineageOS Project
+                   2017-2022 The LineageOS Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -37,16 +37,6 @@
     <string name="profileGroupEmail">E-Mail</string>
     <string name="profileGroupSMS">SMS</string>
     <string name="wildcardProfile">Anderes</string>
-    <string name="perf_profile_pwrsv">Energie sparen</string>
-    <string name="perf_profile_bal">Ausgeglichen</string>
-    <string name="perf_profile_perf">Mehr Leistung</string>
-    <string name="perf_profile_bias_power">Effizient</string>
-    <string name="perf_profile_bias_perf">Schnell</string>
-    <string name="perf_profile_pwrsv_summary">Maximale Energieeinsparung, reduziert die Geräteleistung</string>
-    <string name="perf_profile_bal_summary">Balance zwischen optimaler Leistung und Energieverbrauch</string>
-    <string name="perf_profile_perf_summary">Hochleistungsmodus. Nützlich für Anwendungen die niedrige Latenzen und den höchsten Durchsatz benötigen und der Energiebedarf nicht von Belang ist</string>
-    <string name="perf_profile_bias_power_summary">Auf Energiesparen ausrichten. Verringert die maximale CPU-Leistung auf Kosten höherer Latenz</string>
-    <string name="perf_profile_bias_perf_summary">Auf Leistung ausrichten. Reduziert die Latenz und erhöht den Stromverbrauch leicht</string>
     <string name="live_display_auto">Automatisch</string>
     <string name="live_display_auto_summary">Farbtemperatur des Bildschirms nach Sonnenaufgang und Sonnenuntergang automatisch anpassen</string>
     <string name="live_display_off">Aus</string>
@@ -68,12 +58,8 @@
     <string name="accessibility_quick_settings_live_display_changed_day">LiveDisplay auf Tag-Modus geändert.</string>
     <string name="accessibility_quick_settings_live_display_changed_night">LiveDisplay auf Nacht-Modus geändert.</string>
     <string name="accessibility_quick_settings_live_display_changed_outdoor">LiveDisplay auf Außen-Modus geändert.</string>
-    <string name="permlab_perfAccess">Zugriff auf Leistungsmanager</string>
-    <string name="permdesc_perfAccessDesc">Ermöglicht der App, den Zugriff auf den Leistungsdienst. Wird für normale Apps nicht benötigt.</string>
     <string name="permlab_manageLiveDisplay">LiveDisplay-Einstellungen verwalten</string>
     <string name="permdesc_manageLiveDisplay">Ermöglicht der App, erweiterte Displayeinstellungen vorzunehmen.</string>
-    <string name="permlab_observe_audio_sessions">Audiositzungsänderungen überwachen</string>
-    <string name="permdesc_observe_audio_sessions">Ermöglicht der App, die Erstellung und Löschung von Audio-Streams zu überwachen.</string>
     <string name="permlab_manageRemotePrefs">Remote-Einstellungen verwalten</string>
     <string name="permdesc_manageRemotePrefs">Ermöglicht der App, Remote-Einstellungen zu verwalten</string>
     <string name="build_date">Build-Datum</string>

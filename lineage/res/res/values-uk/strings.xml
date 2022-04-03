@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
      Copyright (C) 2015 The CyanogenMod Project
-               (C) 2017 The LineageOS Project
+                   2017-2022 The LineageOS Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -31,16 +31,6 @@
     <string name="profileGroupEmail">Електронна пошта</string>
     <string name="profileGroupSMS">SMS</string>
     <string name="wildcardProfile">Інший</string>
-    <string name="perf_profile_pwrsv">Енергозбереження</string>
-    <string name="perf_profile_bal">Збалансований</string>
-    <string name="perf_profile_perf">Продуктивність</string>
-    <string name="perf_profile_bias_power">Ефективність</string>
-    <string name="perf_profile_bias_perf">Швидко</string>
-    <string name="perf_profile_pwrsv_summary">Максимальне збереження енергії, знижує продуктивність пристрою</string>
-    <string name="perf_profile_bal_summary">Баланс між енергозбереженням та оптимальною продуктивністю</string>
-    <string name="perf_profile_perf_summary">Режим високої продуктивності. Корисно для застосунків, що вимагають низької затримки відгуку і найвищу пропускну здатність, коли енергоспоживання не має значення</string>
-    <string name="perf_profile_bias_power_summary">Економія понад усе. Обмеження максимальної потужності процесора і оптимізація для енергозбереження за рахунок вищої затримки</string>
-    <string name="perf_profile_bias_perf_summary">Продуктивність понад усе. Зменшує час затримки з трохи збільшеним енергоспоживанням</string>
     <string name="live_display_auto">Автоматично</string>
     <string name="live_display_auto_summary">Автоматичне підлаштування температури кольору екрана після сходу та заходу сонця</string>
     <string name="live_display_off">Вимк</string>
@@ -62,12 +52,8 @@
     <string name="accessibility_quick_settings_live_display_changed_day">LiveDisplay змінено до денного режиму.</string>
     <string name="accessibility_quick_settings_live_display_changed_night">LiveDisplay змінено до нічного режиму.</string>
     <string name="accessibility_quick_settings_live_display_changed_outdoor">LiveDisplay змінено до режиму на вулиці.</string>
-    <string name="permlab_perfAccess">доступ до менеджера продуктивності</string>
-    <string name="permdesc_perfAccessDesc">Дозволяє додатку отримувати доступ до менеджера продуктивності. Цей дозвіл не потрібний звичайним додаткам.</string>
     <string name="permlab_manageLiveDisplay">керування налаштуваннями LiveDisplay</string>
     <string name="permdesc_manageLiveDisplay">Дозволяє додатку керувати розширеними налаштуваннями дисплея.</string>
-    <string name="permlab_observe_audio_sessions">спостерігати за змінами аудіо сесії</string>
-    <string name="permdesc_observe_audio_sessions">Дозволяє додатку переглядати аудіопотоки, які створюються або знищуються.</string>
     <string name="permlab_manageRemotePrefs">керування віддаленими параметрами</string>
     <string name="permdesc_manageRemotePrefs">Дозволяє застосункові керувати налаштуваннями віддаленого підключення</string>
 </resources>

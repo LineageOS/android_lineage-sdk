@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
      Copyright (C) 2015 The CyanogenMod Project
-               (C) 2017 The LineageOS Project
+                   2017-2022 The LineageOS Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -37,16 +37,6 @@
     <string name="profileGroupEmail">E-mail</string>
     <string name="profileGroupSMS">SMS</string>
     <string name="wildcardProfile">Egyéb</string>
-    <string name="perf_profile_pwrsv">Energiatakarékos</string>
-    <string name="perf_profile_bal">Kiegyensúlyozott</string>
-    <string name="perf_profile_perf">Teljesítmény</string>
-    <string name="perf_profile_bias_power">Hatékonyság</string>
-    <string name="perf_profile_bias_perf">Gyors</string>
-    <string name="perf_profile_pwrsv_summary">Maximális energiatakarékosság. Csökkenti a készülék teljesítményét</string>
-    <string name="perf_profile_bal_summary">Egyensúly az optimális teljesítmény és az energiafogyasztás között</string>
-    <string name="perf_profile_perf_summary">Nagy teljesítményű üzemmód. Hasznos az alacsony késleltetést és nagy teljesítményt igénylő alkalmazásokhoz, amikor a fogyasztás nem számít</string>
-    <string name="perf_profile_bias_power_summary">Energiatakarékosság előnyben részesítése. Korlátozza a maximális CPU teljesítményt és optimalizálja az energiatakarékosságot a nagyobb késleltetés árán</string>
-    <string name="perf_profile_bias_perf_summary">Teljesítmény előnyben részesítése. Enyhén megnövekedett energiafogyatással csökkenti a késleltetést</string>
     <string name="live_display_auto">Automatikus</string>
     <string name="live_display_auto_summary">Automatikusan beállítja a képernyő színhőmérsékletét napnyugta és napkelte után</string>
     <string name="live_display_off">Ki</string>
@@ -68,12 +58,8 @@
     <string name="accessibility_quick_settings_live_display_changed_day">LiveDisplay nappali módra változtatva.</string>
     <string name="accessibility_quick_settings_live_display_changed_night">LiveDisplay éjszakai módra változtatva.</string>
     <string name="accessibility_quick_settings_live_display_changed_outdoor">LiveDisplay szabadtéri módra változtatva.</string>
-    <string name="permlab_perfAccess">hozzáférés a teljesítmény kezelőhöz</string>
-    <string name="permdesc_perfAccessDesc">Lehetővé teszi az alkalmazás számára, hogy hozzáférjen a teljesítmény szolgáltatáshoz. Általános alkalmazásoknak soha nem kell ilyen engedély.</string>
     <string name="permlab_manageLiveDisplay">LiveDisplay beállítások kezelése</string>
     <string name="permdesc_manageLiveDisplay">Lehetővé teszi az alkalmazás számára a speciális megjelenítési beállítások konfigurálását.</string>
-    <string name="permlab_observe_audio_sessions">audió munkamenet változásainak megfigyelése</string>
-    <string name="permdesc_observe_audio_sessions">Lehetővé teszi az alkalmazás számára, hogy megfigyelje ahogy az audió folyamok létrejönnek és elpusztulnak.</string>
     <string name="permlab_manageRemotePrefs">távoli beállítások kezelése</string>
     <string name="permdesc_manageRemotePrefs">Lehetővé teszi az alkalmazások számára a távoli beállítások kezelését</string>
     <string name="build_date">A kiadás dátuma</string>

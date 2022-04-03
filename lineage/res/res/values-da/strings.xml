@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
      Copyright (C) 2015 The CyanogenMod Project
-               (C) 2017 The LineageOS Project
+                   2017-2022 The LineageOS Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -37,16 +37,6 @@
     <string name="profileGroupEmail">E-mail</string>
     <string name="profileGroupSMS">SMS</string>
     <string name="wildcardProfile">Andre</string>
-    <string name="perf_profile_pwrsv">Strømbesparelse</string>
-    <string name="perf_profile_bal">Balanceret</string>
-    <string name="perf_profile_perf">Ydeevne</string>
-    <string name="perf_profile_bias_power">Effektivitet</string>
-    <string name="perf_profile_bias_perf">Hurtig</string>
-    <string name="perf_profile_pwrsv_summary">Maksimal strømbesparelse, reducerer enhedens ydeevne</string>
-    <string name="perf_profile_bal_summary">Balance mellem optimal ydelse og strømegenskaber</string>
-    <string name="perf_profile_perf_summary">Højtydende tilstand. Nyttigt for programmer, der kræver lav latenstid og højeste dataoverførselshastighed, når der ikke skal tages hensyn til strømforbruget</string>
-    <string name="perf_profile_bias_power_summary">Prioritér strømbesparelser. Begræns maksimal CPU-kraft og optimér til strømbesparelse på bekostning af højere latenstid</string>
-    <string name="perf_profile_bias_perf_summary">Prioritér ydeevne. Reducerer latenstid på bekostning af en smule øget strømforbrug</string>
     <string name="live_display_auto">Automatisk</string>
     <string name="live_display_auto_summary">Justér automatisk skærms farvetemperatur, efter solnedgang og solopgang</string>
     <string name="live_display_off">Fra</string>
@@ -68,12 +58,8 @@
     <string name="accessibility_quick_settings_live_display_changed_day">LiveDisplay ændret til dag tilstand.</string>
     <string name="accessibility_quick_settings_live_display_changed_night">LiveDisplay ændret til nat tilstand.</string>
     <string name="accessibility_quick_settings_live_display_changed_outdoor">LiveDisplay ændret til udendørstilstand.</string>
-    <string name="permlab_perfAccess">tilgå ydelseshåndtering</string>
-    <string name="permdesc_perfAccessDesc">Tillader en app at tilgå ydelsestjenesten. Bør aldrig være nødvendigt for normale apps.</string>
     <string name="permlab_manageLiveDisplay">håndtér LevendeDisplay-indstillinger</string>
     <string name="permdesc_manageLiveDisplay">Tillader en app at konfigurere avancerede skærmindstillinger.</string>
-    <string name="permlab_observe_audio_sessions">observér lyd-sessionsændringer</string>
-    <string name="permdesc_observe_audio_sessions">Tillader en app at observere når lyd streams bliver oprettet eller ødelagt.</string>
     <string name="permlab_manageRemotePrefs">håndtere fjernbetjeningsindstillinger</string>
     <string name="permdesc_manageRemotePrefs">Tillader en app at håndtere fjernbetjeningsindstillinger</string>
     <string name="lineage_api_level">LineageOS API-niveau</string>

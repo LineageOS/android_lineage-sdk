@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
      Copyright (C) 2015 The CyanogenMod Project
-               (C) 2017 The LineageOS Project
+                   2017-2022 The LineageOS Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -37,16 +37,6 @@
     <string name="profileGroupEmail">E-mail</string>
     <string name="profileGroupSMS">SMS</string>
     <string name="wildcardProfile">Muud</string>
-    <string name="perf_profile_pwrsv">Energiasääst</string>
-    <string name="perf_profile_bal">Tasakaalustatud</string>
-    <string name="perf_profile_perf">Jõudlus</string>
-    <string name="perf_profile_bias_power">Tõhusus</string>
-    <string name="perf_profile_bias_perf">Kiire</string>
-    <string name="perf_profile_pwrsv_summary">Maksimaalne energiasääst, vähendab seadme jõudlust</string>
-    <string name="perf_profile_bal_summary">Optimaalse jõudluse ja energiasäästmise omadused</string>
-    <string name="perf_profile_perf_summary">Kõrge jõudluse režiim. Kasulik rakendustes, mis vajad madalat reaktsiooniaega ja maksimaalset jõudlust, kui akukasutus ei ole tähtis</string>
-    <string name="perf_profile_bias_power_summary">Eelistab energiasäästu. Piirab maksimaalset protsessori jõudlust ja optimeerib akukasutust suurema reaktsiooniaja arvelt</string>
-    <string name="perf_profile_bias_perf_summary">Eelistab jõudlust. Kiirendab reaktsiooniaega veidi suurenenud akukastusega</string>
     <string name="live_display_auto">Automaatne</string>
     <string name="live_display_auto_summary">Reguleeri värvitemperatuuri automaatselt peale päikeseloojangut ja päikesetõusu</string>
     <string name="live_display_off">Väljas</string>
@@ -68,12 +58,8 @@
     <string name="accessibility_quick_settings_live_display_changed_day">LiveDisplay muudetud päevarežiimi.</string>
     <string name="accessibility_quick_settings_live_display_changed_night">LiveDisplay muudetud öörežiimi.</string>
     <string name="accessibility_quick_settings_live_display_changed_outdoor">LiveDisplay muudetud õuerežiimi.</string>
-    <string name="permlab_perfAccess">ligipääs jõudlusehaldurisse</string>
-    <string name="permdesc_perfAccessDesc">Lubab rakendusel pääseda juurde jõudluse teenusele. Tavarakenduste puhul ei peaks kunagi vaja minema.</string>
     <string name="permlab_manageLiveDisplay">LiveDisplay seadete haldamine</string>
     <string name="permdesc_manageLiveDisplay">Lubab rakendusel muuta täpsemaid ekraaniseadeid.</string>
-    <string name="permlab_observe_audio_sessions">heliseansi muutuste jälgimine</string>
-    <string name="permdesc_observe_audio_sessions">Lubab rakendusel jälgida helivoogude alustamist ja lõpetamist.</string>
     <string name="permlab_manageRemotePrefs">kaugtöölaua sätete haldamine</string>
     <string name="permdesc_manageRemotePrefs">Võimaldab rakendusel hallata kaugtöölaua sätteid</string>
     <string name="build_date">Järgu kuupäev</string>

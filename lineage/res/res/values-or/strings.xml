@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
      Copyright (C) 2015 The CyanogenMod Project
-               (C) 2017 The LineageOS Project
+                   2017-2022 The LineageOS Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -31,11 +31,6 @@
     <string name="profileGroupEmail">ଇମେଲ୍</string>
     <string name="profileGroupSMS">SMS</string>
     <string name="wildcardProfile">ଅନ୍ୟାନ୍ୟ</string>
-    <string name="perf_profile_pwrsv">ପାୱାର୍‍ ସଂରକ୍ଷଣ</string>
-    <string name="perf_profile_bal">ସନ୍ତୁଳିତ</string>
-    <string name="perf_profile_perf">ସଂଚାଳନକାରିତା</string>
-    <string name="perf_profile_bias_power">ଉପାଦେୟତା</string>
-    <string name="perf_profile_bias_perf">ଦ୍ରୁତ</string>
     <string name="live_display_auto">ସ୍ୱତଃସ୍ପୃତ</string>
     <string name="live_display_auto_summary">ସୂର୍ଯ୍ୟାସ୍ତ ଓ ସୂର୍ଯ୍ୟୋଦୟ ପରେ ରଙ୍ଗ ତାପମାତ୍ରା ସ୍ୱତଃ ଆଡ୍‍ଜଷ୍ଟ କରନ୍ତୁ</string>
     <string name="live_display_off">ଅଫ୍</string>

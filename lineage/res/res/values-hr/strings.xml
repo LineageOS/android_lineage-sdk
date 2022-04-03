@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
      Copyright (C) 2015 The CyanogenMod Project
-               (C) 2017 The LineageOS Project
+                   2017-2022 The LineageOS Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -37,16 +37,6 @@
     <string name="profileGroupEmail">E-pošta</string>
     <string name="profileGroupSMS">SMS</string>
     <string name="wildcardProfile">Ostalo</string>
-    <string name="perf_profile_pwrsv">Štednja energije</string>
-    <string name="perf_profile_bal">Uravnoteženo</string>
-    <string name="perf_profile_perf">Performanse</string>
-    <string name="perf_profile_bias_power">Učinkovitost</string>
-    <string name="perf_profile_bias_perf">Brzo</string>
-    <string name="perf_profile_pwrsv_summary">Maksimalna ušteda energije, smanjuje performanse uređaja</string>
-    <string name="perf_profile_bal_summary">Ravnoteža optimalnih performansi i karakteristika energije</string>
-    <string name="perf_profile_perf_summary">Način rada visokih performansi. Korisno za aplikacije koje zahtijevaju niske latencije i najveću propusnost kada potrošnja energije nije bitna.</string>
-    <string name="perf_profile_bias_power_summary">Naklonost uštedi energije. Ograničuje maksimalnu upotrebu CPU-a i optimizira za uštedu energije po cijeni više latencije.</string>
-    <string name="perf_profile_bias_perf_summary">Naklonost performansama. Smanjuje latenciju s nešto povećanom potrošnjom energije.</string>
     <string name="live_display_auto">Automatski</string>
     <string name="live_display_auto_summary">Automatski prilagodi temperaturu boje zaslona nakon zalaska i izlaska sunca</string>
     <string name="live_display_off">Isključen</string>
@@ -68,12 +58,8 @@
     <string name="accessibility_quick_settings_live_display_changed_day">LiveDisplay promijenjen u dnevni način.</string>
     <string name="accessibility_quick_settings_live_display_changed_night">LiveDisplay promijenjen u noćni način.</string>
     <string name="accessibility_quick_settings_live_display_changed_outdoor">LiveDisplay promijenjen u vanjski način.</string>
-    <string name="permlab_perfAccess">pristup upravitelju performansi</string>
-    <string name="permdesc_perfAccessDesc">Dopušta aplikaciji pristup servisu performansi. Za obične aplikacije nikada ne bi trebao biti potreban.</string>
     <string name="permlab_manageLiveDisplay">upravljanje postavkama LiveDisplay-a</string>
     <string name="permdesc_manageLiveDisplay">Omogućuje aplikaciji konfiguriranje postavki naprednog prikaza.</string>
-    <string name="permlab_observe_audio_sessions">promatraj promjene zvučnih sesija</string>
-    <string name="permdesc_observe_audio_sessions">Dopušta aplikaciji promatrati tijek zvuka dok je kreiran i prekinut.</string>
     <string name="permlab_manageRemotePrefs">upravljanje udaljenim postavkama</string>
     <string name="permdesc_manageRemotePrefs">Omogućuje aplikaciji upravljanje udaljenim postavkama</string>
     <string name="build_date">Datum izdavanja</string>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
      Copyright (C) 2015 The CyanogenMod Project
-               (C) 2017 The LineageOS Project
+                   2017-2022 The LineageOS Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -31,16 +31,6 @@
     <string name="profileGroupEmail">Epos</string>
     <string name="profileGroupSMS">SMS</string>
     <string name="wildcardProfile">Ander</string>
-    <string name="perf_profile_pwrsv">Bespaar krag</string>
-    <string name="perf_profile_bal">Gebalanseerd</string>
-    <string name="perf_profile_perf">Werkverrigting</string>
-    <string name="perf_profile_bias_power">Doeltreffendheid</string>
-    <string name="perf_profile_bias_perf">Vinnige</string>
-    <string name="perf_profile_pwrsv_summary">Maksimum kragbesparings, verminder toestel prestasie</string>
-    <string name="perf_profile_bal_summary">Balans van optimale prestasie en krageienskappe</string>
-    <string name="perf_profile_perf_summary">Hoë-prestasiemodus. Nuttig vir toepaasings wat lae netwerklatensie en hoogste deurvoer vereis wanneer kragverbruik is nie \'n bron van kommer nie</string>
-    <string name="perf_profile_bias_power_summary">Gee voorkeur aan kragbesparing. Beperk maksimum SVE-krag en optimeer vir kragbesparing ten koste van hoër netwerk latensie</string>
-    <string name="perf_profile_bias_perf_summary">Gee voorkeur aan prestasie. Goeie prestasie ten koste van hoër kragverbruik</string>
     <string name="live_display_auto">Outomaties</string>
     <string name="live_display_auto_summary">Kleurtemperatuur van die skerm sal outomaties aanpas na sononder en sonop</string>
     <string name="live_display_off">Af</string>
@@ -62,12 +52,8 @@
     <string name="accessibility_quick_settings_live_display_changed_day">LiveDisplay verander na dag modus.</string>
     <string name="accessibility_quick_settings_live_display_changed_night">LiveDisplay verander na nag modus.</string>
     <string name="accessibility_quick_settings_live_display_changed_outdoor">LiveDisplay verander na buitelug modus.</string>
-    <string name="permlab_perfAccess">toegang na prestasie bestuurder</string>
-    <string name="permdesc_perfAccessDesc">Laat \'n toep toe om toegang na die prestasie diens te verkry. Moet nooit nodig wees vir normale programme nie.</string>
     <string name="permlab_manageLiveDisplay">bestuur LiveDisplay instellings</string>
     <string name="permdesc_manageLiveDisplay">Laat \'n toep toe om gevorderde skerm instellings te konfigureer.</string>
-    <string name="permlab_observe_audio_sessions">neem oudio-sessie verandering waar</string>
-    <string name="permdesc_observe_audio_sessions">Laat \'n toep toe, om oudio-strome wat geskep en vernietig word, waar te neem.</string>
     <string name="permlab_manageRemotePrefs">bestuur afgeleë opsies</string>
     <string name="permdesc_manageRemotePrefs">Laat \'n toepassing toe om afgeleë opsies te bestuur</string>
 </resources>

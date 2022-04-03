@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
      Copyright (C) 2015 The CyanogenMod Project
-               (C) 2017 The LineageOS Project
+                   2017-2022 The LineageOS Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -16,5 +16,71 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="lineageos_system_label">LineageOS სისტემა</string>
+    <string name="permlab_modifyProfiles">სისტემის პროფილების შესწორება</string>
+    <string name="permdesc_modifyProfiles">პროგრამისთვის ნების დართვა, შეცვალოს სისტემის პროფილები.</string>
+    <string name="permlab_useHardwareFramework">აპარატურული გარსის გამოყენება</string>
+    <string name="permdesc_useHardwareFramework">პროგრამისთვის ნების დართვა Lineage-ის აპარატურულ გარსთან წვდომისთვის.</string>
+    <string name="permlab_writeSettings">Lineage-სისტემის დაცული პარამეტრების შეცვლა</string>
+    <string name="permdesc_writeSettings">პროგრამისთვის ნების დართვა, შეცვალოს Lineage-სისტემის პარამეტრები.</string>
+    <string name="permlab_writeSecureSettings">Lineage-სისტემის დაცული სისტემური პარამეტრების შეცვლა</string>
+    <string name="permdesc_writeSecureSettings">ნებართვა, რომ აპი შეძლებს შეცვალოს Lineage-სისტემის დაცული პარამეტრები. არაა განკუთვნილი ჩვეულებრივი აპებისთვის.</string>
     <string name="profileNameDefault">ნაგულისხმევი</string>
+    <string name="profileNameWork">სამუშაო</string>
+    <string name="profileNameHome">სახლი</string>
+    <string name="profileNameSilent">უხმო</string>
+    <string name="profileNameNight">ღამე</string>
+    <string name="profileNameAutomobile">მანქანა</string>
+    <string name="profileGroupPhone">ტელეფონი</string>
+    <string name="profileGroupCalendar">კალენდარი</string>
+    <string name="profileGroupGmail">Gmail</string>
+    <string name="profileGroupEmail">ელფოსტა</string>
+    <string name="profileGroupSMS">მოკლეტექსტური შეტყობინება</string>
+    <string name="wildcardProfile">სხვა</string>
+    <string name="live_display_auto">ავტომატური</string>
+    <string name="live_display_auto_summary">ეკრანის ფერების ტემპერატურის ავტომატურად შეცვლა მზის ჩასვლისა და ამოსვლის შემდეგ</string>
+    <string name="live_display_off">გამორთ.</string>
+    <string name="live_display_off_summary">ყველა მორგების გაუქმება</string>
+    <string name="live_display_day">დღე</string>
+    <string name="live_display_day_summary">მხოლოდ დღის პარამეტრების გამოყენება</string>
+    <string name="live_display_night">ღამე</string>
+    <string name="live_display_night_summary">მხოლოდ ღამის პარამეტრების გამოყენება</string>
+    <string name="live_display_outdoor">ქუჩა (კაშკაშა მზე)</string>
+    <string name="live_display_outdoor_summary">მხოლოდ ქუჩის პარამეტრების გამოყენება</string>
+    <string name="live_display_hint">LiveDisplay-ს შეუძლია შეამციროს თვალების დაძაბვა და დაგეხმაროთ ღამე მშვიდად დაძინებაში. დააწკაპეთ აქ გამოსაცდელად!</string>
+    <string name="accessibility_quick_settings_live_display_off">LiveDisplay გამორთ.</string>
+    <string name="accessibility_quick_settings_live_display_auto">LiveDisplay: ავტომატური.</string>
+    <string name="accessibility_quick_settings_live_display_day">LiveDisplay: დღის რეჟიმი.</string>
+    <string name="accessibility_quick_settings_live_display_night">LiveDisplay: ღამის რეჟიმი.</string>
+    <string name="accessibility_quick_settings_live_display_outdoor">LiveDisplay: ქუჩის რეჟიმი.</string>
+    <string name="accessibility_quick_settings_live_display_changed_off">LiveDisplay გამორთულია.</string>
+    <string name="accessibility_quick_settings_live_display_changed_auto">LiveDisplay გადაირთო ავტომატურ რეჟიმზე.</string>
+    <string name="accessibility_quick_settings_live_display_changed_day">LiveDisplay გადაირთო დღის რეჟიმზე.</string>
+    <string name="accessibility_quick_settings_live_display_changed_night">LiveDisplay გადაირთო ღამის რეჟიმზე.</string>
+    <string name="accessibility_quick_settings_live_display_changed_outdoor">LiveDisplay გადაირთო ქუჩის რეჟიმზე.</string>
+    <string name="permlab_manageLiveDisplay">LiveDisplay პარამეტრების მართვა</string>
+    <string name="permdesc_manageLiveDisplay">პროგრამისთვის ნების დართვა, რომ შეეძლოს ეკრანის გაფართოებული პარამეტრების გამართვა.</string>
+    <string name="permlab_manageRemotePrefs">დაშორებული პარამეტრების მართვა</string>
+    <string name="permdesc_manageRemotePrefs">პროგრამისთვის ნების დართვა, რომ შეეძლოს დაშორებული პარამეტრების გამართვა </string>
+    <string name="build_date">აწყობის თარიღი</string>
+    <string name="lineage_api_level">LineageOS-ის API-ს დონე</string>
+    <string name="lineage_updates">LineageOS-ის განახლებები</string>
+    <string name="lineage_version">LineageOS-ის ვერსია</string>
+    <string name="lineage_vendor_security_patch">მწარმოებლისგან უსაფრთხოების შესწორების დონე</string>
+    <string name="unknown">უცნობი</string>
+    <string name="app_killed_message">პროგრამა გაითიშა</string>
+    <string name="kilobitspersecond_short">კბიტ/წმ</string>
+    <string name="megabitspersecond_short">მბიტ/წმ</string>
+    <string name="kilobytespersecond_short">კბაიტ/წმ</string>
+    <string name="megabytespersecond_short">მბაიტ/წმ</string>
+    <string name="trust_feature_name">Trust</string>
+    <string name="permlab_trustInterface">Trust-გარსთან წვდომა</string>
+    <string name="permdesc_trustInterface">პროგრამისთვის ნების დართვა, რომ აჩვენოს Trust-ცნობები და შემოთავაზებები</string>
+    <string name="trust_notification_channel">Trust-ცნობები</string>
+    <string name="trust_notification_title_security">Trust \u2022 სისტემის დაცვა</string>
+    <string name="trust_notification_content_selinux">SELinux არაა იძულებით მითითებული, თქვენი უსაფრთხოება შესუსტებულია</string>
+    <string name="trust_notification_content_keys">ეს ანაწყობი ხელმოწერილია საჯარო გასაღებებით</string>
+    <string name="trust_notification_title_onboarding">უკეთ გაიცანით Trust</string>
+    <string name="trust_notification_content_onboarding">იხილეთ, თუ როგორ უნდა დარწმუნდეთ საკუთარი მოწყობილობის უსაფრთხოებაში</string>
+    <string name="trust_notification_action_manage">ცნობების მართვა</string>
 </resources>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
      Copyright (C) 2015 The CyanogenMod Project
-               (C) 2017 The LineageOS Project
+                   2017-2022 The LineageOS Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -16,11 +16,6 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="perf_profile_pwrsv">Ahorro de energía</string>
-    <string name="perf_profile_bal">Equilibrado</string>
-    <string name="perf_profile_perf">Rendimiento</string>
-    <string name="perf_profile_bias_power">Eficiencia</string>
-    <string name="perf_profile_bias_perf">Rápido</string>
     <string name="live_display_auto">Automático</string>
     <string name="live_display_auto_summary">Ajustar automáticamente la temperatura del color de pantalla con el amanecer y el anochecer</string>
     <string name="live_display_off">Apagar</string>
@@ -31,6 +26,4 @@
     <string name="live_display_outdoor">Al aire libre (luz del sol)</string>
     <string name="live_display_outdoor_summary">Utilizar solo los ajustes al aire libre</string>
     <string name="live_display_hint">LiveDisplay puede ayudar a reducir la fatiga visual y ayudarte a dormir por la noche. ¡Haz clic aquí para probarlo!</string>
-    <string name="permlab_perfAccess">acceder al supervisor de rendimiento</string>
-    <string name="permdesc_perfAccessDesc">Permite que la aplicación acceda al servicio de rendimiento. No debería ser necesario para aplicaciones normales.</string>
 </resources>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
      Copyright (C) 2015 The CyanogenMod Project
-               (C) 2017 The LineageOS Project
+                   2017-2022 The LineageOS Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -31,15 +31,6 @@
     <string name="profileGroupEmail">Электронная пошта</string>
     <string name="profileGroupSMS">SMS</string>
     <string name="wildcardProfile">Iншае</string>
-    <string name="perf_profile_pwrsv">Энергазберажэнне</string>
-    <string name="perf_profile_bal">Збалансаваны</string>
-    <string name="perf_profile_perf">Прадукцыйнасць</string>
-    <string name="perf_profile_bias_power">Эфектыўны</string>
-    <string name="perf_profile_bias_perf">Хуткі</string>
-    <string name="perf_profile_bal_summary">Пэўная раўнавага паміж працаздольнасьцьцю і энэргазахаваньнем</string>
-    <string name="perf_profile_perf_summary">Высокая працаздольнасьць. Карысна падчас працы з праграмамі, для якіх неабходны найменьшы час адказу і найвышэйшая хуткасць дадзеных, а таксама, калі энэргазахаванне не з\'яўляецца праблемай</string>
-    <string name="perf_profile_bias_power_summary">Намагацца заховаць энэргію. Абмяжоўваньне найбольшае магутнасьці коштам найбольшага часу адказваньня сістэмы</string>
-    <string name="perf_profile_bias_perf_summary">Падвышаная працаздольнасьць. Зьменшаны час адказу коштам падвышаным энэргаспажываньнем</string>
     <string name="live_display_auto">Аўтаматычна</string>
     <string name="live_display_auto_summary">Аўтаматычная падладка колеравай тэмпературы экрана пасля заходу і ўзыходу сонца</string>
     <string name="live_display_off">Адключана</string>
@@ -57,8 +48,6 @@
     <string name="accessibility_quick_settings_live_display_night">LiveDisplay: ноч.</string>
     <string name="accessibility_quick_settings_live_display_changed_off">LiveDisplay выключаны.</string>
     <string name="accessibility_quick_settings_live_display_changed_auto">LiveDisplay зменены на аўтаматычны рэжым.</string>
-    <string name="permlab_perfAccess">доступ да менеджара прадукцыйнасці</string>
-    <string name="permdesc_perfAccessDesc">Дадатак зможа атрымваць доступ да службы прадукцыйнасці. Гэты дазвол не выкарыстоўваецца звычайнымі дадаткамі.</string>
     <string name="permlab_manageLiveDisplay">кіраванне наладамі LiveDisplay</string>
     <string name="permlab_manageRemotePrefs">кіраваньне аддаленнымі наладамі</string>
     <string name="permdesc_manageRemotePrefs">Дадатак зможа кіраваць аддаленымі наладамі</string>

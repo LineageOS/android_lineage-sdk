@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
      Copyright (C) 2015 The CyanogenMod Project
-               (C) 2017 The LineageOS Project
+                   2017-2022 The LineageOS Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -37,16 +37,6 @@
     <string name="profileGroupEmail">Ebost</string>
     <string name="profileGroupSMS">SMS</string>
     <string name="wildcardProfile">Arall</string>
-    <string name="perf_profile_pwrsv">Arbed pŵer</string>
-    <string name="perf_profile_bal">Cytbwys</string>
-    <string name="perf_profile_perf">Perfformiad</string>
-    <string name="perf_profile_bias_power">Effeithlonrwydd</string>
-    <string name="perf_profile_bias_perf">Cyflym</string>
-    <string name="perf_profile_pwrsv_summary">Arbedion pŵer gorau, gan leihau perfformiad y ddyfais.</string>
-    <string name="perf_profile_bal_summary">Cydbwysedd o berfformiad optimaidd a nodweddion pŵer.</string>
-    <string name="perf_profile_perf_summary">Modd perfformiad uchel. Mae hwn yn ddefnyddiol ar gyfer apiau sydd angen cuddni isel a thrwybwn uchel pan nad oes achos pryderu am ddefnyddio pŵer.</string>
-    <string name="perf_profile_bias_power_summary">Ffafrio arbedion pŵer. Mae hyn yn cyfyngu pŵer y prosesydd ac yn ei optimeiddio ar gyfer arbed defnydd pŵer ar draul cuddni uwch.</string>
-    <string name="perf_profile_bias_perf_summary">Ffafrio perfformiad da. Mae\'n lleihau cuddni gyda defnydd pŵer uwch.</string>
     <string name="live_display_auto">Awtomatig</string>
     <string name="live_display_auto_summary">Addasu tymheredd lliw\'r sgrin yn awtomatig ar ôl machlud a gwawr</string>
     <string name="live_display_off">I ffwrdd</string>
@@ -68,12 +58,8 @@
     <string name="accessibility_quick_settings_live_display_changed_day">LiveDisplay wedi\'i newid i fodd dydd.</string>
     <string name="accessibility_quick_settings_live_display_changed_night">LiveDisplay wedi\'i newid i fodd nos.</string>
     <string name="accessibility_quick_settings_live_display_changed_outdoor">LiveDisplay wedi\'i newid i fodd awyr agored.</string>
-    <string name="permlab_perfAccess">mynediad at reolwr perfformiad</string>
-    <string name="permdesc_perfAccessDesc">Mae\'n caniatáu i ap gyrchu\'r gwasanaeth perfformiad. Ni ddylai apiau arferol byth fod ei angen.</string>
     <string name="permlab_manageLiveDisplay">rheoli gosodiadau LiveDisplay</string>
     <string name="permdesc_manageLiveDisplay">Mae\'n caniatáu i ap ffurfweddu gosodiadau dangosydd uwch.</string>
-    <string name="permlab_observe_audio_sessions">gwylio newidiadau sesiynau sain</string>
-    <string name="permdesc_observe_audio_sessions">Mae\'n caniatáu i ap wylio ffrydiau sain yn cael eu creu a\'u dinistrio.</string>
     <string name="permlab_manageRemotePrefs">rheoli gosodiadau o bell</string>
     <string name="permdesc_manageRemotePrefs">Mae\'n caniatáu ap i reoli gosodiadau o bell.</string>
     <string name="build_date">Dyddiad adeiledd</string>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
      Copyright (C) 2015 The CyanogenMod Project
-               (C) 2017 The LineageOS Project
+                   2017-2022 The LineageOS Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -37,16 +37,6 @@
     <string name="profileGroupEmail">E-mail</string>
     <string name="profileGroupSMS">SMS</string>
     <string name="wildcardProfile">Inny</string>
-    <string name="perf_profile_pwrsv">Oszczędny</string>
-    <string name="perf_profile_bal">Zbalansowany</string>
-    <string name="perf_profile_perf">Wydajny</string>
-    <string name="perf_profile_bias_power">Oszczędny</string>
-    <string name="perf_profile_bias_perf">Szybki</string>
-    <string name="perf_profile_pwrsv_summary">Maksymalna oszczędność energii, zmniejsza wydajność urządzenia</string>
-    <string name="perf_profile_bal_summary">Równowaga optymalnej wydajności i zużycia energii</string>
-    <string name="perf_profile_perf_summary">Tryb wysokiej wydajności. Przydatne dla aplikacji wymagających minimalnych opóźnień i najwyższej wydajności bez względu na zużycie energii</string>
-    <string name="perf_profile_bias_power_summary">Sprzyja oszczędzaniu energii. Ogranicza moc procesora i optymalizuje pod kątem zużycia energii, kosztem większych opóźnień</string>
-    <string name="perf_profile_bias_perf_summary">Sprzyja wydajności. Zmniejsza opóźnienia z lekko zwiększonym zużyciem energii</string>
     <string name="live_display_auto">Automatyczny</string>
     <string name="live_display_auto_summary">Automatycznie dostosuj temperaturę kolorów ekranu po zachodzie i wschodzie słońca</string>
     <string name="live_display_off">Wyłączony</string>
@@ -68,12 +58,8 @@
     <string name="accessibility_quick_settings_live_display_changed_day">LiveDisplay zmieniony na tryb dzienny.</string>
     <string name="accessibility_quick_settings_live_display_changed_night">LiveDisplay zmieniony na tryb nocny.</string>
     <string name="accessibility_quick_settings_live_display_changed_outdoor">LiveDisplay zmieniony na tryb zewnętrzny.</string>
-    <string name="permlab_perfAccess">dostęp do menedżera wydajności</string>
-    <string name="permdesc_perfAccessDesc">Umożliwia aplikacji dostęp do usługi wydajności (nie powinno być wymagane przez standardowe aplikacje).</string>
     <string name="permlab_manageLiveDisplay">zarządzanie ustawieniami LiveDisplay</string>
     <string name="permdesc_manageLiveDisplay">Pozwala aplikacji na konfigurację zaawansowanych ustawień wyświetlacza.</string>
-    <string name="permlab_observe_audio_sessions">obserwuj zmiany sesji audio</string>
-    <string name="permdesc_observe_audio_sessions">Zezwalaj aplikacji na obserwowanie utworzenia lub zamknięcia strumienia dźwięku.</string>
     <string name="permlab_manageRemotePrefs">zarządza zdalnymi ustawieniami</string>
     <string name="permdesc_manageRemotePrefs">Zezwala aplikacji na zarządzanie zdalnymi ustawieniami</string>
     <string name="build_date">Data kompilacji</string>

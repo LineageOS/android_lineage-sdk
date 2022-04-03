@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
      Copyright (C) 2015 The CyanogenMod Project
-               (C) 2017 The LineageOS Project
+                   2017-2022 The LineageOS Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -37,16 +37,6 @@
     <string name="profileGroupEmail">Имейл</string>
     <string name="profileGroupSMS">SMS</string>
     <string name="wildcardProfile">Други</string>
-    <string name="perf_profile_pwrsv">Енергоспестяващ</string>
-    <string name="perf_profile_bal">Балансиран</string>
-    <string name="perf_profile_perf">Високопроизводителен</string>
-    <string name="perf_profile_bias_power">Ефикасен</string>
-    <string name="perf_profile_bias_perf">Бърз</string>
-    <string name="perf_profile_pwrsv_summary">Максимална енергийна ефективност, намалява ефективността на устройството</string>
-    <string name="perf_profile_bal_summary">Баланс между оптимална производителност и енергопотребление</string>
-    <string name="perf_profile_perf_summary">Режим на висока производителност. Подходящ за приложения, изискващи ниска латентност и най-високата производителност, когато консумацията на енергия не е проблем</string>
-    <string name="perf_profile_bias_power_summary">Предпочитане за спестяване на енергия. Ограничаване на максималната мощност на Процесора и оптимизиране за енергоспестяване с цената на по-висока латентност</string>
-    <string name="perf_profile_bias_perf_summary">Предпочитане за производителност. Намалява латентност с леко повишена консумация на енергия</string>
     <string name="live_display_auto">Автоматичен</string>
     <string name="live_display_auto_summary">Автоматично регулиране на цветовата температура след залез/изгрев</string>
     <string name="live_display_off">Изключен</string>
@@ -68,12 +58,8 @@
     <string name="accessibility_quick_settings_live_display_changed_day">Адаптивен дисплей е променен на дневен режим.</string>
     <string name="accessibility_quick_settings_live_display_changed_night">Адаптивен дисплей е променен на нощен режим.</string>
     <string name="accessibility_quick_settings_live_display_changed_outdoor">Адаптивен дисплей е променен на външен режим.</string>
-    <string name="permlab_perfAccess">Достъп до диспечера за производителност</string>
-    <string name="permdesc_perfAccessDesc">Осигурява на приложението достъп до диспечера за производителност. Не е необходимо за нормални приложения.</string>
     <string name="permlab_manageLiveDisplay">управление на настройките за Адаптивен дисплей</string>
     <string name="permdesc_manageLiveDisplay">Позволява на приложението да променя разширените настройки на дисплея.</string>
-    <string name="permlab_observe_audio_sessions">преглед на промените в аудио сесии</string>
-    <string name="permdesc_observe_audio_sessions">Позволява на приложение да наблюдава създаване и унищожаване на аудио потоци.</string>
     <string name="permlab_manageRemotePrefs">управление на отдалечени настройки</string>
     <string name="permdesc_manageRemotePrefs">Позволява на приложението да управлява отдалечени настройки</string>
     <string name="build_date">Дата на изграждане</string>

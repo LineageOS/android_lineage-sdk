@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
      Copyright (C) 2015 The CyanogenMod Project
-               (C) 2017 The LineageOS Project
+                   2017-2022 The LineageOS Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -37,16 +37,6 @@
     <string name="profileGroupEmail">メール</string>
     <string name="profileGroupSMS">SMS</string>
     <string name="wildcardProfile">その他</string>
-    <string name="perf_profile_pwrsv">省電力</string>
-    <string name="perf_profile_bal">バランス</string>
-    <string name="perf_profile_perf">パフォーマンス</string>
-    <string name="perf_profile_bias_power">効率</string>
-    <string name="perf_profile_bias_perf">クイック</string>
-    <string name="perf_profile_pwrsv_summary">省電力化を最大化しますが、パフォーマンスが低下します</string>
-    <string name="perf_profile_bal_summary">最適なパフォーマンスと電力特性のバランスを保ちます</string>
-    <string name="perf_profile_perf_summary">高パフォーマンスモードです。電力消費を気にしなければ、低遅延と高処理を必要とするアプリケーションに最適です。</string>
-    <string name="perf_profile_bias_power_summary">省電力化を優先します。遅延が起こりやすくなりますが、最大CPU電力を制限して、省電力に最適化します。</string>
-    <string name="perf_profile_bias_perf_summary">パフォーマンスを優先します。わずかに電力消費が増えますが、遅延が軽減されます。</string>
     <string name="live_display_auto">自動</string>
     <string name="live_display_auto_summary">日中に画面の色温度を自動的に調整する</string>
     <string name="live_display_off">OFF</string>
@@ -68,12 +58,8 @@
     <string name="accessibility_quick_settings_live_display_changed_day">LiveDisplayが昼モードに変更されました。</string>
     <string name="accessibility_quick_settings_live_display_changed_night">LiveDisplayが夜モードに変更されました。</string>
     <string name="accessibility_quick_settings_live_display_changed_outdoor">LiveDisplayが屋外モードに変更されました。</string>
-    <string name="permlab_perfAccess">パフォーマンスマネージャーへのアクセス</string>
-    <string name="permdesc_perfAccessDesc">パフォーマンスサービスへのアクセスをアプリに許可します。通常のアプリで必要とされることはありません。</string>
     <string name="permlab_manageLiveDisplay">LiveDisplayの設定の管理</string>
     <string name="permdesc_manageLiveDisplay">ディスプレイの詳細設定をアプリに許可します。</string>
-    <string name="permlab_observe_audio_sessions">オーディオセッションの変更の監視</string>
-    <string name="permdesc_observe_audio_sessions">オーディオストリームの作成および破棄の監視をアプリに許可します。</string>
     <string name="permlab_manageRemotePrefs">リモートの設定の管理</string>
     <string name="permdesc_manageRemotePrefs">リモートの設定を管理することをアプリに許可します。</string>
     <string name="build_date">ビルド日時</string>

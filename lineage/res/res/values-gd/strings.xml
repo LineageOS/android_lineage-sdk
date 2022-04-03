@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
      Copyright (C) 2015 The CyanogenMod Project
-               (C) 2017 The LineageOS Project
+                   2017-2022 The LineageOS Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -37,16 +37,6 @@
     <string name="profileGroupEmail">Post-d</string>
     <string name="profileGroupSMS">SMS</string>
     <string name="wildcardProfile">Eile</string>
-    <string name="perf_profile_pwrsv">Caomhnadh cumhachd</string>
-    <string name="perf_profile_bal">Cothromach</string>
-    <string name="perf_profile_perf">Dèanadas</string>
-    <string name="perf_profile_bias_power">Èifeachdachd</string>
-    <string name="perf_profile_bias_perf">Luath</string>
-    <string name="perf_profile_pwrsv_summary">Caomhnadh as motha na cumhachd ach ìsleachadh air dèanadas an uidheim</string>
-    <string name="perf_profile_bal_summary">Meidh eadar an dèanadas as fheàrr is caomhnadh na cumhachd</string>
-    <string name="perf_profile_perf_summary">Modh dèanadais àird. Tha seo feumail ma tha aplacaid feumach air foillidheachd ìosal is an tro-chur as àirde mur eil dragh mu chleachdadh na cumhachd ann</string>
-    <string name="perf_profile_bias_power_summary">Prìomhachas air caomhnadh na cumhachd. Cuingeachadh air cumhachd as motha a’ CPU is piseachadh air caomhnadh na cumhachd ach barrachd foillidheachd air</string>
-    <string name="perf_profile_bias_perf_summary">Prìomhachas air an dèanadas. Beagan as lugha a dh’fhoillidheachd le feum air beagan cumhachd a bharrachd</string>
     <string name="live_display_auto">Fèin-obrachail</string>
     <string name="live_display_auto_summary">Cuir gleus air teothachd nan dath air an sgrìn gu fèin-obrachail às dèidh laighe is èirigh na grèine</string>
     <string name="live_display_off">Dheth</string>
@@ -68,12 +58,8 @@
     <string name="accessibility_quick_settings_live_display_changed_day">Chaidh LiveDisplay atharrachadh gu modh an latha.</string>
     <string name="accessibility_quick_settings_live_display_changed_night">Chaidh LiveDisplay atharrachadh gu modh na h-oidhche.</string>
     <string name="accessibility_quick_settings_live_display_changed_outdoor">Chaidh LiveDisplay atharrachadh gu modh an taoibh a-muigh.</string>
-    <string name="permlab_perfAccess">manaidsear an dèanadais inntrigeadh</string>
-    <string name="permdesc_perfAccessDesc">Leigidh seo le aplacaid seirbheis an dèanadais inntrigeadh. Chan eil seo gu feum do dh’aplacaidean àbhaisteach idir.</string>
     <string name="permlab_manageLiveDisplay">roghainnean LiveDisplay a stiùireadh</string>
     <string name="permdesc_manageLiveDisplay">Leigidh seo le aplacaid roghainnean adhartach an taisbeanaidh a rèiteachadh.</string>
-    <string name="permlab_observe_audio_sessions">sùil a chumail air atharrachaidhean air seisean fuaime</string>
-    <string name="permdesc_observe_audio_sessions">Leigidh seo le aplacaid sùil a chumail air cruthachadh is crìochnachadh sruthan fuaime.</string>
     <string name="permlab_manageRemotePrefs">roghainnean cèine a stiùireadh</string>
     <string name="permdesc_manageRemotePrefs">Leigidh seo le aplacaid roghainnean cèine a stiùireadh</string>
     <string name="build_date">Ceann-là na togail</string>
@@ -93,7 +79,7 @@
     <string name="trust_notification_channel">Rabhaidhean na h-earbsa</string>
     <string name="trust_notification_title_security">Earbsa ⁊ tèarainteachd an t-siostaim</string>
     <string name="trust_notification_content_selinux">Chan eil SELinux teann agus an tèarainteachd agad air a lagachadh</string>
-    <string name="trust_notification_content_keys">Chaidh an togail seo a shoidhneadh le iuchraichean poblach</string>
+    <string name="trust_notification_content_keys">Chaidh an togail a shoidhneadh le iuchair phoblach</string>
     <string name="trust_notification_title_onboarding">Fidir an earbsa</string>
     <string name="trust_notification_content_onboarding">Faigh a-mach mar a nì thu cinnteach gum bi an t-uidheam agad sàbhailte</string>
     <string name="trust_notification_action_manage">Stiùir na rabhaidhean</string>

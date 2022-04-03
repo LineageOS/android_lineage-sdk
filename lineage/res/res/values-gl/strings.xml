@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
      Copyright (C) 2015 The CyanogenMod Project
-               (C) 2017 The LineageOS Project
+                   2017-2022 The LineageOS Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -37,16 +37,6 @@
     <string name="profileGroupEmail">Correo electrónico</string>
     <string name="profileGroupSMS">SMS</string>
     <string name="wildcardProfile">Outro</string>
-    <string name="perf_profile_pwrsv">Aforro de enerxía</string>
-    <string name="perf_profile_bal">Equilibrado</string>
-    <string name="perf_profile_perf">Rendemento</string>
-    <string name="perf_profile_bias_power">Eficiencia</string>
-    <string name="perf_profile_bias_perf">Veloz</string>
-    <string name="perf_profile_pwrsv_summary">Máximo aforro de enerxía, reduce o rendemento do dispositivo</string>
-    <string name="perf_profile_bal_summary">Equilibrio entre un rendemento óptimo e características de aforro de enerxía</string>
-    <string name="perf_profile_perf_summary">Modo de alto rendemento. Útil para as aplicacións que requiren dunha baixa latencia e o un gran rendemento cando o consumo de enerxía non é unha preocupación</string>
-    <string name="perf_profile_bias_power_summary">Favorece o aforro de enerxía. Limita o rendemento máximo da CPU e a optimiza para poder aforrar perante unha maior latencia</string>
-    <string name="perf_profile_bias_perf_summary">Favorece o rendemento. Reduce a latencia cun consumo lixeiramente máis alto</string>
     <string name="live_display_auto">Automático</string>
     <string name="live_display_auto_summary">Axustar automaticamente as cores de pantalla ao mencer e ao solpor</string>
     <string name="live_display_off">Apagado</string>
@@ -68,12 +58,8 @@
     <string name="accessibility_quick_settings_live_display_changed_day">LiveDisplay mudado ao modo día.</string>
     <string name="accessibility_quick_settings_live_display_changed_night">LiveDisplay mudado ao modo noite.</string>
     <string name="accessibility_quick_settings_live_display_changed_outdoor">LiveDisplay mudado ao modo exteriores.</string>
-    <string name="permlab_perfAccess">acceso ao xestor de rendemento</string>
-    <string name="permdesc_perfAccessDesc">Permite que unha aplicación acceda ao servizo de rendemento. Non debería ser necesario para aplicación normais.</string>
     <string name="permlab_manageLiveDisplay">xestionar os axustes de LiveDisplay</string>
     <string name="permdesc_manageLiveDisplay">Permite que unha aplicación poida configurar os axustes de pantalla avanzados.</string>
-    <string name="permlab_observe_audio_sessions">observar os cambios na sesión de son</string>
-    <string name="permdesc_observe_audio_sessions">Permite a unha aplicación observar os fluxos de son que se crean e se destrúen.</string>
     <string name="permlab_manageRemotePrefs">xestionar axustes remotos</string>
     <string name="permdesc_manageRemotePrefs">Permitir a unha aplicación xestionar os axustes remotos</string>
     <string name="build_date">Data de compilación</string>

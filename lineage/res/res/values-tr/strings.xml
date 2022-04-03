@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
      Copyright (C) 2015 The CyanogenMod Project
-               (C) 2017 The LineageOS Project
+                   2017-2022 The LineageOS Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -37,16 +37,6 @@
     <string name="profileGroupEmail">E-posta</string>
     <string name="profileGroupSMS">SMS</string>
     <string name="wildcardProfile">Diğer</string>
-    <string name="perf_profile_pwrsv">Güç tasarrufu</string>
-    <string name="perf_profile_bal">Dengeli</string>
-    <string name="perf_profile_perf">Performans</string>
-    <string name="perf_profile_bias_power">Verimlilik</string>
-    <string name="perf_profile_bias_perf">Hızlı</string>
-    <string name="perf_profile_pwrsv_summary">Maksimum güç tasarrufu, cihaz performansını düşürür</string>
-    <string name="perf_profile_bal_summary">Optimum performans ve güç özelliklerinin dengelenmesi</string>
-    <string name="perf_profile_perf_summary">Yüksek performans modu. Güç tüketiminin endişe kaynağı olmadığında düşük gecikme ve yüksek verim gerektiren uygulamalar için kullanışlıdır</string>
-    <string name="perf_profile_bias_power_summary">Güç tasarrufunu tercih et. Maksimum işlemci gücünü sınırlayın ve daha yüksek gecikme maliyeti ile güç tasarrufu için optimize edin</string>
-    <string name="perf_profile_bias_perf_summary">Performansı tercih et. Hafifletilmiş güç tüketimi ile gecikmeyi azaltır</string>
     <string name="live_display_auto">Otomatik</string>
     <string name="live_display_auto_summary">Gün batımı ve doğumundan sonra ekranın renk sıcaklığını otomatik ayarlar</string>
     <string name="live_display_off">Kapalı</string>
@@ -68,12 +58,8 @@
     <string name="accessibility_quick_settings_live_display_changed_day">LiveDisplay gündüz moduna geçti.</string>
     <string name="accessibility_quick_settings_live_display_changed_night">LiveDisplay gece moduna geçti.</string>
     <string name="accessibility_quick_settings_live_display_changed_outdoor">LiveDisplay açık hava moduna geçti.</string>
-    <string name="permlab_perfAccess">performans yöneticisine erişim</string>
-    <string name="permdesc_perfAccessDesc">Bir uygulamanın performans hizmetine erişimine izin verir. Normal uygulamalar için gerekli değildir.</string>
     <string name="permlab_manageLiveDisplay">LiveDisplay ayarlarını yönet</string>
     <string name="permdesc_manageLiveDisplay">Uygulamalara gelişmiş ekran ayarlarını düzenleme izni verir.</string>
-    <string name="permlab_observe_audio_sessions">ses oturum değişikliklerini gözlemle</string>
-    <string name="permdesc_observe_audio_sessions">Bir uygulamanın, ses akışlarınının oluşturulma ve yok edilmesinde gözlem yapmasına izin verir.</string>
     <string name="permlab_manageRemotePrefs">uzak bağlantı ayarları</string>
     <string name="permdesc_manageRemotePrefs">Bir uygulamaya uzak bağlantı ayarlarını yönetme izni verir</string>
     <string name="build_date">İnşa tarihi</string>
