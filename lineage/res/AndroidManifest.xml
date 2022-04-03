@@ -81,6 +81,7 @@
                  android:persistent="true"
                  android:hasCode="false"
                  android:label="@string/lineageos_system_label"
+                 android:icon="@mipmap/ic_launcher"
                  android:allowClearUserData="false"
                  android:killAfterRestore="false"
                  android:supportsRtl="true"/>
