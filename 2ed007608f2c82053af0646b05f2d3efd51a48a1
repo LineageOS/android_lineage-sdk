@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "aed0175c_b178f549",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2022-04-04T21:24:49Z",
+      "side": 1,
+      "message": "PS2 already contains strings added in https://review.lineageos.org/c/LineageOS/android_packages_apps_LineageParts/+/326739",
+      "revId": "2ed007608f2c82053af0646b05f2d3efd51a48a1",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
