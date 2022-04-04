@@ -141,8 +141,18 @@
 
     <!-- Trust interface -->
     <java-symbol type="bool" name="config_trustLegacyEncryption" />
+    <java-symbol type="drawable" name="ic_info" />
     <java-symbol type="drawable" name="ic_trust" />
     <java-symbol type="drawable" name="ic_trust_notification_manage" />
+    <java-symbol type="drawable" name="ic_trust_encryption_bad" />
+    <java-symbol type="drawable" name="ic_trust_encryption_good" />
+    <java-symbol type="drawable" name="ic_trust_encryption_poor" />
+    <java-symbol type="drawable" name="ic_trust_onboarding_bg" />
+    <java-symbol type="drawable" name="ic_trust_security_patches_bad" />
+    <java-symbol type="drawable" name="ic_trust_security_patches_good" />
+    <java-symbol type="drawable" name="ic_trust_security_patches_poor" />
+    <java-symbol type="drawable" name="ic_trust_selinux_bad" />
+    <java-symbol type="drawable" name="ic_trust_selinux_good" />
     <java-symbol type="drawable" name="ic_warning" />
     <java-symbol type="string" name="trust_feature_name" />
     <java-symbol type="string" name="trust_notification_channel" />
@@ -152,6 +162,33 @@
     <java-symbol type="string" name="trust_notification_title_onboarding" />
     <java-symbol type="string" name="trust_notification_content_onboarding" />
     <java-symbol type="string" name="trust_notification_action_manage" />
+    <java-symbol type="string" name="trust_category_features" />
+    <java-symbol type="string" name="trust_feature_selinux" />
+    <java-symbol type="string" name="trust_feature_selinux_value_enforcing" />
+    <java-symbol type="string" name="trust_feature_selinux_value_disabled" />
+    <java-symbol type="string" name="trust_feature_selinux_explain" />
+    <java-symbol type="string" name="trust_feature_security_patches" />
+    <java-symbol type="string" name="trust_feature_security_patches_value_base" />
+    <java-symbol type="string" name="trust_feature_security_patches_value_new" />
+    <java-symbol type="string" name="trust_feature_security_patches_value_medium" />
+    <java-symbol type="string" name="trust_feature_security_patches_value_old" />
+    <java-symbol type="string" name="trust_feature_security_patches_explain" />
+    <java-symbol type="string" name="trust_feature_encryption" />
+    <java-symbol type="string" name="trust_feature_encryption_value_enabled" />
+    <java-symbol type="string" name="trust_feature_encryption_value_nolock" />
+    <java-symbol type="string" name="trust_feature_encryption_value_disabled" />
+    <java-symbol type="string" name="trust_feature_encryption_explain" />
+    <java-symbol type="string" name="trust_category_tools" />
+    <java-symbol type="string" name="trust_notification_alerts_title" />
+    <java-symbol type="string" name="trust_restrict_usb_title" />
+    <java-symbol type="string" name="trust_restrict_usb_summary" />
+    <java-symbol type="string" name="trust_restrict_usb_always" />
+    <java-symbol type="string" name="trust_restrict_usb_keyguard" />
+    <java-symbol type="string" name="trust_restrict_usb_disabled" />
+    <java-symbol type="string" name="trust_onboarding_description" />
+    <java-symbol type="string" name="trust_warnings_alerts_intro" />
+    <java-symbol type="string" name="trust_warnings_selinux" />
+    <java-symbol type="string" name="trust_warnings_keys" />
 
     <!-- Full screen aspect ratio -->
     <java-symbol type="bool" name="config_haveHigherAspectRatioScreen" />

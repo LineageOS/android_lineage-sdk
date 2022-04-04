@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-     Copyright (C) 2018-2022 The LineageOS Project
+     Copyright (C) 2018 The LineageOS Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -14,12 +14,14 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-<resources>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="256dp"
+    android:height="256dp"
+    android:viewportWidth="256"
+    android:viewportHeight="256"
+    android:tint="?android:attr/colorAccent">
 
-    <color name="color_error">#FF5630</color>
-
-    <color name="trust_status_good">#36B37E</color>
-    <color name="trust_status_poor">#FFAB00</color>
-    <color name="trust_status_bad">#FF5630</color>
-
-</resources>
+    <path
+        android:fillColor="#000000"
+        android:pathData="M 28.4444 0L 227.556 0C 243.271 0 256 12.7289 256 28.4444L 256 128C 256 198.699 198.699 256 128 256C 57.3013 256 0 198.699 0 128L 0 28.4444C 0 12.7289 12.7289 0 28.4444 0Z" />
+</vector>
