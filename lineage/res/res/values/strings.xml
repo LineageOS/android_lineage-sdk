@@ -124,4 +124,31 @@
     <string name="trust_notification_title_onboarding">Discover Trust</string>
     <string name="trust_notification_content_onboarding">Get to know how to assure your device is safe</string>
     <string name="trust_notification_action_manage">Manage alerts</string>
+    <string name="trust_category_features">Status</string>
+    <string name="trust_feature_selinux">SELinux</string>
+    <string name="trust_feature_selinux_value_enforcing">Enforcing</string>
+    <string name="trust_feature_selinux_value_disabled">Disabled</string>
+    <string name="trust_feature_selinux_explain">SELinux dictates what processes have access to which files/paths on your device.\nThis prevents apps and services from accessing files that they are not supposed to: this way a potential malicious process is limited, and your security preserved.</string>
+    <string name="trust_feature_security_patches">Android security patches</string>
+    <string name="trust_feature_security_patches_value_base">Platform: %1$s\nVendor: %2$s</string>
+    <!-- Lowercase on purpose, appears in trust_feature_security_patches_value_base -->
+    <string name="trust_feature_security_patches_value_new">Up to date</string>
+    <!-- Lowercase on purpose, appears in trust_feature_security_patches_value_base -->
+    <string name="trust_feature_security_patches_value_medium">A few months out of date</string>
+    <!-- Lowercase on purpose, appears in trust_feature_security_patches_value_base -->
+    <string name="trust_feature_security_patches_value_old">Out of date</string>
+    <string name="trust_feature_security_patches_explain">Security patches are released monthly by Google in cooperation with SoC vendors to address flaws which could be exploited by malicious apps to bypass security restrictions and cause permanent damage to your device. Patches made available by Google are applied every month on all supported devices, but patches to proprietary code can only be applied by your device\'s manufacturer. To keep your device safe make sure your LineageOS build is always up-to-date, and (if applicable) ensure your vendor image is updated to the latest one recommended by LineageOS.</string>
+    <string name="trust_feature_encryption">Encryption</string>
+    <string name="trust_feature_encryption_value_enabled">Enabled</string>
+    <string name="trust_feature_encryption_value_nolock">Needs a secure lock screen</string>
+    <string name="trust_feature_encryption_value_disabled">Disabled</string>
+    <string name="trust_feature_encryption_explain">Encrypting your device prevents access to your data when your phone is not booted into Android. This is particularly important if your phone is stolen, as it prevents people from reading your messages, contacts, and other private information without your password.\nTo make the encryption more effective you need to set a secure lock screen password.</string>
+    <string name="trust_category_tools">Privacy</string>
+    <string name="trust_notification_alerts_title">Security alerts</string>
+    <string name="trust_restrict_usb_title">Restrict USB</string>
+    <string name="trust_restrict_usb_summary">Disable new USB gadgets when the device is locked</string>
+    <string name="trust_onboarding_description">Trust helps you keep your device secure and protect your privacy.\nThe Trust icon will only show when the contents of the page have been verified.</string>
+    <string name="trust_warnings_alerts_intro">You can select the security issues you want to be warned about. For your safety, it is recommended to enable all alerts</string>
+    <string name="trust_warnings_selinux">SELinux status</string>
+    <string name="trust_warnings_keys">Build signature</string>
 </resources>
