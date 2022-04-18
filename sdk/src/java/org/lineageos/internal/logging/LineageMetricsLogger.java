@@ -74,4 +74,5 @@ public class LineageMetricsLogger extends MetricsLogger {
     public static final int TILE_POWERSHARE = BASE + 47;
     public static final int TILE_ANTI_FLICKER = BASE + 48;
     public static final int SYSTEM_BUTTON_SETTINGS = BASE + 49;
+    public static final int TILE_BATTERY_HEALTH_SAVER = BASE + 50;
 }
