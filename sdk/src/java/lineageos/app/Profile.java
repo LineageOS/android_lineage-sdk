@@ -29,6 +29,7 @@ import android.util.Log;
 import com.android.internal.policy.IKeyguardService;
 import lineageos.os.Build;
 import lineageos.profiles.AirplaneModeSettings;
+import lineageos.profiles.AutobrightnessSettings;
 import lineageos.profiles.BrightnessSettings;
 import lineageos.profiles.ConnectionSettings;
 import lineageos.profiles.LockSettings;
@@ -90,6 +91,8 @@ public final class Profile implements Parcelable, Comparable {
     private RingModeSettings mRingMode = new RingModeSettings();
 
     private AirplaneModeSettings mAirplaneMode = new AirplaneModeSettings();
+
+    private AutobrightnessSettings mAutobrightness = new AutobrightnessSettings();
 
     private BrightnessSettings mBrightness = new BrightnessSettings();
 
@@ -592,6 +595,12 @@ public final class Profile implements Parcelable, Comparable {
         } else {
             dest.writeInt(0);
         }
+        if (mAutobrightness != null) {
+            dest.writeInt(1);
+            mAutobrightness.writeToParcel(dest, 0);
+        } else {
+            dest.writeInt(0);
+        }
         if (mBrightness != null) {
             dest.writeInt(1);
             mBrightness.writeToParcel(dest, 0);
@@ -674,6 +683,9 @@ public final class Profile implements Parcelable, Comparable {
             }
             if (in.readInt() != 0) {
                 mAirplaneMode = AirplaneModeSettings.CREATOR.createFromParcel(in);
+            }
+            if (in.readInt() != 0) {
+                mAutobrightness = AutobrightnessSettings.CREATOR.createFromParcel(in);
             }
             if (in.readInt() != 0) {
                 mBrightness = BrightnessSettings.CREATOR.createFromParcel(in);
@@ -903,6 +915,23 @@ public final class Profile implements Parcelable, Comparable {
     }
 
     /**
+     * Get the {@link AutobrightnessSettings} associated with the {@link Profile}
+     * @return
+     */
+    public AutobrightnessSettings getAutobrightness() {
+        return mAutobrightness;
+    }
+
+    /**
+     * Set the {@link AutobrightnessSettings} associated with the {@link Profile}
+     * @param descriptor
+     */
+    public void setAutobrightness(AutobrightnessSettings descriptor) {
+        mAutobrightness = descriptor;
+        mDirty = true;
+    }
+
+    /**
      * Get the {@link BrightnessSettings} associated with the {@link Profile}
      * @return
      */
@@ -948,6 +977,9 @@ public final class Profile implements Parcelable, Comparable {
             return true;
         }
         if (mAirplaneMode.isDirty()) {
+            return true;
+        }
+        if (mAutobrightness.isDirty()) {
             return true;
         }
         if (mBrightness.isDirty()) {
@@ -1001,6 +1033,8 @@ public final class Profile implements Parcelable, Comparable {
         builder.append("</notification-light-mode>\n");
 
         mAirplaneMode.getXmlString(builder, context);
+
+        mAutobrightness.getXmlString(builder, context);
 
         mBrightness.getXmlString(builder, context);
 
@@ -1137,6 +1171,10 @@ public final class Profile implements Parcelable, Comparable {
                     AirplaneModeSettings amd = AirplaneModeSettings.fromXml(xpp, context);
                     profile.setAirplaneMode(amd);
                 }
+                if (name.equals("autobrightnessDescriptor")) {
+                    AutobrightnessSettings abd = AutobrightnessSettings.fromXml(xpp, context);
+                    profile.setAutobrightness(abd);
+                }
                 if (name.equals("brightnessDescriptor")) {
                     BrightnessSettings bd = BrightnessSettings.fromXml(xpp, context);
                     profile.setBrightness(bd);
@@ -1209,6 +1247,8 @@ public final class Profile implements Parcelable, Comparable {
         // Set airplane mode
         mAirplaneMode.processOverride(context);
 
+        // Set autobrightness
+        mAutobrightness.processOverride(context);
         // Set brightness
         mBrightness.processOverride(context);
 
