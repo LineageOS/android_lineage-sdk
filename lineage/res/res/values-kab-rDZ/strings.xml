@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2015 The CyanogenMod Project
+                   2017-2022 The LineageOS Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="lineageos_system_label">Anagraw n LineageOS</string>
+    <string name="permlab_modifyProfiles">snifel imaɣnuyen unagraw</string>
+    <string name="permdesc_modifyProfiles">Sireg asnas ad-isnifel imaɣnuyen unagraw.</string>
+    <string name="profileNameDefault">Prédéfini(e)</string>
+    <string name="profileNameWork">Axeddim</string>
+    <string name="profileNameHome">Asebter agejdan</string>
+    <string name="profileNameSilent">Ulac sut</string>
+    <string name="profileNameNight">Iḍ</string>
+    <string name="profileNameAutomobile">Takeṛṛust</string>
+    <string name="profileGroupPhone">Tiliɣri</string>
+    <string name="profileGroupCalendar">Tasmektit</string>
+    <string name="profileGroupEmail">Imayl</string>
+    <string name="wildcardProfile">Wayeḍ</string>
+    <string name="live_display_auto">Awurman</string>
+    <string name="live_display_off">Insa</string>
+    <string name="live_display_day">Ass</string>
+    <string name="live_display_night">Iḍ</string>
+    <string name="build_date">Azemz n usefsu</string>
+    <string name="lineage_api_level">Aswir n LineageOS API</string>
+    <string name="lineage_updates">Lqem n LineageOS</string>
+    <string name="lineage_version">Lqem n LineageOS</string>
+    <string name="unknown">Arussin</string>
+    <string name="trust_feature_name">Trust</string>
+</resources>
