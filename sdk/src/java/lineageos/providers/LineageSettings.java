@@ -1575,6 +1575,16 @@ public final class LineageSettings {
                 sBooleanValidator;
 
         /**
+         *  Toggle the wallpaper zoom effects
+         *  0 = 0ff, 1 = on
+         */
+        public static final String DISPLAY_SETTINGS_WALLPAPER_ZOOM = "display_settings_wallpaper_zoom";
+
+        /** @hide */
+        public static final Validator DISPLAY_SETTINGS_WALLPAPER_ZOOM_VALIDATOR =
+                sBooleanValidator;
+
+        /**
          * Show search bar in recents
          * 0 = Off, 1 = on
          */
@@ -2104,6 +2114,7 @@ public final class LineageSettings {
                 LineageSettings.System.DISPLAY_COLOR_ADJUSTMENT,
                 LineageSettings.System.LIVE_DISPLAY_HINTED,
                 LineageSettings.System.DOUBLE_TAP_SLEEP_GESTURE,
+                LineageSettings.System.DISPLAY_SETTINGS_WALLPAPER_ZOOM,
                 LineageSettings.System.RECENTS_SHOW_SEARCH_BAR,
                 LineageSettings.System.NAVBAR_LEFT_IN_LANDSCAPE,
                 LineageSettings.System.T9_SEARCH_INPUT_LOCALE,
@@ -2241,6 +2252,7 @@ public final class LineageSettings {
             VALIDATORS.put(LIVE_DISPLAY_HINTED, LIVE_DISPLAY_HINTED_VALIDATOR);
             VALIDATORS.put(TRUST_INTERFACE_HINTED, TRUST_INTERFACE_HINTED_VALIDATOR);
             VALIDATORS.put(DOUBLE_TAP_SLEEP_GESTURE, DOUBLE_TAP_SLEEP_GESTURE_VALIDATOR);
+            VALIDATORS.put(DISPLAY_SETTINGS_WALLPAPER_ZOOM, DISPLAY_SETTINGS_WALLPAPER_ZOOM_VALIDATOR);
             VALIDATORS.put(RECENTS_SHOW_SEARCH_BAR, RECENTS_SHOW_SEARCH_BAR_VALIDATOR);
             VALIDATORS.put(NAVBAR_LEFT_IN_LANDSCAPE, NAVBAR_LEFT_IN_LANDSCAPE_VALIDATOR);
             VALIDATORS.put(T9_SEARCH_INPUT_LOCALE, T9_SEARCH_INPUT_LOCALE_VALIDATOR);
