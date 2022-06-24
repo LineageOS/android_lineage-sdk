@@ -262,9 +262,6 @@
     <!-- Whether device has a screen with a higher aspect ratio -->
     <bool name="config_haveHigherAspectRatioScreen">false</bool>
 
-    <!-- Whether device has a notch -->
-    <bool name="config_haveNotch">false</bool>
-
     <!-- Button backlight control. Possible values are:
             0 - Not supported
             1 - Supported, but only on/off mode
