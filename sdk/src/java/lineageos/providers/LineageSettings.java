@@ -2046,6 +2046,15 @@ public final class LineageSettings {
                 sBooleanValidator;
 
         /**
+         * Whether to enable fingerprint wake-and-unlock.
+         */
+        public static final String FINGERPRINT_WAKE_UNLOCK = "fingerprint_wake_unlock";
+
+        /** @hide */
+        public static final Validator FINGERPRINT_WAKE_UNLOCK_VALIDATOR =
+                sBooleanValidator;
+
+        /**
          * I can haz more bukkits
          * @hide
          */
@@ -2309,6 +2318,8 @@ public final class LineageSettings {
             VALIDATORS.put(CLICK_PARTIAL_SCREENSHOT,
                     CLICK_PARTIAL_SCREENSHOT_VALIDATOR);
             VALIDATORS.put(ENABLE_TASKBAR,
+                    ENABLE_TASKBAR_VALIDATOR);
+            VALIDATORS.put(FINGERPRINT_WAKE_UNLOCK,
                     ENABLE_TASKBAR_VALIDATOR);
             VALIDATORS.put(__MAGICAL_TEST_PASSING_ENABLER,
                     __MAGICAL_TEST_PASSING_ENABLER_VALIDATOR);
