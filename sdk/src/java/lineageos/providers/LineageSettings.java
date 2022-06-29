@@ -2173,6 +2173,15 @@ public final class LineageSettings {
                 sBooleanValidator;
 
         /**
+         * Whether to enable fingerprint wake-and-unlock.
+         */
+        public static final String FINGERPRINT_WAKE_UNLOCK = "fingerprint_wake_unlock";
+
+        /** @hide */
+        public static final Validator FINGERPRINT_WAKE_UNLOCK_VALIDATOR =
+                sNonNegativeIntegerValidator;
+
+        /**
          * I can haz more bukkits
          * @hide
          */
@@ -2458,6 +2467,8 @@ public final class LineageSettings {
                     FORCE_SHOW_NAVBAR_VALIDATOR);
             VALIDATORS.put(CLICK_PARTIAL_SCREENSHOT,
                     CLICK_PARTIAL_SCREENSHOT_VALIDATOR);
+            VALIDATORS.put(FINGERPRINT_WAKE_UNLOCK,
+                    FINGERPRINT_WAKE_UNLOCK_VALIDATOR);
             VALIDATORS.put(__MAGICAL_TEST_PASSING_ENABLER,
                     __MAGICAL_TEST_PASSING_ENABLER_VALIDATOR);
         };
