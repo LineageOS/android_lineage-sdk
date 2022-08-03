@@ -177,4 +177,7 @@
     <java-symbol type="array" name="config_deviceDisabledComponents" />
     <java-symbol type="array" name="config_globallyDisabledComponents" />
     <java-symbol type="array" name="config_forceEnabledComponents" />
+
+    <!-- Wether to handle audio direction changes between major call states -->
+    <java-symbol type="bool" name="config_handleAudioDirectionChangesBetweenCallStateChanges" />
 </resources>
