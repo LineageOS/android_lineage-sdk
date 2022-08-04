@@ -68,4 +68,6 @@
     <string name="kilobytespersecond_short">кБ/с</string>
     <string name="megabytespersecond_short">МБ/с</string>
     <string name="trust_feature_name">Trust</string>
+    <string name="trust_notification_title_onboarding">Відкрийте для себе Trust</string>
+    <string name="trust_notification_content_onboarding">Дізнайтесь, як убезпечити пристрій</string>
 </resources>

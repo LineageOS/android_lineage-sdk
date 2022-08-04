@@ -64,9 +64,9 @@
     <string name="permdesc_manageRemotePrefs">Tətbiqetməyə uzaqdan bağlantı tənzimləmələrini dəyişdirmək icazəsi verər</string>
     <string name="build_date">Quruluş tarixi</string>
     <string name="lineage_api_level">LineageOS API səviyyəsi</string>
-    <string name="lineage_updates">LineageOS yeniləmələri</string>
+    <string name="lineage_updates">LineageOS güncəlləmələri</string>
     <string name="lineage_version">LineageOS versiyası</string>
-    <string name="lineage_vendor_security_patch">Vendor təhlükəsizlik yamaq səviyyəsi</string>
+    <string name="lineage_vendor_security_patch">Vendor güvənlik yamaq səviyyəsi</string>
     <string name="unknown">Bilinmir</string>
     <string name="app_killed_message">Tətbiqetmə bağlanıldı</string>
     <string name="kilobitspersecond_short">kb/s</string>
@@ -77,8 +77,8 @@
     <string name="permlab_trustInterface">Trust interfeysinə müraciət</string>
     <string name="permdesc_trustInterface">Tətbiqetməyə Trust xəbərdarlıqlarını və təkliflərini görüntüləmə icazəsi verər</string>
     <string name="trust_notification_channel">Trust xəbərdarlıqları</string>
-    <string name="trust_notification_title_security">Trust \u2022 Sistem təhlükəsizliyi</string>
-    <string name="trust_notification_content_selinux">SELinux məcbur edilmir, təhlükəsizliyiniz zəiflədi</string>
+    <string name="trust_notification_title_security">Trust \u2022 Sistem güvənliyi</string>
+    <string name="trust_notification_content_selinux">SELinux məcbur edilmir, güvənliyiniz zəiflədi</string>
     <string name="trust_notification_content_keys">Bu quruluş ictimai açarlarla imzalandı</string>
     <string name="trust_notification_title_onboarding">Trust-ı Kəşf et</string>
     <string name="trust_notification_content_onboarding">Cihazınızın təhlükəsiz olduğundan necə əmin olacağınızı öyrənin</string>
