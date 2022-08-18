@@ -51,6 +51,7 @@ import lineageos.providers.LineageSettings;
 
 import org.lineageos.platform.internal.R;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 
 public class NetworkTraffic extends TextView {
@@ -141,7 +142,7 @@ public class NetworkTraffic extends TextView {
 
     private LineageStatusBarItem.DarkReceiver mDarkReceiver =
             new LineageStatusBarItem.DarkReceiver() {
-        public void onDarkChanged(Rect area, float darkIntensity, int tint) {
+        public void onDarkChanged(ArrayList<Rect> areas, float darkIntensity, int tint) {
             mIconTint = tint;
             setTextColor(mIconTint);
             updateTrafficDrawableColor();

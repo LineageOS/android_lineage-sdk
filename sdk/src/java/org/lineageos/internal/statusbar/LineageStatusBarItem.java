@@ -20,6 +20,8 @@ import android.graphics.Rect;
 import android.view.View;
 import android.view.ViewParent;
 
+import java.util.ArrayList;
+
 public class LineageStatusBarItem {
 
     public interface Manager {
@@ -28,7 +30,7 @@ public class LineageStatusBarItem {
     }
 
     public interface DarkReceiver {
-        public void onDarkChanged(Rect area, float darkIntensity, int tint);
+        public void onDarkChanged(ArrayList<Rect> areas, float darkIntensity, int tint);
         public void setFillColors(int darkColor, int lightColor);
     }
 
