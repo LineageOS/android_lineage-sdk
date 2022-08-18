@@ -403,6 +403,7 @@ public class NetworkTraffic extends TextView {
         TetheringStats tetheringStats = new TetheringStats();
 
         NetworkStats stats = null;
+/*
         try {
             // STATS_PER_UID returns hw offload and netd stats combined (as entry UID_TETHERING)
             // STATS_PER_IFACE returns only hw offload stats (as entry UID_ALL)
@@ -430,6 +431,7 @@ public class NetworkTraffic extends TextView {
                 tetheringStats.rxBytes += entry.rxBytes;
             }
         }
+*/
         return tetheringStats;
     }
 
