@@ -16,6 +16,24 @@
       "message": "got a stacktrace?\n",
       "revId": "d9e8d0e7619a7008d14ec66f46728da2975c3006",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f59eedf5_1cac5431",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 4550
+      },
+      "writtenOn": "2022-08-26T00:12:41Z",
+      "side": 1,
+      "message": "No stacktrace, this doesn\u0027t compile because the code got moved to apex",
+      "parentUuid": "daa56991_a6ab5041",
+      "revId": "d9e8d0e7619a7008d14ec66f46728da2975c3006",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
