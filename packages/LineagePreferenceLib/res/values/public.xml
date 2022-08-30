@@ -1,0 +1,14 @@
+<resources>
+
+  <public type="attr" name="requiresPackage" />
+  <public type="attr" name="requiresFeature" />
+  <public type="attr" name="requiresConfig" />
+  <public type="attr" name="requiresConfigMask" />
+  <public type="attr" name="requiresProperty" />
+  <public type="attr" name="requiresOwner" />
+  <public type="attr" name="xmlRes" />
+  <public type="attr" name="requiresAction" />
+  <public type="attr" name="replacesKey" />
+  <public type="attr" name="minSummaryLines" />
+
+</resources>

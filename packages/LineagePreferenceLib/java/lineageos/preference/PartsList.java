@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.lineageos.internal.lineageparts;
+package lineageos.preference;
 
 import android.content.ComponentName;
 import android.content.Context;
@@ -42,8 +42,8 @@ import static com.android.internal.R.styleable.Preference_icon;
 import static com.android.internal.R.styleable.Preference_key;
 import static com.android.internal.R.styleable.Preference_summary;
 import static com.android.internal.R.styleable.Preference_title;
-import static lineageos.platform.R.styleable.lineage_Searchable;
-import static lineageos.platform.R.styleable.lineage_Searchable_xmlRes;
+import static lineageos.preference.R.styleable.lineage_Searchable;
+import static lineageos.preference.R.styleable.lineage_Searchable_xmlRes;
 
 public class PartsList {
 
