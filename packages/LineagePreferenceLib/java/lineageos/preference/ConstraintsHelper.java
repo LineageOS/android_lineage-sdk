@@ -43,7 +43,8 @@ import java.util.Objects;
 import java.util.Set;
 
 import lineageos.hardware.LineageHardwareManager;
-import lineageos.platform.R;
+import static lineageos.preference.R.styleable.lineage_SelfRemovingPreference_minSummaryLines;
+import static lineageos.preference.R.styleable.lineage_SelfRemovingPreference_replacesKey;
 
 
 /**
@@ -78,8 +79,8 @@ public class ConstraintsHelper {
 
         TypedArray a = context.getResources().obtainAttributes(attrs,
                 R.styleable.lineage_SelfRemovingPreference);
-        mSummaryMinLines = a.getInteger(R.styleable.lineage_SelfRemovingPreference_minSummaryLines, -1);
-        String replacesKey = a.getString(R.styleable.lineage_SelfRemovingPreference_replacesKey);
+        mSummaryMinLines = a.getInteger(lineage_SelfRemovingPreference_minSummaryLines, -1);
+        String replacesKey = a.getString(lineage_SelfRemovingPreference_replacesKey);
         if (replacesKey != null) {
             mReplacesKey = replacesKey.split("\\|");
         }

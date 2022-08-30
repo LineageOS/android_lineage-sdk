@@ -14,6 +14,6 @@
  * limitations under the License.
  */
 
-package org.lineageos.internal.lineageparts;
+package lineageos.preference;
 
 parcelable PartInfo;
