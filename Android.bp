@@ -1,5 +1,5 @@
 //
-// Copyright (C) 2018-2021 The LineageOS Project
+// Copyright (C) 2018-2022 The LineageOS Project
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -66,11 +66,6 @@ lineage_sdk_src = "sdk/src/java/lineageos"
 lineage_sdk_internal_src = "sdk/src/java/org/lineageos/internal"
 library_src = "lineage/lib/main/java"
 
-lineage_sdk_LOCAL_STATIC_ANDROID_LIBRARIES = [
-    "androidx.preference_preference",
-    "SettingsLibMainSwitchPreference",
-]
-
 lineage_sdk_LOCAL_STATIC_JAVA_LIBRARIES = [
     "android.hardware.usb-V1.3-java",
     "vendor.lineage.livedisplay-V2.0-java",
@@ -94,7 +89,7 @@ java_library {
     name: "org.lineageos.platform",
     installable: true,
     sdk_version: "core_platform",
-    static_libs: lineage_sdk_LOCAL_STATIC_ANDROID_LIBRARIES + lineage_sdk_LOCAL_STATIC_JAVA_LIBRARIES,
+    static_libs: lineage_sdk_LOCAL_STATIC_JAVA_LIBRARIES,
 
     libs: [
         "framework",
@@ -124,7 +119,7 @@ java_library {
 java_library {
     name: "org.lineageos.platform.internal",
     required: ["services"],
-    static_libs: lineage_sdk_LOCAL_STATIC_ANDROID_LIBRARIES + lineage_sdk_LOCAL_STATIC_JAVA_LIBRARIES,
+    static_libs: lineage_sdk_LOCAL_STATIC_JAVA_LIBRARIES,
 
     srcs: [
         lineage_sdk_src + "/**/*.java",
@@ -149,7 +144,7 @@ java_library {
 java_library {
     name: "org.lineageos.platform.sdk",
     required: ["services"],
-    static_libs: lineage_sdk_LOCAL_STATIC_ANDROID_LIBRARIES + lineage_sdk_LOCAL_STATIC_JAVA_LIBRARIES,
+    static_libs: lineage_sdk_LOCAL_STATIC_JAVA_LIBRARIES,
 
     srcs: [
         lineage_sdk_src + "/**/*.java",
