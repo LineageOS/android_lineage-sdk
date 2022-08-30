@@ -16,6 +16,24 @@
       "message": "Aren\u0027t the 0x3f ids supposed to be retained?",
       "revId": "514848cd6d522c15071be5c9b25dd84de51d77f8",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2bc01cd9_03fb3699",
+        "filename": "packages/LineagePreferenceLib/res/values/public.xml",
+        "patchSetId": 8
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2022-08-30T15:04:30Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "a70966a0_768d2263",
+      "revId": "514848cd6d522c15071be5c9b25dd84de51d77f8",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
