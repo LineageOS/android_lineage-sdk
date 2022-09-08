@@ -66,7 +66,6 @@ lineage_sdk_internal_src = "sdk/src/java/org/lineageos/internal"
 library_src = "lineage/lib/main/java"
 
 lineage_sdk_LOCAL_STATIC_JAVA_LIBRARIES = [
-    "android.hardware.usb-V1.3-java",
     "vendor.lineage.livedisplay-V2.0-java",
     "vendor.lineage.livedisplay-V2.1-java",
     "vendor.lineage.touch-V1.0-java",
