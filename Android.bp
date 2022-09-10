@@ -67,8 +67,7 @@ lineage_sdk_internal_src = "sdk/src/java/org/lineageos/internal"
 library_src = "lineage/lib/main/java"
 
 lineage_sdk_LOCAL_STATIC_ANDROID_LIBRARIES = [
-    "androidx.preference_preference",
-    "SettingsLibMainSwitchPreference",
+    "SettingsLib",
 ]
 
 lineage_sdk_LOCAL_STATIC_JAVA_LIBRARIES = [
