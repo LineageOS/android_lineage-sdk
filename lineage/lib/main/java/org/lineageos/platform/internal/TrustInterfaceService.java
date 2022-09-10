@@ -34,6 +34,8 @@ import android.util.Log;
 import android.util.Pair;
 import android.text.TextUtils;
 
+import com.android.settingslib.DeviceInfoUtils;
+
 import lineageos.app.LineageContextConstants;
 import lineageos.providers.LineageSettings;
 import lineageos.trust.ITrustInterface;
@@ -202,9 +204,25 @@ public class TrustInterfaceService extends LineageSystemService {
             case TrustInterface.TRUST_FEATURE_SELINUX:
                 return getSELinuxStatus();
             case TrustInterface.TRUST_FEATURE_PLATFORM_SECURITY_PATCH:
-                return getSecurityPatchStatus(PLATFORM_SECURITY_PATCHES);
+                String patchLevel = DeviceInfoUtils.getSecurityPatch();
+                if (TextUtils.isEmpty(patchLevel)) {
+                    // Try to fallback to build prop
+                    patchLevel = SystemProperties.get(PLATFORM_SECURITY_PATCHES);
+                    if (TextUtils.isEmpty(patchLevel)) {
+                        return TrustInterface.ERROR_UNDEFINED;
+                    }
+                }
+                return getSecurityPatchStatus(patchLevel);
             case TrustInterface.TRUST_FEATURE_VENDOR_SECURITY_PATCH:
-                return getSecurityPatchStatus(VENDOR_SECURITY_PATCHES);
+                String patchLevel = SystemProperties.get(VENDOR_SECURITY_PATCHES);
+                if (TextUtils.isEmpty(patchLevel)) {
+                    // Try to fallback to Lineage vendor prop
+                    patchLevel = SystemProperties.get(LINEAGE_VENDOR_SECURITY_PATCHES);
+                    if (TextUtils.isEmpty(patchLevel)) {
+                        return TrustInterface.ERROR_UNDEFINED;
+                    }
+                }
+                return getSecurityPatchStatus(patchLevel);
             case TrustInterface.TRUST_FEATURE_ENCRYPTION:
                 return getEncryptionStatus();
             case TrustInterface.TRUST_FEATURE_KEYS:
@@ -281,20 +299,7 @@ public class TrustInterfaceService extends LineageSystemService {
                 TrustInterface.TRUST_FEATURE_LEVEL_BAD;
     }
 
-    private int getSecurityPatchStatus(String target) {
-        String patchLevel = SystemProperties.get(target);
-        if (TextUtils.isEmpty(patchLevel)) {
-            // Try to fallback to Lineage vendor prop
-            if (VENDOR_SECURITY_PATCHES.equals(target)) {
-                    patchLevel = SystemProperties.get(LINEAGE_VENDOR_SECURITY_PATCHES);
-                    if (TextUtils.isEmpty(patchLevel)) {
-                        return TrustInterface.ERROR_UNDEFINED;
-                    }
-            } else {
-                return TrustInterface.ERROR_UNDEFINED;
-            }
-        }
-
+    private int getSecurityPatchStatus(String patchLevel) {
         Calendar today = Calendar.getInstance();
         Calendar patchCal = Calendar.getInstance();
 
