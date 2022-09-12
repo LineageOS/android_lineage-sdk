@@ -236,18 +236,6 @@ public class NetworkTraffic extends TextView {
                 rxBytes += ifaceRxBytes;
             }
 
-            // Add tether hw offload counters since these are
-            // not included in netd interface stats.
-            final TetheringStats tetheringStats = getOffloadTetheringStats();
-            txBytes += tetheringStats.txBytes;
-            rxBytes += tetheringStats.rxBytes;
-
-            if (DEBUG) {
-                Log.d(TAG, "mNetworksChanged = " + mNetworksChanged);
-                Log.d(TAG, "tether hw offload txBytes: " + tetheringStats.txBytes
-                        + " rxBytes: " + tetheringStats.rxBytes);
-            }
-
             final long txBytesDelta = txBytes - mLastTxBytes;
             final long rxBytesDelta = rxBytes - mLastRxBytes;
 
@@ -392,45 +380,6 @@ public class NetworkTraffic extends TextView {
         ConnectivityManager cm =
                 (ConnectivityManager) mContext.getSystemService(Context.CONNECTIVITY_SERVICE);
         return cm.getActiveNetworkInfo() != null;
-    }
-
-    private class TetheringStats {
-        long txBytes;
-        long rxBytes;
-    }
-
-    private TetheringStats getOffloadTetheringStats() {
-        TetheringStats tetheringStats = new TetheringStats();
-
-        NetworkStats stats = null;
-        try {
-            // STATS_PER_UID returns hw offload and netd stats combined (as entry UID_TETHERING)
-            // STATS_PER_IFACE returns only hw offload stats (as entry UID_ALL)
-            stats = mNetworkManagementService.getNetworkStatsTethering(
-                    NetworkStats.STATS_PER_IFACE);
-        } catch (RemoteException e) {
-            Log.e(TAG, "Unable to call getNetworkStatsTethering: " + e);
-        }
-        if (stats == null) {
-            // nothing we can do except return zero stats
-            return tetheringStats;
-        }
-
-        NetworkStats.Entry entry = null;
-        // Entries here are per tethered interface.
-        // Counters persist even after tethering has been disabled.
-        for (int i = 0; i < stats.size(); i++) {
-            entry = stats.getValues(i, entry);
-            if (DEBUG) {
-                Log.d(TAG, "tethering stats entry: " + entry);
-            }
-            // hw offload tether stats are reported under UID_ALL.
-            if (entry.uid == NetworkStats.UID_ALL) {
-                tetheringStats.txBytes += entry.txBytes;
-                tetheringStats.rxBytes += entry.rxBytes;
-            }
-        }
-        return tetheringStats;
     }
 
     private void updateSettings() {
