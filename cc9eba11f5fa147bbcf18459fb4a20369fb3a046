@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "61b3ea32_8fae74cc",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2022-09-24T09:33:35Z",
+      "side": 1,
+      "message": "\"android.hardware.usb-V1.3-java\" can then be removed from lineage_sdk_LOCAL_STATIC_JAVA_LIBRARIES in the main Android.bp.",
+      "revId": "cc9eba11f5fa147bbcf18459fb4a20369fb3a046",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
