@@ -24,6 +24,30 @@
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "8f5454ca_d4e48bb7",
+        "filename": "sdk/src/java/org/lineageos/internal/statusbar/NetworkTraffic.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2022-09-25T16:36:50Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "b8297db3_17d00a32",
+      "range": {
+        "startLine": 49,
+        "startChar": 0,
+        "endLine": 49,
+        "endChar": 43
+      },
+      "revId": "6904474c997d9f3e0afd1f4ad5bd60aa35a210f4",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "7d5e20a3_6c9622e9",
@@ -47,6 +71,30 @@
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "8e7c5e37_d9d45100",
+        "filename": "sdk/src/java/org/lineageos/internal/statusbar/NetworkTraffic.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 193,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2022-09-25T16:36:50Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7d5e20a3_6c9622e9",
+      "range": {
+        "startLine": 193,
+        "startChar": 0,
+        "endLine": 193,
+        "endChar": 103
+      },
+      "revId": "6904474c997d9f3e0afd1f4ad5bd60aa35a210f4",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "232cdbc4_1b54f48c",
@@ -60,6 +108,30 @@
       "writtenOn": "2022-09-25T16:20:01Z",
       "side": 1,
       "message": "Over 100 chars",
+      "range": {
+        "startLine": 449,
+        "startChar": 12,
+        "endLine": 449,
+        "endChar": 101
+      },
+      "revId": "6904474c997d9f3e0afd1f4ad5bd60aa35a210f4",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "911146c1_825e299b",
+        "filename": "sdk/src/java/org/lineageos/internal/statusbar/NetworkTraffic.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 449,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2022-09-25T16:36:50Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "232cdbc4_1b54f48c",
       "range": {
         "startLine": 449,
         "startChar": 12,
