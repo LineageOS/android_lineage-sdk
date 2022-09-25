@@ -60,7 +60,7 @@ public class LineageDatabaseHelper extends SQLiteOpenHelper{
     private static final boolean LOCAL_LOGV = false;
 
     private static final String DATABASE_NAME = "lineagesettings.db";
-    private static final int DATABASE_VERSION = 16;
+    private static final int DATABASE_VERSION = 17;
 
     private static final String DATABASE_NAME_OLD = "cmsettings.db";
 
@@ -418,6 +418,15 @@ public class LineageDatabaseHelper extends SQLiteOpenHelper{
                 }, true);
             }
             upgradeVersion = 16;
+        }
+
+        if (upgradeVersion < 17) {
+            // Move berry_black_theme to secure
+            moveSettingsToNewTable(db, LineageTableNames.TABLE_SYSTEM,
+                    LineageTableNames.TABLE_SECURE, new String[] {
+                    LineageSettings.Secure.BERRY_BLACK_THEME
+            }, true);
+            upgradeVersion = 17;
         }
         // *** Remember to update DATABASE_VERSION above!
         if (upgradeVersion != newVersion) {
