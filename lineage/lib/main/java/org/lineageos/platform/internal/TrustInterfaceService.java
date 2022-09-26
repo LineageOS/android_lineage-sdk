@@ -166,7 +166,7 @@ public class TrustInterfaceService extends LineageSystemService {
     private boolean hasUsbRestrictorInternal() {
         DevicePolicyManager policyManager = mContext.getSystemService(DevicePolicyManager.class);
         if (policyManager != null) {
-            return policyManager.canUsbDataSignalingBeDisabled();
+            return policyManager.canUsbDataSignalingBeDisabled() || mUsbRestrictor != null;
         } else {
             return mUsbRestrictor != null;
         }
