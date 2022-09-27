@@ -34,6 +34,29 @@
       "parentUuid": "e07ee4ce_f049036f",
       "revId": "7c46c17af4c67fe0b6cc7b500bb20b361f45acf7",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d6027f50_15099451",
+        "filename": "lineage/lib/main/java/org/lineageos/platform/internal/TrustInterfaceService.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 172,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2022-09-27T22:43:06Z",
+      "side": 1,
+      "message": "This can simply become:\n\n\u003e return mUsbRestrictor !\u003d null;",
+      "range": {
+        "startLine": 170,
+        "startChar": 9,
+        "endLine": 172,
+        "endChar": 9
+      },
+      "revId": "7c46c17af4c67fe0b6cc7b500bb20b361f45acf7",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
