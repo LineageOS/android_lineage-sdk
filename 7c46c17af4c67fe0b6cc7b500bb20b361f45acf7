@@ -57,6 +57,29 @@
       },
       "revId": "7c46c17af4c67fe0b6cc7b500bb20b361f45acf7",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "98579ca1_a2c5a6cb",
+        "filename": "lineage/lib/main/java/org/lineageos/platform/internal/TrustInterfaceService.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 172,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2022-09-28T10:47:42Z",
+      "side": 1,
+      "message": "Actually... can\u0027t all this be turned into:\n\n\u003e  return mUsbRestrictor !\u003d null ||\n\u003e          policyManager !\u003d null \u0026\u0026 policyManager.canUsbDataSignalingBeDisabled();",
+      "range": {
+        "startLine": 168,
+        "startChar": 0,
+        "endLine": 172,
+        "endChar": 9
+      },
+      "revId": "7c46c17af4c67fe0b6cc7b500bb20b361f45acf7",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
