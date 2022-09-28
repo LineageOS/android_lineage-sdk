@@ -80,6 +80,30 @@
       },
       "revId": "7c46c17af4c67fe0b6cc7b500bb20b361f45acf7",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1626e378_2d53bb9e",
+        "filename": "lineage/lib/main/java/org/lineageos/platform/internal/TrustInterfaceService.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 172,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2022-09-28T10:57:33Z",
+      "side": 1,
+      "message": "https://review.lineageos.org/c/LineageOS/android_lineage-sdk/+/339855",
+      "parentUuid": "98579ca1_a2c5a6cb",
+      "range": {
+        "startLine": 168,
+        "startChar": 0,
+        "endLine": 172,
+        "endChar": 9
+      },
+      "revId": "7c46c17af4c67fe0b6cc7b500bb20b361f45acf7",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
