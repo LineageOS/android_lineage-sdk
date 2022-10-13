@@ -21,14 +21,19 @@ android_app {
     ],
 
     required: [
-        "privapp_whitelist_org.lineageos.lineagesettings",
+        "privapp_allowlist_eco.shift.settingsstorage",
+    ],
+
+    aaptflags: [
+        "--rename-manifest-package",
+        "eco.shift.settingsstorage",
     ],
 }
 
 prebuilt_etc {
-    name: "privapp_whitelist_org.lineageos.lineagesettings",
+    name: "privapp_allowlist_eco.shift.settingsstorage",
     sub_dir: "permissions",
-    src: "privapp_whitelist_org.lineageos.lineagesettings.xml",
+    src: "privapp_allowlist_eco.shift.settingsstorage.xml",
     filename_from_src: true,
     system_ext_specific: true,
 }
