@@ -4,7 +4,10 @@
 //
 
 android_app {
-    name: "LineageSettingsProvider",
+    name: "SHIFT-SettingsProvider",
+
+    overrides: ["LineageSettingsProvider"],
+
     srcs: ["src/**/*.java"],
     resource_dirs: ["res"],
 
