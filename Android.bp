@@ -134,6 +134,20 @@ java_library {
     },
 }
 
+// Resources only target for use by core
+// ============================================================
+
+java_library {
+    name: "org.lineageos.platform.resources",
+
+    srcs: [
+        // For the generated R.java and Manifest.java
+        ":org.lineageos.platform-res{.aapt.srcjar}",
+    ],
+
+    sdk_version: "core_current",
+}
+
 // The SDK
 // ============================================================
 
