@@ -49,8 +49,7 @@
          the predefined and translated strings in the Settings
          app, they can be remapped here. The format is
          "oldname:newname", one per entry. -->
-    <string-array name="config_displayModeMappings" translatable="false">
-    </string-array>
+    <string-array name="config_displayModeMappings" translatable="false" />
 
     <!-- Should we filter any display modes which are unmapped? -->
     <bool name="config_filterDisplayModes">false</bool>
@@ -252,8 +251,7 @@
 
     <!-- The list of vendor package signatures that should also be considered
          platform signatures, specifically for use on devices with a vendor partition. -->
-    <string-array name="config_vendorPlatformSignatures">
-    </string-array>
+    <string-array name="config_vendorPlatformSignatures" />
 
     <!-- Indicate whether encryption causes significant performances loss.
          This MUST NOT be set to true on devices produced in 2016 or later -->
@@ -291,14 +289,18 @@
 
     <!-- The list of components which should be automatically disabled for a specific device.
          Note: this MUST not be used to randomly disable components, ask for approval first! -->
-    <string-array name="config_deviceDisabledComponents" translatable="false">
-    </string-array>
+    <string-array name="config_deviceDisabledComponents" translatable="false" />
 
     <!-- The list of components which should be automatically disabled for all devices. -->
-    <string-array name="config_globallyDisabledComponents" translatable="false">
-    </string-array>
+    <string-array name="config_globallyDisabledComponents" translatable="false" />
 
     <!-- The list of components which should be forced to be enabled. -->
-    <string-array name="config_forceEnabledComponents" translatable="false">
-    </string-array>
+    <string-array name="config_forceEnabledComponents" translatable="false" />
+
+    <!-- The list of package IDs that are allowed to use aux cameras.
+         NOTE: If this list is empty then all apps will be able to use aux cameras. -->
+    <string-array name="config_cameraAuxPackageAllowList" translatable="false" />
+
+    <!-- The list of package IDs that are not allowed to use aux cameras. -->
+    <string-array name="config_cameraAuxPackageExcludeList" translatable="false" />
 </resources>
