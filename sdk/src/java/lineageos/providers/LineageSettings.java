@@ -2997,6 +2997,16 @@ public final class LineageSettings {
         // endregion
 
         /**
+         * Whether QS tiles requires unlocking
+         * @hide
+         */
+        public static final String QS_TILES_REQUIRES_UNLOCKING = "qs_tiles_requires_unlocking";
+        
+        /** @hide */
+        public static final Validator QS_TILES_REQUIRES_UNLOCKING_VALIDATOR =
+                sBooleanValidator;
+        
+        /**
          * I can haz more bukkits
          * @hide
          */
@@ -3055,6 +3065,7 @@ public final class LineageSettings {
             VALIDATORS.put(TETHERING_ALLOW_VPN_UPSTREAMS, TETHERING_ALLOW_VPN_UPSTREAMS_VALIDATOR);
             VALIDATORS.put(TRUST_WARNINGS, TRUST_WARNINGS_VALIDATOR);
             VALIDATORS.put(VOLUME_PANEL_ON_LEFT, VOLUME_PANEL_ON_LEFT_VALIDATOR);
+            VALIDATORS.put(QS_TILES_REQUIRES_UNLOCKING, QS_TILES_REQUIRES_UNLOCKING_VALIDATOR);
         }
     }
 
