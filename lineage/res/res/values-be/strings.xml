@@ -17,9 +17,9 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="permlab_modifyProfiles">змена сістэмных профіляў</string>
-    <string name="permdesc_modifyProfiles">Дазваляць праграмам змяняць сістэмныя профілі.</string>
+    <string name="permdesc_modifyProfiles">Дазваляе праграме змяняць сістэмныя профілі.</string>
     <string name="permlab_useHardwareFramework">Узаемадзеянне з абсталяваннем</string>
-    <string name="profileNameDefault">Па змаўчанні</string>
+    <string name="profileNameDefault">Прадвызначана</string>
     <string name="profileNameWork">Праца</string>
     <string name="profileNameNight">Ноч</string>
     <string name="profileNameAutomobile">Аўтамабіль</string>
@@ -49,4 +49,5 @@
     <string name="accessibility_quick_settings_live_display_changed_night">LiveDisplay зменены ў начны рэжым.</string>
     <string name="accessibility_quick_settings_live_display_changed_outdoor">LiveDisplay зменены на рэжым для вуліцы.</string>
     <string name="permlab_manageLiveDisplay">кіраванне наладамі LiveDisplay</string>
+    <string name="trust_notification_title_onboarding">Даследуйце Trust</string>
 </resources>
