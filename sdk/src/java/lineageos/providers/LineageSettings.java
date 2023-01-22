@@ -381,6 +381,9 @@ public final class LineageSettings {
     private static final Validator sColorValidator =
             new InclusiveIntegerRangeValidator(Integer.MIN_VALUE, Integer.MAX_VALUE);
 
+    private static final Validator sSecondsFromMidnightValidator =
+            new InclusiveIntegerRangeValidator(0, 86400);
+
     private static final Validator sAlwaysTrueValidator = new Validator() {
         @Override
         public boolean validate(String value) {
@@ -1349,6 +1352,54 @@ public final class LineageSettings {
                 sBooleanValidator;
 
         /**
+         * Whether battery care should be enabled.
+         * The value is boolean (1 or 0).
+         */
+        public static final String BATTERY_CARE_ENABLED = "battery_care_enabled";
+
+        /** @hide */
+        public static final Validator BATTERY_CARE_ENABLED_VALIDATOR =
+                sBooleanValidator;
+
+        /**
+         * Battery care mode, one of AUTO (default), CUSTOM, or ALWAYS.
+         */
+        public static final String BATTERY_CARE_MODE = "battery_care_mode";
+
+        /** @hide */
+        public static final Validator BATTERY_CARE_MODE_VALIDATOR =
+                new InclusiveIntegerRangeValidator(1, 2);
+
+        /**
+         * Time when battery care is automatically activated in CUSTOM mode.
+         * The value is represented as seconds from midnight.
+         */
+        public static final String BATTERY_CARE_START_TIME = "battery_care_start_time";
+
+        /** @hide */
+        public static final Validator BATTERY_CARE_START_TIME_VALIDATOR =
+                sSecondsFromMidnightValidator;
+
+        /**
+         * Target time when battery is fully charged in CUSTOM mode.
+         * The value is represented as seconds from midnight.
+         */
+        public static final String BATTERY_CARE_TARGET_TIME = "battery_care_target_time";
+
+        /** @hide */
+        public static final Validator BATTERY_CARE_TARGET_TIME_VALIDATOR =
+                sSecondsFromMidnightValidator;
+
+        /**
+         * Limit to stop charging in ALWAYS mode.
+         */
+        public static final String BATTERY_CARE_CHARGING_LIMIT = "battery_care_charging_limit";
+
+        /** @hide */
+        public static final Validator BATTERY_CARE_CHARGING_LIMIT_VALIDATOR =
+                new InclusiveIntegerRangeValidator(70, 100);
+
+        /**
          * Whether the battery light should be enabled (if hardware supports it)
          * The value is boolean (1 or 0).
          */
@@ -2218,6 +2269,11 @@ public final class LineageSettings {
                     TORCH_LONG_PRESS_POWER_TIMEOUT_VALIDATOR);
             VALIDATORS.put(BUTTON_BACKLIGHT_ONLY_WHEN_PRESSED,
                     BUTTON_BACKLIGHT_ONLY_WHEN_PRESSED_VALIDATOR);
+            VALIDATORS.put(BATTERY_CARE_ENABLED, BATTERY_CARE_ENABLED_VALIDATOR);
+            VALIDATORS.put(BATTERY_CARE_MODE, BATTERY_CARE_MODE_VALIDATOR);
+            VALIDATORS.put(BATTERY_CARE_START_TIME, BATTERY_CARE_START_TIME_VALIDATOR);
+            VALIDATORS.put(BATTERY_CARE_TARGET_TIME, BATTERY_CARE_TARGET_TIME_VALIDATOR);
+            VALIDATORS.put(BATTERY_CARE_CHARGING_LIMIT, BATTERY_CARE_CHARGING_LIMIT_VALIDATOR);
             VALIDATORS.put(BATTERY_LIGHT_ENABLED, BATTERY_LIGHT_ENABLED_VALIDATOR);
             VALIDATORS.put(BATTERY_LIGHT_FULL_CHARGE_DISABLED,
                     BATTERY_LIGHT_FULL_CHARGE_DISABLED_VALIDATOR);
