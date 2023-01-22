@@ -306,4 +306,7 @@
 
     <!-- The list of package IDs that are allowed to skip camera high frame rate checks. -->
     <string-array name="config_cameraHFRPrivAppList" translatable="false" />
+
+    <!-- Default values for Battery Care -->
+    <bool name="config_enableBatteryCare">false</bool>
 </resources>
