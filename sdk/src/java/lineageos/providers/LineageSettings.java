@@ -1,6 +1,6 @@
 /**
  * Copyright (C) 2015-2016 The CyanogenMod Project
- *               2017-2022 The LineageOS Project
+ *               2017-2023 The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -380,6 +380,9 @@ public final class LineageSettings {
 
     private static final Validator sColorValidator =
             new InclusiveIntegerRangeValidator(Integer.MIN_VALUE, Integer.MAX_VALUE);
+
+    private static final Validator sSecondsFromMidnightValidator =
+            new InclusiveIntegerRangeValidator(0, 86400);
 
     private static final Validator sAlwaysTrueValidator = new Validator() {
         @Override
@@ -1349,6 +1352,54 @@ public final class LineageSettings {
                 sBooleanValidator;
 
         /**
+         * Whether charging control should be enabled.
+         * The value is boolean (1 or 0).
+         */
+        public static final String CHARGING_CONTROL_ENABLED = "charging_control_enabled";
+
+        /** @hide */
+        public static final Validator CHARGING_CONTROL_ENABLED_VALIDATOR =
+                sBooleanValidator;
+
+        /**
+         * Charging control mode, one of AUTO (1; default), CUSTOM (2), or LIMIT (3).
+         */
+        public static final String CHARGING_CONTROL_MODE = "charging_control_mode";
+
+        /** @hide */
+        public static final Validator CHARGING_CONTROL_MODE_VALIDATOR =
+                new InclusiveIntegerRangeValidator(1, 3);
+
+        /**
+         * Time when charging control is automatically activated in CUSTOM mode.
+         * The value is represented as seconds from midnight.
+         */
+        public static final String CHARGING_CONTROL_START_TIME = "charging_control_start_time";
+
+        /** @hide */
+        public static final Validator CHARGING_CONTROL_START_TIME_VALIDATOR =
+                sSecondsFromMidnightValidator;
+
+        /**
+         * Target time when battery is fully charged in CUSTOM mode.
+         * The value is represented as seconds from midnight.
+         */
+        public static final String CHARGING_CONTROL_TARGET_TIME = "charging_control_target_time";
+
+        /** @hide */
+        public static final Validator CHARGING_CONTROL_TARGET_TIME_VALIDATOR =
+                sSecondsFromMidnightValidator;
+
+        /**
+         * Limit to stop charging.
+         */
+        public static final String CHARGING_CONTROL_LIMIT = "charging_control_charging_limit";
+
+        /** @hide */
+        public static final Validator CHARGING_CONTROL_LIMIT_VALIDATOR =
+                new InclusiveIntegerRangeValidator(70, 100);
+
+        /**
          * Whether the battery light should be enabled (if hardware supports it)
          * The value is boolean (1 or 0).
          */
@@ -2227,6 +2278,11 @@ public final class LineageSettings {
                     TORCH_LONG_PRESS_POWER_TIMEOUT_VALIDATOR);
             VALIDATORS.put(BUTTON_BACKLIGHT_ONLY_WHEN_PRESSED,
                     BUTTON_BACKLIGHT_ONLY_WHEN_PRESSED_VALIDATOR);
+            VALIDATORS.put(CHARGING_CONTROL_ENABLED, CHARGING_CONTROL_ENABLED_VALIDATOR);
+            VALIDATORS.put(CHARGING_CONTROL_MODE, CHARGING_CONTROL_MODE_VALIDATOR);
+            VALIDATORS.put(CHARGING_CONTROL_START_TIME, CHARGING_CONTROL_START_TIME_VALIDATOR);
+            VALIDATORS.put(CHARGING_CONTROL_TARGET_TIME, CHARGING_CONTROL_TARGET_TIME_VALIDATOR);
+            VALIDATORS.put(CHARGING_CONTROL_LIMIT, CHARGING_CONTROL_LIMIT_VALIDATOR);
             VALIDATORS.put(BATTERY_LIGHT_ENABLED, BATTERY_LIGHT_ENABLED_VALIDATOR);
             VALIDATORS.put(BATTERY_LIGHT_FULL_CHARGE_DISABLED,
                     BATTERY_LIGHT_FULL_CHARGE_DISABLED_VALIDATOR);
