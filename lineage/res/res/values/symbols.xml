@@ -182,4 +182,7 @@
     <java-symbol type="array" name="config_cameraAuxPackageAllowList" />
     <java-symbol type="array" name="config_cameraAuxPackageExcludeList" />
     <java-symbol type="array" name="config_cameraHFRPrivAppList" />
+
+    <!-- Battery hare -->
+    <java-symbol type="bool" name="config_enableBatteryHealth" />
 </resources>
