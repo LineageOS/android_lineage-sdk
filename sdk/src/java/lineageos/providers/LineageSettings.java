@@ -923,10 +923,10 @@ public final class LineageSettings {
 
         /**
          * Whether to show the clock in the right or left position or show it in the center
-         * 0: show the clock in the right position (LTR)
+         * 0: show the clock in the left position (LTR)
          * 1: show the clock in the center
-         * 2: show the clock in the left position (LTR)
-         * default: 0
+         * 2: show the clock in the right position (LTR)
+         * default: 1
          */
         public static final String STATUS_BAR_CLOCK = "status_bar_clock";
 
@@ -2928,6 +2928,19 @@ public final class LineageSettings {
                 new InclusiveIntegerRangeValidator(0, 3);
 
         /**
+         * Network traffic indicator position
+         * 0 = Centered
+         * 1 = On the right side
+         * 2 = On the left side
+         * @hide
+         */
+        public static final String NETWORK_TRAFFIC_POSITION = "network_traffic_position";
+
+        /** @hide */
+        public static final Validator NETWORK_TRAFFIC_POSITION_VALIDATOR =
+                new InclusiveIntegerRangeValidator(0, 2);
+
+        /**
          * Whether or not to hide the network traffic indicator when there is no activity
          * @hide
          */
@@ -3049,6 +3062,7 @@ public final class LineageSettings {
             VALIDATORS.put(BERRY_BLACK_THEME, BERRY_BLACK_THEME_VALIDATOR);
             VALIDATORS.put(GESTURE_BACK_EXCLUDE_TOP, GESTURE_BACK_EXCLUDE_TOP_VALIDATOR);
             VALIDATORS.put(NETWORK_TRAFFIC_MODE, NETWORK_TRAFFIC_MODE_VALIDATOR);
+            VALIDATORS.put(NETWORK_TRAFFIC_POSITION, NETWORK_TRAFFIC_POSITION_VALIDATOR);
             VALIDATORS.put(NETWORK_TRAFFIC_AUTOHIDE, NETWORK_TRAFFIC_AUTOHIDE_VALIDATOR);
             VALIDATORS.put(NETWORK_TRAFFIC_UNITS, NETWORK_TRAFFIC_UNITS_VALIDATOR);
             VALIDATORS.put(NETWORK_TRAFFIC_SHOW_UNITS, NETWORK_TRAFFIC_SHOW_UNITS_VALIDATOR);
