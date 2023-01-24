@@ -58,6 +58,10 @@ public class NetworkTraffic extends TextView {
     private static final int MODE_DOWNSTREAM_ONLY = 2;
     private static final int MODE_UPSTREAM_AND_DOWNSTREAM = 3;
 
+    private static final int POSITION_CENTERED = 0;
+    private static final int POSITION_RIGHT = 1;
+    private static final int POSITION_LEFT = 2;
+
     private static final int MESSAGE_TYPE_PERIODIC_REFRESH = 0;
     private static final int MESSAGE_TYPE_UPDATE_VIEW = 1;
     private static final int MESSAGE_TYPE_ADD_NETWORK = 2;
@@ -82,6 +86,8 @@ public class NetworkTraffic extends TextView {
     private final SettingsObserver mObserver;
 
     private int mMode = MODE_DISABLED;
+    private int mPosition = POSITION_CENTERED;
+    private int mViewPosition = -1;
     private boolean mNetworkTrafficIsVisible;
     private long mTxKbps;
     private long mRxKbps;
@@ -185,7 +191,8 @@ public class NetworkTraffic extends TextView {
             }
 
             private void displayStatsAndReschedule() {
-                final boolean enabled = mMode != MODE_DISABLED && isConnectionAvailable();
+                final boolean enabled = mMode != MODE_DISABLED && mPosition == mViewPosition
+                        && isConnectionAvailable();
                 final boolean showUpstream =
                         mMode == MODE_UPSTREAM_ONLY || mMode == MODE_UPSTREAM_AND_DOWNSTREAM;
                 final boolean showDownstream =
@@ -311,6 +318,10 @@ public class NetworkTraffic extends TextView {
                 .registerDefaultNetworkCallback(defaultNetworkCallback);
     }
 
+    public void setViewPosition(int vpos) {
+        mViewPosition = vpos;
+    }
+
     private final LineageStatusBarItem.DarkReceiver mDarkReceiver =
             new LineageStatusBarItem.DarkReceiver() {
         public void onDarkChanged(ArrayList<Rect> areas, float darkIntensity, int tint) {
@@ -362,6 +373,9 @@ public class NetworkTraffic extends TextView {
                     LineageSettings.Secure.NETWORK_TRAFFIC_MODE),
                     false, this, UserHandle.USER_ALL);
             resolver.registerContentObserver(LineageSettings.Secure.getUriFor(
+                    LineageSettings.Secure.NETWORK_TRAFFIC_POSITION),
+                    false, this, UserHandle.USER_ALL);
+            resolver.registerContentObserver(LineageSettings.Secure.getUriFor(
                     LineageSettings.Secure.NETWORK_TRAFFIC_AUTOHIDE),
                     false, this, UserHandle.USER_ALL);
             resolver.registerContentObserver(LineageSettings.Secure.getUriFor(
@@ -392,6 +406,8 @@ public class NetworkTraffic extends TextView {
 
         mMode = LineageSettings.Secure.getInt(resolver,
                 LineageSettings.Secure.NETWORK_TRAFFIC_MODE, 0);
+        mPosition = LineageSettings.Secure.getInt(resolver,
+                LineageSettings.Secure.NETWORK_TRAFFIC_POSITION, 0);
         mAutoHide = LineageSettings.Secure.getInt(resolver,
                 LineageSettings.Secure.NETWORK_TRAFFIC_AUTOHIDE, 0) == 1;
         mUnits = LineageSettings.Secure.getInt(resolver,
