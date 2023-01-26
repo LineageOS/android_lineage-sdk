@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6d5aa5ad_b8036989",
+        "filename": "lineage/res/res/values/symbols.xml",
+        "patchSetId": 4
+      },
+      "lineNbr": 186,
+      "author": {
+        "id": 2644
+      },
+      "writtenOn": "2023-01-26T16:42:34Z",
+      "side": 1,
+      "message": "hare? Half way between care and health?",
+      "range": {
+        "startLine": 186,
+        "startChar": 17,
+        "endLine": 186,
+        "endChar": 21
+      },
+      "revId": "d27899f1417ce5b343cc0eaec3d4c096d6abe945",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
