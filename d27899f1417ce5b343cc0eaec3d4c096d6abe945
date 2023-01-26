@@ -22,6 +22,30 @@
       },
       "revId": "d27899f1417ce5b343cc0eaec3d4c096d6abe945",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b92f5610_fb711b25",
+        "filename": "lineage/res/res/values/symbols.xml",
+        "patchSetId": 4
+      },
+      "lineNbr": 186,
+      "author": {
+        "id": 26916
+      },
+      "writtenOn": "2023-01-26T16:45:38Z",
+      "side": 1,
+      "message": "oops. yes, that was a typo.",
+      "parentUuid": "6d5aa5ad_b8036989",
+      "range": {
+        "startLine": 186,
+        "startChar": 17,
+        "endLine": 186,
+        "endChar": 21
+      },
+      "revId": "d27899f1417ce5b343cc0eaec3d4c096d6abe945",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
