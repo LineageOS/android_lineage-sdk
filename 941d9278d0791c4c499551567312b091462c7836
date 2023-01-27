@@ -46,6 +46,30 @@
       },
       "revId": "941d9278d0791c4c499551567312b091462c7836",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2e87cbc3_4ea32705",
+        "filename": "sdk/src/java/org/lineageos/internal/statusbar/NetworkTraffic.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 63,
+      "author": {
+        "id": 11409
+      },
+      "writtenOn": "2023-01-27T17:24:06Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "8f16e2fe_a35c91ab",
+      "range": {
+        "startLine": 60,
+        "startChar": 0,
+        "endLine": 63,
+        "endChar": 47
+      },
+      "revId": "941d9278d0791c4c499551567312b091462c7836",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
