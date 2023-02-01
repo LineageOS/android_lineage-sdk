@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2018-2021 The LineageOS Project
+ * Copyright (C) 2018-2023 The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -67,14 +67,18 @@ public class ActionUtils {
             return false;
         }
 
-        final String packageName = getForegroundTaskPackageName(context, userId);
+        final RootTaskInfo foregroundTask = getForegroundTask(context, userId);
+        if (foregroundTask == null) {
+            return false;
+        }
 
+        final String packageName = foregroundTask.topActivity.getPackageName();
         if (packageName == null) {
             return false;
         }
 
         final IActivityManager am = ActivityManagerNative.getDefault();
-        am.forceStopPackage(packageName, UserHandle.USER_CURRENT);
+        am.forceStopPackage(packageName, foregroundTask.userId);
 
         new Handler(Looper.getMainLooper()).post(() -> {
             Toast.makeText(context, R.string.app_killed_message, Toast.LENGTH_SHORT).show();
@@ -141,7 +145,7 @@ public class ActionUtils {
         return null;
     }
 
-    private static String getForegroundTaskPackageName(Context context, int userId)
+    private static RootTaskInfo getForegroundTask(Context context, int userId)
             throws RemoteException {
         final String defaultHomePackage = resolveCurrentLauncherPackage(context, userId);
         final IActivityManager am = ActivityManager.getService();
@@ -154,7 +158,7 @@ public class ActionUtils {
         final String packageName = focusedStack.topActivity.getPackageName();
         if (!packageName.equals(defaultHomePackage)
                 && !packageName.equals(SYSTEMUI_PACKAGE)) {
-            return packageName;
+            return focusedStack;
         }
 
         return null;
