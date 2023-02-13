@@ -43,11 +43,9 @@
     <string name="accessibility_quick_settings_live_display_auto">LiveDisplay: аўтаматычна.</string>
     <string name="accessibility_quick_settings_live_display_day">LiveDisplay: дзень.</string>
     <string name="accessibility_quick_settings_live_display_night">LiveDisplay: ноч.</string>
-    <string name="accessibility_quick_settings_live_display_outdoor">LiveDisplay працуе ў рэжыме для вуліцы.</string>
     <string name="accessibility_quick_settings_live_display_changed_auto">LiveDisplay зменены на аўтаматычны рэжым.</string>
     <string name="accessibility_quick_settings_live_display_changed_day">LiveDisplay зменены ў дзённы рэжым.</string>
     <string name="accessibility_quick_settings_live_display_changed_night">LiveDisplay зменены ў начны рэжым.</string>
-    <string name="accessibility_quick_settings_live_display_changed_outdoor">LiveDisplay зменены на рэжым для вуліцы.</string>
     <string name="permlab_manageLiveDisplay">кіраванне наладамі LiveDisplay</string>
     <string name="trust_notification_title_onboarding">Даследуйце Trust</string>
 </resources>
