@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: 2022 The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+        android:width="24dp"
+        android:height="24dp"
+        android:viewportWidth="24"
+        android:viewportHeight="24"
+        android:tint="?android:attr/colorControlNormal">
+    <path
+        android:fillColor="#FF000000"
+        android:pathData="M 10 2 L 10 4 L 8.33 4 C 7.6 4 7 4.6 7 5.33 L 7 20.66 C 7 21.4 7.6 22 8.33 22 L 15.66 22 C 16.4 22 17 21.4 17 20.67 L 17 5.33 C 17 4.6 16.4 4 15.67 4 L 14 4 L 14 2 L 10 2 Z M 10.875 9.707 C 11.31 9.707 11.727 9.909 12 10.229 C 12.273 9.909 12.69 9.707 13.125 9.707 C 13.895 9.707 14.5 10.312 14.5 11.082 C 14.5 12.027 13.651 12.795 12.363 13.963 L 12 14.293 L 11.637 13.967 C 10.349 12.797 9.5 12.027 9.5 11.082 C 9.5 10.312 10.105 9.707 10.875 9.707 Z"/>
+</vector>
