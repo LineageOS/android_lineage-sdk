@@ -1,5 +1,5 @@
 //
-// Copyright (C) 2018-2022 The LineageOS Project
+// Copyright (C) 2018-2023 The LineageOS Project
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -66,6 +66,7 @@ lineage_sdk_internal_src = "sdk/src/java/org/lineageos/internal"
 library_src = "lineage/lib/main/java"
 
 lineage_sdk_LOCAL_STATIC_JAVA_LIBRARIES = [
+    "vendor.lineage.health-V1-java",
     "vendor.lineage.livedisplay-V2.0-java",
     "vendor.lineage.livedisplay-V2.1-java",
     "vendor.lineage.touch-V1.0-java",
