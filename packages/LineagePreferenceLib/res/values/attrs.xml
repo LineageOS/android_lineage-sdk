@@ -24,6 +24,7 @@
         <attr name="requiresProperty" format="string" />
         <attr name="requiresOwner" format="boolean" />
         <attr name="requiresAction" format="string" />
+        <attr name="requiresService" format="string" />
         <attr name="replacesKey" format="string" />
         <attr name="minSummaryLines" format="integer" />
     </declare-styleable>
