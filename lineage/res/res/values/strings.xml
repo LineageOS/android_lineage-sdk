@@ -124,4 +124,9 @@
     <string name="trust_notification_title_onboarding">Discover Trust</string>
     <string name="trust_notification_content_onboarding">Get to know how to assure your device is safe</string>
     <string name="trust_notification_action_manage">Manage alerts</string>
+
+    <!-- Health interface -->
+    <string name="charging_control_notification_channel">Charging control</string>
+    <string name="charging_control_notification_title">Charging control</string>
+    <string name="charging_control_notification_content">Battery will be charged to %1$d%% at %2$s</string>
 </resources>
