@@ -72,6 +72,7 @@ lineage_sdk_LOCAL_STATIC_ANDROID_LIBRARIES = [
 ]
 
 lineage_sdk_LOCAL_STATIC_JAVA_LIBRARIES = [
+    "vendor.lineage.health-V1-java",
     "android.hardware.usb-V1.3-java",
     "vendor.lineage.livedisplay-V2.0-java",
     "vendor.lineage.livedisplay-V2.1-java",
