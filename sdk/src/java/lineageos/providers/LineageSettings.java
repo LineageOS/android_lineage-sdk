@@ -1393,7 +1393,7 @@ public final class LineageSettings {
         /**
          * Limit to stop charging.
          */
-        public static final String CHARGING_CONTROL_LIMIT = "charging_control_limit";
+        public static final String CHARGING_CONTROL_LIMIT = "charging_control_charging_limit";
 
         /** @hide */
         public static final Validator CHARGING_CONTROL_LIMIT_VALIDATOR =
