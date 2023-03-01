@@ -182,4 +182,10 @@
     <java-symbol type="array" name="config_cameraAuxPackageAllowList" />
     <java-symbol type="array" name="config_cameraAuxPackageExcludeList" />
     <java-symbol type="array" name="config_cameraHFRPrivAppList" />
+
+    <!-- Health interface -->
+    <java-symbol type="drawable" name="ic_battery_health" />
+    <java-symbol type="string" name="battery_health_notification_channel" />
+    <java-symbol type="string" name="battery_health_notification_title" />
+    <java-symbol type="string" name="battery_health_notification_content" />
 </resources>
