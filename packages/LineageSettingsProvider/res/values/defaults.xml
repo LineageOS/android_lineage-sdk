@@ -78,4 +78,7 @@
     -->
     <integer name="def_clock_position">2</integer>
 
+    <!-- Default for LineageSettings.System.CHARGING_CONTROL_ENABLED -->
+    <bool name="def_enableChargingControl">false</bool>
+
 </resources>

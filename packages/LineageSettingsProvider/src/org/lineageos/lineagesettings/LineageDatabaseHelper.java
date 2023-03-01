@@ -60,7 +60,7 @@ public class LineageDatabaseHelper extends SQLiteOpenHelper{
     private static final boolean LOCAL_LOGV = false;
 
     private static final String DATABASE_NAME = "lineagesettings.db";
-    private static final int DATABASE_VERSION = 18;
+    private static final int DATABASE_VERSION = 19;
 
     private static final String DATABASE_NAME_OLD = "cmsettings.db";
 
@@ -459,6 +459,17 @@ public class LineageDatabaseHelper extends SQLiteOpenHelper{
                     oldSetting);
             upgradeVersion = 18;
         }
+
+        if (upgradeVersion < 19) {
+            db.beginTransaction();
+            try {
+                loadSettings(db);
+                db.setTransactionSuccessful();
+            } finally {
+                db.endTransaction();
+            }
+            upgradeVersion = 19;
+        }
         // *** Remember to update DATABASE_VERSION above!
         if (upgradeVersion != newVersion) {
             Log.wtf(TAG, "warning: upgrading settings database to version "
@@ -588,6 +599,9 @@ public class LineageDatabaseHelper extends SQLiteOpenHelper{
 
             loadIntegerSetting(stmt, LineageSettings.System.STATUS_BAR_CLOCK,
                     R.integer.def_clock_position);
+
+            loadBooleanSetting(stmt, LineageSettings.System.CHARGING_CONTROL_ENABLED,
+                    R.bool.def_enableChargingControl);
 
             if (mContext.getResources().getBoolean(R.bool.def_notification_pulse_custom_enable)) {
                 loadStringSetting(stmt, LineageSettings.System.NOTIFICATION_LIGHT_PULSE_CUSTOM_VALUES,
