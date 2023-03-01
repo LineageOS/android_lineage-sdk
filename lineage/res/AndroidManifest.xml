@@ -2,7 +2,7 @@
 <!--
 /**
  * Copyright (C) 2015 The CyanogenMod Project
- *               2017-2022 The LineageOS Project
+ *               2017-2023 The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -36,6 +36,8 @@
     <protected-broadcast android:name="lineageos.platform.intent.action.INTENT_ACTION_PROFILE_TRIGGER_STATE_CHANGED" />
 
     <protected-broadcast android:name="lineageos.platform.intent.action.UPDATE_TWILIGHT_STATE" />
+
+    <protected-broadcast android:name="lineageos.platform.intent.action.CHARGING_CONTROL_CANCEL_ONCE" />
 
     <!-- Allows an application access to the Lineage hardware abstraction framework
         <p>Not for use by third-party applications. -->
