@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "fd2498a2_c27ce66c",
+        "filename": "Android.bp",
+        "patchSetId": 12
+      },
+      "lineNbr": 73,
+      "author": {
+        "id": 4550
+      },
+      "writtenOn": "2023-03-03T16:34:14Z",
+      "side": 1,
+      "message": "Alphabetical order",
+      "revId": "3b9f900898c229a5096de3cdd2e1a8252457ad54",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5e0b18dc_ce97322d",
+        "filename": "sdk/src/java/lineageos/app/LineageContextConstants.java",
+        "patchSetId": 12
+      },
+      "lineNbr": 86,
+      "author": {
+        "id": 4550
+      },
+      "writtenOn": "2023-03-03T16:34:14Z",
+      "side": 1,
+      "message": "Health",
+      "range": {
+        "startLine": 86,
+        "startChar": 62,
+        "endLine": 86,
+        "endChar": 67
+      },
+      "revId": "3b9f900898c229a5096de3cdd2e1a8252457ad54",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
