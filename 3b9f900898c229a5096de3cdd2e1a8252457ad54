@@ -20,6 +20,40 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "a82f9e6b_08dd3a49",
+        "filename": "lineage/lib/main/java/org/lineageos/platform/internal/health/HealthInterfaceService.java",
+        "patchSetId": 12
+      },
+      "lineNbr": 85,
+      "author": {
+        "id": 13028
+      },
+      "writtenOn": "2023-03-03T17:11:57Z",
+      "side": 1,
+      "message": "I don\u0027t really like the name duplication. It\u0027s already ChargingStopReason, so why not just REACHED_LIMIT and WAITING?\nalso, might want to add \"NONE\" with value \"0\" as well and use that instead on lines like in L#343?",
+      "revId": "3b9f900898c229a5096de3cdd2e1a8252457ad54",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6adfc5f7_2ecd9563",
+        "filename": "lineage/lib/main/java/org/lineageos/platform/internal/health/HealthInterfaceService.java",
+        "patchSetId": 12
+      },
+      "lineNbr": 399,
+      "author": {
+        "id": 13028
+      },
+      "writtenOn": "2023-03-03T17:11:57Z",
+      "side": 1,
+      "message": "should really define constants like MODE_AUTO and MODE_MANUAL (+MODE_NONE) or smth like that (could also use enum?) instead of throwing around magic numbers here",
+      "revId": "3b9f900898c229a5096de3cdd2e1a8252457ad54",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "5e0b18dc_ce97322d",
         "filename": "sdk/src/java/lineageos/app/LineageContextConstants.java",
         "patchSetId": 12
