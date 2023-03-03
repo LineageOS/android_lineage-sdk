@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "437770bf_966b575d",
+        "filename": "lineage/res/res/values/config.xml",
+        "patchSetId": 6
+      },
+      "lineNbr": 311,
+      "author": {
+        "id": 4550
+      },
+      "writtenOn": "2023-03-03T16:36:41Z",
+      "side": 1,
+      "message": "Do we really need this? We should just check if the HAL is present. If a device doesn\u0027t want this then just don\u0027t compile a HAL.",
+      "revId": "3d356327502becb61ba5fcd8c24b78c367006f2a",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
