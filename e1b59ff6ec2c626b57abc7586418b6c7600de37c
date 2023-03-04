@@ -16,6 +16,24 @@
       "message": "Unused",
       "revId": "e1b59ff6ec2c626b57abc7586418b6c7600de37c",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "cfc41632_1ee0effa",
+        "filename": "sdk/src/java/lineageos/health/HealthInterface.java",
+        "patchSetId": 17
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 31578
+      },
+      "writtenOn": "2023-03-04T10:34:12Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "a41e0843_2769a370",
+      "revId": "e1b59ff6ec2c626b57abc7586418b6c7600de37c",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
