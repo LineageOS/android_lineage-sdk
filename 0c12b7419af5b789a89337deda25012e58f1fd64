@@ -38,6 +38,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "ea737963_47e443d9",
+        "filename": "lineage/lib/main/java/org/lineageos/platform/internal/health/HealthInterfaceService.java",
+        "patchSetId": 23
+      },
+      "lineNbr": 266,
+      "author": {
+        "id": 26916
+      },
+      "writtenOn": "2023-03-05T14:19:55Z",
+      "side": 1,
+      "message": "It totally makes sense to me. When I leave the device charging over night and unplug after waking up I want the device to be charged to that limit as well. If we want to not do it we could make a third mode and ignore the start/target time preferences instead. We don\u0027t have to keep it at 80% when reached once. We can charge up to, let\u0027s say X-10%, let it uncharge and calculate the time when to start charging again so it reaches that limit at target time.",
+      "parentUuid": "231ee136_1b75c0ff",
+      "revId": "0c12b7419af5b789a89337deda25012e58f1fd64",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "91cee25b_78358c99",
         "filename": "lineage/lib/main/java/org/lineageos/platform/internal/health/HealthInterfaceService.java",
         "patchSetId": 23
