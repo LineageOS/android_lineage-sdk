@@ -20,6 +20,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "231ee136_1b75c0ff",
+        "filename": "lineage/lib/main/java/org/lineageos/platform/internal/health/HealthInterfaceService.java",
+        "patchSetId": 23
+      },
+      "lineNbr": 266,
+      "author": {
+        "id": 31578
+      },
+      "writtenOn": "2023-03-05T01:51:29Z",
+      "side": 1,
+      "message": "The point is, if we set a limit that is less than 100, does it make sense to have the phone charged to that limit at the target time? Considering keeping the phone plugged in and keep the battery percentage at 80% (the limit) does not harm the battery?",
+      "parentUuid": "899ee89c_818727ce",
+      "revId": "0c12b7419af5b789a89337deda25012e58f1fd64",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "91cee25b_78358c99",
         "filename": "lineage/lib/main/java/org/lineageos/platform/internal/health/HealthInterfaceService.java",
         "patchSetId": 23
@@ -31,6 +49,24 @@
       "writtenOn": "2023-03-04T20:51:13Z",
       "side": 1,
       "message": "Shouldn\u0027t we use java 8 date api instead of legacy java.util.Date/Calendar classes?",
+      "revId": "0c12b7419af5b789a89337deda25012e58f1fd64",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "138f862d_3e6d0a5c",
+        "filename": "lineage/lib/main/java/org/lineageos/platform/internal/health/HealthInterfaceService.java",
+        "patchSetId": 23
+      },
+      "lineNbr": 406,
+      "author": {
+        "id": 31578
+      },
+      "writtenOn": "2023-03-05T01:51:29Z",
+      "side": 1,
+      "message": "will look into that",
+      "parentUuid": "91cee25b_78358c99",
       "revId": "0c12b7419af5b789a89337deda25012e58f1fd64",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
