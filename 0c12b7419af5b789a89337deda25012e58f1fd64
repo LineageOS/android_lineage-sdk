@@ -56,6 +56,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "972436cf_d41251d7",
+        "filename": "lineage/lib/main/java/org/lineageos/platform/internal/health/HealthInterfaceService.java",
+        "patchSetId": 23
+      },
+      "lineNbr": 266,
+      "author": {
+        "id": 31578
+      },
+      "writtenOn": "2023-03-05T16:03:42Z",
+      "side": 1,
+      "message": "In the current implementation, if you set the limit to, like 80%, your device will charge straight up to that level and maintain that level. It will not charge to 100%. So the battery limit setting is always respected. The only thing is that the device will not wait for the target time. \n\nAnd I think the two things are identical(When the limit is set to 80%):\nApproach 1 (Current):\nCharge directly to 80% and maintain that level\nApproach 2:\nCharge to 70%, wait until target time, charge to 80%.\n\nI understand that one may want to do approach 2 when the limit is 100%. But I don\u0027t understand why you want approach 2 even if the battery level is less than 100%.",
+      "parentUuid": "ea737963_47e443d9",
+      "revId": "0c12b7419af5b789a89337deda25012e58f1fd64",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "91cee25b_78358c99",
         "filename": "lineage/lib/main/java/org/lineageos/platform/internal/health/HealthInterfaceService.java",
         "patchSetId": 23
