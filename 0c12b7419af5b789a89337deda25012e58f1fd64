@@ -128,6 +128,23 @@
       "parentUuid": "91cee25b_78358c99",
       "revId": "0c12b7419af5b789a89337deda25012e58f1fd64",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e6bcf0c0_a2829cee",
+        "filename": "lineage/lib/main/java/org/lineageos/platform/internal/health/HealthInterfaceService.java",
+        "patchSetId": 23
+      },
+      "lineNbr": 434,
+      "author": {
+        "id": 19665
+      },
+      "writtenOn": "2023-03-07T16:06:24Z",
+      "side": 1,
+      "message": "\"Lineate\" typo?",
+      "revId": "0c12b7419af5b789a89337deda25012e58f1fd64",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
