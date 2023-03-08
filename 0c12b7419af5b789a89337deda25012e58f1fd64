@@ -131,6 +131,30 @@
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "220b28e5_57a75a12",
+        "filename": "lineage/lib/main/java/org/lineageos/platform/internal/health/HealthInterfaceService.java",
+        "patchSetId": 23
+      },
+      "lineNbr": 304,
+      "author": {
+        "id": 26916
+      },
+      "writtenOn": "2023-03-08T18:53:22Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6dc97b0d_bcd2705a",
+      "range": {
+        "startLine": 304,
+        "startChar": 50,
+        "endLine": 304,
+        "endChar": 52
+      },
+      "revId": "0c12b7419af5b789a89337deda25012e58f1fd64",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "91cee25b_78358c99",
@@ -179,6 +203,24 @@
       "writtenOn": "2023-03-07T16:06:24Z",
       "side": 1,
       "message": "\"Lineate\" typo?",
+      "revId": "0c12b7419af5b789a89337deda25012e58f1fd64",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "285f2b11_88d07798",
+        "filename": "lineage/lib/main/java/org/lineageos/platform/internal/health/HealthInterfaceService.java",
+        "patchSetId": 23
+      },
+      "lineNbr": 434,
+      "author": {
+        "id": 26916
+      },
+      "writtenOn": "2023-03-08T18:53:22Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "e6bcf0c0_a2829cee",
       "revId": "0c12b7419af5b789a89337deda25012e58f1fd64",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
