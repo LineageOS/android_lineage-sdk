@@ -92,6 +92,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "f41fb6ef_f9b0a8b9",
+        "filename": "lineage/lib/main/java/org/lineageos/platform/internal/health/HealthInterfaceService.java",
+        "patchSetId": 23
+      },
+      "lineNbr": 266,
+      "author": {
+        "id": 31578
+      },
+      "writtenOn": "2023-03-08T02:07:14Z",
+      "side": 1,
+      "message": "No we can\u0027t. We can only \"scale\" the needed time or come up with a new way to predict that.",
+      "parentUuid": "21a13242_040744c8",
+      "revId": "0c12b7419af5b789a89337deda25012e58f1fd64",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "6dc97b0d_bcd2705a",
         "filename": "lineage/lib/main/java/org/lineageos/platform/internal/health/HealthInterfaceService.java",
         "patchSetId": 23
