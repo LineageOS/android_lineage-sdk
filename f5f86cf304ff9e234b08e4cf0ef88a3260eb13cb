@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8b2977e1_2a95b480",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 8
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 25732
+      },
+      "writtenOn": "2023-03-09T13:36:58Z",
+      "side": 1,
+      "message": "I would do s/BATTERY_HEALTH/HEALTH_CHARGING_CONTROL everywhere",
+      "revId": "f5f86cf304ff9e234b08e4cf0ef88a3260eb13cb",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
