@@ -1,0 +1,291 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "71fdac43_dc377f94",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 26
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 25732
+      },
+      "writtenOn": "2023-03-09T13:35:03Z",
+      "side": 1,
+      "message": "Do we also need an SDK version bump?",
+      "revId": "77daf24f63553f520c9d2fb7e41eea43054489df",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "582821c4_01ca3f21",
+        "filename": "lineage/lib/main/java/org/lineageos/platform/internal/health/HealthInterfaceService.java",
+        "patchSetId": 26
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 25732
+      },
+      "writtenOn": "2023-03-09T13:35:03Z",
+      "side": 1,
+      "message": "SPDX please",
+      "range": {
+        "startLine": 4,
+        "startChar": 3,
+        "endLine": 14,
+        "endChar": 33
+      },
+      "revId": "77daf24f63553f520c9d2fb7e41eea43054489df",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7f7e74ad_fac6b16c",
+        "filename": "lineage/lib/main/java/org/lineageos/platform/internal/health/HealthInterfaceService.java",
+        "patchSetId": 26
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 25732
+      },
+      "writtenOn": "2023-03-09T13:35:03Z",
+      "side": 1,
+      "message": "ChargingControlInterfaceService?\n\nIt all depends on if we want to handle future battery related interfaces in the same class",
+      "range": {
+        "startLine": 50,
+        "startChar": 13,
+        "endLine": 50,
+        "endChar": 35
+      },
+      "revId": "77daf24f63553f520c9d2fb7e41eea43054489df",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "cc4c8180_f714a293",
+        "filename": "lineage/lib/main/java/org/lineageos/platform/internal/health/HealthInterfaceService.java",
+        "patchSetId": 26
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 25732
+      },
+      "writtenOn": "2023-03-09T13:35:03Z",
+      "side": 1,
+      "message": "mChargingControl",
+      "revId": "77daf24f63553f520c9d2fb7e41eea43054489df",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "32250d98_5a0d26fa",
+        "filename": "lineage/lib/main/java/org/lineageos/platform/internal/health/HealthInterfaceService.java",
+        "patchSetId": 26
+      },
+      "lineNbr": 395,
+      "author": {
+        "id": 25732
+      },
+      "writtenOn": "2023-03-09T13:35:03Z",
+      "side": 1,
+      "message": "100 chars",
+      "range": {
+        "startLine": 395,
+        "startChar": 0,
+        "endLine": 395,
+        "endChar": 104
+      },
+      "revId": "77daf24f63553f520c9d2fb7e41eea43054489df",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5d62f986_a34b7a14",
+        "filename": "lineage/lib/main/java/org/lineageos/platform/internal/health/HealthInterfaceService.java",
+        "patchSetId": 26
+      },
+      "lineNbr": 399,
+      "author": {
+        "id": 25732
+      },
+      "writtenOn": "2023-03-09T13:35:03Z",
+      "side": 1,
+      "message": "100 chars",
+      "range": {
+        "startLine": 399,
+        "startChar": 0,
+        "endLine": 399,
+        "endChar": 105
+      },
+      "revId": "77daf24f63553f520c9d2fb7e41eea43054489df",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f63800bd_f8950087",
+        "filename": "lineage/lib/main/java/org/lineageos/platform/internal/health/HealthInterfaceService.java",
+        "patchSetId": 26
+      },
+      "lineNbr": 512,
+      "author": {
+        "id": 25732
+      },
+      "writtenOn": "2023-03-09T13:35:03Z",
+      "side": 1,
+      "message": "isChargingControlSupported",
+      "range": {
+        "startLine": 512,
+        "startChar": 23,
+        "endLine": 512,
+        "endChar": 47
+      },
+      "revId": "77daf24f63553f520c9d2fb7e41eea43054489df",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "fd03bbe0_2dfba0cc",
+        "filename": "sdk/src/java/lineageos/health/HealthInterface.java",
+        "patchSetId": 26
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 25732
+      },
+      "writtenOn": "2023-03-09T13:35:03Z",
+      "side": 1,
+      "message": "SPDX please",
+      "range": {
+        "startLine": 4,
+        "startChar": 3,
+        "endLine": 14,
+        "endChar": 33
+      },
+      "revId": "77daf24f63553f520c9d2fb7e41eea43054489df",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "26f18a14_145867ac",
+        "filename": "sdk/src/java/lineageos/health/HealthInterface.java",
+        "patchSetId": 26
+      },
+      "lineNbr": 76,
+      "author": {
+        "id": 25732
+      },
+      "writtenOn": "2023-03-09T13:35:03Z",
+      "side": 1,
+      "message": "isChargingControlSupported",
+      "range": {
+        "startLine": 76,
+        "startChar": 19,
+        "endLine": 76,
+        "endChar": 43
+      },
+      "revId": "77daf24f63553f520c9d2fb7e41eea43054489df",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f6d5b9bb_e748ca25",
+        "filename": "sdk/src/java/lineageos/health/HealthInterface.java",
+        "patchSetId": 26
+      },
+      "lineNbr": 81,
+      "author": {
+        "id": 25732
+      },
+      "writtenOn": "2023-03-09T13:35:03Z",
+      "side": 1,
+      "message": "isChargingControlSupported",
+      "range": {
+        "startLine": 81,
+        "startChar": 28,
+        "endLine": 81,
+        "endChar": 52
+      },
+      "revId": "77daf24f63553f520c9d2fb7e41eea43054489df",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c96a6a8f_b198bb84",
+        "filename": "sdk/src/java/lineageos/health/IHealthInterface.aidl",
+        "patchSetId": 26
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 25732
+      },
+      "writtenOn": "2023-03-09T13:35:03Z",
+      "side": 1,
+      "message": "SPDX please",
+      "range": {
+        "startLine": 4,
+        "startChar": 3,
+        "endLine": 14,
+        "endChar": 33
+      },
+      "revId": "77daf24f63553f520c9d2fb7e41eea43054489df",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "75af60bd_9f11213e",
+        "filename": "sdk/src/java/lineageos/health/IHealthInterface.aidl",
+        "patchSetId": 26
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 25732
+      },
+      "writtenOn": "2023-03-09T13:35:03Z",
+      "side": 1,
+      "message": "IChargingControlInterface",
+      "range": {
+        "startLine": 20,
+        "startChar": 10,
+        "endLine": 20,
+        "endChar": 26
+      },
+      "revId": "77daf24f63553f520c9d2fb7e41eea43054489df",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "33ab05a8_8c6c0c1b",
+        "filename": "sdk/src/java/lineageos/health/IHealthInterface.aidl",
+        "patchSetId": 26
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 25732
+      },
+      "writtenOn": "2023-03-09T13:35:03Z",
+      "side": 1,
+      "message": "isChargingControlSupported",
+      "range": {
+        "startLine": 21,
+        "startChar": 12,
+        "endLine": 21,
+        "endChar": 36
+      },
+      "revId": "77daf24f63553f520c9d2fb7e41eea43054489df",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
