@@ -110,6 +110,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "6e01669a_f527b52b",
+        "filename": "lineage/lib/main/java/org/lineageos/platform/internal/health/HealthInterfaceService.java",
+        "patchSetId": 23
+      },
+      "lineNbr": 266,
+      "author": {
+        "id": 25732
+      },
+      "writtenOn": "2023-03-10T09:50:43Z",
+      "side": 1,
+      "message": "\u003e The point is, if we set a limit that is less than 100, does it make sense to have the phone charged to that limit at the target time?\n\nDepends on the HAL implementation: Most of the kernel impls will just disable the current flow to the battery, so the battery consumption would be 0mAh, so the percentage will stay the same, while others will stop receiving energy from the port altogether, so the battery percentage would actually decrease while connected",
+      "parentUuid": "f41fb6ef_f9b0a8b9",
+      "revId": "0c12b7419af5b789a89337deda25012e58f1fd64",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "6dc97b0d_bcd2705a",
         "filename": "lineage/lib/main/java/org/lineageos/platform/internal/health/HealthInterfaceService.java",
         "patchSetId": 23
@@ -186,6 +204,24 @@
       "side": 1,
       "message": "will look into that",
       "parentUuid": "91cee25b_78358c99",
+      "revId": "0c12b7419af5b789a89337deda25012e58f1fd64",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "102a6f83_166b6d21",
+        "filename": "lineage/lib/main/java/org/lineageos/platform/internal/health/HealthInterfaceService.java",
+        "patchSetId": 23
+      },
+      "lineNbr": 406,
+      "author": {
+        "id": 25732
+      },
+      "writtenOn": "2023-03-10T09:50:43Z",
+      "side": 1,
+      "message": "Try this:\n\n // Set the UTC timezone\n ZoneId utcZone \u003d ZoneOffset.UTC;\n // Get the current date in the UTC timezone\n LocalDate currentDate \u003d LocalDate.now(utcZone);\n // Convert seconds of the day to LocalTime\n LocalTime timeOfDay \u003d LocalTime.ofSecondOfDay(System.currentTimeMillis());\n // Combine the date and time to create a ZonedDateTime\n ZonedDateTime zonedDateTime \u003d ZonedDateTime.of(currentDate, timeOfDay, utcZone);\n // Get the UTC wall time in milliseconds\n long utcWallTimeInMillis \u003d zonedDateTime.toInstant().toEpochMilli();",
+      "parentUuid": "138f862d_3e6d0a5c",
       "revId": "0c12b7419af5b789a89337deda25012e58f1fd64",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     },
