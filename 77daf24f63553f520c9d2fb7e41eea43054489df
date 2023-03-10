@@ -88,6 +88,30 @@
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "f3368fc1_bcdf6fdc",
+        "filename": "lineage/lib/main/java/org/lineageos/platform/internal/health/HealthInterfaceService.java",
+        "patchSetId": 26
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 31578
+      },
+      "writtenOn": "2023-03-10T03:57:03Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "7f7e74ad_fac6b16c",
+      "range": {
+        "startLine": 50,
+        "startChar": 13,
+        "endLine": 50,
+        "endChar": 35
+      },
+      "revId": "77daf24f63553f520c9d2fb7e41eea43054489df",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "cc4c8180_f714a293",
@@ -101,6 +125,24 @@
       "writtenOn": "2023-03-09T13:35:03Z",
       "side": 1,
       "message": "mChargingControl",
+      "revId": "77daf24f63553f520c9d2fb7e41eea43054489df",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2110e757_df1386e0",
+        "filename": "lineage/lib/main/java/org/lineageos/platform/internal/health/HealthInterfaceService.java",
+        "patchSetId": 26
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 31578
+      },
+      "writtenOn": "2023-03-10T03:57:03Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "cc4c8180_f714a293",
       "revId": "77daf24f63553f520c9d2fb7e41eea43054489df",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     },
@@ -222,6 +264,30 @@
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "648aef3c_643d485e",
+        "filename": "lineage/lib/main/java/org/lineageos/platform/internal/health/HealthInterfaceService.java",
+        "patchSetId": 26
+      },
+      "lineNbr": 512,
+      "author": {
+        "id": 31578
+      },
+      "writtenOn": "2023-03-10T03:57:03Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "f63800bd_f8950087",
+      "range": {
+        "startLine": 512,
+        "startChar": 23,
+        "endLine": 512,
+        "endChar": 47
+      },
+      "revId": "77daf24f63553f520c9d2fb7e41eea43054489df",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "fd03bbe0_2dfba0cc",
@@ -292,6 +358,30 @@
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "8bb78e2b_74dcb413",
+        "filename": "sdk/src/java/lineageos/health/HealthInterface.java",
+        "patchSetId": 26
+      },
+      "lineNbr": 61,
+      "author": {
+        "id": 31578
+      },
+      "writtenOn": "2023-03-10T03:57:03Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "50704dfa_6c891405",
+      "range": {
+        "startLine": 61,
+        "startChar": 35,
+        "endLine": 61,
+        "endChar": 45
+      },
+      "revId": "77daf24f63553f520c9d2fb7e41eea43054489df",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "26f18a14_145867ac",
@@ -315,6 +405,30 @@
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "03134e28_46b8dce2",
+        "filename": "sdk/src/java/lineageos/health/HealthInterface.java",
+        "patchSetId": 26
+      },
+      "lineNbr": 76,
+      "author": {
+        "id": 31578
+      },
+      "writtenOn": "2023-03-10T03:57:03Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "26f18a14_145867ac",
+      "range": {
+        "startLine": 76,
+        "startChar": 19,
+        "endLine": 76,
+        "endChar": 43
+      },
+      "revId": "77daf24f63553f520c9d2fb7e41eea43054489df",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "f6d5b9bb_e748ca25",
@@ -328,6 +442,30 @@
       "writtenOn": "2023-03-09T13:35:03Z",
       "side": 1,
       "message": "isChargingControlSupported",
+      "range": {
+        "startLine": 81,
+        "startChar": 28,
+        "endLine": 81,
+        "endChar": 52
+      },
+      "revId": "77daf24f63553f520c9d2fb7e41eea43054489df",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "aaa2f86d_4f499338",
+        "filename": "sdk/src/java/lineageos/health/HealthInterface.java",
+        "patchSetId": 26
+      },
+      "lineNbr": 81,
+      "author": {
+        "id": 31578
+      },
+      "writtenOn": "2023-03-10T03:57:03Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "f6d5b9bb_e748ca25",
       "range": {
         "startLine": 81,
         "startChar": 28,
@@ -408,6 +546,30 @@
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "454d1143_3e842eca",
+        "filename": "sdk/src/java/lineageos/health/IHealthInterface.aidl",
+        "patchSetId": 26
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 31578
+      },
+      "writtenOn": "2023-03-10T03:57:03Z",
+      "side": 1,
+      "message": "Let\u0027s make the service handle all health stuff. So `HealthInterface`",
+      "parentUuid": "75af60bd_9f11213e",
+      "range": {
+        "startLine": 20,
+        "startChar": 10,
+        "endLine": 20,
+        "endChar": 26
+      },
+      "revId": "77daf24f63553f520c9d2fb7e41eea43054489df",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "33ab05a8_8c6c0c1b",
@@ -421,6 +583,30 @@
       "writtenOn": "2023-03-09T13:35:03Z",
       "side": 1,
       "message": "isChargingControlSupported",
+      "range": {
+        "startLine": 21,
+        "startChar": 12,
+        "endLine": 21,
+        "endChar": 36
+      },
+      "revId": "77daf24f63553f520c9d2fb7e41eea43054489df",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "eb780ba3_f42d055c",
+        "filename": "sdk/src/java/lineageos/health/IHealthInterface.aidl",
+        "patchSetId": 26
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 31578
+      },
+      "writtenOn": "2023-03-10T03:57:03Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "33ab05a8_8c6c0c1b",
       "range": {
         "startLine": 21,
         "startChar": 12,
