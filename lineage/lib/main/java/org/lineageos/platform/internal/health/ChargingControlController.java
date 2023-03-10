@@ -112,6 +112,8 @@ public class ChargingControlController extends LineageHealthFeature {
 
     // Only when the battery level is above this limit will the charging control be activated.
     private static int CHARGE_CTRL_MIN_LEVEL = 80;
+    private static final String INTENT_PARTS =
+            "org.lineageos.lineageparts.CHARGING_CONTROL_SETTINGS";
 
     private static class ChargingStopReason {
         private static int BIT(int shift) {
@@ -764,6 +766,11 @@ public class ChargingControlController extends LineageHealthFeature {
                         mConfigLimit);
             }
 
+            Intent mainIntent = new Intent(INTENT_PARTS);
+            mainIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            PendingIntent mainPendingIntent = PendingIntent.getActivity(mContext, 0, mainIntent,
+                    PendingIntent.FLAG_IMMUTABLE);
+
             Intent cancelOnceIntent = new Intent(ACTION_CHARGING_CONTROL_CANCEL_ONCE);
             PendingIntent cancelPendingIntent = PendingIntent.getBroadcast(mContext, 0,
                     cancelOnceIntent, PendingIntent.FLAG_IMMUTABLE);
@@ -772,6 +779,7 @@ public class ChargingControlController extends LineageHealthFeature {
                     new Notification.Builder(mContext, CHARGING_CONTROL_CHANNEL_ID)
                             .setContentTitle(title)
                             .setContentText(message)
+                            .setContentIntent(mainPendingIntent)
                             .setSmallIcon(R.drawable.ic_charging_control)
                             .setOngoing(true)
                             .addAction(R.drawable.ic_charging_control,
@@ -798,10 +806,16 @@ public class ChargingControlController extends LineageHealthFeature {
                         mConfigLimit);
             }
 
+            Intent mainIntent = new Intent(INTENT_PARTS);
+            mainIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            PendingIntent mainPendingIntent = PendingIntent.getActivity(mContext, 0, mainIntent,
+                    PendingIntent.FLAG_IMMUTABLE);
+
             Notification.Builder notification = new Notification.Builder(mContext,
                     CHARGING_CONTROL_CHANNEL_ID)
                     .setContentTitle(title)
                     .setContentText(message)
+                    .setContentIntent(mainPendingIntent)
                     .setSmallIcon(R.drawable.ic_charging_control)
                     .setOngoing(false);
 
