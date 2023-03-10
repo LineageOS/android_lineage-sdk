@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4c0e2d16_7a2040ea",
+        "filename": "lineage/lib/main/java/org/lineageos/platform/internal/health/HealthInterfaceService.java",
+        "patchSetId": 33
+      },
+      "lineNbr": 80,
+      "author": {
+        "id": 25732
+      },
+      "writtenOn": "2023-03-10T06:32:46Z",
+      "side": 1,
+      "message": "s/BATTERY_HEALTH/CHARGING_CONTROL",
+      "range": {
+        "startLine": 79,
+        "startChar": 0,
+        "endLine": 80,
+        "endChar": 67
+      },
+      "revId": "f114d43ff6cc4510b40866c28a0d06c4187501f9",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
