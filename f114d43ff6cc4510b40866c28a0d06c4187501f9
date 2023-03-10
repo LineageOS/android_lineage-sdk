@@ -22,6 +22,30 @@
       },
       "revId": "f114d43ff6cc4510b40866c28a0d06c4187501f9",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "85a0e4b9_6d6ed8fc",
+        "filename": "lineage/lib/main/java/org/lineageos/platform/internal/health/HealthInterfaceService.java",
+        "patchSetId": 33
+      },
+      "lineNbr": 80,
+      "author": {
+        "id": 31578
+      },
+      "writtenOn": "2023-03-10T07:00:51Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "4c0e2d16_7a2040ea",
+      "range": {
+        "startLine": 79,
+        "startChar": 0,
+        "endLine": 80,
+        "endChar": 67
+      },
+      "revId": "f114d43ff6cc4510b40866c28a0d06c4187501f9",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
