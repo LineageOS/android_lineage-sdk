@@ -60,7 +60,7 @@ public class LineageDatabaseHelper extends SQLiteOpenHelper{
     private static final boolean LOCAL_LOGV = false;
 
     private static final String DATABASE_NAME = "lineagesettings.db";
-    private static final int DATABASE_VERSION = 17;
+    private static final int DATABASE_VERSION = 18;
 
     private static final String DATABASE_NAME_OLD = "cmsettings.db";
 
@@ -427,6 +427,35 @@ public class LineageDatabaseHelper extends SQLiteOpenHelper{
                     LineageSettings.Secure.BERRY_BLACK_THEME
             }, true);
             upgradeVersion = 17;
+        }
+
+        if (upgradeVersion < 18) {
+            // Default config_requireScreenOnToAuthEnabled value is false
+            Integer oldSetting = 0;
+            db.beginTransaction();
+            SQLiteStatement stmt = null;
+            try {
+                stmt = db.compileStatement("SELECT value FROM system WHERE name=?");
+                // Used to be LineageSettings.System.FINGERPRINT_WAKE_UNLOCK
+                stmt.bindString(1, "fingerprint_wake_unlock");
+                oldSetting = Integer.parseInt(stmt.simpleQueryForString());
+
+                // Reverse 0/1 values, leave 2 as-is
+                if (oldSetting.equals(0)) {
+                    oldSetting = 1;
+                } else if (oldSetting.equals(1)) {
+                    oldSetting = 0;
+                }
+            } catch (SQLiteDoneException ex) {
+                // LineageSettings.System.FINGERPRINT_WAKE_UNLOCK is not set
+            } finally {
+                if (stmt != null) stmt.close();
+                db.endTransaction();
+            }
+            Settings.Secure.putInt(mContext.getContentResolver(),
+                    Settings.Secure.SFPS_REQUIRE_SCREEN_ON_TO_AUTH_ENABLED,
+                    oldSetting);
+            upgradeVersion = 18;
         }
         // *** Remember to update DATABASE_VERSION above!
         if (upgradeVersion != newVersion) {
