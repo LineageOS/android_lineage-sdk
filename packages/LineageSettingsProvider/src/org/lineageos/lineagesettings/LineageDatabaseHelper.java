@@ -430,8 +430,7 @@ public class LineageDatabaseHelper extends SQLiteOpenHelper{
         }
 
         if (upgradeVersion < 18) {
-            // Default config_requireScreenOnToAuthEnabled value is false
-            Integer oldSetting = 0;
+            Integer oldSetting;
             db.beginTransaction();
             SQLiteStatement stmt = null;
             try {
@@ -440,14 +439,17 @@ public class LineageDatabaseHelper extends SQLiteOpenHelper{
                 stmt.bindString(1, "fingerprint_wake_unlock");
                 oldSetting = Integer.parseInt(stmt.simpleQueryForString());
 
-                // Reverse 0/1 values, leave 2 as-is
-                if (oldSetting.equals(0)) {
+                // Reverse 0/1 values, migrate 2 to 1
+                if (oldSetting.equals(0) || oldSetting.equals(2)) {
                     oldSetting = 1;
                 } else if (oldSetting.equals(1)) {
                     oldSetting = 0;
                 }
             } catch (SQLiteDoneException ex) {
-                // LineageSettings.System.FINGERPRINT_WAKE_UNLOCK is not set
+                // LineageSettings.System.FINGERPRINT_WAKE_UNLOCK was not set,
+                // default to config_requireScreenOnToAuthEnabled value
+                oldSetting = mContext.getResources().getBoolean(
+                        com.android.internal.R.bool.config_requireScreenOnToAuthEnabled) ? 1 : 0;
             } finally {
                 if (stmt != null) stmt.close();
                 db.endTransaction();
