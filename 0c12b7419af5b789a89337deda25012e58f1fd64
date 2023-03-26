@@ -126,6 +126,24 @@
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "5ec87955_b29a7900",
+        "filename": "lineage/lib/main/java/org/lineageos/platform/internal/health/HealthInterfaceService.java",
+        "patchSetId": 23
+      },
+      "lineNbr": 266,
+      "author": {
+        "id": 31578
+      },
+      "writtenOn": "2023-03-26T07:49:56Z",
+      "side": 1,
+      "message": "Done.\nFor devices that does not bypass battery when charging stops, set the flag `config_deviceChargingControlBypassBattery` to false in the overlay such that the charging limit setting will be invisiable.",
+      "parentUuid": "6e01669a_f527b52b",
+      "revId": "0c12b7419af5b789a89337deda25012e58f1fd64",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "6dc97b0d_bcd2705a",
@@ -222,6 +240,24 @@
       "side": 1,
       "message": "Try this:\n\n // Set the UTC timezone\n ZoneId utcZone \u003d ZoneOffset.UTC;\n // Get the current date in the UTC timezone\n LocalDate currentDate \u003d LocalDate.now(utcZone);\n // Convert seconds of the day to LocalTime\n LocalTime timeOfDay \u003d LocalTime.ofSecondOfDay(System.currentTimeMillis());\n // Combine the date and time to create a ZonedDateTime\n ZonedDateTime zonedDateTime \u003d ZonedDateTime.of(currentDate, timeOfDay, utcZone);\n // Get the UTC wall time in milliseconds\n long utcWallTimeInMillis \u003d zonedDateTime.toInstant().toEpochMilli();",
       "parentUuid": "138f862d_3e6d0a5c",
+      "revId": "0c12b7419af5b789a89337deda25012e58f1fd64",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "43a57cf7_835b68df",
+        "filename": "lineage/lib/main/java/org/lineageos/platform/internal/health/HealthInterfaceService.java",
+        "patchSetId": 23
+      },
+      "lineNbr": 406,
+      "author": {
+        "id": 31578
+      },
+      "writtenOn": "2023-03-26T07:49:56Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "102a6f83_166b6d21",
       "revId": "0c12b7419af5b789a89337deda25012e58f1fd64",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     },
