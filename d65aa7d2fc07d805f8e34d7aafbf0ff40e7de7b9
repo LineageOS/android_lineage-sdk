@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6d586009_7f2d2fd1",
+        "filename": "lineage/lib/main/java/org/lineageos/platform/internal/health/ChargingControlController.java",
+        "patchSetId": 40
+      },
+      "lineNbr": 430,
+      "author": {
+        "id": 14962
+      },
+      "writtenOn": "2023-03-30T00:55:26Z",
+      "side": 1,
+      "message": "Instead of using the instance variable mIsChargingEnabled, the value should be got from the mChargingControl.getChargingEnabled() each time, because the value may be changed on the Controller side.\nFor example, on pdx206, 30 minutes after setChargeEnabled(false) is called, the charge-enabled value becomes true on the kernel side, and the charge limit does not work properly.",
+      "range": {
+        "startLine": 430,
+        "startChar": 12,
+        "endLine": 430,
+        "endChar": 30
+      },
+      "revId": "d65aa7d2fc07d805f8e34d7aafbf0ff40e7de7b9",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
