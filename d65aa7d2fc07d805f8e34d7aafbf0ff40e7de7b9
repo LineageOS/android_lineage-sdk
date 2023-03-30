@@ -22,6 +22,30 @@
       },
       "revId": "d65aa7d2fc07d805f8e34d7aafbf0ff40e7de7b9",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c3d61a52_413a8317",
+        "filename": "lineage/lib/main/java/org/lineageos/platform/internal/health/ChargingControlController.java",
+        "patchSetId": 40
+      },
+      "lineNbr": 430,
+      "author": {
+        "id": 31578
+      },
+      "writtenOn": "2023-03-30T12:40:21Z",
+      "side": 1,
+      "message": "I am concerned that calling the HAL service very often is very expensive. Normally this shouldn\u0027t happen. I will test.",
+      "parentUuid": "6d586009_7f2d2fd1",
+      "range": {
+        "startLine": 430,
+        "startChar": 12,
+        "endLine": 430,
+        "endChar": 30
+      },
+      "revId": "d65aa7d2fc07d805f8e34d7aafbf0ff40e7de7b9",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
