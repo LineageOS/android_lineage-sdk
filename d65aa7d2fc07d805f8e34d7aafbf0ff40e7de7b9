@@ -70,6 +70,30 @@
       },
       "revId": "d65aa7d2fc07d805f8e34d7aafbf0ff40e7de7b9",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "bc302fbf_53812ccf",
+        "filename": "lineage/lib/main/java/org/lineageos/platform/internal/health/ChargingControlController.java",
+        "patchSetId": 40
+      },
+      "lineNbr": 430,
+      "author": {
+        "id": 14962
+      },
+      "writtenOn": "2023-03-30T13:10:12Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "fdf8b862_45e66cbb",
+      "range": {
+        "startLine": 430,
+        "startChar": 12,
+        "endLine": 430,
+        "endChar": 30
+      },
+      "revId": "d65aa7d2fc07d805f8e34d7aafbf0ff40e7de7b9",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
