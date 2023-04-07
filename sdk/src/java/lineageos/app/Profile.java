@@ -295,11 +295,11 @@ public final class Profile implements Parcelable, Comparable {
             builder.append(" ");
             builder.append(getIdType(mType));
             builder.append("=\"");
-            builder.append(mId);
+            builder.append(TextUtils.htmlEncode(mId));
             builder.append("\" state=\"");
             builder.append(mState);
             builder.append("\" name=\"");
-            builder.append(mName);
+            builder.append(TextUtils.htmlEncode(mName));
             builder.append("\"></");
             builder.append(itemType);
             builder.append(">\n");
