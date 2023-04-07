@@ -16,6 +16,24 @@
       "message": "Try https://developer.android.com/reference/android/text/Html#escapeHtml(java.lang.CharSequence)?",
       "revId": "96c728543d366f8b7303096d94ffd14ae2d099d5",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "056e3ac9_7bbe018b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 10067
+      },
+      "writtenOn": "2023-04-07T19:20:33Z",
+      "side": 1,
+      "message": "Also, don\u0027t you have to decode it somewhere?",
+      "parentUuid": "2da95552_b87bbb6d",
+      "revId": "96c728543d366f8b7303096d94ffd14ae2d099d5",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
