@@ -24,6 +24,7 @@ import android.os.Parcelable;
 import android.os.UserHandle;
 import android.provider.Settings;
 import android.text.TextUtils;
+import android.text.Html;
 import android.util.Log;
 
 import com.android.internal.policy.IKeyguardService;
@@ -295,11 +296,11 @@ public final class Profile implements Parcelable, Comparable {
             builder.append(" ");
             builder.append(getIdType(mType));
             builder.append("=\"");
-            builder.append(mId);
+            builder.append(Html.escapeHtml(mId));
             builder.append("\" state=\"");
             builder.append(mState);
             builder.append("\" name=\"");
-            builder.append(mName);
+            builder.append(Html.escapeHtml(mName));
             builder.append("\"></");
             builder.append(itemType);
             builder.append(">\n");
