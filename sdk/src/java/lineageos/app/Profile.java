@@ -284,6 +284,10 @@ public final class Profile implements Parcelable, Comparable {
             return mState;
         }
 
+        private String escapeAmpersand(String name) {
+            return name.replace("&", "&amp;");
+        }
+
         /**
          * @hide
          */
@@ -295,11 +299,11 @@ public final class Profile implements Parcelable, Comparable {
             builder.append(" ");
             builder.append(getIdType(mType));
             builder.append("=\"");
-            builder.append(mId);
+            builder.append(escapeAmpersand(mId));
             builder.append("\" state=\"");
             builder.append(mState);
             builder.append("\" name=\"");
-            builder.append(mName);
+            builder.append(escapeAmpersand(mName));
             builder.append("\"></");
             builder.append(itemType);
             builder.append(">\n");
