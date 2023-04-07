@@ -34,6 +34,24 @@
       "parentUuid": "2da95552_b87bbb6d",
       "revId": "96c728543d366f8b7303096d94ffd14ae2d099d5",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "fa811903_e652dd7b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 9488
+      },
+      "writtenOn": "2023-04-07T19:46:28Z",
+      "side": 1,
+      "message": "I first thought so, too, but it turns out the xml decoder does that already.",
+      "parentUuid": "056e3ac9_7bbe018b",
+      "revId": "96c728543d366f8b7303096d94ffd14ae2d099d5",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
