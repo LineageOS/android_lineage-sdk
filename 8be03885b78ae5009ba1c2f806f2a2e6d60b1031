@@ -1,6 +1,23 @@
 {
   "comments": [
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "65b7bb9c_6ee4d459",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 25732
+      },
+      "writtenOn": "2023-04-13T21:08:42Z",
+      "side": 1,
+      "message": "And btw we purposely leave CABC disabled by default on whyred",
+      "revId": "8be03885b78ae5009ba1c2f806f2a2e6d60b1031",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "af74f9de_7b85e673",
