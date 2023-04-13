@@ -41,7 +41,6 @@
     <bool name="config_defaultAutoContrast">false</bool>
     <bool name="config_defaultAutoOutdoorMode">true</bool>
     <bool name="config_defaultColorEnhancement">true</bool>
-    <bool name="config_defaultCABC">true</bool>
     <bool name="config_defaultAntiFlicker">false</bool>
 
     <!-- Display mode remapping table.

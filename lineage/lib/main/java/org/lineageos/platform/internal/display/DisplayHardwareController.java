@@ -86,8 +86,6 @@ public class DisplayHardwareController extends LiveDisplayFeature {
         mHardware = LineageHardwareManager.getInstance(mContext);
         mUseCABC = mHardware
                 .isSupported(LineageHardwareManager.FEATURE_ADAPTIVE_BACKLIGHT);
-        mDefaultCABC = mContext.getResources().getBoolean(
-                org.lineageos.platform.internal.R.bool.config_defaultCABC);
 
         mUseColorEnhancement = mHardware
                 .isSupported(LineageHardwareManager.FEATURE_COLOR_ENHANCEMENT);
