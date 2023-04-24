@@ -17,24 +17,21 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="permlab_modifyProfiles">змена сістэмных профіляў</string>
-    <string name="permdesc_modifyProfiles">Дазваляць дадаткам змяняць сістэмныя профілі.</string>
+    <string name="permdesc_modifyProfiles">Дазваляе праграме змяняць сістэмныя профілі.</string>
     <string name="permlab_useHardwareFramework">Узаемадзеянне з абсталяваннем</string>
-    <string name="profileNameDefault">Па змаўчанні</string>
+    <string name="profileNameDefault">Прадвызначана</string>
     <string name="profileNameWork">Праца</string>
-    <string name="profileNameHome">На Галоўную старонку</string>
-    <string name="profileNameSilent">Ціхі рэжым</string>
     <string name="profileNameNight">Ноч</string>
     <string name="profileNameAutomobile">Аўтамабіль</string>
     <string name="profileGroupPhone">Тэлефон</string>
     <string name="profileGroupCalendar">Каляндар</string>
     <string name="profileGroupGmail">Gmail</string>
-    <string name="profileGroupEmail">Электронная пошта</string>
     <string name="profileGroupSMS">SMS</string>
     <string name="wildcardProfile">Iншае</string>
     <string name="live_display_auto">Аўтаматычна</string>
-    <string name="live_display_auto_summary">Аўтаматычная падладка колеравай тэмпературы экрана пасля заходу і ўзыходу сонца</string>
-    <string name="live_display_off">Адключана</string>
-    <string name="live_display_off_summary">Адключыць аўтападладку</string>
+    <string name="live_display_auto_summary">Аўтаматычная карэкціроўка колеравай тэмпературы экрана пасля заходу і ўсходу сонца</string>
+    <string name="live_display_off">Выключана</string>
+    <string name="live_display_off_summary">Адключыць усе карэкціроўкі</string>
     <string name="live_display_day">Дзень</string>
     <string name="live_display_day_summary">Толькі дзённыя налады</string>
     <string name="live_display_night">Ноч</string>
@@ -46,9 +43,9 @@
     <string name="accessibility_quick_settings_live_display_auto">LiveDisplay: аўтаматычна.</string>
     <string name="accessibility_quick_settings_live_display_day">LiveDisplay: дзень.</string>
     <string name="accessibility_quick_settings_live_display_night">LiveDisplay: ноч.</string>
-    <string name="accessibility_quick_settings_live_display_changed_off">LiveDisplay выключаны.</string>
     <string name="accessibility_quick_settings_live_display_changed_auto">LiveDisplay зменены на аўтаматычны рэжым.</string>
+    <string name="accessibility_quick_settings_live_display_changed_day">LiveDisplay зменены ў дзённы рэжым.</string>
+    <string name="accessibility_quick_settings_live_display_changed_night">LiveDisplay зменены ў начны рэжым.</string>
     <string name="permlab_manageLiveDisplay">кіраванне наладамі LiveDisplay</string>
-    <string name="permlab_manageRemotePrefs">кіраваньне аддаленнымі наладамі</string>
-    <string name="permdesc_manageRemotePrefs">Дадатак зможа кіраваць аддаленымі наладамі</string>
+    <string name="trust_notification_title_onboarding">Даследуйце Trust</string>
 </resources>
