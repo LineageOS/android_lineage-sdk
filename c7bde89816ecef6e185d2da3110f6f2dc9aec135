@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "735730f6_81335cee",
+        "filename": "sdk/src/java/lineageos/providers/LineageSettings.java",
+        "patchSetId": 13
+      },
+      "lineNbr": 1396,
+      "author": {
+        "id": 14010
+      },
+      "writtenOn": "2023-05-05T11:08:39Z",
+      "side": 1,
+      "message": "Shouldn\u0027t this be changed into \"charging_control_charging_limit\", to match the key used in LineageParts?\n\nhttps://review.lineageos.org/c/LineageOS/android_packages_apps_LineageParts/+/347828/14/res/xml/charging_control_settings.xml\n\nOr maybe change it there to match this one.",
+      "range": {
+        "startLine": 1396,
+        "startChar": 61,
+        "endLine": 1396,
+        "endChar": 83
+      },
+      "revId": "c7bde89816ecef6e185d2da3110f6f2dc9aec135",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
