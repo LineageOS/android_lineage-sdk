@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a8003cd9_318ca27d",
+        "filename": "packages/LineageSettingsProvider/src/org/lineageos/lineagesettings/LineageDatabaseHelper.java",
+        "patchSetId": 53
+      },
+      "lineNbr": 604,
+      "author": {
+        "id": 4550
+      },
+      "writtenOn": "2023-05-06T08:10:20Z",
+      "side": 1,
+      "message": "def_charging_control_enabled",
+      "range": {
+        "startLine": 604,
+        "startChar": 27,
+        "endLine": 604,
+        "endChar": 52
+      },
+      "revId": "01cc89635ef55f78482e936cb0f11dde01d4351e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
