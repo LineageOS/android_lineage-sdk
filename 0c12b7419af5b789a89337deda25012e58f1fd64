@@ -146,6 +146,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "3b0997bb_a81c57bd",
+        "filename": "lineage/lib/main/java/org/lineageos/platform/internal/health/HealthInterfaceService.java",
+        "patchSetId": 23
+      },
+      "lineNbr": 266,
+      "author": {
+        "id": 25732
+      },
+      "writtenOn": "2023-05-09T18:18:15Z",
+      "side": 1,
+      "message": "Can we make this parameter an AIDL interface getter instead?",
+      "parentUuid": "5ec87955_b29a7900",
+      "revId": "0c12b7419af5b789a89337deda25012e58f1fd64",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "6dc97b0d_bcd2705a",
         "filename": "lineage/lib/main/java/org/lineageos/platform/internal/health/HealthInterfaceService.java",
         "patchSetId": 23
