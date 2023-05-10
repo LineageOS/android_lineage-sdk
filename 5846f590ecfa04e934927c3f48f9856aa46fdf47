@@ -1,0 +1,187 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f033c4c6_2f310d31",
+        "filename": "lineage/lib/main/java/org/lineageos/platform/internal/health/ChargingControlController.java",
+        "patchSetId": 57
+      },
+      "lineNbr": 107,
+      "author": {
+        "id": 11883
+      },
+      "writtenOn": "2023-05-10T09:38:22Z",
+      "side": 1,
+      "message": "Why not an enum?",
+      "range": {
+        "startLine": 107,
+        "startChar": 0,
+        "endLine": 107,
+        "endChar": 45
+      },
+      "revId": "5846f590ecfa04e934927c3f48f9856aa46fdf47",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "526aaeb7_e0ac100f",
+        "filename": "lineage/lib/main/java/org/lineageos/platform/internal/health/ChargingControlController.java",
+        "patchSetId": 57
+      },
+      "lineNbr": 122,
+      "author": {
+        "id": 11883
+      },
+      "writtenOn": "2023-05-10T09:38:22Z",
+      "side": 1,
+      "message": "private static int BIT(int shift) {\n            return 1 \u003c\u003c shift;\n        }\n\n        /**\n         * No stop charging\n         */\n        public static final int NONE \u003d BIT(0);\n\n        /**\n         * The charging stopped because it reaches limit\n         */\n        public static final int REACH_LIMIT \u003d BIT(1);\n\n        /**\n         * The charging stopped because the battery level is decent, and we are waiting to resume\n         * charging when the time approaches the target time.\n         */\n        public static final int WAITING \u003d BIT(2);",
+      "range": {
+        "startLine": 108,
+        "startChar": 0,
+        "endLine": 122,
+        "endChar": 49
+      },
+      "revId": "5846f590ecfa04e934927c3f48f9856aa46fdf47",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a6657ecf_7fa4a945",
+        "filename": "lineage/lib/main/java/org/lineageos/platform/internal/health/ChargingControlController.java",
+        "patchSetId": 57
+      },
+      "lineNbr": 312,
+      "author": {
+        "id": 11883
+      },
+      "writtenOn": "2023-05-10T09:38:22Z",
+      "side": 1,
+      "message": "add -1 too?",
+      "revId": "5846f590ecfa04e934927c3f48f9856aa46fdf47",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ad31e5b8_ebf0ee88",
+        "filename": "lineage/lib/main/java/org/lineageos/platform/internal/health/ChargingControlController.java",
+        "patchSetId": 57
+      },
+      "lineNbr": 318,
+      "author": {
+        "id": 11883
+      },
+      "writtenOn": "2023-05-10T09:38:22Z",
+      "side": 1,
+      "message": "early return if either of those are -1?",
+      "range": {
+        "startLine": 317,
+        "startChar": 0,
+        "endLine": 318,
+        "endChar": 71
+      },
+      "revId": "5846f590ecfa04e934927c3f48f9856aa46fdf47",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c40ff438_833776eb",
+        "filename": "lineage/lib/main/java/org/lineageos/platform/internal/health/ChargingControlController.java",
+        "patchSetId": 57
+      },
+      "lineNbr": 325,
+      "author": {
+        "id": 11883
+      },
+      "writtenOn": "2023-05-10T09:38:22Z",
+      "side": 1,
+      "message": "updateChargingReasonBitmask?",
+      "range": {
+        "startLine": 325,
+        "startChar": 17,
+        "endLine": 325,
+        "endChar": 34
+      },
+      "revId": "5846f590ecfa04e934927c3f48f9856aa46fdf47",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ff222cf6_01788195",
+        "filename": "lineage/lib/main/java/org/lineageos/platform/internal/health/ChargingControlController.java",
+        "patchSetId": 57
+      },
+      "lineNbr": 522,
+      "author": {
+        "id": 11883
+      },
+      "writtenOn": "2023-05-10T09:38:22Z",
+      "side": 1,
+      "message": "why don\u0027t you use a date formatter?\n\n    static SimpleDateFormat formatter \u003d new SimpleDateFormat(\"$format\");\n    \n    public String msToString(long ms) {\n        Calendar calendar \u003d Calendar.getInstance();\n        calendar.setTimeInMillis(ms);\n        return formatter.format(calendar.getTime());\n    }",
+      "range": {
+        "startLine": 519,
+        "startChar": 0,
+        "endLine": 522,
+        "endChar": 49
+      },
+      "revId": "5846f590ecfa04e934927c3f48f9856aa46fdf47",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "40c2b7b2_497e81c5",
+        "filename": "lineage/lib/main/java/org/lineageos/platform/internal/health/ChargingControlController.java",
+        "patchSetId": 57
+      },
+      "lineNbr": 527,
+      "author": {
+        "id": 11883
+      },
+      "writtenOn": "2023-05-10T09:38:22Z",
+      "side": 1,
+      "message": "Can you document what you\u0027re doing here?\nIt seems to me you\u0027re getting current date in UTC, then current localTime, and then creating a zoned time.\n\niirc ZonedDateTime.of expects date and time to be on the same TZ, is that the case?",
+      "revId": "5846f590ecfa04e934927c3f48f9856aa46fdf47",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "92cb8efc_bf96961d",
+        "filename": "lineage/lib/main/java/org/lineageos/platform/internal/health/ChargingControlController.java",
+        "patchSetId": 57
+      },
+      "lineNbr": 537,
+      "author": {
+        "id": 11883
+      },
+      "writtenOn": "2023-05-10T09:38:22Z",
+      "side": 1,
+      "message": "And here you\u0027re using current TZ?",
+      "revId": "5846f590ecfa04e934927c3f48f9856aa46fdf47",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e8ebf349_1a418aa5",
+        "filename": "lineage/lib/main/java/org/lineageos/platform/internal/health/ChargingControlController.java",
+        "patchSetId": 57
+      },
+      "lineNbr": 566,
+      "author": {
+        "id": 11883
+      },
+      "writtenOn": "2023-05-10T09:38:22Z",
+      "side": 1,
+      "message": "Since this gives us the Uri of the updates setting, would it be possible to handle updates granularly per-setting?",
+      "revId": "5846f590ecfa04e934927c3f48f9856aa46fdf47",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
