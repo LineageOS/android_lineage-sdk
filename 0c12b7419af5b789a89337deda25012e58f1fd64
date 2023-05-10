@@ -162,6 +162,24 @@
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "92c8adba_987c4c57",
+        "filename": "lineage/lib/main/java/org/lineageos/platform/internal/health/HealthInterfaceService.java",
+        "patchSetId": 23
+      },
+      "lineNbr": 266,
+      "author": {
+        "id": 31578
+      },
+      "writtenOn": "2023-05-10T07:52:50Z",
+      "side": 1,
+      "message": "Done, now it is changed to a boardconfig: TARGET_HEALTH_CHARGING_CONTROL_BYPASSES_BATTERY\nand it is default to true",
+      "parentUuid": "3b0997bb_a81c57bd",
+      "revId": "0c12b7419af5b789a89337deda25012e58f1fd64",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "6dc97b0d_bcd2705a",
