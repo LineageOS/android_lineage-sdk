@@ -73,6 +73,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "a7aa4e9f_ca4b8d98",
+        "filename": "lineage/lib/main/java/org/lineageos/platform/internal/health/ChargingControlController.java",
+        "patchSetId": 57
+      },
+      "lineNbr": 122,
+      "author": {
+        "id": 11883
+      },
+      "writtenOn": "2023-05-10T10:49:16Z",
+      "side": 1,
+      "message": "private static class ChargingStopReason {\n        private static int BIT(int shift) {\n            return 1 \u003c\u003c shift;\n        }\n\n        /**\n         * No stop charging\n         */\n        public static final int NONE \u003d BIT(0);\n\n        /**\n         * The charging stopped because it reaches limit\n         */\n        public static final int REACH_LIMIT \u003d BIT(1);\n\n        /**\n         * The charging stopped because the battery level is decent, and we are waiting to resume\n         * charging when the time approaches the target time.\n         */\n        public static final int WAITING \u003d BIT(2);\n    }",
+      "parentUuid": "1482ac4c_b70d4c8c",
+      "range": {
+        "startLine": 108,
+        "startChar": 0,
+        "endLine": 122,
+        "endChar": 49
+      },
+      "revId": "5846f590ecfa04e934927c3f48f9856aa46fdf47",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "a6657ecf_7fa4a945",
         "filename": "lineage/lib/main/java/org/lineageos/platform/internal/health/ChargingControlController.java",
         "patchSetId": 57
@@ -192,6 +216,24 @@
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "53a71828_b7f46e38",
+        "filename": "lineage/lib/main/java/org/lineageos/platform/internal/health/ChargingControlController.java",
+        "patchSetId": 57
+      },
+      "lineNbr": 527,
+      "author": {
+        "id": 11883
+      },
+      "writtenOn": "2023-05-10T10:49:16Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "5009db9c_c204474c",
+      "revId": "5846f590ecfa04e934927c3f48f9856aa46fdf47",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "92cb8efc_bf96961d",
@@ -229,6 +271,24 @@
     {
       "unresolved": false,
       "key": {
+        "uuid": "c228303f_4477994d",
+        "filename": "lineage/lib/main/java/org/lineageos/platform/internal/health/ChargingControlController.java",
+        "patchSetId": 57
+      },
+      "lineNbr": 537,
+      "author": {
+        "id": 11883
+      },
+      "writtenOn": "2023-05-10T10:49:16Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "5bda06ae_70b7183e",
+      "revId": "5846f590ecfa04e934927c3f48f9856aa46fdf47",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
         "uuid": "e8ebf349_1a418aa5",
         "filename": "lineage/lib/main/java/org/lineageos/platform/internal/health/ChargingControlController.java",
         "patchSetId": 57
@@ -258,6 +318,24 @@
       "side": 1,
       "message": "While it is possible, I did this for simplicity concern. The `handleSettingChange()` simply reads all settings, so that when the dependencies between different settings change, there is no need to change this function.",
       "parentUuid": "e8ebf349_1a418aa5",
+      "revId": "5846f590ecfa04e934927c3f48f9856aa46fdf47",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "65209111_929c7436",
+        "filename": "lineage/lib/main/java/org/lineageos/platform/internal/health/ChargingControlController.java",
+        "patchSetId": 57
+      },
+      "lineNbr": 566,
+      "author": {
+        "id": 11883
+      },
+      "writtenOn": "2023-05-10T10:49:16Z",
+      "side": 1,
+      "message": "Yeah, was asking if it made sense",
+      "parentUuid": "ed62096e_63312b5e",
       "revId": "5846f590ecfa04e934927c3f48f9856aa46fdf47",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
