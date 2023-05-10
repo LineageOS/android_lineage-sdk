@@ -152,6 +152,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "5009db9c_c204474c",
+        "filename": "lineage/lib/main/java/org/lineageos/platform/internal/health/ChargingControlController.java",
+        "patchSetId": 57
+      },
+      "lineNbr": 527,
+      "author": {
+        "id": 31578
+      },
+      "writtenOn": "2023-05-10T10:15:52Z",
+      "side": 1,
+      "message": "Given the seconds of the day in local time zone, this function returns the UTC millis from the epoch (1970-01-01). I will update the doc accordingly.",
+      "parentUuid": "40c2b7b2_497e81c5",
+      "revId": "5846f590ecfa04e934927c3f48f9856aa46fdf47",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "92cb8efc_bf96961d",
         "filename": "lineage/lib/main/java/org/lineageos/platform/internal/health/ChargingControlController.java",
         "patchSetId": 57
@@ -163,6 +181,24 @@
       "writtenOn": "2023-05-10T09:38:22Z",
       "side": 1,
       "message": "And here you\u0027re using current TZ?",
+      "revId": "5846f590ecfa04e934927c3f48f9856aa46fdf47",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5bda06ae_70b7183e",
+        "filename": "lineage/lib/main/java/org/lineageos/platform/internal/health/ChargingControlController.java",
+        "patchSetId": 57
+      },
+      "lineNbr": 537,
+      "author": {
+        "id": 31578
+      },
+      "writtenOn": "2023-05-10T10:15:52Z",
+      "side": 1,
+      "message": "It returns the time in current time zone",
+      "parentUuid": "92cb8efc_bf96961d",
       "revId": "5846f590ecfa04e934927c3f48f9856aa46fdf47",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     },
@@ -180,6 +216,24 @@
       "writtenOn": "2023-05-10T09:38:22Z",
       "side": 1,
       "message": "Since this gives us the Uri of the updates setting, would it be possible to handle updates granularly per-setting?",
+      "revId": "5846f590ecfa04e934927c3f48f9856aa46fdf47",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ed62096e_63312b5e",
+        "filename": "lineage/lib/main/java/org/lineageos/platform/internal/health/ChargingControlController.java",
+        "patchSetId": 57
+      },
+      "lineNbr": 566,
+      "author": {
+        "id": 31578
+      },
+      "writtenOn": "2023-05-10T10:15:52Z",
+      "side": 1,
+      "message": "While it is possible, I did this for simplicity concern. The `handleSettingChange()` simply reads all settings, so that when the dependencies between different settings change, there is no need to change this function.",
+      "parentUuid": "e8ebf349_1a418aa5",
       "revId": "5846f590ecfa04e934927c3f48f9856aa46fdf47",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
