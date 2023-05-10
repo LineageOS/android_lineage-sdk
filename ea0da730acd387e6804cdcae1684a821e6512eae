@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "da119716_1ec87b41",
+        "filename": "lineage/lib/main/java/org/lineageos/platform/internal/health/ChargingControlController.java",
+        "patchSetId": 60
+      },
+      "lineNbr": 118,
+      "author": {
+        "id": 31578
+      },
+      "writtenOn": "2023-05-10T14:51:04Z",
+      "side": 1,
+      "message": "No bit should be set for NONE.",
+      "revId": "ea0da730acd387e6804cdcae1684a821e6512eae",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
