@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "28fc8db6_634fb0a0",
+        "filename": "lineage/lib/main/java/org/lineageos/platform/internal/LineageBaseFeature.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 101,
+      "author": {
+        "id": 11883
+      },
+      "writtenOn": "2023-05-10T09:45:30Z",
+      "side": 1,
+      "message": "This is likely fine, but some cases observing all user might be wrong fyi",
+      "revId": "8f5c3021e2cc4dbff1926d4eb6917d55050961c6",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "495ada73_62c44676",
+        "filename": "lineage/lib/main/java/org/lineageos/platform/internal/LineageBaseFeature.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 120,
+      "author": {
+        "id": 11883
+      },
+      "writtenOn": "2023-05-10T09:45:30Z",
+      "side": 1,
+      "message": "Might want to implement a callback based interface instead\n\ninterface SettingsCallback {\n   void onSettingsChanged(Uri uri);\n}\n\npublic void setCallback(SettingsCallback cb) { this.cb \u003d cb; }\n\n\n@Override\nprivate void update() {\n    cb.onSettingsChanged(null);\n}\n\n@Override\nprivate void onChange(boolean selfChange, Uri uri) {\n    cb.onSettingsChanged(uri);\n}\n\nAnd drop onSettingsChanged() abstract method",
+      "range": {
+        "startLine": 112,
+        "startChar": 0,
+        "endLine": 120,
+        "endChar": 9
+      },
+      "revId": "8f5c3021e2cc4dbff1926d4eb6917d55050961c6",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
