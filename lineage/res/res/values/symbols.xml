@@ -194,10 +194,6 @@
     <java-symbol type="array" name="config_globallyDisabledComponents" />
     <java-symbol type="array" name="config_forceEnabledComponents" />
 
-    <!-- Camera -->
-    <java-symbol type="array" name="config_cameraAuxPackageAllowList" />
-    <java-symbol type="array" name="config_cameraAuxPackageExcludeList" />
-
     <!-- Health interface -->
     <java-symbol type="bool" name="config_chargingControlEnabled" />
     <java-symbol type="integer" name="config_defaultChargingControlMode" />
