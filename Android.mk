@@ -1,6 +1,6 @@
 #
 # Copyright (C) 2015 The CyanogenMod Project
-#               2017-2022 The LineageOS Project
+#               2017-2023 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -42,29 +42,6 @@ LOCAL_ADDITIONAL_DEPENDENCIES := $(lineage_framework_res_R_stamp)
 $(lineage_framework_module): | $(dir $(lineage_framework_module))org.lineageos.platform-res.apk
 
 lineage_framework_built := $(call java-lib-deps, org.lineageos.platform)
-
-# the sdk as an aar for publish, not built as part of full target
-# DO NOT LINK AGAINST THIS IN BUILD
-# ============================================================
-include $(CLEAR_VARS)
-
-LOCAL_MODULE := org.lineageos.platform.sdk.aar
-
-LOCAL_JACK_ENABLED := disabled
-
-LOCAL_CONSUMER_PROGUARD_FILE := $(LOCAL_PATH)/sdk/proguard.txt
-
-LOCAL_RESOURCE_DIR := $(addprefix $(LOCAL_PATH)/, sdk/res/res)
-LOCAL_MANIFEST_FILE := sdk/AndroidManifest.xml
-
-lineage_sdk_exclude_files := 'lineageos/library'
-LOCAL_JAR_EXCLUDE_PACKAGES := $(lineage_sdk_exclude_files)
-LOCAL_JAR_EXCLUDE_FILES := none
-
-LOCAL_STATIC_JAVA_LIBRARIES := org.lineageos.platform.sdk
-
-include $(BUILD_STATIC_JAVA_LIBRARY)
-$(LOCAL_MODULE) : $(built_aar)
 
 # ===========================================================
 # Common Droiddoc vars
