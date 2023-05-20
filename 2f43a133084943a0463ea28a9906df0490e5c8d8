@@ -16,6 +16,24 @@
       "message": "Exited to have this feature running on my old Sony lilac (xz1c)!\n\nOne issue: Date/time handling is not correct yet. My phone is set in timezone UTC+2, and when setting target time of 06:00am in the lineagepart UI, the notification message is 2 hours off (\u0027charging will be complete at 08:00\u0027) and so seems the actual time that charging approx. stops: it stops around 08:00 local time. Can\u0027t point to a specific piece of code, will have another look.",
       "revId": "2f43a133084943a0463ea28a9906df0490e5c8d8",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "89cfc41d_adee2d33",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 61
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 31578
+      },
+      "writtenOn": "2023-05-20T05:22:22Z",
+      "side": 1,
+      "message": "Done. I have addressed the issue in the update. You can verify the internal state by logcat: `adb logcat | grep LineageHealth` and you should see:\n```\nI LineageHealth: Got target time 03:00:00 PM, start time 10:00:00 AM, current time 01:13:42 PM\n```",
+      "parentUuid": "f953548f_79816da2",
+      "revId": "2f43a133084943a0463ea28a9906df0490e5c8d8",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
