@@ -100,9 +100,6 @@ java_library {
         library_src + "/**/*.java",
         lineage_sdk_src + "/**/I*.aidl",
         lineage_sdk_internal_src + "/**/I*.aidl",
-
-        // For the generated R.java and Manifest.java
-        ":org.lineageos.platform-res{.aapt.srcjar}",
     ],
 
     // Include aidl files from lineageos.app namespace as well as internal src aidl files
@@ -124,9 +121,6 @@ java_library {
         lineage_sdk_internal_src + "/**/*.java",
         lineage_sdk_src + "/**/I*.aidl",
         lineage_sdk_internal_src + "/**/I*.aidl",
-
-        // For the generated R.java and Manifest.java
-        ":org.lineageos.platform-res{.aapt.srcjar}",
     ],
 
     aidl: {
