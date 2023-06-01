@@ -47,7 +47,7 @@
     <string name="live_display_night_summary">Używaj ustawień tylko w nocy</string>
     <string name="live_display_outdoor">Na zewnątrz (jasne światło)</string>
     <string name="live_display_outdoor_summary">Używaj ustawień tylko na zewnątrz</string>
-    <string name="live_display_hint">LiveDisplay może pomóc w zredukowaniu efektu zmęczenia oczu oraz pomaga zasnąć w nocy. Kliknij tutaj, aby wypróbować!</string>
+    <string name="live_display_hint">LiveDisplay może pomóc w zredukowaniu efektu zmęczenia oczu oraz pomaga zasnąć w nocy. Dotknij tutaj, aby wypróbować!</string>
     <string name="accessibility_quick_settings_live_display_off">LiveDisplay wyłączony.</string>
     <string name="accessibility_quick_settings_live_display_auto">LiveDisplay: tryb automatyczny.</string>
     <string name="accessibility_quick_settings_live_display_day">LiveDisplay: tryb dzienny.</string>
