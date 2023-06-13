@@ -120,6 +120,21 @@ public class HealthInterface {
     }
 
     /**
+     * Returns whether charging control is supported
+     *
+     * @return true if charging control is supported
+     */
+    public static boolean isChargingControlSupported(Context context) {
+        try {
+            return getInstance(context).isChargingControlSupported();
+        } catch (RuntimeException e) {
+            Log.e(TAG, e.getLocalizedMessage(), e);
+        }
+
+        return false;
+    }
+
+    /**
      * Returns the charging control enabled status
      *
      * @return whether charging control has been enabled
