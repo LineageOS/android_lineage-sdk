@@ -447,15 +447,15 @@ public class LineageDatabaseHelper extends SQLiteOpenHelper{
                 }
             } catch (SQLiteDoneException ex) {
                 // LineageSettings.System.FINGERPRINT_WAKE_UNLOCK was not set,
-                // default to config_requireScreenOnToAuthEnabled value
+                // default to config_performantAuthDefault value
                 oldSetting = mContext.getResources().getBoolean(
-                        com.android.internal.R.bool.config_requireScreenOnToAuthEnabled) ? 1 : 0;
+                        com.android.internal.R.bool.config_performantAuthDefault) ? 1 : 0;
             } finally {
                 if (stmt != null) stmt.close();
                 db.endTransaction();
             }
             Settings.Secure.putInt(mContext.getContentResolver(),
-                    Settings.Secure.SFPS_REQUIRE_SCREEN_ON_TO_AUTH_ENABLED,
+                    Settings.Secure.SFPS_PERFORMANT_AUTH_ENABLED,
                     oldSetting);
             upgradeVersion = 18;
         }
