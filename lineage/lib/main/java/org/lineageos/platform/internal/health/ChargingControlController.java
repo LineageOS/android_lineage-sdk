@@ -152,8 +152,6 @@ public class ChargingControlController extends LineageHealthFeature {
 
         mChargingTimeMargin = mContext.getResources().getInteger(
                 R.integer.config_chargingControlTimeMargin) * 60 * 1000;
-        mChargingLimitMargin = mContext.getResources().getInteger(
-                R.integer.config_chargingControlBatteryRechargeMargin);
 
         mDefaultEnabled = mContext.getResources().getBoolean(
                 R.bool.config_chargingControlEnabled);
@@ -170,6 +168,17 @@ public class ChargingControlController extends LineageHealthFeature {
         mIsChargingBypassSupported = isChargingModeSupported(ChargingControlSupportedMode.BYPASS);
         mIsChargingDeadlineSupported = isChargingModeSupported(
                 ChargingControlSupportedMode.DEADLINE);
+
+        if (mIsChargingBypassSupported) {
+            // This is a workaround for devices that support charging bypass, but is not able to
+            // hold the charging current to 0mA, which causes battery to lose power very slowly.
+            // This will become a problem in limit mode because it will stop charge at limit and
+            // immediately resume charging at (limit - 1). So we add a small margin here.
+            mChargingLimitMargin = 1;
+        } else {
+            mChargingLimitMargin = mContext.getResources().getInteger(
+                    R.integer.config_chargingControlBatteryRechargeMargin);
+        }
     }
 
     @Override
@@ -404,8 +413,7 @@ public class ChargingControlController extends LineageHealthFeature {
             return false;
         }
 
-        if (!mIsChargingBypassSupported
-                && isChargingReasonSet(ChargingStopReason.REACH_LIMIT)) {
+        if (isChargingReasonSet(ChargingStopReason.REACH_LIMIT)) {
             return mBatteryPct >= mConfigLimit - mChargingLimitMargin;
         }
 
