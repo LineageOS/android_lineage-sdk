@@ -828,6 +828,15 @@ public class ChargingControlController extends LineageHealthFeature {
                     .setSmallIcon(R.drawable.ic_charging_control)
                     .setOngoing(false);
 
+            if (targetTime == null) {
+                Intent cancelOnceIntent = new Intent(ACTION_CHARGING_CONTROL_CANCEL_ONCE);
+                PendingIntent cancelPendingIntent = PendingIntent.getBroadcast(mContext, 0,
+                        cancelOnceIntent, PendingIntent.FLAG_IMMUTABLE);
+                notification.addAction(R.drawable.ic_charging_control,
+                        mContext.getString(R.string.charging_control_notification_cancel_once),
+                        cancelPendingIntent);
+            }
+
             createNotificationChannelIfNeeded();
             mNotificationManager.notify(CHARGING_CONTROL_NOTIFICATION_ID, notification.build());
         }
