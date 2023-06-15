@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
      Copyright (C) 2015 The CyanogenMod Project
-                   2017-2022 The LineageOS Project
+                   2017-2023 The LineageOS Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -83,4 +83,11 @@
     <string name="trust_notification_title_onboarding">Trust-ı Kəşf et</string>
     <string name="trust_notification_content_onboarding">Cihazınızın təhlükəsiz olduğundan necə əmin olacağınızı öyrənin</string>
     <string name="trust_notification_action_manage">Xəbərdarlıqları idarə et</string>
+    <string name="charging_control_notification_channel">Enerji yığma kontrolu</string>
+    <string name="charging_control_notification_title">Enerji yığma kontrolu</string>
+    <string name="charging_control_notification_cancel_once">İmtina</string>
+    <string name="charging_control_notification_content_limit">Batareya %1$d%% enerji yığacaq</string>
+    <string name="charging_control_notification_content_limit_reached">Batareya %1$d%% enerji yığdı</string>
+    <string name="charging_control_notification_content_target">Batareya %1$s ərzində tam dolacaq</string>
+    <string name="charging_control_notification_content_target_reached">Batareya enerji yığdı</string>
 </resources>
