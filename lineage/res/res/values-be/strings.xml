@@ -16,16 +16,20 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="lineageos_system_label">Сістэма LineageOS</string>
     <string name="permlab_modifyProfiles">змена сістэмных профіляў</string>
     <string name="permdesc_modifyProfiles">Дазваляе праграме змяняць сістэмныя профілі.</string>
     <string name="permlab_useHardwareFramework">Узаемадзеянне з абсталяваннем</string>
+    <string name="permlab_writeSettings">змяніць налады сістэмы Lineage</string>
     <string name="profileNameDefault">Прадвызначана</string>
     <string name="profileNameWork">Праца</string>
+    <string name="profileNameHome">Дом</string>
     <string name="profileNameNight">Ноч</string>
     <string name="profileNameAutomobile">Аўтамабіль</string>
     <string name="profileGroupPhone">Тэлефон</string>
     <string name="profileGroupCalendar">Каляндар</string>
     <string name="profileGroupGmail">Gmail</string>
+    <string name="profileGroupEmail">Электронная пошта</string>
     <string name="profileGroupSMS">SMS</string>
     <string name="wildcardProfile">Iншае</string>
     <string name="live_display_auto">Аўтаматычна</string>
@@ -38,14 +42,20 @@
     <string name="live_display_night_summary">Толькі начныя налады</string>
     <string name="live_display_outdoor">На вуліцы (яскравае сонца)</string>
     <string name="live_display_outdoor_summary">Толькі вулічны рэжым</string>
-    <string name="live_display_hint">Жывыя шпалеры дапамогуць зменшыць напружанне на вочы і палепшыць сон. Націсні тут, каб паспрабаваць!</string>
     <string name="accessibility_quick_settings_live_display_off">LiveDisplay выключаны.</string>
-    <string name="accessibility_quick_settings_live_display_auto">LiveDisplay: аўтаматычна.</string>
-    <string name="accessibility_quick_settings_live_display_day">LiveDisplay: дзень.</string>
-    <string name="accessibility_quick_settings_live_display_night">LiveDisplay: ноч.</string>
+    <string name="accessibility_quick_settings_live_display_changed_off">LiveDisplay выключаны.</string>
     <string name="accessibility_quick_settings_live_display_changed_auto">LiveDisplay зменены на аўтаматычны рэжым.</string>
-    <string name="accessibility_quick_settings_live_display_changed_day">LiveDisplay зменены ў дзённы рэжым.</string>
-    <string name="accessibility_quick_settings_live_display_changed_night">LiveDisplay зменены ў начны рэжым.</string>
     <string name="permlab_manageLiveDisplay">кіраванне наладамі LiveDisplay</string>
+    <string name="permlab_manageRemotePrefs">кіраваць аддаленымі наладамі</string>
+    <string name="permdesc_manageRemotePrefs">Дазваляе праграме кіраваць аддаленымі наладамі</string>
+    <string name="build_date">Дата зборкі</string>
+    <string name="lineage_updates">Абнаўленні LineageOS</string>
+    <string name="lineage_version">Версія LineageOS</string>
+    <string name="app_killed_message">Праграма спынена</string>
+    <string name="kilobitspersecond_short">кбіт/с</string>
+    <string name="megabitspersecond_short">Мбіт/с</string>
+    <string name="kilobytespersecond_short">кБ/с</string>
+    <string name="megabytespersecond_short">МБ/с</string>
+    <string name="permlab_trustInterface">доступ да інтэрфейсу Trust</string>
     <string name="trust_notification_title_onboarding">Даследуйце Trust</string>
 </resources>

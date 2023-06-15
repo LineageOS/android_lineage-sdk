@@ -39,9 +39,9 @@
     <string name="wildcardProfile">Inny</string>
     <string name="live_display_auto">Automatyczny</string>
     <string name="live_display_auto_summary">Automatycznie dostosuj temperaturę kolorów ekranu po zachodzie i wschodzie słońca</string>
-    <string name="live_display_off">Wyłączony</string>
+    <string name="live_display_off">Wyłączono</string>
     <string name="live_display_off_summary">Wyłącz wszystkie zmiany</string>
-    <string name="live_display_day">Dzień</string>
+    <string name="live_display_day">Dzienny</string>
     <string name="live_display_day_summary">Używaj tylko ustawień za dnia</string>
     <string name="live_display_night">Nocny</string>
     <string name="live_display_night_summary">Używaj ustawień tylko w nocy</string>
@@ -68,7 +68,7 @@
     <string name="lineage_version">Wersja LineageOS</string>
     <string name="lineage_vendor_security_patch">Poziom poprawek zabezpieczeń producenta</string>
     <string name="unknown">Nieznane</string>
-    <string name="app_killed_message">Aplikacja zabita</string>
+    <string name="app_killed_message">Aplikacja zatrzymana</string>
     <string name="kilobitspersecond_short">kb/s</string>
     <string name="megabitspersecond_short">Mb/s</string>
     <string name="kilobytespersecond_short">kB/s</string>
