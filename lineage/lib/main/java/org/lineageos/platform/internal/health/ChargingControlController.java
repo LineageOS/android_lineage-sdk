@@ -757,6 +757,22 @@ public class ChargingControlController extends LineageHealthFeature {
         private void handleNotificationIntent(Intent intent) {
             if (intent.getAction().equals(ACTION_CHARGING_CONTROL_CANCEL_ONCE)) {
                 mIsControlCancelledOnce = true;
+
+                if (!mIsChargingBypassSupported) {
+                    IntentFilter disconnectFilter = new IntentFilter(
+                            Intent.ACTION_POWER_DISCONNECTED);
+
+                    // Register a one-time receiver that resets internal state on power
+                    // disconnection
+                    mContext.registerReceiver(new BroadcastReceiver() {
+                        @Override
+                        public void onReceive(Context context, Intent intent) {
+                            Log.i(TAG, "Power disconnected, reset internal states");
+                            resetInternalState();
+                            mContext.unregisterReceiver(this);
+                        }
+                    }, disconnectFilter);
+                }
                 updateChargeControl();
                 cancelChargingControlNotification();
             }
