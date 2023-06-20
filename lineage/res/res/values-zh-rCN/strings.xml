@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
      Copyright (C) 2015 The CyanogenMod Project
-                   2017-2022 The LineageOS Project
+                   2017-2023 The LineageOS Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -83,4 +83,11 @@
     <string name="trust_notification_title_onboarding">探索安全中心</string>
     <string name="trust_notification_content_onboarding">了解如何保证设备安全</string>
     <string name="trust_notification_action_manage">管理警报</string>
+    <string name="charging_control_notification_channel">充电控制</string>
+    <string name="charging_control_notification_title">充电控制</string>
+    <string name="charging_control_notification_cancel_once">取消</string>
+    <string name="charging_control_notification_content_limit">电池将会被充电至 %1$d%%</string>
+    <string name="charging_control_notification_content_limit_reached">电池已充电 %1$d%%</string>
+    <string name="charging_control_notification_content_target">电池将在 %1$s 完全充满</string>
+    <string name="charging_control_notification_content_target_reached">电池已充满</string>
 </resources>

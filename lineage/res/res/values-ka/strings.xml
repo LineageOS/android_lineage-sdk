@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
      Copyright (C) 2015 The CyanogenMod Project
-                   2017-2022 The LineageOS Project
+                   2017-2023 The LineageOS Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -83,4 +83,11 @@
     <string name="trust_notification_title_onboarding">უკეთ გაიცანით Trust</string>
     <string name="trust_notification_content_onboarding">იხილეთ, თუ როგორ უნდა დარწმუნდეთ საკუთარი მოწყობილობის უსაფრთხოებაში</string>
     <string name="trust_notification_action_manage">ცნობების მართვა</string>
+    <string name="charging_control_notification_channel">დამუხტვის მართვა</string>
+    <string name="charging_control_notification_title">დამუხტვის მართვა</string>
+    <string name="charging_control_notification_cancel_once">გაუქმება</string>
+    <string name="charging_control_notification_content_limit">დაიმუხტება არაუმეტეს %1$d%%</string>
+    <string name="charging_control_notification_content_limit_reached">დამუხტულია არაუმეტეს %1$d%%</string>
+    <string name="charging_control_notification_content_target">სრულად დამუხტვის დროა %1$s</string>
+    <string name="charging_control_notification_content_target_reached">დამუხტულია</string>
 </resources>
