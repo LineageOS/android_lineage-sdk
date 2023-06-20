@@ -575,15 +575,15 @@ public class ChargingControlController extends LineageHealthFeature {
             return;
         }
 
-        final ChargeTime t = getChargeTime();
-        if (t != null && t.getTargetTime() == mSavedTargetTime) {
-            return;
-        }
-
         long deadline = 0;
-        if (t == null || mIsControlCancelledOnce) {
+        final ChargeTime t = getChargeTime();
+
+        if (!mConfigEnabled || t == null || mIsControlCancelledOnce) {
             deadline = -1;
         } else {
+            if (t.getTargetTime() == mSavedTargetTime) {
+                return;
+            }
             mSavedTargetTime = t.getTargetTime();
             final long targetTime = t.getTargetTime();
             final long currentTime = System.currentTimeMillis();
