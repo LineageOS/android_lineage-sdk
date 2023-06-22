@@ -104,6 +104,7 @@ public class ChargingControlController extends LineageHealthFeature {
     private final boolean mIsChargingToggleSupported;
     private final boolean mIsChargingBypassSupported;
     private final boolean mIsChargingDeadlineSupported;
+    private final boolean mIsChargingLevelSupported;
     private final int mChargingTimeMargin;
     private final int mChargingLimitMargin;
 
@@ -170,6 +171,8 @@ public class ChargingControlController extends LineageHealthFeature {
         mIsChargingBypassSupported = isChargingModeSupported(ChargingControlSupportedMode.BYPASS);
         mIsChargingDeadlineSupported = isChargingModeSupported(
                 ChargingControlSupportedMode.DEADLINE);
+        mIsChargingLevelSupported = isChargingModeSupported(
+                ChargingControlSupportedMode.LEVEL);
     }
 
     @Override
@@ -392,7 +395,9 @@ public class ChargingControlController extends LineageHealthFeature {
     }
 
     private void updateChargeControl() {
-        if (mIsChargingToggleSupported) {
+        if (mIsChargingLevelSupported) {
+            updateChargeLevel();
+        } else if (mIsChargingToggleSupported) {
             updateChargeToggle();
         } else if (mIsChargingDeadlineSupported) {
             updateChargeDeadline();
@@ -541,6 +546,10 @@ public class ChargingControlController extends LineageHealthFeature {
 
         updateChargingReasonBitmask(ChargingStopReason.REACH_LIMIT, shouldSetLimitFlag());
         updateChargingReasonBitmask(ChargingStopReason.WAITING, shouldSetWaitFlag());
+    }
+
+    private void updateChargeLevel() {
+        // TODO
     }
 
     private void updateChargeToggle() {
