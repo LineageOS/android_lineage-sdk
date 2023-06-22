@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "16aa2044_2c4f052f",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 2195
+      },
+      "writtenOn": "2023-06-22T21:28:51Z",
+      "side": 1,
+      "message": "Still very WiP, also looking for feedback to see how to best expose this.\n\nIt does work as expected, I tested with manual sysfs control.",
+      "revId": "3aeb94904d2dd23fd2bb5968756ec371a75a4862",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
