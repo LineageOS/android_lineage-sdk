@@ -16,6 +16,24 @@
       "message": "I\u0027ve been seeing an issue with Pixel 6 series (maybe other devices are affected, too) where after connecting to certain power sources, especially non-computer USB ports, charge_deadline is still not a writable node, same as if there is no power connected. Adding a 1-second delay fixes that, but this change works better, apart from the errors in logcat for the early failed attempts.",
       "revId": "d9037a5b3d1981943e882b4d176de2d628eadf0e",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "788d4c56_046e03d9",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 31578
+      },
+      "writtenOn": "2023-06-23T16:14:19Z",
+      "side": 1,
+      "message": "Thanks! So if I understand correctly, if the deadline fails to set, it will retry setting the deadline on next battery_changed intent",
+      "parentUuid": "594d68db_8c69b8e6",
+      "revId": "d9037a5b3d1981943e882b4d176de2d628eadf0e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
