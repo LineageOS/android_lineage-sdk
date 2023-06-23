@@ -578,22 +578,24 @@ public class ChargingControlController extends LineageHealthFeature {
         }
 
         long deadline = 0;
+        final long targetTime;
         final ChargeTime t = getChargeTime();
 
         if (!mConfigEnabled || t == null || mIsControlCancelledOnce) {
             deadline = -1;
+            targetTime = 0;
         } else {
             if (t.getTargetTime() == mSavedTargetTime) {
                 return;
             }
-            mSavedTargetTime = t.getTargetTime();
-            final long targetTime = t.getTargetTime();
+            targetTime = t.getTargetTime();
             final long currentTime = System.currentTimeMillis();
             deadline = (targetTime - currentTime) / 1000;
         }
 
         try {
             mChargingControl.setChargingDeadline(deadline);
+            mSavedTargetTime = targetTime;
         } catch (IllegalStateException | RemoteException | UnsupportedOperationException e) {
             Log.e(TAG, "Failed to set charge deadline");
         }
