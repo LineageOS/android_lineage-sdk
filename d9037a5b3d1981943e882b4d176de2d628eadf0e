@@ -34,6 +34,24 @@
       "parentUuid": "594d68db_8c69b8e6",
       "revId": "d9037a5b3d1981943e882b4d176de2d628eadf0e",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e935ca36_4ff443ff",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 31604
+      },
+      "writtenOn": "2023-06-23T16:23:52Z",
+      "side": 1,
+      "message": "Yes, that\u0027s my understanding of what\u0027s happening. Here\u0027s what I see in logs, after the additional log lines change 359890. It all happens within a short timeframe.\n\n```\n06-23 12:21:44.043  1000  2631  2631 I LineageHealth: Power connected, start monitoring battery\n06-23 12:21:44.044  1000  2631  2631 I LineageHealth: Current time is 12:21:44 PM\n06-23 12:21:44.044  1000  2631  2631 I LineageHealth: Target time is 10:00:00 PM\n06-23 12:21:44.046  1000  2631  2631 I LineageHealth: Setting charge deadline: Target time: 10:00:00 PM\n06-23 12:21:44.046  1000  2631  2631 I LineageHealth: Setting charge deadline: Deadline (seconds): 34695\n06-23 12:21:44.048  1000   777   777 E vendor.lineage.health-service.default: Failed to write to charging deadline node: Invalid argument\n06-23 12:21:44.051  1000  2631  2631 E LineageHealth: Failed to set charge deadline\n06-23 12:21:44.051  1000  2631  2631 E LineageHealth: java.lang.IllegalStateException: \n[...]\n06-23 12:21:44.053  1000  2631  2631 I LineageHealth: Current time is 12:21:44 PM\n06-23 12:21:44.053  1000  2631  2631 I LineageHealth: Target time is 10:00:00 PM\n06-23 12:21:44.053  1000  2631  2631 I LineageHealth: Setting charge deadline: Current time: 12:21:44 PM\n06-23 12:21:44.053  1000  2631  2631 I LineageHealth: Setting charge deadline: Target time: 10:00:00 PM\n06-23 12:21:44.053  1000  2631  2631 I LineageHealth: Setting charge deadline: Deadline (seconds): 34695\n06-23 12:21:44.054  1000   777   777 E vendor.lineage.health-service.default: Failed to write to charging deadline node: Invalid argument\n06-23 12:21:44.054  1000  2631  2631 E LineageHealth: Failed to set charge deadline\n06-23 12:21:44.054  1000  2631  2631 E LineageHealth: java.lang.IllegalStateException: \n[...]\n06-23 12:21:44.116  1000  2631  2631 I LineageHealth: Current time is 12:21:44 PM\n06-23 12:21:44.116  1000  2631  2631 I LineageHealth: Target time is 10:00:00 PM\n06-23 12:21:44.116  1000  2631  2631 I LineageHealth: Setting charge deadline: Current time: 12:21:44 PM\n06-23 12:21:44.116  1000  2631  2631 I LineageHealth: Setting charge deadline: Target time: 10:00:00 PM\n06-23 12:21:44.116  1000  2631  2631 I LineageHealth: Setting charge deadline: Deadline (seconds): 34695\n06-23 12:21:44.204  1000  2631  2631 I LineageHealth: Current time is 12:21:44 PM\n06-23 12:21:44.205  1000  2631  2631 I LineageHealth: Target time is 10:00:00 PM\n06-23 12:21:44.235  1000  2631  2631 I LineageHealth: Current time is 12:21:44 PM\n06-23 12:21:44.235  1000  2631  2631 I LineageHealth: Target time is 10:00:00 PM\n```",
+      "parentUuid": "788d4c56_046e03d9",
+      "revId": "d9037a5b3d1981943e882b4d176de2d628eadf0e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
