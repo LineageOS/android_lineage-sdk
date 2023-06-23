@@ -584,7 +584,6 @@ public class ChargingControlController extends LineageHealthFeature {
             if (t.getTargetTime() == mSavedTargetTime) {
                 return;
             }
-            mSavedTargetTime = t.getTargetTime();
             final long targetTime = t.getTargetTime();
             final long currentTime = System.currentTimeMillis();
             deadline = (targetTime - currentTime) / 1000;
@@ -592,6 +591,7 @@ public class ChargingControlController extends LineageHealthFeature {
 
         try {
             mChargingControl.setChargingDeadline(deadline);
+            mSavedTargetTime = t.getTargetTime();
         } catch (IllegalStateException | RemoteException | UnsupportedOperationException e) {
             Log.e(TAG, "Failed to set charge deadline");
         }
