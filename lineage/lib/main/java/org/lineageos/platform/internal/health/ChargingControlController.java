@@ -254,7 +254,7 @@ public class ChargingControlController extends LineageHealthFeature {
 
     public boolean isChargingModeSupported(int mode) {
         try {
-            return (mChargingControl.getSupportedMode() & mode) != 0;
+            return isSupported() && (mChargingControl.getSupportedMode() & mode) != 0;
         } catch (RemoteException e) {
             throw new RuntimeException(e);
         }
