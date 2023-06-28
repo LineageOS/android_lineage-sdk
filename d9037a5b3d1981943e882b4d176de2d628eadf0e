@@ -105,6 +105,24 @@
       "parentUuid": "9ddcdc34_a0cacb7c",
       "revId": "d9037a5b3d1981943e882b4d176de2d628eadf0e",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d3421000_f230d3b4",
+        "filename": "lineage/lib/main/java/org/lineageos/platform/internal/health/ChargingControlController.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 594,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2023-06-28T09:31:37Z",
+      "side": 1,
+      "message": "I would go a bit further and move `mSavedTargetTime \u003d targetTime;` to a \"finally\" block.",
+      "parentUuid": "a1122d6a_ba6ca16a",
+      "revId": "d9037a5b3d1981943e882b4d176de2d628eadf0e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
