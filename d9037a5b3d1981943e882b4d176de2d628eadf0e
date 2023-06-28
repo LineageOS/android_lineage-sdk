@@ -123,6 +123,24 @@
       "parentUuid": "a1122d6a_ba6ca16a",
       "revId": "d9037a5b3d1981943e882b4d176de2d628eadf0e",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "add84aa6_e9d45703",
+        "filename": "lineage/lib/main/java/org/lineageos/platform/internal/health/ChargingControlController.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 594,
+      "author": {
+        "id": 31578
+      },
+      "writtenOn": "2023-06-28T10:52:26Z",
+      "side": 1,
+      "message": "if an exception happens, `mSavedTargetTime` shouldn\u0027t be set so that the service will retry setting it when this function is called again.",
+      "parentUuid": "d3421000_f230d3b4",
+      "revId": "d9037a5b3d1981943e882b4d176de2d628eadf0e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
