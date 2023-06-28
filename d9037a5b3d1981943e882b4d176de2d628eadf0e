@@ -70,6 +70,23 @@
       "parentUuid": "e935ca36_4ff443ff",
       "revId": "d9037a5b3d1981943e882b4d176de2d628eadf0e",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9ddcdc34_a0cacb7c",
+        "filename": "lineage/lib/main/java/org/lineageos/platform/internal/health/ChargingControlController.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 594,
+      "author": {
+        "id": 31578
+      },
+      "writtenOn": "2023-06-28T08:33:18Z",
+      "side": 1,
+      "message": "`t` might be null here.",
+      "revId": "d9037a5b3d1981943e882b4d176de2d628eadf0e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
