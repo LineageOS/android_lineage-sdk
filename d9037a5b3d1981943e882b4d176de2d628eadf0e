@@ -87,6 +87,24 @@
       "message": "`t` might be null here.",
       "revId": "d9037a5b3d1981943e882b4d176de2d628eadf0e",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a1122d6a_ba6ca16a",
+        "filename": "lineage/lib/main/java/org/lineageos/platform/internal/health/ChargingControlController.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 594,
+      "author": {
+        "id": 31578
+      },
+      "writtenOn": "2023-06-28T08:37:36Z",
+      "side": 1,
+      "message": "```diff\n--- diff --git a/lineage/lib/main/java/org/lineageos/platform/internal/health/ChargingControlController.java b/lineage/lib/main/java/org/lineageos/platform/internal/health/ChargingControlController.java\nindex aac5f16c..2589dd16 100644\n--- a/lineage/lib/main/java/org/lineageos/platform/internal/health/ChargingControlController.java\n+++ b/lineage/lib/main/java/org/lineageos/platform/internal/health/ChargingControlController.java\n@@ -578,16 +578,18 @@ public class ChargingControlController extends LineageHealthFeature {\n         }\n \n         long deadline \u003d 0;\n+        final long targetTime;\n         final ChargeTime t \u003d getChargeTime();\n \n         if (!mConfigEnabled || t \u003d\u003d null || mIsControlCancelledOnce) {\n             deadline \u003d -1;\n+            targetTime \u003d 0;\n             Log.i(TAG, \"Canceling charge deadline\");\n         } else {\n             if (t.getTargetTime() \u003d\u003d mSavedTargetTime) {\n                 return;\n             }\n-            final long targetTime \u003d t.getTargetTime();\n+            targetTime \u003d t.getTargetTime();\n             final long currentTime \u003d System.currentTimeMillis();\n             deadline \u003d (targetTime - currentTime) / 1000;\n             Log.i(TAG, \"Setting charge deadline: Current time: \" + msToString(currentTime));\n@@ -597,7 +599,7 @@ public class ChargingControlController extends LineageHealthFeature {\n \n         try {\n             mChargingControl.setChargingDeadline(deadline);\n-            mSavedTargetTime \u003d t.getTargetTime();\n+            mSavedTargetTime \u003d targetTime;\n         } catch (IllegalStateException | RemoteException | UnsupportedOperationException e) {\n             Log.e(TAG, \"Failed to set charge deadline\", e);\n         }\n\n```",
+      "parentUuid": "9ddcdc34_a0cacb7c",
+      "revId": "d9037a5b3d1981943e882b4d176de2d628eadf0e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
