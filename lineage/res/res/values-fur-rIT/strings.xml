@@ -66,7 +66,7 @@
     <string name="lineage_api_level">Nivel API LineageOS</string>
     <string name="lineage_updates">Inzornaments di LineageOS</string>
     <string name="lineage_version">Version di LineageOS</string>
-    <string name="lineage_vendor_security_patch">Nivel dal blec di sigurece dal produtôr</string>
+    <string name="lineage_vendor_security_patch">Nivel de corezion di sigurece dal produtôr</string>
     <string name="unknown">No cognossût</string>
     <string name="app_killed_message">Aplicazion copade</string>
     <string name="kilobitspersecond_short">kb/s</string>
