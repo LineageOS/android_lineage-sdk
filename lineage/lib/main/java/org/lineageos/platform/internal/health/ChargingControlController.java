@@ -30,8 +30,6 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.net.Uri;
 import android.os.BatteryManager;
-import android.os.BatteryStatsManager;
-import android.os.BatteryUsageStats;
 import android.os.Handler;
 import android.os.RemoteException;
 import android.os.ServiceManager;
@@ -39,6 +37,12 @@ import android.text.format.DateUtils;
 import android.util.Log;
 
 import org.lineageos.platform.internal.R;
+import org.lineageos.platform.internal.health.provider.ChargingControlProvider;
+import org.lineageos.platform.internal.health.provider.LimitProviderToggle;
+import org.lineageos.platform.internal.health.provider.LimitProviderToggleNB;
+import org.lineageos.platform.internal.health.provider.TimeProviderDeadline;
+import org.lineageos.platform.internal.health.provider.TimeProviderToggle;
+import org.lineageos.platform.internal.health.provider.TimeProviderToggleNB;
 
 import java.io.PrintWriter;
 import java.text.SimpleDateFormat;
@@ -50,6 +54,7 @@ import java.time.ZoneOffset;
 import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Calendar;
+import java.util.TimeZone;
 
 import lineageos.providers.LineageSettings;
 
@@ -81,6 +86,17 @@ public class ChargingControlController extends LineageHealthFeature {
     private int mConfigStartTime = 0;
     private int mConfigTargetTime = 0;
 
+    // Charging control providers
+    ChargingControlProvider toggleLimitProvider;
+    ChargingControlProvider toggleTimeProvider;
+    ChargingControlProvider toggleLimitProviderNB;
+    ChargingControlProvider toggleTimeProviderNB;
+    ChargingControlProvider deadlineTimeProvider;
+
+    ChargingControlProvider mPreferredLimitProvider;
+    ChargingControlProvider mPreferredTimeProvider;
+    ChargingControlProvider mCurrentProvider;
+
     // Settings uris
     private final Uri MODE_URI = LineageSettings.System.getUriFor(
             LineageSettings.System.CHARGING_CONTROL_MODE);
@@ -96,46 +112,13 @@ public class ChargingControlController extends LineageHealthFeature {
     // Internal state
     private float mBatteryPct = 0;
     private boolean mIsPowerConnected = false;
-    private int mChargingStopReason = 0;
-    private long mEstimatedFullTime = 0;
-    private long mSavedAlarmTime = 0;
-    private long mSavedTargetTime = 0;
     private boolean mIsControlCancelledOnce = false;
-    private final boolean mIsChargingToggleSupported;
-    private final boolean mIsChargingBypassSupported;
-    private final boolean mIsChargingDeadlineSupported;
-    private final int mChargingTimeMargin;
-    private final int mChargingLimitMargin;
+    private boolean mShouldAlwaysMonitorBattery = false;
 
     private static final DateTimeFormatter mFormatter = DateTimeFormatter.ofLocalizedTime(SHORT);
-    private static final SimpleDateFormat mDateFormatter = new SimpleDateFormat("hh:mm:ss a");
 
-    // Only when the battery level is above this limit will the charging control be activated.
-    private static int CHARGE_CTRL_MIN_LEVEL = 80;
     private static final String INTENT_PARTS =
             "org.lineageos.lineageparts.CHARGING_CONTROL_SETTINGS";
-
-    private static class ChargingStopReason {
-        private static int BIT(int shift) {
-            return 1 << shift;
-        }
-
-        /**
-         * No stop charging
-         */
-        public static final int NONE = 0;
-
-        /**
-         * The charging stopped because it reaches limit
-         */
-        public static final int REACH_LIMIT = BIT(0);
-
-        /**
-         * The charging stopped because the battery level is decent, and we are waiting to resume
-         * charging when the time approaches the target time.
-         */
-        public static final int WAITING = BIT(1);
-    }
 
     public ChargingControlController(Context context, Handler handler) {
         super(context, handler);
@@ -150,9 +133,6 @@ public class ChargingControlController extends LineageHealthFeature {
 
         mChargingNotification = new ChargingControlNotification(context);
 
-        mChargingTimeMargin = mContext.getResources().getInteger(
-                R.integer.config_chargingControlTimeMargin) * 60 * 1000;
-
         mDefaultEnabled = mContext.getResources().getBoolean(
                 R.bool.config_chargingControlEnabled);
         mDefaultMode = mContext.getResources().getInteger(
@@ -164,20 +144,43 @@ public class ChargingControlController extends LineageHealthFeature {
         mDefaultLimit = mContext.getResources().getInteger(
                 R.integer.config_defaultChargingControlLimit);
 
-        mIsChargingToggleSupported = isChargingModeSupported(ChargingControlSupportedMode.TOGGLE);
-        mIsChargingBypassSupported = isChargingModeSupported(ChargingControlSupportedMode.BYPASS);
-        mIsChargingDeadlineSupported = isChargingModeSupported(
-                ChargingControlSupportedMode.DEADLINE);
+        // Initialize providers
+        toggleLimitProvider = new LimitProviderToggle(mChargingControl, context);
+        toggleTimeProvider = new TimeProviderToggle(mChargingControl, context);
+        toggleLimitProviderNB = new LimitProviderToggleNB(mChargingControl, context);
+        toggleTimeProviderNB = new TimeProviderToggleNB(mChargingControl, context);
+        deadlineTimeProvider = new TimeProviderDeadline(mChargingControl, context);
 
-        if (mIsChargingBypassSupported) {
-            // This is a workaround for devices that support charging bypass, but is not able to
-            // hold the charging current to 0mA, which causes battery to lose power very slowly.
-            // This will become a problem in limit mode because it will stop charge at limit and
-            // immediately resume charging at (limit - 1). So we add a small margin here.
-            mChargingLimitMargin = 1;
+        if (toggleTimeProvider.isSupported()) {
+            mPreferredTimeProvider = toggleTimeProvider;
+        } else if (deadlineTimeProvider.isSupported()) {
+            mPreferredTimeProvider = deadlineTimeProvider;
+        } else if (toggleTimeProviderNB.isSupported()) {
+            mPreferredTimeProvider = toggleTimeProviderNB;
         } else {
-            mChargingLimitMargin = mContext.getResources().getInteger(
-                    R.integer.config_chargingControlBatteryRechargeMargin);
+            Log.e(TAG, "No available charging control provider for time!");
+            mPreferredTimeProvider = null;
+        }
+
+        if (toggleLimitProvider.isSupported()) {
+            mPreferredLimitProvider = toggleLimitProvider;
+        } else if (toggleLimitProviderNB.isSupported()) {
+            mPreferredLimitProvider = toggleLimitProviderNB;
+        } else {
+            Log.e(TAG, "No available charging control provider for limit!");
+            mPreferredTimeProvider = null;
+        }
+
+        if (mPreferredLimitProvider == null && mPreferredTimeProvider == null) {
+            Log.wtf(TAG, "No available charging control providers!");
+        }
+
+        if (mPreferredTimeProvider != null) {
+            mShouldAlwaysMonitorBattery |= mPreferredTimeProvider.shouldAlwaysMonitorBattery();
+        }
+
+        if (mPreferredLimitProvider != null) {
+            mShouldAlwaysMonitorBattery |= mPreferredLimitProvider.shouldAlwaysMonitorBattery();
         }
     }
 
@@ -271,7 +274,7 @@ public class ChargingControlController extends LineageHealthFeature {
 
         // For devices that do not support bypass, we can only always listen to battery change
         // because we can't distinguish between "unplugged" and "plugged in but not charging".
-        if (mIsChargingToggleSupported && !mIsChargingBypassSupported) {
+        if (mShouldAlwaysMonitorBattery) {
             mIsPowerConnected = true;
             onPowerStatus(true);
             handleSettingChange();
@@ -313,12 +316,16 @@ public class ChargingControlController extends LineageHealthFeature {
     }
 
     private void resetInternalState() {
-        mSavedAlarmTime = 0;
-        mSavedTargetTime = 0;
-        mEstimatedFullTime = 0;
-        mChargingStopReason = 0;
         mIsControlCancelledOnce = false;
         mChargingNotification.cancel();
+
+        if (mConfigMode == MODE_LIMIT) {
+            assert mPreferredLimitProvider != null;
+            mPreferredLimitProvider.reset();
+        } else {
+            assert mPreferredTimeProvider != null;
+            mPreferredLimitProvider.reset();
+        }
     }
 
     private void onPowerConnected() {
@@ -346,18 +353,6 @@ public class ChargingControlController extends LineageHealthFeature {
         }
 
         updateChargeControl();
-    }
-
-    private void updateChargingReasonBitmask(int flag, boolean set) {
-        if (set) {
-            mChargingStopReason |= flag;
-        } else {
-            mChargingStopReason &= ~flag;
-        }
-    }
-
-    private boolean isChargingReasonSet(int flag) {
-        return (mChargingStopReason & flag) != 0;
     }
 
     private ChargeTime getChargeTime() {
@@ -393,7 +388,7 @@ public class ChargingControlController extends LineageHealthFeature {
                 }
             }
         } else {
-            Log.e(TAG, "invalid charging control mode " + mConfigMode);
+            Log.e(TAG, "Invalid charging control mode " + mConfigMode);
             return null;
         }
 
@@ -403,212 +398,65 @@ public class ChargingControlController extends LineageHealthFeature {
     }
 
     private void updateChargeControl() {
-        if (mIsChargingToggleSupported) {
-            updateChargeToggle();
-        } else if (mIsChargingDeadlineSupported) {
-            updateChargeDeadline();
-        }
-    }
-
-    private boolean shouldSetLimitFlag() {
-        if (mConfigMode != MODE_LIMIT) {
-            return false;
-        }
-
-        if (isChargingReasonSet(ChargingStopReason.REACH_LIMIT)) {
-            return mBatteryPct >= mConfigLimit - mChargingLimitMargin;
-        }
-
-        if (mBatteryPct >= mConfigLimit) {
-            mChargingNotification.post(null, true);
-            return true;
+        // First, get current provider
+        ChargingControlProvider provider;
+        if (mConfigMode == MODE_LIMIT) {
+            provider = mPreferredLimitProvider;
         } else {
-            mChargingNotification.post(null, false);
-            return false;
-        }
-    }
-
-    private boolean shouldSetWaitFlag() {
-        if (mConfigMode != MODE_AUTO && mConfigMode != MODE_MANUAL) {
-            return false;
+            provider = mPreferredTimeProvider;
         }
 
-        // Now it is time to see whether charging should be stopped. We make decisions in the
-        // following manner:
-        //
-        //  1. If STOP_REASON_WAITING is set, compare the remaining time with the saved estimated
-        //     full time. Resume charging the remain time <= saved estimated time
-        //  2. If the system estimated remaining time already exceeds the target full time, continue
-        //  3. Otherwise, stop charging, save the estimated time, set stop reason to
-        //     STOP_REASON_WAITING.
+        if (provider == null) {
+            Log.wtf(TAG, "Selected a mode but no provider is available!");
+        }
 
-        final ChargeTime t = getChargeTime();
+        if (mCurrentProvider != provider) {
+            if (mCurrentProvider != null) {
+                mCurrentProvider.disable();
+            }
+            mCurrentProvider = provider;
+        }
 
-        if (t == null) {
+        if (!mConfigEnabled || mIsControlCancelledOnce || !mIsPowerConnected) {
+            assert mCurrentProvider != null;
+            mCurrentProvider.disable();
             mChargingNotification.cancel();
-            return false;
-        }
-
-        final long targetTime = t.getTargetTime();
-        final long startTime = t.getStartTime();
-        final long currentTime = System.currentTimeMillis();
-
-        Log.i(TAG, "Got target time " + msToString(targetTime) + ", start time " +
-                msToString(startTime) + ", current time " + msToString(currentTime));
-
-        if (mConfigMode == MODE_AUTO) {
-            if (mSavedAlarmTime != targetTime) {
-                mChargingNotification.cancel();
-
-                if (mSavedAlarmTime != 0 && mSavedAlarmTime < currentTime) {
-                    Log.i(TAG, "Not fully charged when alarm goes off, continue charging.");
-                    mIsControlCancelledOnce = true;
-                    return false;
-                }
-
-                Log.i(TAG, "User changed alarm, reconstruct notification");
-                mSavedAlarmTime = targetTime;
-            }
-
-            // Don't activate if we are more than 9 hrs away from the target alarm
-            if (targetTime - currentTime >= 9 * 60 * 60 * 1000) {
-                mChargingNotification.cancel();
-                return false;
-            }
-        } else if (mConfigMode == MODE_MANUAL) {
-            if (startTime > currentTime) {
-                // Not yet entering user configured time frame
-                mChargingNotification.cancel();
-                return false;
-            }
-        }
-
-        if (mBatteryPct == 100) {
-            mChargingNotification.post(targetTime, true);
-            return true;
-        }
-
-        // Now we have the target time and current time, we can post a notification stating that
-        // the system will be charged by targetTime.
-        mChargingNotification.post(targetTime, false);
-
-        // If current battery level is less than the fast charge limit, don't set this flag
-        if (mBatteryPct < CHARGE_CTRL_MIN_LEVEL) {
-            return false;
-        }
-
-        long deltaTime = targetTime - currentTime;
-        Log.i(TAG, "Current time to target: " + msToString(deltaTime));
-
-        if (isChargingReasonSet(ChargingStopReason.WAITING)) {
-            Log.i(TAG, "Current saved estimation to full: " + msToString(mEstimatedFullTime));
-            if (deltaTime <= mEstimatedFullTime) {
-                Log.i(TAG, "Unset waiting flag");
-                return false;
-            }
-            return true;
-        }
-
-        final BatteryUsageStats batteryUsageStats = mContext.getSystemService(
-                BatteryStatsManager.class).getBatteryUsageStats();
-        if (batteryUsageStats == null) {
-            Log.e(TAG, "Failed to get battery usage stats");
-            return false;
-        }
-        long remaining = batteryUsageStats.getChargeTimeRemainingMs();
-        if (remaining == -1) {
-            Log.i(TAG, "not enough data for prediction for now, waiting for more data");
-            return false;
-        }
-
-        // Add margin here
-        remaining += mChargingTimeMargin;
-        Log.i(TAG, "Current estimated time to full: " + msToString(remaining));
-        if (deltaTime > remaining) {
-            Log.i(TAG, "Stop charging and wait, saving remaining time");
-            mEstimatedFullTime = remaining;
-            return true;
-        }
-
-        return false;
-    }
-
-    private void updateChargingStopReason() {
-        if (mIsControlCancelledOnce) {
-            mChargingStopReason = ChargingStopReason.NONE;
             return;
         }
 
-        if (!mConfigEnabled) {
-            mChargingStopReason = ChargingStopReason.NONE;
-            return;
-        }
+        assert mCurrentProvider != null;
 
-        if (!mIsPowerConnected) {
-            mChargingStopReason = ChargingStopReason.NONE;
-            return;
-        }
-
-        updateChargingReasonBitmask(ChargingStopReason.REACH_LIMIT, shouldSetLimitFlag());
-        updateChargingReasonBitmask(ChargingStopReason.WAITING, shouldSetWaitFlag());
-    }
-
-    private void updateChargeToggle() {
-        updateChargingStopReason();
-
-        Log.i(TAG, "Current mChargingStopReason: " + mChargingStopReason);
-        boolean isChargingEnabled = false;
-        try {
-            isChargingEnabled = mChargingControl.getChargingEnabled();
-        } catch (IllegalStateException | RemoteException | UnsupportedOperationException e) {
-            Log.e(TAG, "Failed to get charging enabled status!");
-        }
-        if (isChargingEnabled != (mChargingStopReason == 0)) {
-            try {
-                mChargingControl.setChargingEnabled(!isChargingEnabled);
-            } catch (IllegalStateException | RemoteException | UnsupportedOperationException e) {
-                Log.e(TAG, "Failed to set charging status");
-            }
-        }
-    }
-
-    private void updateChargeDeadline() {
-        if (!mIsPowerConnected) {
-            return;
-        }
-
-        long deadline = 0;
-        final long targetTime;
-        final ChargeTime t = getChargeTime();
-
-        if (!mConfigEnabled || t == null || mIsControlCancelledOnce) {
-            deadline = -1;
-            targetTime = 0;
-            Log.i(TAG, "Canceling charge deadline");
+        boolean done;
+        if (mConfigMode == MODE_LIMIT) {
+            done = mCurrentProvider.onBatteryChanged(mBatteryPct, mConfigLimit);
+            mChargingNotification.post(null, done);
         } else {
-            if (t.getTargetTime() == mSavedTargetTime) {
+            ChargeTime t = getChargeTime();
+            if (t == null) {
+                mCurrentProvider.disable();
+                mChargingNotification.cancel();
                 return;
             }
-            targetTime = t.getTargetTime();
-            final long currentTime = System.currentTimeMillis();
-            deadline = (targetTime - currentTime) / 1000;
-            Log.i(TAG, "Setting charge deadline: Current time: " + msToString(currentTime));
-            Log.i(TAG, "Setting charge deadline: Target time: " + msToString(targetTime));
-            Log.i(TAG, "Setting charge deadline: Deadline (seconds): " + deadline);
-        }
-
-        try {
-            mChargingControl.setChargingDeadline(deadline);
-            mSavedTargetTime = targetTime;
-        } catch (IllegalStateException | RemoteException | UnsupportedOperationException e) {
-            Log.e(TAG, "Failed to set charge deadline", e);
+            done = mCurrentProvider.onBatteryChanged(mBatteryPct, t.getStartTime(), t.getTargetTime(),
+                    mConfigMode);
+            mChargingNotification.post(t.getTargetTime(), done);
         }
     }
 
-    private String msToString(long ms) {
-        Calendar calendar = Calendar.getInstance();
+    public static String msToString(long ms) {
+        return msToString(ms, TimeZone.getDefault());
+    }
+
+    public static String msToString(long ms, String timeZone) {
+        return msToString(ms, TimeZone.getTimeZone(timeZone));
+    }
+
+    public static String msToString(long ms, TimeZone zone) {
+        final SimpleDateFormat dateFormatter = new SimpleDateFormat("HH:mm:ss");
+        dateFormatter.setTimeZone(zone);
+        Calendar calendar = Calendar.getInstance(zone);
         calendar.setTimeInMillis(ms);
-        return mDateFormatter.format(calendar.getTime());
+        return dateFormatter.format(calendar.getTime());
     }
 
     /**
@@ -671,19 +519,15 @@ public class ChargingControlController extends LineageHealthFeature {
         pw.println("  mConfigLimit: " + mConfigLimit);
         pw.println("  mConfigStartTime: " + mConfigStartTime);
         pw.println("  mConfigTargetTime: " + mConfigTargetTime);
-        pw.println("  mChargingTimeMargin: " + mChargingTimeMargin);
         pw.println();
         pw.println("ChargingControlController State:");
         pw.println("  mBatteryPct: " + mBatteryPct);
         pw.println("  mIsPowerConnected: " + mIsPowerConnected);
-        pw.println("  mChargingStopReason: " + mChargingStopReason);
         pw.println("  mIsNotificationPosted: " + mChargingNotification.isPosted());
         pw.println("  mIsDoneNotification: " + mChargingNotification.isDoneNotification());
         pw.println("  mIsControlCancelledOnce: " + mIsControlCancelledOnce);
-        pw.println("  mSavedAlarmTime: " + msToString(mSavedAlarmTime));
-        if (mIsChargingDeadlineSupported) {
-            pw.println("  mSavedTargetTime (Deadline): " + msToString(mSavedTargetTime));
-        }
+        pw.println();
+        mCurrentProvider.dump(pw);
     }
 
     /* Battery Broadcast Receiver */
@@ -766,7 +610,7 @@ public class ChargingControlController extends LineageHealthFeature {
             if (intent.getAction().equals(ACTION_CHARGING_CONTROL_CANCEL_ONCE)) {
                 mIsControlCancelledOnce = true;
 
-                if (!mIsChargingBypassSupported) {
+                if (!isChargingModeSupported(ChargingControlSupportedMode.BYPASS)) {
                     IntentFilter disconnectFilter = new IntentFilter(
                             Intent.ACTION_POWER_DISCONNECTED);
 
@@ -781,6 +625,7 @@ public class ChargingControlController extends LineageHealthFeature {
                         }
                     }, disconnectFilter);
                 }
+
                 updateChargeControl();
                 cancelChargingControlNotification();
             }
