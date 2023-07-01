@@ -83,4 +83,10 @@
     <string name="trust_notification_title_onboarding">Desvendar o Agente de Confiança</string>
     <string name="trust_notification_content_onboarding">Saiba como garantir a segurança de seu dispositivo</string>
     <string name="trust_notification_action_manage">Gerenciar alertas</string>
+    <string name="charging_control_notification_channel">Controle de carregamento</string>
+    <string name="charging_control_notification_title">Controle de carregamento</string>
+    <string name="charging_control_notification_cancel_once">Cancelar</string>
+    <string name="charging_control_notification_content_limit">A bateria carregará até %1$d%%</string>
+    <string name="charging_control_notification_content_target">A bateria estará totalmente carregada em %1$d%%</string>
+    <string name="charging_control_notification_content_target_reached">Bateria carregada</string>
 </resources>
