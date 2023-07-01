@@ -31,10 +31,9 @@
     <string name="profileGroupGmail">Gmail</string>
     <string name="profileGroupEmail">Электронная пошта</string>
     <string name="profileGroupSMS">SMS</string>
-    <string name="wildcardProfile">Iншае</string>
-    <string name="perf_profile_pwrsv">Энергазберажэнне</string>
     <string name="perf_profile_bal">Збалансаваны</string>
     <string name="perf_profile_perf">Прадукцыйнасць</string>
+    <string name="perf_profile_bias_perf">Хутка</string>
     <string name="perf_profile_bias_power_summary">Рэжым эканоміі энергіі. Абмяжоўваецца максімальная магутнасць працэсара коштам павелічэння часу водгуку сістэмы</string>
     <string name="live_display_auto">Аўтаматычна</string>
     <string name="live_display_auto_summary">Аўтаматычная карэкціроўка колеравай тэмпературы экрана пасля заходу і ўсходу сонца</string>
@@ -44,7 +43,6 @@
     <string name="live_display_day_summary">Толькі дзённыя налады</string>
     <string name="live_display_night">Ноч</string>
     <string name="live_display_night_summary">Толькі начныя налады</string>
-    <string name="live_display_outdoor">На вуліцы (яскравае сонца)</string>
     <string name="live_display_outdoor_summary">Толькі вулічны рэжым</string>
     <string name="accessibility_quick_settings_live_display_off">LiveDisplay выключаны.</string>
     <string name="accessibility_quick_settings_live_display_changed_off">LiveDisplay выключаны.</string>
