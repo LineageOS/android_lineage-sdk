@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3f985943_7cbdd10a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 32801
+      },
+      "writtenOn": "2023-07-03T14:48:51Z",
+      "side": 1,
+      "message": "Hi Michael, I\u0027m using a SURYA (poco x3 nfc) device with a side mounted fps. The behaviour changed, so it unlocks without a button press and no setting to change it.\n\n(security-\u003efingerprint-\u003etouch to unlock at any time)\nsettings get secure \"sfps_performant_auth_enabled_v2\";\n0\n\n(this setting is no longer visible)\nsettings get secure \"sfps_require_screen_on_to_auth_enabled\";\n1\n\nChanging any of these has no effect. Is this a bug or am I missing something?",
+      "revId": "b26271954fc30a4dcb5b445d4dccb189b46d2d10",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
