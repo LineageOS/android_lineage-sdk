@@ -431,7 +431,6 @@ public class LineageDatabaseHelper extends SQLiteOpenHelper{
 
         if (upgradeVersion < 18) {
             Integer oldSetting;
-            db.beginTransaction();
             SQLiteStatement stmt = null;
             try {
                 stmt = db.compileStatement("SELECT value FROM system WHERE name=?");
@@ -453,7 +452,6 @@ public class LineageDatabaseHelper extends SQLiteOpenHelper{
                         ? 0 : 1;
             } finally {
                 if (stmt != null) stmt.close();
-                db.endTransaction();
             }
             // Previously Settings.Secure.SFPS_REQUIRE_SCREEN_ON_TO_AUTH_ENABLED
             Settings.Secure.putInt(mContext.getContentResolver(),
