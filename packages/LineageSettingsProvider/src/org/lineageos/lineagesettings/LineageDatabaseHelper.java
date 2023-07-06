@@ -48,6 +48,7 @@ import org.lineageos.internal.util.FileUtils;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 import java.util.Set;
 import java.util.stream.Collectors;
 
@@ -372,6 +373,7 @@ public class LineageDatabaseHelper extends SQLiteOpenHelper{
             }
             upgradeVersion = 19;
         }
+
         // *** Remember to update DATABASE_VERSION above!
         if (upgradeVersion != newVersion) {
             Log.wtf(TAG, "warning: upgrading settings database to version "
@@ -624,5 +626,121 @@ public class LineageDatabaseHelper extends SQLiteOpenHelper{
         stmt.bindString(1, key);
         stmt.bindString(2, value.toString());
         stmt.execute();
+    }
+
+    private static void ensureTableIsValid(final String tableName) {
+        switch (tableName) {
+            case LineageTableNames.TABLE_GLOBAL:
+                break;
+            case LineageTableNames.TABLE_SECURE:
+                break;
+            case LineageTableNames.TABLE_SYSTEM:
+                break;
+            default:
+                throw new IllegalArgumentException(
+                        "Table '" + tableName + "' is not a valid Lineage database table");
+        }
+    }
+
+    /**
+     * Read a setting from a given database table.
+     * @param db The {@link SQLiteDatabase} to read from.
+     * @param tableName The name of the database table to read from.
+     * @param name The name of the setting to read.
+     * @param defaultValue the value to return if setting cannot be read.
+     */
+    private static String readSetting(final SQLiteDatabase db, final String tableName,
+            final String name, final String defaultValue) {
+        ensureTableIsValid(tableName);
+        SQLiteStatement stmt = null;
+        try {
+            stmt = db.compileStatement("SELECT value FROM " + tableName + " WHERE name=?");
+            stmt.bindString(1, name);
+            return stmt.simpleQueryForString();
+        } catch (SQLiteDoneException ex) {
+            // Value is not set
+        } finally {
+            if (stmt != null) stmt.close();
+        }
+        return defaultValue;
+    }
+
+    /**
+     * Read an Integer setting from a given database table.
+     * @param db The {@link SQLiteDatabase} to read from.
+     * @param tableName The name of the database table to read from.
+     * @param name The name of the setting to read.
+     * @param defaultValue the value to return if setting cannot be read or is not an Integer.
+     */
+    private static Integer readIntegerSetting(final SQLiteDatabase db, final String tableName,
+            final String name, final Integer defaultValue) {
+        ensureTableIsValid(tableName);
+        final String value = readSetting(db, tableName, name, null);
+        try {
+            return value != null ? Integer.parseInt(value) : defaultValue;
+        } catch (NumberFormatException ex) {
+            return defaultValue;
+        }
+    }
+
+    /**
+     * Read a Long setting from a given database table.
+     * @param db The {@link SQLiteDatabase} to read from.
+     * @param tableName The name of the database table to read from.
+     * @param name The name of the setting to read.
+     * @param defaultValue the value to return if setting cannot be read or is not a Long.
+     */
+    private static Long readLongSetting(final SQLiteDatabase db, final String tableName,
+            final String name, final Long defaultValue) {
+        ensureTableIsValid(tableName);
+        final String value = readSetting(db, tableName, name, null);
+        try {
+            return value != null ? Long.parseLong(value) : defaultValue;
+        } catch (NumberFormatException ex) {
+            return defaultValue;
+        }
+    }
+
+    /**
+     * Write a setting to a given database table, overriding existing values
+     * @param db The {@link SQLiteDatabase} to write to.
+     * @param tableName The name of the database table to write to.
+     * @param name The name of the setting to write.
+     * @param value the value of the setting to write.
+     */
+    private static void writeSetting(final SQLiteDatabase db, final String tableName, final String name,
+            final Object value) throws SQLiteDoneException {
+        writeSetting(db, tableName, name, value, true /* replaceIfExists */);
+    }
+
+    /**
+     * Write a setting to a given database table, only if it doesn't already exist
+     * @param db The {@link SQLiteDatabase} to write to.
+     * @param tableName The name of the database table to write to.
+     * @param name The name of the setting to write.
+     * @param value the value of the setting to write.
+     */
+    private static void writeSettingIfNotPresent(final SQLiteDatabase db, final String tableName,
+            final String name, final Object value) throws SQLiteDoneException {
+        writeSetting(db, tableName, name, value, false /* replaceIfExists */);
+    }
+
+    /** Write a setting to a given database table. */
+    private static void writeSetting(final SQLiteDatabase db, final String tableName, final String name,
+            final Object value, final boolean replaceIfExists) throws SQLiteDoneException {
+        ensureTableIsValid(tableName);
+        SQLiteStatement stmt = null;
+        try {
+            stmt = db.compileStatement("INSERT OR " + (replaceIfExists ? "REPLACE" : "IGNORE")
+                    + " INTO " + tableName + "(name,value) VALUES(?,?);");
+            stmt.bindString(1, name);
+            stmt.bindString(2, Objects.toString(value));
+            stmt.execute();
+        } catch (SQLiteDoneException ex) {
+            // Value is not set
+            throw ex;
+        } finally {
+            if (stmt != null) stmt.close();
+        }
     }
 }
