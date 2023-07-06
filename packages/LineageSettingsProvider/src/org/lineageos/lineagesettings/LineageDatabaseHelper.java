@@ -431,29 +431,21 @@ public class LineageDatabaseHelper extends SQLiteOpenHelper{
         }
 
         if (upgradeVersion < 18) {
-            Integer oldSetting;
-            SQLiteStatement stmt = null;
-            try {
-                stmt = db.compileStatement("SELECT value FROM system WHERE name=?");
-                // Used to be LineageSettings.System.FINGERPRINT_WAKE_UNLOCK
-                stmt.bindString(1, "fingerprint_wake_unlock");
-                oldSetting = Integer.parseInt(stmt.simpleQueryForString());
+            Integer defaultValue = mContext.getResources().getBoolean(
+                    org.lineageos.platform.internal.R.bool.config_fingerprintWakeAndUnlock)
+                    ? 1 : 0; // Reversed since they're reversed again below
 
-                // Reverse 0/1 values, migrate 2 to 1
-                if (oldSetting.equals(0) || oldSetting.equals(2)) {
-                    oldSetting = 1;
-                } else if (oldSetting.equals(1)) {
-                    oldSetting = 0;
-                }
-            } catch (SQLiteDoneException ex) {
-                // LineageSettings.System.FINGERPRINT_WAKE_UNLOCK was not set,
-                // set default value based on config_fingerprintWakeAndUnlock
-                oldSetting = mContext.getResources().getBoolean(
-                        org.lineageos.platform.internal.R.bool.config_fingerprintWakeAndUnlock)
-                        ? 0 : 1;
-            } finally {
-                if (stmt != null) stmt.close();
+            // Used to be LineageSettings.System.FINGERPRINT_WAKE_UNLOCK
+            Integer oldSetting = readIntegerSetting(db, LineageTableNames.TABLE_SYSTEM,
+                    "fingerprint_wake_unlock", defaultValue);
+
+            // Reverse 0/1 values, migrate 2 to 1
+            if (oldSetting.equals(0) || oldSetting.equals(2)) {
+                oldSetting = 1;
+            } else if (oldSetting.equals(1)) {
+                oldSetting = 0;
             }
+
             // Previously Settings.Secure.SFPS_REQUIRE_SCREEN_ON_TO_AUTH_ENABLED
             Settings.Secure.putInt(mContext.getContentResolver(),
                     "sfps_require_screen_on_to_auth_enabled",
