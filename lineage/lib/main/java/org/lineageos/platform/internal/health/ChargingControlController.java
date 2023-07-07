@@ -64,15 +64,15 @@ import static lineageos.health.HealthInterface.MODE_LIMIT;
 public class ChargingControlController extends LineageHealthFeature {
     private final IChargingControl mChargingControl;
     private final ContentResolver mContentResolver;
-    private final ChargingControlNotification mChargingNotification;
+    private ChargingControlNotification mChargingNotification = null;
     private LineageHealthBatteryBroadcastReceiver mBattReceiver;
 
     // Defaults
-    private final boolean mDefaultEnabled;
-    private final int mDefaultMode;
-    private final int mDefaultLimit;
-    private final int mDefaultStartTime;
-    private final int mDefaultTargetTime;
+    private boolean mDefaultEnabled = false;
+    private int mDefaultMode = 0;
+    private int mDefaultLimit = 0;
+    private int mDefaultStartTime = 0;
+    private int mDefaultTargetTime = 0;
 
     // User configs
     private boolean mConfigEnabled = false;
@@ -101,11 +101,11 @@ public class ChargingControlController extends LineageHealthFeature {
     private long mSavedAlarmTime = 0;
     private long mSavedTargetTime = 0;
     private boolean mIsControlCancelledOnce = false;
-    private final boolean mIsChargingToggleSupported;
-    private final boolean mIsChargingBypassSupported;
-    private final boolean mIsChargingDeadlineSupported;
-    private final int mChargingTimeMargin;
-    private final int mChargingLimitMargin;
+    private boolean mIsChargingToggleSupported = false;
+    private boolean mIsChargingBypassSupported = false;
+    private boolean mIsChargingDeadlineSupported = false;
+    private int mChargingTimeMargin = 0;
+    private int mChargingLimitMargin = 0;
 
     private static final DateTimeFormatter mFormatter = DateTimeFormatter.ofLocalizedTime(SHORT);
     private static final SimpleDateFormat mDateFormatter = new SimpleDateFormat("hh:mm:ss a");
@@ -147,6 +147,7 @@ public class ChargingControlController extends LineageHealthFeature {
 
         if (mChargingControl == null) {
             Log.i(TAG, "Lineage Health HAL not found");
+            return;
         }
 
         mChargingNotification = new ChargingControlNotification(context);
