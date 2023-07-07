@@ -146,6 +146,7 @@ public class ChargingControlController extends LineageHealthFeature {
 
         if (mChargingControl == null) {
             Log.i(TAG, "Lineage Health HAL not found");
+            return;
         }
 
         mChargingNotification = new ChargingControlNotification(context);
