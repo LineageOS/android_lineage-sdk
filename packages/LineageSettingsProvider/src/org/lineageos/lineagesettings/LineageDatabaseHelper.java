@@ -213,167 +213,62 @@ public class LineageDatabaseHelper extends SQLiteOpenHelper{
         int upgradeVersion = oldVersion;
 
         if (upgradeVersion < 2) {
-            db.beginTransaction();
-            try {
-                loadSettings(db);
-                db.setTransactionSuccessful();
-            } finally {
-                db.endTransaction();
-            }
+            // Used to run loadSettings()
             upgradeVersion = 2;
         }
 
         if (upgradeVersion < 3) {
-            /* Was set LineageSettings.Secure.PROTECTED_COMPONENT_MANAGERS
-             * but this is no longer used
-             */
+            // Used to set LineageSettings.Secure.PROTECTED_COMPONENT_MANAGERS
             upgradeVersion = 3;
         }
 
         if (upgradeVersion < 4) {
-            /* Was set LineageSettings.Secure.LINEAGE_SETUP_WIZARD_COMPLETE
-             * but this is no longer used
-             */
+            // Used to set LineageSettings.Secure.LINEAGE_SETUP_WIZARD_COMPLETE
             upgradeVersion = 4;
         }
 
         if (upgradeVersion < 5) {
-            /* Was set LineageSettings.Global.WEATHER_TEMPERATURE_UNIT
-             * but this is no longer used
-             */
+            // Used to set LineageSettings.Global.WEATHER_TEMPERATURE_UNIT
             upgradeVersion = 5;
         }
 
         if (upgradeVersion < 6) {
-            /* Was move LineageSettings.Secure.DEV_FORCE_SHOW_NAVBAR to global
-             * but this is no longer used
-             */
+            // Used to move LineageSettings.Secure.DEV_FORCE_SHOW_NAVBAR to global
             upgradeVersion = 6;
         }
 
         if (upgradeVersion < 7) {
-            if (mUserHandle == UserHandle.USER_OWNER) {
-                db.beginTransaction();
-                SQLiteStatement stmt = null;
-                try {
-                    stmt = db.compileStatement("SELECT value FROM system WHERE name=?");
-                    stmt.bindString(1, LineageSettings.System.STATUS_BAR_CLOCK);
-                    long value = stmt.simpleQueryForLong();
-
-                    if (value != 0) {
-                        stmt = db.compileStatement("UPDATE system SET value=? WHERE name=?");
-                        stmt.bindLong(1, value - 1);
-                        stmt.bindString(2, LineageSettings.System.STATUS_BAR_CLOCK);
-                        stmt.execute();
-                    }
-                    db.setTransactionSuccessful();
-                } catch (SQLiteDoneException ex) {
-                    // LineageSettings.System.STATUS_BAR_CLOCK is not set
-                } finally {
-                    if (stmt != null) stmt.close();
-                    db.endTransaction();
-                }
-            }
+            // Used to migrate LineageSettings.System.STATUS_BAR_CLOCK
             upgradeVersion = 7;
         }
 
         if (upgradeVersion < 8) {
-            /* Was set LineageSettings.Secure.PROTECTED_COMPONENT_MANAGERS
-             * but this is no longer used
-             */
+            // Used to set LineageSettings.Secure.PROTECTED_COMPONENT_MANAGERS
             upgradeVersion = 8;
         }
 
         if (upgradeVersion < 9) {
-            if (mUserHandle == UserHandle.USER_OWNER) {
-                db.execSQL("UPDATE system SET value = '0' WHERE value IN ('10', '11') AND name IN ("
-                        + "'" + LineageSettings.System.KEY_HOME_LONG_PRESS_ACTION + "',"
-                        + "'" + LineageSettings.System.KEY_HOME_DOUBLE_TAP_ACTION + "',"
-                        + "'" + LineageSettings.System.KEY_MENU_ACTION + "',"
-                        + "'" + LineageSettings.System.KEY_MENU_LONG_PRESS_ACTION + "',"
-                        + "'" + LineageSettings.System.KEY_ASSIST_ACTION + "',"
-                        + "'" + LineageSettings.System.KEY_ASSIST_LONG_PRESS_ACTION + "',"
-                        + "'" + LineageSettings.System.KEY_APP_SWITCH_ACTION + "',"
-                        + "'" + LineageSettings.System.KEY_APP_SWITCH_LONG_PRESS_ACTION + "')");
-            }
+            // Used to migrate LineageSettings.System.KEY_* actions
             upgradeVersion = 9;
         }
 
         if (upgradeVersion < 10) {
-            if (mUserHandle == UserHandle.USER_OWNER) {
-                // Update STATUS_BAR_CLOCK
-                db.beginTransaction();
-                SQLiteStatement stmt = null;
-                try {
-                    stmt = db.compileStatement("SELECT value FROM system WHERE name=?");
-                    stmt.bindString(1, LineageSettings.System.STATUS_BAR_CLOCK);
-                    long value = stmt.simpleQueryForLong();
-
-                    if (value == 0) {
-                        stmt = db.compileStatement("UPDATE system SET value=? WHERE name=?");
-                        stmt.bindLong(1, 2);
-                        stmt.bindString(2, LineageSettings.System.STATUS_BAR_CLOCK);
-                        stmt.execute();
-                    }
-                    db.setTransactionSuccessful();
-                } catch (SQLiteDoneException ex) {
-                    // LineageSettings.System.STATUS_BAR_CLOCK is not set
-                } finally {
-                    if (stmt != null) stmt.close();
-                    db.endTransaction();
-                }
-            }
+            // Used to migrate LineageSettings.System.STATUS_BAR_CLOCK
             upgradeVersion = 10;
         }
 
         if (upgradeVersion < 11) {
-            /* Was move LineageSettings.Global.DEV_FORCE_SHOW_NAVBAR to system
-             * but this is no longer used
-             */
+            // Used to move LineageSettings.Global.DEV_FORCE_SHOW_NAVBAR to system
             upgradeVersion = 11;
         }
 
         if (upgradeVersion < 12) {
-            if (mUserHandle == UserHandle.USER_OWNER) {
-                db.beginTransaction();
-                SQLiteStatement stmt = null;
-                try {
-                    stmt = db.compileStatement("SELECT value FROM system WHERE name=?");
-                    stmt.bindString(1, LineageSettings.System.STATUS_BAR_BATTERY_STYLE);
-                    long value = stmt.simpleQueryForLong();
-
-                    long newValue = 0;
-                    switch ((int) value) {
-                        case 2:
-                            newValue = 1;
-                            break;
-                        case 5:
-                            newValue = 0;
-                            break;
-                        case 6:
-                            newValue = 2;
-                            break;
-                    }
-
-                    stmt = db.compileStatement("UPDATE system SET value=? WHERE name=?");
-                    stmt.bindLong(1, newValue);
-                    stmt.bindString(2, LineageSettings.System.STATUS_BAR_BATTERY_STYLE);
-                    stmt.execute();
-                    db.setTransactionSuccessful();
-                } catch (SQLiteDoneException ex) {
-                    // LineageSettings.System.STATUS_BAR_BATTERY_STYLE is not set
-                } finally {
-                    if (stmt != null) stmt.close();
-                    db.endTransaction();
-                }
-            }
+            // Used to migrate LineageSettings.System.STATUS_BAR_BATTERY_STYLE
             upgradeVersion = 12;
         }
 
         if (upgradeVersion < 13) {
-            /* Was used to migrate LineageSettings.Global.POWER_NOTIFICATIONS_RINGTONE,
-             * but this setting has been deprecated
-             */
+            // Used to migrate LineageSettings.Global.POWER_NOTIFICATIONS_RINGTONE
             upgradeVersion = 13;
         }
 
