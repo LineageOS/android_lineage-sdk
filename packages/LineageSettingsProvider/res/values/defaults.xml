@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
      Copyright (C) 2014-2015 The CyanogenMod Project
-                   2019-2021 The LineageOS Project
+                   2019-2023 The LineageOS Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -16,6 +16,7 @@
      limitations under the License.
 -->
 <resources>
+
     <!-- Defaults for Secure -->
 
     <!-- Default for LineageSettings.Secure.STATS_COLLECTION -->
@@ -77,5 +78,8 @@
          * 2: show the clock in the left position (LTR)
     -->
     <integer name="def_clock_position">2</integer>
+
+    <!-- Default value for lockscreen rotation -->
+    <bool name="def_lockscreen_rotation">false</bool>
 
 </resources>
