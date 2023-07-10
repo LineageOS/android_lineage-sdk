@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "92f676a0_6f65bdc7",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 32827
+      },
+      "writtenOn": "2023-07-10T15:04:29Z",
+      "side": 1,
+      "message": "Helps for martini.",
+      "revId": "c407667d383a419ed1abdb9745a0aea011a0dca4",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
