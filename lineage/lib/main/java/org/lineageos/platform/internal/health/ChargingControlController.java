@@ -64,22 +64,22 @@ import static lineageos.health.HealthInterface.MODE_LIMIT;
 public class ChargingControlController extends LineageHealthFeature {
     private final IChargingControl mChargingControl;
     private final ContentResolver mContentResolver;
-    private ChargingControlNotification mChargingNotification = null;
+    private ChargingControlNotification mChargingNotification;
     private LineageHealthBatteryBroadcastReceiver mBattReceiver;
 
     // Defaults
     private boolean mDefaultEnabled = false;
-    private int mDefaultMode = 0;
-    private int mDefaultLimit = 0;
-    private int mDefaultStartTime = 0;
-    private int mDefaultTargetTime = 0;
+    private int mDefaultMode;
+    private int mDefaultLimit;
+    private int mDefaultStartTime;
+    private int mDefaultTargetTime;
 
     // User configs
-    private boolean mConfigEnabled = false;
+    private boolean mConfigEnabled;
+    private int mConfigStartTime;
+    private int mConfigTargetTime;
     private int mConfigMode = MODE_NONE;
     private int mConfigLimit = 100;
-    private int mConfigStartTime = 0;
-    private int mConfigTargetTime = 0;
 
     // Settings uris
     private final Uri MODE_URI = LineageSettings.System.getUriFor(
@@ -94,18 +94,18 @@ public class ChargingControlController extends LineageHealthFeature {
             LineageSettings.System.CHARGING_CONTROL_TARGET_TIME);
 
     // Internal state
-    private float mBatteryPct = 0;
-    private boolean mIsPowerConnected = false;
-    private int mChargingStopReason = 0;
-    private long mEstimatedFullTime = 0;
-    private long mSavedAlarmTime = 0;
-    private long mSavedTargetTime = 0;
-    private boolean mIsControlCancelledOnce = false;
-    private boolean mIsChargingToggleSupported = false;
-    private boolean mIsChargingBypassSupported = false;
-    private boolean mIsChargingDeadlineSupported = false;
-    private int mChargingTimeMargin = 0;
-    private int mChargingLimitMargin = 0;
+    private float mBatteryPct;
+    private long mEstimatedFullTime;
+    private long mSavedAlarmTime;
+    private long mSavedTargetTime;
+    private boolean mIsPowerConnected;
+    private boolean mIsControlCancelledOnce;
+    private boolean mIsChargingToggleSupported;
+    private boolean mIsChargingBypassSupported;
+    private boolean mIsChargingDeadlineSupported;
+    private int mChargingStopReason;
+    private int mChargingTimeMargin;
+    private int mChargingLimitMargin;
 
     private static final DateTimeFormatter mFormatter = DateTimeFormatter.ofLocalizedTime(SHORT);
     private static final SimpleDateFormat mDateFormatter = new SimpleDateFormat("hh:mm:ss a");
