@@ -16,6 +16,24 @@
       "message": "Why not just make this if-block a ternary?",
       "revId": "3faa84c769a8b8278518ac2758bc233a5d22a7c9",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2542c960_295fdadd",
+        "filename": "packages/LineageSettingsProvider/src/org/lineageos/lineagesettings/LineageDatabaseHelper.java",
+        "patchSetId": 7
+      },
+      "lineNbr": 475,
+      "author": {
+        "id": 4550
+      },
+      "writtenOn": "2023-07-12T11:28:45Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6795d571_934b8129",
+      "revId": "3faa84c769a8b8278518ac2758bc233a5d22a7c9",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
