@@ -16,6 +16,24 @@
       "message": "Nit: Looks like there is more than just readIntegerSetting now. Maybe just change to \"readSetting and variants\" or something. Feel free to resolve this with no action, it\u0027s just minor",
       "revId": "c858d3f9c66ea6351d6d67a8024c6938d7766060",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "74dfe024_cc205276",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 6
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 4550
+      },
+      "writtenOn": "2023-07-13T14:19:28Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "c275ea31_7203f576",
+      "revId": "c858d3f9c66ea6351d6d67a8024c6938d7766060",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
