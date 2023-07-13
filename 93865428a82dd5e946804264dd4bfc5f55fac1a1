@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "fa0b2c44_3c53b0c5",
+        "filename": "packages/LineageSettingsProvider/src/org/lineageos/lineagesettings/LineageDatabaseHelper.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 811,
+      "author": {
+        "id": 31578
+      },
+      "writtenOn": "2023-07-13T05:15:02Z",
+      "side": 1,
+      "message": "100 characters?",
+      "revId": "93865428a82dd5e946804264dd4bfc5f55fac1a1",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "97ca921d_02b606f6",
+        "filename": "packages/LineageSettingsProvider/src/org/lineageos/lineagesettings/LineageDatabaseHelper.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 829,
+      "author": {
+        "id": 31578
+      },
+      "writtenOn": "2023-07-13T05:15:02Z",
+      "side": 1,
+      "message": "100 characters?",
+      "revId": "93865428a82dd5e946804264dd4bfc5f55fac1a1",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
