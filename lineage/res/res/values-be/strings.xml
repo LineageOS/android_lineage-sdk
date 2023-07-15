@@ -19,11 +19,11 @@
     <string name="lineageos_system_label">Сістэма LineageOS</string>
     <string name="permlab_modifyProfiles">змена сістэмных профіляў</string>
     <string name="permdesc_modifyProfiles">Дазваляе праграме змяняць сістэмныя профілі.</string>
-    <string name="permlab_useHardwareFramework">Узаемадзеянне з абсталяваннем</string>
     <string name="permlab_writeSettings">змяніць налады сістэмы Lineage</string>
     <string name="profileNameDefault">Прадвызначана</string>
     <string name="profileNameWork">Праца</string>
     <string name="profileNameHome">Дом</string>
+    <string name="profileNameSilent">Без гуку</string>
     <string name="profileNameNight">Ноч</string>
     <string name="profileNameAutomobile">Аўтамабіль</string>
     <string name="profileGroupPhone">Тэлефон</string>
@@ -40,15 +40,11 @@
     <string name="live_display_off">Выключана</string>
     <string name="live_display_off_summary">Адключыць усе карэкціроўкі</string>
     <string name="live_display_day">Дзень</string>
-    <string name="live_display_day_summary">Толькі дзённыя налады</string>
     <string name="live_display_night">Ноч</string>
-    <string name="live_display_night_summary">Толькі начныя налады</string>
-    <string name="live_display_outdoor_summary">Толькі вулічны рэжым</string>
     <string name="accessibility_quick_settings_live_display_off">LiveDisplay выключаны.</string>
     <string name="accessibility_quick_settings_live_display_changed_off">LiveDisplay выключаны.</string>
     <string name="accessibility_quick_settings_live_display_changed_auto">LiveDisplay зменены на аўтаматычны рэжым.</string>
     <string name="permlab_perfAccess">доступ да менеджара прадукцыйнасці</string>
-    <string name="permlab_weather_write">Абнавіць звесткі аб надвор’і</string>
     <string name="permlab_weather_access_mgr">доступ да службы надвор\'я</string>
     <string name="permlab_manageLiveDisplay">кіраванне наладамі LiveDisplay</string>
     <string name="permlab_observe_audio_sessions">прагляд змен аўдыясеансаў</string>
@@ -57,11 +53,14 @@
     <string name="build_date">Дата зборкі</string>
     <string name="lineage_updates">Абнаўленні LineageOS</string>
     <string name="lineage_version">Версія LineageOS</string>
+    <string name="unknown">Невядома</string>
     <string name="app_killed_message">Праграма спынена</string>
     <string name="kilobitspersecond_short">кбіт/с</string>
     <string name="megabitspersecond_short">Мбіт/с</string>
     <string name="kilobytespersecond_short">кБ/с</string>
     <string name="megabytespersecond_short">МБ/с</string>
+    <string name="trust_feature_name">Trust</string>
     <string name="permlab_trustInterface">доступ да інтэрфейсу Trust</string>
+    <string name="trust_notification_title_security">Trust \u2022 Бяспека сістэмы</string>
     <string name="trust_notification_title_onboarding">Даследуйце Trust</string>
 </resources>
