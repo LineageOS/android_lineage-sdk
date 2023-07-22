@@ -42,15 +42,5 @@
                   android:writePermission="lineageos.permission.WRITE_SETTINGS"
                   android:singleUser="true"
                   android:initOrder="100" />
-
-        <receiver android:name="PreBootReceiver" android:enabled="true" android:exported="true">
-            <!-- This broadcast is sent after the core system has finished
-                 booting, before the home app is launched or BOOT_COMPLETED
-                 is sent. -->
-            <intent-filter>
-                <action android:name="android.intent.action.PRE_BOOT_COMPLETED"/>
-            </intent-filter>
-        </receiver>
-
     </application>
 </manifest>

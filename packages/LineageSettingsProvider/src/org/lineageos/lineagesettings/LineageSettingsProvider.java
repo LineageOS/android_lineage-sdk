@@ -59,9 +59,6 @@ public class LineageSettingsProvider extends ContentProvider {
 
     private static final boolean USER_CHECK_THROWS = true;
 
-    public static final String PREF_HAS_MIGRATED_LINEAGE_SETTINGS =
-            "migrated_settings_to_lineage_17_0";
-
     private static final Bundle NULL_SETTING = Bundle.forPair("value", null);
 
     // Each defined user has their own settings
@@ -138,132 +135,6 @@ public class LineageSettingsProvider extends ContentProvider {
         return true;
     }
 
-    // region Migration Methods
-
-    /**
-     * Migrates Lineage settings for all existing users if this has not been run before.
-     */
-    private void migrateLineageSettingsForExistingUsersIfNeeded() {
-        boolean hasMigratedLineageSettings = mSharedPrefs.getBoolean(PREF_HAS_MIGRATED_LINEAGE_SETTINGS,
-                false);
-
-        if (!hasMigratedLineageSettings) {
-            long startTime = System.currentTimeMillis();
-
-            for (UserInfo user : mUserManager.getUsers()) {
-                migrateLineageSettingsForUser(user.id);
-            }
-
-            mSharedPrefs.edit().putBoolean(PREF_HAS_MIGRATED_LINEAGE_SETTINGS, true).commit();
-
-            // TODO: Add this as part of a boot message to the UI
-            long timeDiffMillis = System.currentTimeMillis() - startTime;
-            if (LOCAL_LOGV) Log.d(TAG, "Migration finished in " + timeDiffMillis + " milliseconds");
-        }
-    }
-
-    /**
-     * Migrates Lineage settings for a specific user.
-     * @param userId The id of the user to run Lineage settings migration for.
-     */
-    private void migrateLineageSettingsForUser(int userId) {
-        synchronized (this) {
-            if (LOCAL_LOGV) Log.d(TAG, "Lineage settings will be migrated for user id: " + userId);
-
-            // Migrate system settings
-            int rowsMigrated = migrateLineageSettingsForTable(userId,
-                    LineageDatabaseHelper.LineageTableNames.TABLE_SYSTEM, LineageSettings.System.LEGACY_SYSTEM_SETTINGS);
-            if (LOCAL_LOGV) Log.d(TAG, "Migrated " + rowsMigrated + " to Lineage system table");
-
-            // Migrate secure settings
-            rowsMigrated = migrateLineageSettingsForTable(userId,
-                    LineageDatabaseHelper.LineageTableNames.TABLE_SECURE, LineageSettings.Secure.LEGACY_SECURE_SETTINGS);
-            if (LOCAL_LOGV) Log.d(TAG, "Migrated " + rowsMigrated + " to Lineage secure table");
-
-            // Migrate global settings
-            rowsMigrated = migrateLineageSettingsForTable(userId,
-                    LineageDatabaseHelper.LineageTableNames.TABLE_GLOBAL, LineageSettings.Global.LEGACY_GLOBAL_SETTINGS);
-            if (LOCAL_LOGV) Log.d(TAG, "Migrated " + rowsMigrated + " to Lineage global table");
-        }
-    }
-
-    /**
-     * Migrates Lineage settings for a specific table and user id.
-     * @param userId The id of the user to run Lineage settings migration for.
-     * @param tableName The name of the table to run Lineage settings migration on.
-     * @param settings An array of keys to migrate from {@link Settings} to {@link LineageSettings}
-     * @return Number of rows migrated.
-     */
-    private int migrateLineageSettingsForTable(int userId, String tableName, String[] settings) {
-        ContentResolver contentResolver = getContext().getContentResolver();
-        ContentValues[] contentValues = new ContentValues[settings.length];
-
-        int migrateSettingsCount = 0;
-        for (String settingsKey : settings) {
-            String settingsValue = null;
-
-            if (tableName.equals(LineageDatabaseHelper.LineageTableNames.TABLE_SYSTEM)) {
-                settingsValue = Settings.System.getStringForUser(contentResolver, settingsKey,
-                        userId);
-            }
-            else if (tableName.equals(LineageDatabaseHelper.LineageTableNames.TABLE_SECURE)) {
-                settingsValue = Settings.Secure.getStringForUser(contentResolver, settingsKey,
-                        userId);
-                if (settingsValue != null && settingsKey.equals(LineageSettings.Secure.STATS_COLLECTION)
-                        && LineageSettings.Secure.getStringForUser(contentResolver, settingsKey, userId)
-                        != null) {
-                    // incorrect migration from YOG4P -> YOG7D failed to remove
-                    // Settings.Secure.STATS_COLLECTION after migration; so it may exist in both
-                    // providers; so if it exists in the new database, prefer it.
-                    continue;
-                }
-            }
-            else if (tableName.equals(LineageDatabaseHelper.LineageTableNames.TABLE_GLOBAL)) {
-                settingsValue = Settings.Global.getStringForUser(contentResolver, settingsKey,
-                        userId);
-            }
-
-            if (LOCAL_LOGV) Log.d(TAG, "Table: " + tableName + ", Key: " + settingsKey + ", Value: "
-                    + settingsValue);
-
-            // Don't trample defaults with null values. This is the only scenario where defaults
-            // take precedence over migration values.
-            if (settingsValue == null) {
-                if (LOCAL_LOGV) Log.d(TAG, "Skipping migrating " + settingsKey
-                        + " because of null value");
-                continue;
-            }
-
-            ContentValues contentValue = new ContentValues();
-            contentValue.put(Settings.NameValueTable.NAME, settingsKey);
-            contentValue.put(Settings.NameValueTable.VALUE, settingsValue);
-            contentValues[migrateSettingsCount++] = contentValue;
-        }
-
-        int rowsInserted = 0;
-        if (contentValues.length > 0) {
-            Uri uri = mUriBuilder.build();
-            uri = uri.buildUpon().appendPath(tableName).build();
-            rowsInserted = bulkInsertForUser(userId, uri, contentValues);
-        }
-
-        return rowsInserted;
-    }
-
-    private List<String> delimitedStringToList(String s, String delimiter) {
-        List<String> list = new ArrayList<String>();
-        if (!TextUtils.isEmpty(s)) {
-            final String[] array = TextUtils.split(s, Pattern.quote(delimiter));
-            for (String item : array) {
-                if (TextUtils.isEmpty(item)) {
-                    continue;
-                }
-                list.add(item);
-            }
-        }
-        return list;
-    }
-
     /**
      * Performs cleanup for the removed user.
      * @param userId The id of the user that is removed.
@@ -278,8 +149,6 @@ public class LineageSettingsProvider extends ContentProvider {
             if (LOCAL_LOGV) Log.d(TAG, "User " + userId + " is removed");
         }
     }
-
-    // endregion Migration Methods
 
     // region Content Provider Methods
 
@@ -299,14 +168,6 @@ public class LineageSettingsProvider extends ContentProvider {
         }
 
         switch (method) {
-            // Migrate methods
-           case LineageSettings.CALL_METHOD_MIGRATE_SETTINGS:
-                migrateLineageSettingsForExistingUsersIfNeeded();
-                return null;
-           case LineageSettings.CALL_METHOD_MIGRATE_SETTINGS_FOR_USER:
-                migrateLineageSettingsForUser(callingUserId);
-                return null;
-
             // Get methods
             case LineageSettings.CALL_METHOD_GET_SYSTEM:
                 return lookupSingleValue(callingUserId, LineageSettings.System.CONTENT_URI,
