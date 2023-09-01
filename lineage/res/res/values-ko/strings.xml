@@ -83,4 +83,8 @@
     <string name="trust_notification_title_onboarding">Trust 알아보기</string>
     <string name="trust_notification_content_onboarding">기기를 안전하게 유지하는 방법 알아보기</string>
     <string name="trust_notification_action_manage">경고 관리</string>
+    <string name="charging_control_notification_channel">충전 제어</string>
+    <string name="charging_control_notification_title">충전 제어</string>
+    <string name="charging_control_notification_cancel_once">취소</string>
+    <string name="charging_control_notification_content_target_reached">배터리 충전됨</string>
 </resources>
