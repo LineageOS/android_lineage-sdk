@@ -73,6 +73,7 @@ public class NetworkTraffic extends TextView {
     private static final int UNITS_MEGABITS = 1;
     private static final int UNITS_KILOBYTES = 2;
     private static final int UNITS_MEGABYTES = 3;
+    private static final int UNITS_AUTOBYTES = 4;
 
     // Thresholds themselves are always defined in kbps
     private static final long AUTOHIDE_THRESHOLD_KILOBITS  = 10;
@@ -244,6 +245,7 @@ public class NetworkTraffic extends TextView {
             private String formatOutput(long kbps) {
                 final String value;
                 final String unit;
+                boolean showUnits = mShowUnits;
                 switch (mUnits) {
                     case UNITS_KILOBITS:
                         value = String.format("%d", kbps);
@@ -261,13 +263,31 @@ public class NetworkTraffic extends TextView {
                         value = String.format("%.2f", (float) kbps / 8000);
                         unit = mContext.getString(R.string.megabytespersecond_short);
                         break;
+                    case UNITS_AUTOBYTES:
+                        if (kbps < 8000) {
+                            value = String.format("%.0f", (float) kbps / 8 );
+                            unit = mContext.getString(R.string.kilobytespersecond_auto);
+                        } else {
+                            unit = mContext.getString(R.string.megabytespersecond_auto);
+                            String format;
+                            if (kbps < 80000) {
+                                format = "%.2f";
+                            } else if (kbps < 800000) {
+                                format = "%.1f";
+                            } else {
+                                format = "%.0f";
+                            }
+                            value = String.format(format, (float) kbps / 8000 );
+                        }
+                        showUnits = true;
+                        break;
                     default:
                         value = "unknown";
                         unit = "unknown";
                         break;
                 }
 
-                if (mShowUnits) {
+                if (showUnits) {
                     return value + " " + unit;
                 } else {
                     return value;
@@ -421,6 +441,7 @@ public class NetworkTraffic extends TextView {
                 mAutoHideThreshold = AUTOHIDE_THRESHOLD_MEGABITS;
                 break;
             case UNITS_KILOBYTES:
+            case UNITS_AUTOBYTES:
                 mAutoHideThreshold = AUTOHIDE_THRESHOLD_KILOBYTES;
                 break;
             case UNITS_MEGABYTES:
