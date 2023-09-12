@@ -2904,22 +2904,31 @@ public final class LineageSettings {
 
         /**
          * Measurement unit preference for network traffic
+         * 0 = kBit/s
+         * 1 = MBit/s
+         * 2 = kByte/s
+         * 3 = MByte/s
+         * 4 = automatic kByte/s or MByte/s
          * @hide
          */
         public static final String NETWORK_TRAFFIC_UNITS = "network_traffic_units";
 
         /** @hide */
         public static final Validator NETWORK_TRAFFIC_UNITS_VALIDATOR =
-                new InclusiveIntegerRangeValidator(0, 3);
+                new InclusiveIntegerRangeValidator(0, 4);
 
         /**
-         * Whether or not to show measurement units in the network traffic indiciator
+         * How to show measurement units in the network traffic indiciator
+         * 0 = off
+         * 1 = on
+         * 2 = compact
          * @hide
          */
         public static final String NETWORK_TRAFFIC_SHOW_UNITS = "network_traffic_show_units";
 
         /** @hide */
-        public static final Validator NETWORK_TRAFFIC_SHOW_UNITS_VALIDATOR = sBooleanValidator;
+        public static final Validator NETWORK_TRAFFIC_SHOW_UNITS_VALIDATOR =
+                new InclusiveIntegerRangeValidator(0, 2);
 
         /**
          * Trust warnings status
