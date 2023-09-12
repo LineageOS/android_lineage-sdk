@@ -137,6 +137,8 @@
     <java-symbol type="string" name="megabitspersecond_short" />
     <java-symbol type="string" name="kilobytespersecond_short" />
     <java-symbol type="string" name="megabytespersecond_short" />
+    <java-symbol type="string" name="kilobytespersecond_compact" />
+    <java-symbol type="string" name="megabytespersecond_compact" />
 
     <java-symbol type="array" name="config_vendorPlatformSignatures" />
 
