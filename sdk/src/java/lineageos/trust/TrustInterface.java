@@ -198,7 +198,6 @@ public class TrustInterface {
             return sService;
         }
         IBinder b = ServiceManager.getService(LineageContextConstants.LINEAGE_TRUST_INTERFACE);
-        sService = ITrustInterface.Stub.asInterface(b);
 
         if (b == null) {
             Log.e(TAG, "null service. SAD!");
