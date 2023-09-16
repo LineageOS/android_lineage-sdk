@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9f2cbb38_6268763b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 11409
+      },
+      "writtenOn": "2023-09-16T16:32:59Z",
+      "side": 1,
+      "message": "Works nice on surya and crosshatch. Saves some space in the statusbar.",
+      "revId": "a498ca1488f55ded89dc8755a58f4dd422a705ae",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
