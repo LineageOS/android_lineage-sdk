@@ -18,6 +18,23 @@
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "2d617034_6e87a991",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 11409
+      },
+      "writtenOn": "2023-09-19T19:13:51Z",
+      "side": 1,
+      "message": "Perhaps, I could simplify network traffic display by leaving the behavior of UNITS_AUTOBYTES as the only option? Are there some usage-data, how often the different settings are chosen?",
+      "revId": "a498ca1488f55ded89dc8755a58f4dd422a705ae",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "7f66206b_060d1f7d",
@@ -37,6 +54,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "1836fb60_b23fbcb7",
+        "filename": "sdk/src/java/org/lineageos/internal/statusbar/NetworkTraffic.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 273,
+      "author": {
+        "id": 11409
+      },
+      "writtenOn": "2023-09-19T19:13:51Z",
+      "side": 1,
+      "message": "Using the UNITS_AUTOBYTES-section for the second half of UNITS_AUTOBYTES would remove the advantage of compactness. UNITS_AUTOBYTES is thought for environments with very little space in the statusbar (I tested with crosshatch with its large notch), therefore the forced limitation to three digits and the abbreviated unit texts (only \u0027k\u0027 or \u0027M\u0027) instead of \u0027kB/s\u0027 or \u0027MB/s\u0027 and possibly up to 5 digits.\n\nWhat if I suggested to reduce the network traffic display to only this compact UNITS_AUTOBYTES form? It would reduce the complexity drastically. In settings, SDK and display. Are the \u0027kbit/s\u0027 or \u0027Mbit/s\u0027 used frequently?",
+      "parentUuid": "7f66206b_060d1f7d",
+      "revId": "a498ca1488f55ded89dc8755a58f4dd422a705ae",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "467911d9_0c3227cf",
         "filename": "sdk/src/java/org/lineageos/internal/statusbar/NetworkTraffic.java",
         "patchSetId": 1
@@ -48,6 +83,24 @@
       "writtenOn": "2023-09-19T09:23:14Z",
       "side": 1,
       "message": "why not make unit \u003d\u003d UNITS_AUTOBYTES imply NETWORK_TRAFFIC_SHOW_UNITS?",
+      "revId": "a498ca1488f55ded89dc8755a58f4dd422a705ae",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "20c84729_85d098bb",
+        "filename": "sdk/src/java/org/lineageos/internal/statusbar/NetworkTraffic.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 282,
+      "author": {
+        "id": 11409
+      },
+      "writtenOn": "2023-09-19T19:13:51Z",
+      "side": 1,
+      "message": "I wanted to preserve the original \"show units\" settings, in case the user returns from UNITS_AUTOBYTES to the previous units. Therefore the detour with the local showUnits.",
+      "parentUuid": "467911d9_0c3227cf",
       "revId": "a498ca1488f55ded89dc8755a58f4dd422a705ae",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     },
@@ -77,6 +130,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "a7e6e4bf_56268de1",
+        "filename": "sdk/src/java/org/lineageos/internal/statusbar/NetworkTraffic.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 434,
+      "author": {
+        "id": 11409
+      },
+      "writtenOn": "2023-09-19T19:13:51Z",
+      "side": 1,
+      "message": "Does it matter? It\u0027s highly probable, that this LineageSetting is already in a defined state at this code point here.",
+      "parentUuid": "41aa6060_24c28491",
+      "range": {
+        "startLine": 434,
+        "startChar": 62,
+        "endLine": 434,
+        "endChar": 74
+      },
+      "revId": "a498ca1488f55ded89dc8755a58f4dd422a705ae",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "aa664869_b15f5924",
         "filename": "sdk/src/java/org/lineageos/internal/statusbar/NetworkTraffic.java",
         "patchSetId": 1
@@ -88,6 +165,30 @@
       "writtenOn": "2023-09-19T09:23:14Z",
       "side": 1,
       "message": "case UNITS_AUTOBYTES:\n                mShowUnits \u003d true;\n            case UNITS_KILOBYTES:\n                ...",
+      "range": {
+        "startLine": 443,
+        "startChar": 0,
+        "endLine": 444,
+        "endChar": 33
+      },
+      "revId": "a498ca1488f55ded89dc8755a58f4dd422a705ae",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "153e3553_8de8bf91",
+        "filename": "sdk/src/java/org/lineageos/internal/statusbar/NetworkTraffic.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 444,
+      "author": {
+        "id": 11409
+      },
+      "writtenOn": "2023-09-19T19:13:51Z",
+      "side": 1,
+      "message": "That would bring mShowUnits out-of-sync with LineageSettings.Secure.NETWORK_TRAFFIC_SHOW_UNITS and therefor with the \"show units\" switch. Returning from UNITS_AUTOBYTES to UNITS_KILOBYTES (or else) would show the units even if the (re-enabled) \"show units\" switch is set to off. Only leaving the network traffic settings and re-entering it would adjust the switch.",
+      "parentUuid": "aa664869_b15f5924",
       "range": {
         "startLine": 443,
         "startChar": 0,
