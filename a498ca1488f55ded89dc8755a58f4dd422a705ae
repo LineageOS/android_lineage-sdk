@@ -16,6 +16,103 @@
       "message": "Works nice on surya and crosshatch. Saves some space in the statusbar.",
       "revId": "a498ca1488f55ded89dc8755a58f4dd422a705ae",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7f66206b_060d1f7d",
+        "filename": "sdk/src/java/org/lineageos/internal/statusbar/NetworkTraffic.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 273,
+      "author": {
+        "id": 11883
+      },
+      "writtenOn": "2023-09-19T09:23:14Z",
+      "side": 1,
+      "message": "the extra \"formatting\" seems more an improvement that could be made even to current code? can you split that up to also include the current UNITS_MEGABYTES?",
+      "revId": "a498ca1488f55ded89dc8755a58f4dd422a705ae",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "467911d9_0c3227cf",
+        "filename": "sdk/src/java/org/lineageos/internal/statusbar/NetworkTraffic.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 282,
+      "author": {
+        "id": 11883
+      },
+      "writtenOn": "2023-09-19T09:23:14Z",
+      "side": 1,
+      "message": "why not make unit \u003d\u003d UNITS_AUTOBYTES imply NETWORK_TRAFFIC_SHOW_UNITS?",
+      "revId": "a498ca1488f55ded89dc8755a58f4dd422a705ae",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "41aa6060_24c28491",
+        "filename": "sdk/src/java/org/lineageos/internal/statusbar/NetworkTraffic.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 434,
+      "author": {
+        "id": 11883
+      },
+      "writtenOn": "2023-09-19T09:23:14Z",
+      "side": 1,
+      "message": "UNITS_MEGABYTES maybe?",
+      "range": {
+        "startLine": 434,
+        "startChar": 62,
+        "endLine": 434,
+        "endChar": 74
+      },
+      "revId": "a498ca1488f55ded89dc8755a58f4dd422a705ae",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "aa664869_b15f5924",
+        "filename": "sdk/src/java/org/lineageos/internal/statusbar/NetworkTraffic.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 444,
+      "author": {
+        "id": 11883
+      },
+      "writtenOn": "2023-09-19T09:23:14Z",
+      "side": 1,
+      "message": "case UNITS_AUTOBYTES:\n                mShowUnits \u003d true;\n            case UNITS_KILOBYTES:\n                ...",
+      "range": {
+        "startLine": 443,
+        "startChar": 0,
+        "endLine": 444,
+        "endChar": 33
+      },
+      "revId": "a498ca1488f55ded89dc8755a58f4dd422a705ae",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6db15317_d72886df",
+        "filename": "sdk/src/java/org/lineageos/internal/statusbar/NetworkTraffic.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 456,
+      "author": {
+        "id": 11883
+      },
+      "writtenOn": "2023-09-19T09:23:14Z",
+      "side": 1,
+      "message": "move that before switch",
+      "revId": "a498ca1488f55ded89dc8755a58f4dd422a705ae",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
