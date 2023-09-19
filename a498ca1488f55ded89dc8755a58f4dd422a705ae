@@ -72,6 +72,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "e7270dec_91e7caef",
+        "filename": "sdk/src/java/org/lineageos/internal/statusbar/NetworkTraffic.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 273,
+      "author": {
+        "id": 11883
+      },
+      "writtenOn": "2023-09-19T19:20:17Z",
+      "side": 1,
+      "message": "I didn\u0027t notice the short suffixes, I prefer fully fledged units generally, but regardless of my preference I think it should be a unified UI across auto and non auto.\nMaybe we can add a \"compat\" switch to use the short variants?",
+      "parentUuid": "1836fb60_b23fbcb7",
+      "revId": "a498ca1488f55ded89dc8755a58f4dd422a705ae",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "467911d9_0c3227cf",
         "filename": "sdk/src/java/org/lineageos/internal/statusbar/NetworkTraffic.java",
         "patchSetId": 1
@@ -101,6 +119,24 @@
       "side": 1,
       "message": "I wanted to preserve the original \"show units\" settings, in case the user returns from UNITS_AUTOBYTES to the previous units. Therefore the detour with the local showUnits.",
       "parentUuid": "467911d9_0c3227cf",
+      "revId": "a498ca1488f55ded89dc8755a58f4dd422a705ae",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "435c8670_fca69380",
+        "filename": "sdk/src/java/org/lineageos/internal/statusbar/NetworkTraffic.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 282,
+      "author": {
+        "id": 11883
+      },
+      "writtenOn": "2023-09-19T19:20:17Z",
+      "side": 1,
+      "message": "the setting would still exist, just making it being implied ALSO by auto unites ( or setting )",
+      "parentUuid": "20c84729_85d098bb",
       "revId": "a498ca1488f55ded89dc8755a58f4dd422a705ae",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     },
@@ -152,6 +188,30 @@
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "5a3d1d9a_11ed784a",
+        "filename": "sdk/src/java/org/lineageos/internal/statusbar/NetworkTraffic.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 434,
+      "author": {
+        "id": 11883
+      },
+      "writtenOn": "2023-09-19T19:20:17Z",
+      "side": 1,
+      "message": "does not",
+      "parentUuid": "a7e6e4bf_56268de1",
+      "range": {
+        "startLine": 434,
+        "startChar": 62,
+        "endLine": 434,
+        "endChar": 74
+      },
+      "revId": "a498ca1488f55ded89dc8755a58f4dd422a705ae",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "aa664869_b15f5924",
@@ -189,6 +249,30 @@
       "side": 1,
       "message": "That would bring mShowUnits out-of-sync with LineageSettings.Secure.NETWORK_TRAFFIC_SHOW_UNITS and therefor with the \"show units\" switch. Returning from UNITS_AUTOBYTES to UNITS_KILOBYTES (or else) would show the units even if the (re-enabled) \"show units\" switch is set to off. Only leaving the network traffic settings and re-entering it would adjust the switch.",
       "parentUuid": "aa664869_b15f5924",
+      "range": {
+        "startLine": 443,
+        "startChar": 0,
+        "endLine": 444,
+        "endChar": 33
+      },
+      "revId": "a498ca1488f55ded89dc8755a58f4dd422a705ae",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ee653bee_b45d88e5",
+        "filename": "sdk/src/java/org/lineageos/internal/statusbar/NetworkTraffic.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 444,
+      "author": {
+        "id": 11883
+      },
+      "writtenOn": "2023-09-19T19:20:17Z",
+      "side": 1,
+      "message": "as per ^ the setting would still exist, it would simply be also implied by the auto unit setting :)",
+      "parentUuid": "153e3553_8de8bf91",
       "range": {
         "startLine": 443,
         "startChar": 0,
