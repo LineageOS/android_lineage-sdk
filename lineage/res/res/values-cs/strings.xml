@@ -83,4 +83,11 @@
     <string name="trust_notification_title_onboarding">Objevte Trust</string>
     <string name="trust_notification_content_onboarding">Zjistěte, jak zajistit bezpečnost zařízení</string>
     <string name="trust_notification_action_manage">Spravovat výstrahy</string>
+    <string name="charging_control_notification_channel">Kontrola nabíjení</string>
+    <string name="charging_control_notification_title">Kontrola nabíjení</string>
+    <string name="charging_control_notification_cancel_once">Zrušit</string>
+    <string name="charging_control_notification_content_limit">Baterie bude nabita na %1$d%%</string>
+    <string name="charging_control_notification_content_limit_reached">Baterie je nabitá na %1$d%%</string>
+    <string name="charging_control_notification_content_target">Baterie bude plně nabita do %s</string>
+    <string name="charging_control_notification_content_target_reached">Baterie je nabitá</string>
 </resources>
