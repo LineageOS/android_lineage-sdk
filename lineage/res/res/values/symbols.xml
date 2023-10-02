@@ -31,6 +31,10 @@
     <!-- Proximity check on screen on default -->
     <java-symbol type="bool" name="config_proximityCheckOnWakeEnabledByDefault" />
 
+    <!-- Status bar DT2S gesture -->
+    <java-symbol type="bool" name="config_dt2sGestureAvailable" />
+    <java-symbol type="bool" name="config_dt2sGestureEnabledByDefault" />
+
     <!-- LiveDisplay -->
     <java-symbol type="bool" name="config_enableLiveDisplay" />
     <java-symbol type="string" name="live_display_title" />
