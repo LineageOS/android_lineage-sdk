@@ -34,6 +34,23 @@
       "parentUuid": "f1185d48_fdefcc06",
       "revId": "3ea4c751bd118ab9525dfdc4d14f7c6cd34c71e3",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0183a20d_8ba7044e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 11409
+      },
+      "writtenOn": "2023-10-02T16:20:51Z",
+      "side": 1,
+      "message": "The commented sections have been modified to respect the comments.",
+      "revId": "3ea4c751bd118ab9525dfdc4d14f7c6cd34c71e3",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }

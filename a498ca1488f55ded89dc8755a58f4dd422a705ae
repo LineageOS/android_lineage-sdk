@@ -88,6 +88,24 @@
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "2e5f6f0f_3535b61f",
+        "filename": "sdk/src/java/org/lineageos/internal/statusbar/NetworkTraffic.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 273,
+      "author": {
+        "id": 11409
+      },
+      "writtenOn": "2023-10-02T16:20:51Z",
+      "side": 1,
+      "message": "The \"Megabytes/s\" benefit from the formatting for \"Automatic\".\nDepending on the selcting units one can select units on, off or compact.",
+      "parentUuid": "e7270dec_91e7caef",
+      "revId": "a498ca1488f55ded89dc8755a58f4dd422a705ae",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "467911d9_0c3227cf",
@@ -283,6 +301,30 @@
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "0606fe4e_19160163",
+        "filename": "sdk/src/java/org/lineageos/internal/statusbar/NetworkTraffic.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 444,
+      "author": {
+        "id": 11409
+      },
+      "writtenOn": "2023-10-02T16:20:51Z",
+      "side": 1,
+      "message": "Having changed mShowUnits from boolean to 3-state solves the problems.",
+      "parentUuid": "ee653bee_b45d88e5",
+      "range": {
+        "startLine": 443,
+        "startChar": 0,
+        "endLine": 444,
+        "endChar": 33
+      },
+      "revId": "a498ca1488f55ded89dc8755a58f4dd422a705ae",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "6db15317_d72886df",
@@ -296,6 +338,24 @@
       "writtenOn": "2023-09-19T09:23:14Z",
       "side": 1,
       "message": "move that before switch",
+      "revId": "a498ca1488f55ded89dc8755a58f4dd422a705ae",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ed70244a_20041c64",
+        "filename": "sdk/src/java/org/lineageos/internal/statusbar/NetworkTraffic.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 456,
+      "author": {
+        "id": 11409
+      },
+      "writtenOn": "2023-10-02T16:20:51Z",
+      "side": 1,
+      "message": "no longer applicable.",
+      "parentUuid": "6db15317_d72886df",
       "revId": "a498ca1488f55ded89dc8755a58f4dd422a705ae",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
