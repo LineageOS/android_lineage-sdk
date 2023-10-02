@@ -451,6 +451,9 @@ public class LineageDatabaseHelper extends SQLiteOpenHelper{
             loadBooleanSetting(stmt, LineageSettings.System.LOCKSCREEN_ROTATION,
                     R.bool.def_lockscreen_rotation);
 
+            loadBooleanSetting(stmt, LineageSettings.System.DOUBLE_TAP_SLEEP_GESTURE,
+                    R.bool.def_dt2s_gesture_enabled);
+
             if (mContext.getResources().getBoolean(R.bool.def_notification_pulse_custom_enable)) {
                 loadStringSetting(stmt, LineageSettings.System.NOTIFICATION_LIGHT_PULSE_CUSTOM_VALUES,
                         R.string.def_notification_pulse_custom_value);
