@@ -34,6 +34,9 @@ public abstract class UserContentObserver extends ContentObserver {
 
     private IUserSwitchObserver mUserSwitchObserver = new IUserSwitchObserver.Stub() {
         @Override
+        public void onBeforeUserSwitching(int newUserId) throws RemoteException {
+        }
+        @Override
         public void onUserSwitching(int newUserId, IRemoteCallback reply) {
         }
         @Override
