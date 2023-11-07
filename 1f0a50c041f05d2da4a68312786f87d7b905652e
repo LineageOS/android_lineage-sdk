@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5dcaacda_487cd3fa",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 6360
+      },
+      "writtenOn": "2023-11-07T15:45:00Z",
+      "side": 1,
+      "message": "This can be implemented for new back affordance.\n\nhttps://github.com/crdroidandroid/android_frameworks_base/commits/14.0/packages/SystemUI/src/com/android/systemui/navigationbar/gestural/BackPanel.kt",
+      "revId": "1f0a50c041f05d2da4a68312786f87d7b905652e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
