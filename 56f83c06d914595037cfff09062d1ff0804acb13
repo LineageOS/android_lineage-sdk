@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2e21b59e_de56de8a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 3075
+      },
+      "writtenOn": "2023-11-09T19:15:29Z",
+      "side": 1,
+      "message": "client/server application throughput is typically measured in bytes and network links typically measured in bits.  Since this feature is about network traffic, I would expect \"auto\" to use bits rather than bytes.  (Do any mobile carriers describe available speeds in bytes per second ?)\n\nThere\u0027s room for both, of course.  auto with bits and auto with bytes.",
+      "revId": "56f83c06d914595037cfff09062d1ff0804acb13",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
