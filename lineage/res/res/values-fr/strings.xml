@@ -73,6 +73,8 @@
     <string name="megabitspersecond_short">Mb/s</string>
     <string name="kilobytespersecond_short">ko/s</string>
     <string name="megabytespersecond_short">Mo/s</string>
+    <string name="kilobytespersecond_compact">k</string>
+    <string name="megabytespersecond_compact">M</string>
     <string name="trust_feature_name">Trust</string>
     <string name="permlab_trustInterface">accéder à l\'interface Trust</string>
     <string name="permdesc_trustInterface">Autorise une application à afficher des avertissements et suggestions Trust</string>
