@@ -75,7 +75,7 @@
     <string name="permlab_weather_read">odczyt pogody</string>
     <string name="permdesc_weather_read">Umożliwia aplikacji odczyt danych od dostawcy pogody.</string>
     <string name="permlab_weather_write">aktualizacja dostawcy pogody</string>
-    <string name="permdesc_weather_write">Umożliwia aplikacji na aktualizację danych dostawcy pogody.</string>
+    <string name="permdesc_weather_write">Pozwala aplikacji na aktualizację danych dostawcy pogody.</string>
     <string name="permlab_weather_bind">powiąż jako usługa dostawcy pogody</string>
     <string name="permdesc_weather_bind">Zezwala aplikacji na dostarczanie usługi prognozy pogody.</string>
     <string name="permlab_weather_access_mgr">dostęp do usługi prognozy pogody</string>
