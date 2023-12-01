@@ -85,8 +85,8 @@
     <string name="trust_notification_title_onboarding">Odkrijte Trust</string>
     <string name="trust_notification_content_onboarding">Spoznajte, kako zagotoviti varnost vaše naprave</string>
     <string name="trust_notification_action_manage">Upravljaj z opozorili</string>
-    <string name="charging_control_notification_channel">Nadzorovanje polnjenja</string>
-    <string name="charging_control_notification_title">Nadzorovanje polnjenja</string>
+    <string name="charging_control_notification_channel">Nadzorovano polnjenje</string>
+    <string name="charging_control_notification_title">Nadzorovano polnjenje</string>
     <string name="charging_control_notification_cancel_once">Prekliči</string>
     <string name="charging_control_notification_content_limit">Baterija bo napolnjena do %1$d%%</string>
     <string name="charging_control_notification_content_limit_reached">Baterija je napolnjena do %1$d%%</string>
