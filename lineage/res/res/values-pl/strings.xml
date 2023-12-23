@@ -59,7 +59,7 @@
     <string name="accessibility_quick_settings_live_display_changed_night">LiveDisplay zmieniony na tryb nocny.</string>
     <string name="accessibility_quick_settings_live_display_changed_outdoor">LiveDisplay zmieniony na tryb zewnętrzny.</string>
     <string name="permlab_manageLiveDisplay">zarządzanie ustawieniami LiveDisplay</string>
-    <string name="permdesc_manageLiveDisplay">Pozwala aplikacji na konfigurację zaawansowanych ustawień wyświetlacza.</string>
+    <string name="permdesc_manageLiveDisplay">Pozwala aplikacji na konfigurację zaawansowanych ustawień ekranu.</string>
     <string name="permlab_manageRemotePrefs">zarządza zdalnymi ustawieniami</string>
     <string name="permdesc_manageRemotePrefs">Zezwala aplikacji na zarządzanie zdalnymi ustawieniami</string>
     <string name="build_date">Data kompilacji</string>

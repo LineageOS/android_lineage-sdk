@@ -18,9 +18,9 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="lineageos_system_label">LineageOS Sistemi</string>
     <string name="permlab_modifyProfiles">sistem profillərini dəyişdir</string>
-    <string name="permdesc_modifyProfiles">Tətbiqetməyə sistem profillərini dəyişdirmə icazəsi verər.</string>
+    <string name="permdesc_modifyProfiles">Tətbiqin sistem profillərini dəyişdirməsinə icazə verir.</string>
     <string name="permlab_useHardwareFramework">avadanlıq bünövrəsindən istifadə et</string>
-    <string name="permdesc_useHardwareFramework">Tətbiqetmənin Lineage avadanlıq bünövrəsinə müraciətinə icazə verər.</string>
+    <string name="permdesc_useHardwareFramework">Tətbiqin Lineage avadanlıq bünövrəsinə müraciətinə icazə verir.</string>
     <string name="permlab_writeSettings">Lineage sistem ayarlarını dəyişdir</string>
     <string name="permdesc_writeSettings">Tətbiqin Lineage sistem ayarlarını dəyişdirməsinə icazə verir.</string>
     <string name="permlab_writeSecureSettings">Lineage güvənli sistem ayarlarını dəyişdir</string>
@@ -68,7 +68,7 @@
     <string name="lineage_version">LineageOS versiyası</string>
     <string name="lineage_vendor_security_patch">Vendor güvənlik yamaq səviyyəsi</string>
     <string name="unknown">Bilinmir</string>
-    <string name="app_killed_message">Tətbiqetmə bağlanıldı</string>
+    <string name="app_killed_message">Tətbiq bağlanıldı</string>
     <string name="kilobitspersecond_short">kb/s</string>
     <string name="megabitspersecond_short">Mb/s</string>
     <string name="kilobytespersecond_short">kB/s</string>
@@ -77,7 +77,7 @@
     <string name="megabytespersecond_compact">M</string>
     <string name="trust_feature_name">Trust</string>
     <string name="permlab_trustInterface">Trust interfeysinə müraciət</string>
-    <string name="permdesc_trustInterface">Tətbiqetməyə Trust xəbərdarlıqlarını və təkliflərini görüntüləmə icazəsi verər</string>
+    <string name="permdesc_trustInterface">Tətbiqin Trust xəbərdarlıqlarını və təkliflərini görüntüləməsinə icazə verir</string>
     <string name="trust_notification_channel">Trust xəbərdarlıqları</string>
     <string name="trust_notification_title_security">Trust \u2022 Sistem güvənliyi</string>
     <string name="trust_notification_content_selinux">SELinux məcbur edilmir, güvənliyiniz zəiflədi</string>
