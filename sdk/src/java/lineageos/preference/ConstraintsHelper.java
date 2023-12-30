@@ -23,6 +23,8 @@ import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.content.res.TypedArray;
+import android.os.IBinder;
+import android.os.ServiceManager;
 import android.os.SystemProperties;
 import android.os.UserHandle;
 import android.telephony.TelephonyManager;
@@ -227,6 +229,21 @@ public class ConstraintsHelper {
                     if (tv.data == 0 || (mask >= 0 && (tv.data & mask) == 0)) {
                         return false;
                     }
+                }
+            }
+
+            // Check a system service
+            String rService = a.getString(
+                    R.styleable.lineage_SelfRemovingPreference_requiresService);
+            if (rService != null) {
+                boolean negated = isNegated(rService);
+                if (negated) {
+                    rService = rService.substring(1);
+                }
+                IBinder value = ServiceManager.getService(rService);
+                boolean available = value != null;
+                if (available == negated) {
+                    return false;
                 }
             }
         } finally {
