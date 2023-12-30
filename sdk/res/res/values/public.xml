@@ -8,6 +8,7 @@
   <public type="attr" name="requiresOwner" id="0x3f010006" />
   <public type="attr" name="xmlRes" id="0x3f010007" />
   <public type="attr" name="requiresAction" id="0x3f010008" />
+  <public type="attr" name="requiresService" id="0x3f01000c" />
   <public type="attr" name="replacesKey" id="0x3f010009" />
   <public type="attr" name="minSummaryLines" id="0x3f01000a" />
 
