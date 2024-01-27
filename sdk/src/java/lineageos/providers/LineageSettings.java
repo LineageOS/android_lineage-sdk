@@ -2969,6 +2969,15 @@ public final class LineageSettings {
 
         /** @hide */
         public static final Validator BERRY_BLACK_THEME_VALIDATOR = sBooleanValidator;
+
+        /**
+         * Whether to show the clipboard overlay
+         * @hide
+         */
+        public static final String CLIPBOARD_SHOW_OVERLAY = "clipboard_show_overlay";
+
+        /** @hide */
+        public static final Validator CLIPBOARD_SHOW_OVERLAY_VALIDATOR = sBooleanValidator;
         // endregion
 
         /**
@@ -2991,6 +3000,7 @@ public final class LineageSettings {
                 new ArrayMap<String, Validator>();
         static {
             VALIDATORS.put(BERRY_BLACK_THEME, BERRY_BLACK_THEME_VALIDATOR);
+            VALIDATORS.put(CLIPBOARD_SHOW_OVERLAY, CLIPBOARD_SHOW_OVERLAY_VALIDATOR);
             VALIDATORS.put(GESTURE_BACK_EXCLUDE_TOP, GESTURE_BACK_EXCLUDE_TOP_VALIDATOR);
             VALIDATORS.put(NETWORK_TRAFFIC_MODE, NETWORK_TRAFFIC_MODE_VALIDATOR);
             VALIDATORS.put(NETWORK_TRAFFIC_POSITION, NETWORK_TRAFFIC_POSITION_VALIDATOR);
