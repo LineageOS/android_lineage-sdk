@@ -2969,6 +2969,15 @@ public final class LineageSettings {
 
         /** @hide */
         public static final Validator BERRY_BLACK_THEME_VALIDATOR = sBooleanValidator;
+
+        /**
+         * Whether to show the clipboard overlay
+         * @hide
+         */
+        public static final String CLIPBOARD_SHOW_OVERLAY = "clipboard_show_overlay";
+
+        /** @hide */
+        public static final Validator CLIPBOARD_SHOW_OVERLAY_VALIDATOR = sBooleanValidator;
         // endregion
 
         /**
@@ -2997,6 +3006,7 @@ public final class LineageSettings {
             VALIDATORS.put(NETWORK_TRAFFIC_AUTOHIDE, NETWORK_TRAFFIC_AUTOHIDE_VALIDATOR);
             VALIDATORS.put(NETWORK_TRAFFIC_UNITS, NETWORK_TRAFFIC_UNITS_VALIDATOR);
             VALIDATORS.put(NETWORK_TRAFFIC_SHOW_UNITS, NETWORK_TRAFFIC_SHOW_UNITS_VALIDATOR);
+            VALIDATORS.put(CLIPBOARD_SHOW_OVERLAY, CLIPBOARD_SHOW_OVERLAY_VALIDATOR);
             VALIDATORS.put(TETHERING_ALLOW_VPN_UPSTREAMS, TETHERING_ALLOW_VPN_UPSTREAMS_VALIDATOR);
             VALIDATORS.put(TRUST_WARNINGS, TRUST_WARNINGS_VALIDATOR);
             VALIDATORS.put(VOLUME_PANEL_ON_LEFT, VOLUME_PANEL_ON_LEFT_VALIDATOR);
