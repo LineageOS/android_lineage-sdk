@@ -1045,6 +1045,16 @@ public final class LineageSettings {
                 sBooleanValidator;
 
         /**
+         * Show per-app volume controls in volume hud
+         * Defaults to 0 - Per-app volume controls hidden
+         */
+        public static final String SHOW_APP_VOLUME = "show_app_volume";
+
+        /** @hide */
+        public static final Validator SHOW_APP_VOLUME_VALIDATOR =
+                sBooleanValidator;
+
+        /**
          * Navigation controls to Use
          */
         public static final String NAV_BUTTONS = "nav_buttons";
@@ -2140,6 +2150,7 @@ public final class LineageSettings {
                     INCREASING_RING_RAMP_UP_TIME_VALIDATOR);
             VALIDATORS.put(VOLUME_ADJUST_SOUNDS_ENABLED,
                     VOLUME_ADJUST_SOUNDS_ENABLED_VALIDATOR);
+            VALIDATORS.put(SHOW_APP_VOLUME, SHOW_APP_VOLUME_VALIDATOR);
             VALIDATORS.put(NAV_BUTTONS, NAV_BUTTONS_VALIDATOR);
             VALIDATORS.put(NAVIGATION_BAR_MENU_ARROW_KEYS,
                     NAVIGATION_BAR_MENU_ARROW_KEYS_VALIDATOR);
