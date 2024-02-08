@@ -42,7 +42,7 @@
     <string name="perf_profile_pwrsv">Oszczędny</string>
     <string name="perf_profile_bal">Zbalansowany</string>
     <string name="perf_profile_perf">Wydajny</string>
-    <string name="perf_profile_bias_power">Oszczędny</string>
+    <string name="perf_profile_bias_power">Efektywny</string>
     <string name="perf_profile_bias_perf">Szybki</string>
     <string name="perf_profile_pwrsv_summary">Maksymalna oszczędność energii, zmniejsza wydajność urządzenia</string>
     <string name="perf_profile_bal_summary">Równowaga optymalnej wydajności i zużycia energii</string>
@@ -51,15 +51,15 @@
     <string name="perf_profile_bias_perf_summary">Sprzyja wydajności. Zmniejsza opóźnienia z lekko zwiększonym zużyciem energii</string>
     <string name="live_display_auto">Automatyczny</string>
     <string name="live_display_auto_summary">Automatycznie dostosuj temperaturę kolorów ekranu po zachodzie i wschodzie słońca</string>
-    <string name="live_display_off">Wyłączony</string>
+    <string name="live_display_off">Wyłączono</string>
     <string name="live_display_off_summary">Wyłącz wszystkie zmiany</string>
-    <string name="live_display_day">Dzień</string>
+    <string name="live_display_day">Dzienny</string>
     <string name="live_display_day_summary">Używaj tylko ustawień za dnia</string>
     <string name="live_display_night">Nocny</string>
     <string name="live_display_night_summary">Używaj ustawień tylko w nocy</string>
     <string name="live_display_outdoor">Na zewnątrz (jasne światło)</string>
     <string name="live_display_outdoor_summary">Używaj ustawień tylko na zewnątrz</string>
-    <string name="live_display_hint">LiveDisplay może pomóc w zredukowaniu efektu zmęczenia oczu oraz pomaga zasnąć w nocy. Kliknij tutaj, aby wypróbować!</string>
+    <string name="live_display_hint">LiveDisplay może pomóc w zredukowaniu efektu zmęczenia oczu oraz pomaga zasnąć w nocy. Dotknij tutaj, aby wypróbować!</string>
     <string name="accessibility_quick_settings_live_display_off">LiveDisplay wyłączony.</string>
     <string name="accessibility_quick_settings_live_display_auto">LiveDisplay: tryb automatyczny.</string>
     <string name="accessibility_quick_settings_live_display_day">LiveDisplay: tryb dzienny.</string>
@@ -75,7 +75,7 @@
     <string name="permlab_weather_read">odczyt pogody</string>
     <string name="permdesc_weather_read">Umożliwia aplikacji odczyt danych od dostawcy pogody.</string>
     <string name="permlab_weather_write">aktualizacja dostawcy pogody</string>
-    <string name="permdesc_weather_write">Umożliwia aplikacji na aktualizację danych dostawcy pogody.</string>
+    <string name="permdesc_weather_write">Pozwala aplikacji na aktualizację danych dostawcy pogody.</string>
     <string name="permlab_weather_bind">powiąż jako usługa dostawcy pogody</string>
     <string name="permdesc_weather_bind">Zezwala aplikacji na dostarczanie usługi prognozy pogody.</string>
     <string name="permlab_weather_access_mgr">dostęp do usługi prognozy pogody</string>
@@ -85,7 +85,7 @@
     <string name="permlab_dataUsageRead">odczyt zawartości licznika danych</string>
     <string name="permdesc_dataUsageRead">Umożliwia aplikacji odczyt zawartości licznika danych.</string>
     <string name="permlab_manageLiveDisplay">zarządzanie ustawieniami LiveDisplay</string>
-    <string name="permdesc_manageLiveDisplay">Pozwala aplikacji na konfigurację zaawansowanych ustawień wyświetlacza.</string>
+    <string name="permdesc_manageLiveDisplay">Pozwala aplikacji na konfigurację zaawansowanych ustawień ekranu.</string>
     <string name="permlab_observe_audio_sessions">obserwuj zmiany sesji audio</string>
     <string name="permdesc_observe_audio_sessions">Zezwalaj aplikacji na obserwowanie utworzenia lub zamknięcia strumienia dźwięku.</string>
     <string name="permlab_manageRemotePrefs">zarządza zdalnymi ustawieniami</string>
@@ -96,7 +96,7 @@
     <string name="lineage_version">Wersja LineageOS</string>
     <string name="lineage_vendor_security_patch">Poziom poprawek zabezpieczeń producenta</string>
     <string name="unknown">Nieznane</string>
-    <string name="app_killed_message">Aplikacja zabita</string>
+    <string name="app_killed_message">Aplikacja zatrzymana</string>
     <string name="kilobitspersecond_short">kb/s</string>
     <string name="megabitspersecond_short">Mb/s</string>
     <string name="kilobytespersecond_short">kB/s</string>
