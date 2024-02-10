@@ -83,4 +83,5 @@
     <string name="trust_notification_title_onboarding">Darganfydda Trust</string>
     <string name="trust_notification_content_onboarding">Dysga sut i sicrhau bod dy ddyfais yn ddiogel</string>
     <string name="trust_notification_action_manage">Rheoli rhybuddion</string>
+    <string name="charging_control_notification_cancel_once">Diddymu</string>
 </resources>
