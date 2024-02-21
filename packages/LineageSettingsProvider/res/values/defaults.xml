@@ -82,7 +82,4 @@
     -->
     <integer name="def_clock_position">2</integer>
 
-    <!-- Default value for lockscreen rotation -->
-    <bool name="def_lockscreen_rotation">false</bool>
-
 </resources>
