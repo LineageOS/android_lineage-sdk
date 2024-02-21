@@ -298,6 +298,10 @@
          causes a poor experience. -->
     <bool name="config_fingerprintWakeAndUnlock">true</bool>
 
+    <!-- Whether device implements proximity sensor based checks to prevent
+         accidental unlocks when the screen is off. -->
+    <bool name="config_fingerprintProximityCheckBeforeWake">false</bool>
+
     <!-- The list of components which should be automatically disabled for a specific device.
          Note: this MUST not be used to randomly disable components, ask for approval first! -->
     <string-array name="config_deviceDisabledComponents" translatable="false" />
