@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "30a129f7_b326f340",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 4550
+      },
+      "writtenOn": "2024-02-21T15:11:21Z",
+      "side": 1,
+      "message": "This wasn\u0027t working, SystemUI overwrites the default value on boot",
+      "revId": "8e3e07e6cf376b2eed5be497e6d33541200faec4",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
