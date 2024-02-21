@@ -215,4 +215,7 @@
     <java-symbol type="string" name="charging_control_notification_content_limit_reached" />
     <java-symbol type="string" name="charging_control_notification_content_target" />
     <java-symbol type="string" name="charging_control_notification_content_target_reached" />
+
+    <!-- Lockscreen rotation default -->
+    <java-symbol type="bool" name="config_lockScreenRotationEnabledByDefault" />
 </resources>
