@@ -1617,6 +1617,15 @@ public final class LineageSettings {
                 sBooleanValidator;
 
         /**
+         * Whether the device should react to lid events
+         * 0 = 0ff, 1 = on
+         */
+        public static final String LID_CONTROL_SLEEP = "lid_control_sleep";
+
+        /** @hide */
+        public static final Validator LID_CONTROL_SLEEP_VALIDATOR = sBooleanValidator;
+
+        /**
          * Show search bar in recents
          * 0 = Off, 1 = on
          */
@@ -2185,6 +2194,7 @@ public final class LineageSettings {
             VALIDATORS.put(LIVE_DISPLAY_HINTED, LIVE_DISPLAY_HINTED_VALIDATOR);
             VALIDATORS.put(TRUST_INTERFACE_HINTED, TRUST_INTERFACE_HINTED_VALIDATOR);
             VALIDATORS.put(DOUBLE_TAP_SLEEP_GESTURE, DOUBLE_TAP_SLEEP_GESTURE_VALIDATOR);
+            VALIDATORS.put(LID_CONTROL_SLEEP, LID_CONTROL_SLEEP_VALIDATOR);
             VALIDATORS.put(RECENTS_SHOW_SEARCH_BAR, RECENTS_SHOW_SEARCH_BAR_VALIDATOR);
             VALIDATORS.put(NAVBAR_LEFT_IN_LANDSCAPE, NAVBAR_LEFT_IN_LANDSCAPE_VALIDATOR);
             VALIDATORS.put(T9_SEARCH_INPUT_LOCALE, T9_SEARCH_INPUT_LOCALE_VALIDATOR);
