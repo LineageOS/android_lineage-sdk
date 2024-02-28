@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "221eaff7_956abe11",
+        "filename": "lineage/res/res/values/config.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 307,
+      "author": {
+        "id": 10067
+      },
+      "writtenOn": "2024-02-28T10:49:23Z",
+      "side": 1,
+      "message": "i\u0027d rather use config_lidControlsSleep+config_lidControlsScreenLock directly.",
+      "range": {
+        "startLine": 305,
+        "startChar": 0,
+        "endLine": 307,
+        "endChar": 54
+      },
+      "revId": "60967304db87f7b12583dda92a0e74a2e2e69824",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
