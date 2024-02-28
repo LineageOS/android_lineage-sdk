@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "23689e2e_649b17b7",
+        "filename": "lineage/res/res/values/config.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 306,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2024-02-28T09:14:37Z",
+      "side": 1,
+      "message": "\"or\" or \"and\"?",
+      "range": {
+        "startLine": 306,
+        "startChar": 44,
+        "endLine": 306,
+        "endChar": 46
+      },
+      "revId": "2802f7c2e01c59f485a9c3b8e4c59a07f523de0b",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c4a41141_9aada7dc",
+        "filename": "lineage/res/res/values/symbols.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 193,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2024-02-28T09:14:37Z",
+      "side": 1,
+      "message": "\"and\" or \"or\"?",
+      "range": {
+        "startLine": 193,
+        "startChar": 44,
+        "endLine": 193,
+        "endChar": 47
+      },
+      "revId": "2802f7c2e01c59f485a9c3b8e4c59a07f523de0b",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
