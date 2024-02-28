@@ -189,6 +189,10 @@
          accidental unlocks when the screen is off. -->
     <java-symbol type="bool" name="config_proximityCheckOnFpsUnlock" />
 
+    <!-- Whether the device should go to sleep when lid events are detected.
+         Depends on config_lidControlsSleep and config_lidControlsScreenLock. -->
+    <java-symbol type="bool" name="config_enableLidControls" />
+
     <!-- Package Manager -->
     <java-symbol type="array" name="config_deviceDisabledComponents" />
     <java-symbol type="array" name="config_globallyDisabledComponents" />

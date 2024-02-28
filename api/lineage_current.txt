@@ -737,6 +737,7 @@ package lineageos.providers {
     field public static final java.lang.String DISPLAY_TEMPERATURE_MODE = "display_temperature_mode";
     field public static final java.lang.String DISPLAY_TEMPERATURE_NIGHT = "display_temperature_night";
     field public static final java.lang.String DOUBLE_TAP_SLEEP_GESTURE = "double_tap_sleep_gesture";
+    field public static final java.lang.String LID_CONTROL_SLEEP = "lid_control_sleep";
     field public static final java.lang.String HEADSET_CONNECT_PLAYER = "headset_connect_player";
     field public static final java.lang.String HIGH_TOUCH_POLLING_RATE_ENABLE = "high_touch_polling_rate_enable";
     field public static final java.lang.String HIGH_TOUCH_SENSITIVITY_ENABLE = "high_touch_sensitivity_enable";
