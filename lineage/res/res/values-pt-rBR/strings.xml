@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
      Copyright (C) 2015 The CyanogenMod Project
-                   2017-2022 The LineageOS Project
+                   2017-2023 The LineageOS Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -83,4 +83,10 @@
     <string name="trust_notification_title_onboarding">Desvendar o Agente de Confiança</string>
     <string name="trust_notification_content_onboarding">Saiba como garantir a segurança de seu dispositivo</string>
     <string name="trust_notification_action_manage">Gerenciar alertas</string>
+    <string name="charging_control_notification_channel">Controle de carregamento</string>
+    <string name="charging_control_notification_title">Controle de carregamento</string>
+    <string name="charging_control_notification_cancel_once">Cancelar</string>
+    <string name="charging_control_notification_content_limit">A bateria carregará até %1$d%%</string>
+    <string name="charging_control_notification_content_target">A bateria estará totalmente carregada em %1$s</string>
+    <string name="charging_control_notification_content_target_reached">Bateria carregada</string>
 </resources>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
      Copyright (C) 2015 The CyanogenMod Project
-                   2017-2022 The LineageOS Project
+                   2017-2023 The LineageOS Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -78,4 +78,11 @@
     <string name="trust_notification_title_onboarding">Opdag Tillid</string>
     <string name="trust_notification_content_onboarding">Få at vide, hvordan du kan sikre din enhed er sikker</string>
     <string name="trust_notification_action_manage">Håndtér advarsler</string>
+    <string name="charging_control_notification_channel">Opladningskontrol</string>
+    <string name="charging_control_notification_title">Opladningskontrol</string>
+    <string name="charging_control_notification_cancel_once">Afbryd</string>
+    <string name="charging_control_notification_content_limit">Batteriet vil blive opladet til %1$d%%</string>
+    <string name="charging_control_notification_content_limit_reached">Batteriet ert opladet til %1$d%%</string>
+    <string name="charging_control_notification_content_target">Batteriet er fuldt opladet ved %1$d%%</string>
+    <string name="charging_control_notification_content_target_reached">Batteri er opladet</string>
 </resources>

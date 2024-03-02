@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
      Copyright (C) 2015 The CyanogenMod Project
-                   2017-2022 The LineageOS Project
+                   2017-2023 The LineageOS Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -83,4 +83,11 @@
     <string name="trust_notification_title_onboarding">Khám phá Trust</string>
     <string name="trust_notification_content_onboarding">Tìm hiểu cách đảm bảo thiết bị của bạn an toàn</string>
     <string name="trust_notification_action_manage">Quản lý cảnh báo</string>
+    <string name="charging_control_notification_channel">Kiểm soát sạc</string>
+    <string name="charging_control_notification_title">Kiểm soát sạc</string>
+    <string name="charging_control_notification_cancel_once">Hủy</string>
+    <string name="charging_control_notification_content_limit">Pin sẽ được sạc đến %1$d%%</string>
+    <string name="charging_control_notification_content_limit_reached">Pin đã được sạc đến %1$d%%</string>
+    <string name="charging_control_notification_content_target">Pin sẽ được sạc đến %1$d%%</string>
+    <string name="charging_control_notification_content_target_reached">Pin đã được sạc</string>
 </resources>

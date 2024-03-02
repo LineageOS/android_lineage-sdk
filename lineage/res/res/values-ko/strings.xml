@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
      Copyright (C) 2015 The CyanogenMod Project
-                   2017-2022 The LineageOS Project
+                   2017-2023 The LineageOS Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -83,4 +83,11 @@
     <string name="trust_notification_title_onboarding">Trust 알아보기</string>
     <string name="trust_notification_content_onboarding">기기를 안전하게 유지하는 방법 알아보기</string>
     <string name="trust_notification_action_manage">경고 관리</string>
+    <string name="charging_control_notification_channel">충전 제어</string>
+    <string name="charging_control_notification_title">충전 제어</string>
+    <string name="charging_control_notification_cancel_once">취소</string>
+    <string name="charging_control_notification_content_limit">배터리가 %1$d%% 까지 충전됩니다</string>
+    <string name="charging_control_notification_content_limit_reached">배터리가 %1$d%% 까지 충전되었습니다</string>
+    <string name="charging_control_notification_content_target">배터리가 %1$d%% 에 완전히 충전됩니다</string>
+    <string name="charging_control_notification_content_target_reached">배터리 충전됨</string>
 </resources>

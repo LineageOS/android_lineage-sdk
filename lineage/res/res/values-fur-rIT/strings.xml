@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
      Copyright (C) 2015 The CyanogenMod Project
-                   2017-2022 The LineageOS Project
+                   2017-2023 The LineageOS Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -83,4 +83,11 @@
     <string name="trust_notification_title_onboarding">Scuvierç Trust</string>
     <string name="trust_notification_content_onboarding">Viôt cemût sigurâti che il to dispositîf al sedi sigûr</string>
     <string name="trust_notification_action_manage">Gjestìs i avîs</string>
+    <string name="charging_control_notification_channel">Control de cjarie</string>
+    <string name="charging_control_notification_title">Control de cjarie</string>
+    <string name="charging_control_notification_cancel_once">Anule</string>
+    <string name="charging_control_notification_content_limit">La batarie e vignarà cjariade fin al %1$d%%</string>
+    <string name="charging_control_notification_content_limit_reached">La batarie e je cjarie al %1$d%%</string>
+    <string name="charging_control_notification_content_target">La batarie e sarà cjariade dal dut aes %1$s</string>
+    <string name="charging_control_notification_content_target_reached">La batarie e je cjarie</string>
 </resources>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
      Copyright (C) 2015 The CyanogenMod Project
-                   2017-2022 The LineageOS Project
+                   2017-2023 The LineageOS Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -83,4 +83,11 @@
     <string name="trust_notification_title_onboarding">Odkrijte Trust</string>
     <string name="trust_notification_content_onboarding">Spoznajte, kako zagotoviti varnost vaše naprave</string>
     <string name="trust_notification_action_manage">Upravljaj z opozorili</string>
+    <string name="charging_control_notification_channel">Nadzorovano polnjenje</string>
+    <string name="charging_control_notification_title">Nadzorovano polnjenje</string>
+    <string name="charging_control_notification_cancel_once">Prekliči</string>
+    <string name="charging_control_notification_content_limit">Baterija bo napolnjena do %1$d%%</string>
+    <string name="charging_control_notification_content_limit_reached">Baterija je napolnjena do %1$d%%</string>
+    <string name="charging_control_notification_content_target">Baterija bo popolnoma napolnjena ob %1$s</string>
+    <string name="charging_control_notification_content_target_reached">Baterija je napolnjena</string>
 </resources>

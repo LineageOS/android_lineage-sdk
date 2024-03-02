@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
      Copyright (C) 2015 The CyanogenMod Project
-                   2017-2022 The LineageOS Project
+                   2017-2023 The LineageOS Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -83,4 +83,11 @@
     <string name="trust_notification_title_onboarding">Zbulo Trust</string>
     <string name="trust_notification_content_onboarding">Informohu si të sigurohesh që paisja juaj është e sigurtë</string>
     <string name="trust_notification_action_manage">Menaxho paralajmërimet</string>
+    <string name="charging_control_notification_channel">Kontrolli i karikimit</string>
+    <string name="charging_control_notification_title">Kontrolli i karikimit</string>
+    <string name="charging_control_notification_cancel_once">Anullo</string>
+    <string name="charging_control_notification_content_limit">Bateria do të karikohet në %1$d%%</string>
+    <string name="charging_control_notification_content_limit_reached">Bateria është e karikuar në %1$d%%</string>
+    <string name="charging_control_notification_content_target">Bateria do të karikohet plotësisht në %1$s</string>
+    <string name="charging_control_notification_content_target_reached">Bateria është e karikuar</string>
 </resources>
