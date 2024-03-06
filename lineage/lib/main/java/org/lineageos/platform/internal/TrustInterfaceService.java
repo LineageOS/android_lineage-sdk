@@ -39,8 +39,6 @@ import lineageos.providers.LineageSettings;
 import lineageos.trust.ITrustInterface;
 import lineageos.trust.TrustInterface;
 
-import vendor.lineage.trust.V1_0.IUsbRestrict;
-
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -67,8 +65,6 @@ public class TrustInterfaceService extends LineageSystemService {
     private Context mContext;
     private NotificationManager mNotificationManager = null;
 
-    private IUsbRestrict mUsbRestrictor = null;
-
     public TrustInterfaceService(Context context) {
         super(context);
         mContext = context;
@@ -93,12 +89,6 @@ public class TrustInterfaceService extends LineageSystemService {
     public void onBootPhase(int phase) {
         if (phase == PHASE_BOOT_COMPLETED) {
             mNotificationManager = mContext.getSystemService(NotificationManager.class);
-
-            try {
-                mUsbRestrictor = IUsbRestrict.getService();
-            } catch (NoSuchElementException | RemoteException e) {
-                // ignore, the hal is not available
-            }
 
             // Onboard
             if (!hasOnboardedUser()) {
@@ -165,8 +155,7 @@ public class TrustInterfaceService extends LineageSystemService {
 
     private boolean hasUsbRestrictorInternal() {
         DevicePolicyManager policyManager = mContext.getSystemService(DevicePolicyManager.class);
-        return mUsbRestrictor != null ||
-                (policyManager != null && policyManager.canUsbDataSignalingBeDisabled());
+        return policyManager != null && policyManager.canUsbDataSignalingBeDisabled();
     }
 
     private boolean postOnBoardingNotification() {
