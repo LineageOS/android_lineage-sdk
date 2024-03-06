@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2018-2022 The LineageOS Project
+ * Copyright (C) 2018-2024 The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -27,7 +27,6 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.pm.PackageManager;
 import android.os.IBinder;
-import android.os.RemoteException;
 import android.os.SELinux;
 import android.os.SystemProperties;
 import android.util.Log;
@@ -39,13 +38,10 @@ import lineageos.providers.LineageSettings;
 import lineageos.trust.ITrustInterface;
 import lineageos.trust.TrustInterface;
 
-import vendor.lineage.trust.V1_0.IUsbRestrict;
-
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
-import java.util.NoSuchElementException;
 
 /** @hide **/
 public class TrustInterfaceService extends LineageSystemService {
@@ -66,8 +62,6 @@ public class TrustInterfaceService extends LineageSystemService {
 
     private Context mContext;
     private NotificationManager mNotificationManager = null;
-
-    private IUsbRestrict mUsbRestrictor = null;
 
     public TrustInterfaceService(Context context) {
         super(context);
@@ -93,12 +87,6 @@ public class TrustInterfaceService extends LineageSystemService {
     public void onBootPhase(int phase) {
         if (phase == PHASE_BOOT_COMPLETED) {
             mNotificationManager = mContext.getSystemService(NotificationManager.class);
-
-            try {
-                mUsbRestrictor = IUsbRestrict.getService();
-            } catch (NoSuchElementException | RemoteException e) {
-                // ignore, the hal is not available
-            }
 
             // Onboard
             if (!hasOnboardedUser()) {
@@ -165,8 +153,7 @@ public class TrustInterfaceService extends LineageSystemService {
 
     private boolean hasUsbRestrictorInternal() {
         DevicePolicyManager policyManager = mContext.getSystemService(DevicePolicyManager.class);
-        return mUsbRestrictor != null ||
-                (policyManager != null && policyManager.canUsbDataSignalingBeDisabled());
+        return policyManager != null && policyManager.canUsbDataSignalingBeDisabled();
     }
 
     private boolean postOnBoardingNotification() {
