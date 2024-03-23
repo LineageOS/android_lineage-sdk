@@ -1,6 +1,6 @@
 /*
  * Copyright (C) 2016 The CyanogenMod Project
- * Copyright (C) 2018-2024 The LineageOS Project
+ * Copyright (C) 2018-2014 The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -21,13 +21,13 @@ import android.util.AttributeSet;
 
 import androidx.preference.PreferenceDataStore;
 import androidx.preference.PreferenceViewHolder;
-import androidx.preference.SwitchPreferenceCompat;
+import androidx.preference.SwitchPreference;
 
 /**
- * A SwitchPreferenceCompat which can automatically remove itself from the hierarchy
+ * A SwitchPreference which can automatically remove itself from the hierarchy
  * based on constraints set in XML.
  */
-public abstract class SelfRemovingSwitchPreference extends SwitchPreferenceCompat {
+public abstract class SelfRemovingSwitchPreference extends SwitchPreference {
 
     private final ConstraintsHelper mConstraints;
 
