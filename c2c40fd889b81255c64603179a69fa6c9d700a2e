@@ -50,6 +50,24 @@
       "message": "I could work around in case of \"ADB over network\" pref (https://review.lineageos.org/c/LineageOS/android_packages_apps_TvSettings/+/387172), but not for \"Advanced restart\".",
       "revId": "c2c40fd889b81255c64603179a69fa6c9d700a2e",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "52327923_463b5647",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2024-03-24T17:32:00Z",
+      "side": 1,
+      "message": "The other \"fix\": https://review.lineageos.org/c/LineageOS/android_packages_apps_TvSettings/+/387262",
+      "parentUuid": "0f51366c_9a522742",
+      "revId": "c2c40fd889b81255c64603179a69fa6c9d700a2e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ],
   "submitRequirementResults": []
