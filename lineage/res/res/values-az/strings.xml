@@ -21,7 +21,7 @@
     <string name="permdesc_modifyProfiles">Tətbiqin sistem profillərini dəyişdirməsinə icazə verir.</string>
     <string name="permlab_useHardwareFramework">avadanlıq bünövrəsindən istifadə et</string>
     <string name="permdesc_useHardwareFramework">Tətbiqin Lineage avadanlıq bünövrəsinə müraciətinə icazə verir.</string>
-    <string name="permlab_writeSettings">Lineage sistem ayarlarını dəyişdirər</string>
+    <string name="permlab_writeSettings">Lineage sistem ayarlarını dəyişdir</string>
     <string name="permdesc_writeSettings">Tətbiqin Lineage sistem ayarlarını dəyişdirməsinə icazə verir.</string>
     <string name="permlab_writeSecureSettings">Lineage güvənli sistem ayarlarını dəyişdir</string>
     <string name="permdesc_writeSecureSettings">Tətbiqin Lineage güvənli sistem ayarlarını dəyişdirməsinə icazə verir. Normal tətbiqlər tərəfindən istifadə olunmur.</string>
