@@ -87,6 +87,7 @@
     <string name="charging_control_notification_title">Rheolaeth gwefru</string>
     <string name="charging_control_notification_cancel_once">Diddymu</string>
     <string name="charging_control_notification_content_limit">Caiff y batri ei wefru at %1$d%%</string>
+    <string name="charging_control_notification_content_limit_reached">Batri wedi\u2019i wefru at %1$d%%</string>
     <string name="charging_control_notification_content_target">Caiff y batri ei wefru\u2019n llawn am %1$s</string>
     <string name="charging_control_notification_content_target_reached">Batri wedi\u2019i wefru</string>
 </resources>
