@@ -81,7 +81,7 @@
     <string name="trust_notification_channel">Paralajmërime Trust</string>
     <string name="trust_notification_title_security">Trust \u2022 sigurinë e Sistemit</string>
     <string name="trust_notification_content_selinux">SELinux nuk është e zbatuar, siguria juaj është dobësuar</string>
-    <string name="trust_notification_content_keys">Ky zhvillim është nënshkruar me çelsa publik</string>
+    <string name="trust_notification_content_keys">Ky ndërtim është nënshkruar me çelsa publik</string>
     <string name="trust_notification_title_onboarding">Zbulo Trust</string>
     <string name="trust_notification_content_onboarding">Informohu si të sigurohesh që paisja juaj është e sigurtë</string>
     <string name="trust_notification_action_manage">Menaxho paralajmërimet</string>

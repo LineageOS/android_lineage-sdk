@@ -85,8 +85,8 @@
     <string name="trust_notification_title_onboarding">Trust-ı Kəşf et</string>
     <string name="trust_notification_content_onboarding">Cihazınızın təhlükəsiz olduğundan necə əmin olacağınızı öyrənin</string>
     <string name="trust_notification_action_manage">Xəbərdarlıqları idarə et</string>
-    <string name="charging_control_notification_channel">Enerji yığma kontrolu</string>
-    <string name="charging_control_notification_title">Enerji yığma kontrolu</string>
+    <string name="charging_control_notification_channel">Doldurma nəzarəti</string>
+    <string name="charging_control_notification_title">Doldurma nəzarəti</string>
     <string name="charging_control_notification_cancel_once">İmtina</string>
     <string name="charging_control_notification_content_limit">Batareya %1$d%% doldurulacaq</string>
     <string name="charging_control_notification_content_limit_reached">Batareya %1$d%% doldu</string>
