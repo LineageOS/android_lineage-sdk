@@ -111,6 +111,7 @@
         <item>org.lineageos.platform.internal.LineageSettingsService</item>
         <item>org.lineageos.platform.internal.LineageGlobalActionsService</item>
         <item>org.lineageos.platform.internal.health.HealthInterfaceService</item>
+        <item>org.lineageos.platform.internal.accessories.AccessoriesInterfaceService</item>
     </string-array>
 
     <!-- The LineageSystemServer class that is invoked from Android's SystemServer -->
