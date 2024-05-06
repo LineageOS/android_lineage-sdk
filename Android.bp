@@ -66,6 +66,7 @@ lineage_sdk_internal_src = "sdk/src/java/org/lineageos/internal"
 library_src = "lineage/lib/main/java"
 
 lineage_sdk_LOCAL_STATIC_JAVA_LIBRARIES = [
+    "vendor.lineage.accessories-V1-java",
     "vendor.lineage.health-V1-java",
     "vendor.lineage.livedisplay-V2.0-java",
     "vendor.lineage.livedisplay-V2.1-java",
@@ -96,8 +97,11 @@ java_library {
 
     srcs: [
         lineage_sdk_src + "/**/*.java",
+        lineage_sdk_src + "/**/*.kt",
         lineage_sdk_internal_src + "/**/*.java",
+        lineage_sdk_internal_src + "/**/*.kt",
         library_src + "/**/*.java",
+        library_src + "/**/*.kt",
         lineage_sdk_src + "/**/*.aidl",
         lineage_sdk_internal_src + "/**/*.aidl",
 
@@ -121,7 +125,9 @@ java_library {
 
     srcs: [
         lineage_sdk_src + "/**/*.java",
+        lineage_sdk_src + "/**/*.kt",
         lineage_sdk_internal_src + "/**/*.java",
+        lineage_sdk_internal_src + "/**/*.kt",
         lineage_sdk_src + "/**/*.aidl",
         lineage_sdk_internal_src + "/**/*.aidl",
 
@@ -160,6 +166,7 @@ java_library {
 
     srcs: [
         lineage_sdk_src + "/**/*.java",
+        lineage_sdk_src + "/**/*.kt",
         lineage_sdk_src + "/**/*.aidl",
 
         // For the generated R.java and Manifest.java
