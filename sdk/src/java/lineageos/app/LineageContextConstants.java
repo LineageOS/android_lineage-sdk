@@ -75,6 +75,17 @@ public final class LineageContextConstants {
     public static final String LINEAGE_HEALTH_INTERFACE = "lineagehealth";
 
     /**
+     * Use with {@link android.content.Context#getSystemService} to retrieve a
+     * {@link lineageos.accessories.AccessoriesInterface} to access the Accessories interface.
+     *
+     * @see android.content.Context#getSystemService
+     * @see lineageos.accessories.AccessoriesInterface
+     *
+     * @hide
+     */
+    public static final String LINEAGE_ACCESSORIES_INTERFACE = "lineageaccessories";
+
+    /**
      * Update power menu (GlobalActions)
      *
      * @hide
@@ -147,5 +158,13 @@ public final class LineageContextConstants {
          */
         @SdkConstant(SdkConstant.SdkConstantType.FEATURE)
         public static final String HEALTH = "org.lineageos.health";
+
+        /**
+         * Feature for {@link PackageManager#getSystemAvailableFeatures} and
+         * {@link PackageManager#hasSystemFeature}: The device includes the lineage accessories
+         * service utilized by the lineage sdk and LineageParts.
+         */
+        @SdkConstant(SdkConstant.SdkConstantType.FEATURE)
+        public static final String ACCESSORIES = "org.lineageos.accessories";
     }
 }
