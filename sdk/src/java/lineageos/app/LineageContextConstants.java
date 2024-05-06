@@ -1,6 +1,6 @@
 /**
  * Copyright (C) 2015, The CyanogenMod Project
- *               2017-2023 The LineageOS Project
+ *               2017-2024 The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -86,6 +86,17 @@ public final class LineageContextConstants {
     public static final String LINEAGE_HEALTH_INTERFACE = "lineagehealth";
 
     /**
+     * Use with {@link android.content.Context#getSystemService} to retrieve a
+     * {@link lineageos.input.AccessoriesInterface} to access the Accessories interface.
+     *
+     * @see android.content.Context#getSystemService
+     * @see lineageos.input.AccessoriesInterface
+     *
+     * @hide
+     */
+    public static final String LINEAGE_ACCESSORIES_INTERFACE = "lineageaccessories";
+
+    /**
      * Update power menu (GlobalActions)
      *
      * @hide
@@ -151,5 +162,13 @@ public final class LineageContextConstants {
          */
         @SdkConstant(SdkConstant.SdkConstantType.FEATURE)
         public static final String HEALTH = "org.lineageos.health";
+
+        /**
+         * Feature for {@link PackageManager#getSystemAvailableFeatures} and
+         * {@link PackageManager#hasSystemFeature}: The device includes the lineage accessories
+         * service utilized by the lineage sdk and LineageParts.
+         */
+        @SdkConstant(SdkConstant.SdkConstantType.FEATURE)
+        public static final String ACCESSORIES = "org.lineageos.accessories";
     }
 }
