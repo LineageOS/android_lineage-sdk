@@ -98,8 +98,8 @@ java_library {
         lineage_sdk_src + "/**/*.java",
         lineage_sdk_internal_src + "/**/*.java",
         library_src + "/**/*.java",
-        lineage_sdk_src + "/**/I*.aidl",
-        lineage_sdk_internal_src + "/**/I*.aidl",
+        lineage_sdk_src + "/**/*.aidl",
+        lineage_sdk_internal_src + "/**/*.aidl",
 
         // For the generated R.java and Manifest.java
         ":org.lineageos.platform-res{.aapt.srcjar}",
@@ -122,8 +122,8 @@ java_library {
     srcs: [
         lineage_sdk_src + "/**/*.java",
         lineage_sdk_internal_src + "/**/*.java",
-        lineage_sdk_src + "/**/I*.aidl",
-        lineage_sdk_internal_src + "/**/I*.aidl",
+        lineage_sdk_src + "/**/*.aidl",
+        lineage_sdk_internal_src + "/**/*.aidl",
 
         // For the generated R.java and Manifest.java
         ":org.lineageos.platform-res{.aapt.srcjar}",
@@ -146,7 +146,7 @@ java_library {
 
     srcs: [
         lineage_sdk_src + "/**/*.java",
-        lineage_sdk_src + "/**/I*.aidl",
+        lineage_sdk_src + "/**/*.aidl",
 
         // For the generated R.java and Manifest.java
         ":org.lineageos.platform-res{.aapt.srcjar}",
