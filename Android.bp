@@ -55,7 +55,7 @@ filegroup {
     name: "lineage-sdk-sources",
     srcs: [
         "sdk/src/java/lineageos/**/*.java",
-        "sdk/src/java/lineageos/**/I*.aidl",
+        "sdk/src/java/lineageos/**/*.aidl",
     ],
 }
 
@@ -63,7 +63,7 @@ filegroup {
     name: "lineage-sdk-internal-sources",
     srcs: [
         "sdk/src/java/org/lineageos/internal/**/*.java",
-        "sdk/src/java/org/lineageos/internal/**/I*.aidl",
+        "sdk/src/java/org/lineageos/internal/**/*.aidl",
     ],
 }
 
