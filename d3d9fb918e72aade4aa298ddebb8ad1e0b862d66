@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "233454d7_31ef5f45",
+        "filename": "lineage/lib/main/java/org/lineageos/platform/internal/accessories/AccessoriesController.kt",
+        "patchSetId": 5
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 11883
+      },
+      "writtenOn": "2024-05-09T07:14:44Z",
+      "side": 1,
+      "message": "ConcurrentHashMap?",
+      "revId": "d3d9fb918e72aade4aa298ddebb8ad1e0b862d66",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "eb135ef8_5ad57587",
+        "filename": "lineage/lib/main/java/org/lineageos/platform/internal/accessories/AccessoriesController.kt",
+        "patchSetId": 5
+      },
+      "lineNbr": 99,
+      "author": {
+        "id": 11883
+      },
+      "writtenOn": "2024-05-09T07:14:44Z",
+      "side": 1,
+      "message": "needs to be made thread safe",
+      "revId": "d3d9fb918e72aade4aa298ddebb8ad1e0b862d66",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4ccb1483_a6f24ccc",
+        "filename": "lineage/lib/main/java/org/lineageos/platform/internal/accessories/CallbacksManager.kt",
+        "patchSetId": 5
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 11883
+      },
+      "writtenOn": "2024-05-09T07:14:44Z",
+      "side": 1,
+      "message": "should be fine, but I don\u0027t remember if keys are also concurrently safe.",
+      "revId": "d3d9fb918e72aade4aa298ddebb8ad1e0b862d66",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
