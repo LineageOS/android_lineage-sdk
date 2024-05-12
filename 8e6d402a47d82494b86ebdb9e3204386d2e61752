@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c558d4ed_5419d246",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 25732
+      },
+      "writtenOn": "2024-05-12T14:26:19Z",
+      "side": 1,
+      "message": "This builds and boots, but as Luca mentioned, having Kotlin on framework classpath is not good",
+      "revId": "8e6d402a47d82494b86ebdb9e3204386d2e61752",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
