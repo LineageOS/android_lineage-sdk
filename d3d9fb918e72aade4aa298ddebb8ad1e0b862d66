@@ -18,6 +18,24 @@
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "d10b7dc3_c5041212",
+        "filename": "lineage/lib/main/java/org/lineageos/platform/internal/accessories/AccessoriesController.kt",
+        "patchSetId": 5
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 25732
+      },
+      "writtenOn": "2024-05-13T00:35:41Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "233454d7_31ef5f45",
+      "revId": "d3d9fb918e72aade4aa298ddebb8ad1e0b862d66",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "eb135ef8_5ad57587",
@@ -31,6 +49,24 @@
       "writtenOn": "2024-05-09T07:14:44Z",
       "side": 1,
       "message": "needs to be made thread safe",
+      "revId": "d3d9fb918e72aade4aa298ddebb8ad1e0b862d66",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a053177c_aeb44ab5",
+        "filename": "lineage/lib/main/java/org/lineageos/platform/internal/accessories/AccessoriesController.kt",
+        "patchSetId": 5
+      },
+      "lineNbr": 99,
+      "author": {
+        "id": 25732
+      },
+      "writtenOn": "2024-05-13T00:35:41Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "eb135ef8_5ad57587",
       "revId": "d3d9fb918e72aade4aa298ddebb8ad1e0b862d66",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     },
