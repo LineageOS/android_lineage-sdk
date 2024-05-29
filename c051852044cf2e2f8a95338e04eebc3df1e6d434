@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9e2780ac_b99484ee",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 4550
+      },
+      "writtenOn": "2024-05-29T11:42:21Z",
+      "side": 1,
+      "message": "This doesn\u0027t have any effect but this is the right place to call it, calyx has been shipping that way since years.",
+      "revId": "c051852044cf2e2f8a95338e04eebc3df1e6d434",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
