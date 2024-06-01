@@ -27,7 +27,7 @@
     <string name="permdesc_writeSecureSettings">Permite que um aplicativo modifique as configurações do sistema seguro Lineage. Não é utilizado por aplicativos normais.</string>
     <string name="profileNameDefault">Padrão</string>
     <string name="profileNameWork">Trabalho</string>
-    <string name="profileNameHome">Lar</string>
+    <string name="profileNameHome">Casa</string>
     <string name="profileNameSilent">Silencioso</string>
     <string name="profileNameNight">Noturno</string>
     <string name="profileNameAutomobile">Automóvel</string>
