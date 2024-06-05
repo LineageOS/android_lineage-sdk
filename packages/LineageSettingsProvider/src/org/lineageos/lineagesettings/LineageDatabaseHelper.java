@@ -15,6 +15,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteDoneException;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.database.sqlite.SQLiteStatement;
+import android.os.Build;
 import android.os.Environment;
 import android.os.SystemProperties;
 import android.os.UserHandle;
@@ -503,6 +504,10 @@ public class LineageDatabaseHelper extends SQLiteOpenHelper{
             stmt = db.compileStatement("INSERT OR IGNORE INTO global(name,value)"
                     + " VALUES(?,?);");
             // Global
+
+            // Always allow USB for debuggable builds; otherwise, allow only when unlocked.
+            loadSetting(stmt, LineageSettings.Global.TRUST_RESTRICT_USB,
+                    Build.IS_ENG ? "0" : "1");
         } finally {
             if (stmt != null) stmt.close();
         }
