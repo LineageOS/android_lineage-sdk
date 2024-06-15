@@ -1,6 +1,6 @@
 /*
  * Copyright (C) 2015 The CyanogenMod Project
- *               2020 The LineageOS Project
+ *               2020-2024 The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -25,6 +25,7 @@ import android.location.LocationManager;
 import android.net.ConnectivityManager;
 import android.net.wifi.WifiManager;
 import android.nfc.NfcAdapter;
+import android.nfc.NfcManager;
 import android.os.Parcel;
 import android.os.Parcelable;
 import android.os.UserHandle;
@@ -254,6 +255,7 @@ public final class ConnectionSettings implements Parcelable {
     public void processOverride(Context context) {
         BluetoothAdapter bta = BluetoothAdapter.getDefaultAdapter();
         LocationManager lm = (LocationManager) context.getSystemService(Context.LOCATION_SERVICE);
+        NfcManager nfcManager = context.getSystemService(NfcManager.class);
         WifiManager wm = (WifiManager) context.getSystemService(Context.WIFI_SERVICE);
         ConnectivityManager cm =
                 (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
@@ -261,10 +263,8 @@ public final class ConnectionSettings implements Parcelable {
                 context.getSystemService(Context.TELEPHONY_SERVICE);
         SubscriptionManager sm = context.getSystemService(SubscriptionManager.class);
         NfcAdapter nfcAdapter = null;
-        try {
-            nfcAdapter = NfcAdapter.getNfcAdapter(context);
-        } catch (UnsupportedOperationException e) {
-            //Nfc not available
+        if (nfcManager != null) {
+            nfcAdapter = nfcManager.getDefaultAdapter();
         }
 
         boolean forcedState = getValue() == 1;
