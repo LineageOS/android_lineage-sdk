@@ -262,7 +262,7 @@ public final class ConnectionSettings implements Parcelable {
         SubscriptionManager sm = context.getSystemService(SubscriptionManager.class);
         NfcAdapter nfcAdapter = null;
         try {
-            nfcAdapter = NfcAdapter.getNfcAdapter(context);
+            nfcAdapter = NfcAdapter.getDefaultAdapter(context);
         } catch (UnsupportedOperationException e) {
             //Nfc not available
         }
