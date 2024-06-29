@@ -1756,6 +1756,16 @@ public final class LineageSettings {
                 new InclusiveIntegerRangeValidator(0, 1);
 
         /**
+         * Whether to start call recording automatically
+         * 0 = 0ff, 1 = on
+         */
+        public static final String CALL_RECORDING_AUTOSTART = "call_recording_autostart";
+
+        /** @hide */
+        public static final Validator CALL_RECORDING_AUTOSTART_VALIDATOR =
+                sBooleanValidator;
+
+        /**
          * Contains the battery light maximum brightness to use.
          * Values range from 1 to 255
          */
@@ -2201,6 +2211,7 @@ public final class LineageSettings {
             VALIDATORS.put(USE_EDGE_SERVICE_FOR_GESTURES,
                     USE_EDGE_SERVICE_FOR_GESTURES_VALIDATOR);
             VALIDATORS.put(CALL_RECORDING_FORMAT, CALL_RECORDING_FORMAT_VALIDATOR);
+            VALIDATORS.put(CALL_RECORDING_AUTOSTART, CALL_RECORDING_AUTOSTART_VALIDATOR);
             VALIDATORS.put(BATTERY_LIGHT_BRIGHTNESS_LEVEL,
                     BATTERY_LIGHT_BRIGHTNESS_LEVEL_VALIDATOR);
             VALIDATORS.put(BATTERY_LIGHT_BRIGHTNESS_LEVEL_ZEN,
