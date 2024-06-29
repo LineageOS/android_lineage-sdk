@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3f82e0d4_771fc9b2",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 33837
+      },
+      "writtenOn": "2024-06-29T10:05:51Z",
+      "side": 1,
+      "message": "\u003e unused? dialer is saving prefs in its own data\n\nProbably not unused. The `call_recording_format` preference is also used the same way and is present here, so I assume this new preference also needs to be here.",
+      "revId": "1a73bdbd4c7094c1f3805af29c76402c89353560",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
