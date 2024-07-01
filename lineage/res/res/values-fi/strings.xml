@@ -83,4 +83,5 @@
     <string name="trust_notification_title_onboarding">Löydä Trust</string>
     <string name="trust_notification_content_onboarding">Selvitä miten voit varmistaa laitteesi olevan turvassa</string>
     <string name="trust_notification_action_manage">Hallitse hälytyksiä</string>
+    <string name="charging_control_notification_cancel_once">Peruuta</string>
 </resources>
