@@ -34,6 +34,24 @@
       "parentUuid": "d63438bb_fcbcfc38",
       "revId": "90ae79341edc497d5df34bf8babd7ab17abe8fc5",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "74eb80ba_ed92e978",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 10067
+      },
+      "writtenOn": "2024-08-31T17:49:38Z",
+      "side": 1,
+      "message": "really? what hotword apk impl does that?",
+      "parentUuid": "8e971c39_3a023e27",
+      "revId": "90ae79341edc497d5df34bf8babd7ab17abe8fc5",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
