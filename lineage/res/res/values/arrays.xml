@@ -102,4 +102,13 @@
         <item>com.android.vending</item>
         <item>com.google.android.intent.action.CONNECT_INPUT</item>
     </string-array>
+
+    <string-array name="config_app_dependencies">
+        <item>com.google.android.gms</item>
+    </string-array>
+
+    <string-array name="config_app_dependent_packages">
+        <item>com.android.hotwordenrollment.okgoogle</item>
+        <item>com.android.hotwordenrollment.xgoogle</item>
+    </string-array>
 </resources>
