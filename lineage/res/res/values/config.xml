@@ -309,6 +309,14 @@
     <!-- The list of components which should be automatically disabled for all devices. -->
     <string-array name="config_globallyDisabledComponents" translatable="false" />
 
+    <!-- The list of apps which determines if apps in config_app_dependent_packages
+    	should be disabled or not. -->
+    <string-array name="config_app_dependencies" translatable="false" />
+
+    <!-- The list of apps which should be automatically disabled if 
+    	config_app_dependencies is not installed. -->
+    <string-array name="config_app_dependent_packages" translatable="false" />
+
     <!-- The list of components which should be forced to be enabled. -->
     <string-array name="config_forceEnabledComponents" translatable="false" />
 
