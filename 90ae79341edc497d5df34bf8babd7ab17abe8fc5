@@ -16,6 +16,24 @@
       "message": "what\u0027s the point of that",
       "revId": "90ae79341edc497d5df34bf8babd7ab17abe8fc5",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8e971c39_3a023e27",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 18796
+      },
+      "writtenOn": "2024-08-31T17:47:45Z",
+      "side": 1,
+      "message": "To disable hotword when there\u0027s no gms. Hotword is pinging google servers even without gms.",
+      "parentUuid": "d63438bb_fcbcfc38",
+      "revId": "90ae79341edc497d5df34bf8babd7ab17abe8fc5",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
