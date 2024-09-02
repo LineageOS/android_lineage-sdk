@@ -19,7 +19,7 @@
     <string name="lineageos_system_label">System LineageOS</string>
     <string name="permlab_modifyProfiles">modyfikuje profile systemowe</string>
     <string name="permdesc_modifyProfiles">Umożliwia aplikacji modyfikację profili systemowych.</string>
-    <string name="permlab_useHardwareFramework">używa sprzętowego frameworka</string>
+    <string name="permlab_useHardwareFramework">korzystaj z zasobów sprzętowych</string>
     <string name="permdesc_useHardwareFramework">Zezwala aplikacji na dostęp do frameworka sprzętowego Lineage.</string>
     <string name="permlab_writeSettings">modyfikacja ustawień systemu Lineage</string>
     <string name="permdesc_writeSettings">Zezwól aplikacji na modyfikację ustawień systemu Lineage.</string>
