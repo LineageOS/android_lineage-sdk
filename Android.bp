@@ -116,7 +116,6 @@ java_library {
 
 java_library {
     name: "org.lineageos.platform.internal",
-    required: ["services"],
     static_libs: lineage_sdk_LOCAL_STATIC_JAVA_LIBRARIES,
 
     srcs: [
