@@ -73,11 +73,23 @@
     <string name="megabitspersecond_short">Mb/s</string>
     <string name="kilobytespersecond_short">kB/s</string>
     <string name="megabytespersecond_short">MB/s</string>
+    <string name="kilobytespersecond_compact">k</string>
+    <string name="megabytespersecond_compact">M</string>
     <string name="trust_feature_name">Trust</string>
     <string name="permlab_trustInterface">acceder a la interfaz Trust</string>
     <string name="permdesc_trustInterface">Permite que una aplicación muestre advertencias y sugerencias de Trust</string>
     <string name="trust_notification_channel">Alertas de Trust</string>
     <string name="trust_notification_title_security">Trust \u2022 Seguridad del sistema</string>
+    <string name="trust_notification_content_selinux">La seguridad del dispositivo se está viendo afectada, ya que no se están aplicando las políticas de seguridad de SELinux.</string>
+    <string name="trust_notification_content_keys">Esta compilación se firmó con claves públicas</string>
     <string name="trust_notification_title_onboarding">Descubre Trust</string>
+    <string name="trust_notification_content_onboarding">Descubre cómo garantizar la seguridad de tu dispositivo</string>
     <string name="trust_notification_action_manage">Gestionar alertas</string>
+    <string name="charging_control_notification_channel">Control de carga</string>
+    <string name="charging_control_notification_title">Control de carga</string>
+    <string name="charging_control_notification_cancel_once">Cancelar</string>
+    <string name="charging_control_notification_content_limit">La batería estará cargada en %1$d%%.</string>
+    <string name="charging_control_notification_content_limit_reached">Batería cargada al %1$d%%.</string>
+    <string name="charging_control_notification_content_target">La batería estará completamente cargada en %1$s</string>
+    <string name="charging_control_notification_content_target_reached">Batería cargada</string>
 </resources>
