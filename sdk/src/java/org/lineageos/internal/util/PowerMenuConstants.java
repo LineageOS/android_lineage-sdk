@@ -1,6 +1,6 @@
 /*
  * Copyright (C) 2015 The CyanogenMod Project
- * Copyright (C) 2017-2022 The LineageOS Project
+ * Copyright (C) 2017-2024 The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -33,6 +33,7 @@ public class PowerMenuConstants {
     public static final String GLOBAL_ACTION_KEY_LOGOUT = "logout";
     public static final String GLOBAL_ACTION_KEY_EMERGENCY = "emergency";
     public static final String GLOBAL_ACTION_KEY_DEVICECONTROLS = "devicecontrols";
+    public static final String GLOBAL_ACTION_KEY_SYSTEM_UPDATE = "system_update";
 
     /**
      * Advanced restart menu actions
@@ -57,6 +58,7 @@ public class PowerMenuConstants {
         GLOBAL_ACTION_KEY_ASSIST,
         GLOBAL_ACTION_KEY_DEVICECONTROLS,
         GLOBAL_ACTION_KEY_LOGOUT,
+        GLOBAL_ACTION_KEY_SYSTEM_UPDATE,
     };
 
     public static String[] getAllActions() {
