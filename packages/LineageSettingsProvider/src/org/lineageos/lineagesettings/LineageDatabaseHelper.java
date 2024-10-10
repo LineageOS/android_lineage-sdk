@@ -17,12 +17,8 @@
 
 package org.lineageos.lineagesettings;
 
-import android.Manifest;
-import android.app.AppGlobals;
 import android.content.Context;
-import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
-import android.content.pm.UserInfo;
 import android.content.res.AssetManager;
 import android.content.res.Configuration;
 import android.content.res.Resources;
@@ -30,12 +26,9 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteDoneException;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.database.sqlite.SQLiteStatement;
-import android.net.ConnectivitySettingsManager;
 import android.os.Environment;
-import android.os.RemoteException;
 import android.os.SystemProperties;
 import android.os.UserHandle;
-import android.os.UserManager;
 import android.provider.Settings;
 import android.text.TextUtils;
 import android.util.DisplayMetrics;
@@ -44,11 +37,7 @@ import android.util.Log;
 import lineageos.providers.LineageSettings;
 
 import java.io.File;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Objects;
-import java.util.Set;
-import java.util.stream.Collectors;
 
 /**
  * The LineageDatabaseHelper allows creation of a database to store Lineage specific settings for a user
@@ -59,7 +48,7 @@ public class LineageDatabaseHelper extends SQLiteOpenHelper{
     private static final boolean LOCAL_LOGV = false;
 
     private static final String DATABASE_NAME = "lineagesettings.db";
-    private static final int DATABASE_VERSION = 19;
+    private static final int DATABASE_VERSION = 20;
 
     public static class LineageTableNames {
         public static final String TABLE_SYSTEM = "system";
@@ -318,6 +307,15 @@ public class LineageDatabaseHelper extends SQLiteOpenHelper{
             upgradeVersion = 19;
         }
 
+        if (upgradeVersion < 20) {
+            // Clear Settings.Global.UIDS_ALLOWED_ON_RESTRICTED_NETWORKS
+            if (mUserHandle == UserHandle.USER_SYSTEM) {
+                Settings.Global.putString(mContext.getContentResolver(),
+                        Settings.Global.UIDS_ALLOWED_ON_RESTRICTED_NETWORKS, "");
+            }
+            upgradeVersion = 20;
+        }
+
         // *** Remember to update DATABASE_VERSION above!
         if (upgradeVersion != newVersion) {
             Log.wtf(TAG, "warning: upgrading settings database to version "
@@ -475,23 +473,6 @@ public class LineageDatabaseHelper extends SQLiteOpenHelper{
     private void loadRestrictedNetworkingModeSetting() {
         Settings.Global.putInt(mContext.getContentResolver(),
                 Settings.Global.RESTRICTED_NETWORKING_MODE, 1);
-        try {
-            List<PackageInfo> packages = new ArrayList<>();
-            for (UserInfo userInfo : UserManager.get(mContext).getAliveUsers()) {
-                packages.addAll(
-                        AppGlobals.getPackageManager().getPackagesHoldingPermissions(
-                                new String[]{Manifest.permission.INTERNET},
-                                PackageManager.MATCH_UNINSTALLED_PACKAGES,
-                                userInfo.id
-                        ).getList());
-            }
-            Set<Integer> uids = packages.stream().map(
-                    packageInfo -> packageInfo.applicationInfo.uid)
-                    .collect(Collectors.toSet());
-            ConnectivitySettingsManager.setUidsAllowedOnRestrictedNetworks(mContext, uids);
-        } catch (RemoteException e) {
-            Log.e(TAG, "Failed to set uids allowed on restricted networks");
-        }
     }
 
     /**
