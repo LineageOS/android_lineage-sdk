@@ -213,4 +213,7 @@
 
     <!-- Lockscreen rotation default -->
     <java-symbol type="bool" name="config_lockScreenRotationEnabledByDefault" />
+
+    <!-- Advanced rotation settings -->
+    <java-symbol type="bool" name="config_enableAdvancedRotationSettings" />
 </resources>

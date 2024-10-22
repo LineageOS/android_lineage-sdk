@@ -350,4 +350,7 @@
 
     <!-- Lockscreen rotation default -->
     <bool name="config_lockScreenRotationEnabledByDefault">false</bool>
+
+    <!-- Advanced rotation settings -->
+    <bool name="config_enableAdvancedRotationSettings">true</bool>
 </resources>
