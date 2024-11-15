@@ -1,12 +1,12 @@
 /*
  * SPDX-FileCopyrightText: 2010 The Android Open Source Project
+ * SPDX-FileCopyrightText: 2024 The LineageOS Project
  * SPDX-License-Identifier: Apache-2.0
  */
 
 package org.lineageos.platform.internal.display;
 
 import android.text.format.DateUtils;
-import android.util.FloatMath;
 
 /** @hide */
 public class TwilightCalculator {
@@ -64,24 +64,24 @@ public class TwilightCalculator {
         final float meanAnomaly = 6.240059968f + daysSince2000 * 0.01720197f;
 
         // true anomaly
-        final float trueAnomaly = meanAnomaly + C1 * FloatMath.sin(meanAnomaly) + C2
-                * FloatMath.sin(2 * meanAnomaly) + C3 * FloatMath.sin(3 * meanAnomaly);
+        final double trueAnomaly = meanAnomaly + C1 * Math.sin(meanAnomaly) + C2
+                * Math.sin(2 * meanAnomaly) + C3 * Math.sin(3 * meanAnomaly);
 
         // ecliptic longitude
-        final float solarLng = trueAnomaly + 1.796593063f + (float) Math.PI;
+        final float solarLng = (float) trueAnomaly + 1.796593063f + (float) Math.PI;
 
         // solar transit in days since 2000
         final double arcLongitude = -longitude / 360;
         float n = Math.round(daysSince2000 - J0 - arcLongitude);
-        double solarTransitJ2000 = n + J0 + arcLongitude + 0.0053f * FloatMath.sin(meanAnomaly)
-                + -0.0069f * FloatMath.sin(2 * solarLng);
+        double solarTransitJ2000 = n + J0 + arcLongitude + 0.0053f * Math.sin(meanAnomaly)
+                + -0.0069f * Math.sin(2 * solarLng);
 
         // declination of sun
-        double solarDec = Math.asin(FloatMath.sin(solarLng) * FloatMath.sin(OBLIQUITY));
+        double solarDec = Math.asin(Math.sin(solarLng) * Math.sin(OBLIQUITY));
 
         final double latRad = latiude * DEGREES_TO_RADIANS;
 
-        double cosHourAngle = (FloatMath.sin(ALTIDUTE_CORRECTION_CIVIL_TWILIGHT) - Math.sin(latRad)
+        double cosHourAngle = (Math.sin(ALTIDUTE_CORRECTION_CIVIL_TWILIGHT) - Math.sin(latRad)
                 * Math.sin(solarDec)) / (Math.cos(latRad) * Math.cos(solarDec));
         // The day or night never ends for the given date and location, if this value is out of
         // range.
