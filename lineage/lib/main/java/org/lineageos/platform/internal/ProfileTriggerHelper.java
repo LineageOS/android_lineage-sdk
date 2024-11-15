@@ -1,5 +1,6 @@
 /*
  * SPDX-FileCopyrightText: 2013-2014 The CyanogenMod Project
+ * SPDX-FileCopyrightText: 2024 The LineageOS Project
  * SPDX-License-Identifier: Apache-2.0
  */
 
@@ -30,13 +31,13 @@ import java.util.UUID;
 public class ProfileTriggerHelper extends BroadcastReceiver {
     private static final String TAG = "ProfileTriggerHelper";
 
-    private Context mContext;
-    private ProfileManagerService mManagerService;
+    private final Context mContext;
+    private final ProfileManagerService mManagerService;
 
-    private WifiManager mWifiManager;
+    private final WifiManager mWifiManager;
     private String mLastConnectedSSID;
 
-    private IntentFilter mIntentFilter;
+    private final IntentFilter mIntentFilter;
     private boolean mFilterRegistered = false;
 
     private class SettingsObserver extends ContentObserver {

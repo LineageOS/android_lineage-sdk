@@ -1,6 +1,6 @@
 /*
  * SPDX-FileCopyrightText: 2012 The Android Open Source Project
- * SPDX-FileCopyrightText: 2017-2018,2021 The LineageOS Project
+ * SPDX-FileCopyrightText: 2017-20224 The LineageOS Project
  * SPDX-License-Identifier: Apache-2.0
  */
 
@@ -12,7 +12,6 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
-import android.location.Criteria;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
@@ -48,8 +47,7 @@ public final class TwilightTracker {
     private final LocationManager mLocationManager;
     private final LocationHandler mLocationHandler;
 
-    private final ArrayList<TwilightListenerRecord> mListeners =
-            new ArrayList<TwilightListenerRecord>();
+    private final ArrayList<TwilightListenerRecord> mListeners = new ArrayList<>();
 
     private TwilightState mTwilightState;
 

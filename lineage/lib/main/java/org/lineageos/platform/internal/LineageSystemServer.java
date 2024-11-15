@@ -1,5 +1,6 @@
 /*
  * SPDX-FileCopyrightText: 2016 The CyanogenMod Project
+ * SPDX-FileCopyrightText: 2024 The LineageOS Project
  * SPDX-License-Identifier: Apache-2.0
  */
 
@@ -20,8 +21,8 @@ import org.lineageos.platform.internal.common.LineageSystemServiceHelper;
  */
 public class LineageSystemServer {
     private static final String TAG = "LineageSystemServer";
-    private Context mSystemContext;
-    private LineageSystemServiceHelper mSystemServiceHelper;
+    private final Context mSystemContext;
+    private final LineageSystemServiceHelper mSystemServiceHelper;
 
     private static final String ENCRYPTING_STATE = "trigger_restart_min_framework";
     private static final String ENCRYPTED_STATE = "1";

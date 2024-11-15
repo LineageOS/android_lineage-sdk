@@ -1,5 +1,6 @@
 /*
  * SPDX-FileCopyrightText: 2016 The CyanogenMod Project
+ * SPDX-FileCopyrightText: 2024 The LineageOS Project
  * SPDX-License-Identifier: Apache-2.0
  */
 
@@ -15,7 +16,7 @@ import java.lang.reflect.InvocationTargetException;
  * Helper methods for fetching a LineageSystemService from a class declaration
  */
 public class LineageSystemServiceHelper {
-    private Context mContext;
+    private final Context mContext;
 
     public LineageSystemServiceHelper(Context context) {
         mContext = context;
@@ -41,10 +42,7 @@ public class LineageSystemServiceHelper {
         } catch (InstantiationException ex) {
             throw new RuntimeException("Failed to create service " + serviceClass
                     + ": service could not be instantiated", ex);
-        } catch (IllegalAccessException ex) {
-            throw new RuntimeException("Failed to create service " + serviceClass
-                    + ": service must have a public constructor with a Context argument", ex);
-        } catch (NoSuchMethodException ex) {
+        } catch (IllegalAccessException | NoSuchMethodException ex) {
             throw new RuntimeException("Failed to create service " + serviceClass
                     + ": service must have a public constructor with a Context argument", ex);
         } catch (InvocationTargetException ex) {

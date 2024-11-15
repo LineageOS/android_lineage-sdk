@@ -38,12 +38,12 @@ public final class LineageNotificationLights {
 
     // Light capabilities
     // Whether the notification light is RGB adjustable.
-    private boolean mMultiColorNotificationLed;
+    private final boolean mMultiColorNotificationLed;
     // Whether the lights HAL supports changing brightness.
-    private boolean mHALAdjustableBrightness;
+    private final boolean mHALAdjustableBrightness;
     // Whether the light should be considered brightness adjustable
     // (via HAL or via modifying RGB values).
-    private boolean mCanAdjustBrightness;
+    private final boolean mCanAdjustBrightness;
 
     // Light config
     private boolean mAutoGenerateNotificationColor;
@@ -56,10 +56,9 @@ public final class LineageNotificationLights {
     private int mDefaultNotificationLedOn;
     private int mDefaultNotificationLedOff;
 
-    private ArrayMap<String, LedValues> mNotificationPulseCustomLedValues;
-    private Map<String, String> mPackageNameMappings;
-    private final ArrayMap<String, Integer> mGeneratedPackageLedColors =
-            new ArrayMap<String, Integer>();
+    private final ArrayMap<String, LedValues> mNotificationPulseCustomLedValues;
+    private final Map<String, String> mPackageNameMappings;
+    private final ArrayMap<String, Integer> mGeneratedPackageLedColors = new ArrayMap<>();
 
     private int mZenMode;
 
@@ -455,7 +454,7 @@ public final class LineageNotificationLights {
                     LineageSettings.System.NOTIFICATION_LIGHT_SCREEN_ON, 0,
                     UserHandle.USER_CURRENT) != 0);
 
-            // Adustable notification LED brightness.
+            // Adjustable notification LED brightness.
             if (mCanAdjustBrightness) {
                 // Normal brightness.
                 mNotificationLedBrightnessLevel = LineageSettings.System.getIntForUser(resolver,

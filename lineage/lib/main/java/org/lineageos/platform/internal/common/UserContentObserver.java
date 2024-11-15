@@ -1,5 +1,6 @@
 /*
  * SPDX-FileCopyrightText: 2016 The CyanogenMod Project
+ * SPDX-FileCopyrightText: 2024 The LineageOS Project
  * SPDX-License-Identifier: Apache-2.0
  */
 package org.lineageos.platform.internal.common;
@@ -19,9 +20,9 @@ import android.util.Log;
 public abstract class UserContentObserver extends ContentObserver {
     private static final String TAG = "UserContentObserver";
 
-    private Runnable mUpdateRunnable;
+    private final Runnable mUpdateRunnable;
 
-    private IUserSwitchObserver mUserSwitchObserver = new IUserSwitchObserver.Stub() {
+    private final IUserSwitchObserver mUserSwitchObserver = new IUserSwitchObserver.Stub() {
         @Override
         public void onBeforeUserSwitching(int newUserId) throws RemoteException {
         }
@@ -40,7 +41,7 @@ public abstract class UserContentObserver extends ContentObserver {
         }
     };
 
-    private Handler mHandler;
+    private final Handler mHandler;
 
     /**
      * Content observer that tracks user switches
@@ -49,12 +50,7 @@ public abstract class UserContentObserver extends ContentObserver {
     public UserContentObserver(Handler handler) {
         super(handler);
         mHandler = handler;
-        mUpdateRunnable = new Runnable() {
-            @Override
-            public void run() {
-                update();
-            }
-        };
+        mUpdateRunnable = this::update;
     }
 
     protected void observe() {
