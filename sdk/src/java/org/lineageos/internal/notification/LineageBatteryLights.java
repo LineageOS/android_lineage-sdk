@@ -1,5 +1,5 @@
 /*
- * SPDX-FileCopyrightText: 2017-2019,2021 The LineageOS Project
+ * SPDX-FileCopyrightText: 2017-2024 The LineageOS Project
  * SPDX-License-Identifier: Apache-2.0
  */
 
@@ -15,6 +15,7 @@ import android.content.res.Resources;
 import android.database.ContentObserver;
 import android.os.BatteryManager;
 import android.os.Handler;
+import android.os.Looper;
 import android.os.UserHandle;
 import android.provider.Settings.Global;
 import android.util.Slog;
@@ -92,7 +93,7 @@ public final class LineageBatteryLights {
                 }, filter);
         mZenMode = mNotificationManager.getZenMode();
 
-        SettingsObserver observer = new SettingsObserver(new Handler());
+        SettingsObserver observer = new SettingsObserver(new Handler(Looper.getMainLooper()));
         observer.observe();
     }
 

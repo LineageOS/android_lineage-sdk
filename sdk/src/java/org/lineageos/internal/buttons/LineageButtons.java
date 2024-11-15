@@ -1,5 +1,5 @@
 /*
- * SPDX-FileCopyrightText: 2018,2020 The LineageOS Project
+ * SPDX-FileCopyrightText: 2018-2024 The LineageOS Project
  * SPDX-License-Identifier: Apache-2.0
  */
 
@@ -15,6 +15,7 @@ import android.media.session.MediaSessionLegacyHelper;
 import android.media.session.MediaSessionManager;
 import android.media.session.PlaybackState;
 import android.os.Handler;
+import android.os.Looper;
 import android.os.Message;
 import android.os.UserHandle;
 import android.util.Slog;
@@ -60,7 +61,7 @@ public final class LineageButtons {
         mHandler = new ButtonHandler();
         mMediaSessionManager = mContext.getSystemService(MediaSessionManager.class);
 
-        SettingsObserver observer = new SettingsObserver(new Handler());
+        SettingsObserver observer = new SettingsObserver(new Handler(Looper.getMainLooper()));
         observer.observe();
     }
 

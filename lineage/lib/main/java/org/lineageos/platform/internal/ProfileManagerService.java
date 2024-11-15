@@ -14,6 +14,7 @@ import android.database.ContentObserver;
 import android.net.Uri;
 import android.net.wifi.WifiInfo;
 import android.net.wifi.WifiManager;
+import android.os.Looper;
 import android.os.Message;
 import android.util.ArraySet;
 import com.android.internal.policy.IKeyguardService;
@@ -225,7 +226,7 @@ public class ProfileManagerService extends LineageSystemService {
     public ProfileManagerService(Context context) {
         super(context);
         mContext = context;
-        mHandler = new Handler(mHandlerCallback);
+        mHandler = new Handler(Looper.getMainLooper(), mHandlerCallback);
     }
 
     @Override

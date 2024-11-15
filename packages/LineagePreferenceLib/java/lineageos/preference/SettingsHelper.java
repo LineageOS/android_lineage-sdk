@@ -1,5 +1,6 @@
 /*
  * SPDX-FileCopyrightText: 2016 The CyanogenMod Project
+ * SPDX-FileCopyrightText: 2024 The LineageOS Project
  * SPDX-License-Identifier: Apache-2.0
  */
 package lineageos.preference;
@@ -9,6 +10,7 @@ import android.content.Context;
 import android.database.ContentObserver;
 import android.net.Uri;
 import android.os.Handler;
+import android.os.Looper;
 import android.provider.Settings;
 import android.util.ArrayMap;
 import android.util.ArraySet;
@@ -37,7 +39,7 @@ public class SettingsHelper {
 
     private SettingsHelper(Context context) {
         mContext = context;
-        mObservatory = new Observatory(context, new Handler());
+        mObservatory = new Observatory(context, new Handler(Looper.getMainLooper()));
     }
 
     public static synchronized SettingsHelper get(Context context) {
