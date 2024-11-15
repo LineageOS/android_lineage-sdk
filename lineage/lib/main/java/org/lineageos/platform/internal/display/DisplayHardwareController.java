@@ -18,14 +18,14 @@ import android.util.MathUtils;
 import android.util.Slog;
 import android.view.animation.LinearInterpolator;
 
+import lineageos.hardware.LineageHardwareManager;
+import lineageos.hardware.LiveDisplayManager;
+import lineageos.providers.LineageSettings;
+
 import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.BitSet;
-
-import lineageos.hardware.LineageHardwareManager;
-import lineageos.hardware.LiveDisplayManager;
-import lineageos.providers.LineageSettings;
 
 public class DisplayHardwareController extends LiveDisplayFeature {
 

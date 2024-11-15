@@ -1,5 +1,5 @@
 /*
- * SPDX-FileCopyrightText: 2023 The LineageOS Project
+ * SPDX-FileCopyrightText: 2023-2024 The LineageOS Project
  * SPDX-License-Identifier: Apache-2.0
  */
 
@@ -18,6 +18,7 @@ import org.lineageos.platform.internal.LineageSystemService;
 
 import lineageos.app.LineageContextConstants;
 import lineageos.health.IHealthInterface;
+
 import vendor.lineage.health.ChargingControlSupportedMode;
 
 import java.io.FileDescriptor;

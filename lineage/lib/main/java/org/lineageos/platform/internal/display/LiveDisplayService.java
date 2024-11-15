@@ -5,6 +5,10 @@
  */
 package org.lineageos.platform.internal.display;
 
+import static lineageos.hardware.LiveDisplayManager.MODE_FIRST;
+import static lineageos.hardware.LiveDisplayManager.MODE_LAST;
+import static lineageos.hardware.LiveDisplayManager.MODE_OFF;
+
 import android.app.Notification;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
@@ -30,6 +34,12 @@ import org.lineageos.platform.internal.common.UserContentObserver;
 import org.lineageos.platform.internal.display.TwilightTracker.TwilightListener;
 import org.lineageos.platform.internal.display.TwilightTracker.TwilightState;
 
+import lineageos.app.LineageContextConstants;
+import lineageos.hardware.HSIC;
+import lineageos.hardware.ILiveDisplayService;
+import lineageos.hardware.LiveDisplayConfig;
+import lineageos.providers.LineageSettings;
+
 import java.io.FileDescriptor;
 import java.io.PrintWriter;
 import java.util.ArrayList;
@@ -37,16 +47,6 @@ import java.util.BitSet;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Locale;
-
-import lineageos.app.LineageContextConstants;
-import lineageos.hardware.HSIC;
-import lineageos.hardware.ILiveDisplayService;
-import lineageos.hardware.LiveDisplayConfig;
-import lineageos.providers.LineageSettings;
-
-import static lineageos.hardware.LiveDisplayManager.MODE_FIRST;
-import static lineageos.hardware.LiveDisplayManager.MODE_LAST;
-import static lineageos.hardware.LiveDisplayManager.MODE_OFF;
 
 /**
  * LiveDisplay is an advanced set of features for improving

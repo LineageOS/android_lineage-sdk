@@ -7,6 +7,7 @@
 package org.lineageos.platform.internal.common;
 
 import android.content.Context;
+
 import org.lineageos.platform.internal.LineageSystemService;
 
 import java.lang.reflect.Constructor;

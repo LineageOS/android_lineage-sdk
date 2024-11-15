@@ -9,6 +9,7 @@ package org.lineageos.platform.internal;
 import android.content.Context;
 import android.os.SystemProperties;
 import android.util.Slog;
+
 import com.android.server.LocalServices;
 import com.android.server.SystemServiceManager;
 

@@ -1,5 +1,5 @@
 /*
- * SPDX-FileCopyrightText: 2023 The LineageOS Project
+ * SPDX-FileCopyrightText: 2023-2024 The LineageOS Project
  * SPDX-License-Identifier: Apache-2.0
  */
 
@@ -13,9 +13,9 @@ import android.os.UserHandle;
 
 import org.lineageos.platform.internal.common.UserContentObserver;
 
-import java.io.PrintWriter;
-
 import lineageos.providers.LineageSettings;
+
+import java.io.PrintWriter;
 
 public abstract class LineageBaseFeature {
     protected final Context mContext;

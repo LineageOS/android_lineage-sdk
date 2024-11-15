@@ -19,9 +19,9 @@ import android.content.pm.PackageManager;
 import android.os.IBinder;
 import android.os.SELinux;
 import android.os.SystemProperties;
+import android.text.TextUtils;
 import android.util.Log;
 import android.util.Pair;
-import android.text.TextUtils;
 
 import lineageos.app.LineageContextConstants;
 import lineageos.providers.LineageSettings;

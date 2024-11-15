@@ -1,6 +1,6 @@
 /*
  * SPDX-FileCopyrightText: 2016 The CyanogenMod Project
- * SPDX-FileCopyrightText: 2019 The LineageOS Project
+ * SPDX-FileCopyrightText: 2019-2024 The LineageOS Project
  * SPDX-License-Identifier: Apache-2.0
  */
 package org.lineageos.platform.internal.display;
@@ -13,12 +13,12 @@ import android.content.Context;
 import android.net.Uri;
 import android.os.Handler;
 
-import java.io.PrintWriter;
-import java.util.BitSet;
-
 import lineageos.hardware.LineageHardwareManager;
 import lineageos.hardware.LiveDisplayManager;
 import lineageos.providers.LineageSettings;
+
+import java.io.PrintWriter;
+import java.util.BitSet;
 
 public class OutdoorModeController extends LiveDisplayFeature {
 

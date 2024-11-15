@@ -6,51 +6,52 @@
 
 package org.lineageos.platform.internal;
 
+import android.app.ActivityManagerNative;
+import android.app.NotificationGroup;
+import android.app.backup.BackupManager;
 import android.bluetooth.BluetoothDevice;
 import android.bluetooth.BluetoothManager;
+import android.content.BroadcastReceiver;
 import android.content.ComponentName;
+import android.content.Context;
+import android.content.Intent;
+import android.content.IntentFilter;
 import android.content.ServiceConnection;
+import android.content.res.XmlResourceParser;
 import android.database.ContentObserver;
 import android.net.Uri;
 import android.net.wifi.WifiInfo;
 import android.net.wifi.WifiManager;
+import android.os.Environment;
+import android.os.Handler;
+import android.os.IBinder;
 import android.os.Looper;
 import android.os.Message;
+import android.os.ParcelUuid;
+import android.os.UserHandle;
+import android.text.TextUtils;
 import android.util.ArraySet;
+import android.util.Log;
+
 import com.android.internal.policy.IKeyguardService;
-import lineageos.providers.LineageSettings;
+
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
 import org.xmlpull.v1.XmlPullParserFactory;
 
-import android.app.ActivityManagerNative;
-import android.app.NotificationGroup;
-import android.app.backup.BackupManager;
-import android.content.BroadcastReceiver;
-import android.content.Context;
-import android.content.Intent;
-import android.content.IntentFilter;
-import android.content.res.XmlResourceParser;
-import android.os.Environment;
-import android.os.Handler;
-import android.os.UserHandle;
-import android.os.IBinder;
-import android.text.TextUtils;
-import android.util.Log;
-import android.os.ParcelUuid;
-
+import lineageos.app.IProfileManager;
 import lineageos.app.LineageContextConstants;
 import lineageos.app.Profile;
 import lineageos.app.ProfileGroup;
 import lineageos.app.ProfileManager;
-import lineageos.app.IProfileManager;
+import lineageos.providers.LineageSettings;
 
-import java.util.Collection;
 import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Arrays;
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;

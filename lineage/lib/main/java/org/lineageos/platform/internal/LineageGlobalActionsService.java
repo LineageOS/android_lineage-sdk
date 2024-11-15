@@ -1,5 +1,5 @@
 /*
- * SPDX-FileCopyrightText: 2021 The LineageOS Project
+ * SPDX-FileCopyrightText: 2021-2024 The LineageOS Project
  * SPDX-License-Identifier: Apache-2.0
  */
 
@@ -8,25 +8,21 @@ package org.lineageos.platform.internal;
 import static lineageos.providers.LineageSettings.Secure.POWER_MENU_ACTIONS;
 import static lineageos.providers.LineageSettings.Secure.getStringForUser;
 import static lineageos.providers.LineageSettings.Secure.putStringForUser;
-
 import static org.lineageos.internal.util.PowerMenuConstants.GLOBAL_ACTION_KEY_BUGREPORT;
-import static org.lineageos.internal.util.PowerMenuConstants.GLOBAL_ACTION_KEY_LOCKDOWN;
 
 import android.content.ContentResolver;
 import android.content.Context;
-import android.content.res.Resources;
 import android.database.ContentObserver;
 import android.net.Uri;
-import android.os.Binder;
 import android.os.Handler;
 import android.os.IBinder;
 import android.os.UserHandle;
 import android.provider.Settings;
 
-import lineageos.app.LineageContextConstants;
-import lineageos.app.ILineageGlobalActions;
-
 import org.lineageos.internal.util.PowerMenuConstants;
+
+import lineageos.app.ILineageGlobalActions;
+import lineageos.app.LineageContextConstants;
 
 import java.util.ArrayList;
 import java.util.Arrays;

@@ -1,11 +1,13 @@
 /*
  * SPDX-FileCopyrightText: 2016 The CyanogenMod Project
+ * SPDX-FileCopyrightText: 2024 The LineageOS Project
  * SPDX-License-Identifier: Apache-2.0
  */
 
 package org.lineageos.platform.internal;
 
 import android.content.Context;
+
 import com.android.server.SystemService;
 
 public abstract class LineageSystemService extends SystemService {

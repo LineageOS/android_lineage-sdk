@@ -18,6 +18,7 @@ import android.net.wifi.WifiManager;
 import android.os.Handler;
 import android.os.UserHandle;
 import android.util.Log;
+
 import lineageos.app.Profile;
 import lineageos.app.Profile.ProfileTrigger;
 import lineageos.app.ProfileManager;
