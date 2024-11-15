@@ -1,13 +1,13 @@
 /*
  * SPDX-FileCopyrightText: 2011-2015 CyanogenMod Project
- * SPDX-FileCopyrightText: 2017-2020 LineageOS Project
+ * SPDX-FileCopyrightText: 2017-2024 LineageOS Project
  * SPDX-License-Identifier: Apache-2.0
  */
 
 package org.lineageos.platform.internal;
 
-import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
+import android.bluetooth.BluetoothManager;
 import android.content.ComponentName;
 import android.content.ServiceConnection;
 import android.database.ContentObserver;
@@ -169,8 +169,8 @@ public class ProfileManagerService extends LineageSystemService {
                 }
             }
             if (!selectProfile && blueToothTriggers.size() > 0) {
-                final BluetoothAdapter mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
-                final Set<BluetoothDevice> pairedDevices = mBluetoothAdapter.getBondedDevices();
+                final BluetoothManager btm = mContext.getSystemService(BluetoothManager.class);
+                final Set<BluetoothDevice> pairedDevices = btm.getAdapter().getBondedDevices();
                 final Set<String> connectedBTDevices = new ArraySet<>();
                 for (BluetoothDevice device : pairedDevices) {
                     if (device.isConnected()) connectedBTDevices.add(device.getAddress());
