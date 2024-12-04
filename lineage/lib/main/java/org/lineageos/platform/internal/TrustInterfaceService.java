@@ -5,6 +5,7 @@
 
 package org.lineageos.platform.internal;
 
+import android.app.ActivityOptions;
 import android.app.Notification;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
@@ -104,10 +105,14 @@ public class TrustInterfaceService extends LineageSystemService {
         String message = mContext.getString(strings.second);
         String action = mContext.getString(R.string.trust_notification_action_manage);
 
+        ActivityOptions activityOptions = ActivityOptions.makeBasic();
+        activityOptions.setPendingIntentCreatorBackgroundActivityStartMode(
+                ActivityOptions.MODE_BACKGROUND_ACTIVITY_START_ALLOWED);
+
         Intent mainIntent = new Intent(INTENT_PARTS);
         mainIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         PendingIntent pMainIntent = PendingIntent.getActivity(mContext, 0, mainIntent,
-                PendingIntent.FLAG_IMMUTABLE);
+                PendingIntent.FLAG_IMMUTABLE, activityOptions.toBundle());
 
         Intent actionIntent = new Intent(INTENT_PARTS);
         actionIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
@@ -150,8 +155,13 @@ public class TrustInterfaceService extends LineageSystemService {
         String message = mContext.getString(R.string.trust_notification_content_onboarding);
         Intent intent = new Intent(INTENT_ONBOARDING);
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+
+        ActivityOptions activityOptions = ActivityOptions.makeBasic();
+        activityOptions.setPendingIntentCreatorBackgroundActivityStartMode(
+                ActivityOptions.MODE_BACKGROUND_ACTIVITY_START_ALLOWED);
+
         PendingIntent pIntent = PendingIntent.getActivity(mContext, 0, intent,
-            PendingIntent.FLAG_IMMUTABLE);
+                PendingIntent.FLAG_IMMUTABLE, activityOptions.toBundle());
 
         Notification.Builder notification = new Notification.Builder(mContext, TRUST_CHANNEL_ID)
                 .setContentTitle(title)
