@@ -118,7 +118,7 @@ public class TrustInterfaceService extends LineageSystemService {
         actionIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         actionIntent.putExtra(":settings:fragment_args_key", "trust_category_alerts");
         PendingIntent pActionIntent = PendingIntent.getActivity(mContext, 0, actionIntent,
-                PendingIntent.FLAG_IMMUTABLE);
+                PendingIntent.FLAG_IMMUTABLEx);
 
         Notification.Builder notification = new Notification.Builder(mContext, TRUST_CHANNEL_ID)
                 .setContentTitle(title)
@@ -160,7 +160,7 @@ public class TrustInterfaceService extends LineageSystemService {
         activityOptions.setPendingIntentCreatorBackgroundActivityStartMode(
                 ActivityOptions.MODE_BACKGROUND_ACTIVITY_START_ALLOWED);
 
-        PendingIntent pIntent = PendingIntent.getActivity(mContext, 0, intent,
+	PendingIntent pIntent = PendingIntent.getActivity(mContext, 0, intent,
                 PendingIntent.FLAG_IMMUTABLE, activityOptions.toBundle());
 
         Notification.Builder notification = new Notification.Builder(mContext, TRUST_CHANNEL_ID)
