@@ -16,6 +16,23 @@
       "message": "Fixes click on notification on ATV now opens trust UI.\nPreviously, log was complaining about:\n\n12-03 21:32:48.597  4177  4191 W ActivityTaskManager: Without BAL hardening this activity start would be allowed\n\n12-03 21:32:48.600  4177  4191 E ActivityTaskManager: Background activity launch blocked! [callingPackage: android; callingPackageTargetSdk: 35; callingUid: 1000; callingPid: -1; appSwitchState: 2; callingUidHasAnyVisibleWindow: false; callingUidProcState: PERSISTENT; isCallingUidPersistentSystemProcess: true; forcedBalByPiSender: BSP.NONE; intent: Intent { act\u003dorg.lineageos.lineageparts.TRUST_HINT flg\u003d0x10000000 cmp\u003dorg.lineageos.lineageparts/.trust.TrustOnBoardingActivity }; callerApp: null; balAllowedByPiCreator: BSP.NONE; balAllowedByPiCreatorWithHardening: BSP.NONE; resultIfPiCreatorAllowsBal: BAL_ALLOW_ALLOWLISTED_UID; hasRealCaller: true; isCallForResult: false; isPendingIntent: true; autoOptInReason: null; realCallingPackage: com.google.android.tvrecommendations; realCallingPackageTargetSdk: 34; realCallingUid: 10054; realCallingPid: 4995; realCallingUidHasAnyVisibleWindow: true; realCallingUidProcState: TOP; isRealCallingUidPersistentSystemProcess: false; originatingPendingIntent: PendingIntentRecord{62dfd77 android startActivity}; realCallerApp: ProcessRecord{24c42c4 4995:com.google.android.tvrecommendations/u0a54}; realInVisibleTask: true; balAllowedByPiSender: BSP.ALLOW_FGS; resultIfPiSenderAllowsBal: BAL_ALLOW_VISIBLE_WINDOW; balImproveRealCallerVisibilityCheck: true; balRequireOptInByPendingIntentCreator: true; balRequireOptInSameUid: false; balRespectAppSwitchStateWhenCheckBoundByForegroundUid: true; balDontBringExistingBackgroundTaskStackToFg: true] (edited)\n￼\n@chrmhoffmann\n@npjohnson @webgeek1234 click on trust notification doesn\u0027t work, does it?",
       "revId": "a30a45489f1f04164236fcb66f99d169a1f3290d",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3ed40618_34900884",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 3917
+      },
+      "writtenOn": "2024-12-04T16:54:21Z",
+      "side": 1,
+      "message": "But there are still some problems: Now it shows on ATV left top corner a back arrow (which doesn\u0027t do anything) and you cannot scroll fully down to enable/disable notifications.",
+      "revId": "a30a45489f1f04164236fcb66f99d169a1f3290d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
