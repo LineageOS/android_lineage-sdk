@@ -77,6 +77,7 @@
         <item>194</item> <!-- KEYCODE_BUTTON_7 -->
         <item>195</item> <!-- KEYCODE_BUTTON_8 -->
         <item>225</item> <!-- KEYCODE_PAIRING -->
+        <item>187</item> <!-- KEYCODE_APPSWITCH -->
     </integer-array>
 
     <!-- Array of packages for special keys on device.
@@ -90,5 +91,6 @@
         <item>com.hbo.hbonow</item>
         <item>com.android.vending</item>
         <item>com.google.android.intent.action.CONNECT_INPUT</item>
+        <item>org.lineageos.tv.launcher.SYSTEM_OPTIONS</item>
     </string-array>
 </resources>
