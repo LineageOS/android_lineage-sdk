@@ -90,6 +90,7 @@
         <item>194</item> <!-- KEYCODE_BUTTON_7 -->
         <item>195</item> <!-- KEYCODE_BUTTON_8 -->
         <item>225</item> <!-- KEYCODE_PAIRING -->
+        <item>284</item> <!-- KEYCODE_ALL_APPS -->
     </integer-array>
 
     <!-- Array of packages for special keys on device.
@@ -103,5 +104,6 @@
         <item>com.hbo.hbonow</item>
         <item>com.android.vending</item>
         <item>com.google.android.intent.action.CONNECT_INPUT</item>
+        <item>org.lineageos.tv.launcher.SYSTEM_OPTIONS</item> <!-- This is an intent -->
     </string-array>
 </resources>
