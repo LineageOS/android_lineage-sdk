@@ -33,6 +33,24 @@
       "message": "But there are still some problems: Now it shows on ATV left top corner a back arrow (which doesn\u0027t do anything) and you cannot scroll fully down to enable/disable notifications.",
       "revId": "a30a45489f1f04164236fcb66f99d169a1f3290d",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "fee0a9b1_d9a39914",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2024-12-17T00:24:06Z",
+      "side": 1,
+      "message": "this is not a new issue, this was always the case when you click the notification. So, not a hold on this.",
+      "parentUuid": "3ed40618_34900884",
+      "revId": "a30a45489f1f04164236fcb66f99d169a1f3290d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
