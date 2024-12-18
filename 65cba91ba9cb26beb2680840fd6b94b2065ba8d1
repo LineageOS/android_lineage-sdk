@@ -22,6 +22,30 @@
       },
       "revId": "65cba91ba9cb26beb2680840fd6b94b2065ba8d1",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "85169e44_8eef6e57",
+        "filename": "sdk/src/java/org/lineageos/internal/tv/TvAdbNetworkManager.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 21651
+      },
+      "writtenOn": "2024-12-18T14:32:39Z",
+      "side": 1,
+      "message": "It only applies for tv, as tv has the legacy adb network. Maybe legacyAdbNetworkManager is better?",
+      "parentUuid": "084494fb_5d391909",
+      "range": {
+        "startLine": 27,
+        "startChar": 13,
+        "endLine": 27,
+        "endChar": 15
+      },
+      "revId": "65cba91ba9cb26beb2680840fd6b94b2065ba8d1",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
