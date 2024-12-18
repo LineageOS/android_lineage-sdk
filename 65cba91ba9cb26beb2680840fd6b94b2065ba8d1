@@ -46,6 +46,30 @@
       },
       "revId": "65cba91ba9cb26beb2680840fd6b94b2065ba8d1",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "57f7406d_d43f64aa",
+        "filename": "sdk/src/java/org/lineageos/internal/tv/TvAdbNetworkManager.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2024-12-18T15:20:54Z",
+      "side": 1,
+      "message": "I know it only applies to ATV, but it\u0027s already part of org.lineageos.internal.tv, so it\u0027s kinda redundant to prefix its classes with \"Tv\". Yeah, you could call it legacy.",
+      "parentUuid": "85169e44_8eef6e57",
+      "range": {
+        "startLine": 27,
+        "startChar": 13,
+        "endLine": 27,
+        "endChar": 15
+      },
+      "revId": "65cba91ba9cb26beb2680840fd6b94b2065ba8d1",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
