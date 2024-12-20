@@ -16,6 +16,24 @@
       "message": "hardcode setting string?\nIt just happens to have the same name but it\u0027s not lineage anymore",
       "revId": "201d92faf10eac487f82c2904c7069cf81e38912",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "84e8ebd5_e45118ad",
+        "filename": "packages/LineageSettingsProvider/src/org/lineageos/lineagesettings/LineageDatabaseHelper.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 311,
+      "author": {
+        "id": 10067
+      },
+      "writtenOn": "2024-12-20T11:23:53Z",
+      "side": 1,
+      "message": "i\u0027m indifferent about that tbh.",
+      "parentUuid": "376bbff4_0a187b49",
+      "revId": "201d92faf10eac487f82c2904c7069cf81e38912",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
