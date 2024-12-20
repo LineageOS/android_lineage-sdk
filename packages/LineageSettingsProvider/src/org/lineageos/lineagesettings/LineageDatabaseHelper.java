@@ -37,7 +37,7 @@ public class LineageDatabaseHelper extends SQLiteOpenHelper{
     private static final boolean LOCAL_LOGV = false;
 
     private static final String DATABASE_NAME = "lineagesettings.db";
-    private static final int DATABASE_VERSION = 20;
+    private static final int DATABASE_VERSION = 21;
 
     public static class LineageTableNames {
         public static final String TABLE_SYSTEM = "system";
@@ -303,6 +303,15 @@ public class LineageDatabaseHelper extends SQLiteOpenHelper{
                         Settings.Global.UIDS_ALLOWED_ON_RESTRICTED_NETWORKS, "");
             }
             upgradeVersion = 20;
+        }
+
+        if (upgradeVersion < 21) {
+            // Migrate tethering allow VPN upstreams setting back to AOSP
+            Settings.Secure.setInt(mContext.getContentResolver(),
+                    LineageSettings.Secure.TETHERING_ALLOW_VPN_UPSTREAMS,
+                    LineageSettings.Secure.getInt(mContext.getContentResolver(),
+                            LineageSettings.Secure.TETHERING_ALLOW_VPN_UPSTREAMS, 0));
+            upgradeVersion = 21;
         }
 
         // *** Remember to update DATABASE_VERSION above!
