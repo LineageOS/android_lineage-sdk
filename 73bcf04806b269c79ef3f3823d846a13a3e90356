@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "91830d89_ee2e6e60",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 3917
+      },
+      "writtenOn": "2024-12-20T15:40:24Z",
+      "side": 1,
+      "message": "Setting gets migrated now.",
+      "revId": "73bcf04806b269c79ef3f3823d846a13a3e90356",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
