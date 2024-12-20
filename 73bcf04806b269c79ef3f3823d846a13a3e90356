@@ -16,6 +16,23 @@
       "message": "Setting gets migrated now.",
       "revId": "73bcf04806b269c79ef3f3823d846a13a3e90356",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a835bf95_bcf7db9f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 13028
+      },
+      "writtenOn": "2024-12-20T16:07:13Z",
+      "side": 1,
+      "message": "Seems like it got lost in the chat so posting it here as well:\nhttps://review.calyxos.org/c/CalyxOS/platform_calyx-sdk/+/10716",
+      "revId": "73bcf04806b269c79ef3f3823d846a13a3e90356",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
