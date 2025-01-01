@@ -807,6 +807,7 @@ public final class LineageHardwareManager {
      * @return true if service is valid
      */
     private boolean checkService() {
+        sService = getService();
         if (sService == null) {
             Log.w(TAG, "not connected to LineageHardwareManagerService");
             return false;
