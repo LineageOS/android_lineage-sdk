@@ -16,6 +16,24 @@
       "message": "Background:\nI built 22.x GSI targets and noticed HWC2-based LiveDisplay was missing, a regression from 21.\nAfter some logging, I found out that LineageHardwareManager was not able to get LineageHardwareService on its first try...\n```\nW LineageHardwareManager: not connected to LineageHardwareManagerService\nE LineageHardwareManager: Unable to get LineageHardwareService. The service either crashed, was not started, or the interface has been called to early in SystemServer init\n```\n...and doesn\u0027t seem to retry until after boot, which causes a bunch of one-time support checks to fail, incl. LiveDisplay.\nFor now I simply made it try getting again on checkService, which seems to be in time for those checks.",
       "revId": "3f5b8ae4f95f36a47cb01ae5e6e3dbe93d0195a1",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "28b0829f_fc30c03d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2025-01-01T07:40:48Z",
+      "side": 1,
+      "message": "detail this in commit msg pls",
+      "parentUuid": "bc73a7f4_3c7eb662",
+      "revId": "3f5b8ae4f95f36a47cb01ae5e6e3dbe93d0195a1",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
