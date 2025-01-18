@@ -32,7 +32,6 @@ public class AdbNetworkManager {
     private static final String ADB_NOTIFICATION_CHANNEL_ID_TV = "usbdevicemanager.adb.tv";
 
     private Context mContext;
-    private boolean mRunning = false;
     private String mHostAddress = null;
     private NotificationManager mNotificationManager;
 
@@ -41,7 +40,6 @@ public class AdbNetworkManager {
         mNotificationManager = (NotificationManager)
                 mContext.getSystemService(Context.NOTIFICATION_SERVICE);
         createNotificationChannel();
-        mRunning = SystemProperties.getInt(ADB_PORT_PROP, -1) > 0;
     }
 
     public void setEnabled(boolean enable) {
@@ -54,7 +52,7 @@ public class AdbNetworkManager {
     }
 
     public void start() {
-        if (mRunning) return;
+        if (isRunning()) return;
 
         SystemProperties.set(ADB_PORT_PROP, ADB_NETWORK_PORT);
 
@@ -80,25 +78,27 @@ public class AdbNetworkManager {
 
         Log.d(TAG, "ADB over network enabled");
         createNotification();
-        mRunning = true;
     }
 
     public void stop() {
-        if (!mRunning) return;
+        if (!isRunning()) return;
 
         SystemProperties.set(ADB_PORT_PROP, "-1");
         cancelNotification();
         Log.d(TAG, "ADB over network disabled");
         mHostAddress = null;
-        mRunning = false;
     }
 
     public boolean getEnabled() {
-        return mRunning;
+        return isRunning();
     }
 
     public String getHostAddress() {
         return mHostAddress;
+    }
+
+    private boolean isRunning() {
+        return SystemProperties.getInt(ADB_PORT_PROP, -1) > 0;
     }
 
     private void createNotification() {
