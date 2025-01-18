@@ -8,19 +8,27 @@ package org.lineageos.internal.tv;
 import android.app.Notification;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
+import android.app.PendingIntent;
 import android.content.Context;
+import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.content.pm.ResolveInfo;
+import android.content.res.Resources;
 import android.debug.AdbNotifications;
 import android.debug.AdbTransportType;
 import android.os.SystemProperties;
 import android.os.UserHandle;
+import android.provider.Settings;
 import android.util.Log;
 
 import com.android.internal.messages.nano.SystemMessageProto.SystemMessage;
+import com.android.internal.notification.SystemNotificationChannels;
+
+import org.lineageos.platform.internal.R;
 
 import java.net.NetworkInterface;
 import java.net.InetAddress;
 import java.net.SocketException;
-
 import java.util.Collections;
 import java.util.List;
 
@@ -108,9 +116,8 @@ public class AdbNetworkManager {
         return SystemProperties.getInt(ADB_PORT_PROP, -1) > 0;
     }
 
-    private void createNotification() {
-        Notification notification = AdbNotifications.createNotification(mContext,
-                AdbTransportType.WIFI);
+    private void notifyAdbNetworkStarted() {
+        Notification notification = createNotification();
         mNotificationManager.notifyAsUser(null, SystemMessage.NOTE_ADB_WIFI_ACTIVE,
                 notification, UserHandle.ALL);
     }
@@ -126,5 +133,40 @@ public class AdbNetworkManager {
                 mContext.getString(
                         com.android.internal.R.string.adb_debugging_notification_channel_tv),
                 NotificationManager.IMPORTANCE_HIGH));
+    }
+
+    private Notification createNotification() {
+        String title = mContext.getString(R.string.adbwifi_enabled_notification_title);
+        String message = mContext.getString(R.string.adbwifi_enabled_notification_message,
+                mHostAddress + ":" + ADB_NETWORK_PORT);
+
+        Intent intent = new Intent(Settings.ACTION_APPLICATION_DEVELOPMENT_SETTINGS);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        ResolveInfo resolveInfo = mContext.getPackageManager().resolveActivity(intent,
+                PackageManager.MATCH_SYSTEM_ONLY);
+
+        // Settings app may not be available (e.g. device policy manager removes it)
+        PendingIntent pIntent = null;
+        if (resolveInfo != null) {
+            intent.setPackage(resolveInfo.activityInfo.packageName);
+            pIntent = PendingIntent.getActivityAsUser(mContext, 0, intent,
+                    PendingIntent.FLAG_IMMUTABLE, null, UserHandle.CURRENT);
+        }
+
+        return new Notification.Builder(mContext, SystemNotificationChannels.DEVELOPER_IMPORTANT)
+                .setSmallIcon(com.android.internal.R.drawable.stat_sys_adb)
+                .setWhen(0)
+                .setOngoing(true)
+                .setTicker(title)
+                .setDefaults(0)  // please be quiet
+                .setColor(mContext.getColor(
+                            com.android.internal.R.color.system_notification_accent_color))
+                .setContentTitle(title)
+                .setContentText(message)
+                .setContentIntent(pIntent)
+                .setVisibility(Notification.VISIBILITY_PUBLIC)
+                .extend(new Notification.TvExtender()
+                        .setChannelId(ADB_NOTIFICATION_CHANNEL_ID_TV))
+                .build();
     }
 }
