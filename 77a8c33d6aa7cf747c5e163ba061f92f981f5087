@@ -16,6 +16,24 @@
       "message": "Is all_apps really the right keycode for this? That button is supposed to open an app drawer to list all installed apps. But this functionality is to open a quick settings overlay. Surely there\u0027s a better keycode.",
       "revId": "77a8c33d6aa7cf747c5e163ba061f92f981f5087",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f960ba60_f6d451f0",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 21651
+      },
+      "writtenOn": "2025-02-06T06:58:41Z",
+      "side": 1,
+      "message": "I don\u0027t think the all apps button would have any use otherwise. At least on my remote, it looks fine enough for this. I don\u0027t think remotes have a \"open qs\" keycode.",
+      "parentUuid": "ed8e0b99_fa7b96de",
+      "revId": "77a8c33d6aa7cf747c5e163ba061f92f981f5087",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
