@@ -34,6 +34,24 @@
       "parentUuid": "ed8e0b99_fa7b96de",
       "revId": "77a8c33d6aa7cf747c5e163ba061f92f981f5087",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6a9c9a6d_bbe48422",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 14048
+      },
+      "writtenOn": "2025-02-06T07:27:12Z",
+      "side": 1,
+      "message": "https://developer.android.com/reference/android/view/KeyEvent#KEYCODE_SETTINGS\nThis is what the shield 2019 remote sets for the hamburger button. A comment in the kl calls it a menu button, though. Which leads to:\nhttps://developer.android.com/reference/android/view/KeyEvent#KEYCODE_MENU\nas another option. Imo settings should remain mapped to tvsettings, for stuff like the gear icon on the dopinder remote. Menu is set on several of the kl\u0027s in lineage/atv. Not sure what button icon those line up with, though.\n\nI don\u0027t like the idea of just taking a known button icon and turning it into something else entirely. Maybe a remap option in the buttons menu. But just hardcode remapping is just asking for ux confusion.",
+      "parentUuid": "f960ba60_f6d451f0",
+      "revId": "77a8c33d6aa7cf747c5e163ba061f92f981f5087",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
