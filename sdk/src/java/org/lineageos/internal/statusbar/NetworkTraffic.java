@@ -1,5 +1,5 @@
 /*
- * SPDX-FileCopyrightText: 2017-2023 The LineageOS project
+ * SPDX-FileCopyrightText: 2017-2025 The LineageOS project
  * SPDX-License-Identifier: Apache-2.0
  */
 
@@ -99,6 +99,11 @@ public class NetworkTraffic extends TextView {
     private int mIconTint = Color.WHITE;
     private Drawable mDrawable;
 
+    // Network tracking related variables
+    private ConnectivityManager mConnectivityManager;
+    private ConnectivityManager.NetworkCallback mNetworkCallback;
+    private ConnectivityManager.NetworkCallback mDefaultNetworkCallback;
+
     private final HashMap<Network, LinkProperties> mLinkPropertiesMap = new HashMap<>();
     // Used to indicate that the set of sources contributing
     // to current stats have changed.
@@ -121,6 +126,7 @@ public class NetworkTraffic extends TextView {
 
         mNetworkTrafficIsVisible = false;
 
+        mConnectivityManager = mContext.getSystemService(ConnectivityManager.class);
         mTrafficHandler = new Handler(mContext.getMainLooper()) {
             @Override
             public void handleMessage(Message msg) {
@@ -292,47 +298,71 @@ public class NetworkTraffic extends TextView {
             }
         };
         mObserver = new SettingsObserver(mTrafficHandler);
+        updateSettings();
+    }
 
-        // Network tracking related variables
-        final NetworkRequest request = new NetworkRequest.Builder()
-                .addCapability(NetworkCapabilities.NET_CAPABILITY_INTERNET)
-                .addCapability(NetworkCapabilities.NET_CAPABILITY_NOT_VPN)
-                .build();
-        ConnectivityManager.NetworkCallback networkCallback =
-                new ConnectivityManager.NetworkCallback() {
-                    @Override
-                    public void onLinkPropertiesChanged(Network network,
-                            LinkProperties linkProperties) {
-                        Message msg = new Message();
-                        msg.what = MESSAGE_TYPE_ADD_NETWORK;
-                        msg.obj = new LinkPropertiesHolder(network, linkProperties);
-                        mTrafficHandler.sendMessage(msg);
-                    }
+    private void unregisterNetworkCallbacks() {
+        if (mNetworkCallback != null) {
+            mConnectivityManager.unregisterNetworkCallback(mNetworkCallback);
+            mNetworkCallback = null;
+        }
+        if (mDefaultNetworkCallback != null) {
+            mConnectivityManager.unregisterNetworkCallback(mDefaultNetworkCallback);
+            mDefaultNetworkCallback = null;
+        }
+    }
 
-                    @Override
-                    public void onLost(Network network) {
-                        Message msg = new Message();
-                        msg.what = MESSAGE_TYPE_REMOVE_NETWORK;
-                        msg.obj = network;
-                        mTrafficHandler.sendMessage(msg);
-                    }
-                };
-        ConnectivityManager.NetworkCallback defaultNetworkCallback =
-                new ConnectivityManager.NetworkCallback() {
-            @Override
-            public void onAvailable(Network network) {
-                updateViewState();
-            }
+    private void manageNetworkCallbacks() {
+        if (mMode == MODE_DISABLED) {
+            // Unregister callbacks if disabling
+            unregisterNetworkCallbacks();
+            return;
+        }
 
-            @Override
-            public void onLost(Network network) {
-                updateViewState();
-            }
-        };
-        context.getSystemService(ConnectivityManager.class)
-                .registerNetworkCallback(request, networkCallback);
-        context.getSystemService(ConnectivityManager.class)
-                .registerDefaultNetworkCallback(defaultNetworkCallback);
+        // Register callbacks if enabling
+        if (mNetworkCallback == null) {
+            mNetworkCallback = new ConnectivityManager.NetworkCallback() {
+                @Override
+                public void onLinkPropertiesChanged(Network network,
+                        LinkProperties linkProperties) {
+                    Message msg = new Message();
+                    msg.what = MESSAGE_TYPE_ADD_NETWORK;
+                    msg.obj = new LinkPropertiesHolder(network, linkProperties);
+                    mTrafficHandler.sendMessage(msg);
+                }
+
+                @Override
+                public void onLost(Network network) {
+                    Message msg = new Message();
+                    msg.what = MESSAGE_TYPE_REMOVE_NETWORK;
+                    msg.obj = network;
+                    mTrafficHandler.sendMessage(msg);
+                }
+            };
+
+            NetworkRequest request = new NetworkRequest.Builder()
+                    .addCapability(NetworkCapabilities.NET_CAPABILITY_INTERNET)
+                    .addCapability(NetworkCapabilities.NET_CAPABILITY_NOT_VPN)
+                    .build();
+
+            mConnectivityManager.registerNetworkCallback(request, mNetworkCallback);
+        }
+
+        if (mDefaultNetworkCallback == null) {
+            mDefaultNetworkCallback = new ConnectivityManager.NetworkCallback() {
+                @Override
+                public void onAvailable(Network network) {
+                    updateViewState();
+                }
+
+                @Override
+                public void onLost(Network network) {
+                    updateViewState();
+                }
+            };
+
+            mConnectivityManager.registerDefaultNetworkCallback(mDefaultNetworkCallback);
+        }
     }
 
     public void setViewPosition(int vpos) {
@@ -377,6 +407,7 @@ public class NetworkTraffic extends TextView {
     protected void onDetachedFromWindow() {
         super.onDetachedFromWindow();
         mObserver.unobserve();
+        unregisterNetworkCallbacks();
     }
 
     class SettingsObserver extends ContentObserver {
@@ -414,8 +445,7 @@ public class NetworkTraffic extends TextView {
     }
 
     private boolean isConnectionAvailable() {
-        ConnectivityManager cm = mContext.getSystemService(ConnectivityManager.class);
-        return cm.getActiveNetwork() != null;
+        return mConnectivityManager.getActiveNetwork() != null;
     }
 
     private void updateSettings() {
@@ -431,6 +461,8 @@ public class NetworkTraffic extends TextView {
                 LineageSettings.Secure.NETWORK_TRAFFIC_UNITS, UNITS_KILOBYTES);
         mShowUnits = LineageSettings.Secure.getInt(resolver,
                 LineageSettings.Secure.NETWORK_TRAFFIC_SHOW_UNITS, SHOW_UNITS_ON);
+
+        manageNetworkCallbacks();
 
         switch (mUnits) {
             case UNITS_KILOBITS:
