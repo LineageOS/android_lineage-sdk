@@ -1,5 +1,6 @@
 /*
  * SPDX-FileCopyrightText: 2015 The CyanogenMod Project
+ * SPDX-FileCopyrightText: 2025 The LineageOS Project
  * SPDX-License-Identifier: Apache-2.0
  */
 
@@ -17,11 +18,6 @@ import android.os.Parcelable;
 import android.os.ParcelUuid;
 import android.text.TextUtils;
 import android.util.Log;
-
-import lineageos.os.Build;
-
-import lineageos.os.Concierge;
-import lineageos.os.Concierge.ParcelInfo;
 
 import java.io.IOException;
 import java.util.UUID;
@@ -258,10 +254,6 @@ public final class ProfileGroup implements Parcelable {
     /** @hide */
     @Override
     public void writeToParcel(Parcel dest, int flags) {
-        // Tell the concierge to prepare the parcel
-        ParcelInfo parcelInfo = Concierge.prepareParcel(dest);
-
-        // === BOYSENBERRY ===
         dest.writeString(mName);
         new ParcelUuid(mUuid).writeToParcel(dest, 0);
         dest.writeInt(mDefaultGroup ? 1 : 0);
@@ -272,36 +264,21 @@ public final class ProfileGroup implements Parcelable {
         dest.writeString(mRingerMode.name());
         dest.writeString(mVibrateMode.name());
         dest.writeString(mLightsMode.name());
-
-        // Complete the parcel info for the concierge
-        parcelInfo.complete();
     }
 
     /** @hide */
     public void readFromParcel(Parcel in) {
-        // Read parcelable version via the Concierge
-        ParcelInfo parcelInfo = Concierge.receiveParcel(in);
-        int parcelableVersion = parcelInfo.getParcelVersion();
+        mName = in.readString();
+        mUuid = ParcelUuid.CREATOR.createFromParcel(in).getUuid();
+        mDefaultGroup = in.readInt() != 0;
+        mDirty = in.readInt() != 0;
+        mSoundOverride = in.readParcelable(null);
+        mRingerOverride = in.readParcelable(null);
 
-        // Pattern here is that all new members should be added to the end of
-        // the writeToParcel method. Then we step through each version, until the latest
-        // API release to help unravel this parcel
-        if (parcelableVersion >= Build.LINEAGE_VERSION_CODES.BOYSENBERRY) {
-            mName = in.readString();
-            mUuid = ParcelUuid.CREATOR.createFromParcel(in).getUuid();
-            mDefaultGroup = in.readInt() != 0;
-            mDirty = in.readInt() != 0;
-            mSoundOverride = in.readParcelable(null);
-            mRingerOverride = in.readParcelable(null);
-
-            mSoundMode = Mode.valueOf(Mode.class, in.readString());
-            mRingerMode = Mode.valueOf(Mode.class, in.readString());
-            mVibrateMode = Mode.valueOf(Mode.class, in.readString());
-            mLightsMode = Mode.valueOf(Mode.class, in.readString());
-        }
-
-        // Complete parcel info for the concierge
-        parcelInfo.complete();
+        mSoundMode = Mode.valueOf(Mode.class, in.readString());
+        mRingerMode = Mode.valueOf(Mode.class, in.readString());
+        mVibrateMode = Mode.valueOf(Mode.class, in.readString());
+        mLightsMode = Mode.valueOf(Mode.class, in.readString());
     }
 
     public enum Mode {

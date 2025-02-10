@@ -1,7 +1,9 @@
 /*
  * SPDX-FileCopyrightText: 2016 The CyanogenMod Project
+ * SPDX-FileCopyrightText: 2025 The LineageOS Project
  * SPDX-License-Identifier: Apache-2.0
  */
+
 package lineageos.preference;
 
 import android.content.Intent;
@@ -9,8 +11,6 @@ import android.os.Parcel;
 import android.os.Parcelable;
 
 import java.util.Objects;
-
-import lineageos.os.Concierge;
 
 public class PartInfo implements Parcelable {
 
@@ -42,9 +42,6 @@ public class PartInfo implements Parcelable {
     }
 
     public PartInfo(Parcel parcel) {
-        Concierge.ParcelInfo parcelInfo = Concierge.receiveParcel(parcel);
-        int parcelableVersion = parcelInfo.getParcelVersion();
-
         mName = parcel.readString();
         mTitle = parcel.readString();
         mSummary = parcel.readString();
@@ -135,8 +132,6 @@ public class PartInfo implements Parcelable {
 
     @Override
     public void writeToParcel(Parcel out, int i) {
-        Concierge.ParcelInfo parcelInfo = Concierge.prepareParcel(out);
-
         out.writeString(mName);
         out.writeString(mTitle);
         out.writeString(mSummary);
@@ -144,9 +139,7 @@ public class PartInfo implements Parcelable {
         out.writeInt(mIconRes);
         out.writeInt(mAvailable ? 1 : 0);
         out.writeInt(mXmlRes);
-        parcelInfo.complete();
     }
-
 
     @Override
     public boolean equals(Object other) {

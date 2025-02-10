@@ -1,6 +1,6 @@
 /*
  * SPDX-FileCopyrightText: 2015 The CyanogenMod Project
- * SPDX-FileCopyrightText: 2020 The LineageOS Project
+ * SPDX-FileCopyrightText: 2020-2025 The LineageOS Project
  * SPDX-License-Identifier: Apache-2.0
  */
 
@@ -12,13 +12,8 @@ import android.provider.Settings;
 import android.os.Parcel;
 import android.os.Parcelable;
 
-import lineageos.os.Build;
-import lineageos.os.Concierge;
-import lineageos.os.Concierge.ParcelInfo;
-
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
-
 
 import java.io.IOException;
 
@@ -181,34 +176,15 @@ public final class AirplaneModeSettings implements Parcelable {
     /** @hide */
     @Override
     public void writeToParcel(Parcel dest, int flags) {
-        // Tell the concierge to prepare the parcel
-        ParcelInfo parcelInfo = Concierge.prepareParcel(dest);
-
-        // === BOYSENBERRY ===
         dest.writeInt(mOverride ? 1 : 0);
         dest.writeInt(mValue);
         dest.writeInt(mDirty ? 1 : 0);
-
-        // Complete the parcel info for the concierge
-        parcelInfo.complete();
     }
 
     /** @hide */
     public void readFromParcel(Parcel in) {
-        // Read parcelable version via the Concierge
-        ParcelInfo parcelInfo = Concierge.receiveParcel(in);
-        int parcelableVersion = parcelInfo.getParcelVersion();
-
-        // Pattern here is that all new members should be added to the end of
-        // the writeToParcel method. Then we step through each version, until the latest
-        // API release to help unravel this parcel
-        if (parcelableVersion >= Build.LINEAGE_VERSION_CODES.BOYSENBERRY) {
-            mOverride = in.readInt() != 0;
-            mValue = in.readInt();
-            mDirty = in.readInt() != 0;
-        }
-
-        // Complete parcel info for the concierge
-        parcelInfo.complete();
+        mOverride = in.readInt() != 0;
+        mValue = in.readInt();
+        mDirty = in.readInt() != 0;
     }
 }
