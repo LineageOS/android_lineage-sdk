@@ -1124,6 +1124,17 @@ public final class LineageSettings {
                 sBooleanValidator;
 
         /**
+         * Wether to mute audio by pressing the volume up and down keys simultneously on Android TV,
+         * the value is boolean.
+         * 0 = 0ff, 1 = on
+         */
+        public static final String VOLUME_UP_AND_DOWN_MUTE = "volume_up_and_down_mute";
+
+        /** @hide */
+        public static final Validator VOLUME_UP_AND_DOWN_MUTE_VALIDATOR =
+                sBooleanValidator;
+
+        /**
          * Whether to wake the screen with the menu key, the value is boolean.
          * 0 = 0ff, 1 = on
          */
@@ -2120,6 +2131,7 @@ public final class LineageSettings {
             VALIDATORS.put(KEY_HOME_LONG_PRESS_ACTION, KEY_HOME_LONG_PRESS_ACTION_VALIDATOR);
             VALIDATORS.put(KEY_HOME_DOUBLE_TAP_ACTION, KEY_HOME_DOUBLE_TAP_ACTION_VALIDATOR);
             VALIDATORS.put(BACK_WAKE_SCREEN, BACK_WAKE_SCREEN_VALIDATOR);
+            VALIDATORS.put(VOLUME_UP_AND_DOWN_MUTE, VOLUME_UP_AND_DOWN_MUTE_VALIDATOR);
             VALIDATORS.put(MENU_WAKE_SCREEN, MENU_WAKE_SCREENN_VALIDATOR);
             VALIDATORS.put(VOLUME_ANSWER_CALL, VOLUME_ANSWER_CALL_VALIDATOR);
             VALIDATORS.put(VOLUME_WAKE_SCREEN, VOLUME_WAKE_SCREEN_VALIDATOR);
