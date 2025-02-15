@@ -243,7 +243,7 @@ public class Toggle extends ChargingControlProvider {
     public void dump(PrintWriter pw) {
         pw.println("Provider: " + getClass().getName());
         pw.println("  mIsLimitSet: " + mIsLimitSet);
-        pw.println("  mSavedTargetTime: " + msToString(mSavedTargetTime));
+        pw.println("  mSavedTargetTime: " + msToString(mContext, mSavedTargetTime));
         pw.println("  mEstimatedFullTime: " + msToUTCString(mEstimatedFullTime));
         pw.println("  mStage: " + mStage);
         pw.println("  mChargeLimitMargin: " + mChargingLimitMargin);
