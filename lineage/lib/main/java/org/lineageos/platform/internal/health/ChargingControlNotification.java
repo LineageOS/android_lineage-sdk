@@ -6,6 +6,7 @@
 package org.lineageos.platform.internal.health;
 
 import static org.lineageos.platform.internal.health.Util.msToString;
+import static org.lineageos.platform.internal.health.Util.msToLocalisedString;
 
 import android.app.Notification;
 import android.app.NotificationChannel;
@@ -111,7 +112,7 @@ public class ChargingControlNotification {
         if (targetTime != null) {
             message = String.format(
                     mContext.getString(R.string.charging_control_notification_content_target),
-                    msToString(targetTime));
+                    msToLocalisedString(targetTime));
         } else {
             message = String.format(
                     mContext.getString(R.string.charging_control_notification_content_limit),
