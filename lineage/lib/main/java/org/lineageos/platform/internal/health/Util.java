@@ -16,10 +16,22 @@ import java.time.ZoneOffset;
 import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Calendar;
+import java.util.Date;
 import java.util.TimeZone;
 
 public class Util {
     private static final DateTimeFormatter mFormatter = DateTimeFormatter.ofLocalizedTime(SHORT);
+
+    /**
+     * Convert milliseconds to a string in the locale's SHORT format.
+     *
+     * @param ms milliseconds from epoch
+     * @return formatted time string in current time zone
+     */
+    static public String msToLocalisedString(long ms) {
+        final Calendar local = msToLocalTime(ms);
+        return mFormatter.format(local.toInstant().atZone(local.getTimeZone().toZoneId()));
+    }
 
     /**
      * Convert milliseconds to a string in the format "hh:mm:ss a".
@@ -28,10 +40,13 @@ public class Util {
      * @return formatted time string in current time zone
      */
     static public String msToString(long ms) {
-        final SimpleDateFormat dateFormat = new SimpleDateFormat("hh:mm:ss a");
+        return new SimpleDateFormat("hh:mm:ss a").format(msToLocalTime(ms).getTime());
+    }
+
+    static private Calendar msToLocalTime(long ms) {
         Calendar calendar = Calendar.getInstance();
         calendar.setTimeInMillis(ms);
-        return dateFormat.format(calendar.getTime());
+        return calendar;
     }
 
     /**
