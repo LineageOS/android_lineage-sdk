@@ -46,6 +46,30 @@
       },
       "revId": "4710a42fabfe643d7ba77e148549b53a3bfde4c2",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "20bf64c1_2609bdee",
+        "filename": "lineage/lib/main/java/org/lineageos/platform/internal/health/ChargingControlNotification.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 31578
+      },
+      "writtenOn": "2025-02-16T01:57:45Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "d9fb5bc9_4e7e68e5",
+      "range": {
+        "startLine": 8,
+        "startChar": 0,
+        "endLine": 8,
+        "endChar": 69
+      },
+      "revId": "4710a42fabfe643d7ba77e148549b53a3bfde4c2",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }

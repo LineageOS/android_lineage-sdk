@@ -33,6 +33,24 @@
       "message": "Unfortunately the emulator environment does not show the \"Charging control\" menu item, so I was not able to test this in vivo, but this (a) builds and runs in general and (b) Util.java is bare Java, so I tested it built into a normal java program and got the expected msToLocalisedString()\u003d\"15:00\"/msToString()\u003d\"03:00:00 pm\" again",
       "revId": "ff43a241c3270cd6c661399032640e58f9b9578e",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2854be9a_208b6790",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 31578
+      },
+      "writtenOn": "2025-02-16T01:57:45Z",
+      "side": 1,
+      "message": "Thanks for submitting the patch! Can you explain what is the expectation after applying this patch? Now the notification shows \"11:00 AM\", which seems correct, but does not respect the 24-hour time format setting, is it what you are expecting?",
+      "parentUuid": "03366fb4_44236207",
+      "revId": "ff43a241c3270cd6c661399032640e58f9b9578e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
