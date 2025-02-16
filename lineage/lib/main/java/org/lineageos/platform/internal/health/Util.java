@@ -35,13 +35,12 @@ public class Util {
     }
 
     /**
-     * Convert seconds of the day to a string in the format "hh:mm:ss".
-     * in UTC.
+     * Convert microseconds to a string in the format "HH:mm:ss".
      *
-     * @param ms milliseconds from epoch
-     * @return formatted time string in UTC time zone
+     * @param ms Time in microseconds
+     * @return Formatted time string in the format "HH:mm:ss"
      */
-    static public String msToUTCString(long ms) {
+    static public String msToHMSString(long ms) {
         final SimpleDateFormat dateFormat = new SimpleDateFormat("HH:mm:ss");
         Calendar calendar = Calendar.getInstance();
         dateFormat.setTimeZone(TimeZone.getTimeZone("UTC"));
