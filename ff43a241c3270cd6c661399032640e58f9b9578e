@@ -51,6 +51,24 @@
       "parentUuid": "03366fb4_44236207",
       "revId": "ff43a241c3270cd6c661399032640e58f9b9578e",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1e425e25_ff1bef24",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 34887
+      },
+      "writtenOn": "2025-02-16T02:41:34Z",
+      "side": 1,
+      "message": "I can\u0027t reproduce this being short-but-not-current-locale; formatting \"\u0027\" + msToString(getTimeMillisFromSecondOfDay(15 * 60 * 60)) + \"\u0027 \u0027\" + msToLocalisedString(getTimeMillisFromSecondOfDay(15 * 60 * 60)) + \"\u0027\" in a StorageItemPreference constructor shows that it does do 15:00: https://storage.waw.cloud.ovh.net/v1/AUTH_74714a37e6e24c7fb695d79be309da62/101010public/media_attachments/files/114/011/209/721/553/713/original/978b41b026d99164.png but idk if the context in the notification is different somehow and it gets broken there? I can\u0027t really test this in vivo unfortunately (I tried and failed to shim the emulated android to show me the Charging control option).\n\nEither way, I\u0027m confident this accurately reflects the implementation from LineageOS 21.\nIt\u0027s independently possible that that\u0027s also broken and always does the en_US format I suppose, but I can\u0027t see that and wouldn\u0027t possibly know how to unbreak it, so 😔",
+      "parentUuid": "2854be9a_208b6790",
+      "revId": "ff43a241c3270cd6c661399032640e58f9b9578e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
