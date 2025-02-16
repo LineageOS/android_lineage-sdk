@@ -105,6 +105,24 @@
       "parentUuid": "0dfc661c_11c27412",
       "revId": "ff43a241c3270cd6c661399032640e58f9b9578e",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "73edb85a_5eaf0ed6",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 34887
+      },
+      "writtenOn": "2025-02-16T04:30:27Z",
+      "side": 1,
+      "message": "Looks reasonable to me, renders fine in my still-crippled test setup, so if it works for you then it\u0027s probably fine.\n\nI\u0027ve also looked at the remaining users of `msToUTCString()` — all in lineage/lib/main/java/org/lineageos/platform/internal/health/ccprovider/Toggle.java\n```java\n        long remaining \u003d batteryUsageStats.getChargeTimeRemainingMs();\n        remaining +\u003d mChargingTimeMargin;\n        Log.i(TAG, \"Current estimated time to full: \" + msToUTCString(remaining));\n\n        long deltaTime \u003d targetTime - currentTime;\n        Log.i(TAG, \"Current time to target: \" + msToUTCString(deltaTime));\n\n        switch (stage) {\n```\ncalling this \"UTC\" is... facetious at best? it\u0027s an interval, so the am/pm is very odd (and, if the remaining time is \u003e24h, it\u0027ll get truncated. but i doubt this is a real concern).\n\n```java\n        pw.println(\"  mIsLimitSet: \" + mIsLimitSet);\n        pw.println(\"  mSavedTargetTime: \" + msToString(mContext, mSavedTargetTime));\n        pw.println(\"  mEstimatedFullTime: \" + msToUTCString(mEstimatedFullTime));\n        pw.println(\"  mStage: \" + mStage);\n        pw.println(\"  mChargeLimitMargin: \" + mChargingLimitMargin);\n```\nthis is assigned from the above: `mEstimatedFullTime \u003d remaining;`, so the same thing applies. This could either be renamed to `msToHMSString()` with the `\" a\"` portion removed, or the function dropped entirely and the numbers formatted directly with \"ms\" after.",
+      "parentUuid": "d8e339a9_dc8b6cf3",
+      "revId": "ff43a241c3270cd6c661399032640e58f9b9578e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
