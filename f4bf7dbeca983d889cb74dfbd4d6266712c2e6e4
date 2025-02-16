@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f073b8cb_04017186",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 20370
+      },
+      "writtenOn": "2025-02-16T11:57:51Z",
+      "side": 1,
+      "message": "before: 02:00:00 PM\nnow: 14:00 \u003c- this is the expected format for my locale, thanks!",
+      "revId": "f4bf7dbeca983d889cb74dfbd4d6266712c2e6e4",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
