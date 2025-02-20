@@ -151,8 +151,9 @@ public class HealthInterfaceService extends LineageSystemService {
 
         @Override
         public boolean allowFineGrainedSettings() {
-            // We allow fine-grained settings if allow toggle and bypass
-            return mCCC.isChargingModeSupported(ChargingControlSupportedMode.TOGGLE);
+            // We allow fine-grained settings if bypass and toggle or limit modes are supported
+            return mCCC.isChargingModeSupported(ChargingControlSupportedMode.TOGGLE)
+                    || mCCC.isChargingModeSupported(ChargingControlSupportedMode.LIMIT);
         }
 
         @Override

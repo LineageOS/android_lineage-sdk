@@ -30,6 +30,7 @@ import android.util.Log;
 import org.lineageos.platform.internal.R;
 import org.lineageos.platform.internal.health.ccprovider.ChargingControlProvider;
 import org.lineageos.platform.internal.health.ccprovider.Deadline;
+import org.lineageos.platform.internal.health.ccprovider.Limit;
 import org.lineageos.platform.internal.health.ccprovider.Toggle;
 
 import lineageos.providers.LineageSettings;
@@ -70,6 +71,9 @@ public class ChargingControlController extends LineageHealthFeature {
 
     // Current selected provider
     private ChargingControlProvider mCurrentProvider;
+    private Deadline mDeadline;
+    private Limit mLimit;
+    private Toggle mToggle;
 
     public ChargingControlController(Context context, Handler handler) {
         super(context, handler);
@@ -98,19 +102,16 @@ public class ChargingControlController extends LineageHealthFeature {
                 R.integer.config_defaultChargingControlLimit);
 
         // Set up charging control providers
-        mCurrentProvider = new Toggle(mChargingControl, mContext);
-        if (!mCurrentProvider.isSupported()) {
-            mCurrentProvider = null;
-        }
-
-        if (mCurrentProvider == null) {
-            mCurrentProvider = new Deadline(mChargingControl, mContext);
-            if (!mCurrentProvider.isSupported()) {
-                mCurrentProvider = null;
-            }
-        }
-
-        if (mCurrentProvider == null) {
+        mDeadline = new Deadline(mChargingControl, mContext);
+        mLimit = new Limit(mChargingControl, mContext);
+        mToggle = new Toggle(mChargingControl, mContext);
+        if (mLimit.isSupported()) {
+            mCurrentProvider = mLimit;
+        } else if (mToggle.isSupported()) {
+            mCurrentProvider = mToggle;
+        } else if (mDeadline.isSupported()) {
+            mCurrentProvider = mDeadline;
+        } else {
             Log.wtf(TAG, "No charging control provider is supported");
         }
     }
@@ -138,6 +139,23 @@ public class ChargingControlController extends LineageHealthFeature {
 
     public boolean setMode(int mode) {
         if (mode < MODE_NONE || mode > MODE_LIMIT) {
+            return false;
+        }
+
+        mCurrentProvider = null;
+        if (mode == MODE_LIMIT) {
+            if (mLimit.isSupported()) {
+                mCurrentProvider = mLimit;
+            } else if (mToggle.isSupported()) {
+                mCurrentProvider = mToggle;
+            }
+        } else if (mode == MODE_AUTO || mode == MODE_MANUAL) {
+            if (mDeadline.isSupported()) {
+                mCurrentProvider = mDeadline;
+            }
+        }
+
+        if (mCurrentProvider == null) {
             return false;
         }
 
