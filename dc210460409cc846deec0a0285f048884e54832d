@@ -46,6 +46,30 @@
       },
       "revId": "dc210460409cc846deec0a0285f048884e54832d",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e5bcb76d_2568fec6",
+        "filename": "lineage/lib/main/java/org/lineageos/platform/internal/health/ChargingControlController.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 325,
+      "author": {
+        "id": 11883
+      },
+      "writtenOn": "2025-02-21T18:18:15Z",
+      "side": 1,
+      "message": "yes, I think it\u0027s the same race this change fixes?",
+      "parentUuid": "ea3c0118_5ca6249c",
+      "range": {
+        "startLine": 306,
+        "startChar": 0,
+        "endLine": 325,
+        "endChar": 0
+      },
+      "revId": "dc210460409cc846deec0a0285f048884e54832d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
