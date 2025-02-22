@@ -1,0 +1,84 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4e237eed_5c437cca",
+        "filename": "lineage/lib/main/java/org/lineageos/platform/internal/health/ChargingControlController.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2025-02-22T15:59:50Z",
+      "side": 1,
+      "message": "before lineageos* imports.",
+      "revId": "0b0b3765b433cbb311395cd6d26e4ebb223a1912",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d66a9f7b_fd4a1a3d",
+        "filename": "lineage/lib/main/java/org/lineageos/platform/internal/health/HealthInterfaceService.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2025-02-22T15:59:50Z",
+      "side": 1,
+      "message": "static imports at the top.",
+      "range": {
+        "startLine": 15,
+        "startChar": 0,
+        "endLine": 16,
+        "endChar": 64
+      },
+      "revId": "0b0b3765b433cbb311395cd6d26e4ebb223a1912",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a377498c_2d9a4f82",
+        "filename": "lineage/lib/main/java/org/lineageos/platform/internal/health/ccprovider/Deadline.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2025-02-22T15:59:50Z",
+      "side": 1,
+      "message": "before lineageos* imports.",
+      "revId": "0b0b3765b433cbb311395cd6d26e4ebb223a1912",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a6f88885_3dbe2c2d",
+        "filename": "lineage/lib/main/java/org/lineageos/platform/internal/health/ccprovider/Toggle.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2025-02-22T15:59:50Z",
+      "side": 1,
+      "message": "before lineageos* imports.",
+      "range": {
+        "startLine": 12,
+        "startChar": 0,
+        "endLine": 13,
+        "endChar": 74
+      },
+      "revId": "0b0b3765b433cbb311395cd6d26e4ebb223a1912",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
