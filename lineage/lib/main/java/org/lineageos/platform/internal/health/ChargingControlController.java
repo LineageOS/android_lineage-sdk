@@ -8,6 +8,8 @@ package org.lineageos.platform.internal.health;
 import static org.lineageos.platform.internal.health.Util.getTimeMillisFromSecondOfDay;
 import static org.lineageos.platform.internal.health.Util.msToString;
 
+import static android.os.BatteryManager.CHARGING_POLICY_DEFAULT;
+
 import static lineageos.health.HealthInterface.MODE_AUTO;
 import static lineageos.health.HealthInterface.MODE_LIMIT;
 import static lineageos.health.HealthInterface.MODE_MANUAL;
@@ -470,6 +472,14 @@ public class ChargingControlController extends LineageHealthFeature {
         pw.println("  mIsControlCancelledOnce: " + mIsControlCancelledOnce);
         pw.println();
         mCurrentProvider.dump(pw);
+    }
+
+    public int getStatus() {
+        if (mCurrentProvider == null) {
+            return CHARGING_POLICY_DEFAULT;
+        }
+
+        return mCurrentProvider.getStatus();
     }
 
     /* Battery Broadcast Receiver */

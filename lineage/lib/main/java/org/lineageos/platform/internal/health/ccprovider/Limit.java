@@ -5,6 +5,8 @@
 
 package org.lineageos.platform.internal.health.ccprovider;
 
+import static android.os.BatteryManager.CHARGING_POLICY_DEFAULT;
+
 import static lineageos.health.HealthInterface.MODE_AUTO;
 import static lineageos.health.HealthInterface.MODE_LIMIT;
 import static lineageos.health.HealthInterface.MODE_MANUAL;
@@ -48,6 +50,11 @@ public class Limit extends ChargingControlProvider {
 
     @Override
     protected void onReset() {
+    }
+
+    @Override
+    protected int onGetStatus() {
+        return CHARGING_POLICY_DEFAULT;
     }
 
     private void setChargingLimit(int targetPct) {
