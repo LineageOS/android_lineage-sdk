@@ -5,6 +5,8 @@
 
 package org.lineageos.platform.internal.health.ccprovider;
 
+import static android.os.BatteryManager.CHARGING_POLICY_DEFAULT;
+
 import android.content.Context;
 import android.os.RemoteException;
 import android.util.Log;
@@ -108,6 +110,21 @@ public abstract class ChargingControlProvider {
     }
 
     /**
+     * Get the current status of the provider
+     *
+     * @return The current status of the provider
+     * @see android.os.BatteryManager#CHARGING_POLICY_DEFAULT
+     * @see android.os.BatteryManager#CHARGING_POLICY_ADAPTIVE_LONGLIFE
+     */
+    public int getStatus() {
+        if (!isEnabled) {
+            return CHARGING_POLICY_DEFAULT;
+        }
+
+        return onGetStatus();
+    }
+
+    /**
      * Called when the provider is enabled
      */
     protected abstract void onEnabled();
@@ -121,6 +138,16 @@ public abstract class ChargingControlProvider {
      * Reset internal states
      */
     protected abstract void onReset();
+
+    /**
+     * Get the current status of the provider. If not viable, return
+     * ${@link android.os.BatteryManager#CHARGING_POLICY_DEFAULT}
+     *
+     * @return The current status of the provider
+     * @see android.os.BatteryManager#CHARGING_POLICY_DEFAULT
+     * @see android.os.BatteryManager#CHARGING_POLICY_ADAPTIVE_LONGLIFE
+     */
+    protected abstract int onGetStatus();
 
     /**
      * Dump internal states

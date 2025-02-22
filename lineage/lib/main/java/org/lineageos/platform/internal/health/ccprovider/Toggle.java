@@ -9,6 +9,9 @@ import static lineageos.health.HealthInterface.MODE_AUTO;
 import static lineageos.health.HealthInterface.MODE_LIMIT;
 import static lineageos.health.HealthInterface.MODE_MANUAL;
 
+import static android.os.BatteryManager.CHARGING_POLICY_DEFAULT;
+import static android.os.BatteryManager.CHARGING_POLICY_ADAPTIVE_LONGLIFE;
+
 import static org.lineageos.platform.internal.health.Util.msToHMSString;
 import static org.lineageos.platform.internal.health.Util.msToString;
 
@@ -231,6 +234,19 @@ public class Toggle extends ChargingControlProvider {
         } catch (Exception e) {
             Log.e(TAG, "Failed to set charging enabled", e);
         }
+    }
+
+    @Override
+    protected int onGetStatus() {
+        if (mIsLimitSet) {
+            return CHARGING_POLICY_ADAPTIVE_LONGLIFE;
+        }
+
+        if (mStage == chgCtrlStage.STAGE_WAITING || mStage == chgCtrlStage.STAGE_CONTINUE) {
+            return CHARGING_POLICY_ADAPTIVE_LONGLIFE;
+        }
+
+        return CHARGING_POLICY_DEFAULT;
     }
 
     @Override

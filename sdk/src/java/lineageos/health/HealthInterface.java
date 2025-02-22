@@ -283,4 +283,17 @@ public class HealthInterface {
             return false;
         }
     }
+
+    /**
+     * Returns current charging status, from the charging control HAL
+     * @see android.os.BatteryManager#CHARGING_POLICY_DEFAULT
+     * @see android.os.BatteryManager#CHARGING_POLICY_ADAPTIVE_LONGLIFE
+     */
+    public int getChargingControlStatus() {
+        try {
+            return checkService() ? sService.getChargingControlStatus() : 0;
+        } catch (RemoteException e) {
+            return 0;
+        }
+    }
 }
