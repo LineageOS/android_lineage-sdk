@@ -5,6 +5,9 @@
 
 package org.lineageos.platform.internal.health;
 
+import static android.os.BatteryManager.CHARGING_POLICY_ADAPTIVE_LONGLIFE;
+import static android.os.BatteryManager.CHARGING_POLICY_DEFAULT;
+
 import android.Manifest;
 import android.content.Context;
 import android.os.Handler;
@@ -148,6 +151,9 @@ public class HealthInterfaceService extends LineageSystemService {
         public boolean resetChargingControl() {
             return mCCC.reset();
         }
+
+        @Override
+        public int getChargingControlStatus() { return mCCC.getStatus(); }
 
         @Override
         public boolean allowFineGrainedSettings() {

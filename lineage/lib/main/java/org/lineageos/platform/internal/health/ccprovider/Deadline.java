@@ -5,8 +5,12 @@
 
 package org.lineageos.platform.internal.health.ccprovider;
 
+import static android.os.BatteryManager.CHARGING_POLICY_DEFAULT;
+
 import static lineageos.health.HealthInterface.MODE_AUTO;
 import static lineageos.health.HealthInterface.MODE_MANUAL;
+
+import static org.lineageos.platform.internal.health.Util.msToString;
 
 import android.content.Context;
 import android.util.Log;
@@ -65,6 +69,11 @@ public class Deadline extends ChargingControlProvider {
         } catch (Exception e) {
             Log.e(TAG, "Failed to reset charging deadline", e);
         }
+    }
+
+    @Override
+    protected int onGetStatus() {
+        return CHARGING_POLICY_DEFAULT;
     }
 
     @Override
