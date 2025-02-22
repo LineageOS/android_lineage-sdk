@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b3219da9_04672ffb",
+        "filename": "lineage/lib/main/java/org/lineageos/platform/internal/health/Util.java",
+        "patchSetId": 5
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 34887
+      },
+      "writtenOn": "2025-02-22T16:13:33Z",
+      "side": 1,
+      "message": "If you\u0027re fixing the javadoc in msToHMSString to be uppercase then I think it makes sense to get these two as well. AFAICT everything else in this directory is already uppercase.",
+      "revId": "f9c202bd2f71acfa22155638eaed8d26880a1ef4",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
