@@ -11,7 +11,6 @@ import static lineageos.health.HealthInterface.MODE_MANUAL;
 import static org.lineageos.platform.internal.health.Util.msToString;
 
 import android.content.Context;
-import android.os.RemoteException;
 import android.util.Log;
 
 import vendor.lineage.health.ChargingControlSupportedMode;
@@ -41,7 +40,7 @@ public class Deadline extends ChargingControlProvider {
         try {
             mChargingControl.setChargingDeadline(deadline);
             mSavedTargetTime = targetTime;
-        } catch (RemoteException e) {
+        } catch (Exception e) {
             Log.e(TAG, "Failed to set charging deadline", e);
             return false;
         } catch (IllegalStateException e) {
@@ -70,7 +69,7 @@ public class Deadline extends ChargingControlProvider {
 
         try {
             mChargingControl.setChargingDeadline(-1);
-        } catch (RemoteException e) {
+        } catch (Exception e) {
             Log.e(TAG, "Failed to reset charging deadline", e);
         }
     }

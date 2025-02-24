@@ -6,7 +6,6 @@
 package org.lineageos.platform.internal.health.ccprovider;
 
 import android.content.Context;
-import android.os.RemoteException;
 import android.util.Log;
 
 import vendor.lineage.health.IChargingControl;
@@ -159,7 +158,7 @@ public abstract class ChargingControlProvider {
             Log.i(TAG, "isSupported mode called, param: " + mode + ", supported: "
                     + mChargingControl.getSupportedMode());
             return (mChargingControl.getSupportedMode() & mode) == mode;
-        } catch (RemoteException e) {
+        } catch (Exception e) {
             Log.e(TAG, "Unable to get supported mode from HAL!", e);
             return false;
         }

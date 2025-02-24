@@ -22,7 +22,6 @@ import android.content.IntentFilter;
 import android.net.Uri;
 import android.os.BatteryManager;
 import android.os.Handler;
-import android.os.RemoteException;
 import android.os.ServiceManager;
 import android.text.format.DateUtils;
 import android.util.Log;
@@ -250,7 +249,7 @@ public class ChargingControlController extends LineageHealthFeature {
     public boolean isChargingModeSupported(int mode) {
         try {
             return isSupported() && (mChargingControl.getSupportedMode() & mode) != 0;
-        } catch (RemoteException e) {
+        } catch (Exception e) {
             throw new RuntimeException(e);
         }
     }
