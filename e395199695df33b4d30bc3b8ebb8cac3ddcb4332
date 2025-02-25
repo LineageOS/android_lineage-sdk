@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "bb12d0d4_2bc1a653",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 11883
+      },
+      "writtenOn": "2025-02-25T09:29:44Z",
+      "side": 1,
+      "message": "Good rule of thumb, if the thing can fail and you don\u0027t own it, be safe",
+      "revId": "e395199695df33b4d30bc3b8ebb8cac3ddcb4332",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
