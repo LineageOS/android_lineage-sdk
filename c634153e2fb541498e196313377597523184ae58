@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "45d988a9_27647fe5",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 11883
+      },
+      "writtenOn": "2025-03-02T08:54:49Z",
+      "side": 1,
+      "message": "this is probably enough, but the content callbacks can be called asynchronously so there could be cases where you check the null-ness in 2 threads and receive the wrong result.\nideally you should synchronized on this?",
+      "revId": "c634153e2fb541498e196313377597523184ae58",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
