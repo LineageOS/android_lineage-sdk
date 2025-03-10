@@ -33,6 +33,23 @@
       "message": "Um, it actually does hit the mark. I was just looking at the wrong A/B slot.",
       "revId": "bbaa0be775821d0d649cf6dafa3c3ec6bc36ed7d",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f577d095_a0b99c12",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 10067
+      },
+      "writtenOn": "2025-03-10T22:46:38Z",
+      "side": 1,
+      "message": "def_battery_light_full_charge_disabled should be removed instead and \u0027true\u0027 hardcoded in LineageParts.",
+      "revId": "bbaa0be775821d0d649cf6dafa3c3ec6bc36ed7d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
