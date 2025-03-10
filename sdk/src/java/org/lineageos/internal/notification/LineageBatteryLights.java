@@ -264,7 +264,7 @@ public final class LineageBatteryLights {
             // Battery light disabled if fully charged
             mLightFullChargeDisabled = LineageSettings.System.getIntForUser(resolver,
                     LineageSettings.System.BATTERY_LIGHT_FULL_CHARGE_DISABLED,
-                    1, UserHandle.USER_CURRENT) != 0;
+                    0, UserHandle.USER_CURRENT) != 0;
 
             // Low battery pulse
             mLedPulseEnabled = LineageSettings.System.getIntForUser(resolver,
