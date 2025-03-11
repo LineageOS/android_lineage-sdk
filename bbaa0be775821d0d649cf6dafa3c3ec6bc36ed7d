@@ -50,6 +50,23 @@
       "message": "def_battery_light_full_charge_disabled should be removed instead and \u0027true\u0027 hardcoded in LineageParts.",
       "revId": "bbaa0be775821d0d649cf6dafa3c3ec6bc36ed7d",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1b1f8eff_ec1a9e59",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 34879
+      },
+      "writtenOn": "2025-03-11T16:13:47Z",
+      "side": 1,
+      "message": "Whatever the preferred way is, I\u0027d love to give it a try in the next days, if that could be a help. Let\u0027s see if I got the idea.\n\nWe would hardcode the default in LineageParts, expose it in some getter function, that is then used also from LineageBatteryLights as a default in the call to getIntForUser. This way we avoid duplication of the default value. That would likely also apply to the two other def_ bools in BatteryLightSettings.\n\nI might be wrong, but it seems that in contrast to the bools the default light colors are fetched from com.android.internal.R.integer.config_notificationsBattery...ARGB both in BatteryLightSettings and in LineageBatteryLights – so no duplication. The default brightness is hardcoded twice: in BatteryBrightnessPreference and in LineageBatteryLights.\n\nWould it make sense to align the handling of the various defaults?",
+      "revId": "bbaa0be775821d0d649cf6dafa3c3ec6bc36ed7d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
