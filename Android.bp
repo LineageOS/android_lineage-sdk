@@ -55,12 +55,18 @@ lineage_sdk_src = "sdk/src/java/lineageos"
 lineage_sdk_internal_src = "sdk/src/java/org/lineageos/internal"
 library_src = "lineage/lib/main/java"
 
-lineage_sdk_LOCAL_STATIC_JAVA_LIBRARIES = [
+lineage_sdk_aidl_hals = [
     "vendor.lineage.health-V2-java",
+    "vendor.lineage.touch-V1-java",
+]
+
+lineage_sdk_hidl_hals = [
     "vendor.lineage.livedisplay-V2.0-java",
     "vendor.lineage.livedisplay-V2.1-java",
     "vendor.lineage.touch-V1.0-java",
 ]
+
+lineage_sdk_LOCAL_STATIC_JAVA_LIBRARIES = lineage_sdk_aidl_hals + lineage_sdk_hidl_hals
 
 java_library {
     name: "org.lineageos.platform",
