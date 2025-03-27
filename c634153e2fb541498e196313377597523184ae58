@@ -16,6 +16,24 @@
       "message": "this is probably enough, but the content callbacks can be called asynchronously so there could be cases where you check the null-ness in 2 threads and receive the wrong result.\nideally you should synchronized on this?",
       "revId": "c634153e2fb541498e196313377597523184ae58",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "bba79f52_cabde14d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 4550
+      },
+      "writtenOn": "2025-03-27T13:50:23Z",
+      "side": 1,
+      "message": "Will be improved in a future commit so that we don\u0027t have to block the other charging limit commits for even longer.",
+      "parentUuid": "45d988a9_27647fe5",
+      "revId": "c634153e2fb541498e196313377597523184ae58",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
