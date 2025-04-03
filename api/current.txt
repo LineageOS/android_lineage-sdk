@@ -1,0 +1,776 @@
+// Signature format: 2.0
+package lineageos.app {
+
+  public class LineageGlobalActions {
+    method public static lineageos.app.LineageGlobalActions getInstance(android.content.Context);
+    method public java.util.List<java.lang.String> getLocalUserConfig();
+    method public String[] getUserActionsArray();
+    method public void updateUserConfig(boolean, String);
+    method public boolean userConfigContains(String);
+  }
+
+  public final class Profile implements java.lang.Comparable android.os.Parcelable {
+    ctor public Profile(String);
+    method public void addSecondaryUuid(java.util.UUID);
+    method public int compareTo(Object);
+    method public int describeContents();
+    method public lineageos.profiles.AirplaneModeSettings getAirplaneMode();
+    method public lineageos.profiles.BrightnessSettings getBrightness();
+    method public lineageos.profiles.ConnectionSettings getConnectionSettingWithSubId(int);
+    method public java.util.Collection<lineageos.profiles.ConnectionSettings> getConnectionSettings();
+    method public int getDozeMode();
+    method public String getName();
+    method public int getNotificationLightMode();
+    method public int getProfileType();
+    method public lineageos.profiles.RingModeSettings getRingMode();
+    method public lineageos.profiles.LockSettings getScreenLockMode();
+    method public java.util.UUID[] getSecondaryUuids();
+    method public lineageos.profiles.ConnectionSettings getSettingsForConnection(int);
+    method public lineageos.profiles.StreamSettings getSettingsForStream(int);
+    method public java.util.Collection<lineageos.profiles.StreamSettings> getStreamSettings();
+    method public int getTriggerState(int, String);
+    method public java.util.ArrayList<lineageos.app.Profile.ProfileTrigger> getTriggersFromType(int);
+    method public java.util.UUID getUuid();
+    method public boolean isConditionalType();
+    method public void setAirplaneMode(lineageos.profiles.AirplaneModeSettings);
+    method public void setBrightness(lineageos.profiles.BrightnessSettings);
+    method public void setConnectionSettings(lineageos.profiles.ConnectionSettings);
+    method public void setDozeMode(int);
+    method public void setName(String);
+    method public void setNotificationLightMode(int);
+    method public void setProfileType(int);
+    method public void setRingMode(lineageos.profiles.RingModeSettings);
+    method public void setScreenLockMode(lineageos.profiles.LockSettings);
+    method public void setSecondaryUuids(java.util.List<java.util.UUID>);
+    method public void setStreamSettings(lineageos.profiles.StreamSettings);
+    method public void setTrigger(lineageos.app.Profile.ProfileTrigger);
+    method public void writeToParcel(android.os.Parcel, int);
+  }
+
+  public static class Profile.DozeMode {
+    ctor public Profile.DozeMode();
+    field public static final int DEFAULT = 0; // 0x0
+    field public static final int DISABLE = 2; // 0x2
+    field public static final int ENABLE = 1; // 0x1
+  }
+
+  public static class Profile.LockMode {
+    ctor public Profile.LockMode();
+    field public static final int DEFAULT = 0; // 0x0
+    field public static final int DISABLE = 2; // 0x2
+    field public static final int INSECURE = 1; // 0x1
+  }
+
+  public static class Profile.NotificationLightMode {
+    ctor public Profile.NotificationLightMode();
+    field public static final int DEFAULT = 0; // 0x0
+    field public static final int DISABLE = 2; // 0x2
+    field public static final int ENABLE = 1; // 0x1
+  }
+
+  public static class Profile.ProfileTrigger implements android.os.Parcelable {
+    ctor public Profile.ProfileTrigger(int, String, int, String);
+    method public int describeContents();
+    method public String getId();
+    method public String getName();
+    method public int getState();
+    method public int getType();
+    method public void writeToParcel(android.os.Parcel, int);
+  }
+
+  public static class Profile.TriggerState {
+    ctor public Profile.TriggerState();
+    field public static final int DISABLED = 2; // 0x2
+    field public static final int ON_A2DP_CONNECT = 3; // 0x3
+    field public static final int ON_A2DP_DISCONNECT = 4; // 0x4
+    field public static final int ON_CONNECT = 0; // 0x0
+    field public static final int ON_DISCONNECT = 1; // 0x1
+  }
+
+  public static class Profile.TriggerType {
+    ctor public Profile.TriggerType();
+    field public static final int BLUETOOTH = 1; // 0x1
+    field public static final int WIFI = 0; // 0x0
+  }
+
+  public static class Profile.Type {
+    ctor public Profile.Type();
+    field public static final int CONDITIONAL = 1; // 0x1
+    field public static final int TOGGLE = 0; // 0x0
+  }
+
+  public class ProfileManager {
+    method public void addProfile(lineageos.app.Profile);
+    method public lineageos.app.Profile getActiveProfile();
+    method public static lineageos.app.ProfileManager getInstance(android.content.Context);
+    method public lineageos.app.Profile getProfile(java.util.UUID);
+    method public String[] getProfileNames();
+    method public lineageos.app.Profile[] getProfiles();
+    method public boolean isProfilesEnabled();
+    method public boolean profileExists(String);
+    method public boolean profileExists(java.util.UUID);
+    method public void removeProfile(lineageos.app.Profile);
+    method public void resetAll();
+    method public void setActiveProfile(java.util.UUID);
+    method public void updateProfile(lineageos.app.Profile);
+    field public static final String ACTION_PROFILE_PICKER = "lineageos.platform.intent.action.PROFILE_PICKER";
+    field public static final String EXTRA_LAST_PROFILE_NAME = "lastName";
+    field public static final String EXTRA_LAST_PROFILE_UUID = "lastUuid";
+    field public static final String EXTRA_PROFILES_STATE = "profile_state";
+    field public static final String EXTRA_PROFILE_DIALOG_THEME = "lineageos.platform.intent.extra.profile.DIALOG_THEME";
+    field public static final String EXTRA_PROFILE_EXISTING_UUID = "lineageos.platform.extra.profile.EXISTING_UUID";
+    field public static final String EXTRA_PROFILE_NAME = "name";
+    field public static final String EXTRA_PROFILE_PICKED_UUID = "lineageos.platform.intent.extra.profile.PICKED_UUID";
+    field public static final String EXTRA_PROFILE_SHOW_NONE = "lineageos.platform.intent.extra.profile.SHOW_NONE";
+    field public static final String EXTRA_PROFILE_TITLE = "lineageos.platform.intent.extra.profile.TITLE";
+    field public static final String EXTRA_PROFILE_UUID = "uuid";
+    field public static final String INTENT_ACTION_PROFILE_SELECTED = "lineageos.platform.intent.action.PROFILE_SELECTED";
+    field public static final String INTENT_ACTION_PROFILE_UPDATED = "lineageos.platform.intent.action.PROFILE_UPDATED";
+    field public static final java.util.UUID NO_PROFILE;
+    field public static final String PROFILES_STATE_CHANGED_ACTION = "lineageos.platform.app.profiles.PROFILES_STATE_CHANGED";
+    field public static final int PROFILES_STATE_DISABLED = 0; // 0x0
+    field public static final int PROFILES_STATE_ENABLED = 1; // 0x1
+  }
+
+}
+
+package lineageos.content {
+
+  public class Intent {
+    ctor public Intent();
+    field public static final String ACTION_INITIALIZE_LINEAGE_HARDWARE = "lineageos.intent.action.INITIALIZE_LINEAGE_HARDWARE";
+    field public static final String ACTION_INITIALIZE_LIVEDISPLAY = "lineageos.intent.action.INITIALIZE_LIVEDISPLAY";
+    field public static final String ACTION_LID_STATE_CHANGED = "lineageos.intent.action.LID_STATE_CHANGED";
+    field public static final String ACTION_RECENTS_LONG_PRESS = "lineageos.intent.action.RECENTS_LONG_PRESS";
+    field public static final String ACTION_SCREEN_CAMERA_GESTURE = "lineageos.intent.action.SCREEN_CAMERA_GESTURE";
+    field public static final String EXTRA_LID_STATE = "lineageos.intent.extra.LID_STATE";
+    field public static final String EXTRA_RECENTS_LONG_PRESS_RELEASE = "lineageos.intent.extra.RECENTS_LONG_PRESS_RELEASE";
+  }
+
+}
+
+package lineageos.hardware {
+
+  public class DisplayMode implements android.os.Parcelable {
+    ctor public DisplayMode(int, String);
+    method public int describeContents();
+    method public void writeToParcel(android.os.Parcel, int);
+    field public final int id;
+    field public final String name;
+  }
+
+  public class HSIC implements android.os.Parcelable {
+    ctor public HSIC(float, float, float, float, float);
+    method public int describeContents();
+    method public String flatten();
+    method public static lineageos.hardware.HSIC fromFloatArray(float[]);
+    method public float getContrast();
+    method public float getHue();
+    method public float getIntensity();
+    method public float getSaturation();
+    method public float getSaturationThreshold();
+    method public float[] toFloatArray();
+    method public int[] toRGB();
+    method public static lineageos.hardware.HSIC unflattenFrom(String) throws java.lang.NumberFormatException;
+    method public void writeToParcel(android.os.Parcel, int);
+  }
+
+  public final class LineageHardwareManager {
+    method public boolean get(int);
+    method public int getColorBalance();
+    method public android.util.Range<java.lang.Integer> getColorBalanceRange();
+    method public lineageos.hardware.DisplayMode getCurrentDisplayMode();
+    method public lineageos.hardware.DisplayMode getDefaultDisplayMode();
+    method public lineageos.hardware.HSIC getDefaultPictureAdjustment();
+    method public int[] getDisplayColorCalibration();
+    method public int getDisplayColorCalibrationMax();
+    method public int getDisplayColorCalibrationMin();
+    method public lineageos.hardware.DisplayMode[] getDisplayModes();
+    method public static lineageos.hardware.LineageHardwareManager getInstance(android.content.Context);
+    method public lineageos.hardware.HSIC getPictureAdjustment();
+    method public java.util.List<android.util.Range<java.lang.Float>> getPictureAdjustmentRanges();
+    method public lineageos.hardware.TouchscreenGesture[] getTouchscreenGestures();
+    method public boolean isSupported(int);
+    method public boolean set(int, boolean);
+    method public boolean setColorBalance(int);
+    method public boolean setDisplayColorCalibration(int[]);
+    method public boolean setDisplayMode(lineageos.hardware.DisplayMode, boolean);
+    method public boolean setPictureAdjustment(lineageos.hardware.HSIC);
+    method public boolean setTouchscreenGestureEnabled(lineageos.hardware.TouchscreenGesture, boolean);
+    field @com.android.internal.annotations.VisibleForTesting public static final int FEATURE_ADAPTIVE_BACKLIGHT = 1; // 0x1
+    field @com.android.internal.annotations.VisibleForTesting public static final int FEATURE_ANTI_FLICKER = 2097152; // 0x200000
+    field @com.android.internal.annotations.VisibleForTesting public static final int FEATURE_AUTO_CONTRAST = 4096; // 0x1000
+    field @com.android.internal.annotations.VisibleForTesting public static final int FEATURE_COLOR_BALANCE = 131072; // 0x20000
+    field @com.android.internal.annotations.VisibleForTesting public static final int FEATURE_COLOR_ENHANCEMENT = 2; // 0x2
+    field @com.android.internal.annotations.VisibleForTesting public static final int FEATURE_DISPLAY_COLOR_CALIBRATION = 4; // 0x4
+    field @com.android.internal.annotations.VisibleForTesting public static final int FEATURE_DISPLAY_MODES = 8192; // 0x2000
+    field @com.android.internal.annotations.VisibleForTesting public static final int FEATURE_HIGH_TOUCH_POLLING_RATE = 8; // 0x8
+    field @com.android.internal.annotations.VisibleForTesting public static final int FEATURE_HIGH_TOUCH_SENSITIVITY = 16; // 0x10
+    field @com.android.internal.annotations.VisibleForTesting public static final int FEATURE_KEY_DISABLE = 32; // 0x20
+    field @com.android.internal.annotations.VisibleForTesting public static final int FEATURE_KEY_SWAP = 64; // 0x40
+    field @com.android.internal.annotations.VisibleForTesting public static final int FEATURE_PICTURE_ADJUSTMENT = 262144; // 0x40000
+    field @com.android.internal.annotations.VisibleForTesting public static final int FEATURE_READING_ENHANCEMENT = 16384; // 0x4000
+    field @com.android.internal.annotations.VisibleForTesting public static final int FEATURE_SUNLIGHT_ENHANCEMENT = 256; // 0x100
+    field @com.android.internal.annotations.VisibleForTesting public static final int FEATURE_TOUCHSCREEN_GESTURES = 524288; // 0x80000
+    field @com.android.internal.annotations.VisibleForTesting public static final int FEATURE_TOUCH_HOVERING = 2048; // 0x800
+    field @com.android.internal.annotations.VisibleForTesting public static final int FEATURE_VIBRATOR = 1024; // 0x400
+  }
+
+  public class LiveDisplayConfig implements android.os.Parcelable {
+    ctor public LiveDisplayConfig(java.util.BitSet, int, int, int, boolean, boolean, boolean, boolean, android.util.Range<java.lang.Integer>, android.util.Range<java.lang.Integer>, android.util.Range<java.lang.Float>, android.util.Range<java.lang.Float>, android.util.Range<java.lang.Float>, android.util.Range<java.lang.Float>, android.util.Range<java.lang.Float>);
+    method public int describeContents();
+    method public android.util.Range<java.lang.Integer> getColorBalanceRange();
+    method public android.util.Range<java.lang.Integer> getColorTemperatureRange();
+    method public android.util.Range<java.lang.Float> getContrastRange();
+    method public boolean getDefaultAutoContrast();
+    method public boolean getDefaultAutoOutdoorMode();
+    method public boolean getDefaultCABC();
+    method public boolean getDefaultColorEnhancement();
+    method public int getDefaultDayTemperature();
+    method public int getDefaultMode();
+    method public int getDefaultNightTemperature();
+    method public android.util.Range<java.lang.Float> getHueRange();
+    method public android.util.Range<java.lang.Float> getIntensityRange();
+    method public java.util.List<android.util.Range<java.lang.Float>> getPictureAdjustmentRanges();
+    method public android.util.Range<java.lang.Float> getSaturationRange();
+    method public android.util.Range<java.lang.Float> getSaturationThresholdRange();
+    method public boolean hasFeature(int);
+    method public boolean hasModeSupport();
+    method public boolean isAvailable();
+    method public void writeToParcel(android.os.Parcel, int);
+  }
+
+  public class LiveDisplayManager {
+    method public float[] getColorAdjustment();
+    method public lineageos.hardware.LiveDisplayConfig getConfig();
+    method public int getDayColorTemperature();
+    method public lineageos.hardware.HSIC getDefaultPictureAdjustment();
+    method public static lineageos.hardware.LiveDisplayManager getInstance(android.content.Context);
+    method public int getMode();
+    method public int getNightColorTemperature();
+    method public lineageos.hardware.HSIC getPictureAdjustment();
+    method public boolean isAntiFlickerEnabled();
+    method public boolean isAutoContrastEnabled();
+    method public boolean isAutomaticOutdoorModeEnabled();
+    method public boolean isCABCEnabled();
+    method public boolean isColorEnhancementEnabled();
+    method public boolean isNightModeEnabled();
+    method public boolean setAntiFlickerEnabled(boolean);
+    method public boolean setAutoContrastEnabled(boolean);
+    method public boolean setAutomaticOutdoorModeEnabled(boolean);
+    method public boolean setCABCEnabled(boolean);
+    method public boolean setColorAdjustment(float[]);
+    method public boolean setColorEnhancementEnabled(boolean);
+    method public boolean setDayColorTemperature(int);
+    method public boolean setMode(int);
+    method public boolean setNightColorTemperature(int);
+    method public boolean setPictureAdjustment(lineageos.hardware.HSIC);
+    field public static final int ADJUSTMENT_CONTRAST = 3; // 0x3
+    field public static final int ADJUSTMENT_HUE = 0; // 0x0
+    field public static final int ADJUSTMENT_INTENSITY = 2; // 0x2
+    field public static final int ADJUSTMENT_SATURATION = 1; // 0x1
+    field public static final int FEATURE_ANTI_FLICKER = 19; // 0x13
+    field public static final int FEATURE_AUTO_CONTRAST = 11; // 0xb
+    field public static final int FEATURE_CABC = 10; // 0xa
+    field public static final int FEATURE_COLOR_ADJUSTMENT = 13; // 0xd
+    field public static final int FEATURE_COLOR_BALANCE = 16; // 0x10
+    field public static final int FEATURE_COLOR_ENHANCEMENT = 12; // 0xc
+    field public static final int FEATURE_DISPLAY_MODES = 15; // 0xf
+    field public static final int FEATURE_MANAGED_OUTDOOR_MODE = 14; // 0xe
+    field public static final int FEATURE_PICTURE_ADJUSTMENT = 17; // 0x11
+    field public static final int FEATURE_READING_ENHANCEMENT = 18; // 0x12
+    field public static final int MODE_AUTO = 2; // 0x2
+    field public static final int MODE_DAY = 4; // 0x4
+    field public static final int MODE_NIGHT = 1; // 0x1
+    field public static final int MODE_OFF = 0; // 0x0
+    field public static final int MODE_OUTDOOR = 3; // 0x3
+  }
+
+  public class TouchscreenGesture implements android.os.Parcelable {
+    ctor public TouchscreenGesture(int, String, int);
+    method public int describeContents();
+    method public void writeToParcel(android.os.Parcel, int);
+    field public final int id;
+    field public final int keycode;
+    field public final String name;
+  }
+
+}
+
+package lineageos.health {
+
+  public class HealthInterface {
+    method public boolean allowFineGrainedSettings();
+    method public boolean getEnabled();
+    method public int getFastChargeMode();
+    method public static lineageos.health.HealthInterface getInstance(android.content.Context);
+    method public int getLimit();
+    method public int getMode();
+    method public int getStartTime();
+    method public int[] getSupportedFastChargeModes();
+    method public int getTargetTime();
+    method public boolean isChargingControlSupported();
+    method public static boolean isChargingControlSupported(android.content.Context);
+    method public boolean isFastChargeSupported();
+    method public boolean reset();
+    method public boolean setEnabled(boolean);
+    method public boolean setFastChargeMode(int);
+    method public boolean setLimit(int);
+    method public boolean setMode(int);
+    method public boolean setStartTime(int);
+    method public boolean setTargetTime(int);
+    field public static final int MODE_AUTO = 1; // 0x1
+    field public static final int MODE_LIMIT = 3; // 0x3
+    field public static final int MODE_MANUAL = 2; // 0x2
+    field public static final int MODE_NONE = 0; // 0x0
+  }
+
+}
+
+package lineageos.platform {
+
+  public final class Manifest {
+    ctor public Manifest();
+  }
+
+  public static final class Manifest.permission {
+    ctor public Manifest.permission();
+    field public static final String HARDWARE_ABSTRACTION_ACCESS = "lineageos.permission.HARDWARE_ABSTRACTION_ACCESS";
+    field public static final String MANAGE_LIVEDISPLAY = "lineageos.permission.MANAGE_LIVEDISPLAY";
+    field public static final String MANAGE_REMOTE_PREFERENCES = "lineageos.permission.MANAGE_REMOTE_PREFERENCES";
+    field public static final String MODIFY_PROFILES = "lineageos.permission.MODIFY_PROFILES";
+    field public static final String TRUST_INTERFACE = "lineageos.permission.TRUST_INTERFACE";
+    field public static final String WRITE_SECURE_SETTINGS = "lineageos.permission.WRITE_SECURE_SETTINGS";
+    field public static final String WRITE_SETTINGS = "lineageos.permission.WRITE_SETTINGS";
+  }
+
+  public final class R {
+    ctor public R();
+  }
+
+  public static final class R.anim {
+    ctor public R.anim();
+  }
+
+  public static final class R.array {
+    ctor public R.array();
+  }
+
+  public static final class R.bool {
+    ctor public R.bool();
+  }
+
+  public static final class R.color {
+    ctor public R.color();
+  }
+
+  public static final class R.dimen {
+    ctor public R.dimen();
+  }
+
+  public static final class R.drawable {
+    ctor public R.drawable();
+  }
+
+  public static final class R.integer {
+    ctor public R.integer();
+  }
+
+  public static final class R.mipmap {
+    ctor public R.mipmap();
+  }
+
+  public static final class R.string {
+    ctor public R.string();
+  }
+
+  public static final class R.xml {
+    ctor public R.xml();
+  }
+
+}
+
+package lineageos.profiles {
+
+  public final class AirplaneModeSettings implements android.os.Parcelable {
+    ctor public AirplaneModeSettings(android.os.Parcel);
+    ctor public AirplaneModeSettings();
+    ctor public AirplaneModeSettings(int, boolean);
+    method public int describeContents();
+    method public int getValue();
+    method public boolean isOverride();
+    method public void setOverride(boolean);
+    method public void setValue(int);
+    method public void writeToParcel(android.os.Parcel, int);
+  }
+
+  public static class AirplaneModeSettings.BooleanState {
+    ctor public AirplaneModeSettings.BooleanState();
+    field public static final int STATE_DISABLED = 0; // 0x0
+    field public static final int STATE_ENABLED = 1; // 0x1
+  }
+
+  public final class BrightnessSettings implements android.os.Parcelable {
+    ctor public BrightnessSettings(android.os.Parcel);
+    ctor public BrightnessSettings();
+    ctor public BrightnessSettings(int, boolean);
+    method public int describeContents();
+    method public int getValue();
+    method public boolean isOverride();
+    method public void setOverride(boolean);
+    method public void setValue(int);
+    method public void writeToParcel(android.os.Parcel, int);
+  }
+
+  public final class ConnectionSettings implements android.os.Parcelable {
+    ctor public ConnectionSettings(android.os.Parcel);
+    ctor public ConnectionSettings(int);
+    ctor public ConnectionSettings(int, int, boolean);
+    method public int describeContents();
+    method public int getConnectionId();
+    method public int getSubId();
+    method public int getValue();
+    method public boolean isOverride();
+    method public void setOverride(boolean);
+    method public void setSubId(int);
+    method public void setValue(int);
+    method public void writeToParcel(android.os.Parcel, int);
+    field public static final int PROFILE_CONNECTION_2G3G4G = 9; // 0x9
+    field public static final int PROFILE_CONNECTION_BLUETOOTH = 7; // 0x7
+    field public static final int PROFILE_CONNECTION_LOCATION = 6; // 0x6
+    field public static final int PROFILE_CONNECTION_MOBILEDATA = 0; // 0x0
+    field public static final int PROFILE_CONNECTION_NFC = 8; // 0x8
+    field public static final int PROFILE_CONNECTION_SYNC = 5; // 0x5
+    field public static final int PROFILE_CONNECTION_WIFI = 1; // 0x1
+    field public static final int PROFILE_CONNECTION_WIFIAP = 2; // 0x2
+  }
+
+  public static class ConnectionSettings.BooleanState {
+    ctor public ConnectionSettings.BooleanState();
+    field public static final int STATE_DISABLED = 0; // 0x0
+    field public static final int STATE_ENABLED = 1; // 0x1
+  }
+
+  public final class LockSettings implements android.os.Parcelable {
+    ctor public LockSettings(android.os.Parcel);
+    ctor public LockSettings();
+    ctor public LockSettings(int);
+    method public int describeContents();
+    method public int getValue();
+    method public void setValue(int);
+    method public void writeToParcel(android.os.Parcel, int);
+  }
+
+  public final class RingModeSettings implements android.os.Parcelable {
+    ctor public RingModeSettings(android.os.Parcel);
+    ctor public RingModeSettings();
+    ctor public RingModeSettings(String, boolean);
+    method public int describeContents();
+    method public String getValue();
+    method public boolean isOverride();
+    method public void setOverride(boolean);
+    method public void setValue(String);
+    method public void writeToParcel(android.os.Parcel, int);
+    field public static final String RING_MODE_MUTE = "mute";
+    field public static final String RING_MODE_NORMAL = "normal";
+    field public static final String RING_MODE_VIBRATE = "vibrate";
+  }
+
+  public final class StreamSettings implements android.os.Parcelable {
+    ctor public StreamSettings(android.os.Parcel);
+    ctor public StreamSettings(int);
+    ctor public StreamSettings(int, int, boolean);
+    method public int describeContents();
+    method public int getStreamId();
+    method public int getValue();
+    method public boolean isOverride();
+    method public void setOverride(boolean);
+    method public void setValue(int);
+    method public void writeToParcel(android.os.Parcel, int);
+  }
+
+}
+
+package lineageos.providers {
+
+  public final class LineageSettings {
+    ctor public LineageSettings();
+    field public static final String ACTION_DATA_USAGE = "lineageos.settings.ACTION_DATA_USAGE";
+    field public static final String ACTION_LIVEDISPLAY_SETTINGS = "lineageos.settings.LIVEDISPLAY_SETTINGS";
+    field public static final String ACTION_TRUST_INTERFACE = "lineageos.settings.TRUST_INTERFACE";
+    field public static final String AUTHORITY = "lineagesettings";
+  }
+
+  public static final class LineageSettings.Global extends android.provider.Settings.NameValueTable {
+    ctor public LineageSettings.Global();
+    method public static float getFloat(android.content.ContentResolver, String, float);
+    method public static float getFloat(android.content.ContentResolver, String) throws lineageos.providers.LineageSettings.LineageSettingNotFoundException;
+    method public static int getInt(android.content.ContentResolver, String, int);
+    method public static int getInt(android.content.ContentResolver, String) throws lineageos.providers.LineageSettings.LineageSettingNotFoundException;
+    method public static long getLong(android.content.ContentResolver, String, long);
+    method public static long getLong(android.content.ContentResolver, String) throws lineageos.providers.LineageSettings.LineageSettingNotFoundException;
+    method public static String getString(android.content.ContentResolver, String);
+    method public static String getString(android.content.ContentResolver, String, String);
+    method public static android.net.Uri getUriFor(String);
+    method public static boolean putFloat(android.content.ContentResolver, String, float);
+    method public static boolean putInt(android.content.ContentResolver, String, int);
+    method public static boolean putLong(android.content.ContentResolver, String, long);
+    method public static boolean putString(android.content.ContentResolver, String, String);
+    field public static final android.net.Uri CONTENT_URI;
+    field public static final String SYS_PROP_LINEAGE_SETTING_VERSION = "sys.lineage_settings_global_version";
+  }
+
+  public static class LineageSettings.LineageSettingNotFoundException extends android.util.AndroidException {
+    ctor public LineageSettings.LineageSettingNotFoundException(String);
+  }
+
+  public static final class LineageSettings.Secure extends android.provider.Settings.NameValueTable {
+    ctor public LineageSettings.Secure();
+    method public static float getFloat(android.content.ContentResolver, String, float);
+    method public static float getFloat(android.content.ContentResolver, String) throws lineageos.providers.LineageSettings.LineageSettingNotFoundException;
+    method public static int getInt(android.content.ContentResolver, String, int);
+    method public static int getInt(android.content.ContentResolver, String) throws lineageos.providers.LineageSettings.LineageSettingNotFoundException;
+    method public static long getLong(android.content.ContentResolver, String, long);
+    method public static long getLong(android.content.ContentResolver, String) throws lineageos.providers.LineageSettings.LineageSettingNotFoundException;
+    method public static String getString(android.content.ContentResolver, String);
+    method public static String getString(android.content.ContentResolver, String, String);
+    method public static android.net.Uri getUriFor(String);
+    method public static boolean putFloat(android.content.ContentResolver, String, float);
+    method public static boolean putInt(android.content.ContentResolver, String, int);
+    method public static boolean putLong(android.content.ContentResolver, String, long);
+    method public static boolean putString(android.content.ContentResolver, String, String);
+    field public static final android.net.Uri CONTENT_URI;
+    field public static final String SYS_PROP_LINEAGE_SETTING_VERSION = "sys.lineage_settings_secure_version";
+    field public static final String TRUST_WARNINGS = "trust_warnings";
+    field public static final String VOLUME_PANEL_ON_LEFT = "volume_panel_on_left";
+  }
+
+  public static final class LineageSettings.System extends android.provider.Settings.NameValueTable {
+    ctor public LineageSettings.System();
+    method public static float getFloat(android.content.ContentResolver, String, float);
+    method public static float getFloat(android.content.ContentResolver, String) throws lineageos.providers.LineageSettings.LineageSettingNotFoundException;
+    method public static int getInt(android.content.ContentResolver, String, int);
+    method public static int getInt(android.content.ContentResolver, String) throws lineageos.providers.LineageSettings.LineageSettingNotFoundException;
+    method public static long getLong(android.content.ContentResolver, String, long);
+    method public static long getLong(android.content.ContentResolver, String) throws lineageos.providers.LineageSettings.LineageSettingNotFoundException;
+    method public static String getString(android.content.ContentResolver, String);
+    method public static String getString(android.content.ContentResolver, String, String);
+    method public static android.net.Uri getUriFor(String);
+    method public static boolean putFloat(android.content.ContentResolver, String, float);
+    method public static boolean putInt(android.content.ContentResolver, String, int);
+    method public static boolean putLong(android.content.ContentResolver, String, long);
+    method public static boolean putString(android.content.ContentResolver, String, String);
+    field public static final String APP_SWITCH_WAKE_SCREEN = "app_switch_wake_screen";
+    field public static final String ASSIST_WAKE_SCREEN = "assist_wake_screen";
+    field public static final String AUTO_BRIGHTNESS_ONE_SHOT = "auto_brightness_one_shot";
+    field public static final String BACK_WAKE_SCREEN = "back_wake_screen";
+    field public static final String BATTERY_LIGHT_BRIGHTNESS_LEVEL = "battery_light_brightness_level";
+    field public static final String BATTERY_LIGHT_BRIGHTNESS_LEVEL_ZEN = "battery_light_brightness_level_zen";
+    field public static final String BATTERY_LIGHT_ENABLED = "battery_light_enabled";
+    field public static final String BATTERY_LIGHT_FULL_CHARGE_DISABLED = "battery_light_full_charge_disabled";
+    field public static final String BATTERY_LIGHT_FULL_COLOR = "battery_light_full_color";
+    field public static final String BATTERY_LIGHT_LOW_COLOR = "battery_light_low_color";
+    field public static final String BATTERY_LIGHT_MEDIUM_COLOR = "battery_light_medium_color";
+    field public static final String BATTERY_LIGHT_PULSE = "battery_light_pulse";
+    field public static final String BLUETOOTH_ACCEPT_ALL_FILES = "bluetooth_accept_all_files";
+    field public static final String BUTTON_BACKLIGHT_ONLY_WHEN_PRESSED = "button_backlight_only_when_pressed";
+    field public static final String CALL_RECORDING_FORMAT = "call_recording_format";
+    field public static final String CAMERA_LAUNCH = "camera_launch";
+    field public static final String CAMERA_SLEEP_ON_RELEASE = "camera_sleep_on_release";
+    field public static final String CAMERA_WAKE_SCREEN = "camera_wake_screen";
+    field public static final String CHARGING_CONTROL_ENABLED = "charging_control_enabled";
+    field public static final String CHARGING_CONTROL_LIMIT = "charging_control_charging_limit";
+    field public static final String CHARGING_CONTROL_MODE = "charging_control_mode";
+    field public static final String CHARGING_CONTROL_START_TIME = "charging_control_start_time";
+    field public static final String CHARGING_CONTROL_TARGET_TIME = "charging_control_target_time";
+    field public static final String CLICK_PARTIAL_SCREENSHOT = "click_partial_screenshot";
+    field public static final android.net.Uri CONTENT_URI;
+    field public static final String DISPLAY_ANTI_FLICKER = "display_anti_flicker";
+    field public static final String DISPLAY_AUTO_CONTRAST = "display_auto_contrast";
+    field public static final String DISPLAY_AUTO_OUTDOOR_MODE = "display_auto_outdoor_mode";
+    field public static final String DISPLAY_CABC = "display_low_power";
+    field public static final String DISPLAY_COLOR_ADJUSTMENT = "display_color_adjustment";
+    field public static final String DISPLAY_COLOR_ENHANCE = "display_color_enhance";
+    field public static final String DISPLAY_PICTURE_ADJUSTMENT = "display_picture_adjustment";
+    field public static final String DISPLAY_READING_MODE = "display_reading_mode";
+    field public static final String DISPLAY_TEMPERATURE_DAY = "display_temperature_day";
+    field public static final String DISPLAY_TEMPERATURE_MODE = "display_temperature_mode";
+    field public static final String DISPLAY_TEMPERATURE_NIGHT = "display_temperature_night";
+    field public static final String DOUBLE_TAP_SLEEP_GESTURE = "double_tap_sleep_gesture";
+    field public static final String ENABLE_TASKBAR = "enable_taskbar";
+    field public static final String FAST_CHARGE_MODE = "fast_charge_mode";
+    field public static final String HEADSET_CONNECT_PLAYER = "headset_connect_player";
+    field public static final String HIGH_TOUCH_POLLING_RATE_ENABLE = "high_touch_polling_rate_enable";
+    field public static final String HIGH_TOUCH_SENSITIVITY_ENABLE = "high_touch_sensitivity_enable";
+    field public static final String HOME_WAKE_SCREEN = "home_wake_screen";
+    field public static final String INCREASING_RING = "increasing_ring";
+    field public static final String INCREASING_RING_RAMP_UP_TIME = "increasing_ring_ramp_up_time";
+    field public static final String INCREASING_RING_START_VOLUME = "increasing_ring_start_vol";
+    field public static final String KEY_APP_SWITCH_ACTION = "key_app_switch_action";
+    field public static final String KEY_APP_SWITCH_LONG_PRESS_ACTION = "key_app_switch_long_press_action";
+    field public static final String KEY_ASSIST_ACTION = "key_assist_action";
+    field public static final String KEY_ASSIST_LONG_PRESS_ACTION = "key_assist_long_press_action";
+    field public static final String KEY_BACK_LONG_PRESS_ACTION = "key_back_long_press_action";
+    field public static final String KEY_EDGE_LONG_SWIPE_ACTION = "key_edge_long_swipe_action";
+    field public static final String KEY_HOME_DOUBLE_TAP_ACTION = "key_home_double_tap_action";
+    field public static final String KEY_HOME_LONG_PRESS_ACTION = "key_home_long_press_action";
+    field public static final String KEY_MENU_ACTION = "key_menu_action";
+    field public static final String KEY_MENU_LONG_PRESS_ACTION = "key_menu_long_press_action";
+    field public static final String LOCKSCREEN_PIN_SCRAMBLE_LAYOUT = "lockscreen_scramble_pin_layout";
+    field public static final String LOCKSCREEN_ROTATION = "lockscreen_rotation";
+    field public static final String LONG_SCREEN_APPS = "long_screen_apps";
+    field public static final String MENU_WAKE_SCREEN = "menu_wake_screen";
+    field public static final String NAVBAR_LEFT_IN_LANDSCAPE = "navigation_bar_left";
+    field public static final String NAVIGATION_BAR_HINT = "navigation_bar_hint";
+    field public static final String NAVIGATION_BAR_MENU_ARROW_KEYS = "navigation_bar_menu_arrow_keys";
+    field public static final String NAV_BUTTONS = "nav_buttons";
+    field public static final String NOTIFICATION_LIGHT_BRIGHTNESS_LEVEL = "notification_light_brightness_level";
+    field public static final String NOTIFICATION_LIGHT_BRIGHTNESS_LEVEL_ZEN = "notification_light_brightness_level_zen";
+    field public static final String NOTIFICATION_LIGHT_PULSE_CALL_COLOR = "notification_light_pulse_call_color";
+    field public static final String NOTIFICATION_LIGHT_PULSE_CALL_LED_OFF = "notification_light_pulse_call_led_off";
+    field public static final String NOTIFICATION_LIGHT_PULSE_CALL_LED_ON = "notification_light_pulse_call_led_on";
+    field public static final String NOTIFICATION_LIGHT_PULSE_CUSTOM_ENABLE = "notification_light_pulse_custom_enable";
+    field public static final String NOTIFICATION_LIGHT_PULSE_CUSTOM_VALUES = "notification_light_pulse_custom_values";
+    field public static final String NOTIFICATION_LIGHT_PULSE_DEFAULT_COLOR = "notification_light_pulse_default_color";
+    field public static final String NOTIFICATION_LIGHT_PULSE_DEFAULT_LED_OFF = "notification_light_pulse_default_led_off";
+    field public static final String NOTIFICATION_LIGHT_PULSE_DEFAULT_LED_ON = "notification_light_pulse_default_led_on";
+    field public static final String NOTIFICATION_LIGHT_PULSE_VMAIL_COLOR = "notification_light_pulse_vmail_color";
+    field public static final String NOTIFICATION_LIGHT_PULSE_VMAIL_LED_OFF = "notification_light_pulse_vmail_led_off";
+    field public static final String NOTIFICATION_LIGHT_PULSE_VMAIL_LED_ON = "notification_light_pulse_vmail_led_on";
+    field public static final String NOTIFICATION_LIGHT_SCREEN_ON = "notification_light_screen_on_enable";
+    field public static final String NOTIFICATION_PLAY_QUEUE = "notification_play_queue";
+    field public static final String PROXIMITY_ON_WAKE = "proximity_on_wake";
+    field public static final String QS_SHOW_BRIGHTNESS_SLIDER = "qs_show_brightness_slider";
+    field public static final String RECENTS_SHOW_SEARCH_BAR = "recents_show_search_bar";
+    field public static final String SHOW_ALARM_ICON = "show_alarm_icon";
+    field public static final String STATUS_BAR_AM_PM = "status_bar_am_pm";
+    field public static final String STATUS_BAR_BATTERY_STYLE = "status_bar_battery_style";
+    field public static final String STATUS_BAR_CLOCK = "status_bar_clock";
+    field public static final String STATUS_BAR_CLOCK_AUTO_HIDE = "status_bar_clock_auto_hide";
+    field public static final String STATUS_BAR_IME_SWITCHER = "status_bar_ime_switcher";
+    field public static final String STATUS_BAR_QUICK_QS_PULLDOWN = "qs_quick_pulldown";
+    field public static final String STATUS_BAR_SHOW_BATTERY_PERCENT = "status_bar_show_battery_percent";
+    field public static final String STYLUS_ICON_ENABLED = "stylus_icon_enabled";
+    field public static final String SWAP_VOLUME_KEYS_ON_ROTATION = "swap_volume_keys_on_rotation";
+    field public static final String SYSTEM_PROFILES_ENABLED = "system_profiles_enabled";
+    field public static final String SYS_PROP_LINEAGE_SETTING_VERSION = "sys.lineage_settings_system_version";
+    field public static final String T9_SEARCH_INPUT_LOCALE = "t9_search_input_locale";
+    field public static final String TORCH_LONG_PRESS_POWER_GESTURE = "torch_long_press_power_gesture";
+    field public static final String TORCH_LONG_PRESS_POWER_TIMEOUT = "torch_long_press_power_timeout";
+    field public static final String TOUCHSCREEN_GESTURE_HAPTIC_FEEDBACK = "touchscreen_gesture_haptic_feedback";
+    field public static final String USE_EDGE_SERVICE_FOR_GESTURES = "edge_service_for_gestures";
+    field public static final String VOLBTN_MUSIC_CONTROLS = "volbtn_music_controls";
+    field public static final String VOLUME_ADJUST_SOUNDS_ENABLED = "volume_adjust_sounds_enabled";
+    field public static final String VOLUME_ANSWER_CALL = "volume_answer_call";
+    field public static final String VOLUME_UP_AND_DOWN_MUTE = "volume_up_and_down_mute";
+    field public static final String VOLUME_WAKE_SCREEN = "volume_wake_screen";
+    field public static final String ZEN_ALLOW_LIGHTS = "allow_lights";
+    field public static final String ZEN_PRIORITY_ALLOW_LIGHTS = "zen_priority_allow_lights";
+  }
+
+}
+
+package lineageos.trust {
+
+  public class TrustInterface {
+    method public static lineageos.trust.TrustInterface getInstance(android.content.Context);
+    method public int getLevelForFeature(int);
+    method public boolean hasUsbRestrictor();
+    method public boolean removeNotificationForFeature(int);
+    field public static final int ERROR_UNDEFINED = -1; // 0xffffffff
+    field public static final int TRUST_FEATURE_ENCRYPTION = 4; // 0x4
+    field public static final int TRUST_FEATURE_KEYS = 5; // 0x5
+    field public static final int TRUST_FEATURE_LEVEL_BAD = 2; // 0x2
+    field public static final int TRUST_FEATURE_LEVEL_GOOD = 0; // 0x0
+    field public static final int TRUST_FEATURE_LEVEL_POOR = 1; // 0x1
+    field public static final int TRUST_FEATURE_PLATFORM_SECURITY_PATCH = 2; // 0x2
+    field public static final int TRUST_FEATURE_SELINUX = 0; // 0x0
+    field public static final int TRUST_FEATURE_VENDOR_SECURITY_PATCH = 3; // 0x3
+    field public static final String TRUST_INTERFACE_PERMISSION = "lineageos.permission.TRUST_INTERFACE";
+    field public static final int TRUST_WARN_PUBLIC_KEY = 4; // 0x4
+    field public static final int TRUST_WARN_SELINUX = 1; // 0x1
+  }
+
+}
+
+package lineageos.util {
+
+  public class ColorUtils {
+    ctor public ColorUtils();
+    method public static double calculateDeltaE(double, double, double, double, double, double);
+    method public static float[] convertRGBtoLAB(int);
+    method public static int dropAlpha(int);
+    method public static int findPerceptuallyNearestColor(int, int[]);
+    method public static int findPerceptuallyNearestSolidColor(int);
+    method public static int generateAlertColorFromDrawable(android.graphics.drawable.Drawable);
+    method public static lineageos.util.palette.Palette.Swatch getDominantSwatch(lineageos.util.palette.Palette);
+    method public static float[] temperatureToRGB(int);
+  }
+
+}
+
+package lineageos.util.palette {
+
+  public class ColorUtils {
+    method public static int HSLToColor(float[]);
+    method public static void RGBToHSL(int, int, int, float[]);
+    method public static double calculateContrast(int, int);
+    method public static double calculateLuminance(int);
+    method public static int calculateMinimumAlpha(int, int, float);
+    method public static void colorToHSL(int, float[]);
+    method public static int compositeColors(int, int);
+    method public static int setAlphaComponent(int, int);
+  }
+
+  public final class Palette {
+    method public static lineageos.util.palette.Palette.Builder from(android.graphics.Bitmap);
+    method public static lineageos.util.palette.Palette from(java.util.List<lineageos.util.palette.Palette.Swatch>);
+    method @Deprecated public static lineageos.util.palette.Palette generate(android.graphics.Bitmap);
+    method @Deprecated public static lineageos.util.palette.Palette generate(android.graphics.Bitmap, int);
+    method @Deprecated public static android.os.AsyncTask<android.graphics.Bitmap,java.lang.Void,lineageos.util.palette.Palette> generateAsync(android.graphics.Bitmap, lineageos.util.palette.Palette.PaletteAsyncListener);
+    method @Deprecated public static android.os.AsyncTask<android.graphics.Bitmap,java.lang.Void,lineageos.util.palette.Palette> generateAsync(android.graphics.Bitmap, int, lineageos.util.palette.Palette.PaletteAsyncListener);
+    method @ColorInt public int getDarkMutedColor(@ColorInt int);
+    method @Nullable public lineageos.util.palette.Palette.Swatch getDarkMutedSwatch();
+    method @ColorInt public int getDarkVibrantColor(@ColorInt int);
+    method @Nullable public lineageos.util.palette.Palette.Swatch getDarkVibrantSwatch();
+    method @ColorInt public int getLightMutedColor(@ColorInt int);
+    method @Nullable public lineageos.util.palette.Palette.Swatch getLightMutedSwatch();
+    method @ColorInt public int getLightVibrantColor(@ColorInt int);
+    method @Nullable public lineageos.util.palette.Palette.Swatch getLightVibrantSwatch();
+    method @ColorInt public int getMutedColor(@ColorInt int);
+    method @Nullable public lineageos.util.palette.Palette.Swatch getMutedSwatch();
+    method public java.util.List<lineageos.util.palette.Palette.Swatch> getSwatches();
+    method @ColorInt public int getVibrantColor(@ColorInt int);
+    method @Nullable public lineageos.util.palette.Palette.Swatch getVibrantSwatch();
+  }
+
+  public static final class Palette.Builder {
+    ctor public Palette.Builder(android.graphics.Bitmap);
+    ctor public Palette.Builder(java.util.List<lineageos.util.palette.Palette.Swatch>);
+    method public lineageos.util.palette.Palette.Builder addFilter(lineageos.util.palette.Palette.Filter);
+    method public lineageos.util.palette.Palette.Builder clearFilters();
+    method public lineageos.util.palette.Palette generate();
+    method public android.os.AsyncTask<android.graphics.Bitmap,java.lang.Void,lineageos.util.palette.Palette> generate(lineageos.util.palette.Palette.PaletteAsyncListener);
+    method public lineageos.util.palette.Palette.Builder maximumColorCount(int);
+    method public lineageos.util.palette.Palette.Builder resizeBitmapSize(int);
+  }
+
+  public static interface Palette.Filter {
+    method public boolean isAllowed(int, float[]);
+  }
+
+  public static interface Palette.PaletteAsyncListener {
+    method public void onGenerated(lineageos.util.palette.Palette);
+  }
+
+  public static final class Palette.Swatch {
+    ctor public Palette.Swatch(@ColorInt int, int);
+    method @ColorInt public int getBodyTextColor();
+    method public float[] getHsl();
+    method public int getPopulation();
+    method @ColorInt public int getRgb();
+    method @ColorInt public int getTitleTextColor();
+  }
+
+}
+
