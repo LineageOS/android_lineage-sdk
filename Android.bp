@@ -1,5 +1,5 @@
 //
-// SPDX-FileCopyrightText: 2018-2024 The LineageOS Project
+// SPDX-FileCopyrightText: 2018-2025 The LineageOS Project
 // SPDX-License-Identifier: Apache-2.0
 //
 
@@ -51,28 +51,56 @@ android_app {
 // The LineageOS Platform Framework Library
 // ============================================================
 
-lineage_sdk_src = "sdk/src/java/lineageos"
-lineage_sdk_internal_src = "sdk/src/java/org/lineageos/internal"
-library_src = "lineage/lib/main/java"
+filegroup {
+    name: "lineage-sdk-sources",
+    srcs: [
+        "sdk/src/java/lineageos/**/*.java",
+        "sdk/src/java/lineageos/**/I*.aidl",
+    ],
+}
 
-lineage_sdk_aidl_hals = [
-    "vendor.lineage.health-V2-java",
-    "vendor.lineage.touch-V1-java",
-]
+filegroup {
+    name: "lineage-sdk-internal-sources",
+    srcs: [
+        "sdk/src/java/org/lineageos/internal/**/*.java",
+        "sdk/src/java/org/lineageos/internal/**/I*.aidl",
+    ],
+}
 
-lineage_sdk_hidl_hals = [
-    "vendor.lineage.livedisplay-V2.0-java",
-    "vendor.lineage.livedisplay-V2.1-java",
-    "vendor.lineage.touch-V1.0-java",
-]
+filegroup {
+    name: "lineage-library-sources",
+    srcs: ["lineage/lib/main/java/**/*.java"],
+}
 
-lineage_sdk_LOCAL_STATIC_JAVA_LIBRARIES = lineage_sdk_aidl_hals + lineage_sdk_hidl_hals
+java_defaults {
+    name: "lineage-sdk-defaults",
+
+    // Include aidl files from lineageos.app namespace as well as internal src aidl files
+    aidl: {
+        local_include_dirs: ["sdk/src/java"],
+    },
+
+    srcs: [
+        ":lineage-sdk-internal-sources",
+        ":lineage-sdk-sources",
+        // For the generated R.java and Manifest.java
+        ":org.lineageos.platform-res{.aapt.srcjar}",
+    ],
+
+    static_libs: [
+        "vendor.lineage.health-V2-java",
+        "vendor.lineage.livedisplay-V2.0-java",
+        "vendor.lineage.livedisplay-V2.1-java",
+        "vendor.lineage.touch-V1-java",
+        "vendor.lineage.touch-V1.0-java",
+    ],
+}
 
 java_library {
     name: "org.lineageos.platform",
+    defaults: ["lineage-sdk-defaults"],
     installable: true,
     sdk_version: "core_platform",
-    static_libs: lineage_sdk_LOCAL_STATIC_JAVA_LIBRARIES,
 
     libs: [
         "framework",
@@ -80,20 +108,8 @@ java_library {
     ],
 
     srcs: [
-        lineage_sdk_src + "/**/*.java",
-        lineage_sdk_internal_src + "/**/*.java",
-        library_src + "/**/*.java",
-        lineage_sdk_src + "/**/I*.aidl",
-        lineage_sdk_internal_src + "/**/I*.aidl",
-
-        // For the generated R.java and Manifest.java
-        ":org.lineageos.platform-res{.aapt.srcjar}",
+        ":lineage-library-sources",
     ],
-
-    // Include aidl files from lineageos.app namespace as well as internal src aidl files
-    aidl: {
-        local_include_dirs: ["sdk/src/java"],
-    },
 }
 
 // Full target for use by platform apps
@@ -101,19 +117,5 @@ java_library {
 
 java_library {
     name: "org.lineageos.platform.internal",
-    static_libs: lineage_sdk_LOCAL_STATIC_JAVA_LIBRARIES,
-
-    srcs: [
-        lineage_sdk_src + "/**/*.java",
-        lineage_sdk_internal_src + "/**/*.java",
-        lineage_sdk_src + "/**/I*.aidl",
-        lineage_sdk_internal_src + "/**/I*.aidl",
-
-        // For the generated R.java and Manifest.java
-        ":org.lineageos.platform-res{.aapt.srcjar}",
-    ],
-
-    aidl: {
-        local_include_dirs: ["sdk/src/java"],
-    },
+    defaults: ["lineage-sdk-defaults"],
 }
