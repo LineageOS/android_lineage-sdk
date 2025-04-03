@@ -50,8 +50,6 @@ import java.util.List;
  *     }
  * });
  * </pre>
- *
- * @hide
  */
 public final class Palette {
 

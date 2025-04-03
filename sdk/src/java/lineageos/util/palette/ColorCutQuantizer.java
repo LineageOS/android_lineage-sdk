@@ -29,8 +29,6 @@ import java.util.PriorityQueue;
  * have roughly the same population, where this quantizer divides boxes based on their color volume.
  * This means that the color space is divided into distinct colors, rather than representative
  * colors.
- *
- * @hide
  */
 final class ColorCutQuantizer {
 
