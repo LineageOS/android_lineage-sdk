@@ -6,10 +6,12 @@
 android_library {
     name: "LineagePreferenceLib",
     min_sdk_version: "30",
+    libs: [
+        "org.lineageos.platform.impl",
+    ],
     static_libs: [
-        "androidx.preference_preference",
         "SettingsLibMainSwitchPreference",
-        "org.lineageos.platform",
+        "androidx.preference_preference",
     ],
 
     srcs: ["java/**/*.java"],
