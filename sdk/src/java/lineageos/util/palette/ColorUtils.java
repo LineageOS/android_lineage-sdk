@@ -9,8 +9,6 @@ import android.graphics.Color;
 
 /**
  * A set of color-related utility methods, building upon those available in {@code Color}.
- *
- * @hide
  */
 public class ColorUtils {
 
