@@ -7,13 +7,14 @@ package lineageos.app;
 
 import android.annotation.SdkConstant;
 import android.annotation.SdkConstant.SdkConstantType;
-import android.app.NotificationGroup;
 import android.content.Context;
 import android.os.IBinder;
 import android.os.ParcelUuid;
 import android.os.RemoteException;
 import android.os.ServiceManager;
 import android.util.Log;
+
+import lineageos.app.NotificationGroup;
 
 import java.util.UUID;
 
