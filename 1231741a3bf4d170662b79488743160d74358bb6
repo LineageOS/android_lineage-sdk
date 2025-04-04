@@ -63,6 +63,30 @@
       },
       "revId": "1231741a3bf4d170662b79488743160d74358bb6",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "dc8570f8_cec3edbd",
+        "filename": "packages/LineagePreferenceLib/Android.bp",
+        "patchSetId": 2
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 19282
+      },
+      "writtenOn": "2025-04-04T17:16:40Z",
+      "side": 1,
+      "message": "And if i select the `stubs` variants for it, then it also does not compile.\n\nUsing `impl` builds and runs.",
+      "parentUuid": "b336db9f_5d6c1ba3",
+      "range": {
+        "startLine": 10,
+        "startChar": 0,
+        "endLine": 10,
+        "endChar": 38
+      },
+      "revId": "1231741a3bf4d170662b79488743160d74358bb6",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
