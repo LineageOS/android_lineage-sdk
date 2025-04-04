@@ -1,13 +1,15 @@
 /*
  * SPDX-FileCopyrightText: 2015 The CyanogenMod Project
+ * SPDX-FileCopyrightText: 2025 LineageOS Project
  * SPDX-License-Identifier: Apache-2.0
  */
 
 package lineageos.app;
 
-import lineageos.app.Profile;
-import android.app.NotificationGroup;
 import android.os.ParcelUuid;
+
+import lineageos.app.NotificationGroup;
+import lineageos.app.Profile;
 
 /** {@hide} */
 interface IProfileManager

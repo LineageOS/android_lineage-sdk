@@ -1,5 +1,6 @@
 /*
  * SPDX-FileCopyrightText: 2015 The CyanogenMod Project
+ * SPDX-FileCopyrightText: 2025 LineageOS Project
  * SPDX-License-Identifier: Apache-2.0
  */
 
@@ -7,7 +8,6 @@ package lineageos.app;
 
 import android.annotation.SdkConstant;
 import android.annotation.SdkConstant.SdkConstantType;
-import android.app.NotificationGroup;
 import android.content.Context;
 import android.os.IBinder;
 import android.os.ParcelUuid;
