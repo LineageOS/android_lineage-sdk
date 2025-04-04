@@ -22,6 +22,30 @@
       },
       "revId": "d8e9d0b83180d2d6ca266a50b1588299635a030e",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "86b50d11_cb479938",
+        "filename": "Android.bp",
+        "patchSetId": 1
+      },
+      "lineNbr": 67,
+      "author": {
+        "id": 19282
+      },
+      "writtenOn": "2025-04-04T17:00:26Z",
+      "side": 0,
+      "message": "\u003e needs to be installable for dexpreopt to keep working\n\nThis is done automagically when switching to `java_sdk_library` but removed it by mistake here already.\n\nwill readd, thanks!\n\n```\nout/target/product/otter/system/framework/org.lineageos.platform.jar\nout/target/product/otter/system/framework/oat/arm64/org.lineageos.platform.odex\nout/target/product/otter/system/framework/oat/arm64/org.lineageos.platform.vdex\n```",
+      "parentUuid": "0874d014_7cbaac41",
+      "range": {
+        "startLine": 67,
+        "startChar": 0,
+        "endLine": 67,
+        "endChar": 22
+      },
+      "revId": "d8e9d0b83180d2d6ca266a50b1588299635a030e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
