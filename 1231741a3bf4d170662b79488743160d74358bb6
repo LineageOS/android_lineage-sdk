@@ -39,6 +39,30 @@
       },
       "revId": "1231741a3bf4d170662b79488743160d74358bb6",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b336db9f_5d6c1ba3",
+        "filename": "packages/LineagePreferenceLib/Android.bp",
+        "patchSetId": 2
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 19282
+      },
+      "writtenOn": "2025-04-04T17:13:01Z",
+      "side": 1,
+      "message": "```\nerror: lineage-sdk/packages/LineagePreferenceLib/Android.bp:6:1: module \"LineagePreferenceLib\" variant \"android_common\": cannot depend directly on java_sdk_library \"org.lineageos.platform\"; try depending on \"org.lineageos.platform.stubs\",\n \"org.lineageos.platform.stubs.system\", \"org.lineageos.platform.stubs.test\", or \"org.lineageos.platform.impl\" instead\n```",
+      "parentUuid": "a568eb18_c99b01e0",
+      "range": {
+        "startLine": 10,
+        "startChar": 0,
+        "endLine": 10,
+        "endChar": 38
+      },
+      "revId": "1231741a3bf4d170662b79488743160d74358bb6",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
