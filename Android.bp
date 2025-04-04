@@ -68,6 +68,14 @@ filegroup {
 }
 
 filegroup {
+    name: "shiftos-sdk-sources",
+    srcs: [
+        "sdk/src/java/shiftos/**/*.java",
+        "sdk/src/java/shiftos/**/I*.aidl",
+    ],
+}
+
+filegroup {
     name: "lineage-library-sources",
     srcs: ["lineage/lib/main/java/**/*.java"],
 }
@@ -85,6 +93,8 @@ java_defaults {
         ":lineage-sdk-sources",
         // For the generated R.java and Manifest.java
         ":org.lineageos.platform-res{.aapt.srcjar}",
+        // ShiftOS
+        ":shiftos-sdk-sources",
     ],
 
     static_libs: [
@@ -122,6 +132,7 @@ java_sdk_library {
         "lineageos.trust",
         "lineageos.util",
         "lineageos.util.palette",
+        "shiftos.providers",
     ],
 
     public: {

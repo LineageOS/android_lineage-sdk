@@ -81,4 +81,19 @@
                 android:description="@string/permdesc_manageRemotePrefs"
                 android:protectionLevel="signature|privileged" />
 
+    <!-- SHIFT -->
+
+    <!-- Allows an application to write to ShiftOS system settings -->
+    <permission android:name="shiftos.permission.WRITE_SETTINGS_SHIFTOS"
+        android:label="@string/permlab_writeSettings_shiftos"
+        android:description="@string/permdesc_writeSettings_shiftos"
+        android:protectionLevel="dangerous" />
+
+    <!-- Allows an application to write to secure ShiftOS system settings.
+        <p>Not for use by third-party applications. -->
+    <permission android:name="shiftos.permission.WRITE_SECURE_SETTINGS_SHIFTOS"
+        android:label="@string/permlab_writeSecureSettings_shiftos"
+        android:description="@string/permdesc_writeSecureSettings_shiftos"
+        android:protectionLevel="signature|privileged" />
+
 </manifest>

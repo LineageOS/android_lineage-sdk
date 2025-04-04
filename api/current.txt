@@ -341,7 +341,9 @@ package lineageos.platform {
     field public static final String MODIFY_PROFILES = "lineageos.permission.MODIFY_PROFILES";
     field public static final String TRUST_INTERFACE = "lineageos.permission.TRUST_INTERFACE";
     field public static final String WRITE_SECURE_SETTINGS = "lineageos.permission.WRITE_SECURE_SETTINGS";
+    field public static final String WRITE_SECURE_SETTINGS_SHIFTOS = "shiftos.permission.WRITE_SECURE_SETTINGS_SHIFTOS";
     field public static final String WRITE_SETTINGS = "lineageos.permission.WRITE_SETTINGS";
+    field public static final String WRITE_SETTINGS_SHIFTOS = "shiftos.permission.WRITE_SETTINGS_SHIFTOS";
   }
 
   public final class R {
@@ -770,6 +772,77 @@ package lineageos.util.palette {
     method public int getPopulation();
     method @ColorInt public int getRgb();
     method @ColorInt public int getTitleTextColor();
+  }
+
+}
+
+package shiftos.providers {
+
+  public final class ShiftOsSettings {
+    ctor public ShiftOsSettings();
+    field public static final String AUTHORITY = "shiftossettings";
+  }
+
+  public static final class ShiftOsSettings.Global extends android.provider.Settings.NameValueTable {
+    ctor public ShiftOsSettings.Global();
+    method public static float getFloat(android.content.ContentResolver, String, float);
+    method public static float getFloat(android.content.ContentResolver, String) throws shiftos.providers.ShiftOsSettings.ShiftOsSettingNotFoundException;
+    method public static int getInt(android.content.ContentResolver, String, int);
+    method public static int getInt(android.content.ContentResolver, String) throws shiftos.providers.ShiftOsSettings.ShiftOsSettingNotFoundException;
+    method public static long getLong(android.content.ContentResolver, String, long);
+    method public static long getLong(android.content.ContentResolver, String) throws shiftos.providers.ShiftOsSettings.ShiftOsSettingNotFoundException;
+    method public static String getString(android.content.ContentResolver, String);
+    method public static String getString(android.content.ContentResolver, String, String);
+    method public static android.net.Uri getUriFor(String);
+    method public static boolean putFloat(android.content.ContentResolver, String, float);
+    method public static boolean putInt(android.content.ContentResolver, String, int);
+    method public static boolean putLong(android.content.ContentResolver, String, long);
+    method public static boolean putString(android.content.ContentResolver, String, String);
+    field public static final android.net.Uri CONTENT_URI;
+    field public static final String SYS_PROP_SHIFTOS_SETTING_VERSION = "sys.shiftos_settings_global_version";
+  }
+
+  public static final class ShiftOsSettings.Secure extends android.provider.Settings.NameValueTable {
+    ctor public ShiftOsSettings.Secure();
+    method public static float getFloat(android.content.ContentResolver, String, float);
+    method public static float getFloat(android.content.ContentResolver, String) throws shiftos.providers.ShiftOsSettings.ShiftOsSettingNotFoundException;
+    method public static int getInt(android.content.ContentResolver, String, int);
+    method public static int getInt(android.content.ContentResolver, String) throws shiftos.providers.ShiftOsSettings.ShiftOsSettingNotFoundException;
+    method public static long getLong(android.content.ContentResolver, String, long);
+    method public static long getLong(android.content.ContentResolver, String) throws shiftos.providers.ShiftOsSettings.ShiftOsSettingNotFoundException;
+    method public static String getString(android.content.ContentResolver, String);
+    method public static String getString(android.content.ContentResolver, String, String);
+    method public static android.net.Uri getUriFor(String);
+    method public static boolean putFloat(android.content.ContentResolver, String, float);
+    method public static boolean putInt(android.content.ContentResolver, String, int);
+    method public static boolean putLong(android.content.ContentResolver, String, long);
+    method public static boolean putString(android.content.ContentResolver, String, String);
+    field public static final android.net.Uri CONTENT_URI;
+    field public static final String ENABLE_METRICS = "enable_metrics";
+    field public static final String SYS_PROP_SHIFTOS_SETTING_VERSION = "sys.shiftos_settings_secure_version";
+  }
+
+  public static class ShiftOsSettings.ShiftOsSettingNotFoundException extends android.util.AndroidException {
+    ctor public ShiftOsSettings.ShiftOsSettingNotFoundException(String);
+  }
+
+  public static final class ShiftOsSettings.System extends android.provider.Settings.NameValueTable {
+    ctor public ShiftOsSettings.System();
+    method public static float getFloat(android.content.ContentResolver, String, float);
+    method public static float getFloat(android.content.ContentResolver, String) throws shiftos.providers.ShiftOsSettings.ShiftOsSettingNotFoundException;
+    method public static int getInt(android.content.ContentResolver, String, int);
+    method public static int getInt(android.content.ContentResolver, String) throws shiftos.providers.ShiftOsSettings.ShiftOsSettingNotFoundException;
+    method public static long getLong(android.content.ContentResolver, String, long);
+    method public static long getLong(android.content.ContentResolver, String) throws shiftos.providers.ShiftOsSettings.ShiftOsSettingNotFoundException;
+    method public static String getString(android.content.ContentResolver, String);
+    method public static String getString(android.content.ContentResolver, String, String);
+    method public static android.net.Uri getUriFor(String);
+    method public static boolean putFloat(android.content.ContentResolver, String, float);
+    method public static boolean putInt(android.content.ContentResolver, String, int);
+    method public static boolean putLong(android.content.ContentResolver, String, long);
+    method public static boolean putString(android.content.ContentResolver, String, String);
+    field public static final android.net.Uri CONTENT_URI;
+    field public static final String SYS_PROP_SHIFTOS_SETTING_VERSION = "sys.shiftos_settings_system_version";
   }
 
 }

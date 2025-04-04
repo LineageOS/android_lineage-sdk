@@ -16,14 +16,9 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- Label for the ShiftOS system components when they are shown to the user. -->
     <string name="shiftos_system_label">ShiftOS System</string>
-
-    <!-- Labels for the WRITE_SETTINGS_SHIFTOS permission -->
-    <string name="permlab_writeSettings_shiftos">modify ShiftOS system settings</string>
-    <string name="permdesc_writeSettings_shiftos">Allows an app to modify ShiftOS system settings.</string>
-
-    <!-- Labels for the WRITE_SECURE_SETTINGS_SHIFTOS permission -->
-    <string name="permlab_writeSecureSettings_shiftos">modify ShiftOS secure system settings</string>
-    <string name="permdesc_writeSecureSettings_shiftos">Allows an app to modify ShiftOS secure system settings. Not for use by normal apps.</string>
+    <string name="permlab_writeSettings_shiftos">ShiftOS-Systemeinstellungen ändern</string>
+    <string name="permdesc_writeSettings_shiftos">Ermöglicht der App, ShiftOS-Systemeinstellungen zu ändern.</string>
+    <string name="permlab_writeSecureSettings_shiftos">ShiftOS-Sicherheitssystemeinstellungen ändern</string>
+    <string name="permdesc_writeSecureSettings_shiftosos">Ermöglicht der App, ShiftOS-Sicherheitssystemeinstellungen zu ändern. Nicht für die Nutzung durch normale Apps bestimmt.</string>
 </resources>
