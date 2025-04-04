@@ -7,7 +7,6 @@
 package lineageos.app;
 
 import android.app.Notification;
-import android.app.NotificationGroup;
 import android.content.Context;
 import android.database.Cursor;
 import android.media.RingtoneManager;
@@ -17,6 +16,8 @@ import android.os.ParcelUuid;
 import android.os.Parcelable;
 import android.text.TextUtils;
 import android.util.Log;
+
+import lineageos.app.NotificationGroup;
 
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;

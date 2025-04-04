@@ -1,13 +1,12 @@
 /*
  * SPDX-FileCopyrightText: 2011-2015 CyanogenMod Project
- * SPDX-FileCopyrightText: 2017-2024 LineageOS Project
+ * SPDX-FileCopyrightText: 2017-2025 LineageOS Project
  * SPDX-License-Identifier: Apache-2.0
  */
 
 package org.lineageos.platform.internal;
 
 import android.app.ActivityManagerNative;
-import android.app.NotificationGroup;
 import android.app.backup.BackupManager;
 import android.bluetooth.BluetoothDevice;
 import android.bluetooth.BluetoothManager;
@@ -37,6 +36,7 @@ import com.android.internal.policy.IKeyguardService;
 
 import lineageos.app.IProfileManager;
 import lineageos.app.LineageContextConstants;
+import lineageos.app.NotificationGroup;
 import lineageos.app.Profile;
 import lineageos.app.ProfileGroup;
 import lineageos.app.ProfileManager;
