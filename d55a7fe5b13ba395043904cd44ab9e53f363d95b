@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2d7afb7e_d4d9c1ce",
+        "filename": "sdk/src/java/lineageos/app/NotificationGroup.aidl",
+        "patchSetId": 2
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 11883
+      },
+      "writtenOn": "2025-04-05T11:05:00Z",
+      "side": 1,
+      "message": "we had a time traveller there",
+      "range": {
+        "startLine": 3,
+        "startChar": 27,
+        "endLine": 3,
+        "endChar": 31
+      },
+      "revId": "d55a7fe5b13ba395043904cd44ab9e53f363d95b",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
