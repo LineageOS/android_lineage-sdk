@@ -438,6 +438,8 @@ public class ChargingControlController extends LineageHealthFeature {
             Log.e(TAG, "Current provider does not support mode: " + mode
                     + ", setting to default mode");
             setMode(mDefaultMode);
+        } else {
+            setMode(mode);
         }
 
         // Reset internal states
