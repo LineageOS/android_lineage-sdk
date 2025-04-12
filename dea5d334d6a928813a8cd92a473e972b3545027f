@@ -16,6 +16,23 @@
       "message": "see #pixel.",
       "revId": "dea5d334d6a928813a8cd92a473e972b3545027f",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "73c134d5_27957d44",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 2644
+      },
+      "writtenOn": "2025-04-12T21:56:51Z",
+      "side": 1,
+      "message": "Tried patch set 4 on bluejay. It still has problems if the charge level is greater than the set charge limit. It connects/disconnects charging and resets the usb connection. I am not sure if this caused the boot problems as I didn\u0027t get logs because the usb went flakey while booting.",
+      "revId": "dea5d334d6a928813a8cd92a473e972b3545027f",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
