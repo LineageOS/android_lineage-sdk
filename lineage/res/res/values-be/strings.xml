@@ -29,7 +29,6 @@
     <string name="profileGroupPhone">Тэлефон</string>
     <string name="profileGroupCalendar">Каляндар</string>
     <string name="profileGroupGmail">Gmail</string>
-    <string name="profileGroupEmail">Электронная пошта</string>
     <string name="profileGroupSMS">SMS</string>
     <string name="live_display_auto">Аўтаматычна</string>
     <string name="live_display_auto_summary">Аўтаматычная карэкціроўка колеравай тэмпературы экрана пасля заходу і ўсходу сонца</string>

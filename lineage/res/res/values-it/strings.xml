@@ -90,6 +90,6 @@
     <string name="charging_control_notification_cancel_once">Annulla</string>
     <string name="charging_control_notification_content_limit">La batteria verrà caricata fino al %1$d%%</string>
     <string name="charging_control_notification_content_limit_reached">La batteria è carica al %1$d%%</string>
-    <string name="charging_control_notification_content_target">La batteria sarà completamente carica alle %s</string>
+    <string name="charging_control_notification_content_target">La batteria sarà completamente carica alle %1$s</string>
     <string name="charging_control_notification_content_target_reached">La batteria è carica</string>
 </resources>

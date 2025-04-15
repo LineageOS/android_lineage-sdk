@@ -90,6 +90,6 @@
     <string name="charging_control_notification_cancel_once">취소</string>
     <string name="charging_control_notification_content_limit">배터리가 %1$d%% 까지 충전됩니다</string>
     <string name="charging_control_notification_content_limit_reached">배터리가 %1$d%% 까지 충전되었습니다</string>
-    <string name="charging_control_notification_content_target">배터리가 %1$d%% 에 완전히 충전됩니다</string>
+    <string name="charging_control_notification_content_target">배터리가 %1$s 에 완전히 충전됩니다</string>
     <string name="charging_control_notification_content_target_reached">배터리 충전됨</string>
 </resources>

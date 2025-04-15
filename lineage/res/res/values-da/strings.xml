@@ -83,6 +83,6 @@
     <string name="charging_control_notification_cancel_once">Afbryd</string>
     <string name="charging_control_notification_content_limit">Batteriet vil blive opladet til %1$d%%</string>
     <string name="charging_control_notification_content_limit_reached">Batteriet ert opladet til %1$d%%</string>
-    <string name="charging_control_notification_content_target">Batteriet er fuldt opladet ved %1$d%%</string>
+    <string name="charging_control_notification_content_target">Batteriet er fuldt opladet ved %1$s</string>
     <string name="charging_control_notification_content_target_reached">Batteri er opladet</string>
 </resources>

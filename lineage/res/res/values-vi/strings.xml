@@ -90,6 +90,6 @@
     <string name="charging_control_notification_cancel_once">Hủy</string>
     <string name="charging_control_notification_content_limit">Pin sẽ được sạc đến %1$d%%</string>
     <string name="charging_control_notification_content_limit_reached">Pin đã được sạc đến %1$d%%</string>
-    <string name="charging_control_notification_content_target">Pin sẽ được sạc đến %1$d%%</string>
+    <string name="charging_control_notification_content_target">Pin sẽ được sạc đến %1$s</string>
     <string name="charging_control_notification_content_target_reached">Pin đã được sạc</string>
 </resources>
