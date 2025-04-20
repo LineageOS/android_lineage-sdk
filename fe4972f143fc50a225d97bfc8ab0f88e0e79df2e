@@ -34,6 +34,24 @@
       "parentUuid": "992064b1_77459657",
       "revId": "fe4972f143fc50a225d97bfc8ab0f88e0e79df2e",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0d06714a_25d6c893",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 11883
+      },
+      "writtenOn": "2025-04-20T17:28:19Z",
+      "side": 1,
+      "message": "yeah, we don\u0027t have any default HAL so it\u0027s up to _users_",
+      "parentUuid": "5083d567_7c01f902",
+      "revId": "fe4972f143fc50a225d97bfc8ab0f88e0e79df2e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
