@@ -88,7 +88,7 @@ public class Limit extends ChargingControlProvider {
 
     @Override
     public boolean isChargingControlModeSupported(int mode) {
-        return mode == MODE_AUTO || mode == MODE_MANUAL || mode == MODE_LIMIT;
+        return mode == MODE_LIMIT;
     }
 
     @Override
