@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "89bb6df9_133ad76a",
+        "filename": "sdk/src/java/org/lineageos/internal/statusbar/NetworkTraffic.java",
+        "patchSetId": 7
+      },
+      "lineNbr": 305,
+      "author": {
+        "id": 11883
+      },
+      "writtenOn": "2025-04-22T07:24:54Z",
+      "side": 1,
+      "message": "Don\u0027t think it makes sense to have it, the service is set in the constructor, maybe you could make it\nmanager \u003d requireNotNull(...)?",
+      "revId": "81e3fb7cf13b443da03e6101e07e2265847388b3",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
