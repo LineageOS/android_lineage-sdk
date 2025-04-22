@@ -290,7 +290,10 @@ public class ChargingControlController extends LineageHealthFeature {
     protected void resetInternalState() {
         mIsControlCancelledOnce = false;
         mChargingNotification.cancel();
-
+        if (mCurrentProvider == null) {
+            Log.e(TAG, "resetInternalState: no charging‑control provider to reset");
+            return;
+        }
         mCurrentProvider.reset();
     }
 
@@ -406,6 +409,11 @@ public class ChargingControlController extends LineageHealthFeature {
     }
 
     protected void updateChargeControl() {
+        if (mCurrentProvider == null) {
+            Log.e(TAG, "updateChargeControl: no charging‑control provider, skipping");
+            return;
+        }
+
         if (!isEnabled() || mIsControlCancelledOnce) {
             mCurrentProvider.disable();
             return;
@@ -442,6 +450,10 @@ public class ChargingControlController extends LineageHealthFeature {
      *     - ${@link lineageos.health.HealthInterface#MODE_LIMIT}
      */
     private boolean isProvideSupportCCMode(int mode) {
+        if (mCurrentProvider == null) {
+            Log.e(TAG, "mCurrentProvider is null, cannot check mode support");
+            return false;
+        }
         return mCurrentProvider.isChargingControlModeSupported(mode);
     }
 
@@ -483,6 +495,10 @@ public class ChargingControlController extends LineageHealthFeature {
         pw.println("  mIsDoneNotification: " + mChargingNotification.isDoneNotification());
         pw.println("  mIsControlCancelledOnce: " + mIsControlCancelledOnce);
         pw.println();
+        if (mCurrentProvider == null) {
+            pw.println("  Warning: no charging‑control provider selected!");
+            return;
+        }
         mCurrentProvider.dump(pw);
     }
 
