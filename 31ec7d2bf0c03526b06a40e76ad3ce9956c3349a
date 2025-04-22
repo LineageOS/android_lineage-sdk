@@ -46,6 +46,30 @@
       },
       "revId": "31ec7d2bf0c03526b06a40e76ad3ce9956c3349a",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "46d5799e_1b06c1bf",
+        "filename": "sdk/src/java/org/lineageos/internal/statusbar/NetworkTraffic.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 18796
+      },
+      "writtenOn": "2025-04-22T05:04:13Z",
+      "side": 1,
+      "message": "Made a few more changes, reflected the code style in the class.",
+      "parentUuid": "67c62dff_6d880dd9",
+      "range": {
+        "startLine": 2,
+        "startChar": 32,
+        "endLine": 2,
+        "endChar": 36
+      },
+      "revId": "31ec7d2bf0c03526b06a40e76ad3ce9956c3349a",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
