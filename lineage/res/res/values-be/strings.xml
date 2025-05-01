@@ -21,7 +21,6 @@
     <string name="profileGroupSMS">SMS</string>
     <string name="live_display_auto">Аўтаматычна</string>
     <string name="live_display_auto_summary">Аўтаматычная карэкціроўка колеравай тэмпературы экрана пасля заходу і ўсходу сонца</string>
-    <string name="live_display_off">Выключана</string>
     <string name="live_display_off_summary">Адключыць усе карэкціроўкі</string>
     <string name="live_display_day">Дзень</string>
     <string name="live_display_night">Ноч</string>
@@ -40,6 +39,8 @@
     <string name="megabitspersecond_short">Мбіт/с</string>
     <string name="kilobytespersecond_short">кБ/с</string>
     <string name="megabytespersecond_short">МБ/с</string>
+    <string name="kilobytespersecond_compact">к</string>
+    <string name="megabytespersecond_compact">М</string>
     <string name="trust_feature_name">Trust</string>
     <string name="permlab_trustInterface">доступ да інтэрфейсу Trust</string>
     <string name="trust_notification_title_security">Trust \u2022 Бяспека сістэмы</string>

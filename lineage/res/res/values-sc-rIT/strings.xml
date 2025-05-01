@@ -42,4 +42,5 @@
     <string name="accessibility_quick_settings_live_display_changed_outdoor">LiveDisplay: cambiadu in modalidade a s\'àera aberta.</string>
     <string name="lineage_api_level">Livellu de s\'API de LineageOS</string>
     <string name="unknown">Disconnotu</string>
+    <string name="charging_control_notification_content_target">Sa bateria at a èssere carrigada de su totu a su %1$s</string>
 </resources>
