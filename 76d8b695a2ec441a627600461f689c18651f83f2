@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c0f7601c_6953b529",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 31578
+      },
+      "writtenOn": "2025-05-02T11:34:59Z",
+      "side": 1,
+      "message": "A potential issue could happen on devices with no charging bypass support. In those devices, when charging is disabled, the state will be not plugged in.",
+      "revId": "76d8b695a2ec441a627600461f689c18651f83f2",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
