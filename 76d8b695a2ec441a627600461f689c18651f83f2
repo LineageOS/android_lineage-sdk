@@ -16,6 +16,24 @@
       "message": "A potential issue could happen on devices with no charging bypass support. In those devices, when charging is disabled, the state will be not plugged in.",
       "revId": "76d8b695a2ec441a627600461f689c18651f83f2",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7c63eab2_14a67dc7",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 34879
+      },
+      "writtenOn": "2025-05-02T12:24:22Z",
+      "side": 1,
+      "message": "Many thanks for your feedback! Doesn\u0027t `ChargingControlController.onStart` set `mIsPowerConnected` to `true` (fixed) if bypass isn\u0027t supported ([lines 245-252](https://github.com/LineageOS/android_lineage-sdk/blob/515b58b86e856d930c733824132287229f915258/lineage/lib/main/java/org/lineageos/platform/internal/health/ChargingControlController.java#L245-L252)), so that my change should have no effect in such cases? Please let me know if I got it wrong.",
+      "parentUuid": "c0f7601c_6953b529",
+      "revId": "76d8b695a2ec441a627600461f689c18651f83f2",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
