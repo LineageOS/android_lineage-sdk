@@ -52,6 +52,23 @@
       "parentUuid": "7c63eab2_14a67dc7",
       "revId": "76d8b695a2ec441a627600461f689c18651f83f2",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2ca9258d_b05ad4b9",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 2644
+      },
+      "writtenOn": "2025-05-04T17:36:59Z",
+      "side": 1,
+      "message": "Fixes charging notification when booting without power connected. Works on troika.",
+      "revId": "76d8b695a2ec441a627600461f689c18651f83f2",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
