@@ -1,0 +1,8 @@
+props {
+  module: "org.lineageos.platform.LineageHealthProperties"
+  prop {
+    api_name: "enable_new_feature"
+    access: ReadWrite
+    prop_name: "persist.lineage.health.enable_new_feature"
+  }
+}
