@@ -1,0 +1,12 @@
+# LineageHealthProperties.sysprop
+
+owner: Platform
+module: "org.lineageos.platform.LineageHealthProperties"
+
+prop {
+    api_name: "enable_new_feature"
+    type: Boolean
+    prop_name: "persist.lineage.health.enable_new_feature"
+    scope: Public
+    access: ReadWrite
+}

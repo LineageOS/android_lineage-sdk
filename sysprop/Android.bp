@@ -1,0 +1,5 @@
+sysprop_library {
+    name: "LineageHealthProperties",
+    srcs: ["LineageHealthProperties.sysprop"],
+    property_owner: "Platform"
+}
