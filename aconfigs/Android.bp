@@ -1,0 +1,18 @@
+//
+// SPDX-FileCopyrightText: 2025 The LineageOS Project
+// SPDX-License-Identifier: Apache-2.0
+//
+
+aconfig_declarations {
+    name: "aconfig_lineageos_platform_flags",
+    package: "org.lineageos.platform.flags",
+    container: "system",
+    srcs: [
+        "*.aconfig"
+    ],
+}
+
+java_aconfig_library {
+    name: "aconfig_lineageos_platform_flags_lib",
+    aconfig_declarations: "aconfig_lineageos_platform_flags",
+}

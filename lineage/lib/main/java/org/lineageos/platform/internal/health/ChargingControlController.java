@@ -32,6 +32,7 @@ import android.util.Log;
 import lineageos.providers.LineageSettings;
 
 import org.lineageos.platform.internal.R;
+import org.lineageos.platform.flags.Flags;
 import org.lineageos.platform.internal.health.ccprovider.ChargingControlProvider;
 import org.lineageos.platform.internal.health.ccprovider.Deadline;
 import org.lineageos.platform.internal.health.ccprovider.Limit;
@@ -47,6 +48,7 @@ public class ChargingControlController extends LineageHealthFeature {
     private ChargingControlNotification mChargingNotification;
     private LineageHealthBatteryBroadcastReceiver mBattReceiver;
     private BroadcastReceiver mAlarmBroadcastReceiver;
+    private boolean mIsEnabled = false;
 
     // Defaults
     private boolean mDefaultEnabled = false;
@@ -236,6 +238,38 @@ public class ChargingControlController extends LineageHealthFeature {
                 && setStartTime(mDefaultStartTime) && setTargetTime(mDefaultTargetTime);
     }
 
+    private void updateBatteryInfo(Intent intent) {
+        if (mCurrentProvider.requiresBatteryLevelMonitoring()) {
+            mIsPowerConnected = true;
+        } else {
+            int battStatus = intent.getIntExtra(BatteryManager.EXTRA_STATUS, -1);
+            int battPlugged = intent.getIntExtra(BatteryManager.EXTRA_PLUGGED, -1);
+            mIsPowerConnected =
+                    battPlugged != 0 || (battStatus != BatteryManager.BATTERY_STATUS_DISCHARGING &&
+                            battStatus != BatteryManager.BATTERY_STATUS_UNKNOWN);
+        }
+
+        int level = intent.getIntExtra(BatteryManager.EXTRA_LEVEL, -1);
+        int scale = intent.getIntExtra(BatteryManager.EXTRA_SCALE, -1);
+        if (level == -1 || scale == -1) {
+            return;
+        }
+
+        mBatteryPct = level * 100 / (float) scale;
+
+        Log.i(TAG, "mIsPowerConnected: " + mIsPowerConnected + ", mBatteryPct: " + mBatteryPct);
+    }
+
+    private void updateBatteryInfo() {
+        IntentFilter ifilter = new IntentFilter(Intent.ACTION_BATTERY_CHANGED);
+        Intent batteryStatus = mContext.registerReceiver(null, ifilter);
+        if (batteryStatus == null) {
+            Log.e(TAG, "batteryStatus is NULL!");
+            return;
+        }
+        updateBatteryInfo(batteryStatus);
+    }
+
     @Override
     public void onStart() {
         if (mChargingControl == null) {
@@ -245,47 +279,51 @@ public class ChargingControlController extends LineageHealthFeature {
         // Register setting observer
         registerSettings(MODE_URI, LIMIT_URI, ENABLED_URI, START_TIME_URI, TARGET_TIME_URI);
 
-        // For devices that do not support bypass, we can only always listen to battery change
-        // because we can't distinguish between "unplugged" and "plugged in but not charging".
-        if (mCurrentProvider.requiresBatteryLevelMonitoring()) {
-            mIsPowerConnected = true;
-            onPowerStatus(true);
-            handleSettingChange();
-            return;
-        }
-
-        // Start monitor battery status when power connected
-        IntentFilter connectedFilter = new IntentFilter(Intent.ACTION_POWER_CONNECTED);
-        mContext.registerReceiver(new BroadcastReceiver() {
-            @Override
-            public void onReceive(Context context, Intent intent) {
-                Log.i(TAG, "Power connected, start monitoring battery");
+        if (!Flags.newChargingControlImpl()) {
+            // For devices that do not support bypass, we can only always listen to battery change
+            // because we can't distinguish between "unplugged" and "plugged in but not charging".
+            if (mCurrentProvider.requiresBatteryLevelMonitoring()) {
                 mIsPowerConnected = true;
                 onPowerStatus(true);
+                handleSettingChange();
+                return;
             }
-        }, connectedFilter);
 
-        // Stop monitor battery status when power disconnected
-        IntentFilter disconnectedFilter = new IntentFilter(Intent.ACTION_POWER_DISCONNECTED);
-        mContext.registerReceiver(new BroadcastReceiver() {
-            @Override
-            public void onReceive(Context context, Intent intent) {
-                Log.i(TAG, "Power disconnected, stop monitoring battery");
-                mIsPowerConnected = false;
-                onPowerStatus(false);
+            // Start monitor battery status when power connected
+            IntentFilter connectedFilter = new IntentFilter(Intent.ACTION_POWER_CONNECTED);
+            mContext.registerReceiver(new BroadcastReceiver() {
+                @Override
+                public void onReceive(Context context, Intent intent) {
+                    Log.i(TAG, "Power connected, start monitoring battery");
+                    mIsPowerConnected = true;
+                    onPowerStatus(true);
+                }
+            }, connectedFilter);
+
+            // Stop monitor battery status when power disconnected
+            IntentFilter disconnectedFilter = new IntentFilter(Intent.ACTION_POWER_DISCONNECTED);
+            mContext.registerReceiver(new BroadcastReceiver() {
+                @Override
+                public void onReceive(Context context, Intent intent) {
+                    Log.i(TAG, "Power disconnected, stop monitoring battery");
+                    mIsPowerConnected = false;
+                    onPowerStatus(false);
+                }
+            }, disconnectedFilter);
+
+            // Initial monitor
+            IntentFilter ifilter = new IntentFilter(Intent.ACTION_BATTERY_CHANGED);
+            Intent batteryStatus = mContext.registerReceiver(null, ifilter);
+            mIsPowerConnected = batteryStatus.getIntExtra(BatteryManager.EXTRA_PLUGGED, -1) != 0;
+            if (mIsPowerConnected) {
+                onPowerConnected();
             }
-        }, disconnectedFilter);
 
-        // Initial monitor
-        IntentFilter ifilter = new IntentFilter(Intent.ACTION_BATTERY_CHANGED);
-        Intent batteryStatus = mContext.registerReceiver(null, ifilter);
-        mIsPowerConnected = batteryStatus.getIntExtra(BatteryManager.EXTRA_PLUGGED, -1) != 0;
-        if (mIsPowerConnected) {
-            onPowerConnected();
+            // Restore settings
+            handleSettingChange();
+        } else {
+            handleSettingChange();
         }
-
-        // Restore settings
-        handleSettingChange();
     }
 
     public boolean isChargingModeSupported(int mode) {
@@ -478,6 +516,29 @@ public class ChargingControlController extends LineageHealthFeature {
     private void handleSettingChange() {
         int mode = getMode();
 
+        if (Flags.newChargingControlImpl()) {
+            if (mIsEnabled != isEnabled()) {
+                mIsEnabled = isEnabled();
+
+                if (mIsEnabled) {
+                    if (mBattReceiver == null) {
+                        mBattReceiver = new LineageHealthBatteryBroadcastReceiver();
+                    } else {
+                        mContext.unregisterReceiver(mBattReceiver);
+                    }
+                    IntentFilter battFilter = new IntentFilter(Intent.ACTION_BATTERY_CHANGED);
+                    mContext.registerReceiver(mBattReceiver, battFilter);
+                    Log.i(TAG, "Enabled charging control, start monitoring battery");
+                } else {
+                    if (mBattReceiver != null) {
+                        mContext.unregisterReceiver(mBattReceiver);
+                        mBattReceiver = null;
+                    }
+                    Log.i(TAG, "Disabled charging control, stop monitoring battery");
+                }
+            }
+        }
+
         if (!isProvideSupportCCMode(mode)) {
             Log.e(TAG, "Current provider does not support mode: " + mode
                     + ", setting to default mode");
@@ -486,6 +547,11 @@ public class ChargingControlController extends LineageHealthFeature {
 
         // Reset internal states
         resetInternalState();
+
+        if (Flags.newChargingControlImpl()) {
+            // Update battery info
+            updateBatteryInfo();
+        }
 
         // Update based on those values
         updateChargeControl();
@@ -528,13 +594,17 @@ public class ChargingControlController extends LineageHealthFeature {
     private class LineageHealthBatteryBroadcastReceiver extends BroadcastReceiver {
         @Override
         public void onReceive(Context context, Intent intent) {
-            int level = intent.getIntExtra(BatteryManager.EXTRA_LEVEL, -1);
-            int scale = intent.getIntExtra(BatteryManager.EXTRA_SCALE, -1);
-            if (level == -1 || scale == -1) {
-                return;
-            }
+            if (Flags.newChargingControlImpl()) {
+                updateBatteryInfo(intent);
+            } else {
+                int level = intent.getIntExtra(BatteryManager.EXTRA_LEVEL, -1);
+                int scale = intent.getIntExtra(BatteryManager.EXTRA_SCALE, -1);
+                if (level == -1 || scale == -1) {
+                    return;
+                }
 
-            mBatteryPct = level * 100 / (float) scale;
+                mBatteryPct = level * 100 / (float) scale;
+            }
             updateChargeControl();
         }
     }

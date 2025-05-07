@@ -1,0 +1,9 @@
+package: "org.lineageos.platform.flags"
+container: "system"
+
+flag {
+    name: "new_charging_control_impl"
+    namespace: "lineageos"
+    description: "New charging control implementation"
+    bug: "<none>"
+}
