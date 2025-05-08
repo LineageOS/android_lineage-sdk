@@ -10,3 +10,11 @@ prop {
     scope: Public
     access: ReadWrite
 }
+
+prop {
+    api_name: "force_monitor_battery"
+    type: Boolean
+    prop_name: "persist.lineage.health.force_monitor_battery"
+    scope: Public
+    access: ReadWrite
+}
