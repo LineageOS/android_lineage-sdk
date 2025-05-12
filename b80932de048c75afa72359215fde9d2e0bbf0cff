@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a8ce7dd9_d847c355",
+        "filename": "sdk/src/java/lineageos/hardware/LineageHardwareManager.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 866,
+      "author": {
+        "id": 11883
+      },
+      "writtenOn": "2025-05-12T17:58:23Z",
+      "side": 1,
+      "message": "broken, can\u0027t up cast",
+      "range": {
+        "startLine": 866,
+        "startChar": 0,
+        "endLine": 866,
+        "endChar": 69
+      },
+      "revId": "b80932de048c75afa72359215fde9d2e0bbf0cff",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
