@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "157f98fa_02a46e77",
+        "filename": "lineage/lib/main/java/org/lineageos/platform/internal/health/ChargingControlController.java",
+        "patchSetId": 5
+      },
+      "lineNbr": 258,
+      "author": {
+        "id": 13028
+      },
+      "writtenOn": "2025-05-12T14:59:38Z",
+      "side": 1,
+      "message": "battPlugged defaults to -1 (from the getintextra-call), so this would always be true?",
+      "revId": "86a3bbb7fc731f7392a23c689d88428811618ae0",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
