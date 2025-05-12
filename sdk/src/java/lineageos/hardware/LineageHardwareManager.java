@@ -322,18 +322,6 @@ public final class LineageHardwareManager {
                     return IReadingEnhancement.getService(true);
                 case FEATURE_SUNLIGHT_ENHANCEMENT:
                     return ISunlightEnhancement.getService(true);
-                case FEATURE_HIGH_TOUCH_POLLING_RATE:
-                    return vendor.lineage.touch.V1_0.IHighTouchPollingRate.getService(true);
-                case FEATURE_HIGH_TOUCH_SENSITIVITY:
-                    return vendor.lineage.touch.V1_0.IGloveMode.getService(true);
-                case FEATURE_KEY_DISABLE:
-                    return vendor.lineage.touch.V1_0.IKeyDisabler.getService(true);
-                case FEATURE_KEY_SWAP:
-                    return vendor.lineage.touch.V1_0.IKeySwapper.getService(true);
-                case FEATURE_TOUCH_HOVERING:
-                    return vendor.lineage.touch.V1_0.IStylusMode.getService(true);
-                case FEATURE_TOUCHSCREEN_GESTURES:
-                    return vendor.lineage.touch.V1_0.ITouchscreenGesture.getService(true);
             }
         } catch (NoSuchElementException | RemoteException e) {
         }
@@ -872,13 +860,7 @@ public final class LineageHardwareManager {
                 vendor.lineage.touch.ITouchscreenGesture touchscreenGesture =
                         vendor.lineage.touch.ITouchscreenGesture.Stub.asInterface(
                                 mAIDLMap.get(FEATURE_TOUCHSCREEN_GESTURES));
-                return AIDLHelper.fromAIDLGestures(touchscreenGesture.getSupportedGestures());
-            }
-            if (isSupportedHIDL(FEATURE_TOUCHSCREEN_GESTURES)) {
-                vendor.lineage.touch.V1_0.ITouchscreenGesture touchscreenGesture =
-                        (vendor.lineage.touch.V1_0.ITouchscreenGesture)
-                                mHIDLMap.get(FEATURE_TOUCHSCREEN_GESTURES);
-                return HIDLHelper.fromHIDLGestures(touchscreenGesture.getSupportedGestures());
+                return (TouchscreenGesture[]) touchscreenGesture.getSupportedGestures();
             }
         } catch (Exception e) {
         }
@@ -895,15 +877,8 @@ public final class LineageHardwareManager {
                 vendor.lineage.touch.ITouchscreenGesture touchscreenGesture =
                         vendor.lineage.touch.ITouchscreenGesture.Stub.asInterface(
                                 mAIDLMap.get(FEATURE_TOUCHSCREEN_GESTURES));
-                touchscreenGesture.setGestureEnabled(AIDLHelper.toAIDLGesture(gesture), state);
+                touchscreenGesture.setGestureEnabled((vendor.lineage.touch.Gesture)gesture, state);
                 return true;
-            }
-            if (isSupportedHIDL(FEATURE_TOUCHSCREEN_GESTURES)) {
-                vendor.lineage.touch.V1_0.ITouchscreenGesture touchscreenGesture =
-                        (vendor.lineage.touch.V1_0.ITouchscreenGesture)
-                                mHIDLMap.get(FEATURE_TOUCHSCREEN_GESTURES);
-                return touchscreenGesture.setGestureEnabled(
-                        HIDLHelper.toHIDLGesture(gesture), state);
             }
         } catch (Exception e) {
         }

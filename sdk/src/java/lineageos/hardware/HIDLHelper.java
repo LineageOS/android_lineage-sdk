@@ -49,24 +49,4 @@ class HIDLHelper {
     static Range<Float> fromHIDLRange(vendor.lineage.livedisplay.V2_0.FloatRange range) {
         return new Range(range.min, range.max);
     }
-
-    static TouchscreenGesture[] fromHIDLGestures(
-            ArrayList<vendor.lineage.touch.V1_0.Gesture> gestures) {
-        int size = gestures.size();
-        TouchscreenGesture[] r = new TouchscreenGesture[size];
-        for (int i = 0; i < size; i++) {
-            vendor.lineage.touch.V1_0.Gesture g = gestures.get(i);
-            r[i] = new TouchscreenGesture(g.id, g.name, g.keycode);
-        }
-        return r;
-    }
-
-    static vendor.lineage.touch.V1_0.Gesture toHIDLGesture(TouchscreenGesture gesture) {
-        vendor.lineage.touch.V1_0.Gesture g = new vendor.lineage.touch.V1_0.Gesture();
-        g.id = gesture.id;
-        g.name = gesture.name;
-        g.keycode = gesture.keycode;
-        return g;
-    }
-
 }
