@@ -1,0 +1,8 @@
+props {
+  module: "org.lineageos.platform.LineageHealthProperties"
+  prop {
+    api_name: "force_monitor_battery"
+    access: ReadWrite
+    prop_name: "persist.lineage.health.force_monitor_battery"
+  }
+}

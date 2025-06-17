@@ -46,6 +46,7 @@ public class ChargingControlController extends LineageHealthFeature {
     private LineageHealthBatteryBroadcastReceiver mBattReceiver;
     private BroadcastReceiver mAlarmBroadcastReceiver;
     private boolean mIsEnabled = false;
+    private boolean mForceMonitorBattery = false;
 
     // Defaults
     private boolean mDefaultEnabled = false;
@@ -119,6 +120,12 @@ public class ChargingControlController extends LineageHealthFeature {
             } else {
                 Log.wtf(TAG, "No charging control provider is supported");
             }
+        }
+
+        if (LineageHealthProperties.force_monitor_battery().isPresent()) {
+            mForceMonitorBattery = LineageHealthProperties.force_monitor_battery().get();
+        } else {
+            mForceMonitorBattery = false;
         }
     }
 
@@ -243,7 +250,7 @@ public class ChargingControlController extends LineageHealthFeature {
             mIsControlCancelledOnce = false;
         }
 
-        if (mCurrentProvider.requiresBatteryLevelMonitoring()) {
+        if (mForceMonitorBattery || mCurrentProvider.requiresBatteryLevelMonitoring()) {
             mIsPowerConnected = true;
         } else {
             mIsPowerConnected =
@@ -527,6 +534,7 @@ public class ChargingControlController extends LineageHealthFeature {
         pw.println("  TargetTime: " + getTargetTime());
         pw.println();
         pw.println("ChargingControlController State:");
+        pw.println("  mForceMonitorBattery: " + mForceMonitorBattery);
         pw.println("  mIsEnabled: " + mIsEnabled);
         pw.println("  mBatteryPct: " + mBatteryPct);
         pw.println("  mIsPowerConnected: " + mIsPowerConnected);
