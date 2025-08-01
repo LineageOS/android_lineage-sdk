@@ -9,7 +9,7 @@
     <string name="permlab_modifyProfiles">sistem profillərini dəyişdir</string>
     <string name="permdesc_modifyProfiles">Tətbiqin sistem profillərini dəyişdirməsinə icazə verir.</string>
     <string name="permlab_useHardwareFramework">avadanlıq bünövrəsindən istifadə et</string>
-    <string name="permdesc_useHardwareFramework">Tətbiqin Lineage avadanlıq bünövrəsinə müraciətinə icazə verir.</string>
+    <string name="permdesc_useHardwareFramework">Tətbiqin Lineage hardware çərçivəsinə erişməsinə icazə verir.</string>
     <string name="permlab_writeSettings">Lineage sistem ayarlarını dəyişdir</string>
     <string name="permdesc_writeSettings">Tətbiqin Lineage sistem ayarlarını dəyişdirməsinə icazə verir.</string>
     <string name="permlab_writeSecureSettings">Lineage güvənli sistem ayarlarını dəyişdir</string>
@@ -65,7 +65,7 @@
     <string name="kilobytespersecond_compact">k</string>
     <string name="megabytespersecond_compact">M</string>
     <string name="trust_feature_name">Trust</string>
-    <string name="permlab_trustInterface">Trust interfeysinə müraciət</string>
+    <string name="permlab_trustInterface">Trust interfeysinə erişim</string>
     <string name="permdesc_trustInterface">Tətbiqin Trust xəbərdarlıqlarını və təkliflərini görüntüləməsinə icazə verir</string>
     <string name="trust_notification_channel">Trust xəbərdarlıqları</string>
     <string name="trust_notification_title_security">Trust \u2022 Sistem güvənliyi</string>
