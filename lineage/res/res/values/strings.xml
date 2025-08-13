@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
      SPDX-FileCopyrightText: 2015 The CyanogenMod Project
-     SPDX-FileCopyrightText: 2017-2023 The LineageOS Project
+     SPDX-FileCopyrightText: 2017-2025 The LineageOS Project
      SPDX-License-Identifier: Apache-2.0
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
@@ -42,6 +42,11 @@
 
     <!-- Name of wildcard profile. -->
     <string name="wildcardProfile">Other</string>
+
+    <!-- Fast charge strings -->
+    <string name="fast_charge_slow">Slow charge</string>
+    <string name="fast_charge_fast">Fast charge</string>
+    <string name="fast_charge_super">Super fast charge</string>
 
     <!-- LiveDisplay strings -->
     <string name="live_display_title" translatable="false">LiveDisplay</string>

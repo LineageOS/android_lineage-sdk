@@ -1,6 +1,6 @@
 /*
  * SPDX-FileCopyrightText: 2015-2016 The CyanogenMod Project
- * SPDX-FileCopyrightText: 2017-2023 The LineageOS Project
+ * SPDX-FileCopyrightText: 2017-2025 The LineageOS Project
  * SPDX-License-Identifier: Apache-2.0
  */
 
@@ -25,6 +25,8 @@ import com.android.internal.annotations.GuardedBy;
 import com.android.internal.util.ArrayUtils;
 
 import lineageos.trust.TrustInterface;
+
+import vendor.lineage.health.FastChargeMode;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -1402,6 +1404,19 @@ public final class LineageSettings {
                 new InclusiveIntegerRangeValidator(70, 100);
 
         /**
+         * Fast charging mode
+         */
+        public static final String FAST_CHARGE_MODE = "fast_charge_mode";
+
+        /** @hide */
+        public static final Validator FAST_CHARGE_MODE_VALIDATOR =
+                new DiscreteValueValidator(new String[] {
+                        String.valueOf(FastChargeMode.NONE),
+                        String.valueOf(FastChargeMode.FAST_CHARGE),
+                        String.valueOf(FastChargeMode.SUPER_FAST_CHARGE),
+                });
+
+        /**
          * Whether the battery light should be enabled (if hardware supports it)
          * The value is boolean (1 or 0).
          */
@@ -2166,6 +2181,7 @@ public final class LineageSettings {
             VALIDATORS.put(CHARGING_CONTROL_START_TIME, CHARGING_CONTROL_START_TIME_VALIDATOR);
             VALIDATORS.put(CHARGING_CONTROL_TARGET_TIME, CHARGING_CONTROL_TARGET_TIME_VALIDATOR);
             VALIDATORS.put(CHARGING_CONTROL_LIMIT, CHARGING_CONTROL_LIMIT_VALIDATOR);
+            VALIDATORS.put(FAST_CHARGE_MODE, FAST_CHARGE_MODE_VALIDATOR);
             VALIDATORS.put(BATTERY_LIGHT_ENABLED, BATTERY_LIGHT_ENABLED_VALIDATOR);
             VALIDATORS.put(BATTERY_LIGHT_FULL_CHARGE_DISABLED,
                     BATTERY_LIGHT_FULL_CHARGE_DISABLED_VALIDATOR);
