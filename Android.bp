@@ -88,6 +88,10 @@ java_defaults {
     ],
 
     static_libs: [
+        // External dependencies
+        "guava",
+
+        // Lineage dependencies
         "vendor.lineage.health-V2-java",
         "vendor.lineage.livedisplay-V2.0-java",
         "vendor.lineage.livedisplay-V2.1-java",
