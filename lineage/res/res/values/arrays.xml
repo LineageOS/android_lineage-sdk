@@ -1,10 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
      SPDX-FileCopyrightText: 2015 The CyanogenMod Project
-     SPDX-FileCopyrightText: 2022 The LineageOS Project
+     SPDX-FileCopyrightText: 2022-2025 The LineageOS Project
      SPDX-License-Identifier: Apache-2.0
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- Fast charge -->
+    <string-array name="charging_speed_entries" translatable="false">
+        <item>@string/charging_speed_slow</item>
+        <item>@string/charging_speed_fast</item>
+        <item>@string/charging_speed_super_fast</item>
+    </string-array>
+
+    <string-array name="charging_speed_values" translatable="false">
+        <item>1</item> <!-- FastChargeMode.NONE -->
+        <item>2</item> <!-- FastChargeMode.FAST_CHARGE -->
+        <item>4</item> <!-- FastChargeMode.SUPER_FAST_CHARGE -->
+    </string-array>
+
     <!-- LiveDisplay -->
     <string-array name="live_display_entries" translatable="false">
         <item>@string/live_display_auto</item>
