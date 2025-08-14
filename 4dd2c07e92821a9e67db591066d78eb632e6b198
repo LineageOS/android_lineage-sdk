@@ -63,6 +63,30 @@
       },
       "revId": "4dd2c07e92821a9e67db591066d78eb632e6b198",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "72ba7e90_23f14629",
+        "filename": "lineage/lib/main/java/org/lineageos/platform/internal/health/FastChargeController.java",
+        "patchSetId": 17
+      },
+      "lineNbr": 75,
+      "author": {
+        "id": 11883
+      },
+      "writtenOn": "2025-08-14T16:07:28Z",
+      "side": 1,
+      "message": "yeah, java streams will do",
+      "parentUuid": "14d544dc_a01236b9",
+      "range": {
+        "startLine": 71,
+        "startChar": 0,
+        "endLine": 75,
+        "endChar": 12
+      },
+      "revId": "4dd2c07e92821a9e67db591066d78eb632e6b198",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
