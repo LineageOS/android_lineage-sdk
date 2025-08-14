@@ -39,6 +39,30 @@
       },
       "revId": "4dd2c07e92821a9e67db591066d78eb632e6b198",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "14d544dc_a01236b9",
+        "filename": "lineage/lib/main/java/org/lineageos/platform/internal/health/FastChargeController.java",
+        "patchSetId": 17
+      },
+      "lineNbr": 75,
+      "author": {
+        "id": 10067
+      },
+      "writtenOn": "2025-08-14T16:02:02Z",
+      "side": 1,
+      "message": "didn\u0027t test it yet, but it builds: https://review.lineageos.org/c/LineageOS/android_lineage-sdk/+/442688/17..18",
+      "parentUuid": "4682aced_d3e67e5c",
+      "range": {
+        "startLine": 71,
+        "startChar": 0,
+        "endLine": 75,
+        "endChar": 12
+      },
+      "revId": "4dd2c07e92821a9e67db591066d78eb632e6b198",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
