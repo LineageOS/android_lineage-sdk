@@ -6,7 +6,6 @@
 package lineageos.hardware;
 
 import android.content.Context;
-import android.hidl.base.V1_0.IBase;
 import android.os.IBinder;
 import android.os.RemoteException;
 import android.os.ServiceManager;
@@ -15,10 +14,19 @@ import android.util.Log;
 import android.util.Range;
 
 import com.android.internal.annotations.VisibleForTesting;
-import com.android.internal.util.ArrayUtils;
 
 import lineageos.app.LineageContextConstants;
 
+import vendor.lineage.livedisplay.IAdaptiveBacklight;
+import vendor.lineage.livedisplay.IAntiFlicker;
+import vendor.lineage.livedisplay.IAutoContrast;
+import vendor.lineage.livedisplay.IColorBalance;
+import vendor.lineage.livedisplay.IColorEnhancement;
+import vendor.lineage.livedisplay.IDisplayColorCalibration;
+import vendor.lineage.livedisplay.IDisplayModes;
+import vendor.lineage.livedisplay.IPictureAdjustment;
+import vendor.lineage.livedisplay.IReadingEnhancement;
+import vendor.lineage.livedisplay.ISunlightEnhancement;
 import vendor.lineage.touch.IGloveMode;
 import vendor.lineage.touch.IHighTouchPollingRate;
 import vendor.lineage.touch.IKeyDisabler;
@@ -31,7 +39,6 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
-import java.util.NoSuchElementException;
 
 /**
  * Manages access to LineageOS hardware extensions
@@ -173,10 +180,7 @@ public final class LineageHardwareManager {
     private final ArrayMap<String, String> mDisplayModeMappings = new ArrayMap<String, String>();
     private final boolean mFilterDisplayModes;
 
-    // AIDL hals
     private HashMap<Integer, IBinder> mAIDLMap = new HashMap<Integer, IBinder>();
-    // HIDL hals
-    private HashMap<Integer, IBase> mHIDLMap = new HashMap<Integer, IBase>();
 
     /**
      * @hide to prevent subclassing from outside of the framework
@@ -244,7 +248,7 @@ public final class LineageHardwareManager {
      * @return true if the feature is supported, false otherwise.
      */
     public boolean isSupported(int feature) {
-        return isSupportedAIDL(feature) || isSupportedHIDL(feature) || isSupportedHWC2(feature);
+        return isSupportedAIDL(feature) || isSupportedHWC2(feature);
     }
 
     private boolean isSupportedAIDL(int feature) {
@@ -252,13 +256,6 @@ public final class LineageHardwareManager {
             mAIDLMap.put(feature, getAIDLService(feature));
         }
         return mAIDLMap.get(feature) != null;
-    }
-
-    private boolean isSupportedHIDL(int feature) {
-        if (!mHIDLMap.containsKey(feature)) {
-            mHIDLMap.put(feature, getHIDLService(feature));
-        }
-        return mHIDLMap.get(feature) != null;
     }
 
     private boolean isSupportedHWC2(int feature) {
@@ -275,25 +272,25 @@ public final class LineageHardwareManager {
         switch (feature) {
             case FEATURE_ADAPTIVE_BACKLIGHT:
                 return ServiceManager.waitForDeclaredService(
-                        vendor.lineage.livedisplay.IAdaptiveBacklight.DESCRIPTOR + "/default");
+                        IAdaptiveBacklight.DESCRIPTOR + "/default");
             case FEATURE_ANTI_FLICKER:
                 return ServiceManager.waitForDeclaredService(
-                        vendor.lineage.livedisplay.IAntiFlicker.DESCRIPTOR + "/default");
+                        IAntiFlicker.DESCRIPTOR + "/default");
             case FEATURE_AUTO_CONTRAST:
                 return ServiceManager.waitForDeclaredService(
-                        vendor.lineage.livedisplay.IAutoContrast.DESCRIPTOR + "/default");
+                        IAutoContrast.DESCRIPTOR + "/default");
             case FEATURE_COLOR_BALANCE:
                 return ServiceManager.waitForDeclaredService(
-                        vendor.lineage.livedisplay.IColorBalance.DESCRIPTOR + "/default");
+                        IColorBalance.DESCRIPTOR + "/default");
             case FEATURE_COLOR_ENHANCEMENT:
                 return ServiceManager.waitForDeclaredService(
-                        vendor.lineage.livedisplay.IColorEnhancement.DESCRIPTOR + "/default");
+                        IColorEnhancement.DESCRIPTOR + "/default");
             case FEATURE_DISPLAY_COLOR_CALIBRATION:
                 return ServiceManager.waitForDeclaredService(
-                        vendor.lineage.livedisplay.IDisplayColorCalibration.DESCRIPTOR + "/default");
+                        IDisplayColorCalibration.DESCRIPTOR + "/default");
             case FEATURE_DISPLAY_MODES:
                 return ServiceManager.waitForDeclaredService(
-                        vendor.lineage.livedisplay.IDisplayModes.DESCRIPTOR + "/default");
+                        IDisplayModes.DESCRIPTOR + "/default");
             case FEATURE_HIGH_TOUCH_POLLING_RATE:
                 return ServiceManager.waitForDeclaredService(
                         IHighTouchPollingRate.DESCRIPTOR + "/default");
@@ -308,48 +305,19 @@ public final class LineageHardwareManager {
                         IKeySwapper.DESCRIPTOR + "/default");
             case FEATURE_PICTURE_ADJUSTMENT:
                 return ServiceManager.waitForDeclaredService(
-                        vendor.lineage.livedisplay.IPictureAdjustment.DESCRIPTOR + "/default");
+                        IPictureAdjustment.DESCRIPTOR + "/default");
             case FEATURE_READING_ENHANCEMENT:
                 return ServiceManager.waitForDeclaredService(
-                        vendor.lineage.livedisplay.IReadingEnhancement.DESCRIPTOR + "/default");
+                        IReadingEnhancement.DESCRIPTOR + "/default");
             case FEATURE_SUNLIGHT_ENHANCEMENT:
                 return ServiceManager.waitForDeclaredService(
-                        vendor.lineage.livedisplay.ISunlightEnhancement.DESCRIPTOR + "/default");
+                        ISunlightEnhancement.DESCRIPTOR + "/default");
             case FEATURE_TOUCH_HOVERING:
                 return ServiceManager.waitForDeclaredService(
                         IStylusMode.DESCRIPTOR + "/default");
             case FEATURE_TOUCHSCREEN_GESTURES:
                 return ServiceManager.waitForDeclaredService(
                         ITouchscreenGesture.DESCRIPTOR + "/default");
-        }
-        return null;
-    }
-
-    private IBase getHIDLService(int feature) {
-        try {
-            switch (feature) {
-                case FEATURE_ADAPTIVE_BACKLIGHT:
-                    return vendor.lineage.livedisplay.V2_0.IAdaptiveBacklight.getService(true);
-                case FEATURE_ANTI_FLICKER:
-                    return vendor.lineage.livedisplay.V2_1.IAntiFlicker.getService(true);
-                case FEATURE_AUTO_CONTRAST:
-                    return vendor.lineage.livedisplay.V2_0.IAutoContrast.getService(true);
-                case FEATURE_COLOR_BALANCE:
-                    return vendor.lineage.livedisplay.V2_0.IColorBalance.getService(true);
-                case FEATURE_COLOR_ENHANCEMENT:
-                    return vendor.lineage.livedisplay.V2_0.IColorEnhancement.getService(true);
-                case FEATURE_DISPLAY_COLOR_CALIBRATION:
-                    return vendor.lineage.livedisplay.V2_0.IDisplayColorCalibration.getService(true);
-                case FEATURE_DISPLAY_MODES:
-                    return vendor.lineage.livedisplay.V2_0.IDisplayModes.getService(true);
-                case FEATURE_PICTURE_ADJUSTMENT:
-                    return vendor.lineage.livedisplay.V2_0.IPictureAdjustment.getService(true);
-                case FEATURE_READING_ENHANCEMENT:
-                    return vendor.lineage.livedisplay.V2_0.IReadingEnhancement.getService(true);
-                case FEATURE_SUNLIGHT_ENHANCEMENT:
-                    return vendor.lineage.livedisplay.V2_0.ISunlightEnhancement.getService(true);
-            }
-        } catch (NoSuchElementException | RemoteException e) {
         }
         return null;
     }
@@ -393,21 +361,13 @@ public final class LineageHardwareManager {
                 IBinder b = mAIDLMap.get(feature);
                 switch (feature) {
                     case FEATURE_ADAPTIVE_BACKLIGHT:
-                        vendor.lineage.livedisplay.IAdaptiveBacklight adaptiveBacklight =
-                                vendor.lineage.livedisplay.IAdaptiveBacklight.Stub.asInterface(b);
-                        return adaptiveBacklight.getEnabled();
+                        return IAdaptiveBacklight.Stub.asInterface(b).getEnabled();
                     case FEATURE_ANTI_FLICKER:
-                        vendor.lineage.livedisplay.IAntiFlicker antiFlicker =
-                                vendor.lineage.livedisplay.IAntiFlicker.Stub.asInterface(b);
-                        return antiFlicker.getEnabled();
+                        return IAntiFlicker.Stub.asInterface(b).getEnabled();
                     case FEATURE_AUTO_CONTRAST:
-                        vendor.lineage.livedisplay.IAutoContrast autoContrast =
-                                vendor.lineage.livedisplay.IAutoContrast.Stub.asInterface(b);
-                        return autoContrast.getEnabled();
+                        return IAutoContrast.Stub.asInterface(b).getEnabled();
                     case FEATURE_COLOR_ENHANCEMENT:
-                        vendor.lineage.livedisplay.IColorEnhancement colorEnhancement =
-                                vendor.lineage.livedisplay.IColorEnhancement.Stub.asInterface(b);
-                        return colorEnhancement.getEnabled();
+                        return IColorEnhancement.Stub.asInterface(b).getEnabled();
                     case FEATURE_HIGH_TOUCH_POLLING_RATE:
                         return IHighTouchPollingRate.Stub.asInterface(b).getEnabled();
                     case FEATURE_HIGH_TOUCH_SENSITIVITY:
@@ -417,43 +377,11 @@ public final class LineageHardwareManager {
                     case FEATURE_KEY_SWAP:
                         return IKeySwapper.Stub.asInterface(b).getEnabled();
                     case FEATURE_READING_ENHANCEMENT:
-                        vendor.lineage.livedisplay.IReadingEnhancement readingEnhancement =
-                                vendor.lineage.livedisplay.IReadingEnhancement.Stub.asInterface(b);
-                        return readingEnhancement.getEnabled();
+                        return IReadingEnhancement.Stub.asInterface(b).getEnabled();
                     case FEATURE_SUNLIGHT_ENHANCEMENT:
-                        vendor.lineage.livedisplay.ISunlightEnhancement sunlightEnhancement =
-                                vendor.lineage.livedisplay.ISunlightEnhancement.Stub.asInterface(b);
-                        return sunlightEnhancement.getEnabled();
+                        return ISunlightEnhancement.Stub.asInterface(b).getEnabled();
                     case FEATURE_TOUCH_HOVERING:
                         return IStylusMode.Stub.asInterface(b).getEnabled();
-                }
-            } else if (isSupportedHIDL(feature)) {
-                IBase obj = mHIDLMap.get(feature);
-                switch (feature) {
-                    case FEATURE_ADAPTIVE_BACKLIGHT:
-                        vendor.lineage.livedisplay.V2_0.IAdaptiveBacklight adaptiveBacklight =
-                                (vendor.lineage.livedisplay.V2_0.IAdaptiveBacklight) obj;
-                        return adaptiveBacklight.isEnabled();
-                    case FEATURE_ANTI_FLICKER:
-                        vendor.lineage.livedisplay.V2_1.IAntiFlicker antiFlicker =
-                                (vendor.lineage.livedisplay.V2_1.IAntiFlicker) obj;
-                        return antiFlicker.isEnabled();
-                    case FEATURE_AUTO_CONTRAST:
-                        vendor.lineage.livedisplay.V2_0.IAutoContrast autoContrast =
-                                (vendor.lineage.livedisplay.V2_0.IAutoContrast) obj;
-                        return autoContrast.isEnabled();
-                    case FEATURE_COLOR_ENHANCEMENT:
-                        vendor.lineage.livedisplay.V2_0.IColorEnhancement colorEnhancement =
-                                (vendor.lineage.livedisplay.V2_0.IColorEnhancement) obj;
-                        return colorEnhancement.isEnabled();
-                    case FEATURE_SUNLIGHT_ENHANCEMENT:
-                        vendor.lineage.livedisplay.V2_0.ISunlightEnhancement sunlightEnhancement =
-                                (vendor.lineage.livedisplay.V2_0.ISunlightEnhancement) obj;
-                        return sunlightEnhancement.isEnabled();
-                    case FEATURE_READING_ENHANCEMENT:
-                        vendor.lineage.livedisplay.V2_0.IReadingEnhancement readingEnhancement =
-                                (vendor.lineage.livedisplay.V2_0.IReadingEnhancement) obj;
-                        return readingEnhancement.isEnabled();
                 }
             } else if (checkService()) {
                 return sService.get(feature);
@@ -483,24 +411,16 @@ public final class LineageHardwareManager {
                 IBinder b = mAIDLMap.get(feature);
                 switch (feature) {
                     case FEATURE_ADAPTIVE_BACKLIGHT:
-                        vendor.lineage.livedisplay.IAdaptiveBacklight adaptiveBacklight =
-                                vendor.lineage.livedisplay.IAdaptiveBacklight.Stub.asInterface(b);
-                        adaptiveBacklight.setEnabled(enable);
+                        IAdaptiveBacklight.Stub.asInterface(b).setEnabled(enable);
                         break;
                     case FEATURE_ANTI_FLICKER:
-                        vendor.lineage.livedisplay.IAntiFlicker antiFlicker =
-                                vendor.lineage.livedisplay.IAntiFlicker.Stub.asInterface(b);
-                        antiFlicker.setEnabled(enable);
+                        IAntiFlicker.Stub.asInterface(b).setEnabled(enable);
                         break;
                     case FEATURE_AUTO_CONTRAST:
-                        vendor.lineage.livedisplay.IAutoContrast autoContrast =
-                                vendor.lineage.livedisplay.IAutoContrast.Stub.asInterface(b);
-                        autoContrast.setEnabled(enable);
+                        IAutoContrast.Stub.asInterface(b).setEnabled(enable);
                         break;
                     case FEATURE_COLOR_ENHANCEMENT:
-                        vendor.lineage.livedisplay.IColorEnhancement colorEnhancement =
-                                vendor.lineage.livedisplay.IColorEnhancement.Stub.asInterface(b);
-                        colorEnhancement.setEnabled(enable);
+                        IColorEnhancement.Stub.asInterface(b).setEnabled(enable);
                         break;
                     case FEATURE_HIGH_TOUCH_POLLING_RATE:
                         IHighTouchPollingRate.Stub.asInterface(b).setEnabled(enable);
@@ -515,49 +435,16 @@ public final class LineageHardwareManager {
                         IKeySwapper.Stub.asInterface(b).setEnabled(enable);
                         break;
                     case FEATURE_READING_ENHANCEMENT:
-                        vendor.lineage.livedisplay.IReadingEnhancement readingEnhancement =
-                                vendor.lineage.livedisplay.IReadingEnhancement.Stub.asInterface(b);
-                        readingEnhancement.setEnabled(enable);
+                        IReadingEnhancement.Stub.asInterface(b).setEnabled(enable);
                         break;
                     case FEATURE_SUNLIGHT_ENHANCEMENT:
-                        vendor.lineage.livedisplay.ISunlightEnhancement sunlightEnhancement =
-                                vendor.lineage.livedisplay.ISunlightEnhancement.Stub.asInterface(b);
-                        sunlightEnhancement.setEnabled(enable);
+                        ISunlightEnhancement.Stub.asInterface(b).setEnabled(enable);
                         break;
                     case FEATURE_TOUCH_HOVERING:
                         IStylusMode.Stub.asInterface(b).setEnabled(enable);
                         break;
                 }
                 return enable;
-            }
-            if (isSupportedHIDL(feature)) {
-                IBase obj = mHIDLMap.get(feature);
-                switch (feature) {
-                    case FEATURE_ADAPTIVE_BACKLIGHT:
-                        vendor.lineage.livedisplay.V2_0.IAdaptiveBacklight adaptiveBacklight =
-                                (vendor.lineage.livedisplay.V2_0.IAdaptiveBacklight) obj;
-                        return adaptiveBacklight.setEnabled(enable);
-                    case FEATURE_ANTI_FLICKER:
-                        vendor.lineage.livedisplay.V2_1.IAntiFlicker antiFlicker =
-                                (vendor.lineage.livedisplay.V2_1.IAntiFlicker) obj;
-                        return antiFlicker.setEnabled(enable);
-                    case FEATURE_AUTO_CONTRAST:
-                        vendor.lineage.livedisplay.V2_0.IAutoContrast autoContrast =
-                                (vendor.lineage.livedisplay.V2_0.IAutoContrast) obj;
-                        return autoContrast.setEnabled(enable);
-                    case FEATURE_COLOR_ENHANCEMENT:
-                        vendor.lineage.livedisplay.V2_0.IColorEnhancement colorEnhancement =
-                                (vendor.lineage.livedisplay.V2_0.IColorEnhancement) obj;
-                        return colorEnhancement.setEnabled(enable);
-                    case FEATURE_READING_ENHANCEMENT:
-                        vendor.lineage.livedisplay.V2_0.IReadingEnhancement readingEnhancement =
-                                (vendor.lineage.livedisplay.V2_0.IReadingEnhancement) obj;
-                        return readingEnhancement.setEnabled(enable);
-                    case FEATURE_SUNLIGHT_ENHANCEMENT:
-                        vendor.lineage.livedisplay.V2_0.ISunlightEnhancement sunlightEnhancement =
-                                (vendor.lineage.livedisplay.V2_0.ISunlightEnhancement) obj;
-                        return sunlightEnhancement.setEnabled(enable);
-                }
             } else if (checkService()) {
                 return sService.set(feature, enable);
             }
@@ -598,16 +485,10 @@ public final class LineageHardwareManager {
     private int[] getDisplayColorCalibrationArray() {
         try {
             if (isSupportedAIDL(FEATURE_DISPLAY_COLOR_CALIBRATION)) {
-                vendor.lineage.livedisplay.IDisplayColorCalibration displayColorCalibration =
-                        vendor.lineage.livedisplay.IDisplayColorCalibration.Stub.asInterface(
+                IDisplayColorCalibration displayColorCalibration =
+                        IDisplayColorCalibration.Stub.asInterface(
                                 mAIDLMap.get(FEATURE_DISPLAY_COLOR_CALIBRATION));
                 return displayColorCalibration.getCalibration();
-            }
-            if (isSupportedHIDL(FEATURE_DISPLAY_COLOR_CALIBRATION)) {
-                vendor.lineage.livedisplay.V2_0.IDisplayColorCalibration displayColorCalibration =
-                        (vendor.lineage.livedisplay.V2_0.IDisplayColorCalibration)
-                                mHIDLMap.get(FEATURE_DISPLAY_COLOR_CALIBRATION);
-                return ArrayUtils.convertToIntArray(displayColorCalibration.getCalibration());
             }
             if (checkService()) {
                 return sService.getDisplayColorCalibration();
@@ -633,19 +514,9 @@ public final class LineageHardwareManager {
      */
     public int getDisplayColorCalibrationMin() {
         if (isSupportedAIDL(FEATURE_DISPLAY_COLOR_CALIBRATION)) {
-            vendor.lineage.livedisplay.IDisplayColorCalibration displayColorCalibration =
-                    vendor.lineage.livedisplay.IDisplayColorCalibration.Stub.asInterface(
+            IDisplayColorCalibration displayColorCalibration =
+                    IDisplayColorCalibration.Stub.asInterface(
                             mAIDLMap.get(FEATURE_DISPLAY_COLOR_CALIBRATION));
-            try {
-                return displayColorCalibration.getMinValue();
-            } catch (RemoteException e) {
-                return 0;
-            }
-        }
-        if (isSupportedHIDL(FEATURE_DISPLAY_COLOR_CALIBRATION)) {
-            vendor.lineage.livedisplay.V2_0.IDisplayColorCalibration displayColorCalibration =
-                        (vendor.lineage.livedisplay.V2_0.IDisplayColorCalibration)
-                                mHIDLMap.get(FEATURE_DISPLAY_COLOR_CALIBRATION);
             try {
                 return displayColorCalibration.getMinValue();
             } catch (RemoteException e) {
@@ -661,19 +532,9 @@ public final class LineageHardwareManager {
      */
     public int getDisplayColorCalibrationMax() {
         if (isSupportedAIDL(FEATURE_DISPLAY_COLOR_CALIBRATION)) {
-            vendor.lineage.livedisplay.IDisplayColorCalibration displayColorCalibration =
-                    vendor.lineage.livedisplay.IDisplayColorCalibration.Stub.asInterface(
+            IDisplayColorCalibration displayColorCalibration =
+                    IDisplayColorCalibration.Stub.asInterface(
                             mAIDLMap.get(FEATURE_DISPLAY_COLOR_CALIBRATION));
-            try {
-                return displayColorCalibration.getMaxValue();
-            } catch (RemoteException e) {
-                return 0;
-            }
-        }
-        if (isSupportedHIDL(FEATURE_DISPLAY_COLOR_CALIBRATION)) {
-            vendor.lineage.livedisplay.V2_0.IDisplayColorCalibration displayColorCalibration =
-                        (vendor.lineage.livedisplay.V2_0.IDisplayColorCalibration)
-                                mHIDLMap.get(FEATURE_DISPLAY_COLOR_CALIBRATION);
             try {
                 return displayColorCalibration.getMaxValue();
             } catch (RemoteException e) {
@@ -696,18 +557,11 @@ public final class LineageHardwareManager {
     public boolean setDisplayColorCalibration(int[] rgb) {
         try {
             if (isSupportedAIDL(FEATURE_DISPLAY_COLOR_CALIBRATION)) {
-                vendor.lineage.livedisplay.IDisplayColorCalibration displayColorCalibration =
-                        vendor.lineage.livedisplay.IDisplayColorCalibration.Stub.asInterface(
+                IDisplayColorCalibration displayColorCalibration =
+                        IDisplayColorCalibration.Stub.asInterface(
                                 mAIDLMap.get(FEATURE_DISPLAY_COLOR_CALIBRATION));
                 displayColorCalibration.setCalibration(rgb);
                 return true;
-            }
-            if (isSupportedHIDL(FEATURE_DISPLAY_COLOR_CALIBRATION)) {
-                vendor.lineage.livedisplay.V2_0.IDisplayColorCalibration displayColorCalibration =
-                        (vendor.lineage.livedisplay.V2_0.IDisplayColorCalibration)
-                                mHIDLMap.get(FEATURE_DISPLAY_COLOR_CALIBRATION);
-                return displayColorCalibration.setCalibration(
-                       new ArrayList<Integer>(Arrays.asList(rgb[0], rgb[1], rgb[2])));
             }
             if (checkService()) {
                 return sService.setDisplayColorCalibration(rgb);
@@ -724,15 +578,9 @@ public final class LineageHardwareManager {
         DisplayMode[] modes = null;
         try {
             if (isSupportedAIDL(FEATURE_DISPLAY_MODES)) {
-                vendor.lineage.livedisplay.IDisplayModes displayModes =
-                        vendor.lineage.livedisplay.IDisplayModes.Stub.asInterface(
-                                mAIDLMap.get(FEATURE_DISPLAY_MODES));
+                IDisplayModes displayModes =
+                        IDisplayModes.Stub.asInterface(mAIDLMap.get(FEATURE_DISPLAY_MODES));
                 modes = AIDLHelper.fromAIDLModes(displayModes.getDisplayModes());
-            } else if (isSupportedHIDL(FEATURE_DISPLAY_MODES)) {
-                vendor.lineage.livedisplay.V2_0.IDisplayModes displayModes =
-                        (vendor.lineage.livedisplay.V2_0.IDisplayModes)
-                                mHIDLMap.get(FEATURE_DISPLAY_MODES);
-                modes = HIDLHelper.fromHIDLModes(displayModes.getDisplayModes());
             }
         } catch (RemoteException e) {
         } finally {
@@ -757,15 +605,9 @@ public final class LineageHardwareManager {
         DisplayMode mode = null;
         try {
             if (isSupportedAIDL(FEATURE_DISPLAY_MODES)) {
-                vendor.lineage.livedisplay.IDisplayModes displayModes =
-                        vendor.lineage.livedisplay.IDisplayModes.Stub.asInterface(
-                                mAIDLMap.get(FEATURE_DISPLAY_MODES));
+                IDisplayModes displayModes =
+                        IDisplayModes.Stub.asInterface(mAIDLMap.get(FEATURE_DISPLAY_MODES));
                 mode = AIDLHelper.fromAIDLMode(displayModes.getCurrentDisplayMode());
-            } else if (isSupportedHIDL(FEATURE_DISPLAY_MODES)) {
-                vendor.lineage.livedisplay.V2_0.IDisplayModes displayModes =
-                        (vendor.lineage.livedisplay.V2_0.IDisplayModes)
-                                mHIDLMap.get(FEATURE_DISPLAY_MODES);
-                mode = HIDLHelper.fromHIDLMode(displayModes.getCurrentDisplayMode());
             }
         } catch (RemoteException e) {
         } finally {
@@ -780,15 +622,9 @@ public final class LineageHardwareManager {
         DisplayMode mode = null;
         try {
             if (isSupportedAIDL(FEATURE_DISPLAY_MODES)) {
-                vendor.lineage.livedisplay.IDisplayModes displayModes =
-                        vendor.lineage.livedisplay.IDisplayModes.Stub.asInterface(
-                                mAIDLMap.get(FEATURE_DISPLAY_MODES));
+                IDisplayModes displayModes =
+                        IDisplayModes.Stub.asInterface(mAIDLMap.get(FEATURE_DISPLAY_MODES));
                 mode = AIDLHelper.fromAIDLMode(displayModes.getDefaultDisplayMode());
-            } else if (isSupportedHIDL(FEATURE_DISPLAY_MODES)) {
-                vendor.lineage.livedisplay.V2_0.IDisplayModes displayModes =
-                        (vendor.lineage.livedisplay.V2_0.IDisplayModes)
-                                mHIDLMap.get(FEATURE_DISPLAY_MODES);
-                mode = HIDLHelper.fromHIDLMode(displayModes.getDefaultDisplayMode());
             }
         } catch (RemoteException e) {
         } finally {
@@ -802,17 +638,10 @@ public final class LineageHardwareManager {
     public boolean setDisplayMode(DisplayMode mode, boolean makeDefault) {
         try {
             if (isSupportedAIDL(FEATURE_DISPLAY_MODES)) {
-                vendor.lineage.livedisplay.IDisplayModes displayModes =
-                        vendor.lineage.livedisplay.IDisplayModes.Stub.asInterface(
-                                mAIDLMap.get(FEATURE_DISPLAY_MODES));
+                IDisplayModes displayModes =
+                        IDisplayModes.Stub.asInterface(mAIDLMap.get(FEATURE_DISPLAY_MODES));
                 displayModes.setDisplayMode(mode.id, makeDefault);
                 return true;
-            }
-            if (isSupportedHIDL(FEATURE_DISPLAY_MODES)) {
-                vendor.lineage.livedisplay.V2_0.IDisplayModes displayModes =
-                        (vendor.lineage.livedisplay.V2_0.IDisplayModes)
-                                mHIDLMap.get(FEATURE_DISPLAY_MODES);
-                return displayModes.setDisplayMode(mode.id, makeDefault);
             }
         } catch (RemoteException e) {
         }
@@ -838,16 +667,9 @@ public final class LineageHardwareManager {
     public Range<Integer> getColorBalanceRange() {
         try {
             if (isSupportedAIDL(FEATURE_COLOR_BALANCE)) {
-                vendor.lineage.livedisplay.IColorBalance colorBalance =
-                        vendor.lineage.livedisplay.IColorBalance.Stub.asInterface(
-                                mAIDLMap.get(FEATURE_COLOR_BALANCE));
+                IColorBalance colorBalance =
+                        IColorBalance.Stub.asInterface(mAIDLMap.get(FEATURE_COLOR_BALANCE));
                 return AIDLHelper.fromAIDLRange(colorBalance.getColorBalanceRange());
-            }
-            if (isSupportedHIDL(FEATURE_COLOR_BALANCE)) {
-                vendor.lineage.livedisplay.V2_0.IColorBalance colorBalance =
-                        (vendor.lineage.livedisplay.V2_0.IColorBalance)
-                                mHIDLMap.get(FEATURE_COLOR_BALANCE);
-                return HIDLHelper.fromHIDLRange(colorBalance.getColorBalanceRange());
             }
         } catch (RemoteException e) {
         }
@@ -860,15 +682,8 @@ public final class LineageHardwareManager {
     public int getColorBalance() {
         try {
             if (isSupportedAIDL(FEATURE_COLOR_BALANCE)) {
-                vendor.lineage.livedisplay.IColorBalance colorBalance =
-                        vendor.lineage.livedisplay.IColorBalance.Stub.asInterface(
-                                mAIDLMap.get(FEATURE_COLOR_BALANCE));
-                return colorBalance.getColorBalance();
-            }
-            if (isSupportedHIDL(FEATURE_COLOR_BALANCE)) {
-                vendor.lineage.livedisplay.V2_0.IColorBalance colorBalance =
-                        (vendor.lineage.livedisplay.V2_0.IColorBalance)
-                                mHIDLMap.get(FEATURE_COLOR_BALANCE);
+                IColorBalance colorBalance =
+                        IColorBalance.Stub.asInterface(mAIDLMap.get(FEATURE_COLOR_BALANCE));
                 return colorBalance.getColorBalance();
             }
         } catch (RemoteException e) {
@@ -886,17 +701,10 @@ public final class LineageHardwareManager {
     public boolean setColorBalance(int value) {
         try {
             if (isSupportedAIDL(FEATURE_COLOR_BALANCE)) {
-                vendor.lineage.livedisplay.IColorBalance colorBalance =
-                        vendor.lineage.livedisplay.IColorBalance.Stub.asInterface(
-                                mAIDLMap.get(FEATURE_COLOR_BALANCE));
+                IColorBalance colorBalance =
+                        IColorBalance.Stub.asInterface(mAIDLMap.get(FEATURE_COLOR_BALANCE));
                 colorBalance.setColorBalance(value);
                 return true;
-            }
-            if (isSupportedHIDL(FEATURE_COLOR_BALANCE)) {
-                vendor.lineage.livedisplay.V2_0.IColorBalance colorBalance =
-                        (vendor.lineage.livedisplay.V2_0.IColorBalance)
-                                mHIDLMap.get(FEATURE_COLOR_BALANCE);
-                return colorBalance.setColorBalance(value);
             }
         } catch (RemoteException e) {
         }
@@ -911,16 +719,9 @@ public final class LineageHardwareManager {
     public HSIC getPictureAdjustment() {
         try {
             if (isSupportedAIDL(FEATURE_PICTURE_ADJUSTMENT)) {
-                vendor.lineage.livedisplay.IPictureAdjustment pictureAdjustment =
-                        vendor.lineage.livedisplay.IPictureAdjustment.Stub.asInterface(
-                                mAIDLMap.get(FEATURE_PICTURE_ADJUSTMENT));
+                IPictureAdjustment pictureAdjustment = IPictureAdjustment.Stub.asInterface(
+                        mAIDLMap.get(FEATURE_PICTURE_ADJUSTMENT));
                 return AIDLHelper.fromAIDLHSIC(pictureAdjustment.getPictureAdjustment());
-            }
-            if (isSupportedHIDL(FEATURE_PICTURE_ADJUSTMENT)) {
-                vendor.lineage.livedisplay.V2_0.IPictureAdjustment pictureAdjustment =
-                        (vendor.lineage.livedisplay.V2_0.IPictureAdjustment)
-                                mHIDLMap.get(FEATURE_PICTURE_ADJUSTMENT);
-                return HIDLHelper.fromHIDLHSIC(pictureAdjustment.getPictureAdjustment());
             }
         } catch (RemoteException e) {
         }
@@ -935,16 +736,9 @@ public final class LineageHardwareManager {
     public HSIC getDefaultPictureAdjustment() {
         try {
             if (isSupportedAIDL(FEATURE_PICTURE_ADJUSTMENT)) {
-                vendor.lineage.livedisplay.IPictureAdjustment pictureAdjustment =
-                        vendor.lineage.livedisplay.IPictureAdjustment.Stub.asInterface(
-                                mAIDLMap.get(FEATURE_PICTURE_ADJUSTMENT));
+                IPictureAdjustment pictureAdjustment = IPictureAdjustment.Stub.asInterface(
+                        mAIDLMap.get(FEATURE_PICTURE_ADJUSTMENT));
                 return AIDLHelper.fromAIDLHSIC(pictureAdjustment.getDefaultPictureAdjustment());
-            }
-            if (isSupportedHIDL(FEATURE_PICTURE_ADJUSTMENT)) {
-                vendor.lineage.livedisplay.V2_0.IPictureAdjustment pictureAdjustment =
-                        (vendor.lineage.livedisplay.V2_0.IPictureAdjustment)
-                                mHIDLMap.get(FEATURE_PICTURE_ADJUSTMENT);
-                return HIDLHelper.fromHIDLHSIC(pictureAdjustment.getDefaultPictureAdjustment());
             }
         } catch (RemoteException e) {
         }
@@ -960,17 +754,10 @@ public final class LineageHardwareManager {
     public boolean setPictureAdjustment(final HSIC hsic) {
         try {
             if (isSupportedAIDL(FEATURE_PICTURE_ADJUSTMENT)) {
-                vendor.lineage.livedisplay.IPictureAdjustment pictureAdjustment =
-                        vendor.lineage.livedisplay.IPictureAdjustment.Stub.asInterface(
-                                mAIDLMap.get(FEATURE_PICTURE_ADJUSTMENT));
+                IPictureAdjustment pictureAdjustment = IPictureAdjustment.Stub.asInterface(
+                        mAIDLMap.get(FEATURE_PICTURE_ADJUSTMENT));
                 pictureAdjustment.setPictureAdjustment(AIDLHelper.toAIDLHSIC(hsic));
                 return true;
-            }
-            if (isSupportedHIDL(FEATURE_PICTURE_ADJUSTMENT)) {
-                vendor.lineage.livedisplay.V2_0.IPictureAdjustment pictureAdjustment =
-                        (vendor.lineage.livedisplay.V2_0.IPictureAdjustment)
-                                mHIDLMap.get(FEATURE_PICTURE_ADJUSTMENT);
-                return pictureAdjustment.setPictureAdjustment(HIDLHelper.toHIDLHSIC(hsic));
             }
         } catch (RemoteException e) {
         }
@@ -985,26 +772,14 @@ public final class LineageHardwareManager {
     public List<Range<Float>> getPictureAdjustmentRanges() {
         try {
             if (isSupportedAIDL(FEATURE_PICTURE_ADJUSTMENT)) {
-                vendor.lineage.livedisplay.IPictureAdjustment pictureAdjustment =
-                        vendor.lineage.livedisplay.IPictureAdjustment.Stub.asInterface(
-                                mAIDLMap.get(FEATURE_PICTURE_ADJUSTMENT));
+                IPictureAdjustment pictureAdjustment = IPictureAdjustment.Stub.asInterface(
+                        mAIDLMap.get(FEATURE_PICTURE_ADJUSTMENT));
                 return Arrays.asList(
                         AIDLHelper.fromAIDLRange(pictureAdjustment.getHueRange()),
                         AIDLHelper.fromAIDLRange(pictureAdjustment.getSaturationRange()),
                         AIDLHelper.fromAIDLRange(pictureAdjustment.getIntensityRange()),
                         AIDLHelper.fromAIDLRange(pictureAdjustment.getContrastRange()),
                         AIDLHelper.fromAIDLRange(pictureAdjustment.getSaturationThresholdRange()));
-            }
-            if (isSupportedHIDL(FEATURE_PICTURE_ADJUSTMENT)) {
-                vendor.lineage.livedisplay.V2_0.IPictureAdjustment pictureAdjustment =
-                        (vendor.lineage.livedisplay.V2_0.IPictureAdjustment)
-                                mHIDLMap.get(FEATURE_PICTURE_ADJUSTMENT);
-                return Arrays.asList(
-                        HIDLHelper.fromHIDLRange(pictureAdjustment.getHueRange()),
-                        HIDLHelper.fromHIDLRange(pictureAdjustment.getSaturationRange()),
-                        HIDLHelper.fromHIDLRange(pictureAdjustment.getIntensityRange()),
-                        HIDLHelper.fromHIDLRange(pictureAdjustment.getContrastRange()),
-                        HIDLHelper.fromHIDLRange(pictureAdjustment.getSaturationThresholdRange()));
             }
         } catch (RemoteException e) {
         }
