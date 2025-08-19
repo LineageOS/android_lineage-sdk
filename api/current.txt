@@ -302,15 +302,19 @@ package lineageos.health {
   public class HealthInterface {
     method public boolean allowFineGrainedSettings();
     method public boolean getEnabled();
+    method public int getFastChargeMode();
     method public static lineageos.health.HealthInterface getInstance(android.content.Context);
     method public int getLimit();
     method public int getMode();
     method public int getStartTime();
+    method public int[] getSupportedFastChargeModes();
     method public int getTargetTime();
     method public boolean isChargingControlSupported();
     method public static boolean isChargingControlSupported(android.content.Context);
+    method public boolean isFastChargeSupported();
     method public boolean reset();
     method public boolean setEnabled(boolean);
+    method public boolean setFastChargeMode(int);
     method public boolean setLimit(int);
     method public boolean setMode(int);
     method public boolean setStartTime(int);
@@ -594,6 +598,7 @@ package lineageos.providers {
     field public static final String DISPLAY_TEMPERATURE_NIGHT = "display_temperature_night";
     field public static final String DOUBLE_TAP_SLEEP_GESTURE = "double_tap_sleep_gesture";
     field public static final String ENABLE_TASKBAR = "enable_taskbar";
+    field public static final String FAST_CHARGE_MODE = "fast_charge_mode";
     field public static final String HEADSET_CONNECT_PLAYER = "headset_connect_player";
     field public static final String HIGH_TOUCH_POLLING_RATE_ENABLE = "high_touch_polling_rate_enable";
     field public static final String HIGH_TOUCH_SENSITIVITY_ENABLE = "high_touch_sensitivity_enable";
