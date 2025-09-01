@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
      SPDX-FileCopyrightText: 2015 The CyanogenMod Project
-     SPDX-FileCopyrightText: 2017-2023 The LineageOS Project
+     SPDX-FileCopyrightText: 2017-2025 The LineageOS Project
      SPDX-License-Identifier: Apache-2.0
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
@@ -26,6 +26,10 @@
     <string name="profileGroupEmail">ئېلخەت</string>
     <string name="profileGroupSMS">قىسقا ئۇچۇر</string>
     <string name="wildcardProfile">باشقا</string>
+    <string name="charging_speed">توكلاش سۈرئىتى</string>
+    <string name="charging_speed_slow">ئاستا</string>
+    <string name="charging_speed_fast">تېز</string>
+    <string name="charging_speed_super_fast">ئىنتايىن تېز</string>
     <string name="live_display_auto">ئاپتوماتېك</string>
     <string name="live_display_auto_summary">كۈن چىققان ۋە كۈن پاتقاندىن كېيىن ئېكران رەڭ تېمپېراتورىسىنى ئۆزلۈكىدىن تەڭشەيدۇ</string>
     <string name="live_display_off">تاقاق</string>
