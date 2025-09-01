@@ -32,6 +32,7 @@
     <string name="profileGroupSMS">SMS</string>
     <string name="live_display_auto">Аўтаматычна</string>
     <string name="live_display_auto_summary">Аўтаматычная карэкціроўка колеравай тэмпературы экрана пасля заходу і ўсходу сонца</string>
+    <string name="live_display_off">Выключана</string>
     <string name="live_display_off_summary">Адключыць усе карэкціроўкі</string>
     <string name="live_display_day">Дзень</string>
     <string name="live_display_night">Ноч</string>

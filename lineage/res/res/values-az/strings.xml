@@ -19,8 +19,8 @@
     <string name="lineageos_system_label">LineageOS Sistemi</string>
     <string name="permlab_modifyProfiles">sistem profillərini dəyişdir</string>
     <string name="permdesc_modifyProfiles">Tətbiqin sistem profillərini dəyişdirməsinə icazə verir.</string>
-    <string name="permlab_useHardwareFramework">avadanlıq bünövrəsindən istifadə et</string>
-    <string name="permdesc_useHardwareFramework">Tətbiqin Lineage hardware çərçivəsinə erişməsinə icazə verir.</string>
+    <string name="permlab_useHardwareFramework">donanım çərçivəsini istifadə et</string>
+    <string name="permdesc_useHardwareFramework">Tətbiqin Lineage donanım çərçivəsinə erişməsinə icazə verir.</string>
     <string name="permlab_writeSettings">Lineage sistem ayarlarını dəyişdir</string>
     <string name="permdesc_writeSettings">Tətbiqin Lineage sistem ayarlarını dəyişdirməsinə icazə verir.</string>
     <string name="permlab_writeSecureSettings">Lineage güvənli sistem ayarlarını dəyişdir</string>
