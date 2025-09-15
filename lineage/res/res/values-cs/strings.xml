@@ -26,6 +26,10 @@
     <string name="profileGroupEmail">E-mail</string>
     <string name="profileGroupSMS">SMS</string>
     <string name="wildcardProfile">Ostatní</string>
+    <string name="charging_speed">Rychlost nabíjení</string>
+    <string name="charging_speed_slow">Pomalá</string>
+    <string name="charging_speed_fast">Rychlá</string>
+    <string name="charging_speed_super_fast">Velmi rychlá</string>
     <string name="live_display_auto">Automatické</string>
     <string name="live_display_auto_summary">Automaticky upravit teplotu barev obrazovky po západu a východu slunce</string>
     <string name="live_display_off">Vypnuto</string>
