@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
      SPDX-FileCopyrightText: 2015 The CyanogenMod Project
-     SPDX-FileCopyrightText: 2017-2023 The LineageOS Project
+     SPDX-FileCopyrightText: 2017-2025 The LineageOS Project
      SPDX-License-Identifier: Apache-2.0
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
@@ -26,6 +26,10 @@
     <string name="profileGroupEmail">电子邮件</string>
     <string name="profileGroupSMS">短信</string>
     <string name="wildcardProfile">其他</string>
+    <string name="charging_speed">充电速度</string>
+    <string name="charging_speed_slow">慢</string>
+    <string name="charging_speed_fast">快</string>
+    <string name="charging_speed_super_fast">极速</string>
     <string name="live_display_auto">自动</string>
     <string name="live_display_auto_summary">在日出和日落后自动调节屏幕色温</string>
     <string name="live_display_off">关闭</string>
