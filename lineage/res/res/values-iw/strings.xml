@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
      SPDX-FileCopyrightText: 2015 The CyanogenMod Project
-     SPDX-FileCopyrightText: 2017-2023 The LineageOS Project
+     SPDX-FileCopyrightText: 2017-2025 The LineageOS Project
      SPDX-License-Identifier: Apache-2.0
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="lineageos_system_label">מערכת LineageOS</string>
-    <string name="permlab_modifyProfiles">שנה פרופילי מערכת</string>
+    <string name="permlab_modifyProfiles">שינוי פרופילי מערכת</string>
     <string name="permdesc_modifyProfiles">מאפשר ליישום לשנות פרופילי מערכת.</string>
     <string name="permlab_useHardwareFramework">השתמש במסגרת חומרה</string>
     <string name="permdesc_useHardwareFramework">אפשר ליישומים גישה לתשתית החומרה של LineageOS.</string>
@@ -21,11 +21,15 @@
     <string name="profileNameNight">לילה</string>
     <string name="profileNameAutomobile">רכב</string>
     <string name="profileGroupPhone">טלפון</string>
-    <string name="profileGroupCalendar">לוח שנה</string>
+    <string name="profileGroupCalendar">יומן</string>
     <string name="profileGroupGmail">Gmail</string>
     <string name="profileGroupEmail">דוא\"ל</string>
     <string name="profileGroupSMS">SMS</string>
     <string name="wildcardProfile">אחר</string>
+    <string name="charging_speed">מהירות טעינה</string>
+    <string name="charging_speed_slow">איטית</string>
+    <string name="charging_speed_fast">מהירה</string>
+    <string name="charging_speed_super_fast">מהירה במיוחד</string>
     <string name="live_display_auto">אוטומטי</string>
     <string name="live_display_auto_summary">התאם אוטומטית את טמפרטורת הצבע של המסך לאחר הזריחה והשקיעה</string>
     <string name="live_display_off">כבוי</string>
@@ -37,17 +41,17 @@
     <string name="live_display_outdoor">בחוץ (שמש בהירה)</string>
     <string name="live_display_outdoor_summary">השתמש בהגדרות חוץ בלבד</string>
     <string name="live_display_hint">LiveDisplay יכולה למזער את עייפות העין ולעזור לך לישון בלילה. לחץ כאן כדי לנסות!</string>
-    <string name="accessibility_quick_settings_live_display_off">LiveDisplay כבוי.</string>
-    <string name="accessibility_quick_settings_live_display_auto">LiveDisplay: מצב אוטומטי.</string>
-    <string name="accessibility_quick_settings_live_display_day">LiveDisplay: מצב יום.</string>
-    <string name="accessibility_quick_settings_live_display_night">LiveDisplay: מצב לילה.</string>
-    <string name="accessibility_quick_settings_live_display_outdoor">LiveDisplay: מצב חוץ.</string>
-    <string name="accessibility_quick_settings_live_display_changed_off">LiveDisplay כובה.</string>
-    <string name="accessibility_quick_settings_live_display_changed_auto">LiveDisplay שונה למצב אוטומטי.</string>
-    <string name="accessibility_quick_settings_live_display_changed_day">LiveDisplay שונה למצב יום.</string>
-    <string name="accessibility_quick_settings_live_display_changed_night">LiveDisplay שונה למצב לילה.</string>
-    <string name="accessibility_quick_settings_live_display_changed_outdoor">LiveDisplay שונה למצב חוץ.</string>
-    <string name="permlab_manageLiveDisplay">נהל הגדרות livedisplay</string>
+    <string name="accessibility_quick_settings_live_display_off">תצוגה חיה כבויה.</string>
+    <string name="accessibility_quick_settings_live_display_auto">תצוגה חיה: מצב אוטומטי.</string>
+    <string name="accessibility_quick_settings_live_display_day">תצוגה חיה: מצב יום.</string>
+    <string name="accessibility_quick_settings_live_display_night">תצוגה חיה: מצב לילה.</string>
+    <string name="accessibility_quick_settings_live_display_outdoor">תצוגה חיה: מצב חוץ.</string>
+    <string name="accessibility_quick_settings_live_display_changed_off">תצוגה חיה כבויה.</string>
+    <string name="accessibility_quick_settings_live_display_changed_auto">תצוגה חיה שונתה למצב אוטומטי.</string>
+    <string name="accessibility_quick_settings_live_display_changed_day">תצוגה חיה שונתה למצב יום.</string>
+    <string name="accessibility_quick_settings_live_display_changed_night">תצוגה חיה שונתה למצב לילה.</string>
+    <string name="accessibility_quick_settings_live_display_changed_outdoor">תצוגה חיה שונתה למצב חוץ.</string>
+    <string name="permlab_manageLiveDisplay">ניהול הגדרות תצוגה חיה</string>
     <string name="permdesc_manageLiveDisplay">מאפשר ליישום לקבוע הגדרות תצוגה מתקדמות.</string>
     <string name="permlab_manageRemotePrefs">נהל הגדרות מרחוק</string>
     <string name="permdesc_manageRemotePrefs">מאפשר ליישום לנהל הגדרות מרחוק</string>
@@ -62,5 +66,23 @@
     <string name="megabitspersecond_short">Mb/s</string>
     <string name="kilobytespersecond_short">kB/s</string>
     <string name="megabytespersecond_short">MB/s</string>
+    <string name="kilobytespersecond_compact">ק\"ב</string>
+    <string name="megabytespersecond_compact">מ\"ב</string>
+    <string name="trust_feature_name">Trust</string>
+    <string name="permlab_trustInterface">גישה לממשק Trust</string>
+    <string name="permdesc_trustInterface">להתיר ליישום להציג אזהרות Trust והצעות</string>
+    <string name="trust_notification_channel">התראות Trust</string>
+    <string name="trust_notification_title_security">Trust\u2022 אבטחת המערכת</string>
+    <string name="trust_notification_content_selinux">Selinux לא נאכף, האבטחה שלך נחלשה</string>
+    <string name="trust_notification_content_keys">הגרסה הזו נבנתה עם מפתחות ציבוריים</string>
+    <string name="trust_notification_title_onboarding">לגלות את Trust</string>
+    <string name="trust_notification_content_onboarding">לגלות כיצד לוודא שמכשירך מאובטח</string>
     <string name="trust_notification_action_manage">נהל התראות</string>
+    <string name="charging_control_notification_channel">בקרת טעינה</string>
+    <string name="charging_control_notification_title">בקרת טעינה</string>
+    <string name="charging_control_notification_cancel_once">ביטול</string>
+    <string name="charging_control_notification_content_limit">הסוללה תטען ל-%1$d%%</string>
+    <string name="charging_control_notification_content_limit_reached">הסוללה טעונה ל-%1$d%%</string>
+    <string name="charging_control_notification_content_target">הסוללה תטען במלואה בשעה %1$s</string>
+    <string name="charging_control_notification_content_target_reached">הסוללה טעונה</string>
 </resources>
