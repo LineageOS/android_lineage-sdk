@@ -1,13 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
      SPDX-FileCopyrightText: 2015 The CyanogenMod Project
-     SPDX-FileCopyrightText: 2017-2023 The LineageOS Project
+     SPDX-FileCopyrightText: 2017-2025 The LineageOS Project
      SPDX-License-Identifier: Apache-2.0
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="lineageos_system_label">LineageOS سىستېمىسى</string>
     <string name="permlab_modifyProfiles">سىستېما سەپلەنمىسىنى ئۆزگەرتىش</string>
     <string name="permdesc_modifyProfiles">ئەپنىڭ سىستېما سەپلەنمىسىنى ئۆزگەرتىشىگە يول قويۇش.</string>
     <string name="permlab_useHardwareFramework">قاتتىق دىتال جازىسىنى ئىشلىتىش</string>
+    <string name="permdesc_useHardwareFramework">ئەپنىڭ Lineage قاتتىق دېتال قۇرۇلمىسىنى زىيارەت قىلىشقا يو قويىدۇ.</string>
+    <string name="permlab_writeSettings">Lineage سىستېما تەڭشىكىنى ئۆزگەرتىدۇ</string>
+    <string name="permdesc_writeSettings">ئەپنىڭ Lineage سىستېما تەڭشىكىنى ئۆزگەرتىشىگە يول قويىدۇ.</string>
+    <string name="permlab_writeSecureSettings">Lineage بىخەتەرلىك سىستېما تەڭشىكىنى ئۆزگەرتىدۇ</string>
+    <string name="permdesc_writeSecureSettings">ئەپنىڭ Lineage بىخەتەرلىك سىستېما تەڭشىكىنى ئۆزگەرتىشىگە يول قويىدۇ. ئادەتتىكى ئەپلەرنىڭ بۇنداق ھوقۇقى بولمايدۇ.</string>
     <string name="profileNameDefault">كۆڭۈلدىكى</string>
     <string name="profileNameWork">ئىش</string>
     <string name="profileNameHome">باش ئېكران</string>
@@ -20,6 +26,10 @@
     <string name="profileGroupEmail">ئېلخەت</string>
     <string name="profileGroupSMS">قىسقا ئۇچۇر</string>
     <string name="wildcardProfile">باشقا</string>
+    <string name="charging_speed">توكلاش سۈرئىتى</string>
+    <string name="charging_speed_slow">ئاستا</string>
+    <string name="charging_speed_fast">تېز</string>
+    <string name="charging_speed_super_fast">ئىنتايىن تېز</string>
     <string name="live_display_auto">ئاپتوماتېك</string>
     <string name="live_display_auto_summary">كۈن چىققان ۋە كۈن پاتقاندىن كېيىن ئېكران رەڭ تېمپېراتورىسىنى ئۆزلۈكىدىن تەڭشەيدۇ</string>
     <string name="live_display_off">تاقاق</string>
@@ -31,4 +41,48 @@
     <string name="live_display_outdoor">تالا (قۇياش نۇرى)</string>
     <string name="live_display_outdoor_summary">تالا تەڭشەكلىرىنىلا ئىشلىتىدۇ</string>
     <string name="live_display_hint">LiveDisplay كۆز چارچىشىنى يېنىكلىتىشكە ياردەم بېرىدۇ، كېچىدە ئۇخلىشىڭىزغا ياردەم بېرىدۇ. سىناش ئۈچۈن بۇ جاينى چېكىڭ!</string>
+    <string name="accessibility_quick_settings_live_display_off">LiveDisplay تاقاق.</string>
+    <string name="accessibility_quick_settings_live_display_auto">LiveDisplay: ئاپتوماتىك ھالەت.</string>
+    <string name="accessibility_quick_settings_live_display_day">LiveDisplay: كۈندۈز ھالىتى.</string>
+    <string name="accessibility_quick_settings_live_display_night">LiveDisplay: كېچە ھالىتى.</string>
+    <string name="accessibility_quick_settings_live_display_outdoor">LiveDisplay: دالا ھالىتى.</string>
+    <string name="accessibility_quick_settings_live_display_changed_off">LiveDisplay تاقالدى.</string>
+    <string name="accessibility_quick_settings_live_display_changed_auto">LiveDisplay ئاپتوماتىك ھالەتكە ئۆزگەرتىلدى.</string>
+    <string name="accessibility_quick_settings_live_display_changed_day">LiveDisplay كۈندۈز ھالەتكە ئۆزگەرتىلدى.</string>
+    <string name="accessibility_quick_settings_live_display_changed_night">LiveDisplay كېچە ھالەتكە ئۆزگەرتىلدى.</string>
+    <string name="accessibility_quick_settings_live_display_changed_outdoor">LiveDisplay دالا ھالەتكە ئۆزگەرتىلدى.</string>
+    <string name="permlab_manageLiveDisplay">LiveDisplay تەڭشىكىنى باشقۇرۇش</string>
+    <string name="permdesc_manageLiveDisplay">ئەپنىڭ ئالىي كۆرسىتىش تەڭشىكىنى سەپلىشىگە يول قويىدۇ.</string>
+    <string name="permlab_manageRemotePrefs">يىراقتىكى تەڭشەكنى باشقۇرۇش</string>
+    <string name="permdesc_manageRemotePrefs">ئەپچنىڭ يىراقتىكى تەڭشەكنى باشقۇرۇشىغا يول قويىدۇ</string>
+    <string name="build_date">ھاسىللىغان چېسلا</string>
+    <string name="lineage_api_level">LineageOS API دەرىجىسى</string>
+    <string name="lineage_updates">LineageOS يېڭىلاش</string>
+    <string name="lineage_version">LineageOS نەشرى</string>
+    <string name="lineage_vendor_security_patch">تەمىنلىگۈچى سودىگەر بىخەتەرلىك ياماق دەرىجىسى</string>
+    <string name="unknown">يوچۇن</string>
+    <string name="app_killed_message">ئەپ ئاخىرلاشتۇرۇلدى</string>
+    <string name="kilobitspersecond_short">kb/s</string>
+    <string name="megabitspersecond_short">Mb/s</string>
+    <string name="kilobytespersecond_short">kB/s</string>
+    <string name="megabytespersecond_short">MB/s</string>
+    <string name="kilobytespersecond_compact">k</string>
+    <string name="megabytespersecond_compact">M</string>
+    <string name="trust_feature_name">ئىشەنچ</string>
+    <string name="permlab_trustInterface">ئىشەنچ كۆرۈنمە يۈزى زىيارىتى</string>
+    <string name="permdesc_trustInterface">ئەپنىڭ ئىشەنچ ئاگاھلاندۇرۇشى ۋە تەۋسىيەسىنى كۆرسىتىشىگە يول قويىدۇ</string>
+    <string name="trust_notification_channel">ئىشەنچ ئاگاھلاندۇرۇشى</string>
+    <string name="trust_notification_title_security">ئىشەنچ \u2022 بىخەتەرلىك سىستېمىسى</string>
+    <string name="trust_notification_content_selinux">SELinux مەجبۇرىي ھالەتتە ئەمەس، بىخەتەرلىكىڭىز ئاجىزلىدى.</string>
+    <string name="trust_notification_content_keys">بۇ نەشرى ئاممىۋى ئاچقۇچ بىلەن ئىمزالانغان</string>
+    <string name="trust_notification_title_onboarding">ئىشەنچ بايقاش</string>
+    <string name="trust_notification_content_onboarding">ئۈسكۈنىڭىزنىڭ بىخەتەرلىكىگە قانداق كاپالەتلىك قىلىدۇ</string>
+    <string name="trust_notification_action_manage">ئاگاھلاندۇرۇش باشقۇرۇش</string>
+    <string name="charging_control_notification_channel">توكلاش تىزگىنى</string>
+    <string name="charging_control_notification_title">توكلاش تىزگىنى</string>
+    <string name="charging_control_notification_cancel_once">ۋاز كەچ</string>
+    <string name="charging_control_notification_content_limit">توكدان %d%% توكلانغان</string>
+    <string name="charging_control_notification_content_limit_reached">توكدان %1$d%% توكلاندى</string>
+    <string name="charging_control_notification_content_target">%1$s توكداننىڭ توكى لىقلىنىدۇ</string>
+    <string name="charging_control_notification_content_target_reached">توكدان توكلاندى</string>
 </resources>
