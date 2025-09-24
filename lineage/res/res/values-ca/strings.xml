@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
      SPDX-FileCopyrightText: 2015 The CyanogenMod Project
-     SPDX-FileCopyrightText: 2017-2023 The LineageOS Project
+     SPDX-FileCopyrightText: 2017-2025 The LineageOS Project
      SPDX-License-Identifier: Apache-2.0
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
@@ -26,6 +26,10 @@
     <string name="profileGroupEmail">Correu electrònic</string>
     <string name="profileGroupSMS">SMS</string>
     <string name="wildcardProfile">Altres</string>
+    <string name="charging_speed">Velocitat de càrrega</string>
+    <string name="charging_speed_slow">Lenta</string>
+    <string name="charging_speed_fast">Ràpida</string>
+    <string name="charging_speed_super_fast">Molt ràpida</string>
     <string name="live_display_auto">Automàtic</string>
     <string name="live_display_auto_summary">Ajusta automàticament la temperatura de color de la pantalla després de la posta de sol i de l\'alba</string>
     <string name="live_display_off">Desactivat</string>

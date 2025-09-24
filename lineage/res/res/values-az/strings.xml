@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
      SPDX-FileCopyrightText: 2015 The CyanogenMod Project
-     SPDX-FileCopyrightText: 2017-2023 The LineageOS Project
+     SPDX-FileCopyrightText: 2017-2025 The LineageOS Project
      SPDX-License-Identifier: Apache-2.0
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="lineageos_system_label">LineageOS Sistemi</string>
     <string name="permlab_modifyProfiles">sistem profillərini dəyişdir</string>
     <string name="permdesc_modifyProfiles">Tətbiqin sistem profillərini dəyişdirməsinə icazə verir.</string>
-    <string name="permlab_useHardwareFramework">avadanlıq bünövrəsindən istifadə et</string>
-    <string name="permdesc_useHardwareFramework">Tətbiqin Lineage avadanlıq bünövrəsinə müraciətinə icazə verir.</string>
+    <string name="permlab_useHardwareFramework">donanım çərçivəsini istifadə et</string>
+    <string name="permdesc_useHardwareFramework">Tətbiqin Lineage donanım çərçivəsinə erişməsinə icazə verir.</string>
     <string name="permlab_writeSettings">Lineage sistem ayarlarını dəyişdir</string>
     <string name="permdesc_writeSettings">Tətbiqin Lineage sistem ayarlarını dəyişdirməsinə icazə verir.</string>
     <string name="permlab_writeSecureSettings">Lineage güvənli sistem ayarlarını dəyişdir</string>
@@ -26,6 +26,10 @@
     <string name="profileGroupEmail">E-poçt</string>
     <string name="profileGroupSMS">SMS</string>
     <string name="wildcardProfile">Digər</string>
+    <string name="charging_speed">Doldurma sürəti</string>
+    <string name="charging_speed_slow">Yavaş</string>
+    <string name="charging_speed_fast">Sürətli</string>
+    <string name="charging_speed_super_fast">Super sürətli</string>
     <string name="live_display_auto">Avtomatik</string>
     <string name="live_display_auto_summary">Gün çıxandan və batandan sonra ekranın rəng hərarətini avtomatik ayarlayır</string>
     <string name="live_display_off">Bağlı</string>
@@ -65,14 +69,14 @@
     <string name="kilobytespersecond_compact">k</string>
     <string name="megabytespersecond_compact">M</string>
     <string name="trust_feature_name">Trust</string>
-    <string name="permlab_trustInterface">Trust interfeysinə müraciət</string>
+    <string name="permlab_trustInterface">Trust interfeysinə erişim</string>
     <string name="permdesc_trustInterface">Tətbiqin Trust xəbərdarlıqlarını və təkliflərini görüntüləməsinə icazə verir</string>
     <string name="trust_notification_channel">Trust xəbərdarlıqları</string>
     <string name="trust_notification_title_security">Trust \u2022 Sistem güvənliyi</string>
     <string name="trust_notification_content_selinux">SELinux məcbur edilmir, güvənliyiniz zəiflədi</string>
     <string name="trust_notification_content_keys">Bu quruluş ictimai açarlarla imzalandı</string>
     <string name="trust_notification_title_onboarding">Trust-ı Kəşf et</string>
-    <string name="trust_notification_content_onboarding">Cihazınızın təhlükəsiz olduğundan necə əmin olacağınızı öyrənin</string>
+    <string name="trust_notification_content_onboarding">Cihazınızın əmniyyətdə olmasını necə təmin edəcəyinizi öyrənin</string>
     <string name="trust_notification_action_manage">Xəbərdarlıqları idarə et</string>
     <string name="charging_control_notification_channel">Doldurma nəzarəti</string>
     <string name="charging_control_notification_title">Doldurma nəzarəti</string>
