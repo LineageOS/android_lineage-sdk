@@ -26,6 +26,10 @@
     <string name="profileGroupEmail">Ηλεκτρονικό ταχυδρομείο</string>
     <string name="profileGroupSMS">SMS</string>
     <string name="wildcardProfile">Άλλο</string>
+    <string name="charging_speed">Ταχύτητα φόρτισης</string>
+    <string name="charging_speed_slow">Αργή</string>
+    <string name="charging_speed_fast">Γρήγορη</string>
+    <string name="charging_speed_super_fast">Πολύ γρήγορη</string>
     <string name="live_display_auto">Αυτόματο</string>
     <string name="live_display_auto_summary">Αυτόματη ρύθμιση της θερμοκρασίας χρώματος της οθόνης μετά το ηλιοβασίλεμα και την ανατολή του ηλίου</string>
     <string name="live_display_off">Ανενεργό</string>

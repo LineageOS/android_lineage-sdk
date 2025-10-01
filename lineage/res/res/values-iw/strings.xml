@@ -83,6 +83,6 @@
     <string name="charging_control_notification_cancel_once">ביטול</string>
     <string name="charging_control_notification_content_limit">הסוללה תטען ל-%1$d%%</string>
     <string name="charging_control_notification_content_limit_reached">הסוללה טעונה ל-%1$d%%</string>
-    <string name="charging_control_notification_content_target">הסוללה תטען במלואה ב-%1$d%%</string>
+    <string name="charging_control_notification_content_target">הסוללה תטען במלואה בשעה %1$s</string>
     <string name="charging_control_notification_content_target_reached">הסוללה טעונה</string>
 </resources>

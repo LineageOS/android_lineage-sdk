@@ -29,6 +29,7 @@
     <string name="charging_speed">Velocidad de carga</string>
     <string name="charging_speed_slow">Lenta</string>
     <string name="charging_speed_fast">Rápida </string>
+    <string name="charging_speed_super_fast">Superrápida</string>
     <string name="live_display_auto">Automático</string>
     <string name="live_display_auto_summary">Ajustar automáticamente la temperatura del color de pantalla con el amanecer y el anochecer</string>
     <string name="live_display_off">Apagar</string>

@@ -76,7 +76,7 @@
     <string name="trust_notification_content_selinux">SELinux məcbur edilmir, güvənliyiniz zəiflədi</string>
     <string name="trust_notification_content_keys">Bu quruluş ictimai açarlarla imzalandı</string>
     <string name="trust_notification_title_onboarding">Trust-ı Kəşf et</string>
-    <string name="trust_notification_content_onboarding">Cihazınızın təhlükəsiz olduğundan necə əmin olacağınızı öyrənin</string>
+    <string name="trust_notification_content_onboarding">Cihazınızın əmniyyətdə olmasını necə təmin edəcəyinizi öyrənin</string>
     <string name="trust_notification_action_manage">Xəbərdarlıqları idarə et</string>
     <string name="charging_control_notification_channel">Doldurma nəzarəti</string>
     <string name="charging_control_notification_title">Doldurma nəzarəti</string>
