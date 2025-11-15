@@ -26,6 +26,9 @@
     <string name="profileGroupEmail">Email</string>
     <string name="profileGroupSMS">SMS</string>
     <string name="wildcardProfile">Tjetër</string>
+    <string name="charging_speed_slow">Ngadalë</string>
+    <string name="charging_speed_fast">E shpejtë</string>
+    <string name="charging_speed_super_fast">Shumë shpejt</string>
     <string name="live_display_auto">Automatike</string>
     <string name="live_display_auto_summary">Rregullo automatikisht temperaturën e ngjyrave të ekranit pas lindjes dhe perëndimit të diellit</string>
     <string name="live_display_off">Fikur</string>
