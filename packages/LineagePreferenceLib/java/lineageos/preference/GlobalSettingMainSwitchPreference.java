@@ -1,5 +1,5 @@
 /*
- * SPDX-FileCopyrightText: 2021 The LineageOS Project
+ * SPDX-FileCopyrightText: 2021-2025 The LineageOS Project
  * SPDX-License-Identifier: Apache-2.0
  */
 
@@ -11,9 +11,11 @@ import android.util.AttributeSet;
 
 import androidx.preference.PreferenceDataStore;
 
+import com.android.settingslib.widget.GroupSectionDividerMixin;
 import com.android.settingslib.widget.MainSwitchPreference;
 
-public class GlobalSettingMainSwitchPreference extends MainSwitchPreference {
+public class GlobalSettingMainSwitchPreference extends MainSwitchPreference
+        implements GroupSectionDividerMixin {
 
     public GlobalSettingMainSwitchPreference(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
