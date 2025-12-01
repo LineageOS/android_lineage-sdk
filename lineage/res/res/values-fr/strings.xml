@@ -26,6 +26,8 @@
     <string name="profileGroupEmail">E-mail</string>
     <string name="profileGroupSMS">SMS</string>
     <string name="wildcardProfile">Autre</string>
+    <string name="charging_speed">Vitesse de charge</string>
+    <string name="charging_speed_slow">Lente</string>
     <string name="charging_speed_fast">Rapide</string>
     <string name="charging_speed_super_fast">Très rapide</string>
     <string name="live_display_auto">Automatique</string>
