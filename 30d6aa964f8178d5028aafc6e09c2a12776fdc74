@@ -16,6 +16,23 @@
       "message": "Did you forget to upload the LineageParts counterpart change?",
       "revId": "30d6aa964f8178d5028aafc6e09c2a12776fdc74",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c76f2365_d0868714",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 6360
+      },
+      "writtenOn": "2025-12-03T15:24:09Z",
+      "side": 1,
+      "message": "https://review.lineageos.org/c/LineageOS/android_packages_apps_LineageParts/+/463133?usp\u003dsearch",
+      "revId": "30d6aa964f8178d5028aafc6e09c2a12776fdc74",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
