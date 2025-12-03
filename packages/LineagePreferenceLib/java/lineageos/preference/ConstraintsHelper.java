@@ -1,6 +1,6 @@
 /*
  * SPDX-FileCopyrightText: 2016 The CyanogenMod Project
- * SPDX-FileCopyrightText: 2017,2019-2020 The LineageOS Project
+ * SPDX-FileCopyrightText: 2017-2025 The LineageOS Project
  * SPDX-License-Identifier: Apache-2.0
  */
 package lineageos.preference;
@@ -71,11 +71,11 @@ public class ConstraintsHelper {
         TypedArray a = context.getResources().obtainAttributes(attrs,
                 R.styleable.lineage_SelfRemovingPreference);
         mSummaryMinLines = a.getInteger(lineage_SelfRemovingPreference_minSummaryLines, -1);
+        setAvailable(checkConstraints());
         String replacesKey = a.getString(lineage_SelfRemovingPreference_replacesKey);
-        if (replacesKey != null) {
+        if (replacesKey != null && mAvailable) {
             mReplacesKey = replacesKey.split("\\|");
         }
-        setAvailable(checkConstraints());
 
         Log.d(TAG, "construct key=" + mPref.getKey() + " available=" + mAvailable);
     }
@@ -316,7 +316,7 @@ public class ConstraintsHelper {
     public void onAttached() {
         checkIntent();
 
-        if (isAvailable() && mReplacesKey != null) {
+        if (mReplacesKey != null) {
             Graveyard.get(mContext).addTombstones(mReplacesKey);
         }
 
