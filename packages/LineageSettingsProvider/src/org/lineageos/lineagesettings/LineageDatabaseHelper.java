@@ -37,7 +37,7 @@ public class LineageDatabaseHelper extends SQLiteOpenHelper{
     private static final boolean LOCAL_LOGV = false;
 
     private static final String DATABASE_NAME = "lineagesettings.db";
-    private static final int DATABASE_VERSION = 21;
+    private static final int DATABASE_VERSION = 22;
 
     public static class LineageTableNames {
         public static final String TABLE_SYSTEM = "system";
@@ -323,6 +323,17 @@ public class LineageDatabaseHelper extends SQLiteOpenHelper{
                 if (stmt != null) stmt.close();
             }
             upgradeVersion = 21;
+        }
+
+        if (upgradeVersion < 22) {
+            // Migrate navigation bar button order to AOSP
+            Integer oldSetting = Settings.Secure.getInt(mContext.getContentResolver(),
+                    "sysui_nav_bar_inverse", 0);
+            if (oldSetting != 0) {
+                Settings.Secure.putInt(mContext.getContentResolver(),
+                        Settings.Secure.NAVIGATIONBAR_KEY_ORDER, oldSetting);
+            }
+            upgradeVersion = 22;
         }
 
         // *** Remember to update DATABASE_VERSION above!
