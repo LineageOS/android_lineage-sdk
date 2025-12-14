@@ -37,7 +37,7 @@ public class LineageDatabaseHelper extends SQLiteOpenHelper{
     private static final boolean LOCAL_LOGV = false;
 
     private static final String DATABASE_NAME = "lineagesettings.db";
-    private static final int DATABASE_VERSION = 21;
+    private static final int DATABASE_VERSION = 22;
 
     public static class LineageTableNames {
         public static final String TABLE_SYSTEM = "system";
@@ -323,6 +323,17 @@ public class LineageDatabaseHelper extends SQLiteOpenHelper{
                 if (stmt != null) stmt.close();
             }
             upgradeVersion = 21;
+        }
+
+        if (upgradeVersion < 22) {
+            // Enable status bar vibrate icon by default since we handle it in SystemUI tuner
+            Integer oldSetting = Settings.Secure.getInt(mContext.getContentResolver(),
+                    Settings.Secure.STATUS_BAR_SHOW_VIBRATE_ICON, 1);
+            if (oldSetting != 1) {
+                Settings.Secure.putInt(mContext.getContentResolver(),
+                        Settings.Secure.STATUS_BAR_SHOW_VIBRATE_ICON, 1);
+            }
+            upgradeVersion = 22;
         }
 
         // *** Remember to update DATABASE_VERSION above!
