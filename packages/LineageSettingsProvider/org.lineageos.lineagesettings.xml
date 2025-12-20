@@ -1,13 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-     SPDX-FileCopyrightText: 2017-2020 The LineageOS Project
+     SPDX-FileCopyrightText: 2017-2025 The LineageOS Project
      SPDX-License-Identifier: Apache-2.0
 -->
 <permissions>
-    <!-- Compatibility for upgrades from old package name -->
-    <privapp-permissions package="org.cyanogenmod.cmsettings">
-        <permission name="android.permission.MANAGE_USERS"/>
-    </privapp-permissions>
     <privapp-permissions package="org.lineageos.lineagesettings">
         <permission name="android.permission.MANAGE_USERS"/>
     </privapp-permissions>
