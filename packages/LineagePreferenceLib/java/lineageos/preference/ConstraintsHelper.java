@@ -316,7 +316,7 @@ public class ConstraintsHelper {
     public void onAttached() {
         checkIntent();
 
-        if (mReplacesKey != null) {
+        if (isAvailable() && mReplacesKey != null) {
             Graveyard.get(mContext).addTombstones(mReplacesKey);
         }
 
