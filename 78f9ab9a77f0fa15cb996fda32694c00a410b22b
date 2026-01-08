@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "db1988bb_e8cf9427",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 3917
+      },
+      "writtenOn": "2026-01-08T20:52:38Z",
+      "side": 1,
+      "message": "Fixes \"Settings-\u003eDisplay-\u003eLock screen-\u003eAlways show time and info\" setting not getting displayed on gta4l(wifi).",
+      "revId": "78f9ab9a77f0fa15cb996fda32694c00a410b22b",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
