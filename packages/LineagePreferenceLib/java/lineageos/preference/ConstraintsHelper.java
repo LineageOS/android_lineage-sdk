@@ -71,11 +71,11 @@ public class ConstraintsHelper {
         TypedArray a = context.getResources().obtainAttributes(attrs,
                 R.styleable.lineage_SelfRemovingPreference);
         mSummaryMinLines = a.getInteger(lineage_SelfRemovingPreference_minSummaryLines, -1);
+        setAvailable(checkConstraints());
         String replacesKey = a.getString(lineage_SelfRemovingPreference_replacesKey);
-        if (replacesKey != null) {
+        if (replacesKey != null && mAvailable) {
             mReplacesKey = replacesKey.split("\\|");
         }
-        setAvailable(checkConstraints());
 
         Log.d(TAG, "construct key=" + mPref.getKey() + " available=" + mAvailable);
     }
