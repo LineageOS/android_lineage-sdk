@@ -1,6 +1,6 @@
 /*
  * SPDX-FileCopyrightText: 2015-2016 The CyanogenMod Project
- * SPDX-FileCopyrightText: 2017-2023 The LineageOS Project
+ * SPDX-FileCopyrightText: 2017-2026 The LineageOS Project
  * SPDX-License-Identifier: Apache-2.0
  */
 
@@ -37,7 +37,7 @@ public class LineageDatabaseHelper extends SQLiteOpenHelper{
     private static final boolean LOCAL_LOGV = false;
 
     private static final String DATABASE_NAME = "lineagesettings.db";
-    private static final int DATABASE_VERSION = 23;
+    private static final int DATABASE_VERSION = 24;
 
     public static class LineageTableNames {
         public static final String TABLE_SYSTEM = "system";
@@ -347,6 +347,12 @@ public class LineageDatabaseHelper extends SQLiteOpenHelper{
             upgradeVersion = 23;
         }
 
+        if (upgradeVersion < 24) {
+            // Set default value for Settings.Global.DISABLE_WINDOW_BLURS
+            loadDisableBlurSetting();
+            upgradeVersion = 24;
+        }
+
         // *** Remember to update DATABASE_VERSION above!
         if (upgradeVersion != newVersion) {
             Log.wtf(TAG, "warning: upgrading settings database to version "
@@ -417,6 +423,7 @@ public class LineageDatabaseHelper extends SQLiteOpenHelper{
         if (mUserHandle == UserHandle.USER_SYSTEM) {
             loadGlobalSettings(db);
             loadRestrictedNetworkingModeSetting();
+            loadDisableBlurSetting();
         }
     }
 
@@ -504,6 +511,11 @@ public class LineageDatabaseHelper extends SQLiteOpenHelper{
     private void loadRestrictedNetworkingModeSetting() {
         Settings.Global.putInt(mContext.getContentResolver(),
                 Settings.Global.RESTRICTED_NETWORKING_MODE, 1);
+    }
+
+    private void loadDisableBlurSetting() {
+        Settings.Global.putInt(mContext.getContentResolver(),
+                Settings.Global.DISABLE_WINDOW_BLURS, R.bool.def_disable_window_blurs);
     }
 
     /**
