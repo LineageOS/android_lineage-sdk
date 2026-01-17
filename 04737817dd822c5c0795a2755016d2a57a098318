@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "bc66044b_ef7c9015",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2026-01-17T11:38:52Z",
+      "side": 1,
+      "message": "Works. Verified on pro1x, on db upgrade and also after data wipe.",
+      "revId": "04737817dd822c5c0795a2755016d2a57a098318",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
