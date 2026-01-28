@@ -124,7 +124,8 @@ public class ChargingControlController extends LineageHealthFeature {
 
     @Override
     public boolean isSupported() {
-        return mChargingControl != null;
+        return mChargingControl != null && (mDeadline.isSupported() || mLimit.isSupported() ||
+                mToggle.isSupported());
     }
 
     public boolean isEnabled() {
