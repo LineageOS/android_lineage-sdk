@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "126fa7d3_b644ef99",
+        "filename": "lineage/lib/main/java/org/lineageos/platform/internal/health/ChargingControlController.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 127,
+      "author": {
+        "id": 11883
+      },
+      "writtenOn": "2026-01-31T07:38:17Z",
+      "side": 1,
+      "message": "As per the constructor logic at least one of these capabilities must be supported otherwise we wtf log (this is usually done to report an unexpected state instead of crashing)\n\nI\u0027d expect this check to be always true, if it\u0027s not in your case simply don\u0027t register the ChargingControl hal",
+      "revId": "c8d60e0115d59a00599bd7f808d3a917fde1aae5",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
