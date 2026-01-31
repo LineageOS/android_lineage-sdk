@@ -16,6 +16,24 @@
       "message": "As per the constructor logic at least one of these capabilities must be supported otherwise we wtf log (this is usually done to report an unexpected state instead of crashing)\n\nI\u0027d expect this check to be always true, if it\u0027s not in your case simply don\u0027t register the ChargingControl hal",
       "revId": "c8d60e0115d59a00599bd7f808d3a917fde1aae5",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0d403818_605e5902",
+        "filename": "lineage/lib/main/java/org/lineageos/platform/internal/health/ChargingControlController.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 127,
+      "author": {
+        "id": 34207
+      },
+      "writtenOn": "2026-01-31T18:53:22Z",
+      "side": 1,
+      "message": "This would make configuration for devices a lot easier. e.g. Instead of having to decommonize the whole manifest entry for health, it can be handled properly.\n\nThough honestly the architecture of the health hal just doesn\u0027t quite account for this scenario, which means resorting to something like this is the only way.",
+      "parentUuid": "126fa7d3_b644ef99",
+      "revId": "c8d60e0115d59a00599bd7f808d3a917fde1aae5",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
