@@ -26,6 +26,10 @@
     <string name="profileGroupEmail">E-posta</string>
     <string name="profileGroupSMS">SMS</string>
     <string name="wildcardProfile">Diğer</string>
+    <string name="charging_speed">Şarj etme hızı</string>
+    <string name="charging_speed_slow">Yavaş</string>
+    <string name="charging_speed_fast">Hızlı</string>
+    <string name="charging_speed_super_fast">Süper hızlı</string>
     <string name="live_display_auto">Otomatik</string>
     <string name="live_display_auto_summary">Gün batımı ve doğumundan sonra ekranın renk sıcaklığını otomatik ayarlar</string>
     <string name="live_display_off">Kapalı</string>
