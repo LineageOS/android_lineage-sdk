@@ -52,6 +52,24 @@
       "parentUuid": "0d403818_605e5902",
       "revId": "c8d60e0115d59a00599bd7f808d3a917fde1aae5",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "fc7647da_18d04ffd",
+        "filename": "lineage/lib/main/java/org/lineageos/platform/internal/health/ChargingControlController.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 127,
+      "author": {
+        "id": 34207
+      },
+      "writtenOn": "2026-02-02T14:57:07Z",
+      "side": 1,
+      "message": "There are other reasons why charging control would show as unsupported (such as bad permissions), and i\u0027d rather have the system boot than to continuously run into a null pointer exception in that case.",
+      "parentUuid": "711126ab_0570cbb1",
+      "revId": "c8d60e0115d59a00599bd7f808d3a917fde1aae5",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
