@@ -127,6 +127,7 @@
     <java-symbol type="drawable" name="stat_sys_network_traffic_updown" />
     <java-symbol type="dimen" name="net_traffic_single_text_size" />
     <java-symbol type="dimen" name="net_traffic_multi_text_size" />
+    <java-symbol type="dimen" name="net_traffic_drawable_padding" />
     <java-symbol type="string" name="kilobitspersecond_short" />
     <java-symbol type="string" name="megabitspersecond_short" />
     <java-symbol type="string" name="kilobytespersecond_short" />
