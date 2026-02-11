@@ -2919,6 +2919,15 @@ public final class LineageSettings {
         public static final Validator NETWORK_TRAFFIC_AUTOHIDE_VALIDATOR = sBooleanValidator;
 
         /**
+         * Whether or not to hide network traffic direction arrows
+         * @hide
+         */
+        public static final String NETWORK_TRAFFIC_HIDE_ARROWS = "network_traffic_hide_arrows";
+
+        /** @hide */
+        public static final Validator NETWORK_TRAFFIC_HIDE_ARROWS_VALIDATOR = sBooleanValidator;
+
+        /**
          * Measurement unit preference for network traffic
          * 0 = kBit/s
          * 1 = MBit/s
@@ -3004,6 +3013,7 @@ public final class LineageSettings {
             VALIDATORS.put(NETWORK_TRAFFIC_MODE, NETWORK_TRAFFIC_MODE_VALIDATOR);
             VALIDATORS.put(NETWORK_TRAFFIC_POSITION, NETWORK_TRAFFIC_POSITION_VALIDATOR);
             VALIDATORS.put(NETWORK_TRAFFIC_AUTOHIDE, NETWORK_TRAFFIC_AUTOHIDE_VALIDATOR);
+            VALIDATORS.put(NETWORK_TRAFFIC_HIDE_ARROWS, NETWORK_TRAFFIC_HIDE_ARROWS_VALIDATOR);
             VALIDATORS.put(NETWORK_TRAFFIC_UNITS, NETWORK_TRAFFIC_UNITS_VALIDATOR);
             VALIDATORS.put(NETWORK_TRAFFIC_SHOW_UNITS, NETWORK_TRAFFIC_SHOW_UNITS_VALIDATOR);
             VALIDATORS.put(TRUST_WARNINGS, TRUST_WARNINGS_VALIDATOR);
