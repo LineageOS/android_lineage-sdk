@@ -1,5 +1,5 @@
 /*
- * SPDX-FileCopyrightText: 2017-2025 The LineageOS project
+ * SPDX-FileCopyrightText: 2017-2026 The LineageOS project
  * SPDX-License-Identifier: Apache-2.0
  */
 
@@ -78,6 +78,7 @@ public class NetworkTraffic extends TextView {
     private static final long AUTOHIDE_THRESHOLD_KILOBYTES = 8;
     private static final long AUTOHIDE_THRESHOLD_MEGABYTES = 80;
 
+    private final int mDrawablePadding;
     private final int mTextSizeSingle;
     private final int mTextSizeMulti;
     private final Handler mTrafficHandler;
@@ -96,7 +97,9 @@ public class NetworkTraffic extends TextView {
     private long mAutoHideThreshold;
     private int mUnits;
     private int mShowUnits;
+    private boolean mHideArrows;
     private int mIconTint = Color.WHITE;
+
     private Drawable mDrawable;
 
     // Network tracking related variables
@@ -121,6 +124,7 @@ public class NetworkTraffic extends TextView {
         super(context, attrs, defStyle);
 
         final Resources resources = getResources();
+        mDrawablePadding = resources.getDimensionPixelSize(R.dimen.net_traffic_drawable_padding);
         mTextSizeSingle = resources.getDimensionPixelSize(R.dimen.net_traffic_single_text_size);
         mTextSizeMulti = resources.getDimensionPixelSize(R.dimen.net_traffic_multi_text_size);
 
@@ -396,8 +400,10 @@ public class NetworkTraffic extends TextView {
 
         LineageStatusBarItem.Manager manager =
                 LineageStatusBarItem.findManager((View) this);
-        manager.addDarkReceiver(mDarkReceiver);
-        manager.addVisibilityReceiver(mVisibilityReceiver);
+        if (manager != null) {
+            manager.addDarkReceiver(mDarkReceiver);
+            manager.addVisibilityReceiver(mVisibilityReceiver);
+        }
 
         mObserver.observe();
         updateSettings();
@@ -406,7 +412,16 @@ public class NetworkTraffic extends TextView {
     @Override
     protected void onDetachedFromWindow() {
         super.onDetachedFromWindow();
+
+        LineageStatusBarItem.Manager manager =
+                LineageStatusBarItem.findManager((View) this);
+        if (manager != null) {
+            manager.removeDarkReceiver(mDarkReceiver);
+            manager.removeVisibilityReceiver(mVisibilityReceiver);
+        }
+
         mObserver.unobserve();
+        mTrafficHandler.removeCallbacksAndMessages(null);
         unregisterNetworkCallbacks();
     }
 
@@ -425,6 +440,9 @@ public class NetworkTraffic extends TextView {
                     false, this, UserHandle.USER_ALL);
             resolver.registerContentObserver(LineageSettings.Secure.getUriFor(
                     LineageSettings.Secure.NETWORK_TRAFFIC_AUTOHIDE),
+                    false, this, UserHandle.USER_ALL);
+            resolver.registerContentObserver(LineageSettings.Secure.getUriFor(
+                    LineageSettings.Secure.NETWORK_TRAFFIC_HIDE_ARROWS),
                     false, this, UserHandle.USER_ALL);
             resolver.registerContentObserver(LineageSettings.Secure.getUriFor(
                     LineageSettings.Secure.NETWORK_TRAFFIC_UNITS),
@@ -457,6 +475,8 @@ public class NetworkTraffic extends TextView {
                 LineageSettings.Secure.NETWORK_TRAFFIC_POSITION, POSITION_CENTER);
         mAutoHide = LineageSettings.Secure.getInt(resolver,
                 LineageSettings.Secure.NETWORK_TRAFFIC_AUTOHIDE, 0) == 1;
+        mHideArrows = LineageSettings.Secure.getInt(resolver,
+                LineageSettings.Secure.NETWORK_TRAFFIC_HIDE_ARROWS, 0) == 1;
         mUnits = LineageSettings.Secure.getInt(resolver,
                 LineageSettings.Secure.NETWORK_TRAFFIC_UNITS, UNITS_KILOBYTES);
         mShowUnits = LineageSettings.Secure.getInt(resolver,
@@ -495,7 +515,9 @@ public class NetworkTraffic extends TextView {
 
     private void updateTrafficDrawable() {
         final int drawableResId;
-        if (mMode == MODE_UPSTREAM_AND_DOWNSTREAM) {
+        if (mHideArrows) {
+            drawableResId = 0;
+        } else if (mMode == MODE_UPSTREAM_AND_DOWNSTREAM) {
             drawableResId = R.drawable.stat_sys_network_traffic_updown;
         } else if (mMode == MODE_UPSTREAM_ONLY) {
             drawableResId = R.drawable.stat_sys_network_traffic_up;
@@ -505,6 +527,7 @@ public class NetworkTraffic extends TextView {
             drawableResId = 0;
         }
         mDrawable = drawableResId != 0 ? getResources().getDrawable(drawableResId) : null;
+        setCompoundDrawablePadding(mDrawable != null ? mDrawablePadding : 0);
         setCompoundDrawablesWithIntrinsicBounds(null, null, mDrawable, null);
         updateTrafficDrawableColor();
     }
