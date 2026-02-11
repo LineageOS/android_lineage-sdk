@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
      SPDX-FileCopyrightText: 2015 The CyanogenMod Project
-     SPDX-FileCopyrightText: 2017-2025 The LineageOS Project
+     SPDX-FileCopyrightText: 2017-2026 The LineageOS Project
      SPDX-License-Identifier: Apache-2.0
 -->
 <resources>
@@ -125,6 +125,7 @@
     <java-symbol type="drawable" name="stat_sys_network_traffic_down" />
     <java-symbol type="drawable" name="stat_sys_network_traffic_up" />
     <java-symbol type="drawable" name="stat_sys_network_traffic_updown" />
+    <java-symbol type="dimen" name="net_traffic_drawable_padding" />
     <java-symbol type="dimen" name="net_traffic_single_text_size" />
     <java-symbol type="dimen" name="net_traffic_multi_text_size" />
     <java-symbol type="string" name="kilobitspersecond_short" />
