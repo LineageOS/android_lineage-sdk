@@ -1,5 +1,5 @@
 /*
- * SPDX-FileCopyrightText: 2018 The LineageOS project
+ * SPDX-FileCopyrightText: 2018-2026 The LineageOS project
  * SPDX-License-Identifier: Apache-2.0
  */
 
@@ -14,17 +14,19 @@ import java.util.ArrayList;
 public class LineageStatusBarItem {
 
     public interface Manager {
-        public void addDarkReceiver(DarkReceiver darkReceiver);
-        public void addVisibilityReceiver(VisibilityReceiver visibilityReceiver);
+        void addDarkReceiver(DarkReceiver darkReceiver);
+        void removeDarkReceiver(DarkReceiver darkReceiver);
+        void addVisibilityReceiver(VisibilityReceiver visibilityReceiver);
+        void removeVisibilityReceiver(VisibilityReceiver visibilityReceiver);
     }
 
     public interface DarkReceiver {
-        public void onDarkChanged(ArrayList<Rect> areas, float darkIntensity, int tint);
-        public void setFillColors(int darkColor, int lightColor);
+        void onDarkChanged(ArrayList<Rect> areas, float darkIntensity, int tint);
+        void setFillColors(int darkColor, int lightColor);
     }
 
     public interface VisibilityReceiver {
-        public void onVisibilityChanged(boolean isVisible);
+        void onVisibilityChanged(boolean isVisible);
     }
 
     // Locate parent LineageStatusBarItem.Manager
