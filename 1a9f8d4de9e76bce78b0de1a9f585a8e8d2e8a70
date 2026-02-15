@@ -16,6 +16,24 @@
       "message": "The omission of the space worsens the readability (IMHO) and does not really save much space.",
       "revId": "1a9f8d4de9e76bce78b0de1a9f585a8e8d2e8a70",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "71b4b507_2e883de4",
+        "filename": "sdk/src/java/org/lineageos/internal/statusbar/NetworkTraffic.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 295,
+      "author": {
+        "id": 35436
+      },
+      "writtenOn": "2026-02-15T18:05:17Z",
+      "side": 1,
+      "message": "maybe, thats something i would like bruno to tell his prefences.",
+      "parentUuid": "2fd49a19_a213f295",
+      "revId": "1a9f8d4de9e76bce78b0de1a9f585a8e8d2e8a70",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
