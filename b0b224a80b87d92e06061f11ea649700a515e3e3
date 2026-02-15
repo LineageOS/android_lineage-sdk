@@ -22,6 +22,30 @@
       },
       "revId": "b0b224a80b87d92e06061f11ea649700a515e3e3",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "def48385_179812e3",
+        "filename": "sdk/src/java/org/lineageos/internal/statusbar/NetworkTraffic.java",
+        "patchSetId": 7
+      },
+      "lineNbr": 530,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2026-02-15T01:04:17Z",
+      "side": 1,
+      "message": "I don\u0027t even know if this does anything.",
+      "parentUuid": "dd47a494_2866eb63",
+      "range": {
+        "startLine": 530,
+        "startChar": 74,
+        "endLine": 530,
+        "endChar": 75
+      },
+      "revId": "b0b224a80b87d92e06061f11ea649700a515e3e3",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
