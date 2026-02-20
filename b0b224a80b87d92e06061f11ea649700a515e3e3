@@ -70,6 +70,30 @@
       },
       "revId": "b0b224a80b87d92e06061f11ea649700a515e3e3",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "32451479_c29eda6b",
+        "filename": "sdk/src/java/org/lineageos/internal/statusbar/NetworkTraffic.java",
+        "patchSetId": 7
+      },
+      "lineNbr": 530,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2026-02-20T14:27:58Z",
+      "side": 1,
+      "message": "Spacing between the nw traffic with/without arrows and system icons is not consistent.",
+      "parentUuid": "b5807c44_3b98d00f",
+      "range": {
+        "startLine": 530,
+        "startChar": 74,
+        "endLine": 530,
+        "endChar": 75
+      },
+      "revId": "b0b224a80b87d92e06061f11ea649700a515e3e3",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
