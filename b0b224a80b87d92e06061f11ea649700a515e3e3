@@ -190,6 +190,30 @@
       },
       "revId": "b0b224a80b87d92e06061f11ea649700a515e3e3",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9947b02c_1e949c81",
+        "filename": "sdk/src/java/org/lineageos/internal/statusbar/NetworkTraffic.java",
+        "patchSetId": 7
+      },
+      "lineNbr": 530,
+      "author": {
+        "id": 35436
+      },
+      "writtenOn": "2026-03-03T18:03:38Z",
+      "side": 1,
+      "message": "now check . seems fine",
+      "parentUuid": "6003d0ed_97ab76a9",
+      "range": {
+        "startLine": 530,
+        "startChar": 74,
+        "endLine": 530,
+        "endChar": 75
+      },
+      "revId": "b0b224a80b87d92e06061f11ea649700a515e3e3",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
