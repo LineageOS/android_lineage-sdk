@@ -26,6 +26,9 @@
     <string name="profileGroupEmail">E-Mail</string>
     <string name="profileGroupSMS">SMS</string>
     <string name="wildcardProfile">Anderes</string>
+    <string name="charging_speed_slow">Langsam</string>
+    <string name="charging_speed_fast">Schnell</string>
+    <string name="charging_speed_super_fast">Sehr schnell</string>
     <string name="live_display_auto">Automatisch</string>
     <string name="live_display_auto_summary">Farbtemperatur des Bildschirms nach Sonnenaufgang und Sonnenuntergang automatisch anpassen</string>
     <string name="live_display_off">Aus</string>
