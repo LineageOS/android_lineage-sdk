@@ -60,7 +60,7 @@
     <string name="lineage_updates">LineageOS புதுப்பிப்புகள்</string>
     <string name="lineage_version">LineageOS பதிப்பு</string>
     <string name="lineage_vendor_security_patch">விற்குநர் பாதுகாப்புச் சீர் நிலை</string>
-    <string name="unknown">அறியப்படா</string>
+    <string name="unknown">அறியா</string>
     <string name="app_killed_message">செயலி ஒழிந்தது</string>
     <string name="kilobitspersecond_short">kb/s</string>
     <string name="megabitspersecond_short">Mb/s</string>
