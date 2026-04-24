@@ -58,6 +58,12 @@ public class LineagePartsPreference extends RemotePreference {
         return getKey();
     }
 
+    @Override
+    public void onAttached() {
+        super.onAttached();
+        updatePreference();
+    }
+
     private void updatePreference() {
         if (isAvailable() != mPart.isAvailable()) {
             setAvailable(mPart.isAvailable());
