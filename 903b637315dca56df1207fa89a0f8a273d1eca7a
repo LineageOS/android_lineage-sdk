@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "78af946c_919f0288",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 19979
+      },
+      "writtenOn": "2026-04-24T18:23:53Z",
+      "side": 1,
+      "message": "This follows how AOSP is using PendingIntents, tests fine on my devices.",
+      "revId": "903b637315dca56df1207fa89a0f8a273d1eca7a",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
