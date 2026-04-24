@@ -1,5 +1,6 @@
 /*
  * SPDX-FileCopyrightText: 2016 The CyanogenMod Project
+ * SPDX-FileCopyrightText: 2022-2026 The LineageOS Project
  * SPDX-License-Identifier: Apache-2.0
  */
 package lineageos.preference;
@@ -39,6 +40,12 @@ public class LineagePartsPreference extends RemotePreference {
 
     public LineagePartsPreference(Context context, AttributeSet attrs) {
         this(context, attrs, androidx.preference.R.attr.preferenceStyle);
+    }
+
+    @Override
+    public void onAttached() {
+        super.onAttached();
+        updatePreference();
     }
 
     @Override
