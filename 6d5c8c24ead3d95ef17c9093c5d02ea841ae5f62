@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0f2971d1_00b24144",
+        "filename": "sdk/src/java/lineageos/app/NotificationGroup.aidl",
+        "patchSetId": 3
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2026-04-25T22:41:30Z",
+      "side": 1,
+      "message": "weird how this ever ended up this way.",
+      "revId": "6d5c8c24ead3d95ef17c9093c5d02ea841ae5f62",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
