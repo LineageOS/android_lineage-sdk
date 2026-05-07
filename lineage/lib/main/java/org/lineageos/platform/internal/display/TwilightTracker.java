@@ -94,6 +94,33 @@ public final class TwilightTracker {
         }
     }
 
+    /**
+     * Unregisters a twilight listener. Disables location updates when the last listener is removed.
+     *
+     * @param listener The listener to unregister.
+     */
+    public void unregisterListener(TwilightListener listener) {
+        synchronized (mLock) {
+            mListeners.removeIf(record -> record.mListener == listener);
+
+            if (mListeners.isEmpty()) {
+                mLocationHandler.disableLocationUpdates();
+            }
+        }
+    }
+
+    /**
+     * Cleans up all listeners, receivers, and location updates. Call this
+     * when the TwilightTracker is no longer needed (e.g., service shutdown).
+     */
+    public void destroy() {
+        synchronized (mLock) {
+            mListeners.clear();
+            mLocationHandler.disableLocationUpdates();
+        }
+        mContext.unregisterReceiver(mUpdateLocationReceiver);
+    }
+
 
     private void setTwilightState(TwilightState state) {
         synchronized (mLock) {
@@ -168,6 +195,19 @@ public final class TwilightTracker {
 
         public void enableLocationUpdates() {
             sendEmptyMessage(MSG_ENABLE_LOCATION_UPDATES);
+        }
+
+        public void disableLocationUpdates() {
+            if (mPassiveListenerEnabled) {
+                mLocationManager.removeUpdates(mLocationListener);
+                mPassiveListenerEnabled = false;
+            }
+            if (mNetworkListenerEnabled) {
+                mLocationManager.removeUpdates(mEmptyLocationListener);
+                mNetworkListenerEnabled = false;
+            }
+            removeMessages(MSG_ENABLE_LOCATION_UPDATES);
+            removeMessages(MSG_GET_NEW_LOCATION_UPDATE);
         }
 
         public void requestLocationUpdate() {
@@ -535,7 +575,7 @@ public final class TwilightTracker {
     }
 
     private static class TwilightListenerRecord implements Runnable {
-        private final TwilightListener mListener;
+        final TwilightListener mListener;
         private final Handler mHandler;
 
         public TwilightListenerRecord(TwilightListener listener, Handler handler) {
