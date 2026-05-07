@@ -29,6 +29,7 @@
                   android:authorities="lineagesettings"
                   android:multiprocess="false"
                   android:exported="true"
+                  android:readPermission="lineageos.permission.WRITE_SETTINGS"
                   android:writePermission="lineageos.permission.WRITE_SETTINGS"
                   android:singleUser="true"
                   android:initOrder="100" />

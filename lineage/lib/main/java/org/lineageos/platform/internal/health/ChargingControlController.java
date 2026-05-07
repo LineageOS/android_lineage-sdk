@@ -44,6 +44,9 @@ public class ChargingControlController extends LineageHealthFeature {
     private ChargingControlNotification mChargingNotification;
     private LineageHealthBatteryBroadcastReceiver mBattReceiver;
 
+    private BroadcastReceiver mPowerConnectedReceiver;
+    private BroadcastReceiver mPowerDisconnectedReceiver;
+
     // Defaults
     private boolean mDefaultEnabled = false;
     private int mDefaultMode;
@@ -215,25 +218,27 @@ public class ChargingControlController extends LineageHealthFeature {
 
         // Start monitor battery status when power connected
         IntentFilter connectedFilter = new IntentFilter(Intent.ACTION_POWER_CONNECTED);
-        mContext.registerReceiver(new BroadcastReceiver() {
+        mPowerConnectedReceiver = new BroadcastReceiver() {
             @Override
             public void onReceive(Context context, Intent intent) {
                 Log.i(TAG, "Power connected, start monitoring battery");
                 mIsPowerConnected = true;
                 onPowerStatus(true);
             }
-        }, connectedFilter);
+        };
+        mContext.registerReceiver(mPowerConnectedReceiver, connectedFilter);
 
         // Stop monitor battery status when power disconnected
         IntentFilter disconnectedFilter = new IntentFilter(Intent.ACTION_POWER_DISCONNECTED);
-        mContext.registerReceiver(new BroadcastReceiver() {
+        mPowerDisconnectedReceiver = new BroadcastReceiver() {
             @Override
             public void onReceive(Context context, Intent intent) {
                 Log.i(TAG, "Power disconnected, stop monitoring battery");
                 mIsPowerConnected = false;
                 onPowerStatus(false);
             }
-        }, disconnectedFilter);
+        };
+        mContext.registerReceiver(mPowerDisconnectedReceiver, disconnectedFilter);
 
         // Initial monitor
         IntentFilter ifilter = new IntentFilter(Intent.ACTION_BATTERY_CHANGED);
@@ -245,6 +250,23 @@ public class ChargingControlController extends LineageHealthFeature {
 
         // Restore settings
         handleSettingChange();
+    }
+
+    @Override
+    public void onDestroy() {
+        if (mPowerConnectedReceiver != null) {
+            mContext.unregisterReceiver(mPowerConnectedReceiver);
+            mPowerConnectedReceiver = null;
+        }
+        if (mPowerDisconnectedReceiver != null) {
+            mContext.unregisterReceiver(mPowerDisconnectedReceiver);
+            mPowerDisconnectedReceiver = null;
+        }
+        if (mBattReceiver != null) {
+            mContext.unregisterReceiver(mBattReceiver);
+            mBattReceiver = null;
+        }
+        super.onDestroy();
     }
 
     public boolean isChargingModeSupported(int mode) {

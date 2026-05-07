@@ -27,8 +27,9 @@ import org.xmlpull.v1.XmlPullParserException;
 
 /**
  * @hide
- * TODO: This isn't ready for public use
+ * @deprecated This isn't ready for public use
  */
+@Deprecated
 public final class ProfileGroup implements Parcelable {
     private static final String TAG = "ProfileGroup";
 
