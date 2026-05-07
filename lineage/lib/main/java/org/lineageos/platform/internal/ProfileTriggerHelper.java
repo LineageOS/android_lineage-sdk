@@ -74,6 +74,18 @@ public class ProfileTriggerHelper extends BroadcastReceiver {
                 mSettingsObserver);
     }
 
+    /**
+     * Cleans up registered observers and receivers. Call this when the
+     * ProfileTriggerHelper is no longer needed to prevent memory leaks.
+     */
+    public void destroy() {
+        if (mFilterRegistered) {
+            mContext.unregisterReceiver(this);
+            mFilterRegistered = false;
+        }
+        mContext.getContentResolver().unregisterContentObserver(mSettingsObserver);
+    }
+
     public void updateEnabled() {
         boolean enabled = LineageSettings.System.getInt(mContext.getContentResolver(),
                 LineageSettings.System.SYSTEM_PROFILES_ENABLED, 1) == 1;
@@ -153,6 +165,8 @@ public class ProfileTriggerHelper extends BroadcastReceiver {
                     intent.putExtra(ProfileManager.EXTRA_TRIGGER_ID, id);
                     intent.putExtra(ProfileManager.EXTRA_TRIGGER_TYPE, type);
                     intent.putExtra(ProfileManager.EXTRA_TRIGGER_STATE, newState);
+                    // TODO: Add lineageos.platform.Manifest.permission.MANAGE_PROFILES
+                    // once the permission is defined on the platform side
                     mContext.sendBroadcastAsUser(intent, UserHandle.ALL);
 
                     final int triggerState = trigger.getState();
