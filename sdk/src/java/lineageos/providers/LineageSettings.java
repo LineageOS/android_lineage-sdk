@@ -481,6 +481,36 @@ public final class LineageSettings {
     /**
      * System settings, containing miscellaneous Lineage system preferences. This table holds simple
      * name/value pairs. There are convenience functions for accessing individual settings entries.
+     *
+     * <p>Feature domains covered by this table:
+     * <ul>
+     *   <li>Status Bar — clock, battery, AM/PM, IME switcher, alarm icon
+     *   <li>Quick Settings — brightness slider, quick QS pulldown
+     *   <li>Notification Light — LED colors, pulse timing, custom per-package LED values
+     *   <li>Battery Light — charging LED colors, brightness, pulse
+     *   <li>Charging Control — auto/custom/limit charging modes
+     *   <li>Display / LiveDisplay — color temperature, CABC, color enhancement, auto contrast,
+     *       anti-flicker, reading mode, outdoor mode, picture adjustment
+     *   <li>Audio — increasing ringtone, volume adjust sounds, volume button music controls,
+     *       headset plug behavior, swap volume keys on rotation
+     *   <li>Navigation — button layout, menu arrow keys, gesture hint, navbar landscape positioning,
+     *       taskbar, force-show navbar
+     *   <li>Key Actions — long-press / double-tap actions for home, back, menu, assist,
+     *       app-switch, and edge-swipe
+     *   <li>Wake / Sleep — per-key wake options, proximity-on-wake, double-tap sleep,
+     *       camera sleep-on-release, torch long-press power
+     *   <li>Lockscreen — PIN scramble, rotation
+     *   <li>Zen Mode — allow lights, priority vibrations
+     *   <li>Telephony — MWI notifications, T9 search locale, call recording format
+     *   <li>Bluetooth — accept all file types over OBEX
+     *   <li>Recents — search bar visibility
+     *   <li>System Profiles — profiles toggle
+     *   <li>Edge / Gesture — edge service for system gestures, touchscreen gesture haptic feedback
+     *   <li>Input — high touch polling rate, high touch sensitivity, stylus icon
+     *   <li>Camera — launch camera on key long-press
+     *   <li>Screenshot — partial screenshot with volume-down + power
+     *   <li>Trust — trust interface hinted flag
+     * </ul>
      */
     public static final class System extends Settings.NameValueTable {
         public static final Uri CONTENT_URI = Uri.parse("content://" + AUTHORITY + "/system");
@@ -872,36 +902,7 @@ public final class LineageSettings {
 
         // region System Settings
 
-        /**
-         * Whether to attach a queue to media notifications.
-         * 0 = 0ff, 1 = on
-         */
-        public static final String NOTIFICATION_PLAY_QUEUE = "notification_play_queue";
-
-        /** @hide */
-        public static final Validator NOTIFICATION_PLAY_QUEUE_VALIDATOR = sBooleanValidator;
-
-        /**
-         * Whether the HighTouchPollingRate is activated or not.
-         * 0 = off, 1 = on
-         */
-        public static final String HIGH_TOUCH_POLLING_RATE_ENABLE =
-                "high_touch_polling_rate_enable";
-
-        /** @hide */
-        public static final Validator HIGH_TOUCH_POLLING_RATE_ENABLE_VALIDATOR =
-                sBooleanValidator;
-
-        /**
-         * Whether the HighTouchSensitivity is activated or not.
-         * 0 = off, 1 = on
-         */
-        public static final String HIGH_TOUCH_SENSITIVITY_ENABLE =
-                "high_touch_sensitivity_enable";
-
-        /** @hide */
-        public static final Validator HIGH_TOUCH_SENSITIVITY_ENABLE_VALIDATOR =
-                sBooleanValidator;
+        // region System Profiles
 
         /**
          * Whether to enable system profiles feature
@@ -912,6 +913,10 @@ public final class LineageSettings {
         /** @hide */
         public static final Validator SYSTEM_PROFILES_ENABLED_VALIDATOR =
                 sBooleanValidator;
+
+        // endregion
+
+        // region Status Bar
 
         /**
          * Whether to show the clock in the right or left position or show it in the center
@@ -935,35 +940,6 @@ public final class LineageSettings {
         /** @hide */
         public static final Validator STATUS_BAR_CLOCK_AUTO_HIDE_VALIDATOR =
                 sBooleanValidator;
-
-        /**
-         * Whether the notification light will be allowed when in zen mode during downtime
-         */
-        public static final String ZEN_ALLOW_LIGHTS = "allow_lights";
-
-        /** @hide */
-        public static final Validator ZEN_ALLOW_LIGHTS_VALIDATOR = sBooleanValidator;
-
-        /**
-         * Whether the notification light will be allowed when in zen priority mode during downtime
-         */
-        public static final String ZEN_PRIORITY_ALLOW_LIGHTS = "zen_priority_allow_lights";
-
-        /** @hide */
-        public static final Validator ZEN_PRIORITY_ALLOW_LIGHTS_VALIDATOR = sBooleanValidator;
-
-        /**
-         * Whether vibrations are allowed when in zen priority mode during downtime
-         * 0: no vibrations
-         * 1: vibrations for calls only
-         * 2: vibrations for calls and notifications
-         * @hide
-         */
-        public static final String ZEN_PRIORITY_VIBRATION_MODE = "zen_priority_vibration_mode";
-
-        /** @hide */
-        public static final Validator ZEN_PRIORITY_VIBRATION_VALIDATOR =
-                new InclusiveIntegerRangeValidator(0, 2);
 
         /**
          * Display style of AM/PM next to clock in status bar
@@ -1004,6 +980,23 @@ public final class LineageSettings {
         public static final Validator STATUS_BAR_SHOW_BATTERY_PERCENT_VALIDATOR =
                 new InclusiveIntegerRangeValidator(0, 2);
 
+        // endregion
+
+        // region Media Notifications
+
+        /**
+         * Whether to attach a queue to media notifications.
+         * 0 = 0ff, 1 = on
+         */
+        public static final String NOTIFICATION_PLAY_QUEUE = "notification_play_queue";
+
+        /** @hide */
+        public static final Validator NOTIFICATION_PLAY_QUEUE_VALIDATOR = sBooleanValidator;
+
+        // endregion
+
+        // region Audio
+
         /**
          * Whether the phone ringtone should be played in an increasing manner
          * 0 = 0ff, 1 = on
@@ -1041,6 +1034,43 @@ public final class LineageSettings {
         public static final Validator VOLUME_ADJUST_SOUNDS_ENABLED_VALIDATOR =
                 sBooleanValidator;
 
+        // endregion
+
+        // region Zen Mode
+
+        /**
+         * Whether the notification light will be allowed when in zen mode during downtime
+         */
+        public static final String ZEN_ALLOW_LIGHTS = "allow_lights";
+
+        /** @hide */
+        public static final Validator ZEN_ALLOW_LIGHTS_VALIDATOR = sBooleanValidator;
+
+        /**
+         * Whether the notification light will be allowed when in zen priority mode during downtime
+         */
+        public static final String ZEN_PRIORITY_ALLOW_LIGHTS = "zen_priority_allow_lights";
+
+        /** @hide */
+        public static final Validator ZEN_PRIORITY_ALLOW_LIGHTS_VALIDATOR = sBooleanValidator;
+
+        /**
+         * Whether vibrations are allowed when in zen priority mode during downtime
+         * 0: no vibrations
+         * 1: vibrations for calls only
+         * 2: vibrations for calls and notifications
+         * @hide
+         */
+        public static final String ZEN_PRIORITY_VIBRATION_MODE = "zen_priority_vibration_mode";
+
+        /** @hide */
+        public static final Validator ZEN_PRIORITY_VIBRATION_VALIDATOR =
+                new InclusiveIntegerRangeValidator(0, 2);
+
+        // endregion
+
+        // region Navigation
+
         /**
          * Navigation controls to Use
          */
@@ -1069,6 +1099,10 @@ public final class LineageSettings {
         /** @hide */
         public static final Validator NAVIGATION_BAR_HINT_VALIDATOR =
                 sBooleanValidator;
+
+        // endregion
+
+        // region Key Actions
 
         /**
          * Action to perform when the home key is long-pressed.
@@ -1112,6 +1146,10 @@ public final class LineageSettings {
         /** @hide */
         public static final Validator KEY_BACK_LONG_PRESS_ACTION_VALIDATOR =
                 new InclusiveIntegerRangeValidator(0, 10);
+
+        // endregion
+
+        // region Wake / Sleep
 
         /**
          * Whether to wake the screen with the back key, the value is boolean.
@@ -1294,6 +1332,32 @@ public final class LineageSettings {
         public static final Validator CAMERA_LAUNCH_VALIDATOR =
                 sBooleanValidator;
 
+        // endregion
+
+        // region Input / Touch
+
+        /**
+         * Whether the HighTouchPollingRate is activated or not.
+         * 0 = off, 1 = on
+         */
+        public static final String HIGH_TOUCH_POLLING_RATE_ENABLE =
+                "high_touch_polling_rate_enable";
+
+        /** @hide */
+        public static final Validator HIGH_TOUCH_POLLING_RATE_ENABLE_VALIDATOR =
+                sBooleanValidator;
+
+        /**
+         * Whether the HighTouchSensitivity is activated or not.
+         * 0 = off, 1 = on
+         */
+        public static final String HIGH_TOUCH_SENSITIVITY_ENABLE =
+                "high_touch_sensitivity_enable";
+
+        /** @hide */
+        public static final Validator HIGH_TOUCH_SENSITIVITY_ENABLE_VALIDATOR =
+                sBooleanValidator;
+
         /**
          * Show icon when stylus is used
          * The value is boolean (1 or 0).
@@ -1315,6 +1379,10 @@ public final class LineageSettings {
         /** @hide */
         public static final Validator SWAP_VOLUME_KEYS_ON_ROTATION_VALIDATOR =
                 new InclusiveIntegerRangeValidator(0, 2);
+
+        // endregion
+
+        // region Power / Torch
 
         /**
          * Activate torchlight when power button is
@@ -1340,6 +1408,10 @@ public final class LineageSettings {
         public static final Validator TORCH_LONG_PRESS_POWER_TIMEOUT_VALIDATOR =
                 new InclusiveIntegerRangeValidator(0, 3600);
 
+        // endregion
+
+        // region Buttons
+
         /**
          * Whether the button backlight is only lit when pressed (and not when screen is touched)
          * The value is boolean (1 or 0).
@@ -1350,6 +1422,10 @@ public final class LineageSettings {
         /** @hide */
         public static final Validator BUTTON_BACKLIGHT_ONLY_WHEN_PRESSED_VALIDATOR =
                 sBooleanValidator;
+
+        // endregion
+
+        // region Charging Control
 
         /**
          * Whether charging control should be enabled.
@@ -1398,6 +1474,10 @@ public final class LineageSettings {
         /** @hide */
         public static final Validator CHARGING_CONTROL_LIMIT_VALIDATOR =
                 new InclusiveIntegerRangeValidator(70, 100);
+
+        // endregion
+
+        // region Battery Light
 
         /**
          * Whether the battery light should be enabled (if hardware supports it)
@@ -1457,6 +1537,10 @@ public final class LineageSettings {
         public static final Validator BATTERY_LIGHT_FULL_COLOR_VALIDATOR =
                 sColorValidator;
 
+        // endregion
+
+        // region Telephony
+
         /**
          * Sprint MWI Quirk: Show message wait indicator notifications
          * @hide
@@ -1467,6 +1551,10 @@ public final class LineageSettings {
         public static final Validator ENABLE_MWI_NOTIFICATION_VALIDATOR =
                 sBooleanValidator;
 
+        // endregion
+
+        // region Sensors
+
         /**
          * Check the proximity sensor during wakeup
          * 0 = 0ff, 1 = on
@@ -1476,6 +1564,10 @@ public final class LineageSettings {
         /** @hide */
         public static final Validator PROXIMITY_ON_WAKE_VALIDATOR =
                 sBooleanValidator;
+
+        // endregion
+
+        // region Display / LiveDisplay
 
         /**
          * Color temperature of the display during the day
@@ -1597,6 +1689,10 @@ public final class LineageSettings {
         public static final Validator LIVE_DISPLAY_HINTED_VALIDATOR =
                 new InclusiveIntegerRangeValidator(-3, 1);
 
+        // endregion
+
+        // region Trust
+
         /**
          * Did we tell the user about the trust brand and interface?
          * @hide
@@ -1605,6 +1701,10 @@ public final class LineageSettings {
 
         /** @hide */
         public static final Validator TRUST_INTERFACE_HINTED_VALIDATOR = sBooleanValidator;
+
+        // endregion
+
+        // region Sleep / Recents
 
         /**
          *  Enable statusbar double tap gesture on to put device to sleep
@@ -1625,6 +1725,10 @@ public final class LineageSettings {
         /** @hide */
         public static final Validator RECENTS_SHOW_SEARCH_BAR_VALIDATOR =
                 sBooleanValidator;
+
+        // endregion
+
+        // region Navigation / Telephony / Bluetooth / Lockscreen
 
         /**
          * Whether navigation bar is placed on the left side in landscape mode
@@ -1682,6 +1786,10 @@ public final class LineageSettings {
         /** @hide */
         public static final Validator LOCKSCREEN_ROTATION_VALIDATOR =
                 sBooleanValidator;
+
+        // endregion
+
+        // region Status Bar / Quick Settings / Audio / Edge
 
         /**
          * Whether to show the alarm clock icon in the status bar.
@@ -1742,6 +1850,10 @@ public final class LineageSettings {
         /** @hide */
         public static final Validator USE_EDGE_SERVICE_FOR_GESTURES_VALIDATOR =
                 sBooleanValidator;
+
+        // endregion
+
+        // region Telephony / Battery & Notification Light
 
         /**
          * Call recording format value
@@ -1988,6 +2100,10 @@ public final class LineageSettings {
         public static final Validator NOTIFICATION_LIGHT_COLOR_AUTO_VALIDATOR =
                 sBooleanValidator;
 
+        // endregion
+
+        // region Additional Display / Audio / Input / Misc
+
         /**
          * Whether auto brightness is applied one shot when screen is turned on
          */
@@ -2076,6 +2192,10 @@ public final class LineageSettings {
         /** @hide */
         public static final Validator ENABLE_TASKBAR_VALIDATOR =
                 sBooleanValidator;
+
+        // endregion
+
+        // region Test
 
         /**
          * Test-only setting used by validation tests. Not intended for production use.
@@ -2256,12 +2376,35 @@ public final class LineageSettings {
                     __MAGICAL_TEST_PASSING_ENABLER_VALIDATOR);
         };
         // endregion
+        // endregion
     }
 
     /**
      * Secure settings, containing miscellaneous Lineage secure preferences. This
      * table holds simple name/value pairs. There are convenience
      * functions for accessing individual settings entries.
+     *
+     * <p>Feature domains covered by this table:
+     * <ul>
+     *   <li>Button Backlight — timeout, brightness, keyboard brightness
+     *   <li>Navigation — navring targets, power menu actions, lockscreen targets
+     *   <li>Quick Settings — brightness slider, auto brightness toggle,
+     *       location advanced detail view
+     *   <li>Network Traffic — mode, position, auto-hide, units, show-units
+     *   <li>Lockscreen — visualizer, media metadata, translucent notifications,
+     *       double-tap sleep anywhere, internal enabled state, pass-to-security-view,
+     *       blur
+     *   <li>Call Behavior — home button behavior when ringing
+     *   <li>Recents — long-press activity override
+     *   <li>Gestures — back gesture top exclusion zone
+     *   <li>Trust — warnings state, icon visibility
+     *   <li>Touch / Input — feature touch hovering, vibrator intensity
+     *   <li>Development — development shortcut menu, advanced reboot
+     *   <li>Audio — volume panel position (left/right)
+     *   <li>Theme — berry black theme toggle
+     *   <li>LiveDisplay — stored color matrix
+     *   <li>Stats — global statistics collection
+     * </ul>
      */
     public static final class Secure extends Settings.NameValueTable {
         public static final Uri CONTENT_URI = Uri.parse("content://" + AUTHORITY + "/secure");
@@ -2654,6 +2797,8 @@ public final class LineageSettings {
 
         // region Secure Settings
 
+        // region Button Backlight
+
         /**
          * The time in ms to keep the button backlight on after pressing a button.
          * A value of 0 will keep the buttons on for as long as the screen is on.
@@ -2676,6 +2821,10 @@ public final class LineageSettings {
          */
         public static final String KEYBOARD_BRIGHTNESS = "keyboard_brightness";
 
+        // endregion
+
+        // region Navigation / Power
+
         /**
          * Custom navring actions
          * @hide
@@ -2691,6 +2840,10 @@ public final class LineageSettings {
          * @hide
          */
         public static final String POWER_MENU_ACTIONS = "power_menu_actions";
+
+        // endregion
+
+        // region Quick Settings / Stats
 
         /**
          * Whether to show the brightness slider in quick settings panel.
@@ -2709,6 +2862,10 @@ public final class LineageSettings {
          * @hide
          */
         public static final String STATS_COLLECTION = "stats_collection";
+
+        // endregion
+
+        // region Recents / Call Behavior
 
         /**
          * The global recents long press activity chosen by the user.
@@ -2748,6 +2905,10 @@ public final class LineageSettings {
          */
         public static final int RING_HOME_BUTTON_BEHAVIOR_DEFAULT =
                 RING_HOME_BUTTON_BEHAVIOR_DO_NOTHING;
+
+        // endregion
+
+        // region Lockscreen / Development / Gestures
 
         /**
          * Launch actions for left/right lockscreen targets
@@ -2794,6 +2955,10 @@ public final class LineageSettings {
          * @hide
          */
         public static final String QS_LOCATION_ADVANCED = "qs_location_advanced";
+
+        // endregion
+
+        // region Lockscreen Visuals
 
         /**
          * Whether to show the keyguard visualizer.
@@ -2853,6 +3018,10 @@ public final class LineageSettings {
          * @hide
          */
         public static final String LOCK_SCREEN_BLUR_ENABLED = "lock_screen_blur_enabled";
+
+        // endregion
+
+        // region Network Traffic / Trust / Audio / Theme
 
         /**
          * Network traffic indicator mode
@@ -2949,7 +3118,10 @@ public final class LineageSettings {
 
         /** @hide */
         public static final Validator BERRY_BLACK_THEME_VALIDATOR = sBooleanValidator;
+
         // endregion
+
+        // region Test
 
         /**
          * Test-only setting used by validation tests. Not intended for production use.
@@ -2980,12 +3152,22 @@ public final class LineageSettings {
             VALIDATORS.put(TRUST_WARNINGS, TRUST_WARNINGS_VALIDATOR);
             VALIDATORS.put(VOLUME_PANEL_ON_LEFT, VOLUME_PANEL_ON_LEFT_VALIDATOR);
         }
+        // endregion
+        // endregion
     }
 
     /**
      * Global settings, containing miscellaneous Lineage global preferences. This
      * table holds simple name/value pairs. There are convenience
      * functions for accessing individual settings entries.
+     *
+     * <p>Feature domains covered by this table:
+     * <ul>
+     *   <li>Wake — wake display on charger plug/unplug
+     *   <li>Zen — disable audio ducking during media playback
+     *   <li>WiFi — auto-prioritize WiFi access points
+     *   <li>Trust — restrict USB (off, locked, always)
+     * </ul>
      */
     public static final class Global extends Settings.NameValueTable {
         public static final Uri CONTENT_URI = Uri.parse("content://" + AUTHORITY + "/global");
@@ -3399,6 +3581,8 @@ public final class LineageSettings {
                 new InclusiveIntegerRangeValidator(0, 2);
         // endregion
 
+        // region Test
+
         /**
          * Test-only setting used by validation tests. Not intended for production use.
          * @hide
@@ -3429,5 +3613,6 @@ public final class LineageSettings {
             VALIDATORS.put(__MAGICAL_TEST_PASSING_ENABLER,
                     __MAGICAL_TEST_PASSING_ENABLER_VALIDATOR);
         };
+        // endregion
     }
 }
