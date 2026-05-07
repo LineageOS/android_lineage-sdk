@@ -2078,16 +2078,15 @@ public final class LineageSettings {
                 sBooleanValidator;
 
         /**
-         * I can haz more bukkits
+         * Test-only setting used by validation tests. Not intended for production use.
          * @hide
          */
         public static final String __MAGICAL_TEST_PASSING_ENABLER =
                 "___magical_test_passing_enabler";
 
         /**
-         * Don't
+         * Validator for the test-passing enabler setting.
          * @hide
-         * me bro
          */
         public static final Validator __MAGICAL_TEST_PASSING_ENABLER_VALIDATOR =
                 sAlwaysTrueValidator;
@@ -2953,7 +2952,7 @@ public final class LineageSettings {
         // endregion
 
         /**
-         * I can haz more bukkits
+         * Test-only setting used by validation tests. Not intended for production use.
          * @hide
          */
         public static final String __MAGICAL_TEST_PASSING_ENABLER =
@@ -3401,16 +3400,15 @@ public final class LineageSettings {
         // endregion
 
         /**
-         * I can haz more bukkits
+         * Test-only setting used by validation tests. Not intended for production use.
          * @hide
          */
         public static final String __MAGICAL_TEST_PASSING_ENABLER =
                 "___magical_test_passing_enabler";
 
         /**
-         * Don't
+         * Validator for the test-passing enabler setting.
          * @hide
-         * me bro
          */
         public static final Validator __MAGICAL_TEST_PASSING_ENABLER_VALIDATOR =
                 sAlwaysTrueValidator;
