@@ -1,0 +1,14 @@
+android_test {
+    name: "LineageSDKTests",
+    srcs: ["src/**/*.java"],
+    static_libs: [
+        "org.lineageos.platform",
+        "junit",
+        "mockito-target-minus-junit4",
+        "androidx.test.rules",
+        "truth",
+    ],
+    platform_apis: true,
+    certificate: "platform",
+    test_suites: ["device-tests"],
+}

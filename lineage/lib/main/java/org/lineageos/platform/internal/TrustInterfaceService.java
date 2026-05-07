@@ -48,7 +48,7 @@ public class TrustInterfaceService extends LineageSystemService {
     private static final String TRUST_CHANNEL_ID = "TrustInterface";
     private static final String TRUST_CHANNEL_ID_TV = "TrustInterface.tv";
 
-    private static final int ONBOARDING_NOTIFCATION_ID = 89;
+    private static final int ONBOARDING_NOTIFICATION_ID = 89;
 
     private Context mContext;
     private NotificationManager mNotificationManager = null;
@@ -173,7 +173,7 @@ public class TrustInterfaceService extends LineageSystemService {
                 .extend(new Notification.TvExtender().setChannelId(TRUST_CHANNEL_ID_TV));
 
         createNotificationChannelIfNeeded();
-        mNotificationManager.notify(ONBOARDING_NOTIFCATION_ID, notification.build());
+        mNotificationManager.notify(ONBOARDING_NOTIFICATION_ID, notification.build());
         return true;
     }
 
