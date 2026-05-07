@@ -41,7 +41,7 @@ public class RemotePreferenceManager {
     private static final boolean DEBUG = Log.isLoggable(
             RemotePreference.class.getSimpleName(), Log.VERBOSE);
 
-    private static RemotePreferenceManager sInstance;
+    private static volatile RemotePreferenceManager sInstance;
 
     private final Context mContext;
     private final Map<String, Intent> mCache = new ArrayMap<>();
@@ -62,7 +62,12 @@ public class RemotePreferenceManager {
         mContext = context;
     }
 
+    @Deprecated
     public synchronized static RemotePreferenceManager get(Context context) {
+        return getInstance(context);
+    }
+
+    public synchronized static RemotePreferenceManager getInstance(Context context) {
         if (sInstance == null) {
             sInstance = new RemotePreferenceManager(context.getApplicationContext());
         }

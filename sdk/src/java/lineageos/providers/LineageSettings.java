@@ -24,7 +24,6 @@ import android.util.ArraySet;
 import android.util.Log;
 
 import com.android.internal.annotations.GuardedBy;
-import com.android.internal.util.ArrayUtils;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -59,6 +58,7 @@ public final class LineageSettings {
      * <p>
      * Output: Nothing.
      */
+    @SuppressWarnings("unused")
     public static final String ACTION_DATA_USAGE = "lineageos.settings.ACTION_DATA_USAGE";
 
     /**
@@ -1141,7 +1141,7 @@ public final class LineageSettings {
         public static final String MENU_WAKE_SCREEN = "menu_wake_screen";
 
         /** @hide */
-        public static final Validator MENU_WAKE_SCREENN_VALIDATOR =
+        public static final Validator MENU_WAKE_SCREEN_VALIDATOR =
                 sBooleanValidator;
 
         /**
@@ -2132,7 +2132,7 @@ public final class LineageSettings {
             VALIDATORS.put(KEY_HOME_DOUBLE_TAP_ACTION, KEY_HOME_DOUBLE_TAP_ACTION_VALIDATOR);
             VALIDATORS.put(BACK_WAKE_SCREEN, BACK_WAKE_SCREEN_VALIDATOR);
             VALIDATORS.put(VOLUME_UP_AND_DOWN_MUTE, VOLUME_UP_AND_DOWN_MUTE_VALIDATOR);
-            VALIDATORS.put(MENU_WAKE_SCREEN, MENU_WAKE_SCREENN_VALIDATOR);
+            VALIDATORS.put(MENU_WAKE_SCREEN, MENU_WAKE_SCREEN_VALIDATOR);
             VALIDATORS.put(VOLUME_ANSWER_CALL, VOLUME_ANSWER_CALL_VALIDATOR);
             VALIDATORS.put(VOLUME_WAKE_SCREEN, VOLUME_WAKE_SCREEN_VALIDATOR);
             VALIDATORS.put(KEY_MENU_ACTION, KEY_MENU_ACTION_VALIDATOR);
@@ -2771,7 +2771,7 @@ public final class LineageSettings {
 
         /**
          * Top to half of the screen height are the valid values
-         * @gide
+         * @hide
          */
         public static final Validator GESTURE_BACK_EXCLUDE_TOP_VALIDATOR =
                 new InclusiveIntegerRangeValidator(0, 50);
