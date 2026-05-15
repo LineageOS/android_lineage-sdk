@@ -88,4 +88,6 @@
     <string name="charging_control_notification_channel">Kontrol pengisian daya</string>
     <string name="charging_control_notification_title">Kontrol pengisian daya</string>
     <string name="charging_control_notification_cancel_once">Batal</string>
+    <string name="charging_control_notification_content_target">Baterai akan terisi penuh pada %1$s</string>
+    <string name="charging_control_notification_content_target_reached">Baterai penuh</string>
 </resources>
