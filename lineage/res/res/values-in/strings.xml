@@ -26,6 +26,10 @@
     <string name="profileGroupEmail">Surel</string>
     <string name="profileGroupSMS">SMS</string>
     <string name="wildcardProfile">Lainnya</string>
+    <string name="charging_speed">Kecepatan pengisian</string>
+    <string name="charging_speed_slow">Lambat</string>
+    <string name="charging_speed_fast">Cepat</string>
+    <string name="charging_speed_super_fast">Sangat cepat</string>
     <string name="live_display_auto">Otomatis</string>
     <string name="live_display_auto_summary">Menyesuaikan suhu warna layar secara otomatis setelah matahari terbenam dan terbit</string>
     <string name="live_display_off">Mati</string>
@@ -77,4 +81,6 @@
     <string name="charging_control_notification_channel">Kontrol pengisian daya</string>
     <string name="charging_control_notification_title">Kontrol pengisian daya</string>
     <string name="charging_control_notification_cancel_once">Batal</string>
+    <string name="charging_control_notification_content_target">Baterai akan terisi penuh pada %1$s</string>
+    <string name="charging_control_notification_content_target_reached">Baterai penuh</string>
 </resources>
