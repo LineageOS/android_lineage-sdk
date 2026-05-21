@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1035d3d5_851ffff6",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 19282
+      },
+      "writtenOn": "2026-05-21T16:30:06Z",
+      "side": 1,
+      "message": "This changes requires changes to all users of `org.lineageos.platform`.",
+      "revId": "92602401d8ec0cfa7607dd16c33d53e6041d2560",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
