@@ -11,7 +11,7 @@ import android.os.ParcelUuid;
 import lineageos.app.NotificationGroup;
 import lineageos.app.Profile;
 
-/** {@hide} */
+/** @hide */
 interface IProfileManager
 {
     boolean setActiveProfile(in ParcelUuid profileParcelUuid);

@@ -5,7 +5,7 @@
 
 package lineageos.trust;
 
-/** {@hide} */
+/** @hide */
 interface ITrustInterface {
 
     boolean postNotificationForFeature(int feature);

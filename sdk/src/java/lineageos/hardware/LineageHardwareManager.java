@@ -462,23 +462,23 @@ public final class LineageHardwareManager {
     }
 
     /**
-     * {@hide}
+     * @hide
      */
     public static final int COLOR_CALIBRATION_RED_INDEX = 0;
     /**
-     * {@hide}
+     * @hide
      */
     public static final int COLOR_CALIBRATION_GREEN_INDEX = 1;
     /**
-     * {@hide}
+     * @hide
      */
     public static final int COLOR_CALIBRATION_BLUE_INDEX = 2;
     /**
-     * {@hide}
+     * @hide
      */
     public static final int COLOR_CALIBRATION_MIN_INDEX = 3;
     /**
-     * {@hide}
+     * @hide
      */
     public static final int COLOR_CALIBRATION_MAX_INDEX = 4;
 
