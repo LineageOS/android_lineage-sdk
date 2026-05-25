@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "abf21929_b353c046",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 36977
+      },
+      "writtenOn": "2026-05-25T20:05:24Z",
+      "side": 1,
+      "message": "Hi! Can you PTAL when you have a free time, please? Thanks!",
+      "revId": "e797cd160eb3d09798d832d26060de09a505b2f4",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
