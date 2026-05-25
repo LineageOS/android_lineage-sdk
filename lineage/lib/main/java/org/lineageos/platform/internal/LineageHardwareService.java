@@ -45,6 +45,9 @@ public class LineageHardwareService extends LineageSystemService {
         private final int MIN = 0;
         private final int MAX = 255;
 
+        private final int[] mCalibrationBuffer = new int[5];
+        private final float[] mMatrixBuffer = new float[16];
+
         /**
          * Matrix and offset used for converting color to grayscale.
          * Copied from com.android.server.accessibility.DisplayAdjustmentUtils.MATRIX_GRAYSCALE
@@ -115,7 +118,10 @@ public class LineageHardwareService extends LineageSystemService {
         }
 
         private float[] rgbToMatrix(int[] rgb) {
-            float[] mat = new float[16];
+            // Reset matrix buffer
+            for (int i = 0; i < 16; i++) {
+                mMatrixBuffer[i] = 0;
+            }
 
             for (int i = 0; i < 3; i++) {
                 // Sanity check
@@ -124,11 +130,11 @@ public class LineageHardwareService extends LineageSystemService {
                 else if (rgb[i] < MIN)
                     rgb[i] = MIN;
 
-                mat[i * 5] = (float)rgb[i] / (float)MAX;
+                mMatrixBuffer[i * 5] = (float)rgb[i] / (float)MAX;
             }
 
-            mat[15] = 1.0f;
-            return mat;
+            mMatrixBuffer[15] = 1.0f;
+            return mMatrixBuffer;
         }
 
         public int[] getDisplayColorCalibration() {
@@ -137,13 +143,12 @@ public class LineageHardwareService extends LineageSystemService {
                 Log.e(TAG, "Invalid color calibration string");
                 return null;
             }
-            int[] currentCalibration = new int[5];
-            currentCalibration[LineageHardwareManager.COLOR_CALIBRATION_RED_INDEX] = rgb[0];
-            currentCalibration[LineageHardwareManager.COLOR_CALIBRATION_GREEN_INDEX] = rgb[1];
-            currentCalibration[LineageHardwareManager.COLOR_CALIBRATION_BLUE_INDEX] = rgb[2];
-            currentCalibration[LineageHardwareManager.COLOR_CALIBRATION_MIN_INDEX] = MIN;
-            currentCalibration[LineageHardwareManager.COLOR_CALIBRATION_MAX_INDEX] = MAX;
-            return currentCalibration;
+            mCalibrationBuffer[LineageHardwareManager.COLOR_CALIBRATION_RED_INDEX] = rgb[0];
+            mCalibrationBuffer[LineageHardwareManager.COLOR_CALIBRATION_GREEN_INDEX] = rgb[1];
+            mCalibrationBuffer[LineageHardwareManager.COLOR_CALIBRATION_BLUE_INDEX] = rgb[2];
+            mCalibrationBuffer[LineageHardwareManager.COLOR_CALIBRATION_MIN_INDEX] = MIN;
+            mCalibrationBuffer[LineageHardwareManager.COLOR_CALIBRATION_MAX_INDEX] = MAX;
+            return mCalibrationBuffer;
         }
 
         public boolean setDisplayColorCalibration(int[] rgb) {
