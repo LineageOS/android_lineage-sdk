@@ -33,6 +33,24 @@
       "message": "What device was this tested on?",
       "revId": "e797cd160eb3d09798d832d26060de09a505b2f4",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a243e038_b0e9f67b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 36977
+      },
+      "writtenOn": "2026-05-26T15:49:49Z",
+      "side": 1,
+      "message": "I haven\u0027t run a full build yet, but the logic is sound. Call sites for these methods only read the data, so reusing the buffers is safe and won\u0027t cause side effects.",
+      "parentUuid": "3f275485_2047ee4a",
+      "revId": "e797cd160eb3d09798d832d26060de09a505b2f4",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
