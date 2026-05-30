@@ -27,7 +27,8 @@ public class DeviceKeysConstants {
         SPLIT_SCREEN,
         KILL_APP,
         PLAY_PAUSE_MUSIC,
-        SCREENSHOT;
+        SCREENSHOT,
+        PARTIAL_SCREENSHOT;
 
         public static Action fromIntSafe(int id) {
             if (id < NOTHING.ordinal() || id > Action.values().length) {
