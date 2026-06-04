@@ -68,6 +68,7 @@
 
     <!-- On-device lights (LED) capabilities -->
     <java-symbol type="integer" name="config_deviceLightCapabilities" />
+    <java-symbol type="bool" name="config_deviceLightsNoBrightness" />
 
     <!-- External Lineage specific core services -->
     <java-symbol type="array" name="config_externalLineageServices" />

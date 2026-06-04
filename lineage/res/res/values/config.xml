@@ -93,6 +93,10 @@
          pulsating and RGB control would set this config to 75. -->
     <integer name="config_deviceLightCapabilities">8</integer>
 
+    <!-- Whether the device's LEDs cannot actually vary brightness, in which case
+         the light brightness controls are hidden even when RGB is supported. -->
+    <bool name="config_deviceLightsNoBrightness">false</bool>
+
     <!-- Defines external services to be started by the LineageSystemServer at boot. The service itself
          should publish as a binder services in its onStart -->
     <string-array name="config_externalLineageServices">

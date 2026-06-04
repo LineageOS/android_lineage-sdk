@@ -58,4 +58,9 @@ public final class LightsCapabilities {
                 org.lineageos.platform.internal.R.integer.config_deviceLightCapabilities);
         return (capabilities & capability) != 0;
     }
+
+    public static boolean hasNoBrightnessControl(Context context) {
+        return context.getResources().getBoolean(
+                org.lineageos.platform.internal.R.bool.config_deviceLightsNoBrightness);
+    }
 }
