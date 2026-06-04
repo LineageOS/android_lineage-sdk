@@ -89,6 +89,10 @@
          // The notification light has non-adjustable pulsing capability.
          LIGHTS_BREATHING_LED = 256
 
+         // The device's LEDs are on/off only, so brightness controls are
+         // hidden even when RGB is supported.
+         LIGHTS_NO_BRIGHTNESS_CONTROL = 512
+
          For example, a device with notification and battery lights that supports
          pulsating and RGB control would set this config to 75. -->
     <integer name="config_deviceLightCapabilities">8</integer>
