@@ -206,4 +206,7 @@
 
     <!-- Advanced rotation settings -->
     <java-symbol type="bool" name="config_enableAdvancedRotationSettings" />
+
+    <!-- Flag indicating which package name can access DeviceConfig table -->
+    <java-symbol type="string" name="config_deviceConfiguratorPackageName" />
 </resources>
