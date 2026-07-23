@@ -91,6 +91,7 @@ java_defaults {
         "vendor.lineage.health-V2-java",
         "vendor.lineage.livedisplay-V1-java",
         "vendor.lineage.touch-V1-java",
+        "org.lineageos.lib.phone",
     ],
 }
 
