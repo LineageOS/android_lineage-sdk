@@ -8,8 +8,13 @@ lineage_sdk_lib_src = "src/java/org/lineageos/lib/"
 java_library {
     name: "org.lineageos.lib.phone",
     sdk_version: "current",
+    min_sdk_version: "36",
+    apex_available: [
+        "//apex_available:platform",
+        "com.android.telephonycore",
+    ],
     static_libs: [
-        "libphonenumber",
+        "libphonenumber-platform",
     ],
 
     srcs: [
