@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8975e9fd_b8754e31",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2026-08-25T05:41:27Z",
+      "side": 1,
+      "message": "Pitch:\n\nSettings button long press \u003d tvsettings\nSettings button short press \u003d qs (mirrors sony and ohm stock)\n\nAll apps short press \u003d all apps\nAll apps long press \u003d QS (for remotes with no settings button)",
+      "revId": "42dc2859adf1bc306b5ab589f046629760c8542d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
