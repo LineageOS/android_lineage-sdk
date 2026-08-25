@@ -69,6 +69,24 @@
       "message": "re-add me when you guys decide on one I guess.",
       "revId": "77a8c33d6aa7cf747c5e163ba061f92f981f5087",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "11f9ae0b_c939f239",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2026-08-25T05:41:51Z",
+      "side": 1,
+      "message": "Pitch:\n\nSettings button long press \u003d tvsettings\nSettings button short press \u003d qs (mirrors sony and ohm stock)\n\nAll apps short press \u003d all apps\nAll apps long press \u003d QS (for remotes with no settings button)",
+      "parentUuid": "6a9c9a6d_bbe48422",
+      "revId": "77a8c33d6aa7cf747c5e163ba061f92f981f5087",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ],
   "submitRequirementResults": []
