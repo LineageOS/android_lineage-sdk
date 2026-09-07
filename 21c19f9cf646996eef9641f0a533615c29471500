@@ -22,6 +22,30 @@
       },
       "revId": "21c19f9cf646996eef9641f0a533615c29471500",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b1fcbd3c_89528a5c",
+        "filename": "lineage/lib/main/java/org/lineageos/platform/internal/LineageSystemServer.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 70,
+      "author": {
+        "id": 15346
+      },
+      "writtenOn": "2026-09-07T09:19:38Z",
+      "side": 1,
+      "message": "Reverted the check and made the service check for telephony flag",
+      "parentUuid": "67c3c9ee_90d5a481",
+      "range": {
+        "startLine": 70,
+        "startChar": 28,
+        "endLine": 70,
+        "endChar": 30
+      },
+      "revId": "21c19f9cf646996eef9641f0a533615c29471500",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
