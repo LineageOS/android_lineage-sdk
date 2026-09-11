@@ -1,0 +1,46 @@
+//
+// SPDX-FileCopyrightText: The LineageOS Project
+// SPDX-License-Identifier: Apache-2.0
+//
+
+filegroup {
+    name: "org.lineageos.services.telecom-sources",
+    srcs: [
+        "aidl/**/*.aidl",
+        "aidl/**/*.java",
+    ],
+    path: "aidl",
+}
+
+java_sdk_library {
+    name: "org.lineageos.services.telecom",
+    srcs: [":org.lineageos.services.telecom-sources"],
+    api_packages: ["org.lineageos.services.telecom"],
+    apex_available: [
+        "com.android.telephonycore",
+        "//apex_available:platform",
+    ],
+    permitted_packages: ["org.lineageos.services.telecom"],
+    public: {
+        enabled: true,
+    },
+    system: {
+        enabled: true,
+    },
+    unsafe_ignore_missing_latest_api: true,
+    compile_dex: true,
+}
+
+android_app {
+    name: "LineageTelecomService",
+    srcs: [
+        "src/**/*.java",
+        ":spn-info",
+    ],
+    platform_apis: true,
+    certificate: "platform",
+    static_libs: [
+        "libphonenumber",
+        "org.lineageos.services.telecom.impl",
+    ],
+}

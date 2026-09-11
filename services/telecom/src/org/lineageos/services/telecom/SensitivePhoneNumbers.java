@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.lineageos.lib.phone;
+package org.lineageos.services.telecom;
 
 import android.content.Context;
 import android.telephony.PhoneNumberUtils;
@@ -19,7 +19,6 @@ import com.google.i18n.phonenumbers.PhoneNumberUtil;
 import com.google.i18n.phonenumbers.PhoneNumberUtil.PhoneNumberFormat;
 import com.google.i18n.phonenumbers.Phonenumber;
 
-import org.lineageos.lib.phone.spn.Item;
 import org.lineageos.lib.phone.spn.SensitivePN;
 import org.lineageos.lib.phone.spn.XmlParser;
 import org.xmlpull.v1.XmlPullParserException;
@@ -34,16 +33,17 @@ import java.util.List;
 
 import javax.xml.datatype.DatatypeConfigurationException;
 
-public class SensitivePhoneNumbers {
-    private final String LOG_TAG = this.getClass().getSimpleName();
+class SensitivePhoneNumbers {
+    private final String LOG_TAG = getClass().getSimpleName();
 
-    public static final String SENSIBLE_PHONENUMBERS_FILE_PATH = "/product/etc/sensitive_pn.xml";
-    private static final String ns = null;
+    private static final String SENSITIVE_PHONE_NUMBERS_FILE_PATH =
+            "/product/etc/sensitive_pn.xml";
 
     private static SensitivePhoneNumbers sInstance = null;
     private static boolean sNumbersLoaded;
 
-    private HashMap<String, ArrayList<Item>> mSensitiveNumbersMap = new HashMap<>();
+    private final HashMap<String, ArrayList<org.lineageos.lib.phone.spn.Item>>
+            mSensitiveNumbersMap = new HashMap<>();
 
     private SensitivePhoneNumbers() { }
 
@@ -54,26 +54,27 @@ public class SensitivePhoneNumbers {
         return sInstance;
     }
 
-    private void loadSensiblePhoneNumbers() {
+    private void loadSensitivePhoneNumbers() {
         if (sNumbersLoaded) {
             return;
         }
 
-        File sensiblePNFile = new File(SENSIBLE_PHONENUMBERS_FILE_PATH);
-        FileInputStream sensiblePNInputStream;
+        File sensitivePhoneNumbersFile = new File(SENSITIVE_PHONE_NUMBERS_FILE_PATH);
+        FileInputStream sensitivePhoneNumbersInputStream;
 
         try {
-            sensiblePNInputStream = new FileInputStream(sensiblePNFile);
+            sensitivePhoneNumbersInputStream = new FileInputStream(sensitivePhoneNumbersFile);
         } catch (FileNotFoundException e) {
-            Log.w(LOG_TAG, "Can not open " + sensiblePNFile.getAbsolutePath());
+            Log.w(LOG_TAG, "Can not open " + sensitivePhoneNumbersFile.getAbsolutePath());
             return;
         }
 
         try {
-            for (SensitivePN sensitivePN : new XmlParser().read(sensiblePNInputStream).getSensitivePN()) {
+            for (SensitivePN sensitivePN : new XmlParser()
+                    .read(sensitivePhoneNumbersInputStream).getSensitivePN()) {
                 String[] mccs = sensitivePN.getNetwork().split(",");
                 for (String mcc : mccs) {
-                    mSensitiveNumbersMap.put(mcc, new ArrayList(sensitivePN.getItem()));
+                    mSensitiveNumbersMap.put(mcc, new ArrayList<>(sensitivePN.getItem()));
                 }
             }
         } catch (DatatypeConfigurationException | IOException | XmlPullParserException e) {
@@ -84,8 +85,14 @@ public class SensitivePhoneNumbers {
     }
 
     public ArrayList<Item> getSensitivePnInfosForMcc(String mcc) {
-        loadSensiblePhoneNumbers();
-        return mSensitiveNumbersMap.getOrDefault(mcc, new ArrayList<Item>());
+        loadSensitivePhoneNumbers();
+        ArrayList<Item> result = new ArrayList<>();
+        for (org.lineageos.lib.phone.spn.Item item : mSensitiveNumbersMap.getOrDefault(mcc,
+                new ArrayList<org.lineageos.lib.phone.spn.Item>())) {
+            result.add(new Item(item.getNumber(), item.getName(), item.getCategories(),
+                    item.getLanguages(), item.getOrganization(), item.getWebsite()));
+        }
+        return result;
     }
 
     public boolean isSensitiveNumber(Context context, String numberToCheck, int subId) {
@@ -93,7 +100,7 @@ public class SensitivePhoneNumbers {
         if (TextUtils.isEmpty(nationalNumber)) {
             return false;
         }
-        loadSensiblePhoneNumbers();
+        loadSensitivePhoneNumbers();
 
         SubscriptionManager subManager = context.getSystemService(SubscriptionManager.class);
         List<SubscriptionInfo> list = subManager.getActiveSubscriptionInfoList();
@@ -137,7 +144,7 @@ public class SensitivePhoneNumbers {
 
     private boolean isSensitiveNumber(String numberToCheck, String mcc) {
         if (mSensitiveNumbersMap.containsKey(mcc)) {
-            for (Item item : mSensitiveNumbersMap.get(mcc)) {
+            for (org.lineageos.lib.phone.spn.Item item : mSensitiveNumbersMap.get(mcc)) {
                 if (PhoneNumberUtils.compare(numberToCheck, item.getNumber())) {
                     return true;
                 }

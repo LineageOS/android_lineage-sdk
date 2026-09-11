@@ -82,13 +82,6 @@ public final class LineageContextConstants {
     public static final String LINEAGE_GLOBAL_ACTIONS_SERVICE = "lineageglobalactions";
 
     /**
-     * Use to access the Sensitive Phone Numbers service.
-     *
-     * @hide
-     */
-    public static final String LINEAGE_SENSITIVE_PHONE_NUMBERS_SERVICE = "lineagesensitivephone";
-
-    /**
      * Features supported by the Lineage SDK.
      */
     public static class Features {

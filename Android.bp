@@ -105,13 +105,8 @@ java_library {
         "services.impl",
     ],
 
-    static_libs: [
-        "org.lineageos.lib.phone",
-    ],
-
     srcs: [
         ":lineage-library-sources",
-        ":telecom-sensitive-phone-numbers-aidl",
     ],
 }
 

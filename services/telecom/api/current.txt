@@ -1,0 +1,37 @@
+// Signature format: 2.0
+package org.lineageos.services.telecom {
+
+  public interface ISensitivePhoneNumbers extends android.os.IInterface {
+    method public java.util.List<org.lineageos.services.telecom.Item> getSensitivePnInfosForMcc(String) throws android.os.RemoteException;
+    method public boolean isSensitiveNumber(String, int) throws android.os.RemoteException;
+    field public static final String SERVICE_NAME = "lineagesensitivephone";
+  }
+
+  public static class ISensitivePhoneNumbers.Default implements org.lineageos.services.telecom.ISensitivePhoneNumbers {
+    ctor public ISensitivePhoneNumbers.Default();
+    method public android.os.IBinder asBinder();
+    method public java.util.List<org.lineageos.services.telecom.Item> getSensitivePnInfosForMcc(String) throws android.os.RemoteException;
+    method public boolean isSensitiveNumber(String, int) throws android.os.RemoteException;
+  }
+
+  public abstract static class ISensitivePhoneNumbers.Stub extends android.os.Binder implements org.lineageos.services.telecom.ISensitivePhoneNumbers {
+    ctor public ISensitivePhoneNumbers.Stub();
+    method public android.os.IBinder asBinder();
+    method public static org.lineageos.services.telecom.ISensitivePhoneNumbers asInterface(android.os.IBinder);
+    method public boolean onTransact(int, android.os.Parcel, android.os.Parcel, int) throws android.os.RemoteException;
+  }
+
+  public final class Item implements android.os.Parcelable {
+    ctor public Item(String, String, String, String, String, String);
+    method public int describeContents();
+    method public void writeToParcel(android.os.Parcel, int);
+    field public static final android.os.Parcelable.Creator<org.lineageos.services.telecom.Item> CREATOR;
+    field public final String categories;
+    field public final String languages;
+    field public final String name;
+    field public final String number;
+    field public final String organization;
+    field public final String website;
+  }
+
+}
