@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ff12db6b_dfe5e2f6",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 4550
+      },
+      "writtenOn": "2026-09-20T12:39:40Z",
+      "side": 1,
+      "message": "This is probably not needed, since lineage defaults to disabled restrictions for all build types",
+      "revId": "7999143efc130f28593f9ee6496762001e81dc0d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
