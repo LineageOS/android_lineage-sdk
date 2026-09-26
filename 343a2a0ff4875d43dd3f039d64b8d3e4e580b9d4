@@ -33,6 +33,24 @@
       "message": "```suggestion\n        InputDevice device \u003d inputManager.getInputDeviceByDescriptor(descriptor);\n```",
       "revId": "343a2a0ff4875d43dd3f039d64b8d3e4e580b9d4",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "11a9737e_84e4cc30",
+        "filename": "sdk/src/java/org/lineageos/internal/util/ControllerUtils.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 29242
+      },
+      "writtenOn": "2026-09-26T07:35:22Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "c566e449_0d7e1330",
+      "revId": "343a2a0ff4875d43dd3f039d64b8d3e4e580b9d4",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
