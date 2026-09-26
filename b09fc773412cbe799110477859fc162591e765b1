@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "13849c20_7b51a554",
+        "filename": "sdk/src/java/org/lineageos/internal/util/ControllerUtils.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 11883
+      },
+      "writtenOn": "2026-09-26T07:46:21Z",
+      "side": 1,
+      "message": "I\u0027m kinda allergic to \"magic\" values in code, can you simply make those final static Strings in the class?",
+      "revId": "b09fc773412cbe799110477859fc162591e765b1",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
