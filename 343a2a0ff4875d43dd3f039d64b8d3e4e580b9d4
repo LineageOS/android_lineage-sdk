@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "bd1b10e9_ce46a98b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 19979
+      },
+      "writtenOn": "2026-09-26T05:46:57Z",
+      "side": 1,
+      "message": "I left one suggestion just because it\u0027s the only variable not using explicit data types.",
+      "revId": "343a2a0ff4875d43dd3f039d64b8d3e4e580b9d4",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c566e449_0d7e1330",
+        "filename": "sdk/src/java/org/lineageos/internal/util/ControllerUtils.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 19979
+      },
+      "writtenOn": "2026-09-26T05:46:57Z",
+      "side": 1,
+      "message": "```suggestion\n        InputDevice device \u003d inputManager.getInputDeviceByDescriptor(descriptor);\n```",
+      "revId": "343a2a0ff4875d43dd3f039d64b8d3e4e580b9d4",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
