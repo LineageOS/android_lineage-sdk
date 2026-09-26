@@ -9,6 +9,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.hardware.input.InputManager;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.InputDevice;
 
@@ -22,6 +23,7 @@ public final class ControllerUtils {
     private static final String GAME_CONTROLLER_FRAGMENT =
             "com.android.settings.input.gamecontroller.GameControllerFragment";
     private static final String EXTRA_SHOW_FRAGMENT_ARGS = ":settings:show_fragment_args";
+    private static final String EXTRA_SHOW_FRAGMENT_TITLE = ":settings:show_fragment_title";
 
     private ControllerUtils() {
         // This class is not supposed to be instantiated
@@ -32,8 +34,9 @@ public final class ControllerUtils {
      *
      * @param context the current context, used to launch the activity.
      * @param descriptor the SHA-1 descriptor of the target input device.
+     * @param title optional custom title to show in GameControllerFragment.
      */
-    public static void launchControllerRemapping(Context context, String descriptor) {
+    public static void launchControllerRemapping(Context context, String descriptor, String title) {
         InputManager inputManager = context.getSystemService(InputManager.class);
         if (inputManager == null) {
             Log.e(TAG, "InputManager service not available");
@@ -49,10 +52,13 @@ public final class ControllerUtils {
         Bundle args = new Bundle();
         args.putParcelable(INPUT_DEVICE_ID, device.getIdentifier());
 
+        String fragmentTitle = TextUtils.isEmpty(title) ? device.getName() : title;
+
         Intent intent = new Intent()
                 .setClassName(SETTINGS, SUB_SETTINGS)
                 .putExtra(EXTRA_SHOW_FRAGMENT, GAME_CONTROLLER_FRAGMENT)
-                .putExtra(EXTRA_SHOW_FRAGMENT_ARGS, args);
+                .putExtra(EXTRA_SHOW_FRAGMENT_ARGS, args)
+                .putExtra(EXTRA_SHOW_FRAGMENT_TITLE, fragmentTitle);
 
         context.startActivity(intent);
     }
