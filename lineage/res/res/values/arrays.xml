@@ -86,6 +86,7 @@
         <item>176</item> <!-- KEYCODE_SETTINGS -->
         <item>190</item> <!-- KEYCODE_BUTTON_3 -->
         <item>191</item> <!-- KEYCODE_BUTTON_4 -->
+        <item>192</item> <!-- KEYCODE_BUTTON_5 -->
         <item>193</item> <!-- KEYCODE_BUTTON_6 -->
         <item>194</item> <!-- KEYCODE_BUTTON_7 -->
         <item>195</item> <!-- KEYCODE_BUTTON_8 -->
@@ -99,6 +100,7 @@
         <item>android.settings.SETTINGS</item> <!-- This is an intent -->
         <item>com.google.android.youtube.tv</item>
         <item>com.netflix.ninja</item>
+        <item>com.amazon.amazonvideo.livingroom/com.amazon.ignition.IgnitionActivity</item>
         <item>com.disney.disneyplus</item>
         <item>com.hbo.hbonow</item>
         <item>com.android.vending</item>
