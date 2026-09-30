@@ -148,11 +148,17 @@ public class ChargingControlController extends LineageHealthFeature {
             return false;
         }
 
-        mCurrentProvider = getProviderForMode(mode);
+        ChargingControlProvider provider = getProviderForMode(mode);
 
-        if (mCurrentProvider == null) {
+        if (provider == null) {
             return false;
         }
+
+        // Undo what the previous provider did, e.g. a charging limit set by Limit
+        if (mCurrentProvider != null && mCurrentProvider != provider) {
+            mCurrentProvider.disable();
+        }
+        mCurrentProvider = provider;
 
         putInt(LineageSettings.System.CHARGING_CONTROL_MODE, mode);
         return true;
@@ -174,11 +180,12 @@ public class ChargingControlController extends LineageHealthFeature {
             if (mDeadline.isSupported()) {
                 return mDeadline;
             }
-            if (mLimit.isSupported()) {
-                return mLimit;
-            }
+            // Limit doesn't implement the time based modes, prefer Toggle if available
             if (mToggle.isSupported()) {
                 return mToggle;
+            }
+            if (mLimit.isSupported()) {
+                return mLimit;
             }
         }
 
