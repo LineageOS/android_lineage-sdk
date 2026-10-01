@@ -16,6 +16,24 @@
       "message": "maybe... this is rather ugly",
       "revId": "2f44b5befaebe6179d552feb120eb886b17dda91",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8a58a8f7_4583d733",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 15346
+      },
+      "writtenOn": "2026-10-01T11:49:07Z",
+      "side": 1,
+      "message": "does this require edits to Telephony/Telecomm or is this completely self contained? If it is self contained it might be worth doing for future maintainability",
+      "parentUuid": "49a2d750_786fe2bc",
+      "revId": "2f44b5befaebe6179d552feb120eb886b17dda91",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
