@@ -1099,6 +1099,18 @@ public final class LineageSettings {
                 sHardwareKeyActionvalidator;
 
         /**
+         * What each position of a physical slider does, as a JSON object whose
+         * names are a slider instance and a choice within it. The action of a
+         * position is held under the position's index, counting from the off
+         * end of the slider's travel.
+         */
+        public static final String SLIDER_CONFIGURATION = "slider_configuration";
+
+        /** @hide */
+        public static final Validator SLIDER_CONFIGURATION_VALIDATOR =
+                sNonNullStringValidator;
+
+        /**
          * Action to perform when the home key is double-tapped.
          * (Default can be configured via config_doubleTapOnHomeBehavior)
          * (See KEY_HOME_LONG_PRESS_ACTION for valid values)
@@ -2150,6 +2162,7 @@ public final class LineageSettings {
             VALIDATORS.put(KEY_BACK_LONG_PRESS_ACTION, KEY_BACK_LONG_PRESS_ACTION_VALIDATOR);
             VALIDATORS.put(KEY_HOME_LONG_PRESS_ACTION, KEY_HOME_LONG_PRESS_ACTION_VALIDATOR);
             VALIDATORS.put(KEY_HOME_DOUBLE_TAP_ACTION, KEY_HOME_DOUBLE_TAP_ACTION_VALIDATOR);
+            VALIDATORS.put(SLIDER_CONFIGURATION, SLIDER_CONFIGURATION_VALIDATOR);
             VALIDATORS.put(BACK_WAKE_SCREEN, BACK_WAKE_SCREEN_VALIDATOR);
             VALIDATORS.put(VOLUME_UP_AND_DOWN_MUTE, VOLUME_UP_AND_DOWN_MUTE_VALIDATOR);
             VALIDATORS.put(MENU_WAKE_SCREEN, MENU_WAKE_SCREENN_VALIDATOR);
