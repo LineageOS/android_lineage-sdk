@@ -51,7 +51,7 @@
     <string name="permdesc_manageLiveDisplay">Gerir forriti kleift að breyta ítarlegum skjástillingum.</string>
     <string name="permlab_manageRemotePrefs">sýsla með fjartengdar stillingar</string>
     <string name="permdesc_manageRemotePrefs">Gerir forriti kleift að sýsla með fjartengdar stillingar</string>
-    <string name="build_date">Byggingardagsetning</string>
+    <string name="build_date">Dagsetning samsetningar</string>
     <string name="lineage_api_level">LineageOS API-stig</string>
     <string name="lineage_updates">LineageOS uppfærslur</string>
     <string name="lineage_version">LineageOS útgáfa</string>
@@ -68,7 +68,7 @@
     <string name="trust_notification_channel">Áminningar um traust</string>
     <string name="trust_notification_title_security">Traust \u2022 Kerfisöryggi</string>
     <string name="trust_notification_content_selinux">Ekki er þvingað fram SELinux öryggissamhengi, öryggið þitt er því veikara</string>
-    <string name="trust_notification_content_keys">Þessi byggingarútgáfa var undirrituð með dreifilyklum</string>
+    <string name="trust_notification_content_keys">Þessi samsetning var undirrituð með dreifilyklum</string>
     <string name="trust_notification_title_onboarding">Kynntu þér Traust</string>
     <string name="trust_notification_content_onboarding">Lærðu hvernig þú átt að halda tækinu þínu öruggu</string>
     <string name="trust_notification_action_manage">Sýsla með áminningar</string>
