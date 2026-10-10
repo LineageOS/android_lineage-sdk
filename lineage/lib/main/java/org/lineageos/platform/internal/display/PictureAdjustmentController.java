@@ -82,6 +82,11 @@ public class PictureAdjustmentController extends LiveDisplayFeature {
         updatePictureAdjustment();
     }
 
+    @Override
+    protected void onScreenStateChanged() {
+        updatePictureAdjustment();
+    }
+
     private void updatePictureAdjustment() {
         if (mUsePictureAdjustment && isScreenOn()) {
             final HSIC hsic = getPictureAdjustment();
