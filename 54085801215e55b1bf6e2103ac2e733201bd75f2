@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2e738dc4_2e31d6e6",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 38336
+      },
+      "writtenOn": "2026-10-15T10:42:42Z",
+      "side": 1,
+      "message": "Tested on gold (Redmi Note 13 5G), lineage-24.0: \"settings delete --lineage system swap_volume_keys_on_rotation\" no longer takes system_server down.",
+      "revId": "54085801215e55b1bf6e2103ac2e733201bd75f2",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
