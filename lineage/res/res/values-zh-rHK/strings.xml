@@ -5,6 +5,28 @@
      SPDX-License-Identifier: Apache-2.0
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="lineageos_system_label">LineageOS 系統</string>
+    <string name="permlab_modifyProfiles">修改系統設定檔</string>
     <string name="permlab_useHardwareFramework">使用硬件框架</string>
+    <string name="profileNameDefault">預設</string>
+    <string name="profileNameWork">工作</string>
+    <string name="profileNameHome">住家</string>
     <string name="profileNameSilent">靜音</string>
+    <string name="profileNameNight">夜間</string>
+    <string name="profileNameAutomobile">汽車</string>
+    <string name="profileGroupPhone">電話</string>
+    <string name="profileGroupCalendar">日曆</string>
+    <string name="profileGroupGmail">Gmail</string>
+    <string name="profileGroupEmail">電子郵件</string>
+    <string name="profileGroupSMS">短訊</string>
+    <string name="wildcardProfile">其他</string>
+    <string name="live_display_auto">自動</string>
+    <string name="live_display_off">關閉</string>
+    <string name="live_display_outdoor">戶外 (猛烈陽光)</string>
+    <string name="build_date">編譯日期</string>
+    <string name="lineage_api_level">LineageOS API 等級</string>
+    <string name="lineage_updates">LineageOS 更新</string>
+    <string name="lineage_version">LineageOS 版本</string>
+    <string name="charging_control_notification_content_limit">電池將會充電至 %1$d%%</string>
+    <string name="charging_control_notification_content_limit_reached">電池已充電至 %1$d%%</string>
 </resources>

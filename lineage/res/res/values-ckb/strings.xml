@@ -26,7 +26,7 @@
     <string name="profileGroupEmail">پۆستی ئەلیکترۆنی</string>
     <string name="profileGroupSMS">کورتەنامە</string>
     <string name="wildcardProfile">هیتر</string>
-    <string name="charging_speed">خێراییی بارگاویکردنەوە</string>
+    <string name="charging_speed">خێرایی بارگاویکردنەوە</string>
     <string name="charging_speed_slow">هێواش</string>
     <string name="charging_speed_fast">خێرا</string>
     <string name="charging_speed_super_fast">زۆر خێرا</string>
