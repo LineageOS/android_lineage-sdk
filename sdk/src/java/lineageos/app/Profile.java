@@ -94,7 +94,10 @@ public final class Profile implements Parcelable, Comparable {
         public static final int DEFAULT = 0;
         /** Represents an insecure state lock mode, where the device has no security screen */
         public static final int INSECURE = 1;
-        /** Represents a disabled state lock mode, where the devices lock screen can be removed */
+        /**
+         * Represents a disabled state lock mode, where the devices lock screen can be removed.
+         * Ignored while the device has a secure lock screen (PIN, pattern or password).
+         */
         public static final int DISABLE = 2;
     }
 

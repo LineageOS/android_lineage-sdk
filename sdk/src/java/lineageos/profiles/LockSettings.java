@@ -6,6 +6,8 @@
 
 package lineageos.profiles;
 
+import android.app.ActivityManager;
+import android.app.KeyguardManager;
 import android.app.admin.DevicePolicyManager;
 import android.content.Context;
 import android.os.Parcel;
@@ -99,7 +101,11 @@ public final class LockSettings implements Parcelable {
         boolean enable;
         final DevicePolicyManager devicePolicyManager =
                 (DevicePolicyManager) context.getSystemService(Context.DEVICE_POLICY_SERVICE);
+        final KeyguardManager keyguardManager = context.getSystemService(KeyguardManager.class);
         if (devicePolicyManager != null && devicePolicyManager.requireSecureKeyguard()) {
+            enable = true;
+        } else if (keyguardManager != null
+                && keyguardManager.isDeviceSecure(ActivityManager.getCurrentUser())) {
             enable = true;
         } else {
             switch (mValue) {
