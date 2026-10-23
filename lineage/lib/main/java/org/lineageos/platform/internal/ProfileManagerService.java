@@ -316,8 +316,8 @@ public class ProfileManagerService extends LineageSystemService {
 
         @Override
         public void resetAll() {
-            long token = clearCallingIdentity();
             enforceChangePermissions();
+            long token = clearCallingIdentity();
             initialize(true);
             restoreCallingIdentity(token);
         }
@@ -325,6 +325,7 @@ public class ProfileManagerService extends LineageSystemService {
         @Override
         @Deprecated
         public boolean setActiveProfileByName(String profileName) {
+            enforceChangePermissions();
             if (!isEnabled()) {
                 Log.w(TAG, "Unable to set active profile because profiles are disabled.");
                 return false;
@@ -352,6 +353,7 @@ public class ProfileManagerService extends LineageSystemService {
 
         @Override
         public boolean setActiveProfile(ParcelUuid profileParcelUuid) {
+            enforceChangePermissions();
             if (!isEnabled()) {
                 Log.w(TAG, "Unable to set active profile because profiles are disabled.");
                 return false;
