@@ -220,8 +220,8 @@ public class ProfileManagerService extends LineageSystemService {
     }
 
     public ProfileManagerService(Context context) {
-        super(context);
-        mContext = context;
+        super(context.createAttributionContext(TAG));
+        mContext = getContext();
         mHandler = new Handler(Looper.getMainLooper(), mHandlerCallback);
     }
 
