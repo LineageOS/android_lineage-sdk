@@ -7,6 +7,7 @@
 package lineageos.profiles;
 
 import android.bluetooth.BluetoothAdapter;
+import android.bluetooth.BluetoothManager;
 import android.content.ContentResolver;
 import android.content.Context;
 import android.content.Intent;
@@ -235,7 +236,8 @@ public final class ConnectionSettings implements Parcelable {
 
     /** @hide */
     public void processOverride(Context context) {
-        BluetoothAdapter bta = BluetoothAdapter.getDefaultAdapter();
+        BluetoothAdapter bta = context.createAttributionContext("profiles")
+                .getSystemService(BluetoothManager.class).getAdapter();
         LocationManager lm = (LocationManager) context.getSystemService(Context.LOCATION_SERVICE);
         NfcAdapter nfcAdapter = NfcAdapter.getDefaultAdapter(context);
         WifiManager wm = (WifiManager) context.getSystemService(Context.WIFI_SERVICE);
