@@ -65,6 +65,9 @@ public class AccessoriesController extends LineageAccessoriesFeature {
     // Bluetooth pairing
     private final AccessoryBluetoothPairer mBluetoothPairer;
 
+    // Connection notifications
+    private final AccessoryNotifier mNotifier;
+
     public AccessoriesController(Context context, Handler handler) {
         super(context, handler);
 
@@ -82,6 +85,7 @@ public class AccessoriesController extends LineageAccessoriesFeature {
                 this::removeAllAccessories);
 
         mBluetoothPairer = new AccessoryBluetoothPairer(context, handler);
+        mNotifier = new AccessoryNotifier(context);
     }
 
     @Override
@@ -110,6 +114,7 @@ public class AccessoriesController extends LineageAccessoriesFeature {
             accessory.dump(pw);
         }
         mBluetoothPairer.dump(pw);
+        mNotifier.dump(pw);
     }
 
     public IAccessory[] getAccessories() {
@@ -186,7 +191,10 @@ public class AccessoriesController extends LineageAccessoriesFeature {
 
             mIdToAccessories.remove(accessoryId);
 
-            mHandler.post(() -> mBluetoothPairer.onAccessoryRemoved(accessoryId));
+            mHandler.post(() -> {
+                mBluetoothPairer.onAccessoryRemoved(accessoryId);
+                mNotifier.onAccessoryRemoved(accessoryId);
+            });
         }
     }
 
@@ -199,7 +207,10 @@ public class AccessoriesController extends LineageAccessoriesFeature {
 
             mIdToAccessories.clear();
 
-            mHandler.post(mBluetoothPairer::onAllAccessoriesRemoved);
+            mHandler.post(() -> {
+                mBluetoothPairer.onAllAccessoriesRemoved();
+                mNotifier.onAllAccessoriesRemoved();
+            });
         }
     }
 
@@ -212,5 +223,6 @@ public class AccessoriesController extends LineageAccessoriesFeature {
 
         mBluetoothPairer.onAccessoryUpdated(accessoryId, accessory.getBluetoothAddress(),
                 accessory.isCharging(), accessory.isEnabled());
+        mNotifier.onAccessoryUpdated(accessoryId, accessory);
     }
 }
