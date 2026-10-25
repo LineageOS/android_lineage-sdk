@@ -130,4 +130,10 @@
     <string name="charging_control_notification_content_limit_reached">Battery is charged to %1$d%%</string>
     <string name="charging_control_notification_content_target">Battery will be fully charged at %1$s</string>
     <string name="charging_control_notification_content_target_reached">Battery is charged</string>
+
+    <!-- Accessories interface -->
+    <string name="accessories_notification_channel">Accessories</string>
+    <string name="accessories_notification_connected">%1$s connected</string>
+    <string name="accessories_notification_battery">Battery %1$d%%</string>
+    <string name="accessories_notification_charging">Charging, %1$d%%</string>
 </resources>

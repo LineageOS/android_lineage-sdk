@@ -80,6 +80,8 @@ public class Accessory implements Dumpable {
 
             // Notify the callbacks
             mCallbacks.forEachCallback(callback -> callback.onBatteryInfoUpdated(info));
+
+            mOnUpdated.accept(Accessory.this);
         }
 
         @Override
@@ -164,7 +166,8 @@ public class Accessory implements Dumpable {
 
     /**
      * @param accessoryInterface The vendor accessory
-     * @param onUpdated Called on the binder thread when the info or the status changes
+     * @param onUpdated Called on the binder thread when the info, the status or the battery info
+     *                  changes
      */
     public static Accessory from(vendor.lineage.accessories.IAccessory accessoryInterface,
             Consumer<Accessory> onUpdated) throws RemoteException {
@@ -187,6 +190,18 @@ public class Accessory implements Dumpable {
             return null;
         }
         return info.dataLink.id;
+    }
+
+    public AccessoryInfo getAccessoryInfo() {
+        return mAccessoryInfo;
+    }
+
+    public BatteryInfo getBatteryInfo() {
+        return mBatteryInfo;
+    }
+
+    public boolean isConnected() {
+        return mAccessoryStatus != AccessoryStatus.DISCONNECTED;
     }
 
     public boolean isCharging() {
