@@ -256,6 +256,27 @@
     -->
     <integer name="config_longPressOnAppSwitchBehavior">0</integer>
 
+    <!-- Control the behavior when the user long presses the assistant (search) button.
+            0 - Nothing
+            1 - Menu key
+            2 - Recent apps view in SystemUI
+            3 - Launch assist intent
+            4 - Voice Search
+            5 - In-app Search
+            6 - Launch camera
+            7 - Sleep
+            8 - Last app
+            9 - Toggle split screen
+            10 - Kill foreground app
+            11 - Play/pause music playback
+            12 - Screenshot
+            13 - Partial screenshot
+            14 - Cycle ringer mode
+         This needs to match the enums in
+         sdk/src/java/org/lineageos/internal/util/DeviceKeysConstants.java.
+    -->
+    <integer name="config_longPressOnAssistBehavior">4</integer>
+
     <!-- Indicates that the device has Single-stage Camera key
          (without "Focus" state) instead of Dual-stage. -->
     <bool name="config_singleStageCameraKey">false</bool>
