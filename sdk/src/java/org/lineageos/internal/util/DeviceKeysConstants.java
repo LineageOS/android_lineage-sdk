@@ -28,7 +28,8 @@ public class DeviceKeysConstants {
         KILL_APP,
         PLAY_PAUSE_MUSIC,
         SCREENSHOT,
-        PARTIAL_SCREENSHOT;
+        PARTIAL_SCREENSHOT,
+        CYCLE_RINGER_MODE;
 
         public static Action fromIntSafe(int id) {
             if (id < NOTHING.ordinal() || id > Action.values().length) {
