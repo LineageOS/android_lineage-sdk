@@ -1088,7 +1088,7 @@ public final class LineageSettings {
          * 8 - Last app
          * 9 - Toggle split screen
          * 10 - Kill foreground app
-         * 11 - Play/pause music
+         * 11 - Play/pause music playback
          * 12 - Take screenshot
          * 13 - Take partial screenshot
          */

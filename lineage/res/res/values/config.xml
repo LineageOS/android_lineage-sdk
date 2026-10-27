@@ -163,6 +163,9 @@
             8 - Last app
             9 - Toggle split screen
             10 - Kill foreground app
+            11 - Play/pause music playback
+            12 - Screenshot
+            13 - Partial screenshot
          This needs to match the enums in
          sdk/src/java/org/lineageos/internal/util/DeviceKeysConstants.java.
     -->
@@ -180,6 +183,9 @@
             8 - Last app
             9 - Toggle split screen
             10 - Kill foreground app
+            11 - Play/pause music playback
+            12 - Screenshot
+            13 - Partial screenshot
          This needs to match the enums in
          sdk/src/java/org/lineageos/internal/util/DeviceKeysConstants.java.
     -->
@@ -197,6 +203,9 @@
             8 - Last app
             9 - Toggle split screen
             10 - Kill foreground app
+            11 - Play/pause music playback
+            12 - Screenshot
+            13 - Partial screenshot
          This needs to match the enums in
          sdk/src/java/org/lineageos/internal/util/DeviceKeysConstants.java.
     -->
@@ -214,6 +223,9 @@
             8 - Last app
             9 - Toggle split screen
             10 - Kill foreground app
+            11 - Play/pause music playback
+            12 - Screenshot
+            13 - Partial screenshot
          This needs to match the enums in
          sdk/src/java/org/lineageos/internal/util/DeviceKeysConstants.java.
     -->
@@ -231,6 +243,9 @@
             8 - Last app
             9 - Toggle split screen
             10 - Kill foreground app
+            11 - Play/pause music playback
+            12 - Screenshot
+            13 - Partial screenshot
          This needs to match the enums in
          sdk/src/java/org/lineageos/internal/util/DeviceKeysConstants.java.
     -->
