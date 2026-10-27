@@ -166,6 +166,7 @@
             11 - Play/pause music playback
             12 - Screenshot
             13 - Partial screenshot
+            14 - Cycle ringer mode
          This needs to match the enums in
          sdk/src/java/org/lineageos/internal/util/DeviceKeysConstants.java.
     -->
@@ -186,6 +187,7 @@
             11 - Play/pause music playback
             12 - Screenshot
             13 - Partial screenshot
+            14 - Cycle ringer mode
          This needs to match the enums in
          sdk/src/java/org/lineageos/internal/util/DeviceKeysConstants.java.
     -->
@@ -206,6 +208,7 @@
             11 - Play/pause music playback
             12 - Screenshot
             13 - Partial screenshot
+            14 - Cycle ringer mode
          This needs to match the enums in
          sdk/src/java/org/lineageos/internal/util/DeviceKeysConstants.java.
     -->
@@ -226,6 +229,7 @@
             11 - Play/pause music playback
             12 - Screenshot
             13 - Partial screenshot
+            14 - Cycle ringer mode
          This needs to match the enums in
          sdk/src/java/org/lineageos/internal/util/DeviceKeysConstants.java.
     -->
@@ -246,6 +250,7 @@
             11 - Play/pause music playback
             12 - Screenshot
             13 - Partial screenshot
+            14 - Cycle ringer mode
          This needs to match the enums in
          sdk/src/java/org/lineageos/internal/util/DeviceKeysConstants.java.
     -->
