@@ -338,7 +338,11 @@ public class LiveDisplayService extends LineageSystemService {
         public HSIC getPictureAdjustment() { return mPAC.getPictureAdjustment(); }
 
         @Override
-        public boolean setPictureAdjustment(final HSIC hsic) { return mPAC.setPictureAdjustment(hsic); }
+        public boolean setPictureAdjustment(final HSIC hsic) {
+            mContext.enforceCallingOrSelfPermission(
+                    lineageos.platform.Manifest.permission.MANAGE_LIVEDISPLAY, null);
+            return mPAC.setPictureAdjustment(hsic);
+        }
 
         @Override
         public HSIC getDefaultPictureAdjustment() { return mPAC.getDefaultPictureAdjustment(); }
