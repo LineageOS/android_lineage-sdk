@@ -18,7 +18,6 @@ import android.nfc.NfcAdapter;
 import android.os.Parcel;
 import android.os.Parcelable;
 import android.os.UserHandle;
-import android.provider.Settings;
 import android.telephony.SubscriptionInfo;
 import android.telephony.SubscriptionManager;
 import android.telephony.TelephonyManager;
@@ -252,16 +251,23 @@ public final class ConnectionSettings implements Parcelable {
 
         switch (getConnectionId()) {
             case PROFILE_CONNECTION_MOBILEDATA:
-                List<SubscriptionInfo> list = sm.getActiveSubscriptionInfoList();
-                if (list != null) {
-                    for (int i = 0; i < list.size(); i++) {
-                        int subId = list.get(i).getSubscriptionId();
-                        int slotIndex = list.get(i).getSimSlotIndex();
-                        currentState = tm.getDataEnabled(subId);
-                        if (forcedState != currentState) {
-                            Settings.Global.putInt(context.getContentResolver(),
-                                    Settings.Global.MOBILE_DATA + i, (forcedState) ? 1 : 0);
-                            tm.setDataEnabled(subId, forcedState);
+                if (forcedState) {
+                    // Enabling data on any other subscription would make it the default one
+                    int subId = SubscriptionManager.getDefaultDataSubscriptionId();
+                    if (SubscriptionManager.isUsableSubscriptionId(subId)) {
+                        tm.createForSubscriptionId(subId).setDataEnabledForReason(
+                                TelephonyManager.DATA_ENABLED_REASON_USER, true);
+                    }
+                } else {
+                    List<SubscriptionInfo> list = sm.getActiveSubscriptionInfoList();
+                    if (list != null) {
+                        for (SubscriptionInfo info : list) {
+                            // Mobile data is never disabled for opportunistic subscriptions
+                            if (!info.isOpportunistic()) {
+                                tm.createForSubscriptionId(info.getSubscriptionId())
+                                        .setDataEnabledForReason(
+                                                TelephonyManager.DATA_ENABLED_REASON_USER, false);
+                            }
                         }
                     }
                 }
