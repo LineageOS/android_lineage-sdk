@@ -34,6 +34,24 @@
       "parentUuid": "84f27b0f_a707ffdf",
       "revId": "854d7bfc24669e18e9a318e480d573703511237b",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9d5de16d_3719922a",
+        "filename": "lineage/res/AndroidManifest.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2026-11-06T15:28:43Z",
+      "side": 0,
+      "message": "yeah, but random app being able to set unrestricted lock screen profile is... not great.",
+      "parentUuid": "879ffbe5_61d91ddf",
+      "revId": "854d7bfc24669e18e9a318e480d573703511237b",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
