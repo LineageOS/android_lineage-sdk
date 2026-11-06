@@ -20,6 +20,9 @@
     <!-- Default for LineageSettings.Secure.QS_SHOW_BRIGHTNESS_SLIDER -->
     <bool name="def_qs_show_brightness_slider">true</bool>
 
+    <!-- Default for LineageSettings.Secure.ADVANCED_REBOOT -->
+    <bool name="def_advanced_reboot">false</bool>
+
     <!-- Defaults for System -->
 
     <!-- Default for LineageSettings.System.FORCE_SHOW_NAVBAR -->

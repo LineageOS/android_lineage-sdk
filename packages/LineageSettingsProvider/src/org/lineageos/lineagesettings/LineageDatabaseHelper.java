@@ -444,6 +444,9 @@ public class LineageDatabaseHelper extends SQLiteOpenHelper{
 
             loadBooleanSetting(stmt, LineageSettings.Secure.QS_SHOW_BRIGHTNESS_SLIDER,
                     R.bool.def_qs_show_brightness_slider);
+
+            loadBooleanSetting(stmt, LineageSettings.Secure.ADVANCED_REBOOT,
+                    R.bool.def_advanced_reboot);
         } finally {
             if (stmt != null) stmt.close();
         }
