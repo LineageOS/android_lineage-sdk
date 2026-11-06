@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "70dd1f26_d8da9f92",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2026-11-06T21:59:19Z",
+      "side": 1,
+      "message": "There\u0027s no need for this. We just have to restore the support, which never landed, even into 23.2. See: https://review.lineageos.org/c/LineageOS/android_packages_apps_TvSettings/+/467765",
+      "revId": "f98c923842c5b3553c701a7b6337e5a000d6815c",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
