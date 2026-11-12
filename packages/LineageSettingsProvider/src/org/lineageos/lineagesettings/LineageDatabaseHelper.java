@@ -15,6 +15,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteDoneException;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.database.sqlite.SQLiteStatement;
+import android.net.ConnectivitySettingsManager;
 import android.os.Environment;
 import android.os.SystemProperties;
 import android.os.UserHandle;
@@ -27,6 +28,7 @@ import lineageos.providers.LineageSettings;
 
 import java.io.File;
 import java.util.Objects;
+import java.util.Set;
 
 /**
  * The LineageDatabaseHelper allows creation of a database to store Lineage specific settings for a user
@@ -294,10 +296,9 @@ public class LineageDatabaseHelper extends SQLiteOpenHelper{
         }
 
         if (upgradeVersion < 20) {
-            // Clear Settings.Global.UIDS_ALLOWED_ON_RESTRICTED_NETWORKS
+            // Clear the restricted networks allowlist
             if (mUserHandle == UserHandle.USER_SYSTEM) {
-                Settings.Global.putString(mContext.getContentResolver(),
-                        Settings.Global.UIDS_ALLOWED_ON_RESTRICTED_NETWORKS, "");
+                ConnectivitySettingsManager.setUidsAllowedOnRestrictedNetworks(mContext, Set.of());
             }
             upgradeVersion = 20;
         }
