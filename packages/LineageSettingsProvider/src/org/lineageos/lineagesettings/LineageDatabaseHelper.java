@@ -37,7 +37,7 @@ public class LineageDatabaseHelper extends SQLiteOpenHelper{
     private static final boolean LOCAL_LOGV = false;
 
     private static final String DATABASE_NAME = "lineagesettings.db";
-    private static final int DATABASE_VERSION = 24;
+    private static final int DATABASE_VERSION = 25;
 
     public static class LineageTableNames {
         public static final String TABLE_SYSTEM = "system";
@@ -234,9 +234,6 @@ public class LineageDatabaseHelper extends SQLiteOpenHelper{
         }
 
         if (upgradeVersion < 15) {
-            if (mUserHandle == UserHandle.USER_OWNER) {
-                loadRestrictedNetworkingModeSetting();
-            }
             upgradeVersion = 15;
         }
 
@@ -353,6 +350,15 @@ public class LineageDatabaseHelper extends SQLiteOpenHelper{
             upgradeVersion = 24;
         }
 
+        if (upgradeVersion < 25) {
+            // The firewall replaced restricted networking mode; return it to AOSP's default.
+            if (mUserHandle == UserHandle.USER_SYSTEM) {
+                mContext.getContentResolver().delete(Settings.Global.getUriFor(
+                        Settings.Global.RESTRICTED_NETWORKING_MODE), null, null);
+            }
+            upgradeVersion = 25;
+        }
+
         // *** Remember to update DATABASE_VERSION above!
         if (upgradeVersion != newVersion) {
             Log.wtf(TAG, "warning: upgrading settings database to version "
@@ -422,7 +428,6 @@ public class LineageDatabaseHelper extends SQLiteOpenHelper{
         // The global table only exists for the 'owner' user
         if (mUserHandle == UserHandle.USER_SYSTEM) {
             loadGlobalSettings(db);
-            loadRestrictedNetworkingModeSetting();
             loadDisableWindowBlursSetting();
         }
     }
@@ -506,11 +511,6 @@ public class LineageDatabaseHelper extends SQLiteOpenHelper{
         } finally {
             if (stmt != null) stmt.close();
         }
-    }
-
-    private void loadRestrictedNetworkingModeSetting() {
-        Settings.Global.putInt(mContext.getContentResolver(),
-                Settings.Global.RESTRICTED_NETWORKING_MODE, 1);
     }
 
     private void loadDisableWindowBlursSetting() {
