@@ -2992,6 +2992,16 @@ public final class LineageSettings {
 
         /** @hide */
         public static final Validator BERRY_BLACK_THEME_VALIDATOR = sBooleanValidator;
+
+        /**
+         * Unique id of the display to show the input method on, whichever display
+         * requested it. Empty or unset to show it on the focused display.
+         * @hide
+         */
+        public static final String IME_PINNED_DISPLAY = "ime_pinned_display";
+
+        /** @hide */
+        public static final Validator IME_PINNED_DISPLAY_VALIDATOR = sAlwaysTrueValidator;
         // endregion
 
         /**
@@ -3015,6 +3025,7 @@ public final class LineageSettings {
         static {
             VALIDATORS.put(BERRY_BLACK_THEME, BERRY_BLACK_THEME_VALIDATOR);
             VALIDATORS.put(GESTURE_BACK_EXCLUDE_TOP, GESTURE_BACK_EXCLUDE_TOP_VALIDATOR);
+            VALIDATORS.put(IME_PINNED_DISPLAY, IME_PINNED_DISPLAY_VALIDATOR);
             VALIDATORS.put(NETWORK_TRAFFIC_MODE, NETWORK_TRAFFIC_MODE_VALIDATOR);
             VALIDATORS.put(NETWORK_TRAFFIC_POSITION, NETWORK_TRAFFIC_POSITION_VALIDATOR);
             VALIDATORS.put(NETWORK_TRAFFIC_AUTOHIDE, NETWORK_TRAFFIC_AUTOHIDE_VALIDATOR);
