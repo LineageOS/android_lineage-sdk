@@ -1640,6 +1640,17 @@ public final class LineageSettings {
                 sBooleanValidator;
 
         /**
+         * Whether swiping down on a pulsing ambient display (e.g. on a notification) expands
+         * the shade and wakes up the device
+         * 0 = 0ff, 1 = on
+         */
+        public static final String PULSE_SWIPE_DOWN_GESTURE = "pulse_swipe_down_gesture";
+
+        /** @hide */
+        public static final Validator PULSE_SWIPE_DOWN_GESTURE_VALIDATOR =
+                sBooleanValidator;
+
+        /**
          * Show search bar in recents
          * 0 = Off, 1 = on
          */
@@ -2210,6 +2221,7 @@ public final class LineageSettings {
             VALIDATORS.put(LIVE_DISPLAY_HINTED, LIVE_DISPLAY_HINTED_VALIDATOR);
             VALIDATORS.put(TRUST_INTERFACE_HINTED, TRUST_INTERFACE_HINTED_VALIDATOR);
             VALIDATORS.put(DOUBLE_TAP_SLEEP_GESTURE, DOUBLE_TAP_SLEEP_GESTURE_VALIDATOR);
+            VALIDATORS.put(PULSE_SWIPE_DOWN_GESTURE, PULSE_SWIPE_DOWN_GESTURE_VALIDATOR);
             VALIDATORS.put(RECENTS_SHOW_SEARCH_BAR, RECENTS_SHOW_SEARCH_BAR_VALIDATOR);
             VALIDATORS.put(NAVBAR_LEFT_IN_LANDSCAPE, NAVBAR_LEFT_IN_LANDSCAPE_VALIDATOR);
             VALIDATORS.put(T9_SEARCH_INPUT_LOCALE, T9_SEARCH_INPUT_LOCALE_VALIDATOR);
