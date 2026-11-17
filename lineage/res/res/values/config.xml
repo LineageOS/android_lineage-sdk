@@ -408,4 +408,8 @@
 
     <!-- Advanced rotation settings -->
     <bool name="config_enableAdvancedRotationSettings">true</bool>
+
+    <!-- Unique id of the display the input method can be pinned to, see
+         LineageSettings.Secure.PIN_IME_TO_DISPLAY. Empty disables the option. -->
+    <string name="config_imePinnedDisplayUniqueId" translatable="false"></string>
 </resources>

@@ -208,4 +208,7 @@
 
     <!-- Advanced rotation settings -->
     <java-symbol type="bool" name="config_enableAdvancedRotationSettings" />
+
+    <!-- IME display pinning -->
+    <java-symbol type="string" name="config_imePinnedDisplayUniqueId" />
 </resources>
