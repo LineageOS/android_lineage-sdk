@@ -130,4 +130,14 @@
     <string name="charging_control_notification_content_limit_reached">Battery is charged to %1$d%%</string>
     <string name="charging_control_notification_content_target">Battery will be fully charged at %1$s</string>
     <string name="charging_control_notification_content_target_reached">Battery is charged</string>
+
+    <!-- Android TV remote shortcut keys: names of the keys as printed on the remote, shown in settings as e.g. "TV button" -->
+    <!-- Name of the remote key that opens live TV [CHAR LIMIT=20] -->
+    <string name="keyhandler_name_tv">TV</string>
+    <!-- Name of the remote key that opens the device settings [CHAR LIMIT=20] -->
+    <string name="keyhandler_name_settings">Settings</string>
+    <!-- Name of the remote key that switches the input source, e.g. between HDMI ports [CHAR LIMIT=20] -->
+    <string name="keyhandler_name_input">Input</string>
+    <!-- Name of the remote key that opens the list of all installed apps [CHAR LIMIT=20] -->
+    <string name="keyhandler_name_apps">Apps</string>
 </resources>

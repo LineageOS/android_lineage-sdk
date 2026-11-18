@@ -1143,6 +1143,35 @@ public final class LineageSettings {
                 sBooleanValidator;
 
         /**
+         * Actions of the Android TV remote shortcut keys (see keyhandler_keycodes) that differ
+         * from their defaults, as comma separated keycode:action entries, where action is one of
+         * none (do nothing), key:keycode (send that key instead) or app:target (open a package
+         * or package/activity component).
+         * Example: 191:none,192:key:85,193:app:com.example.tv
+         */
+        public static final String ATV_SHORTCUT_KEY_ACTIONS = "atv_shortcut_key_actions";
+
+        /** @hide */
+        public static final Validator ATV_SHORTCUT_KEY_ACTIONS_VALIDATOR =
+                new Validator() {
+                    private final Pattern mEntry = Pattern.compile(
+                            "\\d+:(none|key:\\d+|app:[\\w.]+(/[\\w.$]+)?)");
+
+                    @Override
+                    public boolean validate(String value) {
+                        if (TextUtils.isEmpty(value)) {
+                            return true;
+                        }
+                        for (String entry : value.split(",")) {
+                            if (!mEntry.matcher(entry).matches()) {
+                                return false;
+                            }
+                        }
+                        return true;
+                    }
+                };
+
+        /**
          * Whether to wake the screen with the menu key, the value is boolean.
          * 0 = 0ff, 1 = on
          */
@@ -2155,6 +2184,7 @@ public final class LineageSettings {
             VALIDATORS.put(KEY_HOME_DOUBLE_TAP_ACTION, KEY_HOME_DOUBLE_TAP_ACTION_VALIDATOR);
             VALIDATORS.put(BACK_WAKE_SCREEN, BACK_WAKE_SCREEN_VALIDATOR);
             VALIDATORS.put(VOLUME_UP_AND_DOWN_MUTE, VOLUME_UP_AND_DOWN_MUTE_VALIDATOR);
+            VALIDATORS.put(ATV_SHORTCUT_KEY_ACTIONS, ATV_SHORTCUT_KEY_ACTIONS_VALIDATOR);
             VALIDATORS.put(MENU_WAKE_SCREEN, MENU_WAKE_SCREENN_VALIDATOR);
             VALIDATORS.put(VOLUME_ANSWER_CALL, VOLUME_ANSWER_CALL_VALIDATOR);
             VALIDATORS.put(VOLUME_WAKE_SCREEN, VOLUME_WAKE_SCREEN_VALIDATOR);

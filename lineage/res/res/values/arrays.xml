@@ -94,6 +94,21 @@
         <item>284</item> <!-- KEYCODE_ALL_APPS -->
     </integer-array>
 
+    <!-- Array of names for special keys on device, shown in settings.
+         Order & size must match with keyhandler_keycodes -->
+    <string-array name="keyhandler_names" translatable="false">
+        <item>@string/keyhandler_name_tv</item>
+        <item>@string/keyhandler_name_settings</item>
+        <item>YouTube</item>
+        <item>Netflix</item>
+        <item>Prime Video</item>
+        <item>Disney+</item>
+        <item>HBO Max</item>
+        <item>Google Play</item>
+        <item>@string/keyhandler_name_input</item>
+        <item>@string/keyhandler_name_apps</item>
+    </string-array>
+
     <!-- Array of packages for special keys on device.
          Order & size must match with keyhandler_keycodes -->
     <string-array name="keyhandler_packages">
