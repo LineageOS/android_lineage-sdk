@@ -108,4 +108,19 @@
         <item>com.google.android.intent.action.CONNECT_INPUT</item>
         <item>android.intent.action.ALL_APPS</item>
     </string-array>
+
+    <!-- Array of names for special keys on device, shown in settings.
+         Order & size must match with keyhandler_keycodes -->
+    <string-array name="keyhandler_names">
+        <item>@string/keyhandler_name_tv</item>
+        <item>@string/keyhandler_name_settings</item>
+        <item>YouTube</item>
+        <item>Netflix</item>
+        <item>Prime Video</item>
+        <item>Disney+</item>
+        <item>HBO Max</item>
+        <item>Google Play</item>
+        <item>@string/keyhandler_name_input</item>
+        <item>@string/keyhandler_name_apps</item>
+    </string-array>
 </resources>

@@ -95,6 +95,7 @@
     <!-- ATV remote custom keys handling -->
     <java-symbol type="array" name="keyhandler_keycodes" />
     <java-symbol type="array" name="keyhandler_packages" />
+    <java-symbol type="array" name="keyhandler_names" />
 
     <!-- Camera key type -->
     <java-symbol type="bool" name="config_singleStageCameraKey" />
