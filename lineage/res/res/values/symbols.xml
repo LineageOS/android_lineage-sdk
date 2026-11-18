@@ -94,6 +94,7 @@
 
     <!-- ATV remote custom keys handling -->
     <java-symbol type="array" name="keyhandler_keycodes" />
+    <java-symbol type="array" name="keyhandler_names" />
     <java-symbol type="array" name="keyhandler_packages" />
 
     <!-- Camera key type -->
