@@ -18,6 +18,24 @@
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "683f4504_ce1a649d",
+        "filename": "lineage/res/res/values/arrays.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 99,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2026-11-19T21:14:43Z",
+      "side": 1,
+      "message": "Fix applied.",
+      "parentUuid": "5a86a9a1_4060f47f",
+      "revId": "6e69dd66940bb6aed77e306be2def9fb1afea195",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "4bd957d2_35f954b1",
