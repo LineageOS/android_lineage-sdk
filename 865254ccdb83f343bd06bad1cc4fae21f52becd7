@@ -1,0 +1,22 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "dc711e80_e3b86ad2",
+        "filename": "lineage/res/res/values/strings.xml",
+        "patchSetId": 5
+      },
+      "lineNbr": 137,
+      "author": {
+        "id": 38503
+      },
+      "writtenOn": "2026-11-20T08:59:34Z",
+      "side": 1,
+      "message": "Done, added context for translators.",
+      "parentUuid": "4bd957d2_35f954b1",
+      "revId": "865254ccdb83f343bd06bad1cc4fae21f52becd7",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
