@@ -340,4 +340,9 @@
 
     <!-- Advanced rotation settings -->
     <bool name="config_enableAdvancedRotationSettings">true</bool>
+
+    <!-- Whether media audio on a dock (Settings.Global.DOCK_AUDIO_MEDIA_ENABLED) should force the
+         analog dock (AUDIO_POLICY_FORCE_ANALOG_DOCK) instead of the digital dock, as Android 13
+         and earlier did. Needed by analog dock audio accessories such as Moto Mods speakers. -->
+    <bool name="config_dockAudioUseAnalogDock">false</bool>
 </resources>
