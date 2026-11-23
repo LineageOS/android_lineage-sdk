@@ -206,4 +206,7 @@
 
     <!-- Advanced rotation settings -->
     <java-symbol type="bool" name="config_enableAdvancedRotationSettings" />
+
+    <!-- Dock audio -->
+    <java-symbol type="bool" name="config_dockAudioUseAnalogDock" />
 </resources>
