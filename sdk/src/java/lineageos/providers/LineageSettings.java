@@ -1075,6 +1075,16 @@ public final class LineageSettings {
                 sBooleanValidator;
 
         /**
+         * boolean value. toggles the IME navigation bar space below the keyboard
+         * in gestural nav mode when {@link #NAVIGATION_BAR_HINT} is disabled
+         */
+        public static final String NAVIGATION_BAR_IME_SPACE = "navigation_bar_ime_space";
+
+        /** @hide */
+        public static final Validator NAVIGATION_BAR_IME_SPACE_VALIDATOR =
+                sBooleanValidator;
+
+        /**
          * Action to perform when the home key is long-pressed.
          * (Default can be configured via config_longPressOnHomeBehavior)
          * 0 - Nothing
@@ -2150,6 +2160,7 @@ public final class LineageSettings {
             VALIDATORS.put(NAVIGATION_BAR_MENU_ARROW_KEYS,
                     NAVIGATION_BAR_MENU_ARROW_KEYS_VALIDATOR);
             VALIDATORS.put(NAVIGATION_BAR_HINT, NAVIGATION_BAR_HINT_VALIDATOR);
+            VALIDATORS.put(NAVIGATION_BAR_IME_SPACE, NAVIGATION_BAR_IME_SPACE_VALIDATOR);
             VALIDATORS.put(KEY_BACK_LONG_PRESS_ACTION, KEY_BACK_LONG_PRESS_ACTION_VALIDATOR);
             VALIDATORS.put(KEY_HOME_LONG_PRESS_ACTION, KEY_HOME_LONG_PRESS_ACTION_VALIDATOR);
             VALIDATORS.put(KEY_HOME_DOUBLE_TAP_ACTION, KEY_HOME_DOUBLE_TAP_ACTION_VALIDATOR);
