@@ -1,6 +1,23 @@
 {
   "comments": [
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "f5be0b39_655daf7e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 38849
+      },
+      "writtenOn": "2026-11-25T23:38:00Z",
+      "side": 1,
+      "message": "Hi! Hope it\u0027s okay to chime in here.\n\nI ran into this on lineage-24.0 with an unofficial build for the Galaxy Tab A 10.1 (2016) LTE (SM-T585). The device tree ships the health HAL, but none of the charging control modes are supported on this hardware. So the controller logs \"No charging control provider is supported\", carries on without a provider, and once boot completes, onStart() → handleSettingChange() → isProvideSupportCCMode() hits a NullPointerException and takes system_server down with it.\n\nI picked this change onto lineage-24.0 as-is (it applies cleanly), and it sorts it out for me. The wtf still shows up in the log, but the controller simply isn\u0027t registered and system_server stays up.\n\nI do see Luca\u0027s point, and I agree the cleaner fix is on the device side: not shipping the charging control HAL when nothing is supported. That\u0027s probably the right thing to do for this tree as well. Still, it would be really nice if a misconfigured device ended up with a log line rather than a crashing system_server, so if there\u0027s any chance of getting this (or something along these lines) into 24.0 too, I\u0027d be grateful.\n\nThanks!",
+      "revId": "c8d60e0115d59a00599bd7f808d3a917fde1aae5",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "126fa7d3_b644ef99",
