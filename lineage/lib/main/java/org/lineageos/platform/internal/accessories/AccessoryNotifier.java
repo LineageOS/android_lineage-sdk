@@ -44,6 +44,7 @@ public class AccessoryNotifier implements Dumpable {
 
     private final Context mContext;
     private final NotificationManager mNotificationManager;
+    private final boolean mEnabled;
 
     private static final class State {
         final boolean connected;
@@ -69,9 +70,14 @@ public class AccessoryNotifier implements Dumpable {
     public AccessoryNotifier(Context context) {
         mContext = context;
         mNotificationManager = context.getSystemService(NotificationManager.class);
+        mEnabled = context.getResources().getBoolean(R.bool.config_accessoriesNotificationsEnabled);
     }
 
     public void onAccessoryUpdated(String id, Accessory accessory) {
+        if (!mEnabled) {
+            return;
+        }
+
         AccessoryInfo info = accessory.getAccessoryInfo();
         if (info == null) {
             return;
@@ -113,6 +119,7 @@ public class AccessoryNotifier implements Dumpable {
     @Override
     public void dump(PrintWriter pw) {
         pw.println("AccessoryNotifier:");
+        pw.println("  Enabled: " + mEnabled);
         pw.println("  States: " + mStates);
         pw.println("  Notifications posted: " + mPostTimes.keySet());
     }

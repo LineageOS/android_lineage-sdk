@@ -409,4 +409,8 @@
 
     <!-- Advanced rotation settings -->
     <bool name="config_enableAdvancedRotationSettings">true</bool>
+
+    <!-- Whether to post a notification when an accessory gets connected or starts charging.
+         Disable it when the system UI shows its own indication. -->
+    <bool name="config_accessoriesNotificationsEnabled">true</bool>
 </resources>

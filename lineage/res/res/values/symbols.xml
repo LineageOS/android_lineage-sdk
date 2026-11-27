@@ -210,6 +210,7 @@
     <java-symbol type="string" name="accessories_notification_connected" />
     <java-symbol type="string" name="accessories_notification_battery" />
     <java-symbol type="string" name="accessories_notification_charging" />
+    <java-symbol type="bool" name="config_accessoriesNotificationsEnabled" />
 
     <!-- Lockscreen rotation default -->
     <java-symbol type="bool" name="config_lockScreenRotationEnabledByDefault" />
