@@ -22,6 +22,30 @@
       },
       "revId": "8267ce28b0368d25acb28734ac2472bd7989069a",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "64a50882_35504bb6",
+        "filename": "lineage/lib/main/java/org/lineageos/platform/internal/accessories/Accessory.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 61,
+      "author": {
+        "id": 34519
+      },
+      "writtenOn": "2026-11-27T17:38:24Z",
+      "side": 1,
+      "message": "I\u0027m not sure about that which is why i separated it here, cause different devices use different stuff for pens and kb impls, will check with the surfblazer and have it fixed",
+      "parentUuid": "84273691_483975d0",
+      "range": {
+        "startLine": 57,
+        "startChar": 0,
+        "endLine": 61,
+        "endChar": 13
+      },
+      "revId": "8267ce28b0368d25acb28734ac2472bd7989069a",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
