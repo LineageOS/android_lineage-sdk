@@ -67,6 +67,7 @@ public class AccessoriesController extends LineageAccessoriesFeature {
 
     // Bluetooth battery level
     private final AccessoryBluetoothBattery mBluetoothBattery;
+    private final AccessoryBluetoothName mBluetoothName;
 
     // Connection notifications
     private final AccessoryNotifier mNotifier;
@@ -89,6 +90,7 @@ public class AccessoriesController extends LineageAccessoriesFeature {
 
         mBluetoothPairer = new AccessoryBluetoothPairer(context, handler);
         mBluetoothBattery = new AccessoryBluetoothBattery(context, handler);
+        mBluetoothName = new AccessoryBluetoothName(context, handler);
         mNotifier = new AccessoryNotifier(context);
     }
 
@@ -101,6 +103,7 @@ public class AccessoriesController extends LineageAccessoriesFeature {
     public void onStart() {
         mBluetoothPairer.start();
         mBluetoothBattery.start();
+        mBluetoothName.start();
         mService.start();
     }
 
@@ -120,6 +123,7 @@ public class AccessoriesController extends LineageAccessoriesFeature {
         }
         mBluetoothPairer.dump(pw);
         mBluetoothBattery.dump(pw);
+        mBluetoothName.dump(pw);
         mNotifier.dump(pw);
     }
 
@@ -200,6 +204,7 @@ public class AccessoriesController extends LineageAccessoriesFeature {
             mHandler.post(() -> {
                 mBluetoothPairer.onAccessoryRemoved(accessoryId);
                 mBluetoothBattery.onAccessoryRemoved(accessoryId);
+                mBluetoothName.onAccessoryRemoved(accessoryId);
                 mNotifier.onAccessoryRemoved(accessoryId);
             });
         }
@@ -217,6 +222,7 @@ public class AccessoriesController extends LineageAccessoriesFeature {
             mHandler.post(() -> {
                 mBluetoothPairer.onAllAccessoriesRemoved();
                 mBluetoothBattery.onAllAccessoriesRemoved();
+                mBluetoothName.onAllAccessoriesRemoved();
                 mNotifier.onAllAccessoriesRemoved();
             });
         }
@@ -232,6 +238,7 @@ public class AccessoriesController extends LineageAccessoriesFeature {
         mBluetoothPairer.onAccessoryUpdated(accessoryId, accessory.getBluetoothAddress(),
                 accessory.isCharging(), accessory.isEnabled());
         mBluetoothBattery.onAccessoryUpdated(accessoryId, accessory);
+        mBluetoothName.onAccessoryUpdated(accessoryId, accessory);
         mNotifier.onAccessoryUpdated(accessoryId, accessory);
     }
 }

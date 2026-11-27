@@ -9,6 +9,7 @@ import android.os.RemoteException;
 import android.text.TextUtils;
 
 import java.io.PrintWriter;
+import java.util.Objects;
 import java.util.function.Consumer;
 
 import lineageos.accessories.AccessoryInfo;
@@ -29,9 +30,14 @@ public class Accessory implements Dumpable {
     private final Consumer<Accessory> mOnUpdated;
 
     // Vendor data
+    private volatile AccessoryInfo mVendorAccessoryInfo;
     private volatile AccessoryInfo mAccessoryInfo;
     private volatile byte mAccessoryStatus = AccessoryStatus.DISCONNECTED;
     private volatile BatteryInfo mBatteryInfo;
+
+    // Bluetooth data
+    private final Object mInfoLock = new Object();
+    private volatile String mBluetoothName;
 
     // Callbacks
     private final CallbacksManager<IAccessoryCallback> mCallbacks = new CallbacksManager<>();
@@ -47,10 +53,12 @@ public class Accessory implements Dumpable {
                         "Received null AccessoryInfo, this shouldn't happen");
             }
 
-            AccessoryInfo info = toFwk(accessoryInfo);
-
-            // Update the accessory info
-            mAccessoryInfo = info;
+            AccessoryInfo info;
+            synchronized (mInfoLock) {
+                mVendorAccessoryInfo = toFwk(accessoryInfo);
+                info = withDisplayName(mVendorAccessoryInfo, mBluetoothName);
+                mAccessoryInfo = info;
+            }
 
             // Notify the callbacks
             mCallbacks.forEachCallback(callback -> callback.onAccessoryInfoUpdated(info));
@@ -102,7 +110,8 @@ public class Accessory implements Dumpable {
         @Override
         public AccessoryInfo getAccessoryInfo() {
             try {
-                return toFwk(mAccessoryInterface.getAccessoryInfo());
+                return withDisplayName(
+                        toFwk(mAccessoryInterface.getAccessoryInfo()), mBluetoothName);
             } catch (RemoteException e) {
                 AccessoryInfo info = mAccessoryInfo;
                 if (info == null) {
@@ -230,6 +239,29 @@ public class Accessory implements Dumpable {
         mOnUpdated.accept(this);
     }
 
+    /**
+     * Sets the name known to the Bluetooth stack, which replaces the display name provided by the
+     * HAL when not empty.
+     */
+    public void setBluetoothName(String name) {
+        String newName = TextUtils.isEmpty(name) ? null : name;
+        AccessoryInfo info;
+        synchronized (mInfoLock) {
+            if (Objects.equals(newName, mBluetoothName)) {
+                return;
+            }
+            mBluetoothName = newName;
+            if (mVendorAccessoryInfo == null) {
+                return;
+            }
+            info = withDisplayName(mVendorAccessoryInfo, newName);
+            mAccessoryInfo = info;
+        }
+
+        mCallbacks.forEachCallback(callback -> callback.onAccessoryInfoUpdated(info));
+        mOnUpdated.accept(this);
+    }
+
     public boolean isConnected() {
         return mAccessoryStatus != AccessoryStatus.DISCONNECTED;
     }
@@ -252,6 +284,7 @@ public class Accessory implements Dumpable {
             pw.println("Accessory " + info.id + ":");
             pw.println("  Type: " + info.type);
             pw.println("  Display name: " + info.displayName);
+            pw.println("  Bluetooth name: " + mBluetoothName);
             pw.println("  Charging: " + info.isCharging);
             DataLinkInfo dataLink = info.dataLink;
             pw.println("  Data link: " + (dataLink != null
@@ -270,6 +303,24 @@ public class Accessory implements Dumpable {
             return a == b;
         }
         return a.status == b.status && a.levelPercentage == b.levelPercentage;
+    }
+
+    private static AccessoryInfo withDisplayName(AccessoryInfo info, String displayName) {
+        if (displayName == null) {
+            return info;
+        }
+
+        AccessoryInfo copy = new AccessoryInfo();
+        copy.id = info.id;
+        copy.type = info.type;
+        copy.isPersistent = info.isPersistent;
+        copy.displayName = displayName;
+        copy.displayId = info.displayId;
+        copy.supportsToggling = info.supportsToggling;
+        copy.supportsBatteryQuerying = info.supportsBatteryQuerying;
+        copy.isCharging = info.isCharging;
+        copy.dataLink = info.dataLink;
+        return copy;
     }
 
     private static byte accessoryTypeToFwk(byte type) {
