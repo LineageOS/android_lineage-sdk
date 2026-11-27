@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "84273691_483975d0",
+        "filename": "lineage/lib/main/java/org/lineageos/platform/internal/accessories/Accessory.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 61,
+      "author": {
+        "id": 11883
+      },
+      "writtenOn": "2026-11-27T17:36:40Z",
+      "side": 1,
+      "message": "If this needs a lock now it probably needed one from the beginning?",
+      "range": {
+        "startLine": 57,
+        "startChar": 0,
+        "endLine": 61,
+        "endChar": 13
+      },
+      "revId": "8267ce28b0368d25acb28734ac2472bd7989069a",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
