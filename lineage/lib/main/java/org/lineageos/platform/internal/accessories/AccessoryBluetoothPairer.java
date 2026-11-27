@@ -28,6 +28,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import lineageos.accessories.PairingStatus;
+
 /**
  * Pairs the accessories which report their Bluetooth address once they're charging and enabled,
  * e.g. an active pen attached to the device's charger.
@@ -43,8 +45,13 @@ public class AccessoryBluetoothPairer implements Dumpable {
     private static final int MAX_PAIRING_ATTEMPTS = 3;
     private static final long RETRY_DELAY_MS = 1_000L;
 
+    public interface Listener {
+        void onPairingStatusChanged(String id, byte status);
+    }
+
     private final Context mContext;
     private final Handler mHandler;
+    private final Listener mListener;
 
     private BluetoothHidHost mHidHost;
 
@@ -122,6 +129,7 @@ public class AccessoryBluetoothPairer implements Dumpable {
 
                 BluetoothDevice device = result.getDevice();
                 if (device.getBondState() != BluetoothDevice.BOND_NONE) {
+                    pairIfNeeded(mAddress);
                     return;
                 }
                 Log.i(TAG, "Bonding with " + mAddress + ", attempt "
@@ -146,9 +154,10 @@ public class AccessoryBluetoothPairer implements Dumpable {
         }
     }
 
-    public AccessoryBluetoothPairer(Context context, Handler handler) {
+    public AccessoryBluetoothPairer(Context context, Handler handler, Listener listener) {
         mContext = context;
         mHandler = handler;
+        mListener = listener;
     }
 
     public void start() {
@@ -185,6 +194,7 @@ public class AccessoryBluetoothPairer implements Dumpable {
 
         if (address == null) {
             mChargingAccessories.remove(id);
+            mListener.onPairingStatusChanged(id, PairingStatus.IDLE);
             return;
         }
 
@@ -199,6 +209,18 @@ public class AccessoryBluetoothPairer implements Dumpable {
         if (address != null) {
             cancelPairing(address);
         }
+    }
+
+    public void onRetryRequested(String id) {
+        String address = mChargingAccessories.get(id);
+        if (address == null) {
+            return;
+        }
+
+        Log.i(TAG, "Retrying to pair " + address);
+        cancelPairing(address);
+        mPairingAttempts.put(address, 0);
+        pairIfNeeded(address);
     }
 
     public void onAllAccessoriesRemoved() {
@@ -224,7 +246,10 @@ public class AccessoryBluetoothPairer implements Dumpable {
                 }
                 break;
             case BluetoothAdapter.STATE_TURNING_OFF:
-                getChargingAddresses().forEach(this::cancelPairing);
+                for (String address : getChargingAddresses()) {
+                    cancelPairing(address);
+                    setPairingStatus(address, PairingStatus.BLUETOOTH_DISABLED);
+                }
                 break;
         }
     }
@@ -234,7 +259,9 @@ public class AccessoryBluetoothPairer implements Dumpable {
             return;
         }
 
-        if (previousState == BluetoothDevice.BOND_BONDING
+        if (state == BluetoothDevice.BOND_BONDED) {
+            setPairingStatus(address, PairingStatus.IDLE);
+        } else if (previousState == BluetoothDevice.BOND_BONDING
                 && state == BluetoothDevice.BOND_NONE) {
             Log.w(TAG, "Bonding with " + address + " failed");
             retryPairing(address);
@@ -249,21 +276,25 @@ public class AccessoryBluetoothPairer implements Dumpable {
         BluetoothAdapter adapter = getAdapter();
         if (adapter == null || !adapter.isEnabled()) {
             Log.d(TAG, "Bluetooth is disabled, not pairing " + address);
+            setPairingStatus(address, PairingStatus.BLUETOOTH_DISABLED);
             return;
         }
 
         BluetoothDevice device = adapter.getRemoteDevice(address);
         switch (device.getBondState()) {
             case BluetoothDevice.BOND_BONDED:
+                setPairingStatus(address, PairingStatus.IDLE);
                 connect(device);
                 return;
             case BluetoothDevice.BOND_BONDING:
+                setPairingStatus(address, PairingStatus.PAIRING);
                 return;
         }
 
         int attempts = mPairingAttempts.getOrDefault(address, 0);
         if (attempts >= MAX_PAIRING_ATTEMPTS) {
             Log.e(TAG, "Giving up pairing " + address);
+            setPairingStatus(address, PairingStatus.FAILED);
             return;
         }
         mPairingAttempts.put(address, attempts + 1);
@@ -271,8 +302,11 @@ public class AccessoryBluetoothPairer implements Dumpable {
         BluetoothLeScanner scanner = adapter.getBluetoothLeScanner();
         if (scanner == null) {
             Log.e(TAG, "LE scanner unavailable");
+            setPairingStatus(address, PairingStatus.FAILED);
             return;
         }
+
+        setPairingStatus(address, PairingStatus.PAIRING);
 
         Scan scan = new Scan(address);
         mScans.put(address, scan);
@@ -337,6 +371,14 @@ public class AccessoryBluetoothPairer implements Dumpable {
         BluetoothLeScanner scanner = adapter != null ? adapter.getBluetoothLeScanner() : null;
         if (scanner != null) {
             scanner.stopScan(scan);
+        }
+    }
+
+    private void setPairingStatus(String address, byte status) {
+        for (Map.Entry<String, String> entry : mChargingAccessories.entrySet()) {
+            if (entry.getValue().equals(address)) {
+                mListener.onPairingStatusChanged(entry.getKey(), status);
+            }
         }
     }
 

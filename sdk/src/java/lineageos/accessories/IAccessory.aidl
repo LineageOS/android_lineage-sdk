@@ -9,6 +9,7 @@ import lineageos.accessories.AccessoryInfo;
 import lineageos.accessories.AccessoryStatus;
 import lineageos.accessories.BatteryInfo;
 import lineageos.accessories.IAccessoryCallback;
+import lineageos.accessories.IAccessoryPairingCallback;
 
 /**
  * Interface for interacting with an accessory.
@@ -64,4 +65,13 @@ interface IAccessory {
      * @see AccessoryInfo.supportsBatteryQuerying
      */
     BatteryInfo getBatteryInfo();
+
+    oneway void registerPairingCallback(IAccessoryPairingCallback callback);
+
+    oneway void unregisterPairingCallback(IAccessoryPairingCallback callback);
+
+    /**
+     * Tries to pair the accessory again after PairingStatus.FAILED.
+     */
+    void retryPairing();
 }

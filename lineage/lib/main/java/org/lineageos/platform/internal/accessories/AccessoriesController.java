@@ -88,7 +88,8 @@ public class AccessoriesController extends LineageAccessoriesFeature {
                 },
                 this::removeAllAccessories);
 
-        mBluetoothPairer = new AccessoryBluetoothPairer(context, handler);
+        mBluetoothPairer = new AccessoryBluetoothPairer(context, handler,
+                this::onPairingStatusChanged);
         mBluetoothBattery = new AccessoryBluetoothBattery(context, handler);
         mBluetoothName = new AccessoryBluetoothName(context, handler);
         mNotifier = new AccessoryNotifier(context);
@@ -165,7 +166,8 @@ public class AccessoriesController extends LineageAccessoriesFeature {
                 }
 
                 accessory = Accessory.from(accessoryInterface,
-                        updated -> mHandler.post(() -> onAccessoryUpdated(accessoryId, updated)));
+                        updated -> mHandler.post(() -> onAccessoryUpdated(accessoryId, updated)),
+                        retried -> mHandler.post(() -> onRetryPairing(accessoryId, retried)));
             } catch (RemoteException e) {
                 Log.e(TAG, "Failed to add accessory", e);
                 return;
@@ -240,5 +242,22 @@ public class AccessoriesController extends LineageAccessoriesFeature {
         mBluetoothBattery.onAccessoryUpdated(accessoryId, accessory);
         mBluetoothName.onAccessoryUpdated(accessoryId, accessory);
         mNotifier.onAccessoryUpdated(accessoryId, accessory);
+    }
+
+    // Called on the handler thread
+    private void onRetryPairing(String accessoryId, Accessory accessory) {
+        if (mIdToAccessories.get(accessoryId) != accessory) {
+            return;
+        }
+
+        mBluetoothPairer.onRetryRequested(accessoryId);
+    }
+
+    // Called on the handler thread
+    private void onPairingStatusChanged(String accessoryId, byte status) {
+        Accessory accessory = mIdToAccessories.get(accessoryId);
+        if (accessory != null) {
+            accessory.setPairingStatus(status);
+        }
     }
 }

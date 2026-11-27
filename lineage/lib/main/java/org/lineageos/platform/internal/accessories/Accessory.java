@@ -21,6 +21,8 @@ import lineageos.accessories.DataLinkInfo;
 import lineageos.accessories.DataLinkType;
 import lineageos.accessories.IAccessory;
 import lineageos.accessories.IAccessoryCallback;
+import lineageos.accessories.IAccessoryPairingCallback;
+import lineageos.accessories.PairingStatus;
 
 /**
  * vendor.lineage.accessories.IAccessory <-> lineageos.accessories.IAccessory
@@ -28,6 +30,7 @@ import lineageos.accessories.IAccessoryCallback;
 public class Accessory implements Dumpable {
     private final vendor.lineage.accessories.IAccessory mAccessoryInterface;
     private final Consumer<Accessory> mOnUpdated;
+    private final Consumer<Accessory> mOnRetryPairing;
 
     // Vendor data
     private volatile AccessoryInfo mVendorAccessoryInfo;
@@ -38,9 +41,12 @@ public class Accessory implements Dumpable {
     // Bluetooth data
     private final Object mInfoLock = new Object();
     private volatile String mBluetoothName;
+    private volatile byte mPairingStatus = PairingStatus.IDLE;
 
     // Callbacks
     private final CallbacksManager<IAccessoryCallback> mCallbacks = new CallbacksManager<>();
+    private final CallbacksManager<IAccessoryPairingCallback> mPairingCallbacks =
+            new CallbacksManager<>();
 
     // Vendor accessory callback
     private final vendor.lineage.accessories.IAccessoryCallback mAccessoryCallback =
@@ -165,12 +171,31 @@ public class Accessory implements Dumpable {
                 return null;
             }
         }
+
+        @Override
+        public void registerPairingCallback(IAccessoryPairingCallback callback)
+                throws RemoteException {
+            mPairingCallbacks.registerCallback(callback);
+            callback.onPairingStatusUpdated(mPairingStatus);
+        }
+
+        @Override
+        public void unregisterPairingCallback(IAccessoryPairingCallback callback) {
+            mPairingCallbacks.unregisterCallback(callback);
+        }
+
+        @Override
+        public void retryPairing() {
+            mOnRetryPairing.accept(Accessory.this);
+        }
     };
 
     private Accessory(vendor.lineage.accessories.IAccessory accessoryInterface,
-            Consumer<Accessory> onUpdated) throws RemoteException {
+            Consumer<Accessory> onUpdated, Consumer<Accessory> onRetryPairing)
+            throws RemoteException {
         mAccessoryInterface = accessoryInterface;
         mOnUpdated = onUpdated;
+        mOnRetryPairing = onRetryPairing;
 
         // Set the callback, this will also populate the accessory data
         mAccessoryInterface.setCallback(mAccessoryCallback);
@@ -180,10 +205,12 @@ public class Accessory implements Dumpable {
      * @param accessoryInterface The vendor accessory
      * @param onUpdated Called on the binder thread when the info, the status or the battery info
      *                  changes
+     * @param onRetryPairing Called on the binder thread when a client asks to retry pairing
      */
     public static Accessory from(vendor.lineage.accessories.IAccessory accessoryInterface,
-            Consumer<Accessory> onUpdated) throws RemoteException {
-        return new Accessory(accessoryInterface, onUpdated);
+            Consumer<Accessory> onUpdated, Consumer<Accessory> onRetryPairing)
+            throws RemoteException {
+        return new Accessory(accessoryInterface, onUpdated, onRetryPairing);
     }
 
     public IAccessory asInterface() {
@@ -262,6 +289,14 @@ public class Accessory implements Dumpable {
         mOnUpdated.accept(this);
     }
 
+    public void setPairingStatus(byte status) {
+        if (mPairingStatus == status) {
+            return;
+        }
+        mPairingStatus = status;
+        mPairingCallbacks.forEachCallback(callback -> callback.onPairingStatusUpdated(status));
+    }
+
     public boolean isConnected() {
         return mAccessoryStatus != AccessoryStatus.DISCONNECTED;
     }
@@ -291,6 +326,7 @@ public class Accessory implements Dumpable {
                     ? dataLinkTypeToString(dataLink.type) + " " + dataLink.id : "none"));
         }
         pw.println("  Status: " + mAccessoryStatus);
+        pw.println("  Pairing status: " + mPairingStatus);
         BatteryInfo batteryInfo = mBatteryInfo;
         if (batteryInfo != null) {
             pw.println("  Battery: status " + batteryInfo.status
