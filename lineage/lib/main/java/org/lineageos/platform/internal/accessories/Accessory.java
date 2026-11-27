@@ -147,6 +147,9 @@ public class Accessory implements Dumpable {
 
         @Override
         public BatteryInfo getBatteryInfo() {
+            if (!supportsBatteryQuerying()) {
+                return mBatteryInfo;
+            }
             try {
                 return toFwk(mAccessoryInterface.getBatteryInfo());
             } catch (RemoteException e) {
@@ -200,6 +203,33 @@ public class Accessory implements Dumpable {
         return mBatteryInfo;
     }
 
+    public boolean supportsBatteryQuerying() {
+        AccessoryInfo info = mAccessoryInfo;
+        return info != null && info.supportsBatteryQuerying;
+    }
+
+    /**
+     * Sets the battery info from the level reported by the Bluetooth stack, for accessories
+     * that don't support battery querying.
+     */
+    public void setBluetoothBatteryLevel(int level) {
+        BatteryInfo info = null;
+        if (isConnected() && level >= 0 && level <= 100) {
+            info = new BatteryInfo();
+            info.status = isCharging() ? BatteryStatus.CHARGING : BatteryStatus.DISCHARGING;
+            info.levelPercentage = level;
+        }
+
+        if (isSameBatteryInfo(info, mBatteryInfo)) {
+            return;
+        }
+
+        BatteryInfo newInfo = info;
+        mBatteryInfo = newInfo;
+        mCallbacks.forEachCallback(callback -> callback.onBatteryInfoUpdated(newInfo));
+        mOnUpdated.accept(this);
+    }
+
     public boolean isConnected() {
         return mAccessoryStatus != AccessoryStatus.DISCONNECTED;
     }
@@ -233,6 +263,13 @@ public class Accessory implements Dumpable {
             pw.println("  Battery: status " + batteryInfo.status
                     + ", level " + batteryInfo.levelPercentage);
         }
+    }
+
+    private static boolean isSameBatteryInfo(BatteryInfo a, BatteryInfo b) {
+        if (a == null || b == null) {
+            return a == b;
+        }
+        return a.status == b.status && a.levelPercentage == b.levelPercentage;
     }
 
     private static byte accessoryTypeToFwk(byte type) {

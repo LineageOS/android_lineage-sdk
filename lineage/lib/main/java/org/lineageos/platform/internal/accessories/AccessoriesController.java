@@ -65,6 +65,9 @@ public class AccessoriesController extends LineageAccessoriesFeature {
     // Bluetooth pairing
     private final AccessoryBluetoothPairer mBluetoothPairer;
 
+    // Bluetooth battery level
+    private final AccessoryBluetoothBattery mBluetoothBattery;
+
     // Connection notifications
     private final AccessoryNotifier mNotifier;
 
@@ -85,6 +88,7 @@ public class AccessoriesController extends LineageAccessoriesFeature {
                 this::removeAllAccessories);
 
         mBluetoothPairer = new AccessoryBluetoothPairer(context, handler);
+        mBluetoothBattery = new AccessoryBluetoothBattery(context, handler);
         mNotifier = new AccessoryNotifier(context);
     }
 
@@ -96,6 +100,7 @@ public class AccessoriesController extends LineageAccessoriesFeature {
     @Override
     public void onStart() {
         mBluetoothPairer.start();
+        mBluetoothBattery.start();
         mService.start();
     }
 
@@ -114,6 +119,7 @@ public class AccessoriesController extends LineageAccessoriesFeature {
             accessory.dump(pw);
         }
         mBluetoothPairer.dump(pw);
+        mBluetoothBattery.dump(pw);
         mNotifier.dump(pw);
     }
 
@@ -193,6 +199,7 @@ public class AccessoriesController extends LineageAccessoriesFeature {
 
             mHandler.post(() -> {
                 mBluetoothPairer.onAccessoryRemoved(accessoryId);
+                mBluetoothBattery.onAccessoryRemoved(accessoryId);
                 mNotifier.onAccessoryRemoved(accessoryId);
             });
         }
@@ -209,6 +216,7 @@ public class AccessoriesController extends LineageAccessoriesFeature {
 
             mHandler.post(() -> {
                 mBluetoothPairer.onAllAccessoriesRemoved();
+                mBluetoothBattery.onAllAccessoriesRemoved();
                 mNotifier.onAllAccessoriesRemoved();
             });
         }
@@ -223,6 +231,7 @@ public class AccessoriesController extends LineageAccessoriesFeature {
 
         mBluetoothPairer.onAccessoryUpdated(accessoryId, accessory.getBluetoothAddress(),
                 accessory.isCharging(), accessory.isEnabled());
+        mBluetoothBattery.onAccessoryUpdated(accessoryId, accessory);
         mNotifier.onAccessoryUpdated(accessoryId, accessory);
     }
 }
